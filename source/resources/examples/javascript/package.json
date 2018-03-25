@@ -1,0 +1,18 @@
+{
+  "name": "nem2-guide-examples",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "js-sha3": "^0.7.0",
+    "nem2-sdk": "^0.9.1",
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": ""
+}

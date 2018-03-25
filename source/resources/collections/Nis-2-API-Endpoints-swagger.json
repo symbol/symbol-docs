@@ -1,0 +1,1749 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This document defines all the nis2 api endpoints",
+    "version": "0.9.0",
+    "title": "NIS2 API Endpoints",
+    "contact": {
+      "email": "guillem@nemeurope.eu"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost:3000",
+  "tags": [
+    {
+      "name": "Account routes"
+    },
+    {
+      "name": "Blockchain routes"
+    },
+    {
+      "name": "Mosaic routes"
+    },
+    {
+      "name": "Namespace routes"
+    },
+    {
+      "name": "Transaction routes"
+    },
+    {
+      "name": "Network routes"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/account/{accountId}": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get account information",
+        "description": "Returns account information for a given address or publicKey",
+        "operationId": "getAccountInfo",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "description": "Account address or publicKey",
+            "required": true,
+            "type": "string",
+            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/AccountInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/account": {
+      "post": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get accounts information",
+        "description": "Returns accounts information for a given set of address and publicKey",
+        "operationId": "getAccountsInfo",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "addresses",
+            "in": "body",
+            "description": "Accounts address array",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/addresses"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{publicKey}/transactions": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get transactions information",
+        "description": "Returns transactions information for a given publicKey",
+        "operationId": "transactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "description": "Account publicKey",
+            "required": true,
+            "type": "string",
+            "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{publicKey}/transactions/incoming": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get incoming transactions information",
+        "description": "Returns incoming transactions information for a given publicKey",
+        "operationId": "incomingTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "description": "Account publicKey",
+            "required": true,
+            "type": "string",
+            "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{publicKey}/transactions/outgoing": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get outgoing transactions information",
+        "description": "Returns outgoing transactions information for a given publicKey",
+        "operationId": "outgoingTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "description": "Account publicKey",
+            "required": true,
+            "type": "string",
+            "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{publicKey}/transactions/unconfirmed": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get unconfirmed transactions information",
+        "description": "Returns unconfirmed transactions information for a given publicKey",
+        "operationId": "unconfirmedTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "description": "Account publicKey",
+            "required": true,
+            "type": "string",
+            "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{publicKey}/transactions/partial": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get partial transactions information",
+        "description": "Returns partial transactions information for a given publicKey",
+        "operationId": "partialTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "description": "Account publicKey",
+            "required": true,
+            "type": "string",
+            "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/{accountId}/multisig": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get account information",
+        "description": "Returns information for a given address or publicKey",
+        "operationId": "getAccountMultisig",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "description": "The multisig account address or public key for which information should be retreived.",
+            "required": true,
+            "type": "string",
+            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/MultisigAccountInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/account/{accountId}/multisig/graph": {
+      "get": {
+        "tags": [
+          "Account routes"
+        ],
+        "summary": "Get multisig graph information",
+        "description": "Returns information of all accounts address or publicKey is cosignatory",
+        "operationId": "getAccountMultisigGraph",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "description": "The multisig account address public key for which information should be retreived.",
+            "required": true,
+            "type": "string",
+            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MultisigAccountGraphInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blocks/{height}/limit/{limit}": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get blocks information",
+        "description": "Returns blocks information for a given block height and limit",
+        "operationId": "getBlocksByHeightWithLimit",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "description": "The block height at which information should be returned",
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0,
+            "default": 1
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "description": "Block limit",
+            "required": true,
+            "type": "integer",
+            "minimum": 0,
+            "format": "int",
+            "default": 25
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BlockInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/block/{height}": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get block information",
+        "description": "Returns block information for a given block height",
+        "operationId": "getBlockByHeight",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "description": "Block height",
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "default": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/BlockInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/block/{height}/transactions": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get transactions from a block information",
+        "description": "Returns all transactions information for a given block height",
+        "operationId": "getBlockTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "description": "Block height",
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "default": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of transactions to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last transaction id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chain/height": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get the current height of the chain",
+        "description": "Returns the current height of the blockchain",
+        "operationId": "getBlockchainHeight",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/HeightDTO"
+            }
+          }
+        }
+      }
+    },
+    "/chain/score": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get the current score of the chain",
+        "description": "Returns the current chain score",
+        "operationId": "getBlockchainScore",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/BlockchainScoreDTO"
+            }
+          }
+        }
+      }
+    },
+    "/diagnostic/storage": {
+      "get": {
+        "tags": [
+          "Blockchain routes"
+        ],
+        "summary": "Get the storage information",
+        "description": "Returns statistical information about the blockchain",
+        "operationId": "getDiagnosticStorage",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/BlockchainStorageInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/mosaic/{mosaicId}": {
+      "get": {
+        "tags": [
+          "Mosaic routes"
+        ],
+        "summary": "Get mosaic information",
+        "description": "Returns information for a given mosaicId",
+        "operationId": "getMosaic",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "mosaicId",
+            "in": "path",
+            "description": "The mosaic id for which information should be retreived",
+            "type": "string",
+            "required": true,
+            "default": "d525ad41d95fcf29"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/MosaicInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/mosaic": {
+      "post": {
+        "tags": [
+          "Mosaic routes"
+        ],
+        "summary": "Get information for a set of mosaics",
+        "description": "Returns information for a given set of mosaicIds",
+        "operationId": "getMosaics",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "mosaicIds",
+            "in": "body",
+            "description": "Array of mosaicIds",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/mosaicIds"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MosaicInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/namespace/{namespaceId}/mosaics": {
+      "get": {
+        "tags": [
+          "Mosaic routes"
+        ],
+        "summary": "Get mosaics information",
+        "description": "Returns information for a given namespaceId",
+        "operationId": "getMosaicsFromNamespace",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "description": "The namespace id for which mosaics information should be retreived",
+            "type": "string",
+            "required": true,
+            "default": "84b3552d375ffa4b"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of mosaics to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last mosaic id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MosaicInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mosaic/names": {
+      "post": {
+        "tags": [
+          "Mosaic routes"
+        ],
+        "summary": "Get readable names for a set of mosaics",
+        "description": "Returns names for mosaics",
+        "operationId": "getMosaicsName",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "mosaicIds",
+            "in": "body",
+            "description": "Array of mosaicIds",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/mosaicIds"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MosaicNameDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/namespace/{namespaceId}": {
+      "get": {
+        "tags": [
+          "Namespace routes"
+        ],
+        "summary": "Get namespace information",
+        "description": "Returns information for a given namespaceId",
+        "operationId": "getNamespace",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "description": "The namespace id for which information should be retreived",
+            "type": "string",
+            "required": true,
+            "default": "84b3552d375ffa4b"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/NamespaceInfoDTO"
+            }
+          }
+        }
+      }
+    },
+    "/account/{accountId}/namespaces": {
+      "get": {
+        "tags": [
+          "Namespace routes"
+        ],
+        "summary": "Get namespaces an account owns",
+        "description": "Returns information about the namespaces an account owns",
+        "operationId": "getNamespacesFromAccount",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "description": "The account address or public key for which namespaces should be retrieved",
+            "required": true,
+            "type": "string",
+            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of namespace to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last namespace id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NamespaceInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/account/namespaces": {
+      "post": {
+        "tags": [
+          "Namespace routes"
+        ],
+        "summary": "Get namespaces information",
+        "description": "Returns namespaces information for a given set of addresses",
+        "operationId": "getNamespacesFromAccounts",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "addresses",
+            "in": "body",
+            "description": "Accounts address array",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/addresses"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The numbers of namespace to return",
+            "type": "integer"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id last namespace id to apply pagination",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NamespaceInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/namespace/names": {
+      "post": {
+        "tags": [
+          "Namespace routes"
+        ],
+        "summary": "Get readable names for a set of namespaces",
+        "description": "Returns names for namespaces",
+        "operationId": "getNamespacesNames",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "namespaceIds",
+            "in": "body",
+            "description": "Array of namespaceIds",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/namespaceIds"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NamespaceNameDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transaction/{transactionId}": {
+      "get": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Get ransaction information",
+        "description": "Returns transaction information for a given transaction id or hash",
+        "operationId": "getTransaction",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionId",
+            "in": "path",
+            "description": "Transaction id or hash",
+            "required": true,
+            "type": "string",
+            "default": "59B8DA0F0CB2720001103922"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/transaction": {
+      "post": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Get transactions information",
+        "description": "Returns transaction information for a given set of transaction id or hash",
+        "operationId": "getTransactions",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionIds",
+            "in": "body",
+            "description": "Array of transaction ids or hashes",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/transactionIds"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Creates new transaction",
+        "description": "Announce a transaction to the network",
+        "operationId": "announceTransaction",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "payload",
+            "in": "body",
+            "description": "Transaction payload",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/transactionPayload"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/AnnounceTransactionInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transaction/partial": {
+      "put": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Creates partial transaction",
+        "description": "Announce a partial transaction to the network",
+        "operationId": "announcePartialTransaction",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "payload",
+            "in": "body",
+            "description": "Transaction payload",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/transactionPayload"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/AnnounceTransactionInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transaction/cosignature": {
+      "put": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Creates cosignature transaction",
+        "description": "Announce a cosignature transaction to the network",
+        "operationId": "announceCosignatureTransaction",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "payload",
+            "in": "body",
+            "description": "Transaction payload",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/transactionPayload"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/AnnounceTransactionInfoDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transaction/{hash}/status": {
+      "get": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Get transaction status",
+        "description": "Returns transaction status for a given transaction id or hash",
+        "operationId": "getTransactionStatus",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hash",
+            "in": "path",
+            "description": "Transaction hash",
+            "required": true,
+            "type": "string",
+            "default": "5AF72FE39C0515E823903918A0BFE9625DD752C7BD63969C8869F25E9D155DE5"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/TransactionStatusDTO"
+            }
+          }
+        }
+      }
+    },
+    "/transaction/statuses": {
+      "post": {
+        "tags": [
+          "Transaction routes"
+        ],
+        "summary": "Get transactions information",
+        "description": "Returns transaction information for a given set of transaction id or hash",
+        "operationId": "getTransactionsStatuses",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transactionHashes",
+            "in": "body",
+            "description": "Array of transaction ids or hashes",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/transactionHashes"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TransactionStatusDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/network": {
+      "get": {
+        "tags": [
+          "Network routes"
+        ],
+        "summary": "Get the current network type of the chain",
+        "description": "Returns the current network type",
+        "operationId": "getNetworkType",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/NetworkTypeDTO"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AccountInfoDTO": {
+      "type": "object",
+      "required": [
+        "meta",
+        "account"
+      ],
+      "properties": {
+        "meta": {
+          "$ref": "#/definitions/AccountMetaDTO"
+        },
+        "account": {
+          "$ref": "#/definitions/AccountDTO"
+        }
+      }
+    },
+    "AccountMetaDTO": {
+      "type": "object"
+    },
+    "AccountDTO": {
+      "type": "object",
+      "required": [
+        "address",
+        "addressHeight",
+        "publicKey",
+        "publicKeyHeight",
+        "mosaics",
+        "importance",
+        "importanceHeight"
+      ],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "addressHeight": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "publicKey": {
+          "type": "string"
+        },
+        "publicKeyHeight": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "mosaics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MosaicDTO"
+          }
+        },
+        "importance": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "importanceHeight": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "MultisigAccountGraphInfoDTO": {
+      "type": "object",
+      "required": [
+        "level",
+        "multisigEntries"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer"
+        },
+        "multisigEntries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MultisigAccountInfoDTO"
+          }
+        }
+      }
+    },
+    "MultisigAccountInfoDTO": {
+      "type": "object",
+      "required": [
+        "multisig"
+      ],
+      "properties": {
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
+        }
+      }
+    },
+    "Multisig": {
+      "type": "object",
+      "required": [
+        "account",
+        "minApproval",
+        "minRemoval",
+        "cosignatories",
+        "multisigAccounts"
+      ],
+      "properties": {
+        "account": {
+          "type": "string"
+        },
+        "accountAddress": {
+          "type": "string"
+        },
+        "minApproval": {
+          "type": "integer"
+        },
+        "minRemoval": {
+          "type": "integer"
+        },
+        "cosignatories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "multisigAccounts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "AnnounceTransactionInfoDTO": {
+      "type": "object",
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "TransactionStatusDTO": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "group": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "deadline": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "height": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "MosaicDTO": {
+      "type": "object",
+      "required": [
+        "id",
+        "amount"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "amount": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "MosaicInfoDTO": {
+      "type": "object",
+      "required": [
+        "meta",
+        "mosaic"
+      ],
+      "properties": {
+        "meta": {
+          "$ref": "#/definitions/NamespaceMosaicMetaDTO"
+        },
+        "mosaic": {
+          "$ref": "#/definitions/MosaicDefinitionDTO"
+        }
+      }
+    },
+    "NamespaceMosaicMetaDTO": {
+      "type": "object",
+      "required": [
+        "active",
+        "index",
+        "id"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "index": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "MosaicDefinitionDTO": {
+      "type": "object",
+      "required": [
+        "namespaceId",
+        "mosaicId",
+        "supply",
+        "height",
+        "owner",
+        "properties",
+        "levy"
+      ],
+      "properties": {
+        "namespaceId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "mosaicId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "supply": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "height": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/definitions/MosaicPropertiesDTO"
+        },
+        "levy": {
+          "type": "object"
+        }
+      }
+    },
+    "MosaicPropertiesDTO": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UInt64DTO"
+      },
+      "example": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "MosaicNameDTO": {
+      "type": "object",
+      "required": [
+        "parentId",
+        "mosaicId",
+        "name"
+      ],
+      "properties": {
+        "parentId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "mosaicId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "NamespaceInfoDTO": {
+      "type": "object",
+      "required": [
+        "meta",
+        "namespace"
+      ],
+      "properties": {
+        "meta": {
+          "$ref": "#/definitions/NamespaceMosaicMetaDTO"
+        },
+        "namespace": {
+          "$ref": "#/definitions/NamespaceDTO"
+        }
+      }
+    },
+    "NamespaceDTO": {
+      "type": "object",
+      "required": [
+        "type",
+        "depth",
+        "level0",
+        "parentId",
+        "owner",
+        "startHeight",
+        "endHeight"
+      ],
+      "properties": {
+        "type": {
+          "type": "integer"
+        },
+        "depth": {
+          "type": "integer"
+        },
+        "level0": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "level1": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "level2": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "parentId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "ownerAddress": {
+          "type": "string"
+        },
+        "startHeight": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "endHeight": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "NamespaceNameDTO": {
+      "type": "object",
+      "required": [
+        "namespaceId",
+        "name"
+      ],
+      "properties": {
+        "parentId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "namespaceId": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BlockInfoDTO": {
+      "type": "object",
+      "required": [
+        "meta",
+        "block"
+      ],
+      "properties": {
+        "meta": {
+          "$ref": "#/definitions/BlockMetaDTO"
+        },
+        "block": {
+          "$ref": "#/definitions/BlockDTO"
+        }
+      }
+    },
+    "BlockMetaDTO": {
+      "type": "object",
+      "required": [
+        "hash",
+        "generationHash",
+        "totalFee",
+        "numTransactions"
+      ],
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "generationHash": {
+          "type": "string"
+        },
+        "totalFee": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "numTransactions": {
+          "type": "number"
+        }
+      }
+    },
+    "BlockDTO": {
+      "type": "object",
+      "required": [
+        "signature",
+        "signer",
+        "version",
+        "type",
+        "height",
+        "timestamp",
+        "difficulty",
+        "previousBlockHash",
+        "blockTransactionsHash"
+      ],
+      "properties": {
+        "signature": {
+          "type": "string"
+        },
+        "signer": {
+          "type": "string"
+        },
+        "version": {
+          "type": "number"
+        },
+        "type": {
+          "type": "number"
+        },
+        "height": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "timestamp": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "difficulty": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "previousBlockHash": {
+          "type": "string"
+        },
+        "blockTransactionsHash": {
+          "type": "string"
+        }
+      }
+    },
+    "HeightDTO": {
+      "type": "object",
+      "required": [
+        "height"
+      ],
+      "properties": {
+        "height": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "BlockchainScoreDTO": {
+      "type": "object",
+      "required": [
+        "scoreHigh",
+        "scoreLow"
+      ],
+      "properties": {
+        "scoreHigh": {
+          "$ref": "#/definitions/UInt64DTO"
+        },
+        "scoreLow": {
+          "$ref": "#/definitions/UInt64DTO"
+        }
+      }
+    },
+    "BlockchainStorageInfoDTO": {
+      "type": "object",
+      "required": [
+        "numBlocks",
+        "numTransactions",
+        "numAccounts"
+      ],
+      "properties": {
+        "numBlocks": {
+          "type": "integer"
+        },
+        "numTransactions": {
+          "type": "integer"
+        },
+        "numAccounts": {
+          "type": "integer"
+        }
+      }
+    },
+    "NetworkTypeDTO": {
+      "type": "object",
+      "required": [
+        "name",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "mijinTest"
+        },
+        "description": {
+          "type": "string",
+          "example": "catapult development network"
+        }
+      }
+    },
+    "mosaicIds": {
+      "type": "object",
+      "properties": {
+        "mosaicIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "d525ad41d95fcf29"
+          ]
+        }
+      }
+    },
+    "namespaceIds": {
+      "type": "object",
+      "properties": {
+        "namespaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "84b3552d375ffa4b"
+          ]
+        }
+      }
+    },
+    "addresses": {
+      "type": "object",
+      "properties": {
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY",
+            "SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX"
+          ]
+        }
+      }
+    },
+    "transactionIds": {
+      "type": "object",
+      "properties": {
+        "transactionIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "59B8DA0F0CB2720001103922",
+            "59B8D8E60CB2720001103904"
+          ]
+        }
+      }
+    },
+    "transactionHashes": {
+      "type": "object",
+      "properties": {
+        "hashes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "5AF72FE39C0515E823903918A0BFE9625DD752C7BD63969C8869F25E9D155DE5"
+          ]
+        }
+      }
+    },
+    "transactionPayload": {
+      "type": "object",
+      "properties": {
+        "payload": {
+          "type": "string",
+          "default": "payload",
+          "example": "example"
+        }
+      }
+    },
+    "UInt64DTO": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "example": [
+        "lower",
+        "higher"
+      ]
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about NEM 2 in our docs",
+    "url": "https://nemtech.github.com/"
+  }
+}

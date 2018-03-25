@@ -1,0 +1,72 @@
+@import "theme.css";
+
+/* Sidebar */
+
+.wy-nav-side .logo{
+    width: 120px !important;
+}
+.wy-side-nav-search{
+    background-color: #fcfcfc;
+}
+
+.wy-side-nav-search .version{
+    color: #b3b3b3 !important;
+}
+
+.wy-menu-vertical .caption-text{
+    color: #fff;
+}
+
+.sidebar-links {
+    margin-top:20px; 
+}
+
+.sidebar-links a{
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.wy-nav-content {
+    max-width: none;
+}
+
+/* Figure  */
+
+.figure{
+    padding-top: 10px;
+
+}
+
+.figure .caption{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+/* Code example */
+.example-selector{
+    background-color: #e4e4e4;
+    padding: 5px !important;
+    height: 100% !important;
+    margin-bottom: 0px !important;
+}
+
+.example-selector > li{
+      color: gray !important;
+      background-color: transparent !important;
+      float: none !important;
+      display: inline-block !important;
+      margin-left: 0px !important;
+      font-weight: normal !important;
+}
+
+.example-selector > li.selected{
+    background-color: transparent;
+    color: #000 !important;
+}
+
+/* Fundamentals - Aggregate Transaction */
+
+#aggregate-transaction.section table{
+    width: 100%;
+}
