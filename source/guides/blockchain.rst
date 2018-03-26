@@ -65,7 +65,7 @@ Open the connection. You only need to open the connection once and then connect 
         :language: javascript
         :lines: 25
 
-In this example, we will reach only transactions that get confirmed. You can also create other listeners to check unconfirmed, aggregate bounded or transactions that fail.
+In this example, we will reach only transactions that get confirmed. You can also create `other listeners <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_listener_.listener.html#aggregatebondedadded>`_ to check unconfirmed, aggregate bounded or transactions that fail.
 
 .. example-code::
 

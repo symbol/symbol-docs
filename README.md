@@ -33,4 +33,4 @@ Copyright (c) 2018 NEM
 Licensed under the [Apache License 2.0](LICENSE)
 
 [self]: https://github.com/nemtech/nem2-docs
-[docs]: https://nemtech.github.com
+[docs]: https://nemtech.github.io
