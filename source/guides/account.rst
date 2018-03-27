@@ -278,6 +278,7 @@ This shared account is in NEM translated as 1-of-2 multisig, meaning that one co
 
 .. figure:: ../resources/images/guides-accounts-multisig-1-of-2.png
     :align: center
+    :width: 350px
 
     1-of-2 multisig account example
 
@@ -375,6 +376,7 @@ Specifically, you are going to convert a 1-of-2 into a 2-of-2 multisig account.
 
 .. figure:: ../resources/images/guides-accounts-multisig-2-of-2.png
     :align: center
+    :width: 350px
 
     2-of-2 multisig account example
 
@@ -382,6 +384,7 @@ Then, you will add a new cosignatory, becoming a 2-of-3.
 
 .. figure:: ../resources/images/guides-accounts-multisig-2-of-3.png
     :align: center
+    :width: 350px
 
     2-of-3 multisig account example
 
@@ -438,9 +441,9 @@ Announce the aggregate transaction.
 
 **Adding a new cosignatory**
 
-Suddenly, Alice and Bob want to add their daughter Hannah as a cosignatory of the multisig account.
+Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account.
 
-Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Hannah as a cosignatory.
+Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory.
 
 1) Create a multisig cosignatory modification:
 
@@ -544,6 +547,7 @@ Following this tutorial, you will create a :doc:`multi-level multisig account <.
 
 .. figure:: ../resources/images/concepts-multisig-multilevel-1.png
     :align: center
+    :width: 750px
 
     Three-level multisig account example
 
@@ -620,5 +624,6 @@ Who should cosign the transaction if Account #5 initiates an aggregate bonded tr
 
 .. figure:: ../resources/images/concepts-multisig-multilevel-2.png
     :align: center
+    :width: 750px
 
     Sending an aggregate bonded transaction from a MLMA

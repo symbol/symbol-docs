@@ -4,7 +4,7 @@ Block
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-The central element of every cryptocurrency is a public ledger called the blockchain that links blocks together. Each NEM block can contain up to ``200000`` :doc:`transactions <transaction>`.
+The central element of every cryptocurrency is a public ledger called the blockchain that links blocks together. Each NEM block can contain up to ``N`` :doc:`transactions <transaction>`.
 
 Since the blocks in the chain and the transactions in the blocks ordered, the complete transaction history is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
 

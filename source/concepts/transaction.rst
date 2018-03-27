@@ -198,6 +198,7 @@ An aggregate transaction is  **complete** if before announcing it to the network
 
 .. figure:: ../resources/images/guides-transactions-sending-payouts.png
     :align: center
+    :width: 450px
 
     Sending payouts with aggregate complete transactions
 

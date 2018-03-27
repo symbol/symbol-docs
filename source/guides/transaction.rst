@@ -25,6 +25,7 @@ Background
 
 .. figure:: ../resources/images/guides-transactions-transfer.png
     :align: center
+    :width: 450px
 
     Sending a transfer Transaction
 
@@ -128,6 +129,7 @@ Afterwards, try to send new transfer transactions by altering your code to send 
 
 .. figure:: ../resources/images/guides-transactions-transfer-multiple.png
     :align: center
+    :width: 450px
 
     Sending multiple mosaics in the same transaction
 
@@ -168,6 +170,7 @@ Background
 
 .. figure:: ../resources/images/guides-transactions-multisig.png
     :align: center
+    :width: 600px
 
     Sending an aggregate complete transaction
 
@@ -273,6 +276,7 @@ As all required cosigners didn't sign the transaction, it should be announced as
 
 .. figure:: ../resources/images/guides-transactions-multisig-2.png
     :align: center
+    :width: 600px
 
     Sending an aggregate bonded transaction
 
@@ -330,10 +334,11 @@ This guide explains how to send transactions to different accounts atomically, u
 Background
 ==========
 
-It is Christmas, and uncle Dan wants to send money to their nephews Hannah and John.
+It is Christmas, and uncle Dan wants to send money to their nephews Alice and Bob.
 
 .. figure:: ../resources/images/guides-transactions-sending-payouts.png
     :align: center
+    :width: 450px
 
     Sending transactions to different recipients atomically
 
@@ -452,6 +457,7 @@ Let's get into some code?
 
 .. figure:: ../resources/images/guides-transactions-escrow.png
     :align: center
+    :width: 450px
 
     Multi-Asset Escrowed Transactions
 
@@ -535,6 +541,7 @@ Afterwards, swap mosaics between multiple participants.
 
 .. figure:: ../resources/images/guides-transactions-escrow-2.png
     :align: center
+    :width: 600px
 
     Atomic cross-chain trading between public and private network
 
@@ -558,6 +565,7 @@ Let’s get into some code
 
 .. figure:: ../resources/images/guides-transactions-asking-for-mosaics.png
     :align: center
+    :width: 450px
 
     Asking for mosaics with an aggregate bonded transaction
 
@@ -910,6 +918,7 @@ Following this guide, you will swap transactions between different blockchain pl
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
     :align: center
+    :width: 700px
 
     Asking for mosaics with an aggregate bonded transaction
 

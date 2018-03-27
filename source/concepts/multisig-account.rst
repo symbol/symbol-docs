@@ -43,6 +43,7 @@ There is a broad range of useful applications for multisig accounts. Let's take 
 
 .. figure:: ../resources/images/concepts-multisig-figure-1.png
     :align: center
+    :width: 400px
 
     M-of-N multisig account example
 
@@ -50,13 +51,15 @@ There is a broad range of useful applications for multisig accounts. Let's take 
 
 .. figure:: ../resources/images/concepts-multisig-figure-2.png
     :align: center
+    :width: 400px
 
     N-of-N multisig account example
 
-3. Security is another critical aspect of multisig accounts. John wants to make sure his funds are not compromised in any way. Therefore he sets up a multisig account with his funds and attaches two accounts (signer accounts) to control his multisig account as a form of 2-factor authentication. Both of his signer accounts need to approve the transaction, and his signer accounts are located on different computer platforms with different passwords. This means that even if an evil hacker or virus should compromise one of his accounts, his funds are still kept secure.
+3. Security is another critical aspect of multisig accounts. Alice wants to make sure his funds are not compromised in any way. Therefore he sets up a multisig account with his funds and attaches two accounts (signer accounts) to control his multisig account as a form of 2-factor authentication. Both of his signer accounts need to approve the transaction, and his signer accounts are located on different computer platforms with different passwords. This means that even if an evil hacker or virus should compromise one of his accounts, his funds are still kept secure.
 
 .. figure:: ../resources/images/concepts-multisig-figure-3.png
     :align: center
+    :width: 250px
 
     Multi-factor authorization using multisig accounts
 
@@ -77,6 +80,7 @@ Let's see a three-level multisig account example.
 
 .. figure:: ../resources/images/concepts-multisig-multilevel-1.png
     :align: center
+    :width: 750px
 
     Three-level multisig account example
 
@@ -84,5 +88,6 @@ Who should cosign the transaction if *Account #5* initiates an aggregate bonded 
 
 .. figure:: ../resources/images/concepts-multisig-multilevel-2.png
     :align: center
+    :width: 750px
 
     Sending an aggregate bonded transaction from an MLMA
