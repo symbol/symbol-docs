@@ -93,3 +93,37 @@ If you want to use javascript directly, you can execute node to run js files.
 
 .. _ts-node: https://www.npmjs.com/package/ts-node
 
+Java
+====
+
+Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8.
+
+Use your favourite IDE or create a project from the command line.
+
+.. code-block:: bash
+
+    gradle init --type java-application
+
+Edit ``gradle.build`` to use Maven central repository.
+
+.. code-block:: java
+
+    repositories {
+        mavenCentral()
+    }
+
+Add nem2-sdk as a dependency.
+
+.. code-block:: java
+
+    dependencies {
+        compile "io.nem:sdk:0.8.10"
+    }
+
+Execute ``gradle build`` and ``gradle run`` to run your program.
+
+Continue: :doc:`Writing your first application <first-application>`.
+
+.. _gradle: https://gradle.org/install/
+
+.. _JDK: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
