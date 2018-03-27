@@ -53,7 +53,7 @@ class SendingATransferTransactionWithMultipleMosaics {
                 Address.createFromRawAddress(recipientAddress),
                 Arrays.asList(
                         new Mosaic(new MosaicId("alice:token"), BigInteger.valueOf(10)),
-                        Collections.singletonList(XEM.createRelative(BigInteger.valueOf(10)))
+                        XEM.createRelative(BigInteger.valueOf(10))
                 ),
                 PlainMessage.create("sending multiple mosaics"),
                 NetworkType.MIJIN_TEST

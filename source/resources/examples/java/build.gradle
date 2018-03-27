@@ -37,7 +37,7 @@ dependencies {
     compile "io.vertx:vertx-web-client:${vertxVersion}"
     compile "io.vertx:vertx-rx-java2:${vertxVersion}"
     compile "io.reactivex.rxjava2:rxjava:${rxjavaVersion}"
-    compile "io.nem:sdk:0.9.0"
+    compile "io.nem:sdk:0.8.10"
 
     // Tests
     testCompile 'org.slf4j:slf4j-simple:1.7.25'
