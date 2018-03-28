@@ -26,7 +26,7 @@ Please, take into consideration the next template to report your issue:
 > **Error description**\
 > Short and expressive sentence explaining what is wrong.\
 > **Url or screenshot**\
-> For faster issue detection, we would need where to find it. \
+> For faster issue detection, we would need where to find it.
 
 Provide as much information as you can.
 
@@ -72,7 +72,7 @@ Once your changes and tests are ready to submit for review:
 
 Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into nem2-docs.
 
-*CONTRIBUTING.md is based on [CONTRIBUTING-template.md](https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md)* , [elasticsearch/CONTRIGUTING](https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md) and [spark/CONTRIGUTING](https://github.com/apache/spark/blob/master/CONTRIBUTING.md)
+*CONTRIBUTING.md is based on [CONTRIBUTING-template.md](https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md)* , [elasticsearch/CONTRIBUTING](https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md) and [spark/CONTRIBUTING](https://github.com/apache/spark/blob/master/CONTRIBUTING.md)
 
 [pull-request]: https://help.github.com/articles/about-pull-requests/
 [github-issues]: https://github.com/nemtech/nem2-docs/issues
