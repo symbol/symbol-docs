@@ -33,7 +33,7 @@ NEM provides tools and services to accelerate blockchain development, greatly re
 
 Support
 =======
-Couldn't find what you were looking for? Visit :doc:`Support <support/feedback>`.
+Couldn't find what you were looking for? Visit :doc:`Support <support/contributing>`.
 
 Continue: :doc:`Getting started <getting-started/setup-workstation>`.
 
@@ -114,5 +114,4 @@ Continue: :doc:`Getting started <getting-started/setup-workstation>`.
     :hidden:
     :caption: Support
     
-    support/feedback
     support/contributing
