@@ -50,7 +50,7 @@ the feature you would like to see, why you need it, and how it should work.
 
 ## Contributing code and documentation changes
 
-If you have a bugfix or new feature that you would like to contribute to Elasticsearch, please find or open an issue 
+If you have a bugfix or new feature that you would like to contribute to nem2-docs, please find or open an issue
 about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there 
 are particular issues that you should know about before implementing the change.
 

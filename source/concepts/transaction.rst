@@ -46,7 +46,7 @@ Transactions share the following properties:
 
     **Fee**
 
-    How many XEM costs announcing the transaction. The higher the fee, the higher the priority of the transaction. Transactions with high priority get included in a block before transactions with lower priority.
+    How many XEM costs announcing the transaction.
 
     **Signature**
 
@@ -148,7 +148,7 @@ Mosaic supply change transaction is used to assign supply to a :doc:`mosaic<mosa
 
     **Mosaic Id**
 
-    Combination of namepsace name and mosaic name. For example "foo.bar:token".
+    Combination of namespace name and mosaic name. For example "foo.bar:token".
 
     **Direction**
 
@@ -244,11 +244,11 @@ Announce a lock funds transaction before sending an :ref:`announced aggregate bo
 
 Once the related aggregate bonded transaction is confirmed, funds locked become available again in the account that signed the initial lock funds transaction.
 
-If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
+If the aggregate bonded transaction deadline is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 
     **Mosaic**
 
-    Locked mosaic.
+    Locked mosaic, must be at least ``10 nem:xem```.
 
     **Duration**
 
@@ -269,7 +269,7 @@ Once announced, the specified mosaics are locked at blockchain level using the *
 
 Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account should demonstrate that knows the *proof* that unlocks the transaction. That means applying ``hashing algorithm`` to ``proof`` and obtaining hashed ``secret`` message.
 
-If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the lock funds transaction.
+If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the secret lock transaction.
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
     :align: center
