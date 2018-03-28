@@ -543,7 +543,7 @@ Afterwards, swap mosaics between multiple participants.
     :align: center
     :width: 600px
 
-    Atomic cross-chain trading between public and private network
+    Multi-Asset Escrowed Transactions
 
 .. _guide-asking-for-mosaics-with-aggregate-bonded-transaction:
 
@@ -920,7 +920,7 @@ Following this guide, you will swap transactions between different blockchain pl
     :align: center
     :width: 700px
 
-    Asking for mosaics with an aggregate bonded transaction
+    Atomic cross-chain trading between public and private network
 
 
 .. note:: Mijin and NEM share SDK. The example will work with other blockchain platforms if implements Secret Lock / Secret Proof transactions mechanism.
