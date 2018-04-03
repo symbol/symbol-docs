@@ -104,7 +104,7 @@ Use your favourite IDE or create a project from the command line.
 
     gradle init --type java-application
 
-Edit ``gradle.build`` to use Maven central repository.
+Edit ``build.gradle`` to use Maven central repository.
 
 .. code-block:: java
 
