@@ -16,7 +16,10 @@
  *
  */
 
-import {AccountHttp, Address} from "nem2-sdk";
+const nem2Sdk = require("nem2-sdk");
+
+const AccountHttp = nem2Sdk.AccountHttp,
+    Address = nem2Sdk.Address;
 
 const accountHttp = new AccountHttp('http://localhost:3000');
 

@@ -57,7 +57,9 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const signedTransaction2 = multisigAccount2.sign(convertMultisigAccount2Transaction);
 
-transactionHttp.announce(signedTransaction2).subscribe(x => console.log(x));
+transactionHttp.announce(signedTransaction2).subscribe(x => console.log(x),
+    err => console.error(err)
+);
 
 
 // Create multisig #3 (2-of-3)
@@ -98,7 +100,9 @@ const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.crea
 
 const signedTransaction3 = multisigAccount3.sign(convertMultisigAccount3Transaction);
 
-transactionHttp.announce(signedTransaction3).subscribe(x => console.log(x));
+transactionHttp.announce(signedTransaction3).subscribe(x => console.log(x),
+    err => console.error(err)
+);
 
 
 // Create multisig #1 (3-of-3)
@@ -131,4 +135,6 @@ const convertMultisigAccount1Transaction = ModifyMultisigAccountTransaction.crea
 
 const signedTransaction1 = multisigAccount1.sign(convertMultisigAccount1Transaction);
 
-transactionHttp.announce(signedTransaction1).subscribe(x => console.log(x));
+transactionHttp.announce(signedTransaction1).subscribe(x => console.log(x),
+    err => console.error(err)
+);

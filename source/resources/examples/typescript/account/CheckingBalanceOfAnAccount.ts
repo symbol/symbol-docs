@@ -27,10 +27,10 @@ const namespaceHttp = new NamespaceHttp(url);
 const mosaicService = new MosaicService(accountHttp, mosaicHttp, namespaceHttp);
 
 // Replace with address
-const address = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
+const address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
 
 mosaicService.mosaicsAmountViewFromAddress(Address.createFromRawAddress(address))
     .flatMap((_) => _)
-    .subscribe((mosaic) => {
-        console.log('You have', mosaic.relativeAmount(), mosaic.fullName());
-    });
+    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+        err => console.error(err)
+    );

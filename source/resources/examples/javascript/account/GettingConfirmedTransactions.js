@@ -36,6 +36,6 @@ const pageSize = 10;
 accountHttp.transactions(
     PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST),
     new QueryParams(pageSize)
-).subscribe(transactions => {
-    console.log(transactions);
-});
+).subscribe(transactions => console.log(transactions),
+    err => console.error(err)
+);

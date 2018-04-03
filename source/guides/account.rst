@@ -124,7 +124,7 @@ Calling ``accountHttp.getAccountInfo`` you can get account information just pass
 
     .. literalinclude:: ../resources/examples/javascript/account/GettingAccountInformation.js
         :language: javascript
-        :lines: 22-
+        :lines: 24-
 
     .. literalinclude:: ../resources/examples/cli/account/GettingAccountInformation.sh
         :language: bash
@@ -358,6 +358,10 @@ If everything goes well, Alice and Bob should be cosignatories of the multisig a
         :language: java
         :lines: 18-27
 
+    .. literalinclude:: ../resources/examples/javascript/account/GettingMultisigAccountCosignatories.js
+        :language: javascript
+        :lines: 24-
+
 .. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` method.
 
 What's next?
@@ -576,7 +580,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  26-60
+        :lines:  26-62
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -584,7 +588,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 29-63
+        :lines: 29-65
 
 2) Creating multisig account #3
 
@@ -592,7 +596,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  63-101
+        :lines:  65-105
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -600,7 +604,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 66-104
+        :lines: 68-108
 
 3) Creating multisig account #1
 
@@ -608,7 +612,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 104-
+        :lines: 108-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -616,7 +620,7 @@ Let’s get into some code
 
     .. literalinclude:: ../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 107-137
+        :lines: 110-
 
 What's next?
 ============

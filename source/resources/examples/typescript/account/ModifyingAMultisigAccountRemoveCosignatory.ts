@@ -32,7 +32,6 @@ const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemov
 
 // Replace with the cosignatory private key
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY as string;
-
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
 const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Remove,cosignatoryToRemove);
@@ -60,4 +59,6 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x));
+transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
+    err => console.error(err)
+);

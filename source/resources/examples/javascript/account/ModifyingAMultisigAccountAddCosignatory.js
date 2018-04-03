@@ -38,10 +38,10 @@ const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996
 const newCosignatoryPublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF530B1FB52389568F1';
 
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-const newCosignatoryAccount =  PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
+const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
-const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add,newCosignatoryAccount);
+const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add, newCosignatoryAccount);
 
 const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
@@ -79,13 +79,19 @@ const listener = new Listener('http://localhost:3000');
 
 listener.open().then(() => {
 
-    transactionHttp.announce(lockFundsTransactionSigned).subscribe(x => console.log(x));
+    transactionHttp.announce(lockFundsTransactionSigned).subscribe(
+        x => console.log(x),
+        err => console.error(err)
+    );
 
-    listener.confirmed(cosignatoryAccount.address).subscribe(transaction => {
-
-        if (transaction.transactionInfo && transaction.transactionInfo.hash == lockFundsTransactionSigned.hash) {
-
-            transactionHttp.announceAggregateBonded(signedTransaction).subscribe(x => console.log(x));
-        }
-    });
+    listener.confirmed(cosignatoryAccount.address)
+        .filter((transaction) => transaction.transactionInfo !== undefined
+            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
+        .subscribe(ignored => {
+                transactionHttp.announceAggregateBonded(signedTransaction).subscribe(
+                    x => console.log(x),
+                    err => console.error(err)
+                );
+            },
+            err => console.error(err));
 });

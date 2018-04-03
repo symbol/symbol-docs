@@ -17,7 +17,9 @@
  */
 
 const nem2Sdk = require("nem2-sdk");
+
 const AccountHttp = nem2Sdk.AccountHttp;
+const Address = nem2Sdk.Address;
 
 const accountHttp = new AccountHttp('http://localhost:3000');
 
@@ -26,6 +28,6 @@ const address = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
 
 accountHttp.getAccountInfo(
     Address.createFromRawAddress(address)
-).subscribe(accountInfo => {
-    console.log(accountInfo);
-});
+).subscribe(accountInfo => console.log(accountInfo),
+    err => console.error(err)
+);
