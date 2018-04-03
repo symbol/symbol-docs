@@ -24,7 +24,7 @@ const AccountHttp = nem2Sdk.AccountHttp,
     MosaicService = nem2Sdk.MosaicService,
     Address = nem2Sdk.Address;
 
-const url = 'http://localhost:3000/';
+const url = 'http://localhost:3000';
 
 const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);

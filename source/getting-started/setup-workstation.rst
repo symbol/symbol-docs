@@ -26,7 +26,7 @@ Create an account with the command line tool.
 
 .. code-block:: bash
 
-    $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000/
+    $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
 
 The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM blockchain used for development and testing purposes.
 

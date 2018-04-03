@@ -32,7 +32,7 @@ const originAccount = PublicAccount.createFromPublicKey(originPublicKey, Network
 // Replace with address
 const address = Address.createFromRawAddress(recipientAddress);
 
-const accountHttp = new AccountHttp('http://localhost:3000/');
+const accountHttp = new AccountHttp('http://localhost:3000');
 
 accountHttp
     .outgoingTransactions(originAccount)

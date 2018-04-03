@@ -18,7 +18,7 @@
 
 import {AccountHttp, Address} from "nem2-sdk";
 
-const accountHttp = new AccountHttp('http://localhost:3000/');
+const accountHttp = new AccountHttp('http://localhost:3000');
 
 // Replace with address
 const address = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';

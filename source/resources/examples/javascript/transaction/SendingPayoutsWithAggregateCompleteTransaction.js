@@ -49,7 +49,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(Deadline.create
     NetworkType.MIJIN_TEST,
     []);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const signedTransaction = account.sign(aggregateTransaction);
 

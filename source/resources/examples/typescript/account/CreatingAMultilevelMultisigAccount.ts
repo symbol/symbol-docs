@@ -53,7 +53,7 @@ const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.crea
     NetworkType.MIJIN_TEST
 );
 
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const signedTransaction2 = multisigAccount2.sign(convertMultisigAccount2Transaction);
 

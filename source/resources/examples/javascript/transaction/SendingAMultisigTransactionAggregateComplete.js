@@ -63,7 +63,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 //Creating the lock funds transaction and announce it
 
 
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 
 transactionHttp.announce(signedTransaction).subscribe(x => console.log(x));

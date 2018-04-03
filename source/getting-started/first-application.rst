@@ -199,19 +199,19 @@ Once signed, announce it to the network.
 
     .. code-block:: typescript
 
-        const transactionHttp = new TransactionHttp('http://localhost:3000/');
+        const transactionHttp = new TransactionHttp('http://localhost:3000');
 
         transactionHttp.announceTransaction(signedTransaction).subscribe(x => console.log(x));
 
     .. code-block:: java
 
-        final TransactionHttp transactionHttp = new TransactionHttp('http://localhost:3000/');
+        final TransactionHttp transactionHttp = new TransactionHttp('http://localhost:3000');
 
         transactionHttp.announceTransaction(signedTransaction).toFuture().get();
 
     .. code-block:: javascript
 
-        const transactionHttp = new TransactionHttp('http://localhost:3000/');
+        const transactionHttp = new TransactionHttp('http://localhost:3000');
 
         transactionHttp.announceTransaction(signedTransaction).subscribe(x => console.log(x));
 

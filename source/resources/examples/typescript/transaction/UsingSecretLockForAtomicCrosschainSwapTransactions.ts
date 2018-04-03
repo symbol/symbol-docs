@@ -48,7 +48,7 @@ const tx1 = SecretLockTransaction.create(
 
 // Alice sends TX1 to network (PUBLIC)
 const tx1Signed = aliceAccount.sign(tx1);
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp.announce(tx1Signed).subscribe((x) => console.log(x));
 
 

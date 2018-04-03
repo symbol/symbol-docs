@@ -19,7 +19,7 @@
 const nem2Sdk = require("nem2-sdk");
 const AccountHttp = nem2Sdk.AccountHttp;
 
-const accountHttp = new AccountHttp('http://localhost:3000/');
+const accountHttp = new AccountHttp('http://localhost:3000');
 
 // Replace with address
 const address = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';

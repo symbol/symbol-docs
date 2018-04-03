@@ -18,7 +18,7 @@
 
 import {AccountHttp, Address, MosaicHttp, MosaicService, NamespaceHttp} from 'nem2-sdk';
 
-const url = 'http://localhost:3000/';
+const url = 'http://localhost:3000';
 
 const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);

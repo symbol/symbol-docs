@@ -18,7 +18,7 @@
 
 import {AccountHttp, NetworkType, PublicAccount, QueryParams} from "nem2-sdk";
 
-const accountHttp = new AccountHttp('http://localhost:3000/');
+const accountHttp = new AccountHttp('http://localhost:3000');
 
 // Replace with public key
 const publicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';

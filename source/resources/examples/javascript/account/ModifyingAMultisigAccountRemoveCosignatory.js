@@ -63,6 +63,6 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 transactionHttp.announce(signedTransaction).subscribe(x => console.log(x));

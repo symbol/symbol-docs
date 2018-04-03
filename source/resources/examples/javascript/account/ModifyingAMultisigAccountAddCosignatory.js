@@ -72,7 +72,7 @@ const lockFundsTransaction = LockFundsTransaction.create(
 
 const lockFundsTransactionSigned = cosignatoryAccount.sign(lockFundsTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000/');
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 // announce signed transaction
 const listener = new Listener('http://localhost:3000');
