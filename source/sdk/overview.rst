@@ -30,10 +30,4 @@ Backward compatibility with NIS1 SDKs
 
 Start planning the migration to NEM2-SDK to take advantage of new Catapult features and future releases.
 
-Check :doc:`Preparing to NEM2-SDK 1.0.0 <release-notes/00-migration>` to see new features and changes that break backward compatibility with NEM-Library.
-
-*************
-Release notes
-*************
-
-* :doc:`Preparing to NEM2-SDK 1.0.0 <release-notes/00-migration>`
+Check :doc:`Preparing for NEM2-SDK 1.0.0 <release-notes/00-migration>` to see new features and changes that break backward compatibility with NEM-Library.

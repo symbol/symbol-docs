@@ -30,7 +30,7 @@ First of all, let's check if you have received XEM into your account.
 
 .. code-block:: bash
 
-    $> nem2-cli account info --address <your-address-here>
+    $> nem2-cli account info
 
 After running the command, you should see on your screen something similar to:
 
@@ -42,7 +42,7 @@ After running the command, you should see on your screen something similar to:
 
     3628d0b327fb1dd8:       1000000.00
 
-This account owns 1000000.00 XEM. If your row after mosaics is empty, try to :doc:`ask for some XEM again <setup-workstation>`.
+Our account owns 1000000.00 XEM. If your row after mosaics is empty, try to :doc:`ask for some XEM again <setup-workstation>`.
 
 **Monitoring the blockchain**
 
@@ -54,13 +54,13 @@ Monitoring ``unconfirmed`` shows you in real-time which transactions have reache
 
 .. code-block:: bash
 
-    $> nem2-cli monitor unconfirmed --address <your-address-here>
+    $> nem2-cli monitor unconfirmed
 
 See when a transaction involving the provided address gets ``confirmed``.
 
 .. code-block:: bash
 
-    $> nem2-cli monitor confirmed --address <your-address-here>
+    $> nem2-cli monitor confirmed
 
 
 **Creating a namespace**
@@ -81,7 +81,7 @@ To register a new namespace, you should specify a namespace name and its renting
 
 .. code-block:: bash
     
-    $> nem2-cli transaction namespace --name foo --network MIJIN_TEST --rootnamespace --duration 10000
+    $> nem2-cli transaction namespace --name foo --rootnamespace --duration 10000
 
 Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared in ``unconfirmedTransaction`` and when confirmed in ``confirmedTransaction``.
 
@@ -97,7 +97,7 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``, w
 
 .. code-block:: bash
     
-    $> nem2-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000 --network MIJIN_TEST
+    $> nem2-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
 
 **Send your first transfer transaction**
 
@@ -217,7 +217,7 @@ Once signed, announce it to the network.
 
     .. code-block:: bash
 
-        $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics foo:token::10 --network MIJIN_TEST --message my_first_transfer_transaction
+        $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics foo:token::10 --message my_first_transfer_transaction
 
 
 ************
