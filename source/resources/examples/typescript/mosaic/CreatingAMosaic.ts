@@ -66,4 +66,7 @@ const signedTransaction = account.sign(aggregateTransaction);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(x=> console.log(x));
+transactionHttp.announce(signedTransaction).subscribe(
+    x=> console.log(x),
+    err => console.error(err)
+);

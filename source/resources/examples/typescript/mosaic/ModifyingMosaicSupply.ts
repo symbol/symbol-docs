@@ -17,7 +17,7 @@
  */
 
 import {
-    Account, Deadline, Id, MosaicId, MosaicSupplyChangeTransaction, MosaicSupplyType, NetworkType, TransactionHttp,
+    Account, Deadline, MosaicId, MosaicSupplyChangeTransaction, MosaicSupplyType, NetworkType, TransactionHttp,
     UInt64
 } from 'nem2-sdk';
 
@@ -41,4 +41,7 @@ const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x));
+transactionHttp.announce(signedTransaction).subscribe(
+    x=> console.log(x),
+    err => console.error(err)
+);
