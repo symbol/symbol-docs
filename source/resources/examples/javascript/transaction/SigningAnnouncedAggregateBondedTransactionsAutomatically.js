@@ -35,14 +35,18 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 listener.open().then(() => {
 
     listener.aggregateBondedAdded(account.address)
-        .filter((transaction) => !transaction.signedByAccount(account.publicAccount))
-        .subscribe((aggregateTransaction) => {
+        .filter((_) => !_.signedByAccount(account.publicAccount))
+        .subscribe(aggregateTransaction => {
 
-            const cosignatureTransaction = CosignatureTransaction.create(aggregateTransaction);
+                const cosignatureTransaction = CosignatureTransaction.create(aggregateTransaction);
 
-            const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
+                const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
 
-            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(x => console.log(x));
-        });
+                transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(
+                    x => console.log(x),
+                    err => console.error(err)
+                );
+            }, err => console.error(err)
+        );
 });
 

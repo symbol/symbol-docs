@@ -108,7 +108,7 @@ Once signed, Alice can :doc:`announce the transaction <../api/announce-transacti
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  52-54
+        :lines:  52-
 
     .. literalinclude:: ../resources/examples/cli/transaction/SendingATransferTransaction.sh
         :language: bash
@@ -265,7 +265,7 @@ Then, he signs and announces the transaction.
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  60-69
+        :lines:  60-
 
 What's next?
 ============
@@ -361,7 +361,7 @@ First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with t
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  22-45
+        :lines:  22-46
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingPayoutsWithAggregateCompleteTransaction.java
         :language: java
@@ -369,7 +369,7 @@ First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with t
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  28-50
+        :lines:  28-52
 
 Do you know the difference between aggregate complete and aggregate bonded? In this case, one private key can sign all the transactions in the aggregate, so it is *aggregate complete*.
 
@@ -381,7 +381,7 @@ Just sign it and announce it!
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  46-
+        :lines:  47-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingPayoutsWithAggregateCompleteTransaction.java
         :language: java
@@ -389,7 +389,7 @@ Just sign it and announce it!
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  52-
+        :lines:  53-
         
 What's next?
 ============
@@ -518,7 +518,7 @@ Once the ticket distributor signs the aggregate transaction, the amount of locke
 
     .. literalinclude:: ../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  69-95
+        :lines:  69-
 
 Is it possible without aggregate transactions?
 ==============================================
@@ -636,7 +636,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
 
     .. literalinclude:: ../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  59-85
+        :lines:  59-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
         :language: java
@@ -644,7 +644,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
 
     .. literalinclude:: ../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  68-94
+        :lines:  68-
 
 If all goes well, Bob receives a notification via :ref:`WebSocket <guide-debugging-transactions>` (or fetched via :ref:`API Http request <guide-receiving-transactions-of-an-account>`).
 
@@ -704,7 +704,7 @@ For each aggregate bonded transaction that you want to sign, create a :ref:`cosi
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 33
+        :lines: 32
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
         :language: java
@@ -712,7 +712,7 @@ For each aggregate bonded transaction that you want to sign, create a :ref:`cosi
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  38
+        :lines:  37
 
 Sign the transaction using your account.
 
@@ -720,7 +720,7 @@ Sign the transaction using your account.
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 35
+        :lines: 34
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
         :language: java
@@ -728,7 +728,7 @@ Sign the transaction using your account.
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  40
+        :lines:  39
 
 And announce the ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
@@ -736,7 +736,7 @@ And announce the ``CosignatureSignedTransaction`` to the network using the ``Tra
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 37-
+        :lines: 36-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
         :language: java
@@ -744,7 +744,7 @@ And announce the ``CosignatureSignedTransaction`` to the network using the ``Tra
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  42-
+        :lines:  41-
 
 .. _guide-signing-announced-aggregate-bonded-transactions-automatically:
 
@@ -978,7 +978,7 @@ Alice signs and announces TX1 to NEM network.
 
     .. literalinclude:: ../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  49-52
+        :lines:  49-55
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.java
         :language: java
@@ -986,7 +986,7 @@ Alice signs and announces TX1 to NEM network.
 
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
-        :lines:  54-57
+        :lines:  54-60
 
 Alice can tell Bob the secret, or he can retrieve it directly from the recently announced transaction.
 
@@ -1003,7 +1003,7 @@ Bob creates a secret lock transaction TX2, which contains:
 
     .. literalinclude:: ../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  55-69
+        :lines:  58-72
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.java
         :language: java
@@ -1011,7 +1011,7 @@ Bob creates a secret lock transaction TX2, which contains:
 
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
-        :lines:  60-74
+        :lines:  63-77
 
 Once signed, Bob announces TX2 to MIJIN network.
 
@@ -1019,7 +1019,7 @@ Once signed, Bob announces TX2 to MIJIN network.
 
     .. literalinclude:: ../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  71-73
+        :lines:  74-79
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.java
         :language: java
@@ -1027,7 +1027,7 @@ Once signed, Bob announces TX2 to MIJIN network.
 
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
-        :lines:  76-78
+        :lines:  79-84
 
 Now, Alice can announce a secret proof transaction in MIJIN network, selecting encrypting algorithm, the original proof and secret used.
 
@@ -1035,7 +1035,7 @@ Now, Alice can announce a secret proof transaction in MIJIN network, selecting e
 
     .. literalinclude:: ../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  75-87
+        :lines:  81-95
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.java
         :language: java
@@ -1043,7 +1043,7 @@ Now, Alice can announce a secret proof transaction in MIJIN network, selecting e
 
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
-        :lines:  80-91
+        :lines:  86-100
 
 If all goes well, Alice unlocks TX2 funds, and the proof is revealed. Bob does the same by announcing a secret proof transaction TX4  in NEM blockchain.
 
@@ -1051,7 +1051,7 @@ If all goes well, Alice unlocks TX2 funds, and the proof is revealed. Bob does t
 
     .. literalinclude:: ../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  88-
+        :lines:  97-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.java
         :language: java
@@ -1059,7 +1059,7 @@ If all goes well, Alice unlocks TX2 funds, and the proof is revealed. Bob does t
 
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
-        :lines:  93-
+        :lines:  102-
 
 At that moment, Bob unlocks TX1 funds, and the atomic cross-chain swap concludes.
 

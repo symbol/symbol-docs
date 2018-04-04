@@ -34,14 +34,20 @@ listener.open().then(() => {
 
     listener.aggregateBondedAdded(account.address)
         .filter((_) => _.innerTransactions.length == 2)
-        .filter((transaction) => !transaction.signedByAccount(account.publicAccount))
+        .filter((_) => !_.signedByAccount(account.publicAccount))
         .filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount))
-        .subscribe((aggregateTransaction) => {
+        .subscribe(aggregateTransaction => {
 
-            const cosignatureTransaction = CosignatureTransaction.create(aggregateTransaction);
-            const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
-            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(x => console.log(x));
-        });
+                const cosignatureTransaction = CosignatureTransaction.create(aggregateTransaction);
+                const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
+
+                transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(
+                    x => console.log(x),
+                    err => console.error(err)
+                );
+
+            }, err => console.error(err)
+        );
 });
 
 function validTransaction(transaction: Transaction, publicAccount: PublicAccount) {

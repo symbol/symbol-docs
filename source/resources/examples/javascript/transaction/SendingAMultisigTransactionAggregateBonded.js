@@ -81,12 +81,19 @@ const listener = new Listener('http://localhost:3000');
 
 listener.open().then(() => {
 
-    transactionHttp.announce(lockFundsTransactionSigned).subscribe(x => console.log(x));
+    transactionHttp.announce(lockFundsTransactionSigned).subscribe(
+        x => console.log(x),
+        err => console.error(err)
+    );
 
-    listener.confirmed(cosignatoryAccount.address).subscribe(transaction => {
-
-        if (transaction.transactionInfo && transaction.transactionInfo.hash == lockFundsTransactionSigned.hash) {
-            transactionHttp.announceAggregateBonded(signedTransaction).subscribe(x => console.log(x));
-        }
-    });
+    listener.confirmed(cosignatoryAccount.address)
+        .filter((transaction) => transaction.transactionInfo !== undefined
+            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
+        .subscribe(ignored => {
+                transactionHttp.announceAggregateBonded(signedTransaction).subscribe(
+                    x => console.log(x),
+                    err => console.error(err)
+                );
+            },
+            err => console.error(err));
 });

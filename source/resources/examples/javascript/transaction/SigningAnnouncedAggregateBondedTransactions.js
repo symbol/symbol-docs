@@ -32,12 +32,15 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 accountHttp.aggregateBondedTransactions(account.publicAccount)
     .flatMap((_) => _)
-    .filter((transaction) => !transaction.signedByAccount(account.publicAccount))
-    .subscribe((transaction) => {
+    .filter((_) => !_.signedByAccount(account.publicAccount))
+    .subscribe(transaction => {
+            const cosignatureTransaction = CosignatureTransaction.create(transaction);
 
-        const cosignatureTransaction = CosignatureTransaction.create(transaction);
+            const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
 
-        const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
-
-        transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(x => console.log(x));
-    });
+            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(
+                x => console.log(x),
+                err => console.error(err)
+            );
+        }, err => console.error(err)
+    );

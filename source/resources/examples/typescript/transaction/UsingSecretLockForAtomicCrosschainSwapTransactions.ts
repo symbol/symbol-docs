@@ -49,7 +49,10 @@ const tx1 = SecretLockTransaction.create(
 // Alice sends TX1 to network (PUBLIC)
 const tx1Signed = aliceAccount.sign(tx1);
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-transactionHttp.announce(tx1Signed).subscribe((x) => console.log(x));
+transactionHttp.announce(tx1Signed).subscribe(
+    x => console.log(x),
+    err => console.error(err)
+);
 
 
 // Bob is a PRIVATE network user
@@ -70,7 +73,10 @@ const tx2 = SecretLockTransaction.create(
 
 // Bob sends TX2 to network (PRIVATE)
 const tx2Signed = bobAccount.sign(tx2);
-transactionHttp.announce(tx2Signed).subscribe((x) => console.log(x));
+transactionHttp.announce(tx2Signed).subscribe(
+    x => console.log(x),
+    err => console.error(err)
+);
 
 // Alice waits until Txs are confirmed
 // Alice spends TX2 transaction by sending SecretProofTransaction (in PRIVATE network)
@@ -83,7 +89,10 @@ const tx3 = SecretProofTransaction.create(
 );
 
 const tx3Signed = aliceAccount.sign(tx3);
-transactionHttp.announce(tx3Signed).subscribe((x) => console.log(x));
+transactionHttp.announce(tx3Signed).subscribe(
+    x => console.log(x),
+    err => console.error(err)
+);
 
 // Bob spends TX1 transaction by sending SecretProofTransaction (in PUBLIC network)
 const tx4 = SecretProofTransaction.create(
@@ -95,4 +104,7 @@ const tx4 = SecretProofTransaction.create(
 );
 const tx4Signed = aliceAccount.sign(tx4);
 
-transactionHttp.announce(tx4Signed).subscribe((x) => console.log(x));
+transactionHttp.announce(tx4Signed).subscribe(
+    x => console.log(x),
+    err => console.error(err)
+);

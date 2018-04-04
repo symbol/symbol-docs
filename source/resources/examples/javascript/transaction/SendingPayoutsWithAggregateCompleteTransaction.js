@@ -42,17 +42,20 @@ const amount = XEM.createRelative(10); // 10 xem represent 10 000 000 micro xem
 const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 
-const aggregateTransaction = AggregateTransaction.createComplete(Deadline.create(),
+const aggregateTransaction = AggregateTransaction.createComplete(
+    Deadline.create(),
     [
         brotherTransferTransaction.toAggregate(account.publicAccount),
         sisterTransferTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST,
-    []);
+    []
+);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const signedTransaction = account.sign(aggregateTransaction);
 
-transactionHttp.announce(signedTransaction).subscribe((x) => {
-    console.log(x);
-});
+transactionHttp.announce(signedTransaction).subscribe(
+    x => console.log(x),
+    err => console.error(err)
+);
