@@ -44,6 +44,7 @@ accountHttp
     .map((_) => _.mosaics[0].amount.compact() / Math.pow(10, XEM.DIVISIBILITY)) // Map only amount in xem
     .toArray() // Add all mosaics amounts into one array
     .map((_) => _.reduce((a, b) => a + b, 0))
-    .subscribe(total => console.log('Total xem send to account', address.pretty(), 'is:', total),
+    .subscribe(
+        total => console.log('Total xem send to account', address.pretty(), 'is:', total),
         err => console.error(err)
     );

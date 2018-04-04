@@ -25,6 +25,7 @@ const blockchainHttp = new BlockchainHttp('http://localhost:3000');
 // Replace with block height
 const height = 1;
 
-blockchainHttp.getBlockByHeight(height).subscribe(block => {
-    console.log(block);
-});
+blockchainHttp.getBlockByHeight(height).subscribe(
+    block => console.log(block),
+    err => console.error(err)
+);

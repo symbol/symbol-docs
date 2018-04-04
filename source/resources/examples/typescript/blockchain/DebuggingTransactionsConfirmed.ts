@@ -25,10 +25,10 @@ listener.open().then(() => {
 
     const address =  Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
-    listener.confirmed(address)
-        .subscribe((transaction) => {
-            console.log(transaction);
-        });
+    listener.confirmed(address).subscribe(
+        transaction => console.log(transaction),
+        err => console.error(err)
+    );
 });
 
 

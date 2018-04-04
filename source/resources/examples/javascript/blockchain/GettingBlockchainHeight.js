@@ -22,6 +22,7 @@ const BlockchainHttp = nem2Sdk.BlockchainHttp;
 
 const blockchainHttp = new BlockchainHttp('http://localhost:3000');
 
-blockchainHttp.getBlockchainHeight().subscribe((height) => {
-    console.log(height.compact());
-});
+blockchainHttp.getBlockchainHeight().subscribe(
+    height => console.log(height.compact()),
+    err => console.error(err)
+);

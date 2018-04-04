@@ -23,8 +23,7 @@ const accountHttp = new AccountHttp('http://localhost:3000');
 // Replace with address
 const address = 'SCSGBN-HYJD6P-KJHACX-3R2BI3-QUMMOY-QSNW5J-ICLK';
 
-accountHttp.getMultisigAccountInfo(
-    Address.createFromRawAddress(address)
-).subscribe(accountInfo => console.log(accountInfo),
+accountHttp.getMultisigAccountInfo(Address.createFromRawAddress(address)).subscribe(
+    accountInfo => console.log(accountInfo),
     err => console.error(err)
 );
