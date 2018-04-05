@@ -116,9 +116,9 @@ In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4X
     .. code-block:: typescript
 
         import {
-            Address, Deadline, XEM, UInt64, NetworkType, PlainMessage, TransferTransaction, Transaction, Mosaic, MosaicId
+            Account, Address, Deadline, UInt64, NetworkType, PlainMessage, TransferTransaction, Mosaic, MosaicId,
+            TransactionHttp
         } from 'nem2-sdk';
-
 
         const transferTransaction = TransferTransaction.create(
             Deadline.create(),
@@ -155,7 +155,16 @@ In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4X
 
         const nem2Sdk = require("nem2-sdk");
 
-        const Address = nem2Sdk.Address, Deadline = nem2Sdk.Deadline, XEM = nem2Sdk.XEM, UInt64 = nem2Sdk.UInt64, NetworkType = nem2Sdk.NetworkType, PlainMessage = nem2Sdk.PlainMessage, TransferTransaction = nem2Sdk.TransferTransaction, Transaction = nem2Sdk.Transaction, Mosaic = nem2Sdk.Mosaic, MosaicId = nem2Sdk.MosaicId;
+        const Address = nem2Sdk.Address,
+            Deadline = nem2Sdk.Deadline,
+            Account = nem2Sdk.Account,
+            UInt64 = nem2Sdk.UInt64,
+            NetworkType = nem2Sdk.NetworkType,
+            PlainMessage = nem2Sdk.PlainMessage,
+            TransferTransaction = nem2Sdk.TransferTransaction,
+            Mosaic = nem2Sdk.Mosaic,
+            MosaicId = nem2Sdk.MosaicId,
+            TransactionHttp = nem2Sdk.TransactionHttp;
 
         const transferTransaction = TransferTransaction.create(
             Deadline.create(),
@@ -201,7 +210,10 @@ Once signed, announce it to the network.
 
         const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-        transactionHttp.announceTransaction(signedTransaction).subscribe(x => console.log(x));
+        transactionHttp.announce(signedTransaction).subscribe(
+            x => console.log(x),
+            err => console.log(err)
+        );
 
     .. code-block:: java
 
@@ -213,7 +225,10 @@ Once signed, announce it to the network.
 
         const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-        transactionHttp.announceTransaction(signedTransaction).subscribe(x => console.log(x));
+        transactionHttp.announce(signedTransaction).subscribe(
+            x => console.log(x),
+            err => console.log(err)
+        );
 
     .. code-block:: bash
 
