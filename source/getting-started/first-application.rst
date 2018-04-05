@@ -40,9 +40,9 @@ After running the command, you should see on your screen something similar to:
 
     Mosaics
 
-    3628d0b327fb1dd8:       1000000.00
+    3628d0b327fb1dd8:       1000000
 
-Our account owns 1000000.00 XEM. If your row after mosaics is empty, try to :doc:`ask for some XEM again <setup-workstation>`.
+Our account owns 1.000.000 XEM. If your row after mosaics is empty, try to :doc:`ask for some XEM again <setup-workstation>`.
 
 **Monitoring the blockchain**
 
@@ -125,7 +125,7 @@ In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4X
             Address.createFromRawAddress('SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
             [new Mosaic(new MosaicId('foo:token'), UInt64.fromUint(10))],
             PlainMessage.create('my first transfer transaction!'),
-            NetworkType.MIJIN_TEST,
+            NetworkType.MIJIN_TEST
         );
 
     .. code-block:: java
@@ -171,7 +171,7 @@ In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4X
             Address.createFromRawAddress('SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
             [new Mosaic(new MosaicId('foo:token'), UInt64.fromUint(10))],
             PlainMessage.create('my first transfer transaction!'),
-            NetworkType.MIJIN_TEST,
+            NetworkType.MIJIN_TEST
         );
 
 Although the transaction is created, it has not been announced to the network yet. Sign the transaction with your account first, so the network can verify the authenticity of the transaction.

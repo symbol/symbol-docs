@@ -50,11 +50,11 @@ Interaction with WebSockets in :doc:`NEM2-SDK <../sdk/overview>` is done with ``
 
 .. csv-table:: WebSockets vs SDK Listeners
 
-   block, ``newBlock(): Observable<BlockInfo>``
-   confirmedAdded/<ADDRESS>, ``confirmed(address: Address): Observable<Transaction>``
-   unconfirmedAdded/<ADDRESS>, ``unconfirmedAdded(address: Address): Observable<Transaction>``
-   unconfirmedRemoved/<ADDRESS>, ``unconfirmedRemoved(address: Address): Observable<string>``
-   partialAdded/<ADDRESS>, ``aggregateBondedAdded(address: Address): Observable<AggregateTransaction>``
-   partialRemoved/<ADDRESS>, ``aggregateBondedRemoved(address: Address): Observable<string>``
-   cosignature/<ADDRESS>, ``cosignatureAdded(address: Address): Observable<CosignatureSignedTransaction>``
-   status/<ADDRESS>, ``status(address: Address): Observable<TransactionStatusError>``
+   block, ``newBlock()`` : ``Observable<BlockInfo>``
+   confirmedAdded/<ADDRESS>, ``confirmed(address: Address)`` : ``Observable<Transaction>``
+   unconfirmedAdded/<ADDRESS>, ``unconfirmedAdded(address: Address)`` : ``Observable<Transaction>``
+   unconfirmedRemoved/<ADDRESS>, ``unconfirmedRemoved(address: Address)`` : ``Observable<string>``
+   partialAdded/<ADDRESS>, ``aggregateBondedAdded(address: Address)`` : ``Observable<AggregateTransaction>``
+   partialRemoved/<ADDRESS>, ``aggregateBondedRemoved(address: Address)``: ``Observable<string>``
+   cosignature/<ADDRESS>, ``cosignatureAdded(address: Address)`` : ``Observable<CosignatureSignedTransaction>``
+   status/<ADDRESS>, ``status(address: Address)`` : ``Observable<TransactionStatusError>``

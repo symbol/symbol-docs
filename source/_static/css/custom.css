@@ -43,6 +43,18 @@
 
 }
 
+/* Tables */
+@media screen and (min-width: 992px ){
+
+    .wy-table-responsive table td, .wy-table-responsive table th {
+        white-space: normal;
+    }
+
+    .wy-table-responsive {
+        overflow: visible;
+    }
+}
+
 /* Code example */
 .example-selector{
     background-color: #e4e4e4;

@@ -43,6 +43,6 @@ In :doc:`NEM2-SDK <../sdk/overview>`, transactions are announced using ``Transac
 
 .. csv-table:: NIS2-API vs SDK TransactionHttp
 
-    PUT /transaction, ``announce(signedTransaction: SignedTransaction): Observable<TransactionAnnounceResponse>``
-    PUT /transaction/partial, ``announceAggregateBonded(signedTransaction: SignedTransaction): Observable<TransactionAnnounceResponse>``
-    PUT /transaction/cosignature, ``announceAggregateBondedCosignature(cosignatureSignedTransaction: CosignatureSignedTransaction): Observable<TransactionAnnounceResponse>``
+    PUT /transaction, ``announce(signedTransaction: SignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``
+    PUT /transaction/partial, ``announceAggregateBonded(signedTransaction: SignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``
+    PUT /transaction/cosignature, ``announceAggregateBondedCosignature(cosignatureSignedTransaction: CosignatureSignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``

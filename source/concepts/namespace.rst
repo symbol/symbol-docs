@@ -18,7 +18,7 @@ Just like on the internet, where a domain can have a sub-domain, namespaces can 
 
 It is possible to create multiple subnamespaces with the same name (example: ``foo.bar`` and ``foo2.bar``, ``bar`` is the subnamespace/sub-domain).
 
-Namespaces can have up to 3 levels, a namespace and its two levels of subnamespace domains.
+Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
 ******
 Fields

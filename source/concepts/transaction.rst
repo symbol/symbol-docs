@@ -135,9 +135,9 @@ Mosaic definition transaction is used to create a new :doc:`mosaic<mosaic>`.
 
     * ``supply``: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
 
-    * ``supply mutable``: The creator can choose between a definition that allows a mosaic supply change at a later point or a **immutable** supply. In the first case the creator is only allowed to decrease the supply within the limits of mosaics owned.
+    * ``supply mutable``: The creator can choose between a definition that allows a mosaic supply change at a later point or a immutable supply. In the first case the creator is only allowed to decrease the supply within the limits of mosaics owned.
 
-    * ``transferability``: The creator can choose if the mosaic can be transferred to and from arbitrary accounts, or only allowing itself to be the recipient once transferred for the first time.
+    * ``transferability``: The creator can choose if the mosaic can be transferred to and from arbitrary accounts, or only allowing itself to be the recipient once transferred.
 
 .. _mosaic-supply-change-transaction:
 
