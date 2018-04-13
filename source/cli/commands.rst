@@ -213,6 +213,40 @@ Transaction
 
 Transactions are signed with the profiles configured with ``nem2-cli profile create``.
 
+Cosign aggregate bonded transaction
+===================================
+
+Cosign and announce an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+
+Options
+
+.. code-block:: bash
+
+    -h, --hash <hash>       - Aggregate bonded transaction hash to be signed
+
+Command
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+
+Transaction info
+================
+
+Gets a :doc:`transaction <../concepts/transaction>` by its ID.
+
+Options
+
+.. code-block:: bash
+
+    -h, --hash <hash>       - Transaction hash
+
+Command
+
+.. code-block:: bash
+
+    $> nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+
 Send transfer transaction
 =========================
 
@@ -317,23 +351,6 @@ Command
 
     $> nem2-cli transaction mosaic --mosaicname token --namespacename new-namespace --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
 
-
-Transaction info
-================
-
-Gets a :doc:`transaction <../concepts/transaction>` by its ID.
-
-Options
-
-.. code-block:: bash
-
-    -h, --hash <hash>       - Transaction hash
-
-Command
-
-.. code-block:: bash
-
-    $> nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
 
 *********
 Namespace
