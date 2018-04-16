@@ -48,7 +48,13 @@ Our account owns 1.000.000 XEM. If your row after mosaics is empty, try to :doc:
 
 It is advisable to see what happens when sending and receiving transactions to the blockchain.
 
-We suggest opening two new terminals, and type the following commands:
+We suggest opening three new terminals, and type the following commands:
+
+The first terminal :ref:`monitors account transactions<guide-debugging-transactions>` validation errors.
+
+.. code-block:: bash
+
+    $> nem2-cli monitor status
 
 Monitoring ``unconfirmed`` shows you in real-time which transactions have reached the network, but are not valid yet.
 
@@ -61,7 +67,6 @@ See when a transaction involving the provided address gets ``confirmed``.
 .. code-block:: bash
 
     $> nem2-cli monitor confirmed
-
 
 **Creating a namespace**
 
