@@ -17,6 +17,8 @@ Error list
 
 This section describes the errors messages that can be returned from NIS.
 
+.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+
 .. csv-table::
    :header: "Error code", "Meaning"
 
@@ -33,19 +35,19 @@ This section describes the errors messages that can be returned from NIS.
    Failure_Core_Block_Harvester_Ineligible,
    Failure_Hash_Exists, The hash of the entity already exists either in the cache or the database.
    Failure_Signature_Not_Verifiable, The signature of the entity failed upon verification.
-   Failure_Aggregate_Too_Many_Transactions, The aggregate transaction exceeds the maximum number of inner transactions. An aggregate transaction can contain up to ''N'' inner transactions.
+   Failure_Aggregate_Too_Many_Transactions, The aggregate transaction exceeds the maximum number of inner transactions. An aggregate transaction can contain up to ``1000`` inner transactions.
    Failure_Aggregate_No_Transactions, The aggregate transaction does not contain any inner transactions.
-   Failure_Aggregate_Too_Many_Cosignatures, The aggregate transaction contains too many cosignatories. The maximum number of cosignatories allowed is ``N``.
+   Failure_Aggregate_Too_Many_Cosignatures, The aggregate transaction contains too many cosignatories. The maximum number of cosignatories allowed is ``15``.
    Failure_Aggregate_Redundant_Cosignatures, The aggregate transaction contains the cosignature of the account who signed the transaction.
    Failure_Aggregate_Ineligible_Cosigners, The account who signed the aggregate transaction is not an eligible cosigner.
    Failure_Aggregate_Missing_Cosigners, The aggregate transaction was announced as complete but there are missing signatures.
    Failure_Lock_Invalid_Hash_Algorithm, The hash algorithm used is not defined.
    Failure_Lock_Invalid_Mosaic_Id, The locks funds transaction failed because locked mosaic is not XEM.
-   Failure_Lock_Invalid_Mosaic_Amount, The amount of locked XEM  was insufficient. The minimum amount is ``N``.
+   Failure_Lock_Invalid_Mosaic_Amount, The amount of locked XEM is insufficient. The minimum amount is ``10``.
    Failure_Lock_Hash_Exists, The locks funds transaction failed because the hash of the aggregate transaction already exists either in the cache or in the database.
    Failure_Lock_Hash_Does_Not_Exist, The aggregate transaction failed because its hash has not been locked previously.
    Failure_Lock_Missing_Secret_Padding,
-   Failure_Lock_Hash_Not_Implemented, The secret lock and the secret proof used hash algorithm is different.
+   Failure_Lock_Hash_Not_Implemented, The secret lock and the secret proof hash algorithm used is different.
    Failure_Lock_Proof_Size_Out_Of_Bounds, The proof length is invalid. It should be between ``10 and 1000 bytes``.
    Failure_Lock_Secret_Mismatch, The proof hashed does not equal to the secret.
    Failure_Lock_Unknown_Secret, The secret proof transaction specifies a secret that has not been found in the cache.
@@ -64,9 +66,9 @@ This section describes the errors messages that can be returned from NIS.
    Failure_Multisig_Modify_Min_Setting_Out_Of_Range,
    Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories, It is not possible to set more required signatures than cosignatories has the multisig.
    Failure_Multisig_Modify_Unsupported_Modification_Type, The modification type is different than add (0) or remove (1).
-   Failure_Multisig_Modify_Max_Cosigned_Accounts, A cosignatory is already a member of ``N`` multisig accounts.
-   Failure_Multisig_Modify_Max_Cosigners, An aggregate transaction can only have up to ``N`` different cosigners.
-   Failure_Multisig_Modify_Loop, A multisig account cannot be cosignatory of itself. An account neither can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
+   Failure_Multisig_Modify_Max_Cosigned_Accounts,
+   Failure_Multisig_Modify_Max_Cosigners,
+   Failure_Multisig_Modify_Loop, A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
    Failure_Multisig_Modify_Max_Multisig_Depth, The maximum number of a multilevel multisig account is ``3``.
    Failure_Multisig_Operation_Not_Permitted_By_Account, A multisig account cannot be converted into a multisig account again.
    Failure_Namespace_Invalid_Duration, Duration lies too far in the future or refers to past. Duration is allowed to lie up to ``N`` blocks in the future.
@@ -77,19 +79,19 @@ This section describes the errors messages that can be returned from NIS.
    Failure_Mosaic_Name_Id_Mismatch,
    Failure_Namespace_Expired, Validation failed because the namespace has expired.
    Failure_Mosaic_Expired,  Validation failed because the mosaic has expired.
-   Failure_Namespace_Owner_Conflict, The signer of the transaction does not own the namespace.
-   Failure_Mosaic_Owner_Conflict, The signer of the transaction does not own the mosaic.
+   Failure_Namespace_Owner_Conflict, The signer of the transaction is not the owner of the namespace.
+   Failure_Mosaic_Owner_Conflict, The signer of the transaction is not the owner of the mosaic.
    Failure_Namespace_Invalid_Namespace_Type, The namespace type is different than rootnamespace (0) or subnamesapce (1).
    Failure_Namespace_Root_Name_Reserved, Certain strings are reserved and thus not allowed as namespace parts.
    Failure_Namespace_Too_Deep, Namespaces can have up to ``3`` levels.
    Failure_Namespace_Parent_Unknown, The provided parent namespace is unknown.
    Failure_Namespace_Already_Exists, The namespace already exists.
    Failure_Namespace_Already_Active,
-   Failure_Namespace_Eternal_After_Nemesis_Block, The namespace duration was set to 0.
+   Failure_Namespace_Eternal_After_Nemesis_Block, The namespace duration is set to 0.
    Failure_Mosaic_Parent_Id_Conflict,
    Failure_Mosaic_Invalid_Property,Transaction payload is invalid as it contains invalid property.
    Failure_Mosaic_Invalid_Flags, Transaction payload is invalid as it contains an invalid flag.
-   Failure_Mosaic_Invalid_Divisibility, The specified divisibility is greater than ``N`` or negative.
+   Failure_Mosaic_Invalid_Divisibility, The specified divisibility is greater than ``6`` or negative.
    Failure_Mosaic_Invalid_Supply_Change_Direction, The supply change direction is different than decrease (0) or increase (1).
    Failure_Mosaic_Invalid_Supply_Change_Amount, The provided supply change amount is not greater than 0.
    Failure_Mosaic_Name_Reserved, Certain strings are reserved and thus not allowed as mosaic parts.
