@@ -29,7 +29,7 @@ const namespace = "foo";
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
     Deadline.create(),
     namespace, // use your own namespace name
-    UInt64.fromUint(100000),
+    UInt64.fromUint(1000),
     NetworkType.MIJIN_TEST,
 );
 

@@ -48,7 +48,7 @@ class RegisteringANamespace {
         final RegisterNamespaceTransaction registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
                 Deadline.create(2, ChronoUnit.HOURS),
                 namespaceName,
-                BigInteger.valueOf(100000),
+                BigInteger.valueOf(1000),
                 NetworkType.MIJIN_TEST
         );
 

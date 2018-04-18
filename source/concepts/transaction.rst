@@ -248,7 +248,7 @@ If the aggregate bonded transaction deadline is reached without being signed by 
 
     **Mosaic**
 
-    Locked mosaic, must be at least ``10 nem:xem```.
+    Locked mosaic, must be at least ``10 nem:xem``.
 
     **Duration**
 

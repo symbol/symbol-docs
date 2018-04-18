@@ -86,7 +86,7 @@ To register a new namespace, you should specify a namespace name and its renting
 
 .. code-block:: bash
     
-    $> nem2-cli transaction namespace --name foo --rootnamespace --duration 10000
+    $> nem2-cli transaction namespace --name foo --rootnamespace --duration 1000
 
 Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared in ``unconfirmedTransaction`` and when confirmed in ``confirmedTransaction``.
 
@@ -102,7 +102,7 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``, w
 
 .. code-block:: bash
     
-    $> nem2-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+    $> nem2-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration 1000
 
 **Send your first transfer transaction**
 
