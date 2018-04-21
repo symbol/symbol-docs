@@ -205,7 +205,7 @@ Bob needs to know which is the public key of the multisig account that he shares
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
-        :lines: 43-54
+        :lines: 43-55
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
@@ -261,7 +261,7 @@ Then, he signs and announces the transaction.
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
-        :lines:  72-77
+        :lines:  72-78
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
@@ -680,82 +680,49 @@ Prerequisites
 Let’s get into some code
 =========================
 
-Fetch all aggregate bonded transactions that require being signed by your account.
+Create a function to cosign any aggregate bonded transaction.
 
 .. example-code::
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 21-31
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
-        :language: java
-        :lines:  36-48
+        :lines: 24-27
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  26-36
+        :lines:  26-30
+
+Fetch all aggregate bonded transactions pending to be signed by your account.
 
 .. note:: To fetch aggregate bonded transactions that should be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
-For each aggregate bonded transaction that you want to sign, create a :ref:`cosignature transaction <cosignature-transaction>` with it.
+For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
+
+Did you realise that we are using RxJS operators intensively? Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
 .. example-code::
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 32
+        :lines: 28-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
         :language: java
-        :lines:  50
+        :lines:  37-57
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  37
-
-Sign the transaction using your account.
-
-.. example-code::
-
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
-        :language: typescript
-        :lines: 34
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
-        :language: java
-        :lines:  52
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
-        :language: javascript
-        :lines:  39
-
-And announce the ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
-
-.. example-code::
-
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
-        :language: typescript
-        :lines: 36-
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
-        :language: java
-        :lines:  54
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
-        :language: javascript
-        :lines:  41-
+        :lines:  31-
 
 .. _guide-signing-announced-aggregate-bonded-transactions-automatically:
-
 
 *************************************************************
 Signing announced aggregate bonded transactions automatically
 *************************************************************
 
-Following this guide, you will create an application to sign  :ref:`aggregate bonded transactions <aggregate-transaction>` automatically.
+Following this guide, you will create an application that is notified every time your account receives a transaction pending to be cosigned.
 
-The app will be notified every time a new aggregate bonded transaction is sent to your account, sign the transaction and send it to the network.
+Automatically, the app will cosign the transaction and announce it to the network.
 
 Prerequisites
 =============
@@ -769,103 +736,43 @@ Prerequisites
 Let’s get into some code
 =========================
 
-Create a new listener to get notified every time a new aggregate bonded transaction is sent to your account.
+Create a function to cosign any aggregate bonded transaction.
 
 .. example-code::
 
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
+    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 25
+        :lines: 24-27
 
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :lines:  48
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
+    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  31
+        :lines:  26-30
+
+Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
 
 Open the connection. You only need to open the connection once and then connect to all desired channels.
 
-.. example-code::
-
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
-        :language: typescript
-        :lines: 29
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :lines:  50
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
-        :language: javascript
-        :lines:  35
-
-Start listening for new transactions to cosign by your account. To do this, subscribe to the ``aggregateBondedAdded`` channel using your account's address.
+Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
 
 .. note:: To sign automatically aggregate bonded transactions that should be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
-.. example-code::
+For each received transaction, check if you have not already signed it.  Cosign each pending aggregate bonded transaction using the previously created function.
 
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
-        :language: typescript
-        :lines: 31-33
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :lines:  52-54
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
-        :language: javascript
-        :lines:  37-39
-
-Now that you can get a new transaction, take the aggregate bonded transaction and create a :ref:`cosignature transaction <cosignature-transaction>` with it.
+Did you realise that we are using RxJS operators intensively? Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
 .. example-code::
 
     .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 35
+        :lines: 29-
 
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
         :language: java
-        :lines:  56
+        :lines:  39-61
 
     .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
-        :lines:  41
-
-Sign the transaction using your account.
-
-.. example-code::
-
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
-        :language: typescript
-        :lines: 37
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :lines:  58
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
-        :language: javascript
-        :lines:  43
-
-And announce the ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
-
-.. example-code::
-
-    .. literalinclude:: ../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
-        :language: typescript
-        :lines: 39-
-
-    .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :lines: 60
-
-    .. literalinclude:: ../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
-        :language: javascript
-        :lines:  45-
+        :lines:  31-
 
 What's next?
 ============
@@ -903,7 +810,7 @@ The goal of this guide is to show you how to exchange tokens between different b
 
 Background
 ==========
-Alice and Bob want to change 10 alice:token per 10 bob:token. The problem is that they are not in the same blockchain: Alice uses NEM public network, whereas Bob is using MIJIN private network.
+Alice and Bob want to exchange 10 alice:token for 10 bob:token. The problem is that they are not in the same blockchain: Alice uses NEM public network, whereas Bob is using MIJIN private network.
 
 One non-atomic solution could be:
 
@@ -934,7 +841,7 @@ Prerequisites
 Let's get into some code?
 =========================
 
-Alice picks a random number, which we call proof, and applies a sha512 hash, obtaining the secret.
+Alice picks a random number, which we call ``proof``. Applies SHA512 hash algorithm to it, obtaining the ``secret``.
 
 .. example-code::
 
@@ -954,7 +861,7 @@ Now, Alice creates a secret lock transaction, which contains:
 
 * The mosaic and amount to be sent: 10 alice:token
 * A recipient address: Bob's address in public chain
-* The secret that should be achieved in to unlock the funds.
+* The secret: Hashed proof.
 * The amount of time while funds can be unlocked: 96h
 
 .. example-code::
@@ -970,7 +877,6 @@ Now, Alice creates a secret lock transaction, which contains:
     .. literalinclude:: ../resources/examples/javascript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.js
         :language: javascript
         :lines:  43-52
-
 
 Alice signs and announces TX1 to NEM network.
 

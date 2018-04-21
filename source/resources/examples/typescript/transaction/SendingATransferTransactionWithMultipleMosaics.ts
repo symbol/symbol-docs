@@ -45,7 +45,5 @@ const transferTransaction = TransferTransaction.create(
 const signedTransaction = account.sign(transferTransaction);
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(
-    x => console.log(x),
-    err => console.error(err)
-);
+transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
+    err => console.error(err));

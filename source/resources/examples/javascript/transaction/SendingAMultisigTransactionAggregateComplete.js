@@ -40,7 +40,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const transferTransaction= TransferTransaction.create(
+const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     Address.createFromRawAddress(recipientAddress),
     [XEM.createRelative(10)],
@@ -57,16 +57,9 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     []
 );
 
-//Signing the aggregate transaction
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
-
-//Creating the lock funds transaction and announce it
-
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x => console.log(x),
-    err => console.error(err)
-);
+transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
+    err => console.error(err));

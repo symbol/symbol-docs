@@ -16,26 +16,28 @@
  *
  */
 
-import {Account, AccountHttp, CosignatureTransaction, NetworkType, TransactionHttp} from 'nem2-sdk';
+import {
+    Account, AccountHttp, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, NetworkType,
+    TransactionHttp
+} from 'nem2-sdk';
 
-// Replace with a private key
+const cosignAggregateBondedTransaction = (transaction:AggregateTransaction, account: Account) : CosignatureSignedTransaction => {
+    const cosignatureTransaction = CosignatureTransaction.create(transaction);
+    return account.signCosignatureTransaction(cosignatureTransaction);
+};
+
+// Replace with private key
 const privateKey = process.env.PRIVATE_KEY as string;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 const accountHttp = new AccountHttp('http://localhost:3000');
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
+
 accountHttp.aggregateBondedTransactions(account.publicAccount)
     .flatMap((_) => _)
     .filter((_) => !_.signedByAccount(account.publicAccount))
-    .subscribe(transaction => {
-            const cosignatureTransaction = CosignatureTransaction.create(transaction);
-
-            const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
-
-            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(
-                x => console.log(x),
-                err => console.error(err)
-            );
-        }, err => console.error(err)
-    );
+    .map(transaction => cosignAggregateBondedTransaction(transaction, account))
+    .flatMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+    .subscribe(announcedTransaction => console.log(announcedTransaction),
+        err => console.error(err));

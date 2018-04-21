@@ -23,6 +23,20 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp,
     CosignatureTransaction = nem2Sdk.CosignatureTransaction;
 
+const validTransaction = (transaction, publicAccount) => {
+    return transaction instanceof TransferTransaction &&
+        transaction.signer.equals(publicAccount) &&
+        transaction.mosaics.length == 1 &&
+        transaction.mosaics[0].id.equals(XEM.MOSAIC_ID) &&
+        transaction.mosaics[0].amount.compact() < XEM.createRelative(100).amount.compact();
+};
+
+const cosignAggregateBondedTransaction = (transaction, account) => {
+    const cosignatureTransaction = CosignatureTransaction.create(transaction);
+    return account.signCosignatureTransaction(cosignatureTransaction);
+};
+
+// Replace with private key
 const privateKey = process.env.PRIVATE_KEY;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
@@ -37,24 +51,8 @@ listener.open().then(() => {
         .filter((_) => _.innerTransactions.length == 2)
         .filter((_) => !_.signedByAccount(account.publicAccount))
         .filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount))
-        .subscribe(aggregateTransaction => {
-
-                const cosignatureTransaction = CosignatureTransaction.create(aggregateTransaction);
-                const cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
-
-                transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).subscribe(
-                    x => console.log(x),
-                    err => console.error(err)
-                );
-
-            }, err => console.error(err)
-        );
+        .map(transaction => cosignAggregateBondedTransaction(transaction, account))
+        .flatMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+        .subscribe(announcedTransaction => console.log(announcedTransaction),
+            err => console.error(err));
 });
-
-function validTransaction(transaction, publicAccount) {
-    return transaction instanceof TransferTransaction &&
-        transaction.signer.equals(publicAccount) &&
-        transaction.mosaics.length == 1 &&
-        transaction.mosaics[0].id.equals(XEM.MOSAIC_ID) &&
-        transaction.mosaics[0].amount.compact() < XEM.createRelative(100).amount.compact();
-}
