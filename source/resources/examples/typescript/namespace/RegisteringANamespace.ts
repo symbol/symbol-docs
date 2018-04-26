@@ -23,7 +23,7 @@ const privateKey = process.env.PRIVATE_KEY as string;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-//Replace with namespace name
+//Replace with namespace name (all lowercase)
 const namespace = "foo";
 
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
