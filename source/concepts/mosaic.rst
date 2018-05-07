@@ -38,7 +38,7 @@ The basic data for a mosaic definition consists of:
 
     * Divisibility: Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
 
-    * Duration: The number of confirmed blocks we would like to rent our namespace for. Should be inferior or equal to namespace duration.
+    * Duration: The number of confirmed blocks we would like to rent our namespace for.
 
     * Supply: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
 

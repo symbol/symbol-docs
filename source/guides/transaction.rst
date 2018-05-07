@@ -463,7 +463,7 @@ Let's get into some code?
 
 **Setting up the required accounts and mosaics**
 
-In this example, Alice and a ticket distributor want to swap the following assets.
+In this example, Alice and a ticket distributor want to swap the following mosaics.
 
 .. csv-table::
         :header: "Owner", "Mosaic Name", "Amount"

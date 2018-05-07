@@ -6,7 +6,7 @@ Multisig Account
 
 A NEM :doc:`account <account>` can be converted to multisig account at the blockchain level, assigning rights of a certain account to other accounts.
 
-This unlocks various advantages and interesting possibilities for the user. For example, enables several people to administrate the activity of an account, control assets such as XEM from one account, other mosaics, or create additional  :doc:`transactions <transaction>` such as creating a new token.
+This unlocks various advantages and interesting possibilities for the user. For example, enables several people to administrate the activity of an account, control mosaics, or create additional :doc:`transactions <transaction>`.
 
 ******
 Fields

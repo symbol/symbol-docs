@@ -67,7 +67,7 @@ Transaction types
 Transfer transaction
 ====================
 
-Transfer transaction is used to send :doc:`assets <mosaic>` between two accounts. It can hold a message of length ``1024``.
+Transfer transaction is used to send :doc:`mosaics <mosaic>` between two accounts. It can hold a message of length ``1024``.
 
 Following parameters are required:
 
@@ -131,7 +131,7 @@ Mosaic definition transaction is used to create a new :doc:`mosaic<mosaic>`.
 
     * ``divisibility``: Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
 
-    * ``duration``: The number of confirmed blocks we would like to rent our namespace for. Should be inferior or equal to namespace duration.
+    * ``duration``: The number of confirmed blocks we would like to rent our namespace for.
 
     * ``supply``: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
 
@@ -240,9 +240,9 @@ Cosignature transaction is used to sign :ref:`announced aggregate bonded transac
 Lock funds transaction
 ======================
 
-Announce a lock funds transaction before sending an :ref:`announced aggregate bonded transactions<aggregate-transaction>`.
+Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`.
 
-Once the related aggregate bonded transaction is confirmed, funds locked become available again in the account that signed the initial lock funds transaction.
+Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
 
 If the aggregate bonded transaction deadline is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 
