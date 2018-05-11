@@ -2,17 +2,7 @@
 Node
 ####
 
-Nodes are the entities that exchange data in a P2P network. They form the core to ensure and keep the network plus the block chain validated all the time.
-
-A node is essentially a **NEM Infrastructure Server** (short: ``NIS``) instance running on a computer. To be able to communicate with the network, a node needs to be booted.
-
-Through node requests, it is possible to discover other nodes in the network, learn about other nodes experiences and get information about their current chain height.
-
-************
-Architecture
-************
-
-Catapult is fast because it’s built with a four-layered architecture. This keeps each layer free from getting slowed down by the others, so API calls and data queries can respond quickly even with high traffic. It also allows developers to update any of these tiers without disrupting the others, improving security.
+The NEM blockchain platform is built from a network of nodes, all running NEM’s core node server software. In summary, these nodes provide a powerful, easy-to-use, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
 .. figure:: ../resources/images/four-layer-architecture.png
     :width: 650px
@@ -20,6 +10,25 @@ Catapult is fast because it’s built with a four-layered architecture. This kee
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
-Consider a node as the aggregation of the core blockchain server for P2P, database and API server, corresponding to the first and second layers.
+
+The four-layered architecture allows developers to update any of these tiers without disrupting the others, improving security.
+
+NEM nodes are represented in the two first layers:
+
+Layer 01 - The blockchain network
+=================================
+Each NEM node works with other nodes to build the peer-to-peer blockchain network. In sum, this network creates and supports the blockchain itself.
+
+The NEM node software verifies transactions, maintains a database, synchronizes with other nodes, and maintains stability and trustworthiness to create a network that is fast, secure, and scalable.
+
+Layer 02 - API Gateway Server
+=============================
+
+Each node provides the API gateway that applications may use to access the blockchain and its features.
+
+Your application does not need to run any complex node software; all usage functionality is available through the API interface on each node in the network itself.
+
+Blockchain can be used to create a variety of solution architectures with light-weight code in any language.
+
 
 .. note:: How to run a node and minimum requirements not yet available.

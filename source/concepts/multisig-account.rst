@@ -4,9 +4,25 @@ Multisig Account
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-A NEM :doc:`account <account>` can be converted to multisig account at the blockchain level, assigning rights of a certain account to other accounts.
+Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
 
-This unlocks various advantages and interesting possibilities for the user. For example, enables several people to administrate the activity of an account, control mosaics, or create additional :doc:`transactions <transaction>`.
+A NEM :doc:`account <account>` can be :ref:`converted to multisig <guide-converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself, requiring other accounts to announce transactions for them.  These other accounts are the multisig ``cosignatories``.
+
+Besides, it is not always necessary to force all cosignatories to cosign the transaction. NEM allows to set up the minimum number of cosignatories agreement. These properties can be edited afterwards to suit almost any needs.
+
+Some important considerations to keep in mind:
+
+* Once you convert an account to a multisig, you can no longer initiate transactions from that account. Only the cosignatories can initiate transactions for the account.
+
+* NEM's current implementation of multisig is *"M-of-N"*, meaning M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+
+* Multisig accounts can have up to ``10`` cosignatories.
+
+* An account can be cosigner of up to ``5`` multisig accounts.
+
+* The number of minimum cosignatures to approve transactions and remove cosignatories is editable.
+
+.. warning:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost, and minimum approval is not reached, this would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
 
 ******
 Fields
@@ -21,21 +37,10 @@ A multisig account has the following properties:
 
     The number of signatures needed to remove a cosignatory.
 
-    **Modifications**
+    **Cosignatories**
 
-    List of cosigner accounts involved in the multisignature account.
+    List of :doc:`accounts <account>` enabled to announce and cosign transactions for its approval.
 
-.. warning:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost, and minimum approval is not reached, this would currently result in the permanent loss of access to the funds held by the multisig account.
-
-Multisig accounts permissions can be edited to suit almost any needs. Despite that, you should consider the following:
-
-* Once you convert an account to a multisig account, you can no longer initiate transactions from that account. All transactions from the multisig account must be initiated by one of the cosignatories.
-
-* NEM's current implementation of multisig is *"M-of-N"*, meaning M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 11-of-12 and so on.
-
-* You can create multisig accounts with up to ``10`` cosignatories.
-
-* You can choose the number of minimum cosignatories to approve transactions and remove cosignatories.
 
 There is a broad range of useful applications for multisig accounts. Let's take a look at some of the common use cases.
 
@@ -43,7 +48,7 @@ There is a broad range of useful applications for multisig accounts. Let's take 
 
 .. figure:: ../resources/images/concepts-multisig-figure-1.png
     :align: center
-    :width: 400px
+    :width: 300px
 
     M-of-N multisig account example
 
@@ -51,7 +56,7 @@ There is a broad range of useful applications for multisig accounts. Let's take 
 
 .. figure:: ../resources/images/concepts-multisig-figure-2.png
     :align: center
-    :width: 400px
+    :width: 350px
 
     N-of-N multisig account example
 
@@ -59,35 +64,47 @@ There is a broad range of useful applications for multisig accounts. Let's take 
 
 .. figure:: ../resources/images/concepts-multisig-figure-3.png
     :align: center
-    :width: 250px
+    :width: 300px
 
     Multi-factor authorization using multisig accounts
 
-To convert a normal account to a multisig account or edit an existent one, announce a :doc:`modify multisig account transaction <transaction>`.
+4. Multisig accounts can be used to represent the ownership of assets. A company could create a 1-of-1 multisig account for each of their products, adding themselves as the cosignatory. When the company sells the product to Alice, she becomes the owner, being the company removed in the same transaction.
+
+.. figure:: ../resources/images/concepts-multisig-figure-4.png
+    :align: center
+    :width: 300px
+
+    Transferring an account
 
 ************************************
 Multi-Level Multisig Accounts (MLMA)
 ************************************
 
-A Multi-Level Multisig Account is a multisig that has a cosigner that is another multisig. MLMA accounts add “AND/OR” logic to multi-signature transactions.
+Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
-Consider the following constraints:
+MLMA allow a huge variety of business logic:
 
-* The maximum number of levels is ``3``.
-* The maximum of no-multisig cosigners (leaf) is ``5``.
+1. In this example, a manufacturer is shipping a product such as a pharmaceutical. The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature. Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
 
-Let's see a three-level multisig account example.
-
-.. figure:: ../resources/images/concepts-multisig-multilevel-1.png
+.. figure:: ../resources/images/concepts-mlma-figure-1.png
     :align: center
     :width: 750px
 
-    Three-level multisig account example
+    Manufacturing and Supply Chains
 
-Who should cosign the transaction if *Account #5* initiates an aggregate bonded transaction? Notice that multisig accounts are not capable of cosigning transactions, being responsible for doing so no-multisig cosigners.
 
-.. figure:: ../resources/images/concepts-multisig-multilevel-2.png
+2. This example shows how a high-security account can be made easier to use. Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI. MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.
+
+.. figure:: ../resources/images/concepts-mlma-figure-2.png
+    :align: center
+    :width: 550px
+
+    Fraud Detection
+
+3. You can set up your account so it can be recovered only with the approval of signatures from specified accounts, such as your friends and family. Combine the branches any way you like.
+
+.. figure:: ../resources/images/concepts-mlma-figure-3.png
     :align: center
     :width: 750px
 
-    Sending an aggregate bonded transaction from an MLMA
+    Account Recovery

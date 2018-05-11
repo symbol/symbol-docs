@@ -2,9 +2,19 @@
 NEM Developer Documentation
 ###########################
 
-|nem| blockchain technology delivers a world-class platform for management of almost any kind of asset: currencies, supply chains, notarizations, ownership records and more.
+|nem| is a blockchain platform built from the ground up to be simple for developers to use blockchain technology.
 
-NEM’s power is exposed through a straightforward and secure developer interface so that you can deploy your blockchain solution in record time.
+NEM is built around a powerful system for customizing your use of the blockchain. We call it the “Smart Asset System”, and it gives you the power to use NEM as if it were a custom blockchain built for your application and your assets.
+
+.. figure:: resources/images/smart-assets-system.png
+    :align: center
+    :width: 600px
+
+    The Smart Asset System
+
+Rather than force you to write your own “smart contract” code from scratch or use off-blockchain methods of defining custom assets for your application, NEM gives you direct access to a specialized set of tested and secure on-blockchain features.
+
+NEM is suitable for an amazing variety of solution classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
 
 .. note:: This documentation refers to NEM latest version, **Catapult**, which provides higher performance and new functionalities to NEM.
 
@@ -12,15 +22,17 @@ Here you will find everything you need to implement NEM in your application or s
 
 Getting started
 ===============
-Is this your first time developing with NEM Catapult? Start by :doc:`setting up your working environment <getting-started/setup-workstation>` and then :doc:`follow the first guide <getting-started/first-application>`.
+Is this your first time developing with blockchain technology? NEM was created to be your entry point into the blockchain industry.
+
+Start by :doc:`setting up your working environment <getting-started/setup-workstation>` and then :doc:`follow the first guide <getting-started/first-application>`.
 
 Fundamentals
 ============
-When working with the NEM Blockchain technology, it is essential to understand its core concepts, such as :doc:`Blocks<concepts/block>`, :doc:`Nodes<concepts/node>`, :doc:`Accounts <concepts/account>`,  :doc:`Transactions <concepts/transaction>`,  :doc:`Namespaces <concepts/namespace>` and :doc:`Mosaics <concepts/mosaic>`.
+NEM Smart Assets are built using four closely connected parts: :doc:`Accounts <concepts/account>`,  :doc:`Transactions <concepts/transaction>`,  :doc:`Namespaces <concepts/namespace>` and :doc:`Mosaics <concepts/mosaic>`.
 
 Developer Guides
 ================
-The guide section provides you with code examples of possible implementations of the abovementioned fundamentals, along with easy-to-follow :doc:`step by step guides <guides/overview>`.
+Easy-to-follow :doc:`step by step guides <guides/overview>` with code examples.
 
 References
 ==========
@@ -54,7 +66,6 @@ Continue: :doc:`Getting started <getting-started/setup-workstation>`.
     :hidden:
     :caption: Fundamentals
 
-    concepts/overview
     concepts/account
     concepts/multisig-account
     concepts/transaction

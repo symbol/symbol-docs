@@ -4,7 +4,13 @@ Transaction
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-Transactions are actions taken on the blockchain that change its state.
+Transactions are actions taken on the blockchain that change its state. In other words, how your Smart Assets are put into action.
+
+Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`account <accounts>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-acount>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
+
+**********************
+Transaction life-cycle
+**********************
 
 Once a transaction is initiated, it is still unconfirmed and thus not yet accepted by the network. At this point, it is not clear if it will get included in a block. Never rely on a transaction which has the state unconfirmed.
 
@@ -240,7 +246,7 @@ Cosignature transaction is used to sign :ref:`announced aggregate bonded transac
 Lock funds transaction
 ======================
 
-Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`.
+Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming and ensure that transactions are cosigned.
 
 Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
 

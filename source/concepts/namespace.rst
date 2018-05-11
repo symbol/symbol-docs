@@ -4,11 +4,12 @@ Namespace
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-A namespace is an on-chain unique domain for your  :doc:`assets <mosaic>`.
 
-The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
+Namespaces let you create an on-chain unique place for your business and your assets on the NEM blockchain.
 
-If one :doc:`account <account>` creates a namespace, that namespace will appear unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
+A namespace starts with a unique name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear unique in the NEM ecosystem.
+
+After registering your namespace, you have the ability to define your own subdomains, as well as names for your :doc:`mosaics <mosaics>`. This makes your assets unique, easy to use, and trustable.
 
 *************
 Subnamespaces

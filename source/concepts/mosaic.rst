@@ -4,11 +4,13 @@ Mosaic
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-:doc:`Namespaces <namespace>` give rise to a unique naming convention. Mosaics give rise to the creation of assets.
+Mosaics are part of what makes the Smart Asset System unique and flexible. Mosaics are fixed assets on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
-Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+A mosaic could be as simple as a token, but it could also represent a set of more specialized assets like: reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-A mosaic is like a file hosted on a domain, and represents an asset.  Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
+Each Mosaic is defined by a variety of attributes such as name, description, quantity, divisibility, transferability and more.
+
+Mosaics are held within :doc:`accounts <account>`, and can be transferred between them to represent a surprising variety of transactions such as: registering a signature, updating the status of an item, casting a vote, or simply passing coins or points between accounts.
 
 ******
 Fields
@@ -18,15 +20,19 @@ The basic data for a mosaic definition consists of:
 
     **Namespace**
 
-    To be able to create a mosaic definition, an account must rent at least one root namespace which the mosaic definition can then refer to.
+    A mosaic is always linked to a namespace, like a file hosted on a domain.
 
     **Name**
 
-    Name of the mosaic, up to a size limit of ``64`` characters; must be unique under the domain name.
+    Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
 
-    Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    Mosaics are named joining the namespace name with the mosaic name using ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
 
-    Mosaics are usually identified by the joining the namepace name with the mosaic name using ':' symbol. For example, if we create a namespace called ``nem`` and a mosaic called ``xem`` under it, mosaic is referenced as ``nem:xem``.
+    Consider the following restrictions:
+
+    * The name of the mosaic has a size limit of ``64`` characters and must be unique under the domain name.
+
+    * Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
     **Owner**
 

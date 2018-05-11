@@ -4,9 +4,13 @@ Account
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-An account is a key pair (private and public key) associated to a mutable state stored on the NEM blockchain.
+An account is a key pair (private and public key) associated to a mutable state stored on the NEM blockchain. Simply put, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
-The state of the account is modified when the network accepts :doc:`transactions <transaction>` involving it.
+Think about NEM accounts as a container for assets on the blockchain. An account could represent a simple as a user’s account full of coins, like most blockchains. But it could also represent a single object that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
+
+Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be can be updated and transferred. One crucial rule type is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties, all on the blockchain.
+
+.. note:: It is recommended to share the address instead of the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
 
 ******
 Fields
@@ -24,7 +28,7 @@ An account has the following properties:
 
     **Public key**
 
-    To derive the public key from the private key, NEM is using the ``Ed25519 elliptic curve`` with the ``SHA3`` hashing algorithm.
+    The **public key** is cryptographically derived from the private key. NEM is using the ``Ed25519 elliptic curve`` with the ``SHA3`` hashing algorithm.
 
     It appears that in general, to break an n bit elliptic curve public key, the effort is 2^(n/2), or about 3.4*10^38, basic operations.
 

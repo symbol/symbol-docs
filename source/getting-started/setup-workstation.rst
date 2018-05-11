@@ -12,7 +12,7 @@ An account is a key pair (private and public key) associated to a mutable state 
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the NEM Blockchain protocol. It is better to share this address than just the public key, as it contains more information, such as a validity check and which network it uses (public, private or testnet).
+Finally, the account address is generated with the public key, following the NEM blockchain protocol. It is better to share this address than just the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
 
 :doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account and sending funds, etc.
 
