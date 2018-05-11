@@ -8,9 +8,7 @@ Sending transactions
 Sending a transfer transaction
 ******************************
 
-The goal of this guide is to create a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
-
-Then, you will sign and announce the transaction to the network.
+The goal of this announce a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
 Prerequisites
 =============
@@ -29,33 +27,32 @@ Background
 
     Sending a transfer Transaction
 
-Alice wants to send 10 XEM to Bob, who just created a NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 XEM to Bob, who just created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
-The transfer transaction is used to send mosaics between two accounts. It can hold a message of length ``1024``.
 
 **Monitoring the transaction**
 
-Before starting this example, it is advisable to see what happens when sending transactions to the blockchain.
+Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-We suggest opening three new terminals, and type the following commands:
+Receiving an OK response doesn't mean the transaction is valid, hence not included in a block. A good practice is to monitor transactions before being announced.
 
-The first terminal :ref:`monitors account transactions<guide-debugging-transactions>` validation errors.
-
-.. code-block:: bash
-
-    $> nem2-cli monitor status --address <your-address-here>
-
-Monitoring ``unconfirmed`` shows you in real-time which transactions have reached the network, but are not valid yet.
+We suggest opening three new terminals. The first terminal :ref:`monitors announced transactions<guide-debugging-transactions>` validation errors.
 
 .. code-block:: bash
 
-    $> nem2-cli monitor unconfirmed --address <your-address-here>
+    $> nem2-cli monitor status
 
-See when a transaction involving the provided address gets ``confirmed``.
+Monitoring ``unconfirmed`` shows you which transactions have reached the network, but not yet included in a block.
 
 .. code-block:: bash
 
-    $> nem2-cli monitor confirmed --address <your-address-here>
+    $> nem2-cli monitor unconfirmed
+
+Once a transaction is included, you will see it under the ``confirmed`` terminal.
+
+.. code-block:: bash
+
+    $> nem2-cli monitor confirmed
 
 Let’s get into some code
 =========================
@@ -118,12 +115,12 @@ Open the terminal where you are monitoring account transactions ``status``, it s
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
-If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account. Additionally, the transaction fee is deducted from the sender's account.
+If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.
 
 What's next?
 ============
 
-Afterwards, try to send new transfer transactions by altering your code to send multiple mosaics in the same transaction.
+Send a new transfer transactions by altering your code to send multiple mosaics in the same transaction.
 
 **Adding multiple mosaics**
 
@@ -135,7 +132,7 @@ Afterwards, try to send new transfer transactions by altering your code to send 
 
 As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to create transfer transactions with multiple mosaics at a time.
 
-If you own more than one mosaic, try to send them together in the same transaction by changing the array:
+If you own more than one mosaic, try to send them together in the same transaction:
 
 .. example-code::
 
@@ -161,9 +158,7 @@ If you own more than one mosaic, try to send them together in the same transacti
 Sending a multisig transaction
 ******************************
 
-The purpose of this guide is to create a :doc:`multisig <../concepts/multisig-account>` transaction, learning how :ref:`aggregate bonded transaction <aggregate-transaction>` works.
-
-Then, you will sign and announce the transaction to the network.
+Send a transaction involving a :doc:`multisig <../concepts/multisig-account>`, learning how :ref:`aggregate bonded transaction <aggregate-transaction>` works.
 
 Background
 ==========
@@ -301,9 +296,7 @@ Open a new terminal for :ref:`monitoring<guide-debugging-transactions>` the aggr
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM.
-
-Once all cosigners sign the transaction, the amount of XEM becomes available again on Bob's account.
+When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again on Bob's account.
 
 After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../api/announce-transaction>`.
 
@@ -329,7 +322,7 @@ Alice should :ref:`cosign the transaction <guide-signing-announced-aggregate-bon
 Sending payouts with aggregate complete transaction
 ***************************************************
 
-This guide explains how to send transactions to different accounts atomically, using an :ref:`aggregate complete transaction <aggregate-transaction>`.
+Send transactions to different accounts atomically, using an :ref:`aggregate complete transaction <aggregate-transaction>`.
 
 Background
 ==========
@@ -551,7 +544,7 @@ Afterwards, swap mosaics between multiple participants.
 Asking for mosaics with aggregate bonded transaction
 ****************************************************
 
-This guide shows you how to ask an account to send you some mosaics using an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+Ask an account to send you funds using an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 Prerequisites
 =============
@@ -666,7 +659,7 @@ Signing announced aggregate bonded transactions
 
 You probably have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all cosigners have not signed it yet.
 
-This guide will help you to cosign aggregate bonded transactions that require being signed by your account.
+This guide will show you how to cosign aggregate bonded transactions that require being signed by your account.
 
 Prerequisites
 =============
@@ -806,7 +799,7 @@ Try it yourself! Here you have the implementation:
 Using secret lock for atomic cross-chain swap transactions
 **********************************************************
 
-The goal of this guide is to show you how to exchange tokens between different blockchains atomically using :ref:`secret lock <secret-lock-transaction>` and :ref:`secret proof transactions <secret-proof-transaction>`.
+Exchange tokens between different blockchains atomically using :ref:`secret lock <secret-lock-transaction>` and :ref:`secret proof transactions <secret-proof-transaction>`.
 
 Background
 ==========
@@ -821,7 +814,7 @@ One non-atomic solution could be:
 
 But they don't trust each other that much. Ideally, they want to exchange their tokens between different blockchains atomically.
 
-Following this guide, you will swap transactions between different blockchain platforms atomically using secret lock transaction.
+Following this guide, you will swap tokens between different blockchain platforms atomically using secret lock transaction.
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
     :align: center

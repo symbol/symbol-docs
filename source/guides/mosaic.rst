@@ -8,7 +8,7 @@ Interacting with mosaics
 Creating a mosaic
 *****************
 
-Once you own a namespace, it is the time to create a :doc:`mosaic<../concepts/mosaic>` .
+After creating a namespace, follow this guide to create a :doc:`mosaic<../concepts/mosaic>` .
 
 Background
 ==========
@@ -106,7 +106,7 @@ Both transactions can be announced together using an :ref:`aggregate transaction
 What's next?
 ============
 
-Now that you have your mosaic, try to :ref:`transfer <guide-sending-a-transfer-transaction>` it or modify its properties following next guide.
+:ref:`Transfer <guide-sending-a-transfer-transaction>` one mosaic created to another account or modify its properties following the next guide.
 
 .. _guide-modifying-mosaic-supply:
 
@@ -116,7 +116,7 @@ Modifying mosaic supply
 
 Did you register a :doc:`mosaics<../concepts/mosaic>` with ``supplyMutable`` option set to true?
 
-In that case, this guide will walk you through increasing or decreasing your mosaic available supply.
+In that case, you can increase or decrease your mosaic available supply following this guide.
 
 Prerequisites
 =============
@@ -151,4 +151,4 @@ Let's increase ``2.000.000`` the initial supply. Just sign and announce a :ref:`
 What's next?
 ============
 
-You could try to decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.
+Try to decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.

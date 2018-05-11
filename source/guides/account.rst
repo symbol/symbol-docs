@@ -98,7 +98,7 @@ In case you already have a private key, not needing to generate a new account:
 Getting account information
 ***************************
 
-You are going to develop a program to get the public key, height, balance and importance of an :doc:`account <../concepts/account>`.
+Get the public key, height, balance and importance of an :doc:`account <../concepts/account>`.
 
 Prerequisites
 =============
@@ -165,7 +165,7 @@ Check account's balance using ``mosaicService``. The balance is the amount of th
 What’s next?
 ============
 
-Try to repeat retrieving the balance by only filtering XEM amount.
+Try to retrieve the balance by only filtering XEM amount.
 
 .. _guide-getting-the-amount-of-XEM-sent-to-an-account:
 
@@ -173,7 +173,7 @@ Try to repeat retrieving the balance by only filtering XEM amount.
 Getting the amount of XEM sent to an account
 ********************************************
 
-You are going to develop a program to check the amount of XEM you have sent to some account.
+Check the amount of XEM you have sent to some account.
 
 Prerequisites
 =============
@@ -185,7 +185,7 @@ Prerequisites
 Let’s get into some code
 =========================
 
-After obtaining all outgoing :doc:`transactions <../concepts/transaction>` from an account, apply a filter to distinguish target recipient.
+After obtaining all outgoing :doc:`transactions <../concepts/transaction>` from an account, apply the following operators to identify the target recipient.
 
 .. example-code::
 
@@ -206,7 +206,7 @@ The amount of sent XEM in transfer transactions is displayed.
 What’s next?
 ============
 
-Try to repeat the example by changing NEM filter for another :doc:`mosaic <../concepts/mosaic>` .
+Repeat the example by changing NEM filter for another :doc:`mosaic <../concepts/mosaic>` .
 
 .. _guide-receiving-transactions-of-an-account:
 
@@ -214,7 +214,7 @@ Try to repeat the example by changing NEM filter for another :doc:`mosaic <../co
 Receiving transactions of an account 
 ************************************
 
-You are going to develop a program to get the list of :doc:`transactions <../concepts/transaction>` where an :doc:`account <../concepts/account>` is involved.
+Get the list of :doc:`transactions <../concepts/transaction>` where an :doc:`account <../concepts/account>` is involved.
 
 Background
 ==========
@@ -497,9 +497,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines: 56-64
 
-Alice needs to lock at least 10 XEM.
-
-Once Bob cosigns the transaction, the amount of XEM becomes available again on Alice's account.
+Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. Once Bob cosigns the transaction, the amount of XEM becomes available again on Alice's account.
 
 After lock funds transaction has been confirmed, Alice announces the aggregate transaction.
 
@@ -557,12 +555,7 @@ Following this tutorial, you will create a :doc:`multi-level multisig account <.
 
 Background
 ==========
-A multi-level multisig is a multisig that has a cosignatory that is another multisig.
-
-Consider the following constraints:
-
-* The maximum number of levels is ``3``.
-* The maximum of no-multisig cosignatories (leaf) is ``15``.
+Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 Prerequisites
 =============

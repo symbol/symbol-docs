@@ -30,9 +30,11 @@ Prerequisites
 Let’s get into some code
 =========================
 
-The first step is to choose a name for your namespace.  A root namespace may have a length of ``N`` characters.
+A :doc:`namespace <../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
 
-One common option is to choose your company's name. This name should be available, as is unique. In this example, we will register a namespace called ``foo``. Let's check if this name is available.
+A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
+
+Register your namespace, choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
 
 .. example-code::
 
@@ -56,6 +58,8 @@ Is the namespace available? Try to register it before someone else does it!
 
 To register a new namespace, announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
 
+.. note:: In Catapult, NEM blocks are complete every ``15`` seconds in average.
+
 .. example-code::
 
     .. literalinclude:: ../resources/examples/typescript/namespace/RegisteringANamespace.ts
@@ -76,9 +80,9 @@ To register a new namespace, announce a :ref:`register namespace transaction<reg
 
 What's next?
 ============
-Now that you have registered your namespace, you can start :ref:`creating mosaics <guide-creating-a-mosaic>`.
+Now that you have registered your namespace, check how you can  :ref:`create mosaics <guide-creating-a-mosaic>`.
 
-Also, when the transaction is confirmed, you will be able to  :ref:`register a subnamespace <guide-registering-a-subnamespace>` by following next guide.
+When the transaction is confirmed, you will be able to  :ref:`register a subnamespace <guide-registering-a-subnamespace>` following the next guide.
 
 .. _guide-registering-a-subnamespace:
 
@@ -86,11 +90,11 @@ Also, when the transaction is confirmed, you will be able to  :ref:`register a s
 Registering a subnamespace
 **************************
 
-After creating a namespace, this tutorial will help you to register a :doc:`subnamespace <../concepts/namespace>`.
+Register a :doc:`subnamespace <../concepts/namespace>` following this guide.
 
 Background
 ==========
-Having a root namespace registered we can create up to 3 levels of subnamespaces.
+Having a root namespace registered, you can create up to ``3`` levels of subnamespaces.
 
 Subnamespaces do not have a renting duration by its own. They have the same one as their parent namespace.
 
@@ -108,14 +112,14 @@ Let’s get into some code
 =========================
 The first step is to choose a name for your subnamespace.
 
-In this example, we will register a namespace called ``bar`` under ``foo`` namespace. Subnamespaces may have a length of ``64`` characters maximum.
+In this example, we will register a namespace called ``bar`` under ``foo`` namespace.
 
 .. example-code::
 
     .. literalinclude:: ../resources/examples/typescript/namespace/RegisteringASubnamespace.ts
         :language: typescript
         :lines:  24-
-    
+
     .. literalinclude:: ../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java
         :language: java
         :lines: 39-61

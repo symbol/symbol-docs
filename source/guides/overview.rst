@@ -2,19 +2,17 @@
 Overview
 ########
 
-Guides show you how to use specific NEM functionality by practising with step by step simple use cases.
+Guides show you how to use NEM built-in features while following step by step simple use cases.
 
 *********************
 How to run an example
 *********************
 
-Every guide has code examples ready to use.
+With every guide, you have the code implementation ready to use.
 
 * |guides-repository|
 
-You will find snippets divided by programming language and topic.
-
-To run an example, check installation instructions for that language.
+You will find the example snippets divided by programming language and topic.
 
 Cli
 ====
