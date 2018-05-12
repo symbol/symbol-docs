@@ -9,7 +9,7 @@ Welcome to the *NEM Developer documentation*, the place where you'll find everyt
 If it is your first time developing with blockchain technology, this guide is for you. NEM was created to be your entry point into the blockchain industry. If you’re an experienced developer, you will learn how to create cutting-edge blockchain apps.
 
 Getting started
-======
+===============
 Easy-to-follow :doc:`step by step guides <guides/overview>` with code examples.
 
 * :doc:`NEM Overview<getting-started/nem-overview>`

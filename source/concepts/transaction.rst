@@ -6,7 +6,7 @@ Transaction
 
 Transactions are actions taken on the blockchain that change its state. In other words, how your Smart Assets are put into action.
 
-Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`account <accounts>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-acount>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
+Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`account <account>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
 
 **********************
 Transaction life-cycle
@@ -175,15 +175,15 @@ Modify multisig account transaction is used to change properties of a :doc:`mult
 
     **Minimum Approval Delta**
 
-    The number of signatures needed to approve a transaction. If we are modifying an existing multisignature account this indicates the relative change of the minimum cosignatories.
+    The number of signatures needed to approve a transaction. If we are modifying an existing multisig account this indicates the relative change of the minimum cosignatories.
 
     **Minimum Removal Delta**
 
-    The number of signatures needed to remove a cosignatory. If we are modifying an existing multisignature account this indicates the relative change of the minimum cosignatories.
+    The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account this indicates the relative change of the minimum cosignatories.
 
     **Modifications**
 
-    Array of cosigner accounts added or removed from the multisignature account.
+    Array of cosigner accounts added or removed from the multisig account.
 
 .. _aggregate-transaction:
 
