@@ -2,7 +2,7 @@
 NEM Developer Documentation
 ###########################
 
-Welcome to the *NEM Developer documentation*, the place where you'll find everything you need to start integrating NEM blockchain in your application or service.
+Welcome to the *NEM Developer documentation*, the place where you’ll find everything you need to start integrating NEM blockchain into your application.
 
 .. note:: This documentation refers to NEM latest version, **Catapult**, which provides higher performance and new functionalities to NEM.
 
