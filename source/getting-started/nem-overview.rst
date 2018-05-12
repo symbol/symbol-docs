@@ -20,9 +20,9 @@ Rather than force you to write your own “smart contract” code from scratch o
 
 NEM is suitable for an amazing variety of solution classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
 
-**************************
-Arquitecting NEM Solutions
-**************************
+*******************
+Architecting on NEM
+*******************
 
 NEM :doc:`nodes <../concepts/node>` provide a powerful, easy-to-use, stable, and secure platform where smart assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
