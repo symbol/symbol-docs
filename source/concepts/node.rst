@@ -24,11 +24,8 @@ The NEM node software verifies transactions, maintains a database, synchronizes 
 Layer 02 - API Gateway Server
 =============================
 
-Each node provides the API gateway that applications may use to access the blockchain and its features.
+Each node provides the :doc:`API <../api/overview>` gateway that applications may use to access the blockchain and its features.
 
 Your application does not need to run any complex node software; all usage functionality is available through the API interface on each node in the network itself.
-
-Blockchain can be used to create a variety of solution architectures with light-weight code in any language.
-
 
 .. note:: How to run a node and minimum requirements not yet available.
