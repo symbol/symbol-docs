@@ -6,7 +6,7 @@ Multisig Account
 
 Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
 
-A NEM :doc:`account <account>` can be :ref:`converted to multisig <guide-converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself, requiring other accounts to announce transactions for them.  These other accounts are the multisig ``cosignatories``.
+A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself, requiring other accounts to announce transactions for them.  These other accounts are the multisig ``cosignatories``.
 
 Besides, it is not always necessary to force all cosignatories to cosign the transaction. NEM allows to set up the minimum number of cosignatories agreement. These properties can be edited afterwards to suit almost any needs.
 

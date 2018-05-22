@@ -217,7 +217,7 @@ body{
 
 
 .example-selector li::before {
-    content: " ";
+    content: " " !important;
 }
 
 .example-selector > li{

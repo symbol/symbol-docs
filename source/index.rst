@@ -142,6 +142,7 @@ NEM Developer Center
     guides/namespace
     guides/mosaic
     guides/transaction
+    guides/running-catapult-in-local
 
 .. toctree::
     :maxdepth: 2

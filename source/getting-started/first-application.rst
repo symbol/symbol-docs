@@ -54,7 +54,7 @@ Accounts change the blockchain state through transactions. Once an account annou
 
 Receiving an OK response doesn't mean the transaction is valid, hence not included in a block. A good practice is to monitor transactions before being announced.
 
-We suggest opening three new terminals. The first terminal :ref:`monitors announced transactions<guide-debugging-transactions>` validation errors.
+We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../guides/blockchain/debugging-transactions>` validation errors.
 
 .. code-block:: bash
 

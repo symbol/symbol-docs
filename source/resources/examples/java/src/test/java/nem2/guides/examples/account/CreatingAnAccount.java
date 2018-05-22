@@ -29,7 +29,7 @@ class CreatingAnAccount {
     @Test
     void creatingAnAccount() throws ExecutionException, InterruptedException {
         // Replace with a private key
-        final String privateKey = "AC4091B7B9127FB4009CE3EADFD89116F6A80AB768C4681B12CD55D7196078F4";
+        final String privateKey = "";
 
         final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
     }
