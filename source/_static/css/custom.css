@@ -1,33 +1,157 @@
-@import "theme.css";
-
-/* Sidebar */
-
-.wy-nav-side .logo{
-    width: 120px !important;
-}
-.wy-side-nav-search{
-    background-color: #fcfcfc;
+/* General */
+body{
+    padding-top: 70px;
+    overflow-x: hidden;
 }
 
-.wy-side-nav-search .version{
-    color: #b3b3b3 !important;
+.custom-content{
+    max-width:860px;
+    margin: 0 auto;
+}
+.custom-row{
+    padding: 20px 40px;
+    clear: both;
 }
 
-.wy-menu-vertical .caption-text{
+.gap{
+    margin-bottom: 40px;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content ul li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.content ul li::before {
+    content: "• ";
+    color: rgb(32, 181, 172);
+}
+
+
+/* Navbar */
+
+.navbar-default{
+    background-color: white;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-default b,
+.navbar-default .navbar-brand{
+    color: #555;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #999;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:hover{
+    color: #555;
+}
+
+.dLabelGlobalToc{
+    display: none;
+}
+
+.navbar-default .navbar-toggle{
+    color: #555;
+}
+
+.navbar-default #dLabelGlobalToc{
+    display: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #555;
+    border-color:  #555;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #20b5ac;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{
     color: #fff;
 }
 
-.sidebar-links {
-    margin-top:20px; 
+
+@media screen and (max-width: 992px){
+    .navbar-default form{
+        display: none;
+    }
 }
 
-.sidebar-links a{
-    color: #000;
-    font-size: 0.9rem;
+/* Sidebar */
+
+#sidebar{
+    padding: 10px;
+    z-index: 9;
 }
 
-.wy-nav-content {
-    max-width: none;
+#sidebar ul:not(.current){
+    display: none;
+}
+
+
+
+
+#sidebar ul{
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+#sidebar .current ul{
+    display:block;
+}
+
+#sidebar .caption:hover{
+    cursor: pointer;
+}
+
+/* Alert */
+
+.alert{
+    margin: 10px auto 10px auto;
+}
+.alert-info{
+    background: rgba(55, 167, 219, 1);
+    background: -moz-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55, 167, 219, 1)), color-stop(100%, rgba(59, 185, 234, 1)));
+    background: -webkit-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -o-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: linear-gradient(to right, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    border-color: #37a7db;
+}
+
+.alert-warning{
+    background: #f7a700;
+    border-color: #f5aa24;
+    color: #555;
 }
 
 /* Figure  */
@@ -43,6 +167,24 @@
 
 }
 
+/* Card */
+.card {
+    background: #fff;
+    width: 100%;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 /* Tables */
 @media screen and (min-width: 992px ){
 
@@ -56,11 +198,22 @@
 }
 
 /* Code example */
+
+.example-code.container{
+    padding: 0px;
+    max-width: 100%;
+}
+
 .example-selector{
-    background-color: #e4e4e4;
+    background-color: #e4e4e4 !important;
     padding: 5px !important;
     height: 100% !important;
     margin-bottom: 0px !important;
+}
+
+
+.example-selector li::before {
+    content: " ";
 }
 
 .example-selector > li{
@@ -68,17 +221,61 @@
       background-color: transparent !important;
       float: none !important;
       display: inline-block !important;
-      margin-left: 0px !important;
+      margin-left: 20px !important;
       font-weight: normal !important;
 }
 
 .example-selector > li.selected{
-    background-color: transparent;
+    background-color: transparent !important;
     color: #000 !important;
 }
 
-/* Fundamentals - Aggregate Transaction */
+/* Footer */
 
-#aggregate-transaction.section table{
-    width: 100%;
+
+footer{
+    background: #fff;
+    z-index: 10;
+    position: relative;
 }
+
+/* Home Page */
+.jumbotron{
+    color: #fff;
+    padding-bottom: 250px;
+    background: rgba(90,176,229,1);
+    background: -moz-linear-gradient(left,rgba(90,176,229,1) 0,rgba(76,138,196,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(90,176,229,1)),color-stop(100%,rgba(76,138,196,1)));
+    background: -webkit-linear-gradient(left,rgba(90,176,229,1) 0,rgba(76,138,196,1) 100%);
+    background: -o-linear-gradient(left,rgba(90,176,229,1) 0,rgba(76,138,196,1) 100%);
+    background: -ms-linear-gradient(left,rgba(90,176,229,1) 0,rgba(76,138,196,1) 100%);
+    background: linear-gradient(to right,rgba(90,176,229,1) 0,rgba(76,138,196,1) 100%);
+    filter: progid:DXImageTransform.Microsof
+}
+
+.jumbotron .image-reference{
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+
+@media screen and (max-width: 450px){
+    .jumbotron .image-reference img{
+        height: 200px !important;
+    }
+}
+
+.content .social .fab{
+    font-size: 3em;
+}
+
+.content .social a{
+    color: #555;
+}
+
+.content .social a:hover{
+    color: rgba(90,176,229,1);
+}
+
+

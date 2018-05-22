@@ -2,30 +2,29 @@
 Extending NEM capabilities
 ##########################
 
-Adding more features that are not 100% related with the NIS2-API to the SDK could lead to a slow release circle and being more difficult to maintain. Instead, we opt for extending the SDK via standalone libraries. Apostille is a clear example as of a standalone library.
+Aside from creating a heavy and full-featured :doc:`SDK<../sdk/overview>` , we are also developing a robust and lightweight SDK. Thanks to this SDK, different libraries can be developed for each standard on top of NEM2-SDK allowing higher and faster growth for NEM applications.
 
-A standalone library uses NEM2-SDK, but it evolves as an independent library, with its development team, release cycles and roadmap.
-
-There are two major standalone library types, NIP and non-NIP.
+Developers could opt to create a standalone library to add more features to NEM. However, to become an accepted library, it should be proposed as a |NIP|.
 
 ***********
 NIP Library
 ***********
 
-A NIP library is a NIP that was successfully accepted in the |nip_repo|. It has advantages over non-NIP libraries.
+The reason behind the NIP Repository is to ensure the new library to be reviewed, tested and shared among NEM developers. It allows a higher adoption compared to non-NIP libraries.
 
-- Accepted specification
-- At least one implementation that successfully passes the code review to ensure the code quality (security, performance, testing, ...)
-- Projects using NIP libraries are compatible with third-party projects that implement/uses the same NIP Library.
+* Accepted specification
+* At least one implementation that successfully passes the code review to ensure the code quality (security, performance, testing, ...)
+* Projects using NIP libraries are compatible with third-party projects that implement/uses the same NIP Library.
 
 ***************
 non-NIP Library
 ***************
 
-A non-NIP library is a library that adds more features to NEM but does not imply multiple components, or is not accepted as NIP.
+Do you need to create a NIP to create a library? No, you don’t. In fact, we suggest to not submit a NIP until you build a library that improves the NEM blockchain and the different projects that use it. Since the library can be changed multiple times, developers should spend more time experimenting and learning, creating a specification later on.
 
 Non-NIP libraries could become NIP Library.
 
-.. |nip_repo| raw:: html
 
-   <a href="https://github.com/nemtech/NIP" target="_blank">NIP Repository</a>
+.. |NIP| raw:: html
+
+   <a href="https://github.com/nemtech/NIP" target="_blank">NIP</a>

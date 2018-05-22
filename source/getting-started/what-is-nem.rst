@@ -1,5 +1,5 @@
 ############
-NEM Overview
+What is NEM?
 ############
 
 **********************
@@ -50,8 +50,9 @@ A gateway server links existing business contract logic, systems, or databases t
 
     <a href="https://nem.io/" target="_blank">NEM</a>
 
-Public vs. Private Blockchain
-=============================
+******************
+Public and Private
+******************
 
 .. figure:: ../resources/images/public-private-blockchain.png
     :align: center

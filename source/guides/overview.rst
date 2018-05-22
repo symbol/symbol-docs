@@ -10,9 +10,7 @@ How to run an example
 
 With every guide, you have the code implementation ready to use.
 
-* |guides-repository|
-
-You will find the example snippets divided by programming language and topic.
+Inside |guides-repository| you will find the example snippets divided by programming language and topic.
 
 Cli
 ====

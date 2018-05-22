@@ -22,25 +22,33 @@ Some important considerations to keep in mind:
 
 * The number of minimum cosignatures to approve transactions and remove cosignatories is editable.
 
+* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
+
 .. warning:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost, and minimum approval is not reached, this would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
 
-******
-Fields
-******
-A multisig account has the following properties:
+.. _modify-multisig-account-transaction:
 
-    **Minimum Approval**
+***********************************
+Modify multisig account transaction
+***********************************
 
-    The number of signatures needed to approve a transaction.
+Modify multisig account transaction is used to change properties of a multisig account.
 
-    **Minimum Removal**
+    **Minimum Approval Delta**
 
-    The number of signatures needed to remove a cosignatory.
+    The number of signatures needed to approve a transaction. If we are modifying an existing multisig account this indicates the relative change of the minimum cosignatories.
 
-    **Cosignatories**
+    **Minimum Removal Delta**
+
+    The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account this indicates the relative change of the minimum cosignatories.
+
+    **Modifications**
 
     List of :doc:`accounts <account>` enabled to announce and cosign transactions for its approval.
 
+.. raw:: html
+
+    <h2>Examples</h2>
 
 There is a broad range of useful applications for multisig accounts. Let's take a look at some of the common use cases.
 
@@ -75,36 +83,3 @@ There is a broad range of useful applications for multisig accounts. Let's take 
     :width: 300px
 
     Transferring an account
-
-************************************
-Multi-Level Multisig Accounts (MLMA)
-************************************
-
-Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
-
-MLMA allow a huge variety of business logic:
-
-1. In this example, a manufacturer is shipping a product such as a pharmaceutical. The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature. Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
-
-.. figure:: ../resources/images/concepts-mlma-figure-1.png
-    :align: center
-    :width: 750px
-
-    Manufacturing and Supply Chains
-
-
-2. This example shows how a high-security account can be made easier to use. Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI. MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.
-
-.. figure:: ../resources/images/concepts-mlma-figure-2.png
-    :align: center
-    :width: 550px
-
-    Fraud Detection
-
-3. You can set up your account so it can be recovered only with the approval of signatures from specified accounts, such as your friends and family. Combine the branches any way you like.
-
-.. figure:: ../resources/images/concepts-mlma-figure-3.png
-    :align: center
-    :width: 750px
-
-    Account Recovery

@@ -21,11 +21,13 @@ It is possible to create multiple subnamespaces with the same name (example: ``f
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
-******
-Fields
-******
+.. _register-namespace-transaction:
 
-A namespace has the following properties:
+******************************
+Register namespace transaction
+******************************
+
+Register namespace transaction is used to create and re-rental a namespace or subnamespace.
 
     **Name**
 

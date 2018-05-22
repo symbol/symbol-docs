@@ -12,11 +12,14 @@ Each Mosaic is defined by a variety of attributes such as name, description, qua
 
 Mosaics are held within :doc:`accounts <account>`, and can be transferred between them to represent a surprising variety of transactions such as: registering a signature, updating the status of an item, casting a vote, or simply passing coins or points between accounts.
 
-******
-Fields
-******
 
-The basic data for a mosaic definition consists of:
+.. _mosaic-definition-transaction:
+
+*****************************
+Mosaic definition transaction
+*****************************
+
+Mosaic definition transaction is used to create a new mosaic.
 
     **Namespace**
 
@@ -52,3 +55,22 @@ The basic data for a mosaic definition consists of:
 
     * Transferability: The creator can choose if the mosaic can be transferred to and from arbitrary accounts, or only allowing itself to be the recipient once transferred.
 
+.. _mosaic-supply-change-transaction:
+
+********************************
+Mosaic supply change transaction
+********************************
+
+Mosaic supply change transaction is used to assign supply to a mosaic.
+
+    **Mosaic Id**
+
+    Combination of namespace name and mosaic name. For example "foo.bar:token".
+
+    **Direction**
+
+    Could be Increase (0) or Decrease (1).
+
+    **Delta**
+
+    The amount of supply to increase or decrease.

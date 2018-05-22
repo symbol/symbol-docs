@@ -10,7 +10,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 Please, **don't use the issue tracker for support questions**.
 
-.. note:: Once you are accepted into the early access program, you can post support questions on Slack.
+.. note:: Once you are accepted into the early access program, you can post support questions on |Slack|.
 
 *************
 Error reports
@@ -103,43 +103,8 @@ See original |contributing-md| file.
 
    <a href="https://github.com/nemtech/nem2-docs/" target="_blank">nem2-docs repository</a>
 
+.. |slack| raw:: html
 
-************
-Contributors
-************
+   <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM" target="_blank">Slack</a>
 
-NEM Catapult documentation for developers is not written from scratch. It is the sum of previous effort and documents written by the community and core developers, adapted for this new release. Thank you!
 
-* |nem-technical-reference|
-* |nem-nis-api-reference|
-* |nem-knowledge-base|
-* |nem-developer-guide|
-* |nem-blog-articles|
-
-We want to recognize the current contributors who provide content and improve the quality of this documentation.
-
-* |github-contributors-list|
-
-.. |nem-technical-reference| raw:: html
-
-   <a href="https://nem.io/wp-content/themes/nem/files/NEM_techRef.pdf" target="_blank">NEM Technical Reference</a>
-
-.. |nem-nis-api-reference| raw:: html
-
-   <a href="https://nemproject.github.io/" target="_blank">NEM NIS API Reference</a>
-
-.. |nem-knowledge-base| raw:: html
-
-   <a href="http://docs.nem.io/en" target="_blank">NEM Knowledge base</a>
-
-.. |nem-developer-guide| raw:: html
-
-   <a href="https://github.com/rb2nem/nem-dev-guide" target="_blank">Developer guide by rb2nem</a>
-
-.. |nem-blog-articles| raw:: html
-
-   <a href="https://blog.nem.io/" target="_blank">NEM Blog articles</a>
-
-.. |github-contributors-list| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/graphs/contributors" target="_blank">Github Contributors List</a>

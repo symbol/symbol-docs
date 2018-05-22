@@ -19,7 +19,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import sphinx_rtd_theme
+import sphinx_bootstrap_theme
+
 
 
 # -- General configuration ------------------------------------------------
@@ -40,7 +41,8 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'sphinxcontrib.examplecode']
+    'sphinxcontrib.examplecode',
+    'sphinxcontrib.fulltoc']
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -65,7 +67,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.9.4'
+version = u'1.0.0'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -93,14 +95,76 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
+
 html_theme_options = {
-        'logo_only': True,
+    'navbar_title': "developer center",
+
+    # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "Site",
+
+    'navbar_links': [
+        ("Guides", "guides/overview"),
+        ("Built-in Features", "concepts/account"),
+        ("References", "sdk/overview"),
+    ],
+
+    # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': False,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': False,
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    'navbar_pagenav_name': "Page",
+
+    # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': 2,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    'navbar_class': "navbar",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "true",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "exclude",
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing (default) or the name of a valid theme
+    # such as "cosmo" or "sandstone".
+    #
+    # The set of valid themes depend on the version of Bootstrap
+    # that's used (the next config option).
+    #
+    # Currently, the supported themes are:
+    # - Bootstrap 2: https://bootswatch.com/2
+    # - Bootstrap 3: https://bootswatch.com/3
+    'bootswatch_theme': "cosmo",
+
+    # Choose Bootstrap version.
+    # Values: "3" (default) or "2" (in quotes)
+    'bootstrap_version': "3",
 }
 
 # The name of an image file (relative to this directory) to place at the top
@@ -113,7 +177,13 @@ html_logo = "logo-nem.svg"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_style = 'css/custom.css'
+
+## Custom style overrides
+def setup(app):
+    app.add_stylesheet("https://use.fontawesome.com/releases/v5.0.13/css/all.css")
+    app.add_stylesheet("css/custom.css")  # may also be an URL
+    app.add_javascript("js/custom.js")
+
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -121,10 +191,8 @@ html_style = 'css/custom.css'
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+    '**': ['localtoc.html'],
+  'index': []
 }
 
 

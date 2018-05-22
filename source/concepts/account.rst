@@ -12,9 +12,9 @@ Accounts become truly smart when configured with special rules – directly on t
 
 .. note:: It is recommended to share the address instead of the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
 
-******
-Fields
-******
+.. raw:: html
+
+    <h2>Fields</h2>
 
 An account has the following properties:
 
@@ -38,9 +38,9 @@ An account has the following properties:
 
     A NEM address is a base-32 :sup:`3` encoded triplet consisting of:
 
-        * Network byte
-        * 160-bit hash of the account’s public key
-        * 4 byte checksum
+    * Network byte
+    * 160-bit hash of the account’s public key
+    * 4 byte checksum
 
     The checksum allows for quick recognition of mistyped addresses. It is possible to send XEM to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the account to which the XEM is sent, the XEM is likely lost forever.
 

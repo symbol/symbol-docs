@@ -8,8 +8,6 @@ NIS2-API is a REST API that combines HTTP and WebSockets to perform read and wri
 Interacting with the API
 *************************
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 NIS uses port ``3000`` to communicate with its clients. It accepts both HTTP ``GET``, ``PUT`` and ``POST`` requests.
 
 Assuming that the NIS is running locally, HTTP GET requests can be executed from a browser and have the form:

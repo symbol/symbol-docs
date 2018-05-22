@@ -18,16 +18,61 @@ NEM2-SDK share the same design/architecture between programming languages to acc
 
 * **Fewer bugs**: If some bug appears in one language, it is faster to check and fix it.
 
-Check the languages supported :doc:`here <languages>`.
-
-.. note:: The best way to learn about the SDKs is through :doc:`guides <../guides/overview>`, we encourage you to check them.
+The best way to learn about the SDKs is through :doc:`guides <../guides/overview>`, we encourage you to check them.
 
 *************************************
 Backward compatibility with NIS1 SDKs
 *************************************
 
-.. warning:: Final information regarding compatibility with NIS1 is not yet available.
+.. note:: Final information regarding compatibility with NIS1 is not yet available.
 
 Start planning the migration to NEM2-SDK to take advantage of new Catapult features and future releases.
 
 Check :doc:`Preparing for NEM2-SDK 1.0.0 <release-notes/00-migration>` to see new features and changes that break backward compatibility with NEM-Library.
+
+
+**********************
+Languages & References
+**********************
+
+Typescript & JavaScript
+=======================
+
+- |tsjs-repo|
+- |tsjs-reference|
+
+
+JVM: Java & Kotlin
+==================
+
+- |javasdk-repo|
+- |javasdk-reference|
+
+
+Planned languages to give support
+=================================
+
+- C#
+- PHP
+- Python
+- Go
+- Ruby
+
+In case there is not SDK for your preferred language, check the support page. We are glad to help you getting involved in the SDK development for your preferred language.
+
+.. |tsjs-repo| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">SDK Repository</a>
+
+.. |tsjs-reference| raw:: html
+
+    <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/" target="_blank">SDK Reference Documentation</a>
+
+.. |javasdk-repo| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-sdk-java" target="_blank">SDK Repository</a>
+
+.. |javasdk-reference| raw:: html
+
+    <a href="https://nemtech.github.io/nem2-sdk-java/" target="_blank">SDK Reference Documentation</a>
+
