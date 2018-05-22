@@ -9,4 +9,4 @@ Sending transactions
 * :doc:`Asking for mosaics with aggregate bonded transaction<transaction/asking-for-mosaics-with-aggregate-bonded-transaction>`
 * :doc:`Signing announced aggregate bonded transactions<transaction/signing-announced-aggregate-bonded-transactions>`
 * :doc:`Signing announced aggregate bonded transactions automatically<transaction/signing-announced-aggregate-bonded-transactions-automatically>`
-* :doc:`Using secret lock transaction for atomic cross-chain swap<transaction/using-secret-lock-transaction-for-atmomic-cross-chain-swap>`
+* :doc:`Using secret lock transaction for atomic cross-chain swap<transaction/using-secret-lock-transaction-for-atomic-cross-chain-swap>`

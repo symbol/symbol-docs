@@ -51,8 +51,8 @@ Normalizing the language into NEM related concepts:
 Prerequisites
 *************
 
-- Finish :ref:`creating a mosaic guide <guide-creating-a-mosaic>`
-- Finish :ref:`sending payouts with aggregate complete transactions <guide-sending-payouts-with-aggregate-complete-transaction>`
+- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
+- Finish :doc:`sending payouts with aggregate complete transactions <sending-payouts-with-aggregate-complete-transaction>`
 - NEM2-SDK
 - A text editor or IDE
 

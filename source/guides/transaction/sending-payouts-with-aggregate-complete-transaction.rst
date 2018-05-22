@@ -24,7 +24,7 @@ He chooses to send an aggregate complete transaction, so both of them will recei
 Prerequisites
 *************
 
-- Finish :ref:`sending a transfer transaction guide <guide-sending-a-transfer-transaction>`
+- Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - NEM2-SDK
 - A text editor or IDE
 - An account with XEM

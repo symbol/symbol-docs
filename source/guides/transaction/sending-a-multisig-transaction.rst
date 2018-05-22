@@ -27,8 +27,8 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 Prerequisites
 *************
 
-- Finish :ref:`sending a transfer transaction guide <guide-sending-a-transfer-transaction>`
-- Finish :ref:`converting an account to multisig guide <guide-converting-an-account-to-multisig>`
+- Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - NEM2-SDK
 - A text editor or IDE
 - An multisig account with XEM
@@ -141,7 +141,7 @@ As all required cosigners didn't sign the transaction, it should be announced as
         :lines:  55-61
 
 
-Open a new terminal for :ref:`monitoring<guide-debugging-transactions>` the aggregate bonded transaction.
+Open a new terminal for :doc:`monitoring<../blockchain/debugging-transactions>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
@@ -165,4 +165,4 @@ After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed,
         :language: javascript
         :lines:  63-
 
-Alice should :ref:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!
+Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!

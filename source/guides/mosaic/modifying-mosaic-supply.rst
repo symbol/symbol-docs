@@ -12,7 +12,7 @@ In that case, you can increase or decrease your mosaic available supply followin
 Prerequisites
 *************
 
-- Finish :ref:`creating a mosaic guide <guide-creating-a-mosaic>`
+- Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
 - NEM2-SDK or CLI
 - A text editor or IDE
 - An account with XEM

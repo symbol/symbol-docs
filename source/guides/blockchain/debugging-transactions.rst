@@ -89,4 +89,4 @@ In this example, we will reach only transactions that get confirmed. You can als
 What's next?
 ************
 
-Run your application and try to :ref:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see transaction information in your terminal.
+Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see transaction information in your terminal.

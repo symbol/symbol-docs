@@ -14,7 +14,7 @@ A namespace is an on-chain unique domain for your assets.
 
 The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
 
-If one :doc:`account <account>` creates a namespace, that namespace will appear unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
+If one :doc:`account <../../concepts/account>` creates a namespace, that namespace will appear unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
 
 *************
 Prerequisites

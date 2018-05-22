@@ -10,7 +10,7 @@ Ask an account to send you funds using an :ref:`aggregate bonded transaction <ag
 Prerequisites
 *************
 
-- Finish :ref:`creating an escrow with aggregate bonded transaction guide <guide-creating-an-escrow-with-aggregate-bonded-transaction>`
+- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
 - A text editor or IDE
 - An account with XEM
 
@@ -101,7 +101,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
         :language: javascript
         :lines:  68-
 
-If all goes well, Bob receives a notification via :ref:`WebSocket <guide-debugging-transactions>` (or fetched via :ref:`API Http request <guide-receiving-transactions-of-an-account>`).
+If all goes well, Bob receives a notification via :doc:`WebSocket <../blockchain/debugging-transactions>` (or fetched via :doc:`API Http request <../account/receiving-transactions-from-an-account>`).
 
 ************
 What's next?
