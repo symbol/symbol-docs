@@ -192,9 +192,7 @@ def setup(app):
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
   '**': ['localtoc.html'],
-  'index': [],
-'guides/account/*': ['localtoc.html'],
-
+  'index': []
 }
 
 
