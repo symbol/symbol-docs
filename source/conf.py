@@ -27,7 +27,7 @@ import sphinx_bootstrap_theme
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '0.10'
+# needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -67,7 +67,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'1.0.0'
+version = u'0.10.0'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -191,8 +191,10 @@ def setup(app):
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-    '**': ['localtoc.html'],
-  'index': []
+  '**': ['localtoc.html'],
+  'index': [],
+'guides/account/*': ['localtoc.html'],
+
 }
 
 

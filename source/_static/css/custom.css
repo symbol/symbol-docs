@@ -1,4 +1,7 @@
 /* General */
+html{
+    overflow-x: hidden;
+}
 body{
     padding-top: 70px;
     overflow-x: hidden;
@@ -190,15 +193,13 @@ body{
 }
 
 /* Tables */
-@media screen and (min-width: 992px ){
 
-    .wy-table-responsive table td, .wy-table-responsive table th {
-        white-space: normal;
-    }
+table{
+    word-break: break-all;
+}
 
-    .wy-table-responsive {
-        overflow: visible;
-    }
+table-td{
+    max-width: 50%;
 }
 
 /* Code example */
