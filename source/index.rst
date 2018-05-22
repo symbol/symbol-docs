@@ -1,11 +1,8 @@
 .. raw:: html
 
     <div class="jumbotron text-center">
-    <div class="section" id="nem-developer-center">
         <h1>NEM Developer Center</h1>
-    </div>
-
-    <p>Start integrating NEM into your application.</p>
+        <p>Start integrating NEM into your application.</p>
 
 .. image:: resources/images/nem-developers.png
     :align: center
@@ -103,8 +100,7 @@ NEM provides tools and services to accelerate blockchain development, greatly re
     </div>
     </div></div>
 
-
-*********************
+********************
 NEM Developer Center
 ********************
 

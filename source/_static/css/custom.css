@@ -43,6 +43,10 @@ body{
     color: rgb(32, 181, 172);
 }
 
+#nem-developer-center{
+    display: none;
+}
+
 
 /* Navbar */
 
