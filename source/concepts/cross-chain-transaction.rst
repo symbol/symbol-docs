@@ -2,6 +2,8 @@
 Cross-Chain Transaction
 #######################
 
+.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+
 .. _secret-lock-transaction:
 
 ***********************

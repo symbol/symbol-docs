@@ -89,7 +89,7 @@ NEM provides tools and services to accelerate blockchain development, greatly re
         </div>
 
         <div class="col-sm-4">
-            <a href="https://es.stackoverflow.com/questions/tagged/nem"><i class="fab fa-stack-overflow"></i></a>
+            <a href="https://stackoverflow.com/tags/nem/"><i class="fab fa-stack-overflow"></i></a>
             <h4 class="gap">Ask development questions</h4>
         </div>
 

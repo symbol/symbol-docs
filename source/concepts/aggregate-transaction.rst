@@ -2,6 +2,8 @@
 Aggregate transaction
 ######################
 
+.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+
 .. _aggregate-transaction:
 
 Aggregated Transactions merge multiple transactions into one, allowing trustless swaps, automatic cross-chain transactions, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.

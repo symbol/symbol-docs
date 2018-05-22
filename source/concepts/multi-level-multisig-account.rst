@@ -2,6 +2,8 @@
 Multi-Level Multisig Account
 ############################
 
+.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+
 :doc:`Multisig accounts <multisig-account>` can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 .. raw:: html

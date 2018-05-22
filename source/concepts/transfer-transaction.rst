@@ -2,6 +2,8 @@
 Transfer Transaction
 #####################
 
+.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+
 .. _transfer-transaction:
 
 Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. It can hold a message of length ``1024``.
