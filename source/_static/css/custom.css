@@ -144,6 +144,7 @@ body{
 .alert{
     margin: 10px auto 10px auto;
 }
+
 .alert-info{
     background: rgba(55, 167, 219, 1);
     background: -moz-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
@@ -281,6 +282,21 @@ footer{
 
 .content .social a:hover{
     color: rgba(90,176,229,1);
+}
+
+/* Search Page */
+ul.search li{
+    text-indent: 0;
+    padding: 0px;
+    background: none;
+}
+
+ul.search li div.context{
+    margin: 10px 0px;
+}
+
+ul.search li:before{
+    content: none;
 }
 
 
