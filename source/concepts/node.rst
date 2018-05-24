@@ -40,5 +40,5 @@ Your application does not need to run any complex node software; all usage funct
 
 .. |catapult-rest| raw:: html
 
-    <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult Rest Server</a>
+    <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult Rest</a>
 

@@ -6,6 +6,10 @@ WebSockets make possible receiving notifications when a transaction or event occ
 
 The notification is received in real time without having to poll the API waiting for a reply.
 
+********
+Channels
+********
+
     **block**
 
     The block channel notifies for every new block. The message contains the block information.

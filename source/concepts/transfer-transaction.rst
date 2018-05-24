@@ -14,6 +14,10 @@ Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`a
 
     Alice sends 10 nem:xem to Bob
 
+.. raw:: html
+
+    <h2>Parameters</h2>
+
 Following parameters are required:
 
     **Recipient**

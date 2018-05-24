@@ -8,6 +8,12 @@ Aggregate transaction
 
 Aggregated Transactions merge multiple transactions into one, allowing trustless swaps, automatic cross-chain transactions, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
 
+.. raw:: html
+
+    <h2>Parameters</h2>
+
+Aggregate transactions accept the following parameters:
+
     **Inner Transaction**
 
     Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions. Other aggregate transactions are not allowed as inner transactions.

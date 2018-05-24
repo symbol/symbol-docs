@@ -16,9 +16,9 @@ NEM blocks complete every ``15`` seconds, making transactions confirm quickly en
 
 .. raw:: html
 
-    <h2>Fields</h2>
+    <h2>Parameters</h2>
 
-A block has the following properties:
+Blocks have the following properties:
 
     **Timestamp**
 

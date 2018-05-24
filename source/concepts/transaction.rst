@@ -33,13 +33,13 @@ Cryptocurrencies have the ability to roll back part of the blockchain. This is e
 
 There is, however, a maximum number of blocks that can be rolled back, which is called the "rewrite limit". Hence, forks can only be resolved up to a certain depth too. 
 
-NEM has a rewrite limit of 360 blocks. Once a transaction has more than 360 confirmations, it cannot be reversed. 
+NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
-In real life, forks that are deeper than 20 blocks do not happen, unless there are some severe problem with the blockchain due to a bug in the code or an attack of some kind.
+In real life, forks that are deeper than ``20`` blocks do not happen, unless there are some severe problem with the blockchain due to a bug in the code or an attack of some kind.
 
 .. raw:: html
 
-    <h2>Fields</h2>
+    <h2>Properties</h2>
 
 Transactions share the following properties:
 

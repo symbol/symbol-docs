@@ -14,7 +14,7 @@ Accounts become truly smart when configured with special rules – directly on t
 
 .. raw:: html
 
-    <h2>Fields</h2>
+    <h2>Properties</h2>
 
 An account has the following properties:
 
@@ -24,7 +24,7 @@ An account has the following properties:
 
     The probability to randomly generate a secret key that is linked to an account already existing is 10^77. Collision probability is, cryptographically speaking, negligible.
 
-    .. note:: Your private key holds all the power of your account. It is a priority to make sure it is backed up safely somewhere **offline**.
+    .. warning:: Your private key holds all the power of your account. It is a priority to make sure it is backed up safely somewhere **offline**.
 
     **Public key**
 
