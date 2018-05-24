@@ -38,7 +38,7 @@ If you followed the docker installation instructions correctly, or already had d
     peer-node-0_1             | 2018-05-18 18:52:12.477647 0x00007f35d4de4700: <debug> (src::NetworkHeightService.cpp@45) network chain height increased from 120 to 121
 
 
-You can verify things are running by doing a quick curl request to get block information: `curl localhost:3000/blocks/1`
+You can verify things are running by doing a quick curl request to get block information: `curl localhost:3000/block/1`
 
 To stop the server simply press ``Ctrl+c`` to kill/stop the foreground docker process.
 
@@ -90,7 +90,7 @@ If your service is in a bad state, or you just want to restart from fresh again 
 Known Issues
 ************
 
-The Catapult cache and query engine is powered by mongodb.  There are some known issues with the latest storage engine in some docker environments.  We have provided a backup docker compose file to use if you run into mongo `wiredtiger` errors on start.  You can use the backup file by running:
+The Catapult cache and query engine is powered by mongodb. There are some known issues with the latest storage engine in some docker environments.  We have provided a backup docker compose file to use if you run into mongo `wiredtiger` errors on start.  You can use the backup file by running:
 
 .. code-block:: bash
 

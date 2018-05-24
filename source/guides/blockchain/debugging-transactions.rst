@@ -10,14 +10,14 @@ This tutorial will guide you in the creation of an application to monitor announ
 Background
 **********
 
-If you are used to NIS1 API calls, you know that after announcing a transaction you received a success message or some error indicating the reason why the transaction has not been included in the block.
+If you are used to NIS1 API calls, after announcing a transaction you received a success message or some error indicating the reason why the transaction has not been included in the block.
 
-The new NIS2-API works differently, being *asynchronous*. When a user announces a transaction through the API, it always returns an OK.
+The new Catapult REST API works differently, being *asynchronous*. When a user announces a transaction through the API, it always returns an OK.
 
-To know the status of the transaction, which can be OK or Failure, you have to:
+To know the status of the transaction, which can be OK or :doc:`Failure<../../api/error>`, you have to:
 
 a) Check the status via API endpoint.
-b) Listen to the different WebSocket channels.
+b) Listen to the different :doc:`WebSocket<../../concepts/listener>` channels.
 
 .. note:: While developing, it is encouraged to open terminals with different listeners to monitor transactions you send using NEM2-CLI.
 

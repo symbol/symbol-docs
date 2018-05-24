@@ -48,11 +48,15 @@ JVM: Java & Kotlin
 - |javasdk-repo|
 - |javasdk-reference|
 
+C#
+====
+
+- |csharp-repo|
+
 
 Planned languages to give support
 =================================
 
-- C#
 - PHP
 - Python
 - Go
@@ -75,4 +79,10 @@ In case there is not SDK for your preferred language, check the support page. We
 .. |javasdk-reference| raw:: html
 
     <a href="https://nemtech.github.io/nem2-sdk-java/" target="_blank">SDK Reference Documentation</a>
+
+.. |csharp-repo| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">SDK Repository</a>
+
+
 

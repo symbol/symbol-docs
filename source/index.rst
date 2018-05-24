@@ -60,6 +60,7 @@ NEM Smart Assets are built using the following connected parts:
 * :doc:`Cross-Chain Transaction <concepts/cross-chain-transaction>`
 * :doc:`Block <concepts/block>`
 * :doc:`Node <concepts/node>`
+* :doc:`Listener <concepts/listener>`
 
 
 
@@ -74,13 +75,13 @@ NEM provides tools and services to accelerate blockchain development, greatly re
 
 * :doc:`NEM2-CLI <cli/overview>` Reference
 * :doc:`NEM2-SDK <sdk/overview>` Reference
-* :doc:`NIS2-API <api/overview>` Reference
-* :doc:`NEM Libraries <libraries/overview>`
+* :doc:`Catapult REST API <api/overview>` Reference
+* :doc:`NEM2 Libraries <libraries/overview>`
 
 .. raw:: html
 
     </div></div></div>
-    <div class="custom-row social">
+    <div id="support" class="custom-row social">
     <h2 class="gap">Connect with the NEM Development Community</h2>
     <div class="text-center">
         <div class="col-sm-4">
@@ -95,7 +96,7 @@ NEM provides tools and services to accelerate blockchain development, greatly re
 
         <div class="col-sm-4">
             <a href="https://twitter.com/nemtechdev"><i class="fab fa-twitter"></i></a>
-          <h4 class="gap">Follow the NEM dev team feed</h4>
+          <h4 class="gap">Follow the dev team</h4>
         </div>
     </div>
     </div></div>
@@ -130,6 +131,7 @@ NEM Developer Center
     concepts/cross-chain-transaction
     concepts/block
     concepts/node
+    concepts/listener
 
 .. toctree::
     :maxdepth: 2
@@ -163,12 +165,10 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: NIS2-API
+    :caption: Catapult REST API
 
     api/overview
-    api/announce-transaction
-    api/websockets
-    api/errors
+    api/error
 
 .. toctree::
     :maxdepth: 2

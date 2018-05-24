@@ -12,7 +12,12 @@ Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`account <acc
 Transaction life-cycle
 **********************
 
-Once a transaction is initiated, it is still unconfirmed and thus not yet accepted by the network. At this point, it is not clear if it will get included in a block. Never rely on a transaction which has the state unconfirmed.
+When a transaction is initiated through the API, it always returns an OK. It is still unconfirmed and thus not yet accepted by the network. At this point, it is not clear if it will get included in a block. Never rely on a transaction which has the state unconfirmed.
+
+To know the status of the transaction, which can be OK or :doc:`Failure<../api/error>`, you have to:
+
+1) Check the status via API endpoint
+2) Listen to the different :doc:`WebSocket<listener>` channels.
 
 .. figure:: ../resources/images/transaction-cycle.png
     :width: 800px
@@ -35,7 +40,6 @@ In real life, forks that are deeper than 20 blocks do not happen, unless there a
 .. raw:: html
 
     <h2>Fields</h2>
-
 
 Transactions share the following properties:
 
@@ -63,6 +67,15 @@ NEM defines some types of transactions that can be performed. See :ref:`transact
 
     The account of the transaction creator public key.
 
+
+In :doc:`NEM2-SDK <../sdk/overview>`, transactions are announced using ``TransactionHttp``.
+
+.. csv-table:: Catapult REST API vs SDK TransactionHttp
+
+    PUT /transaction, ``announce(signedTransaction: SignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``
+    PUT /transaction/partial, ``announceAggregateBonded(signedTransaction: SignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``
+    PUT /transaction/cosignature, ``announceAggregateBondedCosignature(cosignatureSignedTransaction: CosignatureSignedTransaction)`` : ``Observable<TransactionAnnounceResponse>``
+
 .. _transaction-types:
 
 *****************
@@ -79,6 +92,3 @@ Transaction types
 * :ref:`Lock Funds Transaction <lock-funds-transaction>`
 * :ref:`Secret Lock Transaction <secret-lock-transaction>`
 * :ref:`Secret Proof Transaction <secret-proof-transaction>`
-
-
-

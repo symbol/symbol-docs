@@ -149,7 +149,7 @@ Open a new terminal for :doc:`monitoring<../blockchain/debugging-transactions>` 
 
 When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again on Bob's account.
 
-After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../api/announce-transaction>`.
+After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

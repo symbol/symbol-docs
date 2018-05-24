@@ -1,6 +1,6 @@
-##########
-WebSockets
-##########
+########
+Listener
+########
 
 WebSockets make possible receiving notifications when a transaction or event occurs in the blockchain.
 
@@ -46,9 +46,9 @@ The notification is received in real time without having to poll the API waiting
 
     The status channel notifies when a transaction related to an address rises an error. The message contains the error message and the transaction hash.
 
-Interaction with WebSockets in :doc:`NEM2-SDK <../sdk/overview>` is done with ``Listeners``.
+Interaction with :doc:`API <../api/overview>` WebSockets in :doc:`NEM2-SDK <../sdk/overview>` is done with ``Listeners``.
 
-.. csv-table:: WebSockets vs SDK Listeners
+.. csv-table:: API WebSockets vs SDK Listeners
 
    block, ``newBlock()`` : ``Observable<BlockInfo>``
    confirmedAdded/<ADDRESS>, ``confirmed(address: Address)`` : ``Observable<Transaction>``

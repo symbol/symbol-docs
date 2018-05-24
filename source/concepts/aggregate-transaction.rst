@@ -38,6 +38,12 @@ In case that it requires signatures from other participants but announced to the
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
+.. figure:: ../resources/images/aggregate-bonded-transaction-cycle.png
+    :width: 900px
+    :align: center
+
+    Aggregate bonded transaction cycle
+
 Every time a cosignatory signs and announces an aggregate bonded cosignature, the network checks if all required cosigners have already signed. If it is the case, the transaction changes to unconfirmed state until the network accepts it, and is included in a block once processed.
 
 .. figure:: ../resources/images/guides-transactions-escrow.png
