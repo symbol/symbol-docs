@@ -25,12 +25,14 @@ These nodes works with other nodes to build the peer-to-peer blockchain network.
 
 The server verifies transactions, maintains a database, synchronizes with other nodes, and maintains stability and trustworthiness to create a network that is fast, secure, and scalable.
 
-Catapult REST API
-=================
+Catapult REST: MongoDB & API Server
+===================================
 
 **Repository:** |catapult-rest|
 
 Catapult Rest provides the :doc:`API <../api/overview>` gateway that applications may use to access the blockchain and its features.
+
+MongoDB serves supplemental data to Catapult REST clients. It is used for high query performance to satisfy high transaction per second scenarios.
 
 Your application does not need to run any complex node software; all usage functionality is available through the API interface.
 
