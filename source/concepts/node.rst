@@ -14,7 +14,7 @@ The four-layered architecture allows developers to update any of these tiers wit
 
 NEM nodes are represented in the two first layers. The blockchain server and the Rest API can be run separately, having two types of nodes:
 
-.. note: Guides explaining how to run a main net node are pending to be published. See how to run :doc:`Catapult in local<../guides/running-catapult-in-local>` for testing purposes.
+.. note: Guides explaining how to run a main net node are pending to be published. See how to run :doc:`Catapult in local<../guides/running-a-node>` for testing purposes.
 
 Catapult Server: The blockchain network
 =======================================

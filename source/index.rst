@@ -144,7 +144,7 @@ NEM Developer Center
     guides/namespace
     guides/mosaic
     guides/transaction
-    guides/running-catapult-in-local
+    guides/running-a-node
 
 .. toctree::
     :maxdepth: 2
@@ -168,7 +168,7 @@ NEM Developer Center
     :caption: Catapult REST API
 
     api/overview
-    api/error
+    api/websockets
 
 .. toctree::
     :maxdepth: 2

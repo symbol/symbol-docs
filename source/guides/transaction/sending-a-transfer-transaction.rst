@@ -110,7 +110,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
         :language: bash
         :start-after: #!/bin/sh
 
-Open the terminal where you are monitoring account transactions ``status``, it should be empty. If you see an error, check :doc:`HTTP Error Codes <../../api/error>` and their meaning.
+Open the terminal where you are monitoring account transactions ``status``, it should be empty. If you see an error, check :ref:`HTTP Error Codes <status-error>` and their meaning.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 

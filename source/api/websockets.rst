@@ -1,13 +1,32 @@
-###########
-Error List
-###########
+##########
+Websockets
+##########
 
-This section describes the errors messages that can be returned via ``status`` :doc:`channel<../concepts/listener>`.
+Interaction with :doc:`API <../api/overview>` WebSockets in :doc:`NEM2-SDK <../sdk/overview>` is done with ``Listeners``.
+
+.. csv-table::
+   :header: "API WebSockets", "SDK Listeners"
+
+   block, ``newBlock()`` : ``Observable<BlockInfo>``
+   confirmedAdded/<ADDRESS>, ``confirmed(address: Address)`` : ``Observable<Transaction>``
+   unconfirmedAdded/<ADDRESS>, ``unconfirmedAdded(address: Address)`` : ``Observable<Transaction>``
+   unconfirmedRemoved/<ADDRESS>, ``unconfirmedRemoved(address: Address)`` : ``Observable<string>``
+   partialAdded/<ADDRESS>, ``aggregateBondedAdded(address: Address)`` : ``Observable<AggregateTransaction>``
+   partialRemoved/<ADDRESS>, ``aggregateBondedRemoved(address: Address)``: ``Observable<string>``
+   cosignature/<ADDRESS>, ``cosignatureAdded(address: Address)`` : ``Observable<CosignatureSignedTransaction>``
+   status/<ADDRESS>, ``status(address: Address)`` : ``Observable<TransactionStatusError>``
+
+.. _status-error:
+
+Status Errors
+=============
+
+This section describes the errors messages that can be returned via ``status`` :doc:`channel<../concepts/listener>` after announcing a transaction.
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
 .. csv-table::
-    :header: "Error code", "Meaning"
+    :header: "Error code", "Description"
 
     Neutral
     Failure

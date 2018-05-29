@@ -1,12 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This document defines all the nis2 api endpoints",
-    "version": "0.9.0",
-    "title": "NIS2 API Endpoints",
-    "contact": {
-      "email": "guillem@nemeurope.eu"
-    },
+    "version": "0.7.7",
+    "title": "Catapult REST API Reference",
     "license": {
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -43,7 +39,7 @@
           "Account routes"
         ],
         "summary": "Get account information",
-        "description": "Returns account information for a given address or publicKey",
+        "description": "Returns AccountInfo for an account.",
         "operationId": "getAccountInfo",
         "produces": [
           "application/json"
@@ -52,7 +48,7 @@
           {
             "name": "accountId",
             "in": "path",
-            "description": "Account address or publicKey",
+            "description": "Account address or publicKey.",
             "required": true,
             "type": "string",
             "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
@@ -64,6 +60,12 @@
             "schema": {
               "$ref": "#/definitions/AccountInfoDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -74,7 +76,7 @@
           "Account routes"
         ],
         "summary": "Get accounts information",
-        "description": "Returns accounts information for a given set of address and publicKey",
+        "description": "Returns AccountsInfo for different accounts.",
         "operationId": "getAccountsInfo",
         "produces": [
           "application/json"
@@ -83,7 +85,7 @@
           {
             "name": "addresses",
             "in": "body",
-            "description": "Accounts address array",
+            "description": "Array of addresses.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/addresses"
@@ -99,6 +101,12 @@
                 "$ref": "#/definitions/AccountInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -108,8 +116,8 @@
         "tags": [
           "Account routes"
         ],
-        "summary": "Get transactions information",
-        "description": "Returns transactions information for a given publicKey",
+        "summary": "Get confirmed transactions information",
+        "description": "Gets an array of confirmed transaction for which an account is signer or recipient.",
         "operationId": "transactions",
         "produces": [
           "application/json"
@@ -118,7 +126,7 @@
           {
             "name": "publicKey",
             "in": "path",
-            "description": "Account publicKey",
+            "description": "Account publicKey.",
             "required": true,
             "type": "string",
             "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
@@ -126,13 +134,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -145,6 +153,9 @@
                 "type": "object"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -155,7 +166,7 @@
           "Account routes"
         ],
         "summary": "Get incoming transactions information",
-        "description": "Returns incoming transactions information for a given publicKey",
+        "description": "Gets an array of transactions for which an account is the recipient. A transaction is said to be incoming regarding an account if the account is the recipient of a transaction.",
         "operationId": "incomingTransactions",
         "produces": [
           "application/json"
@@ -164,7 +175,7 @@
           {
             "name": "publicKey",
             "in": "path",
-            "description": "Account publicKey",
+            "description": "Account publicKey.",
             "required": true,
             "type": "string",
             "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
@@ -172,13 +183,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -191,6 +202,9 @@
                 "type": "object"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -201,7 +215,7 @@
           "Account routes"
         ],
         "summary": "Get outgoing transactions information",
-        "description": "Returns outgoing transactions information for a given publicKey",
+        "description": "Gets an array of transactions for which an account is the sender. A transaction is said to be outgoing regarding an account if the account is the sender of a transaction.",
         "operationId": "outgoingTransactions",
         "produces": [
           "application/json"
@@ -210,7 +224,7 @@
           {
             "name": "publicKey",
             "in": "path",
-            "description": "Account publicKey",
+            "description": "Account publicKey.",
             "required": true,
             "type": "string",
             "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
@@ -218,13 +232,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -237,6 +251,9 @@
                 "type": "object"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -247,7 +264,7 @@
           "Account routes"
         ],
         "summary": "Get unconfirmed transactions information",
-        "description": "Returns unconfirmed transactions information for a given publicKey",
+        "description": "Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block.",
         "operationId": "unconfirmedTransactions",
         "produces": [
           "application/json"
@@ -256,7 +273,7 @@
           {
             "name": "publicKey",
             "in": "path",
-            "description": "Account publicKey",
+            "description": "Account publicKey.",
             "required": true,
             "type": "string",
             "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
@@ -264,13 +281,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -283,6 +300,9 @@
                 "type": "object"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -292,8 +312,8 @@
         "tags": [
           "Account routes"
         ],
-        "summary": "Get partial transactions information",
-        "description": "Returns partial transactions information for a given publicKey",
+        "summary": "Get aggregate bonded transactions information",
+        "description": "Gets an array of aggregate bonded transactions for which an account is the sender or has signed the transaction. A transaction is said to be aggregate bonded regarding an account if announced but there are missing signatures.",
         "operationId": "partialTransactions",
         "produces": [
           "application/json"
@@ -302,7 +322,7 @@
           {
             "name": "publicKey",
             "in": "path",
-            "description": "Account publicKey",
+            "description": "Account publicKey.",
             "required": true,
             "type": "string",
             "default": "EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390"
@@ -310,13 +330,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -329,6 +349,9 @@
                 "type": "object"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -338,8 +361,8 @@
         "tags": [
           "Account routes"
         ],
-        "summary": "Get account information",
-        "description": "Returns information for a given address or publicKey",
+        "summary": "Get multisig account information",
+        "description": "Returns MultisigAccountInfo for an account.",
         "operationId": "getAccountMultisig",
         "produces": [
           "application/json"
@@ -348,10 +371,10 @@
           {
             "name": "accountId",
             "in": "path",
-            "description": "The multisig account address or public key for which information should be retreived.",
+            "description": "Account address or public key.",
             "required": true,
             "type": "string",
-            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+            "default": "SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX"
           }
         ],
         "responses": {
@@ -360,6 +383,12 @@
             "schema": {
               "$ref": "#/definitions/MultisigAccountInfoDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -369,8 +398,8 @@
         "tags": [
           "Account routes"
         ],
-        "summary": "Get multisig graph information",
-        "description": "Returns information of all accounts address or publicKey is cosignatory",
+        "summary": "Get multisig account graph information",
+        "description": "Returns MultisigAccountGraphInfo for an account.",
         "operationId": "getAccountMultisigGraph",
         "produces": [
           "application/json"
@@ -379,10 +408,10 @@
           {
             "name": "accountId",
             "in": "path",
-            "description": "The multisig account address public key for which information should be retreived.",
+            "description": "Account address or public key.",
             "required": true,
             "type": "string",
-            "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
+            "default": "SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX"
           }
         ],
         "responses": {
@@ -394,6 +423,12 @@
                 "$ref": "#/definitions/MultisigAccountGraphInfoDTO"
               }
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -404,7 +439,7 @@
           "Blockchain routes"
         ],
         "summary": "Get blocks information",
-        "description": "Returns blocks information for a given block height and limit",
+        "description": "Returns an array of BlockInfo for a given block height and limit.",
         "operationId": "getBlocksByHeightWithLimit",
         "produces": [
           "application/json"
@@ -413,7 +448,7 @@
           {
             "name": "height",
             "in": "path",
-            "description": "The block height at which information should be returned",
+            "description": "Block height.",
             "required": true,
             "type": "integer",
             "format": "int64",
@@ -423,7 +458,7 @@
           {
             "name": "limit",
             "in": "path",
-            "description": "Block limit",
+            "description": "Number of following blocks to be returned.",
             "required": true,
             "type": "integer",
             "minimum": 0,
@@ -440,6 +475,9 @@
                 "$ref": "#/definitions/BlockInfoDTO"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -450,7 +488,7 @@
           "Blockchain routes"
         ],
         "summary": "Get block information",
-        "description": "Returns block information for a given block height",
+        "description": "Returns BlockInfo for a given block height.",
         "operationId": "getBlockByHeight",
         "produces": [
           "application/json"
@@ -459,7 +497,7 @@
           {
             "name": "height",
             "in": "path",
-            "description": "Block height",
+            "description": "Block height.",
             "required": true,
             "type": "integer",
             "format": "int64",
@@ -472,6 +510,12 @@
             "schema": {
               "$ref": "#/definitions/BlockInfoDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -481,8 +525,8 @@
         "tags": [
           "Blockchain routes"
         ],
-        "summary": "Get transactions from a block information",
-        "description": "Returns all transactions information for a given block height",
+        "summary": "Get transactions from a block",
+        "description": "Returns array of transactions included in a block for a block height.",
         "operationId": "getBlockTransactions",
         "produces": [
           "application/json"
@@ -500,13 +544,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of transactions to return",
+            "description": "The number of transactions to return. Should be between 10 and 100, otherwise 10.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last transaction id to apply pagination",
+            "description": "Identifier of the transaction after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -519,6 +563,12 @@
                 "type": "object"
               }
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -529,7 +579,7 @@
           "Blockchain routes"
         ],
         "summary": "Get the current height of the chain",
-        "description": "Returns the current height of the blockchain",
+        "description": "Returns the current blockchain height.",
         "operationId": "getBlockchainHeight",
         "produces": [
           "application/json"
@@ -550,7 +600,7 @@
           "Blockchain routes"
         ],
         "summary": "Get the current score of the chain",
-        "description": "Returns the current chain score",
+        "description": "Returns the current chain score.",
         "operationId": "getBlockchainScore",
         "produces": [
           "application/json"
@@ -571,7 +621,7 @@
           "Blockchain routes"
         ],
         "summary": "Get the storage information",
-        "description": "Returns statistical information about the blockchain",
+        "description": "Returns statistical information about the blockchain.",
         "operationId": "getDiagnosticStorage",
         "produces": [
           "application/json"
@@ -592,7 +642,7 @@
           "Mosaic routes"
         ],
         "summary": "Get mosaic information",
-        "description": "Returns information for a given mosaicId",
+        "description": "Returns MosaicInfo for a given mosaicId.",
         "operationId": "getMosaic",
         "produces": [
           "application/json"
@@ -601,7 +651,7 @@
           {
             "name": "mosaicId",
             "in": "path",
-            "description": "The mosaic id for which information should be retreived",
+            "description": "Mosaic identifier.",
             "type": "string",
             "required": true,
             "default": "d525ad41d95fcf29"
@@ -613,6 +663,12 @@
             "schema": {
               "$ref": "#/definitions/MosaicInfoDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -623,7 +679,7 @@
           "Mosaic routes"
         ],
         "summary": "Get information for a set of mosaics",
-        "description": "Returns information for a given set of mosaicIds",
+        "description": "Returns MosaicInfo for a given set of mosaicIds.",
         "operationId": "getMosaics",
         "produces": [
           "application/json"
@@ -632,7 +688,7 @@
           {
             "name": "mosaicIds",
             "in": "body",
-            "description": "Array of mosaicIds",
+            "description": "Array of mosaicIds.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/mosaicIds"
@@ -648,6 +704,12 @@
                 "$ref": "#/definitions/MosaicInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -657,8 +719,8 @@
         "tags": [
           "Mosaic routes"
         ],
-        "summary": "Get mosaics information",
-        "description": "Returns information for a given namespaceId",
+        "summary": "Get mosaics information.",
+        "description": "Returns an array of MosaicInfo from mosaics created under provided namespace.",
         "operationId": "getMosaicsFromNamespace",
         "produces": [
           "application/json"
@@ -667,7 +729,7 @@
           {
             "name": "namespaceId",
             "in": "path",
-            "description": "The namespace id for which mosaics information should be retreived",
+            "description": "Namespace identifier.",
             "type": "string",
             "required": true,
             "default": "84b3552d375ffa4b"
@@ -675,13 +737,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of mosaics to return",
+            "description": "The number of mosaics to return.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last mosaic id to apply pagination",
+            "description": "Identifier of the mosaic after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -694,6 +756,9 @@
                 "$ref": "#/definitions/MosaicInfoDTO"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -704,7 +769,7 @@
           "Mosaic routes"
         ],
         "summary": "Get readable names for a set of mosaics",
-        "description": "Returns names for mosaics",
+        "description": "Returns names for mosaics.",
         "operationId": "getMosaicsName",
         "produces": [
           "application/json"
@@ -713,7 +778,7 @@
           {
             "name": "mosaicIds",
             "in": "body",
-            "description": "Array of mosaicIds",
+            "description": "Array of mosaicIds.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/mosaicIds"
@@ -729,6 +794,12 @@
                 "$ref": "#/definitions/MosaicNameDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -739,7 +810,7 @@
           "Namespace routes"
         ],
         "summary": "Get namespace information",
-        "description": "Returns information for a given namespaceId",
+        "description": "Returns NamespaceInfo for a given namespaceId.",
         "operationId": "getNamespace",
         "produces": [
           "application/json"
@@ -748,7 +819,7 @@
           {
             "name": "namespaceId",
             "in": "path",
-            "description": "The namespace id for which information should be retreived",
+            "description": "Namespace identifier.",
             "type": "string",
             "required": true,
             "default": "84b3552d375ffa4b"
@@ -760,6 +831,12 @@
             "schema": {
               "$ref": "#/definitions/NamespaceInfoDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -770,7 +847,7 @@
           "Namespace routes"
         ],
         "summary": "Get namespaces an account owns",
-        "description": "Returns information about the namespaces an account owns",
+        "description": "Returns an array of NamespaceInfo for an account.",
         "operationId": "getNamespacesFromAccount",
         "produces": [
           "application/json"
@@ -779,7 +856,7 @@
           {
             "name": "accountId",
             "in": "path",
-            "description": "The account address or public key for which namespaces should be retrieved",
+            "description": "Account address or public key.",
             "required": true,
             "type": "string",
             "default": "SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY"
@@ -787,13 +864,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of namespace to return",
+            "description": "The number of namespaces to return.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last namespace id to apply pagination",
+            "description": "Identifier of the namespace after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -806,6 +883,9 @@
                 "$ref": "#/definitions/NamespaceInfoDTO"
               }
             }
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -816,7 +896,7 @@
           "Namespace routes"
         ],
         "summary": "Get namespaces information",
-        "description": "Returns namespaces information for a given set of addresses",
+        "description": "Returns an array of NamespaceInfo for a given set of addresses.",
         "operationId": "getNamespacesFromAccounts",
         "produces": [
           "application/json"
@@ -825,7 +905,7 @@
           {
             "name": "addresses",
             "in": "body",
-            "description": "Accounts address array",
+            "description": "Accounts address array.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/addresses"
@@ -834,13 +914,13 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The numbers of namespace to return",
+            "description": "The number of namespaces to return.",
             "type": "integer"
           },
           {
             "name": "id",
             "in": "query",
-            "description": "Id last namespace id to apply pagination",
+            "description": "Identifier of the namespace after which we want the transactions to be returned.",
             "type": "string"
           }
         ],
@@ -853,6 +933,12 @@
                 "$ref": "#/definitions/NamespaceInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -863,7 +949,7 @@
           "Namespace routes"
         ],
         "summary": "Get readable names for a set of namespaces",
-        "description": "Returns names for namespaces",
+        "description": "Returns names for namespaces.",
         "operationId": "getNamespacesNames",
         "produces": [
           "application/json"
@@ -872,7 +958,7 @@
           {
             "name": "namespaceIds",
             "in": "body",
-            "description": "Array of namespaceIds",
+            "description": "Array of namespaceIds.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/namespaceIds"
@@ -888,6 +974,12 @@
                 "$ref": "#/definitions/NamespaceNameDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -897,8 +989,8 @@
         "tags": [
           "Transaction routes"
         ],
-        "summary": "Get ransaction information",
-        "description": "Returns transaction information for a given transaction id or hash",
+        "summary": "Get transaction information",
+        "description": "Returns transaction given its transactionId or hash.",
         "operationId": "getTransaction",
         "produces": [
           "application/json"
@@ -907,10 +999,10 @@
           {
             "name": "transactionId",
             "in": "path",
-            "description": "Transaction id or hash",
+            "description": "TransactionId or hash.",
             "required": true,
             "type": "string",
-            "default": "59B8DA0F0CB2720001103922"
+            "default": "5AB412B5C60E68000145A4C2"
           }
         ],
         "responses": {
@@ -919,6 +1011,12 @@
             "schema": {
               "type": "object"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -929,7 +1027,7 @@
           "Transaction routes"
         ],
         "summary": "Get transactions information",
-        "description": "Returns transaction information for a given set of transaction id or hash",
+        "description": "Returns transaction information for a given set of transactionId or hash.",
         "operationId": "getTransactions",
         "produces": [
           "application/json"
@@ -938,7 +1036,7 @@
           {
             "name": "transactionIds",
             "in": "body",
-            "description": "Array of transaction ids or hashes",
+            "description": "Array of transactionIds or hashes.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/transactionIds"
@@ -954,6 +1052,12 @@
                 "type": "object"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       },
@@ -961,8 +1065,8 @@
         "tags": [
           "Transaction routes"
         ],
-        "summary": "Creates new transaction",
-        "description": "Announce a transaction to the network",
+        "summary": "Announce a  new transaction",
+        "description": "Announces a transaction to the network.",
         "operationId": "announceTransaction",
         "produces": [
           "application/json"
@@ -971,7 +1075,7 @@
           {
             "name": "payload",
             "in": "body",
-            "description": "Transaction payload",
+            "description": "Transaction payload.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/transactionPayload"
@@ -987,6 +1091,12 @@
                 "$ref": "#/definitions/AnnounceTransactionInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -996,8 +1106,8 @@
         "tags": [
           "Transaction routes"
         ],
-        "summary": "Creates partial transaction",
-        "description": "Announce a partial transaction to the network",
+        "summary": "Announce an aggregate bonded transaction",
+        "description": "Announces an aggregate bonded transaction to the network.",
         "operationId": "announcePartialTransaction",
         "produces": [
           "application/json"
@@ -1006,7 +1116,7 @@
           {
             "name": "payload",
             "in": "body",
-            "description": "Transaction payload",
+            "description": "Transaction payload.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/transactionPayload"
@@ -1014,7 +1124,7 @@
           }
         ],
         "responses": {
-          "200": {
+          "202": {
             "description": "success",
             "schema": {
               "type": "object",
@@ -1022,6 +1132,12 @@
                 "$ref": "#/definitions/AnnounceTransactionInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -1031,8 +1147,8 @@
         "tags": [
           "Transaction routes"
         ],
-        "summary": "Creates cosignature transaction",
-        "description": "Announce a cosignature transaction to the network",
+        "summary": "Announce a cosignature transaction",
+        "description": "Announces a cosignature transaction to the network.",
         "operationId": "announceCosignatureTransaction",
         "produces": [
           "application/json"
@@ -1041,7 +1157,7 @@
           {
             "name": "payload",
             "in": "body",
-            "description": "Transaction payload",
+            "description": "Transaction payload.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/transactionPayload"
@@ -1049,7 +1165,7 @@
           }
         ],
         "responses": {
-          "200": {
+          "202": {
             "description": "success",
             "schema": {
               "type": "object",
@@ -1057,6 +1173,12 @@
                 "$ref": "#/definitions/AnnounceTransactionInfoDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -1067,7 +1189,7 @@
           "Transaction routes"
         ],
         "summary": "Get transaction status",
-        "description": "Returns transaction status for a given transaction id or hash",
+        "description": "Returns transaction status for a given transactionId or hash.",
         "operationId": "getTransactionStatus",
         "produces": [
           "application/json"
@@ -1076,10 +1198,10 @@
           {
             "name": "hash",
             "in": "path",
-            "description": "Transaction hash",
+            "description": "Transaction hash.",
             "required": true,
             "type": "string",
-            "default": "5AF72FE39C0515E823903918A0BFE9625DD752C7BD63969C8869F25E9D155DE5"
+            "default": "F0078795F73549AF8DC74CBA70533250016FA45CACCD494877291CE02299C414"
           }
         ],
         "responses": {
@@ -1088,6 +1210,12 @@
             "schema": {
               "$ref": "#/definitions/TransactionStatusDTO"
             }
+          },
+          "404": {
+            "description": "resource not found"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -1097,8 +1225,8 @@
         "tags": [
           "Transaction routes"
         ],
-        "summary": "Get transactions information",
-        "description": "Returns transaction information for a given set of transaction id or hash",
+        "summary": "Get transactions status.",
+        "description": "Returns an array of transaction statuses for a given set of transactionId or hash.",
         "operationId": "getTransactionsStatuses",
         "produces": [
           "application/json"
@@ -1107,7 +1235,7 @@
           {
             "name": "transactionHashes",
             "in": "body",
-            "description": "Array of transaction ids or hashes",
+            "description": "Array of transactionIds or hashes.",
             "required": true,
             "schema": {
               "$ref": "#/definitions/transactionHashes"
@@ -1123,6 +1251,12 @@
                 "$ref": "#/definitions/TransactionStatusDTO"
               }
             }
+          },
+          "400": {
+            "description": "invalid content"
+          },
+          "409": {
+            "description": "invalid argument"
           }
         }
       }
@@ -1133,7 +1267,7 @@
           "Network routes"
         ],
         "summary": "Get the current network type of the chain",
-        "description": "Returns the current network type",
+        "description": "Returns the current network type.",
         "operationId": "getNetworkType",
         "produces": [
           "application/json"
@@ -1743,7 +1877,7 @@
     }
   },
   "externalDocs": {
-    "description": "Find out more about NEM 2 in our docs",
+    "description": "Find out more about NEM2",
     "url": "https://nemtech.github.io/"
   }
 }
