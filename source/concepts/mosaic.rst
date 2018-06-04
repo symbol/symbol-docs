@@ -4,13 +4,11 @@ Mosaic
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-Mosaics are part of what makes the Smart Asset System unique and flexible. Mosaics are fixed assets on the NEM blockchain that can represent a set of multiple identical things that do not change.
+Mosaics are part of what makes the Smart Asset System unique and flexible. They are fixed assets on the NEM blockchain that can represent a set of multiple identical things that do not change.
+
+Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
 
 A mosaic could be as simple as a token, but it could also represent a set of more specialized assets like: reward points, shares of stock, signatures, status flags, votes or even other currencies.
-
-Each Mosaic is defined by a variety of attributes such as name, description, quantity, divisibility, transferability and more.
-
-Mosaics are held within :doc:`accounts <account>`, and can be transferred between them to represent a surprising variety of transactions such as: registering a signature, updating the status of an item, casting a vote, or simply passing coins or points between accounts.
 
 
 .. _mosaic-definition-transaction:

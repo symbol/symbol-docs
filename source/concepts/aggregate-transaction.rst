@@ -6,7 +6,7 @@ Aggregate transaction
 
 .. _aggregate-transaction:
 
-Aggregated Transactions merge multiple transactions into one, allowing trustless swaps, automatic cross-chain transactions, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
+Aggregated Transactions merge multiple transactions into one, allowing trustless swaps, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
 
 .. raw:: html
 

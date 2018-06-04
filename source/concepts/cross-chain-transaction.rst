@@ -67,4 +67,4 @@ To unlock a secret lock transaction, the account should demonstrate that knows t
 
     **Proof**
 
-    The proof seed. to be confirmed before unlocking funds.
+    The proof seed.
