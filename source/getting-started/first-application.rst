@@ -229,7 +229,7 @@ Once signed, announce it to the network.
 
     .. code-block:: java
 
-        final TransactionHttp transactionHttp = new TransactionHttp('http://localhost:3000');
+        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
 
         transactionHttp.announceTransaction(signedTransaction).toFuture().get();
 
