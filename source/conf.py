@@ -16,9 +16,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('_ext'))
 import sphinx_bootstrap_theme
 
 
@@ -42,7 +42,8 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
-    'sphinxcontrib.fulltoc']
+    'sphinxcontrib.fulltoc',
+    'edit-on-github']
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -280,3 +281,12 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 html_favicon = 'favicon-32x32.png'
+
+# -- Options for edit on github ----------------------------------------------
+
+edit_on_github_project = 'nemtech/nem2-docs'
+edit_on_github_branch = 'master'
+
+# -- Options for edit scaled images ----------------------------------------------
+
+html_scaled_image_link = False

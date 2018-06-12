@@ -1,12 +1,79 @@
 /* General */
 html{
     overflow-x: hidden;
+    height: 100%;
 }
 body{
     padding-top: 70px;
     overflow-x: hidden;
+    min-height: 100%;
+    position: relative;
 }
 
+/* Button */
+.btn-default{
+    border-radius: 15px;
+    background-color: #78b6e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 10px;
+    color: white !important;
+    text-transform: uppercase;
+    width: auto;
+    border: 0 !important;
+}
+/* Alert */
+.alert{
+    margin: 10px auto 10px auto;
+}
+
+.alert-info{
+    background: rgba(55, 167, 219, 1);
+    background: -moz-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55, 167, 219, 1)), color-stop(100%, rgba(59, 185, 234, 1)));
+    background: -webkit-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -o-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    background: linear-gradient(to right, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
+    border-color: #37a7db;
+}
+
+.alert-warning{
+    background: #f7a700;
+    border-color: #f5aa24;
+    color: #555;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    width: 100%;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Tables */
+table{
+    word-break: break-all;
+}
+
+table-td{
+    max-width: 50%;
+}
+
+/* Layout*/
 .custom-content{
     max-width:860px;
     margin: 0 auto;
@@ -28,6 +95,10 @@ body{
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.content{
+    padding-bottom: 50px;
 }
 
 .content ul {
@@ -52,7 +123,6 @@ body{
 
 
 /* Navbar */
-
 .navbar-default{
     background-color: white;
     border: 0;
@@ -105,6 +175,17 @@ body{
     color: #fff;
 }
 
+.navbar-default .navbar-right{
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+}
+
+.navbar-default .navbar-right a,
+.navbar-default .navbar-right a:hover{
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+}
 
 @media screen and (max-width: 992px){
     .navbar-default form{
@@ -113,18 +194,15 @@ body{
 }
 
 /* Sidebar */
-
 #sidebar{
     padding: 10px;
     z-index: 9;
+    position: relative !important;
 }
 
 #sidebar ul:not(.current){
     display: none;
 }
-
-
-
 
 #sidebar ul{
     -webkit-animation: fadeIn 1s;
@@ -139,29 +217,6 @@ body{
     cursor: pointer;
 }
 
-/* Alert */
-
-.alert{
-    margin: 10px auto 10px auto;
-}
-
-.alert-info{
-    background: rgba(55, 167, 219, 1);
-    background: -moz-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55, 167, 219, 1)), color-stop(100%, rgba(59, 185, 234, 1)));
-    background: -webkit-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -o-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: linear-gradient(to right, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    border-color: #37a7db;
-}
-
-.alert-warning{
-    background: #f7a700;
-    border-color: #f5aa24;
-    color: #555;
-}
-
 /* Figure  */
 
 .figure{
@@ -173,34 +228,6 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 
-}
-
-/* Card */
-.card {
-    background: #fff;
-    width: 100%;
-    border-radius: 2px;
-    display: inline-block;
-    position: relative;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.card:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-/* Tables */
-
-table{
-    word-break: break-all;
-}
-
-table-td{
-    max-width: 50%;
 }
 
 /* Code example */
@@ -242,7 +269,10 @@ table-td{
 footer{
     background: #fff;
     z-index: 10;
-    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 /* Home Page */
@@ -259,7 +289,7 @@ footer{
     filter: progid:DXImageTransform.Microsof
 }
 
-.jumbotron .image-reference{
+.jumbotron .image-container{
     position: absolute;
     width: 100%;
     left: 0;
@@ -267,7 +297,7 @@ footer{
 
 
 @media screen and (max-width: 450px){
-    .jumbotron .image-reference img{
+    .jumbotron .image-container img{
         height: 200px !important;
     }
 }

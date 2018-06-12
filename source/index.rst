@@ -3,6 +3,7 @@
     <div class="jumbotron text-center">
         <h1>NEM Developer Center</h1>
         <p>Start integrating NEM into your application.</p>
+        <div class="image-container">
 
 .. image:: resources/images/nem-developers.png
     :align: center
@@ -11,10 +12,11 @@
 .. raw:: html
 
     </div>
+    </div>
     <div class="custom-content">
     <div class="custom-row">
 
-    <h2>NEM is Your Blockchain Engine</h2>
+    <h2 class="text-center">NEM is Your Blockchain Engine</h2>
     <p>NEM is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. NEM  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
     <p> This documentation refers to NEM latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
     </div>
@@ -23,7 +25,7 @@
 
     <div class="custom-row">
 
-    <h2>Dive into our Developer Documentation</h2>
+    <h2 class="text-center">Dive into our Developer Documentation</h2>
 
     <p class="gap">Our detailed NEM development documentation is provided via our documentation site. Below are some shortcut links that may be a good place to start.</p>
 
@@ -73,16 +75,17 @@ NEM Smart Assets are built using the following connected parts:
 
 NEM provides tools and services to accelerate blockchain development, greatly reducing development time.
 
-* :doc:`NEM2-CLI <cli/overview>` Reference
-* :doc:`NEM2-SDK <sdk/overview>` Reference
-* :doc:`Catapult REST API <api/overview>` Reference
+* :doc:`NEM2-CLI <cli/overview>`
+* :doc:`NEM2-SDK <sdk/overview>`
+* :doc:`Catapult REST API <api/overview>`
 * :doc:`NEM2 Libraries <libraries/overview>`
+
 
 .. raw:: html
 
     </div></div></div>
     <div id="support" class="custom-row social">
-    <h2 class="gap">Connect with the NEM Development Community</h2>
+    <h2 class="gap text-center">Connect with the NEM Development Community</h2>
     <div class="text-center">
         <div class="col-sm-4">
             <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM"><i class="fab fa-slack"></i></a>
@@ -169,6 +172,15 @@ NEM Developer Center
 
     api/overview
     api/websockets
+
+..
+    .. toctree::
+        :maxdepth: 2
+        :hidden:
+        :caption: NEM2 Prototyping Tool
+
+        prototyping-tool/overview
+        prototyping-tool/examples
 
 .. toctree::
     :maxdepth: 2

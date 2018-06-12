@@ -8,7 +8,7 @@ function addSidebarClickHandler(){
         if (nextUl.hasClass("show")) nextUl.removeClass("show");
         else nextUl.addClass("show");
     });
-};
+}
 
 $( document ).ready(function() {
     homePageFullWidth();

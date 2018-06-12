@@ -1,0 +1,10 @@
+{%- if pagename != "search" %}
+
+{%- if edit_on_github_url %}
+<div class="navbar-right hidden-sm hidden-xs">
+    <a class="btn-search" href="/search.html?q=nem"><i class="fa fa-search"></i> Search</a>
+    <a href="{{ edit_on_github_url }}"
+       rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit on GitHub') }}</a>
+</div>
+{%- endif %}
+{%- endif %}
