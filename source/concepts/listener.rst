@@ -44,7 +44,7 @@ Channels
 
     **cosignature/<ADDRESS>**
 
-    The partialRemoved channel notifies when a *cosignature signed transaction* related to an address is added to an aggregate bonded transaction with partial state. The message contains the cosignature signed transaction.
+    The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an aggregate bonded transaction with partial state. The message contains the cosignature signed transaction.
 
     **status/<ADDRESS>**
 

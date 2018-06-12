@@ -38,7 +38,7 @@ Command
 
     $> nem2-cli profile list
 
-.. note:: By default NEM2-CLI will always use the default profile to connect to a node and set default options such us: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
+.. note:: By default NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
 
 *******
 Account
@@ -252,7 +252,7 @@ Send transfer transaction
 
 Send a :ref:`transfer transaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
 
-You can send ``multiple mosaics`` splitting them with a comma, e.g: nem:xem::10,nps:msc:10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 XEM is 1000000.
+You can send ``multiple mosaics`` splitting them with a comma, e.g: nem:xem::10,nps:msc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 XEM is 1000000.
 
 Options
 
@@ -381,7 +381,7 @@ Mosaic
 Info
 ====
 
-Get information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in the form of namespaceName:mosaicName (ex: nem:xem) or the mosaic uint id in the form of  [3646934825,3576016193].
+Get information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in the form of namespaceName:mosaicName (ex: nem:xem) or the mosaic uint ID in the form of  [3646934825,3576016193].
 
 Options
 
