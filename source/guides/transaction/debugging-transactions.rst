@@ -37,15 +37,15 @@ Create a new listener to get notified every time a transaction related to your a
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/blockchain/DebuggingTransactionsConfirmed.ts
+    .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
         :lines:  22
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/DebuggingTransactionsConfirmed.java
+    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
         :lines: 35
 
-    .. literalinclude:: ../../resources/examples/javascript/blockchain/DebuggingTransactionsConfirmed.js
+    .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
         :language: javascript
         :lines: 23
 
@@ -53,15 +53,15 @@ Open the connection. You only need to open the connection once and then connect 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/blockchain/DebuggingTransactionsConfirmed.ts
+    .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
         :lines:  24
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/DebuggingTransactionsConfirmed.java
+    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
         :lines: 39
 
-    .. literalinclude:: ../../resources/examples/javascript/blockchain/DebuggingTransactionsConfirmed.js
+    .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
         :language: javascript
         :lines: 25
 
@@ -69,19 +69,19 @@ In this example, we will reach only transactions that get confirmed. You can als
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/blockchain/DebuggingTransactionsConfirmed.ts
+    .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
         :lines:  24-33
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/DebuggingTransactionsConfirmed.java
+    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
         :lines: 37-43
 
-    .. literalinclude:: ../../resources/examples/javascript/blockchain/DebuggingTransactionsConfirmed.js
+    .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
         :language: javascript
         :lines: 25-
 
-    .. literalinclude:: ../../resources/examples/cli/blockchain/DebuggingTransactionsConfirmed.sh
+    .. literalinclude:: ../../resources/examples/cli/transaction/DebuggingTransactionsConfirmed.sh
         :language: bash
         :start-after: #!/bin/sh
 

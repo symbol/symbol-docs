@@ -141,7 +141,7 @@ As all required cosigners didn't sign the transaction, it should be announced as
         :lines:  55-61
 
 
-Open a new terminal for :doc:`monitoring<../blockchain/debugging-transactions>` the aggregate bonded transaction.
+Open a new terminal for :doc:`monitoring<../transaction/debugging-transactions>` the aggregate bonded transaction.
 
 .. code-block:: bash
 

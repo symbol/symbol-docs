@@ -101,7 +101,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
         :language: javascript
         :lines:  68-
 
-If all goes well, :doc:`Bob receives a notification <../blockchain/debugging-transactions>`.
+If all goes well, :doc:`Bob receives a notification <../transaction/debugging-transactions>`.
 
 ************
 What's next?

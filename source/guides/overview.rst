@@ -4,6 +4,13 @@ Overview
 
 Guides show you how to use NEM built-in features while following step by step simple use cases.
 
+* :doc:`Interacting with accounts <account>`
+* :doc:`Monitoring blockchain <blockchain>`
+* :doc:`Registering namespaces <namespace>`
+* :doc:`Interacting with mosaics <mosaic>`
+* :doc:`Sending transactions <transaction>`
+* :doc:`Running a node <running-a-node>`
+
 *********************
 How to run an example
 *********************

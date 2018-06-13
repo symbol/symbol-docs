@@ -1,31 +1,31 @@
 {% extends "!layout.html" %}
 
 {% block head %}
-    {{ super() }}
+{{ super() }}
 
-    {% block extrahead %}
-        {{ super() }}
+{% block extrahead %}
+{{ super() }}
 
-       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119775843-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119775843-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-            gtag('config', 'UA-119775843-1');
-        </script>
-    {% endblock %}
+    gtag('config', 'UA-119775843-1');
+</script>
+{% endblock %}
 {% endblock %}
 
 {%- block footer %}
 <footer class="footer">
     <div class="container">
         <!--<p class="pull-right">-->
-            <!--<a href="#">Back to top</a>-->
-            <!--{% if theme_source_link_position == "footer" %}-->
-            <!--<br/>-->
-            <!--{% include "sourcelink.html" %}-->
-            <!--{% endif %}-->
+        <!--<a href="#">Back to top</a>-->
+        <!--{% if theme_source_link_position == "footer" %}-->
+        <!--<br/>-->
+        <!--{% include "sourcelink.html" %}-->
+        <!--{% endif %}-->
         <!--</p>-->
         <p>
             {%- if show_copyright %}

@@ -34,7 +34,7 @@ Once an account announces a transaction, if properly formed, the server will ret
 
 Receiving an OK response doesn't mean the transaction is valid, hence not included in a block. A good practice is to monitor transactions before being announced.
 
-We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../blockchain/debugging-transactions>` validation errors.
+We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
 
 .. code-block:: bash
 
