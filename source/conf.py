@@ -68,7 +68,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.10.2'
+version = u'0.10.3'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -192,8 +192,23 @@ def setup(app):
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-  '**': ['localtoc.html'],
-  'index': []
+  'api/**': ['localtoc.html'],
+  'cli/**': ['localtoc.html'],
+  'concepts/**': ['localtoc.html'],
+  'getting-started/**': ['localtoc.html'],
+  'guides/overview': ['localtoc.html'],
+  'guides/account': ['localtoc.html'],
+  'guides/blockchain': ['localtoc.html'],
+  'guides/mosaic': ['localtoc.html'],
+  'guides/namespace': ['localtoc.html'],
+  'guides/mosaic': ['localtoc.html'],
+  'guides/running-a-node': ['localtoc.html'],
+  'guides/transaction': ['localtoc.html'],
+  'libraries/**': ['localtoc.html'],
+  'prototyping-tool/**': ['localtoc.html'],
+  'sdk/**': ['localtoc.html'],
+  'support/**': ['localtoc.html'],
+  'index': [],
 }
 
 
