@@ -2,11 +2,11 @@
 Overview
 ########
 
-The NEM2 Command Line Interface (CLI) is a unified tool to interact with the NEM blockchain.
+The NEM2 Command Line Interface is a unified tool to interact with the NEM blockchain.
 
 This tool will enable you to perform the most common used actions to interact with the blockchain.
 
-NEM2-CLI is an open source tool built on top of the :doc:`NEM2-SDK<../sdk/overview>` Typescript. Use it in your favorite terminal program.
+**NEM2-CLI** is an open source tool built on top of the :doc:`NEM2-SDK<../sdk/overview>` Typescript. Use it in your favorite terminal program.
 
 *******
 Example

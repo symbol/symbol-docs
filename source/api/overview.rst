@@ -2,7 +2,7 @@
 Overview
 ########
 
-Catapult REST API combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+**Catapult REST API** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
 
 ************************
 Interacting with the API
@@ -21,6 +21,8 @@ HTTP PUT and POST requests use JSON structures in the request body. Request retu
 *****************
 Reference & Tools
 *****************
+
+|catapult-rest-reference|
 
 We recommend using one of the following tools to interact with Catapult REST API, especially for PUT and POST methods.
 
@@ -48,6 +50,11 @@ Download `Insomnia app <https://insomnia.rest/>`_ for your operative system and 
 .. |endpoints-insomnia| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/" target="_blank">Catapult REST API Insomnia</a>
+
+.. |catapult-rest-reference| raw:: html
+
+   <a href="https://app.swaggerhub.com/apis/nemtech/catapult-rest-api/" target="_blank">Catapult REST API Reference</a>
+
 
 HTTP Status Codes
 =================

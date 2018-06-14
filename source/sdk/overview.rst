@@ -2,7 +2,7 @@
 Overview
 ########
 
-The NEM2 Software Development Kit (a.k.a. NEM2-SDK) is the primary software development tool to create NEM2 components, like more tools, libraries or applications. All, or almost all, components should use NEM2-SDK instead of raw API.
+The NEM2 Software Development Kit is the primary software development tool to create NEM2 components, like more tools, libraries or applications. All, or almost all, components should use **NEM2-SDK** instead of raw API.
 
 .. warning::  The SDKs methods could change until it reaches the stable version 1.0.0.
 
