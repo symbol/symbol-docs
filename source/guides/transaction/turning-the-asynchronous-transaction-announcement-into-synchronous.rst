@@ -20,6 +20,8 @@ On the other hand, keeping track of the status of the transactions adds unnecess
 
 nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announce, it waits for the confirmation via :doc:`WebSockets<../../concepts/listener>` and returns the message to the HTTP call.
 
+.. note:: The method ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+
 .. figure:: ../../resources/images/guides-transactions-transfer-nem2-camel.png
     :align: center
 
@@ -92,15 +94,19 @@ Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>
         :language: typescript
         :lines:  26-44
 
-    Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait for the confirmation via WebSockets and return the confirmed transaction. After receiving the confirmation, Alice can send an email to Bob.
+Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. Afterwards, Alice can send an email to Bob.
 
-If the Catapult REST server throws an error, subscribe method will invoke ``error function`` returning a ``TransactionStatus`` object.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
         :lines:  46-
+
+If the transaction is valid, nem2-camel would return a ``Transaction`` object. It is important to highlight that this transaction has ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
+
+In case the Catapult REST server throws an error, the subscribe method will invoke the ``error function`` returning a ``TransactionStatus`` object.
+
 
 .. |nem2-camel| raw:: html
 
@@ -113,7 +119,6 @@ If the Catapult REST server throws an error, subscribe method will invoke ``erro
 .. |docker| raw:: html
 
     <a href="https://docs.docker.com/install/" target="_blank">docker</a>
-
 
 .. |docker-compose| raw:: html
 

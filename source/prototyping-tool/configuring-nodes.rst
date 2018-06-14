@@ -50,7 +50,7 @@ Running a flow
 
 Click the ``deploy`` button, at the top-right corner of your screen. Select the square attached to the first node to run the flow.
 
-Check in the right sidebar the output returned, under debug tab. NEM2 nodes return outputs following the structure ``msg.nem.<name_of_the_output>``.
+Check the output returned at the right sidebar, under the debug tab. NEM2 nodes return outputs following the structure ``msg.nem.<name_of_the_output>``.
 
 .. figure:: ../resources/images/nem2-prototyping-tool-4.png
     :align: center

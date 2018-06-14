@@ -4,8 +4,19 @@
 Examples
 ########
 
-* `Transfer transaction example template <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_, by  `jorisadri <https://github.com/jorisadri>`_.
+******
+Basics
+******
 
+* `Transfer transaction example template <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_, by  `jorisadri <https://github.com/jorisadri>`_.
+* `Create namespace example template <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_, by `jorisadri <https://github.com/jorisadri>`_.
+* `Create mosaic example template <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_, by `jorisadri <https://github.com/jorisadri>`_.
+
+********
+Advanced
+********
+
+Send your flows!
 
 ****************
 Importing a flow
