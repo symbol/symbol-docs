@@ -79,7 +79,7 @@ NEM provides tools and services to accelerate blockchain development, greatly re
 * :doc:`NEM2-SDK <sdk/overview>`
 * :doc:`Catapult REST API <api/overview>`
 * :doc:`NEM2 Libraries <libraries/overview>`
-* :doc:`NEM2 Prototyping Tool <libraries/overview>`
+* :doc:`NEM2 Prototyping Tool <prototyping-tool/overview>`
 
 
 .. raw:: html

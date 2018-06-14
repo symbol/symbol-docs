@@ -57,7 +57,7 @@ Prerequisites
 - A text editor or IDE
 
 *************************
-Let's get into some code?
+Let's get into some code
 *************************
 
 .. figure:: ../../resources/images/guides-transactions-escrow.png
