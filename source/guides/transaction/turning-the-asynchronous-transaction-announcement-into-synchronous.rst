@@ -103,7 +103,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
         :language: typescript
         :lines:  46-
 
-If the transaction is valid, nem2-camel would return a ``Transaction`` object. It is important to highlight that this transaction has ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
+If the transaction is valid, nem2-camel returns a ``Transaction`` object. It is important to highlight that this transaction has ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
 
 In case the Catapult REST server throws an error, the subscribe method will invoke the ``error function`` returning a ``TransactionStatus`` object.
 

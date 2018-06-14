@@ -6,18 +6,18 @@ Transaction
 
 Transactions are actions taken on the blockchain that change its state. In other words, how your Smart Assets are put into action.
 
-Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`account <account>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
+Transactions let you transfer :doc:`mosaics <mosaic>` between :doc:`accounts <account>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
 
 **********************
 Transaction life-cycle
 **********************
 
-When a transaction is initiated through the API, it always returns an OK. It is still unconfirmed and thus not yet accepted by the network. At this point, it is not clear if it will get included in a block. Never rely on a transaction which has the state unconfirmed.
+When you announce a transaction, the REST API will always return an OK. At this point, it still unknown if the transaction is :ref:`valid<status-error>`.
 
 To know the status of the transaction, which can be OK or :ref:`Failure<status-error>`, you have to:
 
-1) Check the status via API endpoint
-2) Listen to the different :doc:`WebSocket<listener>` channels.
+a) Check the status via API endpoint
+b) Listen to the different :doc:`WebSocket<listener>` channels.
 
 .. figure:: ../resources/images/transaction-cycle.png
     :width: 800px
@@ -25,17 +25,21 @@ To know the status of the transaction, which can be OK or :ref:`Failure<status-e
 
     Transaction cycle
 
-Once it is included in a :doc:`block <block>`, the transaction gets processed and, in case of a transfer transaction, the amount stated in the transaction gets transferred from the sender's account to the recipient's account. Additionally, the transaction fee is deducted from the sender's account.
+If valid, the transaction reaches the network with an ``unconfirmed`` status.
 
-The transaction is said to have 0 confirmations at this point. When another block is added to the blockchain, the transaction has 1 confirmation. The next block added to the chain will give it 2 confirmations and so on.
+.. note:: Never rely on a transaction which has the state unconfirmed. It is not clear if it will get included in a block.
 
-Cryptocurrencies have the ability to roll back part of the blockchain. This is essential for being able to resolve forks of the blockchain. 
+The transaction is ``confirmed`` once it is included in a :doc:`block <block>`. In case of a transfer transaction, the transaction gets processed and the amount stated gets transferred from the sender's account to the recipient's account. Additionally, the transaction fee is deducted from the sender's account.
 
-There is, however, a maximum number of blocks that can be rolled back, which is called the "rewrite limit". Hence, forks can only be resolved up to a certain depth too. 
+The transaction has zero confirmations at this point. When another block is added to the blockchain, the transaction has one confirmation. The next block added to the chain will give it two confirmations and so on.
+
+Cryptocurrencies can roll back part of the blockchain. Rollbacks are essential for resolving forks of the blockchain.
+
+The "rewrite limit" is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
 NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
-In real life, forks that are deeper than ``20`` blocks do not happen, unless there are some severe problem with the blockchain due to a bug in the code or an attack of some kind.
+In real life, forks that are deeper than ``20`` blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 .. raw:: html
 
