@@ -41,7 +41,7 @@ Prerequisites
 - A text editor or IDE
 
 *************************
-Let's get into some code?
+Let's get into some code
 *************************
 
 Alice picks a random number, which we call ``proof``. Applies SHA512 hash algorithm to it, obtaining the ``secret``.
