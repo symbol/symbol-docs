@@ -30,7 +30,7 @@ Prerequisites
 - An account with XEM
 
 *************************
-Let's get into some code?
+Let's get into some code
 *************************
 
 First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, and wrap them in an :ref:`aggregate transaction <aggregate-transaction>`.
