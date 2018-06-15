@@ -15,7 +15,7 @@ Drag & drop NEM nodes and link them with other services in new and interesting w
 Node-RED
 ********
 
-NEM2 Prototyping Tool is a collection of **Node-RED nodes**.
+|NEM2-Prototyping-Tool| is a collection of **Node-RED** nodes.
 
 |Node-RED| is a visual programming tool for wiring together hardware devices, APIs and online services.
 
@@ -27,18 +27,30 @@ The flows created in Node-RED are stored using JSON which can be easily imported
 Installation
 ************
 
-* |download-the-app| for Windows, Mac or Linux.
+Install Node-RED:
 
-* See command line |installation-instructions|.
+.. code-block:: bash
+
+    $> npm install -g node-red
+
+Install NEM2 Prototyping Tool:
+
+.. code-block:: bash
+
+    $> cd ~\.node-red
+    $> npm install node-red-contrib-nem2
+
+Run Node-RED:
+
+.. code-block:: bash
+
+    $> node-RED
+
 
 .. |Node-RED| raw:: html
 
     <a href="https://nodered.org/" target="_blank">Node-RED</a>
 
-.. |installation-instructions| raw:: html
+.. |NEM2-Prototyping-Tool| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-prototyping-tool" target="_blank">installation instructions</a>
-
-.. |download-the-app| raw:: html
-
-    <a href="https://github.com/nemtech/nem2-prototyping-tool/releases" target="_blank">Download the app</a>
+    <a href="https://github.com/nemtech/nem2-prototyping-tool" target="_blank">NEM2 Prototyping Tool</a>
