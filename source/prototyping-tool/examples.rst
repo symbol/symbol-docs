@@ -16,7 +16,7 @@ Basics
 Advanced
 ********
 
-Send your flows!
+* `Simple chat example template <https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_, by `planethouki <https://github.com/planethouki>`_.
 
 ****************
 Importing a flow
