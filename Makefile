@@ -15,6 +15,9 @@ help:
 livehtml:
 	sphinx-autobuild -a -b html $(SOURCEDIR) $(BUILDDIR)/html
 
+linkcheck:
+	sphinx-build -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
+
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new

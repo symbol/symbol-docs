@@ -31,7 +31,7 @@ This kind of request usually cannot be executed from within the browser unless y
 Swagger UI
 ==========
 
-Open `Swagger online editor <https://swagger.io/swagger-editor/>`_ and import:
+Open `Swagger online editor <https://swagger.io/tools/swagger-editor/>`_ and import:
 
 * |endpoints-swagger|
 
