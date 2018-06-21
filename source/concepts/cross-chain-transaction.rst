@@ -2,7 +2,11 @@
 Cross-Chain Transaction
 #######################
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
+Cross-chain transactions enable trading tokens between different blockchains, without using an intermediary party in the process.
+
+This exchange of tokens will succeed atomically. If some of the actors don't agree, each of them will receive the locked tokens back after a determined amount of time.
+
+When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps thought :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
 
 .. _secret-lock-transaction:
 
@@ -14,7 +18,7 @@ Use secret lock transaction to send mosaics to a recipient once an account disco
 
 Once announced, the specified mosaics are locked at blockchain level using the *hashed secret* message.
 
-Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account should demonstrate that knows the *proof* that unlocks the transaction. That means applying ``hashing algorithm`` to ``proof`` and obtaining hashed ``secret`` message.
+Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account should demonstrate knowing the *proof* that unlocks the transaction. Applying a ``hashing algorithm`` to the ``proof``, it should be equal to the hashed ``secret`` message.
 
 If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the secret lock transaction.
 
@@ -23,7 +27,7 @@ If the transaction duration is reached and not proved, the locked amount is retu
 
     Atomic cross-chain trading between public and private network
 
-Secret lock and proof transactions enable :doc:`atomic cross-chain trading <../guides/transaction/using-secret-lock-transaction-for-atomic-cross-chain-swap>`, without the necessity of trusting a third party.
+Secret lock and proof transactions enable :doc:`atomic cross-chain trading <../guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`, without the necessity of trusting a third party.
 
     **Mosaic**
 

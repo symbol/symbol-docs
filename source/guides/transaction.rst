@@ -23,8 +23,7 @@ Aggregate Transaction
 Cross Chain Transaction
 ***********************
 
-* :doc:`Using secret lock transaction for atomic cross-chain swap<transaction/using-secret-lock-transaction-for-atomic-cross-chain-swap>`
-
+* :doc:`Atomic cross-chain swap between NEM public and private chain<transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`
 
 **********
 Monitoring
