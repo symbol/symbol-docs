@@ -28,11 +28,11 @@ Create a function to cosign any aggregate bonded transaction.
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 24-27
+        :lines: 29-32
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  26-30
+        :lines:  26-29
 
 Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
 
@@ -50,7 +50,7 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 29-
+        :lines: 34-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
         :language: java
@@ -77,12 +77,8 @@ Try it yourself! Here you have the implementation:
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts
         :language: typescript
-        :lines:  25-
+        :lines:  34-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java
         :language: java
         :lines:  40-72
-
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.js
-        :language: javascript
-        :lines:  26-

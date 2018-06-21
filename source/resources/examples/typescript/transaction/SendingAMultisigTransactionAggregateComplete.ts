@@ -17,43 +17,47 @@
  */
 
 import {
-    Address, TransferTransaction, Deadline, PublicAccount, XEM, PlainMessage, NetworkType,
-    AggregateTransaction, Account, TransactionHttp
+    Account,
+    Address,
+    AggregateTransaction,
+    Deadline,
+    NetworkType,
+    PlainMessage,
+    PublicAccount,
+    TransactionHttp,
+    TransferTransaction,
+    XEM
 } from "nem2-sdk";
 
-// Replace with the cosignatory private key
+// 01 - Set up
+const transactionHttp = new TransactionHttp( 'http://localhost:3000');
+
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY as string;
-
-// Replace with the multisig public key
-const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
-
-// Replace with recipient address
-const recipientAddress = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
-
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
+const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+
+const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+
+// 02 - Create Transaction
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(recipientAddress),
+    recipientAddress,
     [XEM.createRelative(10)],
     PlainMessage.create('sending 10 nem:xem'),
-    NetworkType.MIJIN_TEST
-);
+    NetworkType.MIJIN_TEST);
 
+// 03 - Create Aggregate Complete Transaction
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [
-        transferTransaction.toAggregate(multisigAccount),
-    ],
+    [transferTransaction.toAggregate(multisigAccount),],
     NetworkType.MIJIN_TEST,
-    []
-);
+    []);
 
+// 04 - Sign and announce transaction
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
-    err => console.error(err));
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

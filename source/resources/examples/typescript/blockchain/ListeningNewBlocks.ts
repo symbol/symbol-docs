@@ -16,16 +16,14 @@
  *
  */
 
-
 import {Listener} from "nem2-sdk";
 
 const listener = new Listener('http://localhost:3000');
 
 listener.open().then(() => {
 
-    listener.newBlock().subscribe(
-        block => console.log(block),
-        err => console.error(err)
-    );
+    listener
+        .newBlock()
+        .subscribe(block => console.log(block), err => console.error(err));
 
 });

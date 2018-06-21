@@ -36,7 +36,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  26-63
+        :lines:  31-61
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -44,7 +44,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 29-66
+        :lines: 31-61
 
 2) Creating multisig account #3
 
@@ -52,7 +52,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  65-107
+        :lines:  64-99
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -60,7 +60,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 68-110
+        :lines: 64-99
 
 3) Creating multisig account #1
 
@@ -68,7 +68,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 108-
+        :lines: 102-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
         :language: java
@@ -76,7 +76,7 @@ Let’s get into some code
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 111-
+        :lines: 102-
 
 ************
 What's next?

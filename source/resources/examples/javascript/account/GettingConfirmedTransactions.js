@@ -18,25 +18,18 @@
 
 const nem2Sdk = require("nem2-sdk");
 
-const NetworkType = nem2Sdk.NetworkType,
-    AccountHttp = nem2Sdk.AccountHttp,
-    PublicAccount = nem2Sdk.PublicAccount,
-    QueryParams = nem2Sdk.QueryParams;
+const AccountHttp = nem2Sdk.AccountHttp,
+    NetworkType = nem2Sdk.NetworkType,
+    QueryParams = nem2Sdk.QueryParams,
+    PublicAccount = nem2Sdk.PublicAccount;
 
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-// Replace with public key
 const publicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
+const publicAccount =  PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 
-/**
- * Page size between 10 and 100, otherwise 10
- */
-const pageSize = 10;
+const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
-accountHttp.transactions(
-    PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST),
-    new QueryParams(pageSize)
-).subscribe(
-    transactions => console.log(transactions),
-    err => console.error(err)
-);
+accountHttp
+    .transactions(publicAccount, new QueryParams(pageSize))
+    .subscribe(transactions => console.log(transactions), err => console.error(err));

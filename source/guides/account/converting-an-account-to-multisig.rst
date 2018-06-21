@@ -42,7 +42,7 @@ The first step is to define who will be the cosignatories of the multisig accoun
 
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines:  25-35
+        :lines:  31-39
     
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
         :language: java
@@ -50,7 +50,7 @@ The first step is to define who will be the cosignatories of the multisig accoun
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 29-39
+        :lines: 30-38
 
 The next step is to convert the account into a multisig account by setting a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`. As it is a 1-of-2 multisig account, set the minimum signatures to 1.
 
@@ -58,7 +58,7 @@ The next step is to convert the account into a multisig account by setting a :re
 
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 37-51
+        :lines: 42-55
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
         :language: java
@@ -66,7 +66,7 @@ The next step is to convert the account into a multisig account by setting a :re
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 41-55
+        :lines: 41-54
 
 Finally, multisig account signs and announces the transaction.
 
@@ -74,7 +74,7 @@ Finally, multisig account signs and announces the transaction.
 
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 53-
+        :lines: 58-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
         :language: java
@@ -87,6 +87,9 @@ Finally, multisig account signs and announces the transaction.
 .. _guide-get-multisig-account-info:
 
 If everything goes well, Alice and Bob should be cosignatories of the multisig account.
+
+
+.. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` method.
 
 .. example-code::
 
@@ -102,7 +105,6 @@ If everything goes well, Alice and Bob should be cosignatories of the multisig a
         :language: javascript
         :lines: 24-
 
-.. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` method.
 
 ************
 What's next?

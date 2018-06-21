@@ -62,7 +62,7 @@ Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Wel
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  26-34
+        :lines:  31-38
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
         :language: java
@@ -70,7 +70,7 @@ Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Wel
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  31-39
+        :lines:  31-38
 
 Although the transaction is created, it has not been announced to the network yet.
 
@@ -80,7 +80,7 @@ To announce it, Alice shall sign the transaction with her account first so that 
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  38-44
+        :lines:  41-45
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
         :language: java
@@ -88,7 +88,7 @@ To announce it, Alice shall sign the transaction with her account first so that 
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  43-48
+        :lines:  41-45
 
 Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
@@ -96,7 +96,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  47-
+        :lines:  48-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
         :language: java
@@ -104,7 +104,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  52-
+        :lines:  48-
 
     .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransaction.sh
         :language: bash
@@ -138,7 +138,7 @@ If you own more than one mosaic, try to send them together in the same transacti
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
         :language: typescript
-        :lines:  36-39
+        :lines:  39-40
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransactionWithMultipleMosaics.java
         :language: java
@@ -146,7 +146,7 @@ If you own more than one mosaic, try to send them together in the same transacti
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
-        :lines:  42-45
+        :lines:  38-39
 
     .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransactionWithMultipleMosaics.sh
         :language: bash

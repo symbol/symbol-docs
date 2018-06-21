@@ -18,11 +18,18 @@
 
 
 import {
-    Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Listener, NetworkType,
-    PublicAccount, Transaction,
-    TransactionHttp, TransferTransaction, XEM
+    Account,
+    AggregateTransaction,
+    CosignatureSignedTransaction,
+    CosignatureTransaction,
+    Listener,
+    NetworkType,
+    PublicAccount,
+    Transaction,
+    TransactionHttp,
+    TransferTransaction,
+    XEM
 } from "nem2-sdk";
-
 
 const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {
     return transaction instanceof TransferTransaction &&
@@ -37,18 +44,17 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
 
-// Replace with private key
 const privateKey = process.env.PRIVATE_KEY as string;
-
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const listener = new Listener('http://localhost:3000');
-
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
 
-    listener.aggregateBondedAdded(account.address)
+    listener
+        .aggregateBondedAdded(account.address)
         .filter((_) => _.innerTransactions.length == 2)
         .filter((_) => !_.signedByAccount(account.publicAccount))
         .filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount))

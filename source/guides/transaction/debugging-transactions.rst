@@ -39,7 +39,7 @@ Create a new listener to get notified every time a transaction related to your a
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
-        :lines:  22
+        :lines:  21
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
@@ -55,7 +55,7 @@ Open the connection. You only need to open the connection once and then connect 
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
-        :lines:  24
+        :lines:  23
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
@@ -71,7 +71,7 @@ In this example, we will reach only transactions that get confirmed. You can als
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
         :language: typescript
-        :lines:  24-33
+        :lines:  23-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
         :language: java
@@ -79,7 +79,7 @@ In this example, we will reach only transactions that get confirmed. You can als
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
         :language: javascript
-        :lines: 25-
+        :lines: 24-
 
     .. literalinclude:: ../../resources/examples/cli/transaction/DebuggingTransactionsConfirmed.sh
         :language: bash

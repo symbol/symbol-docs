@@ -27,27 +27,22 @@ const Account = nem2Sdk.Account,
     UInt64 = nem2Sdk.UInt64;
 
 
-// Replace with a private key
-const privateKey = process.env.PRIVATE_KEY;
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
+const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-// Replace with mosaic id
-const mosaicID = new MosaicId('foo:token'); // replace with mosaic full name
+const mosaicID = new MosaicId('foo:token');
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicID,
     MosaicSupplyType.Increase,
     UInt64.fromUint(2000000),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x=> console.log(x),
-    err => console.error(err)
-);
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x=> console.log(x), err => console.error(err));

@@ -21,18 +21,13 @@ import {
     XEM
 } from 'nem2-sdk';
 
-// Replace with public key
+const accountHttp = new AccountHttp('http://localhost:3000');
+
 const originPublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
-
-// Replace with recipient address
-const recipientAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
-
 const originAccount = PublicAccount.createFromPublicKey(originPublicKey, NetworkType.MIJIN_TEST);
 
-// Replace with address
+const recipientAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
 const address = Address.createFromRawAddress(recipientAddress);
-
-const accountHttp = new AccountHttp('http://localhost:3000');
 
 accountHttp
     .outgoingTransactions(originAccount)

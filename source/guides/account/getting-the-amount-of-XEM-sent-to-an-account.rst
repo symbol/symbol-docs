@@ -18,7 +18,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-After obtaining all outgoing :doc:`transactions <../../concepts/transaction>` from an account, apply the following operators to identify the target recipient.
+After obtaining all the outgoing :doc:`transactions <../../concepts/transaction>` from an account, apply the following operators to identify the target recipient.
 
 .. example-code::
 
@@ -30,11 +30,7 @@ After obtaining all outgoing :doc:`transactions <../../concepts/transaction>` fr
         :language: java
         :lines: 40-66
 
-    .. literalinclude:: ../../resources/examples/javascript/account/GettingTheAmountOfXEMSentToAnAccount.js
-        :language: javascript
-        :lines: 28-
-
-The amount of sent XEM in transfer transactions is displayed.
+The amount of XEM sent  is displayed in your terminal.
 
 ************
 What’s next?

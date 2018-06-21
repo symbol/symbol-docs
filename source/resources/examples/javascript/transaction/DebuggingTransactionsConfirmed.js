@@ -24,11 +24,7 @@ const listener = new Listener('http://localhost:3000');
 
 listener.open().then(() => {
 
-    const address =  Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
-
-    listener.confirmed(address).subscribe(
-        transaction => console.log(transaction),
-        err => console.error(err)
-    );
+    listener
+        .confirmed(Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54'))
+        .subscribe(transaction => console.log(transaction), err => console.error(err));
 });
-

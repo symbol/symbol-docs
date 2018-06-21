@@ -24,20 +24,17 @@ const AccountHttp = nem2Sdk.AccountHttp,
     MosaicService = nem2Sdk.MosaicService,
     Address = nem2Sdk.Address;
 
-const url = 'http://localhost:3000';
 
+const url = 'http://localhost:3000';
 const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);
 const namespaceHttp = new NamespaceHttp(url);
-
 const mosaicService = new MosaicService(accountHttp, mosaicHttp, namespaceHttp);
 
-// Replace with address
-const address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
+const address = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54");
 
-mosaicService.mosaicsAmountViewFromAddress(Address.createFromRawAddress(address))
+mosaicService
+    .mosaicsAmountViewFromAddress(address)
     .flatMap((_) => _)
-    .subscribe(
-        mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
-        err => console.error(err)
-    );
+    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+        err => console.error(err));

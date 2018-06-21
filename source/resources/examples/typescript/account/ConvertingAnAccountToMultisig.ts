@@ -17,23 +17,28 @@
  */
 
 import {
-    Account, Deadline, PublicAccount, NetworkType, MultisigCosignatoryModification,
-    ModifyMultisigAccountTransaction, MultisigCosignatoryModificationType, TransactionHttp
+    Account,
+    Deadline,
+    ModifyMultisigAccountTransaction,
+    MultisigCosignatoryModification,
+    MultisigCosignatoryModificationType,
+    NetworkType,
+    PublicAccount,
+    TransactionHttp
 } from "nem2-sdk";
 
+//01 - Setup
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-// Replace with the private key of the account that you want to convert into multisig
-const privateKey = process.env.PRIVATE_KEY as string;
-
-// Replace with cosignatories public keys
-const cosignatory1PublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
-const cosignatory2PublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
-
+const privateKey = process.env.PRIVATE_KEY as string; // Private key of the account to convert into multisig
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
+const cosignatory1PublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
 const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, NetworkType.MIJIN_TEST);
+const cosignatory2PublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, NetworkType.MIJIN_TEST);
 
+//02 - Create ModifyMultisigAccountTransaction
 const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     1,
@@ -47,14 +52,11 @@ const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
             MultisigCosignatoryModificationType.Add,
             cosignatory2,
         )],
-    NetworkType.MIJIN_TEST
-);
+    NetworkType.MIJIN_TEST);
 
+//03 - Sign and announce the transaction from the account to convert into multisig
 const signedTransaction = account.sign(convertIntoMultisigTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x => console.log(x),
-    err => console.error(err)
-);
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

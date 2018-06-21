@@ -10,7 +10,7 @@ Get the list of :doc:`transactions <../../concepts/transaction>` where an :doc:`
 Background
 **********
 
-By default, the SDK provides up to 10 transactions. This parameter is increasable up to 100 transactions.
+By default, the SDK provides up to 10 transactions. This parameter can be increased up to 100 transactions.
 
 *************
 Prerequisites
@@ -25,7 +25,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-In this example, we will fetch confirmed transactions for a given account using ``accountHttp`` repository.
+In this example, you will fetch confirmed transactions for a given account using ``accountHttp`` repository.
 
 A transaction is confirmed if it is included in a block and validated by the network.
 
@@ -47,7 +47,7 @@ A transaction is confirmed if it is included in a block and validated by the net
         :language: bash
         :start-after: #!/bin/sh
 
-Notice that you can also retrieve aggregate bonded, unconfirmed, incoming and outgoing transactions for a given account. See available ``accountHttp`` methods `here <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
+.. note:: You can also retrieve aggregate bonded, unconfirmed, incoming and outgoing transactions for a given account. See available ``accountHttp`` methods `here <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
 
 ***********
 What's next

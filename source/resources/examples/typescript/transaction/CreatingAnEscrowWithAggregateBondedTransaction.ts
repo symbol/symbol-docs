@@ -17,20 +17,31 @@
  */
 
 import {
-    Account, AggregateTransaction, Deadline, Listener, LockFundsTransaction,
-    Mosaic, MosaicId, NetworkType, PlainMessage, PublicAccount, TransactionHttp,
-    TransferTransaction, UInt64, XEM
+    Account,
+    AggregateTransaction,
+    Deadline,
+    Listener,
+    LockFundsTransaction,
+    Mosaic,
+    MosaicId,
+    NetworkType,
+    PlainMessage,
+    PublicAccount,
+    TransactionHttp,
+    TransferTransaction,
+    UInt64,
+    XEM
 } from 'nem2-sdk';
 
+// 01 - Setup
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
-
-// Replace with private key
 const alicePrivateKey = process.env.PRIVATE_KEY as string;
-
-// Replace with public key
-const ticketDistributorPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
-
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
+
+const ticketDistributorPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey( ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
@@ -38,28 +49,22 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     ticketDistributorPublicAccount.address,
     [XEM.createRelative(100)],
     PlainMessage.create('send 100 nem:xem to distributor'),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
     [new Mosaic( new MosaicId('museum:ticket'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum:ticket to alice'),
-    NetworkType.MIJIN_TEST,
-);
-
-const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
-    [
-        aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
-        ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount),
-    ],
     NetworkType.MIJIN_TEST);
 
+// 02 - Aggregate Transaction
+const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
+    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+        ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
+    NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
-
-// Creating the lock funds transaction
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
@@ -70,17 +75,14 @@ const lockFundsTransaction = LockFundsTransaction.create(
 
 const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-// announce signed transaction
-const listener = new Listener('http://localhost:3000');
-
 listener.open().then(() => {
 
-    transactionHttp.announce(lockFundsTransactionSigned).subscribe(x => console.log(x),
-        err => console.error(err));
+    transactionHttp
+        .announce(lockFundsTransactionSigned)
+        .subscribe(x => console.log(x), err => console.error(err));
 
-    listener.confirmed(aliceAccount.address)
+    listener
+        .confirmed(aliceAccount.address)
         .filter((transaction) => transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
         .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))

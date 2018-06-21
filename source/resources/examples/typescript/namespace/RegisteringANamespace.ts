@@ -18,26 +18,21 @@
 
 import {Account, Deadline, NetworkType, RegisterNamespaceTransaction, TransactionHttp, UInt64} from 'nem2-sdk';
 
-//Replace with private key
-const privateKey = process.env.PRIVATE_KEY as string;
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
+const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-//Replace with namespace name
-const namespace = "foo";
+const namespaceName = "foo"; //Replace with an unique namespace name
 
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
     Deadline.create(),
-    namespace, // use your own namespace name
+    namespaceName,
     UInt64.fromUint(1000),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(registerNamespaceTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x => console.log(x),
-    err => console.error(err)
-);
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

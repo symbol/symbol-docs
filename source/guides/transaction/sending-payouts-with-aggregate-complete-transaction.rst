@@ -39,7 +39,7 @@ First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with t
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  22-46
+        :lines:  32-54
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingPayoutsWithAggregateCompleteTransaction.java
         :language: java
@@ -47,7 +47,7 @@ First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with t
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  28-52
+        :lines:  32-54
 
 Do you know the difference between aggregate complete and aggregate bonded? In this case, one private key can sign all the transactions in the aggregate, so it is *aggregate complete*.
 
@@ -59,7 +59,7 @@ Just sign it and announce it!
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  47-
+        :lines:  57-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingPayoutsWithAggregateCompleteTransaction.java
         :language: java
@@ -67,7 +67,7 @@ Just sign it and announce it!
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  53-
+        :lines:  57-
 
 ************
 What's next?

@@ -28,42 +28,38 @@ const Account = nem2Sdk.Account,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
-    Address = nem2Sdk. Address;
+    Address = nem2Sdk.Address,
+    PublicAccount = nem2Sdk.PublicAccount;
 
 
-// Replace with the cosignatory private key
+// 01 - Set up
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
+
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
-
-// Replace with the multisig public key
-const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
-
-// Replace with recipient address
-const recipientAddress = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
-
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
+const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+
+const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+
+// 02 - Create transfer transaction
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(recipientAddress),
+    recipientAddress,
     [XEM.createRelative(10)],
     PlainMessage.create('sending 10 nem:xem'),
-    NetworkType.MIJIN_TEST
-);
+    NetworkType.MIJIN_TEST);
 
+// 02 - Create aggregate transaction
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
-    [
-        transferTransaction.toAggregate(multisigAccount),
-    ],
-    NetworkType.MIJIN_TEST
-);
+    [transferTransaction.toAggregate(multisigAccount)],
+    NetworkType.MIJIN_TEST);
 
-//Signing the aggregate transaction
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
-
-//Creating the lock funds transaction and announce it
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
@@ -74,17 +70,14 @@ const lockFundsTransaction = LockFundsTransaction.create(
 
 const lockFundsTransactionSigned = cosignatoryAccount.sign(lockFundsTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-// announce signed transaction
-const listener = new Listener('http://localhost:3000');
-
 listener.open().then(() => {
 
-    transactionHttp.announce(lockFundsTransactionSigned).subscribe(x => console.log(x),
-        err => console.error(err));
+    transactionHttp
+        .announce(lockFundsTransactionSigned)
+        .subscribe(x => console.log(x), err => console.error(err));
 
-    listener.confirmed(cosignatoryAccount.address)
+    listener
+        .confirmed(cosignatoryAccount.address)
         .filter((transaction) => transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
         .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))

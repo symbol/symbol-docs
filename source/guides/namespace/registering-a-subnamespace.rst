@@ -37,7 +37,7 @@ In this example, we will register a namespace called ``bar`` under ``foo`` names
 
     .. literalinclude:: ../../resources/examples/typescript/namespace/RegisteringASubnamespace.ts
         :language: typescript
-        :lines:  24-
+        :lines:  21-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java
         :language: java

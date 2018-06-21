@@ -46,7 +46,7 @@ Bob needs to know which is the public key of the multisig account that he shares
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines: 24-36
+        :lines: 33-41
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
@@ -54,7 +54,7 @@ Bob needs to know which is the public key of the multisig account that he shares
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines: 30-41
+        :lines: 33-41
 
 As he wants to pay the groceries with the multisig account, he defines a :ref:`transfer transaction <transfer-transaction>`.
 
@@ -66,7 +66,7 @@ As he wants to pay the groceries with the multisig account, he defines a :ref:`t
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  37-43
+        :lines:  44-49
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
@@ -74,7 +74,7 @@ As he wants to pay the groceries with the multisig account, he defines a :ref:`t
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  43-49
+        :lines:  44-49
 
 Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching multisig public key as the signer.
 
@@ -86,7 +86,7 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  45-52
+        :lines:  52-56
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
@@ -94,7 +94,7 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  51-58
+        :lines:  52-56
 
 Then, he signs and announces the transaction.
 
@@ -102,7 +102,7 @@ Then, he signs and announces the transaction.
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  54-
+        :lines:  59-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
         :language: java
@@ -110,7 +110,7 @@ Then, he signs and announces the transaction.
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  60-
+        :lines:  59-
 
 ************
 What's next?
@@ -130,7 +130,7 @@ As all required cosigners didn't sign the transaction, it should be announced as
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  45-51
+        :lines:  57-60
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
         :language: java
@@ -138,7 +138,7 @@ As all required cosigners didn't sign the transaction, it should be announced as
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  55-61
+        :lines:  57-60
 
 
 Open a new terminal for :doc:`monitoring<../transaction/debugging-transactions>` the aggregate bonded transaction.
@@ -155,7 +155,7 @@ After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed,
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  53-
+        :lines:  62-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
         :language: java
@@ -163,6 +163,6 @@ After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed,
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  63-
+        :lines:  62-
 
 Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!

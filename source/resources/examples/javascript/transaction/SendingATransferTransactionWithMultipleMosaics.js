@@ -25,31 +25,31 @@ const Account = nem2Sdk.Account,
     PlainMessage = nem2Sdk.PlainMessage,
     Mosaic = nem2Sdk.Mosaic,
     MosaicId = nem2Sdk.MosaicId,
-    Address = nem2Sdk. Address;
+    Address = nem2Sdk. Address,
+    UInt64 = nem2Sdk.UInt64,
     XEM = nem2Sdk.XEM;
 
-// Replace with private key
-const privateKey = process.env.PRIVATE_KEY;
-
-// Replace with recipient address
-const recipientAddress = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
-
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+// 01 - Create Transfer Transaction
+const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(recipientAddress),
-    [
-        new Mosaic( new MosaicId('alice:token'), UInt64.fromUint(10)),
-        XEM.createRelative(10),
-    ],
-    PlainMessage.create('sending multiple mosaics'),
-    NetworkType.MIJIN_TEST,
-);
+    recipientAddress,
+    [new Mosaic( new MosaicId('alice:token'), UInt64.fromUint(10)),
+        XEM.createRelative(10)],
+    PlainMessage.create('Welcome To NEM'),
+    NetworkType.MIJIN_TEST);
 
-//Signing and announcing the transaction
+// 02 - Signing the transaction
+const privateKey = process.env.PRIVATE_KEY;
+
+const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+
 const signedTransaction = account.sign(transferTransaction);
+
+// 03 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
-    err => console.error(err));
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

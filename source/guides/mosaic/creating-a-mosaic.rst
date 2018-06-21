@@ -35,7 +35,7 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``.
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  24-31
+        :lines:  33-40
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
         :language: java
@@ -43,7 +43,7 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``.
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 32-39
+        :lines: 33-40
 
 It is necessary to announce two transactions when creating a mosaic:
 
@@ -55,7 +55,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  33-45
+        :lines:  43-54
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
         :language: java
@@ -63,7 +63,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 41-53
+        :lines: 43-54
 
 2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. ``foo:token`` initial supply is 1.000.000
 
@@ -73,7 +73,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  46-53
+        :lines:  57-62
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
         :language: java
@@ -81,7 +81,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 55-61
+        :lines: 57-62
 
 Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -89,7 +89,7 @@ Both transactions can be announced together using an :ref:`aggregate transaction
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  54-
+        :lines:  65-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
         :language: java
@@ -97,7 +97,7 @@ Both transactions can be announced together using an :ref:`aggregate transaction
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 63-
+        :lines: 65-
 
     .. literalinclude:: ../../resources/examples/cli/mosaic/CreatingAMosaic.sh
         :language: bash

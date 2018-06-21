@@ -37,6 +37,21 @@ Let’s get into some code
 
 Alice and Bob are cosignatories of the 1-of-2 multisig account.
 
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
+        :language: typescript
+        :lines:  30-36
+
+    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
+        :language: java
+        :lines: 42-46
+
+    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
+        :language: javascript
+        :lines: 30-36
+
+
 One of them, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`.
 
 1) Create a modify multisig account transaction,  increasing ``minAprovalDelta`` in one unit.
@@ -45,15 +60,15 @@ One of them, announces a :ref:`modify multisig account transaction <modify-multi
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :lines:  24-37
+        :lines:  39-44
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
         :language: java
-        :lines: 41-54
+        :lines: 47-54
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
-        :lines: 29-42
+        :lines: 39-44
 
 2) Wrap the modify multisig account transaction under an aggregate transaction, attaching multisig public key as the signer.
 
@@ -63,7 +78,7 @@ An aggregate transaction is *complete* if before announcing it to the network, a
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :lines:  39-
+        :lines:  47-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
         :language: java
@@ -71,7 +86,7 @@ An aggregate transaction is *complete* if before announcing it to the network, a
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
-        :lines: 44-
+        :lines: 47-
 
 Announce the aggregate transaction.
 
@@ -87,7 +102,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  25-34
+        :lines:  36-49
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -95,7 +110,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 35-44
+        :lines:  36-49
 
 2) Create a modify multisig account transaction:
 
@@ -103,7 +118,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  36-44
+        :lines:  52-57
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -111,7 +126,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 46-54
+        :lines:  52-57
 
 3) Create an aggregate bonded transaction:
 
@@ -119,7 +134,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  46-54
+        :lines:  60-63
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -127,7 +142,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 56-64
+        :lines:  60-63
 
 Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. Once Bob cosigns the transaction, the amount of XEM becomes available again on Alice's account.
 
@@ -137,7 +152,7 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  56-
+        :lines:  68-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -145,7 +160,7 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 65-
+        :lines: 68-
 
 ************
 What’s next?
@@ -161,7 +176,7 @@ The following shows how to remove a cosignatory of a 2-of-3 multisig account wit
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts
         :language: typescript
-        :lines:  25-
+        :lines:  31-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountRemoveCosignatory.java
         :language: java

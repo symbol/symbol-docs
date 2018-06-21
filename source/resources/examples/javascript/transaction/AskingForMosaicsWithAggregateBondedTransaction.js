@@ -28,46 +28,46 @@ const Account = nem2Sdk.Account,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
-    Listener = nem2Sdk.Listener;
+    Listener = nem2Sdk.Listener,
+    PublicAccount = nem2Sdk.PublicAccount;
 
-// Replace with private key
+
+// 01 - Setup
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
+
 const alicePrivateKey = process.env.ALICE_PRIVATE_KEY;
-
-// Replace with public key
-const bobPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
-
-
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
+
+const bobPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const bobAccount = PublicAccount.createFromPublicKey(bobPublicKey, NetworkType.MIJIN_TEST);
 
+// 02 - Create transfer transactions
 const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
     PlainMessage.create('send me 20 XEM'),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
     [XEM.createRelative(20)],
     EmptyMessage,
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
+// 03 - Create and sign aggregate transaction with Alice account
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
-    [
-        transferTransaction1.toAggregate(aliceAccount.publicAccount),
-        transferTransaction2.toAggregate(bobAccount)
-    ],
-    NetworkType.MIJIN_TEST
-);
+    [transferTransaction1.toAggregate(aliceAccount.publicAccount),
+        transferTransaction2.toAggregate(bobAccount)],
+    NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
-//Creating the lock funds transaction and announce it
+// 04 - Announcing the transaction with Alice account
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
     XEM.createRelative(10),
@@ -77,17 +77,14 @@ const lockFundsTransaction = LockFundsTransaction.create(
 
 const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-const listener = new Listener('http://localhost:3000');
-
 listener.open().then(() => {
 
-    transactionHttp.announce(lockFundsTransactionSigned).subscribe(
-        x => console.log(x),
-        err => console.error(err));
+    transactionHttp
+        .announce(lockFundsTransactionSigned)
+        .subscribe(x => console.log(x), err => console.error(err));
 
-    listener.confirmed(aliceAccount.address)
+    listener
+        .confirmed(aliceAccount.address)
         .filter((transaction) => transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
         .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))

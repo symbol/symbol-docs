@@ -17,37 +17,38 @@
  */
 
 import {
-    Address, Deadline, NetworkType, TransferTransaction,
-    TransactionHttp, Account, EmptyMessage, XEM
+    Account,
+    Address,
+    Deadline,
+    EmptyMessage,
+    NetworkType,
+    TransactionHttp,
+    TransferTransaction,
+    XEM
 } from 'nem2-sdk';
 
 
-// Replace with recipient address
-const recipientAddress = 'SBHEVGUFDEW22FAT2EFU6UYXRKLTC6HFOPB4CRSE';
+// 01 - Create Transfer Transaction
+const privateKey = process.env.PRIVATE_KEY as string;
+const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+
+const recipientAddress =  Address.createFromRawAddress('SBHEVGUFDEW22FAT2EFU6UYXRKLTC6HFOPB4CRSE');
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(recipientAddress),
+   recipientAddress,
     [XEM.createRelative(10)],
     EmptyMessage,
-    NetworkType.MIJIN_TEST,
-);
-
-// Signing  the transaction
-
-// Replace with private key
-const privateKey = process.env.PRIVATE_KEY;
-
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+    NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
 
-
-// Announcing the transaction
+// 02 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://0.0.0.0:9000');
 
-transactionHttp.announceSync(signedTransaction).subscribe(
-    x => {
+transactionHttp
+    .announceSync(signedTransaction)
+    .subscribe(x => {
         console.log(x);
         // TODO: send email to Bob
     },

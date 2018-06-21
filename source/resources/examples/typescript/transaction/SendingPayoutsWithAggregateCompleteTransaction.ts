@@ -16,19 +16,28 @@
  *
  */
 
-import {Account, Address, Deadline, NetworkType, PlainMessage, TransactionHttp, TransferTransaction, XEM,
-    AggregateTransaction} from 'nem2-sdk';
+import {
+    Account,
+    Address,
+    AggregateTransaction,
+    Deadline,
+    NetworkType,
+    PlainMessage,
+    TransactionHttp,
+    TransferTransaction,
+    XEM
+} from 'nem2-sdk';
 
-// Replace with private key
+// 01 - Setup
+const transactionHttp = new TransactionHttp('http://localhost:3000');
+
 const privateKey = process.env.PRIVATE_KEY as string;
-
-// Replace with addresses
-const brotherAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
-const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
-
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
+const brotherAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
 const brotherAccount = Address.createFromRawAddress(brotherAddress);
+
+const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
 const sisterAccount = Address.createFromRawAddress(sisterAddress);
 
 const amount = XEM.createRelative(10); // 10 xem represent 10 000 000 micro xem
@@ -38,16 +47,15 @@ const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), 
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [
-        brotherTransferTransaction.toAggregate(account.publicAccount),
+    [brotherTransferTransaction.toAggregate(account.publicAccount),
         sisterTransferTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST,
     []
 );
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
+// 02 - Sign and announce aggregate complete transaction
 const signedTransaction = account.sign(aggregateTransaction);
 
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
-        err => console.error(err));
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

@@ -92,16 +92,15 @@ Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  26-44
+        :lines:  32-44
 
 Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. Afterwards, Alice can send an email to Bob.
-
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  46-
+        :lines:  47-
 
 If the transaction is valid, nem2-camel returns a ``Transaction`` object. It is important to highlight that this transaction has ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
 

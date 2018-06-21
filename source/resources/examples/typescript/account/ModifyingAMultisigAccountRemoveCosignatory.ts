@@ -17,20 +17,25 @@
  */
 
 import {
-    Account, Deadline, PublicAccount, NetworkType, ModifyMultisigAccountTransaction,
-    MultisigCosignatoryModificationType, AggregateTransaction, MultisigCosignatoryModification,
+    Account,
+    AggregateTransaction,
+    Deadline,
+    ModifyMultisigAccountTransaction,
+    MultisigCosignatoryModification,
+    MultisigCosignatoryModificationType,
+    NetworkType,
+    PublicAccount,
     TransactionHttp
 } from "nem2-sdk";
 
-// Replace with the multisig public key
+const transactionHttp = new TransactionHttp('http://localhost:3000');
+
 const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
-// Replace with the cosignatory public key to be deleted
 const cosignatoryToRemovePublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF530B1FB52389568F1';
 const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, NetworkType.MIJIN_TEST);
 
-// Replace with the cosignatory private key
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY as string;
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
@@ -40,26 +45,16 @@ const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create
     Deadline.create(),
     0,
     0,
-    [
-        multisigCosignatoryModification
-    ],
-    NetworkType.MIJIN_TEST
-);
+    [multisigCosignatoryModification],
+    NetworkType.MIJIN_TEST);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [
-        modifyMultisigAccountTransaction.toAggregate(multisigAccount),
-    ],
+    [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST,
-    []
-);
+    []);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x => console.log(x),
-    err => console.error(err)
-);
+transactionHttp.announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));

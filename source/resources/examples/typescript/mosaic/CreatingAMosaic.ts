@@ -17,56 +17,62 @@
  */
 
 import {
-    Account, AggregateTransaction, Deadline, MosaicDefinitionTransaction, MosaicProperties, MosaicSupplyChangeTransaction,
-    MosaicSupplyType, NetworkType, TransactionHttp, UInt64
+    Account,
+    AggregateTransaction,
+    Deadline,
+    MosaicDefinitionTransaction,
+    MosaicProperties,
+    MosaicSupplyChangeTransaction,
+    MosaicSupplyType,
+    NetworkType,
+    TransactionHttp,
+    UInt64
 } from 'nem2-sdk';
 
-// Replace with a private key
-const privateKey = process.env.PRIVATE_KEY as string;
+// 01 - Setup
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 
+const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 // Replace with namespace name and mosaic name
-const namespace = 'foo';
-const mosaic = 'token';
+const namespaceName = 'foo';
+const mosaicName = 'token';
 
+// 02 - Create Mosaic Definition Transaction
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
-    mosaic,
-    namespace,
+    mosaicName,
+    namespaceName,
     MosaicProperties.create({
         supplyMutable: true,
         transferable: true,
         levyMutable: false,
         divisibility: 0,
-        duration: UInt64.fromUint(1000),
+        duration: UInt64.fromUint(1000)
     }),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
+// 03 - Create Supply Change Transaction
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
     MosaicSupplyType.Increase,
     UInt64.fromUint(1000000),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
+// 04 - Wrap both transactions inside an aggregate transaction
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
         mosaicDefinitionTransaction.toAggregate(account.publicAccount),
-        mosaicSupplyChangeTransaction.toAggregate(account.publicAccount),
+        mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)
     ],
     NetworkType.MIJIN_TEST,
-    []
-);
+    []);
 
 const signedTransaction = account.sign(aggregateTransaction);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp.announce(signedTransaction).subscribe(
-    x=> console.log(x),
-    err => console.error(err)
-);
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x=> console.log(x),err => console.error(err));

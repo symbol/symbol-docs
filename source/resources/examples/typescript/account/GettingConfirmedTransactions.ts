@@ -20,18 +20,11 @@ import {AccountHttp, NetworkType, PublicAccount, QueryParams} from "nem2-sdk";
 
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-// Replace with public key
 const publicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
+const publicAccount =  PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 
-/**
- * Page size between 10 and 100, otherwise 10
- */
-const pageSize = 10;
+const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
-accountHttp.transactions(
-    PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST),
-    new QueryParams(pageSize)
-).subscribe(
-    transactions => console.log(transactions),
-    err => console.error(err)
-);
+accountHttp
+    .transactions(publicAccount, new QueryParams(pageSize))
+    .subscribe(transactions => console.log(transactions), err => console.error(err));

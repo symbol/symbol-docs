@@ -24,7 +24,21 @@ Let’s get into some code
 
     Asking for mosaics with an aggregate bonded transaction
 
-Alice wants to ask Bob for 20 XEM.
+Alice wants to ask Bob for 20 XEM. Set up Alice and Bob accounts.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+        :language: typescript
+        :lines:  36-44
+
+    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
+        :language: java
+        :lines:  30-52
+
+    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+        :language: javascript
+        :lines:  36-44
 
 Alice creates an aggregate bonded transaction with two inner transactions:
 
@@ -38,7 +52,7 @@ Inner :ref:`transfer transaction <transfer-transaction>` 1:
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  34-40
+        :lines:  47-52
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
         :language: java
@@ -46,7 +60,7 @@ Inner :ref:`transfer transaction <transfer-transaction>` 1:
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  43-49
+        :lines:  47-52
 
 Inner transfer transaction 2:
 
@@ -59,7 +73,7 @@ Inner transfer transaction 2:
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines: 42-48
+        :lines: 54-59
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
         :language: java
@@ -67,7 +81,7 @@ Inner transfer transaction 2:
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  51-57
+        :lines:  54-59
 
 Aggregate transaction:
 
@@ -75,7 +89,7 @@ Aggregate transaction:
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  50-57
+        :lines:  62-68
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
         :language: java
@@ -83,7 +97,7 @@ Aggregate transaction:
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  59-66
+        :lines:  62-68
 
 Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
 
@@ -91,7 +105,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  59-
+        :lines:  71-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
         :language: java
@@ -99,7 +113,7 @@ Alice signs the aggregate bonded transaction and announces it to the network, lo
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  68-
+        :lines:  71-
 
 If all goes well, :doc:`Bob receives a notification <../transaction/debugging-transactions>`.
 

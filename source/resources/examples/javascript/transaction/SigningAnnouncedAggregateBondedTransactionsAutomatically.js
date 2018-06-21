@@ -28,21 +28,19 @@ const cosignAggregateBondedTransaction = (transaction, account)  => {
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
 
-// Replace with private key
 const privateKey = process.env.PRIVATE_KEY;
-
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const listener = new Listener('http://localhost:3000');
-
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
 
-    listener.aggregateBondedAdded(account.address)
+    listener
+        .aggregateBondedAdded(account.address)
         .filter((_) => !_.signedByAccount(account.publicAccount))
         .map(transaction => cosignAggregateBondedTransaction(transaction, account))
         .flatMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
-        .subscribe(announcedTransaction => console.log(announcedTransaction),
-            err => console.error(err));
+        .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
 });

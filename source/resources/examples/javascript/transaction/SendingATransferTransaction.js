@@ -27,29 +27,26 @@ const Account = nem2Sdk.Account,
     XEM = nem2Sdk.XEM,
     Address = nem2Sdk. Address;
 
-// Replace with recipient address
-const recipientAddress = 'SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54';
+// 01 - Create Transfer Transaction
+const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(recipientAddress),
+    recipientAddress,
     [XEM.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
-    NetworkType.MIJIN_TEST,
-);
+    NetworkType.MIJIN_TEST);
 
-// Signing  the transaction
-
-// Replace with private key
+// 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY;
 
 const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
 
-// Announcing the transaction
-
+// 03 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-transactionHttp.announce(signedTransaction).subscribe(x => console.log(x),
-    err => console.error(err));
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));
