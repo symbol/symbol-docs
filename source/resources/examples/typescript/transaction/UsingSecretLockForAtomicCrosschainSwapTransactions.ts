@@ -53,7 +53,7 @@ const proof = random.toString('hex');
 // 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, MosaicId, Amount, valid for 96h }
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId('ticket:token'), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId('alice:token'), UInt64.fromUint(10)),
     UInt64.fromUint(96*60), // assuming one block per minute
     HashType.SHA3_512,
     secret,
@@ -69,7 +69,7 @@ privateChainTransactionHttp
 // 05 - B creates TX2 SecretLockTransaction{ H(x), A, MosaicId, Amount, valid for 84h }
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    XEM.createRelative(100),
+    new Mosaic(new MosaicId('bob:token'), UInt64.fromUint(10)),
     UInt64.fromUint(84*60), // assuming one block per minute
     HashType.SHA3_512,
     secret,
