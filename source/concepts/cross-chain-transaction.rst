@@ -24,10 +24,11 @@ If the transaction duration is reached and not proved, the locked amount is retu
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
     :align: center
+    :width: 700px
 
-    Atomic cross-chain trading between public and private network
+    Atomic cross-chain swap between public and private network
 
-Secret lock and proof transactions enable :doc:`atomic cross-chain trading <../guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`, without the necessity of trusting a third party.
+Secret lock and proof transactions enable :doc:`atomic cross-chain swap <../guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`, without the necessity of trusting a third party.
 
     **Mosaic**
 

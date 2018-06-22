@@ -41,17 +41,17 @@ Let's get into some code
 
 Trading tokens directly from one blockchain to the other it is not possible, due to the technological differences between them.
 
-In case of NEM public and private chain, the same mosaic name could have different definition and distribution, or even, not exist in one of them.
+In case of NEM public and private chain, the same mosaic name could have different definition and distribution, or even not exist. Between Bitcoin and NEM, the difference it is even more evident, as each blockchain uses an entirely different technology.
 
-Between Bitcoin and NEM, the difference it is even more evident, as each blockchain uses an entirely different technology.
-
-For that reason, each actor involved, in that case, Alice and Bob should have at least one account in each blockchain.
+Instead of transferring tokens between the different chains, the trade will be performed inside each chain. The Secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 
 .. figure:: ../../resources/images/guides-transactions-atomic-cross-chain-swap.png
         :align: center
         :width: 700px
 
         Atomic cross-chain swap between public and private network
+
+For that reason, each actor involved should have at least one account in each blockchain.
 
 .. example-code::
 
