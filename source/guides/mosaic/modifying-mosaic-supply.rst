@@ -30,7 +30,7 @@ Let's increase ``2.000.000`` the initial supply. Just sign and announce a :ref:`
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts
         :language: typescript
-        :lines:  24-
+        :lines:  30-
     
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/ModifyingMosaicSupply.java
         :language: java
