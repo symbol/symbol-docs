@@ -28,9 +28,9 @@ Let’s get into some code
 
 **Checking your balance**
 
-Have you created an account and requested XEM? If it is not the case, go back to :doc:`getting started section <setup-workstation>`.
+Have you loaded an account with test XEM? If it is not the case, go back to :doc:`getting started section <setup-workstation>`.
 
-First of all, let's check if you have received XEM into your account.
+First of all, let's check if you have XEM into your account.
 
 .. code-block:: bash
 
@@ -46,7 +46,7 @@ After running the command, you should see on your screen a line similar to:
 
     3628d0b327fb1dd8:       1000000
 
-Our account owns 1.000.000 XEM. If your row after mosaics is empty, try to :doc:`ask for some XEM again <setup-workstation>`.
+Our account owns 1.000.000 XEM. If your row after mosaics is empty, follow :doc:`the previous tutorial <setup-workstation>`.
 
 **Monitoring the blockchain**
 
@@ -79,7 +79,7 @@ Before creating your mosaic, you need to register a namespace.
 
 A :doc:`namespace <../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to understand it is by means of the domain-file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
 
-A mosaic is like a file hosted on a domain and it represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
+A mosaic is like a file hosted on a domain and it represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique.
 
 First, register your namespace by choosing a name that you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
 
@@ -87,9 +87,7 @@ First, register your namespace by choosing a name that you like. One common opti
 
     $> nem2-cli namespace info --name foo
 
-Is the namespace available? Try to register it before someone else does it!
-
-To register it, specify the namespace name and its renting duration expressed in blocks.
+Is the namespace available? Register it by setting the namespace name and its renting duration expressed in blocks.
 
 .. note:: In Catapult, NEM blocks are complete every ``15`` seconds in average.
 

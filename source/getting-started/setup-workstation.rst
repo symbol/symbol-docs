@@ -4,6 +4,32 @@ Setting up your workstation
 
 This guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
 
+**********************************
+Running Catapult Service Bootstrap
+**********************************
+
+.. figure:: ../resources/images/four-layer-architecture.png
+    :width: 650px
+    :align: center
+
+**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
+
+You are going to run a private chain for learning purposes using Catapult Service Bootstrap in less than 5 minutes. This service runs Catapult server instances and Catapult REST nodes locally.
+
+Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
+
+.. code-block:: bash
+
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
+    $> cd catapult-service-bootstrap
+    $> docker-compose up
+
+After the image has been downloaded and the service is running, check if you can get the first block information:
+
+.. code-block:: bash
+
+    $> curl localhost:3000/block/1
+
 ***********************
 Creating a test account
 ***********************
@@ -46,11 +72,27 @@ What is XEM and how to get it?
 
 The underlying cryptocurrency of the NEM network is called **XEM**. Every action on the NEM blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
 
-Once you have created an account, ask for some XEM from our faucet, by simply sharing your address.
+Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
 
-XEM will appear in your account’s balance after the transaction is confirmed by the network.
+Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
-.. note:: There is a bot listening to requests. It might be occasionally offline. Please contact support if the problem persists.
+.. code-block:: bash
+
+    $> cd  build/generated-addresses/
+    $> cat addresses.yaml
+
+Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
+
+Load the first account as a profile in NEM2-CLI. This account identifies the company.
+
+.. code-block:: bash
+
+    $> nem2-cli profile create
+
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce your private key: 41************************************************************FF
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Insert profile name (blank means default and it could overwrite the previous profile):
 
 .. _setup-development-environment:
 
@@ -58,7 +100,7 @@ XEM will appear in your account’s balance after the transaction is confirmed b
 Setting up the development environment
 **************************************
 
-By then, you should have created an account and have received some XEM. Then, it is time to choose a programming language. Pick the one you feel most comfortable with, or just follow project requirements.
+By then, you should have loaded an account with some XEM. Then, it is time to choose a programming language. Pick the one you feel most comfortable with, or just follow project requirements.
 
 After that, create a folder for your new project and run the instructions for the selected language.
 
@@ -127,3 +169,7 @@ Continue: :doc:`Writing your first application <first-application>`.
 .. _gradle: https://gradle.org/install/
 
 .. _JDK: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+
+.. _docker: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+
+.. _docker-compose: https://docs.docker.com/compose/install/
