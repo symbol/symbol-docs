@@ -8,7 +8,7 @@ Mosaics are part of what makes the Smart Asset System unique and flexible. They 
 
 Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
 
-A mosaic could be as simple as a token, but it could also represent a set of more specialized assets like: reward points, shares of stock, signatures, status flags, votes or even other currencies.
+A mosaic could be as simple as a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
 
 .. _mosaic-definition-transaction:
@@ -25,13 +25,13 @@ Mosaic definition transaction is used to create a new mosaic.
 
     **Name**
 
-    Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
+    Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique, even if the rest of it is not.
 
-    Mosaics are named joining the namespace name with the mosaic name using ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
+    Mosaics are named joining the namespace name with the mosaic name using the ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
 
     Consider the following restrictions:
 
-    * The name of the mosaic has a size limit of ``64`` characters and must be unique under the domain name.
+    * Mosaic names have a size limit of ``64`` characters and must be unique under the domain name.
 
     * Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
@@ -49,9 +49,9 @@ Mosaic definition transaction is used to create a new mosaic.
 
     * Supply: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
 
-    * Supply mutable: The creator can choose between a definition that allows a mosaic supply change at a later point or a **immutable** supply. In the first case the creator is only allowed to decrease the supply within the limits of mosaics owned.
+    * Supply mutable: The creator can choose between a definition that allows a mosaic supply to change at a later point or an **immutable** supply. In the first case, the creator is only allowed to decrease the supply within the limits of mosaics owned.
 
-    * Transferability: The creator can choose if the mosaic can be transferred to and from arbitrary accounts, or only allowing itself to be the recipient once transferred.
+    * Transferability: The creator can choose whether the mosaic can be transferred to and from arbitrary accounts, or only allowing him/herself to be the recipient once transferred.
 
 .. _mosaic-supply-change-transaction:
 

@@ -18,7 +18,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Do you have curiosity to see what happened in genesis block? Run the following code to find out what happened.
+Are you curious to see what happened in genesis block? Run the following code to find it out.
 
 .. example-code::
 
@@ -34,7 +34,7 @@ Do you have curiosity to see what happened in genesis block? Run the following c
         :language: javascript
         :lines: 23-
 
-Here you have a snippet to check the number last block number.
+Here you have a snippet to check the last block number.
 
 .. example-code::
 

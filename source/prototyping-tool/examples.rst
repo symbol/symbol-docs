@@ -30,7 +30,7 @@ In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the JSO
 Contributing
 ************
 
-We love to receive contributions from our community — you! Follow these guidelines to get your flow included in this documentation.
+We love to receiving contributions from our community — you! Follow these guidelines to get your flow included in this documentation.
 
 The first step is to export the flow you have created. In Node-RED, select the flow you want to export. Open ``Export > Clipboard`` from the menu (Ctrl-E) and copy the JSON from the dialogue.
 

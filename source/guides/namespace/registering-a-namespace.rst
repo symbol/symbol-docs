@@ -10,11 +10,11 @@ The purpose of this guide is to register your own :doc:`namespace <../../concept
 Background
 **********
 
-A namespace is an on-chain unique domain for your assets.
+A :doc:`namespace <../../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to understand it is by means of the domain-file analogy on the internet.
 
-The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
+A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique.
 
-If one :doc:`account <../../concepts/account>` creates a namespace, that namespace will appear unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
+If an :doc:`account <../../concepts/account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
 
 *************
 Prerequisites
@@ -29,11 +29,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-A :doc:`namespace <../../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
-
-A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
-
-Register your namespace, choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
+Register your namespace namespace by choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
 
 .. example-code::
 

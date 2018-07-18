@@ -4,7 +4,7 @@
 Getting the amount of XEM sent to an account
 ############################################
 
-Check the amount of XEM you have sent to some account.
+Check the amount of XEM you have sent to any account.
 
 *************
 Prerequisites

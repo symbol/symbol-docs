@@ -10,7 +10,7 @@ This tutorial will guide you in the creation of an application to monitor announ
 Background
 **********
 
-If you are used to NIS1 API calls, after announcing a transaction you received a success message or some error indicating the reason why the transaction has not been included in the block.
+If you are used to NIS1 API calls, after announcing a transaction you will receive a success message or some error indicating the reason why the transaction has not been included in the block.
 
 The new Catapult REST API works differently, being *asynchronous*. When a user announces a transaction through the API, it always returns an OK.
 
@@ -19,7 +19,7 @@ To know the status of the transaction, which can be OK or :ref:`Failure<status-e
 a) Check the status via API endpoint.
 b) Listen to the different :doc:`WebSocket<../../concepts/listener>` channels.
 
-.. note:: While developing, it is encouraged to open terminals with different listeners to monitor transactions you send using NEM2-CLI.
+.. note:: While developing, it is encouraged to open terminals with different listeners to monitor the transactions you send using NEM2-CLI.
 
 *************
 Prerequisites
@@ -49,7 +49,7 @@ Create a new listener to get notified every time a transaction related to your a
         :language: javascript
         :lines: 23
 
-Open the connection. You only need to open the connection once and then connect to all desired channels.
+Open the connection. You only need to open the connection once. Then listen to all desired channels.
 
 .. example-code::
 
@@ -89,4 +89,4 @@ In this example, we will reach only transactions that get confirmed. You can als
 What's next?
 ************
 
-Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see transaction information in your terminal.
+Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see the transaction information in your terminal.

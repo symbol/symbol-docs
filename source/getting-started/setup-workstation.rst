@@ -2,19 +2,19 @@
 Setting up your workstation
 ###########################
 
-This guide will walk you through the installation step-by-step, by showing you how to use the tools to start developing with NEM Catapult.
+This guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
 
-*********************
-Create a test account
-*********************
+***********************
+Creating a test account
+***********************
 
-An account is a key pair (private and public key) associated to a mutable state stored on the NEM blockchain. Simply put, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. Simply put, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the NEM blockchain protocol. It is better to share this address than just the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
+Finally, the account address is generated with the public key, following the NEM blockchain protocol. It is better to share this address than just the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
-:doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account and sending funds, etc.
+:doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
 Install NEM2-CLI using ``npm``.
 
@@ -30,7 +30,7 @@ Create an account with the command line tool.
 
 The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM blockchain used for development and testing purposes.
 
-Use ``save flag`` to store the account in your computer. NEM2-CLI uses stored account to sign transactions you start.
+Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
 
 You should be able to see the following lines in your terminal, containing the account credentials:
 
@@ -54,13 +54,13 @@ XEM will appear in your account’s balance after the transaction is confirmed b
 
 .. _setup-development-environment:
 
-**********************************
-Set up the development environment
-**********************************
+**************************************
+Setting up the development environment
+**************************************
 
-By that time, you should have created an account and have received some XEM. Then it is time to choose a programming language. Pick the one you feel most comfortable with, or just follow project requirements.
+By then, you should have created an account and have received some XEM. Then, it is time to choose a programming language. Pick the one you feel most comfortable with, or just follow project requirements.
 
-Afterwards, create a folder for your new project and run the instructions for the selected language.
+After that, create a folder for your new project and run the instructions for the selected language.
 
 TypeScript/JavaScript
 =====================

@@ -4,7 +4,7 @@
 Creating an escrow with aggregate bonded transaction
 ####################################################
 
-This guide will run you through NEM general concepts, and precisely :ref:`aggregate bonded transaction <aggregate-transaction>`, by creating an escrow.
+Learn about :ref:`aggregate bonded transactions <aggregate-transaction>`, by creating an escrow.
 
 **********
 Background
@@ -14,11 +14,11 @@ An **escrow** is a ``contractual arrangement`` in which a ``third party receives
 
 See full description at |escrow_wikipedia|.
 
-In this example, imagine the two parties agree in a virtual service, implying that the **escrow can be immediate**.
+In this example, imagine the two parties agree on a virtual service, implying that the **escrow can be immediate**.
 
 **How does it work?**
 
-1. Buyer and seller agree to terms
+1. Buyer and seller agree on terms
 2. Buyer submits payment to escrow
 3. Seller delivers goods or service to Buyer
 4. Buyer approves goods or service
@@ -44,7 +44,7 @@ Normalizing the language into NEM related concepts:
     No account, just an atomic swap
 
 **until the consummation or termination of a transaction**
-    The transaction included in a block
+    The transaction gets included in a block
 
 
 *************
@@ -76,7 +76,7 @@ In this example, Alice and a ticket distributor want to swap the following mosai
         Alice, nem:xem, 100
         Ticket distributor, museum:ticket, 1
 
-Before continuing, practise by setting up set up the namespaces and mosaics required.
+Before continuing, practise by setting up the namespaces and mosaics required.
 
 **Mosaics swap**
 
@@ -91,7 +91,7 @@ Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregat
 
 An aggregate Transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
-In case that requires signatures from other participants but announced to the network, then the transaction is considered *aggregate bonded*.
+In case that signatures are required from other participants and the transaction is announced to the network, it is considered an aggregate bonded.
 
 .. example-code::
 
@@ -129,10 +129,10 @@ Once the ticket distributor signs the aggregate transaction, the amount of locke
 Is it possible without aggregate transactions?
 **********************************************
 
-**It is not secure**, since something of the next list could happen:
+**It is not secure**, since any event of the next list may happen:
 
-- The buyer doesn't pay.
-- The seller doesn't send the virtual goods.
+- The buyer does not pay.
+- The seller does not send the virtual goods.
 
 .. |escrow_wikipedia| raw:: html
 
@@ -142,7 +142,7 @@ Is it possible without aggregate transactions?
 What's next?
 ************
 
-The distributor didn't sign the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
+The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
 
 Afterwards, swap mosaics between multiple participants.
 

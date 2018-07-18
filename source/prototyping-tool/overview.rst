@@ -17,11 +17,11 @@ Node-RED
 
 |NEM2-Prototyping-Tool| is a collection of **Node-RED** nodes.
 
-|Node-RED| is a visual programming tool for wiring together hardware devices, APIs and online services.
+|Node-RED| is a visual programming tool to wire together hardware devices, APIs and online services.
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single click.
 
-The flows created in Node-RED are stored using JSON which can be easily imported and exported for sharing with others.
+The flows created in Node-RED are stored using JSON, which can be easily imported and exported to share with others.
 
 ************
 Installation

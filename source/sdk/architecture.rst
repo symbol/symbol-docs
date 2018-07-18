@@ -10,10 +10,10 @@ Characteristics
 - **Loose Coupling**: Reducing the degree of component coupling fosters.
 - **Abstraction**: Increasing long-term consistency of interoperability and allowing underlying components to evolve independently.
 - **Reusability**: Enabling high-level interoperability between modules and potential component consumers.
-- **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequent and reliable.
+- **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
 - **Composability**: For components to be effectively composable they must be interoperable.
 
-A key objective is for interoperability to become a natural design of the NEM2-SDK, ideally to extend that components to work with other products or systems.
+A key objective is for interoperability to become a natural design of the NEM2-SDK, ideally to the extend that components work with other products or systems.
 
 ********
 Reactive
@@ -33,12 +33,12 @@ NEM2-SDK uses intensely ReactiveX Library. See |reactivex|.
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
-- **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools for handling these sort of errors.
+- **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle these sort of errors.
 - **Concurrency made easy**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
 - **Frontend**: Simple manipulation of UI events and API responses on the Web using RxJS
 - **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
 
-.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. But, **we encourage you to learn ReactiveX**.
+.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
 
 References
 ==========
@@ -65,7 +65,7 @@ The HTTP requests are made following the Repository Pattern, and they return NEM
 Models
 ======
 
-The NEM Domain models are, usually, immutable by definition, the developer cannot change its attributes. Instead, the developer has to create new Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to change the NEM Blockchain state.
+The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to change the NEM Blockchain state.
 
 Services
 ========

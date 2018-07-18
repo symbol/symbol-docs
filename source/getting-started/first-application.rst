@@ -2,16 +2,16 @@
 Writing your first application
 ##############################
 
-This first guide will run you through some :doc:`NEM general concepts <../concepts/account>`. Once you find a new one, it is advisable to read more about it by clicking on the provided link.
+This first guide will take you through some :doc:`NEM general concepts <../concepts/account>`. Once you find a new one, it is advisable to read more about it by clicking on the provided link.
 
 Background
 ==========
 
-:doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+:doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 
-After finishing this guide, you will create a mosaic and send your first :ref:`transfer transaction <transfer-transaction>` in less than 15 minutes.
+After finishing this guide, you will be able to create a mosaic and send your first :ref:`transfer transaction <transfer-transaction>` in less than 15 minutes.
 
-At first glance, it may seem difficult to imagine that you can do all of this in such a short time. NEM tools make it possible by reducing blockchain development complexity, letting developers focus on their product.
+At first glance, it may seem difficult to imagine that you can do all of this in such a short period of time. NEM tools make it possible by reducing blockchain development complexity, allowing developers to focus on their product.
 
 *************
 Prerequisites
@@ -52,7 +52,7 @@ Our account owns 1.000.000 XEM. If your row after mosaics is empty, try to :doc:
 
 Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response doesn't mean the transaction is valid, hence not included in a block. A good practice is to monitor transactions before being announced.
+Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
 
 We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../guides/transaction/debugging-transactions>` validation errors.
 
@@ -60,7 +60,7 @@ We suggest opening three new terminals. The first terminal :doc:`monitors announ
 
     $> nem2-cli monitor status
 
-Monitoring ``unconfirmed`` shows you which transactions have reached the network, but not yet included in a block.
+Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
 
 .. code-block:: bash
 
@@ -77,11 +77,11 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 
 Before creating your mosaic, you need to register a namespace.
 
-A :doc:`namespace <../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to appreciate it is the domain and file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
+A :doc:`namespace <../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to understand it is by means of the domain-file analogy on the internet. Imagine that a domain address has to be unique in a root (lowest level).
 
-A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
+A mosaic is like a file hosted on a domain and it represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique even if the rest of it is not.
 
-Register your namespace, choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
+First, register your namespace by choosing a name that you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
 
 .. code-block:: bash
 
@@ -97,7 +97,7 @@ To register it, specify the namespace name and its renting duration expressed in
     
     $> nem2-cli transaction namespace --name foo --rootnamespace --duration 1000
 
-Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared under ``unconfirmed`` terminal and after a while got ``confirmed``.
+Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared under ``unconfirmed`` terminal and, after a while, got confirmed ``confirmed``.
 
 **Creating a mosaic**
 
@@ -115,13 +115,13 @@ Reference this mosaic in future transactions as ``foo:token``.
 
 Congratulations! You are the owner of the mosaic. Now send some ``foo:token`` to another account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
-A transfer transaction is composed of three essential attributes:
+A transfer transaction is made of three essential attributes:
 
 * The recipient address.
 * A message, that can be encrypted or not.
 * An array of mosaics.
 
-In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``. You can also include a message, for example ``my first transfer transaction!``. Feel free to change recipient address by creating a new account.
+In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``. You can also include a message, for example ``my first transfer transaction!``. Feel free change the recipient address by creating a new account.
 
 .. example-code::
 
@@ -251,4 +251,4 @@ Once signed, announce it to the network.
 What's next?
 ************
 
-Continue reviewing :doc:`general concepts <../concepts/account>` or practicing with more step by step :doc:`guides <../guides/overview>`.
+Continue reviewing :doc:`general concepts <../concepts/account>` or practicing with more step-by-step :doc:`guides <../guides/overview>`.

@@ -41,7 +41,7 @@ Configuration
 
 To start using NEM2-CLI, configure a profile.
 
-Profile holds an account and a node url for a specific network. Profiles are used to set a base url and have an account to sign transactions.
+A profile holds an account and a node url for a specific network. Profiles are used to set a base url and have an account to sign transactions.
 
 Configure default profile.
 
@@ -49,7 +49,7 @@ Configure default profile.
 
     $> nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000
 
-NEM2-CLI supports names profiles. You can configure additional profiles by using the --profile option.
+NEM2-CLI supports named profiles. You can configure additional profiles by using the --profile option.
 
 .. code-block:: bash
 
@@ -67,7 +67,7 @@ If you are going to use named profile for multiple commands, you can use the NEM
 
     $> export NEM2_PROFILE=mijin_test_net_profile
 
-If you don't have a private key to create a profile you can generate a new account, add a node url and save it as default or named profile.
+If you do not have a private key to create a profile you can generate a new account, add a node url and save it as default or named profile.
 
 .. code-block:: bash
 

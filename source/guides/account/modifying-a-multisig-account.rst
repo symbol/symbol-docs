@@ -166,7 +166,7 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
 What’s next?
 ************
 
-Bob didn't cosign the transaction yet. Follow :doc:`signing announced aggregate bonded transactions guide<../transaction/signing-announced-aggregate-bonded-transactions>`.
+Bob hasn't cosigned the transaction yet. Follow :doc:`signing announced aggregate bonded transactions guide<../transaction/signing-announced-aggregate-bonded-transactions>`.
 
 Once you have finished this guide, try to delete a cosignatory from the multisig. Notice that multisig accounts can be converted again to regular accounts by removing all cosignatories, just make sure you own the multisig private key!
 

@@ -39,7 +39,7 @@ Open a new |issue| here.
 Requests
 ********
 
-If you find yourself wishing for contents that don't exist in nem2-docs, you are probably not alone. Many of the documentation and guides that nem2-docs has today have been added because our users saw the need. Open an |issue| on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
+If you find yourself wishing for content that does not exist in nem2-docs, you are probably not alone. Most of the documentation and guides that nem2-docs has today have been added because our users saw the need. Open an |issue| on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
 
 If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the project repository.
 

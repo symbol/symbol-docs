@@ -2,7 +2,7 @@
 Listener
 ########
 
-Listeners make possible receiving notifications when a transaction or event occurs in the blockchain.
+Listeners make receiving notifications possible when a transaction or event occurs in the blockchain.
 
 The notification is received in real time without having to poll the API waiting for a reply.
 
@@ -22,13 +22,13 @@ Channels
 
     The unconfirmedAdded channel notifies when a transaction related to an address is in unconfirmed state and waiting to be included in a block. The message contains the transaction.
 
-    Possible scenarios when this channel notifies are, the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an aggregate bonded transaction has all required cosigners and change the state from *partial* to *unconfirmed*.
+    Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an aggregate bonded transaction has all required cosigners and change its state from *partial* to *unconfirmed*.
 
     **unconfirmedRemoved/<ADDRESS>**
 
-    The unconfirmedRemoved channel notifies when a transaction related to an address was in unconfirmed state but not anymore. The message contains the transaction hash.
+    The unconfirmedRemoved channel notifies when a transaction related to an address was in unconfirmed state but is not anymore. The message contains the transaction hash.
 
-    Possible scenarios when this channel notifies are, the transaction now is confirmed or the deadline has been reached and it was not included in a block.
+    Possible scenarios when this channel notifies are: the transaction now is confirmed or the deadline has been reached and it was not included in a block.
 
     **partialAdded/<ADDRESS>**
 
@@ -38,9 +38,9 @@ Channels
 
     **partialRemoved/<ADDRESS>**
 
-    The partialRemoved channel notifies when a transaction related to an address was in partial state but not anymore. The message contains the transaction hash.
+    The partialRemoved channel notifies when a transaction related to an address was in partial state but is not anymore. The message contains the transaction hash.
 
-    Possible scenarios when this channel notifies are, the transaction now is in unconfirmed or the deadline has been reached and it was not included in a block.
+    Possible scenarios when this channel notifies are: the transaction now is in unconfirmed or the deadline has been reached and it was not included in a block.
 
     **cosignature/<ADDRESS>**
 

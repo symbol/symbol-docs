@@ -2,21 +2,21 @@
 Overview
 ########
 
-The NEM2 Software Development Kit is the primary software development tool to create NEM2 components, like more tools, libraries or applications. All, or almost all, components should use **NEM2-SDK** instead of raw API.
+The NEM2 Software Development Kit is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications. Almost all, if not all, components should use **NEM2-SDK** instead of raw API.
 
 .. warning::  The SDKs methods could change until it reaches the stable version 1.0.0.
 
-The new SDK enables the developers to focus on their product rather than the NEM2 Blockchain specific API details due to its higher abstraction.
+The new SDK enables developers to focus on their product rather than on the NEM2 Blockchain specific API details due to its higher abstraction.
 
-NEM2-SDK share the same design/architecture between programming languages to accomplish the next properties:
+NEM2-SDK shares the same design/architecture between programming languages to accomplish the next properties:
 
-* **Fast language adaptation**: There is a library for Java, but you needed it for C# for example, because both SDKs share the same design, you can re-write the library faster, just adapting the syntax to your language. Also applies to examples, projects, applications...
+* **Fast language adaptation**: There is a library for Java, but you need it for C# for example, because both SDKs share the same design, you can re-write the library faster, just adapting the syntax to your language. It also applies to examples, projects, applications...
 
-* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by best practices.
+* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
 
-* **Fast SDK updates**: Migrating one improvement from a NEM2-SDK implementation to the rest is faster.
+* **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
 
-* **Fewer bugs**: If some bug appears in one language, it is faster to check and fix it.
+* **Fewer bugs**: If any bug appears in one language, it is faster to check and fix it.
 
 The best way to learn about the SDKs is through :doc:`guides <../guides/overview>`, we encourage you to check them.
 
@@ -24,7 +24,7 @@ The best way to learn about the SDKs is through :doc:`guides <../guides/overview
 Backward compatibility with NIS1 SDKs
 *************************************
 
-.. note:: Final information regarding compatibility with NIS1 is not yet available.
+.. note:: Final information regarding compatibility with NIS1 is not available yet.
 
 Start planning the migration to NEM2-SDK to take advantage of new Catapult features and future releases.
 

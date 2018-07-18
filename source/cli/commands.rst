@@ -38,7 +38,7 @@ Command
 
     $> nem2-cli profile list
 
-.. note:: By default NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
+.. note:: By default, NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
 
 *******
 Account
@@ -49,7 +49,7 @@ Generate new account
 
 Generate a new :doc:`account <../concepts/account>` in a network. This command generates a private key, public key and address.
 
-As seen in the configuration section, generated account can be stored as named profiles by adding node url.
+As seen in the configuration section, generated account can be stored as named profiles by adding a node url.
 
 Options
 
@@ -87,7 +87,7 @@ Command
 Get confirmed transactions
 ==========================
 
-Gets an array of confirmed :doc:`transaction <../concepts/transaction>` for which an account is signer or recipient.
+Get an array of confirmed :doc:`transaction <../concepts/transaction>` for which an account is signer or recipient.
 
 Options
 
@@ -108,7 +108,7 @@ Command
 Get incoming transactions
 =========================
 
-Gets an array of :doc:`transactions <../concepts/transaction>` for which an account is the recipient. A transaction is said to be ``incoming`` regarding an account if the account is the recipient of a transaction.
+Get an array of :doc:`transactions <../concepts/transaction>` for which an account is the recipient. A transaction is said to be ``incoming`` regarding an account if the account is the recipient of a transaction.
 
 Options
 
@@ -127,7 +127,7 @@ Command
 Get outgoing transactions
 =========================
 
-Gets an array of :doc:`transactions <../concepts/transaction>` for which an account is the sender. A transaction is said to be ``outgoing`` regarding an account if the account is the sender of a transaction.
+Get an array of :doc:`transactions <../concepts/transaction>` for which an account is the sender. A transaction is said to be ``outgoing`` regarding an account if the account is the sender of a transaction.
 
 Options
 
@@ -146,7 +146,7 @@ Command
 Get unconfirmed transactions
 ============================
 
-Gets the array of :doc:`transactions <../concepts/transaction>` for which an account is the sender or receiver and which have not yet been included in a block.
+Get the array of :doc:`transactions <../concepts/transaction>` for which an account is the sender or receiver and have not been included in a block yet.
 
 Options
 
@@ -165,7 +165,7 @@ Command
 Get Aggregate bonded transactions
 =================================
 
-Gets an array of :doc:`aggregate bonded transactions <../concepts/transaction>` for which an account is the sender or has signed the transaction. A transaction is said to be ``aggregate bonded`` regarding an account if announced but there are missing signatures.
+Get an array of :doc:`aggregate bonded transactions <../concepts/transaction>` for which an account is the sender or has signed the transaction. A transaction is said to be ``aggregate bonded`` regarding an account if it is announced, but there still are missing signatures.
 
 Options
 
@@ -233,7 +233,7 @@ Command
 Transaction info
 ================
 
-Gets a :doc:`transaction <../concepts/transaction>` by its ID.
+Get a :doc:`transaction <../concepts/transaction>` by its ID.
 
 Options
 

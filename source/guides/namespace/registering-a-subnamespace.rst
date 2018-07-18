@@ -10,9 +10,9 @@ Register a :doc:`subnamespace <../../concepts/namespace>` following this guide.
 Background
 **********
 
-Having a root namespace registered, you can create up to ``3`` levels of subnamespaces.
+Once you have a registered root namespace, you can create up to ``3`` levels of subnamespaces.
 
-Subnamespaces do not have a renting duration by its own. They have the same one as their parent namespace.
+Subnamespaces do not have a renting duration on its own. They have the same one as their parent namespace.
 
 It is possible to create multiple subnamespaces with the same name in different namespaces (example: ``foo.bar`` and ``foo2.bar``).
 

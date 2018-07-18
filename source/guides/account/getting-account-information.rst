@@ -4,7 +4,7 @@
 Getting account information
 ###########################
 
-Get the public key, height, balance and importance of an :doc:`account <../../concepts/account>`.
+Getting the public key, height, balance and importance of an :doc:`account <../../concepts/account>`.
 
 *************
 Prerequisites
@@ -18,7 +18,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Calling ``accountHttp.getAccountInfo`` you can get account information just passing address and network as a parameter.
+By calling ``accountHttp.getAccountInfo`` you can get account information just passing address and network as a parameter.
 
 .. example-code::
 
@@ -53,7 +53,7 @@ Does the account have an importance?
 
 **Checking account's balance**
 
-Check account's balance using ``mosaicService``. The balance is the amount of the different mosaics stored in the account.
+Check account's balance using ``mosaicService``. The balance is the amount of the different mosaics stored on the account.
 
 .. example-code::
 

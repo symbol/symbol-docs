@@ -11,9 +11,9 @@ The left sidebar is the **node palette**. You can find NEM related nodes under:
 * NEM2 Listeners
 * NEM2 Utility
 
-Open *NEM account* tab and click once **account** node.
+Open the *NEM account* tab and click once on the **account** node.
 
-The right sidebar shows you the node description, properties, input fields, and returned outputs.
+The right sidebar shows you the node description, properties, input fields and returned outputs.
 
 The idea is simple: you have to link nodes together, connecting the previous node outputs with the following node inputs.
 
@@ -32,7 +32,7 @@ Let's link account with other nodes. As we need a ``privateKey`` as an input, we
 
     Drag and drop and link nodes together.
 
-Double-click account node. Choose the ``network`` you want to use. Do the same for generateAccount node.
+Double-click on account node. Choose the ``network`` you want to use. Do the same for generateAccount node.
 
 .. figure:: ../resources/images/nem2-prototyping-tool-3.png
     :align: center
@@ -48,7 +48,7 @@ Finally, find **debug** node in the node palette, under *output* tab. Link it wi
 Running a flow
 **************
 
-Click the ``deploy`` button, at the top-right corner of your screen. Select the square attached to the first node to run the flow.
+Click on the ``deploy`` button, at the top-right corner of your screen. Select the square attached to the first node to run the flow.
 
 Check the output returned at the right sidebar, under the debug tab. NEM2 nodes return outputs following the structure ``msg.nem.<name_of_the_output>``.
 

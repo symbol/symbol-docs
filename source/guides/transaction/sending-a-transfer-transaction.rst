@@ -25,14 +25,14 @@ Background
 
     Sending a transfer Transaction
 
-Alice wants to send 10 XEM to Bob, who just created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 XEM to Bob, who has just created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
 
 **Monitoring the transaction**
 
 Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response doesn't mean the transaction is valid, hence not included in a block. A good practice is to monitor transactions before being announced.
+Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
 
 We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
 
@@ -74,7 +74,7 @@ Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Wel
 
 Although the transaction is created, it has not been announced to the network yet.
 
-To announce it, Alice shall sign the transaction with her account first so that the network can verify its authenticity.
+To announce it, Alice must sign the transaction with her account first so that the network can verify its authenticity.
 
 .. example-code::
 
@@ -110,7 +110,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
         :language: bash
         :start-after: #!/bin/sh
 
-Open the terminal where you are monitoring account transactions ``status``, it should be empty. If you see an error, check :ref:`HTTP Error Codes <status-error>` and their meaning.
+Open the terminal where you are monitoring account transactions ``status``. It should be empty. If you see an error, check :ref:`HTTP Error Codes <status-error>` and their meaning.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 

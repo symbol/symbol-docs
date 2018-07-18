@@ -2,7 +2,7 @@
 Overview
 ########
 
-Guides show you how to use NEM built-in features while following step by step simple use cases.
+Guides show you how to use NEM built-in features while following step-by-step simple use cases.
 
 * :doc:`Interacting with accounts <account>`
 * :doc:`Monitoring blockchain <blockchain>`
@@ -37,7 +37,7 @@ Find and run an example.
 TypeScript
 ==========
 
-Go to ``typescript`` folder and then install required packages.
+Go to ``typescript`` folder and then install the required packages.
 
 .. code:: bash
 
@@ -66,7 +66,7 @@ If some code contains dynamic variables, for example, a public key (without quot
 JavaScript
 ==========
 
-Go to ``javascript`` folder and then install required packages.
+Go to ``javascript`` folder and then install the required packages.
 
 .. code:: bash
 
@@ -91,7 +91,7 @@ Java
 
 Open ``java`` folder with your favourite IDE.
 
-Find the example, and run it as a JUnit Test.
+Find the example and run it as a JUnit Test.
 
 .. |guides-repository| raw:: html
 

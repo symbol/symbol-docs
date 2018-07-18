@@ -16,7 +16,7 @@ http://localhost:3000/<path-to-API-request> for example:
 
 http://localhost:3000/account/7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246/transactions
 
-HTTP PUT and POST requests use JSON structures in the request body. Request return data (if any is returned) using JSON structures.
+HTTP PUT and POST requests use JSON structures in the request body. Request returns data (if any is returned) using JSON structures.
 
 *****************
 Reference & Tools
@@ -26,7 +26,7 @@ Reference & Tools
 
 We recommend using one of the following tools to interact with Catapult REST API, especially for PUT and POST methods.
 
-This kind of request usually cannot be executed from within the browser unless you use a plugin which enables you to do it.
+This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
 
 Swagger UI
 ==========

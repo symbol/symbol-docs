@@ -38,9 +38,9 @@ An aggregate transaction is  **complete** if before announcing it to the network
 Aggregate bonded
 ****************
 
-In case that it requires signatures from other participants but announced to the network, then the transaction is considered Aggregate **bonded**.
+In case that the transaction requires signatures from other participants, then the transaction is considered Aggregate **bonded**.
 
-.. note:: When sending an **aggregate bonded transaction**, an account should first send and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
+.. note:: When sending an **aggregate bonded transaction**, an account must first send and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -50,7 +50,7 @@ Once an aggregate bonded is announced, it reaches partial state and notifies its
 
     Aggregate bonded transaction cycle
 
-Every time a cosignatory signs and announces an aggregate bonded cosignature, the network checks if all required cosigners have already signed. If it is the case, the transaction changes to unconfirmed state until the network accepts it, and is included in a block once processed.
+Every time a cosignatory signs and announces an aggregate bonded cosignature, the network checks if all the required cosigners have already signed. If it is the case, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
 
 .. figure:: ../resources/images/guides-transactions-escrow.png
     :align: center
@@ -66,7 +66,7 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 
     Paying for others fees
 
-Alice sends 10 € to Bob using a payment app. But she doesn’t have any XEM to pay the blockchain transaction fee. Creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee.
+Alice sends 10 € to Bob using a payment app. But she doesn’t have any XEM to pay the blockchain transaction fee. By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee.
 
 Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM. Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -88,7 +88,7 @@ Cosignature transaction is used to sign :ref:`announced aggregate bonded transac
 Lock funds transaction
 **********************
 
-Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming and ensure that transactions are cosigned.
+Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming and to ensure that transactions are cosigned.
 
 Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
 

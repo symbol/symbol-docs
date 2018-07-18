@@ -18,7 +18,7 @@ Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`a
 
     <h2>Parameters</h2>
 
-Following parameters are required:
+The following parameters are required:
 
     **Recipient**
 
@@ -26,8 +26,8 @@ Following parameters are required:
 
     **Mosaics**
 
-    The array of mosaic to be sent. The array could be empty.
+    The array of mosaic to be sent. The array can be empty.
 
     **Message**
 
-    The transaction message of ``1024`` characters. It could be empty.
+    The transaction message of ``1024`` characters. It can be empty.

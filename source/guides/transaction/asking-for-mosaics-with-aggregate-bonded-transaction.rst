@@ -24,7 +24,7 @@ Let’s get into some code
 
     Asking for mosaics with an aggregate bonded transaction
 
-Alice wants to ask Bob for 20 XEM. Set up Alice and Bob accounts.
+Alice wants to ask Bob for 20 XEM. Set up both Alice's and Bob's accounts.
 
 .. example-code::
 
@@ -121,7 +121,7 @@ If all goes well, :doc:`Bob receives a notification <../transaction/debugging-tr
 What's next?
 ************
 
-Bob didn't cosign the transaction yet. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
+Bob has not cosigned the transaction yet. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
 
 After receiving the transaction, Bob signs the ``transaction hash`` and announces the cosignature signed transaction.
 

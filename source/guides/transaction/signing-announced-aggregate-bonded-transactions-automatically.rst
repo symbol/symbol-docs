@@ -40,7 +40,7 @@ Open the connection. You only need to open the connection once and then connect 
 
 Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
 
-.. note:: To sign automatically aggregate bonded transactions that should be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 For each received transaction, check if you have not already signed it.  Cosign each pending aggregate bonded transaction using the previously created function.
 
@@ -69,7 +69,7 @@ In this guide, you have seen how to create an automatic signature for an account
 * Aggregate transactions with two inner transactions.
 * Two inner transactions must be transfer transactions.
 * The transaction sending funds must have yourself as the signer.
-* The transaction sending funds should have only one mosaic being this less than 100 XEM.
+* The transaction sending funds should have only one mosaic, being this less than 100 XEM.
 
 Try it yourself! Here you have the implementation:
 

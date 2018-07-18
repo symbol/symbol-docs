@@ -4,11 +4,11 @@ Account
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-An account is a key pair (private and public key) associated to a mutable state stored on the NEM blockchain. Simply put, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored on the NEM blockchain. Simply put, you have a deposit box in the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
-Think about NEM accounts as a container for assets on the blockchain. An account could represent a simple as a user’s account full of coins, like most blockchains. But it could also represent a single object that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
+Think about NEM accounts as a container for assets in the blockchain. An account could represent something as simply as a user's account full of coins, like most blockchains. However, it could also represent a single object that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
 
-Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be can be updated and transferred. One crucial rule type is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties, all on the blockchain.
+Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties, all in the blockchain.
 
 .. note:: It is recommended to share the address instead of the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
 
@@ -32,7 +32,7 @@ An account has the following properties:
 
     It appears that in general, to break an n bit elliptic curve public key, the effort is 2^(n/2), or about 3.4*10^38, basic operations.
 
-    The public key of an account is stored on the blockchain with the first transaction issued. An account which has not issued any transaction has its public key field empty.
+    The public key of an account is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
     **Address**
 
@@ -42,7 +42,7 @@ An account has the following properties:
     * 160-bit hash of the account’s public key
     * 4 byte checksum
 
-    The checksum allows for quick recognition of mistyped addresses. It is possible to send XEM to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the account to which the XEM is sent, the XEM is likely lost forever.
+    The checksum allows for quick recognition of mistyped addresses. It is possible to send XEM to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the account to which the XEM is sent, the XEM is most likely lost forever.
 
     The following steps are performed to convert a public key to an address:
 
@@ -53,6 +53,6 @@ An account has the following properties:
     5. Concatenate output of step 3 and the checksum from step 4
     6. Encode result using base32
 
-    From the explanation above, you can create an account without ever interacting the with blockchain.
+    From the explanation above, you can create an account without ever interacting with the blockchain.
 
-    Does it mean that all possible accounts are pre-defined on the blockchain? No. It means that only accounts that have had a transaction involving the account are tracked on the blockchain.
+    Does it mean that all possible accounts are pre-defined on the blockchain? No. It means that only accounts that have had a transaction involving the account are tracked in the blockchain.

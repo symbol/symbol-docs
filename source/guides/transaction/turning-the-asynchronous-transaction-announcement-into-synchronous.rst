@@ -14,11 +14,11 @@ Alice is developing a simple app to send 10 nem:xem to Bob. She wants to know if
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 
-As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is developer's responsibility to check the status of the transaction and ensure it is confirmed.
+As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is developer's responsibility to check the transactions status and ensure it is confirmed.
 
-On the other hand, keeping track of the status of the transactions adds unnecessary complexity to simple projects. It also increases the difficulty when migrating from NIS1.
+On the other hand, keeping track of transactions status adds unnecessary complexity to simple projects. It also increases the difficulty when migrating from NIS1.
 
-nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announce, it waits for the confirmation via :doc:`WebSockets<../../concepts/listener>` and returns the message to the HTTP call.
+nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announcement, it waits for the confirmation via :doc:`WebSockets<../../concepts/listener>` and returns the message to the HTTP call.
 
 .. note:: The method ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
@@ -63,7 +63,7 @@ If everything goes well, after the image has been downloaded and the service is 
 
 **Getting Alice and Bob addresses**
 
-Once the Catapult Service is running, it will generate a set :doc:`accounts <../../concepts/account>` containing XEM.
+Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing XEM.
 
 .. code-block:: bash
 
@@ -76,7 +76,7 @@ Under the section ``nemesis_addresses`` find the key pairs which contain XEM. Ta
 
 .. note:: nem2-camel requires at least Java version 8.
 
-Download latest |nem2-camel-jar| package release, and run:
+Download the latest |nem2-camel-jar| package release, and run:
 
 .. code-block:: bash
 
@@ -94,7 +94,7 @@ Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>
         :language: typescript
         :lines:  32-44
 
-Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. Afterwards, Alice can send an email to Bob.
+Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. After that, Alice can send an email to Bob.
 
 .. example-code::
 
@@ -102,7 +102,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
         :language: typescript
         :lines:  47-
 
-If the transaction is valid, nem2-camel returns a ``Transaction`` object. It is important to highlight that this transaction has ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
+If the transaction is valid, nem2-camel returns a ``Transaction`` object. It is important to highlight that this transaction has an ``unconfirmed`` status. Alice, or you, might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before executing additional actions.
 
 In case the Catapult REST server throws an error, the subscribe method will invoke the ``error function`` returning a ``TransactionStatus`` object.
 

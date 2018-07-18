@@ -82,7 +82,7 @@ Let’s get into some code
 What's next?
 ************
 
-Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Notice that multisig accounts are not capable of cosigning transactions, being responsible for doing so cosignatories.
+Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Notice that multisig accounts are not capable of cosigning transactions, cosignatories are responsible for doing so.
 
 .. figure:: ../../resources/images/concepts-multisig-multilevel-2.png
     :align: center

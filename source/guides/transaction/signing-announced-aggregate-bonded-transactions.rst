@@ -4,7 +4,7 @@
 Signing announced aggregate bonded transactions
 ###############################################
 
-You probably have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all cosigners have not signed it yet.
+You have probably announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all cosigners have not signed it yet.
 
 This guide will show you how to cosign aggregate bonded transactions that require being signed by your account.
 
@@ -36,7 +36,7 @@ Create a function to cosign any aggregate bonded transaction.
 
 Fetch all aggregate bonded transactions pending to be signed by your account.
 
-.. note:: To fetch aggregate bonded transactions that should be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To fetch aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
 

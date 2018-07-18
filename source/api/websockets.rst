@@ -21,7 +21,7 @@ Interaction with :doc:`API <../api/overview>` WebSockets in :doc:`NEM2-SDK <../s
 Status Errors
 =============
 
-This section describes the errors messages that can be returned via ``status`` :doc:`channel<../concepts/listener>` after announcing a transaction.
+This section describes the error messages that can be returned via ``status`` :doc:`channel<../concepts/listener>` after announcing a transaction.
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
@@ -30,7 +30,7 @@ This section describes the errors messages that can be returned via ``status`` :
 
     Neutral
     Failure
-    Failure_Core_Past_Deadline, The deadline lies too far in the future. Deadlines are only allowed to lie up to ``24`` hours in the future.
+    Failure_Core_Past_Deadline, The deadline lies too far in the future. Deadlines are only allowed to lie up to ``24`` hours ahead.
     Failure_Core_Future_Deadline, The deadline lies in the past.
     Failure_Core_Insufficient_Balance, The account does not have enough funds.
     Failure_Core_Timestamp_Too_Far_In_Future, The timestamp of the entity lies too far in the future.
@@ -64,8 +64,8 @@ This section describes the errors messages that can be returned via ``status`` :
     Failure_Lock_Secret_Already_Used, The secret lock transaction failed because the hash has already been used.
     Failure_Lock_Invalid_Duration, Duration lies too far in the future or refers to past. Duration is allowed to lie up to ``N`` blocks in the future.
     Failure_Multisig_Modify_Account_In_Both_Sets, Adding and removing the same account in a single transaction is not possible.
-    Failure_Multisig_Modify_Multiple_Deletes, It is not possible to remove multiple cosignatories at a time.
-    Failure_Multisig_Modify_Redundant_Modifications, The transaction tries to add the same cosignatory more than once.
+    Failure_Multisig_Modify_Multiple_Deletes, It is not possible to remove multiple cosignatories at once.
+    Failure_Multisig_Modify_Redundant_Modifications, The transaction tried to add the same cosignatory more than once.
     Failure_Multisig_Modify_Unknown_Multisig_Account, The multisig has not been created yet and the transaction includes a delete modification.
     Failure_Multisig_Modify_Not_A_Cosigner, The account who signed the transaction is not a cosignatory of the multisig account.
     Failure_Multisig_Modify_Already_A_Cosigner, A cosignatory added is already cosignatory of that multisig account.

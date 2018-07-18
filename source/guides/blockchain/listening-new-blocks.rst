@@ -1,10 +1,10 @@
 :orphan:
 
-####################
-Listening new blocks
-####################
+#######################
+Listening to new blocks
+#######################
 
-Following this guide you will build a simple application to get notified when a new :doc:`block <../../concepts/block>` is included in the network.
+By following this guide you will build a simple application to get notified when a new :doc:`block <../../concepts/block>` is included in the network.
 
 *************
 Prerequisites

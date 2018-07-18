@@ -10,7 +10,7 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
-The four-layered architecture allows developers to update any of these tiers without disrupting the others, improving security.
+The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
 NEM nodes are represented in the two first layers. The blockchain server and the Rest API can be run separately, having two types of nodes:
 
@@ -21,7 +21,7 @@ Catapult Server: The blockchain network
 
 **Repository:** |catapult-server|
 
-These nodes works with other nodes to build the peer-to-peer blockchain network. In sum, this network creates and supports the blockchain itself.
+These nodes work with other nodes to build the peer-to-peer blockchain network. In short, this network creates and supports the blockchain itself.
 
 The server verifies transactions, maintains a database, synchronizes with other nodes, and maintains stability and trustworthiness to create a network that is fast, secure, and scalable.
 

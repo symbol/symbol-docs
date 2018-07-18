@@ -10,7 +10,7 @@ The purpose of this guide is to create a 1-of-2 :doc:`multisig account<../../con
 Background
 **********
 
-Alice and Bob live together and have separate :doc:`accounts <../../concepts/account>`. They also have a shared account so that if Bob is out shopping, he can buy groceries for both him and Alice.
+Alice and Bob live together and have separate :doc:`accounts <../../concepts/account>`. They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
 This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 

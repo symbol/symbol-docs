@@ -5,7 +5,7 @@
 Sending a multisig transaction
 ##############################
 
-Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>`, learning how :ref:`aggregate bonded transaction <aggregate-transaction>` works.
+Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>` and learn how an :ref:`aggregate bonded transaction <aggregate-transaction>` works.
 
 **********
 Background
@@ -17,7 +17,7 @@ Background
 
     Sending an aggregate complete transaction
 
-Alice and Bob live together and have separate accounts. They also have a shared account so that if Bob is out shopping, he can buy groceries for both him and Alice.
+Alice and Bob live together and have separate accounts. They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
 This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 
@@ -38,7 +38,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase is 10 XEM.
+Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 XEM.
 
 Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
@@ -118,7 +118,7 @@ What's next?
 
 What would have happened if the account were a 2-of-2 multisig instead of a 1-of-2?
 
-As all required cosigners didn't sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>`.
+As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>`.
 
 .. figure:: ../../resources/images/guides-transactions-multisig-2.png
     :align: center
@@ -141,13 +141,13 @@ As all required cosigners didn't sign the transaction, it should be announced as
         :lines:  57-60
 
 
-Open a new terminal for :doc:`monitoring<../transaction/debugging-transactions>` the aggregate bonded transaction.
+Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again on Bob's account.
+When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account.
 
 After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
