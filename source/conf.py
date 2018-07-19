@@ -111,8 +111,8 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
+        ("Getting Started", "getting-started/what-is-nem"),
         ("Guides", "guides/overview"),
-        ("Built-in Features", "concepts/account"),
         ("References", "sdk/overview"),
     ],
 

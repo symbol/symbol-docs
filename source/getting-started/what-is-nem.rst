@@ -59,3 +59,5 @@ Public and Private
     :width: 600px
 
 NEM provides both a decentralized, open and self-sustaining **public blockchain** that can be used by anyone – as well as a **permissioned/private blockchain solution** that can be provisioned specifically for your use on your servers when speed and privacy are the priority.
+
+Continue: :doc:`Setting up your workstation <setup-workstation>`.
