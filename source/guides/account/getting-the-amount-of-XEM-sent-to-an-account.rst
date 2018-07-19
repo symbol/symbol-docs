@@ -24,7 +24,7 @@ After obtaining all the outgoing :doc:`transactions <../../concepts/transaction>
 
     .. literalinclude:: ../../resources/examples/typescript/account/GettingTheAmountOfXEMSentToAnAccount.ts
         :language: typescript
-        :lines:  23-
+        :lines:  22-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingTheAmountOfXEMSentToAnAccount.java
         :language: java

@@ -31,9 +31,10 @@ import {
     UInt64,
     XEM
 } from "nem2-sdk";
+import {filter, mergeMap} from 'rxjs/operators';
 
 // 01 - Setup
-const nodeUrl = 'http://localhost:3000'
+const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
@@ -82,10 +83,11 @@ listener.open().then(() => {
 
     listener
         .confirmed(cosignatoryAccount.address)
-        .filter((transaction) => transaction.transactionInfo !== undefined
-            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
-        .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
-
 });

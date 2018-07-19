@@ -97,7 +97,7 @@ In case that signatures are required from other participants and the transaction
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  37-59
+        :lines:  40-62
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
         :language: java
@@ -105,7 +105,7 @@ In case that signatures are required from other participants and the transaction
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  37-59
+        :lines:  40-62
 
 When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM.
 
@@ -115,7 +115,7 @@ Once the ticket distributor signs the aggregate transaction, the amount of locke
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  62-
+        :lines:  65-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
         :language: java
@@ -123,7 +123,7 @@ Once the ticket distributor signs the aggregate transaction, the amount of locke
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  62-
+        :lines:  65-
 
 **********************************************
 Is it possible without aggregate transactions?

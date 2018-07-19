@@ -17,6 +17,7 @@
  */
 
 const nem2Sdk = require("nem2-sdk");
+const operators = require('rxjs/operators');
 const Account = nem2Sdk.Account,
     Deadline = nem2Sdk.Deadline,
     NetworkType = nem2Sdk.NetworkType,
@@ -29,8 +30,9 @@ const Account = nem2Sdk.Account,
     UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
     Address = nem2Sdk.Address,
-    PublicAccount = nem2Sdk.PublicAccount;
-
+    PublicAccount = nem2Sdk.PublicAccount,
+    filter = operators.filter,
+    mergeMap = operators.mergeMap;
 
 // 01 - Set up
 const nodeUrl = 'http://localhost:3000';
@@ -78,9 +80,11 @@ listener.open().then(() => {
 
     listener
         .confirmed(cosignatoryAccount.address)
-        .filter((transaction) => transaction.transactionInfo !== undefined
-            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
-        .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });

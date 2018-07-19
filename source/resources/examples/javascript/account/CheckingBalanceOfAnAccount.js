@@ -17,13 +17,14 @@
  */
 
 const nem2Sdk = require("nem2-sdk");
+const operators = require('rxjs/operators');
 
 const AccountHttp = nem2Sdk.AccountHttp,
     MosaicHttp = nem2Sdk.MosaicHttp,
     NamespaceHttp = nem2Sdk.NamespaceHttp,
     MosaicService = nem2Sdk.MosaicService,
-    Address = nem2Sdk.Address;
-
+    Address = nem2Sdk.Address,
+    mergeMap = operators.mergeMap;
 
 const url = 'http://localhost:3000';
 const accountHttp = new AccountHttp(url);
@@ -35,6 +36,8 @@ const address = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)
-    .flatMap((_) => _)
+    .pipe(
+        mergeMap((_) => _)
+    )
     .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
         err => console.error(err));

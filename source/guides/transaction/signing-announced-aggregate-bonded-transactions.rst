@@ -28,11 +28,11 @@ Create a function to cosign any aggregate bonded transaction.
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 29-32
+        :lines: 30-33
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  26-29
+        :lines:  31-34
 
 Fetch all aggregate bonded transactions pending to be signed by your account.
 
@@ -54,4 +54,4 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  31-
+        :lines:  35-

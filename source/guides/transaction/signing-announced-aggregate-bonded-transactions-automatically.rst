@@ -26,13 +26,13 @@ Create a function to cosign any aggregate bonded transaction.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 29-32
+        :lines: 31-34
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
+    .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
-        :lines:  26-29
+        :lines:  31-34
 
 Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
 
@@ -50,7 +50,7 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 34-
+        :lines: 36-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
         :language: java
@@ -58,7 +58,7 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
-        :lines:  31-
+        :lines:  36-
 
 ************
 What's next?
@@ -77,7 +77,7 @@ Try it yourself! Here you have the implementation:
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts
         :language: typescript
-        :lines:  34-
+        :lines:  35-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java
         :language: java

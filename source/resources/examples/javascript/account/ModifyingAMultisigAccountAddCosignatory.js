@@ -17,6 +17,7 @@
  */
 
 const nem2Sdk = require("nem2-sdk");
+const operators = require('rxjs/operators');
 
 const Account = nem2Sdk.Account,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
@@ -30,10 +31,12 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp,
     Listener = nem2Sdk.Listener,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
-    UInt64 = nem2Sdk.UInt64;
+    UInt64 = nem2Sdk.UInt64,
+    filter = operators.filter,
+    mergeMap = operators.mergeMap;
 
 // 01 - Setup
-const nodeUrl = 'http://localhost:3000'
+const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
@@ -82,10 +85,11 @@ listener.open().then(() => {
 
     listener
         .confirmed(cosignatoryAccount.address)
-        .filter((transaction) => transaction.transactionInfo !== undefined
-            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
-        .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
-
 });

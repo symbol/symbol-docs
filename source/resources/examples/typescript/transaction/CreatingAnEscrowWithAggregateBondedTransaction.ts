@@ -16,6 +16,7 @@
  *
  */
 
+
 import {
     Account,
     AggregateTransaction,
@@ -33,6 +34,8 @@ import {
     XEM
 } from 'nem2-sdk';
 
+import {filter, mergeMap} from "rxjs/operators";
+
 // 01 - Setup
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
@@ -42,7 +45,7 @@ const alicePrivateKey = process.env.PRIVATE_KEY as string;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
 const ticketDistributorPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
-const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey( ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
+const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
@@ -54,7 +57,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [new Mosaic( new MosaicId('museum:ticket'), UInt64.fromUint(1))],
+    [new Mosaic(new MosaicId('museum:ticket'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum:ticket to alice'),
     NetworkType.MIJIN_TEST);
 
@@ -83,9 +86,11 @@ listener.open().then(() => {
 
     listener
         .confirmed(aliceAccount.address)
-        .filter((transaction) => transaction.transactionInfo !== undefined
-            && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash)
-        .flatMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });

@@ -130,7 +130,7 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  57-60
+        :lines:  59-64
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
         :language: java
@@ -138,7 +138,7 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  57-60
+        :lines:  59-64
 
 
 Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
@@ -155,7 +155,7 @@ After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed,
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  62-
+        :lines:  66-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
         :language: java
@@ -163,6 +163,6 @@ After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed,
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  62-
+        :lines:  66-
 
 Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!

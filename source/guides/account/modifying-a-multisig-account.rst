@@ -102,7 +102,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  36-49
+        :lines:  37-50
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -110,7 +110,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  36-49
+        :lines:  39-52
 
 2) Create a modify multisig account transaction:
 
@@ -118,7 +118,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  52-57
+        :lines:  53-58
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -126,7 +126,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  52-57
+        :lines:  55-60
 
 3) Create an aggregate bonded transaction:
 
@@ -134,7 +134,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  60-63
+        :lines:  61-66
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -142,7 +142,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  60-63
+        :lines:  63-68
 
 Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. Once Bob cosigns the transaction, the amount of XEM becomes available again on Alice's account.
 
@@ -152,7 +152,7 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  68-
+        :lines:  69-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
         :language: java
@@ -160,7 +160,7 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 68-
+        :lines: 71-
 
 ************
 What’s next?

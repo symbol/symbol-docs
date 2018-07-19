@@ -30,6 +30,7 @@ import {
     TransferTransaction,
     XEM
 } from "nem2-sdk";
+import {filter, map, mergeMap} from "rxjs/operators";
 
 const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {
     return transaction instanceof TransferTransaction &&
@@ -55,11 +56,13 @@ listener.open().then(() => {
 
     listener
         .aggregateBondedAdded(account.address)
-        .filter((_) => _.innerTransactions.length == 2)
-        .filter((_) => !_.signedByAccount(account.publicAccount))
-        .filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount))
-        .map(transaction => cosignAggregateBondedTransaction(transaction, account))
-        .flatMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+        .pipe(
+            filter((_) => _.innerTransactions.length == 2),
+            filter((_) => !_.signedByAccount(account.publicAccount)),
+            filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount)),
+            map(transaction => cosignAggregateBondedTransaction(transaction, account)),
+            mergeMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+        )
         .subscribe(announcedTransaction => console.log(announcedTransaction),
             err => console.error(err));
 });

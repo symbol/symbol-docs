@@ -17,6 +17,7 @@
  */
 
 import {AccountHttp, Address, MosaicHttp, MosaicService, NamespaceHttp} from 'nem2-sdk';
+import {mergeMap} from 'rxjs/operators';
 
 const url = 'http://localhost:3000';
 const accountHttp = new AccountHttp(url);
@@ -28,6 +29,8 @@ const address = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)
-    .flatMap((_) => _)
+    .pipe(
+        mergeMap((_) => _)
+    )
     .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
         err => console.error(err));

@@ -10,7 +10,10 @@
   "license": "",
   "dependencies": {
     "js-sha3": "^0.7.0",
-    "nem2-sdk": "^0.9.3",
-    "rxjs": "^5.5.7"
+    "nem2-sdk": "^0.10.1",
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2"
   }
 }

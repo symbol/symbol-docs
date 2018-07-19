@@ -59,11 +59,11 @@ Check account's balance using ``mosaicService``. The balance is the amount of th
 
     .. literalinclude:: ../../resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts
         :language: typescript
-        :lines:  21-
+        :lines:  22-
 
     .. literalinclude:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
         :language: javascript
-        :lines: 27-
+        :lines: 29-
 
     .. literalinclude:: ../../resources/examples/cli/account/CheckingBalanceOfAnAccount.sh
         :language: bash

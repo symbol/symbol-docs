@@ -26,7 +26,9 @@ import {
     TransactionHttp
 } from "nem2-sdk";
 
-const cosignAggregateBondedTransaction = (transaction:AggregateTransaction, account: Account) : CosignatureSignedTransaction => {
+import {filter, map, mergeMap} from "rxjs/operators";
+
+const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
     const cosignatureTransaction = CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
@@ -42,8 +44,10 @@ listener.open().then(() => {
 
     listener
         .aggregateBondedAdded(account.address)
-        .filter((_) => !_.signedByAccount(account.publicAccount))
-        .map(transaction => cosignAggregateBondedTransaction(transaction, account))
-        .flatMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+        .pipe(
+            filter((_) => !_.signedByAccount(account.publicAccount)),
+            map(transaction => cosignAggregateBondedTransaction(transaction, account)),
+            mergeMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+        )
         .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
 });
