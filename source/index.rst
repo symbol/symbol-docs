@@ -38,8 +38,8 @@ Easy-to-follow step by step guides with code examples.
 * :doc:`What is NEM?<getting-started/what-is-nem>`
 * :doc:`Setting up your environment<getting-started/setup-workstation>`
 * :doc:`Writing your first application<getting-started/first-application>`
-* :doc:`More Guides <guides/overview>`
-
+* |self-paced-training|
+* :doc:`More guides <guides/overview>`
 
 
 .. raw:: html
@@ -197,3 +197,7 @@ NEM Developer Center
 
     support/contributing
     support/contributors
+
+.. |self-paced-training| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-workshops" target="_blank">Self-paced training</a>
