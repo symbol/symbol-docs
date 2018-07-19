@@ -28,9 +28,9 @@ Some important considerations to keep in mind:
 
 .. _modify-multisig-account-transaction:
 
-***********************************
+**************************************
 Modifying multisig account transaction
-***********************************
+**************************************
 
 Modifying multisig account transaction is used to change properties of a multisig account.
 
