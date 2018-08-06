@@ -1,0 +1,22 @@
+namespace Catapult.Buffers;
+
+table CosignatoryModificationBuffer {
+    type: ubyte;
+    cosignatoryPublicKey: [ubyte];
+}
+
+table ModifyMultisigAccountTransactionBuffer {
+    size: uint;
+    signature: [ubyte];
+    signer: [ubyte];
+    version: ushort;
+    type: ushort;
+    fee: [uint];
+    deadline:[uint];
+    minRemovalDelta: ubyte;
+    minApprovalDelta: ubyte;
+    numModifications: ubyte;
+    modifications: [CosignatoryModificationBuffer];
+}
+
+root_type ModifyMultisigAccountTransactionBuffer;

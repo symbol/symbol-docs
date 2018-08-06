@@ -1,0 +1,22 @@
+namespace Catapult.Buffers;
+
+table MosaicDefinitionTransactionBuffer {
+    size: uint;
+    signature: [ubyte];
+    signer: [ubyte];
+    version: ushort;
+    type: ushort;
+    fee: [uint];
+    deadline:[uint];
+    parentId:[uint];
+    mosaicId:[uint];
+    mosaicNameLength:ubyte;
+    numOptionalProperties:ubyte;
+    flags:ubyte;
+    divisibility:ubyte;
+    mosaicName:string;
+    indicateDuration:ubyte;
+    duration:[uint];
+}
+
+root_type MosaicDefinitionTransactionBuffer;

@@ -1,0 +1,18 @@
+namespace Catapult.Buffers;
+
+table RegisterNamespaceTransactionBuffer {
+    size: uint;
+    signature: [ubyte];
+    signer: [ubyte];
+    version: ushort;
+    type: ushort;
+    fee: [uint];
+    deadline:[uint];
+    namespaceType:ubyte;
+    durationParentId:[uint];
+    namespaceId:[uint];
+    namespaceNameSize:ubyte;
+    namespaceName:string;
+}
+
+root_type RegisterNamespaceTransactionBuffer;

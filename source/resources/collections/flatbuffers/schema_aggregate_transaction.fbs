@@ -1,0 +1,15 @@
+namespace Catapult.Buffers;
+
+table AggregateTransactionBuffer {
+    size: uint;
+    signature: [ubyte];
+    signer: [ubyte];
+    version: ushort;
+    type: ushort;
+    fee: [uint];
+    deadline:[uint];
+    transactionsSize: uint;
+    transactions:[ubyte];
+}
+
+root_type AggregateTransactionBuffer;

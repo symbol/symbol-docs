@@ -1,0 +1,28 @@
+namespace Catapult.Buffers;
+
+table MessageBuffer {
+    type: ubyte;
+    payload: [ubyte];
+}
+
+table MosaicBuffer {
+    id: [uint];
+    amount: [uint];
+}
+
+table TransferTransactionBuffer {
+    size: uint;
+    signature: [ubyte];
+    signer: [ubyte];
+    version: ushort;
+    type: ushort;
+    fee: [uint];
+    deadline:[uint];
+    recipient: [ubyte];
+    messageSize: ushort;
+    numMosaics: ubyte;
+    message: MessageBuffer;
+    mosaics: [MosaicBuffer];
+}
+
+root_type TransferTransactionBuffer;
