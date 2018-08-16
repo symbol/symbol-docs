@@ -67,12 +67,13 @@ Alice picks a random number, called ``proof``. Then, applies a SHA512 hash algor
         :language: typescript
         :lines:  48-51
 
-Alice creates a secret lock transaction to the private chain, including:
+Alice creates a secret lock transaction, including:
 
 * The mosaic and amount to be sent: 10 alice:token
 * The recipient address: Bob's address in private chain
 * The secret: Hashed proof.
 * The amount of time in which funds can be unlocked: 96h
+* The network: Private Chain
 
 .. example-code::
 
@@ -98,6 +99,7 @@ Bob creates a secret lock transaction TX2, which contains:
 * A recipient address: Alice's address in public chain
 * The secret that should be achieved to unlock the funds.
 * The amount of time in which funds can be unlocked: 84h
+* The network: Public Chain
 
 .. example-code::
 
