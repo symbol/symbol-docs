@@ -82,7 +82,7 @@ Alice creates a secret lock transaction to the private chain, including:
 
 Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If after a determined period of time no one proved it, the locked funds will be returned to Alice.
 
-Alice signs and announces TX1 to the public chain.
+Alice signs and announces TX1 to the private chain.
 
 .. example-code::
 
