@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 16 Aug, 2018
+    :category: namespace
+    :excerpt: 1
+    :nocomments:
+
 ########################
 Registering a namespace
 ########################

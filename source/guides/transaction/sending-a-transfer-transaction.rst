@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 10 Aug, 2018
+    :category: transfer-transaction
+    :excerpt: 1
+    :nocomments:
+
 ##############################
 Sending a transfer transaction
 ##############################

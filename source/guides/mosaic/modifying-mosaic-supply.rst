@@ -1,12 +1,15 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: mosaic
+    :excerpt: 1
+    :nocomments:
+
 #######################
 Modifying mosaic supply
 #######################
 
-Did you register a :doc:`mosaic<../../concepts/mosaic>` with ``supplyMutable`` option set to true?
-
-In that case, you can increase or decrease your mosaic available supply following this guide.
+Did you register a :doc:`mosaic<../../concepts/mosaic>` with supplyMutable option set to true? In that case, you can increase or decrease your mosaic available supply following this guide.
 
 *************
 Prerequisites

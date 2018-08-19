@@ -1,5 +1,9 @@
 :orphan:
 
+.. post:: 10 Aug, 2018
+    :category: aggregate-transaction
+    :excerpt: 1
+    :nocomments:
 
 ##############################
 Sending a multisig transaction

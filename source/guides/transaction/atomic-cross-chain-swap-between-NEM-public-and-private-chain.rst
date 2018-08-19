@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: cross-chain-transaction
+    :excerpt: 1
+    :nocomments:
+
 ############################################################
 Atomic cross-chain swap between NEM public and private chain
 ############################################################

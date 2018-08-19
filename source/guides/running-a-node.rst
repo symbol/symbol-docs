@@ -4,6 +4,8 @@ Running a node
 
 * |running-catapult-locally|
 
+Deploy a Catapult node for learning and development purposes.
+
 
 .. |running-catapult-locally| raw:: html
 

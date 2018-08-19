@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 16 Aug, 2018
+    :category: mosaic
+    :excerpt: 1
+    :nocomments:
+
 #################
 Creating a mosaic
 #################

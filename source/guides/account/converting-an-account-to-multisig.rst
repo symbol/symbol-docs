@@ -1,5 +1,11 @@
 :orphan:
 
+.. post:: 16 Aug, 2018
+    :category: multisig-account
+    :excerpt: 1
+    :nocomments:
+
+
 #################################
 Converting an account to multisig
 #################################

@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: multisig-account
+    :excerpt: 1
+    :nocomments:
+
 ##############################################
 Creating a multi-level multisig account (MLMA)
 ##############################################

@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: account
+    :excerpt: 1
+    :nocomments:
+    
 ############################################
 Getting the amount of XEM sent to an account
 ############################################

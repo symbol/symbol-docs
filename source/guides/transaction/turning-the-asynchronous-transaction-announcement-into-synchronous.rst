@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: monitoring
+    :excerpt: 1
+    :nocomments:
+
 ##################################################################
 Turning the asynchronous transaction announcement into synchronous
 ##################################################################

@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 11 Aug, 2018
+    :category: aggregate-transaction
+    :excerpt: 1
+    :nocomments:
+
 ###################################################
 Sending payouts with aggregate complete transaction
 ###################################################

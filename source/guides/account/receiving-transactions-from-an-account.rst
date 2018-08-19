@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 18 Aug, 2018
+    :category: account
+    :excerpt: 1
+    :nocomments:
+
 ####################################
 Receiving transactions of an account 
 ####################################

@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 13 Aug, 2018
+    :category: aggregate-transaction
+    :excerpt: 1
+    :nocomments:
+
 ####################################################
 Asking for mosaics with aggregate bonded transaction
 ####################################################

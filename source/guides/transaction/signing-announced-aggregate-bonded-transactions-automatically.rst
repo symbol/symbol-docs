@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 15 Aug, 2018
+    :category: aggregate-transaction
+    :excerpt: 1
+    :nocomments:
+
 #############################################################
 Signing announced aggregate bonded transactions automatically
 #############################################################

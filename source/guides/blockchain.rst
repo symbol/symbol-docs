@@ -2,5 +2,10 @@
 Monitoring blockchain
 #####################
 
-* :doc:`Listening to new blocks<blockchain/listening-new-blocks>`
-* :doc:`Getting block by height<blockchain/getting-block-by-height>`
+.. postlist::
+  :category: blockchain
+  :date: %A, %B %d, %Y
+  :format: {title}
+  :list-style: circle
+  :excerpts:
+  :sort:

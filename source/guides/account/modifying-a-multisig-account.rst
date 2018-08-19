@@ -1,5 +1,10 @@
 :orphan:
 
+.. post:: 17 Aug, 2018
+    :category: multisig-account
+    :excerpt: 1
+    :nocomments:
+
 ############################
 Modifying a multisig account
 ############################
