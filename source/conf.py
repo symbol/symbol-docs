@@ -43,11 +43,16 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.fulltoc',
-    'edit-on-github']
+    'sphinxcontrib.ghcontributors',
+    'edit-on-github',
+    'ablog'
+    ]
 
 
 # Add any paths that contain templates here, relative to this directory.
+import ablog
 templates_path = ['_templates']
+templates_path.append(ablog.get_html_templates_path())
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -68,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.10.5'
+version = u'0.11'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -113,7 +118,7 @@ html_theme_options = {
     'navbar_links': [
         ("Getting Started", "getting-started/what-is-nem"),
         ("Guides", "guides/overview"),
-        ("References", "sdk/overview"),
+        ("Reference", "reference"),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)

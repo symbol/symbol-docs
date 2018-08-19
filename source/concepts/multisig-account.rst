@@ -24,7 +24,7 @@ Some important considerations to keep in mind:
 
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
 
-.. warning:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
+.. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
 
 .. _modify-multisig-account-transaction:
 

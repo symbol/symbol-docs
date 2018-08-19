@@ -2,7 +2,7 @@
 Contributors
 ############
 
-NEM Catapult documentation for developers is not written from scratch. It is the sum of previous effort and documents written by the community and core developers, adapted for this new release. Thank you!
+NEM documentation for developers is not written from scratch. It is the sum of previous effort and documents written by the community and core developers, adapted for this new release. Thank you!
 
 * |nem-technical-reference|
 * |nem-website|
@@ -12,10 +12,11 @@ NEM Catapult documentation for developers is not written from scratch. It is the
 * |nem-blog-articles|
 * |nem-medium-articles|
 
-We want to recognize the current contributors who provide content and improve the quality of this documentation.
+We want to recognize the contributors who provide content and improve the quality and completeness of this documentation.
 
-* |github-contributors-list|
-
+..  ghcontributors::
+   :owner: nemtech
+   :repository: nem2-docs
 
 .. |nem-technical-reference| raw:: html
 
@@ -45,6 +46,3 @@ We want to recognize the current contributors who provide content and improve th
 
    <a href="https://medium.com/nemofficial" target="_blank">NEM Medium articles</a>
 
-.. |github-contributors-list| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/graphs/contributors" target="_blank">Github Contributors List</a>
