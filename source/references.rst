@@ -170,7 +170,7 @@
 .. raw:: html
 
                             </i>
-                            <h4>Apostille Library</h4>
+                            <h4>Apostille</h4>
                         </div></a>
                     </div>
 

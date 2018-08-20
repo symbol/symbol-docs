@@ -85,12 +85,13 @@ blockquote {
     padding: 20px;
 }
 
-.card.font-icon i{
+.card i{
     font-size: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: inline-block;
+    height: 50px;
 }
-
 
 .colored.green{
     color: #20b5ac;
@@ -406,6 +407,10 @@ footer .social li{
     .jumbotron .image-container img {
         height: 200px !important;
     }
+
+    .jumbotron{
+        padding-bottom: 150px !important;
+    }
 }
 
 
@@ -450,6 +455,10 @@ ul.search li:before {
 
 
 /* References */
+
+#reference-page .card{
+    height: 135px;
+}
 
 .subtitle-container h2{
     font-weight: 400;
