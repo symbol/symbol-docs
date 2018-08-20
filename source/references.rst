@@ -2,10 +2,8 @@
 
 .. raw:: html
 
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-.. raw:: html
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <div class="jumbotron text-center gap">
         <h1>Reference Documentation</h1>
@@ -139,20 +137,44 @@
 
               <div class="col-md-8">
 
-                  <div class="col-xs-6 col-sm-3">
-                   <a href="https://github.com/nemtech/nem2-camel">
-                    <div class="card font-icon">
-                        <i class="fas fa-sync colored blue"></i>
-                        <h4>NEM2 Camel</h4>
-
-                    </div></a>
-                </div>
 
                 <div class="col-xs-6 col-sm-3">
                    <a href="https://github.com/tech-bureau/catapult-service-bootstrap">
                     <div class="card font-icon">
                           <i class="devicon-docker-plain colored"></i>
                         <h4>Catapult Service</h4>
+                    </div></a>
+                </div>
+
+                  <div class="col-xs-6 col-sm-3">
+                   <a href="https://github.com/nemtech/nem2-camel">
+                    <div class="card font-icon">
+                        <i class="fas fa-sync colored blue"></i>
+                        <h4>NEM2 Camel</h4>
+                    </div></a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3">
+                   <a href="https://apostille.io/">
+                    <div class="card font-icon"><i>
+
+.. image:: resources/images/logo-apostille.png
+    :align: center
+    :height: 40px
+
+.. raw:: html
+
+                        </i>
+                        <h4>Apostille Library</h4>
+                    </div></a>
+                </div>
+
+
+                <div class="col-xs-6 col-sm-3">
+                   <a href="https://github.com/aleixmorgadas/nem2-asset-identifier">
+                    <div class="card font-icon">
+                          <i class="fas fa-box colored blue"></i>
+                        <h4>Asset Identifier</h4>
                     </div></a>
                 </div>
 

@@ -24,7 +24,6 @@ Do you need to create a NIP to create a library? No, you don’t. In fact, we su
 
 Non-NIP libraries could become NIP Library.
 
-
 .. |NIP| raw:: html
 
    <a href="https://github.com/nemtech/NIP" target="_blank">NIP</a>
