@@ -192,7 +192,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-8 text-center gap center-block">
-                     <h2><b>Catapult REST API</b></h2>
+                     <h2>Catapult REST API</h2>
                       <p><a href="api/overview.html"><b>Catapult REST API</b></a> combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.</p>
                 </div>
             </div>
