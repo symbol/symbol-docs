@@ -100,7 +100,6 @@ blockquote {
     color: rgba(90, 176, 229, 1);
 }
 
-/* List */
 
 /* Tables */
 table {
@@ -115,6 +114,12 @@ table-td {
 .section {
     max-width: 992px;
     margin: 0 auto;
+    display: block;
+}
+
+.center-block{
+    margin: 0 auto;
+    float: none;
     display: block;
 }
 
@@ -165,7 +170,7 @@ table-td {
 .content ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .content ul li {
@@ -444,3 +449,12 @@ ul.search li:before {
 }
 
 
+/* References */
+
+.subtitle-container h2{
+    font-weight: 400;
+}
+
+.subtitle-container p{
+    margin-top: 10px;
+}
