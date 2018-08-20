@@ -20,7 +20,9 @@ http://localhost:3000/account/7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F8
 HTTP PUT and POST requests use JSON structures in the request body. Request returns data (if any is returned) using JSON structures.
 
 * |catapult-rest-reference|
-*  :doc:`Websockets<websockets>`
+* :doc:`Websockets<websockets>`
+
+This kind of request cannot usually be executed from within the browser unless you use a :doc:`plugin<tools>` which enables you to do it.
 
 HTTP Status Codes
 =================
@@ -54,36 +56,9 @@ HTTP Errors
      "message": "accountId has an invalid format"
    }
 
-Tools
-=====
-
-We recommend using one of the following tools to interact with Catapult REST API, especially for PUT and POST methods.
-
-This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
-
-Swagger UI
-==========
-
-Open `Swagger online editor <https://swagger.io/tools/swagger-editor/>`_ and import:
-
-* |endpoints-swagger|
-
-Insomnia
-========
-
-Download `Insomnia app <https://insomnia.rest/>`_ for your operative system and import:
-
-* |endpoints-insomnia|
-
-
-.. |endpoints-swagger| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/" target="_blank">Catapult REST API Swagger</a>
-
-.. |endpoints-insomnia| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/" target="_blank">Catapult REST API Insomnia</a>
-
 .. |catapult-rest-reference| raw:: html
 
    <a href="https://app.swaggerhub.com/apis/nemtech/catapult-rest-api/" target="_blank">Endpoints</a>
+
+
+Continue: :doc:`Tools <tools>`.

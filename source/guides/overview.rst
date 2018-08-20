@@ -11,6 +11,10 @@ Guides show you how to use NEM built-in features while following step-by-step si
 * :doc:`Sending transactions <transaction>`
 * :doc:`Running a node <running-a-node>`
 
+
+
+Access to more self-paced training reviewing |workshops|.
+
 *********************
 How to run an example
 *********************
@@ -96,3 +100,7 @@ Find the example and run it as a JUnit Test.
 .. |guides-repository| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/" target="_blank">NEM Guides Code Repository</a>
+
+.. |workshops| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-workshops/" target="_blank">NEM workshops used at events</a>

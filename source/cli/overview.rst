@@ -72,3 +72,6 @@ If you do not have a private key to create a profile you can generate a new acco
 .. code-block:: bash
 
     $> nem2-cli account generate --network MIJIN_TEST -s --url http://localhost:3000 --profile mijin_test_net_profile
+
+
+Continue: :doc:`Commands <commands>`.
