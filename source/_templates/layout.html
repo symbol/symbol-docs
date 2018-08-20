@@ -20,14 +20,87 @@
 {%- block footer %}
 <footer class="footer">
     <div class="container">
-        <!--<p class="pull-right">-->
-        <!--<a href="#">Back to top</a>-->
-        <!--{% if theme_source_link_position == "footer" %}-->
-        <!--<br/>-->
-        <!--{% include "sourcelink.html" %}-->
-        <!--{% endif %}-->
-        <!--</p>-->
-        <p>
+        <div class="row social">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM">
+                            <i class="fab fa-slack"></i>
+                            <span >Join general discussion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/tags/nem/">
+                            <i class="fab fa-stack-overflow"></i>
+                            <span>Ask development questions</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/nemtechdev">
+                            <i class="fab fa-twitter"></i>
+                            <span>Follow the dev updates</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/nemtech">
+                            <i class="fab fa-github"></i>
+                            <span>Explore Github</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4">
+                <h4>Built-in Features</h4>
+
+                <ul>
+                    <li><a href="/concepts/account.html">Account</a></li>
+                    <li><a href="/concepts/multisig-account.html">Multisig Account</a></li>
+                    <li><a href="/concepts/multi-level-multisig-account.html">Multilevel Multisig Account</a></li>
+                    <li><a href="/concepts/transaction.html">Transaction</a></li>
+                    <li><a href="/concepts/namespace.html">Namespace</a></li>
+                    <li><a href="/concepts/mosaic.html">Mosaic</a></li>
+                    <li><a href="/concepts/transfer-transaction.html">Transfer Transaction</a></li>
+                    <li><a href="/concepts/aggregate-transaction.html">Aggregate Transaction</a></li>
+                    <li><a href="/concepts/cross-chain-transaction.html">Cross-Chain Transaction</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-4">
+                <h4>Guides</h4>
+
+                <ul>
+
+                    <li><a href="/guides/account.html">Interacting with accounts</a></li>
+                    <li><a href="/guides/blockchain.html">Monitoring blockchain</a></li>
+                    <li><a href="/guides/namespace.html">Registering namespaces</a></li>
+                    <li><a href="/guides/mosaic.html">Interacting with mosaics</a></li>
+                    <li><a href="/guides/transaction.html">Sending transactions</a></li>
+                    <li><a href="/guides/running-a-node.html">Running a node</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-4">
+                <h4>References</h4>
+
+                <ul>
+                    <li><a href="/cli/overview.html">CLI</a></li>
+                    <li><a href="/sdk/overview.html">NEM2-SDK</a></li>
+                    <li><a href="/api/overview.html">REST API</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="text-center top-gap">
             {%- if show_copyright %}
             {%- if hasdoc('copyright') %}
             {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -37,9 +110,6 @@
             {%- endif %}
             {%- if last_updated %}
             {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-            {%- endif %}
-            {%- if show_sphinx %}
-            {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
             {%- endif %}
         </p>
     </div>

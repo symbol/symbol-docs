@@ -118,7 +118,7 @@ html_theme_options = {
     'navbar_links': [
         ("Getting Started", "getting-started/what-is-nem"),
         ("Guides", "guides/overview"),
-        ("Reference", "reference"),
+        ("References", "references"),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)

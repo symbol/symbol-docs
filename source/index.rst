@@ -1,6 +1,6 @@
 .. raw:: html
 
-    <div class="jumbotron text-center">
+    <div class="home jumbotron text-center gap">
         <h1>NEM Developer Center</h1>
         <p>Start integrating NEM into your application.</p>
         <div class="image-container">
@@ -11,99 +11,101 @@
 
 .. raw:: html
 
-    </div>
-    </div>
-    <div class="custom-content">
-    <div class="custom-row">
-
-    <h2 class="text-center">NEM is Your Blockchain Engine</h2>
-    <p>NEM is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. NEM  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
-    <p> This documentation refers to NEM latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
-    </div>
-
-.. raw:: html
-
-    <div class="custom-row">
-
-    <h2 class="text-center">Dive into our Developer Documentation</h2>
-
-    <p class="gap">Our detailed NEM development documentation is provided via our documentation site. Below are some shortcut links that may be a good place to start.</p>
-
-    <div class="col-md-4">
-    <div class="card">
-    <h3>Getting started</h3>
-
-Easy-to-follow step by step guides with code examples.
-
-* :doc:`What is NEM?<getting-started/what-is-nem>`
-* :doc:`Setting up your environment<getting-started/setup-workstation>`
-* :doc:`Writing your first application<getting-started/first-application>`
-* |self-paced-training|
-* :doc:`More guides <guides/overview>`
-
-
-.. raw:: html
-
-    </div></div>
-    <div class="col-md-4">
-    <div class="card">
-    <h3>Built-in Features</h3>
-
-NEM Smart Assets are built using the following connected parts:
-
-* :doc:`Account <concepts/account>`
-* :doc:`Multisig Account <concepts/multisig-account>`
-* :doc:`Multi-level Multisig Account <concepts/multi-level-multisig-account>`
-* :doc:`Transaction <concepts/transaction>`
-* :doc:`Namespace <concepts/namespace>`
-* :doc:`Mosaic <concepts/mosaic>`
-* :doc:`Transfer Transaction <concepts/transfer-transaction>`
-* :doc:`Aggregate Transaction <concepts/aggregate-transaction>`
-* :doc:`Cross-Chain Transaction <concepts/cross-chain-transaction>`
-* :doc:`Block <concepts/block>`
-* :doc:`Node <concepts/node>`
-* :doc:`Listener <concepts/listener>`
-
-
-
-.. raw:: html
-
-    </div></div>
-    <div class="col-md-4">
-    <div class="card">
-    <h3>SDKs and Tools</h3>
-
-NEM provides tools and services to accelerate blockchain development, greatly reducing development time.
-
-* :doc:`NEM2-CLI <cli/overview>`
-* :doc:`NEM2-SDK <sdk/overview>`
-* :doc:`Catapult REST API <api/overview>`
-* :doc:`NEM2 Libraries <libraries/overview>`
-* :doc:`NEM2 Prototyping Tool <prototyping-tool/overview>`
-
-
-.. raw:: html
-
-    </div></div></div>
-    <div id="support" class="custom-row social">
-    <h2 class="gap text-center">Connect with the NEM Development Community</h2>
-    <div class="text-center">
-        <div class="col-sm-4">
-            <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM"><i class="fab fa-slack"></i></a>
-            <h4 class="gap">Join #general discussion</h4>
-        </div>
-
-        <div class="col-sm-4">
-            <a href="https://stackoverflow.com/tags/nem/"><i class="fab fa-stack-overflow"></i></a>
-            <h4 class="gap">Ask development questions</h4>
-        </div>
-
-        <div class="col-sm-4">
-            <a href="https://twitter.com/nemtechdev"><i class="fab fa-twitter"></i></a>
-          <h4 class="gap">Follow the dev team</h4>
         </div>
     </div>
-    </div></div>
+    <section class="container">
+        <div class="row custom-row">
+            <p>NEM is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. NEM  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
+            <p> This documentation refers to NEM latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
+        </div>
+    </section>
+.. raw:: html
+
+    <section class="home container card-container gap">
+        <div class="row top-gap">
+            <div class="col-md-6">
+                 <a href="getting-started/what-is-nem.html"><div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+
+.. image:: resources/images/home-getting-started.png
+    :align: center
+    :height: 50px
+
+.. raw:: html
+
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>Getting started</h3>
+                        <p>Learn about NEM by developing your first blockchain app.</p>
+                       <b>START</b>
+                   </div>
+                </div></a>
+            </div>
+
+
+            <div class="col-md-6">
+                 <a href="concepts/account.html"><div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+
+.. image:: resources/images/home-built-in-features.png
+    :align: center
+    :height: 50px
+
+.. raw:: html
+
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>Built-in Features</h3>
+                        <p>Discover in-depth the connected parts that make up the Smart Asset System.</p>
+                       <b>DISCOVER</b>
+                   </div>
+                </div></a>
+            </div>
+
+        </div>
+        <div class="row">
+
+
+            <div class="col-md-6">
+                 <a href="guides/overview.html"><div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+
+.. image:: resources/images/home-guides.png
+    :align: center
+    :height: 50px
+
+.. raw:: html
+
+                    </div>
+                    <div class="col-sm-8">
+                    <h3>Guides</h3>
+                    <p>Easy-to-follow step by step guides with code examples.</p>
+                   <b>CREATE</b>
+                   </div>
+                </div></a>
+            </div>
+
+       <div class="col-md-6">
+                 <a href="references.html"><div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+
+.. image:: resources/images/home-references.png
+    :align: center
+    :height: 50px
+
+.. raw:: html
+
+                    </div>
+                    <div class="col-sm-8">
+                    <h3>References</h3>
+                    <p>From SDKs to extensions that make blockchain development easier.</p>
+                   <b>LEARN MORE</b>
+                   </div>
+                </div></a>
+            </div>
+
+        </div>
+    </section>
 
 ********************
 NEM Developer Center
@@ -165,6 +167,7 @@ NEM Developer Center
 
     sdk/overview
     sdk/architecture
+    sdk/languages
 
 .. toctree::
     :maxdepth: 2
@@ -172,6 +175,7 @@ NEM Developer Center
     :caption: Catapult REST API
 
     api/overview
+    api/tools
     api/websockets
 
 .. toctree::

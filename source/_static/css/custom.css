@@ -38,23 +38,18 @@ blockquote {
 }
 
 .alert-info {
-    background: rgba(55, 167, 219, 1);
-    background: -moz-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55, 167, 219, 1)), color-stop(100%, rgba(59, 185, 234, 1)));
-    background: -webkit-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -o-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    background: linear-gradient(to right, rgba(55, 167, 219, 1) 0, rgba(59, 185, 234, 1) 100%);
-    border-color: #37a7db;
-}
-
-.alert-warning {
-    background: #f7a700;
-    border-color: #f5aa24;
+    background: #f7f5fa;
+    border-color: #f7f5fa;
     color: #555;
 }
 
+.alert-warning {
+    background: rgba(55, 167, 219, 1);
+    border-color: rgba(55, 167, 219, 1);
+}
+
 /* Card */
+
 .card {
     background: #fff;
     width: 100%;
@@ -72,6 +67,41 @@ blockquote {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+.card-container a {
+    color: #555;
+}
+
+.card-container a:hover{
+    color: #555;
+    text-decoration: none;
+}
+
+.card b{
+    color: #20b5ac;
+}
+
+.card.font-icon {
+    text-align: center;
+    padding: 20px;
+}
+
+.card.font-icon i{
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.colored.green{
+    color: #20b5ac;
+}
+
+.colored.blue{
+    color: rgba(90, 176, 229, 1);
+}
+
+/* List */
+
 /* Tables */
 table {
     word-break: break-all;
@@ -88,18 +118,26 @@ table-td {
     display: block;
 }
 
-.custom-content {
+.custom-row {
     max-width: 860px;
-    margin: 0 auto;
+    margin: 40px auto 0px auto;
 }
 
-.custom-row {
-    padding: 20px 40px;
-    clear: both;
+.top-gap{
+    margin-top: 40px;
+}
+
+.top-gap-l{
+    margin-top: 80px;
 }
 
 .gap {
     margin-bottom: 40px;
+}
+
+.inner-gap{
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -140,7 +178,8 @@ table-td {
     color: rgb(32, 181, 172);
 }
 
-#nem-developer-center {
+#nem-developer-center,
+#reference {
     display: none;
 }
 
@@ -288,18 +327,56 @@ table-td {
 /* Footer */
 
 footer {
-    background: #fff;
+    color: rgba(255,255,255,0.4);
+    background-color: #272030;
+    padding: 40px 40px 0 40px;
     z-index: 10;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+}
+
+footer a{
+    color: rgba(255,255,255,0.4);
+    text-decoration: none !important;
+}
+
+footer h4{
+    color: #fff;
+}
+
+footer a:hover{
+    color: #fff;
+}
+
+footer ul{
+    padding: 0px;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer .social{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+footer .social li{
+    display: inline-block;
+    margin-right: 20px;
 }
 
 /* Home Page */
+
+.home.jumbotron{
+    padding-bottom: 250px;
+}
+
+.home .card-img img{
+    margin: 40px;
+}
+
 .jumbotron {
     color: #fff;
-    padding-bottom: 250px;
     background: rgba(90, 176, 229, 1);
     background: -moz-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(90, 176, 229, 1)), color-stop(100%, rgba(76, 138, 196, 1)));
@@ -316,22 +393,39 @@ footer {
     left: 0;
 }
 
+.bg-gray{
+    background-color: #F5F6FC;
+}
+
 @media screen and (max-width: 450px) {
     .jumbotron .image-container img {
         height: 200px !important;
     }
 }
 
-.content .social .fab {
-    font-size: 3em;
+
+/* Guides */
+
+.postlist li{
+    text-indent: 0 !important;
 }
 
-.content .social a {
-    color: #555;
+.postlist li p:nth-child(1) a {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
 }
 
-.content .social a:hover {
-    color: rgba(90, 176, 229, 1);
+.postlist li p:nth-child(2) a {
+    color: #333;
+}
+
+ul.postlist-style-circle{
+    list-style-type: none !important;
+}
+
+ul.postlist-style-circle .first{
+    display: inline;
 }
 
 /* Search Page */
