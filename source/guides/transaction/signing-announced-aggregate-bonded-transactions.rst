@@ -9,7 +9,7 @@
 Signing announced aggregate bonded transactions
 ###############################################
 
-You have probably announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all cosigners have not signed it yet.
+You have probably announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
 This guide will show you how to cosign aggregate bonded transactions that require being signed by your account.
 
@@ -60,3 +60,7 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
         :lines:  35-
+
+    .. literalinclude:: ../../resources/examples/cli/transaction/SigningAnnouncedAggregateBondedTransactions.sh
+        :language: bash
+        :lines:  3
