@@ -11,21 +11,7 @@ Modifying a multisig account
 
 After reviewing this guide, you will learn how to modify an existing :doc:`multisig account<../../concepts/multisig-account>`.
 
-Specifically, you are going to convert a 1-of-2 into a 2-of-2 multisig account.
-
-.. figure:: ../../resources/images/guides-accounts-multisig-2-of-2.png
-    :align: center
-    :width: 350px
-
-    2-of-2 multisig account example
-
-Then, you will add a new cosignatory, becoming a 2-of-3.
-
-.. figure:: ../../resources/images/guides-accounts-multisig-2-of-3.png
-    :align: center
-    :width: 350px
-
-    2-of-3 multisig account example
+First, you are going to turn a 1-of-2 multisig account into a 2-of-2. Then, you will add a new cosignatory, becoming a 2-of-3. After removing a cosignatory, you will know how to perform all sort of modifications to multisig accounts.
 
 *************
 Prerequisites
@@ -40,7 +26,11 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Alice and Bob are cosignatories of the 1-of-2 multisig account.
+.. _guide-modify-a-multisig-account-min-approval:
+
+**Editing minApproval**
+
+Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their accounts signatures are required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
 .. example-code::
 
@@ -57,9 +47,18 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account.
         :lines: 30-36
 
 
-One of them, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`.
+Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a  2-of-2 multisig instead. We could achieve it by increasing ``minApproval`` parameter in one unit.
 
-1) Create a modify multisig account transaction,  increasing ``minAprovalDelta`` in one unit.
+.. figure:: ../../resources/images/guides-accounts-multisig-2-of-2.png
+        :align: center
+        :width: 350px
+
+        2-of-2 multisig account example
+
+
+One of the accounts, for example Alice ones, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`, increasing ``minApprovalDelta``.
+
+1) Create a modify multisig account transaction, increasing minAprovalDelta in one unit.
 
 .. example-code::
 
@@ -79,6 +78,8 @@ One of them, announces a :ref:`modify multisig account transaction <modify-multi
 
 An aggregate transaction is *complete* if before announcing it to the network, all required cosignatories have signed it. If valid, it will be included in a block.
 
+As only one cosignature is required (1-of-2), Alice can sign the transaction and announce it to the network.
+
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
@@ -93,13 +94,23 @@ An aggregate transaction is *complete* if before announcing it to the network, a
         :language: javascript
         :lines: 47-
 
-Announce the aggregate transaction.
+Once confirmed, the minApproval value of the multisig will be set to 2, having our 2-of-2 multisig.
+
+.. note:: If you want to decrease the minApproval parameter, going back to a 1-of-2 multisig, set minApprovalDelta with a negative value. In this case ``-1``.
+
+.. _guide-modify-a-multisig-account-add-new-cosignatory:
 
 **Adding a new cosignatory**
 
-Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account.
+Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account, to achieve 2-of-3 cosignatures required.
 
-Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory.
+.. figure:: ../../resources/images/guides-accounts-multisig-2-of-3.png
+        :align: center
+        :width: 350px
+
+        2-of-3 multisig account example
+
+Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
 
 1) Create a multisig cosignatory modification:
 
@@ -133,7 +144,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  55-60
 
-3) Create an aggregate bonded transaction:
+        3) Create an aggregate bonded transaction. The transaction is *aggregate bonded* because more than one cosignature is required:
 
 .. example-code::
 
@@ -149,7 +160,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  63-68
 
-Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. Once Bob cosigns the transaction, the amount of XEM becomes available again on Alice's account.
+Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned.
 
 After lock funds transaction has been confirmed, Alice announces the aggregate transaction.
 
@@ -167,15 +178,17 @@ After lock funds transaction has been confirmed, Alice announces the aggregate t
         :language: javascript
         :lines: 71-
 
-************
-What’s next?
-************
+Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of XEM locked becomes available again on Alice's account and Carol is added to the multisig.
 
-Bob hasn't cosigned the transaction yet. Follow :doc:`signing announced aggregate bonded transactions guide<../transaction/signing-announced-aggregate-bonded-transactions>`.
+.. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
-Once you have finished this guide, try to delete a cosignatory from the multisig. Notice that multisig accounts can be converted again to regular accounts by removing all cosignatories, just make sure you own the multisig private key!
+**Removing a cosignatory**
 
-The following shows how to remove a cosignatory of a 2-of-3 multisig account with minimum removal set to 1.
+Once you have finished this guide, try to delete a cosignatory from the multisig. Multisig accounts can be converted again to regular accounts by removing all cosignatories, make sure you own the multisig private key!
+
+The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to 1. The multisig modification transaction is wrapped in an aggregate complete, as only one person is required to delete others from the multisig.
+
+.. note:: The minRemoval parameter indicates the number of required signatures to delete someone from the multisig. You can increase or decrease it the same way you :ref:`modify minApproval parameter<guide-modify-a-multisig-account-min-approval>`.
 
 .. example-code::
 
@@ -190,3 +203,9 @@ The following shows how to remove a cosignatory of a 2-of-3 multisig account wit
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
         :language: javascript
         :lines: 31-
+
+************
+What’s next?
+************
+
+Learn more about :doc:`multi-level multisig accounts <creating-a-multi-level-multisig-account>`.

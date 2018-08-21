@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="col-xs-6 col-sm-3">
-                       <a href="#">
+                       <a href="https://github.com/nemtech/nem2-sdk-csharp">
                         <div class="card font-icon">
                             <i class="devicon-csharp-plain colored"></i>
                             <h4>C#</h4>
