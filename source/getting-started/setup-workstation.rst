@@ -104,18 +104,22 @@ By then, you should have loaded an account with some XEM. Then, it is time to ch
 
 After that, create a folder for your new project and run the instructions for the selected language.
 
-TypeScript/JavaScript
-=====================
+TypeScript and JavaScript
+=========================
 
-Create a ``package.json`` file and check the npm repository for the latest updates. The minimum required Node.js version is 8.9.X.
+Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
 .. code-block:: bash
 
-    $> npm install nem2-sdk rxjs --save
+    $> npm init
 
-:doc:`nem2-sdk <../sdk/overview>` is build with TypeScript language.
+Install nem2-sdk and rxjs library.
 
-It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+.. code-block:: bash
+
+    $> npm install nem2-sdk rxjs
+
+nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
 .. code-block:: bash
 
@@ -130,10 +134,6 @@ Use `ts-node`_ to execute TypeScript files with node.
     $> npm install -g ts-node
 
 If you want to use javascript directly, you can execute node to run js files.
-
-.. _mijin: http://mijin.io/en/catapult
-
-.. _ts-node: https://www.npmjs.com/package/ts-node
 
 Java
 ====
@@ -154,22 +154,48 @@ Edit ``build.gradle`` to use Maven central repository.
         mavenCentral()
     }
 
-Add nem2-sdk as a dependency.
+Add nem2-sdk and reactive library as a dependency.
 
 .. code-block:: java
 
     dependencies {
-        compile "io.nem:sdk:0.8.10"
+        compile "io.nem:sdk:0.9.1"
+        compile "io.reactivex.rxjava2:rxjava:2.1.7"
     }
 
 Execute ``gradle build`` and ``gradle run`` to run your program.
 
+C#
+====
+
+Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
+
+Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
+
+Enter nem2-sdk and reactive library packages names in the terminal.
+
+.. code-block:: bash
+
+    $> Install-Package nem2-sdk
+    $> Install-Package System.Reactive
+
+Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
+
 Continue: :doc:`Writing your first application <first-application>`.
+
+.. _docker: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+
+.. _docker-compose: https://docs.docker.com/compose/install/
+
+.. _mijin: http://mijin.io/en/catapult
+
+.. _ts-node: https://www.npmjs.com/package/ts-node
 
 .. _gradle: https://gradle.org/install/
 
 .. _JDK: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-.. _docker: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-.. _docker-compose: https://docs.docker.com/compose/install/
+.. |different-ways-to-install-a-nuget-package| raw:: html
+
+   <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/ways-to-install-a-package" target="_blank">different ways to install a NuGet Package</a>
