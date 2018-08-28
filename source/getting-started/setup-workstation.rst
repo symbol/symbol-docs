@@ -183,7 +183,7 @@ Are you using another IDE? In that case check |different-ways-to-install-a-nuget
 
 Continue: :doc:`Writing your first application <first-application>`.
 
-.. _docker: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+.. _docker: https://docs.docker.com/install/
 
 .. _docker-compose: https://docs.docker.com/compose/install/
 
