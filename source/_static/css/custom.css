@@ -16,7 +16,6 @@ body {
 .btn-default {
     border-radius: 15px;
     background-color: #78b6e4;
-    text-transform: uppercase;
     font-size: 14px;
     padding: 10px 30px;
     display: inline-block;
@@ -174,6 +173,10 @@ table-td {
     margin: 0 0 10px 0;
 }
 
+.content h2{
+    font-size: 30px;
+}
+
 .content ul li {
     padding-left: 1em;
     text-indent: -.7em;
@@ -185,7 +188,7 @@ table-td {
 }
 
 #nem-developer-center,
-#reference {
+#reference{
     display: none;
 }
 

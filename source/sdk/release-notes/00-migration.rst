@@ -19,7 +19,7 @@ What is new?
 
 NEM2-SDK shares the same design/architecture between programming languages. That means fast language adaptation, cohesion and shared knowledge between NEM developers, most rapid SDK updates and fewer bugs.
 
-NEM-SDK does not add features that are not 100% related to :doc:`Catapult REST API<../../api/overview>`. Instead, it permits to be extended by the use of new standalone :doc:`libraries <../../libraries/overview>`.
+NEM-SDK does not add features that are not 100% related to :doc:`Catapult REST API<../../api>`. Instead, it permits to be extended by the use of new standalone :doc:`libraries <../../libraries/overview>`.
 
 The new SDK implements the new features available in Catapult.
 

@@ -1,0 +1,148 @@
+/* This css file rewrites ReDoc css template */
+
+body{
+    overflow-x: unset;
+    position: initial;
+}
+
+redoc * {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
+
+redoc h1,
+redoc h2,
+redoc h3 {
+    font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif !important  ;
+    font-weight: 300 !important;
+    line-height: 1.1;
+    color: #333 !important;
+}
+
+redoc h1{
+    font-size: 39px !important;
+}
+redoc h2{
+    font-size: 30px !important;
+}
+redoc h3{
+    font-size: 20px !important;
+}
+redoc a{
+    color: #2780e3 !important;
+}
+redoc a:hover{
+    text-decoration: underline;
+}
+
+/* Layout */
+redoc span.api-info-version {
+    font-size: 30px !important;
+}
+redoc .openapi-button[_ngcontent-c6] {
+    border: 1px solid #2780e3 !important;
+    color:  #2780e3 !important;
+}
+redoc .background{
+    display: none;
+}
+redoc blockquote{
+    background: rgba(55, 167, 219, 1) !important;
+    color: #fff !important;
+    padding: 10px !important;
+    margin: 20px 0px 20px 0px !important;
+    border: 0px !important;
+}
+
+redoc pre{
+    color: #fff;
+}
+
+redoc ul li{
+    text-indent: 0 !important;
+}
+redoc ul li::before{
+    display: none;
+}
+
+/* Sidebar */
+
+redoc [sticky-sidebar]{
+    top: 101px !important;
+}
+
+redoc [sticky-sidebar][_ngcontent-c0]{
+    background-color: #f7f5fa !important;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 5px;
+}
+
+
+redoc .menu-item-depth-1[_ngcontent-c8] > .menu-item-header[_ngcontent-c8]:not(.disabled):hover,
+redoc .menu-item-depth-1.active[_ngcontent-c8] > .menu-item-header[_ngcontent-c8] {
+    color: #333 !important;
+    background-color: #e5e3e9 !important;
+}
+redoc .menu-item-depth-1[_ngcontent-c8] > .menu-item-header[_ngcontent-c8]:not(.disabled):hover span,
+redoc .menu-item-depth-1.active[_ngcontent-c8] > .menu-item-header[_ngcontent-c8] span{
+    font-weight: bold !important;
+}
+redoc .menu-item-depth-2[_ngcontent-c8] > .menu-item-header[_ngcontent-c8]:hover,
+redoc .menu-item-depth-2.active[_ngcontent-c8] > .menu-item-header[_ngcontent-c8]{
+    background-color: #e5e3e9 !important;
+}
+
+redoc .menu-item-title{
+    text-transform: none !important;
+}
+
+
+redoc .search-results[_ngcontent-c3]{
+    background-color: #f7f5fa !important;
+}
+
+redoc .search-results[_ngcontent-c3] li.menu-item-depth-1[_ngcontent-c3]{
+    color: #2780e3 !important;
+}
+
+/* Content*/
+
+redoc .operation-content,
+redoc .operation-samples,
+redoc [_nghost-c6] > .api-info-wrapper[_ngcontent-c6],
+redoc .tag-info[_ngcontent-c7]{
+    width: 100% !important;
+    float: none !important;
+}
+
+redoc [_nghost-c6] [section] {
+    padding-top: 20px !important;
+}
+redoc .tag-info,
+[_nghost-c9]{
+    padding-bottom: 0px !important;
+}
+redoc .operation-content[_ngcontent-c9]{
+    padding-top: 0px !important;
+}
+redoc .responses-list-header[_ngcontent-c12]{
+    margin: 0 0 1.1em !important;
+}
+
+@media screen and (max-width: 1000px){
+
+
+    redoc .menu-content{
+        top: 71px !important;
+        left: 0px !important;
+    }
+
+    redoc .selected-item-info[_ngcontent-c4]{
+        padding-left: 10px;
+    }
+}
+/* Footer */
+footer{
+    display: none;
+}

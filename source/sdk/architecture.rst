@@ -70,7 +70,7 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 Services
 ========
 
-Common operations that require multiple :doc:`REST API<../api/overview>` requests are handled by already provided services.
+Common operations that require multiple :doc:`REST API<../api>` requests are handled by already provided services.
 
 .. |reactivex| raw:: html
 

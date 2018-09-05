@@ -103,7 +103,6 @@
                    </div>
                 </div></a>
             </div>
-
         </div>
     </section>
 
@@ -174,9 +173,7 @@ NEM Developer Center
     :hidden:
     :caption: Catapult REST API
 
-    api/overview
-    api/tools
-    api/websockets
+    api
 
 .. toctree::
     :maxdepth: 2
@@ -201,7 +198,3 @@ NEM Developer Center
 
     support/contributing
     support/contributors
-
-.. |self-paced-training| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-workshops" target="_blank">Self-paced training</a>
