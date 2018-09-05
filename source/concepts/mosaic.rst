@@ -4,7 +4,11 @@ Mosaic
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-Mosaics are part of what makes the Smart Asset System unique and flexible. They are fixed assets on the NEM blockchain that can represent a set of multiple identical things that do not change.
+***********
+Fixed Asset
+***********
+
+Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
 Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
 

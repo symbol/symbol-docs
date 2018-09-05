@@ -4,7 +4,7 @@ Namespace
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-Namespaces allow you to create an on-chain unique place for your business and your assets on the NEM blockchain.
+Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem.
 

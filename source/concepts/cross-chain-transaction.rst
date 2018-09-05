@@ -2,7 +2,7 @@
 Cross-Chain Transaction
 #######################
 
-Cross-chain transactions enable trading tokens between different blockchains, without using an intermediary party in the process.
+Cross-chain transactions enable **trading tokens** between **different blockchains**, without using an intermediary party in the process.
 
 This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
 

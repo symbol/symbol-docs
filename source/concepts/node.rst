@@ -30,7 +30,7 @@ Catapult REST: MongoDB & API Server
 
 **Repository:** |catapult-rest|
 
-Catapult Rest provides the :doc:`API <../api/overview>` gateway that applications may use to access the blockchain and its features.
+Catapult Rest provides the :doc:`API <../api>` gateway that applications may use to access the blockchain and its features.
 
 MongoDB serves supplemental data to Catapult REST clients. It is used for high query performance to satisfy high transaction per second scenarios.
 

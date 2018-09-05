@@ -12,9 +12,9 @@ Transactions allow you to transfer :doc:`mosaics <mosaic>` between :doc:`account
 Transaction life-cycle
 **********************
 
-When you announce a transaction, the REST API will always return an OK. At this point, it still unknown whether the transaction is :ref:`valid<status-error>`.
+When you announce a transaction, the REST API will always return an OK. At this point, it still unknown whether the transaction is `valid </api.html#tag/Websockets>`_.
 
-To know the transaction status, which can be OK or :ref:`Failure<status-error>`, you have to:
+To know the transaction status, which can be OK or `Failure </api.html#tag/Websockets>`_, you have to:
 
 a) Check the status via API endpoint
 b) Listen to the different :doc:`WebSocket<listener>` channels.
@@ -40,6 +40,7 @@ The "rewrite limit" is the maximum number of blocks that can be rolled back. Hen
 NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
 In real life, forks that are deeper than ``20`` blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
+
 
 .. raw:: html
 

@@ -6,7 +6,7 @@ Aggregate transaction
 
 .. _aggregate-transaction:
 
-Aggregated Transactions merge multiple transactions into one, allowing trustless swaps, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
+Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
 
 .. raw:: html
 
@@ -28,6 +28,12 @@ Aggregate complete
 
 An aggregate transaction is  **complete** if before announcing it to the network, all cosigners have signed it. If valid, it will be included in a block.
 
+.. raw:: html
+
+    <h2>Example</h2>
+
+Dan announces an aggregate complete transaction that merges two transfer transactions, so Alice and Bob will receive the mosaics at the same time.
+
 .. figure:: ../resources/images/guides-transactions-sending-payouts.png
     :align: center
     :width: 450px
@@ -38,19 +44,19 @@ An aggregate transaction is  **complete** if before announcing it to the network
 Aggregate bonded
 ****************
 
-In case that the transaction requires signatures from other participants, then the transaction is considered Aggregate **bonded**.
+In case that the transaction requires signatures from other participants, then the transaction is considered to be **bonded**.
 
 .. note:: When sending an **aggregate bonded transaction**, an account must first send and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
-.. figure:: ../resources/images/aggregate-bonded-transaction-cycle.png
-    :width: 900px
-    :align: center
-
-    Aggregate bonded transaction cycle
-
 Every time a cosignatory signs and announces an aggregate bonded cosignature, the network checks if all the required cosigners have already signed. If it is the case, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
+
+.. raw:: html
+
+    <h2>Examples</h2>
+
+1. In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
 
 .. figure:: ../resources/images/guides-transactions-escrow.png
     :align: center
@@ -58,18 +64,13 @@ Every time a cosignatory signs and announces an aggregate bonded cosignature, th
 
     Multi-Asset Escrowed Transactions
 
-In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
+2. Alice sends 10 € to Bob using a payment app. But she doesn’t have any XEM to pay the blockchain transaction fee. By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM. Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
 .. figure:: ../resources/images/guides-transactions-paying-for-others-fees.png
     :align: center
     :width: 450px
 
     Paying for others fees
-
-Alice sends 10 € to Bob using a payment app. But she doesn’t have any XEM to pay the blockchain transaction fee. By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee.
-
-Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM. Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
-
 .. _cosignature-transaction:
 
 ***********************
