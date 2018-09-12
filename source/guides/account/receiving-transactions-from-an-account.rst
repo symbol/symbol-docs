@@ -52,11 +52,11 @@ A transaction is confirmed if it is included in a block and validated by the net
         :language: bash
         :start-after: #!/bin/sh
 
-.. note:: You can also retrieve aggregate bonded, unconfirmed, incoming and outgoing transactions for a given account. See available ``accountHttp`` methods `here <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
+You can also retrieve aggregate bonded, unconfirmed, incoming and outgoing transactions for a given account. See available ``accountHttp`` methods `here <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
 
 ***********
 What's next
 ***********
 
-Try to get more than 10 transactions per request.
+Get more than 10 transactions per request.
 

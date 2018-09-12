@@ -9,7 +9,7 @@
 Creating and opening an account
 ###############################
 
-You are going to create a new :doc:`account <../../concepts/account>` and open it.
+Create a new :doc:`account <../../concepts/account>` and open it.
 
 *************
 Prerequisites
@@ -43,7 +43,7 @@ The **private key** uniquely identifies a NEM account and holds all of its power
 
 The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
 
-In case you already have a private key, it is not necessary to generate a new account:
+If you already have a private key, it is not necessary to generate a new account:
 
 .. example-code::
 
@@ -79,7 +79,7 @@ A wallet grants using an account for signing transactions by encrypting your cre
         :language: bash
         :start-after: #!/bin/sh
 
-In case you already have a private key, it is not necessary to generate a new account:
+If already have a private key, it is not necessary to generate a new wallet:
 
 .. example-code::
 

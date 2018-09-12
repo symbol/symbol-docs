@@ -2,7 +2,7 @@
 Node
 ####
 
-The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, easy-to-use, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
+The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
 .. figure:: ../resources/images/four-layer-architecture.png
     :width: 650px

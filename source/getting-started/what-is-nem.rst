@@ -24,7 +24,7 @@ NEM is suitable for an amazing variety of solutions of different classes, such a
 Architecting on NEM
 *******************
 
-NEM :doc:`nodes <../concepts/node>` provide a powerful, easy-to-use, stable and secure platform where smart asset transactions are conducted, searched, and immutably logged to the blockchain ledger.
+NEM :doc:`nodes <../concepts/node>` provide a powerful, stable and secure platform where smart asset transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
 All the functionalities are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight code in any language.
 

@@ -38,7 +38,7 @@ Prerequisites
 Let's get into some code
 *************************
 
-First, Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, and wrap them in an :ref:`aggregate transaction <aggregate-transaction>`.
+1. Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, and wrap them in an :ref:`aggregate transaction <aggregate-transaction>`.
 
 .. example-code::
 
@@ -58,7 +58,7 @@ Do you know the difference between aggregate complete and aggregate bonded? In t
 
 That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
 
-Sign and announce the transaction.
+2. Sign and announce the transaction.
 
 .. example-code::
 
@@ -78,4 +78,4 @@ Sign and announce the transaction.
 What's next?
 ************
 
-Try to send an aggregate bonded transaction by following :doc:`creating an escrow with aggregate bonded transaction <creating-an-escrow-with-aggregate-bonded-transaction>` guide.
+Send an aggregate bonded transaction by following :doc:`creating an escrow with aggregate bonded transaction <creating-an-escrow-with-aggregate-bonded-transaction>` guide.

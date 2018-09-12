@@ -27,7 +27,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Create a function to cosign any aggregate bonded transaction.
+1. Create a function to cosign any aggregate bonded transaction.
 
 .. example-code::
 
@@ -39,13 +39,13 @@ Create a function to cosign any aggregate bonded transaction.
         :language: javascript
         :lines:  31-34
 
-Fetch all aggregate bonded transactions pending to be signed by your account.
+2. Fetch all aggregate bonded transactions pending to be signed by your account.
 
 .. note:: To fetch aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
-For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
+3. For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
 
-Did you realise that we are using RxJS operators intensively? Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
+4. Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
 .. example-code::
 

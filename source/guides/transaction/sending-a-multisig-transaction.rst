@@ -44,7 +44,7 @@ Let’s get into some code
 
 Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 XEM.
 
-Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
+1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
 .. example-code::
 
@@ -60,7 +60,7 @@ Bob needs to know which is the public key of the multisig account that he shares
         :language: javascript
         :lines: 33-41
 
-As he wants to pay the groceries with the multisig account, he defines a :ref:`transfer transaction <transfer-transaction>`.
+2. As he wants to pay the groceries with the multisig account, he defines a :ref:`transfer transaction <transfer-transaction>`.
 
 * Recipient: Grocery's address
 * Message: Grocery payment
@@ -80,7 +80,7 @@ As he wants to pay the groceries with the multisig account, he defines a :ref:`t
         :language: javascript
         :lines:  44-49
 
-Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching multisig public key as the signer.
+3. Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching multisig public key as the signer.
 
 An aggregate transaction is **complete** if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
@@ -100,7 +100,7 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: javascript
         :lines:  52-56
 
-Then, he signs and announces the transaction.
+4. Sign and announce the transaction with Bob's account.
 
 .. example-code::
 
@@ -145,15 +145,13 @@ As all required cosigners did not sign the transaction, it should be announced a
         :lines:  59-64
 
 
-Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
+1. Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account.
-
-After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account. After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

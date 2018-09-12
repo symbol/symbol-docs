@@ -8,32 +8,23 @@ This tool will enable you to perform the most common used actions to interact wi
 
 **NEM2-CLI** is an open source tool built on top of the :doc:`NEM2-SDK<../sdk/overview>` Typescript. Use it in your favorite terminal program.
 
-*******
-Example
-*******
+************
+Installation
+************
 
-See in this example how to use NEM2-CLI. You are going to get general information from an account.
-
-.. code-block:: bash
-
-    $> nem2-cli account info --address SDAUTVFWMVXVWWKTTEFTLGUO6HP6MR4GLEK6POJ4
-
-*******
-Install
-*******
 NEM2-CLI is distributed using the node package manager ``npm``.
 
 To install:
 
 .. code-block:: bash
 
-    $> npm i -g nem2-cli
+    $> sudo npm install --global nem2-cli
 
 To update:
 
 .. code-block:: bash
 
-    $> npm update -g nem2-cli
+    $> sudo npm update --global nem2-cli
 
 *************
 Configuration

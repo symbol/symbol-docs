@@ -11,8 +11,6 @@ Guides show you how to use NEM built-in features.
 * :doc:`Sending transactions <transaction>`
 * :doc:`Running a node <running-a-node>`
 
-
-
 Access to more self-paced training reviewing |workshops|.
 
 *********************

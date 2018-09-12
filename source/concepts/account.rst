@@ -35,8 +35,6 @@ An account has the following properties:
 
     The **public key** is cryptographically derived from the private key. NEM is using the ``Ed25519 elliptic curve`` with the ``SHA3`` hashing algorithm.
 
-    It appears that in general, to break an n bit elliptic curve public key, the effort is 2^(n/2), or about 3.4*10^38, basic operations.
-
     The public key of an account is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
     .. note:: It is recommended to share the address instead of the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).

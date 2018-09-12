@@ -9,7 +9,7 @@
 Creating a multi-level multisig account (MLMA)
 ##############################################
 
-Following this tutorial, you will create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
 
 .. figure:: ../../resources/images/concepts-multisig-multilevel-1.png
     :align: center
@@ -35,7 +35,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-1) Creating multisig account #2
+1. Create multisig account #2
 
 .. example-code::
 
@@ -51,7 +51,7 @@ Let’s get into some code
         :language: javascript
         :lines: 31-61
 
-2) Creating multisig account #3
+2. Create multisig account #3
 
 .. example-code::
 
@@ -67,7 +67,7 @@ Let’s get into some code
         :language: javascript
         :lines: 64-99
 
-3) Creating multisig account #1
+3. Create multisig account #1
 
 .. example-code::
 
@@ -87,7 +87,7 @@ Let’s get into some code
 What's next?
 ************
 
-Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Notice that multisig accounts are not capable of cosigning transactions, cosignatories are responsible for doing so.
+Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, cosignatories are responsible for doing so.
 
 .. figure:: ../../resources/images/concepts-multisig-multilevel-2.png
     :align: center

@@ -8,7 +8,7 @@ Namespaces allow you to create an on-chain **unique place** for your business an
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem.
 
-After registering your namespace, you have the ability to define your own subdomains, as well as the names for your :doc:`mosaics <mosaic>`. This makes your assets unique, easy to use, and trustable.
+After registering your namespace, you have the ability to define your own subdomains, as well as the names for your :doc:`mosaics <mosaic>`.
 
 *************
 Subnamespaces

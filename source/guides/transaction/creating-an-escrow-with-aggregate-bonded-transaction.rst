@@ -87,12 +87,12 @@ Before continuing, practise by setting up the namespaces and mosaics required.
 
 Alice will send a transaction to the ticket distributor exchanging 100 nem:xem with 1 museum:ticket.
 
-Create two  :ref:`transfer transaction <transfer-transaction>`:
+1. Create two  :ref:`transfer transaction <transfer-transaction>`:
 
-1. From Alice to the ticket distributor sending 100 nem:xem
-2. From the ticket distributor to Alice sending 1 museum:ticket.
+A. From Alice to the ticket distributor sending 100 nem:xem
+B. From the ticket distributor to Alice sending 1 museum:ticket.
 
-Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
+2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
 
 An aggregate Transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
@@ -112,9 +112,7 @@ In case that signatures are required from other participants and the transaction
         :language: javascript
         :lines:  40-62
 
-When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM.
-
-Once the ticket distributor signs the aggregate transaction, the amount of locked XEM becomes available again on Alice's account, and the exchange will get through.
+3. When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM. Once the ticket distributor signs the aggregate transaction, the amount of locked XEM becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 

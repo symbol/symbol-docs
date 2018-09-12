@@ -9,9 +9,7 @@
 Signing announced aggregate bonded transactions automatically
 #############################################################
 
-Following this guide, you will create an application that is notified every time your account receives a transaction pending to be cosigned.
-
-Automatically, the app will cosign the transaction and announce it to the network.
+Sign automatically transactions pending to be cosigned.
 
 *************
 Prerequisites
@@ -27,7 +25,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Create a function to cosign any aggregate bonded transaction.
+1. Create a function to cosign any aggregate bonded transaction.
 
 .. example-code::
 
@@ -39,17 +37,17 @@ Create a function to cosign any aggregate bonded transaction.
         :language: javascript
         :lines:  31-34
 
-Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
+2. Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
 
-Open the connection. You only need to open the connection once and then connect to all desired channels.
+3. Open the connection. You only need to open the connection once and then connect to all desired channels.
 
-Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
+4. Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
 
 .. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
-For each received transaction, check if you have not already signed it.  Cosign each pending aggregate bonded transaction using the previously created function.
+5. For each received transaction, check if you have not already signed it.  Cosign each pending aggregate bonded transaction using the previously created function.
 
-Did you realise that we are using RxJS operators intensively? Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
+6. Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
 .. example-code::
 
@@ -69,14 +67,14 @@ Did you realise that we are using RxJS operators intensively? Announce ``Cosigna
 What's next?
 ************
 
-In this guide, you have seen how to create an automatic signature for an account aggregate bonded transactions. Now that you know some general concepts, you could extend it by filtering transactions matching some constraints.
+Extend the previous function for signing transactions if they follow some constraints.
 
 * Aggregate transactions with two inner transactions.
 * Two inner transactions must be transfer transactions.
 * The transaction sending funds must have yourself as the signer.
 * The transaction sending funds should have only one mosaic, being this less than 100 XEM.
 
-Try it yourself! Here you have the implementation:
+Try it yourself! Here you have a possible implementation:
 
 .. example-code::
 

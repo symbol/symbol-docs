@@ -88,7 +88,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
         :language: javascript
         :lines: 57-62
 
-Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
+3. Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
 
 .. example-code::
 

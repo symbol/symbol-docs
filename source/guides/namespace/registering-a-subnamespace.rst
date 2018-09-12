@@ -36,7 +36,7 @@ Let’s get into some code
 
 The first step is to choose a name for your subnamespace.
 
-In this example, we will register a namespace called ``bar`` under ``foo`` namespace.
+In this example, we have registered a subnamespace called ``bar`` under ``foo`` namespace.
 
 .. example-code::
 

@@ -29,7 +29,9 @@ Let’s get into some code
 
     Asking for mosaics with an aggregate bonded transaction
 
-Alice wants to ask Bob for 20 XEM. Set up both Alice's and Bob's accounts.
+Alice wants to ask Bob for 20 XEM. 
+
+1. Set up both Alice's and Bob's accounts.
 
 .. example-code::
 
@@ -45,9 +47,9 @@ Alice wants to ask Bob for 20 XEM. Set up both Alice's and Bob's accounts.
         :language: javascript
         :lines:  39-47
 
-Alice creates an aggregate bonded transaction with two inner transactions:
+2. Alice creates an aggregate bonded transaction with two inner transactions:
 
-Inner :ref:`transfer transaction <transfer-transaction>` 1:
+A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
 
 * message: "message reason" (custom, but not empty)
 * receiver: Bob address
@@ -67,7 +69,7 @@ Inner :ref:`transfer transaction <transfer-transaction>` 1:
         :language: javascript
         :lines:  50-55
 
-Inner transfer transaction 2:
+B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
 * message: empty
 * receiver: Alice address
@@ -88,7 +90,7 @@ Inner transfer transaction 2:
         :language: javascript
         :lines:  57-62
 
-Aggregate transaction:
+3.Wrap the defined transactions in an aggregate bonded transaction:
 
 .. example-code::
 
@@ -104,7 +106,7 @@ Aggregate transaction:
         :language: javascript
         :lines:  65-71
 
-Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
+4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
 
 .. example-code::
 

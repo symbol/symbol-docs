@@ -168,13 +168,11 @@ General
 
 **Package name**
 
-Import nem2-sdk rather than nem-library.
+Import nem2-sdk instead of nem-library.
 
 .. code-block:: typescript
 
     import { ... } from 'nem2-sdk';
-
-
 
 **Removed network bootstrapping**
 

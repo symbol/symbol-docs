@@ -9,7 +9,7 @@
 Debugging Transactions
 ######################
 
-This tutorial will guide you in the creation of an application to monitor announced :doc:`transactions <../../concepts/transaction>`.
+Create an application to monitor announced :doc:`transactions <../../concepts/transaction>`.
 
 **********
 Background
@@ -38,7 +38,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Create a new listener to get notified every time a transaction related to your account reaches the network and gets confirmed.
+1. Create a new listener to get notified every time a transaction related to your account reaches the network and gets confirmed.
 
 .. example-code::
 
@@ -54,7 +54,7 @@ Create a new listener to get notified every time a transaction related to your a
         :language: javascript
         :lines: 23
 
-Open the connection. You only need to open the connection once. Then listen to all desired channels.
+2. Open the connection. You only need to open the connection once. Then listen to all desired channels.
 
 .. example-code::
 
@@ -70,7 +70,7 @@ Open the connection. You only need to open the connection once. Then listen to a
         :language: javascript
         :lines: 25
 
-In this example, we will reach only transactions that get confirmed. You can also create `other listeners <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_listener_.listener.html#aggregatebondedadded>`_ to check unconfirmed, aggregate bounded or transactions that fail.
+3. In this example, we will reach only transactions that get confirmed. You can also create `other listeners <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_listener_.listener.html#aggregatebondedadded>`_ to check unconfirmed, aggregate bounded or transactions that fail.
 
 .. example-code::
 

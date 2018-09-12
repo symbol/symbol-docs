@@ -9,7 +9,7 @@
 Modifying a multisig account
 ############################
 
-After reviewing this guide, you will learn how to modify an existing :doc:`multisig account<../../concepts/multisig-account>`.
+Modify an existing :doc:`multisig account<../../concepts/multisig-account>`.
 
 First, you are going to turn a 1-of-2 multisig account into a 2-of-2. Then, you will add a new cosignatory, becoming a 2-of-3. After removing a cosignatory, you will know how to perform all sort of modifications to multisig accounts.
 
@@ -30,7 +30,7 @@ Let’s get into some code
 
 **Editing minApproval**
 
-Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
+ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
 .. example-code::
 
@@ -58,7 +58,7 @@ Multisig accounts are editable at the blockchain level. In this case, we want to
 
 One of the accounts, for example Alice's, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`, increasing ``minApprovalDelta``.
 
-1) Create a modify multisig account transaction, increasing minAprovalDelta in one unit.
+1. Create a modify multisig account transaction, increasing minAprovalDelta in one unit.
 
 .. example-code::
 
@@ -74,7 +74,7 @@ One of the accounts, for example Alice's, announces a :ref:`modify multisig acco
         :language: javascript
         :lines: 39-44
 
-2) Wrap the modify multisig account transaction under an aggregate transaction, attaching multisig public key as the signer.
+2. Wrap the modify multisig account transaction under an aggregate transaction, attaching multisig public key as the signer.
 
 An aggregate transaction is *complete* if, before announcing it to the network, all required cosignatories have signed it. If valid, it will be included in a block.
 
@@ -112,7 +112,7 @@ Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig accou
 
 Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
 
-1) Create a multisig cosignatory modification:
+1. Create a multisig cosignatory modification:
 
 .. example-code::
 
@@ -128,7 +128,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  39-52
 
-2) Create a modify multisig account transaction:
+2. Create a modify multisig account transaction:
 
 .. example-code::
 
@@ -144,7 +144,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  55-60
 
-3) Create an aggregate bonded transaction. The transaction is *aggregate bonded* because more than one cosignature is required:
+3. Create an aggregate bonded transaction. The transaction is *aggregate bonded* because more than one cosignature is required:
 
 .. example-code::
 
@@ -160,9 +160,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  63-68
 
-Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned.
-
-After lock funds transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After lock funds transaction has been confirmed, Alice announces the aggregate transaction.
 
 .. example-code::
 
@@ -184,7 +182,7 @@ Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregat
 
 **Removing a cosignatory**
 
-Once you have finished this guide, try to delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
+Once you have finished this guide,  delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 
 The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to 1. The multisig modification transaction is wrapped in an aggregate complete, as only one person is required to delete others from the multisig.
 

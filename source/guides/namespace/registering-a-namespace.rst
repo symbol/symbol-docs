@@ -9,7 +9,7 @@
 Registering a namespace
 ########################
 
-The purpose of this guide is to register your own :doc:`namespace <../../concepts/namespace>`.
+Rregister your own :doc:`namespace <../../concepts/namespace>`.
 
 **********
 Background
@@ -34,7 +34,9 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Register your namespace namespace by choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. Let's check if this name is available.
+Register your namespace by choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. 
+
+1. Check if this nampespace name is available.
 
 .. example-code::
 
@@ -54,9 +56,7 @@ Register your namespace namespace by choosing a name you like. One common option
         :language: bash
         :start-after: #!/bin/sh
 
-Is the namespace available? Try to register it before someone else does it!
-
-To register a new namespace, announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
+2. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
 
 .. note:: In Catapult, NEM blocks are complete every ``15`` seconds in average.
 
@@ -82,6 +82,6 @@ To register a new namespace, announce a :ref:`register namespace transaction<reg
 What's next?
 ************
 
-Now that you have registered your namespace, check how you can  :doc:`create mosaics <../mosaic/creating-a-mosaic>`.
+Now that you have registered your namespace, check how you can :doc:`create mosaics <../mosaic/creating-a-mosaic>`.
 
-When the transaction is confirmed, you will be able to  :doc:`register a subnamespace <registering-a-subnamespace>` following the next guide.
+When the transaction is confirmed, you can :doc:`register a subnamespace <registering-a-subnamespace>` following the next guide.

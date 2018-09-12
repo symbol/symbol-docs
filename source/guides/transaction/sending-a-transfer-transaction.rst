@@ -61,7 +61,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Let’s get into some code
 ************************
 
-Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Welcome to NEM``.
+1. Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Welcome to NEM``.
 
 .. example-code::
 
@@ -79,7 +79,7 @@ Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Wel
 
 Although the transaction is created, it has not been announced to the network yet.
 
-To announce it, Alice must sign the transaction with her account first so that the network can verify its authenticity.
+2. Alice must sign the transaction with her account first so that the network can verify its authenticity.
 
 .. example-code::
 
@@ -95,7 +95,7 @@ To announce it, Alice must sign the transaction with her account first so that t
         :language: javascript
         :lines:  41-45
 
-Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network.
+3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
@@ -115,7 +115,7 @@ Once signed, Alice can :doc:`announce the transaction <../../concepts/transactio
         :language: bash
         :start-after: #!/bin/sh
 
-Open the terminal where you are monitoring account transactions ``status``. It should be empty. If you see an error, check `error codes </api.html#tag/Websockets>`_ and their meaning.
+4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If you see an error, check `error codes </api.html#tag/Websockets>`_ and their meaning.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
@@ -137,7 +137,7 @@ Send a new transfer transactions by altering your code to send multiple mosaics 
 
 As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to create transfer transactions with multiple mosaics at a time.
 
-If you own more than one mosaic, try to send them together in the same transaction:
+If you own more than one mosaic, send them together in the same transaction:
 
 .. example-code::
 

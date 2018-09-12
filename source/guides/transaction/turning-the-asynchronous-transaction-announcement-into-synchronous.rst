@@ -25,14 +25,12 @@ On the other hand, keeping track of transactions status adds unnecessary complex
 
 nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announcement, it waits for the confirmation via :doc:`WebSockets<../../concepts/listener>` and returns the message to the HTTP call.
 
-.. note:: The method ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+.. note:: The function ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
 .. figure:: ../../resources/images/guides-transactions-transfer-nem2-camel.png
     :align: center
 
     nem2-camel
-
-In summary, it turns the asynchronous API to announce transactions into synchronous.
 
 *************
 Prerequisites
@@ -52,7 +50,7 @@ nem2-camel acts like a proxy between the application and the REST API.
 
 For development and learning purposes, you can run the :doc:`Catapult Server and Catapult REST <../../concepts/node>` using the |catapult-service-bootstrap|.
 
-Make sure you have |docker| and |docker-compose| installed before running the following instructions:
+1. Make sure you have |docker| and |docker-compose| installed before running the following instructions:
 
 .. code-block:: bash
 
@@ -60,7 +58,7 @@ Make sure you have |docker| and |docker-compose| installed before running the fo
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
-If everything goes well, after the image has been downloaded and the service is running, check if you can get the first block information:
+2. If everything goes well, after the image has been downloaded and the service is running, check if you can get the first block information:
 
 .. code-block:: bash
 
@@ -70,28 +68,32 @@ If everything goes well, after the image has been downloaded and the service is 
 
 Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing XEM.
 
+1. Find the key pairs which contain XEM under the section ``nemesis_addresses``.
+
 .. code-block:: bash
 
     $> cd  build/generated-addresses/
     $> cat raw-addresses.yaml
 
-Under the section ``nemesis_addresses`` find the key pairs which contain XEM. Take the first key pair as Alice's account, and copy the private key. From the second one, use the address to represent Bob's account.
+ 2. Take the first key pair as Alice's account, and copy the private key. 
+ 
+ 2. Take the second key pair as Bob's account, and copy the address. 
 
 **Installing nem2-camel**
 
 .. note:: nem2-camel requires at least Java version 8.
 
-Download the latest |nem2-camel-jar| package release, and run:
+1. Download the latest |nem2-camel-jar| package release, and run:
 
 .. code-block:: bash
 
     $> java -jar nem2-camel.jar --url http://localhost:3000
 
-After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
+2. After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
 
 **Sending the transfer transaction**
 
-Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>`, sending ``10 XEM`` to Bob and signs it with her account.
+1. Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>`, sending ``10 XEM`` to Bob and signs it with her account.
 
 .. example-code::
 
@@ -99,7 +101,7 @@ Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>
         :language: typescript
         :lines:  32-44
 
-Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. After that, Alice can send an email to Bob.
+2. Once signed, Alice can :doc:`announce the transaction <../../concepts/transaction>` to the network. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until it reaches the network and returns back the Transaction object. After that, Alice can send an email to Bob.
 
 .. example-code::
 

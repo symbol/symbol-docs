@@ -23,8 +23,6 @@ Prerequisites
 Let’s get into some code
 ************************
 
-After obtaining all the outgoing :doc:`transactions <../../concepts/transaction>` from an account, apply the following operators to identify the target recipient.
-
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/GettingTheAmountOfXEMSentToAnAccount.ts
@@ -35,7 +33,7 @@ After obtaining all the outgoing :doc:`transactions <../../concepts/transaction>
         :language: java
         :lines: 40-66
 
-The amount of XEM sent  is displayed in your terminal.
+The amount of XEM sent is displayed in your terminal.
 
 ************
 What’s next?

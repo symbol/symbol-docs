@@ -10,7 +10,7 @@
 Converting an account to multisig
 #################################
 
-The purpose of this guide is to create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by adding two cosignatories.
+Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by adding two cosignatories.
 
 **********
 Background
@@ -42,7 +42,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-The first step is to define who will be the cosignatories of the multisig account. Then, open the account that will be converted into multisig by providing its private key.
+1. Define who will be the cosignatories of the multisig account. Then, open the account that will be converted into multisig by providing its private key.
 
 .. example-code::
 
@@ -58,7 +58,7 @@ The first step is to define who will be the cosignatories of the multisig accoun
         :language: javascript
         :lines: 30-38
 
-The next step is to convert the account into a multisig account by setting a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`. As it is a 1-of-2 multisig account, set the minimum signatures to 1.
+2. Convert the account into a multisig account by setting a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`. As they want a 1-of-2 multisig account, set the minimum signatures to 1.
 
 .. example-code::
 
@@ -74,7 +74,7 @@ The next step is to convert the account into a multisig account by setting a :re
         :language: javascript
         :lines: 41-54
 
-Finally, multisig account signs and announces the transaction.
+3. Sign and announce the transaciton with the canidate multisig account.
 
 .. example-code::
 
@@ -95,7 +95,7 @@ Finally, multisig account signs and announces the transaction.
 If everything goes well, Alice and Bob should be cosignatories of the multisig account.
 
 
-.. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` method.
+.. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
 
 .. example-code::
 
@@ -115,4 +115,4 @@ If everything goes well, Alice and Bob should be cosignatories of the multisig a
 ************
 What's next?
 ************
-Try to modify the account, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
+Modify the account, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.

@@ -394,7 +394,7 @@ paths:
       tags:
         - Account routes
       summary: Get unconfirmed transactions
-      description: Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block
+      description: Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block.
       operationId: unconfirmedTransactions
       produces:
         - application/json

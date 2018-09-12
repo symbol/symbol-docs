@@ -27,7 +27,7 @@ Let’s get into some code
 
 If you have followed the previous guide, right now you should own a ``supply mutable`` mosaic.
 
-Let's increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`.
+Increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`.
 
 .. example-code::
 
@@ -47,4 +47,4 @@ Let's increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mo
 What's next?
 ************
 
-Try to decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.
+Decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.

@@ -9,7 +9,7 @@
 Getting account information
 ###########################
 
-Getting the public key, height, balance and importance of an :doc:`account <../../concepts/account>`.
+Get the public key, height, balance and importance of an :doc:`account <../../concepts/account>`.
 
 *************
 Prerequisites
@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-By calling ``accountHttp.getAccountInfo`` you can get account information by passing the address and network as a parameter.
+Call ``accountHttp.getAccountInfo``, passing the address and network as a parameter.
 
 .. example-code::
 
@@ -43,7 +43,7 @@ By calling ``accountHttp.getAccountInfo`` you can get account information by pas
         :language: bash
         :start-after: #!/bin/sh
     
-Can you spot account's public key?
+Can you determine the account's public key?
 
     publicKey: 'F33152059827EAA4D7D67C6E27A59851AF09FBD0926C35150FA44D2A9A5E4CAA',
 
@@ -78,4 +78,4 @@ Check account's balance using ``mosaicService``. The balance is the amount of th
 What’s next?
 ************
 
-Try to retrieve the balance by only filtering XEM amount.
+Retrieve the balance by only filtering XEM amount.

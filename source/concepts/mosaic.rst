@@ -14,7 +14,6 @@ Each mosaic is defined by a variety of attributes such as name, quantity, divisi
 
 A mosaic could be a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-
 .. _mosaic-definition-transaction:
 
 *****************************

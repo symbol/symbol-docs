@@ -9,7 +9,7 @@ Profile
 Create
 ======
 
-Create a new profile.
+Creates a new profile.
 
 Options
 
@@ -30,7 +30,7 @@ Command
 List
 ====
 
-Get the list of stored accounts.
+Gets the list of stored accounts.
 
 Command
 
@@ -47,9 +47,9 @@ Account
 Generate new account
 ====================
 
-Generate a new :doc:`account <../concepts/account>` in a network. This command generates a private key, public key and address.
+Generates a new :doc:`account <../concepts/account>`. This command generates a private key, public key and address.
 
-As seen in the configuration section, generated account can be stored as named profiles by adding a node url.
+Generated accounts can be stored as named profiles by adding a node url.
 
 Options
 
@@ -69,8 +69,7 @@ Command
 Get account info
 ================
 
-Get information of an account such as public key, importance and :doc:`mosaics <../concepts/mosaic>` balance.
-
+Returns the account information, such as the public key, importance and :doc:`mosaics <../concepts/mosaic>` balance.
 
 Options
 
@@ -87,7 +86,7 @@ Command
 Get confirmed transactions
 ==========================
 
-Get an array of confirmed :doc:`transaction <../concepts/transaction>` for which an account is signer or recipient.
+Gets an array of transactions for which an account is the sender or receiver.
 
 Options
 
@@ -108,7 +107,7 @@ Command
 Get incoming transactions
 =========================
 
-Get an array of :doc:`transactions <../concepts/transaction>` for which an account is the recipient. A transaction is said to be ``incoming`` regarding an account if the account is the recipient of a transaction.
+Gets an array of incoming transactions. A transaction is said to be incoming with respect to an account if the account is the recipient of the transaction.
 
 Options
 
@@ -127,13 +126,13 @@ Command
 Get outgoing transactions
 =========================
 
-Get an array of :doc:`transactions <../concepts/transaction>` for which an account is the sender. A transaction is said to be ``outgoing`` regarding an account if the account is the sender of a transaction.
+Gets an array of outgoing transactions. A transaction is said to be outgoing with respect to an account if the account is the sender of the transaction.
 
 Options
 
 .. code-block:: bash
 
-    -p, --publickey <publickey>             - Account public key`
+    -p, --publickey <publickey>             - Account public key
     -n, --numtransactions <numtransactions> - (optional) Number of transactions
     -i, --id <id>                           - (optional) Identifier of the transaction after which we want the transactions to be returned
 
@@ -146,7 +145,7 @@ Command
 Get unconfirmed transactions
 ============================
 
-Get the array of :doc:`transactions <../concepts/transaction>` for which an account is the sender or receiver and have not been included in a block yet.
+Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block.
 
 Options
 
@@ -165,7 +164,7 @@ Command
 Get Aggregate bonded transactions
 =================================
 
-Get an array of :doc:`aggregate bonded transactions <../concepts/transaction>` for which an account is the sender or has signed the transaction. A transaction is said to be ``aggregate bonded`` regarding an account if it is announced, but there still are missing signatures.
+Gets an array of aggregate bonded transactions where the account is the sender or requires to cosign the transaction.
 
 Options
 
@@ -188,7 +187,7 @@ Blockchain
 Blockchain height
 =================
 
-Get the current blockchain height.
+Returns the current height of the block chain.
 
 Command
 
@@ -199,7 +198,7 @@ Command
 Blockchain score
 ================
 
-Get the blockchain score.
+Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
 
 Command
 
@@ -216,7 +215,7 @@ Transactions are signed with the profiles configured with ``nem2-cli profile cre
 Cosign aggregate bonded transaction
 ===================================
 
-Cosign and announce an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+Cosigns and announces an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 Options
 
@@ -233,7 +232,7 @@ Command
 Transaction info
 ================
 
-Get a :doc:`transaction <../concepts/transaction>` by its ID.
+Returns transaction information given a hash.
 
 Options
 
@@ -250,7 +249,7 @@ Command
 Send transfer transaction
 =========================
 
-Send a :ref:`transfer transaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
+Announces a :ref:`transfer transaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
 
 You can send ``multiple mosaics`` splitting them with a comma, e.g: nem:xem::10,nps:msc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 XEM is 1000000.
 
@@ -271,7 +270,7 @@ Command
 Send pull transaction
 =====================
 
-Request :doc:`mosaic <../concepts/mosaic>` funds from an account.
+Requests :doc:`mosaics <../concepts/mosaic>` from an account. The other account has to cosign the transaction.
 
 Options
 
@@ -290,7 +289,7 @@ Command
 Register root namespace
 =======================
 
-Register a root :doc:`namespace <../concepts/namespace>`.
+Registers a root :doc:`namespace <../concepts/namespace>`.
 
 Options
 
@@ -310,7 +309,7 @@ Command
 Register subnamespace
 =====================
 
-Register a :doc:`subnamespace <../concepts/namespace>`.
+Registers a :doc:`subnamespace <../concepts/namespace>`.
 
 Options
 
@@ -330,7 +329,7 @@ Command
 Create a mosaic
 ===============
 
-Create a new :doc:`mosaic <../concepts/mosaic>`.
+Creates a new :doc:`mosaic <../concepts/mosaic>`.
 
 Options
 
@@ -359,7 +358,7 @@ Namespace
 Info
 ====
 
-Get information from a :doc:`namesapce <../concepts/namespace>`. Use this command providing the namespace name or the mosaic uint ID in the form of [3646934825,3576016193].
+Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this command providing the namespace name or the mosaic uint ID in the form of [3646934825,3576016193].
 
 Options
 
@@ -381,7 +380,7 @@ Mosaic
 Info
 ====
 
-Get information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in the form of namespaceName:mosaicName (ex: nem:xem) or the mosaic uint ID in the form of  [3646934825,3576016193].
+Gets information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in the form of namespaceName:mosaicName (ex: nem:xem) or the mosaic uint ID in the form of  [3646934825,3576016193].
 
 Options
 
@@ -406,7 +405,7 @@ The NEM2 command line interface has a set of monitoring commands to track events
 Block
 =====
 
-Monitor new confirmed :doc:`blocks <../concepts/block>` harvested in the blockchain.
+Monitors new confirmed :doc:`blocks <../concepts/block>` harvested in the blockchain.
 
 Command
 
@@ -417,7 +416,7 @@ Command
 Confirmed transactions
 ======================
 
-Monitor new confirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
+Monitors new confirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
 
 Options
 
@@ -434,7 +433,7 @@ Command
 Unconfirmed transactions
 ========================
 
-Monitor new unconfirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
+Monitors new unconfirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
 
 Options
 
@@ -451,7 +450,7 @@ Command
 Aggregate bonded transactions
 =============================
 
-Monitor new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
+Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
 
 Options
 
@@ -468,7 +467,7 @@ Command
 Transaction status
 ==================
 
-Monitor :doc:`account <../concepts/account>` validation errors.
+Monitors :doc:`account <../concepts/account>` validation errors.
 
 Options
 

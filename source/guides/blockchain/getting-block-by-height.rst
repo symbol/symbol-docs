@@ -9,7 +9,7 @@
 Getting block by height
 #######################
 
-Write a program to get the :doc:`block <../../concepts/block>` information given a height.
+Get the :doc:`block <../../concepts/block>` information given a height.
 
 *************
 Prerequisites
@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Are you curious to see what happened in genesis block? Run the following code to find it out.
+Are you curious to see what happened in the genesis block?
 
 .. example-code::
 
@@ -39,7 +39,7 @@ Are you curious to see what happened in genesis block? Run the following code to
         :language: javascript
         :lines: 23-
 
-Here you have a snippet to check the last block number.
+The following snippet returns the height of the latest block.
 
 .. example-code::
 

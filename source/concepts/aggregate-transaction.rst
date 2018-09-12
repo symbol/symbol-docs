@@ -20,7 +20,7 @@ Aggregate transactions accept the following parameters:
 
     **Cosignatures**
 
-    The array of transaction cosigners signatures.  The maximum number of cosignatories allowed is ``15``.
+    The array of transaction cosigners signatures. The maximum number of cosignatories allowed is ``15``.
 
 ******************
 Aggregate complete
@@ -32,7 +32,7 @@ An aggregate transaction is  **complete** if before announcing it to the network
 
     <h2>Example</h2>
 
-Dan announces an aggregate complete transaction that merges two transfer transactions, so Alice and Bob will receive the mosaics at the same time.
+Dan announces an aggregate complete transaction that merges two transfer transactions. Alice and Bob will receive the mosaics at the same time.
 
 .. figure:: ../resources/images/guides-transactions-sending-payouts.png
     :align: center
@@ -44,13 +44,13 @@ Dan announces an aggregate complete transaction that merges two transfer transac
 Aggregate bonded
 ****************
 
-In case that the transaction requires signatures from other participants, then the transaction is considered to be **bonded**.
+An aggregate transaction is  considered to be bonded if requires signatures from other participants.
 
-.. note:: When sending an **aggregate bonded transaction**, an account must first send and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
+.. note:: When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
-Every time a cosignatory signs and announces an aggregate bonded cosignature, the network checks if all the required cosigners have already signed. If it is the case, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
+Every time a cosignatory signs the transaction and announces an aggregate bonded cosignature, the network checks if all the required cosigners have already signed. In this situation, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
 
 .. raw:: html
 
@@ -77,7 +77,7 @@ Every time a cosignatory signs and announces an aggregate bonded cosignature, th
 Cosignature transaction
 ***********************
 
-Cosignature transaction is used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
+Cosignature transactions are used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
 
     **Transaction to cosign**
 
@@ -89,7 +89,7 @@ Cosignature transaction is used to sign :ref:`announced aggregate bonded transac
 Lock funds transaction
 **********************
 
-Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming and to ensure that transactions are cosigned.
+Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming.
 
 Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
 

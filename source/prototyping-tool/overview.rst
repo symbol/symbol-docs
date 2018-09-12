@@ -19,9 +19,9 @@ Node-RED
 
 |Node-RED| is a visual programming tool to wire together hardware devices, APIs and online services.
 
-It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single click.
+It provides a browser-based editor to wire nodes. The combination of nodes is named flows, which you can execute in a single click.
 
-The flows created in Node-RED are stored using JSON, which can be easily imported and exported to share with others.
+The flows created in Node-RED are stored using JSON, being exportable to share with others.
 
 ************
 Installation
@@ -31,21 +31,19 @@ Install Node-RED:
 
 .. code-block:: bash
 
-    $> npm install -g node-red
+    $> sudo npm install --global --unsafe-perm node-red
 
 Install NEM2 Prototyping Tool:
 
 .. code-block:: bash
 
-    $> cd ~\.node-red
-    $> npm install node-red-contrib-nem2
+    $> sudo npm install --global node-red-contrib-nem2
 
 Run Node-RED:
 
 .. code-block:: bash
 
-    $> node-RED
-
+    $> node-red
 
 .. |Node-RED| raw:: html
 
