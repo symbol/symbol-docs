@@ -46,7 +46,7 @@ Install NEM2-CLI using ``npm``.
 
 .. code-block:: bash
 
-    $> npm i -g nem2-cli
+    $> sudo npm install --global nem2-cli
 
 Create an account with the command line tool.
 
@@ -123,7 +123,7 @@ nem2-sdk is build with TypeScript language. It is recommended to use **TypeScrip
 
 .. code-block:: bash
 
-    $> npm install -g typescript
+    $> sudo npm install --global typescript
 
 Make sure you have at least version 2.5.X installed.
 
@@ -131,7 +131,7 @@ Use `ts-node`_ to execute TypeScript files with node.
 
 .. code-block:: bash
 
-    $> npm install -g ts-node
+    $> sudo npm install --global ts-node
 
 If you want to use javascript directly, you can execute node to run js files.
 
