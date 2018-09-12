@@ -2,7 +2,7 @@
 Overview
 ########
 
-Guides show you how to use NEM built-in features while following step-by-step simple use cases.
+Guides show you how to use NEM built-in features.
 
 * :doc:`Interacting with accounts <account>`
 * :doc:`Monitoring blockchain <blockchain>`

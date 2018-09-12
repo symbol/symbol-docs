@@ -58,7 +58,7 @@ Do you know the difference between aggregate complete and aggregate bonded? In t
 
 That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
 
-Just sign it and announce it!
+Sign and announce the transaction.
 
 .. example-code::
 

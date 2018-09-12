@@ -35,7 +35,7 @@ NEM2-SDK uses intensely ReactiveX Library. See |reactivex|.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
 - **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle these sort of errors.
 - **Concurrency made easy**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
-- **Frontend**: Simple manipulation of UI events and API responses on the Web using RxJS
+- **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
 - **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
 
 .. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.

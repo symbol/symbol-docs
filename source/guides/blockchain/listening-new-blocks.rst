@@ -9,7 +9,7 @@
 Listening to new blocks
 #######################
 
-By following this guide you will build a simple application to get notified when a new :doc:`block <../../concepts/block>` is included in the network.
+By following this guide you will build an application to get notified when a new :doc:`block <../../concepts/block>` is included in the network.
 
 *************
 Prerequisites

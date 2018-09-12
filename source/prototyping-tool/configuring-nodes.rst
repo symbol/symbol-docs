@@ -15,7 +15,7 @@ Open the *NEM account* tab and click once on the **account** node.
 
 The right sidebar shows you the node description, properties, input fields and returned outputs.
 
-The idea is simple: you have to link nodes together, connecting the previous node outputs with the following node inputs.
+You have to link nodes together, connecting the previous node outputs with the following node inputs.
 
 In some cases, you could configure inputs and properties directly by double-clicking a node.
 

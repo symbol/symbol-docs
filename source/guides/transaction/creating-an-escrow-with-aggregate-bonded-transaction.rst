@@ -46,7 +46,7 @@ Normalizing the language into NEM related concepts:
     Sign transaction
 
 **account established by a broker for holding funds**
-    No account, just an atomic swap
+    No account, it will happen atomically using an aggregate transaction
 
 **until the consummation or termination of a transaction**
     The transaction gets included in a block

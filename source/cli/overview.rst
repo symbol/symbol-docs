@@ -12,7 +12,7 @@ This tool will enable you to perform the most common used actions to interact wi
 Example
 *******
 
-See in this simple example how to use NEM2-CLI. You are going to get general information from an account.
+See in this example how to use NEM2-CLI. You are going to get general information from an account.
 
 .. code-block:: bash
 

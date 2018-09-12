@@ -12,7 +12,7 @@ Mosaics are part of what makes the Smart Asset System unique and flexible. They 
 
 Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
 
-A mosaic could be as simple as a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
+A mosaic could be a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
 
 .. _mosaic-definition-transaction:

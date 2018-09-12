@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-By calling ``accountHttp.getAccountInfo`` you can get account information just passing address and network as a parameter.
+By calling ``accountHttp.getAccountInfo`` you can get account information by passing the address and network as a parameter.
 
 .. example-code::
 

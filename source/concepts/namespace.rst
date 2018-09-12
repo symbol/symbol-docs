@@ -14,7 +14,7 @@ After registering your namespace, you have the ability to define your own subdom
 Subnamespaces
 *************
 
-Just like on the internet, where a domain can have a sub-domain, namespaces can have subnamespaces.
+On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
 
 It is possible to create multiple subnamespaces with the same name (example: ``foo.bar`` and ``foo2.bar``, ``bar`` is the subnamespace/sub-domain).
 

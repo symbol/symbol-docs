@@ -9,7 +9,7 @@
 Getting block by height
 #######################
 
-A simple program to get :doc:`block <../../concepts/block>` information given a height.
+Write a program to get the :doc:`block <../../concepts/block>` information given a height.
 
 *************
 Prerequisites

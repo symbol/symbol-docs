@@ -34,11 +34,11 @@ After the image has been downloaded and the service is running, check if you can
 Creating a test account
 ***********************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. Simply put, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the NEM blockchain protocol. It is better to share this address than just the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
+Finally, the account address is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
 :doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
@@ -100,9 +100,9 @@ Load the first account as a profile in NEM2-CLI. This account identifies the com
 Setting up the development environment
 **************************************
 
-By then, you should have loaded an account with some XEM. Then, it is time to choose a programming language. Pick the one you feel most comfortable with, or just follow project requirements.
+It is time to choose a programming language. Pick the one you feel most comfortable with, or follow your project requirements.
 
-After that, create a folder for your new project and run the instructions for the selected language.
+Create a folder for your new project and run the instructions for the selected language.
 
 TypeScript and JavaScript
 =========================

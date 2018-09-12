@@ -30,7 +30,7 @@ Background
 
     Sending a transfer Transaction
 
-Alice wants to send 10 XEM to Bob, who has just created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 XEM to Bob, who has created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
 
 **Monitoring the transaction**
