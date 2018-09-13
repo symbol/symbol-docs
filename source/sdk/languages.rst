@@ -2,57 +2,58 @@
 Languages
 #########
 
-***********************
-Typescript & JavaScript
-***********************
+*************
+Official SDKs
+*************
 
-- |tsjs-repo|
-- |tsjs-reference|
+.. csv-table:: Official Repositories
+   :header: "Language", "Repository", "Reference", "Active Developers"
+   :delim: ;
 
-******************
-JVM: Java & Kotlin
-******************
+   TypeScript & JS SDK ; |tsjs-repo|; |tsjs-reference|;  NEM Foundation
+   Java SDK ; |java-repo|; |java-reference|;  NEM Foundation
+   C# ; |csharp-repo|; ; `@kodty <https://github.com/kodty>`_
 
-- |javasdk-repo|
-- |javasdk-reference|
+**************
+Community SDKs
+**************
 
-****
-C#
-****
+In case you want to collaborate in SDK creation, check the :doc:`SDK
+Development guidelines <development>`. Then, add it to this page by clicking the *"Edit on Github"* button at the top-right part of the screen.
 
-- |csharp-repo|
+.. csv-table:: Community Repositories
+   :header: "Language", "Repository", "Reference", "Active Developers"
+   :delim: ;
 
-*********************************
-Planned languages to give support
-*********************************
+   Go SDK ; |go-repo|; ; `@slackve <https://github.com/slackve>`_
+   Swift SDK ; ; ;  
+   PHP SDK ; ; ;
+   C++ SDK ; ; ;  
+   Python SDK ; ; ;
+   Ruby SDK ; ; ; 
 
-- PHP
-- Python
-- Go
-- Ruby
-
-In case there is not SDK for your preferred language, check the |guidelines|. We are glad to help you getting involved in the SDK development for your preferred language.
 
 .. |tsjs-repo| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">SDK Repository</a>
+    <a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">Repository</a>
 
 .. |tsjs-reference| raw:: html
 
-    <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/" target="_blank">SDK Reference Documentation</a>
+    <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/" target="_blank">Documentation</a>
 
-.. |javasdk-repo| raw:: html
+.. |java-repo| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-sdk-java" target="_blank">SDK Repository</a>
+    <a href="https://github.com/nemtech/nem2-sdk-java" target="_blank">Repository</a>
 
-.. |javasdk-reference| raw:: html
+.. |java-reference| raw:: html
 
-    <a href="https://nemtech.github.io/nem2-sdk-java/" target="_blank">SDK Reference Documentation</a>
+    <a href="https://nemtech.github.io/nem2-sdk-java/" target="_blank">Documentation</a>
 
 .. |csharp-repo| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">SDK Repository</a>
+    <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">Repository</a>
 
-.. |guidelines| raw:: html
+.. |go-repo| raw:: html
 
-    <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md/" target="_blank">contributing guidelines for NEM2 SDK development collaboration</a>
+    <a href="https://github.com/slackve/nem2-sdk-go/" target="_blank">Repository</a>
+

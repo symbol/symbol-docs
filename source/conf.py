@@ -209,6 +209,8 @@ html_sidebars = {
   'guides/mosaic': ['localtoc.html'],
   'guides/running-a-node': ['localtoc.html'],
   'guides/transaction': ['localtoc.html'],
+  'guides/workshops': ['localtoc.html'],
+  'guides/workshops/creating-a-new-workshop': ['localtoc.html'],
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],

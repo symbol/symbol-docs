@@ -103,7 +103,7 @@ blockquote {
 
 /* Tables */
 table {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 table-td {
@@ -175,6 +175,10 @@ table-td {
 
 .content h2{
     font-size: 30px;
+}
+
+.content ol{
+    padding: 0 15px 0 15px;
 }
 
 .content ul li {

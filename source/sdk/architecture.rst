@@ -13,8 +13,6 @@ Characteristics
 - **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
 - **Composability**: For components to be effectively composable they must be interoperable.
 
-A key objective is for interoperability to become a natural design of the NEM2-SDK, ideally to the extend that components work with other products or systems.
-
 ********
 Reactive
 ********

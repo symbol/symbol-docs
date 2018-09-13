@@ -30,7 +30,7 @@ Let’s get into some code
 
 Have you loaded an account with test XEM? If it is not the case, go back to :doc:`getting started section <setup-workstation>`.
 
-First of all, let's check if you have XEM into your account.
+Check if you have XEM into your account.
 
 .. code-block:: bash
 

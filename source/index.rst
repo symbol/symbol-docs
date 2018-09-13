@@ -150,6 +150,7 @@ NEM Developer Center
     guides/mosaic
     guides/transaction
     guides/running-a-node
+    guides/workshops
 
 .. toctree::
     :maxdepth: 2

@@ -16,7 +16,7 @@ Running Catapult Service Bootstrap
 
 You are going to run a private chain for learning purposes using Catapult Service Bootstrap in less than 5 minutes. This service runs Catapult server instances and Catapult REST nodes locally.
 
-Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
+1. Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
 
 .. code-block:: bash
 
@@ -24,7 +24,7 @@ Make sure you have `docker`_ and `docker-compose`_ installed before running the 
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
-After the image has been downloaded and the service is running, check if you can get the first block information:
+2. Check if you can get the first block information:
 
 .. code-block:: bash
 
@@ -42,13 +42,13 @@ Finally, the account address is generated with the public key, following the NEM
 
 :doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
-Install NEM2-CLI using ``npm``.
+1. Install NEM2-CLI using ``npm``.
 
 .. code-block:: bash
 
     $> sudo npm install --global nem2-cli
 
-Create an account with the command line tool.
+2. Create an account with the command line tool.
 
 .. code-block:: bash
 
@@ -58,7 +58,7 @@ The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM bl
 
 Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
 
-You should be able to see the following lines in your terminal, containing the account credentials:
+3. You should be able to see the following lines in your terminal, containing the account credentials:
 
     New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
 
@@ -74,16 +74,16 @@ The underlying cryptocurrency of the NEM network is called **XEM**. Every action
 
 Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
 
-Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+1. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
 .. code-block:: bash
 
     $> cd  build/generated-addresses/
     $> cat addresses.yaml
 
-Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
+2. Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
 
-Load the first account as a profile in NEM2-CLI. This account identifies the company.
+3. Load the first account as a profile in NEM2-CLI. This account identifies the company.
 
 .. code-block:: bash
 
@@ -107,27 +107,28 @@ Create a folder for your new project and run the instructions for the selected l
 TypeScript and JavaScript
 =========================
 
-Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
 .. code-block:: bash
 
     $> npm init
 
-Install nem2-sdk and rxjs library.
+2. Install nem2-sdk and rxjs library.
 
 .. code-block:: bash
 
     $> npm install nem2-sdk rxjs
 
-nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+
+Make sure you have at least version 2.5.X installed.
 
 .. code-block:: bash
 
     $> sudo npm install --global typescript
+    $> typescript --version
 
-Make sure you have at least version 2.5.X installed.
-
-Use `ts-node`_ to execute TypeScript files with node.
+4. Use `ts-node`_ to execute TypeScript files with node.
 
 .. code-block:: bash
 
@@ -140,13 +141,13 @@ Java
 
 Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8.
 
-Use your favourite IDE or create a project from the command line.
+1. Use your favourite IDE or create a project from the command line.
 
 .. code-block:: bash
 
     gradle init --type java-application
 
-Edit ``build.gradle`` to use Maven central repository.
+2. Edit ``build.gradle`` to use Maven central repository.
 
 .. code-block:: java
 
@@ -154,7 +155,7 @@ Edit ``build.gradle`` to use Maven central repository.
         mavenCentral()
     }
 
-Add nem2-sdk and reactive library as a dependency.
+3. Add nem2-sdk and reactive library as a dependency.
 
 .. code-block:: java
 
@@ -163,16 +164,16 @@ Add nem2-sdk and reactive library as a dependency.
         compile "io.reactivex.rxjava2:rxjava:2.1.7"
     }
 
-Execute ``gradle build`` and ``gradle run`` to run your program.
+4. Execute ``gradle build`` and ``gradle run`` to run your program.
 
 C#
 ====
 
-Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
+1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
 
-Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
+2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
 
-Enter nem2-sdk and reactive library packages names in the terminal.
+3. Enter nem2-sdk and reactive library packages names in the terminal.
 
 .. code-block:: bash
 

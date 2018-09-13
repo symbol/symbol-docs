@@ -94,7 +94,6 @@ Let’s get into some code
 
 If everything goes well, Alice and Bob should be cosignatories of the multisig account.
 
-
 .. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
 
 .. example-code::
