@@ -10,103 +10,117 @@ Thank you for considering writing a new guide!
 Before starting 
 ***************
 
-1. Open the nem2-docs issues, and find which are the guides pending to be written. 
+1. Open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending to be written and find some ideas pending to be written. They have the label "great new issue".
 
-2. Opt to contribute to one of them by adding a comment, or create a new issue with your idea. 
+2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea. 
 
 3. Look if you can classify your guide under the current categories. If not, create a new issue proposing a new category:
 
-* :doc:`Interacting with accounts <account>`
-* :doc:`Monitoring blockchain <blockchain>`
-* :doc:`Registering namespaces <namespace>`
-* :doc:`Interacting with mosaics <mosaic>`
-* :doc:`Sending transactions <transaction>`
-* :doc:`Running a node <running-a-node>`
+.. csv-table:: Categories
+   :header: "Section", "Categories"
+   :delim: ;
 
-*****************
-Writing the guide
-*****************
+   :doc:`Interacting with accounts <account>` ; account, multisig-account
+   :doc:`Monitoring blockchain <blockchain>` ; blockchain
+   :doc:`Registering namespaces <namespace>`; namespace
+   :doc:`Interacting with mosaics <namespace>`; mosaic
+   :doc:`Sending transactions <transaction>`; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
+   :doc:`Running a node <running-a-node>`
 
-You can opt to upload the guide directly in this repository, or use your own blog.
+4. You can opt to write the guide for this repository, or use your blog.
 
+*********************************
 Write a guide for this repository
-=================================
+*********************************
 
-1. Create a new rst file inside one of the guides folders, named with your name title:
+1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `nem2-docs <https://github.com/nemtech/nem2-docs>`_ repository.
 
-2. 
+.. code-block:: bash
 
-***************************
-Fork nem2-workshop-template
-***************************
+    $> git clone <url>
 
-We suggest forking the `nem2-workshop-template <https://github.com/nemtech/nem2-workshop-template/>`__. However, it is not necessary to follow the structure proposed as long as the previous requirements are met.
+2. Make sure you have Python 2.7 or 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed. 
 
-Check your Ruby version meets our requirements.
+.. code-block:: bash
 
-``ruby -v  2.3.3``
+    $> python --version
 
-Clone the forked repository.
+3. Install requirements using pip:
 
-``git clone <url>``
+.. code-block:: bash
 
-Install gems.
+    $> pip install -r requirements.txt
 
-``bundle install``
+3. Create a new ``rst`` file inside one of the guides folder,
 
-Run Jekyll.
+.. code-block:: bash
 
-``bundle exec jekyll serve``
+    $> mkdir source/guides/<folder_name>/<title>.rst
 
-More information about Jekyll can be found on their `official website <https://jekyllrb.com/>`__.
-
-Modify \_config.yml
-===================
+4. Use the following template to organize your content.
 
 ::
 
-    title: NEM2 Workshop Title
-    email: your@email.com
-    description: >- # this means to ignore newlines until "baseurl:"
-      Start developing a real use case step by step.
-    baseurl: "/repository-name" # the subpath of your site, e.g. /blog
-    url: "https://your-github-username.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-    repository: your-username/repository-name/
+    :orphan:
 
-Modify README and index.md
-==========================
+    .. post:: 18 Aug, 2018
+        :category: monitoring
+        :excerpt: 1
+        :nocomments:
+        :author: <your_name_or_username>
 
-**Learning objectives**: Describe the target and outcomes of the workshop.
+    #####
+    Title
+    #####
 
-**Requirements**: Remark the pre-requisites that a person who takes the workshop must take into account before starting.
+    Objective after finishing the guide. 
 
-**Modules**: Summarize the workshop contents.
+    **********
+    Background
+    **********
 
-Add new lessons
-===============
+    Explain necessary concepts before starting to code.
 
-Create a new markdown file inside ``_lessons`` folder. The lesson file name must start with the following consecutive number.
+    *************
+    Prerequisites
+    *************
 
-Example:
+    - A
+    - B
+    - C
+
+    ************************
+    Let’s get into some code
+    ************************
+
+    Present the code and step-by-step explanation.
+
+    ************
+    What's next?
+    ************
+
+    Is there any extra exercise that readers could try on their own?
+
+5. Write and code your guide! Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
+
+6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``. You can render fragments of code from a file inside your rst file.
 
 ::
 
-    _lessons/01-introduction.markdown
-    _lessons/02-setting-up-your-workstation.markdown
+    .. example-code::
 
-The markdown file must start with the following header. Remember to update the title and permalink.
+        .. literalinclude:: <relative_url>.ts
+            :language: typescript
+            :lines: 20-40
 
-::
+7. Test and preview your changes.
 
-    ---
-    layout: post
-    title:  "Introduction"
-    permalink: /lessons/introduction/
-    ---
+    $> make livehtml
 
-Check `Markdown Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`__ to style your text.
+8. Push your changes and do a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the documentation writing style.
 
-Add project and slides
-======================
+**************************
+Write a guide in your blog
+**************************
 
-Consider attaching your project code and slides inside ``project`` and ``slides``\ folder.
+Create or comment an existent issue including the link of your blog post. If the content is relevant and not repeated, the repository maintainers will include your link under the guides section.

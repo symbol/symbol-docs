@@ -44,8 +44,7 @@ Guides
 
 The NEM Developer Center gathers a collection of
 :doc:`guides <../guides/overview>`. They show
-developers how to use NEM built-in features while following step-by-step
-simple use cases.
+developers how to use NEM built-in features while following step-by-step use cases.
 
 Each guide comes with at least one snippet. Snippets are executable
 pieces of code that solve the proposed use case.

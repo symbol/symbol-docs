@@ -8,13 +8,13 @@ Thank you for considering doing a new workshop!
 
 Start by choosing the topic and target audience. Workshops published in this repository must be open source, available online and come with a written or recorded guide.
 
-Consider checking already published workshops, just in case you could contribute to one of them instead of creating a whole new workshop from scratch.
+Consider checking already published workshops. You could contribute to one of them instead of creating a complete new workshop from scratch.
 
 ***************************
 Fork nem2-workshop-template
 ***************************
 
-We suggest forking the `nem2-workshop-template <https://github.com/nemtech/nem2-workshop-template/>`__. However, it is not necessary to follow the structure proposed as long as the previous requirements are met.
+We suggest forking the `nem2-workshop-template <https://github.com/nemtech/nem2-workshop-template/>`_. However, it is not necessary to follow the structure proposed as long as the previous requirements are met.
 
 1. Check your Ruby version meets our requirements.
 
