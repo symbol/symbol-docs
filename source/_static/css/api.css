@@ -72,9 +72,10 @@ redoc [sticky-sidebar]{
     top: 101px !important;
 }
 
-@media screen and (max-width: 1000px){}
-redoc [sticky-sidebar] {
-    display: none;
+@media screen and (max-width: 1000px){
+    redoc [sticky-sidebar] {
+        display: none;
+    }
 }
 
 redoc [sticky-sidebar][_ngcontent-c0]{
