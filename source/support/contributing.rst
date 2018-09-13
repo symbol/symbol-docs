@@ -36,6 +36,3 @@ Workshops
 *********
 * :doc:`Summary <../guides/workshops>`
 * :doc:`Creating a new workshop <../guides/workshops/creating-a-new-workshop>`
-
-
-

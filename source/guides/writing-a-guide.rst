@@ -14,7 +14,7 @@ Before starting
 
 2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea. 
 
-3. Look if you can classify your guide under the current categories. If not, create a new issue proposing a new category:
+3. Check if you can classify your guide under one of the current categories. If not, create a new issue proposing a new category:
 
 .. csv-table:: Categories
    :header: "Section", "Categories"
