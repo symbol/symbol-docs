@@ -74,7 +74,7 @@ redoc [sticky-sidebar]{
 
 @media screen and (max-width: 1000px){
     redoc [sticky-sidebar] {
-        display: none;
+        visibility: hidden;
     }
 }
 
