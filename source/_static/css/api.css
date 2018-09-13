@@ -72,12 +72,16 @@ redoc [sticky-sidebar]{
     top: 101px !important;
 }
 
+@media screen and (max-width: 1000px){}
+redoc [sticky-sidebar] {
+    display: none;
+}
+
 redoc [sticky-sidebar][_ngcontent-c0]{
     background-color: #f7f5fa !important;
     text-shadow: 0 1px 0 #fff;
     border-radius: 5px;
 }
-
 
 redoc .menu-item-depth-1[_ngcontent-c8] > .menu-item-header[_ngcontent-c8]:not(.disabled):hover,
 redoc .menu-item-depth-1.active[_ngcontent-c8] > .menu-item-header[_ngcontent-c8] {

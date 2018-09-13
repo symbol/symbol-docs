@@ -181,6 +181,10 @@ table-td {
     padding: 0 15px 0 15px;
 }
 
+.content ol li{
+    margin-bottom: 15px;
+}
+
 .content ul li {
     padding-left: 1em;
     text-indent: -.7em;

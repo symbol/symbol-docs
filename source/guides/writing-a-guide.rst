@@ -25,7 +25,7 @@ Before starting
    :doc:`Registering namespaces <namespace>`; namespace
    :doc:`Interacting with mosaics <namespace>`; mosaic
    :doc:`Sending transactions <transaction>`; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
-   :doc:`Running a node <running-a-node>`
+   :doc:`Running a node <running-a-node>`; node
 
 4. You can opt to write the guide for this repository, or use your blog.
 

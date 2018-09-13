@@ -21,7 +21,7 @@ SDK
 Wallets & Explorers
 ===================
 
-* :doc:`Summary <../wallet/summary>`
+* :doc:`Summary <../wallet/overview>`
 
 *************
 Documentation

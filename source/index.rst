@@ -155,15 +155,14 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: NEM2-CLI
+    :caption: REST API
 
-    cli/overview
-    cli/commands
+    api
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: NEM2-SDK
+    :caption: SDks
 
     sdk/overview
     sdk/architecture
@@ -172,21 +171,22 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Catapult REST API
+    :caption: Client
 
-    api
-
+    cli/overview
+    cli/commands
+    
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: NEM2 Libraries
+    :caption: Libraries
 
     libraries/overview
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: NEM2 Prototyping Tool
+    :caption: Prototyping Tool
 
     prototyping-tool/overview
     prototyping-tool/configuring-nodes
