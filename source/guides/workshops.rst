@@ -29,7 +29,7 @@ Community workshops
 .. csv-table:: Community workshops
    :delim: ;
 
-   `NEM applied to supply chain [JP] <https://qiita.com/44uk_i3/items/b9c4fc5751d93bf50a3d>`_ ;  Start developing a real use case step by step. ; Developers;  `@44uk_i3 <https://github.com/44uk>`_
+   `NEM applied to supply chain [Japanese] <https://qiita.com/44uk_i3/items/b9c4fc5751d93bf50a3d>`_ ;  Start developing a real use case step by step. ; Developers;  `@44uk_i3 <https://github.com/44uk>`_
 
 Creating and publishing a new workshop
 ======================================
