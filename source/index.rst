@@ -162,7 +162,7 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: SDks
+    :caption: SDKs
 
     sdk/overview
     sdk/architecture
