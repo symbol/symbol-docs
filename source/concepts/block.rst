@@ -6,7 +6,7 @@ Block
 
 The central element of every cryptocurrency is a public ledger called the called blockchain, which links blocks together. Each NEM block can contain up to ``N`` :doc:`transactions <transaction>`.
 
-Since the blocks in the chain and the transactions in the blocks are ordered, the complete transaction history is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
+Since the blocks in the chain are ordered, the complete transaction history is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
 
 Blocks are stored on a database as permanent medium. NEM calls the first block in the chain the nemesis block.
 
