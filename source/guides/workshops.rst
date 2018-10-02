@@ -13,7 +13,7 @@ Workshops used at events.
 .. warning: Some of the workshops are not open-sourced yet. This page will be updated when the missing workshops are released.
 
 .. csv-table:: Official workshops
-   :header: "Tile", "Description", "Target", "Active contributors"
+   :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
    Defining a blockchain MVP ; Find out were blockchain fits in your company in small iterations.  ; Analysts and developers ; NEM Foundation
