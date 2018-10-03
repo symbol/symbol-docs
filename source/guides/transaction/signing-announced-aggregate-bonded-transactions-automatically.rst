@@ -30,10 +30,12 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-ts|
         :language: typescript
         :lines: 31-34
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-js|
         :language: javascript
         :lines:  31-34
 
@@ -52,14 +54,17 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-ts|
         :language: typescript
         :lines: 36-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-java|
         :language: java
         :lines:  39-61
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-js|
         :language: javascript
         :lines:  36-
 
@@ -79,9 +84,31 @@ Try it yourself! Here you have a possible implementation:
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-ts|
         :language: typescript
         :lines:  35-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java
+        :caption: |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-java|
         :language: java
         :lines:  40-72
+
+.. |signing-announced-aggregate-bonded-transactions-automatically-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts" target="_blank">View Code</a>
+
+.. |signing-announced-aggregate-bonded-transactions-automatically-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java" target="_blank">View Code</a>
+
+.. |signing-announced-aggregate-bonded-transactions-automatically-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js" target="_blank">View Code</a>
+
+.. |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts" target="_blank">View Code</a>
+
+.. |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java" target="_blank">View Code</a>

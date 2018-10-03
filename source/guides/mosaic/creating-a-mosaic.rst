@@ -39,14 +39,17 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``.
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
+        :caption: |creating-a-mosaic-ts|
         :language: typescript
         :lines:  33-40
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
+        :caption: |creating-a-mosaic-java|
         :language: java
         :lines: 40-47
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+        :caption: |creating-a-mosaic-js|
         :language: javascript
         :lines: 33-40
 
@@ -59,14 +62,17 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
+        :caption: |creating-a-mosaic-ts|
         :language: typescript
         :lines:  43-54
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
+        :caption: |creating-a-mosaic-java|
         :language: java
         :lines: 49-55
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+        :caption: |creating-a-mosaic-js|
         :language: javascript
         :lines: 43-54
 
@@ -77,14 +83,17 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
+        :caption: |creating-a-mosaic-ts|
         :language: typescript
         :lines:  57-62
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
+        :caption: |creating-a-mosaic-java|
         :language: java
         :lines: 57-63
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+        :caption: |creating-a-mosaic-js|
         :language: javascript
         :lines: 57-62
 
@@ -93,18 +102,22 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
+        :caption: |creating-a-mosaic-ts|
         :language: typescript
         :lines:  65-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
+        :caption: |creating-a-mosaic-java|
         :language: java
         :lines: 65-78
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+        :caption: |creating-a-mosaic-js|
         :language: javascript
         :lines: 65-
 
     .. literalinclude:: ../../resources/examples/cli/mosaic/CreatingAMosaic.sh
+        :caption: |creating-a-mosaic-cli|
         :language: bash
         :start-after: #!/bin/sh
 
@@ -113,3 +126,19 @@ What's next?
 ************
 
 :doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account or modify its properties following the next guide.
+
+.. |creating-a-mosaic-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts" target="_blank">View Code</a>
+
+.. |creating-a-mosaic-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java" target="_blank">View Code</a>
+
+.. |creating-a-mosaic-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/CreatingAMosaic.js" target="_blank">View Code</a>
+
+.. |creating-a-mosaic-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/mosaic/CreatingAMosaic.sh" target="_blank">View Code</a>

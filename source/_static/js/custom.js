@@ -11,9 +11,16 @@ function addSidebarClickHandler(){
     });
 }
 
+function addBlockCaptionInsideCodeExample(){
+    $(".code-block-caption").each(function() {
+        $(this).next().prepend(this);
+    });
+    $(".literal-block-wrapper").removeClass('container');
+}
+
 $( document ).ready(function() {
     homePageFullWidth();
     addSidebarClickHandler();
+    addBlockCaptionInsideCodeExample();
 });
-
 

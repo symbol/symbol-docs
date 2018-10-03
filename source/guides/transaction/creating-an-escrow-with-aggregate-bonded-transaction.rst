@@ -101,14 +101,17 @@ In case that signatures are required from other participants and the transaction
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
         :language: typescript
         :lines:  40-62
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
         :language: java
         :lines:  44-80
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
         :language: javascript
         :lines:  40-62
 
@@ -117,14 +120,17 @@ In case that signatures are required from other participants and the transaction
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
         :language: typescript
         :lines:  65-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
         :language: java
         :lines:  80-105
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
         :language: javascript
         :lines:  65-
 
@@ -136,10 +142,6 @@ Is it possible without aggregate transactions?
 
 - The buyer does not pay.
 - The seller does not send the virtual goods.
-
-.. |escrow_wikipedia| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Escrow" target="_blank">Wikipedia</a>
 
 ************
 What's next?
@@ -154,3 +156,19 @@ Afterwards, swap mosaics between multiple participants.
     :width: 600px
 
     Multi-Asset Escrowed Transactions
+
+.. |escrow_wikipedia| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Escrow" target="_blank">Wikipedia</a>
+
+.. |creating-an-escrow-with-aggregate-bonded-transaction-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
+
+.. |creating-an-escrow-with-aggregate-bonded-transaction-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java" target="_blank">View Code</a>
+
+.. |creating-an-escrow-with-aggregate-bonded-transaction-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js" target="_blank">View Code</a>

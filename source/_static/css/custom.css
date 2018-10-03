@@ -341,6 +341,22 @@ table-td {
     color: #000 !important;
 }
 
+.example-code .code-block-caption{
+    top: -28px;
+    right: 5px;
+    position: relative;
+    text-align: right;
+    height: 0;
+}
+
+.literal-block-wrapper{
+    padding: 0px !important;
+}
+
+.code-block-caption .headerlink{
+    display: none;
+}
+
 /* Footer */
 
 footer {

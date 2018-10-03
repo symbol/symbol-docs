@@ -66,14 +66,17 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
+        :caption: |sending-a-transfer-transaction-ts|
         :language: typescript
         :lines:  31-38
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
+        :caption: |sending-a-transfer-transaction-java|
         :language: java
         :lines:  45-53
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
+        :caption: |sending-a-transfer-transaction-js|
         :language: javascript
         :lines:  31-38
 
@@ -84,14 +87,17 @@ Although the transaction is created, it has not been announced to the network ye
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
+        :caption: |sending-a-transfer-transaction-ts|
         :language: typescript
         :lines:  41-45
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
+        :caption: |sending-a-transfer-transaction-java|
         :language: java
         :lines:  55-60
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
+        :caption: |sending-a-transfer-transaction-js|
         :language: javascript
         :lines:  41-45
 
@@ -100,18 +106,22 @@ Although the transaction is created, it has not been announced to the network ye
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
+        :caption: |sending-a-transfer-transaction-ts|
         :language: typescript
         :lines:  48-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java
+        :caption: |sending-a-transfer-transaction-java|
         :language: java
         :lines:  63-66
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
+        :caption: |sending-a-transfer-transaction-js|
         :language: javascript
         :lines:  48-
 
     .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransaction.sh
+        :caption: |sending-a-transfer-transaction-cli|
         :language: bash
         :start-after: #!/bin/sh
 
@@ -142,17 +152,53 @@ If you own more than one mosaic, send them together in the same transaction:
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-ts|
         :language: typescript
         :lines:  39-40
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransactionWithMultipleMosaics.java
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-java|
         :language: java
         :lines:  54-57
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-js|
         :language: javascript
         :lines:  38-39
 
     .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransactionWithMultipleMosaics.sh
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-cli|
         :language: bash
         :start-after: #!/bin/sh
+
+.. |sending-a-transfer-transaction-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransaction.java" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransaction.js" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/SendingATransferTransaction.sh" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-with-multiple-mosaics-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-with-multiple-mosaics-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingATransferTransactionWithMultipleMosaics.java" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-with-multiple-mosaics-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-with-multiple-mosaics-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/SendingATransferTransactionWithMultipleMosaics.sh" target="_blank">View Code</a>
