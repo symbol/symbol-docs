@@ -41,17 +41,37 @@ In this example, we have registered a subnamespace called ``bar`` under ``foo`` 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/namespace/RegisteringASubnamespace.ts
+        :caption: |registering-a-subnamespace-ts|
         :language: typescript
         :lines:  21-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java
+        :caption: |registering-a-subnamespace-java|
         :language: java
         :lines: 39-61
 
     .. literalinclude:: ../../resources/examples/javascript/namespace/RegisteringASubnamespace.js
+        :caption: |registering-a-subnamespace-js|
         :language: javascript
         :lines: 26-
 
     .. literalinclude:: ../../resources/examples/cli/namespace/RegisteringASubnamespace.sh
+        :caption: |registering-a-subnamespace-cli|
         :language: bash
         :start-after: #!/bin/sh
+
+.. |registering-a-subnamespace-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/RegisteringASubnamespace.ts" target="_blank">View Code</a>
+
+.. |registering-a-subnamespace-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java" target="_blank">View Code</a>
+
+.. |registering-a-subnamespace-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/RegisteringASubnamespace.js" target="_blank">View Code</a>
+
+.. |registering-a-subnamespace-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/namespace/RegisteringASubnamespace.sh" target="_blank">View Code</a>

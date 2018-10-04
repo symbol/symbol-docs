@@ -98,6 +98,7 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
+        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
         :language: typescript
         :lines:  32-44
 
@@ -106,6 +107,7 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
+        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
         :language: typescript
         :lines:  47-
 
@@ -133,3 +135,7 @@ In case the Catapult REST server throws an error, the subscribe method will invo
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>
+
+.. |turning-the-asynchronous-transaction-announcement-into-synchronous-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts" target="_blank">View Code</a>

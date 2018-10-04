@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.11.3'
+version = u'0.11.4'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -178,7 +178,7 @@ html_theme_options = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "logo-nem.svg"
+html_logo = "_static/logo-nem.svg"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,

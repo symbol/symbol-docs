@@ -43,14 +43,17 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
+        :caption: |debugging-transactions-confirmed-ts|
         :language: typescript
         :lines:  21
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
+        :caption: |debugging-transactions-confirmed-java|
         :language: java
         :lines: 35
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
+        :caption: |debugging-transactions-confirmed-js|
         :language: javascript
         :lines: 23
 
@@ -59,14 +62,17 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
+        :caption: |debugging-transactions-confirmed-ts|
         :language: typescript
         :lines:  23
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
+        :caption: |debugging-transactions-confirmed-java|
         :language: java
         :lines: 39
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
+        :caption: |debugging-transactions-confirmed-js|
         :language: javascript
         :lines: 25
 
@@ -75,18 +81,22 @@ Let’s get into some code
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts
+        :caption: |debugging-transactions-confirmed-ts|
         :language: typescript
         :lines:  23-
 
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java
+        :caption: |debugging-transactions-confirmed-java|
         :language: java
         :lines: 37-43
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js
+        :caption: |debugging-transactions-confirmed-js|
         :language: javascript
         :lines: 24-
 
     .. literalinclude:: ../../resources/examples/cli/transaction/DebuggingTransactionsConfirmed.sh
+        :caption: |debugging-transactions-confirmed-cli|
         :language: bash
         :start-after: #!/bin/sh
 
@@ -95,3 +105,19 @@ What's next?
 ************
 
 Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see the transaction information in your terminal.
+
+.. |debugging-transactions-confirmed-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/DebuggingTransactionsConfirmed.ts" target="_blank">View Code</a>
+
+.. |debugging-transactions-confirmed-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/DebuggingTransactionsConfirmed.java" target="_blank">View Code</a>
+
+.. |debugging-transactions-confirmed-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/DebuggingTransactionsConfirmed.js" target="_blank">View Code</a>
+
+.. |debugging-transactions-confirmed-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/DebuggingTransactionsConfirmed.sh" target="_blank">View Code</a>

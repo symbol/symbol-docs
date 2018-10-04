@@ -32,14 +32,17 @@ Increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mosaic s
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts
+        :caption: |modifying-mosaic-supply-ts|
         :language: typescript
         :lines:  30-
     
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/ModifyingMosaicSupply.java
+        :caption: |modifying-mosaic-supply-java|
         :language: java
         :lines: 43-63
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/ModifyingMosaicSupply.js
+        :caption: |modifying-mosaic-supply-js|
         :language: javascript
         :lines: 30-
 
@@ -48,3 +51,15 @@ What's next?
 ************
 
 Decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.
+
+.. |modifying-mosaic-supply-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts" target="_blank">View Code</a>
+
+.. |modifying-mosaic-supply-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/mosaic/ModifyingMosaicSupply.java" target="_blank">View Code</a>
+
+.. |modifying-mosaic-supply-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/ModifyingMosaicSupply.js" target="_blank">View Code</a>

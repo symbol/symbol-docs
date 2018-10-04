@@ -37,18 +37,22 @@ A transaction is confirmed if it is included in a block and validated by the net
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.ts
+        :caption: |getting-confirmed-transactions-ts|
         :language: typescript
         :lines:  21-
     
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
+        :caption: |getting-confirmed-transactions-java|
         :language: java
         :lines: 36-48
 
     .. literalinclude:: ../../resources/examples/javascript/account/GettingConfirmedTransactions.js
+        :caption: |getting-confirmed-transactions-js|
         :language: javascript
         :lines: 26-
 
     .. literalinclude:: ../../resources/examples/cli/account/GettingConfirmedTransactions.sh
+        :caption: |getting-confirmed-transactions-cli|
         :language: bash
         :start-after: #!/bin/sh
 
@@ -59,4 +63,21 @@ What's next
 ***********
 
 Get more than 10 transactions per request.
+
+.. |getting-confirmed-transactions-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingConfirmedTransactions.ts" target="_blank">View Code</a>
+
+.. |getting-confirmed-transactions-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingConfirmedTransactions.js" target="_blank">View Code</a>
+
+.. |getting-confirmed-transactions-java| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java" target="_blank">View Code</a>
+
+.. |getting-confirmed-transactions-cli| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/GettingConfirmedTransactions.sh" target="_blank">View Code</a>
+
 

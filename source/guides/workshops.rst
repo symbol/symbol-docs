@@ -13,7 +13,7 @@ Workshops used at events.
 .. warning: Some of the workshops are not open-sourced yet. This page will be updated when the missing workshops are released.
 
 .. csv-table:: Official workshops
-   :header: "Tile", "Description", "Target", "Active contributors"
+   :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
    Defining a blockchain MVP ; Find out were blockchain fits in your company in small iterations.  ; Analysts and developers ; NEM Foundation
@@ -29,7 +29,7 @@ Community workshops
 .. csv-table:: Community workshops
    :delim: ;
 
-   `NEM applied to supply chain [JP] <https://qiita.com/44uk_i3/items/b9c4fc5751d93bf50a3d>`_ ;  Start developing a real use case step by step. ; Developers;  `@44uk_i3 <https://github.com/44uk>`_
+   `NEM applied to supply chain [Japanese] <https://qiita.com/44uk_i3/items/b9c4fc5751d93bf50a3d>`_ ;  Start developing a real use case step by step. ; Developers;  `@44uk_i3 <https://github.com/44uk>`_
 
 Creating and publishing a new workshop
 ======================================

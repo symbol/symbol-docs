@@ -10,7 +10,7 @@ Thank you for considering writing a new guide!
 Before starting 
 ***************
 
-1. Open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending to be written and find some ideas pending to be written. They have the label "great new issue".
+1. Open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending to be written. They have the label "great new issue".
 
 2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea. 
 
