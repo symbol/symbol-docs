@@ -313,3 +313,6 @@ edit_on_github_branch = 'master'
 # -- Options for edit scaled images ----------------------------------------------
 
 html_scaled_image_link = False
+
+# base blog url
+blog_baseurl = ''
