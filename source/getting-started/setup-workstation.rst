@@ -188,13 +188,13 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. _docker-compose: https://docs.docker.com/compose/install/
 
-.. _mijin: http://mijin.io/en/catapult
+.. _mijin: https://mijin.io/en/product/#mijin2
 
 .. _ts-node: https://www.npmjs.com/package/ts-node
 
 .. _gradle: https://gradle.org/install/
 
-.. _JDK: http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+.. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
 
 .. |different-ways-to-install-a-nuget-package| raw:: html

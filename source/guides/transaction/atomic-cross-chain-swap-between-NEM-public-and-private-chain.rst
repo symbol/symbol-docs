@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: cross-chain-transaction
+    :category: cross-chain-swaps
     :excerpt: 1
     :nocomments:
 
@@ -9,7 +9,7 @@
 Atomic cross-chain swap between NEM public and private chain
 ############################################################
 
-:doc:`Cross-chain transactions <../../concepts/cross-chain-transaction>` enable trading tokens between different blockchains, without using an intermediary party in the process.
+:doc:`Cross-chain swaps <../../concepts/cross-chain-swaps>` enable trading tokens between different blockchains, without using an intermediary party in the process.
 
 This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
 

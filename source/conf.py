@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.11.4'
+version = u'0.11.5'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -316,3 +316,6 @@ edit_on_github_branch = 'master'
 # -- Options for edit scaled images ----------------------------------------------
 
 html_scaled_image_link = False
+
+# base blog url
+blog_baseurl = ''

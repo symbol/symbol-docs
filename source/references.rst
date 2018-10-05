@@ -175,10 +175,10 @@
 
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/aleixmorgadas/nem2-asset-identifier">
+                                                        <a href="https://github.com/aleixmorgadas/nem2-nonfungible-asset">
                                                         <div class="card font-icon">
                                                               <i class="fas fa-box colored blue"></i>
-                                                            <h4>Asset Identifier</h4>
+                                                            <h4>Non-fungible asset</h4>
                                                         </div></a>
                                                 </div>
 

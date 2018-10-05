@@ -36,7 +36,7 @@ Add a new library to this page by clicking the *"Edit on Github"* button at the 
    :delim: ;
 
    `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Blockchain notarization and timestamping with transferable, updatable, branded, and conjointly owned notarizations.; `@luxtagofficial <https://github.com/luxtagofficial/>`_
-   `Asset identifier library <https://github.com/aleixmorgadas/nem2-asset-identifier>`_ ; Work with unique and updatable assets.;`@aleixmorgadas <https://github.com/aleixmorgadas/>`_
+   `Non-fungible asset library <https://github.com/aleixmorgadas/nem2-nonfungible-asset>`_ ; Work with unique and updatable assets.;`@aleixmorgadas <https://github.com/aleixmorgadas/>`_
 
 .. |NIP| raw:: html
 

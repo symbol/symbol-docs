@@ -31,8 +31,9 @@ function initLanguageSelector() {
 }
 
 function homePageFullWidth(){
-    $('.jumbotron').closest('.container').css({"width": "100%", "padding": "0px"});
-    $('.jumbotron').closest('.content').css({"padding-bottom": "0px"});
+    const jumbotron = $('.jumbotron');
+    jumbotron.closest('.container').css({"width": "100%", "padding": "0px"});
+    jumbotron.closest('.content').css({"padding-bottom": "0px"});
 }
 
 function addSidebarClickHandler(){

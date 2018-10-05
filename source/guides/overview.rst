@@ -2,7 +2,7 @@
 Overview
 ########
 
-Guides show you how to use NEM built-in features.
+Guides show you how to use NEM built-in features. Every guide comes with the code implementation ready to use.
 
 * :doc:`Interacting with accounts <account>`
 * :doc:`Monitoring blockchain <blockchain>`
@@ -17,20 +17,18 @@ Access to more self-paced training reviewing :doc:`workshops <workshops>`.
 How to run an example
 *********************
 
-With every guide, you have the code implementation ready to use.
-
-Inside |guides-repository| you will find the example snippets divided by programming language and topic.
+Download the |guide-repository|. They are divided by programming language and topic.
 
 Cli
 ====
 
-Go to ``cli`` folder, and give executing permission to an example.
+1. Go to ``cli`` folder, and give executing permission to an example.
 
 .. code:: bash
 
         $> chmod +x <file-name>.sh
 
-Find and run an example.
+2. Find and run an example.
 
 .. code:: bash
 
@@ -39,13 +37,13 @@ Find and run an example.
 TypeScript
 ==========
 
-Go to ``typescript`` folder and then install the required packages.
+1. Go to ``typescript`` folder and then install the required packages.
 
 .. code:: bash
 
         $> npm install
 
-Use `ts-node`_ to execute TypeScript files with node.
+2. Use `ts-node`_ to execute TypeScript files with node.
 
 Install the tool first if you have not it installed yet.
 
@@ -53,7 +51,7 @@ Install the tool first if you have not it installed yet.
 
         $> npm install -g ts-node
 
-Find and run an example.
+3. Find and run an example.
 
 .. code:: bash
 
@@ -68,13 +66,13 @@ If some code contains dynamic variables, for example, a public key (without quot
 JavaScript
 ==========
 
-Go to ``javascript`` folder and then install the required packages.
+1. Go to ``javascript`` folder and then install the required packages.
 
 .. code:: bash
 
         $> npm install
 
-Find and run an example.
+2. Find and run an example.
 
 .. code:: bash
 
@@ -91,13 +89,13 @@ If some code contains dynamic variables, for example, a public key (without quot
 Java
 ====
 
-Open ``java`` folder with your favourite IDE.
+1. Open ``java`` folder with your favourite IDE.
 
-Find the example and run it as a JUnit Test.
+2. Find the example and run it as a JUnit Test.
 
-.. |guides-repository| raw:: html
+.. |guide-repository| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/" target="_blank">NEM Guides Code Repository</a>
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/" target="_blank">snippets</a>
 
 .. |workshops| raw:: html
 
