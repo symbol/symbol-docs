@@ -2,7 +2,7 @@
 Cross-Chain Swaps
 #################
 
-A cross-chain swap enables **trading tokens** accross **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
+A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
     :align: center
@@ -12,7 +12,7 @@ A cross-chain swap enables **trading tokens** accross **different blockchains**,
 
 In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (`HTLC <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_). Two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_. 
 
-In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failling to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
+In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
 The figure below illustrates the cross-chain swap protocol.
 
 .. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap-sequence-diagram.png
@@ -31,7 +31,7 @@ Secret lock transaction
 
 Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``. 
 
-Funds are unlocked and transferred, when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
+Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
 
 If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the secret lock transaction.
 
@@ -65,11 +65,11 @@ Secret proof transaction
 
 Secret proof transaction is used to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
-To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hasing algorithm*, which unlock the transaction.
+To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hashing algorithm*, which unlock the transaction.
 
     **Hash Type**
 
-    Hash algorithm used, to check that proof hashed equals secret.
+    The hash algorithm used, to check that proof hashed equals secret.
 
     **Secret**
 
