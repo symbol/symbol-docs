@@ -1,10 +1,25 @@
-#######################
-Cross-Chain Transaction
-#######################
+#################
+Cross-Chain Swaps
+#################
 
-Cross-chain transactions enable **trading tokens** between **different blockchains**, without using an intermediary party in the process.
+A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
 
-This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
+.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
+    :align: center
+    :width: 700px
+
+    Atomic cross-chain swap between public and private network
+
+In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (`HTLC <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_). Two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_. 
+
+In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
+The figure below illustrates the cross-chain swap protocol.
+
+.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap-sequence-diagram.png
+    :align: center
+    :width: 700px
+
+    Atomic cross-chain swap sequence diagram
 
 When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
 
@@ -14,21 +29,13 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Secret lock transaction
 ***********************
 
-Use secret lock transaction to send mosaics to a recipient once an account discovers an attached secret message, known as *proof*.
+Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``. 
 
-Once announced, the specified mosaics are locked at blockchain level using the *hashed secret* message.
-
-Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *proof* that unlocks the transaction. Applying a ``hashing algorithm`` to the ``proof``, which should be equal to the hashed ``secret`` message.
+Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
 
 If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the secret lock transaction.
 
-.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
-    :align: center
-    :width: 700px
-
-    Atomic cross-chain swap between public and private network
-
-Secret lock and proof transactions enable :doc:`atomic cross-chain swaps <../guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`, without the necessity of trusting a third party.
+Remember, secret lock and proof transactions enable :doc:`cross-chain swaps <../guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain>`, without the necessity of trusting a third party.
 
     **Mosaic**
 
@@ -50,8 +57,6 @@ Secret lock and proof transactions enable :doc:`atomic cross-chain swaps <../gui
 
     The address who will receive the funds once unlocked.
 
-Based on `Bitcoin Atomic Cross Chain Trading <https://en.bitcoin.it/wiki/Atomic_cross-chain_trading>`_.
-
 .. _secret-proof-transaction:
 
 ************************
@@ -60,11 +65,11 @@ Secret proof transaction
 
 Secret proof transaction is used to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
-To unlock a secret lock transaction, the account must demonstrate that knows the *proof* that unlocks the transaction.
+To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hashing algorithm*, which unlock the transaction.
 
     **Hash Type**
 
-    Hash algorithm used, to check that proof hashed equals secret.
+    The hash algorithm used, to check that proof hashed equals secret.
 
     **Secret**
 
