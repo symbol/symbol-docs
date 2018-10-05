@@ -1,4 +1,4 @@
-.. If you want to improve the api documentaton, please edit source/resources/collections/swagger.yml file.
+.. If you want to improve the API reference, please edit source/resources/collections/swagger.yml file.
 
 .. raw:: html
 
