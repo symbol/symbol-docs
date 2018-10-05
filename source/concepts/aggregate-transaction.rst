@@ -1,6 +1,6 @@
-######################
-Aggregate transaction
-######################
+#####################
+Aggregate Transaction
+#####################
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
@@ -51,6 +51,13 @@ An aggregate transaction is  considered to be bonded if requires signatures from
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
 Every time a cosignatory signs the transaction and announces an aggregate bonded cosignature, the network checks if all the required cosigners have already signed. In this situation, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
+
+.. figure:: ../resources/images/aggregate-bonded-transaction-cycle.png
+    :width: 900px
+    :align: center
+
+    Aggregate bonded transaction cycle
+
 
 .. raw:: html
 
