@@ -1,6 +1,6 @@
-#######################
+#################
 Cross-Chain Swaps
-#######################
+#################
 
 A cross-chain swap enables **trading tokens** accross **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
 
@@ -10,7 +10,7 @@ A cross-chain swap enables **trading tokens** accross **different blockchains**,
 
     Atomic cross-chain swap between public and private network
 
-In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (`HTLC <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_). As opposed to a simple transfer transaction, two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_. 
+In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (`HTLC <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_). Two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_. 
 
 In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failling to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
 The figure below illustrates the cross-chain swap protocol.
