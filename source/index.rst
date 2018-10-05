@@ -133,7 +133,7 @@ NEM Developer Center
     concepts/mosaic
     concepts/transfer-transaction
     concepts/aggregate-transaction
-    concepts/cross-chain-transaction
+    concepts/cross-chain-swaps
     concepts/block
     concepts/node
     concepts/listener

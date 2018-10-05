@@ -26,12 +26,12 @@ Aggregate Transaction
   :excerpts:
   :sort:
 
-***********************
-Cross Chain Transaction
-***********************
+*****************
+Cross-chain Swaps
+*****************
 
 .. postlist::
-  :category: cross-chain-transaction
+  :category: cross-chain-swaps
   :date: %A, %B %d, %Y
   :format: {title}
   :list-style: circle
