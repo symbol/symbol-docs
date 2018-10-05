@@ -1,8 +1,10 @@
 # Contributing to nem2-docs
 
-First off, thank you for considering contributing to nem2-docs. 
+First off, thank you for considering contributing to NEM Developer Center. 
 
-nem2-docs is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or writing new pieces of documentation which can be incorporated into nem2-docs itself.
+The NEM Developer Center is an open source project and we love to receive contributions from our community — you! 
+There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
+ writing new pieces of documentation which can be incorporated into the docs itself.
 
 Following these guidelines helps to communicate that you respect the time of
 the developers managing and developing this open source project. In return,
@@ -13,7 +15,7 @@ Please, **don't use the issue tracker for support questions**.
 
 ## Error reports
 
-If you think you have found an error in nem2-docs, first make sure that you
+If you think you have found an error in the NEM Developer Center, first make sure that you
 are testing against the latest version of nem2-docs - your issue may already
 have been fixed. If not, search our issues list on GitHub in case a similar
 issue has already been opened.
@@ -34,14 +36,19 @@ Open a new issue [here][github-issues].
 
 ## Requests
 
-If you find yourself wishing for content that does not exist in nem2-docs,
-you are probably not alone. Most of the documentation and guides that nem2-docs has today have been added because our users saw the need. Open an [issue][github-issues] on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
+If you find yourself wishing for content that does not exist in nem2-docs, you are probably not alone. 
+Most of the documentation and guides that nem2-docs has today have been added because our users saw the need. 
+Open an [issue][github-issues] on our issues list on GitHub which describes the missing documentation or improvement 
+you would like to see.
 
-If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the project repository.
+If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the 
+project repository.
 
 ## Contributing code and documentation changes
 
-To expand and improve the nem2-docs, please find or open an issue about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
+To expand and improve the NEM Developer Center, please find or open an issue about it first. 
+Talk about what you would like to do. It may be that somebody is already working on it, 
+or that there are particular issues that you should know about before implementing the change.
 
 We enjoy working with contributors to get their pull-requests accepted.
 
@@ -53,7 +60,9 @@ Whether or not you state this explicitly, by submitting any copyrighted material
 
 ### Fork and clone the repository
 
-You will need to fork the main nem2-docs repository and clone
+If the documentation change is small, you can use the *"Edit on Github"* button at the top of the page.
+
+For substantial changes or contributions, you may need to fork the main nem2-docs repository and clone
 it to your local machine. See [github help page](https://help.github.com/articles/fork-a-repo/) for help.
 
 Further instructions for specific projects are given below.

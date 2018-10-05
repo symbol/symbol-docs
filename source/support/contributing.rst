@@ -2,10 +2,11 @@
 Contributing
 ############
 
-Thank you for considering contributing to NEM! Follow this guidelines to contribute in NEM projects, achieving the best quality
-with the less effort.
+First off, thank you for considering contributing to NEM!
 
-.. note: If the project already exist, read as well the CONTRIBUTING.md file of its repository.
+Follow these guidelines for contributing to NEM projects, achieving the best quality with the less effort.
+
+.. note:: If you want to contribute to a existent project, read as well the CONTRIBUTING.md file of its repository.
 
 ***********
 Development
