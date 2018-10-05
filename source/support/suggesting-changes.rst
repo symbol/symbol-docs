@@ -4,6 +4,10 @@
 Suggesting documentation changes
 ################################
 
+The NEM Developer Center is an open source project and we love to receive contributions from our community — you!
+There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
+writing new pieces of documentation which can be incorporated into the docs itself.
+
 *************
 Error reports
 *************
@@ -74,7 +78,7 @@ Once your changes and tests are ready to submit for review:
 
 Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into nem2-docs.
 
-See original |contributing-md| file.
+*CONTRIBUTING.md* is based on `CONTRIBUTING-template.md <https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md>`_ , `elasticsearch/CONTRIBUTING <https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and `spark/CONTRIBUTING <https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_.
 
 .. |issue| raw:: html
 
@@ -99,5 +103,3 @@ See original |contributing-md| file.
 .. |slack| raw:: html
 
    <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM" target="_blank">Slack</a>
-
-
