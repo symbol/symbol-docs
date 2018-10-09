@@ -11,12 +11,6 @@ Receiving transactions of an account
 
 Get the list of :doc:`transactions <../../concepts/transaction>` where an :doc:`account <../../concepts/account>` is involved.
 
-**********
-Background
-**********
-
-By default, the SDK provides up to 10 transactions. This parameter can be increased up to 100 transactions.
-
 *************
 Prerequisites
 *************
@@ -30,9 +24,9 @@ Prerequisites
 Let’s get into some code
 ************************
 
-In this example, you will fetch confirmed transactions for a given account using ``accountHttp`` repository.
+In this example, you will fetch the latest confirmed transactions for a given account using the ``accountHttp`` repository.
 
-A transaction is confirmed if it is included in a block and validated by the network.
+By default, the SDK provides up to 10 transactions. The page size can be increased up to 100 transactions.
 
 .. example-code::
 
@@ -56,13 +50,17 @@ A transaction is confirmed if it is included in a block and validated by the net
         :language: bash
         :start-after: #!/bin/sh
 
-You can also retrieve aggregate bonded, unconfirmed, incoming and outgoing transactions for a given account. See available ``accountHttp`` methods `here <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
+.. note:: Get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete `accountHttp definition <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
 
 ***********
 What's next
 ***********
 
-Get more than 10 transactions per request.
+To `get more than 100 transactions <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,   you will have to make further requests. For each additional call, add to the ``QueryParams`` the optional parameter ``transactionId`` with the latest transaction identifier known returned by the previous request.
+
+.. code-block:: typescript
+
+    new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
 
 .. |getting-confirmed-transactions-ts| raw:: html
 
