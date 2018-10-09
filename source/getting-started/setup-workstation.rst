@@ -14,7 +14,7 @@ Running Catapult Service Bootstrap
 
 **Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
-You are going to run a private chain for learning purposes using Catapult Service Bootstrap in less than 5 minutes. This service runs Catapult server instances and Catapult REST nodes locally.
+You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
 
 1. Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
 
@@ -23,6 +23,8 @@ You are going to run a private chain for learning purposes using Catapult Servic
     $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
     $> cd catapult-service-bootstrap
     $> docker-compose up
+
+.. note:: Is catapult service bootstrap not working? Check |catapult-service-bootstrap-known-issues|.
 
 2. Check if you can get the first block information:
 
@@ -196,6 +198,13 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
+.. |catapult-service-bootstrap| raw:: html
+
+   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+
+.. |catapult-service-bootstrap-known-issues| raw:: html
+
+   <a href="https://github.com/tech-bureau/catapult-service-bootstrap#known-issues" target="_blank">these troubleshooting tips</a>
 
 .. |different-ways-to-install-a-nuget-package| raw:: html
 
