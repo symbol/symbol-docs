@@ -6,7 +6,7 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the transaction, all of them are executed at once.
+Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
 .. raw:: html
 
@@ -16,23 +16,27 @@ Aggregate transactions accept the following parameters:
 
     **Inner Transaction**
 
-    Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions. Other aggregate transactions are not allowed as inner transactions.
+    Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
 
     **Cosignatures**
 
-    The array of transaction cosigners signatures. The maximum number of cosignatories allowed is ``15``.
+    An array of transaction cosignatures.
 
 ******************
 Aggregate complete
 ******************
 
-An aggregate transaction is  **complete** if before announcing it to the network, all cosigners have signed it. If valid, it will be included in a block.
+An aggregate transaction is  **complete** when all cosigners have signed it.
+
+The different participants can sign without using the blockchain the aggregate transaction. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
+
+Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions between different participants in the same operation.
 
 .. raw:: html
 
     <h2>Example</h2>
 
-Dan announces an aggregate complete transaction that merges two transfer transactions. Alice and Bob will receive the mosaics at the same time.
+Dan announces an aggregate transaction that merges two transfer transactions. As he is the only required signed, we say the aggregate transaction it is complete. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
 .. figure:: ../resources/images/guides-transactions-sending-payouts.png
     :align: center
@@ -44,7 +48,7 @@ Dan announces an aggregate complete transaction that merges two transfer transac
 Aggregate bonded
 ****************
 
-An aggregate transaction is  considered to be bonded if requires signatures from other participants.
+An aggregate transaction is **bonded** when it requires signatures from other participants.
 
 .. note:: When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
 
@@ -100,7 +104,7 @@ Announce a lock funds transaction before sending a signed :ref:`aggregate bonded
 
 Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
 
-If the aggregate bonded transaction deadline is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
+If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 
     **Mosaic**
 

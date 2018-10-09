@@ -9,7 +9,7 @@
 Sending a transfer transaction
 ##############################
 
-Announce a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two accounts.
 
 #############
 Prerequisites
@@ -30,22 +30,19 @@ Background
 
     Sending a transfer Transaction
 
-Alice wants to send 10 XEM to Bob, who has created the following NEM account with address ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
-
+Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
 **Monitoring the transaction**
 
-Once an account announces a transaction, if properly formed, the server will return an OK response.
+Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
 
-Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
-
-We suggest opening three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
+To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
 
 .. code-block:: bash
 
     $> nem2-cli monitor status
 
-Monitoring ``unconfirmed`` shows you which transactions have reached the network, but not yet included in a block.
+Monitoring ``unconfirmed`` shows you which transactions have reached the network, but not are not included in a block yet.
 
 .. code-block:: bash
 
@@ -61,7 +58,9 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Let’s get into some code
 ************************
 
-1. Alice sends ``10 XEM`` to Bob. She can also include a message, for example ``Welcome to NEM``.
+Alice wants sends ``10 XEM`` to Bob. She wants to include a message, for example ``Welcome to NEM``.
+
+1. Create the transfer transaction, by including Bob address as the recipient, adding 10 XEM and the message requested.
 
 .. example-code::
 
@@ -80,9 +79,9 @@ Let’s get into some code
         :language: javascript
         :lines:  31-38
 
-Although the transaction is created, it has not been announced to the network yet.
+Although the transaction is created, it has not been announced to the network yet. Alice must sign the transaction with her account first so that the network can verify its authenticity.
 
-2. Alice must sign the transaction with her account first so that the network can verify its authenticity.
+2. Sign the transaction with Alice account.
 
 .. example-code::
 
@@ -101,7 +100,7 @@ Although the transaction is created, it has not been announced to the network ye
         :language: javascript
         :lines:  41-45
 
-3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
+3. Once signed, you can :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
@@ -125,7 +124,7 @@ Although the transaction is created, it has not been announced to the network ye
         :language: bash
         :start-after: #!/bin/sh
 
-4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If you see an error, check `error codes </api.html#tag/Websockets>`_ and their meaning.
+4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check `the error code here </api.html#tag/Websockets>`_.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
@@ -135,7 +134,7 @@ If it is included in a block, the transaction gets processed, and the amount sta
 What's next?
 ************
 
-Send a new transfer transactions by altering your code to send multiple mosaics in the same transaction.
+Send multiple mosaics in the same transaction.
 
 **Adding multiple mosaics**
 
@@ -145,7 +144,7 @@ Send a new transfer transactions by altering your code to send multiple mosaics 
 
     Sending multiple mosaics in the same transaction
 
-As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to create transfer transactions with multiple mosaics at a time.
+As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
 
 If you own more than one mosaic, send them together in the same transaction:
 

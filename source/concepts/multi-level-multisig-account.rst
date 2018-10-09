@@ -4,7 +4,9 @@ Multi-Level Multisig Account
 
 .. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
 
-:doc:`Multisig accounts <multisig-account>` can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
+:doc:`Multisig accounts <multisig-account>` can have as cosignatories other multisig accounts. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
+
+The maximum depth of a multilevel multisig account is ``3``.
 
 .. raw:: html
 
@@ -12,7 +14,7 @@ Multi-Level Multisig Account
 
 MLMA allows a huge variety of business logic:
 
-1. In this example, a manufacturer is shipping a product, say a pharmaceutical one. The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature. Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
+1. In this example, a manufacturer is shipping a pharmaceutical product. The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature. Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
 
 .. figure:: ../resources/images/concepts-mlma-figure-1.png
     :align: center

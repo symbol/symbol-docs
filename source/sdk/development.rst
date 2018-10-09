@@ -54,7 +54,7 @@ Creating the project
 1. Add a README with the instructions to install the SDK. Find
    :download:`here a template <../resources/templates/README_SDK.md>`.
 2. Add a `Code of
-   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`.
+   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
    Find :download:`here an example <../resources/templates/CODE_OF_CONDUCT.md>`.
 3. Add a `Contributors
    guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_
@@ -65,7 +65,7 @@ Creating the project
    suits you best.
 
 A project with a good test coverage it's more likely to be used and
-trusted by the developers! :smile:
+trusted by the developers!
 
 We **strongly** suggest you to do `Test-Driven
 Development <https://en.wikipedia.org/wiki/Test-driven_development>`_

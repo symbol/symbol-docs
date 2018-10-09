@@ -9,7 +9,7 @@
 Creating a multi-level multisig account (MLMA)
 ##############################################
 
-Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+Create a :doc:`multi-level multisig account <../../concepts/multi-level-multisig-account>`.
 
 .. figure:: ../../resources/images/concepts-multisig-multilevel-1.png
     :align: center
@@ -21,7 +21,9 @@ Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
 Background
 **********
 
-Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
+:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
+
+The maximum depth of a multilevel multisig account is ``3``.
 
 *************
 Prerequisites

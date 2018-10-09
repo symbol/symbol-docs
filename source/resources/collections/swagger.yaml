@@ -180,7 +180,7 @@ tags:
       | Failure_Multisig_Modify_Max_Cosigned_Accounts | An account cannot be cosignatory of more than `5` multisig accounts.  |
       | Failure_Multisig_Modify_Max_Cosigners | A multisig account cannot have more than `10` cosignatories. |
       | Failure_Multisig_Modify_Loop | A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory. |
-      | Failure_Multisig_Modify_Max_Multisig_Depth | The maximum number of a multilevel multisig account is `3`.  |
+      | Failure_Multisig_Modify_Max_Multisig_Depth | The maximum depth of a multilevel multisig account is `3`.  |
       | Failure_Multisig_Operation_Not_Permitted_By_Account | A multisig account cannot be converted into a multisig account again. |
       | Failure_Namespace_Invalid_Duration | Duration lies too far in the future or refers to past. Duration is allowed to lie up to `N` blocks in the future. |
       | Failure_Mosaic_Invalid_Duration | Duration lies too far in the future or refers to past. Duration is allowed to lie up to `N` blocks in the future. |

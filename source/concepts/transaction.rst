@@ -8,9 +8,9 @@ Transactions are actions taken on the blockchain that change its state. In other
 
 Transactions allow you to transfer :doc:`mosaics <mosaic>` between :doc:`accounts <account>`, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), send messages and more. NEMs blockchain includes a built-in consensus-driven timekeeping facility, so transactions are automatically and accurately time stamped.
 
-**********************
-Transaction life-cycle
-**********************
+*********************
+Transaction lifecycle
+*********************
 
 When you announce a transaction, the REST API will always return an OK. At this point, it still unknown whether the transaction is `valid </api.html#tag/Websockets>`_.
 
