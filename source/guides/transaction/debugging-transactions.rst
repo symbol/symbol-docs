@@ -100,6 +100,21 @@ Let’s get into some code
         :language: bash
         :start-after: #!/bin/sh
 
+.. _monitoring-transactions-client-side:
+
+************************************************************
+Troubleshooting: Monitoring transactions on the client side
+************************************************************
+
+The nem2-sdk for typescript base listener was designed to work on Node.js backend environments.
+
+To make the code work in the client side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
+
+.. code-block:: typescript
+
+  const listener = new Listener('ws://localhost:3000', WebSocket);
+  listener.open().then(() => ...
+
 ************
 What's next?
 ************

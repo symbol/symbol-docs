@@ -185,6 +185,8 @@ As all required cosigners did not sign the transaction, it should be announced a
         :language: javascript
         :lines:  66-
 
+.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
+
 Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!
 
 .. |sending-a-multisig-transaction-aggregate-complete-ts| raw:: html

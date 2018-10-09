@@ -197,6 +197,8 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines: 71-
 
+.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
+
 Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of XEM locked becomes available again on Alice's account and Carol is added to the multisig.
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
