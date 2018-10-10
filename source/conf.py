@@ -215,6 +215,7 @@ html_sidebars = {
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],
+  'wallet/**': ['localtoc.html'],
   'support/**': ['localtoc.html'],
   'index': [],
 }

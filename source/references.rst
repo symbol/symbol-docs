@@ -88,7 +88,7 @@
                                                         </div></a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md#community-repositories">
+                                                        <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
                                                             <i class="devicon-php-plain"></i>
                                                             <h4>PHP</h4>
@@ -96,14 +96,14 @@
                                                 </div>
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md#community-repositories">
+                                                        <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
                                                             <i class="devicon-cplusplus-plain"></i>
                                                             <h4>C++</h4>
                                                         </div></a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md#community-repositories">
+                                                        <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
                                                             <i class="devicon-python-plain"></i>
                                                             <h4>Python</h4>
@@ -111,7 +111,7 @@
                                                 </div>
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md#community-repositories">
+                                                        <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
                                                             <i class="devicon-go-plain"></i>
                                                             <h4>Go</h4>
@@ -119,7 +119,7 @@
                                                 </div>
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="https://github.com/nemtech/guidelines/blob/master/development/summary.md#community-repositories">
+                                                        <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
                                                             <i class="devicon-ruby-plain"></i>
                                                             <h4>Ruby</h4>
