@@ -18,25 +18,22 @@ Check if your repository has a complete README. Consider adapting the
 
 Required sections:
 
--  Requirements
--  Installation
--  Contributing
--  License
+* Requirements
+* Installation
+* Contributing
+* License
 
-*********
-Reference
-*********
+***************************
+Comments and reference docs
+***************************
 
 Document functions and classes with comments while you write your code.
 A reference generator should be able to read this comments and generate
 HTML as an output.
 
-Some examples of reference generators are [tsdoc][tsdoc] for Javascript,
-whereas in Java we are using Javadoc. Research which is the reference
+Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ for Javascript,
+whereas in Java we are using `Javadoc <https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_. Research which is the reference
 generator most convenient for your language.
-
-If the SDK you are contributing is inspired in nem2-sdk-java or
-nem2-sdk-javascript-typescript, consider reusing the same comments
 
 ******
 Guides

@@ -4,8 +4,6 @@
 SDK Development
 ###############
 
-.. warning:: draft
-
 A key objective is that interoperability becomes a natural design of the NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving the best quality
 with the less effort.
 
@@ -223,8 +221,7 @@ Buffers and the Schemas, to serialize the transaction.
 KeyPair and Cryptographic functions
 ===================================
 
-To do
-
+.. warning:: This section is incomplete.
 
 ********************
 Documenting your SDK
@@ -239,7 +236,13 @@ documentation <documentation>`.
 Publishing the SDK as official
 ******************************
 
-To do
+When you open-source your code,
+:doc:`submit the repository to this page <../sdk/languages>`.
+
+To become an accepted SDK, it should be proposed as a
+`NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason
+behind the NEM2 Improvement Proposal is to ensure that the new
+libraries are reviewed, tested and shared among NEM developers.
 
 ***********
 Future work
@@ -247,7 +250,11 @@ Future work
 
 The current guideline shows what is done up to today since the SDK isn't
 complete. It will get updates according to the latest
-architecture/features. ## Recommended Licenses
+architecture/features.
+
+********************
+Recommended Licenses
+********************
 
 -  MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_
 -  Apache-2.0: `Apache License, version
