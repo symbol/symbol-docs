@@ -20,8 +20,6 @@ The reason behind the |NIP| is to ensure that the new library is reviewed, teste
    :header: "Name", "Description", "Active Developers"
    :delim: ;
 
-   `Camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.; NEM Foundation
-
 
 *******************
 Community libraries

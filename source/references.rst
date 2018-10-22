@@ -136,7 +136,7 @@
                                 <div class="row">
                                         <div class="col-md-8 subtitle-container text-center gap center-block">
                                                 <h2>Extensions</h2>
-                                                <p>Collection of <a href="libraries/overview.html"><b>libraries</b></a> and tools to accelerate blockchain development.</p>
+                                                <p>Collection of <a href="/sdk/libraries.html"><b>libraries</b></a> and tools to accelerate blockchain development.</p>
                                         </div>
                                 </div>
                                 <div class="row">

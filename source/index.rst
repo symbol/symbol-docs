@@ -167,6 +167,7 @@ NEM Developer Center
     sdk/overview
     sdk/architecture
     sdk/languages
+    sdk/libraries
 
 .. toctree::
     :maxdepth: 2
@@ -176,12 +177,6 @@ NEM Developer Center
     cli/overview
     cli/commands
     
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: Libraries
-
-    libraries/overview
 
 .. toctree::
     :maxdepth: 2
