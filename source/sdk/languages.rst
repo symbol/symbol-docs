@@ -20,16 +20,14 @@ If you want to collaborate in SDK creation, check the :doc:`SDK Development guid
 Community SDKs
 **************
 
-The following repositories have passed some sort of testing and have been in the community for awhile.
-
-
 .. csv-table::
    :header: "Language", "Repository", "Reference", "Active Developers"
    :delim: ;
 
    C# SDK ; |csharp-repo| ;  ; `@kodty <https://github.com/kodty>`_
+   Go SDK ; |go-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
+   Swift SDK ; |swift-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
    PHP SDK ;  ;  ;
-   Swift SDK ; |swift-repo| ;  ;`ProximaX Limited <https://github.com/proximax-storage>`_
    Ruby SDK ; ; ;
 
 ************
