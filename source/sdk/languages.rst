@@ -20,16 +20,14 @@ If you want to collaborate in SDK creation, check the :doc:`SDK Development guid
 Community SDKs
 **************
 
-The following repositories have passed some sort of testing and have been in the community for awhile.
-
-
 .. csv-table::
    :header: "Language", "Repository", "Reference", "Active Developers"
    :delim: ;
 
    C# SDK ; |csharp-repo| ;  ; `@kodty <https://github.com/kodty>`_
+   Go SDK ; |go-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
+   Swift SDK ; |swift-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
    PHP SDK ;  ;  ;
-   Swift SDK ;  ;  ;
    Ruby SDK ; ; ;
 
 ************
@@ -42,7 +40,6 @@ The following repositories have not been tested by the community, they are under
   :header: "Language", "Repository", "Reference", "Active Developers"
   :delim: ;
 
-  Go SDK ; |go-repo|;  ; `@slackve <https://github.com/slackve>`_
   Python SDK ; |python-repo| ;  ; NEM Foundation
 
 
@@ -65,10 +62,14 @@ The following repositories have not been tested by the community, they are under
 .. |csharp-repo| raw:: html
 
     <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">Repository</a>
+    
+.. |swift-repo| raw:: html
+
+    <a href="https://github.com/proximax-storage/nem2-sdk-swift/" target="_blank">Repository</a>
 
 .. |go-repo| raw:: html
 
-    <a href="https://github.com/slackve/nem2-sdk-go/" target="_blank">Repository</a>
+    <a href="https://github.com/proximax-storage/nem2-sdk-go/" target="_blank">Repository</a>
 
 .. |python-repo| raw:: html
 
