@@ -27,23 +27,15 @@ The flows created in Node-RED are stored using JSON, being exportable to share w
 Installation
 ************
 
-Install Node-RED:
+Download and run the |executable-package| for **Windows**, **Linux** or **Mac**.
 
-.. code-block:: bash
+Do you already have Node-RED app? Open ``Manage palette`` and install |node-red-contrib-nem2| package.
 
-    $> sudo npm install --global --unsafe-perm node-red
+.. figure:: ../resources/images/nem2-prototyping-tool-install.png
+    :align: center
+    :width: 500px
 
-Install NEM2 Prototyping Tool:
-
-.. code-block:: bash
-
-    $> sudo npm install --global node-red-contrib-nem2
-
-Run Node-RED:
-
-.. code-block:: bash
-
-    $> node-red
+    *Manage palette -> Install -> node-red-contrib-nem2*
 
 .. |Node-RED| raw:: html
 
@@ -52,3 +44,16 @@ Run Node-RED:
 .. |NEM2-Prototyping-Tool| raw:: html
 
     <a href="https://github.com/nemtech/nem2-prototyping-tool" target="_blank">NEM2 Prototyping Tool</a>
+
+.. |node-red-contrib-nem2| raw:: html
+
+    <a href="https://flows.nodered.org/node/node-red-contrib-nem2" target="_blank">node-red-contrib-nem2</a>
+
+.. |executable-package| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-prototyping-tool/releases/tag/v0.10.0" target="_blank">executable package</a>
+
+.. |installation| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-prototyping-tool/tree/v0.10.0#installation" target="_blank">installation</a>
+
