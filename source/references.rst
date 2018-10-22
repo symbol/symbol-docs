@@ -87,6 +87,23 @@
                                                             <h4>C#</h4>
                                                         </div></a>
                                                 </div>
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                        <a href="https://github.com/proximax-storage/nem2-sdk-go/">
+                                                        <div class="card font-icon">
+                                                            <i class="devicon-go-plain colored"></i>
+                                                            <h4>Go</h4>
+                                                        </div></a>
+                                                </div>
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                        <a href="https://github.com/proximax-storage/nem2-sdk-swift/">
+                                                        <div class="card font-icon">
+                                                            <i class="devicon-swift-plain colored"></i>
+                                                            <h4>Swift</h4>
+                                                        </div></a>
+                                                </div>
+
                                                 <div class="col-xs-6 col-sm-3">
                                                         <a href="/sdk/languages.html">
                                                         <div class="card font-icon">
@@ -110,13 +127,6 @@
                                                         </div></a>
                                                 </div>
 
-                                                <div class="col-xs-6 col-sm-3">
-                                                        <a href="/sdk/languages.html">
-                                                        <div class="card font-icon">
-                                                            <i class="devicon-go-plain"></i>
-                                                            <h4>Go</h4>
-                                                        </div></a>
-                                                </div>
 
                                                 <div class="col-xs-6 col-sm-3">
                                                         <a href="/sdk/languages.html">
