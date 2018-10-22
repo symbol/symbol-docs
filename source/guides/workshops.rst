@@ -12,8 +12,8 @@ Published workshops
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
-   `NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/>`_ ; Start developing a real use case step by step.; Developers; NEM Foundation
-   `NEM applied to supply chain [Japanese] <https://qiita.com/44uk_i3/items/b9c4fc5751d93bf50a3d>`_ ;  Start developing a real use case step by step. ; Developers;  `@44uk_i3 <https://github.com/44uk>`_
+   `Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2-workshop-document-notarization/>`_ ; Learn how digital assets can be notarized in the blockchain.; Developers (NEM advanced beginner); NEM Foundation
+   `NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/>`_ ; Start developing a real use case step by step.; Developers (NEM competent); NEM Foundation
 
 ************
 Ongoing work
@@ -25,10 +25,9 @@ Ongoing work
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
-   Defining a blockchain MVP ; Find out were blockchain fits in your company in small iterations.  ; Analysts and developers ; NEM Foundation
-   Rapid prototyping with NEM blockchain ; Deploy your first blockchain app without coding ; Analysts and developers ; NEM Foundation
-   Digital assets notarization ; Learn how digital assets can be notarized in the blockchain.; Developers ; NEM Foundation
-   Atomic cross-chain swap between different blockchains ; Learn how to code cross-chain transactions between two private chains ; Developers ; NEM Foundation
+   Defining a blockchain MVP ; Find out where blockchain fits in your company in small iterations.  ; Analysts and developers (NEM novice) ; NEM Foundation
+   Rapid prototyping with NEM blockchain ; Deploy your first blockchain app without coding ; Analysts and developers (NEM novice) ; NEM Foundation
+   Atomic cross-chain swap between different blockchains ; Learn how to code cross-chain transactions between two private chains (NEM competent); Developers ; NEM Foundation
 
 
 Creating and publishing a new workshop
