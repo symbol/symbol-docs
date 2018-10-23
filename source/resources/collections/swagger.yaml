@@ -14,9 +14,11 @@ info:
 
     Catapult REST API uses port ``3000``. It accepts both HTTP ``GET``, ``PUT`` and ``POST`` requests.
 
-    Assuming that the [Catapult server] and [Catapult REST] are running locally, HTTP GET requests can be executed from a browser and have the form:
+    Assuming that the Catapult server and Catapult REST are running locally, HTTP GET requests can be executed from a browser and have the form:
 
-    http://localhost:3000/<path-to-API-request> for example:
+    http://localhost:3000/<path-to-API-request>
+
+    For example:
 
     http://localhost:3000/account/7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246/transactions
 

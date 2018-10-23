@@ -3,14 +3,24 @@
 .. raw:: html
 
     <link href="_static/css/api.css" rel="stylesheet">
-    <redoc hide-loading spec-url="_downloads/swagger.yaml"></redoc>
-    <script src="https://rebilly.github.io/ReDoc/releases/v1.22.0/redoc.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.41/bundles/redoc.standalone.js"></script>
+    <div id="redoc"></div>
+    <script>
+    Redoc.init('_downloads/swagger.yaml', {
+          scrollYOffset: '101',
+          hideLoading: true,
+          suppressWarnings: true,
+          theme: {
+            spacing: {
+              sectionVertical: 15
+            }
+          }
+        }, document.getElementById('redoc'));
+    </script>
 
 .. rst-class:: text-right
 
-  :download:`Download Swagger spec <resources/collections/swagger.yaml>` | :download:`Download Insomnia spec<resources/collections/insomnia.json>` | Powered by `ReDoc`_.
-
-.. _ReDoc: http://rebilly.github.io/ReDoc/
+  :download:`Download Swagger spec <resources/collections/swagger.yaml>` | :download:`Download Insomnia spec<resources/collections/insomnia.json>`.
 
 *********
 Reference
