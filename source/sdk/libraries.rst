@@ -16,11 +16,6 @@ The reason behind the |NIP| is to ensure that the new library is reviewed, teste
 * At least one implementation that successfully passes the code review.
 * Compatible with third-party projects that implement/uses the same NIP Library.
 
-.. csv-table::
-   :header: "Name", "Description", "Active Developers"
-   :delim: ;
-
-
 *******************
 Community libraries
 *******************
