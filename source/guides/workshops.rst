@@ -12,6 +12,7 @@ Published workshops
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
+   `Getting started with NEM Catapult <https://blockchain.craftain.com/courses/getting-started-with-nem-catapult/>`_;  Build a decentralized blockchain app using Catapult.; Developers (NEM novice); Craftain and NEM Foundation
    `Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2-workshop-document-notarization/>`_ ; Learn how digital assets can be notarized in the blockchain.; Developers (NEM advanced beginner); NEM Foundation
    `NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/>`_ ; Start developing a real use case step by step.; Developers (NEM competent); NEM Foundation
 
@@ -26,8 +27,8 @@ Ongoing work
    :delim: ;
 
    Defining a blockchain MVP ; Find out where blockchain fits in your company in small iterations.  ; Analysts and developers (NEM novice) ; NEM Foundation
-   Rapid prototyping with NEM blockchain ; Deploy your first blockchain app without coding ; Analysts and developers (NEM novice) ; NEM Foundation
-   Atomic cross-chain swap between different blockchains ; Learn how to code cross-chain transactions between two private chains (NEM competent); Developers ; NEM Foundation
+   Rapid prototyping with NEM blockchain ; Deploy your first blockchain app without coding. ; Analysts and developers (NEM novice) ; NEM Foundation
+   Atomic cross-chain swap between different blockchains ; Learn how to code cross-chain transactions between two private chains. ; Developers (NEM competent) ; NEM Foundation
 
 
 Creating and publishing a new workshop

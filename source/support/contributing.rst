@@ -1,6 +1,6 @@
-############
-Contributing
-############
+##########
+Guidelines
+##########
 
 First off, thank you for considering contributing to NEM!
 

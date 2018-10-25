@@ -49,8 +49,8 @@ References
 Package Organization
 ********************
 
-.. figure:: ../resources/images/nem2-sdk-architecture-1.png
-    :width: 550px
+.. figure:: ../resources/images/nem2-sdk-architecture.png
+    :width: 400px
     :align: center
 
     Package organization diagram
@@ -68,7 +68,7 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 Services
 ========
 
-Common operations that require multiple :doc:`REST API<../api>` requests are handled by already provided services.
+Common operations that require multiple :doc:`REST API <../api/requests>` requests are handled by already provided services.
 
 .. |reactivex| raw:: html
 
