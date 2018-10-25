@@ -8,7 +8,7 @@ This guide will walk you through a step-by-step installation of the required too
 Running Catapult Service Bootstrap
 **********************************
 
-.. figure:: ../resources/images/four-layer-architecture.png
+.. figure:: ../resources/images/four-layer-architecture-basic.png
     :width: 650px
     :align: center
 
