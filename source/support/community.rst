@@ -4,9 +4,7 @@ Community
 
 After reading the docs, you probably have some unanswered questions. Most of the documentation and guides that the NEM Developer Center has today have been added because our community saw the need.
 
-If you find yourself wishing for content that does not exist yet:
-
-* Use |stack-overflow| for development related questions.
+* Ask in |stack-overflow| development related questions.
 
 * Reach our community joining the official |slack|.
 

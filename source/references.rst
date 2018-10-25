@@ -202,14 +202,14 @@
                                 <div class="row">
                                         <div class="col-md-8 text-center gap center-block">
                                              <h2>Catapult REST API</h2>
-                                              <p><a href="/api.html"><b>Catapult REST API</b></a> combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.</p>
+                                              <p><a href="/api/requests.html"><b>Catapult REST API</b></a> combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.</p>
                                         </div>
                                 </div>
                                 <div class="row">
                                         <div class="card-container col-md-8 center-block">
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="/api.html#section/Introduction/Requests">
+                                                        <a href="/api/requests.html">
                                                         <div class="card font-icon">
                                                           <i class="fas fa-sliders-h colored green"></i>
                                                           <h4>Requests</h4>
@@ -217,7 +217,7 @@
                                                 </div>
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="/api.html#section/Introduction/Tools">
+                                                        <a href="/api/tools.html">
                                                               <div class="card font-icon">
                                                                 <i class="fas fa-toolbox colored green"></i>
                                                                   <h4>Tools</h4>
@@ -226,7 +226,7 @@
                                                 </div>
 
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="/api.html#tag/Account-routes">
+                                                        <a href="/api/endpoints.html">
                                                                 <div class="card font-icon">
                                                                   <i class="fas fa-exchange-alt colored green"></i>
                                                                   <h4>Endpoints</h4>
@@ -234,13 +234,22 @@
                                                         </a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-3">
-                                                        <a href="/api.html#tag/Websockets">
+                                                        <a href="/api/websockets.html">
                                                               <div class="card font-icon">
                                                                   <i class="fas fa-dot-circle colored green"></i>
                                                                   <h4>Websockets</h4>
                                                               </div>
                                                         </a>
                                                 </div>
+                                                <div class="col-xs-6 col-sm-3">
+                                                        <a href="/api/status-errors.html">
+                                                              <div class="card font-icon">
+                                                                  <i class="fas fa-times colored green"></i>
+                                                                  <h4>Status Errors</h4>
+                                                              </div>
+                                                        </a>
+                                                </div>
+
                                         </div>
                                 </div>
                         </div>

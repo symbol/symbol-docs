@@ -49,7 +49,7 @@ The main responsibility of Catapult API components is to store the data in reada
 
 Additionally, this layer verifies blocks and transactions. The API throws the errors to REST via ZMQ in binary.
 
-Catapult API collects the cosignatures for the aggregated bonded transactions. Aggregated bonded transactions are pushed to P2P nodes once they are complete.
+Catapult API collects cosignatures. :doc:`Aggregated bonded transactions <aggregate-transaction>` are pushed to P2P nodes once they are complete.
 
 API components can connect to multiple P2P nodes, but at least must connect to one.
 
