@@ -2,11 +2,9 @@
 Transfer Transaction
 #####################
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 .. _transfer-transaction:
 
-Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. It can hold a message of length ``1024``.
+Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. It can hold a message of length 1024.
 
 .. figure:: ../resources/images/guides-transactions-transfer.png
     :align: center
@@ -14,9 +12,11 @@ Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`a
 
     Alice sends 10 nem:xem to Bob
 
-.. raw:: html
+.. note:: It is possible to send mosaics to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the recipient's account, the funds are most likely lost forever.
 
-    <h2>Parameters</h2>
+**********
+Parameters
+**********
 
 The following parameters are required:
 
@@ -31,3 +31,5 @@ The following parameters are required:
     **Message**
 
     The transaction message of ``1024`` characters. It can be empty.
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.

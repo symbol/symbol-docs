@@ -2,15 +2,14 @@
 Multi-Level Multisig Account
 ############################
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 :doc:`Multisig accounts <multisig-account>` can have as cosignatories other multisig accounts. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 The maximum depth of a multilevel multisig account is ``3``.
 
-.. raw:: html
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
-    <h2>Examples</h2>
+Examples
+========
 
 MLMA allows a huge variety of business logic:
 

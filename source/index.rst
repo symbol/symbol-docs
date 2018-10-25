@@ -123,20 +123,26 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
+    :caption: Protocol
+
+    concepts/cryptography
+    concepts/block
+    concepts/transaction
+    concepts/node
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
     :caption: Built-in Features
 
     concepts/account
     concepts/multisig-account
     concepts/multi-level-multisig-account
-    concepts/transaction
     concepts/namespace
     concepts/mosaic
     concepts/transfer-transaction
     concepts/aggregate-transaction
     concepts/cross-chain-swaps
-    concepts/block
-    concepts/node
-    concepts/listener
 
 .. toctree::
     :maxdepth: 2
@@ -157,7 +163,12 @@ NEM Developer Center
     :hidden:
     :caption: REST API
 
-    api
+    api/requests
+    api/tools
+    api/endpoints
+    api/websockets
+    api/status-errors
+
 
 .. toctree::
     :maxdepth: 2
@@ -192,5 +203,6 @@ NEM Developer Center
     :hidden:
     :caption: Support
 
+    support/community
     support/contributing
     support/contributors

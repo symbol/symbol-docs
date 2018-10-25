@@ -4,11 +4,7 @@ Account
 
 An account is a **key pair** (private and public key) associated to a mutable state stored on the NEM blockchain. In other words, you have a deposit box in the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
-************
-Unique Asset
-************
-
-Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a single object that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
+Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a **single object** that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
 
 ****************
 Multisig Account
@@ -16,49 +12,26 @@ Multisig Account
 
 Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties, all in the blockchain.
 
-
-.. raw:: html
-
-    <h2>Properties</h2>
+**********
+Properties
+**********
 
 An account has the following properties:
 
     **Private Key**
 
-    The private key is a random 256-bit integer, which uniquely identifies a NEM account.
+    A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
 
-    The probability to randomly generate a secret key that is linked to an account already existing is 10^77. Collision probability is, cryptographically speaking, negligible.
-
-    .. note:: Your private key holds all the power of your account. It is a priority to make sure it is backed up safely somewhere **offline**.
+    .. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
 
     **Public key**
 
-    The **public key** is cryptographically derived from the private key. NEM is using the ``Ed25519 elliptic curve`` with the ``SHA3`` hashing algorithm.
-
-    The public key of an account is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
-
-    .. note:: It is recommended to share the address instead of the public key, as it contains more information, such as a validity check and which network it uses (public, testnet or private).
+    The :ref:`public key <keypair>` can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
     **Address**
 
-    A NEM address is a base-32 :sup:`3` encoded triplet consisting of:
+    Each account has a unique :ref:`address <address>`. You will normally share the derived address instead, as it is shorter and gathers more information.
 
-    * Network byte
-    * 160-bit hash of the account’s public key
-    * 4 byte checksum
+    **Balance**
 
-    The checksum allows for quick recognition of mistyped addresses. It is possible to send XEM to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the account to which the XEM is sent, the XEM is most likely lost forever.
-
-    The following steps are performed to convert a public key to an address:
-
-    1. Perform 256-bit Sha3 on the public key
-    2. Perform 160-bit Ripemd of hash resulting from step 1.
-    3. Prepend version byte to Ripemd hash (either 0x68 or 0x98)
-    4. Perform 256-bit Sha3 on the result, take the first four bytes as a checksum
-    5. Concatenate output of step 3 and the checksum from step 4
-    6. Encode result using base32
-
-    From the explanation above, you can create an account without ever interacting with the blockchain.
-
-    Does it mean that all possible accounts are pre-defined on the blockchain? No. It means that only accounts that have had a transaction involving the account are tracked in the blockchain.
-
+    Amount of different :doc:`mosaics <mosaic>` the account owns.

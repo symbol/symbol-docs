@@ -2,15 +2,13 @@
 Aggregate Transaction
 #####################
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 .. _aggregate-transaction:
 
 Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
-.. raw:: html
-
-    <h2>Parameters</h2>
+**********
+Parameters
+**********
 
 Aggregate transactions accept the following parameters:
 
@@ -22,6 +20,8 @@ Aggregate transactions accept the following parameters:
 
     An array of transaction cosignatures.
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 ******************
 Aggregate complete
 ******************
@@ -32,9 +32,8 @@ The different participants can sign without using the blockchain the aggregate t
 
 Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions between different participants in the same operation.
 
-.. raw:: html
-
-    <h2>Example</h2>
+Examples
+========
 
 Dan announces an aggregate transaction that merges two transfer transactions. As he is the only required signed, we say the aggregate transaction it is complete. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
@@ -62,10 +61,8 @@ Every time a cosignatory signs the transaction and announces an aggregate bonded
 
     Aggregate bonded transaction cycle
 
-
-.. raw:: html
-
-    <h2>Examples</h2>
+Examples
+========
 
 1. In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
 
@@ -82,6 +79,7 @@ Every time a cosignatory signs the transaction and announces an aggregate bonded
     :width: 450px
 
     Paying for others fees
+
 .. _cosignature-transaction:
 
 ***********************
