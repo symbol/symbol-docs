@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.11.7'
+version = u'0.12'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -197,7 +197,11 @@ def setup(app):
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-  'api/**': ['localtoc.html'],
+  'api/requests': ['localtoc.html'],
+  'api/endpoints': [],
+  'api/tools': ['localtoc.html'],
+  'api/websockets': ['localtoc.html'],
+  'api/status-errors': ['localtoc.html'],
   'cli/**': ['localtoc.html'],
   'concepts/**': ['localtoc.html'],
   'getting-started/**': ['localtoc.html'],

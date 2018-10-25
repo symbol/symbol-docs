@@ -2,11 +2,11 @@
 
 .. raw:: html
 
-    <link href="_static/css/api.css" rel="stylesheet">
+    <link href="../_static/css/api.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.41/bundles/redoc.standalone.js"></script>
     <div id="redoc"></div>
     <script>
-    Redoc.init('_downloads/swagger.yaml', {
+    Redoc.init('../_downloads/swagger.yaml', {
           scrollYOffset: '101',
           hideLoading: true,
           suppressWarnings: true,
@@ -20,8 +20,8 @@
 
 .. rst-class:: text-right
 
-  :download:`Download Swagger spec <resources/collections/swagger.yaml>` | :download:`Download Insomnia spec<resources/collections/insomnia.json>`.
+  :download:`Download Swagger spec <../resources/collections/swagger.yaml>`.
 
 *********
-Reference
+Endpoints
 *********
