@@ -52,4 +52,6 @@ Register namespace transaction is used to create and re-rent a namespace or subn
 
     During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
 
-    When a renting period ends, the namespace will become inactive, and you will have ``N`` blocks to re-rent it.
+    When a renting period ends, the namespace will become inactive.
+
+    .. and you will have ``N`` blocks to re-rent it.
