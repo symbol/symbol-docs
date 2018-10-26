@@ -310,14 +310,18 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 html_favicon = 'favicon-32x32.png'
 
-# -- Options for edit on github ----------------------------------------------
+# -- Options for edit on github -------------------------------------------
 
 edit_on_github_project = 'nemtech/nem2-docs'
 edit_on_github_branch = 'master'
 
-# -- Options for edit scaled images ----------------------------------------------
+# -- Options for edit scaled images ---------------------------------------
 
 html_scaled_image_link = False
 
-# base blog url
+# -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
+
+# -- Options for linkcheck ------------------------------------------------
+
+linkcheck_ignore = [r'http://localhost:\d+']

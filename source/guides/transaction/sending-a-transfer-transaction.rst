@@ -124,7 +124,7 @@ Although the transaction is created, it has not been announced to the network ye
         :language: bash
         :start-after: #!/bin/sh
 
-4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check `the error code here </api.html#tag/Websockets>`_.
+4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :doc:`the error code here <../../api/status-errors>`.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 

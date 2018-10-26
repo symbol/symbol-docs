@@ -19,7 +19,7 @@ If you are used to NIS1 API calls, after announcing a transaction you will recei
 
 The new Catapult REST API works differently, being *asynchronous*. When a user announces a transaction through the API, it always returns an OK.
 
-To know the status of the transaction, which can be OK or `Failure </api.html#tag/Websockets>`_, you have to:
+To know the status of the transaction, which can be OK or :doc:`Failure <../../api/status-errors>`, you have to:
 
 a) Check the status via API endpoint.
 b) Listen to the different :doc:`WebSocket<../../api/websockets>` channels.
