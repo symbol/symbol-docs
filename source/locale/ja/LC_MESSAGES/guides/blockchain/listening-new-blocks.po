@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:10
+msgid "Listening to new blocks"
+msgstr "新しいブロックの監視"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:12
+msgid ""
+"Get notified when a new :doc:`block <../../concepts/block>` is included."
+msgstr "新しい :doc:`ブロック <../../concepts/block>` が取り込まれた通知を受け取る。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了していること"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:19
+msgid "Text editor or IDE"
+msgstr "テキストエディタ または IDE"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:20
+msgid "NEM2-SDK or CLI"
+msgstr "NEM2-SDK または CLI"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:24
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:28
+msgid "|listening-new-blocks-ts|"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:33
+msgid "|listening-new-blocks-java|"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:38
+msgid "|listening-new-blocks-js|"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:43
+msgid "|listening-new-blocks-cli|"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:48
+msgid ""
+"The :ref:`listener implementation changes <monitoring-transactions-client-"
+"side>` when used on the client side (e.g., Angular, React, Vue)."
+msgstr ""
+"クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
+"transactions-client-side>` 。"

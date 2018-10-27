@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/api/tools.rst:3
+msgid "Tools"
+msgstr "ツール"
+
+#: ../../source/api/tools.rst:5
+msgid ""
+"Use one of the following tools to interact with Catapult REST API, "
+"particularly for PUT and POST methods."
+msgstr ""
+
+#: ../../source/api/tools.rst:9
+msgid "NEM2-SDK"
+msgstr ""
+
+#: ../../source/api/tools.rst:11
+msgid ""
+"The **NEM2 Software Development Kit** is the primary software development "
+"tool to create NEM2 components, such as additional tools, libraries or "
+"applications."
+msgstr ""
+"**NEM2 ソフトウェア開発キット** は、NEM2 "
+"コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
+
+#: ../../source/api/tools.rst:15
+msgid ":doc:`Reference <../sdk/overview>`"
+msgstr ""
+
+#: ../../source/api/tools.rst:16
+msgid ":doc:`Guides <../guides/overview>`"
+msgstr ""
+
+#: ../../source/api/tools.rst:20
+msgid "Insomnia REST"
+msgstr ""
+
+#: ../../source/api/tools.rst:22
+msgid "An open source HTTP client, available for Mac, Windows and Linux."
+msgstr ""
+
+#: ../../source/api/tools.rst:24
+msgid "Download |insomnia-app| for your operative system."
+msgstr ""
+
+#: ../../source/api/tools.rst:26
+msgid ""
+"Import the :download:`Insomnia spec<../resources/collections/insomnia.json>`"
+" for NEM."
+msgstr ""
+
+#: ../../source/api/tools.rst:29
+msgid "Continue: :doc:`Endpoints <endpoints>`."
+msgstr ""

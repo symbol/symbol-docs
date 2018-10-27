@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:10
+msgid "Getting block by height"
+msgstr "ブロック高によるブロックの取得"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:12
+msgid ""
+"Get the :doc:`block <../../concepts/block>` information given a height."
+msgstr "与えられたブロック高の :doc:`ブロック <../../concepts/block>` 情報を取得する。"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了していること"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:19
+msgid "Text editor or IDE"
+msgstr "テキストエディタ または IDE"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:20
+msgid "NEM2-SDK or CLI"
+msgstr "NEM2-SDK または CLI"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:24
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:26
+msgid "Are you curious to see what happened in the genesis block?"
+msgstr "ジェネシスブロックで何が起きていたかを見る好奇心はありますか？"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:30
+msgid "|getting-block-by-height-ts|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:35
+msgid "|getting-block-by-height-java|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:40
+msgid "|getting-block-by-height-js|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:45
+msgid "The following snippet returns the height of the latest block."
+msgstr "以下のスニペットは最終ブロックの高さを返却します。"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:49
+msgid "|getting-blockchain-height-ts|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:54
+msgid "|getting-blockchain-height-java|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:59
+msgid "|getting-blockchain-height-js|"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:64
+msgid "|getting-blockchain-height-cli|"
+msgstr ""

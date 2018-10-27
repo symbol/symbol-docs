@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/sdk/architecture.rst:3
+msgid "Architecture"
+msgstr "アーキテクチャ"
+
+#: ../../source/sdk/architecture.rst:7
+msgid "Characteristics"
+msgstr "特徴"
+
+#: ../../source/sdk/architecture.rst:9
+msgid ""
+"**Standardized Contracts**: Guaranteeing interoperability and harmonization "
+"of data models."
+msgstr "**標準化された契約**: データモデルの相互運用性と調和を保証する。"
+
+#: ../../source/sdk/architecture.rst:10
+msgid "**Loose Coupling**: Reducing the degree of component coupling fosters."
+msgstr "**疎結合**: コンポーネントの結合度合いを取り除く。"
+
+#: ../../source/sdk/architecture.rst:11
+msgid ""
+"**Abstraction**: Increasing long-term consistency of interoperability and "
+"allowing underlying components to evolve independently."
+msgstr "**抽象化**: 相互運用性の長期的な一貫性を高め、基礎となるコンポーネントを独立して進化させる。"
+
+#: ../../source/sdk/architecture.rst:12
+msgid ""
+"**Reusability**: Enabling high-level interoperability between modules and "
+"potential component consumers."
+msgstr "**再利用性**: モジュールとコンポーネント利用者間での高いレベルの相互運用性。"
+
+#: ../../source/sdk/architecture.rst:13
+msgid ""
+"**Stateless**: Increasing availability and scalability of components "
+"allowing them to interoperate more frequently and reliably."
+msgstr "**ステートレス**: コンポーネントの可用性と拡張性を高め、より頻繁で信頼できる相互運用を可能にします。"
+
+#: ../../source/sdk/architecture.rst:14
+msgid ""
+"**Composability**: For components to be effectively composable they must be "
+"interoperable."
+msgstr "**合成性**: 効果的なコンポーネントの構成のために、相互運用可能でなければなりません。"
+
+#: ../../source/sdk/architecture.rst:18
+msgid "Reactive"
+msgstr "リアクティブ"
+
+#: ../../source/sdk/architecture.rst:22
+msgid "Reactive Programming"
+msgstr "リアクティブプログラミング"
+
+#: ../../source/sdk/architecture.rst:21
+msgid ""
+"In computing, **reactive programming** is a declarative programming paradigm"
+" concerned with data streams and the propagation of change. This means that "
+"it becomes possible to express static (e.g. arrays) or dynamic (e.g. event "
+"emitters) *data streams* with ease via the employed programming language(s),"
+" and that an inferred dependency within the associated execution model "
+"exists, which facilitates the *automatic propagation of the change involved "
+"with data flow*. |rp-wiki|."
+msgstr ""
+"コンピューティングにおいて **リアクティブプログラミング** "
+"とは、データストリームと変更の伝播に関する宣言的プログラミングのパラダイムです。使用するプログラミング言語を介して、静的(例: 配列)または動的(例: "
+"イベントエミッタ) *データストリーム* を表現することが可能になり、関連する実行モデル内の推論された依存関係が存在することにより、 "
+"*データフローに伴う変更の自動伝播* が容易になります。|rp-wiki|"
+
+#: ../../source/sdk/architecture.rst:26
+msgid "Observer Pattern"
+msgstr "オブザーバーパターン"
+
+#: ../../source/sdk/architecture.rst:25
+msgid ""
+"The **observer pattern** is a software design pattern in which an object, "
+"called the *subject*, maintains a list of its dependents, called "
+"*observers*, and notifies them automatically of any state changes, usually "
+"by calling one of their methods. |op-wiki|."
+msgstr ""
+"**オブザーバーパターン** とは、 *サブジェクト* と呼ばれるオブジェクトが *オブザーバー* "
+"と呼ばれる従属オブジェクトのリストを保持し、通常はそれらのメソッドの1つを呼び出すことによって、状態の変更を自動的に通知するソフトウェア設計パターンです。"
+" |op-wiki|"
+
+#: ../../source/sdk/architecture.rst:30
+msgid "NEM2-SDK uses intensely ReactiveX Library. See |reactivex|."
+msgstr "NEM2-SDK は熱心に ReactiveX ライブラリを使用しています。 |reactivex| を参照してください。"
+
+#: ../../source/sdk/architecture.rst:32
+msgid ""
+"**Functional**: Developers can avoid complex stateful programs using clean "
+"input/output functions over observable streams."
+msgstr ""
+"**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
+
+#: ../../source/sdk/architecture.rst:33
+msgid ""
+"**Less is more**: ReactiveX's operators often reduce what was once an "
+"elaborate challenge into a few lines of code."
+msgstr "**少ない事で多くの事を**: 大抵の場合、ReactiveX オペレータは複雑なコードを数行のコードへ還元します。"
+
+#: ../../source/sdk/architecture.rst:34
+msgid ""
+"**Async error handling**: Traditional try/catch is powerless for errors "
+"handling in asynchronous computations, but ReactiveX will offer developers "
+"the proper tools to handle these sort of errors."
+msgstr ""
+"**非同期的エラーハンドリング**: 伝統的な try/catch は非同期処理でのエラー処理には無力ですが、ReactiveX "
+"はこれらのエラーを処理するための適切なツールを開発者に提供します。"
+
+#: ../../source/sdk/architecture.rst:35
+msgid ""
+"**Concurrency**: Observables and Schedulers in ReactiveX allow the "
+"programmer to abstract away low-level threading, synchronization, and "
+"concurrency issues."
+msgstr ""
+"**並列処理**: ReactiveX "
+"のオブザーバブルとスケジューラは、プログラマへの低水準のスレッディング、同期、並行処理の実装を抽象化することができます。"
+
+#: ../../source/sdk/architecture.rst:36
+msgid ""
+"**Frontend**: Manipulation of UI events and API responses on the Web using "
+"RxJS."
+msgstr "**フロントエンド**: Web上で RxJS を使用したUIイベントとAPI応答の操作。"
+
+#: ../../source/sdk/architecture.rst:37
+msgid ""
+"**Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and "
+"implementation independence."
+msgstr "**バックエンド**: ReactiveX の非同期性を利用し、同時性と実装の独立性を可能にします。"
+
+#: ../../source/sdk/architecture.rst:39
+msgid ""
+"In case you are not familiar with ReactiveX and you still have to deliver "
+"something fast, you can convert an observable to Promise/Future by reviewing"
+" this |rp-promise-example|. However, **we encourage you to learn "
+"ReactiveX**."
+msgstr ""
+"ReactiveX に精通しておらず、何か素早く成果物を提供しなければならない場合は、この |rp-promise-example| "
+"を見てオブザーバブルなものを Promise/Future に変換することができます。それでも **ReactiveX を学習することを推奨** "
+"します。"
+
+#: ../../source/sdk/architecture.rst:42
+msgid "References"
+msgstr "リファレンス"
+
+#: ../../source/sdk/architecture.rst:44
+msgid "|rxjsinaction|"
+msgstr ""
+
+#: ../../source/sdk/architecture.rst:45
+msgid "|frp|"
+msgstr ""
+
+#: ../../source/sdk/architecture.rst:46
+msgid "|learnrxjs|"
+msgstr ""
+
+#: ../../source/sdk/architecture.rst:50
+msgid "Package Organization"
+msgstr "パッケージ構成"
+
+#: ../../source/sdk/architecture.rst:56
+msgid "Package organization diagram"
+msgstr "パッケージ構成図"
+
+#: ../../source/sdk/architecture.rst:59
+msgid "Infrastructure"
+msgstr "インフラストラクチャ"
+
+#: ../../source/sdk/architecture.rst:61
+msgid ""
+"The HTTP requests are made following the Repository Pattern, and they return"
+" NEM Domain immutable models via the Observable Pattern."
+msgstr "HTTP リクエストはリポジトリパターンに則しており、これらはオブザーバルパターンを介して、NEM の変更不可なモデルを返します。"
+
+#: ../../source/sdk/architecture.rst:64
+msgid "Models"
+msgstr "モデル"
+
+#: ../../source/sdk/architecture.rst:66
+msgid ""
+"The NEM Domain models are, usually, immutable by definition. The developer "
+"cannot change its attributes. Instead, the developers have to create new "
+"Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to "
+"change the NEM Blockchain state."
+msgstr ""
+"NEM "
+"ドメインモデルは通常は定義によっては不変ですが、開発者はその属性を変更できません。代わりに開発者は新しいトランザクションを作成し、TransactionHTTP"
+" 経由で NEM ブロックチェーンに送り出して、NEM ブロックチェーン状態を変更する必要があります。"
+
+#: ../../source/sdk/architecture.rst:69
+msgid "Services"
+msgstr "サービス"
+
+#: ../../source/sdk/architecture.rst:71
+msgid ""
+"Common operations that require multiple :doc:`REST API <../api/requests>` "
+"requests are handled by already provided services."
+msgstr ""
+"複数の :doc:`REST API<../api/requests>` "
+"要求を必要とする一般的な操作は、すでに提供されているサービスによって処理されます。"
+
+#: ../../source/sdk/architecture.rst:101
+msgid "Continue: :doc:`Languages <languages>`."
+msgstr "次へ: :doc:`言語 <languages>`"

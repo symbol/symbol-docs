@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/transfer-transaction.rst:3
+msgid "Transfer Transaction"
+msgstr "転送トランザクション"
+
+#: ../../source/concepts/transfer-transaction.rst:7
+msgid ""
+"Transfer transaction is used to send :doc:`mosaics <mosaic>` between two "
+":doc:`accounts <account>`. It can hold a message of length 1024."
+msgstr ""
+"転送トランザクションは :doc:`モザイク <mosaic>` を2つの :doc:`アカウント <account>` "
+"間で送信するために使われます。1024文字以内のメッセージを含めることもできます。"
+
+#: ../../source/concepts/transfer-transaction.rst:13
+msgid "Alice sends 10 nem:xem to Bob"
+msgstr "ALICE は 10 nem:xem を BOB へ送る"
+
+#: ../../source/concepts/transfer-transaction.rst:15
+msgid ""
+"It is possible to send mosaics to any valid address even if the address has "
+"not previously participated in any transaction. If nobody owns the private "
+"key of the recipient's account, the funds are most likely lost forever."
+msgstr ""
+"過去にトランザクションに関与したことがなくても、正当なアドレスであればモザイクを送信することができます。 "
+"もし受信するアドレスの秘密鍵を誰も持っていない場合、その資産は永久に使うことができなくなります。"
+
+#: ../../source/concepts/transfer-transaction.rst:19
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../source/concepts/transfer-transaction.rst:21
+msgid "The following parameters are required:"
+msgstr "以下のパラメータが必須です:"
+
+#: ../../source/concepts/transfer-transaction.rst:23
+msgid "**Recipient**"
+msgstr "**受信者**"
+
+#: ../../source/concepts/transfer-transaction.rst:25
+msgid "The address of the recipient account."
+msgstr "受信アカウントのアドレス"
+
+#: ../../source/concepts/transfer-transaction.rst:27
+msgid "**Mosaics**"
+msgstr "**モザイク**"
+
+#: ../../source/concepts/transfer-transaction.rst:29
+msgid "The array of mosaic to be sent. The array can be empty."
+msgstr "送信するモザイク配列。配列は空にすることもできます。"
+
+#: ../../source/concepts/transfer-transaction.rst:31
+msgid "**Message**"
+msgstr "**メッセージ**"
+
+#: ../../source/concepts/transfer-transaction.rst:33
+msgid "The transaction message of ``1024`` characters. It can be empty."
+msgstr "``1024`` 文字以内のトランザクションメッセージです。空にすることもできます。"
+
+#: ../../source/concepts/transfer-transaction.rst:35
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ "
+"です。公開ネットワークでは異なる可能性があります。"

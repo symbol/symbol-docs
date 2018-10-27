@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/support/contributing.rst:3
+msgid "Guidelines"
+msgstr "ガイドライン"
+
+#: ../../source/support/contributing.rst:5
+msgid "First off, thank you for considering contributing to NEM!"
+msgstr "はじめに、NEM への貢献を検討していただきありがとうございます。"
+
+#: ../../source/support/contributing.rst:7
+msgid ""
+"Follow these guidelines for contributing to NEM projects, achieving the best"
+" quality with the less effort."
+msgstr "これらのガイドラインに従って、NEM プロジェクトに貢献し、より少ない労力で最高の品質を達成してください。"
+
+#: ../../source/support/contributing.rst:9
+msgid ""
+"If you want to contribute to a existent project, read as well the "
+"CONTRIBUTING.md file of its repository."
+msgstr "既存のプロジェクトに貢献したい場合は、そのリポジトリの CONTRIBUTING.md ファイルも読んでください"
+
+#: ../../source/support/contributing.rst:13
+msgid "Development"
+msgstr "開発"
+
+#: ../../source/support/contributing.rst:16
+msgid "SDK"
+msgstr ""
+
+#: ../../source/support/contributing.rst:18
+msgid ":doc:`Summary <../sdk/languages>`"
+msgstr ":doc:`概要 <../sdk/languages>`"
+
+#: ../../source/support/contributing.rst:19
+msgid ":doc:`Developing a SDK <../sdk/development>`"
+msgstr ":doc:`SDK の開発 <../sdk/development>`"
+
+#: ../../source/support/contributing.rst:20
+msgid ":doc:`Documenting a SDK <../sdk/documentation>`"
+msgstr ":doc:`SDK のドキュメント <../sdk/documentation>`"
+
+#: ../../source/support/contributing.rst:23
+msgid "Wallets & Explorers"
+msgstr "ウォレット＆エクスプローラ"
+
+#: ../../source/support/contributing.rst:25
+msgid ":doc:`Summary <../wallet/overview>`"
+msgstr ":doc:`概要 <../wallet/overview>`"
+
+#: ../../source/support/contributing.rst:29
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: ../../source/support/contributing.rst:31
+msgid ":doc:`Writing a guide <../guides/writing-a-guide>`"
+msgstr ":doc:`ガイドの記述 <../guides/writing-a-guide>`"
+
+#: ../../source/support/contributing.rst:32
+msgid ":doc:`Suggesting changes <suggesting-changes>`"
+msgstr ":doc:`変更の提案 <suggesting-changes>`"
+
+#: ../../source/support/contributing.rst:36
+msgid "Workshops"
+msgstr "ワークショップ"
+
+#: ../../source/support/contributing.rst:37
+msgid ":doc:`Summary <../guides/workshops>`"
+msgstr ":doc:`概要 <../guides/workshops>`"
+
+#: ../../source/support/contributing.rst:38
+msgid ""
+":doc:`Creating a new workshop <../guides/workshops/creating-a-new-workshop>`"
+msgstr ":doc:`新しいワークショップの作成 <../guides/workshops/creating-a-new-workshop>`"

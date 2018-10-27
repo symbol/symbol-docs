@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/getting-started/what-is-nem.rst:3
+msgid "What is NEM?"
+msgstr "NEM とは？"
+
+#: ../../source/getting-started/what-is-nem.rst:7
+#: ../../source/getting-started/what-is-nem.rst:17
+msgid "The Smart Asset System"
+msgstr "スマートアセットシステム"
+
+#: ../../source/getting-started/what-is-nem.rst:9
+msgid ""
+"|nem| is a blockchain platform built from the ground up to be simple for "
+"developers to use blockchain technology."
+msgstr "|nem| は開発者がシンプルにブロックチェーンテクノロジーを利用できるように構築されたブロックチェーンプラットフォームです。"
+
+#: ../../source/getting-started/what-is-nem.rst:11
+msgid ""
+"NEM is built around a powerful system to customize your using of the "
+"blockchain. We call it the *Smart Asset System*. It gives you the power to "
+"use NEM as if it were a custom blockchain built for your application and "
+"your assets."
+msgstr ""
+"NEM はブロックチェーンの利用をカスタマイズするための強力なシステムを中心に構築されています。私たちはこれを *スマートアセットシステム* "
+"と呼びます。あなたのアプリケーションとあなたの資産のためのカスタムビルドのブロックチェーンであったかのような NEM を使用する力を提供します。"
+
+#: ../../source/getting-started/what-is-nem.rst:19
+msgid ""
+"Rather than force you to write your own “smart contract” code from scratch "
+"or use off-blockchain methods that define custom assets for you application,"
+" NEM gives you direct access to a specialized set of tested and secure on-"
+"blockchain features."
+msgstr ""
+"NEM はスクラッチから独自の “スマートコントラクト” "
+"コードを書いたり、アプリケーションでのカスタムアセットの定義によるオフブロックチェーンのメソッドを使うのではなく、ブロックチェーン上のテスト済みで安全な特別なセットへの直接的なアクセスを提供します。"
+
+#: ../../source/getting-started/what-is-nem.rst:21
+msgid ""
+"NEM is suitable for an amazing variety of solutions of different classes, "
+"such as direct public transactions via a streamlined smartphone app, "
+"efficient cloud services that connect client or web applications, or a high-"
+"performance permissioned enterprise back-end for business-critical record "
+"keeping."
+msgstr ""
+"NEM "
+"は合理化されたスマートフォンアプリからの直接なパブリックトランザクション、クライアントやウェブアプリケーションに接続された効率的なクラウドサービス、またはビジネスクリティカルな記録を保持するハイパフォーマンスで許可制のエンタープライズバックエンドなど、驚くほど様々なソリューションに適しています。"
+
+#: ../../source/getting-started/what-is-nem.rst:25
+msgid "Architecting on NEM"
+msgstr "NEM アーキテクチャ"
+
+#: ../../source/getting-started/what-is-nem.rst:27
+msgid ""
+"NEM :doc:`nodes <../concepts/node>` provide a powerful, stable and secure "
+"platform where smart asset transactions are conducted, searched, and "
+"immutably logged to the blockchain ledger."
+msgstr ""
+"NEM :doc:`ノード <../concepts/node>` "
+"はスマートアセットのトランザクションを実行、検索、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。"
+
+#: ../../source/getting-started/what-is-nem.rst:29
+msgid ""
+"All the functionalities are available through the API interface on each node"
+" in the network itself. This means that the blockchain can be used to create"
+" a variety of architecture solutions with lightweight code in any language."
+msgstr ""
+"すべての機能はネットワーク内の各ノードのAPIインターフェイスを通じて利用可能です。これはブロックチェーンがあらゆるプログラミング言語の軽量なコードによって様々なソリューションのアーキテクチャを構築できることを意味します。"
+
+#: ../../source/getting-started/what-is-nem.rst:31
+msgid "Some examples of possible architecture solutions:"
+msgstr "可能なアーキテクチャソリューションの例:"
+
+#: ../../source/getting-started/what-is-nem.rst:37
+msgid "**Mobile app direct access**"
+msgstr "**モバイルアプリのダイレクトアクセス**"
+
+#: ../../source/getting-started/what-is-nem.rst:39
+msgid "A lightweight app directly interfaces to blockchain features."
+msgstr "ブロックチェーン機能へのインターフェイスを直接利用する軽量なアプリケーション。"
+
+#: ../../source/getting-started/what-is-nem.rst:41
+msgid "**Client/server model**"
+msgstr "**クライアント/サーバモデル**"
+
+#: ../../source/getting-started/what-is-nem.rst:43
+msgid ""
+"A gateway server manages blockchain usage for a client app or web service."
+msgstr "クライアントアプリケーションやウェブサービスによるブロックチェーンの利用を管理するゲートウェイサーバ。"
+
+#: ../../source/getting-started/what-is-nem.rst:45
+msgid "**Legacy system integration**"
+msgstr "**レガシーシステムの統合**"
+
+#: ../../source/getting-started/what-is-nem.rst:47
+msgid ""
+"A gateway server links existing business contract logic, systems, or "
+"databases to the blockchain ledger."
+msgstr "既存ビジネスの契約ロジック、システム、データベースをブロックチェーンへ繋げるゲートウェイサーバ。"
+
+#: ../../source/getting-started/what-is-nem.rst:55
+msgid "Public and Private"
+msgstr "パブリックとプライベート"
+
+#: ../../source/getting-started/what-is-nem.rst:61
+msgid ""
+"NEM provides both a decentralized, open and self-sustaining **public "
+"blockchain** that can be used by anyone – as well as a "
+"**permissioned/private blockchain solution** that can be provisioned "
+"specifically for your use on your servers when speed and privacy are the "
+"priority."
+msgstr ""
+"NEM は誰もが利用できる分散化されオープンで自立した **パブリックブロックチェーン** "
+"と、速度とプライバシーが優先される場合にサーバーでの使用に特化してプロビジョニングできる **許可制/プライベートのブロックチェーンソリューション** "
+"の両方を提供します。"
+
+#: ../../source/getting-started/what-is-nem.rst:63
+msgid "Continue: :doc:`Setting up your workstation <setup-workstation>`."
+msgstr "次へ: :doc:`ワークステーションのセットアップ <setup-workstation>`"

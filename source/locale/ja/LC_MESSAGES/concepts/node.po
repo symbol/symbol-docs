@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/node.rst:3
+msgid "Nodes"
+msgstr "ノード"
+
+#: ../../source/concepts/node.rst:5
+msgid ""
+"The NEM blockchain platform is built from a network of nodes. These nodes "
+"provide a powerful, stable, and secure platform where Smart Assets "
+"transactions are conducted, searched, and immutably logged to the blockchain"
+" ledger."
+msgstr ""
+"NEM "
+"ブロックチェーンプラットフォームはノードのネットワークによって構築されています。これらのノードはスマートアセットのトランザクションを実行、検索し、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。"
+
+#: ../../source/concepts/node.rst:11
+msgid "Catapult’s Performance Advantage: A Four-Layered Architecture"
+msgstr "Catapult のパフォーマンス優位性: 4層アーキテクチャ"
+
+#: ../../source/concepts/node.rst:13
+msgid ""
+"The four-layered architecture allows developers to update any of these tiers"
+" without disrupting the others, which improves security."
+msgstr "4層アーキテクチャにより、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。"
+
+#: ../../source/concepts/node.rst:15
+msgid ""
+"Guides explaining how to run a main net node are pending to be published. "
+"See how to run :doc:`Catapult in local<../guides/running-a-node>` for "
+"testing purposes."
+msgstr ""
+
+#: ../../source/concepts/node.rst:19
+msgid "Catapult P2P Component"
+msgstr "Catapult P2P コンポーネント"
+
+#: ../../source/concepts/node.rst:21
+msgid "**Repository:** |catapult-server|"
+msgstr "**リポジトリ:** |catapult-server|"
+
+#: ../../source/concepts/node.rst:23
+msgid ""
+"The P2P nodes form the backbone of the blockchain. The role of the node is "
+"to verify  :doc:`transactions<transaction>` and :doc:`blocks<block>`, run "
+"the consensus algorithm, create new blocks, and propagate the changes "
+"through the network."
+msgstr ""
+
+#: ../../source/concepts/node.rst:25
+msgid ""
+"The API nodes push new transactions to P2P nodes. If the transaction "
+"received is invalid, the P2P nodes discard it."
+msgstr ""
+
+#: ../../source/concepts/node.rst:27
+msgid "After processing a block:"
+msgstr ""
+
+#: ../../source/concepts/node.rst:29
+msgid "The block binary is saved on disk as a flat file."
+msgstr "ブロックのバイナリはフラットなファイルとしてディスクに保存されます。"
+
+#: ../../source/concepts/node.rst:30
+msgid "The updated chain state is saved in memory or RocksDB (configurable)."
+msgstr ""
+
+#: ../../source/concepts/node.rst:33
+msgid "RocksDB"
+msgstr ""
+
+#: ../../source/concepts/node.rst:35
+msgid ""
+"|rocksdb| stores the chain state. The data structures cached are serialized "
+"and stored as value to a corresponding key. In other words, supports "
+"different “columns” (key/value pair “tables”)."
+msgstr ""
+
+#: ../../source/concepts/node.rst:37
+msgid ""
+"For example, a column maps the public keys to addresses. Another one, the "
+"account state entries as the value to corresponding address keys."
+msgstr ""
+
+#: ../../source/concepts/node.rst:39
+msgid ""
+"Storing the state in memory is faster than using RocksDB. However, storing "
+"state information in RocksDB demands less memory the network nodes. This is "
+"primarily desirable in networks with a large number of accounts."
+msgstr ""
+
+#: ../../source/concepts/node.rst:43
+msgid "Catapult API Component"
+msgstr "Catapult API コンポーネント"
+
+#: ../../source/concepts/node.rst:45 ../../source/concepts/node.rst:77
+msgid "**Repository:** |catapult-rest|"
+msgstr "**リポジトリ:** |catapult-rest|"
+
+#: ../../source/concepts/node.rst:48
+msgid ""
+"The main responsibility of Catapult API components is to store the data in "
+"readable form.  Each API instance maintains a MongoDB, and optionally a "
+"RocksDB to store state."
+msgstr ""
+
+#: ../../source/concepts/node.rst:50
+msgid ""
+"Additionally, this layer verifies blocks and transactions. The API throws "
+"the errors to REST via ZMQ in binary."
+msgstr ""
+
+#: ../../source/concepts/node.rst:52
+msgid ""
+"Catapult API collects cosignatures. :doc:`Aggregated bonded transactions "
+"<aggregate-transaction>` are pushed to P2P nodes once they are complete."
+msgstr ""
+
+#: ../../source/concepts/node.rst:54
+msgid ""
+"API components can connect to multiple P2P nodes, but at least must connect "
+"to one."
+msgstr ""
+
+#: ../../source/concepts/node.rst:57
+msgid "MongoDB"
+msgstr ""
+
+#: ../../source/concepts/node.rst:59
+msgid ""
+"|mongodb| stores blocks, transactions and chain state for high query "
+"performance."
+msgstr ""
+
+#: ../../source/concepts/node.rst:61
+msgid "The API updates the MongoDB when:"
+msgstr ""
+
+#: ../../source/concepts/node.rst:63
+msgid "A new block / a bunch of blocks finished processing."
+msgstr ""
+
+#: ../../source/concepts/node.rst:64
+msgid "New unconfirmed transactions finished processing."
+msgstr ""
+
+#: ../../source/concepts/node.rst:66
+msgid "The MongoDB shouldn’t be accessed externally."
+msgstr ""
+
+#: ../../source/concepts/node.rst:69
+msgid "ZMQ"
+msgstr ""
+
+#: ../../source/concepts/node.rst:71
+msgid ""
+"|zmq| is an asynchronous messaging library, which enables real-time "
+"subscriptions. It transports notifications from the API server to the ZMQ "
+"endpoint, where the Catapult REST component listens.  It is an alternative "
+"to REST WebSockets, aimed to be used when performance is critical."
+msgstr ""
+
+#: ../../source/concepts/node.rst:75
+msgid "Catapult REST Component"
+msgstr "Catapult REST コンポーネント"
+
+#: ../../source/concepts/node.rst:79
+msgid ""
+"Catapult REST handles **JSON API** client requests. This component reads "
+"from MongoDB, formats the response, and returns it to the client. Each "
+"Catapult REST connects to one Catapult API instance."
+msgstr ""
+
+#: ../../source/concepts/node.rst:81
+msgid ""
+"Additionally, Catapult REST sends new transactions to the Catapult API using"
+" sockets. The component announces events to the client via WebSockets."
+msgstr ""

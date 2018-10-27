@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/support/community.rst:3
+msgid "Community"
+msgstr "コミュニティ"
+
+#: ../../source/support/community.rst:5
+msgid ""
+"After reading the docs, you probably have some unanswered questions. Most of"
+" the documentation and guides that the NEM Developer Center has today have "
+"been added because our community saw the need."
+msgstr ""
+
+#: ../../source/support/community.rst:7
+msgid "Ask in |stack-overflow| development related questions."
+msgstr ""
+
+#: ../../source/support/community.rst:9
+msgid "Reach our community joining the official |slack|."
+msgstr ""
+
+#: ../../source/support/community.rst:11
+msgid ""
+"Check the :doc:`contributing guidelines <suggesting-changes>` to propose "
+"changes."
+msgstr ""
+
+#: ../../source/support/community.rst:13
+msgid "Follow the development updates on |twitter|."
+msgstr ""
