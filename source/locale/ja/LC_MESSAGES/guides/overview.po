@@ -65,7 +65,7 @@ msgstr "例の実行方法"
 msgid ""
 "Download the |guide-repository|. They are divided by programming language "
 "and topic."
-msgstr "|guides-repository| リポジトリをダウンロードしてください。プログラミング言語ごとに分けられています。"
+msgstr "|guide-repository| リポジトリをダウンロードしてください。プログラミング言語ごとに分けられています。"
 
 #: ../../source/guides/overview.rst:23
 msgid "Cli"
