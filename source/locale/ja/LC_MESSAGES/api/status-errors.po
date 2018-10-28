@@ -26,7 +26,7 @@ msgstr "ステータスエラー"
 msgid ""
 "This section describes the error messages that can be returned via status "
 "channel after announcing a transaction."
-msgstr ""
+msgstr "このセクションでは、トランザクションをアナウンスした後に、ステータスチャンネルが返却するエラーメッセージの説明をします。"
 
 #: ../../source/api/status-errors.rst:7
 msgid ""

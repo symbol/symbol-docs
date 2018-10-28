@@ -26,7 +26,7 @@ msgstr "ツール"
 msgid ""
 "Use one of the following tools to interact with Catapult REST API, "
 "particularly for PUT and POST methods."
-msgstr ""
+msgstr "PUT と POST メソッドの利用のため、Catapult REST API と疎通するためには以下のツールを使ってください。"
 
 #: ../../source/api/tools.rst:9
 msgid "NEM2-SDK"
@@ -55,17 +55,19 @@ msgstr ""
 
 #: ../../source/api/tools.rst:22
 msgid "An open source HTTP client, available for Mac, Windows and Linux."
-msgstr ""
+msgstr "Mac, Windows, Linux 向けのオープンソースのHTTPクライアント。"
 
 #: ../../source/api/tools.rst:24
 msgid "Download |insomnia-app| for your operative system."
-msgstr ""
+msgstr "あなたのOSに合わせた |insomnia-app| をダウンロードしてください。"
 
 #: ../../source/api/tools.rst:26
 msgid ""
 "Import the :download:`Insomnia spec<../resources/collections/insomnia.json>`"
 " for NEM."
 msgstr ""
+"NEM用の :download:`Insomnia 仕様 <../resources/collections/insomnia.json>` "
+"をインポートしてください。"
 
 #: ../../source/api/tools.rst:29
 msgid "Continue: :doc:`Endpoints <endpoints>`."
