@@ -166,8 +166,8 @@ msgid ""
 "an :doc:`errors <status-errors>`. The message contains the error message and"
 " the transaction hash."
 msgstr ""
-"ステータスチャンネルはアドレスに関連するトランザクションで :doc:`エラー <status-"
-"errors>`が発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
+"ステータスチャンネルはアドレスに関連するトランザクションで :doc:`エラー <status-errors>` "
+"が発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
 
 #: ../../source/api/websockets.rst:54
 msgid "Continue: :doc:`Status errors <status-errors>`."
