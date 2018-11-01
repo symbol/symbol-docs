@@ -28,12 +28,16 @@ msgid ""
 " occurs in the blockchain. The notification is received in real time without"
 " having to poll the API waiting for a reply."
 msgstr ""
+"WebSockets "
+"はブロックチェーン上でトランザクションやイベントが発生した通知を受け取ることを可能にします。この通知はAPIの返却を待つことなく、リアルタイムで行われます。"
 
 #: ../../source/api/websockets.rst:7
 msgid ""
 "Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk/overview>` is done"
 " with **Listeners**."
 msgstr ""
+":doc:`NEM2-SDK <../sdk/overview>` でAPI WebSocket と疎通するには **Listeners** "
+"によって行います。"
 
 #: ../../source/api/websockets.rst:11
 msgid "Channels"
@@ -171,4 +175,4 @@ msgstr ""
 
 #: ../../source/api/websockets.rst:54
 msgid "Continue: :doc:`Status errors <status-errors>`."
-msgstr ""
+msgstr "次へ: :doc:`ステータスエラー <status-errors>`"

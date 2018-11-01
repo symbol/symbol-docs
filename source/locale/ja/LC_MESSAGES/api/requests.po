@@ -45,7 +45,7 @@ msgstr ""
 msgid ""
 "Assuming that Catapult REST is running locally, HTTP GET requests can be "
 "executed from a browser and have the form:"
-msgstr ""
+msgstr " Catapult REST がローカルで動いていると仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
 
 #: ../../source/api/requests.rst:15
 msgid "http://localhost:3000/<path-to-API-request>"
@@ -67,6 +67,9 @@ msgid ""
 "request cannot usually be executed from within the browser unless you use a "
 ":doc:`plugin <tools>` which enables you to do it."
 msgstr ""
+"HTTP PUT と POST "
+"リクエストはボディ部にJSON形式を使用します。リクエストは(返す物があれば)データをJSON形式を返します。この種のリクエストはそれが可能な "
+":doc:`プラグイン <tools>` を利用しないことにはブラウザから実行することができません。"
 
 #: ../../source/api/requests.rst:25
 msgid "Http errors"

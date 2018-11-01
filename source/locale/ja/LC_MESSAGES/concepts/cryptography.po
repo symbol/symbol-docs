@@ -38,6 +38,8 @@ msgid ""
 "cryptographically derived from the private key. NEM is using the ``Ed25519 "
 "elliptic curve`` with the ``SHA3`` hashing algorithm."
 msgstr ""
+"**秘密鍵** はランダムな256bitの整数です。**公開鍵** は秘密鍵から暗号学的に導出されます。NEM では ``Ed25519曲線`` と "
+"``SHA3`` ハッシュアルゴリズムを使用しています。"
 
 #: ../../source/concepts/cryptography.rst:19
 msgid "Address"
@@ -45,7 +47,7 @@ msgstr "アドレス"
 
 #: ../../source/concepts/cryptography.rst:21
 msgid "A NEM address is a base-32 :sup:`3` encoded triplet consisting of:"
-msgstr ""
+msgstr "NEM アドレスは BASE 32 :sup:`3` エンコードトリプレットです:"
 
 #: ../../source/concepts/cryptography.rst:23
 msgid "Network byte"
@@ -53,41 +55,41 @@ msgstr "ネットワークバイト"
 
 #: ../../source/concepts/cryptography.rst:24
 msgid "160-bit hash of the account's public key"
-msgstr ""
+msgstr "アカウントの公開鍵の 160 bit ハッシュ"
 
 #: ../../source/concepts/cryptography.rst:25
 msgid "4 byte checksum, to allow quick recognition of mistyped addresses."
-msgstr ""
+msgstr "アドレスのミスタイプを素早く確認するための 4 byte チェックサム"
 
 #: ../../source/concepts/cryptography.rst:27
 msgid ""
 "The following steps are performed to convert a public key to an address:"
-msgstr ""
+msgstr "以下のステップで公開鍵をアドレスに変換します:"
 
 #: ../../source/concepts/cryptography.rst:29
 msgid "Perform 256-bit Sha3 on the public key."
-msgstr ""
+msgstr "公開鍵に 256 SHA3 を適用します。"
 
 #: ../../source/concepts/cryptography.rst:30
 msgid "Perform 160-bit Ripemd of hash resulting from step 1."
-msgstr ""
+msgstr "ステップ1の結果に 160 bit Ripemd ハッシュを適用します。"
 
 #: ../../source/concepts/cryptography.rst:31
 msgid "Prepend version byte to Ripemd hash (either 0x68 or 0x98)."
-msgstr ""
+msgstr "Ripemd ハッシュにバージョン byte (0x68 か 0x98) を接頭します。"
 
 #: ../../source/concepts/cryptography.rst:32
 msgid ""
 "Perform 256-bit Sha3 on the result, take the first four bytes as a checksum."
-msgstr ""
+msgstr "結果に 256bit SHA3 を適用し、最初の 4 byte をチェックサムとします。"
 
 #: ../../source/concepts/cryptography.rst:33
 msgid "Concatenate output of step 3 and the checksum from step 4."
-msgstr ""
+msgstr "ステップ3の出力とステップ4のチェックサムを結合します。"
 
 #: ../../source/concepts/cryptography.rst:34
 msgid "Encode result using base32."
-msgstr ""
+msgstr "base32 を使ってエンコードした結果"
 
 #: ../../source/concepts/cryptography.rst:36
 msgid ""
@@ -95,3 +97,4 @@ msgid ""
 "with the blockchain. The blockchain only tracks addresses involved in at "
 "least one transaction."
 msgstr ""
+"上記の説明通り、ブロックチェーンとの疎通無しにアドレスを作ることができます。ブロックチェーンは最低でも1つのトランザクションが関係するアドレスだけを追跡します。"

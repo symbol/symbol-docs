@@ -171,7 +171,7 @@ msgstr ""
 #: ../../source/sdk/release-notes/00-migration.rst:70
 #: ../../source/sdk/release-notes/00-migration.rst:223
 msgid "Models"
-msgstr ""
+msgstr "モデル"
 
 #: ../../source/sdk/release-notes/00-migration.rst:72
 #: ../../source/sdk/release-notes/00-migration.rst:225
@@ -197,7 +197,7 @@ msgstr ""
 #: ../../source/sdk/release-notes/00-migration.rst:80
 #: ../../source/sdk/release-notes/00-migration.rst:237
 msgid "**Address**"
-msgstr ""
+msgstr "**アドレス**"
 
 #: ../../source/sdk/release-notes/00-migration.rst:83
 msgid "Added static constructor createFromPublicKey."
@@ -468,7 +468,7 @@ msgstr ""
 
 #: ../../source/sdk/release-notes/00-migration.rst:256
 msgid "**Mosaic**"
-msgstr ""
+msgstr "**モザイク**"
 
 #: ../../source/sdk/release-notes/00-migration.rst:258
 msgid "Changed quantity name to amount."
@@ -504,7 +504,7 @@ msgstr ""
 
 #: ../../source/sdk/release-notes/00-migration.rst:274
 msgid "**Namespace**"
-msgstr ""
+msgstr "**ネームスペース**"
 
 #: ../../source/sdk/release-notes/00-migration.rst:276
 msgid "Changed name from Namespace to NamespaceInfo."
