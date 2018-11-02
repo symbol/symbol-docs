@@ -5,9 +5,8 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-  - make html
-  - sphinx-intl build
-  - sphinx-build -b html source build/html/ja -D language='ja'
+  - make alldocs
+
 deploy:
   provider: pages
   skip_cleanup: true
