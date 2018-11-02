@@ -50,11 +50,11 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Modify_Unknown_Multisig_Account, The multisig has not been created yet and the transaction includes a delete modification.
     Failure_Multisig_Modify_Not_A_Cosigner, The account who signed the transaction is not a cosignatory of the multisig account.
     Failure_Multisig_Modify_Already_A_Cosigner, A cosignatory added is already cosignatory of that multisig account.
-    Failure_Multisig_Modify_Min_Setting_Out_Of_Range, Multisig modification parameters are negative and inferior to the number of cosignatories of the multisig.|
+    Failure_Multisig_Modify_Min_Setting_Out_Of_Range, Multisig modification parameters are negative and inferior to the number of cosignatories of the multisig.
     Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories, It is not possible to set more required signatures than cosignatories has the multisig.
     Failure_Multisig_Modify_Unsupported_Modification_Type, The modification type is different than add (0) or remove (1).
-    Failure_Multisig_Modify_Max_Cosigned_Accounts,  An account cannot be cosignatory of more than `5` multisig accounts.  |
-    Failure_Multisig_Modify_Max_Cosigners, A multisig account cannot have more than `10` cosignatories. |
+    Failure_Multisig_Modify_Max_Cosigned_Accounts,  An account cannot be cosignatory of more than `5` multisig accounts.
+    Failure_Multisig_Modify_Max_Cosigners, A multisig account cannot have more than `10` cosignatories.
     Failure_Multisig_Modify_Loop, A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
     Failure_Multisig_Modify_Max_Multisig_Depth,  The maximum depth of a multilevel multisig account is `3`.
     Failure_Multisig_Operation_Not_Permitted_By_Account, A multisig account cannot be converted into a multisig account again.
@@ -103,4 +103,4 @@ This section describes the error messages that can be returned via status channe
     Failure_Consumer_Remote_Chain_Score_Not_Better,
     Failure_Consumer_Remote_Chain_Too_Far_Behind,
     Failure_Extension_Partial_Transaction_Cache_Prune,
-    Failure_Extension_Partial_Transaction_Dependency_Removed,|
+    Failure_Extension_Partial_Transaction_Dependency_Removed,
