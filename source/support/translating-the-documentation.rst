@@ -4,7 +4,7 @@
 Translating the documentation
 #############################
 
-The NEM Developer Center uses the Sphinx documentation system, a Python framework to write documentation. The extension `sphinx-intl <http://www.sphinx-doc.org/en/master/intl.html>`_ permits translating documentation into multiple languages without having to host different documentation sites.
+The NEM Developer Center uses Sphinx, a Python framework to write documentation. The extension `sphinx-intl <http://www.sphinx-doc.org/en/master/intl.html>`_ permits translating documentation into multiple languages without having to host different documentation sites.
 
 ****************************
 Adding/updating translations
@@ -38,7 +38,7 @@ For each documentation file, a .po file will be generated under ``_build/gettext
 
 Replace <lang> for your `language code <https://en.wikipedia.org/wiki/ISO_639-1>`_.
 
-5. Translate your .po files under ``source/locale/<lang>/LC_MESSAGES/``. For each ``msgid``, provide  the translated ``msgstr``.
+5. Translate your .po files under ``source/locale/<lang>/LC_MESSAGES/``. For each ``msgid``, provide the translated ``msgstr``.
 
 6. Generate the translated document and review the changes.
 

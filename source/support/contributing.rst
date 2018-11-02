@@ -30,6 +30,7 @@ Documentation
 
 * :doc:`Writing a guide <../guides/writing-a-guide>`
 * :doc:`Suggesting changes <suggesting-changes>`
+* :doc:`Translating the documentation <translating-the-documentation>`
 
 *********
 Workshops
