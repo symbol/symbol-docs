@@ -3,28 +3,27 @@ const translations = ['ja'];
 function translatePathRedirect(languageCode) {
     const path = window.location.pathname;
     let splitPath = path.split('/');
-    if (languageCode === 'en') {
-        splitPath.shift();
-        splitPath.shift();
+    if (splitPath[1] !== languageCode){
+        if (languageCode === 'en') {
+            splitPath.splice(1, 1);
+        } else if (translations.indexOf(splitPath[1]) > -1) {
+            splitPath[1] = languageCode;
+        } else if(translations.indexOf(languageCode) > -1){
+            splitPath.splice(1, 0, languageCode);
+        }
+        window.location.href = splitPath.join('/');
     }
-    else if(splitPath[1] in translations) {
-        splitPath[1] = languageCode;
-    }
-    else{
-        splitPath.splice(1, 0, languageCode);
-    }
-    window.location.href = splitPath.join('/');
 }
 
 function initLanguageSelector() {
     const languageSelector = $('#language select');
     const path = window.location.pathname;
     const languageCode = path.split('/')[1];
-    if (languageCode in translations) {
+    if (translations.indexOf(languageCode) > -1) {
         languageSelector.val(languageCode);
+    } else {
+        languageSelector.val('en');
     }
-    else languageSelector.val('en');
-
     languageSelector.change(function () {
         translatePathRedirect($(this).val());
     });
@@ -39,8 +38,11 @@ function homePageFullWidth(){
 function addSidebarClickHandler(){
     $('#sidebar .caption').click(function() {
         const nextUl = $(this).next('ul');
-        if (nextUl.hasClass("show")) nextUl.removeClass("show");
-        else nextUl.addClass("show");
+        if (nextUl.hasClass("show")) {
+            nextUl.removeClass("show");
+        } else {
+            nextUl.addClass("show");
+        }
     });
 }
 

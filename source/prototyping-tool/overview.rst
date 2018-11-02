@@ -29,7 +29,7 @@ Installation
 
 Download and run the |executable-package| for **Windows**, **Linux** or **Mac**.
 
-Do you already have Node-RED app? Open ``Manage palette`` and install |node-red-contrib-nem2| package.
+Do you already have Node-RED app? Open ``Manage palette`` and install |nem2-node-red| package.
 
 .. figure:: ../resources/images/nem2-prototyping-tool-install.png
     :align: center
@@ -45,7 +45,7 @@ Do you already have Node-RED app? Open ``Manage palette`` and install |node-red-
 
     <a href="https://github.com/nemtech/nem2-prototyping-tool" target="_blank">NEM2 Prototyping Tool</a>
 
-.. |node-red-contrib-nem2| raw:: html
+.. |nem2-node-red| raw:: html
 
     <a href="https://flows.nodered.org/node/node-red-contrib-nem2" target="_blank">node-red-contrib-nem2</a>
 

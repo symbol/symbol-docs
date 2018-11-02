@@ -101,7 +101,7 @@ msgid ""
 "`Simple chat "
 "<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
 msgstr ""
-"シンプルなチャット "
+"`シンプルなチャット "
 "<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
 
 #: ../../source/prototyping-tool/examples.rst:1

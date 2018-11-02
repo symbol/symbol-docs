@@ -77,8 +77,7 @@ msgid ""
 "Do you already have Node-RED app? Open ``Manage palette`` and install |node-"
 "red-contrib-nem2| package."
 msgstr ""
-"すでに Node-RED はお持ちですか？``Manage palette`` を開いて、 |node-red-contrib-nem2| "
-"パッケージをインストールしてください。"
+"すでに Node-RED はお持ちですか？``Manage palette`` を開いて、 |nem2-node-red| パッケージをインストールしてください。"
 
 #: ../../source/prototyping-tool/overview.rst:38
 msgid "*Manage palette -> Install -> node-red-contrib-nem2*"
