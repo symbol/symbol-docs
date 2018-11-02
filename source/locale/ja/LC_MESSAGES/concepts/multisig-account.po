@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/multisig-account.rst:3
+msgid "Multisig Account"
+msgstr "マルチシグアカウント"
+
+#: ../../source/concepts/multisig-account.rst:5
+msgid ""
+"Editable on-chain contracts, the most powerful way to secure funds and "
+"enable joint accounts."
+msgstr "編集可能なオンチェーンコントラクトは、資産を安全に共有アカウントで扱うのにとても強力な方法です。"
+
+#: ../../source/concepts/multisig-account.rst:7
+msgid ""
+"A NEM :doc:`account <account>` can be :doc:`converted to multisig "
+"<../guides/account/converting-an-account-to-multisig>`. From that moment on,"
+" the account cannot announce transactions by itself. It will require other "
+"accounts to announce transactions for them. These other accounts are the "
+"multisig **cosignatories**."
+msgstr ""
+"NEM :doc:`アカウント <account>` は :doc:`マルチシグに変換する<../guides/account/converting-"
+"an-account-to-multisig>` "
+"ことができます。その瞬間からアカウントはトランザクションを単独でアナウンスすることはできなくなります。他のアカウントからトランザクションをアナウンスすることを要求されます。これらの他のアカウントとは、マルチシグ"
+" **連署者** を指します。"
+
+#: ../../source/concepts/multisig-account.rst:9
+msgid ""
+"Nevertheless, it is not always necessary to force all cosignatories to "
+"cosign the transaction. NEM allows to set up the minimum number of "
+"consignatory agreements. These properties can be edited afterwards to suit "
+"almost all needs."
+msgstr ""
+"それでも、必ずしもすべての連署者にトランザクションへの連署をさせる必要はありません。NEM "
+"は連署者の同意の最小数の設定が可能です。大抵のニーズに合わせて、これらのプロパティを編集することができます。"
+
+#: ../../source/concepts/multisig-account.rst:11
+msgid "Some important considerations to keep in mind:"
+msgstr "心に留めておくべき重要な考慮事項"
+
+#: ../../source/concepts/multisig-account.rst:13
+msgid ""
+"Once you convert an account to a multisig, you can no longer initiate "
+"transactions from that account. Only cosignatories can initiate transactions"
+" for the account."
+msgstr ""
+"アカウントをマルチシグに変換すると、そのアカウントからトランザクションを開始できなくなります。連署者だけがアカウントのトランザクションを開始することができます。"
+
+#: ../../source/concepts/multisig-account.rst:15
+msgid ""
+"NEM's current implementation of multisig is *\"M-of-N\"*. This means that M "
+"can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, "
+"9-of-10 and so on."
+msgstr ""
+"NEM の現在のマルチシグの実装は *\"M-of-N\"* です。M は N と同じまたは以下の任意の数にできます。例えば 1-of-4, "
+"2-of-2, 4-of-9, 9-of-10 などの組み合わせです。"
+
+#: ../../source/concepts/multisig-account.rst:17
+msgid "Multisig accounts can have up to ``10`` cosignatories."
+msgstr "マルチシグアカウントは ``10`` 連署者までを設定可能です。"
+
+#: ../../source/concepts/multisig-account.rst:19
+msgid "An account can be cosigner of up to ``5`` multisig accounts."
+msgstr "アカウントは ``5`` マルチシグアカウントまでの連署者として設定可能です。"
+
+#: ../../source/concepts/multisig-account.rst:21
+msgid ""
+"The number of minimum cosignatures to approve transactions and remove "
+"cosignatories is editable."
+msgstr "トランザクションを承認したり、連署者を削除するために必要な最小連署者の数は変更することが可能です。"
+
+#: ../../source/concepts/multisig-account.rst:23
+msgid ""
+"Multisig accounts can have as a cosigner another multisig, up to ``3`` "
+"levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-"
+"account>`."
+msgstr ""
+"マルチシグアカウントは、最大 ``3`` レベルまでの別のマルチシグを連署者として持つことができます。:doc:`マルチレベルマルチシグアカウント "
+"<multi-level-multisig-account>` を参照してください。"
+
+#: ../../source/concepts/multisig-account.rst:25
+msgid ""
+"Multisig accounts are a powerful tool, but please use this tool with "
+"caution.  If cosignatories keys get lost and minimum approval is not "
+"reached, it would result in the permanent loss of access to the funds held "
+"by the multisig account. Choose wisely ``minimum removal`` parameter to "
+"avoid this situation."
+msgstr ""
+"マルチシグアカウントは強力なツールですが、このツールの使用には慎重になってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントの保有する資産へのアクセスが永久に不可能になります。この状況を回避するには、熟考した"
+" ``最小限の除去`` パラメータを設定してください。"
+
+#: ../../source/concepts/multisig-account.rst:27
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ "
+"です。公開ネットワークでは異なる可能性があります。"
+
+#: ../../source/concepts/multisig-account.rst:33
+msgid "Modifying multisig account transaction"
+msgstr "マルチシグアカウント変更トランザクション"
+
+#: ../../source/concepts/multisig-account.rst:35
+msgid ""
+"Modifying multisig account transaction is used to change properties of a "
+"multisig account."
+msgstr "マルチシグアカウント変更トランザクションは、マルチシグアカウントのプロパティを変更するために使用されます。"
+
+#: ../../source/concepts/multisig-account.rst:37
+msgid "**Minimum Approval Delta**"
+msgstr "**最小同意者数**"
+
+#: ../../source/concepts/multisig-account.rst:39
+msgid ""
+"The number of signatures needed to approve a transaction. If we are "
+"modifying an existing multisig account, this indicates the relative change "
+"of the minimum cosignatories."
+msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
+
+#: ../../source/concepts/multisig-account.rst:41
+msgid "**Minimum Removal Delta**"
+msgstr "**最小削除者数**"
+
+#: ../../source/concepts/multisig-account.rst:43
+msgid ""
+"The number of signatures needed to remove a cosignatory. If we are modifying"
+" an existing multisig account, this indicates the relative change of the "
+"minimum cosignatories."
+msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
+
+#: ../../source/concepts/multisig-account.rst:45
+msgid "**Modifications**"
+msgstr "**変更**"
+
+#: ../../source/concepts/multisig-account.rst:47
+msgid ""
+"List of :doc:`accounts <account>` enabled to announce and cosign "
+"transactions for its approval."
+msgstr "承認のためのトランザクションをアナウンスし、連署することができる :doc:`アカウント <account>` のリスト。"
+
+#: ../../source/concepts/multisig-account.rst:50
+msgid "Examples"
+msgstr "例"
+
+#: ../../source/concepts/multisig-account.rst:52
+msgid ""
+"There is a broad range of useful applications for multisig accounts. Let's "
+"take a look at some of the most common use cases."
+msgstr "マルチシグアカウントには幅広い便利なアプリケーションがあります。一般的な使用例のいくつかを見てみましょう。"
+
+#: ../../source/concepts/multisig-account.rst:54
+msgid ""
+"Alice and Bob live together. They have separate accounts, but they also need"
+" a shared account so that if Bob is out shopping, he can buy groceries for "
+"both him and Alice."
+msgstr ""
+"ALICE と BOB は一緒に住んでいて、それぞれのアカウントを持っています。また、BOB が外出するとき、彼が、自分と ALICE "
+"のために食料雑貨を購入できるように、共有アカウントも持っています。"
+
+#: ../../source/concepts/multisig-account.rst:60
+msgid "M-of-N multisig account example"
+msgstr "M-of-N マルチシグアカウントの例"
+
+#: ../../source/concepts/multisig-account.rst:62
+msgid ""
+"Several families are members of the local philatelist society and use a "
+"shared account to buy stamps. To ensure that all agree on which old stamps "
+"they should buy and on the right price, they use a multisig account. This "
+"way, all members of the society need to approve the transaction before it is"
+" included in the blockchain."
+msgstr ""
+"いくつかの家族は地元の切手収集家共同体のメンバーであり、切手を購入するために共有アカウントを使用していますこの方法は、正当なトランザクションとしてブロックチェーンに取り込まれる前に、共同体の全員がトランザクションに同意することが必要です。"
+
+#: ../../source/concepts/multisig-account.rst:68
+msgid "N-of-N multisig account example"
+msgstr "N-of-N マルチシグアカウントの例"
+
+#: ../../source/concepts/multisig-account.rst:70
+msgid ""
+"Security is another critical aspect of multisig accounts. Alice wants to "
+"make sure her funds are not compromised in any way. Therefore she sets up a "
+"multisig account with her funds and attaches two accounts (signer accounts) "
+"to control her multisig account as a form of 2-factor authentication. Both "
+"of her signer accounts need to approve the transaction, and her signer "
+"accounts are located on different computer platforms with different "
+"passwords. This means that even if an evil hacker or virus should compromise"
+" one of her accounts, the funds are still kept secure."
+msgstr ""
+"セキュリティはマルチシグアカウントの重要な側面です。ALICE "
+"は彼女の資産が決して損なわれないようにしたいと考えています。したがって、彼女は彼女の資産でマルチシグアカウントを設定し、マルチシグアカウントを制御するために2要素認証の形態として、2つのアカウント(署名者アカウント)を設定しました。彼女の署名者アカウントは両方ともトランザクションを承認する必要があり、この署名者アカウントは異なるパスワードを持つ、異なるコンピュータに配置されます。これは悪意のあるハッカーやウィルスが自分のアカウントのうち1つを侵害したとしても、彼女の資金はまだ安全に保たれます。"
+
+#: ../../source/concepts/multisig-account.rst:76
+msgid "Multi-factor authorization using multisig accounts"
+msgstr "マルチシグアカウントを使用した複数要素認証"
+
+#: ../../source/concepts/multisig-account.rst:78
+msgid ""
+"Multisig accounts can be used to represent the ownership of assets. A "
+"company could create a 1-of-1 multisig account for each of their products, "
+"adding themselves as the cosignatory. When the company sells the product to "
+"Alice, she becomes the owner, being the company removed in the same "
+"transaction."
+msgstr ""
+"マルチシグアカウントを使用して資産の所有権を表すことができます。企業は製品ごとに 1-of-1 "
+"マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が ALICE "
+"へ製品を販売するとき、彼女が所有者となり、同じ取引で会社の所有権が取り除かれます。"
+
+#: ../../source/concepts/multisig-account.rst:84
+msgid "Transferring an account"
+msgstr "アカウントの譲渡"

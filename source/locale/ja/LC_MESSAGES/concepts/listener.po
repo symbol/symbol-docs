@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.11.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 21:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/listener.rst:3
+msgid "Listener"
+msgstr "リスナー"
+
+#: ../../source/concepts/listener.rst:5
+msgid ""
+"Listeners make receiving notifications possible when a transaction or event "
+"occurs in the blockchain."
+msgstr "リスナーは、ブロックチェーン内のトランザクションやその他のイベントが発生したときに、通知を受け取ることを可能にします。"
+
+#: ../../source/concepts/listener.rst:7
+msgid ""
+"The notification is received in real time without having to poll the API "
+"waiting for a reply."
+msgstr "通知は API のポーリングによる返答を待つのではなく、リアルタイムで受け取れます。"
+
+#: ../../source/concepts/listener.rst:11
+msgid "Channels"
+msgstr "チャンネル"
+
+#: ../../source/concepts/listener.rst:13
+msgid "**block**"
+msgstr "**ブロック**"
+
+#: ../../source/concepts/listener.rst:15
+msgid ""
+"The block channel notifies for every new block. The message contains the "
+"block information."
+msgstr "ブロックチャンネルは新しいブロックごとに通知します。メッセージにはブロックの情報が含まれます。"
+
+#: ../../source/concepts/listener.rst:17
+msgid "**confirmedAdded/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:19
+msgid ""
+"The confirmedAdded channel notifies when a transaction related to an address"
+" is included in a block. The message contains the transaction."
+msgstr ""
+"承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。メッセージにはトランザクションが含まれます。"
+
+#: ../../source/concepts/listener.rst:21
+msgid "**unconfirmedAdded/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:23
+msgid ""
+"The unconfirmedAdded channel notifies when a transaction related to an "
+"address is in unconfirmed state and waiting to be included in a block. The "
+"message contains the transaction."
+msgstr ""
+"未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。メッセージにはトランザクションが含まれます。"
+
+#: ../../source/concepts/listener.rst:25
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction is "
+"announced to the network via ``PUT /transaction`` HTTP endpoint or an "
+"aggregate bonded transaction has all required cosigners and change its state"
+" from *partial* to *unconfirmed*."
+msgstr ""
+"トランザクションが ``PUT /transaction`` HTTP "
+"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、 *partial* から *未承認* "
+"へ変わるとき、このチャンネルからの通知が届く可能性があります。"
+
+#: ../../source/concepts/listener.rst:27
+msgid "**unconfirmedRemoved/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:29
+msgid ""
+"The unconfirmedRemoved channel notifies when a transaction related to an "
+"address was in unconfirmed state but is not anymore. The message contains "
+"the transaction hash."
+msgstr ""
+"未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
+
+#: ../../source/concepts/listener.rst:31
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction now is "
+"confirmed or the deadline has been reached and it was not included in a "
+"block."
+msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
+
+#: ../../source/concepts/listener.rst:33
+msgid "**partialAdded/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:35
+msgid ""
+"The partialAdded channel notifies when an aggregate bonded transaction "
+"related to an address is in *partial* state and waiting to have all "
+"*required cosigners*. The message contains a transaction."
+msgstr ""
+"パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが *partial* な状態にあり、すべての *必要な連署者* "
+"を待機しているときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
+
+#: ../../source/concepts/listener.rst:37
+msgid ""
+"The scenario when this channel notifies is when an aggregate bonded "
+"transaction is announced to the network via ``PUT /transaction/partial`` "
+"HTTP endpoint."
+msgstr ""
+"このチャンネルが通知するシナリオとしては、アグリゲートボンドトランザクションが ``PUT /transaction/partial`` "
+"経由でネットワークへアナウンスされたときです。"
+
+#: ../../source/concepts/listener.rst:39
+msgid "**partialRemoved/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:41
+msgid ""
+"The partialRemoved channel notifies when a transaction related to an address"
+" was in partial state but is not anymore. The message contains the "
+"transaction hash."
+msgstr ""
+"パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
+
+#: ../../source/concepts/listener.rst:43
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction now is in"
+" unconfirmed or the deadline has been reached and it was not included in a "
+"block."
+msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに取り込まれなくなったときです。"
+
+#: ../../source/concepts/listener.rst:45
+msgid "**cosignature/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:47
+msgid ""
+"The cosignature channel notifies when a *cosignature signed transaction* "
+"related to an address is added to an aggregate bonded transaction with "
+"partial state. The message contains the cosignature signed transaction."
+msgstr ""
+"連署チャネルはアドレスに関連する *連署署名トランザクション* "
+"が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。メッセージには連署したトランザクションが含まれます。"
+
+#: ../../source/concepts/listener.rst:49
+msgid "**status/<ADDRESS>**"
+msgstr ""
+
+#: ../../source/concepts/listener.rst:51
+msgid ""
+"The status channel notifies when a transaction related to an address rises "
+"an error. The message contains the error message and the transaction hash."
+msgstr ""
+"ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"

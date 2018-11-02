@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/prototyping-tool/overview.rst:5
+msgid "Overview"
+msgstr "概要"
+
+#: ../../source/prototyping-tool/overview.rst:10
+msgid ""
+"Create blockchain applications without coding using **NEM2 Prototyping "
+"Tool**."
+msgstr "コーディングせずに **NEM2 Prototyping Tool** を使ってブロックチェーンアプリケーションを作りましょう。"
+
+#: ../../source/prototyping-tool/overview.rst:12
+msgid ""
+"Drag & drop NEM nodes and link them with other services in new and "
+"interesting ways for prototyping or learning purposes."
+msgstr "NEM ノードをドラッグ＆ドロップして他のサービスとリンクし、プロトタイピングや学習のための新しく、楽しい方法を提供します。"
+
+#: ../../source/prototyping-tool/overview.rst:16
+msgid "Node-RED"
+msgstr ""
+
+#: ../../source/prototyping-tool/overview.rst:18
+msgid "|NEM2-Prototyping-Tool| is a collection of **Node-RED** nodes."
+msgstr "|NEM2-Prototyping-Tool| は **Node-RED** ノードの集まりです。"
+
+#: ../../source/prototyping-tool/overview.rst:20
+msgid ""
+"|Node-RED| is a visual programming tool to wire together hardware devices, "
+"APIs and online services."
+msgstr "|Node-RED| はハードウェアやAPI、オンラインサービスと一緒に接続するための仮想的なプログラミングツールです。"
+
+#: ../../source/prototyping-tool/overview.rst:22
+msgid ""
+"It provides a browser-based editor to wire nodes. The combination of nodes "
+"is named flows, which you can execute in a single click."
+msgstr "ノードを接続するブラウザベースのエディタを提供します。ノードのコンビネーションはクリックで実行できる名前付きのフローになります。"
+
+#: ../../source/prototyping-tool/overview.rst:24
+msgid ""
+"The flows created in Node-RED are stored using JSON, being exportable to "
+"share with others."
+msgstr "Node-RED で作ったフローは、他の人と共有するためにエクスポート可能な JSON として保存されます。"
+
+#: ../../source/prototyping-tool/overview.rst:28
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/prototyping-tool/overview.rst:30
+msgid ""
+"Download and run the |executable-package| for **Windows**, **Linux** or "
+"**Mac**."
+msgstr ""
+"**Windows**, **Linux** または **Mac** 向けの |executable-package| をダウンロードして、 "
+"実行してください。"
+
+#: ../../source/prototyping-tool/overview.rst:32
+msgid ""
+"Do you already have Node-RED app? Open ``Manage palette`` and install |node-"
+"red-contrib-nem2| package."
+msgstr ""
+"すでに Node-RED はお持ちですか？``Manage palette`` を開いて、 |node-red-contrib-nem2| "
+"パッケージをインストールしてください。"
+
+#: ../../source/prototyping-tool/overview.rst:38
+msgid "*Manage palette -> Install -> node-red-contrib-nem2*"
+msgstr ""

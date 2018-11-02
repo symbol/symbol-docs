@@ -1,3 +1,35 @@
+const translations = ['ja'];
+
+function translatePathRedirect(languageCode) {
+    const path = window.location.pathname;
+    let splitPath = path.split('/');
+    if (languageCode === 'en') {
+        splitPath.shift();
+        splitPath.shift();
+    }
+    else if(splitPath[1] in translations) {
+        splitPath[1] = languageCode;
+    }
+    else{
+        splitPath.splice(1, 0, languageCode);
+    }
+    window.location.href = splitPath.join('/');
+}
+
+function initLanguageSelector() {
+    const languageSelector = $('#language select');
+    const path = window.location.pathname;
+    const languageCode = path.split('/')[1];
+    if (languageCode in translations) {
+        languageSelector.val(languageCode);
+    }
+    else languageSelector.val('en');
+
+    languageSelector.change(function () {
+        translatePathRedirect($(this).val());
+    });
+}
+
 function homePageFullWidth(){
     const jumbotron = $('.jumbotron');
     jumbotron.closest('.container').css({"width": "100%", "padding": "0px"});
@@ -28,6 +60,7 @@ $( document ).ready(function() {
     homePageFullWidth();
     addSidebarClickHandler();
     addBlockCaptionInsideCodeExample();
+    initLanguageSelector();
     addHoverToSidebar();
 });
 

@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/overview.rst:3
+msgid "Overview"
+msgstr "概要"
+
+#: ../../source/guides/overview.rst:5
+msgid ""
+"Guides show you how to use NEM built-in features. Every guide comes with the"
+" code implementation ready to use."
+msgstr "このガイドでは NEM にビルドインされている機能の使い方を説明します。各ガイドにはすぐに実行できる実装が用意されています。"
+
+#: ../../source/guides/overview.rst:7
+msgid ":doc:`Interacting with accounts <account>`"
+msgstr ":doc:`アカウントとの疎通 <account>`"
+
+#: ../../source/guides/overview.rst:8
+msgid ":doc:`Monitoring blockchain <blockchain>`"
+msgstr ":doc:`ブロックチェーンの監視 <blockchain>`"
+
+#: ../../source/guides/overview.rst:9
+msgid ":doc:`Registering namespaces <namespace>`"
+msgstr ":doc:`ネームスペースの取得 <namespace>`"
+
+#: ../../source/guides/overview.rst:10
+msgid ":doc:`Interacting with mosaics <mosaic>`"
+msgstr ":doc:`モザイクとの疎通 <mosaic>`"
+
+#: ../../source/guides/overview.rst:11
+msgid ":doc:`Sending transactions <transaction>`"
+msgstr ":doc:`トランザクションの送信 <transaction>`"
+
+#: ../../source/guides/overview.rst:12
+msgid ":doc:`Running a node <running-a-node>`"
+msgstr ":doc:`ノードの起動 <running-a-node>`"
+
+#: ../../source/guides/overview.rst:14
+msgid ""
+"Access to more self-paced training reviewing :doc:`workshops <workshops>`."
+msgstr "自分のペースに合わせたトレーニングの :doc:`ワークショップ <workshops>` レビュー。"
+
+#: ../../source/guides/overview.rst:18
+msgid "How to run an example"
+msgstr "例の実行方法"
+
+#: ../../source/guides/overview.rst:20
+msgid ""
+"Download the |guide-repository|. They are divided by programming language "
+"and topic."
+msgstr "|guide-repository| リポジトリをダウンロードしてください。プログラミング言語ごとに分けられています。"
+
+#: ../../source/guides/overview.rst:23
+msgid "Cli"
+msgstr ""
+
+#: ../../source/guides/overview.rst:25
+msgid "Go to ``cli`` folder, and give executing permission to an example."
+msgstr "``cli`` フォルダに移動して、例に実行権限をつけましょう。"
+
+#: ../../source/guides/overview.rst:31 ../../source/guides/overview.rst:54
+#: ../../source/guides/overview.rst:75
+msgid "Find and run an example."
+msgstr "例を選んで実行してください。"
+
+#: ../../source/guides/overview.rst:38
+msgid "TypeScript"
+msgstr ""
+
+#: ../../source/guides/overview.rst:40
+msgid "Go to ``typescript`` folder and then install the required packages."
+msgstr "``typescript`` フォルダに移動し、必要なパッケージをインストールしてください。"
+
+#: ../../source/guides/overview.rst:46
+msgid "Use `ts-node`_ to execute TypeScript files with node."
+msgstr "nodeでTypeScriptを実行するために `ts-node`_ を使います。"
+
+#: ../../source/guides/overview.rst:48
+msgid "Install the tool first if you have not it installed yet."
+msgstr "まだインストールしていない場合は、先にツールをインストールしてください。"
+
+#: ../../source/guides/overview.rst:60 ../../source/guides/overview.rst:81
+msgid ""
+"If some code contains dynamic variables, for example, a public key (without "
+"quotes), run:"
+msgstr "コードに動的な変数が含まれる場合、例えば公開鍵(クオートは外してください)ではこのように実行します:"
+
+#: ../../source/guides/overview.rst:67
+msgid "JavaScript"
+msgstr ""
+
+#: ../../source/guides/overview.rst:69
+msgid "Go to ``javascript`` folder and then install the required packages."
+msgstr "``javascript`` フォルダに移動し、必要なパッケージをインストールしてください。"
+
+#: ../../source/guides/overview.rst:90
+msgid "Java"
+msgstr ""
+
+#: ../../source/guides/overview.rst:92
+msgid "Open ``java`` folder with your favourite IDE."
+msgstr "``java`` フォルダをお好みのIDEで開いてください。"
+
+#: ../../source/guides/overview.rst:94
+msgid "Find the example and run it as a JUnit Test."
+msgstr "例を選んで、JUnit Testとして実行してください。"

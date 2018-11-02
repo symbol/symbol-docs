@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/getting-started/first-application.rst:3
+msgid "Writing your first application"
+msgstr "はじめてのアプリケーションを作成"
+
+#: ../../source/getting-started/first-application.rst:5
+msgid ""
+"This first guide will take you through some :doc:`NEM general concepts "
+"<../concepts/account>`. Once you find a new one, it is advisable to read "
+"more about it by clicking on the provided link."
+msgstr ""
+"この最初のガイドでは、 :doc:`NEM においての一般的な概念 <../concepts/account>` "
+"を紹介します。目新しいことを見つけたら、提供されたリンクをクリックして詳細を読むことをおすすめします。"
+
+#: ../../source/getting-started/first-application.rst:9
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/getting-started/first-application.rst:11
+msgid ""
+":doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in "
+"the blockchain, such as objects, tickets, coupons, stock share "
+"representation, and even your cryptocurrency."
+msgstr ""
+":doc:`モザイク <../concepts/mosaic>` "
+"は物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなる資産をブロックチェーン上に表現するために使用されます。"
+
+#: ../../source/getting-started/first-application.rst:13
+msgid ""
+"After finishing this guide, you will be able to create a mosaic and send "
+"your first :ref:`transfer transaction <transfer-transaction>` in less than "
+"15 minutes."
+msgstr ""
+"このガイドを終了したら、あなたはモザイクを作成して、はじめての :ref:`転送トランザクション<transfer-transaction>` "
+"を送ることを15分以下で実施できるようになります。"
+
+#: ../../source/getting-started/first-application.rst:15
+msgid ""
+"At first glance, it may seem difficult to imagine that you can do all of "
+"this in such a short period of time. NEM tools make it possible by reducing "
+"blockchain development complexity, allowing developers to focus on their "
+"product."
+msgstr ""
+"一見すると、短期間でこれだけのことができるとは想像しにくいかもしれません。ですが、NEM "
+"のツール郡を使用するとブロックチェーンの開発の複雑さを削減でき、開発者に製品の開発へ集中させることでそれが可能になります。"
+
+#: ../../source/getting-started/first-application.rst:19
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/getting-started/first-application.rst:21
+msgid "Finish :doc:`getting started section <setup-workstation>`"
+msgstr ":doc:`入門セクション <setup-workstation>` を終了していること"
+
+#: ../../source/getting-started/first-application.rst:22
+msgid "Text editor or IDE"
+msgstr "テキストエディタ または IDE"
+
+#: ../../source/getting-started/first-application.rst:23
+msgid "NEM2-SDK and CLI"
+msgstr "NEM2-SDK と CLI"
+
+#: ../../source/getting-started/first-application.rst:24
+msgid "An account with XEM"
+msgstr "XEM を保有したアカウント"
+
+#: ../../source/getting-started/first-application.rst:28
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/getting-started/first-application.rst:30
+msgid "**Checking your balance**"
+msgstr "**残高を確認してください**"
+
+#: ../../source/getting-started/first-application.rst:32
+msgid ""
+"Have you loaded an account with test XEM? If it is not the case, go back to "
+":doc:`getting started section <setup-workstation>`."
+msgstr ""
+"テストネットXEMを保有したアカウントの読み込みは済ませましたか？まだ終わっていないのであれば :doc:`入門セクション <setup-"
+"workstation>` に戻ってください。"
+
+#: ../../source/getting-started/first-application.rst:34
+msgid "Check if you have XEM into your account."
+msgstr "あなたのアカウントに XEM が入ってきているかを確認しましょう。"
+
+#: ../../source/getting-started/first-application.rst:40
+msgid ""
+"After running the command, you should see on your screen a line similar to:"
+msgstr "このコマンドの実行後に、同じような行がスクリーンに表示されるでしょう:"
+
+#: ../../source/getting-started/first-application.rst:42
+msgid "New Account: SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:44
+msgid "[...]"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:46
+msgid "Mosaics"
+msgstr "モザイク"
+
+#: ../../source/getting-started/first-application.rst:48
+msgid "3628d0b327fb1dd8:       1000000"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:50
+msgid ""
+"Our account owns 1.000.000 XEM. If your row after mosaics is empty, follow "
+":doc:`the previous tutorial <setup-workstation>`."
+msgstr ""
+"アカウントは 1,000,000 XEM を保有しています。もし mosaics の次の行が空であるならば、:doc:`前のチュートリアル "
+"<setup-workstation>` に従ってください。"
+
+#: ../../source/getting-started/first-application.rst:52
+msgid "**Monitoring the blockchain**"
+msgstr "**ブロックチェーンの監視**"
+
+#: ../../source/getting-started/first-application.rst:54
+msgid ""
+"Accounts change the blockchain state through transactions. Once an account "
+"announces a transaction, if properly formed, the server will return an OK "
+"response."
+msgstr ""
+"アカウントはトランザクションを通じてブロックチェーンの状態を変更します。アカウントが正しく構成されているトランザクションをアナウンスすると、サーバーは "
+"OK のレスポンスを返します。"
+
+#: ../../source/getting-started/first-application.rst:56
+msgid ""
+"Receiving an OK response does not mean the transaction is valid, which means"
+" it is still not included in a block. A good practice is to monitor "
+"transactions before being announced."
+msgstr ""
+"OK "
+"のレスポンスを受信することは、トランザクションが正当であることを意味するわけではなく、まだブロックには含まれていないことを意味します。トランザクションをアナウンスする前に監視を始めておくのがよいでしょう。"
+
+#: ../../source/getting-started/first-application.rst:58
+msgid ""
+"We suggest opening three new terminals. The first terminal :doc:`monitors "
+"announced transactions<../guides/transaction/debugging-transactions>` "
+"validation errors."
+msgstr ""
+"ターミナルを3つ開くことをおすすめします。バリデーションエラーのある :doc:`アナウンスされたトランザクションの監視 "
+"<../guides/transaction/debugging-transactions>` 。"
+
+#: ../../source/getting-started/first-application.rst:64
+msgid ""
+"Monitoring ``unconfirmed`` shows you which transactions have reached the "
+"network, but are not included in a block yet."
+msgstr "``未承認`` の監視はトランザクションがネットワークに到着したことを確認できますが、まだブロックには含まれてません。"
+
+#: ../../source/getting-started/first-application.rst:70
+msgid ""
+"Once a transaction is included, you will see it under the ``confirmed`` "
+"terminal."
+msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
+
+#: ../../source/getting-started/first-application.rst:77
+msgid "**Creating a namespace**"
+msgstr "**ネームスペースの作成**"
+
+#: ../../source/getting-started/first-application.rst:79
+msgid "Before creating your mosaic, you need to register a namespace."
+msgstr "モザイクを作成する前に、ネームスペースを取得する必要があります。"
+
+#: ../../source/getting-started/first-application.rst:81
+msgid ""
+"A :doc:`namespace <../concepts/namespace>` is an on-chain unique domain for "
+"your assets. The easiest way to understand it is by means of the domain-file"
+" analogy on the internet. Imagine that a domain address has to be unique in "
+"a root (lowest level)."
+msgstr ""
+":doc:`ネームスペース <../concepts/namespace>` "
+"はチェーン上の資産のための一意なドメインです。インターネット上のドメインのファイルの関係に類似していることに例えるのが、これを理解するのに最も簡単です。ドメインのアドレスがルート(最下層)において一意であることを考えてみてください。"
+
+#: ../../source/getting-started/first-application.rst:83
+msgid ""
+"A mosaic is like a file hosted on a domain and it represents an asset. Like "
+"a website and directory, a mosaic can have the same name as other files on "
+"other domains. However,  a namespace + mosaic is always unique."
+msgstr ""
+"モザイクはドメイン上にホストされているファイルのようなもので、資産として表現されます。ウェブサイトやディレクトリと同様に、モザイクは他のドメインの他のファイルと同じ名前を持つことができます。それでも、ネームスペース"
+" + モザイクは常に一意になります。"
+
+#: ../../source/getting-started/first-application.rst:85
+msgid ""
+"First, register your namespace by choosing a name that you like. One common "
+"option is to use your company's or own name.  In this example, we will "
+"register a namespace called ``foo``. Let's check if this name is available."
+msgstr ""
+"まず、あなたの好きな名前でネームスペースを登録しましょう。よくある方法として、あなたの会社や自分の名前を使用します。このケースでは、``foo`` "
+"というネームスペースを登録します。この名前が有効であるか確認してみましょう。"
+
+#: ../../source/getting-started/first-application.rst:91
+msgid ""
+"Is the namespace available? Register it by setting the namespace name and "
+"its renting duration expressed in blocks."
+msgstr "そのネームスペースは有効ですか？ネームスペース名とブロック数で数えたレンタル期間を指定して取得してください。"
+
+#: ../../source/getting-started/first-application.rst:93
+msgid "In Catapult, NEM blocks are complete every ``15`` seconds in average."
+msgstr "Catapultにおいて、NEM ブロック生成は平均 ``15`` 毎秒で完了します。"
+
+#: ../../source/getting-started/first-application.rst:99
+msgid ""
+"Did you check what happened in terminals where you are monitoring your "
+"account transactions? The transaction first appeared under ``unconfirmed`` "
+"terminal and, after a while, got confirmed ``confirmed``."
+msgstr ""
+"アカウントのトランザクションを監視しているターミナルで何が起きたかを確認しましたか？トランザクションはまず ``unconfirmed`` "
+"の下に表示され、その後 ``confirmed`` になります。"
+
+#: ../../source/getting-started/first-application.rst:101
+msgid "**Creating a mosaic**"
+msgstr "**モザイクの作成**"
+
+#: ../../source/getting-started/first-application.rst:103
+msgid ""
+"Choose the name for your mosaic. The name of the mosaic, up to a size limit "
+"of ``64`` characters, must be unique under the domain name."
+msgstr "モザイクの名前を選んでください。モザイク名は最大 ``64`` 文字で一意なドメイン名でなければなりません。"
+
+#: ../../source/getting-started/first-application.rst:105
+msgid ""
+"Our mosaic will be called ``token``, and its parent namespace will be "
+"``foo``, with a total supply of ``1.000.000``."
+msgstr "モザイクは ``token`` と呼び、その親ネームスペースは ``foo`` であり、供給量は ``1,000,000`` となります。"
+
+#: ../../source/getting-started/first-application.rst:107
+msgid "Reference this mosaic in future transactions as ``foo:token``."
+msgstr "のちのトランザクションでは、このモザイクを ``foo:token`` として参照してください。"
+
+#: ../../source/getting-started/first-application.rst:113
+msgid "**Send your first transfer transaction**"
+msgstr "**はじめての転送トランザクションの送信**"
+
+#: ../../source/getting-started/first-application.rst:115
+msgid ""
+"Congratulations! You are the owner of the mosaic. Now send some "
+"``foo:token`` to another account announcing a :ref:`transfer transaction "
+"<transfer-transaction>`, one of the most commonly used actions in NEM."
+msgstr ""
+"おめでとう！これであなたはこのモザイクの所有者です。 :ref:`転送トランザクション <transfer-transaction>` "
+"をアナウンスすることで、幾分かの ``foo:token`` を他のアカウントへ送ることができます。これは NEM の中で最も一般的なアクションです。"
+
+#: ../../source/getting-started/first-application.rst:117
+msgid "A transfer transaction is made of three essential attributes:"
+msgstr "転送トランザクションは３つの不可欠な属性によって成り立ちます:"
+
+#: ../../source/getting-started/first-application.rst:119
+msgid "The recipient address."
+msgstr "受信アドレス"
+
+#: ../../source/getting-started/first-application.rst:120
+msgid "A message, that can be encrypted or not."
+msgstr "メッセージ、暗号化することも可能です"
+
+#: ../../source/getting-started/first-application.rst:121
+msgid "An array of mosaics."
+msgstr "モザイク配列"
+
+#: ../../source/getting-started/first-application.rst:123
+msgid ""
+"In this example, you are going to send ``10 foo:token`` to ``SC7A4H-7CYCSH-"
+"4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``. You can also include a message, for "
+"example ``my first transfer transaction!``. Feel free change the recipient "
+"address by creating a new account."
+msgstr ""
+"この例では、 ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU`` へ ``10 foo:token``"
+" を送りました。また、 ``my first transfer transaction!`` "
+"のようにメッセージを添付することもできます。新しくアカウントを作成して、受信アドレスを変更してみましょう。"
+
+#: ../../source/getting-started/first-application.rst:188
+msgid ""
+"Although the transaction is created, it has not been announced to the "
+"network yet. Sign the transaction with your account first, so the network "
+"can verify the authenticity of the transaction."
+msgstr ""
+"トランザクションは作られましたが、まだネットワークへアナウンスされていません。ネットワークがトランザクションの信憑性を検証できるように、あなたのアカウントでトランザクションに署名します。"
+
+#: ../../source/getting-started/first-application.rst:216
+msgid "Once signed, announce it to the network."
+msgstr "署名が終わったら、ネットワークへアナウンスします。"
+
+#: ../../source/getting-started/first-application.rst:251
+msgid "What's next?"
+msgstr "次は？"
+
+#: ../../source/getting-started/first-application.rst:253
+msgid ""
+"Continue reviewing :doc:`general concepts <../concepts/account>` or "
+"practicing with more step-by-step :doc:`guides <../guides/overview>`."
+msgstr ""
+":doc:`一般的なコンセプト <../concepts/account>` を復習したり、ステップバイステップ :doc:`ガイド "
+"<../guides/overview>` でさらに練習してください。"

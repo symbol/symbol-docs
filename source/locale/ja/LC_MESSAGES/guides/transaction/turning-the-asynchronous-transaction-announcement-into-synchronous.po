@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:10
+msgid "Turning the asynchronous transaction announcement into synchronous"
+msgstr "非同期なトランザクションのアナウンスを同期的にする"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:12
+msgid ""
+"Turn asynchronous transaction announcement into synchronous with "
+"|nem2-camel|."
+msgstr "|nem2-camel| で非同期なトランザクションのアナウンスを同期的にします。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:16
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:18
+msgid ""
+"Alice is developing an app to send 10 nem:xem to Bob. She wants to know if "
+"the transaction has reached the network before sending Bob an email."
+msgstr ""
+"ALICE は BOB に 10 nem:xem を送るアプリケーションを開発しています。彼女は BOB "
+"にメールを送る前に、トランザクションがネットワークに到着したかどうかを知りたいです。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:20
+msgid ""
+"When announcing a transaction in NIS1, you had to wait to get the response "
+"from the node. Catapult works differently. When a transaction is announced, "
+"the REST API server will always return an OK."
+msgstr ""
+"NIS1 では、トランザクションをアナウンスしたら、ノードからのレスポンスを待つ必要がありました。Catapult "
+"では異なる動作をします。トランザクションがアナウンスされると、REST API サーバーは常に OK を返します。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:22
+msgid ""
+"As a result, the developer does not have to wait until the server returns a "
+"response, being able to make more responsive apps.  However, it is "
+"developer's responsibility to check the transactions status and ensure it is"
+" confirmed."
+msgstr ""
+"これにより、開発者はサーバがレスポンスを返却するのを待つ必要がなくなり、よりレスポンシブなアプリケーションの開発を可能になりました。しかし、トランザクションの状態を確認、承認を確認することは開発者の責任となりました。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:24
+msgid ""
+"On the other hand, keeping track of transactions status adds unnecessary "
+"complexity to small projects. It also increases the difficulty when "
+"migrating from NIS1."
+msgstr ""
+"一方で、トランザクションの状態を追跡し続けることは、小さなプロジェクトに複雑さを持ち込むことになります。NIS1 "
+"からのマイグレーションにおいても難易度が上がってしまうでしょう。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:26
+msgid ""
+"nem2-camel aims to solve these problems by providing a server that listens "
+"to the Catapult REST calls and acts as a proxy. When it detects a "
+"transaction announcement, it waits for the confirmation via "
+":doc:`WebSockets<../../api/websockets>` and returns the message to the HTTP "
+"call."
+msgstr ""
+"nem2-camel は、Catapult REST "
+"を監視し、プロキシとして動作するサーバの提供によって、これらの問題の解決を目指しています。トランザクションのアナウンスを検知すると、 "
+":doc:`WebSockets<../../api/websockets>` を経由して承認を待ち、HTTP 呼び出しへメッセージを返します。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:28
+msgid ""
+"The function ``TransactionHttp.announceSync`` allows announcing transactions"
+" synchronously when using  nem2-camel as a proxy.  nem2-camel will respond "
+"successfully when the transaction has reached the network and had no "
+"validation errors.  You might still need to :doc:`wait for several "
+"confirmations  <../../concepts/transaction>` before executing additional "
+"actions."
+msgstr ""
+"nem2-camel をプロキシとして使用するとき、 ``TransactionHttp.announceSync`` "
+"関数はトランザクションを同期的に実行します。nem2-camel "
+"は、トランザクションがネットワークへ到着し、正当性チェックエラーが無い場合に、成功を返します。あなたは、追加のアクションを実行する前に "
+":doc:`幾分かの承認を待つ <../../concepts/transaction>` 必要があるかもしれません。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:33
+msgid "nem2-camel"
+msgstr ""
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:37
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:39
+msgid ""
+"Finish :doc:`sending a transfer transaction guide <sending-a-transfer-"
+"transaction>`"
+msgstr ":doc:`転送トランザクションの送信ガイド <sending-a-transfer-transaction>` を終了していること"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:40
+msgid "A text editor or IDE"
+msgstr "テキストエディタ または IDE"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:41
+msgid "An account with XEM"
+msgstr "XEM を保有したアカウント"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:45
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:47
+msgid "**Running Catapult Service in local**"
+msgstr "**Catapultサービスをローカルに立ち上げます**"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:49
+msgid "nem2-camel acts like a proxy between the application and the REST API."
+msgstr "nem2-camel はアプリケーションと REST API の間のプロキシとして動作します。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:51
+msgid ""
+"For development and learning purposes, you can run the :doc:`Catapult Server"
+" and Catapult REST <../../concepts/node>` using the |catapult-service-"
+"bootstrap|."
+msgstr ""
+"開発と学習の目的のために |catapult-service-bootstrap| を使用して、 :doc:`Catapult サーバ と "
+"Catapult REST <../../concepts/node>` を実行できます。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:53
+msgid ""
+"Make sure you have |docker| and |docker-compose| installed before running "
+"the following instructions:"
+msgstr "以下のインストラクションを実行する前に、 |docker| と |docker-compose| をインストールしてください:"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:61
+msgid ""
+"If everything goes well, after the image has been downloaded and the service"
+" is running, check if you can get the first block information:"
+msgstr "すべてがうまく行けば、イメージがダウンロードされ、サービスが動き始めるので、最初のブロックの情報を取得して確認ができるでしょう:"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:67
+msgid "**Getting Alice and Bob addresses**"
+msgstr "**ALICE と BOB のアドレスを手に入れる**"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:69
+msgid ""
+"Once the Catapult Service is running, it will generate a set of "
+":doc:`accounts <../../concepts/account>` containing XEM."
+msgstr ""
+"Catapult サービスが動き出せば、XEM を保有した :doc:`アカウント <../../concepts/account>` "
+"が生成されるでしょう。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:71
+msgid ""
+"Find the key pairs which contain XEM under the section "
+"``nemesis_addresses``."
+msgstr "``nemesis_addresses`` のセクションからキーペアを見つけてください。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:82
+msgid "**Installing nem2-camel**"
+msgstr "**nem2-camel のインストール**"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:84
+msgid "nem2-camel requires at least Java version 8."
+msgstr "nem2-camel は少なくとも Java 8 以上を必要とします。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:86
+msgid "Download the latest |nem2-camel-jar| package release, and run:"
+msgstr "リリースされている |nem2-camel-jar| パッケージをダウンロードして、実行してください:"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:92
+msgid "After the service is up, use ``0.0.0.0:9000`` as the new proxy url."
+msgstr "サービスを起動したら ``0.0.0.0:9000`` を新しいプロキシURLとして使用してください。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:94
+msgid "**Sending the transfer transaction**"
+msgstr "**転送トランザクションの送信**"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:96
+msgid ""
+"Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-"
+"transaction>`, sending ``10 XEM`` to Bob and signs it with her account."
+msgstr ""
+"ALICE は :doc:`転送トランザクション <../../concepts/transfer-transaction>` を作成し、``10 "
+"XEM`` を BOB へ送り、彼女のアカウントで署名します。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:100
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:109
+msgid ""
+"|turning-the-asynchronous-transaction-announcement-into-synchronous-ts|"
+msgstr ""
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:105
+msgid ""
+"Once signed, Alice can :doc:`announce the transaction "
+"<../../concepts/transaction>` to the network. Use "
+"``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to "
+"wait until it reaches the network and returns back the Transaction object. "
+"After that, Alice can send an email to Bob."
+msgstr ""
+"署名が済めば、ALICE はネットワークへ :doc:`トランザクションをアナウンス <../../concepts/transaction>` "
+"できます。トランザクションがネットワークへ到着し、トランザクションオブジェクトを返却するのを待つために、``TransactionHttp.announceSync``"
+" の代わりに ``TransactionHttp.announce`` を使用してください。その後に ALICE は BOB "
+"にメールを送信することができます。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:114
+msgid ""
+"If the transaction is valid, nem2-camel returns a ``Transaction`` object. It"
+" is important to highlight that this transaction has an ``unconfirmed`` "
+"status. Alice, or you, might still need to :doc:`wait  for several "
+"confirmations <../../concepts/transaction>` before executing additional "
+"actions."
+msgstr ""
+"トランザクションが正当であれば、nem2-camel は ``Transaction`` オブジェクトを返します。トランザクションには ``未確認`` "
+"状態があることを強調することが重要です。ALICE またはあなたは、追加のアクションを実行する前に :doc:`幾分かの承認を待つ "
+"<../../concepts/transaction>` 必要があるかもしれません。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:116
+msgid ""
+"In case the Catapult REST server throws an error, the subscribe method will "
+"invoke the ``error function`` returning a ``TransactionStatus`` object."
+msgstr ""
+"Catapult REST サーバーがエラーをスローした場合、購読メソッドは ``TransactionStatus`` オブジェクトを返す "
+"``error`` 関数を呼び出します"

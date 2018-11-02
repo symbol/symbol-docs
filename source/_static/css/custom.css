@@ -429,6 +429,22 @@ footer .social li{
     margin-right: 20px;
 }
 
+@media screen and (max-width: 768px){
+    footer .social{
+        margin-bottom: 0px;
+    }
+
+    footer li{
+        margin-bottom: 10px;
+    }
+}
+
+footer select{
+    color: rgba(255,255,255,0.4);
+    border: 0;
+    background: transparent;
+}
+
 /* Home Page */
 
 .home.jumbotron{

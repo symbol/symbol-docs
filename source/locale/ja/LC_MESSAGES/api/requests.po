@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/api/requests.rst:3
+msgid "Overview"
+msgstr "概要"
+
+#: ../../source/api/requests.rst:5
+msgid ""
+"**Catapult REST API** combines HTTP and WebSockets to perform read and write"
+" actions in the NEM blockchain."
+msgstr ""
+"**Catapult REST API** はHTTPとWebSocketsを NEM ブロックチェーンを読み書きできるように併合させます。"
+
+#: ../../source/api/requests.rst:9
+msgid "Requests"
+msgstr "リクエスト"
+
+#: ../../source/api/requests.rst:11
+msgid ""
+"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
+"**POST** requests."
+msgstr ""
+"Catapult REST はポート `3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
+"リクエストを受け付けます。"
+
+#: ../../source/api/requests.rst:13
+msgid ""
+"Assuming that Catapult REST is running locally, HTTP GET requests can be "
+"executed from a browser and have the form:"
+msgstr " Catapult REST がローカルで動いていると仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
+
+#: ../../source/api/requests.rst:15
+msgid "http://localhost:3000/<path-to-API-request>"
+msgstr ""
+
+#: ../../source/api/requests.rst:17
+msgid "For example:"
+msgstr "例"
+
+#: ../../source/api/requests.rst:19
+msgid ""
+"http://localhost:3000/account/7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246/transactions"
+msgstr ""
+
+#: ../../source/api/requests.rst:21
+msgid ""
+"HTTP PUT and POST requests use JSON structures in the request body. Request "
+"returns data (if any is returned) using JSON structures. This kind of "
+"request cannot usually be executed from within the browser unless you use a "
+":doc:`plugin <tools>` which enables you to do it."
+msgstr ""
+"HTTP PUT と POST "
+"リクエストはボディ部にJSON形式を使用します。リクエストは(返す物があれば)データをJSON形式を返します。この種のリクエストはそれが可能な "
+":doc:`プラグイン <tools>` を利用しないことにはブラウザから実行することができません。"
+
+#: ../../source/api/requests.rst:25
+msgid "Http errors"
+msgstr "HTTP エラー"
+
+#: ../../source/api/requests.rst:1
+msgid "Status code"
+msgstr "ステータスコード"
+
+#: ../../source/api/requests.rst:1 ../../source/api/requests.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/api/requests.rst:1
+msgid "200"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid "Ok. The request has succeeded."
+msgstr "OK リクエストは成功しました。"
+
+#: ../../source/api/requests.rst:1
+msgid "202"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid ""
+"Accepted. The request has been accepted for processing but the processing "
+"has not been completed."
+msgstr "Accepted リクエストは処理のために受理されましたが、処理は完了していません。"
+
+#: ../../source/api/requests.rst:1
+msgid "400"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid "Bad request. Check your request syntax."
+msgstr "Bad request リクエストのシンタックスを確認してください。"
+
+#: ../../source/api/requests.rst:1
+msgid "404"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid "Not found. The resource does not exist."
+msgstr "Not Found リソースは存在しません。"
+
+#: ../../source/api/requests.rst:1
+msgid "409"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid "Conflict. Check your arguments."
+msgstr "Conflict 引数を確認してください。"
+
+#: ../../source/api/requests.rst:1
+msgid "500"
+msgstr ""
+
+#: ../../source/api/requests.rst:1
+msgid "Internal error. Unexpected condition."
+msgstr "Internal error 予期しない状態です。"
+
+#: ../../source/api/requests.rst:40
+msgid "Http status"
+msgstr "HTTP ステータス"
+
+#: ../../source/api/requests.rst:1
+msgid "Key"
+msgstr "キー"
+
+#: ../../source/api/requests.rst:1
+msgid "code"
+msgstr "コード"
+
+#: ../../source/api/requests.rst:1
+msgid "Error identifier in camelCase."
+msgstr "キャメルケースによるエラー識別子"
+
+#: ../../source/api/requests.rst:1
+msgid "message"
+msgstr "メッセージ"
+
+#: ../../source/api/requests.rst:1
+msgid "Error explained in human-readable format."
+msgstr "可読可能なフォーマットによるエラー説明"
+
+#: ../../source/api/requests.rst:49
+msgid "**Example**"
+msgstr "**例**"
+
+#: ../../source/api/requests.rst:60
+msgid "Numbers: lower and higher"
+msgstr "数値: 高位と下位"
+
+#: ../../source/api/requests.rst:62
+msgid ""
+"Javascript operate on 32 bit values. To enable representation up to 64 bits,"
+" the API returns numbers encoded in two parts: ``lower`` and ``higher``."
+msgstr ""
+"Javascript は 32 bit の値を扱います。64 bit の表現を可能にするために、API は ``lower`` と ``higher``"
+" の２つの部分にエンコードされた数値を返します。"
+
+#: ../../source/api/requests.rst:64
+msgid ""
+"Check `how to compact lower and higher into a simple number "
+"<https://github.com/nemtech/nem2-library-"
+"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_."
+msgstr ""
+"`lowerとhigherをシンプルな数値へと変換する方法 <https://github.com/nemtech/nem2-library-"
+"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_"
+" を確認してください。"
+
+#: ../../source/api/requests.rst:66
+msgid "Continue: :doc:`Tools <tools>`."
+msgstr "次へ: :doc:`ツール <tools>`"
