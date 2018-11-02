@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 21:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/prototyping-tool/examples.rst:5
+msgid "Examples"
+msgstr "例"
+
+#: ../../source/prototyping-tool/examples.rst:9
+msgid "Basics"
+msgstr "基本"
+
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+msgid "Name"
+msgstr "名前"
+
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+msgid "Contributor"
+msgstr "貢献"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Create transfer transaction "
+"<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
+msgstr ""
+"`トランスファートランザクションの作成 "
+"<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+#: ../../source/prototyping-tool/examples.rst:1
+msgid "`@jorisadri <https://github.com/jorisadri>`_"
+msgstr ""
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Create namespace "
+"<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
+msgstr ""
+"`ネームスペースの作成 "
+"<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Create mosaic "
+"<https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
+msgstr ""
+"`モザイクの作成 <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Create multisig account "
+"<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
+msgstr ""
+"`マルチシグアカウントの作成 "
+"<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Create aggregate transaction "
+"<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
+msgstr ""
+"`アグリゲートトランザクションの作成 "
+"<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Cosign aggregate transaction "
+"<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
+msgstr ""
+"`アグリゲートトランザクションへの署名 "
+"<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
+
+#: ../../source/prototyping-tool/examples.rst:25
+msgid "Applications"
+msgstr ""
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid ""
+"`Simple chat "
+"<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
+msgstr ""
+"シンプルなチャット "
+"<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
+
+#: ../../source/prototyping-tool/examples.rst:1
+msgid "`@planethouki <https://github.com/planethouki>`_"
+msgstr ""
+
+#: ../../source/prototyping-tool/examples.rst:35
+msgid "Importing a flow"
+msgstr "フローのインポート"
+
+#: ../../source/prototyping-tool/examples.rst:37
+msgid ""
+"After opening an example, copy the JSON you will find at the bottom of the "
+"site."
+msgstr "例を開いたら、サイトの下部にあるボタンで JSON をコピーしてください。"
+
+#: ../../source/prototyping-tool/examples.rst:39
+msgid ""
+"In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the"
+" JSON flow and click Import button."
+msgstr ""
+"Node-REDで ``Import > Clipboard from the menu`` (Ctrl-E) を選択してください。JSON "
+"フローをペーストして、インポートボタンをクリックします。"
+
+#: ../../source/prototyping-tool/examples.rst:43
+msgid "Contributing"
+msgstr "貢献"
+
+#: ../../source/prototyping-tool/examples.rst:45
+msgid ""
+"We love to receiving contributions from our community — you! Follow these "
+"guidelines to get your flow included in this documentation."
+msgstr ""
+"私たちは私たちのコミュニティ - そう、あなた！ "
+"からの貢献をを喜んで受け入れます。あなたのフローをドキュメントへ含めるために、これらのガイドラインに従ってください。"
+
+#: ../../source/prototyping-tool/examples.rst:47
+msgid ""
+"The first step is to export the flow you have created. In Node-RED, select "
+"the flow you want to export. Open ``Export > Clipboard`` from the menu "
+"(Ctrl-E) and copy the JSON from the dialogue."
+msgstr ""
+"最初のステップは、あなたの作ったフローをエクスポートすることです。Node-RED では、メニュー (Ctrl-E) から ``Export > "
+"Clipboard`` を開き、ダイアログから JSON をコピーしてください。"
+
+#: ../../source/prototyping-tool/examples.rst:49
+msgid "We are using |Node-RED-flows-repository| to share our flows."
+msgstr "私たちはフローの共有に |Node-RED-flows-repository| を使用しています。"
+
+#: ../../source/prototyping-tool/examples.rst:51
+msgid "Click ``Add flow``."
+msgstr "``Add flow`` をクリック"
+
+#: ../../source/prototyping-tool/examples.rst:52
+msgid ""
+"Give your flow a short, descriptive title and describe what the flow does "
+"and how it is used."
+msgstr "あなたのフローを端的でわかりやすいタイトルを、このフローは何をするのか、どうやって使うのかを説明してください。"
+
+#: ../../source/prototyping-tool/examples.rst:53
+msgid "Paste the JSON flow you want to share."
+msgstr "共有したいフローの JSON をペーストしてください。"
+
+#: ../../source/prototyping-tool/examples.rst:54
+msgid "Add the tag ``NEM2``."
+msgstr "``NEM2`` のタグを追加します。"
+
+#: ../../source/prototyping-tool/examples.rst:56
+msgid ""
+"After a while, your flow and your GitHub username will be included in this "
+"page."
+msgstr "しばらくすると、あなたのフローと GitHub ユーザー名がこのページに反映されます。"
