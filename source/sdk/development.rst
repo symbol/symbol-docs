@@ -4,8 +4,6 @@
 SDK Development
 ###############
 
-.. warning:: draft
-
 A key objective is that interoperability becomes a natural design of the NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving the best quality
 with the less effort.
 
@@ -15,11 +13,10 @@ Learning about Catapult
 
 In case you haven't used NEM2-SDK or Catapult in general, we encourage you to:
 
-1. Review the technical documentation to become familiar with the concepts at https://nemtech.github.io/.
-
+1. Review the technical documentation to become familiar with the :doc:`NEM built-in features<../concepts/account>`.
 2. Setup the `catapult in local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_ or enroll the `beta program <https://mijin.io/en/product/#mijin2>`_ to access a Catapult Test Net without the need to run it yourself.
-3. `Check the API reference <https://nemtech.github.io/api.html>`_ and play with the API endpoints.
-4. Become familiar with the current `nem2-sdk via code examples <https://nemtech.github.io/guides/overview.html>`_ & `nem2-cli <https://nemtech.github.io/cli/overview.html>`_.
+3. :doc:`Check the API reference <../api/requests>` and play with the API endpoints.
+4. Become familiar with the current  :doc:`nem2-sdk via code examples <../guides/overview>` & :doc:`nem2-cli <../cli/overview>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask Catapult related questions.
 
 ***********
@@ -54,7 +51,7 @@ Creating the project
 1. Add a README with the instructions to install the SDK. Find
    :download:`here a template <../resources/templates/README_SDK.md>`.
 2. Add a `Code of
-   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`.
+   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
    Find :download:`here an example <../resources/templates/CODE_OF_CONDUCT.md>`.
 3. Add a `Contributors
    guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_
@@ -65,7 +62,7 @@ Creating the project
    suits you best.
 
 A project with a good test coverage it's more likely to be used and
-trusted by the developers! :smile:
+trusted by the developers!
 
 We **strongly** suggest you to do `Test-Driven
 Development <https://en.wikipedia.org/wiki/Test-driven_development>`_
@@ -223,8 +220,7 @@ Buffers and the Schemas, to serialize the transaction.
 KeyPair and Cryptographic functions
 ===================================
 
-To do
-
+.. warning:: This section is incomplete.
 
 ********************
 Documenting your SDK
@@ -239,7 +235,13 @@ documentation <documentation>`.
 Publishing the SDK as official
 ******************************
 
-To do
+When you open-source your code,
+:doc:`submit the repository to this page <../sdk/languages>`.
+
+To become an accepted SDK, it should be proposed as a
+`NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason
+behind the NEM2 Improvement Proposal is to ensure that the new
+libraries are reviewed, tested and shared among NEM developers.
 
 ***********
 Future work
@@ -247,7 +249,11 @@ Future work
 
 The current guideline shows what is done up to today since the SDK isn't
 complete. It will get updates according to the latest
-architecture/features. ## Recommended Licenses
+architecture/features.
+
+********************
+Recommended Licenses
+********************
 
 -  MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_
 -  Apache-2.0: `Apache License, version

@@ -4,25 +4,25 @@
 Wallets & Explorers
 ###################
 
-****************
-Official Tools
-****************
+**************
+Official tools
+**************
 
-.. csv-table:: Official Repositories
-   :header: "wallet Name", "Description", "Repository", "Active Developers"
+.. csv-table::
+   :header: "Wallet Name", "Description", "Repository", "Active Developers"
    :delim: ;
 
    :doc:`NEM2-CLI <../cli/overview>` ; Terminal client to interact with NEM. ; |nem2-cli-repo| ;  ⚠️ Help wanted
    :doc:`Prototyping Tool <../prototyping-tool/overview>` ; Drag & drop NEM nodes and link them together. ; |prototyping-tool-repo| ;  NEM Foundation
 
 ***************
-Community Tools
+Community tools
 ***************
 
 Add a new wallet to this page by clicking the *"Edit on Github"* button at the top-right part of the screen.
 
-.. csv-table:: Community Repositories
-   :header: "wallet Name", "Description", "Repository", "Active Developers"
+.. csv-table::
+   :header: "Wallet Name", "Description", "Repository", "Active Developers"
    :delim: ;
 
    Be the first one! ; ; ; 

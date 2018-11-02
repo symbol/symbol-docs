@@ -274,7 +274,6 @@ table-td {
 
 /* Sidebar */
 #sidebar {
-    padding: 10px;
     z-index: 9;
     position: relative !important;
 }
@@ -292,10 +291,42 @@ table-td {
     display: block;
 }
 
+#sidebar .caption{
+    padding: 12.5px 20px;
+    margin: 0;
+}
+
+#sidebar .toctree-l1 > a{
+    padding: 12.5px 20px 12.5px 30px;
+    margin: 0;
+}
+
+#sidebar a.current,
+#sidebar a:hover,
+.sidebar-current-ul,
+#sidebar > .caption:hover
+{
+    background-color: #e5e3e9;
+}
+
+.sidebar-current-ul,
+#sidebar > .caption:hover {
+    font-weight: bold;
+    background-color: #e5e3e9;
+}
+
 #sidebar .caption:hover {
     cursor: pointer;
 }
 
+#sidebar .toctree-l3,
+#sidebar .toctree-l2 {
+    display: none;
+}
+
+.bs-sidenav .nav > li > a{
+    color: #333;
+}
 /* Figure  */
 
 .figure {

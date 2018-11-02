@@ -67,9 +67,9 @@ If you already have a private key, it is not necessary to generate a new account
 
 **Using a Wallet**
 
-If the programming language of the SDK you are using allows client-side development, you will be able to create a new account by creating a new wallet.
+If the programming language of the SDK you are using allows client-side development, you can create a  wallet.
 
-A wallet grants using an account for signing transactions by encrypting your credentials with a password.
+A wallet enables you to store your account to sign transactions, encrypting your private key with a password.
 
 .. example-code::
 
@@ -88,7 +88,7 @@ A wallet grants using an account for signing transactions by encrypting your cre
         :language: bash
         :start-after: #!/bin/sh
 
-If already have a private key, it is not necessary to generate a new wallet:
+Do you have a private key? You can create and open a wallet importing your private key.
 
 .. example-code::
 

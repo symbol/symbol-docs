@@ -19,10 +19,10 @@ If you are used to NIS1 API calls, after announcing a transaction you will recei
 
 The new Catapult REST API works differently, being *asynchronous*. When a user announces a transaction through the API, it always returns an OK.
 
-To know the status of the transaction, which can be OK or `Failure </api.html#tag/Websockets>`_, you have to:
+To know the status of the transaction, which can be OK or :doc:`Failure <../../api/status-errors>`, you have to:
 
 a) Check the status via API endpoint.
-b) Listen to the different :doc:`WebSocket<../../concepts/listener>` channels.
+b) Listen to the different :doc:`WebSocket<../../api/websockets>` channels.
 
 .. note:: While developing, it is encouraged to open terminals with different listeners to monitor the transactions you send using NEM2-CLI.
 
@@ -99,6 +99,21 @@ Let’s get into some code
         :caption: |debugging-transactions-confirmed-cli|
         :language: bash
         :start-after: #!/bin/sh
+
+.. _monitoring-transactions-client-side:
+
+************************************************************
+Troubleshooting: Monitoring transactions on the client side
+************************************************************
+
+The nem2-sdk for typescript base listener was designed to work on Node.js backend environments.
+
+To make the code work in the client side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
+
+.. code-block:: typescript
+
+  const listener = new Listener('ws://localhost:3000', WebSocket);
+  listener.open().then(() => ...
 
 ************
 What's next?

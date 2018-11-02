@@ -9,7 +9,7 @@
 Getting account information
 ###########################
 
-Get the public key, height, balance and importance of an :doc:`account <../../concepts/account>`.
+Get the public key and balance of an :doc:`account <../../concepts/account>`.
 
 *************
 Prerequisites
@@ -23,7 +23,9 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Call ``accountHttp.getAccountInfo``, passing the address and network as a parameter.
+The **public key** identifies your account publicly in the network. Your  **address** is derived from it, which contains further information such as network and validity check.
+
+Get more information about your account passing the address and network as a parameter.
 
 .. example-code::
 
@@ -47,22 +49,11 @@ Call ``accountHttp.getAccountInfo``, passing the address and network as a parame
         :language: bash
         :start-after: #!/bin/sh
     
-Can you determine the account's public key?
-
-    publicKey: 'F33152059827EAA4D7D67C6E27A59851AF09FBD0926C35150FA44D2A9A5E4CAA',
-
-Which block was the first one where account address and public key appeared?
-
-    publicKeyHeight: UInt64 { lower: 401575, higher: 0 },
-    addressHeight: UInt64 { lower: 288598, higher: 0 },
-
-Does the account have an importance?
-
-    importance: UInt64 { lower: 1100282, higher: 0 },
+Can you determine the account's public key? Which was the first block where this account appeared?
 
 **Checking account's balance**
 
-Check account's balance using ``mosaicService``. The balance is the amount of the different mosaics stored on the account.
+The balance is the amount of the different **mosaics** owned by the account. How many different :doc:`mosaics <../../concepts/mosaic>` does your account own?
 
 .. example-code::
 
@@ -85,7 +76,7 @@ Check account's balance using ``mosaicService``. The balance is the amount of th
 What’s next?
 ************
 
-Retrieve the balance by only filtering XEM amount.
+Retrieve the balance by only `filtering the nem:xem <https://www.learnrxjs.io/operators/filtering/filter.html>`_ amount.
 
 .. |getting-account-information-ts| raw:: html
 

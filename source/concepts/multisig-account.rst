@@ -2,11 +2,9 @@
 Multisig Account
 ################
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
 
-A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig ``cosignatories``.
+A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig **cosignatories**.
 
 Nevertheless, it is not always necessary to force all cosignatories to cosign the transaction. NEM allows to set up the minimum number of consignatory agreements. These properties can be edited afterwards to suit almost all needs.
 
@@ -25,6 +23,8 @@ Some important considerations to keep in mind:
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
 
 .. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 .. _modify-multisig-account-transaction:
 
@@ -46,9 +46,8 @@ Modifying multisig account transaction is used to change properties of a multisi
 
     List of :doc:`accounts <account>` enabled to announce and cosign transactions for its approval.
 
-.. raw:: html
-
-    <h2>Examples</h2>
+Examples
+========
 
 There is a broad range of useful applications for multisig accounts. Let's take a look at some of the most common use cases.
 

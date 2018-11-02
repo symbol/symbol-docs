@@ -2,12 +2,6 @@
 Mosaic
 ######
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
-***********
-Fixed Asset
-***********
-
 Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
 Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
@@ -55,6 +49,8 @@ Mosaic definition transaction is used to create a new mosaic.
     * Supply mutable: The creator can choose between a definition that allows a mosaic supply to change at a later point or an **immutable** supply. In the first case, the creator is only allowed to decrease the supply within the limits of mosaics owned.
 
     * Transferability: The creator can choose whether the mosaic can be transferred to and from arbitrary accounts, or only allowing him/herself to be the recipient once transferred.
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 .. _mosaic-supply-change-transaction:
 

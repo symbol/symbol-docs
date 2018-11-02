@@ -134,6 +134,8 @@ In case that signatures are required from other participants and the transaction
         :language: javascript
         :lines:  65-
 
+.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
+
 **********************************************
 Is it possible without aggregate transactions?
 **********************************************

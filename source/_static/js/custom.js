@@ -48,7 +48,12 @@ function addBlockCaptionInsideCodeExample(){
     $(".code-block-caption").each(function() {
         $(this).next().prepend(this);
     });
-    $(".literal-block-wrapper").removeClass('container');
+    $(".literal-block-wrapper").removeClass("container");
+}
+
+
+function addHoverToSidebar(){
+    $( "#sidebar > ul.current").prev().addClass("sidebar-current-ul");
 }
 
 $( document ).ready(function() {
@@ -56,5 +61,6 @@ $( document ).ready(function() {
     addSidebarClickHandler();
     addBlockCaptionInsideCodeExample();
     initLanguageSelector();
+    addHoverToSidebar();
 });
 

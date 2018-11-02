@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.11.5'
+version = u'0.12'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -200,7 +200,11 @@ def setup(app):
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-  'api/**': ['localtoc.html'],
+  'api/requests': ['localtoc.html'],
+  'api/endpoints': [],
+  'api/tools': ['localtoc.html'],
+  'api/websockets': ['localtoc.html'],
+  'api/status-errors': ['localtoc.html'],
   'cli/**': ['localtoc.html'],
   'concepts/**': ['localtoc.html'],
   'getting-started/**': ['localtoc.html'],
@@ -218,6 +222,7 @@ html_sidebars = {
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],
+  'wallet/**': ['localtoc.html'],
   'support/**': ['localtoc.html'],
   'index': [],
 }
@@ -308,14 +313,18 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 html_favicon = 'favicon-32x32.png'
 
-# -- Options for edit on github ----------------------------------------------
+# -- Options for edit on github -------------------------------------------
 
 edit_on_github_project = 'nemtech/nem2-docs'
 edit_on_github_branch = 'master'
 
-# -- Options for edit scaled images ----------------------------------------------
+# -- Options for edit scaled images ---------------------------------------
 
 html_scaled_image_link = False
 
-# base blog url
+# -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
+
+# -- Options for linkcheck ------------------------------------------------
+
+linkcheck_ignore = [r'http://localhost:\d+']

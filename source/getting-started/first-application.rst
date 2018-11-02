@@ -4,8 +4,9 @@ Writing your first application
 
 This first guide will take you through some :doc:`NEM general concepts <../concepts/account>`. Once you find a new one, it is advisable to read more about it by clicking on the provided link.
 
+**********
 Background
-==========
+**********
 
 :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 

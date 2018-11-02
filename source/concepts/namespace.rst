@@ -2,8 +2,6 @@
 Namespace
 #########
 
-.. warning:: The configuration presented is NOT intended to be used on the public network. These are the parameters used for the Catapult Testnet version (MIJIN_TEST).
-
 Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem.
@@ -19,6 +17,8 @@ On the internet, a domain can have a sub-domain. In NEM, namespaces can have sub
 It is possible to create multiple subnamespaces with the same name (example: ``foo.bar`` and ``foo2.bar``, ``bar`` is the subnamespace/sub-domain).
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 .. _register-namespace-transaction:
 
@@ -52,4 +52,6 @@ Register namespace transaction is used to create and re-rent a namespace or subn
 
     During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
 
-    When a renting period ends, the namespace will become inactive, and you will have ``N`` blocks to re-rent it.
+    When a renting period ends, the namespace will become inactive.
+
+    .. and you will have ``N`` blocks to re-rent it.

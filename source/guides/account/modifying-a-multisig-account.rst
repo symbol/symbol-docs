@@ -30,7 +30,7 @@ Let’s get into some code
 
 **Editing minApproval**
 
- Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
+Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
 .. example-code::
 
@@ -196,6 +196,8 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
         :lines: 71-
+
+.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
 Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of XEM locked becomes available again on Alice's account and Carol is added to the multisig.
 

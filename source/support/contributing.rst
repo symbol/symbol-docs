@@ -1,6 +1,6 @@
-############
-Contributing
-############
+##########
+Guidelines
+##########
 
 First off, thank you for considering contributing to NEM!
 
@@ -28,7 +28,6 @@ Wallets & Explorers
 Documentation
 *************
 
-* Writing style - TBD
 * :doc:`Writing a guide <../guides/writing-a-guide>`
 * :doc:`Suggesting changes <suggesting-changes>`
 

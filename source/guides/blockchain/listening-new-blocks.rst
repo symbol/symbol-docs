@@ -45,6 +45,8 @@ Let’s get into some code
         :language: bash
         :start-after: #!/bin/sh
 
+.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
+
 .. |listening-new-blocks-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/blockchain/ListeningNewBlocks.ts" target="_blank">View Code</a>
