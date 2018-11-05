@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yoshiyuki Ieyama, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.12\n"
+"Project-Id-Version: nem2-docs 0.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 21:52+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -48,6 +51,8 @@ msgid ""
 "See how to run :doc:`Catapult in local<../guides/running-a-node>` for "
 "testing purposes."
 msgstr ""
+"メインネットのノードを実行する方法の説明したガイドは公開を延期しています。テスト用途の :doc:`ローカル環境でのCatapult "
+"<../guides/running-a-node>` を参照してください。"
 
 #: ../../source/concepts/node.rst:19
 msgid "Catapult P2P Component"
@@ -73,7 +78,7 @@ msgstr ""
 
 #: ../../source/concepts/node.rst:27
 msgid "After processing a block:"
-msgstr ""
+msgstr "ブロック処理の後:"
 
 #: ../../source/concepts/node.rst:29
 msgid "The block binary is saved on disk as a flat file."
@@ -148,7 +153,7 @@ msgstr ""
 msgid ""
 "|mongodb| stores blocks, transactions and chain state for high query "
 "performance."
-msgstr ""
+msgstr "|mongodb| はブロック、トランザクションとチェーン状態をハイパフォーマンスの実現のために保存します。"
 
 #: ../../source/concepts/node.rst:61
 msgid "The API updates the MongoDB when:"

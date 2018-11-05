@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yoshiyuki Ieyama, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.12\n"
+"Project-Id-Version: nem2-docs 0.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 21:52+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"PO-Revision-Date: 2018-10-26 13:37+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -161,12 +164,12 @@ msgstr ""
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:127
 msgid ""
 "Open the terminal where you are monitoring account transactions ``status``. "
-"It should be empty. If there is an error, you can check `the error code here"
-" </api.html#tag/Websockets>`_."
+"It should be empty. If there is an error, you can check :doc:`the error code"
+" here <../../api/status-errors>`."
 msgstr ""
 "アカウントのトランザクションの ``ステータス`` "
-"を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は、 `エラーコード "
-"</api.html#tag/Websockets>`_ で確認できます。"
+"を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は :doc:`エラーコード "
+"<../../api/status-errors>` で確認できます。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:129
 msgid ""
