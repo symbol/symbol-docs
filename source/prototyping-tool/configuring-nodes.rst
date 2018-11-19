@@ -48,11 +48,13 @@ In some cases, you could configure inputs and properties directly by double-clic
 Configuring API gateway
 ***********************
 
-In some cases you need to configure API gateway. To do this you need to:
+Some nodes require to configure an API gateway (e.g. **announce transaction** and **listener** nodes).
 
-1. Double-click on a node which needs this configuration (e.g. **announce transaction** and **listener** nodes). Click on the pencil icon next to the ``Server`` input field.
+1. Double-click on a node which needs this configuration.
 
-2. Enter your ``custom url`` using http or https schema (e.g. http://localhost). Choose the ``network`` and ``port`` you want to use and then press ``Update``.
+2. Click on the pencil icon next to the ``Server`` input field.
+
+3. Enter your ``custom url`` using http or https schema (e.g. http://localhost). Choose the ``network`` and ``port`` you want to use and then press ``Update``.
 
 .. figure:: ../resources/images/nem2-prototyping-tool-5.png
     :align: center
