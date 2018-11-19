@@ -44,6 +44,22 @@ In some cases, you could configure inputs and properties directly by double-clic
 
 4. Finally, find **debug** node in the node palette, under *output* tab. Link it with the account, and inside its properties change  ``output``  to ``complete msg object``.
 
+***********************
+Configuring API gateway
+***********************
+
+Some nodes require to configure an API gateway (e.g. **announce transaction** and **listener** nodes).
+
+1. Double-click on a node which needs this configuration.
+
+2. Click on the pencil icon next to the ``Server`` input field.
+
+3. Enter your ``custom url`` using http or https schema (e.g. http://localhost). Choose the ``network`` and ``port`` you want to use and then press ``Update``.
+
+.. figure:: ../resources/images/nem2-prototyping-tool-5.png
+    :align: center
+    :width: 500px
+    
 **************
 Running a flow
 **************
