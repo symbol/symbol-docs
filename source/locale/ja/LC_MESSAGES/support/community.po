@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yoshiyuki Ieyama, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.12\n"
+"Project-Id-Version: nem2-docs 0.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 21:52+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -28,21 +31,22 @@ msgid ""
 " the documentation and guides that the NEM Developer Center has today have "
 "been added because our community saw the need."
 msgstr ""
+"ドキュメントを読んだ後、あなたには未回答の質問があるかもしれません。私たちのコミュニティが必要性を感じていたため、今日のNEM開発センターのドキュメントとガイドのほとんどが追加されています。"
 
 #: ../../source/support/community.rst:7
 msgid "Ask in |stack-overflow| development related questions."
-msgstr ""
+msgstr "開発に関連する疑問は |stack-overflow| で質問してください。"
 
 #: ../../source/support/community.rst:9
 msgid "Reach our community joining the official |slack|."
-msgstr ""
+msgstr "私達の公式 |slack| に参加してください。"
 
 #: ../../source/support/community.rst:11
 msgid ""
 "Check the :doc:`contributing guidelines <suggesting-changes>` to propose "
 "changes."
-msgstr ""
+msgstr "変更を提案するためには :doc:`貢献ガイドライン <suggesting-changes>` を確認してください。"
 
 #: ../../source/support/community.rst:13
 msgid "Follow the development updates on |twitter|."
-msgstr ""
+msgstr "|twitter| で開発のアップデートを追いかけましょう。"
