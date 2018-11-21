@@ -12,22 +12,6 @@ Properties
 
 Transactions share the following properties:
 
-    **Type**
-
-    NEM defines some types of transactions that can be performed. See :ref:`transaction types <transaction-types>`.
-
-    **Version number**
-
-    The version of the structure.
-
-    **Deadline**
-
-    The maximum amount of time to include the transaction in the blockchain.
-
-    **Fee**
-
-    How much it costs to announce the transaction in XEM.
-
     **Signature**
 
     The transaction signature.
@@ -36,6 +20,21 @@ Transactions share the following properties:
 
     The transaction signer public key.
 
+    **Type**
+
+    NEM defines some types of transactions that can be performed. See :ref:`transaction types <transaction-types>`.
+
+    **Version number**
+
+    The version of the structure.
+
+    **Fee**
+
+    How much it costs to announce the transaction in XEM.
+
+    **Deadline**
+
+    The maximum amount of time to include the transaction in the blockchain.
 
 *********
 Lifecycle
@@ -81,17 +80,17 @@ Transaction types
 *****************
 
 .. csv-table::
-    :header: "Transaction name", "Transaction type"
+    :header: "Transaction type", "High byte", "Low byte", "Decimal"
     :delim: ;
 
-    :ref:`Transfer Transaction <transfer-transaction>`; 0x4154
-    :ref:`Register Namespace Transaction <register-namespace-transaction>`; 0x414e
-    :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; 0x414d
-    :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; 0x424d
-    :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; 0x4155
-    :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x4141
-    :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; 0x4241
-    :ref:`Cosignature Transaction <cosignature-transaction>`; --
-    :ref:`Lock Funds Transaction <lock-funds-transaction>`; 0x414C
-    :ref:`Secret Lock Transaction <secret-lock-transaction>`; 0x424C
-    :ref:`Secret Proof Transaction <secret-proof-transaction>`; 0x434C
+    :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x41;	0x41; 16705
+    :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x42;	0x41;	16961
+    :ref:`Cosignature Transaction <cosignature-transaction>`; -- ; -- ; --
+    :ref:`Lock Funds Transaction <lock-funds-transaction>`; 0x41; 0x4C; 16716
+    :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; 0x41; 0x4D; 16717
+    :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; 0x42; 0x4D; 16973
+    :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; 0x41; 0x55; 16725
+    :ref:`Register Namespace Transaction <register-namespace-transaction>`; 0x41; 0x4E; 16718
+    :ref:`Secret Lock Transaction <secret-lock-transaction>`; 0x41; 0x52; 16722
+    :ref:`Secret Proof Transaction <secret-proof-transaction>`; 0x43 ;0x4C; 17228
+    :ref:`Transfer Transaction <transfer-transaction>`; 0x41; 0x54; 16724
