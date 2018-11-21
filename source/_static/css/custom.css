@@ -196,7 +196,8 @@ table-td {
 }
 
 #nem-developer-center,
-#reference{
+#reference,
+#endpoints{
     display: none;
 }
 

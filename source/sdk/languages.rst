@@ -27,6 +27,7 @@ Community SDKs
    C# SDK ; |csharp-repo| ;  ; `@kodty <https://github.com/kodty>`_
    Go SDK ; |go-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
    Swift SDK ; |swift-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
+   C++ ;  ;  ;
    PHP SDK ;  ;  ;
    Ruby SDK ; ; ;
 
