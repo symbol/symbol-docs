@@ -63,7 +63,7 @@ The API updates the MongoDB when:
 - A new block / a bunch of blocks finished processing.
 - New unconfirmed transactions finished processing.
 
-.. note:: The MongoDB shouldn’t be accessed externally.
+.. note:: MongoDB should not be accessed externally.
 
 ZMQ
 ====

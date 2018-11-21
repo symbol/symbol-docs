@@ -10,7 +10,7 @@ Think about NEM accounts as a **container for assets** in the blockchain. An acc
 Multisig Account
 ****************
 
-Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties, all in the blockchain.
+Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
 
 **********
 Properties
@@ -18,20 +18,20 @@ Properties
 
 An account has the following properties:
 
-    **Private Key**
+  **Private Key**
 
-    A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
+  A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
 
-    .. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
+  .. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
 
-    **Public key**
+  **Public key**
 
-    The :ref:`public key <keypair>` can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
+  The :ref:`public key <keypair>` can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
-    **Address**
+  **Address**
 
-    Each account has a unique :ref:`address <address>`. You will normally share the derived address instead, as it is shorter and gathers more information.
+  Each account has a unique :ref:`address <address>`. You will normally share the derived address instead, as it is shorter and gathers more information.
 
-    **Balance**
+  **Mosaics**
 
-    Amount of different :doc:`mosaics <mosaic>` the account owns.
+  Amount of different :doc:`mosaics <mosaic>` the account owns.

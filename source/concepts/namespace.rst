@@ -28,6 +28,9 @@ Register namespace transaction
 
 Register namespace transaction is used to create and re-rent a namespace or subnamespace.
 
+Parameters
+==========
+
     **Name**
 
     A namespace name must be unique and may have a maximum length of ``64`` characters.
@@ -37,10 +40,6 @@ Register namespace transaction is used to create and re-rent a namespace or subn
     **Parent namespace**
 
     If it is a subdomain, a reference to parent namespace name is required.
-
-    **Depth**
-
-    Level of the namespace. Namespace ``foo`` level is 0, whereas ``foo.bar`` level is 1.
 
     **Owner**
 

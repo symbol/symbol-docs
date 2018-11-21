@@ -16,6 +16,9 @@ Mosaic definition transaction
 
 Mosaic definition transaction is used to create a new mosaic.
 
+Parameters
+==========
+
     **Namespace**
 
     A mosaic is always linked to a namespace, like a file hosted on a domain.
@@ -26,11 +29,7 @@ Mosaic definition transaction is used to create a new mosaic.
 
     Mosaics are named joining the namespace name with the mosaic name using the ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
 
-    Consider the following restrictions:
-
-    * Mosaic names have a size limit of ``64`` characters and must be unique under the domain name.
-
-    * Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    Mosaic names have a size limit of ``64`` characters and must be unique under the domain name. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
     **Owner**
 
@@ -59,6 +58,9 @@ Mosaic supply change transaction
 ********************************
 
 Mosaic supply change transaction is used to assign supply to a mosaic.
+
+Parameters
+==========
 
     **Mosaic Id**
 
