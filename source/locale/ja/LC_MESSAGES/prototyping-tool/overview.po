@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yoshiyuki Ieyama, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.12\n"
+"Project-Id-Version: nem2-docs 0.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 21:52+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -74,10 +77,11 @@ msgstr ""
 
 #: ../../source/prototyping-tool/overview.rst:32
 msgid ""
-"Do you already have Node-RED app? Open ``Manage palette`` and install |node-"
-"red-contrib-nem2| package."
+"Do you already have Node-RED app? Open ``Manage palette`` and install |nem2"
+"-node-red| package."
 msgstr ""
-"すでに Node-RED はお持ちですか？``Manage palette`` を開いて、 |nem2-node-red| パッケージをインストールしてください。"
+"すでに Node-RED はお持ちですか？ ``Manage palette`` を開いて |nem2-node-red| "
+"パッケージをインストールしてください。"
 
 #: ../../source/prototyping-tool/overview.rst:38
 msgid "*Manage palette -> Install -> node-red-contrib-nem2*"

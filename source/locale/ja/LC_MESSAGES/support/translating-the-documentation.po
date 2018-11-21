@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"PO-Revision-Date: 2018-11-03 13:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/support/translating-the-documentation.rst:5
+msgid "Translating the documentation"
+msgstr "ドキュメントの翻訳"
+
+#: ../../source/support/translating-the-documentation.rst:7
+msgid ""
+"The NEM Developer Center uses Sphinx, a Python framework to write "
+"documentation. The extension `sphinx-intl <http://www.sphinx-"
+"doc.org/en/master/intl.html>`_ permits translating documentation into "
+"multiple languages without having to host different documentation sites."
+msgstr ""
+"この NEM 開発センターはドキュメント作成用 Python のフレームワークである Sphinx によって作成されています。その拡張である "
+"`sphinx-intl <http://www.sphinx-doc.org/en/master/intl.html>`_ "
+"は異なるドキュメントサイトをホストすることなく、ドキュメントを多言語に翻訳することができます。"
+
+#: ../../source/support/translating-the-documentation.rst:11
+msgid "Adding/updating translations"
+msgstr "翻訳の追加/更新"
+
+#: ../../source/support/translating-the-documentation.rst:13
+msgid ""
+"Clone the repository, and make sure you have Python 2.7 or 3.4+ and pip "
+"installed."
+msgstr "リポジトリをクローンして、Python 2.7 または 3.4+ と pip がインストールされていることを確認してください。"
+
+#: ../../source/support/translating-the-documentation.rst:19
+msgid "Install the project's requirements."
+msgstr "プロジェクトの必須項目をインストール"
+
+#: ../../source/support/translating-the-documentation.rst:25
+msgid "Extract the docs messages into .po files."
+msgstr ".poファイルにドキュメントのメッセージを抽出"
+
+#: ../../source/support/translating-the-documentation.rst:31
+msgid ""
+"For each documentation file, a .po file will be generated under "
+"``_build/gettext``."
+msgstr "各ドキュメントファイルの .po ファイルは ``_build/gettext`` に生成されます。"
+
+#: ../../source/support/translating-the-documentation.rst:33
+msgid ""
+"Copy translation files into ``source/locale`` with the following command. It"
+" is also used to update .po files when the documentation in English have "
+"changed:"
+msgstr ""
+"次のコマンドで ``source/locale`` へ翻訳ファイルをコピーしてください。これは英語のドキュメントが変更された時に、 .po "
+"ファイルを更新するためにも用います。"
+
+#: ../../source/support/translating-the-documentation.rst:39
+msgid ""
+"Replace <lang> for your `language code "
+"<https://en.wikipedia.org/wiki/ISO_639-1>`_."
+msgstr ""
+"<lang> をあなたの `言語コード <https://en.wikipedia.org/wiki/ISO_639-1>`_ に置き換えてください。"
+
+#: ../../source/support/translating-the-documentation.rst:41
+msgid ""
+"Translate your .po files under ``source/locale/<lang>/LC_MESSAGES/``. For "
+"each ``msgid``, provide the translated ``msgstr``."
+msgstr ""
+"``source/locale/<lang>/LC_MESSAGES/`` にある .po ファイルを翻訳してください。各 ``msgid`` は "
+"翻訳された ``msgstr`` を提供します。"
+
+#: ../../source/support/translating-the-documentation.rst:43
+msgid "Generate the translated document and review the changes."
+msgstr "翻訳されたドキュメントの生成と変更の確認"
+
+#: ../../source/support/translating-the-documentation.rst:50
+msgid ""
+":doc:`Submit your changes<suggesting-changes>` into the nem2-docs "
+"repository."
+msgstr "nem2-docs リポジトリへ :doc:`変更を提出<suggesting-changes>` してください。"
