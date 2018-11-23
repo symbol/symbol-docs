@@ -35,3 +35,11 @@ An account has the following properties:
   **Mosaics**
 
   Amount of different :doc:`mosaics <mosaic>` the account owns.
+
+  **Filters**
+
+  Accounts may define a set of smart rules to receive transactions only from an allowed list of addresses. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+
+  When these pair of lists are empty, all accounts can send transactions to the stated account.
+
+  The same behavior can be applied to allow or block receiving transactions containing a given mosaic id or only allowing sending certain transactions by type.
