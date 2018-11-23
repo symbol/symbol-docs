@@ -79,6 +79,16 @@ Blocks are composed of the following properties:
 
     The transactions included in a block are hashed forming a |merkle-tree|. The root of the tree summarizes them.
 
+    **State root hash**
+
+    The state of the blockchain is stored in RocksDB for each block, forming a |patricia-tree|. The root of the tree summarizes the state of the blockchain for a given block.
+
+
 .. |merkle-tree| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle Tree</a>
+
+.. |patricia-tree| raw::html
+
+  <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">Patricia Tree</a>
+
