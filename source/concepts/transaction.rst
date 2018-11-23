@@ -86,11 +86,11 @@ Transaction types
     :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x41;	0x41; 16705
     :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x42;	0x41;	16961
     :ref:`Cosignature Transaction <cosignature-transaction>`; -- ; -- ; --
-    :ref:`Lock Funds Transaction <lock-funds-transaction>`; 0x41; 0x4C; 16716
+    :ref:`Lock Funds Transaction <lock-funds-transaction>`; 0x41; 0x48;	;'H'
     :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; 0x41; 0x4D; 16717
     :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; 0x42; 0x4D; 16973
     :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; 0x41; 0x55; 16725
     :ref:`Register Namespace Transaction <register-namespace-transaction>`; 0x41; 0x4E; 16718
-    :ref:`Secret Lock Transaction <secret-lock-transaction>`; 0x41; 0x52; 16722
+    :ref:`Secret Lock Transaction <secret-lock-transaction>`; 0x41; 0x52; ;'R'
     :ref:`Secret Proof Transaction <secret-proof-transaction>`; 0x43 ;0x4C; 17228
     :ref:`Transfer Transaction <transfer-transaction>`; 0x41; 0x54; 16724
