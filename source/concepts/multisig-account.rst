@@ -97,4 +97,8 @@ Modifying multisig account transaction is used to change properties of a multisi
 
     **Modifications**
 
-    List of :doc:`accounts <account>` enabled to announce and cosign transactions for its approval.
+    Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
+
+
+
+
