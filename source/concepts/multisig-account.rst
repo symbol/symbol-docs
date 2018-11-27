@@ -36,11 +36,11 @@ Several families are members of the local philatelist society and use a shared a
 
 To ensure that all agree on which old stamps they should buy and on the right price, they use a multisig account. This way, all members of the society need to approve the transaction before it is included in the blockchain.
 
-.. figure:: ../resources/images/examples/multisig-shared-account.png
+.. figure:: ../resources/images/examples/multisig-2-of-3.png
     :align: center
     :width: 350px
 
-    N-of-N multisig account example
+    M-of-N multisig account
 
 Multi-factor authorization
 ==========================
