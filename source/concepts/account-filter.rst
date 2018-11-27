@@ -33,14 +33,14 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
   Blocking spam transactions
 
-The company opts to configure their product accounts filters, enabling only to receive transactions containing "company.quality:seal" mosaics.
+The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality:seal`` mosaics.
 
 Enhancing the account security
 ==============================
 
-Lately, Alice is only using her main account to cosign aggregate transactions where a :doc:`multisig<multisig>` she is a cosignatory is involved.
+Lately, Alice is only using her main account to cosign aggregate transactions where a :doc:`multisig<multisig-account>` she is a cosignatory is involved.
 
-As a temporary measure, Alice opts to disable announcing transfer transactions from  her main account, double checking that any of the funds she owns will be transferred.
+As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
 
 ******************************
 Account Properties Transaction
