@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-.. figure:: ../../resources/images/guides-transactions-asking-for-mosaics.png
+.. figure:: ../../resources/images/examples/aggregate-asking-for-mosaics.png
     :align: center
     :width: 450px
 

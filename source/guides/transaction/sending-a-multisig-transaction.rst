@@ -15,7 +15,7 @@ Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>`
 Background
 **********
 
-.. figure:: ../../resources/images/guides-transactions-multisig.png
+.. figure:: ../../resources/images/examples/multisig-transaction-1-of-2.png
     :align: center
     :width: 600px
 
@@ -136,7 +136,7 @@ What would have happened if the account were a 2-of-2 multisig instead of a 1-of
 
 As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>`.
 
-.. figure:: ../../resources/images/guides-transactions-multisig-2.png
+.. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
     :align: center
     :width: 600px
 

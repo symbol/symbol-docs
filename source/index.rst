@@ -5,7 +5,7 @@
         <p>Start integrating NEM into your application.</p>
         <div class="image-container">
 
-.. image:: resources/images/nem-developers.png
+.. image:: resources/images/icons/nem-developers.png
     :align: center
     :height: 300px
 
@@ -27,7 +27,7 @@
                  <a href="getting-started/what-is-nem.html"><div class="card">
                     <div class="col-sm-4 hidden-xs card-img">
 
-.. image:: resources/images/home-getting-started.png
+.. image:: resources/images/icons/home-getting-started.png
     :align: center
     :height: 50px
 
@@ -47,7 +47,7 @@
                  <a href="concepts/account.html"><div class="card">
                     <div class="col-sm-4 hidden-xs card-img">
 
-.. image:: resources/images/home-built-in-features.png
+.. image:: resources/images/icons/home-built-in-features.png
     :align: center
     :height: 50px
 
@@ -70,7 +70,7 @@
                  <a href="guides/overview.html"><div class="card">
                     <div class="col-sm-4 hidden-xs card-img">
 
-.. image:: resources/images/home-guides.png
+.. image:: resources/images/icons/home-guides.png
     :align: center
     :height: 50px
 
@@ -89,7 +89,7 @@
                  <a href="references.html"><div class="card">
                     <div class="col-sm-4 hidden-xs card-img">
 
-.. image:: resources/images/home-references.png
+.. image:: resources/images/icons/home-references.png
     :align: center
     :height: 50px
 

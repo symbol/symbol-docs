@@ -4,7 +4,7 @@ Cross-Chain Swaps
 
 A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
 
-.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
+.. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
     :width: 500px
 
@@ -15,7 +15,7 @@ In order to create a trustless environment for an exchange, a specific transacti
 In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
 The figure below illustrates the cross-chain swap protocol.
 
-.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap-sequence-diagram.png
+.. figure:: ../resources/images/diagrams/cross-chain-swap-cycle.png
     :align: center
     :width: 700px
 

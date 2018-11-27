@@ -1,5 +1,3 @@
-:orphan:
-
 ########
 Overview
 ########
@@ -31,7 +29,7 @@ Download and run the |executable-package| for **Windows**, **Linux** or **Mac**.
 
 Do you already have Node-RED app? Open ``Manage palette`` and install |nem2-node-red| package.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-install.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-install.png
     :align: center
     :width: 500px
 

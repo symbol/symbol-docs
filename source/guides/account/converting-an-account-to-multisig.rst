@@ -20,7 +20,7 @@ Alice and Bob live together and have separate :doc:`accounts <../../concepts/acc
 
 This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 
-.. figure:: ../../resources/images/guides-accounts-multisig-1-of-2.png
+.. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
     :width: 350px
 

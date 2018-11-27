@@ -49,7 +49,7 @@ References
 Package Organization
 ********************
 
-.. figure:: ../resources/images/nem2-sdk-architecture.png
+.. figure:: ../resources/images/diagrams/nem2-sdk-architecture.png
     :width: 400px
     :align: center
 

@@ -24,7 +24,7 @@ Prerequisites
 Background
 **********
 
-.. figure:: ../../resources/images/guides-transactions-transfer.png
+.. figure:: ../../resources/images/examples/transfer-transaction.png
     :align: center
     :width: 450px
 
@@ -138,7 +138,7 @@ Send multiple mosaics in the same transaction.
 
 **Adding multiple mosaics**
 
-.. figure:: ../../resources/images/guides-transactions-transfer-multiple.png
+.. figure:: ../../resources/images/examples/transfer-transaction-multiple-mosaics.png
     :align: center
     :width: 450px
 

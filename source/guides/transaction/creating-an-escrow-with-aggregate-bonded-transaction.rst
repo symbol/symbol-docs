@@ -65,7 +65,7 @@ Prerequisites
 Let's get into some code
 *************************
 
-.. figure:: ../../resources/images/guides-transactions-escrow.png
+.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
 
@@ -153,7 +153,7 @@ The distributor has not signed the aggregate bonded transaction yet, so exchange
 
 Afterwards, swap mosaics between multiple participants.
 
-.. figure:: ../../resources/images/guides-transactions-escrow-2.png
+.. figure:: ../../resources/images/examples/aggregate-escrow-2.png
     :align: center
     :width: 600px
 

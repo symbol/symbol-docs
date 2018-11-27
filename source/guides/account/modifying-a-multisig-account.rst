@@ -52,7 +52,7 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
 
 Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a  2-of-2 multisig instead. We could achieve it by increasing ``minApproval`` parameter in one unit.
 
-.. figure:: ../../resources/images/guides-accounts-multisig-2-of-2.png
+.. figure:: ../../resources/images/examples/multisig-2-of-2.png
         :align: center
         :width: 350px
 
@@ -113,7 +113,7 @@ Once confirmed, the minApproval value of the multisig will be set to 2, having o
 
 Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
-.. figure:: ../../resources/images/guides-accounts-multisig-2-of-3.png
+.. figure:: ../../resources/images/examples/multisig-2-of-3.png
         :align: center
         :width: 350px
 

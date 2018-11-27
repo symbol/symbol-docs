@@ -6,7 +6,7 @@ Transfer Transaction
 
 Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. It can hold a message of length 1024.
 
-.. figure:: ../resources/images/guides-transactions-transfer.png
+.. figure:: ../resources/images/examples/transfer-transaction.png
     :align: center
     :width: 450px
 
