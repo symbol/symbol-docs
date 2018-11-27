@@ -4,9 +4,9 @@ Namespace
 
 Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
-A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem.
+A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
 
-After registering your namespace, you have the ability to define your own subdomains, as well as the names for your :doc:`mosaics <mosaic>`.
+You can associate a name with an account address or a :doc:`mosaic <mosaic>` identifier by announcing an alias transaction. The binding between namespaces and assets makes long account addresses rememberable and mosaics identifiers recognizable.
 
 *************
 Subnamespaces
@@ -20,13 +20,29 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+********
+Examples
+********
+
+Identifying an account
+======================
+Every time a customer buys a ticket for an event, a ticket sales company sends a ticket to the customer account.
+
+The seller company has assigned the namespace "ticketsales" to its main account. Customers can quickly recognize incoming transactions from the vendor account.
+
+Organizing mosaics
+==================
+The same distributor sells tickets for an event organized in different venues. The company registers a non-transferable mosaic for each function.
+
+Namespaces and subnamespaces are used to organize the different mosaics. Now, customers can send 1 ``ticketsales.eventname.ticket`` instead of 1 ``0xE4EEB491``.
+
 .. _register-namespace-transaction:
 
 ******************************
 Register namespace transaction
 ******************************
 
-Register namespace transaction is used to create and re-rent a namespace or subnamespace.
+Announce a register namespace transaction to register and re-rent a namespace.
 
 Parameters
 ==========
@@ -47,10 +63,31 @@ Parameters
 
     **Renting duration**
 
-    Renting duration represents the number of confirmed blocks we would like to rent our namespace for.
+    The renting duration represents the number of confirmed blocks we would like to rent our namespace for.
 
     During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
 
     When a renting period ends, the namespace will become inactive.
 
     .. and you will have ``N`` blocks to re-rent it.
+
+*****************
+Alias transaction
+*****************
+
+Announce an alias transaction to attach a namespace to an account or mosaic. A namespace can be assigned to any account present in the network. Setting an alias to mosaics is only possible if the account announcing the transaction owns the namespace and mosaic involved.
+
+Parameters
+==========
+
+    **Type**
+
+    Mosaic or account.
+
+    **Id**
+
+    A MosaicId or an address.
+
+    **Namespace name**
+
+    The namespace or subnamespace name.
