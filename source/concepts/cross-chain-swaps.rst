@@ -29,7 +29,7 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Secret lock transaction
 ***********************
 
-Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``. 
+Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``.
 
 Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
 
@@ -64,7 +64,7 @@ Parameters
 Secret proof transaction
 ************************
 
-Secret proof transaction is used to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
+Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
 To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hashing algorithm*, which unlock the transaction.
 

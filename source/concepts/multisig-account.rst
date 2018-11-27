@@ -81,11 +81,14 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
 .. _modify-multisig-account-transaction:
 
-**************************************
-Modifying multisig account transaction
-**************************************
+***********************************
+Modify multisig account transaction
+***********************************
 
-Modifying multisig account transaction is used to change properties of a multisig account.
+Announce a modify multisig account transaction to:
+
+a) Transform an account to multisig.
+b) Change the configurable properties of a multisig account.
 
     **Minimum Approval Delta**
 
