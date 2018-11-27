@@ -46,7 +46,7 @@ As a temporary measure, Alice opts to disable announcing transfer transactions f
 Account Properties Transaction
 ******************************
 
-Filters are set using Account Properties Transaction.
+Set and modify account filters announcing an account properties transaction.
 
 Parameters
 ==========
@@ -54,7 +54,6 @@ Parameters
   **Modifications**
 
   An array of modifications. A maximum of ``255`` modifications per transaction is allowed.
-
 
 Each modification is composed of:
 
