@@ -4,9 +4,21 @@ Mosaic
 
 Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
-Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
+A mosaic could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-A mosaic could be a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
+Each mosaic has a set of configurable properties. During the mosaic creation, you can define:
+
+.. _mosaic-properties:
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
+    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for.
+    Initial supply; Integer; Indicates the amount of mosaic in circulation. The initial supply must be in the range of 0 and 9,000,000,000.
+    Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
+    Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
 .. _mosaic-definition-transaction:
 
@@ -14,14 +26,14 @@ A mosaic could be a token, but it could also represent a set of more specialized
 Mosaic definition transaction
 *****************************
 
-Mosaic definition transaction is used to create a new mosaic.
+Announce a mosaic definition transaction to create a new mosaic.
 
 Parameters
 ==========
 
     **Namespace**
 
-    A mosaic is always linked to a namespace, like a file hosted on a domain.
+    A mosaic is always linked to a :doc:`namespace <namespace>`, like a file hosted on a domain.
 
     **Name**
 
@@ -33,21 +45,11 @@ Parameters
 
     **Owner**
 
-    The public key of the mosaic creator.
+    The public key of the :doc:`mosaic creator <account>`.
 
     **Properties**
 
-    The behavior of a mosaic can be customized by a set of properties. Supported properties are:
-
-    * Divisibility: Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
-
-    * Duration: The number of confirmed blocks we would like to rent our namespace for.
-
-    * Supply: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
-
-    * Supply mutable: The creator can choose between a definition that allows a mosaic supply to change at a later point or an **immutable** supply. In the first case, the creator is only allowed to decrease the supply within the limits of mosaics owned.
-
-    * Transferability: The creator can choose whether the mosaic can be transferred to and from arbitrary accounts, or only allowing him/herself to be the recipient once transferred.
+    See :ref:`mosaic configurable properties<mosaic-properties>`
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
@@ -57,18 +59,18 @@ Parameters
 Mosaic supply change transaction
 ********************************
 
-Mosaic supply change transaction is used to assign supply to a mosaic.
+Announce a supply change transaction to increase or decrease a mosaic's supply.
 
 Parameters
 ==========
 
     **Mosaic Id**
 
-    Combination of namespace name and mosaic name. For example "foo.bar:token".
+    A combination of namespace name and mosaic name. For example "foo.bar:token".
 
     **Direction**
 
-    Could be Increase (0) or Decrease (1).
+    The direction could be Increase (0) or Decrease (1).
 
     **Delta**
 

@@ -170,7 +170,7 @@
                                                         <a href="https://apostille.io/">
                                                         <div class="card font-icon"><i>
 
-.. image:: resources/images/logo-apostille.png
+.. image:: resources/images/icons/logo-apostille.png
         :align: center
         :height: 40px
 

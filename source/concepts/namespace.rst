@@ -4,7 +4,7 @@ Namespace
 
 Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
-A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem.
+A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
 
 After registering your namespace, you have the ability to define your own subdomains, as well as the names for your :doc:`mosaics <mosaic>`.
 
@@ -26,7 +26,7 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Register namespace transaction
 ******************************
 
-Register namespace transaction is used to create and re-rent a namespace or subnamespace.
+Announce a register namespace transaction to register and re-rent a namespace.
 
 Parameters
 ==========
@@ -47,7 +47,7 @@ Parameters
 
     **Renting duration**
 
-    Renting duration represents the number of confirmed blocks we would like to rent our namespace for.
+    The renting duration represents the number of confirmed blocks we would like to rent our namespace for.
 
     During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
 

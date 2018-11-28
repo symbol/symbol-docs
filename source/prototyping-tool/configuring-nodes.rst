@@ -1,5 +1,3 @@
-:orphan:
-
 #################
 Configuring Nodes
 #################
@@ -19,14 +17,14 @@ You have to link nodes together, connecting the previous node outputs with the f
 
 In some cases, you could configure inputs and properties directly by double-clicking a node.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-1.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-node-palette.png
     :align: center
 
     The node palette and node help sidebars.
 
 2. Let's link account with other nodes. As we need a ``privateKey`` as an input, we could opt to drag and drop and link **generateAccount** with **account** node, under *NEM Account*.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-2.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-link-nodes.png
     :align: center
     :width: 500px
 
@@ -34,7 +32,7 @@ In some cases, you could configure inputs and properties directly by double-clic
 
 3. Double-click on account node. Choose the ``network`` you want to use. Do the same for generateAccount node.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-3.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-edit-account-node.png
     :align: center
     :width: 500px
 
@@ -56,7 +54,7 @@ Some nodes require to configure an API gateway (e.g. **announce transaction** an
 
 3. Enter your ``custom url`` using http or https schema (e.g. http://localhost). Choose the ``network`` and ``port`` you want to use and then press ``Update``.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-5.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-edit-server-config-node.png
     :align: center
     :width: 500px
     
@@ -68,7 +66,7 @@ Running a flow
 
 2. Check the output returned at the right sidebar, under the debug tab. NEM2 nodes return outputs following the structure ``msg.nem.<name_of_the_output>``.
 
-.. figure:: ../resources/images/nem2-prototyping-tool-4.png
+.. figure:: ../resources/images/screenshots/nem2-prototyping-tool-debug.png
     :align: center
     :width: 500px
 

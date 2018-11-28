@@ -10,7 +10,7 @@ The Smart Asset System
 
 NEM is built around a powerful system to customize your using of the blockchain. We call it the *Smart Asset System*. It gives you the power to use NEM as if it were a custom blockchain built for your application and your assets.
 
-.. figure:: ../resources/images/smart-assets-system.png
+.. figure:: ../resources/images/examples/smart-assets-system.png
     :align: center
     :width: 600px
 
@@ -30,7 +30,7 @@ All the functionalities are available through the API interface on each node in 
 
 Some examples of possible architecture solutions:
 
-.. figure:: ../resources/images/arquitecturing-nem-solutions.png
+.. figure:: ../resources/images/examples/architecting-nem-solutions.png
     :align: center
     :width: 600px
 
@@ -54,7 +54,7 @@ A gateway server links existing business contract logic, systems, or databases t
 Public and Private
 ******************
 
-.. figure:: ../resources/images/public-private-blockchain.png
+.. figure:: ../resources/images/examples/public-private-blockchain.png
     :align: center
     :width: 600px
 

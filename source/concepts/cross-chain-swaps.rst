@@ -4,7 +4,7 @@ Cross-Chain Swaps
 
 A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
 
-.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap.png
+.. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
     :width: 500px
 
@@ -15,7 +15,7 @@ In order to create a trustless environment for an exchange, a specific transacti
 In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree. 
 The figure below illustrates the cross-chain swap protocol.
 
-.. figure:: ../resources/images/guides-transactions-atomic-cross-chain-swap-sequence-diagram.png
+.. figure:: ../resources/images/diagrams/cross-chain-swap-cycle.png
     :align: center
     :width: 700px
 
@@ -29,7 +29,7 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Secret lock transaction
 ***********************
 
-Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``. 
+Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``.
 
 Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
 
@@ -64,7 +64,7 @@ Parameters
 Secret proof transaction
 ************************
 
-Secret proof transaction is used to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
+Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
 To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hashing algorithm*, which unlock the transaction.
 

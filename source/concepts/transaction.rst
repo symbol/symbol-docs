@@ -40,7 +40,7 @@ Transactions share the following properties:
 Lifecycle
 *********
 
-.. figure:: ../resources/images/transaction-cycle.png
+.. figure:: ../resources/images/diagrams/transaction-cycle.png
     :width: 800px
     :align: center
 

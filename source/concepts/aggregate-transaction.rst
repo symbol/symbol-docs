@@ -17,7 +17,7 @@ Dan announces an aggregate transaction that merges two transfer transactions.
 
 As he is the only required signed, we say the aggregate transaction it is complete. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
-.. figure:: ../resources/images/guides-transactions-sending-payouts.png
+.. figure:: ../resources/images/examples/aggregate-sending-payouts.png
     :align: center
     :width: 450px
 
@@ -29,7 +29,7 @@ Multi-Asset Escrowed Transactions
 
 In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
 
-.. figure:: ../resources/images/guides-transactions-escrow.png
+.. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
 
@@ -44,7 +44,7 @@ By creating an aggregate bonded transaction, she can convert USD to XEM to pay t
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
-.. figure:: ../resources/images/guides-transactions-paying-for-others-fees.png
+.. figure:: ../resources/images/examples/aggregate-paying-for-others-fees.png
     :align: center
     :width: 450px
 
@@ -88,7 +88,7 @@ Once an aggregate bonded is announced, it reaches partial state and notifies its
 
 Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature<cosignature-transaction>`, the network checks if all the required cosigners have already signed. In this situation, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
 
-.. figure:: ../resources/images/aggregate-bonded-transaction-cycle.png
+.. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
     :align: center
 
