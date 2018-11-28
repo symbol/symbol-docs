@@ -2,17 +2,38 @@
 Account Filter
 ##############
 
-:doc:`Accounts<account>` may configure account properties, a set of smart rules to receive transactions only from an allowed list of addresses. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+:doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
 
-When these pair of lists are empty, all accounts can send transactions to the stated account.
+The constraints given to block transactions are called filters. Accounts can add and edit their own filters by announcing an :ref:`AccountPropertiesTransaction<account-properties-transaction>`.
 
-.. figure:: ../resources/images/concepts-account-properties-array.png
-  :align: center
-  :width: 550px
+************
+Filter types
+************
 
-  Address filter
+Address filter
+==============
 
-The same behavior can be applied to allow or block receiving transactions containing a given :doc:`mosaic id<mosaic>` or only allowing sending certain :ref:`transactions by type<transaction-types>`.
+An account can decide to receive transactions only from an allowed list of addresses. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+
+.. figure:: ../resources/images/diagrams/account-properties-address.png
+    :align: center
+    :width: 450px
+
+    Address filter diagram
+
+.. note:: Allow and block filters are mutually exclusive. In other words, an account can only configure a block or an allow list per type of filter.
+
+By default, when there is no filter set, all the accounts in the network can announce transactions to the stated account.
+
+Mosaic filter
+=============
+
+An account can configure a filter to permit incoming transactions only if all the mosaics attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+
+TransactionType filter
+======================
+
+An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
 
 ********
 Examples
@@ -27,11 +48,11 @@ When the quality verification process concludes, an operator sends a :doc:`quali
 
 The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding others to spam their products with non-related information.
 
-.. figure:: ../resources/images/concepts-account-properties-spam.png
-  :align: center
-  :width: 450px
+.. figure:: ../resources/images/examples/account-properties-spam.png
+    :align: center
+    :width: 450px
 
-  Blocking spam transactions
+    Blocking spam transactions
 
 The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality:seal`` mosaics.
 
@@ -41,6 +62,8 @@ Enhancing the account security
 Lately, Alice is only using her main account to cosign aggregate transactions where a :doc:`multisig<multisig-account>` she is a cosignatory is involved.
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
+
+.. _account-properties-transaction:
 
 ******************************
 Account Properties Transaction
