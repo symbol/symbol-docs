@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-11-28 07:55+0900\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -85,6 +85,8 @@ msgid ""
 "You can click  the “Edit on Github” button at the top-right part of the "
 "screen."
 msgstr ""
+"SDK 作成に協力したい場合は :doc:`SDK 開発ガイドライン <development>` を確認してください。そして、リポジトリに  "
+"“Ongoing work” を追記してください。スクリーン右上の “Edit on Github” ボタンをクリックすることができます。"
 
 #: ../../source/sdk/languages.rst:21
 msgid "Community SDKs"
@@ -123,6 +125,10 @@ msgid "|swift-repo|"
 msgstr ""
 
 #: ../../source/sdk/languages.rst:1
+msgid "C++"
+msgstr ""
+
+#: ../../source/sdk/languages.rst:1
 msgid "PHP SDK"
 msgstr ""
 
@@ -130,11 +136,11 @@ msgstr ""
 msgid "Ruby SDK"
 msgstr ""
 
-#: ../../source/sdk/languages.rst:35
+#: ../../source/sdk/languages.rst:36
 msgid "Ongoing work"
 msgstr "稼働中の仕事"
 
-#: ../../source/sdk/languages.rst:37
+#: ../../source/sdk/languages.rst:38
 msgid ""
 "The following repositories have not been tested by the community, they are "
 "under development and might be unstable."

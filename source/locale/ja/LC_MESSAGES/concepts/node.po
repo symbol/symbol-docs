@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-11-28 07:55+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -168,8 +168,8 @@ msgid "New unconfirmed transactions finished processing."
 msgstr ""
 
 #: ../../source/concepts/node.rst:66
-msgid "The MongoDB shouldn’t be accessed externally."
-msgstr ""
+msgid "MongoDB should not be accessed externally."
+msgstr "MongoDB は外部からアクセスされるべきではありません。"
 
 #: ../../source/concepts/node.rst:69
 msgid "ZMQ"
