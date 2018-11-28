@@ -85,6 +85,9 @@ Transaction types
 
     :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x41;	0x41; 16705
     :ref:`Aggregate Complete Transaction <aggregate-transaction>`; 0x42;	0x41;	16961
+    :ref:`Account Properties Transaction - Address <account-properties-transaction>`; 0x41;	0x50; 16720
+    :ref:`Account Properties Transaction - Mosaic  <account-properties-transaction>`; 0x42;	0x50; 16976
+    :ref:`Account Properties Transaction - TransactionType  <account-properties-transaction>`; 0x43;	0x50; 17232
     :ref:`Cosignature Transaction <cosignature-transaction>`; -- ; -- ; --
     :ref:`Lock Funds Transaction <lock-funds-transaction>`; 0x41; 0x48; 16712
     :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; 0x41; 0x4D; 16717
