@@ -195,7 +195,7 @@ table-td {
     color: rgb(32, 181, 172);
 }
 
-#nem-developer-center,
+#home,
 #reference,
 #endpoints{
     display: none;
@@ -487,7 +487,6 @@ footer select{
         padding-bottom: 150px !important;
     }
 }
-
 
 /* Guides */
 

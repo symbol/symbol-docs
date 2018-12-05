@@ -2,7 +2,7 @@
 Writing your first application
 ##############################
 
-This first guide will take you through the NEM development cycle. You will send your first transaction to the blockchain after combining some NEM :doc:`built-in features <../concepts/account>`.
+This guide will take you through the NEM development cycle. You will send your first transaction to the blockchain after combining some NEM :doc:`built-in features <../concepts/account>`.
 
 **********
 Background

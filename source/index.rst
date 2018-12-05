@@ -79,8 +79,8 @@
                     </div>
                     <div class="col-sm-8">
                         <h3>Built-in Features</h3>
-                        <p>Architecture your solution connecting the different parts that make up the Smart Asset System.</p>
-                       <b>COMPOSE</b>
+                        <p>Architecture your solution connecting the features that make up the Smart Asset System.</p>
+                       <b>COMBINE</b>
                    </div>
                 </div></a>
             </div>
@@ -108,9 +108,9 @@
         </div>
     </section>
 
-********************
-NEM Developer Center
-********************
+****
+Home
+****
 
 
 .. toctree::

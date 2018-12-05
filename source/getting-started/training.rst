@@ -6,7 +6,7 @@ Although you can read this documentation from start to end, we recommend you to 
 
 If you prefer to learn about NEM through guided lessons, consider taking one course from the following list.
 
-.. csv-table::
+.. csv-table:: Courses
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
