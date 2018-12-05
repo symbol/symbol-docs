@@ -19,7 +19,7 @@ Large networks compute a large number of transactions. Working with binary optim
 
 **Flexibility**
 
-REST `transaction endpoints <https://nemtech.github.io/api/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockhain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+REST `transaction endpoints <https://nemtech.github.io/api/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
 
 **Reusability**
 
@@ -52,13 +52,13 @@ The following entities are currently supported:
 Parsing a schema and generating code
 ====================================
 
-Generate the code for a determined schema in one of the available languages.  For example, run the following command to generate C++ code to serialize and deserialize a transfer transaction:
+Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ code to serialize and deserialize a transfer transaction:
 
 .. code-block:: bash
 
     $> python main.py -i schemas/transfer.cats -g cpp-builder
 
-The generators creates a new file under ``_generated/cpp`` folder. Repeat the process using a different input schema ``(-i)`` or generator ``(-g)`` as needed.
+The generator creates a new file under ``_generated/cpp`` folder. Repeat the process using a different input schema ``(-i)`` or generator ``(-g)`` as needed.
 
 Writing a schema
 ================
