@@ -4,6 +4,13 @@ Serialization
 
 `Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
 
+.. figure:: ../resources/images/diagrams/catbuffer.png
+    :width: 450px
+    :align: center
+
+    NEM2-SDK serialization module
+
+
 The library accomplishes the following properties:
 
 **Memory Efficiency**
