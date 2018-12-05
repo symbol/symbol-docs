@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-11-28 07:55+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -53,10 +53,26 @@ msgid "Transactions share the following properties:"
 msgstr "トランザクションには以下の共通プロパティがあります:"
 
 #: ../../source/concepts/transaction.rst:15
+msgid "**Signature**"
+msgstr "**署名**"
+
+#: ../../source/concepts/transaction.rst:17
+msgid "The transaction signature."
+msgstr "トランザクションの署名"
+
+#: ../../source/concepts/transaction.rst:19
+msgid "**Signer**"
+msgstr "**署名者**"
+
+#: ../../source/concepts/transaction.rst:21
+msgid "The transaction signer public key."
+msgstr "トランザクション署名者の公開鍵"
+
+#: ../../source/concepts/transaction.rst:23
 msgid "**Type**"
 msgstr "**タイプ**"
 
-#: ../../source/concepts/transaction.rst:17
+#: ../../source/concepts/transaction.rst:25
 msgid ""
 "NEM defines some types of transactions that can be performed. See "
 ":ref:`transaction types <transaction-types>`."
@@ -64,89 +80,73 @@ msgstr ""
 "NEMは実行可能なトランザクションにいくつかのタイプの定義しています。:ref:`トランザクションタイプ <transaction-types>` "
 "を参照してください。"
 
-#: ../../source/concepts/transaction.rst:19
+#: ../../source/concepts/transaction.rst:27
 msgid "**Version number**"
 msgstr "**バージョンナンバー**"
 
-#: ../../source/concepts/transaction.rst:21
+#: ../../source/concepts/transaction.rst:29
 msgid "The version of the structure."
 msgstr "構造体のバージョン"
 
-#: ../../source/concepts/transaction.rst:23
+#: ../../source/concepts/transaction.rst:31
+msgid "**Fee**"
+msgstr "**手数料**"
+
+#: ../../source/concepts/transaction.rst:33
+msgid "How much it costs to announce the transaction in XEM."
+msgstr "トランザクションをアナウンスするための XEM コスト"
+
+#: ../../source/concepts/transaction.rst:35
 msgid "**Deadline**"
 msgstr "**期限**"
 
-#: ../../source/concepts/transaction.rst:25
+#: ../../source/concepts/transaction.rst:37
 msgid ""
 "The maximum amount of time to include the transaction in the blockchain."
 msgstr "トランザクションがブロックチェーンに取り込まれるまでの最大時間"
 
-#: ../../source/concepts/transaction.rst:27
-msgid "**Fee**"
-msgstr "**手数料**"
-
-#: ../../source/concepts/transaction.rst:29
-msgid "How much it costs to announce the transaction in XEM."
-msgstr "トランザクションをアナウンスするための XEM コスト"
-
-#: ../../source/concepts/transaction.rst:31
-msgid "**Signature**"
-msgstr "**署名**"
-
-#: ../../source/concepts/transaction.rst:33
-msgid "The transaction signature."
-msgstr "トランザクションの署名"
-
-#: ../../source/concepts/transaction.rst:35
-msgid "**Signer**"
-msgstr "**署名者**"
-
-#: ../../source/concepts/transaction.rst:37
-msgid "The transaction signer public key."
-msgstr "トランザクション署名者の公開鍵"
-
-#: ../../source/concepts/transaction.rst:42
+#: ../../source/concepts/transaction.rst:41
 msgid "Lifecycle"
 msgstr "ライフサイクル"
 
-#: ../../source/concepts/transaction.rst:48
+#: ../../source/concepts/transaction.rst:47
 msgid "Transaction cycle"
 msgstr "トランザクションサイクル"
 
-#: ../../source/concepts/transaction.rst:50
+#: ../../source/concepts/transaction.rst:49
 msgid ""
 "When you announce a transaction, the REST API will always return an OK. At "
 "this point, it still unknown whether the transaction is valid."
 msgstr "トランザクションをアナウンスすると、REST API は常にOKを返します。この時点ではトランザクションが正当かどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:52
+#: ../../source/concepts/transaction.rst:51
 msgid ""
 "To know the transaction status, which can be OK or :doc:`Failure "
 "<../api/websockets>`, you have to:"
 msgstr ""
 "トランザクションが OK または :doc:`失敗 <../api/websockets>` かのステータスを知るには、次の操作を行う必要があります。"
 
-#: ../../source/concepts/transaction.rst:54
+#: ../../source/concepts/transaction.rst:53
 msgid "Check the status via API endpoint"
 msgstr "APIエンドポイント経由で状態をチェックする"
 
-#: ../../source/concepts/transaction.rst:55
+#: ../../source/concepts/transaction.rst:54
 msgid "Listen to the different :doc:`WebSocket<../api/websockets>` channels."
 msgstr "異なる :doc:`WebSocket<../api/websockets>` チャンネルを監視してください。"
 
-#: ../../source/concepts/transaction.rst:57
+#: ../../source/concepts/transaction.rst:56
 msgid ""
 "If valid, the transaction reaches the network with an **unconfirmed** "
 "status."
 msgstr "トランザクションが正当な場合には、 **未承認** 状態としてネットワークに到達します。"
 
-#: ../../source/concepts/transaction.rst:59
+#: ../../source/concepts/transaction.rst:58
 msgid ""
 "Never rely on a transaction which has an unconfirmed state. It is not clear "
 "if it will get included in a block."
 msgstr "決して未承認状態の取引に頼らないでください。それがブロックに含まれるかどうかはわかりません。"
 
-#: ../../source/concepts/transaction.rst:61
+#: ../../source/concepts/transaction.rst:60
 msgid ""
 "The transaction is **confirmed** once it is included in a :doc:`block "
 "<block>`. In case of a transfer transaction, the transaction gets processed "
@@ -157,7 +157,7 @@ msgstr ""
 "トランザクションは :doc:`ブロック<block>` に含まれると **承認済** "
 "になります。転送トランザクションの場合、トランザクションが処理され、設定された総量が送信者のアカウントから受信者のアカウントへ振り込まれます。そしてトランザクション手数料は送信者のアカウントから差し引かれます。"
 
-#: ../../source/concepts/transaction.rst:63
+#: ../../source/concepts/transaction.rst:62
 msgid ""
 "The transaction has zero confirmations at this point. When another block is "
 "added to the blockchain, the transaction has one confirmation. The next "
@@ -165,111 +165,92 @@ msgid ""
 msgstr ""
 "この時点でトランザクションの承認はゼロです。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:67
+#: ../../source/concepts/transaction.rst:66
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/transaction.rst:69
+#: ../../source/concepts/transaction.rst:68
 msgid ""
 "Cryptocurrencies can roll back part of the blockchain. Rollbacks are "
 "essential for resolving forks of the blockchain."
 msgstr ""
 "暗号通貨はブロックチェーンの一部をロールバックすることができます。ロールバックはブロックチェーンのフォークを解決するために不可欠なものです。"
 
-#: ../../source/concepts/transaction.rst:71
+#: ../../source/concepts/transaction.rst:70
 msgid ""
 "The \"rewrite limit\" is the maximum number of blocks that can be rolled "
 "back. Hence, forks can only be resolved up to a certain depth too."
 msgstr "\"書き換え制限\" とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
-#: ../../source/concepts/transaction.rst:73
+#: ../../source/concepts/transaction.rst:72
 msgid ""
 "NEM has a rewrite limit of 360 blocks. Once a transaction has more than 360 "
 "confirmations, it cannot be reversed."
 msgstr "NEMの書き換え限界は360ブロックです。トランザクションが360ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
-#: ../../source/concepts/transaction.rst:75
+#: ../../source/concepts/transaction.rst:74
 msgid ""
 "In real life, forks that are deeper than 20 blocks do not happen, unless "
 "there is a severe problem with the blockchain due to a bug in the code or an"
 " attack."
 msgstr "実際の生活では、コードや攻撃のバグによりブロックチェーンに重大な問題がない限り、20ブロックよりも深いフォークは起こりません。"
 
-#: ../../source/concepts/transaction.rst:81
+#: ../../source/concepts/transaction.rst:80
 msgid "Transaction types"
 msgstr "トランザクションタイプ"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Transaction name"
-msgstr "トランザクション名"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Transaction type"
 msgstr "トランザクションタイプ"
 
 #: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Transfer Transaction <transfer-transaction>`"
-msgstr ":ref:`転送トランザクション <transfer-transaction>`"
+msgid "High byte"
+msgstr "高位byte"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4154"
-msgstr ""
+msgid "Low byte"
+msgstr "低位byte"
 
 #: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Register Namespace Transaction <register-namespace-transaction>`"
-msgstr ":ref:`ネームスペース登録トランザクション <register-namespace-transaction>`"
+msgid "Decimal"
+msgstr "10進法"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414e"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`"
-msgstr ":ref:`モザイク定義トランザクション <mosaic-definition-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x414d"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`"
-msgstr ":ref:`モザイク供給量変更トランザクション <mosaic-supply-change-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x424d"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`Modify Multisig Account Transaction <modify-multisig-account-"
-"transaction>`"
-msgstr ":ref:`マルチシグ変更トランザクション <modify-multisig-account-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4155"
-msgstr ""
-
 #: ../../source/concepts/transaction.rst:1
 msgid ":ref:`Aggregate Complete Transaction <aggregate-transaction>`"
 msgstr ":ref:`アグリゲートコンプリートトランザクション <aggregate-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4141"
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+msgid "0x41"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Aggregate Bonded Transaction <aggregate-transaction>`"
-msgstr ":ref:`アグリゲートボンドトランザクション <aggregate-transaction>`"
+msgid "16705"
+msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4241"
+#: ../../source/concepts/transaction.rst:1
+msgid "0x42"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16961"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ":ref:`Cosignature Transaction <cosignature-transaction>`"
 msgstr ":ref:`連署トランザクション <cosignature-transaction>`"
 
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 msgid "--"
 msgstr ""
@@ -279,7 +260,60 @@ msgid ":ref:`Lock Funds Transaction <lock-funds-transaction>`"
 msgstr ":ref:`ロック資産トランザクション <lock-funds-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414C"
+#: ../../source/concepts/transaction.rst:1
+msgid "0x4C"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16716"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ":ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`"
+msgstr ":ref:`モザイク定義トランザクション <mosaic-definition-transaction>`"
+
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+msgid "0x4D"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16717"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+":ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`"
+msgstr ":ref:`モザイク供給量変更トランザクション <mosaic-supply-change-transaction>`"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16973"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+":ref:`Modify Multisig Account Transaction <modify-multisig-account-"
+"transaction>`"
+msgstr ":ref:`マルチシグ変更トランザクション <modify-multisig-account-transaction>`"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "0x55"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16725"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ":ref:`Register Namespace Transaction <register-namespace-transaction>`"
+msgstr ":ref:`ネームスペース登録トランザクション <register-namespace-transaction>`"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "0x4E"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16718"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
@@ -287,7 +321,11 @@ msgid ":ref:`Secret Lock Transaction <secret-lock-transaction>`"
 msgstr ":ref:`シークレットロックトランザクション <secret-lock-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x424C"
+msgid "0x52"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16722"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
@@ -295,5 +333,21 @@ msgid ":ref:`Secret Proof Transaction <secret-proof-transaction>`"
 msgstr ":ref:`シークレット証明トランザクション <secret-proof-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x434C"
+msgid "0x43"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "17228"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ":ref:`Transfer Transaction <transfer-transaction>`"
+msgstr ":ref:`転送トランザクション <transfer-transaction>`"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "0x54"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "16724"
 msgstr ""

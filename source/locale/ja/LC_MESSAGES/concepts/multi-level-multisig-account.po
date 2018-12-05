@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-11-28 07:55+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -49,52 +49,66 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:12
+#: ../../source/concepts/multi-level-multisig-account.rst:13
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:14
-msgid "MLMA allows a huge variety of business logic:"
-msgstr "MLMA はかなり様々なビジネスロジックに適用可能です:"
+#: ../../source/concepts/multi-level-multisig-account.rst:15
+msgid "MLMA allows a huge variety of business logic."
+msgstr "MLMA はかなり様々なビジネスロジックに適用可能です。"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:16
-msgid ""
-"In this example, a manufacturer is shipping a pharmaceutical product. The "
-"product receives its quality approval :doc:`mosaic <mosaic>` only when its "
-"blockchain record shows it has a production date, safety inspection, and was"
-" shipped at the correct temperature. Sensors in the shipping container "
-"report temperature data every 5 minutes and consolidate it into a daily "
-"report."
-msgstr ""
-"これは製造者が医薬製品を発送する事例です。この製品は、ブロックチェーン記録が示す製造日時、安全検査、正しい温度で出荷されたかを示したときだけに、品質認可"
-" :doc:`モザイク <mosaic>` を受取ります。出荷コンテナ内のセンサーが温度を5分ごとにレポートし、日次レポートとしてまとめます。"
-
-#: ../../source/concepts/multi-level-multisig-account.rst:22
+#: ../../source/concepts/multi-level-multisig-account.rst:18
+#: ../../source/concepts/multi-level-multisig-account.rst:30
 msgid "Manufacturing and Supply Chains"
 msgstr "製造とサプライチェーン"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:25
+#: ../../source/concepts/multi-level-multisig-account.rst:20
+msgid "In this example, a manufacturer is shipping a pharmaceutical product."
+msgstr "これは製造者が医薬製品を発送する事例です。"
+
+#: ../../source/concepts/multi-level-multisig-account.rst:22
 msgid ""
-"This example shows how a high-security account can be made easier to use. "
+"The product receives its quality approval :doc:`mosaic <mosaic>` only when "
+"its blockchain record shows it has a production date, safety inspection, and"
+" was shipped at the correct temperature."
+msgstr ""
+"この製品は、ブロックチェーン記録が示す製造日時、安全検査、正しい温度で出荷されたかを示したときだけに、品質認可 :doc:`モザイク <mosaic>`"
+" を受取ります。"
+
+#: ../../source/concepts/multi-level-multisig-account.rst:24
+msgid ""
+"Sensors in the shipping container report temperature data every 5 minutes "
+"and consolidate it into a daily report."
+msgstr "出荷コンテナ内のセンサーが温度を5分ごとにレポートし、日次レポートとしてまとめます。"
+
+#: ../../source/concepts/multi-level-multisig-account.rst:34
+#: ../../source/concepts/multi-level-multisig-account.rst:44
+msgid "Fraud Detection"
+msgstr "不正検知"
+
+#: ../../source/concepts/multi-level-multisig-account.rst:36
+msgid ""
+"This example shows how a high-security account can be made easier to use."
+msgstr "この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。"
+
+#: ../../source/concepts/multi-level-multisig-account.rst:38
+msgid ""
 "Transactions are only approved from a hardware wallet OR your phone AND a "
 "fraud detection AI. MLMA allows a variety of security configurations at the "
 "protocol level to keep businesses and their customers hack-free."
 msgstr ""
-"この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。トランザクションはハードウェアウォレットまたは電話と不正検知AIによってのみ承認されます。MLMA"
-" はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
+"トランザクションはハードウェアウォレットまたは電話と不正検知AIによってのみ承認されます。MLMA "
+"はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:31
-msgid "Fraud Detection"
-msgstr "不正検知"
+#: ../../source/concepts/multi-level-multisig-account.rst:47
+#: ../../source/concepts/multi-level-multisig-account.rst:55
+msgid "Account Recovery"
+msgstr "アカウントの復旧"
 
-#: ../../source/concepts/multi-level-multisig-account.rst:33
+#: ../../source/concepts/multi-level-multisig-account.rst:49
 msgid ""
 "You can set up your account so it can be recovered only with the approval of"
 " signatures from specified accounts, such as your friends and family. "
 "Combine the branches any way you like."
 msgstr ""
 "アカウントを、友人や家族などのアカウントから承認署名を用いて、復旧できるようにセットアップすることもできます。お好みの分岐を構成してください。"
-
-#: ../../source/concepts/multi-level-multisig-account.rst:39
-msgid "Account Recovery"
-msgstr "アカウントの復旧"

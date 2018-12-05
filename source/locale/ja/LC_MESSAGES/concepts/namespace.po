@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.13.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-11-28 07:55+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -34,11 +34,11 @@ msgstr "ネームスペースによって、NEM ブロックチェーン上に�
 #: ../../source/concepts/namespace.rst:7
 msgid ""
 "A namespace starts with a name that you choose, similar to an internet "
-"domain name. If one :doc:`account <account>` creates a namespace, that "
-"namespace will appear as unique in the NEM ecosystem."
+"domain name. If one :doc:`account <account>` creates a namespace, that will "
+"appear as unique in the NEM ecosystem."
 msgstr ""
 "ネームスペースはインターネットドメイン名と同様に選択した一意の名前で始まります。ある :doc:`アカウント <account>` "
-"がネームスペースを作成すると、そのネームスペースは NEM エコシステム内で一意に表現されるようになります。"
+"がネームスペースを作成すると、それは NEM エコシステム内で一意に表現されるようになります。"
 
 #: ../../source/concepts/namespace.rst:9
 msgid ""
@@ -87,62 +87,56 @@ msgstr "ネームスペース登録トランザクション"
 
 #: ../../source/concepts/namespace.rst:29
 msgid ""
-"Register namespace transaction is used to create and re-rent a namespace or "
-"subnamespace."
-msgstr "ネームスペース取得トランザクションはネームスペースまたはサブネームスペースの取得と再取得に使用します。"
+"Announce a register namespace transaction to register and re-rent a "
+"namespace."
+msgstr "ネームスペース取得トランザクションはネームスペースの取得と再取得に使用します。"
 
-#: ../../source/concepts/namespace.rst:31
+#: ../../source/concepts/namespace.rst:32
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../source/concepts/namespace.rst:34
 msgid "**Name**"
 msgstr "**名前**"
 
-#: ../../source/concepts/namespace.rst:33
+#: ../../source/concepts/namespace.rst:36
 msgid ""
 "A namespace name must be unique and may have a maximum length of ``64`` "
 "characters."
 msgstr "ネームスペースは一意でなければならず、最大 ``64`` 文字です。"
 
-#: ../../source/concepts/namespace.rst:35
+#: ../../source/concepts/namespace.rst:38
 msgid "Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -."
 msgstr "利用可能な文字は a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -. です。"
 
-#: ../../source/concepts/namespace.rst:37
+#: ../../source/concepts/namespace.rst:40
 msgid "**Parent namespace**"
 msgstr "**親ネームスペース**"
 
-#: ../../source/concepts/namespace.rst:39
+#: ../../source/concepts/namespace.rst:42
 msgid ""
 "If it is a subdomain, a reference to parent namespace name is required."
 msgstr "それがサブネームスペースの場合、親ネームスペースへの参照は必須です。"
 
-#: ../../source/concepts/namespace.rst:41
-msgid "**Depth**"
-msgstr "**深さ**"
-
-#: ../../source/concepts/namespace.rst:43
-msgid ""
-"Level of the namespace. Namespace ``foo`` level is 0, whereas ``foo.bar`` "
-"level is 1."
-msgstr "ネームスペースの深さ。ネームスペース ``foo`` のレベルは 0 で ``foo.bar`` はレベル 1 です。"
-
-#: ../../source/concepts/namespace.rst:45
+#: ../../source/concepts/namespace.rst:44
 msgid "**Owner**"
 msgstr "**所有者**"
 
-#: ../../source/concepts/namespace.rst:47
+#: ../../source/concepts/namespace.rst:46
 msgid "The public key of the namespace creator."
 msgstr "ネームスペース作成者の公開鍵"
 
-#: ../../source/concepts/namespace.rst:49
+#: ../../source/concepts/namespace.rst:48
 msgid "**Renting duration**"
 msgstr "**レンタル期間**"
 
-#: ../../source/concepts/namespace.rst:51
+#: ../../source/concepts/namespace.rst:50
 msgid ""
-"Renting duration represents the number of confirmed blocks we would like to "
-"rent our namespace for."
+"The renting duration represents the number of confirmed blocks we would like"
+" to rent our namespace for."
 msgstr "レンタル期間はネームスペースを借りたい期間のブロック数を表します。"
 
-#: ../../source/concepts/namespace.rst:53
+#: ../../source/concepts/namespace.rst:52
 msgid ""
 "During the renting period, it is possible to extend the rental by sending a "
 ":ref:`register namespace transaction<register-namespace-transaction>` with "
@@ -151,6 +145,6 @@ msgstr ""
 "レンタル期間中に余分なブロックを持つ :ref:`ネームスペース登録トランザクション<register-namespace-transaction>` "
 "を送信して、ネームスペースをレンタルすることによって、レンタル期間を延長することが可能です。"
 
-#: ../../source/concepts/namespace.rst:55
+#: ../../source/concepts/namespace.rst:54
 msgid "When a renting period ends, the namespace will become inactive."
 msgstr "レンタル期間が終了するとネームスペースは非アクティブになります。"
