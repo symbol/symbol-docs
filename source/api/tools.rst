@@ -13,7 +13,7 @@ The **NEM2 Software Development Kit** is the primary software development tool t
 .. note::️️ Consider using **NEM2-SDK** instead of calling the API directly.
 
 * :doc:`Reference <../sdk/overview>`
-* :doc:`Guides <../guides/overview>`
+* :doc:`Guides <../concepts/account>`
 
 *************
 Insomnia REST

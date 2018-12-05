@@ -232,6 +232,14 @@
                                                         </a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-3">
+                                                        <a href="api/serialization.html">
+                                                              <div class="card font-icon">
+                                                                <i class="fas fa-cubes colored green"></i>
+                                                                  <h4>Serialization</h4>
+                                                              </div>
+                                                        </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3">
                                                         <a href="api/websockets.html">
                                                               <div class="card font-icon">
                                                                   <i class="fas fa-dot-circle colored green"></i>
