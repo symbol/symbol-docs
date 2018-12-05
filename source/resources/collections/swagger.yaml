@@ -744,14 +744,14 @@ paths:
       tags:
         - Transaction routes
       summary: Announce a new transaction
-      description: Announces a [transaction](https://nemtech.github.io/concepts/transaction.html) to the network. It is recommended to use the NEM2-SDK to announce transactions.
+      description: Announces a [transaction](https://nemtech.github.io/concepts/transaction.html) to the network. It is recommended to use the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api/serialization.html).
       operationId: announceTransaction
       produces:
         - application/json
       parameters:
         - name: payload
           in: body
-          description: The transaction [payload](https://github.com/nemtech/guidelines/blob/master/development/sdk-development.md#transaction-serialization).
+          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
           required: true
           schema:
             $ref: '#/definitions/transactionPayload'
@@ -778,7 +778,7 @@ paths:
       parameters:
         - name: payload
           in: body
-          description: The transaction [payload](https://github.com/nemtech/guidelines/blob/master/development/sdk-development.md#transaction-serialization).
+          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
           required: true
           schema:
             $ref: '#/definitions/transactionPayload'
@@ -798,14 +798,14 @@ paths:
       tags:
         - Transaction routes
       summary: Announce a cosignature transaction
-      description: Announces a [cosignature transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#cosignature-transaction) to the network.  It is recommended to use the NEM2-SDK to announce transactions.
+      description: Announces a [cosignature transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#cosignature-transaction) to the network.
       operationId: announceCosignatureTransaction
       produces:
         - application/json
       parameters:
         - name: payload
           in: body
-          description: The transaction [payload](https://github.com/nemtech/guidelines/blob/master/development/sdk-development.md#transaction-serialization).
+          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
           required: true
           schema:
             $ref: '#/definitions/transactionPayload'
