@@ -10,7 +10,7 @@ If you prefer to learn about NEM through guided lessons, consider taking one cou
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
-   `Getting started with NEM Catapult <https://blockchain.craftain.com/courses/getting-started-with-nem-catapult/>`_;  Build a decentralized blockchain app using Catapult.; Developers (NEM novice); Craftain and NEM Foundation
+   `Getting started with NEM Catapult <https://craftain.com/courses/getting-started-with-nem-catapult/>`_ ;  Build a decentralized blockchain app using Catapult.; Developers (NEM novice); Craftain and NEM Foundation
    `Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2-workshop-document-notarization/>`_ ; Learn how digital assets can be notarized in the blockchain.; Developers (NEM advanced beginner); NEM Foundation
    `NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/>`_ ; Start developing a real use case step by step.; Developers (NEM competent); NEM Foundation
 
