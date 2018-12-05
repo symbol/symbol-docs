@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -55,15 +55,6 @@ msgid "http://localhost:3000/<path-to-API-request>"
 msgstr ""
 
 #: ../../source/api/requests.rst:17
-msgid "For example:"
-msgstr "例"
-
-#: ../../source/api/requests.rst:19
-msgid ""
-"http://localhost:3000/account/7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246/transactions"
-msgstr ""
-
-#: ../../source/api/requests.rst:21
 msgid ""
 "HTTP PUT and POST requests use JSON structures in the request body. Request "
 "returns data (if any is returned) using JSON structures. This kind of "
@@ -74,7 +65,7 @@ msgstr ""
 "リクエストはボディ部にJSON形式を使用します。リクエストは(返す物があれば)データをJSON形式を返します。この種のリクエストはそれが可能な "
 ":doc:`プラグイン <tools>` を利用しないことにはブラウザから実行することができません。"
 
-#: ../../source/api/requests.rst:25
+#: ../../source/api/requests.rst:21
 msgid "Http errors"
 msgstr "HTTP エラー"
 
@@ -136,7 +127,7 @@ msgstr ""
 msgid "Internal error. Unexpected condition."
 msgstr "Internal error 予期しない状態です。"
 
-#: ../../source/api/requests.rst:40
+#: ../../source/api/requests.rst:36
 msgid "Http status"
 msgstr "HTTP ステータス"
 
@@ -160,15 +151,15 @@ msgstr "メッセージ"
 msgid "Error explained in human-readable format."
 msgstr "可読可能なフォーマットによるエラー説明"
 
-#: ../../source/api/requests.rst:49
+#: ../../source/api/requests.rst:45
 msgid "**Example**"
 msgstr "**例**"
 
-#: ../../source/api/requests.rst:60
+#: ../../source/api/requests.rst:56
 msgid "Numbers: lower and higher"
 msgstr "数値: 高位と下位"
 
-#: ../../source/api/requests.rst:62
+#: ../../source/api/requests.rst:58
 msgid ""
 "Javascript operate on 32 bit values. To enable representation up to 64 bits,"
 " the API returns numbers encoded in two parts: ``lower`` and ``higher``."
@@ -176,7 +167,7 @@ msgstr ""
 "Javascript は 32 bit の値を扱います。64 bit の表現を可能にするために、API は ``lower`` と ``higher``"
 " の２つの部分にエンコードされた数値を返します。"
 
-#: ../../source/api/requests.rst:64
+#: ../../source/api/requests.rst:60
 msgid ""
 "Check `how to compact lower and higher into a simple number "
 "<https://github.com/nemtech/nem2-library-"
@@ -186,6 +177,6 @@ msgstr ""
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_"
 " を確認してください。"
 
-#: ../../source/api/requests.rst:66
+#: ../../source/api/requests.rst:62
 msgid "Continue: :doc:`Tools <tools>`."
 msgstr "次へ: :doc:`ツール <tools>`"

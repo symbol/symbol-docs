@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -27,9 +27,9 @@ msgstr "ワークステーションのセットアップ"
 
 #: ../../source/getting-started/setup-workstation.rst:5
 msgid ""
-"This guide will walk you through a step-by-step installation of the required"
-" tools to start developing on NEM Catapult."
-msgstr "このガイドでは、NEM Catapult で開発を始めるために必要なツールのインストールを段階的に進めていきます。"
+"This first guide will walk you through a step-by-step installation of the "
+"required tools to start developing on NEM Catapult."
+msgstr "最初のガイドでは、NEM Catapult で開発を始めるために必要なツールのインストールを段階的に進めていきます。"
 
 #: ../../source/getting-started/setup-workstation.rst:9
 msgid "Running Catapult Service Bootstrap"
@@ -187,10 +187,8 @@ msgid ""
 msgstr "``nemesis_addresses`` のセクションから、XEM を保有するキーペアを見つけてください。"
 
 #: ../../source/getting-started/setup-workstation.rst:88
-msgid ""
-"Load the first account as a profile in NEM2-CLI. This account identifies the"
-" company."
-msgstr "NEM2-CLI に最初のアカウントを読み込みましょう。このアカウントは会社を表します。"
+msgid "Load the first account as a profile in NEM2-CLI."
+msgstr "NEM2-CLI に最初のアカウントを読み込みます。"
 
 #: ../../source/getting-started/setup-workstation.rst:103
 msgid "Setting up the development environment"
