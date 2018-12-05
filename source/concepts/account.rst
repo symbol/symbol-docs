@@ -34,4 +34,16 @@ An account has the following properties:
 
   **Mosaics**
 
-  Amount of different :doc:`mosaics <mosaic>` the account owns.
+  The amount of different :doc:`mosaics <mosaic>` the account owns.
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: account
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

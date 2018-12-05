@@ -28,12 +28,8 @@ Wallets & Explorers
 Documentation
 *************
 
-* :doc:`Writing a guide <../guides/writing-a-guide>`
+* :doc:`Writing a guide <writing-a-guide>`
+* :doc:`Creating a new workshop <creating-a-new-workshop>`
 * :doc:`Suggesting changes <suggesting-changes>`
 * :doc:`Translating the documentation <translating-the-documentation>`
 
-*********
-Workshops
-*********
-* :doc:`Summary <../guides/workshops>`
-* :doc:`Creating a new workshop <../guides/workshops/creating-a-new-workshop>`

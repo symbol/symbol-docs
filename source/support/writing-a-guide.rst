@@ -17,15 +17,15 @@ Before starting
 3. Check if you can classify your guide under one of the current categories. If not, create a new issue proposing a new category:
 
 .. csv-table:: Categories
-   :header: "Section", "Categories"
+   :header: "Built-in feature", "Tags"
    :delim: ;
 
-   :doc:`Interacting with accounts <account>` ; account, multisig-account
-   :doc:`Monitoring blockchain <blockchain>` ; blockchain
-   :doc:`Registering namespaces <namespace>`; namespace
-   :doc:`Interacting with mosaics <namespace>`; mosaic
-   :doc:`Sending transactions <transaction>`; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
-   :doc:`Running a node <running-a-node>`; node
+   Account ; account, multisig-account, mlma
+   Blockchain ; blockchain
+   Namespace ; namespace
+   Mosaic ; mosaic
+   Transaction; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
+   Node; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
 
 4. You can opt to write the guide for this repository, or use your blog.
 

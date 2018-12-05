@@ -33,3 +33,16 @@ The following parameters are required:
     The transaction message of ``1024`` characters. It can be empty.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: transfer-transaction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

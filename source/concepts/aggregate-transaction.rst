@@ -23,7 +23,6 @@ As he is the only required signed, we say the aggregate transaction it is comple
 
     Sending payouts with aggregate complete transactions
 
-
 Multi-Asset Escrowed Transactions
 =================================
 
@@ -137,3 +136,15 @@ Parameters
     Aggregate bonded has to be confirmed before unlocking funds.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: aggregate-transaction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

@@ -91,6 +91,15 @@ b) Change the configurable properties of a multisig account.
 
     Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
 
+**************
+Related guides
+**************
 
-
+.. postlist::
+    :category: multisig-account
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 

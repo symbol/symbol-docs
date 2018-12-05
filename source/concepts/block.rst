@@ -1,6 +1,6 @@
-######
-Blocks
-######
+#####
+Block
+#####
 
 The central element of every cryptocurrency is a public ledger called the called blockchain, which links blocks together.
 
@@ -82,3 +82,15 @@ Blocks are composed of the following properties:
 .. |merkle-tree| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle Tree</a>
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: blockchain
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

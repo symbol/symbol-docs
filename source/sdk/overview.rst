@@ -18,7 +18,7 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 
 * **Fewer bugs**: If any bug appears in one language, it is faster to check and fix it.
 
-The best way to learn about the SDKs is through :doc:`guides <../guides/overview>`, we encourage you to check them.
+The best way to learn about the SDKs is through :doc:`guides <../concepts/account>`.
 
 *************************************
 Backward compatibility with NIS1 SDKs

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: multisig-account
+    :category: multisig-account, mlma
     :excerpt: 1
     :nocomments:
 

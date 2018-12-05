@@ -1,6 +1,6 @@
-############
-Transactions
-############
+###########
+Transaction
+###########
 
 Transactions are actions taken on the blockchain that change its state. In other words, how your Smart Assets are put into action.
 
@@ -94,3 +94,15 @@ Transaction types
     :ref:`Secret Lock Transaction <secret-lock-transaction>`; 0x41; 0x52; 16722
     :ref:`Secret Proof Transaction <secret-proof-transaction>`; 0x43 ;0x4C; 17228
     :ref:`Transfer Transaction <transfer-transaction>`; 0x41; 0x54; 16724
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: monitoring
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

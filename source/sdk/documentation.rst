@@ -40,7 +40,7 @@ Guides
 ******
 
 The NEM Developer Center gathers a collection of
-:doc:`guides <../guides/overview>`. They show
+:doc:`guides <../concepts/account>`. They show
 developers how to use NEM built-in features while following step-by-step use cases.
 
 Each guide comes with at least one snippet. Snippets are executable

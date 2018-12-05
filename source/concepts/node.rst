@@ -1,6 +1,6 @@
-#####
-Nodes
-#####
+####
+Node
+####
 
 The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
@@ -11,8 +11,6 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
 The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
-
-.. note:: Guides explaining how to run a main net node are pending to be published. See how to run :doc:`Catapult in local<../guides/running-a-node>` for testing purposes.
 
 **********************
 Catapult P2P Component
@@ -99,3 +97,16 @@ Additionally, Catapult REST sends new transactions to the Catapult API using soc
 .. |zmq| raw:: html
 
   <a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a>
+
+
+**************
+Related guides
+**************
+
+* |running-catapult-locally|
+
+Deploy a Catapult node for learning and development purposes.
+
+.. |running-catapult-locally| raw:: html
+
+   <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank"><b>Running Catapult locally</b></a>
