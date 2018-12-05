@@ -250,4 +250,4 @@ Once signed, announce it to the network.
 What's next?
 ************
 
-Continue reviewing :doc:`general concepts <../concepts/account>` or practicing with more step-by-step :doc:`guides <../guides/overview>`.
+Continue reviewing :doc:`NEM built-in features <../concepts/account>` or practicing with :doc:`self-paced training <training>`.
