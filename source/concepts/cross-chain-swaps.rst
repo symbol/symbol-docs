@@ -2,7 +2,7 @@
 Cross-Chain Swaps
 #################
 
-A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process. 
+A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process.
 
 .. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
@@ -29,11 +29,19 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Secret lock transaction
 ***********************
 
-Use a secret lock transaction to initiate the cross-chain swap. Once announced, the specified mosaics are locked at blockchain level, associated with a previously chosen *hashed proof* called ``secret``.
+Use a secret lock transaction to start the cross-chain swap.
 
-Funds are unlocked and transferred when an account announces a  valid :ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must demonstrate knowing the *secret* that unlocks the transaction, by disclosing the previously used ``hashing algorithm`` and the ``proof``. 
+1. Define the mosaic units you want to transfer to a determined account.
 
-If the transaction duration is reached and not proved, the locked amount is returned to the initiator of the secret lock transaction.
+2. Generate a random set of bytes called ``proof``.
+
+3. Hash the obtained proof with one of the available algorithms to generate the ``secret``.
+
+4. Select during how much time the mosaics will be locked and announce the transaction.
+
+The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction <secret-proof-transaction>` unlocks them.
+
+If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
 
 Parameters
 ==========
@@ -44,11 +52,17 @@ Parameters
 
     **Duration**
 
-    The duration for the funds to be released or returned.
+    If reached, the mosaics will be returned to the initiator.
 
     **Hash Type**
 
-    Hash algorithm used, with which secret is generated.
+    The algorithm used to hash the proof.
+
+    .. csv-table::
+        :header: "Hash Type", "ID"
+        :delim: ;
+
+        SHA_512; 0
 
     **Secret**
 
@@ -66,14 +80,14 @@ Secret proof transaction
 
 Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
-To unlock a secret lock transaction, the account must demonstrate that it knows the *proof* and the used *hashing algorithm*, which unlock the transaction.
+The transaction must prove that knows the *proof*  that unlocks the mosaics.
 
 Parameters
 ==========
 
     **Hash Type**
 
-    The hash algorithm used, to check that proof hashed equals secret.
+    The algorithm used to hash the proof.
 
     **Secret**
 
@@ -81,4 +95,16 @@ Parameters
 
     **Proof**
 
-    The proof seed.
+    The original proof.
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: cross-chain-swaps
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
