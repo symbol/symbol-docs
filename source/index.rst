@@ -44,7 +44,7 @@
 
 
      <div class="col-md-6">
-                 <a href="guides/overview.html"><div class="card">
+                 <a href="concepts/cryptography.html"><div class="card">
                     <div class="col-sm-4 hidden-xs card-img">
 
 .. image:: resources/images/icons/home-guides.png
