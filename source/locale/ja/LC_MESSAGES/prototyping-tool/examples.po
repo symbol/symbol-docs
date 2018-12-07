@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/prototyping-tool/examples.rst:5
+#: ../../source/prototyping-tool/examples.rst:3
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/prototyping-tool/examples.rst:9
+#: ../../source/prototyping-tool/examples.rst:7
 msgid "Basics"
 msgstr "基本"
 
@@ -95,7 +95,7 @@ msgstr ""
 "`アグリゲートトランザクションへの署名 "
 "<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
 
-#: ../../source/prototyping-tool/examples.rst:25
+#: ../../source/prototyping-tool/examples.rst:23
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -111,17 +111,17 @@ msgstr ""
 msgid "`@planethouki <https://github.com/planethouki>`_"
 msgstr ""
 
-#: ../../source/prototyping-tool/examples.rst:35
+#: ../../source/prototyping-tool/examples.rst:33
 msgid "Importing a flow"
 msgstr "フローのインポート"
 
-#: ../../source/prototyping-tool/examples.rst:37
+#: ../../source/prototyping-tool/examples.rst:35
 msgid ""
 "After opening an example, copy the JSON you will find at the bottom of the "
 "site."
 msgstr "例を開いたら、サイトの下部にあるボタンで JSON をコピーしてください。"
 
-#: ../../source/prototyping-tool/examples.rst:39
+#: ../../source/prototyping-tool/examples.rst:37
 msgid ""
 "In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the"
 " JSON flow and click Import button."
@@ -129,11 +129,11 @@ msgstr ""
 "Node-REDで ``Import > Clipboard from the menu`` (Ctrl-E) を選択してください。JSON "
 "フローをペーストして、インポートボタンをクリックします。"
 
-#: ../../source/prototyping-tool/examples.rst:43
+#: ../../source/prototyping-tool/examples.rst:41
 msgid "Contributing"
 msgstr "貢献"
 
-#: ../../source/prototyping-tool/examples.rst:45
+#: ../../source/prototyping-tool/examples.rst:43
 msgid ""
 "We love to receiving contributions from our community — you! Follow these "
 "guidelines to get your flow included in this documentation."
@@ -141,7 +141,7 @@ msgstr ""
 "私たちは私たちのコミュニティ - そう、あなた！ "
 "からの貢献をを喜んで受け入れます。あなたのフローをドキュメントへ含めるために、これらのガイドラインに従ってください。"
 
-#: ../../source/prototyping-tool/examples.rst:47
+#: ../../source/prototyping-tool/examples.rst:45
 msgid ""
 "The first step is to export the flow you have created. In Node-RED, select "
 "the flow you want to export. Open ``Export > Clipboard`` from the menu "
@@ -150,29 +150,29 @@ msgstr ""
 "最初のステップは、あなたの作ったフローをエクスポートすることです。Node-RED では、メニュー (Ctrl-E) から ``Export > "
 "Clipboard`` を開き、ダイアログから JSON をコピーしてください。"
 
-#: ../../source/prototyping-tool/examples.rst:49
+#: ../../source/prototyping-tool/examples.rst:47
 msgid "We are using |Node-RED-flows-repository| to share our flows."
 msgstr "私たちはフローの共有に |Node-RED-flows-repository| を使用しています。"
 
-#: ../../source/prototyping-tool/examples.rst:51
+#: ../../source/prototyping-tool/examples.rst:49
 msgid "Click ``Add flow``."
 msgstr "``Add flow`` をクリック"
 
-#: ../../source/prototyping-tool/examples.rst:52
+#: ../../source/prototyping-tool/examples.rst:50
 msgid ""
 "Give your flow a short, descriptive title and describe what the flow does "
 "and how it is used."
 msgstr "あなたのフローを端的でわかりやすいタイトルを、このフローは何をするのか、どうやって使うのかを説明してください。"
 
-#: ../../source/prototyping-tool/examples.rst:53
+#: ../../source/prototyping-tool/examples.rst:51
 msgid "Paste the JSON flow you want to share."
 msgstr "共有したいフローの JSON をペーストしてください。"
 
-#: ../../source/prototyping-tool/examples.rst:54
+#: ../../source/prototyping-tool/examples.rst:52
 msgid "Add the tag ``NEM2``."
 msgstr "``NEM2`` のタグを追加します。"
 
-#: ../../source/prototyping-tool/examples.rst:56
+#: ../../source/prototyping-tool/examples.rst:54
 msgid ""
 "After a while, your flow and your GitHub username will be included in this "
 "page."

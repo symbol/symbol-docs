@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13.1\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-28 07:55+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -74,26 +74,17 @@ msgid "Documentation"
 msgstr "ドキュメント"
 
 #: ../../source/support/contributing.rst:31
-msgid ":doc:`Writing a guide <../guides/writing-a-guide>`"
-msgstr ":doc:`ガイドの記述 <../guides/writing-a-guide>`"
+msgid ":doc:`Writing a guide <writing-a-guide>`"
+msgstr ":doc:`ガイドの記述 <writing-a-guide>`"
 
 #: ../../source/support/contributing.rst:32
+msgid ":doc:`Creating a new workshop <creating-a-new-workshop>`"
+msgstr ":doc:`新しいワークショップの作成 <creating-a-new-workshop>`"
+
+#: ../../source/support/contributing.rst:33
 msgid ":doc:`Suggesting changes <suggesting-changes>`"
 msgstr ":doc:`変更の提案 <suggesting-changes>`"
 
-#: ../../source/support/contributing.rst:33
+#: ../../source/support/contributing.rst:34
 msgid ":doc:`Translating the documentation <translating-the-documentation>`"
 msgstr ":doc:`ドキュメントの翻訳 <translating-the-documentation>`"
-
-#: ../../source/support/contributing.rst:37
-msgid "Workshops"
-msgstr "ワークショップ"
-
-#: ../../source/support/contributing.rst:38
-msgid ":doc:`Summary <../guides/workshops>`"
-msgstr ":doc:`概要 <../guides/workshops>`"
-
-#: ../../source/support/contributing.rst:39
-msgid ""
-":doc:`Creating a new workshop <../guides/workshops/creating-a-new-workshop>`"
-msgstr ":doc:`新しいワークショップの作成 <../guides/workshops/creating-a-new-workshop>`"
