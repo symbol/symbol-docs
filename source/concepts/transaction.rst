@@ -9,7 +9,7 @@ Transactions are actions taken on the blockchain that change its state. When an 
 There are different types of transactions. For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 .. csv-table::
-    :header:  "Transaction type",  "Name", "Description"
+    :header:  "Id",  "Type", "Description"
     :delim: ;
 
     0x4154; :ref:`Transfer Transaction <transfer-transaction>`; Send mosaics and messages between two accounts.
@@ -24,11 +24,16 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
     0x4154; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
 
-**********
-Properties
-**********
+**********************
+Defining a transaction
+**********************
 
 Every transaction shares some common properties. Each transaction extends from the following definition, adding the type's particular properties.
+
+Transactions are defined in a :doc:`serialized form <../api/serialization>`. We recommend to `use the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+
+Properties
+==========
 
     **Size**: 4 bytes
 
@@ -36,7 +41,7 @@ Every transaction shares some common properties. Each transaction extends from t
 
     **Signature**: 64 bytes
 
-    The transaction :ref:`transaction types <transaction-signature>`.
+    The :ref:`transaction signature <transaction-signature>`.
 
     **Signer**: 32 bytes
 
@@ -64,13 +69,13 @@ Every transaction shares some common properties. Each transaction extends from t
 Signing a transaction
 *********************
 
-Accounts must sign transactions before announcing them to the network. Signing a transaction expresses the account's agreement to change the network state as defined.
+Accounts must sign transactions before announcing them to the network. `Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
 For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account to the other.
 
 The account generates the signature `signing the first 100 bytes of the defined transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ with its private key. Then, the signature is appended to the transaction's body, resulting in a signed transaction.
 
-The hash of the transaction is generated once `the sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
+The hash of the transaction is generated once `the Sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
 
 .. _transaction-validation:
 
@@ -86,7 +91,7 @@ Signed transactions are ready to be announced to the network.
 
     Transaction cycle
 
-After announcing a transaction, the REST API will always return an OK response immediately. At this point, it still unknown whether the transaction is valid.
+After `announcing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_, the REST API will always return an OK response immediately. At this point, it still unknown whether the transaction is valid.
 
 The first validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation before.
 

@@ -41,20 +41,20 @@ Blocks are composed of the following properties:
     The version of the block. The higher byte represents the network identifier.
 
     .. csv-table::
-      :header: "Block version", "Description", "High byte"
+      :header: "Id", "Version", "Description"
       :delim: ;
 
-      MAIN_NET; Public main network; 0x68
-      TEST_NET; Public test network; 0x98
-      MIJIN; Private network; 0x60
-      MIJIN_TEST; Private test network; 0x90
+      0x68; MAIN_NET; Public main network
+      0x98; TEST_NET; Public test network
+      0x60; MIJIN; Private network
+      0x90; MIJIN_TEST; Private test network
 
     **Type**
 
     The type of the block.
 
     .. csv-table::
-      :header: "Block type", "Description"
+      :header: "Id", "Type"
       :delim: ;
 
       0x8043; Nemesis Block
@@ -72,7 +72,7 @@ Blocks are composed of the following properties:
 
     **Previous block hash**
 
-    The ``sha3-256`` hash of the last block, formatted in as a hexadecimal string.
+    The ``Sha3-256`` hash of the last block, formatted in as a hexadecimal string.
 
 
     **Block transaction hash**

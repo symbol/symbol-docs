@@ -10,7 +10,7 @@ body {
     min-height: 100%;
     position: relative;
     font-size: 16px;
-    font-family: "Roboto" !important;
+    font-family: "Roboto", sans-serif !important;
 }
 
 /* Button */
@@ -230,7 +230,7 @@ table-td {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-brand:hover {
     color: #555;
-}K
+}
 
 .dLabelGlobalToc {
     display: none;
