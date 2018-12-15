@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13.1\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-28 07:55+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -124,5 +124,9 @@ msgid "**Mosaics**"
 msgstr "**モザイク**"
 
 #: ../../source/concepts/account.rst:37
-msgid "Amount of different :doc:`mosaics <mosaic>` the account owns."
+msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
+
+#: ../../source/concepts/account.rst:41
+msgid "Related guides"
+msgstr "関連するガイド"

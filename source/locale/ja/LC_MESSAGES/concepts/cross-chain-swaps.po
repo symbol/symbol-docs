@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13.1\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-28 07:55+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -82,84 +82,113 @@ msgid "Secret lock transaction"
 msgstr "シークレットロックトランザクション"
 
 #: ../../source/concepts/cross-chain-swaps.rst:32
-msgid ""
-"Use a secret lock transaction to initiate the cross-chain swap. Once "
-"announced, the specified mosaics are locked at blockchain level, associated "
-"with a previously chosen *hashed proof* called ``secret``."
-msgstr ""
-"クロスチェーンスワップを始めるにはシークレットロックトランザクションを使用してください。アナウンスをすると、指定モザイクがブロックチェーンレベルでロックされ、以前に選択した"
-" ``シークレット`` と呼ばれる *ハッシュ化した証明* と関連付けられます。"
+msgid "Use a secret lock transaction to start the cross-chain swap."
+msgstr "クロスチェーンスワップを行うために、シークレットロックトランザクションを使用します。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:34
-msgid ""
-"Funds are unlocked and transferred when an account announces a  valid "
-":ref:`Secret Proof Transaction <secret-proof-transaction>`. The account must"
-" demonstrate knowing the *secret* that unlocks the transaction, by "
-"disclosing the previously used ``hashing algorithm`` and the ``proof``."
-msgstr ""
-"アカウントが正当な :ref:`シークレット証明トランザクション <secret-proof-transaction>` "
-"をアナウンスすると、資産はアンロックされ、転送されます。アカウントは以前に使用された ``ハッシュアルゴリズム`` と``証明`` "
-"を開示することによって、トランザクションのロックを解除する *シークレット* を知っていることを示す必要があります。"
+msgid "Define the mosaic units you want to transfer to a determined account."
+msgstr "送信先のアカウントに送りたいモザイクの単位を定義してください。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:36
-msgid ""
-"If the transaction duration is reached and not proved, the locked amount is "
-"returned to the initiator of the secret lock transaction."
-msgstr "トランザクションの期間に到達したとき、証明されていない場合、ロックされた総量はロックトランザクションを開始したアカウントへ返還されます。"
+msgid "Generate a random set of bytes called ``proof``."
+msgstr "``proof`` と呼ばれるランダムなバイトセットを生成してください。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:39
-#: ../../source/concepts/cross-chain-swaps.rst:72
+#: ../../source/concepts/cross-chain-swaps.rst:38
+msgid ""
+"Hash the obtained proof with one of the available algorithms to generate the"
+" ``secret``."
+msgstr "得られた proof を利用可能なアルゴリズムの1つでハッシュ化して ``secret`` を生成します。"
+
+#: ../../source/concepts/cross-chain-swaps.rst:40
+msgid ""
+"Select during how much time the mosaics will be locked and announce the "
+"transaction."
+msgstr "モザイクがロックされる時間を選択し、トランザクションをアナウンスします。"
+
+#: ../../source/concepts/cross-chain-swaps.rst:42
+msgid ""
+"The specified mosaics remain locked until a valid :ref:`Secret Proof "
+"Transaction <secret-proof-transaction>` unlocks them."
+msgstr ""
+"特定のモザイクは妥当な :ref:`シークレットプルーフトランザクション <secret-proof-transaction>` "
+"がそれらをアンロックするまで、ロックされたままになります。"
+
+#: ../../source/concepts/cross-chain-swaps.rst:44
+msgid ""
+"If the transaction duration is reached without being proved, the locked "
+"amount goes back to the initiator of the secret lock transaction."
+msgstr "トランザクションが証明されずに期間に到達した場合、ロックされた総量はロックトランザクションを開始したアカウントへ戻ります。"
+
+#: ../../source/concepts/cross-chain-swaps.rst:47
+#: ../../source/concepts/cross-chain-swaps.rst:86
 msgid "Parameters"
 msgstr "パラメータ"
 
-#: ../../source/concepts/cross-chain-swaps.rst:41
+#: ../../source/concepts/cross-chain-swaps.rst:49
 msgid "**Mosaic**"
 msgstr "**モザイク**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:43
+#: ../../source/concepts/cross-chain-swaps.rst:51
 msgid "Locked mosaic."
 msgstr "ロックされたモザイク"
 
-#: ../../source/concepts/cross-chain-swaps.rst:45
+#: ../../source/concepts/cross-chain-swaps.rst:53
 msgid "**Duration**"
 msgstr "**期間**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:47
-msgid "The duration for the funds to be released or returned."
-msgstr "ファンドの開放または返還されるまでの期間"
+#: ../../source/concepts/cross-chain-swaps.rst:55
+msgid "If reached, the mosaics will be returned to the initiator."
+msgstr "到達した場合、モザイクはトランザクション開始者へ返還されます。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:49
-#: ../../source/concepts/cross-chain-swaps.rst:74
+#: ../../source/concepts/cross-chain-swaps.rst:57
+#: ../../source/concepts/cross-chain-swaps.rst:88
 msgid "**Hash Type**"
 msgstr "**ハッシュタイプ**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:51
-msgid "Hash algorithm used, with which secret is generated."
-msgstr "シークレットの生成に使用されているハッシュアルゴリズム"
+#: ../../source/concepts/cross-chain-swaps.rst:59
+#: ../../source/concepts/cross-chain-swaps.rst:90
+msgid "The algorithm used to hash the proof."
+msgstr "proof に使用されているハッシュアルゴリズム"
 
-#: ../../source/concepts/cross-chain-swaps.rst:53
-#: ../../source/concepts/cross-chain-swaps.rst:78
+#: ../../source/concepts/cross-chain-swaps.rst:1
+msgid "Hash Type"
+msgstr "ハッシュタイプ"
+
+#: ../../source/concepts/cross-chain-swaps.rst:1
+msgid "ID"
+msgstr ""
+
+#: ../../source/concepts/cross-chain-swaps.rst:1
+msgid "SHA_512"
+msgstr ""
+
+#: ../../source/concepts/cross-chain-swaps.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/concepts/cross-chain-swaps.rst:67
+#: ../../source/concepts/cross-chain-swaps.rst:92
 msgid "**Secret**"
 msgstr "**シークレット**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:55
-#: ../../source/concepts/cross-chain-swaps.rst:80
+#: ../../source/concepts/cross-chain-swaps.rst:69
+#: ../../source/concepts/cross-chain-swaps.rst:94
 msgid "The proof hashed."
 msgstr "ハッシュ化された証明"
 
-#: ../../source/concepts/cross-chain-swaps.rst:57
+#: ../../source/concepts/cross-chain-swaps.rst:71
 msgid "**Recipient**"
 msgstr "**受信アドレス**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:59
+#: ../../source/concepts/cross-chain-swaps.rst:73
 msgid "The address who will receive the funds once unlocked."
 msgstr "ロック後、ファンドを受け取るアドレス"
 
-#: ../../source/concepts/cross-chain-swaps.rst:65
+#: ../../source/concepts/cross-chain-swaps.rst:79
 msgid "Secret proof transaction"
 msgstr "シークレット証明トランザクション"
 
-#: ../../source/concepts/cross-chain-swaps.rst:67
+#: ../../source/concepts/cross-chain-swaps.rst:81
 msgid ""
 "Use a secret proof transaction to unlock :ref:`secret lock transactions "
 "<secret-lock-transaction>`."
@@ -167,23 +196,19 @@ msgstr ""
 "シークレット証明トランザクションは :ref:`シークレットロックトランザクション <secret-lock-transaction>` "
 "のアンロックに使用します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:69
+#: ../../source/concepts/cross-chain-swaps.rst:83
 msgid ""
-"To unlock a secret lock transaction, the account must demonstrate that it "
-"knows the *proof* and the used *hashing algorithm*, which unlock the "
-"transaction."
-msgstr ""
-"シークレットロックトランザクションをアンロックするために、アカウントはトランザクションをアンロックするための *証明* と使用された "
-"*ハッシュアルゴリズム* を知っていることを立証しなければなりません。"
+"The transaction must prove that knows the *proof*  that unlocks the mosaics."
+msgstr "トランザクションはモザイクをアンロックするための *proof* を証明しなければなりません。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:76
-msgid "The hash algorithm used, to check that proof hashed equals secret."
-msgstr "ハッシュ化された証明とシークレットの一致を確認するための、使用されているハッシュアルゴリズム"
-
-#: ../../source/concepts/cross-chain-swaps.rst:82
+#: ../../source/concepts/cross-chain-swaps.rst:96
 msgid "**Proof**"
 msgstr "**証明**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:84
-msgid "The proof seed."
-msgstr "証明のシード"
+#: ../../source/concepts/cross-chain-swaps.rst:98
+msgid "The original proof."
+msgstr "元の proof"
+
+#: ../../source/concepts/cross-chain-swaps.rst:102
+msgid "Related guides"
+msgstr "関連するガイド"
