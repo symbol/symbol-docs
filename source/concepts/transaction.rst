@@ -22,7 +22,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x414C; :ref:`Lock Funds Transaction <lock-funds-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
-    0x4154; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
+    0x434C; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
 
 **********************
 Defining a transaction
