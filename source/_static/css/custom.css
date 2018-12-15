@@ -10,6 +10,7 @@ body {
     min-height: 100%;
     position: relative;
     font-size: 16px;
+    font-family: "Roboto" !important;
 }
 
 /* Button */
@@ -68,6 +69,7 @@ blockquote {
 
 .card-container a {
     color: #555;
+    font-size: 15px;
 }
 
 .card-container a:hover{
@@ -218,7 +220,7 @@ table-td {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #999;
+    color: #555;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -228,7 +230,7 @@ table-td {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-brand:hover {
     color: #555;
-}
+}K
 
 .dLabelGlobalToc {
     display: none;
@@ -422,7 +424,6 @@ footer li{
 footer .social{
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 1.1em;
 }
 
 footer .social li{
@@ -444,6 +445,10 @@ footer select{
     color: rgba(255,255,255,0.4);
     border: 0;
     background: transparent;
+}
+
+footer option{
+    color: #000;
 }
 
 /* Home Page */

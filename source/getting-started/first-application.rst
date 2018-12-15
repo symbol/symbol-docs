@@ -47,9 +47,9 @@ Prerequisites
 - NEM2-SDK and CLI
 - An account with XEM
 
-*************************
+************************
 Let’s get into some code
-*************************
+************************
 
 **1.Creating an account for each participant**
 

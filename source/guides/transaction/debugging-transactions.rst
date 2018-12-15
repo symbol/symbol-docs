@@ -21,8 +21,8 @@ The new Catapult REST API works differently, being *asynchronous*. When a user a
 
 To know the status of the transaction, which can be OK or :doc:`Failure <../../api/status-errors>`, you have to:
 
-a) Check the status via API endpoint.
-b) Listen to the different :doc:`WebSocket<../../api/websockets>` channels.
+a) Check the status via :doc:`API endpoint <../../api/endpoints>`.
+b) Listen to the different :doc:`WebSocket <../../api/websockets>` channels.
 
 .. note:: While developing, it is encouraged to open terminals with different listeners to monitor the transactions you send using NEM2-CLI.
 

@@ -25,7 +25,7 @@ REST `transaction endpoints <https://nemtech.github.io/api/endpoints.html#operat
 
 Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
 
-At the current moment, you can generate buffers for **C++**. Javascript and Python are under development. If you are developing a SDK in another language, please consider coding a new generator.
+At the current moment, you can generate buffers for **C++**. Javascript and Python are under development. If you are developing an SDK in another language, please consider coding a new generator.
 
 ******
 Schema
@@ -112,7 +112,7 @@ Finally, define an EmbeddedTransaction struct.  This struct is used to serialize
 Integration
 ***********
 
-Adding generated code to a SDK
+Adding generated code to an SDK
 ===============================
 
 After compiling all the schemas for a selected language, move the generated files to your ``model/transaction`` SDK folder.

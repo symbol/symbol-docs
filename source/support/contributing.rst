@@ -16,8 +16,8 @@ SDK
 ====
 
 * :doc:`Summary <../sdk/languages>`
-* :doc:`Developing a SDK <../sdk/development>`
-* :doc:`Documenting a SDK <../sdk/documentation>`
+* :doc:`Developing an SDK <../sdk/development>`
+* :doc:`Documenting an SDK <../sdk/documentation>`
 
 Wallets & Explorers
 ===================

@@ -54,15 +54,18 @@ Parameters
 
     If reached, the mosaics will be returned to the initiator.
 
-    **Hash Type**
+    **Hash type**
 
     The algorithm used to hash the proof.
 
     .. csv-table::
-        :header: "Hash Type", "ID"
+        :header: "Id", "Hash ype", "Description"
         :delim: ;
 
-        SHA_512; 0
+        0; SHA_3; Input is hashed using Sha-3
+        1; Keccak; Input is hashed using Keccak
+        2; Hash_160; Input is hashed twice: first with SHA-256 and then with RIPEMD-160.
+        3; Hash_256; Input is hashed twice with SHA-256.
 
     **Secret**
 
@@ -85,7 +88,7 @@ The transaction must prove that knows the *proof*  that unlocks the mosaics.
 Parameters
 ==========
 
-    **Hash Type**
+    **Hash type**
 
     The algorithm used to hash the proof.
 

@@ -191,6 +191,7 @@ html_static_path = ['_static']
 
 ## Custom style overrides
 def setup(app):
+    app.add_stylesheet("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700")
     app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
