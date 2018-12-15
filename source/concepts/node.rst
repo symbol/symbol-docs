@@ -18,7 +18,7 @@ Catapult P2P Component
 
 **Repository:** |catapult-server|
 
-The P2P nodes form the backbone of the blockchain. The role of the node is to verify  :doc:`transactions<transaction>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
+The P2P nodes form the backbone of the blockchain. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
 The API nodes push new transactions to P2P nodes. If the transaction received is invalid, the P2P nodes discard it.
 
@@ -42,12 +42,11 @@ Catapult API Component
 
 **Repository:** |catapult-rest|
 
+The primary responsibility of Catapult API is to store the data in readable form.  Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
 
-The main responsibility of Catapult API components is to store the data in readable form.  Each API instance maintains a MongoDB, and optionally a RocksDB to store state.
+The layer :ref:`validates the transactions <transaction-validation>` received from the REST component. Additionally, the API throws the errors back via ZMQ in binary.
 
-Additionally, this layer verifies blocks and transactions. The API throws the errors to REST via ZMQ in binary.
-
-Catapult API collects cosignatures. :doc:`Aggregated bonded transactions <aggregate-transaction>` are pushed to P2P nodes once they are complete.
+The Catapult API component is also responsible for collecting cosignatures. :doc:`Aggregated bonded transactions <aggregate-transaction>` are pushed to P2P nodes once they are complete.
 
 API components can connect to multiple P2P nodes, but at least must connect to one.
 
@@ -76,7 +75,7 @@ Catapult REST Component
 
 Catapult REST handles **JSON API** client requests. This component reads from MongoDB, formats the response, and returns it to the client. Each Catapult REST connects to one Catapult API instance.
 
-Additionally, Catapult REST sends new transactions to the Catapult API using sockets. The component announces events to the client via WebSockets.
+Catapult REST sends new transactions to the Catapult API using sockets. The component announces events as well to the client via WebSockets.
 
 .. |catapult-server| raw:: html
 
