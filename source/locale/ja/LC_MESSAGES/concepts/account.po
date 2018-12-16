@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2018-12-15 22:53+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -27,7 +27,7 @@ msgstr "アカウント"
 
 #: ../../source/concepts/account.rst:5
 msgid ""
-"An account is a **key pair** (private and public key) associated to a "
+"An account is a **key pair** (private and public key) associated with a "
 "mutable state stored on the NEM blockchain. In other words, you have a "
 "deposit box in the blockchain, which only you can modify with your key pair."
 " As the name suggests, the private key has to be kept secret at all times. "
@@ -42,7 +42,7 @@ msgid ""
 "Think about NEM accounts as a **container for assets** in the blockchain. An"
 " account could represent a deposit of tokens, like most blockchains. "
 "However, it could also represent a **single object** that must be unique and"
-" updatable: a package to be shipped, a deed to a house, or a document to be "
+" updatable: a package to be shipped, a deed to a house or a document to be "
 "notarized."
 msgstr ""
 "NEM アカウントをブロックチェーン内の **資産のコンテナ** "
@@ -75,7 +75,7 @@ msgid "An account has the following properties:"
 msgstr "アカウントは以下のプロパティを持ちます:"
 
 #: ../../source/concepts/account.rst:21
-msgid "**Private Key**"
+msgid "**Private key**"
 msgstr "**秘密鍵**"
 
 #: ../../source/concepts/account.rst:23

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2018-12-15 22:53+0900\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -54,11 +54,11 @@ msgid ":doc:`Summary <../sdk/languages>`"
 msgstr ":doc:`概要 <../sdk/languages>`"
 
 #: ../../source/support/contributing.rst:19
-msgid ":doc:`Developing a SDK <../sdk/development>`"
+msgid ":doc:`Developing an SDK <../sdk/development>`"
 msgstr ":doc:`SDK の開発 <../sdk/development>`"
 
 #: ../../source/support/contributing.rst:20
-msgid ":doc:`Documenting a SDK <../sdk/documentation>`"
+msgid ":doc:`Documenting an SDK <../sdk/documentation>`"
 msgstr ":doc:`SDK のドキュメント <../sdk/documentation>`"
 
 #: ../../source/support/contributing.rst:23
