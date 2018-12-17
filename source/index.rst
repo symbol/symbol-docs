@@ -35,9 +35,9 @@
 
                     </div>
                     <div class="col-sm-8">
-                        <h3>Getting started</h3>
-                        <p>Start developing your first blockchain app.</p>
-                       <b>START</b>
+                        <h3 class="card-title">Getting started</h3>
+                        <p class="card-text">Start developing your first blockchain app.</p>
+                       <b class="card-cta">START</b>
                    </div>
                 </div></a>
             </div>
@@ -55,9 +55,9 @@
 
                     </div>
                     <div class="col-sm-8">
-                    <h3>Protocol</h3>
-                    <p>Learn in-depth how the blockchain protocol works.</p>
-                   <b>DISCOVER</b>
+                    <h3 class="card-title">Protocol</h3>
+                    <p class="card-text">Learn in-depth how the blockchain protocol works.</p>
+                   <b class="card-cta">DISCOVER</b>
                    </div>
                 </div></a>
             </div>
@@ -78,9 +78,9 @@
 
                     </div>
                     <div class="col-sm-8">
-                        <h3>Built-in Features</h3>
-                        <p>Architecture your solution connecting the features that make up the Smart Asset System.</p>
-                       <b>COMBINE</b>
+                        <h3 class="card-title">Built-in Features</h3>
+                        <p class="card-text">Architecture your solution connecting the features that make up the Smart Asset System.</p>
+                       <b class="card-cta">COMBINE</b>
                    </div>
                 </div></a>
             </div>
@@ -99,9 +99,9 @@
 
                     </div>
                     <div class="col-sm-8">
-                    <h3>References</h3>
-                    <p>From SDKs to extensions that make blockchain development easier.</p>
-                   <b>DEVELOP</b>
+                    <h3 class="card-title">References</h3>
+                    <p class="card-text">From SDKs to extensions that make blockchain development easier.</p>
+                   <b class="card-cta">DEVELOP</b>
                    </div>
                 </div></a>
             </div>

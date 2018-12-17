@@ -13,6 +13,15 @@ body {
     font-family: "Roboto", sans-serif !important;
 }
 
+/* Colors */
+.colored.green{
+    color: #20b5ac;
+}
+
+.colored.blue{
+    color: rgba(90, 176, 229, 1);
+}
+
 /* Button */
 .btn-default {
     border-radius: 15px;
@@ -77,7 +86,7 @@ blockquote {
     text-decoration: none;
 }
 
-.card b{
+.card .card-cta{
     color: #20b5ac;
 }
 
@@ -94,14 +103,11 @@ blockquote {
     height: 50px;
 }
 
-.colored.green{
-    color: #20b5ac;
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .card .card-text {
+        min-height: 64px;
+    }
 }
-
-.colored.blue{
-    color: rgba(90, 176, 229, 1);
-}
-
 
 /* Tables */
 table {
@@ -270,7 +276,8 @@ table-td {
 }
 
 @media screen and (max-width: 992px) {
-    .navbar-default form {
+    .navbar-default form,
+    .navbar-version {
         display: none;
     }
 }
@@ -484,12 +491,12 @@ footer option{
 }
 
 @media screen and (max-width: 450px) {
-    .jumbotron .image-container img {
-        height: 200px !important;
+    .home.jumbotron{
+        padding-bottom: 150px !important;
     }
 
-    .jumbotron{
-        padding-bottom: 150px !important;
+    .jumbotron .image-container img {
+        height: 200px !important;
     }
 }
 
