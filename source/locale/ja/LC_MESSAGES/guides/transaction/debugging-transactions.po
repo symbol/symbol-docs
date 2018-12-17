@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2018-12-15 22:53+0900\n"
 "PO-Revision-Date: 2018-10-26 13:37+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -62,12 +62,12 @@ msgstr ""
 "したのかを確認するためには、このようにします:"
 
 #: ../../source/guides/transaction/debugging-transactions.rst:24
-msgid "Check the status via API endpoint."
-msgstr "API エンドポイント経由でステータスを確認してください。"
+msgid "Check the status via :doc:`API endpoint <../../api/endpoints>`."
+msgstr ":doc:`API エンドポイント <../../api/endpoints>` 経由でステータスを確認してください。"
 
 #: ../../source/guides/transaction/debugging-transactions.rst:25
 msgid ""
-"Listen to the different :doc:`WebSocket<../../api/websockets>` channels."
+"Listen to the different :doc:`WebSocket <../../api/websockets>` channels."
 msgstr "別の :doc:`WebSocket<../../api/websockets>` チャンネルを監視してください。"
 
 #: ../../source/guides/transaction/debugging-transactions.rst:27

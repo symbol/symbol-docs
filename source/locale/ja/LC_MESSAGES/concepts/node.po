@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2018-12-15 22:53+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -56,12 +56,13 @@ msgstr "**リポジトリ:** |catapult-server|"
 #: ../../source/concepts/node.rst:21
 msgid ""
 "The P2P nodes form the backbone of the blockchain. The role of the node is "
-"to verify  :doc:`transactions<transaction>` and :doc:`blocks<block>`, run "
-"the consensus algorithm, create new blocks, and propagate the changes "
-"through the network."
+"to :ref:`verify transactions <transaction-validation>` and "
+":doc:`blocks<block>`, run the consensus algorithm, create new blocks, and "
+"propagate the changes through the network."
 msgstr ""
-"P2P ノードはブロックチェーンのバックボーンを構成します。ノードの役割は :doc:`トランザクション <transaction>` と "
-":doc:`ブロック <block>` を検証すること、コンセンサスアルゴリズム、新しいブロックの生成、ネットワークへの変更の伝播を実行することです。"
+"P2P ノードはブロックチェーンのバックボーンを構成します。ノードの役割は :ref:`トランザクション <transaction-"
+"validation>` と :doc:`ブロック <block>` "
+"を検証すること、コンセンサスアルゴリズムの実行、新しいブロックの生成、ネットワークへの変更の伝播を実行することです。"
 
 #: ../../source/concepts/node.rst:23
 msgid ""
@@ -92,12 +93,14 @@ msgid ""
 "and stored as value to a corresponding key. In other words, supports "
 "different “columns” (key/value pair “tables”)."
 msgstr ""
+"|rocksdb| はチェーン状態を保存します。このキャッシュされたデータ構造はシリアライズされ、対応するキーに値として保存されます。つまり "
+"\"columns\" (key/value ペアのテーブル) をサポートします。"
 
 #: ../../source/concepts/node.rst:35
 msgid ""
 "For example, a column maps the public keys to addresses. Another one, the "
 "account state entries as the value to corresponding address keys."
-msgstr ""
+msgstr "例えば、公開鍵をアドレスにマッピングしている列。他には、対応するアドレスをキーの値とした、アカウント状態のエントリです。"
 
 #: ../../source/concepts/node.rst:37
 msgid ""
@@ -110,66 +113,68 @@ msgstr ""
 msgid "Catapult API Component"
 msgstr "Catapult API コンポーネント"
 
-#: ../../source/concepts/node.rst:43 ../../source/concepts/node.rst:75
+#: ../../source/concepts/node.rst:43 ../../source/concepts/node.rst:74
 msgid "**Repository:** |catapult-rest|"
 msgstr "**リポジトリ:** |catapult-rest|"
 
-#: ../../source/concepts/node.rst:46
+#: ../../source/concepts/node.rst:45
 msgid ""
-"The main responsibility of Catapult API components is to store the data in "
-"readable form.  Each API instance maintains a MongoDB, and optionally a "
-"RocksDB to store state."
+"The primary responsibility of Catapult API is to store the data in readable "
+"form.  Each API instance maintains a MongoDB, and optionally a RocksDB to "
+"save the state."
 msgstr ""
 
-#: ../../source/concepts/node.rst:48
+#: ../../source/concepts/node.rst:47
 msgid ""
-"Additionally, this layer verifies blocks and transactions. The API throws "
-"the errors to REST via ZMQ in binary."
+"The layer :ref:`validates the transactions <transaction-validation>` "
+"received from the REST component. Additionally, the API throws the errors "
+"back via ZMQ in binary."
 msgstr ""
 
-#: ../../source/concepts/node.rst:50
+#: ../../source/concepts/node.rst:49
 msgid ""
-"Catapult API collects cosignatures. :doc:`Aggregated bonded transactions "
-"<aggregate-transaction>` are pushed to P2P nodes once they are complete."
+"The Catapult API component is also responsible for collecting cosignatures. "
+":doc:`Aggregated bonded transactions <aggregate-transaction>` are pushed to "
+"P2P nodes once they are complete."
 msgstr ""
 
-#: ../../source/concepts/node.rst:52
+#: ../../source/concepts/node.rst:51
 msgid ""
 "API components can connect to multiple P2P nodes, but at least must connect "
 "to one."
 msgstr ""
 
-#: ../../source/concepts/node.rst:55
+#: ../../source/concepts/node.rst:54
 msgid "MongoDB"
 msgstr ""
 
-#: ../../source/concepts/node.rst:57
+#: ../../source/concepts/node.rst:56
 msgid ""
 "|mongodb| stores blocks, transactions and chain state for high query "
 "performance."
 msgstr "|mongodb| はブロック、トランザクションとチェーン状態をハイパフォーマンスの実現のために保存します。"
 
-#: ../../source/concepts/node.rst:59
+#: ../../source/concepts/node.rst:58
 msgid "The API updates the MongoDB when:"
 msgstr ""
 
-#: ../../source/concepts/node.rst:61
+#: ../../source/concepts/node.rst:60
 msgid "A new block / a bunch of blocks finished processing."
 msgstr ""
 
-#: ../../source/concepts/node.rst:62
+#: ../../source/concepts/node.rst:61
 msgid "New unconfirmed transactions finished processing."
 msgstr ""
 
-#: ../../source/concepts/node.rst:64
+#: ../../source/concepts/node.rst:63
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB は外部からアクセスされるべきではありません。"
 
-#: ../../source/concepts/node.rst:67
+#: ../../source/concepts/node.rst:66
 msgid "ZMQ"
 msgstr ""
 
-#: ../../source/concepts/node.rst:69
+#: ../../source/concepts/node.rst:68
 msgid ""
 "|zmq| is an asynchronous messaging library, which enables real-time "
 "subscriptions. It transports notifications from the API server to the ZMQ "
@@ -177,31 +182,31 @@ msgid ""
 "to REST WebSockets, aimed to be used when performance is critical."
 msgstr ""
 
-#: ../../source/concepts/node.rst:73
+#: ../../source/concepts/node.rst:72
 msgid "Catapult REST Component"
 msgstr "Catapult REST コンポーネント"
 
-#: ../../source/concepts/node.rst:77
+#: ../../source/concepts/node.rst:76
 msgid ""
 "Catapult REST handles **JSON API** client requests. This component reads "
 "from MongoDB, formats the response, and returns it to the client. Each "
 "Catapult REST connects to one Catapult API instance."
 msgstr ""
 
-#: ../../source/concepts/node.rst:79
+#: ../../source/concepts/node.rst:78
 msgid ""
-"Additionally, Catapult REST sends new transactions to the Catapult API using"
-" sockets. The component announces events to the client via WebSockets."
+"Catapult REST sends new transactions to the Catapult API using sockets. The "
+"component announces events as well to the client via WebSockets."
 msgstr ""
 
-#: ../../source/concepts/node.rst:104
+#: ../../source/concepts/node.rst:103
 msgid "Related guides"
 msgstr "関連するガイド"
 
-#: ../../source/concepts/node.rst:106
+#: ../../source/concepts/node.rst:105
 msgid "|running-catapult-locally|"
 msgstr ""
 
-#: ../../source/concepts/node.rst:108
+#: ../../source/concepts/node.rst:107
 msgid "Deploy a Catapult node for learning and development purposes."
 msgstr "Catapult ノードを学習と開発目的でデプロイする。"
