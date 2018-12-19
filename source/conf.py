@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.13.1'
+version = u'0.14.1'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -119,8 +119,8 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting Started", "getting-started/what-is-nem"),
-        ("Guides", "guides/overview"),
+        ("Getting started", "getting-started/what-is-nem"),
+        ("Built-in features", "concepts/account"),
         ("References", "references"),
     ],
 
@@ -180,6 +180,8 @@ html_theme_options = {
 # of the sidebar.
 html_logo = "_static/logo-nem.svg"
 
+# Docs Title
+html_title = 'NEM Developer Center'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -189,6 +191,7 @@ html_static_path = ['_static']
 
 ## Custom style overrides
 def setup(app):
+    app.add_stylesheet("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700")
     app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
@@ -204,21 +207,12 @@ html_sidebars = {
   'api/endpoints': [],
   'api/tools': ['localtoc.html'],
   'api/websockets': ['localtoc.html'],
+  'api/serialization': ['localtoc.html'],
   'api/status-errors': ['localtoc.html'],
   'cli/**': ['localtoc.html'],
   'concepts/**': ['localtoc.html'],
   'getting-started/**': ['localtoc.html'],
-  'guides/overview': ['localtoc.html'],
-  'guides/account': ['localtoc.html'],
-  'guides/blockchain': ['localtoc.html'],
-  'guides/mosaic': ['localtoc.html'],
-  'guides/namespace': ['localtoc.html'],
-  'guides/mosaic': ['localtoc.html'],
-  'guides/running-a-node': ['localtoc.html'],
-  'guides/transaction': ['localtoc.html'],
-  'guides/workshops': ['localtoc.html'],
-  'guides/workshops/creating-a-new-workshop': ['localtoc.html'],
-  'guides/writing-a-guide': ['localtoc.html'],
+  'guides/**/**': [],
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],

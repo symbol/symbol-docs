@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -62,18 +62,18 @@ msgid "Failure_Core_Past_Deadline"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid ""
-"The deadline lies too far in the future. Deadlines are only allowed to lie "
-"up to `24` hours ahead."
-msgstr ""
+msgid "The deadline lies in the past."
+msgstr "期限が過去に設定されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Future_Deadline"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The deadline lies in the past."
-msgstr ""
+msgid ""
+"The deadline lies too far in the future. Deadlines are only allowed to lie "
+"up to ``24`` hours ahead."
+msgstr "期限が遠すぎる未来に指定されています。期限は ``24`` 時間先までが許可されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Insufficient_Balance"
@@ -81,15 +81,15 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "The account does not have enough funds."
-msgstr ""
+msgstr "アカウントが十分な資産を持っていません。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Timestamp_Too_Far_In_Future"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The timestamp of the entity lies too far in the future."
-msgstr ""
+msgid "The timestamp of the transaction lies in the future."
+msgstr "タイムスタンプが未来に設定されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Too_Many_Transactions"
@@ -100,9 +100,7 @@ msgid "Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid ""
-"The supplied transaction has the nemesis account as the sender and cannot be"
-" included in a normal block."
+msgid "The nemesis account has signed the transaction."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -205,7 +203,9 @@ msgid "Failure_Lock_Invalid_Hash_Algorithm"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The hash algorithm used is not defined."
+msgid ""
+"The hash algorithm used is not defined. See the :doc:`available algorithms "
+"<../concepts/cross-chain-swaps>` list."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -280,8 +280,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"The secret proof transaction specifies a secret that has not been found in "
-"the cache."
+"The secret proof transaction specifies a secret that has not been found."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -331,11 +330,10 @@ msgstr ""
 msgid "Failure_Lock_Invalid_Duration"
 msgstr ""
 
-#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
 #: ../../source/api/status-errors.rst:1
 msgid ""
 "Duration lies too far in the future or refers to past. Duration is allowed "
-"to lie up to ``N`` blocks in the future."
+"to lie up to ``N`` hours."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -425,7 +423,7 @@ msgid "Failure_Multisig_Modify_Max_Cosigned_Accounts"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "An account cannot be cosignatory of more than `5` multisig accounts."
+msgid "An account cannot be cosignatory of more than ``5`` multisig accounts."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -433,7 +431,7 @@ msgid "Failure_Multisig_Modify_Max_Cosigners"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "A multisig account cannot have more than `10` cosignatories."
+msgid "A multisig account cannot have more than ``10`` cosignatories."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -452,8 +450,8 @@ msgid "Failure_Multisig_Modify_Max_Multisig_Depth"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The maximum depth of a multilevel multisig account is `3`."
-msgstr ""
+msgid "The maximum depth of a multilevel multisig account is ``3``."
+msgstr "マルチレベルマルチシグアカウントの最大深さは ``3`` です。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Multisig_Operation_Not_Permitted_By_Account"
@@ -467,6 +465,12 @@ msgstr ""
 msgid "Failure_Namespace_Invalid_Duration"
 msgstr ""
 
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
+msgid ""
+"Duration lies too far in the future or refers to past. Duration is allowed "
+"to lie up to ``365`` days."
+msgstr ""
+
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Duration"
 msgstr ""
@@ -476,7 +480,10 @@ msgid "Failure_Namespace_Invalid_Name"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The namespace name is invalid. See namespace."
+msgid ""
+"The namespace name may have a maximum length of ``64`` characters. Allowed "
+"characters are `a-to-z`; `0-to-9` and the following special characters: "
+"\\`_-"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -484,7 +491,10 @@ msgid "Failure_Mosaic_Invalid_Name"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The name for the mosaic is invalid. See mosaics."
+msgid ""
+"The mosaic name may have a maximum length of ``64`` characters. Allowed "
+"characters are `a-to-z`; `0-to-9` and the following special characters: "
+"\\`_-"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -541,7 +551,10 @@ msgid "Failure_Namespace_Root_Name_Reserved"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Certain strings are reserved and thus not allowed as namespace parts."
+msgid ""
+"`Certain strings <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties#L60>`_ are reserved "
+"and thus not allowed as namespace parts."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -549,7 +562,7 @@ msgid "Failure_Namespace_Too_Deep"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Namespaces can have up to ``3`` levels."
+msgid "Namespaces can have up to ``3`` nested levels."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -589,7 +602,8 @@ msgid "Failure_Mosaic_Invalid_Property"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Transaction payload is invalid as it contains invalid property."
+msgid ""
+"The transaction payload has been altered and contains an invalid property."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -597,7 +611,7 @@ msgid "Failure_Mosaic_Invalid_Flags"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Transaction payload is invalid as it contains an invalid flag."
+msgid "The transaction payload has been altered and contains an invalid flag."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -669,7 +683,8 @@ msgid "Failure_Mosaic_Supply_Exceeded"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The provided mosaic supply is not in the range of 0 and 9.000.000.000."
+msgid ""
+"The provided mosaic supply is not in the range of 0 and ``9.000.000.000``."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1

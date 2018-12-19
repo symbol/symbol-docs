@@ -35,13 +35,36 @@
 
                     </div>
                     <div class="col-sm-8">
-                        <h3>Getting started</h3>
-                        <p>Learn about NEM by developing your first blockchain app.</p>
-                       <b>START</b>
+                        <h3 class="card-title">Getting started</h3>
+                        <p class="card-text">Start developing your first blockchain app.</p>
+                       <b class="card-cta">START</b>
                    </div>
                 </div></a>
             </div>
 
+
+     <div class="col-md-6">
+                 <a href="concepts/cryptography.html"><div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+
+.. image:: resources/images/icons/home-guides.png
+    :align: center
+    :height: 50px
+
+.. raw:: html
+
+                    </div>
+                    <div class="col-sm-8">
+                    <h3 class="card-title">Protocol</h3>
+                    <p class="card-text">Learn in-depth how the blockchain protocol works.</p>
+                   <b class="card-cta">DISCOVER</b>
+                   </div>
+                </div></a>
+            </div>
+
+
+        </div>
+        <div class="row">
 
             <div class="col-md-6">
                  <a href="concepts/account.html"><div class="card">
@@ -55,35 +78,14 @@
 
                     </div>
                     <div class="col-sm-8">
-                        <h3>Built-in Features</h3>
-                        <p>Discover in-depth the connected parts that make up the Smart Asset System.</p>
-                       <b>DISCOVER</b>
+                        <h3 class="card-title">Built-in Features</h3>
+                        <p class="card-text">Architecture your solution connecting the features that make up the Smart Asset System.</p>
+                       <b class="card-cta">COMBINE</b>
                    </div>
                 </div></a>
             </div>
 
-        </div>
-        <div class="row">
 
-
-            <div class="col-md-6">
-                 <a href="guides/overview.html"><div class="card">
-                    <div class="col-sm-4 hidden-xs card-img">
-
-.. image:: resources/images/icons/home-guides.png
-    :align: center
-    :height: 50px
-
-.. raw:: html
-
-                    </div>
-                    <div class="col-sm-8">
-                    <h3>Guides</h3>
-                    <p>Easy-to-follow step by step guides with code examples.</p>
-                   <b>CREATE</b>
-                   </div>
-                </div></a>
-            </div>
 
        <div class="col-md-6">
                  <a href="references.html"><div class="card">
@@ -97,18 +99,18 @@
 
                     </div>
                     <div class="col-sm-8">
-                    <h3>References</h3>
-                    <p>From SDKs to extensions that make blockchain development easier.</p>
-                   <b>LEARN MORE</b>
+                    <h3 class="card-title">References</h3>
+                    <p class="card-text">From SDKs to extensions that make blockchain development easier.</p>
+                   <b class="card-cta">DEVELOP</b>
                    </div>
                 </div></a>
             </div>
         </div>
     </section>
 
-********************
-NEM Developer Center
-********************
+****
+Home
+****
 
 
 .. toctree::
@@ -119,6 +121,7 @@ NEM Developer Center
     getting-started/what-is-nem
     getting-started/setup-workstation
     getting-started/first-application
+    getting-started/training
 
 .. toctree::
     :maxdepth: 2
@@ -148,25 +151,12 @@ NEM Developer Center
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Guides
-
-    guides/overview
-    guides/account
-    guides/blockchain
-    guides/namespace
-    guides/mosaic
-    guides/transaction
-    guides/running-a-node
-    guides/workshops
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
     :caption: REST API
 
     api/requests
     api/tools
     api/endpoints
+    api/serialization
     api/websockets
     api/status-errors
 
@@ -188,7 +178,7 @@ NEM Developer Center
 
     cli/overview
     cli/commands
-    
+
 
 .. toctree::
     :maxdepth: 2

@@ -75,3 +75,17 @@ Parameters
     **Delta**
 
     The amount of supply to increase or decrease.
+
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: mosaic
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+

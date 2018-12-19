@@ -79,11 +79,11 @@ Announce a modify multisig account transaction to:
 a) Transform an account to multisig.
 b) Change the configurable properties of a multisig account.
 
-    **Minimum Approval Delta**
+    **Minimum approval delta**
 
     The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
 
-    **Minimum Removal Delta**
+    **Minimum removal delta**
 
     The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
 
@@ -91,6 +91,15 @@ b) Change the configurable properties of a multisig account.
 
     Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
 
+**************
+Related guides
+**************
 
-
+.. postlist::
+    :category: multisig-account
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 

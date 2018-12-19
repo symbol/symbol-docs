@@ -54,3 +54,15 @@ Parameters
     When a renting period ends, the namespace will become inactive.
 
     .. and you will have ``N`` blocks to re-rent it.
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: namespace
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

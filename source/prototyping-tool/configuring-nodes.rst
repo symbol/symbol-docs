@@ -1,5 +1,5 @@
 #################
-Configuring Nodes
+Configuring nodes
 #################
 
 The left sidebar is the **node palette**. You can find NEM related nodes under:

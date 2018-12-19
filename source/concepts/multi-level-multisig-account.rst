@@ -53,3 +53,15 @@ You can set up your account so it can be recovered only with the approval of sig
     :width: 750px
 
     Account Recovery
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: mlma
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

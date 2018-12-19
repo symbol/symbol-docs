@@ -23,7 +23,6 @@ As he is the only required signed, we say the aggregate transaction it is comple
 
     Sending payouts with aggregate complete transactions
 
-
 Multi-Asset Escrowed Transactions
 =================================
 
@@ -38,7 +37,7 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 Paying for others fees
 ======================
 
-Alice sends 10 € to Bob using a payment app. But she doesn’t have any XEM to pay the blockchain transaction fee.
+Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XEM to pay the blockchain transaction fee.
 
 By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
 
@@ -56,7 +55,7 @@ Parameters
 
 Aggregate transactions accept the following parameters:
 
-    **Inner Transaction**
+    **Inner transactions**
 
     Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
 
@@ -137,3 +136,15 @@ Parameters
     Aggregate bonded has to be confirmed before unlocking funds.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+**************
+Related guides
+**************
+
+.. postlist::
+    :category: aggregate-transaction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
