@@ -263,7 +263,7 @@ paths:
         '409':
           description: invalid argument
 
-  '/accountProperties/{accountId}':
+  '/account/properties/{accountId}':
       get:
         tags:
           - Account routes
@@ -288,6 +288,33 @@ paths:
             description: resource not found
           '409':
             description: invalid argument
+  /account/properties:
+    post:
+      tags:
+      - Account routes
+      summary: Get account properties for given array of addresses
+      description: Returns [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given array of addresses.
+      operationId: getAccountPropertiesFromAccounts
+      produces:
+      - application/json
+      parameters:
+      - name: addresses
+        in: body
+        description: An array of addresses.
+        required: true
+        schema:
+          $ref: '#/definitions/addresses'
+      responses:
+        '200':
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccountPropertiesInfoDTO'
+        '400':
+          description: invalid content
+        '409':
+          description: invalid argument
 
   '/account/{accountId}/multisig':
     get:
