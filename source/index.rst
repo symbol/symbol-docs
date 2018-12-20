@@ -16,7 +16,7 @@
     <section class="container">
         <div class="row custom-row">
             <p>NEM is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. NEM  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
-            <p> This documentation refers to NEM latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
+            <p> This documentation refers to NEM's latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
         </div>
     </section>
 .. raw:: html
