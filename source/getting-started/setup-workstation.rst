@@ -20,7 +20,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
