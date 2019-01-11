@@ -471,12 +471,12 @@ footer option{
 .jumbotron {
     color: #fff;
     background: rgba(90, 176, 229, 1);
-    background: -moz-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(90, 176, 229, 1)), color-stop(100%, rgba(76, 138, 196, 1)));
-    background: -webkit-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    background: -o-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    background: linear-gradient(to right, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
+    background: -moz-linear-gradient(left,#58d4e3, #026061 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #58d4e3), color-stop(100%, #026061));
+    background: -webkit-linear-gradient(left, #58d4e3, #026061 100%);
+    background: -o-linear-gradient(left, #58d4e3, #026061 100%);
+    background: -ms-linear-gradient(left, #58d4e3, #026061 100%);
+    background: linear-gradient(to right, #58d4e3, #026061 100%);
     filter: progid:DXImageTransform.Microsof
 }
 

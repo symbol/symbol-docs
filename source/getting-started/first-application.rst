@@ -2,7 +2,7 @@
 Writing your first application
 ##############################
 
-This guide will take you through the NEM development cycle. You will send your first transaction to the blockchain after combining some NEM :doc:`built-in features <../concepts/account>`.
+This guide will take you through the ProximaX development cycle. You will send your first transaction to the blockchain after combining some ProximaX :doc:`built-in features <../concepts/account>`.
 
 **********
 Background
@@ -26,7 +26,7 @@ a) Identify each ticket buyer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-**Why should we use NEM?**
+**Why should we use ProximaX?**
 
 Blockchain technology makes sense in cases where:
 
@@ -34,7 +34,7 @@ Blockchain technology makes sense in cases where:
 * These participants need to trust each other.
 * There is the need to keep track of an immutable set of events.
 
-NEM is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+ProximaX is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
@@ -114,7 +114,7 @@ We suggest opening three new terminals:
 
 **3. Creating the ticket**
 
-We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+We are representing the ticket as a ProximaX mosaic. :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
 Before creating a mosaic with the ticket vendor account, you need to register a namespace. A :doc:`namespace <../concepts/namespace>` is a unique name in the network that gives a recognizable name to your assets.
 
@@ -144,7 +144,7 @@ Did you check what happened in terminals where you are monitoring your account t
 
 **4. Sending the ticket**
 
-Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in ProximaX.
 
 1. Prepare the transfer transaction. Three main attributes form a transfer transaction:
 
@@ -249,10 +249,10 @@ What's next?
 
 Did you solve the proposed use case?
 
-✅ Identify each ticket buyer: Creating NEM accounts for each buyer.
+✅ Identify each ticket buyer: Creating ProximaX accounts for each buyer.
 
 ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
 ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique namespace and a mosaic named ``company:ticket``.
 
-Continue learning about more :doc:`NEM built-in features <../concepts/account>` or practicing with :doc:`self-paced training <training>`.
+Continue learning about more :doc:`ProximaX built-in features <../concepts/account>` or practicing with :doc:`self-paced training <training>`.

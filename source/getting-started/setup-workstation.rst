@@ -2,7 +2,7 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on ProximaX Catapult.
 
 **********************************
 Running Catapult Service Bootstrap
@@ -36,11 +36,11 @@ You are going to run a private chain for learning purposes using |catapult-servi
 Creating a test account
 ***********************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
+Finally, the account address is generated with the public key, following the ProximaX blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
 :doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
@@ -56,7 +56,7 @@ Finally, the account address is generated with the public key, following the NEM
 
     $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
 
-The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM blockchain used for development and testing purposes.
+The ``network flag`` is set to MIJIN_TEST. Test network is an alternative ProximaX blockchain used for development and testing purposes.
 
 Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
 
@@ -72,7 +72,7 @@ Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored ac
 What is XEM and how to get it?
 ******************************
 
-The underlying cryptocurrency of the NEM network is called **XEM**. Every action on the NEM blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
+The underlying cryptocurrency of the ProximaX network is called **XEM**. Every action on the ProximaX blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
 
 Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
 
@@ -93,7 +93,7 @@ Let’s use an account which already has XEM. We will need it to register the na
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Introduce your private key: 41************************************************************FF
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce ProximaX 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
 .. _setup-development-environment:
@@ -121,7 +121,7 @@ TypeScript and JavaScript
 
     $> npm install nem2-sdk rxjs
 
-3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for ProximaX blockchain.
 
 Make sure you have at least version 2.5.X installed.
 

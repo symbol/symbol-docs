@@ -65,8 +65,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'nem2-docs'
-copyright = u'2018, NEM'
-author = u'NEM'
+copyright = u'2018, ProximaX'
+author = u'ProximaX'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

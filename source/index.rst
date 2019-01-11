@@ -1,8 +1,8 @@
 .. raw:: html
 
     <div class="home jumbotron text-center gap">
-        <h1>NEM Developer Center</h1>
-        <p>Start integrating NEM into your application.</p>
+        <h1>ProximaX Developer Center</h1>
+        <p>Start integrating ProximaX into your application.</p>
         <div class="image-container">
 
 .. image:: resources/images/icons/nem-developers.png
@@ -15,8 +15,8 @@
     </div>
     <section class="container">
         <div class="row custom-row">
-            <p>NEM is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. NEM  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
-            <p> This documentation refers to NEM's latest version, <b>Catapult</b>, which provides higher performance and new functionalities to NEM.</p>
+            <p>ProximaX is a blockchain platform built from the ground up to be <b>simple for developers to use</b>. ProximaX  gives you direct access to a specialized set of <b>tested</b> and secure <b>on-blockchain features</b> using your favourite <a href="sdk/overview.html"><b>programming language</b></a>.</p>
+            <p> This documentation refers to ProximaX's latest version, <b>Catapult</b>, which provides higher performance and new functionalities to ProximaX.</p>
         </div>
     </section>
 .. raw:: html
