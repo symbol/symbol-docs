@@ -138,6 +138,31 @@ Parameters
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 **************
+Schemas
+**************
+
+Aggregate Transactions are composed of the following schemas:
+
+    **Aggregate Schema**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      transactions; array; transactionWithMetadata
+      cosignatures; array; aggregate.cosignature
+
+    **aggregate.cosignature**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      signer; binary
+      signature; binary
+      parentHash; binary
+
+**************
 Related guides
 **************
 

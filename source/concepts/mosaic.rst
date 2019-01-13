@@ -76,6 +76,40 @@ Parameters
 
     The amount of supply to increase or decrease.
 
+**************
+Schemas
+**************
+
+Mosaics are composed of the following schemas:
+
+    **mosaicDefinition.mosaicProperty**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      value; uint64
+
+    **mosaicDescriptor**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      meta; object; transactionMetadata
+      mosaic; object; mosaicDescriptor.mosaic
+
+    **mosaicDescriptor.mosaic**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      mosaicId; uint64
+      supply; uint64
+      height; uint64
+      owner; binary
+      properties; array; uint64
 
 **************
 Related guides

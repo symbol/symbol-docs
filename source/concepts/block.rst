@@ -84,6 +84,70 @@ Blocks are composed of the following properties:
    <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle Tree</a>
 
 **************
+Schemas
+**************
+
+Blocks are composed of the following schemas:
+
+    **Verifiable Entity**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      signature; binary
+      sinner; binary
+
+    **Block Header**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      height; uint64
+      timestamp; uint64
+      difficulty; uint64
+      previousBlockHash; binary
+      blockTransactionsHash; binary
+      stateHash; binary
+
+    **Block Header Metadata**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      hash; binary;
+      generationHash; binary;
+      totalFee; uint64;
+      subCacheMerkleRoots; arrary; binary
+
+    **Block Header with Metadata**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      meta; object; blockHeaderMetadata
+      block; object; blockHeader
+
+    **Merkle Proof Info**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      merklePath; array; merkleProofInfoPathNode
+
+    **Merkle Proof Info Path Node**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      hash; binary
+
+**************
 Related guides
 **************
 

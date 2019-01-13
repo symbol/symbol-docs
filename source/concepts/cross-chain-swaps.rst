@@ -101,6 +101,69 @@ Parameters
     The original proof.
 
 **************
+Schemas
+**************
+
+Cross-Chain swaps are composed of the following schemas:
+
+    **commonLockInfo Schema**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      account; binary
+      accountAddress; binary
+      mosaicId; uint64
+      amount; uint64
+      height; uint64
+
+    **commonLockTransaction Schema**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      mosaicId; uint64
+      amount; uint64
+      duration; uint64
+
+    **hashLockInfo**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      lock; object; hashLockInfo.lock
+
+    **hashLockInfo.lock**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      hash; binary
+
+    **secretLockInfo**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      lock; object; secretLockInfo.lock
+
+    **secretLockInfo.lock**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      secret; binary
+      recipient; binary
+
+
+
+**************
 Related guides
 **************
 

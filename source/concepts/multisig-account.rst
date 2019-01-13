@@ -92,6 +92,47 @@ b) Change the configurable properties of a multisig account.
     Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
 
 **************
+Schema
+**************
+
+Multisig Accounts are composed of the following schemas:
+
+    **modifyMultisigAccount.modification**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      cosignatoryPublicKey; binary
+
+    **multisigEntry**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      multisig; object; multisigEntry.multisig
+
+    **multisigEntry.multisig**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      account; binary
+      accountAddress; binary
+      multisigAccounts; array; binary
+      cosignatories; array; binary
+
+    **multisigGraph**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      multisigEntries; array; multisigEntry
+
+**************
 Related guides
 **************
 

@@ -37,6 +37,50 @@ An account has the following properties:
   The amount of different :doc:`mosaics <mosaic>` the account owns.
 
 **************
+Schemas
+**************
+
+Accounts are composed of the following schemas:
+
+    **Account**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      address; binary
+      addressHeight; uint64
+      publicKey; binary
+      publicKeyHeight; uint64
+      importance; uint64
+      importance Height; uint64
+      mosaics; arrary; mosaic
+
+    **Mosaic**
+
+    .. csv-table::
+      :header: "Key", "Type",
+      :delim: ;
+
+      id; uint64
+      amount; uint64
+
+    **Account Metadata**
+
+    Empty
+
+    **Account With Metadata**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      meta; object; accountMetadata
+      account; object; account
+
+
+
+**************
 Related guides
 **************
 
