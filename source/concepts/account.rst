@@ -54,7 +54,7 @@ Accounts are composed of the following schemas:
       publicKeyHeight; uint64
       importance; uint64
       importance Height; uint64
-      mosaics; arrary; mosaic
+      mosaics; array; mosaic
 
     **Mosaic**
 
