@@ -56,6 +56,46 @@ Parameters
     .. and you will have ``N`` blocks to re-rent it.
 
 **************
+Schemas
+**************
+
+Namespaces are composed of the following schemas:
+
+    **namespaceDescriptor**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      meta; object; transactionMetadata
+      namespace; object; namespaceDescriptor.namespace
+
+    **namespaceDescriptor.namespace**
+
+    .. csv-table::
+      :header: "Key", "Type",
+      :delim: ;
+
+      level0; uint64
+      level1; uint64
+      level2; uint64
+      parentId; uint64
+      owner; binary
+      ownerAddress; binary
+      startHeight; uint64
+      endHeight; uint64
+
+    **namespaceNameTuple**
+
+    .. csv-table::
+      :header: "Key", "Type",
+      :delim: ;
+
+      namespaceId; uint64
+      name; sting
+      parentId; uint64
+
+**************
 Related guides
 **************
 

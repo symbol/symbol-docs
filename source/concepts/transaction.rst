@@ -114,6 +114,54 @@ NEM has a rewrite limit of 360 blocks. Once a transaction has more than 360 conf
 In real life, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 **************
+Schemas
+**************
+
+Transactions are composed of the following schemas:
+
+    **Transaction**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      deadline; uint64
+      fee; uint64
+
+    **Transaction Metadata**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      aggregateHash; binary
+      aggregateId; objectId
+      id; objectId
+      height; uint64
+      hash; binary
+      merkleComponentHash; binary
+
+    **Transaction with Metadata**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      meta; object; transactionMetadata
+      transaction; object; undefined
+
+    **Transaction Status**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      hash; binary
+      status; statusCode
+      deadline; uint64
+      height; uint64
+
+**************
 Related guides
 **************
 

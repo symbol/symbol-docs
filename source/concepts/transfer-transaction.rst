@@ -34,6 +34,20 @@ The following parameters are required:
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+**************
+Schema
+**************
+
+Transfer Transactions are composed of the following schema:
+
+    **transfer.message**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      payload; binary
+
 
 **************
 Related guides

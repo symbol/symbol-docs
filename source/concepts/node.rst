@@ -77,6 +77,50 @@ Catapult REST handles **JSON API** client requests. This component reads from Mo
 
 Catapult REST sends new transactions to the Catapult API using sockets. The component announces events as well to the client via WebSockets.
 
+**************
+Schemas
+**************
+
+Node info are composed of the following schemas:
+
+    **Chain Info**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      height; uint64
+      scoreLow; uint64
+      scoreHeigh; uint64
+
+    **Node Info**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      friendName; string
+      host; string
+      publicKey; binary
+
+    **Communication Timestamps**
+
+    .. csv-table::
+      :header: "Key", "Type"
+      :delim: ;
+
+      receiveTimestamp; uint64
+      sendTimestamp; uint64
+
+    **Node Time**
+
+    .. csv-table::
+      :header: "Key", "Type", "SchemaName"
+      :delim: ;
+
+      communicationTimestamps; object; communicationTimestamps
+
+
 .. |catapult-server| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
