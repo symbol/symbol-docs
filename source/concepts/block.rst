@@ -120,7 +120,7 @@ Blocks are composed of the following schemas:
       hash; binary;
       generationHash; binary;
       totalFee; uint64;
-      subCacheMerkleRoots; arrary; binary
+      subCacheMerkleRoots; array; binary
 
     **Block Header with Metadata**
 
