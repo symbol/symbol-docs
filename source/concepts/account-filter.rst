@@ -2,18 +2,17 @@
 Account Filter
 ##############
 
+.. note:: This feature is not implemented yet in the SDK.
+
 :doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
 
-The constraints given to block transactions are called filters. Accounts can add and edit their own filters by announcing an :ref:`AccountPropertiesTransaction<account-properties-transaction>`.
+The editable on-chain constraints are called filters. Accounts can configure the following types:
 
-************
-Filter types
-************
-
+**************
 Address filter
-==============
+**************
 
-An account can decide to receive transactions only from an allowed list of addresses. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+An account can decide to receive transactions only from an allowed list of :doc:`addresses <account>`. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
 
 .. figure:: ../resources/images/diagrams/account-properties-address.png
     :align: center
@@ -25,13 +24,15 @@ An account can decide to receive transactions only from an allowed list of addre
 
 By default, when there is no filter set, all the accounts in the network can announce transactions to the stated account.
 
+*************
 Mosaic filter
-=============
+*************
 
-An account can configure a filter to permit incoming transactions only if all the mosaics attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+An account can configure a filter to permit incoming transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
-TransactionType filter
-======================
+*****************
+EntityType filter
+*****************
 
 An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
 
@@ -63,40 +64,176 @@ Lately, Alice is only using her main account to cosign aggregate transactions wh
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
 
-.. _account-properties-transaction:
+*******
+Schemas
+*******
 
-******************************
-Account Properties Transaction
-******************************
+.. _account-properties-address-transaction:
 
-Set and modify account filters announcing an account properties transaction.
+AccountPropertiesAddressTransaction
+===================================
 
-Parameters
-==========
+**Version**: 0x01
 
-  **Modifications**
+**Entity type**: 0x4150
 
-  An array of modifications. A maximum of ``255`` modifications per transaction is allowed.
+**Inlines**:
 
-Each modification is composed of:
+* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
 
-      **Modification Type**
+Configure filters to prevent receiving transactions from undesired addresses.
 
-      Add (1) or Delete (2) property.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-      **Property**
+    modificationsCount; uint8; The number of modifications.
+    modifications; array(:ref:`AddressModification <address-modification>`, modificationsCount); The array of modifications.
 
-      .. csv-table::
-          :header: "Property Type", "Description", "Value Type", "Id"
-          :delim: ;
+.. _account-properties-mosaic-transaction:
 
-          Address allow; Incoming transactions from specified address are allowed; Address; 1
-          Address block; Incoming transactions from specified address are blocked; Address; 129
-          Mosaic allow; Incoming transactions containing the specified mosaic are allowed; MosaicId; 2
-          Mosaic block; Incoming transactions containing the specified mosaic are blocked; MosaicId; 130
-          Transaction Type allow; Outgoing transactions with specified transactions type are allowed; :ref:`TransactionType<transaction-types>`; 4
-          Transaction Type block; Outgoing transactions with specified transactions type are blocked;  :ref:`TransactionType<transaction-types>`; 132
+AccountPropertiesMosaicTransaction
+===================================
 
-      **Value**
+Configure filters to prevent receiving transactions containing a specific mosaic.
 
-      Address, MosaicId or TransactionType.
+**Version**: 0x01
+
+**Entity type**: 0x4250
+
+**Inlines**:
+
+* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    modificationsCount; uint8; The number of modifications.
+    modifications; array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount); The array of modifications.
+
+
+.. _account-properties-entity-type-transaction:
+
+AccountPropertiesEntityTypeTransaction
+======================================
+
+Configure filters to prevent announcing transactions by :ref:`type <transaction-types>`.
+
+**Version**: 0x01
+
+**Entity type**: 0x4350
+
+**Inlines**:
+
+* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    modificationsCount; uint8; The number of modifications.
+    modifications; array(:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount); The array of modifications.
+
+.. _address-modification:
+
+AddressModification
+===================
+
+**Inlines**:
+
+* :ref:`AccountPropertiesModification<account-properties-modification>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    value; 25 bytes (binary); The address to allow/block.
+
+.. _mosaic-modification:
+
+MosaicModification
+==================
+
+**Inlines**:
+
+* :ref:`AccountPropertiesModification<account-properties-modification>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    value; uint64; The mosaic id to allow/block.
+
+
+.. _entity-type-modification:
+
+EntityTypeModification
+======================
+
+**Inlines**:
+
+* :ref:`AccountPropertiesModification<account-properties-modification>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    value; uint16; The :ref:`entity type<transaction-types>` to allow/block.
+
+.. _account-properties-transaction-body:
+
+AccountPropertiesTransactionBody
+================================
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    propertyType; :ref:`PropertyType<property-type>` ; The property type.
+
+.. _account-properties-modification:
+
+AccountPropertiesModification
+=============================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    modificationType; :ref:`PropertyModificationType<property-modification-type>` ; The modification type.
+
+.. _property-type:
+
+PropertyType
+============
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id"", "Description"
+    :delim: ;
+
+    0x01; The property type is an address.
+    0x02; The property type is mosaic id.
+    0x03; The property type is a transaction type.
+    0x04; Property type sentinel.
+    0x80 + type; The property is interpreted as a blocking operation.
+
+.. _property-modification-type:
+
+PropertyModificationType
+========================
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x00; Add property value.
+    0x01; Remove property value.
