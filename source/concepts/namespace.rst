@@ -20,6 +20,18 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: namespace
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -31,7 +43,7 @@ RegisterNamespaceTransaction
 
 Announce a register namespace transaction to register and re-rent a namespace.
 
-**Version**: 2
+**Version**: 0x02
 
 **Entity type**: 0x414E
 
@@ -55,15 +67,3 @@ RegisterNamespaceTransactionBody
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
     name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: namespace
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

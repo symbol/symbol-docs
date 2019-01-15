@@ -23,15 +23,15 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a multisig contract.
     0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x414C; :ref:`Hash Lock Transaction <hash-lock-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
+    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
-    **Account Properties Transactions**;;
-    0x424E; :ref:`Account Properties Transaction - Address Filter<account-properties-transaction>`; Allow or block incoming transactions for a given a set of addresses.
-    0x434E; :ref:`Account Properties Transaction - Mosaic Filter<account-properties-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4150; :ref:`Account Properties Transaction - Transaction Type Filter<account-properties-transaction>`; Allow or block outgoing transactions by transaction type.
+    **Account Filters**;;
+    0x4150; :ref:`Account Properties Address Transaction <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
+    0x4250; :ref:`Account Properties Mosaic Transaction <account-properties-mosaic-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`Account Properties Entity Type Transaction <account-properties-entity-type-transaction>`; Allow or block outgoing transactions by transaction type.
     **Cross-chain swaps Transactions**;;
-    0x424C; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
-    0x434C; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
+    0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
+    0x4252; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
 
 **********************
 Defining a transaction
@@ -91,6 +91,18 @@ NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 
 
 In real life, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: monitoring
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -123,15 +135,3 @@ SizePrefixedEntity
     :delim: ;
 
     size; unit32; The size of the transaction.
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: monitoring
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

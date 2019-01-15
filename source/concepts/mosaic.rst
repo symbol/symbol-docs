@@ -20,6 +20,18 @@ Each mosaic has a set of configurable properties. During the mosaic creation, yo
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: mosaic
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -60,20 +72,6 @@ MosaicDefinitionTransactionBody
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
-.. _mosaic-flags:
-
-MosaicFlags
-===========
-
-.. csv-table::
-    :header: "Id", "Type"; "Description"
-    :delim: ;
-
-    0x00; uint8; No flags present.
-    0x01; uint8; The mosaic supply is mutable.
-    0x02; uint8; The mosaic is transferable.
-    0x04; uint8; The mosaic levy is mutable
-
 .. _mosaic-property:
 
 MosaicProperty
@@ -109,12 +107,28 @@ UnresolvedMosaic
     mosaicId; uint64; The mosaic id.
     amount; uint64; The amount of the mosaic.
 
+.. _mosaic-flags:
+
+MosaicFlags
+===========
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id"; "Description"
+    :delim: ;
+
+    0x00; No flags present.
+    0x01; The mosaic supply is mutable.
+    0x02; The mosaic is transferable.
+    0x04; The mosaic levy is mutable
+
 .. _mosaic-supply-change-transaction:
 
 MosaicSupplyChangeTransaction
 =============================
 
-**Version**: 2
+**Version**: 0x02
 
 **Entity type**: 0x424D
 
@@ -139,17 +153,3 @@ MosaicSupplyChangeTransactionBody
     **Delta**
 
     The amount of supply to increase or decrease.
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: mosaic
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:
-
-
