@@ -41,7 +41,6 @@ Schemas
 
 .. _secret-lock-transaction:
 
-
 SecretLockTransaction
 =====================
 
