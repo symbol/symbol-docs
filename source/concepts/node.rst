@@ -10,7 +10,7 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
-The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
+    The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
 **********************
 Catapult P2P Component
@@ -76,50 +76,6 @@ Catapult REST Component
 Catapult REST handles **JSON API** client requests. This component reads from MongoDB, formats the response, and returns it to the client. Each Catapult REST connects to one Catapult API instance.
 
 Catapult REST sends new transactions to the Catapult API using sockets. The component announces events as well to the client via WebSockets.
-
-**************
-Schemas
-**************
-
-Node info are composed of the following schemas:
-
-    **Chain Info**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      height; uint64
-      scoreLow; uint64
-      scoreHeigh; uint64
-
-    **Node Info**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      friendName; string
-      host; string
-      publicKey; binary
-
-    **Communication Timestamps**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      receiveTimestamp; uint64
-      sendTimestamp; uint64
-
-    **Node Time**
-
-    .. csv-table::
-      :header: "Key", "Type", "SchemaName"
-      :delim: ;
-
-      communicationTimestamps; object; communicationTimestamps
-
 
 .. |catapult-server| raw:: html
 

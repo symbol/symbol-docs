@@ -41,7 +41,7 @@ The following entities are currently supported:
 
     `entity.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/entity.cats>`_ ; Describes an :ref:`entity <transaction-types>`.
     `accountlink.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/accountlink.cats>`_ ; Describes account link transaction.
-    `hashlock.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/hashlock.cats>`_ ; Describes a :ref:`lock funds transaction <lock-funds-transaction>`.
+    `hashlock.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/hashlock.cats>`_ ; Describes a :ref:`hash lock transaction <hash-lock-transaction>`.
     `secretlock.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/secretlock.cats>`_ ; Describes a :ref:`secret lock transaction <secret-lock-transaction>`.
     `lockhashtypes.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/lockhashtypes.cats>`_ ; Describes the available :ref:`hash algorithms <secret-lock-transaction>`.
     `secretproof.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/secretproof.cats>`_ ; Describes a :ref:`secret proof transaction <secret-proof-transaction>`.

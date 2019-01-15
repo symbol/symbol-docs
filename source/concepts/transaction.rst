@@ -19,9 +19,9 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a multisig contract.
     0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x414C; :ref:`Lock Funds Transaction <lock-funds-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
+    0x414C; :ref:`Hash Lock Transaction <hash-lock-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
-    0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
+    0x424C; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
     0x434C; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
 
 **********************
@@ -31,37 +31,6 @@ Defining a transaction
 Every transaction shares some common properties. Each transaction extends from the following definition, adding the type's particular properties.
 
 Transactions are defined in a :doc:`serialized form <../api/serialization>`. We recommend to `use the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
-
-Properties
-==========
-
-    **Size**: 4 bytes
-
-    The size of the transaction.
-
-    **Signature**: 64 bytes
-
-    The :ref:`transaction signature <transaction-signature>`.
-
-    **Signer**: 32 bytes
-
-    The transaction signer's :doc:`public key <account>`.
-
-    **Version**: 2 bytes
-
-    The version of the structure.
-
-    **Type**: 2 bytes
-
-    See :ref:`transaction types <transaction-types>`.
-
-    **Fee**: 8 bytes
-
-    The cost of announcing a transaction.  This fee is necessary to provide an incentive for those who secure the network. The account pays the fee  in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
-
-    **Deadline**: 8 bytes
-
-    The maximum amount of time to include the transaction in the blockchain.
 
 .. _transaction-signature:
 
@@ -109,57 +78,42 @@ Cryptocurrencies can roll back part of the blockchain. Rollbacks are essential f
 
 The "rewrite limit" is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of 360 blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
+NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
 In real life, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
-**************
+*******
 Schemas
-**************
+*******
 
-Transactions are composed of the following schemas:
+.. _transaction:
 
-    **Transaction**
+Transaction
+===========
 
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
+**Inlines**:
 
-      deadline; uint64
-      fee; uint64
+* :ref:`SizePrefixedEntity<size-prefixed-entity>`
+* :ref:`VerifiableEntity<verifiable-entity>`
+* :ref:`EntityBody<entity-body>`
 
-    **Transaction Metadata**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
+    fee; uint64; The cost of announcing a transaction.  This fee is necessary to provide an incentive for those who secure the network. The account pays the fee  in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
+    deadline; uint64; The maximum amount of time to include the transaction in the blockchain.
 
-      aggregateHash; binary
-      aggregateId; objectId
-      id; objectId
-      height; uint64
-      hash; binary
-      merkleComponentHash; binary
+.. _size-prefixed-entity:
 
-    **Transaction with Metadata**
+SizePrefixedEntity
+==================
 
-    .. csv-table::
-      :header: "Key", "Type", "SchemaName"
-      :delim: ;
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-      meta; object; transactionMetadata
-      transaction; object; undefined
-
-    **Transaction Status**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      hash; binary
-      status; statusCode
-      deadline; uint64
-      height; uint64
+    size; unit32; The size of the transaction.
 
 **************
 Related guides

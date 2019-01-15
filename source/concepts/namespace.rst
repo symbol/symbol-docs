@@ -20,80 +20,41 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+*******
+Schemas
+*******
+
 .. _register-namespace-transaction:
 
-******************************
-Register namespace transaction
-******************************
+RegisterNamespaceTransaction
+============================
 
 Announce a register namespace transaction to register and re-rent a namespace.
 
-Parameters
-==========
+**Version**: 2
 
-    **Name**
+**Entity type**: 0x414E
 
-    A namespace name must be unique and may have a maximum length of ``64`` characters.
+**Inlines**:
 
-    Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+* :ref:`Transaction<transaction>`
+* :ref:`RegisterNamespaceTransactionBody<register-namespace-transaction-body>`
 
-    **Parent namespace**
+.. _register-namespace-transaction-body:
 
-    If it is a subdomain, a reference to parent namespace name is required.
+RegisterNamespaceTransactionBody
+================================
 
-    **Owner**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The public key of the namespace creator.
-
-    **Renting duration**
-
-    The renting duration represents the number of confirmed blocks we would like to rent our namespace for.
-
-    During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
-
-    When a renting period ends, the namespace will become inactive.
-
-    .. and you will have ``N`` blocks to re-rent it.
-
-**************
-Schemas
-**************
-
-Namespaces are composed of the following schemas:
-
-    **namespaceDescriptor**
-
-    .. csv-table::
-      :header: "Key", "Type", "SchemaName"
-      :delim: ;
-
-      meta; object; transactionMetadata
-      namespace; object; namespaceDescriptor.namespace
-
-    **namespaceDescriptor.namespace**
-
-    .. csv-table::
-      :header: "Key", "Type",
-      :delim: ;
-
-      level0; uint64
-      level1; uint64
-      level2; uint64
-      parentId; uint64
-      owner; binary
-      ownerAddress; binary
-      startHeight; uint64
-      endHeight; uint64
-
-    **namespaceNameTuple**
-
-    .. csv-table::
-      :header: "Key", "Type",
-      :delim: ;
-
-      namespaceId; uint64
-      name; sting
-      parentId; uint64
+    namespaceType; uint8; The type of the registered namespace: (0) root, (1) child.
+    duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
+    namespaceId; uint64; The id of the namespace.
+    namespaceNameSize; uint8; The size of the namespace name.
+    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
 **************
 Related guides

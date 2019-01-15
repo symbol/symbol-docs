@@ -49,21 +49,9 @@ Since the app creator can put their own branding on the open source payment app,
 
     Paying for others fees
 
-**********
-Parameters
-**********
-
-Aggregate transactions accept the following parameters:
-
-    **Inner transactions**
-
-    Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-
-    **Cosignatures**
-
-    An array of transaction cosignatures.
-
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+.. _aggregate-complete:
 
 ******************
 Aggregate complete
@@ -75,13 +63,15 @@ The different participants can sign without using the blockchain the aggregate t
 
 Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions between different participants in the same operation.
 
+.. _aggregate-bonded:
+
 ****************
 Aggregate bonded
 ****************
 
 An aggregate transaction is **bonded** when it requires signatures from other participants.
 
-.. note:: When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a Lock Funds Transaction for this aggregate with at least ``10`` XEM.
+.. note:: When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a :ref:`hash lock transaction<hash-lock-transaction>` for this aggregate with at least ``10`` XEM.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -93,35 +83,74 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 
     Aggregate bonded transaction cycle
 
+********
+Schemas
+********
+
+AggregateTransaction
+====================
+
+**Version**: 1
+
+**Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`AggregateTransactionBody<aggregate-transaction-body>`
+
+.. _aggregate-transaction-body:
+
+AggregateTransactionBody
+========================
+Aggregate transactions accept the following parameters:
+
+    **transactions**: array of transactions
+
+    Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+
+    **cosignatures**: array of cosignatures
+
+    An array of transaction cosignatures.
+
 .. _cosignature-transaction:
 
-***********************
-Cosignature transaction
-***********************
+CosignatureTransaction
+======================
 
 Cosignature transactions are used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
 
-Parameters
-==========
 
     **Transaction to cosign**
 
-    Aggregate bonded transaction to cosign.
+    Aggregate bonded transaction hash to cosign.
 
-.. _lock-funds-transaction:
+.. _hash-lock-transaction:
 
-**********************
-Lock funds transaction
-**********************
+HashLockTransaction
+===================
 
-Announce a lock funds transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming.
+**Version**: 1
 
-Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial lock funds transaction.
+**Entity type**: 0x414C
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`HashLockTransactionBody<hash-lock-transaction-body>`
+
+**Alias**: LockFundsTransaction
+
+Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming.
+
+Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial hash lock transaction.
 
 If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 
-Parameters
-==========
+.. _hash-lock-transaction-body:
+
+HashLockTransactionBody
+=======================
 
     **Mosaic**
 
@@ -133,34 +162,10 @@ Parameters
 
     **Hash**
 
-    Aggregate bonded has to be confirmed before unlocking funds.
+    The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
-**************
-Schemas
-**************
-
-Aggregate Transactions are composed of the following schemas:
-
-    **Aggregate Schema**
-
-    .. csv-table::
-      :header: "Key", "Type", "SchemaName"
-      :delim: ;
-
-      transactions; array; transactionWithMetadata
-      cosignatures; array; aggregate.cosignature
-
-    **aggregate.cosignature**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      signer; binary
-      signature; binary
-      parentHash; binary
 
 **************
 Related guides

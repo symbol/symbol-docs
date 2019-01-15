@@ -23,13 +23,26 @@ The figure below illustrates the cross-chain swap protocol.
 
 When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
 
+*******
+Schemas
+*******
+
 .. _secret-lock-transaction:
 
-***********************
-Secret lock transaction
-***********************
+*********************
+SecretLockTransaction
+*********************
 
-Use a secret lock transaction to start the cross-chain swap.
+**Version**: 1
+
+**Entity type**: 0x424C
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`SecretLockTransactionBody<secret-lock-transaction-body>`
+
+Use a secret lock transaction to start the cross-chain swap:
 
 1. Define the mosaic units you want to transfer to a determined account.
 
@@ -43,125 +56,66 @@ The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction
 
 If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
 
-Parameters
-==========
+.. _secret-lock-transaction-body:
 
-    **Mosaic**
+SecretLockTransactionBody
+=========================
 
-    Locked mosaic.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Duration**
-
-    If reached, the mosaics will be returned to the initiator.
-
-    **Hash type**
-
-    The algorithm used to hash the proof.
-
-    .. csv-table::
-        :header: "Id", "Hash type", "Description"
-        :delim: ;
-
-        0; SHA_3; Input is hashed using Sha3
-        1; Keccak; Input is hashed using Keccak
-        2; Hash_160; Input is hashed twice: first with Sha-256 and then with RIPEMD-160
-        3; Hash_256; Input is hashed twice with Sha-256
-
-    **Secret**
-
-    The proof hashed.
-
-    **Recipient**
-
-    The address who will receive the funds once unlocked.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic.
+    duration; uint64; The lock duration. If reached, the mosaics will be returned to the initiator.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
+    secret; 64 bytes (binary);  The proof hashed.
+    recipient; 25 bytes (binary); The address who will receive the funds once unlocked.
 
 .. _secret-proof-transaction:
 
-************************
-Secret proof transaction
-************************
+SecretProofTransaction
+======================
+
+**Version**: 1
+
+**Entity type**: 0x434C
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`SecretProofTransactionBody<secret-proof-transaction-body>`
 
 Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
 The transaction must prove that knows the *proof*  that unlocks the mosaics.
 
-Parameters
-==========
+.. _secret-proof-transaction-body:
 
-    **Hash type**
+SecretProofTransactionBody
+==========================
 
-    The algorithm used to hash the proof.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Secret**
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
+    secret; 64 bytes (binary); The proof hashed.
+    proofSize; uint16; The proof size in bytes.
+    proof; array(byte, proofSize); The original proof.
 
-    The proof hashed.
+.. _lock-hash-algorithm:
 
-    **Proof**
+LockHashAlgorithm
+=================
 
-    The original proof.
+.. csv-table::
+    :header: "Id", "Type", "Description"
+    :delim: ;
 
-**************
-Schemas
-**************
-
-Cross-Chain swaps are composed of the following schemas:
-
-    **commonLockInfo Schema**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      account; binary
-      accountAddress; binary
-      mosaicId; uint64
-      amount; uint64
-      height; uint64
-
-    **commonLockTransaction Schema**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      mosaicId; uint64
-      amount; uint64
-      duration; uint64
-
-    **hashLockInfo**
-
-    .. csv-table::
-      :header: "Key", "Type", "SchemaName"
-      :delim: ;
-
-      lock; object; hashLockInfo.lock
-
-    **hashLockInfo.lock**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      hash; binary
-
-    **secretLockInfo**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      lock; object; secretLockInfo.lock
-
-    **secretLockInfo.lock**
-
-    .. csv-table::
-      :header: "Key", "Type"
-      :delim: ;
-
-      secret; binary
-      recipient; binary
-
-
+    0 (SHA_3); uint8; Input is hashed using Sha3.
+    1 (Keccak); uint8; Input is hashed using Keccak.
+    2 (Hash_160); uint8; Input is hashed twice: first with Sha-256 and then with RIPEMD-160.
+    3 (Hash_256); uint8; Input is hashed twice with Sha-256.
 
 **************
 Related guides
