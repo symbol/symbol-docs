@@ -56,7 +56,7 @@ BlockHeader
     timestamp; uint64; The number of seconds elapsed since the creation of the nemesis block.
     difficulty; uint64; The block difficulty.
     previousBlockHash; 64 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
-    stateRootHash; 64 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
+    stateHash; 64 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
 
 .. |merkle| raw:: html
 

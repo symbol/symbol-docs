@@ -215,7 +215,7 @@ PropertyType
 Enumeration: uint8
 
 .. csv-table::
-    :header: "Id"", "Description"
+    :header: "Id", "Description"
     :delim: ;
 
     0x01; The property type is an address.
