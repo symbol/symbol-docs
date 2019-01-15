@@ -20,62 +20,125 @@ Each mosaic has a set of configurable properties. During the mosaic creation, yo
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
+*******
+Schemas
+*******
+
 .. _mosaic-definition-transaction:
 
-*****************************
-Mosaic definition transaction
-*****************************
+MosaicDefinitionTransaction
+===========================
+
+**Version**: 2
+
+**Entity type**: 0x414E
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`
 
 Announce a mosaic definition transaction to create a new mosaic.
 
-Parameters
-==========
+.. _mosaic-definition-transaction-body:
 
-    **Namespace**
+MosaicDefinitionTransactionBody
+===============================
 
-    A mosaic is always linked to a :doc:`namespace <namespace>`, like a file hosted on a domain.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Name**
-
-    Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique, even if the rest of it is not.
-
-    Mosaics are named joining the namespace name with the mosaic name using the ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
-
-    Mosaic names have a size limit of ``64`` characters and must be unique under the domain name. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
-
-    **Owner**
-
-    The public key of the :doc:`mosaic creator <account>`.
-
-    **Properties**
-
-    See :ref:`mosaic configurable properties<mosaic-properties>`
+    parentId; uint64; The namespace parent Id.
+    mosaicId; uint64; The mosaic Id.
+    mosaicNameLength; uint8; The mosaic name lenght.
+    count; uint8; The number of elements in optional properties
+    flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
+    divisibility; uint8; The mosaic divisibility.
+    mosaicName; array(byte, mosaicNameLength); The mosaic name may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+.. _mosaic-flags:
+
+MosaicFlags
+===========
+
+.. csv-table::
+    :header: "Id", "Type"; "Description"
+    :delim: ;
+
+    0x00; uint8; No flags present.
+    0x01; uint8; The mosaic supply is mutable.
+    0x02; uint8; The mosaic is transferable.
+    0x04; uint8; The mosaic levy is mutable
+
+.. _mosaic-property:
+
+MosaicProperty
+==============
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    id; uint8; The property id. (0x02) stands for duration.
+    mosaicId; uint64; The mosaic property value.
+
+.. _mosaic:
+
+Mosaic
+======
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
+
+.. _unresolved-mosaic:
+
+UnresolvedMosaic
+================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
+
 .. _mosaic-supply-change-transaction:
 
-********************************
-Mosaic supply change transaction
-********************************
+MosaicSupplyChangeTransaction
+=============================
 
-Announce a supply change transaction to increase or decrease a mosaic's supply.
+**Version**: 2
 
-Parameters
-==========
+**Entity type**: 0x424D
 
-    **Mosaic Id**
+**Inlines**:
 
-    A combination of namespace name and mosaic name. For example "foo.bar:token".
+* :ref:`Transaction<transaction>`
+* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
+
+.. _mosaic-supply-change-transaction-body:
+
+MosaicSupplyChangeTransactionBody
+=================================
+
+    **Mosaic Id**:
+
+    The mosaic id.
 
     **Direction**
 
-    The direction could be Increase (0) or Decrease (1).
+    The direction could be increase (0) or decrease (1).
 
     **Delta**
 
     The amount of supply to increase or decrease.
-
 
 **************
 Related guides
@@ -88,4 +151,5 @@ Related guides
     :list-style: circle
     :excerpts:
     :sort:
+
 

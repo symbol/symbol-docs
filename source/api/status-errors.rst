@@ -62,7 +62,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Supply_Immutable, Validation failed because the mosaic supply is immutable.
     Failure_Mosaic_Supply_Negative, Validation failed because the resulting mosaic supply is negative.
     Failure_Mosaic_Supply_Exceeded, Validation failed because the resulting mosaic supply exceeds the maximum allowed value. The range should be between 0 and ``9.000.000.000``.
-    Failure_Mosaic_Non_Transferable, Validation failed because the mosaic is not transferable.  Only the creator of the mosaic is eligible to be the recipient of a non-transferable mosaic once transferred.
+    Failure_Mosaic_Non_Transferable, Validation failed because the mosaic is not transferable. Only the creator of the mosaic is eligible to be the recipient of a non-transferable mosaic once transferred.
     Failure_Mosaic_Max_Mosaics_Exceeded, Validation failed because the credit of the mosaic would exceed the maximum different mosaics an account is allowed to own. Set by default to ``10.000`` different mosaics per account.
     Failure_Multisig_Modify_Account_In_Both_Sets, Validation failed because account is specified to be both added and removed.
     Failure_Multisig_Modify_Multiple_Deletes, Validation failed because multiple removals are present.
