@@ -29,9 +29,8 @@ Schemas
 
 .. _secret-lock-transaction:
 
-*********************
 SecretLockTransaction
-*********************
+=====================
 
 **Version**: 1
 

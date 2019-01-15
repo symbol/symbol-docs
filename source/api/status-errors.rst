@@ -13,11 +13,11 @@ This section describes the error messages that can be returned via status channe
     Neutral, Validation result is neither success nor failure.
     Failure, Validation result is failure.
     Failure_Core_Past_Deadline, Validation failed because the deadline passed.
-    Failure_Core_Future_Deadline, Validation failed because the deadline is too far in the future.. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    Failure_Core_Future_Deadline, Validation failed because the deadline is too far in the future. Deadlines are only allowed to lie up to ``24`` hours ahead.
     Failure_Core_Insufficient_Balance, Validation failed because the account has an insufficient balance.
     Failure_Core_Too_Many_Transactions, Validation failed because there are too many transactions in a block.
     Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block, Validation failed because an entity originated from the nemesis account after the nemesis block.
-    Failure_Core_Wrong_Network, Validation failed because the entity has the wrong network specified..
+    Failure_Core_Wrong_Network, Validation failed because the entity has the wrong network specified.
     Failure_Core_Invalid_Address, Validation failed because an address is invalid.
     Failure_Core_Block_Harvester_Ineligible, Validation failed because a block was harvested by an ineligible harvester
     Failure_Hash_Exists, Validation failed because the entity hash is already known.
@@ -60,7 +60,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Operation_Not_Permitted_By_Account, Validation failed because an operation is not permitted by a multisig account. A multisig account cannot be converted into a multisig account again.
     Failure_Mosaic_Invalid_Name, Validation failed because the name is invalid. The mosaic name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
     Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
-    Failure_Mosaic_Invalid_Duration, Validation failed because the name is invalid.. Duration is allowed to lie up to ``365`` days.
+    Failure_Mosaic_Invalid_Duration, Validation failed because the name is invalid. Duration is allowed to lie up to ``365`` days.
     Failure_Mosaic_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Namespace_Expired, Validation failed because the parent is expired.
     Failure_Mosaic_Owner_Conflict, Validation failed because the parent owner conflicts with the child owner.
