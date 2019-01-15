@@ -22,7 +22,6 @@ Some important considerations to keep in mind:
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
-
 ********
 Examples
 ********
@@ -68,16 +67,33 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
     Transferring an account
 
+*******
+Schemas
+*******
+
 .. _modify-multisig-account-transaction:
 
-***********************************
-Modify multisig account transaction
-***********************************
+ModifyMultisigTransaction
+=========================
+
+**Version**: 1
+
+**Entity type**: 0x4155
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`ModifyMultisigTransactionBody<modify-multisig-transaction-body>`
 
 Announce a modify multisig account transaction to:
 
 a) Transform an account to multisig.
 b) Change the configurable properties of a multisig account.
+
+.. _modify-multisig-transaction-body:
+
+ModifyMultisigTransactionBody
+=============================
 
     **Minimum approval delta**
 
@@ -102,4 +118,3 @@ Related guides
     :list-style: circle
     :excerpts:
     :sort:
-
