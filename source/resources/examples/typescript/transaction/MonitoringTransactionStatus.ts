@@ -51,7 +51,7 @@ const amountOfConfirmationsToSkip = 5;
 
 listener.open().then(() => {
 
-    listener
+    const newBlockSubscription = listener
         .newBlock()
         .pipe(timeout(30000)) // time in milliseconds when to timeout.
         .subscribe(block => {
@@ -67,6 +67,7 @@ listener.open().then(() => {
         .pipe(filter(error => error.hash === signedTransaction.hash))
         .subscribe(error => {
                 console.log("❌:" + error.status);
+                newBlockSubscription.unsubscribe();
                 listener.close();
             },
             error => console.error(error));
@@ -93,6 +94,7 @@ listener.open().then(() => {
         )
         .subscribe(ignored => {
             console.log("✅: Transaction confirmed");
+            newBlockSubscription.unsubscribe();
             listener.close();
         }, error => console.error(error));
 

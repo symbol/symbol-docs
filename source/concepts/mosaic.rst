@@ -31,7 +31,7 @@ MosaicDefinitionTransaction
 
 **Version**: 2
 
-**Entity type**: 0x414E
+**Entity type**: 0x414D
 
 **Inlines**:
 

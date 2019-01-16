@@ -89,7 +89,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
     .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :caption: |monitoring-transactions-status-ts|
         :language: typescript
-        :lines:  65-72
+        :lines:  65-73
 
     .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionStatusError.sh
         :caption: |monitoring-transaction-status-error-cli|
@@ -103,7 +103,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
     .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :caption: |monitoring-transactions-status-ts|
         :language: typescript
-        :lines:  74-79
+        :lines:  75-80
 
     .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionUnconfirmed.sh
         :caption: |monitoring-transaction-unconfirmed-cli|
@@ -117,7 +117,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
     .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :caption: |monitoring-transactions-status-ts|
         :language: typescript
-        :lines:  81-97
+        :lines:  82-99
 
     .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionConfirmed.sh
         :caption: |monitoring-transaction-confirmed-cli|
@@ -131,7 +131,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
     .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :caption: |monitoring-transactions-status-ts|
         :language: typescript
-        :lines: 99-
+        :lines: 101-
 
     .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransaction.sh
         :caption: |sending-a-transfer-transaction-cli|
