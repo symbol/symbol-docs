@@ -43,7 +43,8 @@ BlockHeader
     height; uint64; The height of the blockchain. Each blockchain has a unique height. Subsequent blocks differ in height by 1.
     timestamp; uint64; The number of seconds elapsed since the creation of the nemesis block.
     difficulty; uint64; The block difficulty.
-    previousBlockHash; 64 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
+    previousBlockHash; 32 bytes (binary); The hash of the previous block.
+    blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
 
 .. |merkle| raw:: html
 

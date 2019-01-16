@@ -123,22 +123,33 @@ MosaicSupplyChangeTransaction
 * :ref:`Transaction<transaction>`
 * :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
 
+Announce a supply change transaction to increase or decrease a mosaic's supply.
+
 .. _mosaic-supply-change-transaction-body:
 
 MosaicSupplyChangeTransactionBody
 =================================
 
-    **Mosaic Id**:
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The mosaic id.
+    mosaicId; uint64; The id of the affected mosaic.
+    duration; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
 
-    **Direction**
 
-    The direction could be increase (0) or decrease (1).
+.. _mosaic-supply-change-direction:
 
-    **Delta**
+MosaicSupplyChangeDirection
+===========================
 
-    The amount of supply to increase or decrease.
+.. csv-table::
+    :header: "Id", "Type", "Description"
+    :delim: ;
+
+    0x00; uint8; Increase.
+    0x01; uint8; Decrease.
 
 **************
 Related guides
