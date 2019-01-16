@@ -107,14 +107,37 @@ b) Change the configurable properties of a multisig account.
 ModifyMultisigTransactionBody
 =============================
 
-    **Minimum approval delta**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minRemovalDelta; uint8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minApprovalDelta; uint8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    modificationsCount; uint8; The number of modifications.
+    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
 
-    **Minimum removal delta**
+.. _cosignatory-modification:
 
-    The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+CosignatoryModification
+=======================
 
-    **Modifications**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
+    modificationType; :ref:`CosignatoryModificationType <cosignatory-modification-type>`; The cosignatory modification type.
+    cosignatoryPublicKey; 32 bytes (binary); The public key of the cosignatory.
+
+.. _cosignatory-modification-type:
+
+CosignatoryModificationType
+===========================
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id"; "Description"
+    :delim: ;
+
+    0x00; Add.
+    0x01; Remove.

@@ -94,7 +94,7 @@ Receiving an OK response does not mean the transaction is valid, which means it 
 
 We suggest opening three new terminals:
 
-1. The first terminal :doc:`monitors announced transactions<../guides/transaction/debugging-transactions>` validation errors.
+1. The first terminal :doc:`monitors announced transactions <../guides/transaction/monitoring-a-transaction-status>` validation errors.
 
 .. code-block:: bash
 

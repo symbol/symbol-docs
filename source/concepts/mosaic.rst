@@ -43,7 +43,7 @@ MosaicDefinitionTransaction
 
 **Version**: 2
 
-**Entity type**: 0x414E
+**Entity type**: 0x414D
 
 **Inlines**:
 
@@ -107,22 +107,6 @@ UnresolvedMosaic
     mosaicId; uint64; The mosaic id.
     amount; uint64; The amount of the mosaic.
 
-.. _mosaic-flags:
-
-MosaicFlags
-===========
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id"; "Description"
-    :delim: ;
-
-    0x00; No flags present.
-    0x01; The mosaic supply is mutable.
-    0x02; The mosaic is transferable.
-    0x04; The mosaic levy is mutable
-
 .. _mosaic-supply-change-transaction:
 
 MosaicSupplyChangeTransaction
@@ -137,19 +121,49 @@ MosaicSupplyChangeTransaction
 * :ref:`Transaction<transaction>`
 * :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
 
+Announce a supply change transaction to increase or decrease a mosaic's supply.
+
 .. _mosaic-supply-change-transaction-body:
 
 MosaicSupplyChangeTransactionBody
 =================================
 
-    **Mosaic Id**:
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The mosaic id.
+    mosaicId; uint64; The id of the affected mosaic.
+    duration; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
 
-    **Direction**
+.. _mosaic-flags:
 
-    The direction could be increase (0) or decrease (1).
+MosaicFlags
+===========
 
-    **Delta**
+Enumeration: uint8
 
-    The amount of supply to increase or decrease.
+.. csv-table::
+    :header: "Id"; "Description"
+    :delim: ;
+
+        0x00; No flags present.
+        0x01; The mosaic supply is mutable.
+        0x02; The mosaic is transferable.
+        0x04; The mosaic levy is mutable
+
+.. _mosaic-supply-change-direction:
+
+MosaicSupplyChangeDirection
+===========================
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id"; "Description"
+    :delim: ;
+
+    0x00; Increase.
+    0x01; Decrease.
+
+

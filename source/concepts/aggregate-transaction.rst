@@ -115,7 +115,6 @@ AggregateTransaction
 
 AggregateTransactionBody
 ========================
-Aggregate transactions accept the following parameters:
 
     **transactions**: array of transactions
 
@@ -132,8 +131,7 @@ CosignatureTransaction
 
 Cosignature transactions are used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
 
-
-    **Transaction to cosign**
+    **Hash**
 
     Aggregate bonded transaction hash to cosign.
 
@@ -164,16 +162,12 @@ If the aggregate bonded transaction duration is reached without being signed by 
 HashLockTransactionBody
 =======================
 
-    **Mosaic**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    Locked :doc:`mosaic <mosaic>`, must be at least ``10 nem:xem``.
-
-    **Duration**
-
-    The funds lock duration.
-
-    **Hash**
-
-    The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 nem:xem``.
+    duration; uint64; The lock duration.
+    hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.

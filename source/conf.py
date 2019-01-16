@@ -319,6 +319,11 @@ html_scaled_image_link = False
 # -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
 
+blog_authors = {
+    'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
+    'jorisadri': ('jorisadri', 'http://github.com/jorisadri'),
+}
+
 # -- Options for linkcheck ------------------------------------------------
 
 linkcheck_ignore = [r'http://localhost:\d+']

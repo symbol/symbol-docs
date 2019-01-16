@@ -55,8 +55,9 @@ BlockHeader
     height; uint64; The height of the blockchain. Each blockchain has a unique height. Subsequent blocks differ in height by 1.
     timestamp; uint64; The number of seconds elapsed since the creation of the nemesis block.
     difficulty; uint64; The block difficulty.
-    previousBlockHash; 64 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
-    stateHash; 64 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
+    previousBlockHash; 32 bytes (binary); The hash of the previous block.
+    blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
+    stateHash; 32 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
 
 .. |merkle| raw:: html
 
