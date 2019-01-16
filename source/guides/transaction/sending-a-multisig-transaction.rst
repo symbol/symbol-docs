@@ -160,7 +160,7 @@ As all required cosigners did not sign the transaction, it should be announced a
         :lines:  59-64
 
 
-1. Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
+1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
