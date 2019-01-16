@@ -69,14 +69,14 @@ listener.open().then(() => {
                 console.log("❌:" + error.status);
                 listener.close();
             },
-            err => console.error(err));
+            error => console.error(error));
 
     listener
         .unconfirmedAdded(signer.address)
         .pipe(filter(transaction => (transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === signedTransaction.hash)))
         .subscribe(ignored => console.log("⏳: Transaction status changed to unconfirmed"),
-            err => console.error(err));
+            error => console.error(error));
 
     listener
         .confirmed(signer.address)
@@ -94,10 +94,10 @@ listener.open().then(() => {
         .subscribe(ignored => {
             console.log("✅: Transaction confirmed");
             listener.close();
-        }, err => console.error(err));
+        }, error => console.error(error));
 
     transactionHttp
         .announce(signedTransaction)
         .subscribe(x => console.log(x),
-            err => console.error(err));
+            error => console.error(error));
 });

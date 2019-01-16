@@ -18,27 +18,27 @@
                     <li>
                         <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM">
                             <i class="fab fa-slack"></i>
-                            <span >Join #general discussion</span>
+                            <span>{{ gettext('Join #general discussion') }}</span>
                         </a>
                     </li>
                     <li>
                         <a href="https://stackoverflow.com/tags/nem/">
                             <i class="fab fa-stack-overflow"></i>
-                            <span>Ask development questions</span>
+                            <span>{{ gettext('Ask development questions') }}</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="https://twitter.com/nemtechdev">
                             <i class="fab fa-twitter"></i>
-                            <span>Follow the dev updates</span>
+                            <span>{{ gettext('Follow the dev updates') }}</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="https://github.com/nemtech">
                             <i class="fab fa-github"></i>
-                            <span>Explore Github</span>
+                            <span>{{ gettext('Explore Github') }}</span>
                         </a>
                     </li>
                 </ul>
@@ -47,47 +47,47 @@
         <div class="row">
 
             <div class="col-sm-4">
-                <h4>Protocol</h4>
+                <h4>{{ gettext('Protocol') }}</h4>
 
                 <ul>
-                    <li><a href="{{pathto('concepts/cryptography')}}">Cryptography</a></li>
-                    <li><a href="{{pathto('concepts/block')}}">Block</a></li>
-                    <li><a href="{{pathto('concepts/transaction')}}">Transaction</a></li>
-                    <li><a href="{{pathto('concepts/node')}}">Node</a></li>
+                    <li><a href="{{pathto('concepts/cryptography')}}">{{ gettext('Cryptography') }}</a></li>
+                    <li><a href="{{pathto('concepts/block')}}">{{ gettext('Block') }}</a></li>
+                    <li><a href="{{pathto('concepts/transaction')}}">{{ gettext('Transaction') }}</a></li>
+                    <li><a href="{{pathto('concepts/node')}}">{{ gettext('Node') }}</a></li>
                 </ul>
 
             </div>
 
             <div class="col-sm-4">
-                <h4>Built-in Features</h4>
+                <h4>{{ gettext('Built-in Features') }}</h4>
 
                 <ul>
-                    <li><a href="{{pathto('concepts/account')}}">Account</a></li>
-                    <li><a href="{{pathto('concepts/multisig-account')}}">Multisig Account</a></li>
-                    <li><a href="{{pathto('concepts/multi-level-multisig-account')}}">Multilevel Multisig Account</a></li>
-                    <li><a href="{{pathto('concepts/namespace')}}">Namespace</a></li>
-                    <li><a href="{{pathto('concepts/mosaic')}}">Mosaic</a></li>
-                    <li><a href="{{pathto('concepts/transfer-transaction')}}">Transfer Transaction</a></li>
-                    <li><a href="{{pathto('concepts/aggregate-transaction')}}">Aggregate Transaction</a></li>
-                    <li><a href="{{pathto('concepts/cross-chain-swaps')}}">Cross-Chain Swaps</a></li>
+                    <li><a href="{{pathto('concepts/account')}}">{{ gettext('Account') }}</a></li>
+                    <li><a href="{{pathto('concepts/multisig-account')}}">{{ gettext('Multisig Account') }}</a></li>
+                    <li><a href="{{pathto('concepts/multi-level-multisig-account')}}">{{ gettext('Multilevel Multisig Account') }}</a></li>
+                    <li><a href="{{pathto('concepts/namespace')}}">{{ gettext('Namespace') }}</a></li>
+                    <li><a href="{{pathto('concepts/mosaic')}}">{{ gettext('Mosaic') }}</a></li>
+                    <li><a href="{{pathto('concepts/transfer-transaction')}}">{{ gettext('Transfer Transaction') }}</a></li>
+                    <li><a href="{{pathto('concepts/aggregate-transaction')}}">{{ gettext('Aggregate Transaction') }}</a></li>
+                    <li><a href="{{pathto('concepts/cross-chain-swaps')}}">{{ gettext('Cross-Chain Swaps') }}</a></li>
                 </ul>
 
             </div>
 
             <div class="col-sm-4">
-                <h4>References</h4>
+                <h4>{{ gettext('References') }}</h4>
 
                 <ul>
-                    <li><a href="{{pathto('api/requests')}}">REST API</a></li>
-                    <li><a href="{{pathto('sdk/languages')}}">SDKs</a></li>
-                    <li><a href="{{pathto('sdk/libraries')}}">Libraries</a></li>
-                    <li><a href="{{pathto('cli/overview')}}">CLI</a></li>
+                    <li><a href="{{pathto('api/requests')}}">{{ gettext('REST API') }}</a></li>
+                    <li><a href="{{pathto('sdk/languages')}}">{{ gettext('SDKs') }}</a></li>
+                    <li><a href="{{pathto('sdk/libraries')}}">{{ gettext('Libraries') }}</a></li>
+                    <li><a href="{{pathto('cli/overview')}}">{{ gettext('CLI') }}</a></li>
                 </ul>
                 <div id="language">
                     <i class="fas fa-globe"></i>
                     <select>
-                        <option id="english" value="en">English</option>
-                        <option id="japanese" value="ja">Japanese</option>
+                        <option id="english" value="en">{{ gettext('English') }}</option>
+                        <option id="japanese" value="ja">{{ gettext('Japanese') }}</option>
                     </select>
                 </div>
 
