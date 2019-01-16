@@ -144,13 +144,13 @@ MosaicFlags
 Enumeration: uint8
 
 .. csv-table::
-    :header: "Id"; "Description"
+    :header: "Id", "Description"
     :delim: ;
 
-        0x00; No flags present.
-        0x01; The mosaic supply is mutable.
-        0x02; The mosaic is transferable.
-        0x04; The mosaic levy is mutable
+    0x00; No flags present.
+    0x01; The mosaic supply is mutable.
+    0x02; The mosaic is transferable.
+    0x04; The mosaic levy is mutable
 
 .. _mosaic-supply-change-direction:
 
@@ -160,7 +160,7 @@ MosaicSupplyChangeDirection
 Enumeration: uint8
 
 .. csv-table::
-    :header: "Id"; "Description"
+    :header: "Id", "Description"
     :delim: ;
 
     0x00; Increase.

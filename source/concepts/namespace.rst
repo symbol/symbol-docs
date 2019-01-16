@@ -61,9 +61,23 @@ RegisterNamespaceTransactionBody
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceType; uint8; The type of the registered namespace: (0) root, (1) child.
+    namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
     duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
     name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+
+.. _namespace-type:
+
+NamespaceType
+=============
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x00; Root namespace.
+    0x01; Child namespace.
