@@ -22,6 +22,18 @@ Blocks are created by accounts. The process of creating new blocks is called har
 
 .. Any account that has a vested balance of at least N XEM is eligible to harvest.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: blockchain
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -45,6 +57,7 @@ BlockHeader
     difficulty; uint64; The block difficulty.
     previousBlockHash; 32 bytes (binary); The hash of the previous block.
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
+    stateHash; 32 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
 
 .. |merkle| raw:: html
 
@@ -101,15 +114,3 @@ EntityBody
     signer; 32 bytes (binary); The public key of the :doc:`harvester <account>` of the block.
     version; uint16; The version of the entity.
     type; uint16; The type of the entity.
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: blockchain
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

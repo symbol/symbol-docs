@@ -54,9 +54,9 @@ You can set up your account so it can be recovered only with the approval of sig
 
     Account Recovery
 
-**************
-Related guides
-**************
+******
+Guides
+******
 
 .. postlist::
     :category: mlma

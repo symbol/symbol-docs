@@ -51,9 +51,9 @@ Http status
     "message": "accountId has an invalid format"
   }
 
-*************************
-Numbers: lower and higher
-*************************
+************************
+uint64: lower and higher
+************************
 
 Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: ``lower`` and ``higher``.
 

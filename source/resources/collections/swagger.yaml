@@ -262,6 +262,60 @@ paths:
               type: object
         '409':
           description: invalid argument
+
+  '/account/properties/{accountId}':
+      get:
+        tags:
+          - Account routes
+        summary: Get account configurable properties information
+        description: Returns [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given account.
+        operationId: getAccountProperties
+        produces:
+          - application/json
+        parameters:
+          - name: accountId
+            in: path
+            description: The public key or address of the account.
+            required: true
+            type: string
+            default: SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
+        responses:
+          '200':
+            description: success
+            schema:
+              $ref: '#/definitions/AccountPropertiesInfoDTO'
+          '404':
+            description: resource not found
+          '409':
+            description: invalid argument
+  /account/properties:
+    post:
+      tags:
+      - Account routes
+      summary: Get account properties for given array of addresses
+      description: Returns [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given array of addresses.
+      operationId: getAccountPropertiesFromAccounts
+      produces:
+      - application/json
+      parameters:
+      - name: addresses
+        in: body
+        description: An array of addresses.
+        required: true
+        schema:
+          $ref: '#/definitions/addresses'
+      responses:
+        '200':
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccountPropertiesInfoDTO'
+        '400':
+          description: invalid content
+        '409':
+          description: invalid argument
+
   '/account/{accountId}/multisig':
     get:
       tags:
@@ -957,6 +1011,54 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       importanceHeight:
         $ref: '#/definitions/UInt64DTO'
+  AccountPropertiesInfoDTO:
+    type: object
+    required:
+      - meta
+      - accountProperties
+    properties:
+      meta:
+        $ref: '#/definitions/AccountPropertiesMetaDTO'
+      accountProperties:
+        $ref: '#/definitions/AccountPropertiesDTO'
+  AccountPropertiesMetaDTO:
+    type: object
+    required:
+     - id
+    properties:
+      id:
+        type: string
+        example: 00000000000000000000032f
+  AccountPropertiesDTO:
+    type: object
+    required:
+      - address
+      - properties
+    properties:
+      address:
+        type: string
+        example: U0RSREdGVERMTENCNjdENEhQR0lNSUhQTlNSWVJKUlQ3RE9CR1daWQ==
+      properties:
+        type: array
+        items:
+          $ref: '#/definitions/AccountPropertyDTO'
+  AccountPropertyDTO:
+    type: object
+    required:
+      - propertyType
+      - values
+    properties:
+      propertyType:
+        type: integer
+        example: 1
+      values:
+        type: array
+        items:
+          type: object
+        example:
+          - C14+w2br1wkUdGm/SNSlBwCvcksjWBkBXg==
+          - Ul6vmYP5TAEIOMMcDoHz6sn7bCdpjBaE+Q==
+
   MultisigAccountGraphInfoDTO:
     type: object
     required:
@@ -975,8 +1077,8 @@ definitions:
       - multisig
     properties:
       multisig:
-        $ref: '#/definitions/Multisig'
-  Multisig:
+        $ref: '#/definitions/MultisigDTO'
+  MultisigDTO:
     type: object
     required:
       - account
@@ -1257,7 +1359,6 @@ definitions:
       description:
         type: string
         example: catapult development network
-
   NodeInfoDTO:
     type: object
     required:

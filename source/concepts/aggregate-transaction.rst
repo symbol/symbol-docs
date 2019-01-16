@@ -83,6 +83,18 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 
     Aggregate bonded transaction cycle
 
+******
+Guides
+******
+
+.. postlist::
+    :category: aggregate-transaction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 ********
 Schemas
 ********
@@ -90,7 +102,7 @@ Schemas
 AggregateTransaction
 ====================
 
-**Version**: 1
+**Version**: 0x01
 
 **Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
 
@@ -128,9 +140,9 @@ Cosignature transactions are used to sign :ref:`announced aggregate bonded trans
 HashLockTransaction
 ===================
 
-**Version**: 1
+**Version**: 0x01
 
-**Entity type**: 0x414C
+**Entity type**: 0x4148
 
 **Inlines**:
 
@@ -159,16 +171,3 @@ HashLockTransactionBody
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: aggregate-transaction
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

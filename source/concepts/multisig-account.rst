@@ -67,6 +67,18 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
     Transferring an account
 
+******
+Guides
+******
+
+.. postlist::
+    :category: multisig-account
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -76,7 +88,7 @@ Schemas
 ModifyMultisigTransaction
 =========================
 
-**Version**: 1
+**Version**: 0x01
 
 **Entity type**: 0x4155
 
@@ -121,22 +133,11 @@ CosignatoryModification
 CosignatoryModificationType
 ===========================
 
+Enumeration: uint8
+
 .. csv-table::
-    :header: "Id", "Type", "Description"
+    :header: "Id"; "Description"
     :delim: ;
 
-    0x00; uint8; Add.
-    0x01; uint8; Remove.
-
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: multisig-account
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:
+    0x00; Add.
+    0x01; Remove.

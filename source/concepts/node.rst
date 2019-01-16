@@ -98,9 +98,9 @@ Catapult REST sends new transactions to the Catapult API using sockets. The comp
   <a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a>
 
 
-**************
-Related guides
-**************
+******
+Guides
+******
 
 * |running-catapult-locally|
 

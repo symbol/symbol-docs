@@ -23,6 +23,18 @@ The figure below illustrates the cross-chain swap protocol.
 
 When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: cross-chain-swaps
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -32,9 +44,9 @@ Schemas
 SecretLockTransaction
 =====================
 
-**Version**: 1
+**Version**: 0x01
 
-**Entity type**: 0x424C
+**Entity type**: 0x4152
 
 **Inlines**:
 
@@ -75,9 +87,9 @@ SecretLockTransactionBody
 SecretProofTransaction
 ======================
 
-**Version**: 1
+**Version**: 0x01
 
-**Entity type**: 0x434C
+**Entity type**: 0x4252
 
 **Inlines**:
 
@@ -107,23 +119,13 @@ SecretProofTransactionBody
 LockHashAlgorithm
 =================
 
+Enumeration: uint8
+
 .. csv-table::
-    :header: "Id", "Type", "Description"
+    :header: "Id", "Description"
     :delim: ;
 
-    0 (SHA_3); uint8; Input is hashed using Sha3.
-    1 (Keccak); uint8; Input is hashed using Keccak.
-    2 (Hash_160); uint8; Input is hashed twice: first with Sha-256 and then with RIPEMD-160.
-    3 (Hash_256); uint8; Input is hashed twice with Sha-256.
-
-**************
-Related guides
-**************
-
-.. postlist::
-    :category: cross-chain-swaps
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:
+    0 (SHA_3); Input is hashed using Sha3.
+    1 (Keccak); Input is hashed using Keccak.
+    2 (Hash_160); Input is hashed twice: first with Sha-256 and then with RIPEMD-160.
+    3 (Hash_256); Input is hashed twice with Sha-256.
