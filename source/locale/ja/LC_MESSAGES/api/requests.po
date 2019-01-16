@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2019-01-14 09:13+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid ""
 "Assuming that Catapult REST is running locally, HTTP GET requests can be "
 "executed from a browser and have the form:"
-msgstr " Catapult REST がローカルで動いていると仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
+msgstr "Catapult REST がローカルで動いていると仮定すると、HTTP GET リクエストはブラウザからこのように実行できます:"
 
 #: ../../source/api/requests.rst:15
 msgid "http://localhost:3000/<path-to-API-request>"
