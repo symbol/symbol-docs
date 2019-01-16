@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-15 22:53+0900\n"
+"POT-Creation-Date: 2019-01-16 07:27+0900\n"
 "PO-Revision-Date: 2018-12-05 20:49+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -136,8 +136,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/api/serialization.rst:1
-msgid "Describes a :ref:`lock funds transaction <lock-funds-transaction>`."
-msgstr ":ref:`ロック資産トランザクション <lock-funds-transaction>` の説明"
+msgid "Describes a :ref:`hash lock transaction <hash-lock-transaction>`."
+msgstr ":ref:`ハッシュロックトランザクション <hash-lock-transaction>` の説明"
 
 #: ../../source/api/serialization.rst:1
 msgid ""

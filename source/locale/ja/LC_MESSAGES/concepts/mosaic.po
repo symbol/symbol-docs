@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2019-01-16 17:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:3
+#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:92
 msgid "Mosaic"
 msgstr "モザイク"
 
@@ -49,15 +49,21 @@ msgid ""
 "creation, you can define:"
 msgstr "各モザイクは設定可能なプロパティの集合を持ちます。モザイクを作成する時に、定義できます:"
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Description"
 msgstr "説明"
 
@@ -122,76 +128,139 @@ msgid ""
 msgstr ""
 "true にセットした場合、モザイクは任意のアカウント間で転送できます。そうでない場合、モザイクはモザイク作成者へ送り返すことしかできません。"
 
-#: ../../source/concepts/mosaic.rst:27
-msgid "Mosaic definition transaction"
+#: ../../source/concepts/mosaic.rst:25
+msgid "Schemas"
+msgstr "スキーマ"
+
+#: ../../source/concepts/mosaic.rst:30
+msgid "MosaicDefinitionTransaction"
 msgstr "モザイク定義トランザクション"
 
-#: ../../source/concepts/mosaic.rst:29
+#: ../../source/concepts/mosaic.rst:32 ../../source/concepts/mosaic.rst:117
+msgid "**Version**: 2"
+msgstr "**バージョン**: 2"
+
+#: ../../source/concepts/mosaic.rst:34
+msgid "**Entity type**: 0x414E"
+msgstr "**エンティティタイプ**: 0x414E"
+
+#: ../../source/concepts/mosaic.rst:36 ../../source/concepts/mosaic.rst:121
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/concepts/mosaic.rst:38 ../../source/concepts/mosaic.rst:123
+msgid ":ref:`Transaction<transaction>`"
+msgstr ":ref:`トランザクション <transaction>`"
+
+#: ../../source/concepts/mosaic.rst:39
+msgid ""
+":ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`"
+msgstr ":ref:`モザイク定義トランザクション本体<mosaic-definition-transaction-body>`"
+
+#: ../../source/concepts/mosaic.rst:41
 msgid "Announce a mosaic definition transaction to create a new mosaic."
 msgstr "新しいモザイクを作るためにモザイク定義トランザクションをアナウンスしてください。"
 
-#: ../../source/concepts/mosaic.rst:32 ../../source/concepts/mosaic.rst:65
-msgid "Parameters"
-msgstr "パラメータ"
-
-#: ../../source/concepts/mosaic.rst:34
-msgid "**Namespace**"
-msgstr "**ネームスペース**"
-
-#: ../../source/concepts/mosaic.rst:36
-msgid ""
-"A mosaic is always linked to a :doc:`namespace <namespace>`, like a file "
-"hosted on a domain."
-msgstr "ドメイン上にホストされたファイルのように、モザイクは常に :doc:`ネームスペース <namespace>` とリンクしています。"
-
-#: ../../source/concepts/mosaic.rst:38
-msgid "**Name**"
-msgstr "**名前**"
-
-#: ../../source/concepts/mosaic.rst:40
-msgid ""
-"Like a website and directory, a mosaic can have the same name as other files"
-" on other domains. However,  a namespace + mosaic is always unique, as the "
-"root namespace was unique, even if the rest of it is not."
-msgstr ""
-"ウェブサイトとディレクトリのように、他のドメイン上の他のファイルのように、モザイクは同じ名前を持つことができます。しかし、ネームスペース + "
-"モザイクは常に一意で、ルートネームスペースは一意で、それ以外はその限りではありません。"
-
-#: ../../source/concepts/mosaic.rst:42
-msgid ""
-"Mosaics are named joining the namespace name with the mosaic name using the "
-"':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` "
-"under it, the mosaic is referenced as ``nem:xem``."
-msgstr ""
-"モザイクはネームスペース名とモザイク名を ':' で接続したものとなります。``nem`` と呼ばれるネームスペースの下に、``xem`` "
-"というモザイクを借りると、モザイクは ``nem:xem`` として参照されます。"
-
-#: ../../source/concepts/mosaic.rst:44
-msgid ""
-"Mosaic names have a size limit of ``64`` characters and must be unique under"
-" the domain name. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, "
-"', _ , -."
-msgstr ""
-"モザイク名は ``64`` 文字で、一意なドメイン名でなければなりません。許可されている文字列は a, b, c, ..., z, 0, 1, 2, "
-"..., 9, ', _ , - です。"
-
 #: ../../source/concepts/mosaic.rst:46
-msgid "**Owner**"
-msgstr "**所有者**"
+msgid "MosaicDefinitionTransactionBody"
+msgstr "モザイク定義トランザクション本体"
 
-#: ../../source/concepts/mosaic.rst:48
-msgid "The public key of the :doc:`mosaic creator <account>`."
-msgstr ":doc:`モザイクの作成者 <account>` の公開鍵"
+#: ../../source/concepts/mosaic.rst:1
+msgid "parentId"
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:50
-msgid "**Properties**"
-msgstr "**プロパティ**"
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1
+msgid "uint64"
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:52
-msgid "See :ref:`mosaic configurable properties<mosaic-properties>`"
-msgstr ":ref:`モザイク設定プロパティ<mosaic-properties>` を参照してください"
+#: ../../source/concepts/mosaic.rst:1
+msgid "The namespace parent Id."
+msgstr "親ネームスペースID"
 
-#: ../../source/concepts/mosaic.rst:54
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "mosaicId"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic Id."
+msgstr "モザイクID"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "mosaicNameLength"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic name lenght."
+msgstr "モザイク名の長さ"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "count"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The number of elements in optional properties"
+msgstr "オプションプロパティの要素数"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "flags"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid ":ref:`MosaicFlag<mosaic-flags>`"
+msgstr ":ref:`モザイクフラグ<mosaic-flags>`"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic flags."
+msgstr "モザイクフラグ"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "divisibility"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic divisibility."
+msgstr "モザイクの可分性"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "mosaicName"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "array(byte, mosaicNameLength)"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid ""
+"The mosaic name may have a maximum length of ``64`` characters. Allowed "
+"characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -."
+msgstr ""
+"モザイク名は最大 ``64`` 文字です。利用可能な文字は a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -. "
+"です。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "property"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "array(:ref:`MosaicProperty<mosaic-property>`, count)"
+msgstr "array(:ref:`モザイクプロパティ<mosaic-property>`, count)"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The optional mosaic properties."
+msgstr "オプションのモザイクプロパティ"
+
+#: ../../source/concepts/mosaic.rst:61
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -201,42 +270,117 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/mosaic.rst:60
-msgid "Mosaic supply change transaction"
+#: ../../source/concepts/mosaic.rst:66
+msgid "MosaicFlags"
+msgstr "モザイクフラグ"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "0x00"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "No flags present."
+msgstr "フラグ無し"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "0x01"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic supply is mutable."
+msgstr "モザイク供給量は変更可能です。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "0x02"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic is transferable."
+msgstr "モザイクは転送可能です。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "0x04"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic levy is mutable"
+msgstr "モザイク手数料は変更可能です。"
+
+#: ../../source/concepts/mosaic.rst:80
+msgid "MosaicProperty"
+msgstr "モザイクプロパティ"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "id"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The property id. (0x02) stands for duration."
+msgstr "プロパティID (0x02) は期間を意味します。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "The mosaic property value."
+msgstr "モザイクプロパティの値"
+
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:133
+msgid "The mosaic id."
+msgstr "モザイクID"
+
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "amount"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "The amount of the mosaic."
+msgstr "モザイクの量"
+
+#: ../../source/concepts/mosaic.rst:103
+msgid "UnresolvedMosaic"
+msgstr "未解決モザイク"
+
+#: ../../source/concepts/mosaic.rst:115
+msgid "MosaicSupplyChangeTransaction"
 msgstr "モザイク供給量変更トランザクション"
 
-#: ../../source/concepts/mosaic.rst:62
+#: ../../source/concepts/mosaic.rst:119
+msgid "**Entity type**: 0x424D"
+msgstr "**エンティティタイプ**: 0x424D"
+
+#: ../../source/concepts/mosaic.rst:124
 msgid ""
-"Announce a supply change transaction to increase or decrease a mosaic's "
-"supply."
-msgstr "モザイクの供給量を増加または減少させるために供給量変更トランザクションをアナウンスする。"
+":ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-"
+"body>`"
+msgstr ":ref:`モザイク供給量変更トランザクション本体<mosaic-supply-change-transaction-body>`"
 
-#: ../../source/concepts/mosaic.rst:67
-msgid "**Mosaic Id**"
-msgstr "**モザイクID**"
+#: ../../source/concepts/mosaic.rst:129
+msgid "MosaicSupplyChangeTransactionBody"
+msgstr "モザイク供給量変更トランザクション本体"
 
-#: ../../source/concepts/mosaic.rst:69
-msgid ""
-"A combination of namespace name and mosaic name. For example "
-"\"foo.bar:token\"."
-msgstr "ネームスペース名とモザイク名の組み合わせです。例えば、\"foo.bar:token\" です。 "
+#: ../../source/concepts/mosaic.rst:131
+msgid "**Mosaic Id**:"
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:71
+#: ../../source/concepts/mosaic.rst:135
 msgid "**Direction**"
-msgstr "**方向**"
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:73
-msgid "The direction could be Increase (0) or Decrease (1)."
-msgstr "増加(0) または 減少(1) の方向を指定できます。"
+#: ../../source/concepts/mosaic.rst:137
+msgid "The direction could be increase (0) or decrease (1)."
+msgstr "増加 (0) または 減少 (1) の方向を指定できます。"
 
-#: ../../source/concepts/mosaic.rst:75
+#: ../../source/concepts/mosaic.rst:139
 msgid "**Delta**"
-msgstr "**デルタ**"
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:77
+#: ../../source/concepts/mosaic.rst:141
 msgid "The amount of supply to increase or decrease."
 msgstr "モザイク供給量の増加または減少の総量。"
 
-#: ../../source/concepts/mosaic.rst:82
+#: ../../source/concepts/mosaic.rst:145
 msgid "Related guides"
 msgstr "関連するガイド"

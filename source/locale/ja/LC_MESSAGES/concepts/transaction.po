@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-15 22:53+0900\n"
+"POT-Creation-Date: 2019-01-16 07:27+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transaction.rst:3
+#: ../../source/concepts/transaction.rst:92
 msgid "Transaction"
 msgstr "トランザクション"
 
@@ -50,9 +51,13 @@ msgid "Id"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 msgid "Description"
 msgstr "説明"
@@ -149,8 +154,8 @@ msgid "0x414C"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Lock Funds Transaction <lock-funds-transaction>`"
-msgstr ":ref:`ロック資産トランザクション <lock-funds-transaction>`"
+msgid ":ref:`Hash Lock Transaction <hash-lock-transaction>`"
+msgstr ":ref:`ハッシュロックトランザクション <hash-lock-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
@@ -171,7 +176,7 @@ msgid "Cosign an aggregate bonded transaction."
 msgstr "アグリゲートボンドトランザクションへ連署。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4152"
+msgid "0x424C"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
@@ -217,78 +222,11 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
 " ことを推奨しています。"
 
-#: ../../source/concepts/transaction.rst:36
-msgid "Properties"
-msgstr "プロパティ"
-
-#: ../../source/concepts/transaction.rst:38
-msgid "**Size**: 4 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:40
-msgid "The size of the transaction."
-msgstr "トランザクションのサイズ"
-
-#: ../../source/concepts/transaction.rst:42
-msgid "**Signature**: 64 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:44
-msgid "The :ref:`transaction signature <transaction-signature>`."
-msgstr ":ref:`トランザクション署名 <transaction-signature>`"
-
-#: ../../source/concepts/transaction.rst:46
-msgid "**Signer**: 32 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:48
-msgid "The transaction signer's :doc:`public key <account>`."
-msgstr "トランザクション署名者の :doc:`公開鍵 <account>`"
-
-#: ../../source/concepts/transaction.rst:50
-msgid "**Version**: 2 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:52
-msgid "The version of the structure."
-msgstr "構造体のバージョン"
-
-#: ../../source/concepts/transaction.rst:54
-msgid "**Type**: 2 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:56
-msgid "See :ref:`transaction types <transaction-types>`."
-msgstr ":ref:`トランザクションタイプ<transaction-types>` を参照してください。"
-
-#: ../../source/concepts/transaction.rst:58
-msgid "**Fee**: 8 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:60
-msgid ""
-"The cost of announcing a transaction.  This fee is necessary to provide an "
-"incentive for those who secure the network. The account pays the fee  in "
-"XEM, the underlying cryptocurrency of the NEM network. Private chains can "
-"edit the network configuration to suppress the fees."
-msgstr ""
-"トランザクションのアナウンスコストです。この手数料はネットワークをセキュアに保っている人へのインセンティブとして必要なものです。アカウントは NEM "
-"ネットワークの基軸としての暗号通貨 XEM で手数料を支払います。プライベートチェーンではネットワークで手数料が無いように構成を編集できます。"
-
-#: ../../source/concepts/transaction.rst:62
-msgid "**Deadline**: 8 bytes"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:64
-msgid ""
-"The maximum amount of time to include the transaction in the blockchain."
-msgstr "トランザクションがブロックチェーンに取り込まれるまでの最大時間"
-
-#: ../../source/concepts/transaction.rst:70
+#: ../../source/concepts/transaction.rst:39
 msgid "Signing a transaction"
 msgstr "トランザクションへの署名"
 
-#: ../../source/concepts/transaction.rst:72
+#: ../../source/concepts/transaction.rst:41
 msgid ""
 "Accounts must sign transactions before announcing them to the network. "
 "`Signing a transaction "
@@ -299,7 +237,7 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
 " することは、定義されたとおりにネットワークの状態を変更することにアカウントが同意したと示されます。"
 
-#: ../../source/concepts/transaction.rst:74
+#: ../../source/concepts/transaction.rst:43
 msgid ""
 "For example, a transfer transaction describes who is the recipient and the "
 "quantity of mosaics to transfer. In this case, signing the transaction means"
@@ -307,7 +245,7 @@ msgid ""
 msgstr ""
 "例えば、転送トランザクションには受信者が誰であるかと、転送するモザイクの量が記述されます。この場合、トランザクションに署名するということは、そのモザイクを一方のアカウントから他方のアカウントに移動することに同意することを意味します。"
 
-#: ../../source/concepts/transaction.rst:76
+#: ../../source/concepts/transaction.rst:45
 msgid ""
 "The account generates the signature `signing the first 100 bytes of the "
 "defined transaction <https://github.com/nemtech/nem2-library-"
@@ -320,7 +258,7 @@ msgstr ""
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
 " 署名を生成します。すると署名がトランザクションの本文に追加され、署名付きトランザクションが生成されます。"
 
-#: ../../source/concepts/transaction.rst:78
+#: ../../source/concepts/transaction.rst:47
 msgid ""
 "The hash of the transaction is generated once `the Sha3-256 algorithm "
 "<https://github.com/nemtech/nem2-library-"
@@ -332,19 +270,19 @@ msgstr ""
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
 " が適用されると、トランザクションのハッシュが生成されます。"
 
-#: ../../source/concepts/transaction.rst:84
+#: ../../source/concepts/transaction.rst:53
 msgid "Announcing a transaction"
 msgstr "トランザクションのアナウンス"
 
-#: ../../source/concepts/transaction.rst:86
+#: ../../source/concepts/transaction.rst:55
 msgid "Signed transactions are ready to be announced to the network."
 msgstr "署名済みトランザクションはネットワークへアナウンスする準備ができています。"
 
-#: ../../source/concepts/transaction.rst:92
+#: ../../source/concepts/transaction.rst:61
 msgid "Transaction cycle"
 msgstr "トランザクションサイクル"
 
-#: ../../source/concepts/transaction.rst:94
+#: ../../source/concepts/transaction.rst:63
 msgid ""
 "After `announcing a transaction "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_,"
@@ -355,7 +293,7 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_"
 " をすると、REST API は常にOKをすぐに返します。この時点ではトランザクションが正当かどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:96
+#: ../../source/concepts/transaction.rst:65
 msgid ""
 "The first validation happens in the API nodes. If the transaction presents "
 "some error, the WebSocket throws a notification through the status channel. "
@@ -368,7 +306,7 @@ msgstr ""
 "はステータスチャンネルへ通知を投げます。良いケースの場合、トランザクションは P2P ネットワークへ **未承認** "
 "ステータスとして到達します。未承認状態のトランザクションを信頼してはいけません。2つ目のバリデーションを通過しないといけないので、これがブロックに取り込まれるかどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:98
+#: ../../source/concepts/transaction.rst:67
 msgid ""
 "The second validation is done before the transaction is added in a harvested"
 " block. If valid, the harvester stores the transaction in a block, and it "
@@ -377,7 +315,7 @@ msgstr ""
 "トランザクションがハーベストされたブロックに追加される前に、２つ目のバリデーションは完了します。妥当な場合、ハーベスターはブロックにトランザクションを保存し、それは"
 " **承認済み** のステータスとなります。"
 
-#: ../../source/concepts/transaction.rst:100
+#: ../../source/concepts/transaction.rst:69
 msgid ""
 "Continuing the previous example, the transaction gets processed and the "
 "amount stated gets transferred from the signer's account to the recipient's "
@@ -386,7 +324,7 @@ msgid ""
 msgstr ""
 "前述の例を続けると、そのトランザクションが処理され、設定された総量が署名者のアカウントから受信者のアカウントへ振り込まれます。そしてトランザクション手数料は署名者のアカウントから差し引かれます。"
 
-#: ../../source/concepts/transaction.rst:102
+#: ../../source/concepts/transaction.rst:71
 msgid ""
 "The transaction has **zero confirmations** at this point. When another block"
 " is added to the blockchain, the transaction has one confirmation. The next "
@@ -395,36 +333,105 @@ msgstr ""
 "この時点で **トランザクション承認数はゼロ** "
 "です。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:106
+#: ../../source/concepts/transaction.rst:75
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/transaction.rst:108
+#: ../../source/concepts/transaction.rst:77
 msgid ""
 "Cryptocurrencies can roll back part of the blockchain. Rollbacks are "
 "essential for resolving forks of the blockchain."
 msgstr ""
 "暗号通貨はブロックチェーンの一部をロールバックすることができます。ロールバックはブロックチェーンのフォークを解決するために不可欠なものです。"
 
-#: ../../source/concepts/transaction.rst:110
+#: ../../source/concepts/transaction.rst:79
 msgid ""
 "The \"rewrite limit\" is the maximum number of blocks that can be rolled "
 "back. Hence, forks can only be resolved up to a certain depth too."
 msgstr "\"書き換え制限\" とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
-#: ../../source/concepts/transaction.rst:112
+#: ../../source/concepts/transaction.rst:81
 msgid ""
-"NEM has a rewrite limit of 360 blocks. Once a transaction has more than 360 "
-"confirmations, it cannot be reversed."
-msgstr "NEMの書き換え限界は360ブロックです。トランザクションが360ブロック以上の承認を得ると、それを元に戻すことはできません。"
+"NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than "
+"360 confirmations, it cannot be reversed."
+msgstr "NEMの書き換え限界は ``360`` ブロックです。トランザクションが360ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
-#: ../../source/concepts/transaction.rst:114
+#: ../../source/concepts/transaction.rst:83
 msgid ""
 "In real life, forks that are deeper than 20 blocks do not happen, unless "
 "there is a severe problem with the blockchain due to a bug in the code or an"
 " attack."
 msgstr "実際の生活では、コードや攻撃のバグによりブロックチェーンに重大な問題がない限り、20ブロックよりも深いフォークは起こりません。"
 
-#: ../../source/concepts/transaction.rst:118
+#: ../../source/concepts/transaction.rst:87
+msgid "Schemas"
+msgstr "スキーマ"
+
+#: ../../source/concepts/transaction.rst:94
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/concepts/transaction.rst:96
+msgid ":ref:`SizePrefixedEntity<size-prefixed-entity>`"
+msgstr ":ref:`サイズ接頭エンティティ<size-prefixed-entity>`"
+
+#: ../../source/concepts/transaction.rst:97
+msgid ":ref:`VerifiableEntity<verifiable-entity>`"
+msgstr ":ref:`検証可能エンティティ<verifiable-entity>`"
+
+#: ../../source/concepts/transaction.rst:98
+msgid ":ref:`EntityBody<entity-body>`"
+msgstr ":ref:`エンティティ本体 <entity-body>`"
+
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "fee"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+msgid "uint64"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+"The cost of announcing a transaction.  This fee is necessary to provide an "
+"incentive for those who secure the network. The account pays the fee  in "
+"XEM, the underlying cryptocurrency of the NEM network. Private chains can "
+"edit the network configuration to suppress the fees."
+msgstr ""
+"トランザクションのアナウンスコストです。この手数料はネットワークをセキュアに保っている人へのインセンティブとして必要なものです。アカウントは NEM "
+"ネットワークの基軸としての暗号通貨 XEM で手数料を支払います。プライベートチェーンではネットワークで手数料が無いように構成を編集できます。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "deadline"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+"The maximum amount of time to include the transaction in the blockchain."
+msgstr "トランザクションがブロックチェーンに取り込まれるまでの最大時間"
+
+#: ../../source/concepts/transaction.rst:110
+msgid "SizePrefixedEntity"
+msgstr "サイズ接頭エンティティ"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "size"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "unit32"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:1
+msgid "The size of the transaction."
+msgstr "トランザクションのサイズ"
+
+#: ../../source/concepts/transaction.rst:120
 msgid "Related guides"
 msgstr "関連するガイド"
