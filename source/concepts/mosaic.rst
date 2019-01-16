@@ -66,7 +66,7 @@ MosaicFlags
 ===========
 
 .. csv-table::
-    :header: "Id", "Type"; "Description"
+    :header: "Id", "Type", "Description"
     :delim: ;
 
     0x00; uint8; No flags present.
