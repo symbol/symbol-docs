@@ -133,7 +133,7 @@ MosaicSupplyChangeTransactionBody
     :delim: ;
 
     mosaicId; uint64; The id of the affected mosaic.
-    duration; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
     delta; uint64; The amount of supply to increase or decrease.
 
 .. _mosaic-flags:
