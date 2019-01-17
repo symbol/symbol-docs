@@ -47,26 +47,9 @@ MosaicDefinitionTransaction
 
 Announce a mosaic definition transaction to create a new mosaic.
 
-**Version**: 2
-
-**Entity type**: 0x414D
-
-**Inlines**:
-
-<<<<<<< HEAD
-* :ref:`Transaction<transaction>`
-* :ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`
-
-Announce a mosaic definition transaction to create a new mosaic.
-
-.. _mosaic-supply-change-transaction:
-
-MosaicSupplyChangeTransaction
-=============================
-
 **Version**: 0x02
 
-**Entity type**: 0x424D
+**Entity type**: 0x414D
 
 **Inlines**:
 
