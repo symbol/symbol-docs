@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 07:21+0900\n"
+"POT-Creation-Date: 2019-01-17 19:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because secret does not match proof."
-msgstr ""
+msgstr "シークレットがプルーフにマッチしないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_LockSecret_Unknown_Secret"
@@ -325,7 +325,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because secret is unknown."
-msgstr ""
+msgstr "シークレットが不明のため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_LockSecret_Inactive_Secret"
@@ -341,7 +341,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because hash algorithm does not match."
-msgstr ""
+msgstr "ハッシュアルゴリズムがマッチしないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_LockSecret_Invalid_Duration"
@@ -351,7 +351,7 @@ msgstr ""
 msgid ""
 "Validation failed because duration is too long. Duration is allowed to lie "
 "up to ``30`` days."
-msgstr ""
+msgstr "期間が長すぎるため、バリデーションに失敗しました。期間は ``30`` 日までが許容されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_LockSecret_Already_Used"
@@ -361,11 +361,11 @@ msgstr ""
 msgid "Failure_Mosaic_Invalid_Duration"
 msgstr ""
 
-#: ../../source/api/status-errors.rst:1
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
 msgid ""
 "Validation failed because the duration has an invalid value. Duration is "
 "allowed to lie up to ``365`` days."
-msgstr ""
+msgstr "期間が妥当ではないため、バリデーションに失敗しました。期間は ``365`` 日先までが許可されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Name"
@@ -376,7 +376,7 @@ msgid ""
 "Validation failed because the name is invalid. The mosaic name may have a "
 "maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
 "`0-to-9` and the following special characters: \\`_-"
-msgstr ""
+msgstr "モザイク名は最大 ``64`` 文字です。利用可能な文字は `a-to-z`; `0-to-9`、特別な文字として \\`_- です。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Name_Id_Mismatch"
@@ -384,7 +384,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
 msgid "Validation failed because the name and id don't match."
-msgstr ""
+msgstr "名前とIDがマッチしないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Expired"
@@ -392,13 +392,13 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the parent is expired."
-msgstr ""
+msgstr "親の期限が切れているため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Owner_Conflict"
 msgstr ""
 
-#: ../../source/api/status-errors.rst:1
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
 msgid ""
 "Validation failed because the parent owner conflicts with the child owner."
 msgstr ""
@@ -419,7 +419,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because a mosaic property is invalid."
-msgstr ""
+msgstr "モザイクプロパティが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Flags"
@@ -427,7 +427,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the mosaic flags are invalid."
-msgstr ""
+msgstr "モザイクフラグが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Divisibility"
@@ -437,7 +437,7 @@ msgstr ""
 msgid ""
 "Validation failed because the mosaic divisibility is invalid. The specified "
 "divisibility is greater than ``6`` or negative."
-msgstr ""
+msgstr "モザイク可分性が妥当ではないため、バリデーションに失敗しました。``6`` 以上または負の値が指定されました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Supply_Change_Direction"
@@ -447,7 +447,7 @@ msgstr ""
 msgid ""
 "Validation failed because the mosaic supply change direction is invalid: "
 "decrease (0) and  increase (1)."
-msgstr ""
+msgstr "モザイク供給量変更方向が妥当ではないため、バリデーションに失敗しました。減少 (0) または 増加 (1)"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Invalid_Supply_Change_Amount"
@@ -455,7 +455,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the mosaic supply change amount is invalid."
-msgstr ""
+msgstr "モザイク供給量が妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Mosaic_Name_Reserved"
@@ -669,20 +669,14 @@ msgid "Failure_Namespace_Invalid_Duration"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid ""
-"Duration lies too far in the future or refers to past. Duration is allowed "
-"to lie up to ``365`` days."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Invalid_Name"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"The namespace name may have a maximum length of ``64`` characters. Allowed "
-"characters are `a-to-z`; `0-to-9` and the following special characters: "
-"\\`_-"
+"Validation failed because the namespace has an invalid name. The namespace "
+"name may have a maximum length of ``64`` characters. Allowed characters are "
+"`a-to-z`; `0-to-9` and the following special characters: \\`_-"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -695,14 +689,10 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace has expired."
-msgstr ""
+msgstr "ネームスペースが期限切れのため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Owner_Conflict"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "The signer of the transaction is not the owner of the namespace."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -742,7 +732,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace parent is unknown."
-msgstr ""
+msgstr "親ネームスペースが不明のため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Already_Exists"
@@ -750,7 +740,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace already exists."
-msgstr ""
+msgstr "ネームスペースがすでに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Already_Active"
@@ -758,7 +748,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace is already active."
-msgstr ""
+msgstr "ネームスペースがすでにアクティブなため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Eternal_After_Nemesis_Block"
@@ -786,7 +776,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the property type is invalid."
-msgstr ""
+msgstr "プロパティタイプが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Property_Modification_Type_Invalid"
@@ -794,7 +784,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because a modification type is invalid."
-msgstr ""
+msgstr "変更タイプが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Property_Modification_Address_Invalid"
@@ -803,6 +793,8 @@ msgstr ""
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because a modification address is invalid."
 msgstr ""
+"変更アドレス"
+"が妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Property_Modification_Operation_Type_Incompatible"
@@ -862,7 +854,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the property value is invalid."
-msgstr ""
+msgstr "プロパティが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Property_Signer_Address_Interaction_Not_Allowed"
@@ -882,7 +874,7 @@ msgstr ""
 msgid ""
 "Validation failed because the mosaic transfer is prohibited by the "
 "recipient."
-msgstr ""
+msgstr "受信者によってモザイクの転送が禁止されているため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Property_Transaction_Type_Not_Allowed"
@@ -902,7 +894,7 @@ msgstr ""
 msgid ""
 "Validation failed because the message is too large.  It exceeds the limit of"
 " ``1024`` bytes."
-msgstr ""
+msgstr "メッセージが長すぎるため、バリデーションに失敗しました。上限の ``1024`` バイトに達しています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Transfer_Out_Of_Order_Mosaics"
