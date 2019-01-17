@@ -36,10 +36,14 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _mosaic-definition-transaction:
 
 MosaicDefinitionTransaction
 ===========================
+
+Announce a mosaic definition transaction to create a new mosaic.
 
 **Version**: 2
 
@@ -47,15 +51,7 @@ MosaicDefinitionTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`
-
-Announce a mosaic definition transaction to create a new mosaic.
-
-.. _mosaic-definition-transaction-body:
-
-MosaicDefinitionTransactionBody
-===============================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -70,7 +66,28 @@ MosaicDefinitionTransactionBody
     mosaicName; array(byte, mosaicNameLength); The mosaic name may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
     property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. _mosaic-supply-change-transaction:
+
+MosaicSupplyChangeTransaction
+=============================
+
+Announce a supply change transaction to increase or decrease a mosaic's supply.
+
+**Version**: 0x02
+
+**Entity type**: 0x424D
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The id of the affected mosaic.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
 
 .. _mosaic-property:
 
@@ -106,35 +123,6 @@ UnresolvedMosaic
 
     mosaicId; uint64; The mosaic id.
     amount; uint64; The amount of the mosaic.
-
-.. _mosaic-supply-change-transaction:
-
-MosaicSupplyChangeTransaction
-=============================
-
-**Version**: 0x02
-
-**Entity type**: 0x424D
-
-**Inlines**:
-
-* :ref:`Transaction<transaction>`
-* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
-
-Announce a supply change transaction to increase or decrease a mosaic's supply.
-
-.. _mosaic-supply-change-transaction-body:
-
-MosaicSupplyChangeTransactionBody
-=================================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; uint64; The id of the affected mosaic.
-    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
-    delta; uint64; The amount of supply to increase or decrease.
 
 .. _mosaic-flags:
 

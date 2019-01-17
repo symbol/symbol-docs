@@ -18,8 +18,6 @@ It is possible to create multiple subnamespaces with the same name (example: ``f
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
 ******
 Guides
 ******
@@ -36,6 +34,8 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _register-namespace-transaction:
 
 RegisterNamespaceTransaction
@@ -49,13 +49,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`RegisterNamespaceTransactionBody<register-namespace-transaction-body>`
-
-.. _register-namespace-transaction-body:
-
-RegisterNamespaceTransactionBody
-================================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"

@@ -49,8 +49,6 @@ Since the app creator can put their own branding on the open source payment app,
 
     Paying for others fees
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
 .. _aggregate-complete:
 
 ******************
@@ -95,9 +93,11 @@ Guides
     :excerpts:
     :sort:
 
-********
+*******
 Schemas
-********
+*******
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 AggregateTransaction
 ====================
@@ -108,13 +108,8 @@ AggregateTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`AggregateTransactionBody<aggregate-transaction-body>`
+:ref:`Transaction <transaction>`
 
-.. _aggregate-transaction-body:
-
-AggregateTransactionBody
-========================
 
     **transactions**: array of transactions
 
@@ -123,6 +118,7 @@ AggregateTransactionBody
     **cosignatures**: array of cosignatures
 
     An array of transaction cosignatures.
+
 
 .. _cosignature-transaction:
 
@@ -140,15 +136,6 @@ Cosignature transactions are used to sign :ref:`announced aggregate bonded trans
 HashLockTransaction
 ===================
 
-**Version**: 0x01
-
-**Entity type**: 0x4148
-
-**Inlines**:
-
-* :ref:`Transaction<transaction>`
-* :ref:`HashLockTransactionBody<hash-lock-transaction-body>`
-
 **Alias**: LockFundsTransaction
 
 Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming.
@@ -157,10 +144,13 @@ Once the related aggregate bonded transaction is confirmed, locked funds become 
 
 If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 
-.. _hash-lock-transaction-body:
+**Version**: 0x01
 
-HashLockTransactionBody
-=======================
+**Entity type**: 0x4148
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -169,5 +159,3 @@ HashLockTransactionBody
     mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 nem:xem``.
     duration; uint64; The lock duration.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
-
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.

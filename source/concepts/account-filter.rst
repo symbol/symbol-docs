@@ -2,7 +2,7 @@
 Account Filter
 ##############
 
-.. note:: This feature is not implemented yet in the SDK.
+.. note:: Account filters feature is not implemented in the SDK yet.
 
 :doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
 
@@ -68,10 +68,14 @@ As a temporary measure, Alice opts to disable announcing transfer transactions f
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _account-properties-address-transaction:
 
 AccountPropertiesAddressTransaction
 ===================================
+
+Configure filters to prevent receiving transactions from undesired addresses.
 
 **Version**: 0x01
 
@@ -79,14 +83,13 @@ AccountPropertiesAddressTransaction
 
 **Inlines**:
 
-* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
-
-Configure filters to prevent receiving transactions from undesired addresses.
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
     modifications; array(:ref:`AddressModification <address-modification>`, modificationsCount); The array of modifications.
 
@@ -103,12 +106,13 @@ Configure filters to prevent receiving transactions containing a specific mosaic
 
 **Inlines**:
 
-* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
     modifications; array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount); The array of modifications.
 
@@ -126,12 +130,13 @@ Configure filters to prevent announcing transactions by :ref:`type <transaction-
 
 **Inlines**:
 
-* :ref:`AccountPropertiesTransactionBody<account-properties-transaction-body>`
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
     modifications; array(:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount); The array of modifications.
 
@@ -181,20 +186,6 @@ EntityTypeModification
 
     value; uint16; The :ref:`entity type<transaction-types>` to allow/block.
 
-.. _account-properties-transaction-body:
-
-AccountPropertiesTransactionBody
-================================
-
-**Inlines**:
-
-* :ref:`Transaction<transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
 
 .. _account-properties-modification:
 

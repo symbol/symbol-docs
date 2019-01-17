@@ -78,11 +78,11 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Modify_Loop, Validation failed because a multisig loop is created. A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
     Failure_Multisig_Modify_Max_Multisig_Depth, Validation failed because the max multisig depth is exceeded. The maximum depth of a multilevel multisig account is ``3``.
     Failure_Multisig_Operation_Not_Permitted_By_Account, Validation failed because an operation is not permitted by a multisig account. A multisig account cannot be converted into a multisig account again.
-    Failure_Namespace_Invalid_Duration, Duration lies too far in the future or refers to past. Duration is allowed to lie up to ``365`` days.
-    Failure_Namespace_Invalid_Name, The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
+    Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
+    Failure_Namespace_Invalid_Name, Validation failed because the namespace has an invalid name. The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
     Failure_Namespace_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Namespace_Expired, Validation failed because the namespace has expired.
-    Failure_Namespace_Owner_Conflict, The signer of the transaction is not the owner of the namespace.
+    Failure_Namespace_Owner_Conflict,  Validation failed because the parent owner conflicts with the child owner.
     Failure_Namespace_Invalid_Namespace_Type, Validation failed because the namespace type is invalid: rootnamespace (0) and subnamesapce (1).
     Failure_Namespace_Root_Name_Reserved, Validation failed because the root namespace has a `reserved name <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L60>`_.
     Failure_Namespace_Too_Deep, Validation failed because the resulting namespace would exceed the maximum allowed namespace depth. Namespaces can have up to ``3`` nested levels.

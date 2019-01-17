@@ -20,8 +20,6 @@ Some important considerations to keep in mind:
 
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
 ********
 Examples
 ********
@@ -83,10 +81,17 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _modify-multisig-account-transaction:
 
 ModifyMultisigTransaction
 =========================
+
+Announce a modify multisig account transaction to:
+
+a) Transform an account to multisig.
+b) Change the configurable properties of a multisig account.
 
 **Version**: 0x01
 
@@ -94,18 +99,7 @@ ModifyMultisigTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`ModifyMultisigTransactionBody<modify-multisig-transaction-body>`
-
-Announce a modify multisig account transaction to:
-
-a) Transform an account to multisig.
-b) Change the configurable properties of a multisig account.
-
-.. _modify-multisig-transaction-body:
-
-ModifyMultisigTransactionBody
-=============================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
