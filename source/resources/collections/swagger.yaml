@@ -107,11 +107,18 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
           description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
+          type: string
+        - name: ordering
+          in: query
+          description: |
+            The ordering criteria. When not specified, the transactions are ordered by id in descending order.
+            * -id: Descending order by id.
+            * id: Ascending order by id.
           type: string
       responses:
         '200':
@@ -142,11 +149,18 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
           description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
+          type: string
+        - name: ordering
+          in: query
+          description: |
+            The ordering criteria. When not specified, the transactions are ordered by id in descending order.
+            * -id: Descending order by id.
+            * id: Ascending order by id.
           type: string
       responses:
         '200':
@@ -177,11 +191,18 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
           description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
+          type: string
+        - name: ordering
+          in: query
+          description: |
+            The ordering criteria. When not specified, the transactions are ordered by id in descending order.
+            * -id: Descending order by id.
+            * id: Ascending order by id.
           type: string
       responses:
         '200':
@@ -212,11 +233,18 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
           description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
+          type: string
+        - name: ordering
+          in: query
+          description: |
+            The ordering criteria. When not specified, the transactions are ordered by id in descending order.
+            * -id: Descending order by id.
+            * id: Ascending order by id.
           type: string
       responses:
         '200':
@@ -247,11 +275,18 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
           description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
+          type: string
+        - name: ordering
+          in: query
+          description: |
+            The ordering criteria. When not specified, the transactions are ordered by id in descending order.
+            * -id: Descending order by id.
+            * id: Ascending order by id.
           type: string
       responses:
         '200':
@@ -450,7 +485,7 @@ paths:
           in: query
           minimum: 10
           maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
+          description: The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.
           type: integer
         - name: id
           in: query
