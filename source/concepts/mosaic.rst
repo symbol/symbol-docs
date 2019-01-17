@@ -45,7 +45,7 @@ MosaicDefinitionTransaction
 
 Announce a mosaic definition transaction to create a new mosaic.
 
-**Version**: 2
+**Version**: 0x02
 
 **Entity type**: 0x414D
 
