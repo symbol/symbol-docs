@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -21,59 +21,59 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:5
-msgid "Configuring Nodes"
+#: ../../source/prototyping-tool/configuring-nodes.rst:3
+msgid "Configuring nodes"
 msgstr "ノードの設定"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:7
+#: ../../source/prototyping-tool/configuring-nodes.rst:5
 msgid ""
 "The left sidebar is the **node palette**. You can find NEM related nodes "
 "under:"
 msgstr "左側のサイドバーは **ノードパレット** です。NEM に以下の関連したノードが確認できるでしょう:"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:9
+#: ../../source/prototyping-tool/configuring-nodes.rst:7
 msgid "NEM2 Account"
 msgstr "NEM2 アカウント"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:10
+#: ../../source/prototyping-tool/configuring-nodes.rst:8
 msgid "NEM2 Transactions"
 msgstr "NEM2 トランザクション"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:11
+#: ../../source/prototyping-tool/configuring-nodes.rst:9
 msgid "NEM2 Listeners"
 msgstr "NEM2 リスナー"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:12
+#: ../../source/prototyping-tool/configuring-nodes.rst:10
 msgid "NEM2 Utility"
 msgstr "NEM2 ユーティリティ"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:14
+#: ../../source/prototyping-tool/configuring-nodes.rst:12
 msgid "Open the *NEM account* tab and click once on the **account** node."
 msgstr "*NEM account* タブを開き、 **account** ノードをクリックしてください。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:16
+#: ../../source/prototyping-tool/configuring-nodes.rst:14
 msgid ""
 "The right sidebar shows you the node description, properties, input fields "
 "and returned outputs."
 msgstr "右側のサイドバーはノードの説明、プロパティ、入力、出力を表示します。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:18
+#: ../../source/prototyping-tool/configuring-nodes.rst:16
 msgid ""
 "You have to link nodes together, connecting the previous node outputs with "
 "the following node inputs."
 msgstr "前のノードのアウトプットと続くノードのインプットへ繋げて、ノード同士をリンクさせてください。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:20
+#: ../../source/prototyping-tool/configuring-nodes.rst:18
 msgid ""
 "In some cases, you could configure inputs and properties directly by double-"
 "clicking a node."
 msgstr "場合によっては、ノードをダブルクリックして、入力とプロパティを直接設定することもあります。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:25
+#: ../../source/prototyping-tool/configuring-nodes.rst:23
 msgid "The node palette and node help sidebars."
 msgstr "ノードパレットとノードヘルプサイドバー"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:27
+#: ../../source/prototyping-tool/configuring-nodes.rst:25
 msgid ""
 "Let's link account with other nodes. As we need a ``privateKey`` as an "
 "input, we could opt to drag and drop and link **generateAccount** with "
@@ -82,11 +82,11 @@ msgstr ""
 "他のノードとアカウントをリンクしてみましょう。入力として ``privateKey`` を必要とするように、 *NEM Account* "
 "の下で、**アカウント** のノードと **generateAccount** をドラッグ＆ドロップし、リンクすることができます。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:33
+#: ../../source/prototyping-tool/configuring-nodes.rst:31
 msgid "Drag and drop and link nodes together."
 msgstr "ドラッグ&ドロップしてノード同士を接続します。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:35
+#: ../../source/prototyping-tool/configuring-nodes.rst:33
 msgid ""
 "Double-click on account node. Choose the ``network`` you want to use. Do the"
 " same for generateAccount node."
@@ -94,11 +94,11 @@ msgstr ""
 "アカウントノードをダブルクリックしてください。使用したい ``ネットワーク`` を選択してください。generateAccount "
 "ノードと同じにしてください。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:41
+#: ../../source/prototyping-tool/configuring-nodes.rst:39
 msgid "Complete node properties."
 msgstr "ノードのプロパティを完成させます。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:43
+#: ../../source/prototyping-tool/configuring-nodes.rst:41
 msgid ""
 "Have you seen  ``private key`` under account node properties?  Setting a "
 "property hardcoded overwrites the input. In other words, when not empty, "
@@ -109,7 +109,7 @@ msgstr ""
 "があるのを発見しましたか？プロパティを設定すると、入力が上書きされます。つまり、空でない場合 ``generateAccount`` "
 "ノードによって提供される ``privateKey`` 出力の代わりに、このプロパティが使用されます。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:45
+#: ../../source/prototyping-tool/configuring-nodes.rst:43
 msgid ""
 "Finally, find **debug** node in the node palette, under *output* tab. Link "
 "it with the account, and inside its properties change  ``output``  to "
@@ -118,17 +118,45 @@ msgstr ""
 "最後に、*アウトプット* タブの下のパレットから **debug** ノードを見つけてください。これをアカウントへ接続して、 ``output`` "
 "のプロパティを ``complete msg object`` に変更してください。"
 
+#: ../../source/prototyping-tool/configuring-nodes.rst:47
+msgid "Configuring API gateway"
+msgstr "API ゲートウェイの設定"
+
 #: ../../source/prototyping-tool/configuring-nodes.rst:49
+msgid ""
+"Some nodes require to configure an API gateway (e.g. **announce "
+"transaction** and **listener** nodes)."
+msgstr ""
+"いくつかのノードは API ゲートウェイの設定(例 **announce transaction** と **listener** ノード)が必要です。"
+
+#: ../../source/prototyping-tool/configuring-nodes.rst:51
+msgid "Double-click on a node which needs this configuration."
+msgstr "設定が必要なノードをダブルクリックしてください。"
+
+#: ../../source/prototyping-tool/configuring-nodes.rst:53
+msgid "Click on the pencil icon next to the ``Server`` input field."
+msgstr "``Server`` 入力フィールドの横にある鉛筆のアイコンをクリックしてください。"
+
+#: ../../source/prototyping-tool/configuring-nodes.rst:55
+msgid ""
+"Enter your ``custom url`` using http or https schema (e.g. "
+"http://localhost). Choose the ``network`` and ``port`` you want to use and "
+"then press ``Update``."
+msgstr ""
+"http か https (例 http://localhost)スキーマの ``custom url`` を入力してください。あなたが使用したい "
+"``network`` と ``port`` を選んで ``Update`` を押下してください。"
+
+#: ../../source/prototyping-tool/configuring-nodes.rst:63
 msgid "Running a flow"
 msgstr "フローの実行"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:51
+#: ../../source/prototyping-tool/configuring-nodes.rst:65
 msgid ""
 "Click on the ``deploy`` button, at the top-right corner of your screen. "
 "Select the square attached to the first node to run the flow."
 msgstr "画面の右上にある ``deploy`` ボタンをクリックします。フローを実行するには、最初のノードに接続されている四角形を選択します。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:53
+#: ../../source/prototyping-tool/configuring-nodes.rst:67
 msgid ""
 "Check the output returned at the right sidebar, under the debug tab. NEM2 "
 "nodes return outputs following the structure "
@@ -137,6 +165,6 @@ msgstr ""
 "右側のサイドバーのデバッグタブの下に出力が返されたことを確認します。NEM2 ノードは "
 "``msg.,nem.<name_of_the_output>.</name_of_the_output>`` このような構造体を出力します。"
 
-#: ../../source/prototyping-tool/configuring-nodes.rst:59
+#: ../../source/prototyping-tool/configuring-nodes.rst:73
 msgid "See outputs under debug tab."
 msgstr "debug タブの下の出力を確認してください。"

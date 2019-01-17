@@ -2,11 +2,9 @@
 Transfer Transaction
 #####################
 
-.. _transfer-transaction:
+Transfer transactions are used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. They can hold a messages of length ``1023`` characters.
 
-Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`accounts <account>`. It can hold a message of length 1024.
-
-.. figure:: ../resources/images/guides-transactions-transfer.png
+.. figure:: ../resources/images/examples/transfer-transaction.png
     :align: center
     :width: 450px
 
@@ -14,22 +12,49 @@ Transfer transaction is used to send :doc:`mosaics <mosaic>` between two :doc:`a
 
 .. note:: It is possible to send mosaics to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the recipient's account, the funds are most likely lost forever.
 
-**********
-Parameters
-**********
+******
+Guides
+******
 
-The following parameters are required:
+.. postlist::
+    :category: transfer-transaction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
-    **Recipient**
+*******
+Schemas
+*******
 
-    The address of the recipient account.
+.. _transfer-transaction:
 
-    **Mosaics**
+TransferTransaction
+===================
 
-    The array of mosaic to be sent. The array can be empty.
+**Version**: 0x03
 
-    **Message**
+**Entity type**: 0x4154
 
-    The transaction message of ``1024`` characters. It can be empty.
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`TransferTransactionBody<transfer-transaction-body>`
+
+.. _transfer-transaction-body:
+
+TransferTransactionBody
+=======================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    recipient; 25 bytes (binary); The address of the recipient account.
+    messageSize; uint16; The size of the attached message.
+    mosaicsCount; uint8; The number of attached mosaics.
+    message; array(byte, messageSize); The message type (0) and a payload of up to ``1023`` bytes.
+    mosaics; array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount); The different mosaic to be sent.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.

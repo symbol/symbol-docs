@@ -2,7 +2,7 @@
 Setting up your workstation
 ###########################
 
-This guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
 
 **********************************
 Running Catapult Service Bootstrap
@@ -20,7 +20,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
@@ -85,7 +85,7 @@ Let’s use an account which already has XEM. We will need it to register the na
 
 2. Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
 
-3. Load the first account as a profile in NEM2-CLI. This account identifies the company.
+3. Load the first account as a profile in NEM2-CLI.
 
 .. code-block:: bash
 

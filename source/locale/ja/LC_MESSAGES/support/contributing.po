@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-15 22:53+0900\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -47,18 +47,18 @@ msgstr "開発"
 
 #: ../../source/support/contributing.rst:16
 msgid "SDK"
-msgstr ""
+msgstr "SDK"
 
 #: ../../source/support/contributing.rst:18
 msgid ":doc:`Summary <../sdk/languages>`"
 msgstr ":doc:`概要 <../sdk/languages>`"
 
 #: ../../source/support/contributing.rst:19
-msgid ":doc:`Developing a SDK <../sdk/development>`"
+msgid ":doc:`Developing an SDK <../sdk/development>`"
 msgstr ":doc:`SDK の開発 <../sdk/development>`"
 
 #: ../../source/support/contributing.rst:20
-msgid ":doc:`Documenting a SDK <../sdk/documentation>`"
+msgid ":doc:`Documenting an SDK <../sdk/documentation>`"
 msgstr ":doc:`SDK のドキュメント <../sdk/documentation>`"
 
 #: ../../source/support/contributing.rst:23
@@ -74,26 +74,17 @@ msgid "Documentation"
 msgstr "ドキュメント"
 
 #: ../../source/support/contributing.rst:31
-msgid ":doc:`Writing a guide <../guides/writing-a-guide>`"
-msgstr ":doc:`ガイドの記述 <../guides/writing-a-guide>`"
+msgid ":doc:`Writing a guide <writing-a-guide>`"
+msgstr ":doc:`ガイドの記述 <writing-a-guide>`"
 
 #: ../../source/support/contributing.rst:32
+msgid ":doc:`Creating a new workshop <creating-a-new-workshop>`"
+msgstr ":doc:`新しいワークショップの作成 <creating-a-new-workshop>`"
+
+#: ../../source/support/contributing.rst:33
 msgid ":doc:`Suggesting changes <suggesting-changes>`"
 msgstr ":doc:`変更の提案 <suggesting-changes>`"
 
-#: ../../source/support/contributing.rst:33
+#: ../../source/support/contributing.rst:34
 msgid ":doc:`Translating the documentation <translating-the-documentation>`"
 msgstr ":doc:`ドキュメントの翻訳 <translating-the-documentation>`"
-
-#: ../../source/support/contributing.rst:37
-msgid "Workshops"
-msgstr "ワークショップ"
-
-#: ../../source/support/contributing.rst:38
-msgid ":doc:`Summary <../guides/workshops>`"
-msgstr ":doc:`概要 <../guides/workshops>`"
-
-#: ../../source/support/contributing.rst:39
-msgid ""
-":doc:`Creating a new workshop <../guides/workshops/creating-a-new-workshop>`"
-msgstr ":doc:`新しいワークショップの作成 <../guides/workshops/creating-a-new-workshop>`"

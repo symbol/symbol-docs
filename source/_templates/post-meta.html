@@ -1,0 +1,13 @@
+{% if pagename in ablog %}
+{% set post = ablog[pagename] %}
+
+{% if post.author %}
+<div id="author"><span> <b>{% if post.author|length == 1 %}{{ gettext('Author') }}{% else %}{{ gettext('Authors') }}{% endif %}: </b></span>
+    {% for coll in post.author %}
+    {% if coll|length %}
+    <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.author|length %},{% endif %}
+    {% else %}{{ coll }}{% if loop.index < post.author|length %},{% endif %}{% endif %}
+    {% endfor %}
+</div>
+{% endif %}
+{% endif %}

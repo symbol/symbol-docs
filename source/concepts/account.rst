@@ -2,23 +2,13 @@
 Account
 #######
 
-An account is a **key pair** (private and public key) associated to a mutable state stored on the NEM blockchain. In other words, you have a deposit box in the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a **key pair** (private and public key) associated with a mutable state stored on the NEM blockchain. In other words, you have a deposit box in the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
-Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a **single object** that must be unique and updatable: a package to be shipped, a deed to a house, or a document to be notarized.
+Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a **single object** that must be unique and updatable: a package to be shipped, a deed to a house or a document to be notarized.
 
-****************
-Multisig Account
-****************
+Accounts have the following properties:
 
-Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
-
-**********
-Properties
-**********
-
-An account has the following properties:
-
-  **Private Key**
+  **Private key**
 
   A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
 
@@ -34,4 +24,26 @@ An account has the following properties:
 
   **Mosaics**
 
-  Amount of different :doc:`mosaics <mosaic>` the account owns.
+  The amount of different :doc:`mosaics <mosaic>` the account owns.
+
+  **Filters**
+
+  Accounts may configure a set of smart rules to block announcing or receiving transactions :doc:`given a series of constraints <account-filter>`.
+
+****************
+Multisig Account
+****************
+
+Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
+
+******
+Guides
+******
+
+.. postlist::
+    :category: account
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

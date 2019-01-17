@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2019-01-16 07:27+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,19 +25,20 @@ msgstr ""
 msgid "Transfer Transaction"
 msgstr "転送トランザクション"
 
-#: ../../source/concepts/transfer-transaction.rst:7
+#: ../../source/concepts/transfer-transaction.rst:5
 msgid ""
-"Transfer transaction is used to send :doc:`mosaics <mosaic>` between two "
-":doc:`accounts <account>`. It can hold a message of length 1024."
+"Transfer transactions are used to send :doc:`mosaics <mosaic>` between two "
+":doc:`accounts <account>`. They can hold a messages of length ``1023`` "
+"characters."
 msgstr ""
-"転送トランザクションは :doc:`モザイク <mosaic>` を2つの :doc:`アカウント <account>` "
-"間で送信するために使われます。1024文字以内のメッセージを含めることもできます。"
+"転送トランザクションは :doc:`モザイク <mosaic>` を2つの :doc:`アカウント <account>` 間で送信するために使われます。"
+" ``1023`` 文字以内のメッセージを含めることもできます。"
 
-#: ../../source/concepts/transfer-transaction.rst:13
+#: ../../source/concepts/transfer-transaction.rst:11
 msgid "Alice sends 10 nem:xem to Bob"
 msgstr "ALICE は 10 nem:xem を BOB へ送る"
 
-#: ../../source/concepts/transfer-transaction.rst:15
+#: ../../source/concepts/transfer-transaction.rst:13
 msgid ""
 "It is possible to send mosaics to any valid address even if the address has "
 "not previously participated in any transaction. If nobody owns the private "
@@ -46,39 +47,111 @@ msgstr ""
 "過去にトランザクションに関与したことがなくても、正当なアドレスであればモザイクを送信することができます。 "
 "もし受信するアドレスの秘密鍵を誰も持っていない場合、その資産は永久に使うことができなくなります。"
 
-#: ../../source/concepts/transfer-transaction.rst:19
-msgid "Parameters"
-msgstr "パラメータ"
+#: ../../source/concepts/transfer-transaction.rst:17
+msgid "Schemas"
+msgstr "スキーマ"
 
-#: ../../source/concepts/transfer-transaction.rst:21
-msgid "The following parameters are required:"
-msgstr "以下のパラメータが必須です:"
+#: ../../source/concepts/transfer-transaction.rst:22
+msgid "TransferTransaction"
+msgstr "転送トランザクション"
 
-#: ../../source/concepts/transfer-transaction.rst:23
-msgid "**Recipient**"
-msgstr "**受信者**"
+#: ../../source/concepts/transfer-transaction.rst:24
+msgid "**Version**: 3"
+msgstr "**バージョン**: 3"
 
-#: ../../source/concepts/transfer-transaction.rst:25
+#: ../../source/concepts/transfer-transaction.rst:26
+msgid "**Entity type**: 0x4154"
+msgstr "**エンティティタイプ**: 0x4154"
+
+#: ../../source/concepts/transfer-transaction.rst:28
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/concepts/transfer-transaction.rst:30
+msgid ":ref:`Transaction<transaction>`"
+msgstr ":ref:`トランザクション <transaction>`"
+
+#: ../../source/concepts/transfer-transaction.rst:31
+msgid ":ref:`TransferTransactionBody<transfer-transaction-body>`"
+msgstr ":ref:`転送トランザクション本体 <transfer-transaction-body>`"
+
+#: ../../source/concepts/transfer-transaction.rst:36
+msgid "TransferTransactionBody"
+msgstr "転送トランザクション本体"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "recipient"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "25 bytes (binary)"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The address of the recipient account."
 msgstr "受信アカウントのアドレス"
 
-#: ../../source/concepts/transfer-transaction.rst:27
-msgid "**Mosaics**"
-msgstr "**モザイク**"
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "messageSize"
+msgstr ""
 
-#: ../../source/concepts/transfer-transaction.rst:29
-msgid "The array of mosaic to be sent. The array can be empty."
-msgstr "送信するモザイク配列。配列は空にすることもできます。"
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "uint16"
+msgstr ""
 
-#: ../../source/concepts/transfer-transaction.rst:31
-msgid "**Message**"
-msgstr "**メッセージ**"
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "The size of the attached message."
+msgstr "添付されたメッセージのサイズ"
 
-#: ../../source/concepts/transfer-transaction.rst:33
-msgid "The transaction message of ``1024`` characters. It can be empty."
-msgstr "``1024`` 文字以内のトランザクションメッセージです。空にすることもできます。"
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "mosaicsCount"
+msgstr ""
 
-#: ../../source/concepts/transfer-transaction.rst:35
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "The number of attached mosaics."
+msgstr "添付されたモザイクの数"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "message"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "array(byte, messageSize)"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "The message type (0) and a payload of up to ``1023`` bytes."
+msgstr "メッセージタイプ (0) と ``1023`` バイトまでのペイロード"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "mosaics"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount)"
+msgstr "array(:ref:`未解決モザイク<unresolved-mosaic>`, mosaicsCount)"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "The different mosaic to be sent."
+msgstr "異なるモザイクを送信する"
+
+#: ../../source/concepts/transfer-transaction.rst:48
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -87,3 +160,7 @@ msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
+
+#: ../../source/concepts/transfer-transaction.rst:52
+msgid "Related guides"
+msgstr "関連するガイド"

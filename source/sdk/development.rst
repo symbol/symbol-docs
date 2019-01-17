@@ -16,7 +16,7 @@ In case you haven't used NEM2-SDK or Catapult in general, we encourage you to:
 1. Review the technical documentation to become familiar with the :doc:`NEM built-in features<../concepts/account>`.
 2. Setup the `catapult in local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_ or enroll the `beta program <https://mijin.io/en/product/#mijin2>`_ to access a Catapult Test Net without the need to run it yourself.
 3. :doc:`Check the API reference <../api/requests>` and play with the API endpoints.
-4. Become familiar with the current  :doc:`nem2-sdk via code examples <../guides/overview>` & :doc:`nem2-cli <../cli/overview>` .
+4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli/overview>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask Catapult related questions.
 
 ***********

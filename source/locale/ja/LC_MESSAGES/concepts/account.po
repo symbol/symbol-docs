@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2019-01-14 09:13+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -27,7 +27,7 @@ msgstr "アカウント"
 
 #: ../../source/concepts/account.rst:5
 msgid ""
-"An account is a **key pair** (private and public key) associated to a "
+"An account is a **key pair** (private and public key) associated with a "
 "mutable state stored on the NEM blockchain. In other words, you have a "
 "deposit box in the blockchain, which only you can modify with your key pair."
 " As the name suggests, the private key has to be kept secret at all times. "
@@ -42,7 +42,7 @@ msgid ""
 "Think about NEM accounts as a **container for assets** in the blockchain. An"
 " account could represent a deposit of tokens, like most blockchains. "
 "However, it could also represent a **single object** that must be unique and"
-" updatable: a package to be shipped, a deed to a house, or a document to be "
+" updatable: a package to be shipped, a deed to a house or a document to be "
 "notarized."
 msgstr ""
 "NEM アカウントをブロックチェーン内の **資産のコンテナ** "
@@ -60,9 +60,10 @@ msgid ""
 " well as how their contents can be updated and transferred. One crucial type"
 " of rule is :doc:`multisig <multisig-account>` control that allows ownership"
 " of account based assets to be shared in a variety of ways between multiple "
-"parties, all in the blockchain."
+"parties."
 msgstr ""
-"直接ブロックチェーン上に、どのように相互に関連して制御するか、どのようにその内容を更新や転送をする定義の特別なルールを設定しておけば、アカウントはとてもスマートとなります。1つの重要なルールタイプは、すべてをブロックチェーン上で、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる"
+"どのように相互に関連して制御するか、どのようにその内容を更新や転送をするかの定義を、直接 NEM "
+"ブロックチェーン上に特別なルールとして設定しておけば、アカウントはとてもスマートなものになります。1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる"
 " :doc:`マルチシグ <multisig-account>` コントロールです。"
 
 #: ../../source/concepts/account.rst:17
@@ -74,7 +75,7 @@ msgid "An account has the following properties:"
 msgstr "アカウントは以下のプロパティを持ちます:"
 
 #: ../../source/concepts/account.rst:21
-msgid "**Private Key**"
+msgid "**Private key**"
 msgstr "**秘密鍵**"
 
 #: ../../source/concepts/account.rst:23
@@ -119,9 +120,13 @@ msgstr ""
 "を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出アドレスを共有するでしょう。"
 
 #: ../../source/concepts/account.rst:35
-msgid "**Balance**"
-msgstr "**残高**"
+msgid "**Mosaics**"
+msgstr "**モザイク**"
 
 #: ../../source/concepts/account.rst:37
-msgid "Amount of different :doc:`mosaics <mosaic>` the account owns."
+msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
+
+#: ../../source/concepts/account.rst:41
+msgid "Related guides"
+msgstr "関連するガイド"

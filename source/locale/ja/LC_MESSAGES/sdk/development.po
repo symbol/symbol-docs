@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2018-12-06 05:34+0900\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -60,12 +60,12 @@ msgstr ""
 msgid ""
 ":doc:`Check the API reference <../api/requests>` and play with the API "
 "endpoints."
-msgstr ""
+msgstr ":doc:`API リファレンスを確認 <../api/requests>` して、API エンドポイントを利用してみてください。"
 
 #: ../../source/sdk/development.rst:19
 msgid ""
-"Become familiar with the current  :doc:`nem2-sdk via code examples "
-"<../guides/overview>` & :doc:`nem2-cli <../cli/overview>` ."
+"Become familiar with the current :doc:`nem2-sdk via code examples "
+"<../concepts/account>` & :doc:`nem2-cli <../cli/overview>` ."
 msgstr ""
 
 #: ../../source/sdk/development.rst:20
@@ -148,6 +148,9 @@ msgid ""
 "conduct-to-your-project/>`_. Find :download:`here an example "
 "<../resources/templates/CODE_OF_CONDUCT.md>`."
 msgstr ""
+"`Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-"
+"to-your-project/>`_ を追加してください。 :download:`例はここ "
+"<../resources/templates/CODE_OF_CONDUCT.md>` にあります。"
 
 #: ../../source/sdk/development.rst:56
 msgid ""
@@ -343,7 +346,7 @@ msgstr ""
 
 #: ../../source/sdk/development.rst:154
 msgid "**Generating the buffer classes: The easy part**"
-msgstr ""
+msgstr "**バッファクラスの生成: 簡単な工程**"
 
 #: ../../source/sdk/development.rst:157
 msgid ""
@@ -370,7 +373,7 @@ msgstr ""
 
 #: ../../source/sdk/development.rst:167
 msgid "**Creating the Schema class: The difficult part**"
-msgstr ""
+msgstr "**スキーマクラスの作成: 難しい工程**"
 
 #: ../../source/sdk/development.rst:169
 msgid ""
@@ -563,7 +566,7 @@ msgstr "キーペアと暗号化関数"
 
 #: ../../source/sdk/development.rst:223
 msgid "This section is incomplete."
-msgstr ""
+msgstr "このセクションは未完了です。"
 
 #: ../../source/sdk/development.rst:227
 msgid "Documenting your SDK"
@@ -579,7 +582,7 @@ msgstr ""
 
 #: ../../source/sdk/development.rst:236
 msgid "Publishing the SDK as official"
-msgstr ""
+msgstr "公式として公開されているSDK"
 
 #: ../../source/sdk/development.rst:238
 msgid ""
@@ -597,7 +600,7 @@ msgstr ""
 
 #: ../../source/sdk/development.rst:248
 msgid "Future work"
-msgstr ""
+msgstr "今後の成果物"
 
 #: ../../source/sdk/development.rst:250
 msgid ""

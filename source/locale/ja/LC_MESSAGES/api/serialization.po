@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.14.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-16 07:27+0900\n"
+"PO-Revision-Date: 2018-12-05 20:49+0000\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/api/serialization.rst:3
+msgid "Serialization"
+msgstr "シリアル化"
+
+#: ../../source/api/serialization.rst:5
+msgid ""
+"`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
+"protocol to serialize and deserialize Catapult entities. The library comes "
+"with code generators for different languages. SDKs and applications use the "
+"generated code to interact with REST transaction endpoint."
+msgstr ""
+
+#: ../../source/api/serialization.rst:11
+msgid "NEM2-SDK serialization module"
+msgstr "NEM2-SDK シリアル化モジュール"
+
+#: ../../source/api/serialization.rst:14
+msgid "The library accomplishes the following properties:"
+msgstr "このライブラリは以下の特性を達成します:"
+
+#: ../../source/api/serialization.rst:16
+msgid "**Memory Efficiency**"
+msgstr "**効率的なメモリ使用**"
+
+#: ../../source/api/serialization.rst:18
+msgid ""
+"Large networks compute a large number of transactions. Working with binary "
+"optimized in size makes the communication faster. Furthermore, reading "
+"entities from memory buffers -or just a part of them - is memory efficient."
+msgstr ""
+"大きなネットワークはたくさんのトランザクションを計算します。バイナリに最適化された仕事はコミュニケーションを高速にします。さらに、メモリバッファからのエンティティ"
+" -またはそれらの一部- の読み込みはメモリを効率的に使用します。"
+
+#: ../../source/api/serialization.rst:20
+msgid "**Flexibility**"
+msgstr "**柔軟性**"
+
+#: ../../source/api/serialization.rst:22
+msgid ""
+"REST `transaction endpoints "
+"<https://nemtech.github.io/api/endpoints.html#operation/announceTransaction>`_"
+" handle the calls to update the blockchain state. The serialized payload of "
+"a transaction is appended to the body of the POST call. These endpoints "
+"allow the addition of new functionality to the server side without modifying"
+" the API contract."
+msgstr ""
+
+#: ../../source/api/serialization.rst:24
+msgid "**Reusability**"
+msgstr "**再利用性**"
+
+#: ../../source/api/serialization.rst:26
+msgid ""
+"Applications can embed the generated code, without managing dependencies. "
+"This is particularly desirable in highly-secure environments. Besides, "
+"sharing a common codebase enables the addition of new features with less "
+"effort."
+msgstr ""
+
+#: ../../source/api/serialization.rst:28
+msgid ""
+"At the current moment, you can generate buffers for **C++**. Javascript and "
+"Python are under development. If you are developing an SDK in another "
+"language, please consider coding a new generator."
+msgstr ""
+
+#: ../../source/api/serialization.rst:32
+msgid "Schema"
+msgstr "スキーマ"
+
+#: ../../source/api/serialization.rst:34
+msgid ""
+"A schema file defines the entity data structure. The library generates the "
+"leanest code necessary to serialize and deserialize defined entities."
+msgstr ""
+
+#: ../../source/api/serialization.rst:36
+msgid "The following entities are currently supported:"
+msgstr "以下のエンティティは現在のところサポートしています:"
+
+#: ../../source/api/serialization.rst:1
+msgid "Schema file"
+msgstr "スキーマファイル"
+
+#: ../../source/api/serialization.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`entity.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/entity.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes an :ref:`entity <transaction-types>`."
+msgstr ":ref:`エンティティ <transaction-types>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`accountlink.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/accountlink.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes account link transaction."
+msgstr "アカウントリンクトランザクションの説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`hashlock.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/hashlock.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes a :ref:`hash lock transaction <hash-lock-transaction>`."
+msgstr ":ref:`ハッシュロックトランザクション <hash-lock-transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`secretlock.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/secretlock.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes a :ref:`secret lock transaction <secret-lock-transaction>`."
+msgstr ":ref:`シークレットロックトランザクション <secret-lock-transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`lockhashtypes.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/lockhashtypes.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"Describes the available :ref:`hash algorithms <secret-lock-transaction>`."
+msgstr ":ref:`ハッシュアルゴリズム <secret-lock-transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`secretproof.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/secretproof.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"Describes a :ref:`secret proof transaction <secret-proof-transaction>`."
+msgstr ":ref:`シークレットプルーフトランザクション <secret-proof-transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`transfer.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes a :ref:`transfer <transfer-transaction>` transaction."
+msgstr ":ref:`転送トランザクション <transfer-transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`transaction.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/transaction.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describes a :doc:`transaction <../concepts/transaction>`."
+msgstr ":doc:`トランザクション <../../concepts/transaction>` の説明"
+
+#: ../../source/api/serialization.rst:1
+msgid ""
+"`types.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_"
+msgstr ""
+
+#: ../../source/api/serialization.rst:1
+msgid "Describe field types used by other schemas."
+msgstr ""
+
+#: ../../source/api/serialization.rst:53
+msgid "Parsing a schema and generating code"
+msgstr "スキーマのパースとコードの生成"
+
+#: ../../source/api/serialization.rst:55
+msgid ""
+"Generate the code for a determined schema in one of the available languages."
+" For example, run the following command to generate C++ code to serialize "
+"and deserialize a transfer transaction:"
+msgstr ""
+
+#: ../../source/api/serialization.rst:61
+msgid ""
+"The generator creates a new file under ``_generated/cpp`` folder. Repeat the"
+" process using a different input schema ``(-i)`` or generator ``(-g)`` as "
+"needed."
+msgstr ""
+
+#: ../../source/api/serialization.rst:64
+msgid "Writing a schema"
+msgstr "スキーマの記述"
+
+#: ../../source/api/serialization.rst:66
+msgid ""
+"Are you writing a new catapult plugin that includes a new transaction type?"
+msgstr "新しいトランザクションタイプを含む、新しい Catapult プラグインを記述しようとしていますか？"
+
+#: ../../source/api/serialization.rst:68
+msgid ""
+"In this example, we are examining how the `transfer.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats>`_ "
+"schema works. Follow the same steps to define a new schema."
+msgstr ""
+
+#: ../../source/api/serialization.rst:70
+msgid ""
+"First off, create a new file under ``schemas`` folder and define a struct "
+"for the transaction body. Think of a struct as a set of properties that we "
+"want to store in the same block of memory."
+msgstr ""
+
+#: ../../source/api/serialization.rst:72
+msgid ""
+"The transaction body contains the extra properties which differ from a basic"
+" transaction. Each attribute can have one of the types defined in "
+"`types.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_."
+msgstr ""
+
+#: ../../source/api/serialization.rst:89
+msgid ""
+"Secondly, define a second transaction struct in the same file. This will "
+"contain information about the version of the entity and its identifier. The "
+"underlying transaction properties and the particular transaction body are "
+"appended as inlines."
+msgstr ""
+
+#: ../../source/api/serialization.rst:102
+msgid ""
+"Finally, define an EmbeddedTransaction struct.  This struct is used to "
+"serialize inner transactions.  The embedded transaction and the body "
+"transaction are added as inlines."
+msgstr ""
+
+#: ../../source/api/serialization.rst:113
+msgid "Integration"
+msgstr "統合"
+
+#: ../../source/api/serialization.rst:116
+msgid "Adding generated code to an SDK"
+msgstr "SDK へ生成したコードを追加する"
+
+#: ../../source/api/serialization.rst:118
+msgid ""
+"After compiling all the schemas for a selected language, move the generated "
+"files to your ``model/transaction`` SDK folder."
+msgstr ""
+
+#: ../../source/api/serialization.rst:120
+msgid ""
+"This section is incomplete. More information will be published once the "
+"NEM2-SDK is updated."
+msgstr ""

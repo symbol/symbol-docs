@@ -27,7 +27,7 @@ nem2-camel aims to solve these problems by providing a server that listens to th
 
 .. note:: The function ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
-.. figure:: ../../resources/images/guides-transactions-transfer-nem2-camel.png
+.. figure:: ../../resources/images/diagrams/nem2-camel-proxy.png
     :align: center
 
     nem2-camel

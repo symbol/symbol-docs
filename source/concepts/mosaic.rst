@@ -20,52 +20,151 @@ Each mosaic has a set of configurable properties. During the mosaic creation, yo
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
-A 64-bit unsigned integer identifies each mosaic in the network. You can make a mosaic readily recognizable by associating a namespace to it.
+******
+Guides
+******
+
+.. postlist::
+    :category: mosaic
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+*******
+Schemas
+*******
 
 .. _mosaic-definition-transaction:
 
-*****************************
-Mosaic definition transaction
-*****************************
+MosaicDefinitionTransaction
+===========================
 
 Announce a mosaic definition transaction to create a new mosaic.
 
-Parameters
-==========
+**Version**: 2
+
+**Entity type**: 0x414D
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`
+
+Announce a mosaic definition transaction to create a new mosaic.
+
+.. _mosaic-definition-transaction-body:
+
+MosaicDefinitionTransactionBody
+===============================
 
     **Nonce**
 
     A 32-bit random string used to generate the mosaic id.
 
-    **Owner**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The public key of the mosaic creator.
+    parentId; uint64; The namespace parent Id.
+    mosaicId; uint64; The mosaic Id.
+    mosaicNameLength; uint8; The mosaic name lenght.
+    count; uint8; The number of elements in optional properties
+    flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
+    divisibility; uint8; The mosaic divisibility.
+    mosaicName; array(byte, mosaicNameLength); The mosaic name may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
-    **Properties**
+MosaicProperty
+==============
 
-    See :ref:`mosaic configurable properties<mosaic-properties>`
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+    id; uint8; The property id. (0x02) stands for duration.
+    mosaicId; uint64; The mosaic property value.
+
+.. _mosaic:
+
+Mosaic
+======
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
+
+.. _unresolved-mosaic:
+
+UnresolvedMosaic
+================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
 
 .. _mosaic-supply-change-transaction:
 
-********************************
-Mosaic supply change transaction
-********************************
+MosaicSupplyChangeTransaction
+=============================
+
+**Version**: 0x02
+
+**Entity type**: 0x424D
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
 
 Announce a supply change transaction to increase or decrease a mosaic's supply.
 
-Parameters
-==========
+.. _mosaic-supply-change-transaction-body:
 
-    **Mosaic Id**
+MosaicSupplyChangeTransactionBody
+=================================
 
-    The 64-bit unsigned integer mosaic identifier.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Direction**
+    mosaicId; uint64; The id of the affected mosaic.
+    duration; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
 
-    The direction could be Increase (0) or Decrease (1).
+.. _mosaic-flags:
 
-    **Delta**
+MosaicFlags
+===========
 
-    The amount of supply to increase or decrease.
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x00; No flags present.
+    0x01; The mosaic supply is mutable.
+    0x02; The mosaic is transferable.
+    0x04; The mosaic levy is mutable
+
+.. _mosaic-supply-change-direction:
+
+MosaicSupplyChangeDirection
+===========================
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x00; Increase.
+    0x01; Decrease.

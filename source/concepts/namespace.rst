@@ -34,46 +34,71 @@ Organizing mosaics
 ==================
 The same distributor sells tickets for an event organized in different venues. The company registers a non-transferable mosaic for each function.
 
-Namespaces and subnamespaces are used to organize the different mosaics. Now, customers can send 1 ``ticketsales.eventname.ticket`` instead of 1 ``0xE4EEB491``.
+Namespaces and subnamespaces are used to organize the different mosaics. Customers can send 1 ``ticketsales.eventname.ticket`` to ``alice`` instead of 1 ``0xE4EEB491`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
+
+
+******
+Guides
+******
+
+.. postlist::
+    :category: namespace
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
+*******
+Schemas
+*******
 
 .. _register-namespace-transaction:
 
-******************************
-Register namespace transaction
-******************************
+RegisterNamespaceTransaction
+============================
 
 Announce a register namespace transaction to register and re-rent a namespace.
 
-Parameters
-==========
+**Version**: 0x02
 
-    **Name**
+**Entity type**: 0x414E
 
-    A namespace name must be unique and may have a maximum length of ``64`` characters.
+**Inlines**:
 
-    Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+* :ref:`Transaction<transaction>`
+* :ref:`RegisterNamespaceTransactionBody<register-namespace-transaction-body>`
 
-    **Parent namespace**
+.. _register-namespace-transaction-body:
 
-    If it is a subdomain, a reference to parent namespace name is required.
+RegisterNamespaceTransactionBody
+================================
 
-    **Owner**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The public key of the namespace creator.
+    namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
+    duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
+    namespaceId; uint64; The id of the namespace.
+    namespaceNameSize; uint8; The size of the namespace name.
+    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
-    **Renting duration**
+NamespaceType
+=============
 
-    The renting duration represents the number of confirmed blocks we would like to rent our namespace for.
+Enumeration: uint8
 
-    During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace.
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
 
-    When a renting period ends, the namespace will become inactive.
+    0x00; Root namespace.
+    0x01; Child namespace.
 
-    .. and you will have ``N`` blocks to re-rent it.
-
-*****************
 Alias transaction
-*****************
+=================
 
 Announce an alias transaction to attach a namespace to an account or mosaic. A namespace can be assigned to any account present in the network. Setting an alias to mosaics is only possible if the account announcing the transaction owns the namespace and mosaic involved.
 

@@ -17,7 +17,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Core_Insufficient_Balance, Validation failed because the account has an insufficient balance.
     Failure_Core_Too_Many_Transactions, Validation failed because there are too many transactions in a block.
     Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block, Validation failed because an entity originated from the nemesis account after the nemesis block.
-    Failure_Core_Wrong_Network, The entity was rejected because it has the wrong network specified.
+    Failure_Core_Wrong_Network, Validation failed because the entity has the wrong network specified.
     Failure_Core_Invalid_Address, Validation failed because an address is invalid.
     Failure_Core_Block_Harvester_Ineligible, Validation failed because a block was harvested by an ineligible harvester
     Failure_Hash_Exists, Validation failed because the entity hash is already known.
@@ -54,8 +54,8 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Invalid_Name, Validation failed because the name is invalid. The mosaic name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
     Failure_Mosaic_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Mosaic_Expired, Validation failed because the parent is expired.
-    Failure_Mosaic_Owner_Conflict, The signer of the transaction is not the owner of the mosaic.
     Failure_Mosaic_Id_Mismatch,
+    Failure_Mosaic_Owner_Conflict, Validation failed because the parent owner conflicts with the child owner.
     Failure_Mosaic_Parent_Id_Conflict, Validation failed because the existing parent id does not match the supplied parent id.
     Failure_Mosaic_Invalid_Property, Validation failed because a mosaic property is invalid.
     Failure_Mosaic_Invalid_Flags, Validation failed because the mosaic flags are invalid.
@@ -63,12 +63,13 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Invalid_Supply_Change_Direction, Validation failed because the mosaic supply change direction is invalid: decrease (0) and  increase (1).
     Failure_Mosaic_Invalid_Supply_Change_Amount, Validation failed because the mosaic supply change amount is invalid.
     Failure_Mosaic_Invalid_Id,
+    Failure_Mosaic_Name_Reserved, Validation failed because the mosaic has a reserved name.
     Failure_Mosaic_Modification_Disallowed, Validation failed because mosaic modification is not allowed.
     Failure_Mosaic_Modification_No_Changes, Validation failed because mosaic modification would not result in any changes.
     Failure_Mosaic_Supply_Immutable, Validation failed because the mosaic supply is immutable.
     Failure_Mosaic_Supply_Negative, Validation failed because the resulting mosaic supply is negative.
     Failure_Mosaic_Supply_Exceeded, Validation failed because the resulting mosaic supply exceeds the maximum allowed value. The range should be between 0 and ``9.000.000.000``.
-    Failure_Mosaic_Non_Transferable, Validation failed because the mosaic is not transferable.  Only the creator of the mosaic is eligible to be the recipient of a non-transferable mosaic once transferred.
+    Failure_Mosaic_Non_Transferable, Validation failed because the mosaic is not transferable. Only the creator of the mosaic is eligible to be the recipient of a non-transferable mosaic once transferred.
     Failure_Mosaic_Max_Mosaics_Exceeded, Validation failed because the credit of the mosaic would exceed the maximum different mosaics an account is allowed to own. Set by default to ``10.000`` different mosaics per account.
     Failure_Multisig_Modify_Account_In_Both_Sets, Validation failed because account is specified to be both added and removed.
     Failure_Multisig_Modify_Multiple_Deletes, Validation failed because multiple removals are present.
@@ -84,11 +85,11 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Modify_Loop, Validation failed because a multisig loop is created. A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
     Failure_Multisig_Modify_Max_Multisig_Depth, Validation failed because the max multisig depth is exceeded. The maximum depth of a multilevel multisig account is ``3``.
     Failure_Multisig_Operation_Not_Permitted_By_Account, Validation failed because an operation is not permitted by a multisig account. A multisig account cannot be converted into a multisig account again.
-    Failure_Namespace_Invalid_Duration, Duration lies too far in the future or refers to past. Duration is allowed to lie up to ``365`` days.
-    Failure_Namespace_Invalid_Name, The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
+    Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
+    Failure_Namespace_Invalid_Name, The namespace has an invalid name. The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
     Failure_Namespace_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Namespace_Expired, Validation failed because the namespace has expired.
-    Failure_Namespace_Owner_Conflict, The signer of the transaction is not the owner of the namespace.
+    Failure_Namespace_Owner_Conflict, Validation failed because the parent owner conflicts with the child owner.
     Failure_Namespace_Id_Mismatch,
     Failure_Namespace_Invalid_Namespace_Type, Validation failed because the namespace type is invalid: rootnamespace (0) and subnamesapce (1).
     Failure_Namespace_Root_Name_Reserved, Validation failed because the root namespace has a `reserved name <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L60>`_.
@@ -136,5 +137,6 @@ This section describes the error messages that can be returned via status channe
     Failure_Consumer_Remote_Chain_Mismatched_Difficulties, Validation failed because the remote chain difficulties do not match the calculated difficulties.
     Failure_Consumer_Remote_Chain_Score_Not_Better, Validation failed because the remote chain score is not better.
     Failure_Consumer_Remote_Chain_Too_Far_Behind, Validation failed because the remote chain is too far behind.
+    Failure_Consumer_Remote_Chain_Too_Far_In_Future, Validation failed because the remote chain timestamp is too far in the future.
     Failure_Extension_Partial_Transaction_Cache_Prune, Validation failed because the partial transaction was pruned from the temporal cache.
     Failure_Extension_Partial_Transaction_Dependency_Removed, Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.

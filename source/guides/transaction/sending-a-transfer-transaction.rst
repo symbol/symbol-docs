@@ -24,7 +24,7 @@ Prerequisites
 Background
 **********
 
-.. figure:: ../../resources/images/guides-transactions-transfer.png
+.. figure:: ../../resources/images/examples/transfer-transaction.png
     :align: center
     :width: 450px
 
@@ -36,7 +36,7 @@ Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2T
 
 Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
 
-To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
+To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/monitoring-a-transaction-status>` validation errors.
 
 .. code-block:: bash
 
@@ -138,7 +138,7 @@ Send multiple mosaics in the same transaction.
 
 **Adding multiple mosaics**
 
-.. figure:: ../../resources/images/guides-transactions-transfer-multiple.png
+.. figure:: ../../resources/images/examples/transfer-transaction-multiple-mosaics.png
     :align: center
     :width: 450px
 

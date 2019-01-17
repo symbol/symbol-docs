@@ -170,7 +170,7 @@
                                                         <a href="https://apostille.io/">
                                                         <div class="card font-icon"><i>
 
-.. image:: resources/images/logo-apostille.png
+.. image:: resources/images/icons/logo-apostille.png
         :align: center
         :height: 40px
 
@@ -229,6 +229,14 @@
                                                                   <i class="fas fa-exchange-alt colored green"></i>
                                                                   <h4>Endpoints</h4>
                                                                 </div>
+                                                        </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3">
+                                                        <a href="api/serialization.html">
+                                                              <div class="card font-icon">
+                                                                <i class="fas fa-cubes colored green"></i>
+                                                                  <h4>Serialization</h4>
+                                                              </div>
                                                         </a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-3">

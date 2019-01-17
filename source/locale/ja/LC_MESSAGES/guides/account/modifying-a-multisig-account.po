@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.13\n"
+"Project-Id-Version: nem2-docs 0.14.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-05 12:47+0900\n"
+"POT-Creation-Date: 2019-01-16 07:27+0900\n"
 "PO-Revision-Date: 2018-10-26 13:38+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -232,11 +232,11 @@ msgstr "アグリゲートボンドトランザクションを作成します。
 msgid ""
 "Before sending an aggregate bonded transaction, Alice needs to lock at least"
 " ``10`` XEM. This mechanism is required to prevent network spamming and "
-"ensure that transactions are cosigned. After lock funds transaction has been"
-" confirmed, Alice announces the aggregate transaction."
+"ensure that transactions are cosigned. After hash lock transaction has been "
+"confirmed, Alice announces the aggregate transaction."
 msgstr ""
 "アグリゲートボンドトランザクションを送信する前に、ALICE はロックするのに最低 ``10`` XEM "
-"を必要とします。このメカニズムはネットワークスパムを防止するためとトランザクションに署名することを促すために要求されます。ロックファンドトランザクションが承認されると、アリスはアグリゲートトランザクションをアナウンスできます。"
+"を必要とします。このメカニズムはネットワークスパムを防止するためとトランザクションに署名することを促すために要求されます。ハッシュロックトランザクションが承認されると、アリスはアグリゲートトランザクションをアナウンスできます。"
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:200
 msgid ""

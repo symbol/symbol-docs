@@ -23,7 +23,7 @@ The product receives its quality approval :doc:`mosaic <mosaic>` only when its b
 
 Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
 
-.. figure:: ../resources/images/concepts-mlma-figure-1.png
+.. figure:: ../resources/images/examples/mlma-supply-chain.png
     :align: center
     :width: 750px
 
@@ -37,7 +37,7 @@ This example shows how a high-security account can be made easier to use.
 
 Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI. MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.
 
-.. figure:: ../resources/images/concepts-mlma-figure-2.png
+.. figure:: ../resources/images/examples/mlma-fraud-detection.png
     :align: center
     :width: 550px
 
@@ -48,8 +48,20 @@ Account Recovery
 
 You can set up your account so it can be recovered only with the approval of signatures from specified accounts, such as your friends and family. Combine the branches any way you like.
 
-.. figure:: ../resources/images/concepts-mlma-figure-3.png
+.. figure:: ../resources/images/examples/mlma-account-recovery.png
     :align: center
     :width: 750px
 
     Account Recovery
+
+******
+Guides
+******
+
+.. postlist::
+    :category: mlma
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
