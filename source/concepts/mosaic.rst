@@ -56,6 +56,22 @@ Announce a mosaic definition transaction to create a new mosaic.
 
 Announce a mosaic definition transaction to create a new mosaic.
 
+.. _mosaic-supply-change-transaction:
+
+MosaicSupplyChangeTransaction
+=============================
+
+**Version**: 0x02
+
+**Entity type**: 0x424D
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
+
+Announce a supply change transaction to increase or decrease a mosaic's supply.
+
 .. _mosaic-definition-transaction-body:
 
 MosaicDefinitionTransactionBody
@@ -69,14 +85,27 @@ MosaicDefinitionTransactionBody
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentId; uint64; The namespace parent Id.
+    mosaicNonce; uint32; Random nonce used to generate the mosaic id.
     mosaicId; uint64; The mosaic Id.
-    mosaicNameLength; uint8; The mosaic name lenght.
-    count; uint8; The number of elements in optional properties
+    propertiesCount; uint8; The number of elements in optional properties
     flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
     divisibility; uint8; The mosaic divisibility.
-    mosaicName; array(byte, mosaicNameLength); The mosaic name may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
     property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
+
+.. _mosaic-supply-change-transaction-body:
+
+MosaicSupplyChangeTransactionBody
+=================================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The id of the affected mosaic.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
+
+.. _mosaic-property:
 
 MosaicProperty
 ==============
@@ -111,34 +140,6 @@ UnresolvedMosaic
     mosaicId; uint64; The mosaic id.
     amount; uint64; The amount of the mosaic.
 
-.. _mosaic-supply-change-transaction:
-
-MosaicSupplyChangeTransaction
-=============================
-
-**Version**: 0x02
-
-**Entity type**: 0x424D
-
-**Inlines**:
-
-* :ref:`Transaction<transaction>`
-* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
-
-Announce a supply change transaction to increase or decrease a mosaic's supply.
-
-.. _mosaic-supply-change-transaction-body:
-
-MosaicSupplyChangeTransactionBody
-=================================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; uint64; The id of the affected mosaic.
-    duration; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
-    delta; uint64; The amount of supply to increase or decrease.
 
 .. _mosaic-flags:
 

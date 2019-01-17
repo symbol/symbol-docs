@@ -36,7 +36,6 @@ The same distributor sells tickets for an event organized in different venues. T
 
 Namespaces and subnamespaces are used to organize the different mosaics. Customers can send 1 ``ticketsales.eventname.ticket`` to ``alice`` instead of 1 ``0xE4EEB491`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
 
-
 ******
 Guides
 ******
@@ -69,6 +68,39 @@ Announce a register namespace transaction to register and re-rent a namespace.
 * :ref:`Transaction<transaction>`
 * :ref:`RegisterNamespaceTransactionBody<register-namespace-transaction-body>`
 
+.. _alias-address-transaction:
+
+AliasAddressTransaction
+=======================
+
+Announce an alias transaction to attach a namespace to an account. A namespace can be assigned to any account present in the network.
+
+**Version**: 0x01
+
+**Entity type**: 0x424E
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`AliasAddressTransactionBody<alias-address-transaction-body>`
+
+.. _alias-mosaic-transaction:
+
+AliasMosaicTransaction
+======================
+
+**Version**: 0x01
+
+**Entity type**: 0x434E
+
+**Inlines**:
+
+* :ref:`Transaction<transaction>`
+* :ref:`AliasMosaicTransactionBody<alias-mosaic-transaction-body>`
+
+Announce an alias transaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
+
+
 .. _register-namespace-transaction-body:
 
 RegisterNamespaceTransactionBody
@@ -85,6 +117,35 @@ RegisterNamespaceTransactionBody
     namespaceNameSize; uint8; The size of the namespace name.
     name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
+
+.. _alias-address-transaction-body:
+
+AliasAddressTransactionBody
+===========================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    aliasAction; :ref:`AliasAction <alias-action>`;
+    namespaceId; uint64; The id of the namespace that will become an alias.
+    address; 25 bytes (binary); The aliased address.
+
+.. _alias-mosaic-transaction-body:
+
+AliasMosaicTransactionBody
+===========================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    aliasAction; :ref:`AliasAction <alias-action>`;
+    namespaceId; uint64; The id of the namespace that will become an alias.
+    mosaicId; uint64; The aliased mosaic id.
+
+.. _namespace-type:
+
 NamespaceType
 =============
 
@@ -97,22 +158,16 @@ Enumeration: uint8
     0x00; Root namespace.
     0x01; Child namespace.
 
-Alias transaction
-=================
+.. _alias-action:
 
-Announce an alias transaction to attach a namespace to an account or mosaic. A namespace can be assigned to any account present in the network. Setting an alias to mosaics is only possible if the account announcing the transaction owns the namespace and mosaic involved.
+Alias Action
+=============
 
-Parameters
-==========
+Enumeration: uint8
 
-    **Type**
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
 
-    Mosaic or account.
-
-    **Id**
-
-    A MosaicId or an address.
-
-    **Namespace name**
-
-    The namespace or subnamespace name.
+    0x00; Link alias.
+    0x01; Unlink alias.
