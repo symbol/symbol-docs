@@ -18,8 +18,6 @@ It is possible to create multiple subnamespaces with the same name (example: ``f
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
 ********
 Examples
 ********
@@ -52,6 +50,8 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _register-namespace-transaction:
 
 RegisterNamespaceTransaction
@@ -65,8 +65,19 @@ Announce a register namespace transaction to register and re-rent a namespace.
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`RegisterNamespaceTransactionBody<register-namespace-transaction-body>`
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
+    duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
+    namespaceId; uint64; The id of the namespace.
+    namespaceNameSize; uint8; The size of the namespace name.
+    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+
 
 .. _alias-address-transaction:
 
@@ -81,13 +92,22 @@ Announce an alias transaction to attach a namespace to an account. A namespace c
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`AliasAddressTransactionBody<alias-address-transaction-body>`
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    aliasAction; :ref:`AliasAction <alias-action>`; The alias action.
+    namespaceId; uint64; The id of the namespace that will become an alias.
+    address; 25 bytes (binary); The aliased address.
 
 .. _alias-mosaic-transaction:
 
 AliasMosaicTransaction
 ======================
+
+Announce an alias transaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
 
 **Version**: 0x01
 
@@ -95,52 +115,13 @@ AliasMosaicTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`AliasMosaicTransactionBody<alias-mosaic-transaction-body>`
-
-Announce an alias transaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
-
-
-.. _register-namespace-transaction-body:
-
-RegisterNamespaceTransactionBody
-================================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
-    duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
-    parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
-    namespaceId; uint64; The id of the namespace.
-    namespaceNameSize; uint8; The size of the namespace name.
-    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
-
-
-.. _alias-address-transaction-body:
-
-AliasAddressTransactionBody
-===========================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    aliasAction; :ref:`AliasAction <alias-action>`;
-    namespaceId; uint64; The id of the namespace that will become an alias.
-    address; 25 bytes (binary); The aliased address.
-
-.. _alias-mosaic-transaction-body:
-
-AliasMosaicTransactionBody
-===========================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    aliasAction; :ref:`AliasAction <alias-action>`;
+    aliasAction; :ref:`AliasAction <alias-action>`; The alias action.
     namespaceId; uint64; The id of the namespace that will become an alias.
     mosaicId; uint64; The aliased mosaic id.
 

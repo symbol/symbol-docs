@@ -86,7 +86,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Modify_Max_Multisig_Depth, Validation failed because the max multisig depth is exceeded. The maximum depth of a multilevel multisig account is ``3``.
     Failure_Multisig_Operation_Not_Permitted_By_Account, Validation failed because an operation is not permitted by a multisig account. A multisig account cannot be converted into a multisig account again.
     Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
-    Failure_Namespace_Invalid_Name, The namespace has an invalid name. The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
+    Failure_Namespace_Invalid_Name, Validation failed because the namespace has an invalid name. The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
     Failure_Namespace_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Namespace_Expired, Validation failed because the namespace has expired.
     Failure_Namespace_Owner_Conflict, Validation failed because the parent owner conflicts with the child owner.

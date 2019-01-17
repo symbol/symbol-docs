@@ -39,19 +39,12 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _secret-lock-transaction:
 
 SecretLockTransaction
 =====================
-
-**Version**: 0x01
-
-**Entity type**: 0x4152
-
-**Inlines**:
-
-* :ref:`Transaction<transaction>`
-* :ref:`SecretLockTransactionBody<secret-lock-transaction-body>`
 
 Use a secret lock transaction to start the cross-chain swap:
 
@@ -67,10 +60,13 @@ The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction
 
 If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
 
-.. _secret-lock-transaction-body:
+**Version**: 0x01
 
-SecretLockTransactionBody
-=========================
+**Entity type**: 0x4152
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -87,23 +83,17 @@ SecretLockTransactionBody
 SecretProofTransaction
 ======================
 
+Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
+
+The transaction must prove that knows the *proof* that unlocks the mosaics.
+
 **Version**: 0x01
 
 **Entity type**: 0x4252
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`SecretProofTransactionBody<secret-proof-transaction-body>`
-
-Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
-
-The transaction must prove that knows the *proof* that unlocks the mosaics.
-
-.. _secret-proof-transaction-body:
-
-SecretProofTransactionBody
-==========================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"

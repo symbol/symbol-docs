@@ -28,10 +28,14 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _transfer-transaction:
 
 TransferTransaction
 ===================
+
+Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages between two :doc:`accounts <account>`.
 
 **Version**: 0x03
 
@@ -39,13 +43,7 @@ TransferTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`TransferTransactionBody<transfer-transaction-body>`
-
-.. _transfer-transaction-body:
-
-TransferTransactionBody
-=======================
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -56,5 +54,3 @@ TransferTransactionBody
     mosaicsCount; uint8; The number of attached mosaics.
     message; array(byte, messageSize); The message type (0) and a payload of up to ``1023`` bytes.
     mosaics; array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount); The different mosaic to be sent.
-
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.

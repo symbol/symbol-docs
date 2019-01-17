@@ -38,6 +38,8 @@ Guides
 Schemas
 *******
 
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _mosaic-definition-transaction:
 
 MosaicDefinitionTransaction
@@ -51,6 +53,7 @@ Announce a mosaic definition transaction to create a new mosaic.
 
 **Inlines**:
 
+<<<<<<< HEAD
 * :ref:`Transaction<transaction>`
 * :ref:`MosaicDefinitionTransactionBody<mosaic-definition-transaction-body>`
 
@@ -67,19 +70,7 @@ MosaicSupplyChangeTransaction
 
 **Inlines**:
 
-* :ref:`Transaction<transaction>`
-* :ref:`MosaicSupplyChangeTransactionBody<mosaic-supply-change-transaction-body>`
-
-Announce a supply change transaction to increase or decrease a mosaic's supply.
-
-.. _mosaic-definition-transaction-body:
-
-MosaicDefinitionTransactionBody
-===============================
-
-    **Nonce**
-
-    A 32-bit random string used to generate the mosaic id.
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -92,10 +83,20 @@ MosaicDefinitionTransactionBody
     divisibility; uint8; The mosaic divisibility.
     property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
-.. _mosaic-supply-change-transaction-body:
+.. _mosaic-supply-change-transaction:
 
-MosaicSupplyChangeTransactionBody
-=================================
+MosaicSupplyChangeTransaction
+=============================
+
+Announce a supply change transaction to increase or decrease a mosaic's supply.
+
+**Version**: 0x02
+
+**Entity type**: 0x424D
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -139,7 +140,6 @@ UnresolvedMosaic
 
     mosaicId; uint64; The mosaic id.
     amount; uint64; The amount of the mosaic.
-
 
 .. _mosaic-flags:
 
