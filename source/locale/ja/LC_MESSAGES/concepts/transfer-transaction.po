@@ -74,6 +74,8 @@ msgid ""
 "Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages "
 "between two :doc:`accounts <account>`."
 msgstr ""
+":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
+"間で送信するためには、転送トランザクションをアナウンスします。"
 
 #: ../../source/concepts/transfer-transaction.rst:40
 msgid "**Version**: 0x03"

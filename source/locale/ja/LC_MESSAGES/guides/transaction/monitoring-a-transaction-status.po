@@ -143,6 +143,8 @@ msgid ""
 "the API WebSocket, who will communicate you asynchronously the status of the"
 " transaction."
 msgstr ""
+"新しい :doc:`リスナ <../../api/websockets>` を開いてください。これは API WebSocket "
+"と疎通し、トランザクションの状態を非同期にあなたへ伝えます。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:71
 msgid ""
@@ -151,6 +153,8 @@ msgid ""
 "timeout can be raised if there is no response after 30 seconds "
 "approximately."
 msgstr ""
+"WebSocket のコネクションが有効ならばモニタリングをスタートします。 :doc:`ブロック <../../concepts/block>` は "
+"平均 ``15`` 秒毎で生成されるので、30秒間ほどレスポンスがない場合、タイムアウトが発生します。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:80
 msgid "|listening-new-blocks-cli|"
@@ -164,6 +168,9 @@ msgid ""
 "accordingly, by reviewing the :doc:`error status list <../../api/status-"
 "errors>`."
 msgstr ""
+"発行されたトランザクションにバリデーションエラーがあるかどうかを監視します。ステータス WebSocket "
+"チャンネルからメッセージを受け取る場合、それはトランザクションが要件を満たさなかったことを意味します。エラーを適切にハンドリングするためには "
+":doc:`エラーステータスリスト <../../api/status-errors>` を参照してください。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:94
 msgid "|monitoring-transaction-status-error-cli|"
@@ -177,6 +184,8 @@ msgid ""
 "transaction will be included, as a second validation happens before being "
 "finally confirmed."
 msgstr ""
+"トランザクションがネットワークに到達したかどうかも監視します。未承認 WebSocket "
+"チャンネルからメッセージを受け取る場合、トランザクションは妥当であり、ブロックに取りこまれるのを待っている状態です。2回目のバリデーションが最終的に確認される前に行われるため、これはトランザクションが含まれるのが確定したことを意味するものではありません。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:108
 msgid "|monitoring-transaction-unconfirmed-cli|"
@@ -190,6 +199,10 @@ msgid ""
 "`transaction is secured "
 "<https://gist.github.com/aleixmorgadas/3d856d318e60f901be09dbd23467b374>`_."
 msgstr ""
+"トランザクションがブロックに含まれたことを監視します。含まれても、トランザクションにはまだフォークによる :doc:`ロールバック "
+"<../../concepts/transaction>` の可能性があります。あなた自身で、例えば、6ブロックで `トランザクションがセキュア "
+"<https://gist.github.com/aleixmorgadas/3d856d318e60f901be09dbd23467b374>`_ "
+"であると、決めることができます。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:122
 msgid "|monitoring-transaction-confirmed-cli|"
@@ -211,6 +224,9 @@ msgid ""
 " endpoint. The status of failed transactions is not persistent, meaning that"
 " eventually is pruned."
 msgstr ""
+"WebSocket のレスポンスを失った場合、 `トランザクションステータス "
+"<https://nemtech.github.io/api/endpoints.html#operation/getTransactionStatus>`_"
+" エンドポイントを呼び出すことで、トランザクションの状態を確認できます。失敗したトランザクションの状態は永続的ではなく、最終的には除去されます。"
 
 #: ../../source/guides/transaction/monitoring-a-transaction-status.rst:143
 msgid ""

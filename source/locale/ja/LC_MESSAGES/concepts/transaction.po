@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 07:21+0900\n"
+"POT-Creation-Date: 2019-01-17 19:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -439,10 +439,12 @@ msgid "Schemas"
 msgstr "スキーマ"
 
 #: ../../source/concepts/transaction.rst:115
+#: ../../source/concepts/transaction.rst:133
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
 #: ../../source/concepts/transaction.rst:117
+#: ../../source/concepts/transaction.rst:135
 msgid ":ref:`SizePrefixedEntity<size-prefixed-entity>`"
 msgstr ""
 
@@ -451,6 +453,7 @@ msgid ":ref:`VerifiableEntity<verifiable-entity>`"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:119
+#: ../../source/concepts/transaction.rst:136
 msgid ":ref:`EntityBody<entity-body>`"
 msgstr ""
 
@@ -488,6 +491,10 @@ msgid ""
 msgstr "トランザクションがブロックチェーンに取り込まれるまでの最大時間"
 
 #: ../../source/concepts/transaction.rst:131
+msgid "EmbeddedTransaction"
+msgstr ""
+
+#: ../../source/concepts/transaction.rst:141
 msgid "SizePrefixedEntity"
 msgstr ""
 

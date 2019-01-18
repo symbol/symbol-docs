@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 07:21+0900\n"
+"POT-Creation-Date: 2019-01-17 20:48+0900\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -21,75 +21,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/catalog.html:16
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:7
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:10
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:3
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/recentposts.html:6
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:21
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:39
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:42
-msgid "None"
-msgstr "なし"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/authors.html:2
-#: ../../source/_templates/post-meta.html:5
-msgid "Authors"
-msgstr "投稿者"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/categories.html:2
-msgid "Categories"
-msgstr "カテゴリ"
-
-#: ../../source/_templates/navbarsearchbox.html:7
-msgid "Edit on GitHub"
-msgstr "GitHubで編集"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:2
-msgid "Update"
-msgstr "更新"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:7
-#: ../../source/_templates/post-meta.html:5
-msgid "Author"
-msgstr "投稿者"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:16
-msgid "Location"
-msgstr "場所"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:25
-msgid "Language"
-msgstr "言語"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:34
-msgid "Category"
-msgstr "カテゴリ"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:43
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/tagcloud.html:2
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:44
-msgid "Tag"
-msgstr "タグ"
-
 #: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/recentposts.html:2
 msgid "Recent Posts"
 msgstr "最近の投稿"
 
-#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/recentposts.html:6
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:21
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:39
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:42
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:7
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:10
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/catalog.html:16
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:3
+msgid "None"
+msgstr "なし"
 
 #: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:48
 msgid "Read more ..."
@@ -102,6 +47,36 @@ msgstr "前へ"
 #: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postnavy.html:17
 msgid "Next"
 msgstr "次へ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:7
+msgid "Author"
+msgstr "投稿者"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/authors.html:2
+msgid "Authors"
+msgstr "投稿者"
+
+#: ../../source/_templates/navbarsearchbox.html:7
+msgid "Edit on GitHub"
+msgstr "GitHubで編集"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/categories.html:2
+msgid "Categories"
+msgstr "カテゴリ"
 
 #: ../../source/_templates/layout.html:21
 msgid "Join #general discussion"
@@ -214,3 +189,28 @@ msgstr ""
 #: ../../source/_templates/layout.html:107
 msgid "Last updated on %(last_updated)s."
 msgstr "最終更新 %(last_updated)"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:2
+msgid "Update"
+msgstr "更新"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:16
+msgid "Location"
+msgstr "場所"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:25
+msgid "Language"
+msgstr "言語"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:34
+msgid "Category"
+msgstr "カテゴリ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/tagcloud.html:2
+msgid "Tags"
+msgstr "タグ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:44
+msgid "Tag"
+msgstr "タグ"
