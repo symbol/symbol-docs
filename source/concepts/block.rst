@@ -58,6 +58,7 @@ BlockHeader
     previousBlockHash; 32 bytes (binary); The hash of the previous block.
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
     stateHash; 32 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
+    blockReceiptsHash; 32 bytes (binary); The collection of transaction statements, mosaic, and alias resolutions are hashed into a |merkle|. The block header stores the root hash, which is different to zero when the block has invisible state changes.
 
 .. |merkle| raw:: html
 
