@@ -58,15 +58,15 @@ BlockHeader
     previousBlockHash; 32 bytes (binary); The hash of the previous block.
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
     stateHash; 32 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
-    blockReceiptsHash; 32 bytes (binary); The collection of transaction statements, mosaic, and alias resolutions are hashed into a |merkle|. The block header stores the root hash, which is different to zero when the block has invisible state changes.
+    blockReceiptsHash; 32 bytes (binary); The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash.
 
 .. |merkle| raw:: html
 
-    <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle Tree</a>
+    <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">merkle tree</a>
 
 .. |patricia| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">Patricia Tree</a>
+   <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">patricia tree</a>
 
 **Version**: The higher byte represents the network identifier.
 
