@@ -64,7 +64,7 @@ Announce a mosaic definition transaction to create a new mosaic.
     propertiesCount; uint8; The number of elements in optional properties
     flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
     divisibility; uint8; The mosaic divisibility.
-    property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
+    properties; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
 .. _mosaic-supply-change-transaction:
 
@@ -150,5 +150,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Increase.
-    0x01; Decrease.
+    0; Increase.
+    1; Decrease.

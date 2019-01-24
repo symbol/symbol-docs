@@ -93,7 +93,7 @@ Announce a modify multisig account transaction to:
 a) Transform an account to multisig.
 b) Change the configurable properties of a multisig account.
 
-**Version**: 0x01
+**Version**: 0x03
 
 **Entity type**: 0x4155
 
@@ -105,8 +105,8 @@ b) Change the configurable properties of a multisig account.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    minRemovalDelta; uint8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    minApprovalDelta; uint8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; The number of modifications.
     modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
 
@@ -133,5 +133,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Add.
-    0x01; Remove.
+    0; Add cosignatory.
+    1; Remove cosignatory.

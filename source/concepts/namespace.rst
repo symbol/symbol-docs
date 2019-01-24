@@ -136,8 +136,8 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Root namespace.
-    0x01; Child namespace.
+    0; Root namespace.
+    1; Child namespace.
 
 .. _alias-action:
 
@@ -150,5 +150,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Link alias.
-    0x01; Unlink alias.
+    0; Link alias.
+    1; Unlink alias.
