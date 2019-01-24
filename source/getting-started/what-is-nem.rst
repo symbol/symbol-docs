@@ -3,10 +3,10 @@ What is ProximaX?
 ############
 
 **********************
-The Smart Asset System
+Blockchain Reimagined and Evolved
 **********************
 
-|nem| is a blockchain platform built from the ground up to be simple for developers to use blockchain technology.
+|ProximaX| is a blockchain platform built from the ground up to be simple for developers to use blockchain technology.
 
 ProximaX is built around a powerful system to customize your using of the blockchain. We call it the *Smart Asset System*. It gives you the power to use ProximaX as if it were a custom blockchain built for your application and your assets.
 
@@ -46,9 +46,9 @@ A gateway server manages blockchain usage for a client app or web service.
 
 A gateway server links existing business contract logic, systems, or databases to the blockchain ledger.
 
-.. |nem| raw:: html
+.. |ProximaX| raw:: html
 
-    <a href="https://nem.io/" target="_blank">ProximaX</a>
+    <a href="https://proximax.io/" target="_blank">ProximaX</a>
 
 ******************
 Public and Private

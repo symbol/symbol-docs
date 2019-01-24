@@ -69,7 +69,7 @@ Have you loaded an account with test XEM? If it is not the case, go back to :doc
    $> nem2-cli account info
 
 
-   New Account: SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
+   New Account: WCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
 
    [...]
 
@@ -148,7 +148,7 @@ Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`tran
 
 1. Prepare the transfer transaction. Three main attributes form a transfer transaction:
 
-* The recipient account address: ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``.
+* The recipient account address: ``WC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``.
 * A message: ``enjoy your ticket``.
 * An array of mosaics: ``[1 company:ticket]``.
 
@@ -163,7 +163,7 @@ Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`tran
 
        const transferTransaction = TransferTransaction.create(
            Deadline.create(),
-           Address.createFromRawAddress('SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
+           Address.createFromRawAddress('WC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
            [new Mosaic(new MosaicId(company:ticket'), UInt64.fromUint(1))],
            PlainMessage.create(‘enjoy your ticket’'),
            NetworkType.MIJIN_TEST
@@ -186,7 +186,7 @@ Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`tran
 
        final TransferTransaction transferTransaction = TransferTransaction.create(
            Deadline.create(2, HOURS),
-           Address.createFromRawAddress("SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"),
+           Address.createFromRawAddress("WC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"),
            Arrays.asList(new Mosaic(new MosaicId("company:ticket"), BigInteger.valueOf(1))),
            PlainMessage.create("enjoy your ticket"),
            NetworkType.MIJIN_TEST
@@ -235,7 +235,7 @@ Although the transaction is created, it has not been announced to the network ye
 
    .. code-block:: bash
 
-       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company:ticket::1 --message enjoy_your_ticket
+       $> nem2-cli transaction transfer --recipient WD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company:ticket::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
