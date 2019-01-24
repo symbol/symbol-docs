@@ -122,7 +122,7 @@ Transaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    fee; uint64; The cost of announcing a transaction.  This fee is necessary to provide an incentive for those who secure the network. The account pays the fee  in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
+    maxFee; uint64; The maximum cost of announcing a transaction. The fee is necessary to provide an incentive for those who secure the network. The account pays the fee in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
     deadline; uint64; The maximum amount of time to include the transaction in the blockchain.
 
 .. _embedded-transaction:
