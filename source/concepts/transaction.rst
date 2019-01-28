@@ -67,9 +67,9 @@ If the effective fee is smaller or equal to the max_fee, the transaction could f
 
 The harvesting nodes can decide their transaction inclusion strategy:
 
-* **Prefer-oldest**: Prefered for high transaction per seconds networks, will include first older transactions.
-* **Minimize-fees**: Benevolent nodes, will include first transactions other nodes does not want to include.
-* **Maximize-fees**: Most common in public networks, will include first transactions with higher fees.
+* **Prefer-oldest**: Preferred for high transaction per seconds networks. Include first the oldest transactions.
+* **Minimize-fees**: Benevolent nodes. Include first transactions that other nodes do not want to include.
+* **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
 By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to suppress fees, or use another mosaic definition that better suits their needs.
 
