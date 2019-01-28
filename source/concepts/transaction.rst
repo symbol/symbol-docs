@@ -49,6 +49,30 @@ Every transaction shares some common properties. Each transaction extends from t
 
 Transactions are defined in a :doc:`serialized form <../api/serialization>`. We recommend to `use the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
+.. _fees:
+
+Fees
+====
+
+Transactions have an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network.
+
+The fee associated with a transaction primarily depends on the transaction’s size. The transaction effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure this latest value to all positive values, including zero.
+
+
+    effective_transction_fee = transaction::size * block::fee_multiplier
+
+A sender of a transaction must specify during the transaction definition a ``max_fee``, meaning the maximum fee the account allows to spend for this transaction.
+
+If the effective fee is smaller or equal to the max_fee, the transaction could form part of the block. The ``fee_multiplier`` is stored in the :ref:`block header <block-header>`, permitting to resolve which was the effective fee paid for every transaction included.
+
+The harvesting nodes can decide their transaction inclusion strategy:
+
+* **Prefer-oldest**: Prefered for high transaction per seconds networks, will include first older transactions.
+* **Minimize-fees**: Benevolent nodes, will include first transactions other nodes does not want to include.
+* **Maximize-fees**: Most common in public networks, will include first transactions with higher fees.
+
+By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to suppress fees, or use another mosaic definition that better suits their needs.
+
 .. _transaction-signature:
 
 *********************
@@ -130,7 +154,7 @@ Transaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    maxFee; uint64; The maximum cost of announcing a transaction. The fee is necessary to provide an incentive for those who secure the network. The account pays the fee in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
+    max_fee; uint64; The maximum fee allowed to spend for the transaction.
     deadline; uint64; The maximum amount of time to include the transaction in the blockchain.
 
 .. _embedded-transaction:
