@@ -75,7 +75,7 @@ The first validation happens in the API nodes. If the transaction presents some 
 
 The second validation is done before the transaction is added in a harvested block. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
 
-Continuing the previous example, the transaction gets processed and the amount stated gKets transferred from the signer's account to the recipient's account. Additionally, the transaction fee is deducted from the signer's account.
+Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account. Additionally, the transaction fee is deducted from the signer's account.
 
 The transaction has **zero confirmations** at this point. When another block is added to the blockchain, the transaction has one confirmation. The next block added to the chain will give it two confirmations and so on.
 
