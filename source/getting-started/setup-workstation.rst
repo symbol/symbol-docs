@@ -2,7 +2,7 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
 **********************************
 Running Catapult Service Bootstrap
