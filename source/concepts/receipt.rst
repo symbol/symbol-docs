@@ -33,57 +33,27 @@ Recorded receipts
 
 Catapult records invisible state changes for the following entities.
 
-Core receipts
-=============
-
 .. csv-table::
-    :header: "Id", "Receipt", "Type", "Description"
+    :header:  "Id", "Receipt", "Type", "Description"
     :delim: ;
 
-    0x4321; Harvest_Fee; :ref:`BalanceCredit <balance-change-receipt>`; The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is harvested.
-    0x43F1; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid address alias instead of an address.
+    **Core**;;;
+    0x4321; Harvest_Fee; :ref:`BalanceCredit <balance-change-receipt>`; The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is :doc:`harvested <harvesting>`.
+    0x43F1; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
     0x43F2; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaicId.
     0x43E1; Transaction_Group;  :ref:`Aggregate <transaction-statement>`; A collection of state changes for a given source. It is recorded when a state change receipt is issued.
-
-Mosaic receipts
-===============
-
-.. csv-table::
-    :header: "Id", "Receipt", "Type", "Description"
-    :delim: ;
-
+    **Mosaic**;;;
     0x4D41; Mosaic_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The mosaicId expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` expires.
     0x4D12; Mosaic_Levy; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the levied mosaic, the mosaicId and amount. It is recorded when a transaction has a levied mosaic.
     0x4D13; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
-
-Namespace receipts
-==================
-
-.. csv-table::
-    :header: "Id", "Receipt", "Type", "Description"
-    :delim: ;
-
+    **Namespace**;;;
     0x4E41; Namespace_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The namespaceId expiring in this block. It is recorded when a :doc:`namespace <namespace>` expires.
     0x4E12; Namespace_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
-
-HashLock receipts
-=================
-
-.. csv-table::
-    :header: "Id", "Receipt", "Type", "Description"
-    :delim: ;
-
+    **HashLock**;;;
     0x4831; LockHash_Created; :ref:`BalanceDebit <balance-transfer-receipt>`; The lockhash  sender, mosaicId and amount locked. It is recorded when a valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced.
     0x4822; LockHash_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The haslock sender, mosaicId and amount locked that is returned. It is recorded when an aggregate bonded transaction linked to the hash completes.
     0x4823; LockHash_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a lock hash expires.
-
-SecretLock receipts
-===================
-
-.. csv-table::
-    :header: "Id", "Receipt", "Type", "Description"
-    :delim: ;
-
+    **SecretLock**;;;
     0x5231; LockSecret_Created; :ref:`BalanceDebit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced.
     0x5222; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a secretlock is proved.
     0x5223; LockSecret_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a secretlock expires.

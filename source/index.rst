@@ -131,6 +131,7 @@ Home
     concepts/cryptography
     concepts/block
     concepts/transaction
+    concepts/harvesting
     concepts/receipt
     concepts/node
 
