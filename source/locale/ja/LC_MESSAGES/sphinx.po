@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 07:24+0900\n"
+"POT-Creation-Date: 2019-01-17 20:48+0900\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,94 +21,196 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:2
-msgid "Update"
-msgstr "更新"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:3
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard.html:7
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard.html:10
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/catalog.html:16
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/recentposts.html:6
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/collection.html:21
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/collection.html:39
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/collection.html:42
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/recentposts.html:6
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:21
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:39
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:42
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:7
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard.html:10
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/catalog.html:16
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:3
 msgid "None"
 msgstr "なし"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:7
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/collection.html:48
+msgid "Read more ..."
+msgstr "もっと読む"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:7
 msgid "Author"
 msgstr "投稿者"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:16
-msgid "Location"
-msgstr "場所"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:25
-msgid "Language"
-msgstr "言語"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:34
-msgid "Category"
-msgstr "カテゴリ"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:43
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/tagcloud.html:2
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/postcard2.html:44
-msgid "Tag"
-msgstr "タグ"
+#: ../../source/_templates/post-meta.html:5
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/authors.html:2
+msgid "Authors"
+msgstr "投稿者"
 
 #: ../../source/_templates/navbarsearchbox.html:7
 msgid "Edit on GitHub"
 msgstr "GitHubで編集"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
-
-#: ../../source/_templates/layout.html:105
-msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/layout.html:107
-msgid "&copy; Copyright %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/layout.html:111
-msgid "Last updated on %(last_updated)s."
-msgstr "最終更新 %(last_updated)"
-
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/archives.html:2
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/archives.html:2
 msgid "Archives"
 msgstr "アーカイブ"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/categories.html:2
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/categories.html:2
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
+#: ../../source/_templates/layout.html:21
+msgid "Join #general discussion"
+msgstr ""
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/authors.html:2
-msgid "Authors"
-msgstr "投稿者"
+#: ../../source/_templates/layout.html:27
+msgid "Ask development questions"
+msgstr ""
 
-#: ../../../../.pyenv/versions/2.7.13/lib/python2.7/site-packages/ablog/templates/collection.html:48
-msgid "Read more ..."
-msgstr "もっと読む"
+#: ../../source/_templates/layout.html:34
+msgid "Follow the dev updates"
+msgstr ""
+
+#: ../../source/_templates/layout.html:41
+msgid "Explore Github"
+msgstr ""
+
+#: ../../source/_templates/layout.html:50
+msgid "Protocol"
+msgstr "プロトコル"
+
+#: ../../source/_templates/layout.html:53
+msgid "Cryptography"
+msgstr "暗号理論"
+
+#: ../../source/_templates/layout.html:54
+msgid "Block"
+msgstr "ブロック"
+
+#: ../../source/_templates/layout.html:55
+msgid "Transaction"
+msgstr "トランザクション"
+
+#: ../../source/_templates/layout.html:56
+msgid "Node"
+msgstr "ノード"
+
+#: ../../source/_templates/layout.html:62
+msgid "Built-in Features"
+msgstr "ビルドイン機能"
+
+#: ../../source/_templates/layout.html:65
+msgid "Account"
+msgstr "アカウント"
+
+#: ../../source/_templates/layout.html:66
+msgid "Multisig Account"
+msgstr "マルチシグアカウント"
+
+#: ../../source/_templates/layout.html:67
+msgid "Multilevel Multisig Account"
+msgstr "マルチレベルマルチシグアカウント"
+
+#: ../../source/_templates/layout.html:68
+msgid "Namespace"
+msgstr "ネームスペース"
+
+#: ../../source/_templates/layout.html:69
+msgid "Mosaic"
+msgstr "モザイク"
+
+#: ../../source/_templates/layout.html:70
+msgid "Transfer Transaction"
+msgstr "転送トランザクション"
+
+#: ../../source/_templates/layout.html:71
+msgid "Aggregate Transaction"
+msgstr "アグリゲートトランザクション"
+
+#: ../../source/_templates/layout.html:72
+msgid "Cross-Chain Swaps"
+msgstr "クロスチェーンスワップ"
+
+#: ../../source/_templates/layout.html:78
+msgid "References"
+msgstr "リファレンス"
+
+#: ../../source/_templates/layout.html:81
+msgid "REST API"
+msgstr ""
+
+#: ../../source/_templates/layout.html:82
+msgid "SDKs"
+msgstr ""
+
+#: ../../source/_templates/layout.html:83
+msgid "Libraries"
+msgstr "ライブラリ"
+
+#: ../../source/_templates/layout.html:84
+msgid "CLI"
+msgstr ""
+
+#: ../../source/_templates/layout.html:89
+msgid "English"
+msgstr "英語"
+
+#: ../../source/_templates/layout.html:90
+msgid "Japanese"
+msgstr "日本語"
+
+#: ../../source/_templates/layout.html:101
+msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
+msgstr ""
+
+#: ../../source/_templates/layout.html:103
+msgid "&copy; Copyright %(copyright)s."
+msgstr ""
+
+#: ../../source/_templates/layout.html:107
+msgid "Last updated on %(last_updated)s."
+msgstr "最終更新 %(last_updated)"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:2
+msgid "Update"
+msgstr "更新"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:16
+msgid "Location"
+msgstr "場所"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:25
+msgid "Language"
+msgstr "言語"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:34
+msgid "Category"
+msgstr "カテゴリ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/tagcloud.html:2
+msgid "Tags"
+msgstr "タグ"
+
+#: ../../../../.pyenv/versions/3.6.2/lib/python3.6/site-packages/ablog/templates/postcard2.html:44
+msgid "Tag"
+msgstr "タグ"

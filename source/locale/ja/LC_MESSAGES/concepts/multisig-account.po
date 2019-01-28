@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14.1\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 07:27+0900\n"
+"POT-Creation-Date: 2019-01-17 19:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -96,37 +96,27 @@ msgstr ""
 "マルチシグアカウントは、最大 ``3`` レベルまでの別のマルチシグを連署者として持つことができます。:doc:`マルチレベルマルチシグアカウント "
 "<multi-level-multisig-account>` を参照してください。"
 
-#: ../../source/concepts/multisig-account.rst:23
-msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
-msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/multisig-account.rst:27
+#: ../../source/concepts/multisig-account.rst:25
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/concepts/multisig-account.rst:29
+#: ../../source/concepts/multisig-account.rst:27
 msgid ""
 "There is a broad range of useful applications for multisig accounts. Let's "
 "take a look at some of the most common use cases."
 msgstr "マルチシグアカウントには幅広い便利なアプリケーションがあります。一般的な使用例のいくつかを見てみましょう。"
 
-#: ../../source/concepts/multisig-account.rst:32
+#: ../../source/concepts/multisig-account.rst:30
 msgid "Shared accounts"
 msgstr "共有アカウント"
 
-#: ../../source/concepts/multisig-account.rst:34
+#: ../../source/concepts/multisig-account.rst:32
 msgid ""
 "Several families are members of the local philatelist society and use a "
 "shared account to buy stamps."
 msgstr "いくつかの家族は地元の切手収集家共同体のメンバーであり、切手を購入するために共有アカウントを使用しています。"
 
-#: ../../source/concepts/multisig-account.rst:36
+#: ../../source/concepts/multisig-account.rst:34
 msgid ""
 "To ensure that all agree on which old stamps they should buy and on the "
 "right price, they use a multisig account. This way, all members of the "
@@ -135,15 +125,15 @@ msgid ""
 msgstr ""
 "購入するべき古い切手と適切な価格のすべてに合意するために、彼らはマルチシグアカウントを使用します。この方法では、正当なトランザクションとしてブロックチェーンに取り込まれる前に、共同体の全員がトランザクションに同意することが必要です。"
 
-#: ../../source/concepts/multisig-account.rst:42
+#: ../../source/concepts/multisig-account.rst:40
 msgid "M-of-N multisig account"
 msgstr "M-of-N マルチシグアカウント"
 
-#: ../../source/concepts/multisig-account.rst:45
+#: ../../source/concepts/multisig-account.rst:43
 msgid "Multi-factor authorization"
 msgstr "複数要素認証"
 
-#: ../../source/concepts/multisig-account.rst:47
+#: ../../source/concepts/multisig-account.rst:45
 msgid ""
 "Alice wants to make sure her funds are not compromised in any way. Therefore"
 " she sets up a multisig account with her funds and attaches two accounts "
@@ -153,7 +143,7 @@ msgstr ""
 "ALICE "
 "は彼女の資産が決して損なわれないようにしたいと考えています。したがって、彼女は彼女の資産でマルチシグアカウントを設定し、マルチシグアカウントを制御するために2要素認証の形態として、2つのアカウント(署名者アカウント)を設定しました。"
 
-#: ../../source/concepts/multisig-account.rst:49
+#: ../../source/concepts/multisig-account.rst:47
 msgid ""
 "Both of her signer accounts need to approve the transaction, and her signer "
 "accounts are located on different computer platforms with different "
@@ -162,19 +152,19 @@ msgid ""
 msgstr ""
 "彼女の署名者アカウントは両方ともトランザクションを承認する必要があり、この署名者アカウントは異なるパスワードを持つ、異なるコンピュータに配置されます。これは悪意のあるハッカーやウィルスが自分のアカウントのうち1つを侵害したとしても、彼女の資金はまだ安全に保たれます。"
 
-#: ../../source/concepts/multisig-account.rst:55
+#: ../../source/concepts/multisig-account.rst:53
 msgid "Multi-factor authorization using multisig accounts"
 msgstr "マルチシグアカウントを使用した複数要素認証"
 
-#: ../../source/concepts/multisig-account.rst:58
+#: ../../source/concepts/multisig-account.rst:56
 msgid "Assets ownership"
 msgstr "アセットの所有権"
 
-#: ../../source/concepts/multisig-account.rst:60
+#: ../../source/concepts/multisig-account.rst:58
 msgid "Multisig accounts can be used to represent the ownership of assets."
 msgstr "マルチシグアカウントを使用して資産の所有権を表すことができます。"
 
-#: ../../source/concepts/multisig-account.rst:62
+#: ../../source/concepts/multisig-account.rst:60
 msgid ""
 "A company could create a 1-of-1 multisig account for each of their products,"
 " adding themselves as the cosignatory. When the company sells the product to"
@@ -184,87 +174,182 @@ msgstr ""
 "企業は製品ごとに 1-of-1 マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が ALICE "
 "へ製品を販売するとき、彼女が所有者となり、同じ取引で会社の所有権が取り除かれます。"
 
-#: ../../source/concepts/multisig-account.rst:68
+#: ../../source/concepts/multisig-account.rst:66
 msgid "Transferring an account"
 msgstr "アカウントの譲渡"
 
-#: ../../source/concepts/multisig-account.rst:72
+#: ../../source/concepts/multisig-account.rst:70
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/concepts/multisig-account.rst:82
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/multisig-account.rst:77
+#: ../../source/concepts/multisig-account.rst:84
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ "
+"です。公開ネットワークでは異なる可能性があります。"
+
+#: ../../source/concepts/multisig-account.rst:89
 msgid "ModifyMultisigTransaction"
-msgstr "マルチシグ変更トランザクション"
+msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:79
-msgid "**Version**: 1"
-msgstr "**バージョン**: 1"
-
-#: ../../source/concepts/multisig-account.rst:81
-msgid "**Entity type**: 0x4155"
-msgstr "**エンティティタイプ**: 0x4155"
-
-#: ../../source/concepts/multisig-account.rst:83
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/multisig-account.rst:85
-msgid ":ref:`Transaction<transaction>`"
-msgstr ":ref:`トランザクション <transaction>`"
-
-#: ../../source/concepts/multisig-account.rst:86
-msgid ":ref:`ModifyMultisigTransactionBody<modify-multisig-transaction-body>`"
-msgstr ":ref:`マルチシグ変更トランザクション本体<modify-multisig-transaction-body>`"
-
-#: ../../source/concepts/multisig-account.rst:88
+#: ../../source/concepts/multisig-account.rst:91
 msgid "Announce a modify multisig account transaction to:"
 msgstr "マルチシグアカウント変更トランザクションのアナウンス:"
 
-#: ../../source/concepts/multisig-account.rst:90
+#: ../../source/concepts/multisig-account.rst:93
 msgid "Transform an account to multisig."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/concepts/multisig-account.rst:91
+#: ../../source/concepts/multisig-account.rst:94
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更する。"
 
 #: ../../source/concepts/multisig-account.rst:96
-msgid "ModifyMultisigTransactionBody"
-msgstr "マルチシグ変更トランザクション本体"
+msgid "**Version**: 0x01"
+msgstr "**バージョン**: 0x01"
 
 #: ../../source/concepts/multisig-account.rst:98
-msgid "**Minimum approval delta**"
-msgstr "**最小同意者数**"
+msgid "**Entity type**: 0x4155"
+msgstr "**エンティティタイプ**: 0x4155"
 
 #: ../../source/concepts/multisig-account.rst:100
-msgid ""
-"The number of signatures needed to approve a transaction. If we are "
-"modifying an existing multisig account, this indicates the relative change "
-"of the minimum cosignatories."
-msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
+msgid "**Inlines**:"
+msgstr "**インライン**"
 
 #: ../../source/concepts/multisig-account.rst:102
-msgid "**Minimum removal delta**"
-msgstr "**最小削除者数**"
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
 
-#: ../../source/concepts/multisig-account.rst:104
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "minRemovalDelta"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+#: ../../source/concepts/multisig-account.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
 msgid ""
 "The number of signatures needed to remove a cosignatory. If we are modifying"
 " an existing multisig account, this indicates the relative change of the "
 "minimum cosignatories."
 msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
-#: ../../source/concepts/multisig-account.rst:106
-msgid "**Modifications**"
-msgstr "**変更**"
+#: ../../source/concepts/multisig-account.rst:1
+msgid "minApprovalDelta"
+msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:108
+#: ../../source/concepts/multisig-account.rst:1
 msgid ""
-"Each account in the modification list can be enabled to announce and cosign "
-"transactions for its approval (1) or deleted from a the multisig account "
-"(0)."
-msgstr "変更リスト中の各アカウントは、トランザクションのアナウンスや署名の承認 (1) またはマルチシグアカウント (0) から削除ができます。"
+"The number of signatures needed to approve a transaction. If we are "
+"modifying an existing multisig account, this indicates the relative change "
+"of the minimum cosignatories."
+msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
-#: ../../source/concepts/multisig-account.rst:112
-msgid "Related guides"
-msgstr "関連するガイド"
+#: ../../source/concepts/multisig-account.rst:1
+msgid "modificationsCount"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "The number of modifications."
+msgstr "変更の数"
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "modification"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid ""
+"array(:ref:`CosignatoryModification <cosignatory-modification>`, "
+"modificationsCount)"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
+msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
+
+#: ../../source/concepts/multisig-account.rst:116
+msgid "CosignatoryModification"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "modificationType"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid ":ref:`CosignatoryModificationType <cosignatory-modification-type>`"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "The cosignatory modification type."
+msgstr "連署者変更タイプ"
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "cosignatoryPublicKey"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "32 bytes (binary)"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "The public key of the cosignatory."
+msgstr "連署者の公開鍵"
+
+#: ../../source/concepts/multisig-account.rst:128
+msgid "CosignatoryModificationType"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:130
+msgid "Enumeration: uint8"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "0x00"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Add."
+msgstr "追加"
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "0x01"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Remove."
+msgstr "削除"

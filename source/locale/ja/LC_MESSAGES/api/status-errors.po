@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14.1\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 07:27+0900\n"
+"POT-Creation-Date: 2019-01-17 19:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -42,8 +42,8 @@ msgstr ""
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Error code"
-msgstr "エラーコード"
+msgid "Status"
+msgstr "ステータス"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Description"
@@ -55,23 +55,23 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation result is success."
-msgstr ""
+msgstr "バリデーション結果は成功です。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Neutral"
-msgstr "中立"
+msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation result is neither success nor failure."
-msgstr ""
+msgstr "バリデーション結果は成功でも失敗でもありません。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure"
-msgstr "失敗"
+msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation result is failure."
-msgstr ""
+msgstr "バリデーション結果は失敗です。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Past_Deadline"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the deadline passed."
-msgstr ""
+msgstr "デッドラインを過ぎているため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Future_Deadline"
@@ -89,7 +89,7 @@ msgstr ""
 msgid ""
 "Validation failed because the deadline is too far in the future. Deadlines "
 "are only allowed to lie up to ``24`` hours ahead."
-msgstr ""
+msgstr "デッドラインが遠すぎる未来に設定されているため、バリデーションに失敗しました。デッドラインは ``24`` 時間先までが許容されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Insufficient_Balance"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the account has an insufficient balance."
-msgstr ""
+msgstr "アカウントの残高が不十分なため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Too_Many_Transactions"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because there are too many transactions in a block."
-msgstr ""
+msgstr "ブロックにトランザクションが多すぎるため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the entity has the wrong network specified."
-msgstr ""
+msgstr "エンティティに間違ったネットワークが指定されているため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Invalid_Address"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because an address is invalid."
-msgstr ""
+msgstr "アドレスが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Core_Block_Harvester_Ineligible"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the entity hash is already known."
-msgstr ""
+msgstr "エンティティのハッシュがすでに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Signature_Not_Verifiable"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the verification of the signature failed."
-msgstr ""
+msgstr "署名の検証に失敗したため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Aggregate_Too_Many_Transactions"
@@ -167,6 +167,8 @@ msgid ""
 "Validation failed because aggregate has too many transactions. An aggregate "
 "transaction can contain up to ``1000`` inner transactions."
 msgstr ""
+"アグリゲートに多すぎるトランザクションがあるため、バリデーションに失敗しました。アグリゲートトランザクションは ``1000`` "
+"までのトランザクションを内包可能です。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Aggregate_No_Transactions"
@@ -174,7 +176,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because aggregate does not have any transactions."
-msgstr ""
+msgstr "アグリゲートにトランザクションが無いため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Aggregate_Too_Many_Cosignatures"
@@ -184,7 +186,7 @@ msgstr ""
 msgid ""
 "Validation failed because aggregate has too many cosignatures. The maximum "
 "number of cosignatories allowed is ``15``."
-msgstr ""
+msgstr "アグリゲートの連署名が多すぎるため、バリデーションに失敗しました。最大で ``15`` の連署名が許容されています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Aggregate_Redundant_Cosignatures"
@@ -192,7 +194,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because redundant cosignatures are present."
-msgstr ""
+msgstr "重複する連署者がいるため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Aggregate_Ineligible_Cosigners"
@@ -213,95 +215,45 @@ msgid ""
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Invalid_Hash_Algorithm"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because hash algorithm for lock type secret is invalid. "
-"See the :doc:`available algorithms <../concepts/cross-chain-swaps>` list."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Invalid_Mosaic_Id"
+msgid "Failure_LockHash_Invalid_Mosaic_Id"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
 "Validation failed because lock does not allow the specified mosaic. The only"
 " mosaic allowed is ``xem``."
-msgstr ""
+msgstr "ロックに許可されていないモザイクが指定されたため、バリデーションに失敗しました。許可されたモザイクは ``xem`` のみです。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Invalid_Mosaic_Amount"
+msgid "Failure_LockHash_Invalid_Mosaic_Amount"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
 "Validation failed because lock does not allow the specified amount. The "
 "minimum amount is ``10``."
-msgstr ""
+msgstr "ロックに許可されていない量が指定されたため、バリデーションに失敗しました。最低量は ``10`` です。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Hash_Exists"
+msgid "Failure_LockHash_Hash_Exists"
 msgstr ""
 
-#: ../../source/api/status-errors.rst:1
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
 msgid "Validation failed because hash is already present in cache."
-msgstr ""
+msgstr "ハッシュがすでにキャッシュに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Hash_Does_Not_Exist"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because hash is not present in cache."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Missing_Secret_Padding"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because hash is not 0 padded."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Hash_Not_Implemented"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because hash is not implemented yet."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Proof_Size_Out_Of_Bounds"
+msgid "Failure_LockHash_Hash_Does_Not_Exist"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because proof is too small or too large. It should be "
-"between ``10 and 1000 bytes``."
+"Validation failed because hash is not present in cache. Remember to lock "
+"before announcing aggregate bonded transactions."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Secret_Mismatch"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because secret does not match proof."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Unknown_Secret"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because secret is unknown."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Inactive_Hash"
+msgid "Failure_LockHash_Inactive_Hash"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -309,7 +261,74 @@ msgid "Validation failed because hash is inactive."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Inactive_Secret"
+msgid "Failure_LockHash_Invalid_Duration"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because duration is too long. Duration is allowed to lie "
+"up to ``2`` days."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockHash_Already_Used"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
+msgid "Validation failed because hash has already been used."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Invalid_Hash_Algorithm"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the hash algorithm for lock type secret is "
+"invalid. See the :doc:`available algorithms <../concepts/cross-chain-swaps>`"
+" list."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Hash_Exists"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Hash_Not_Implemented"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because hash is not implemented yet."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Proof_Size_Out_Of_Bounds"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because proof is too small or too large. It should be "
+"between ``10`` and ``1000`` bytes."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Secret_Mismatch"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because secret does not match proof."
+msgstr "シークレットがプルーフにマッチしないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Unknown_Secret"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because secret is unknown."
+msgstr "シークレットが不明のため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Inactive_Secret"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -317,35 +336,199 @@ msgid "Validation failed because secret is inactive."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Hash_Algorithm_Mismatch"
+msgid "Failure_LockSecret_Hash_Algorithm_Mismatch"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because hash algorithm does not match."
+msgstr "ハッシュアルゴリズムがマッチしないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Invalid_Duration"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Hash_Already_Used"
+msgid ""
+"Validation failed because duration is too long. Duration is allowed to lie "
+"up to ``30`` days."
+msgstr "期間が長すぎるため、バリデーションに失敗しました。期間は ``30`` 日までが許容されています。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_LockSecret_Already_Used"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because hash has already been used."
+msgid "Failure_Mosaic_Invalid_Duration"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the duration has an invalid value. Duration is "
+"allowed to lie up to ``365`` days."
+msgstr "期間が妥当ではないため、バリデーションに失敗しました。期間は ``365`` 日先までが許可されています。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Name"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Secret_Already_Used"
+msgid ""
+"Validation failed because the name is invalid. The mosaic name may have a "
+"maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
+"`0-to-9` and the following special characters: \\`_-"
+msgstr "モザイク名は最大 ``64`` 文字です。利用可能な文字は `a-to-z`; `0-to-9`、特別な文字として \\`_- です。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Name_Id_Mismatch"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
+msgid "Validation failed because the name and id don't match."
+msgstr "名前とIDがマッチしないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Expired"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because secret has already been used."
+msgid "Validation failed because the parent is expired."
+msgstr "親の期限が切れているため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Owner_Conflict"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1 ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the parent owner conflicts with the child owner."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Lock_Invalid_Duration"
+msgid "Failure_Mosaic_Parent_Id_Conflict"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because duration is too long."
+msgid ""
+"Validation failed because the existing parent id does not match the supplied"
+" parent id."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Property"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because a mosaic property is invalid."
+msgstr "モザイクプロパティが妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Flags"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the mosaic flags are invalid."
+msgstr "モザイクフラグが妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Divisibility"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the mosaic divisibility is invalid. The specified "
+"divisibility is greater than ``6`` or negative."
+msgstr "モザイク可分性が妥当ではないため、バリデーションに失敗しました。``6`` 以上または負の値が指定されました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Supply_Change_Direction"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the mosaic supply change direction is invalid: "
+"decrease (0) and  increase (1)."
+msgstr "モザイク供給量変更方向が妥当ではないため、バリデーションに失敗しました。減少 (0) または 増加 (1)"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Invalid_Supply_Change_Amount"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the mosaic supply change amount is invalid."
+msgstr "モザイク供給量が妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Name_Reserved"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the mosaic has a reserved name."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Modification_Disallowed"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because mosaic modification is not allowed."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Modification_No_Changes"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because mosaic modification would not result in any "
+"changes."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Supply_Immutable"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the mosaic supply is immutable."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Supply_Negative"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the resulting mosaic supply is negative."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Supply_Exceeded"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the resulting mosaic supply exceeds the maximum "
+"allowed value. The range should be between 0 and ``9.000.000.000``."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Non_Transferable"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the mosaic is not transferable. Only the creator "
+"of the mosaic is eligible to be the recipient of a non-transferable mosaic "
+"once transferred."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Mosaic_Max_Mosaics_Exceeded"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the credit of the mosaic would exceed the maximum "
+"different mosaics an account is allowed to own. Set by default to ``10.000``"
+" different mosaics per account."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -482,42 +665,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Name"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because the name is invalid. The mosaic name may have a "
-"maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
-"`0-to-9` and the following special characters: \\`_-"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Invalid_Duration"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because the duration has an invalid value. Duration is "
-"allowed to lie up to ``365`` days."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Duration"
+msgid "Failure_Namespace_Invalid_Name"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because the name is invalid. Duration is allowed to lie up"
-" to ``365`` days."
+"Validation failed because the namespace has an invalid name. The namespace "
+"name may have a maximum length of ``64`` characters. Allowed characters are "
+"`a-to-z`; `0-to-9` and the following special characters: \\`_-"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Name_Id_Mismatch"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the name and id don't match."
+msgid "Failure_Namespace_Name_Id_Mismatch"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -525,16 +688,11 @@ msgid "Failure_Namespace_Expired"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the parent is expired."
-msgstr ""
+msgid "Validation failed because the namespace has expired."
+msgstr "ネームスペースが期限切れのため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Owner_Conflict"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because the parent owner conflicts with the child owner."
+msgid "Failure_Namespace_Owner_Conflict"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -542,7 +700,9 @@ msgid "Failure_Namespace_Invalid_Namespace_Type"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the namespace type is invalid."
+msgid ""
+"Validation failed because the namespace type is invalid: rootnamespace (0) "
+"and subnamesapce (1)."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -572,7 +732,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace parent is unknown."
-msgstr ""
+msgstr "親ネームスペースが不明のため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Already_Exists"
@@ -580,7 +740,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace already exists."
-msgstr ""
+msgstr "ネームスペースがすでに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Already_Active"
@@ -588,7 +748,7 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the namespace is already active."
-msgstr ""
+msgstr "ネームスペースがすでにアクティブなため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Namespace_Eternal_After_Nemesis_Block"
@@ -611,127 +771,119 @@ msgid ""
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Parent_Id_Conflict"
+msgid "Failure_Property_Invalid_Property_Type"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the property type is invalid."
+msgstr "プロパティタイプが妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Property_Modification_Type_Invalid"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because a modification type is invalid."
+msgstr "変更タイプが妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Property_Modification_Address_Invalid"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because a modification address is invalid."
+msgstr ""
+"変更アドレス"
+"が妥当ではないため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Property_Modification_Operation_Type_Incompatible"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the operation type is incompatible."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Property_Modify_Unsupported_Modification_Type"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because the existing parent id does not match the supplied"
-" parent id."
+"Validation failed because the modification type is unsupported: (0) add and "
+"(1) delete."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Property"
+msgid "Failure_Property_Modification_Redundant"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because a mosaic property is invalid."
+msgid "Validation failed because a modification is redundant."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Flags"
+msgid "Failure_Property_Modification_Not_Allowed"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the mosaic flags are invalid."
+msgid "Validation failed because there is not a value in the container."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Divisibility"
+msgid "Failure_Property_Modification_Count_Exceeded"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because the mosaic divisibility is invalid. It is greater "
-"than ``6`` or negative."
+msgid "Validation failed because the transaction has too many modifications."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Direction"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid ""
-"Validation failed because the mosaic supply change direction is invalid: "
-"decrease (0) and  increase (1)."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Amount"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the mosaic supply change amount is invalid."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Name_Reserved"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the mosaic has a reserved name."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Modification_Disallowed"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because mosaic modification is not allowed."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Modification_No_Changes"
+msgid "Failure_Property_Values_Count_Exceeded"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because mosaic modification would not result in any "
-"changes."
+"Validation failed because the resulting property has too many values. The "
+"maximum number of values a property can have is ``512``."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Supply_Immutable"
+msgid "Failure_Property_Value_Invalid"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the mosaic supply is immutable."
-msgstr ""
+msgid "Validation failed because the property value is invalid."
+msgstr "プロパティが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Supply_Negative"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the resulting mosaic supply is negative."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Supply_Exceeded"
+msgid "Failure_Property_Signer_Address_Interaction_Not_Allowed"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because the resulting mosaic supply exceeds the maximum "
-"allowed value. The range is between 0 and ``9.000.000.000``."
+"Validation failed because the signer is not allowed to interact with an "
+"address involved in the transaction."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Non_Transferable"
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Validation failed because the mosaic is not transferable."
-msgstr ""
-
-#: ../../source/api/status-errors.rst:1
-msgid "Failure_Mosaic_Max_Mosaics_Exceeded"
+msgid "Failure_Property_Mosaic_Transfer_Not_Allowed"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid ""
-"Validation failed because the credit of the mosaic would exceed the maximum "
-"of different mosaics an account is allowed to own."
+"Validation failed because the mosaic transfer is prohibited by the "
+"recipient."
+msgstr "受信者によってモザイクの転送が禁止されているため、バリデーションに失敗しました。"
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Property_Transaction_Type_Not_Allowed"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the transaction type is not allowed to be "
+"initiated by the signer."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -739,15 +891,19 @@ msgid "Failure_Transfer_Message_Too_Large"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "The message for the transaction exceeds the limit of ``1024`` bytes."
-msgstr ""
+msgid ""
+"Validation failed because the message is too large.  It exceeds the limit of"
+" ``1024`` bytes."
+msgstr "メッセージが長すぎるため、バリデーションに失敗しました。上限の ``1024`` バイトに達しています。"
 
 #: ../../source/api/status-errors.rst:1
 msgid "Failure_Transfer_Out_Of_Order_Mosaics"
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
-msgid "Mosaics on a transfer transaction should be ordered by id value."
+msgid ""
+"Validation failed because mosaics are out of order. Mosaics on a transfer "
+"transaction should be ordered by id value."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -766,6 +922,14 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because a block was received that is not a hit."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Chain_Unconfirmed_Cache_Too_Full"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Validation failed because the unconfirmed cache is too full."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1
@@ -853,6 +1017,16 @@ msgstr ""
 
 #: ../../source/api/status-errors.rst:1
 msgid "Validation failed because the remote chain is too far behind."
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid "Failure_Consumer_Remote_Chain_Too_Far_In_Future"
+msgstr ""
+
+#: ../../source/api/status-errors.rst:1
+msgid ""
+"Validation failed because the remote chain timestamp is too far in the "
+"future."
 msgstr ""
 
 #: ../../source/api/status-errors.rst:1

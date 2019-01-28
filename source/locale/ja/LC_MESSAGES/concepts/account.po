@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14.1\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 09:13+0900\n"
+"POT-Creation-Date: 2019-01-17 07:21+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,11 +49,80 @@ msgstr ""
 "として考えてみてください。よくあるブロックチェーンのように、アカウントは預け入れられたトークンを表現します。しかし、唯一の更新可能な: "
 "出荷されるパッケージ、家の譲渡証書、公証書類のような **単一のオブジェクト** としても表現できます。"
 
+#: ../../source/concepts/account.rst:9
+msgid "Accounts have the following properties:"
+msgstr "アカウントは以下のプロパティを持ちます:"
+
 #: ../../source/concepts/account.rst:11
+msgid "**Private key**"
+msgstr "**秘密鍵**"
+
+#: ../../source/concepts/account.rst:13
+msgid ""
+"A :ref:`private key <keypair>` is a key to an account. Anyone having the "
+"private key to an account can initiate any account related action."
+msgstr ""
+":ref:`プライベートキー <keypair>` "
+"はアカウントのものです。アカウントに紐づくプライベートキーを持っているひとは誰でも、アカウントに関するアクションを実行できます。"
+
+#: ../../source/concepts/account.rst:15
+msgid ""
+"The private key must be kept secret at all costs. Make sure your private key"
+" is backed up safely somewhere offline."
+msgstr ""
+"プライベートキーはどんなにコストを掛けても必ず秘密にしてください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
+
+#: ../../source/concepts/account.rst:17
+msgid "**Public key**"
+msgstr "**公開鍵**"
+
+#: ../../source/concepts/account.rst:19
+msgid ""
+"The :ref:`public key <keypair>` can be used to verify signatures of the "
+"account. The public key is stored in the blockchain with the first issued "
+"transaction. An account which has not issued any transaction has its public "
+"key field empty."
+msgstr ""
+":ref:`公開鍵 <keypair>` "
+"はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
+
+#: ../../source/concepts/account.rst:21
+msgid "**Address**"
+msgstr "**アドレス**"
+
+#: ../../source/concepts/account.rst:23
+msgid ""
+"Each account has a unique :ref:`address <address>`. You will normally share "
+"the derived address instead, as it is shorter and gathers more information."
+msgstr ""
+"各アカウントは一意な :ref:`アドレス <address>` "
+"を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出アドレスを共有するでしょう。"
+
+#: ../../source/concepts/account.rst:25
+msgid "**Mosaics**"
+msgstr "**モザイク**"
+
+#: ../../source/concepts/account.rst:27
+msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
+msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
+
+#: ../../source/concepts/account.rst:29
+msgid "**Filters**"
+msgstr "**フィルタ**"
+
+#: ../../source/concepts/account.rst:31
+msgid ""
+"Accounts may configure a set of smart rules to block announcing or receiving"
+" transactions :doc:`given a series of constraints <account-filter>`."
+msgstr ""
+"アカウントはスマートなルールの集合を構成し、 :doc:`一連の制約 <account-filter>` "
+"の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
+
+#: ../../source/concepts/account.rst:35
 msgid "Multisig Account"
 msgstr "マルチシグアカウント"
 
-#: ../../source/concepts/account.rst:13
+#: ../../source/concepts/account.rst:37
 msgid ""
 "Accounts become truly smart when configured with special rules – directly on"
 " the NEM blockchain – that define how they relate and control each other, as"
@@ -66,67 +135,6 @@ msgstr ""
 "ブロックチェーン上に特別なルールとして設定しておけば、アカウントはとてもスマートなものになります。1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる"
 " :doc:`マルチシグ <multisig-account>` コントロールです。"
 
-#: ../../source/concepts/account.rst:17
-msgid "Properties"
-msgstr "プロパティ"
-
-#: ../../source/concepts/account.rst:19
-msgid "An account has the following properties:"
-msgstr "アカウントは以下のプロパティを持ちます:"
-
-#: ../../source/concepts/account.rst:21
-msgid "**Private key**"
-msgstr "**秘密鍵**"
-
-#: ../../source/concepts/account.rst:23
-msgid ""
-"A :ref:`private key <keypair>` is a key to an account. Anyone having the "
-"private key to an account can initiate any account related action."
-msgstr ""
-":ref:`プライベートキー <keypair>` "
-"はアカウントのものです。アカウントに紐づくプライベートキーを持っているひとは誰でも、アカウントに関するアクションを実行できます。"
-
-#: ../../source/concepts/account.rst:25
-msgid ""
-"The private key must be kept secret at all costs. Make sure your private key"
-" is backed up safely somewhere offline."
-msgstr ""
-"プライベートキーはどんなにコストを掛けても必ず秘密にしてください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
-
-#: ../../source/concepts/account.rst:27
-msgid "**Public key**"
-msgstr "**公開鍵**"
-
-#: ../../source/concepts/account.rst:29
-msgid ""
-"The :ref:`public key <keypair>` can be used to verify signatures of the "
-"account. The public key is stored in the blockchain with the first issued "
-"transaction. An account which has not issued any transaction has its public "
-"key field empty."
-msgstr ""
-":ref:`公開鍵 <keypair>` "
-"はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
-
-#: ../../source/concepts/account.rst:31
-msgid "**Address**"
-msgstr "**アドレス**"
-
-#: ../../source/concepts/account.rst:33
-msgid ""
-"Each account has a unique :ref:`address <address>`. You will normally share "
-"the derived address instead, as it is shorter and gathers more information."
-msgstr ""
-"各アカウントは一意な :ref:`アドレス <address>` "
-"を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出アドレスを共有するでしょう。"
-
-#: ../../source/concepts/account.rst:35
-msgid "**Mosaics**"
-msgstr "**モザイク**"
-
-#: ../../source/concepts/account.rst:37
-msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
-msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
-
 #: ../../source/concepts/account.rst:41
-msgid "Related guides"
-msgstr "関連するガイド"
+msgid "Guides"
+msgstr "ガイド"

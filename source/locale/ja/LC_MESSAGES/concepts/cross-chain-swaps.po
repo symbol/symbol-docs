@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14.1\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 07:27+0900\n"
+"POT-Creation-Date: 2019-01-17 19:57+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -78,61 +78,52 @@ msgstr ""
 "<secret-proof-transaction>` を通じてアトミックスワップを可能にします。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:28
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/concepts/cross-chain-swaps.rst:40
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/cross-chain-swaps.rst:33
-msgid "SecretLockTransaction"
-msgstr "シークレットロックトランザクション"
-
-#: ../../source/concepts/cross-chain-swaps.rst:35
-#: ../../source/concepts/cross-chain-swaps.rst:78
-msgid "**Version**: 1"
-msgstr "**バージョン**: 1"
-
-#: ../../source/concepts/cross-chain-swaps.rst:37
-msgid "**Entity type**: 0x424C"
-msgstr "**エンティティタイプ**: 0x424C"
-
-#: ../../source/concepts/cross-chain-swaps.rst:39
-#: ../../source/concepts/cross-chain-swaps.rst:82
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/cross-chain-swaps.rst:41
-#: ../../source/concepts/cross-chain-swaps.rst:84
-msgid ":ref:`Transaction<transaction>`"
-msgstr ":ref:`トランザクション <transaction>`"
-
 #: ../../source/concepts/cross-chain-swaps.rst:42
-msgid ":ref:`SecretLockTransactionBody<secret-lock-transaction-body>`"
-msgstr ":ref:`シークレットトランザクション本体<secret-lock-transaction-body>`"
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ "
+"です。公開ネットワークとは異なる可能性があります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:44
+#: ../../source/concepts/cross-chain-swaps.rst:47
+msgid "SecretLockTransaction"
+msgstr ""
+
+#: ../../source/concepts/cross-chain-swaps.rst:49
 msgid "Use a secret lock transaction to start the cross-chain swap:"
 msgstr "クロスチェーンスワップを行うために、シークレットロックトランザクションを使用します:"
 
-#: ../../source/concepts/cross-chain-swaps.rst:46
+#: ../../source/concepts/cross-chain-swaps.rst:51
 msgid "Define the mosaic units you want to transfer to a determined account."
 msgstr "送信先のアカウントに送りたいモザイクの単位を定義してください。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:48
+#: ../../source/concepts/cross-chain-swaps.rst:53
 msgid "Generate a random set of bytes called ``proof``."
 msgstr "``proof`` と呼ばれるランダムなバイトセットを生成してください。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:50
+#: ../../source/concepts/cross-chain-swaps.rst:55
 msgid ""
 "Hash the obtained proof with one of the available algorithms to generate the"
 " ``secret``."
 msgstr "得られた proof を利用可能なアルゴリズムの1つでハッシュ化して ``secret`` を生成します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:52
+#: ../../source/concepts/cross-chain-swaps.rst:57
 msgid ""
 "Select during how much time the mosaics will be locked and announce the "
 "transaction."
 msgstr "モザイクがロックされる時間を選択し、トランザクションをアナウンスします。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:54
+#: ../../source/concepts/cross-chain-swaps.rst:59
 msgid ""
 "The specified mosaics remain locked until a valid :ref:`Secret Proof "
 "Transaction <secret-proof-transaction>` unlocks them."
@@ -140,22 +131,40 @@ msgstr ""
 "特定のモザイクは妥当な :ref:`シークレットプルーフトランザクション <secret-proof-transaction>` "
 "がそれらをアンロックするまで、ロックされたままになります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:56
+#: ../../source/concepts/cross-chain-swaps.rst:61
 msgid ""
 "If the transaction duration is reached without being proved, the locked "
 "amount goes back to the initiator of the secret lock transaction."
 msgstr "トランザクションが証明されずに期間に到達した場合、ロックされた総量はロックトランザクションを開始したアカウントへ戻ります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:61
-msgid "SecretLockTransactionBody"
-msgstr "シークレットトランザクション本体"
+#: ../../source/concepts/cross-chain-swaps.rst:63
+#: ../../source/concepts/cross-chain-swaps.rst:90
+msgid "**Version**: 0x01"
+msgstr "**バージョン**: 0x01"
+
+#: ../../source/concepts/cross-chain-swaps.rst:65
+msgid "**Entity type**: 0x4152"
+msgstr "**エンティティタイプ**: 0x4152"
+
+#: ../../source/concepts/cross-chain-swaps.rst:67
+#: ../../source/concepts/cross-chain-swaps.rst:94
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/concepts/cross-chain-swaps.rst:69
+#: ../../source/concepts/cross-chain-swaps.rst:96
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
-#: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Type"
@@ -173,7 +182,7 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ":ref:`Mosaic<mosaic>`"
-msgstr ":ref:`モザイク <mosaic>`"
+msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Locked mosaic."
@@ -201,7 +210,7 @@ msgstr ""
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ":ref:`LockHashAlgorithm<lock-hash-algorithm>`"
-msgstr ":ref:`ロックハッシュアルゴリズム <lock-hash-algorithm>`"
+msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -235,19 +244,11 @@ msgstr ""
 msgid "The address who will receive the funds once unlocked."
 msgstr "ロック後、ファンドを受け取るアドレス"
 
-#: ../../source/concepts/cross-chain-swaps.rst:76
+#: ../../source/concepts/cross-chain-swaps.rst:84
 msgid "SecretProofTransaction"
-msgstr "シークレットプルーフトランザクション"
+msgstr ""
 
-#: ../../source/concepts/cross-chain-swaps.rst:80
-msgid "**Entity type**: 0x434C"
-msgstr "**エンティティタイプ**: 0x434C"
-
-#: ../../source/concepts/cross-chain-swaps.rst:85
-msgid ":ref:`SecretProofTransactionBody<secret-proof-transaction-body>`"
-msgstr ":ref:`シークレットプルーフトランザクション本体 <secret-proof-transaction-body>`"
-
-#: ../../source/concepts/cross-chain-swaps.rst:87
+#: ../../source/concepts/cross-chain-swaps.rst:86
 msgid ""
 "Use a secret proof transaction to unlock :ref:`secret lock transactions "
 "<secret-lock-transaction>`."
@@ -255,14 +256,14 @@ msgstr ""
 "シークレット証明トランザクションは :ref:`シークレットロックトランザクション <secret-lock-transaction>` "
 "のアンロックに使用します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:89
+#: ../../source/concepts/cross-chain-swaps.rst:88
 msgid ""
-"The transaction must prove that knows the *proof*  that unlocks the mosaics."
+"The transaction must prove that knows the *proof* that unlocks the mosaics."
 msgstr "トランザクションはモザイクをアンロックするための *proof* を証明しなければなりません。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:94
-msgid "SecretProofTransactionBody"
-msgstr "シークレットプルーフトランザクション本体"
+#: ../../source/concepts/cross-chain-swaps.rst:92
+msgid "**Entity type**: 0x4252"
+msgstr "**エンティティタイプ**: 0x4252"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "proofSize"
@@ -288,9 +289,13 @@ msgstr ""
 msgid "The original proof."
 msgstr "元の proof"
 
-#: ../../source/concepts/cross-chain-swaps.rst:108
+#: ../../source/concepts/cross-chain-swaps.rst:110
 msgid "LockHashAlgorithm"
-msgstr "ロックハッシュアルゴリズム"
+msgstr ""
+
+#: ../../source/concepts/cross-chain-swaps.rst:112
+msgid "Enumeration: uint8"
+msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Id"
@@ -298,13 +303,6 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "0 (SHA_3)"
-msgstr ""
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "uint8"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -334,7 +332,3 @@ msgstr ""
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Input is hashed twice with Sha-256."
 msgstr "SHA-256 によって2回のハッシュ化された入力"
-
-#: ../../source/concepts/cross-chain-swaps.rst:121
-msgid "Related guides"
-msgstr "関連するガイド"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14.1\n"
+"Project-Id-Version: nem2-docs 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 07:27+0900\n"
+"POT-Creation-Date: 2019-01-17 07:21+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -77,24 +77,28 @@ msgstr ""
 "はブロック内のトランザクションに応じた手数料を取得します。これによりハーベスターにはできるだけ多くのトランザクションをブロックに追加するインセンティブが与えられます。"
 
 #: ../../source/concepts/block.rst:27
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/concepts/block.rst:39
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/block.rst:32
+#: ../../source/concepts/block.rst:44
 msgid "BlockHeader"
 msgstr "ブロックヘッダ"
 
-#: ../../source/concepts/block.rst:34
+#: ../../source/concepts/block.rst:46
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
-#: ../../source/concepts/block.rst:36
+#: ../../source/concepts/block.rst:48
 msgid ":ref:`VerifiableEntity<verifiable-entity>`"
-msgstr ":ref:`検証可能エンティティ<verifiable-entity>`"
+msgstr ""
 
-#: ../../source/concepts/block.rst:37
+#: ../../source/concepts/block.rst:49
 msgid ":ref:`EntityBody<entity-body>`"
-msgstr ":ref:`エンティティ本体 <entity-body>`"
+msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1
@@ -145,11 +149,20 @@ msgstr "ブロック難易度"
 
 #: ../../source/concepts/block.rst:1
 msgid "previousBlockHash"
-msgstr "前ブロックのハッシュ"
+msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1
-msgid "64 bytes (binary)"
+msgid "32 bytes (binary)"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid "The hash of the previous block."
+msgstr "前ブロックのハッシュ"
+
+#: ../../source/concepts/block.rst:1
+msgid "blockTransactionHash"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
@@ -158,7 +171,20 @@ msgid ""
 " of the tree summarizes them."
 msgstr "ブロックに含まれたトランザクションは |merkle| としてハッシュ化されます。この木のルートはそれらを要約しています。"
 
-#: ../../source/concepts/block.rst:56
+#: ../../source/concepts/block.rst:1
+msgid "stateHash"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The state of the blockchain is stored in RocksDB for each block, forming a "
+"|patricia|. The root of the tree summarizes the state of the blockchain for "
+"a given block."
+msgstr ""
+"ブロックチェーンの状態は各ブロックごとに RocksDB に |patricia| "
+"の形で保存されています。ツリーのルートは与えられたブロックのブロックチェーンの状態を要約しています。"
+
+#: ../../source/concepts/block.rst:70
 msgid "**Version**: The higher byte represents the network identifier."
 msgstr "**バージョン**: 高位バイトはネットワーク識別子を示します。"
 
@@ -198,7 +224,7 @@ msgstr ""
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/concepts/block.rst:67
+#: ../../source/concepts/block.rst:81
 msgid "**Type**: The type of the block."
 msgstr "**タイプ**: ブロックタイプ"
 
@@ -214,28 +240,28 @@ msgstr "ネメシスブロック"
 msgid "0x8143"
 msgstr ""
 
-#: ../../source/concepts/block.rst:79
+#: ../../source/concepts/block.rst:93
 msgid "VerifiableEntity"
-msgstr "検証可能エンティティ"
+msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 msgid "signature"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+msgid "64 bytes (binary)"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid "The :ref:`transaction signature <transaction-signature>`."
 msgstr ":ref:`トランザクション署名 <transaction-signature>`"
 
-#: ../../source/concepts/block.rst:90
+#: ../../source/concepts/block.rst:104
 msgid "EntityBody"
-msgstr "エンティティ本体"
-
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "signer"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "32 bytes (binary)"
+msgid "signer"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
@@ -280,7 +306,3 @@ msgstr "エンティティのバージョン"
 #: ../../source/concepts/block.rst:1
 msgid "The type of the entity."
 msgstr "エンティティのタイプ"
-
-#: ../../source/concepts/block.rst:106
-msgid "Related guides"
-msgstr "関連するガイド"
