@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15\n"
+"Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 07:21+0900\n"
+"POT-Creation-Date: 2019-02-09 07:59+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -29,7 +29,7 @@ msgstr "ブロック"
 msgid ""
 "The central element of every cryptocurrency is a public ledger called the "
 "called blockchain, which links blocks together."
-msgstr "いかなる暗号通貨の中心要素は、ブロック同士がリンクしたブロックチェーンと呼ばれる公開台帳です。"
+msgstr "全ての暗号通貨の中心となる要素は、ブロック同士がリンクしたブロックチェーンと呼ばれる公開台帳です。"
 
 #: ../../source/concepts/block.rst:9
 msgid ""
@@ -67,36 +67,37 @@ msgstr "ブロック生成"
 
 #: ../../source/concepts/block.rst:21
 msgid ""
-"Blocks are created by accounts. The process of creating new blocks is called"
-" harvesting. The harvesting account - called the harvester - gets the fees "
-"for the transactions in the block. This gives the harvester an incentive to "
-"add as many transactions to the block as possible."
+"Blocks are created by :doc:`accounts <account>`. The process of creating new"
+" blocks is called :doc:`harvesting <harvesting>`. The harvesting account - "
+"called the harvester - gets the fees for the transactions in the block. This"
+" gives the harvester an incentive to add as many transactions to the block "
+"as possible."
 msgstr ""
-"ブロックはアカウントによって作成されます。新しいブロックの生成プロセスはハーベスティングと呼ばれます。ハーベスティングアカウント - "
-"ハーベスターと呼ばれます - "
+"ブロックは :doc:`アカウント <account>` によって作成されます。新しいブロックの生成プロセスは :doc:`ハーベスティング "
+"<harvesting>` と呼ばれます。ハーベスティングアカウント - ハーベスターと呼ばれます - "
 "はブロック内のトランザクションに応じた手数料を取得します。これによりハーベスターにはできるだけ多くのトランザクションをブロックに追加するインセンティブが与えられます。"
 
-#: ../../source/concepts/block.rst:27
+#: ../../source/concepts/block.rst:25
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:39
+#: ../../source/concepts/block.rst:37
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/block.rst:44
+#: ../../source/concepts/block.rst:42
 msgid "BlockHeader"
 msgstr "ブロックヘッダ"
 
-#: ../../source/concepts/block.rst:46
+#: ../../source/concepts/block.rst:44
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
-#: ../../source/concepts/block.rst:48
+#: ../../source/concepts/block.rst:46
 msgid ":ref:`VerifiableEntity<verifiable-entity>`"
 msgstr ""
 
-#: ../../source/concepts/block.rst:49
+#: ../../source/concepts/block.rst:47
 msgid ":ref:`EntityBody<entity-body>`"
 msgstr ""
 
@@ -148,12 +149,24 @@ msgid "The block difficulty."
 msgstr "ブロック難易度"
 
 #: ../../source/concepts/block.rst:1
+msgid "feeMultiplier"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid "uint32"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid "The fee multiplier applied to transactions contained in block."
+msgstr "手数料乗数はブロックに含まれるトランザクションに適用されます。"
+
+#: ../../source/concepts/block.rst:1
 msgid "previousBlockHash"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-#: ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 msgid "32 bytes (binary)"
 msgstr ""
 
@@ -172,6 +185,18 @@ msgid ""
 msgstr "ブロックに含まれたトランザクションは |merkle| としてハッシュ化されます。この木のルートはそれらを要約しています。"
 
 #: ../../source/concepts/block.rst:1
+msgid "blockReceiptsHash"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and "
+"linked to a :doc:`block <block>`. The block header stores the root hash."
+msgstr ""
+":doc:`レシート <receipt>` の集合はハッシュ化されて |merkle| に入り :doc:`ブロック <block>` "
+"にリンクされます。ブロックヘッダはルートハッシュを格納します。"
+
+#: ../../source/concepts/block.rst:1
 msgid "stateHash"
 msgstr ""
 
@@ -184,7 +209,15 @@ msgstr ""
 "ブロックチェーンの状態は各ブロックごとに RocksDB に |patricia| "
 "の形で保存されています。ツリーのルートは与えられたブロックのブロックチェーンの状態を要約しています。"
 
-#: ../../source/concepts/block.rst:70
+#: ../../source/concepts/block.rst:1
+msgid "beneficiaryPublicKey"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid "The public key of the optional beneficiary designated by harvester."
+msgstr "ハーベスタによって指定されたオプション受益者の公開鍵。"
+
+#: ../../source/concepts/block.rst:71
 msgid "**Version**: The higher byte represents the network identifier."
 msgstr "**バージョン**: 高位バイトはネットワーク識別子を示します。"
 
@@ -224,7 +257,7 @@ msgstr ""
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/concepts/block.rst:81
+#: ../../source/concepts/block.rst:82
 msgid "**Type**: The type of the block."
 msgstr "**タイプ**: ブロックタイプ"
 
@@ -240,39 +273,38 @@ msgstr "ネメシスブロック"
 msgid "0x8143"
 msgstr ""
 
-#: ../../source/concepts/block.rst:93
+#: ../../source/concepts/block.rst:94
 msgid "VerifiableEntity"
 msgstr ""
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
 msgid "signature"
 msgstr ""
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
 msgid "64 bytes (binary)"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The :ref:`transaction signature <transaction-signature>`."
-msgstr ":ref:`トランザクション署名 <transaction-signature>`"
+msgid "The entity signature generated by the signer."
+msgstr "署名者により生成されたエンティティの署名。"
 
-#: ../../source/concepts/block.rst:104
+#: ../../source/concepts/block.rst:105
 msgid "EntityBody"
 msgstr ""
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
 msgid "signer"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The transaction signer's :doc:`public key <account>`."
-msgstr "トランザクション署名者の :doc:`公開鍵 <account>`"
+msgid "The entity signer's :doc:`public key <account>`."
+msgstr "エンティティ署名者の :doc:`公開鍵 <account>`"
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
 msgid "version"
 msgstr ""
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 msgid "uint16"
 msgstr ""
@@ -281,28 +313,13 @@ msgstr ""
 msgid "The version of the structure."
 msgstr "構造体のバージョン"
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
 msgid "type"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "See :ref:`transaction types <transaction-types>`."
-msgstr ":ref:`トランザクションタイプ<transaction-types>` を参照してください。"
-
-#: ../../source/concepts/block.rst:1
 msgid ""
-"The block signature. This is generated by the signer and can be used to "
-"validate that a node did not modify the block data."
-msgstr "ブロック署名。これは署名者によって作られ、ノードによってブロックデータが改竄されていないことを確認するために使用します。"
-
-#: ../../source/concepts/block.rst:1
-msgid "The public key of the :doc:`harvester <account>` of the block."
-msgstr "ブロックの :doc:`ハーベスター <account>` の公開鍵"
-
-#: ../../source/concepts/block.rst:1
-msgid "The version of the entity."
-msgstr "エンティティのバージョン"
-
-#: ../../source/concepts/block.rst:1
-msgid "The type of the entity."
-msgstr "エンティティのタイプ"
+"The entity type. For transaction types, see :ref:`transaction types "
+"<transaction-types>`."
+msgstr ""
+"エンティティタイプ。トランザクションタイプについては :ref:`トランザクションタイプ <transaction-types>` を参照してください。"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15\n"
+"Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 07:21+0900\n"
+"POT-Creation-Date: 2019-02-09 07:59+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -107,16 +107,14 @@ msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
 
 #: ../../source/concepts/account.rst:29
-msgid "**Filters**"
-msgstr "**フィルタ**"
+msgid "**Importance**"
+msgstr "**インポータンス**"
 
 #: ../../source/concepts/account.rst:31
 msgid ""
-"Accounts may configure a set of smart rules to block announcing or receiving"
-" transactions :doc:`given a series of constraints <account-filter>`."
-msgstr ""
-"アカウントはスマートなルールの集合を構成し、 :doc:`一連の制約 <account-filter>` "
-"の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
+"The relation between the amount of harvesting mosaics the account owns and "
+"the total mosaic supply."
+msgstr "アカウントが保有するハーベスティングモザイク量と総モザイク供給量の関係。"
 
 #: ../../source/concepts/account.rst:35
 msgid "Multisig Account"
@@ -136,5 +134,17 @@ msgstr ""
 " :doc:`マルチシグ <multisig-account>` コントロールです。"
 
 #: ../../source/concepts/account.rst:41
+msgid "Filters"
+msgstr "フィルタ"
+
+#: ../../source/concepts/account.rst:43
+msgid ""
+"Accounts may configure a set of smart rules to block announcing or receiving"
+" transactions :doc:`given a series of constraints <account-filter>`."
+msgstr ""
+"アカウントはスマートなルールの集合を構成し、 :doc:`一連の制約 <account-filter>` "
+"の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
+
+#: ../../source/concepts/account.rst:47
 msgid "Guides"
 msgstr "ガイド"
