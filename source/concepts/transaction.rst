@@ -2,7 +2,9 @@
 Transaction
 ###########
 
-Transactions are actions taken on the blockchain that change its state. When an :doc:`account <account>` signs a transaction, and the network accepts it, this is stored permanently on a :doc:`block <block>`.
+A transaction generally represents a unit of work within a database system. In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
+
+Transactions accepted by the network are stored permanently on :doc:`blocks <block>`.
 
 *****************
 Transaction types
@@ -29,7 +31,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
     0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`; Deposit to announce aggregate bonded transactions. Prevents the network spamming.
+    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`; A deposit before announcing aggregate bonded transactions.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     **Account filters**;;
     0x4150; :ref:`Account Properties Address Transaction <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
@@ -54,24 +56,23 @@ Transactions are defined in a :doc:`serialized form <../api/serialization>`. We 
 Fees
 ====
 
-Transactions have an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network.
+Transactions have an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network and run the infrastructure.
 
-The fee associated with a transaction primarily depends on the transaction’s size. The transaction effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure this latest value to all positive values, including zero.
+The fee associated with a transaction primarily depends on the transaction’s size. The effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure the latter value to all positive values, including zero.
 
-
-    effective_transction_fee = transaction::size * block::fee_multiplier
+    effective_fee = transaction::size * block::fee_multiplier
 
 A sender of a transaction must specify during the transaction definition a ``max_fee``, meaning the maximum fee the account allows to spend for this transaction.
 
-If the effective fee is smaller or equal to the max_fee, the transaction could form part of the block. The ``fee_multiplier`` is stored in the :ref:`block header <block-header>`, permitting to resolve which was the effective fee paid for every transaction included.
+If the ``effective_fee`` is smaller or equal to the ``max_fee``, the harvester can opt to include the transaction in the block. The ``fee_multiplier`` is stored in the :ref:`block header <block-header>`, permitting to resolve which was the effective fee paid for every transaction included.
 
 The harvesting nodes can decide their transaction inclusion strategy:
 
-* **Prefer-oldest**: Preferred for high transaction per seconds networks. Include first the oldest transactions.
-* **Minimize-fees**: Benevolent nodes. Include first transactions that other nodes do not want to include.
+* **Prefer-oldest**: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.
+* **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
 * **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to suppress fees, or use another mosaic definition that better suits their needs.
+By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
 
 .. _transaction-signature:
 
@@ -81,7 +82,7 @@ Signing a transaction
 
 Accounts must sign transactions before announcing them to the network. `Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
-For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account to the other.
+For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account’s balance to another.
 
 The account generates the signature `signing the first 100 bytes of the defined transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ with its private key. Then, the signature is appended to the transaction's body, resulting in a signed transaction.
 
@@ -101,9 +102,9 @@ Signed transactions are ready to be announced to the network.
 
     Transaction cycle
 
-After `announcing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_, the REST API will always return an OK response immediately. At this point, it still unknown whether the transaction is valid.
+After `announcing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_, the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
 
-The first validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation before.
+The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
 
 The second validation is done before the transaction is added in a harvested block. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
 
@@ -115,13 +116,13 @@ The transaction has **zero confirmations** at this point. When another block is 
 Rollbacks
 *********
 
-Cryptocurrencies can roll back part of the blockchain. Rollbacks are essential for resolving forks of the blockchain.
+Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back. These are essential to resolve forks of the blockchain.
 
 The "rewrite limit" is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
 NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
-In real life, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
+From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 ******
 Guides
