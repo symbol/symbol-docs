@@ -511,7 +511,7 @@ paths:
     get:
       tags:
       - Blockchain routes
-      summary: Get the merkle path for a given a transaction and block.
+      summary: Get the merkle path for a given a transaction and block
       description: Returns the merkle path for a [transaction](https://nemtech.github.io/concepts/transaction.html) included in a block. The path is the complementary data needed to calculate the merkle root. A client can compare if the calculated root equals the one recorded in the block header, verifying that the transaction was included in the block.
       operationId: getMerkleTransaction
       produces:
@@ -567,7 +567,7 @@ paths:
     get:
       tags:
       - Blockchain routes
-      summary: Get the merkle path for a given a receipt statement hash and block.
+      summary: Get the merkle path for a given a receipt statement hash and block
       description: Returns the merkle path for a [receipt statement or resolution](https://nemtech.github.io/concepts/receipt.html) linked to a block. The path is the complementary data needed to calculate the merkle root. A client can compare if the calculated root equals the one recorded in the block header, verifying that the receipt was linked with the block.
       operationId: getMerkleReceipts
       produces:
@@ -1231,7 +1231,7 @@ definitions:
   NamespaceInfoDTO:
     type: object
     required:
-    - meta
+    - metad
     - namespace
     properties:
       meta:

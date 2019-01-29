@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+{% set title = _('Reference Documentation') %}
+
+{% block extrahead %}
+{{ super() }}
+<link rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="jumbotron text-center gap">
+    <h1>{% trans %}Reference Documentation{% endtrans %}</h1>
+    <div class="col-md-8 center-block">
+        <p>{% trans %}From SDKs in your favorite languages to extensions that make blockchain development easier.{%
+            endtrans %}</p>
+    </div>
+</div>
+<div id="reference-page">
+    <section class="gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 subtitle-container text-center gap center-block">
+                    <h2>{% trans %}Clients & Apps{% endtrans %}</h2>
+                    <p>{% trans %}Apps to interact with the NEM blockchain.{% endtrans %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-container col-md-8 center-block">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('cli/overview')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-terminal colored blue"></i>
+                                <h4>{% trans %}Client{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('prototyping-tool/overview')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-bezier-curve colored blue"></i>
+                                <h4>{% trans %}Prototyping{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="inner-gap bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 subtitle-container text-center gap center-block">
+                    <h2>{% trans %}SDKs{% endtrans %}</h2>
+                    <p>{% trans %}The{% endtrans %} <a href="{{ pathto('sdk/overview')}}"><b>{% trans%}NEM2 Software
+                        Development Kit {% endtrans %}</b></a>
+                        {% trans %}is the primary software development tool to create NEM2 components, such as
+                        additional tools, libraries or applications.{% endtrans %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-container col-md-8 center-block">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/">
+                            <div class="card font-icon">
+                                <i class="devicon-typescript-plain colored"></i>
+                                <h4>{% trans %}Typescript{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/">
+                            <div class="card font-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <h4>{% trans %}Javascript{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://nemtech.github.io/nem2-sdk-java/">
+                            <div class="card font-icon">
+                                <i class="devicon-java-plain colored"></i>
+                                <h4>{% trans %}Java{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/nemtech/nem2-sdk-csharp">
+                            <div class="card font-icon">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <h4>{% trans %}C#{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/proximax-storage/nem2-sdk-go/">
+                            <div class="card font-icon">
+                                <i class="devicon-go-plain colored"></i>
+                                <h4>{% trans %}Go{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/proximax-storage/nem2-sdk-swift/">
+                            <div class="card font-icon">
+                                <i class="devicon-swift-plain colored"></i>
+                                <h4>{% trans %}Swift{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('sdk/languages')}}">
+                            <div class="card font-icon">
+                                <i class="devicon-php-plain"></i>
+                                <h4>{% trans %}PHP{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('sdk/languages')}}">
+                            <div class="card font-icon">
+                                <i class="devicon-cplusplus-plain"></i>
+                                <h4>{% trans %}C++{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('sdk/languages')}}">
+                            <div class="card font-icon">
+                                <i class="devicon-python-plain"></i>
+                                <h4>{% trans %}Python{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('sdk/languages')}}">
+                            <div class="card font-icon">
+                                <i class="devicon-ruby-plain"></i>
+                                <h4>{% trans %}Ruby{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="inner-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 subtitle-container text-center gap center-block">
+                    <h2>{% trans %}Extensions{% endtrans %}</h2>
+                    <p>{% trans %}Collection of {% endtrans %}<a href="{{ pathto('sdk/libraries')}}"><b>{% trans
+                        %}libraries{% endtrans %}</b></a> {% trans %}and tools to accelerate blockchain development. {% endtrans %} </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-container col-md-8 center-block">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/tech-bureau/catapult-service-bootstrap">
+                            <div class="card font-icon">
+                                <i class="devicon-docker-plain colored"></i>
+                                <h4>{% trans %}Service Bootstrap{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/nemtech/nem2-camel">
+                            <div class="card font-icon">
+                                <i class="fas fa-sync colored blue"></i>
+                                <h4>{% trans %}NEM2-Camel{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://apostille.io/">
+                            <div class="card font-icon">
+                                <i><img class="align-center" src="{{pathto('_static/images/logo-apostille.png', 1 )}}"/></i>
+                                <h4>{% trans %}Apostille{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://github.com/aleixmorgadas/nem2-nonfungible-asset">
+                            <div class="card font-icon">
+                                <i class="fas fa-box colored blue"></i>
+                                <h4>{% trans %}Non-fungible asset{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray inner-gap subtitle-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center gap center-block">
+                    <h2>{% trans %}REST API{% endtrans %}</h2>
+                    <p><a href="{{ pathto('api/requests')}}"><b>{% trans %}Catapult REST API{% endtrans %}</b></a> {%
+                        trans %}combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.{% endtrans %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-container col-md-8 center-block">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/requests')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-sliders-h colored green"></i>
+                                <h4>{% trans %}Requests{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/tools')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-toolbox colored green"></i>
+                                <h4>{% trans %}Tools{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/endpoints')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-exchange-alt colored green"></i>
+                                <h4>{% trans %}Endpoints{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/serialization')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-cubes colored green"></i>
+                                <h4>{% trans %}Serialization{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/websockets')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-dot-circle colored green"></i>
+                                <h4>{% trans %}WebSockets{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="{{ pathto('api/status-errors')}}">
+                            <div class="card font-icon">
+                                <i class="fas fa-times colored green"></i>
+                                <h4>{% trans %}Status Errors{% endtrans %}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

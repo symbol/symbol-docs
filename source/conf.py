@@ -61,7 +61,7 @@ templates_path.append(ablog.get_html_templates_path())
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'contents'
 
 # General information about the project.
 project = u'nem2-docs'
@@ -188,6 +188,8 @@ html_title = 'NEM Developer Center'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Additional html pages
+html_additional_pages = {'index': 'index.html', 'references': 'references.html'}
 
 ## Custom style overrides
 def setup(app):
