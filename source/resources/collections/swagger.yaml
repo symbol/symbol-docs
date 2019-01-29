@@ -563,7 +563,7 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-  '/block/{height}/receipts/{hash}/merkle':
+  '/block/{height}/receipt/{hash}/merkle':
     get:
       tags:
       - Blockchain routes
