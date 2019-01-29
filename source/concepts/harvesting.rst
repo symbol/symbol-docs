@@ -10,13 +10,13 @@ The account importance determines the chances to create a new block. The importa
 the number of harvesting mosaics the account owns and the total supply. To have importance greater than zero,
 the account needs to hold a minimum amount this mosaics.
 
-Catapult software admits defining any native mosaic for harvesting, using its configurable
+Catapult software allows defining any :doc:`mosaic <mosaic>` for harvesting, using its configurable
 properties to fit the business needs. For example, consortium networks can distribute harvesting mosaics between the
-companies that can run the infrastructure, but other participants are only allowed to use the service paying fees.
+companies that are running the infrastructure, while other participants need to pay fees in the currency mosaic to consume services.
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. Public network configuration may differ.
 
-Accounts can create new blocks harvesting locally or delegating its importance to a remote node.
+Harvester accounts can use their importance to create new blocks in a local or remote node.
 
 ****************
 Local harvesting
@@ -40,7 +40,7 @@ inherits the importance of the original account.
 
 Security-wise, sharing a proxy private key does not compromise the original account since:
 
-* The remote account has balance zero.
+* The remote account has zero balance.
 * The remote account by itself can't transfer the importance to another account.
 * The original account receives the resulting fees.
 
