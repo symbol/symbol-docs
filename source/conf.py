@@ -120,7 +120,7 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting started", "getting-started/what-is-nem"),
+        ("Getting started", "getting-started/setup-workstation"),
         ("Built-in features", "concepts/account"),
         ("References", "references"),
     ],

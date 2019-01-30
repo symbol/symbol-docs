@@ -239,7 +239,7 @@ Although the transaction is created, it has not been announced to the network ye
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
-   .. code-block:: bash
+.. code-block:: bash
 
     $> nem2-cli account info --profile buyer
 

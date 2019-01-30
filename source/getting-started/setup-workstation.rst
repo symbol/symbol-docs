@@ -2,7 +2,7 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on :doc:`NEM <what-is-nem>`.
 
 **********************************
 Running Catapult Service Bootstrap
@@ -12,7 +12,7 @@ Running Catapult Service Bootstrap
     :width: 650px
     :align: center
 
-**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
+**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (lainyer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
 You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
 
