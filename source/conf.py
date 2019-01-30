@@ -44,6 +44,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.fulltoc',
     'sphinxcontrib.ghcontributors',
+    'sphinx_tabs.tabs',
     'edit-on-github',
     'ablog'
     ]
