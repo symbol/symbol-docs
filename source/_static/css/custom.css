@@ -348,7 +348,22 @@ table-td {
 
 }
 
-/* Code example */
+/* Tabs */
+
+.sphinx-tabs{
+    margin: 0px;
+    max-width: 100%;
+}
+
+.sphinx-tabs .container{
+    width: fit-content;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.sphinx-tabs .sphinx-menu{
+    padding: 0px;
+}
 
 .example-code.container {
     padding: 0px;
