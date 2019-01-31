@@ -6,7 +6,7 @@ Namespaces allow you to create an on-chain **unique place** for your business an
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
 
-You can associate a name with an account address or a :doc:`mosaic <mosaic>` identifier by announcing an alias transaction. The binding between namespaces and assets makes long account addresses rememberable and mosaics identifiers recognizable.
+You can associate a name with an account address or a :doc:`mosaic <mosaic>` identifier by announcing an :ref:`alias transaction <address-alias-transaction>`. The binding between namespaces and assets makes long account addresses rememberable and mosaics identifiers recognizable.
 
 *************
 Subnamespaces
@@ -79,9 +79,9 @@ Announce a register namespace transaction to register and re-rent a namespace.
     name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
 
-.. _alias-address-transaction:
+.. _address-alias-transaction:
 
-AliasAddressTransaction
+AddressAliasTransaction
 =======================
 
 Announce an alias transaction to attach a namespace to an account. A namespace can be assigned to any account present in the network.
@@ -102,9 +102,9 @@ Announce an alias transaction to attach a namespace to an account. A namespace c
     namespaceId; uint64; The id of the namespace that will become an alias.
     address; 25 bytes (binary); The aliased address.
 
-.. _alias-mosaic-transaction:
+.. _mosaic-alias-transaction:
 
-AliasMosaicTransaction
+MosaicAliasTransaction
 ======================
 
 Announce an alias transaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.

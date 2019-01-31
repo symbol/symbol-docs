@@ -23,8 +23,8 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x424D; :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
     **Namespace**;;
     0x414E; :ref:`Register Namespace Transaction <register-namespace-transaction>`; Register a :doc:`namespace <mosaic>` to organize your assets.
-    0x424E; :ref:`Alias Address Transaction <alias-address-transaction>`; Attach a namespace name to an account.
-    0x434E; :ref:`Alias Mosaic Transaction <alias-mosaic-transaction>`; Attach a namespace name to a mosaic.
+    0x424E; :ref:`Address Alias Transaction <address-alias-transaction>`; Attach a namespace name to an account.
+    0x434E; :ref:`Mosaic Alias Transaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
     **Transfer**;;
     0x4154; :ref:`Transfer Transaction <transfer-transaction>`; Send mosaics and messages between two accounts.
     **Multisignature**;;
