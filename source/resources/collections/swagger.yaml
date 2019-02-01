@@ -418,23 +418,22 @@ paths:
       tags:
       - Blockchain routes
       summary: Get blocks information
-      description: Gets up to limit number of blocks after given block height from the chain.
+      description: Gets up to limit number of blocks after given block height.
       operationId: getBlocksByHeightWithLimit
       produces:
       - application/json
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: The height of the block. If height -1 is not a multiple of the limit provided, the inferior closest multiple + 1 is used instead.
         required: true
         type: integer
-        minimum: 1
       - name: limit
         in: path
-        description: The number of following blocks to be returned.
+        description: The number of blocks to be returned.
         required: true
         type: integer
-        minimum: 0
+        enum: [25, 50, 75, 100]
       responses:
         '200':
           description: success
