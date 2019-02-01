@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: monitoring
+    :category: Monitoring
     :excerpt: 1
     :nocomments:
 

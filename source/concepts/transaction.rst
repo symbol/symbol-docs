@@ -31,7 +31,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
     0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`; A deposit before announcing aggregate bonded transactions.
+    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     **Account filters**;;
     0x4150; :ref:`Account Properties Address Transaction <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
@@ -129,7 +129,7 @@ Guides
 ******
 
 .. postlist::
-    :category: monitoring
+    :category: Monitoring
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

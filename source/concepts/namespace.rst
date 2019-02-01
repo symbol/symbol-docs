@@ -39,7 +39,7 @@ Guides
 ******
 
 .. postlist::
-    :category: namespace
+    :category: Namespace
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

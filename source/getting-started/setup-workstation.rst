@@ -1,8 +1,13 @@
+.. post:: 16 Aug, 2018
+    :category: Tools
+    :excerpt: 1
+    :nocomments:
+
 ###########################
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on :doc:`NEM <what-is-nem>`.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
 **********************************
 Running Catapult Service Bootstrap

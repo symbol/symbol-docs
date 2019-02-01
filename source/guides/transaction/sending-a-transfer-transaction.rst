@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 10 Aug, 2018
-    :category: transfer-transaction
+    :category: Transfer Transaction
     :excerpt: 1
     :nocomments:
 

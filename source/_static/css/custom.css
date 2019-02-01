@@ -315,6 +315,7 @@ table-td {
 #sidebar > .caption:hover
 {
     background-color: #e5e3e9;
+    text-decoration: none;
 }
 
 .sidebar-current-ul,

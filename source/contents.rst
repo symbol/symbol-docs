@@ -28,7 +28,6 @@
     concepts/account
     concepts/account-filter
     concepts/multisig-account
-    concepts/multi-level-multisig-account
     concepts/namespace
     concepts/mosaic
     concepts/transfer-transaction

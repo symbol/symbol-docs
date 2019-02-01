@@ -88,7 +88,7 @@ Guides
 .. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
 
 .. postlist::
-    :category: aggregate-transaction
+    :category: Aggregate Transaction
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

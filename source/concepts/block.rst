@@ -25,7 +25,7 @@ Guides
 ******
 
 .. postlist::
-    :category: blockchain
+    :category: Block
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

@@ -1,12 +1,12 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: account
+    :category: Account
     :excerpt: 1
     :nocomments:
 
 ####################################
-Receiving transactions of an account 
+Reading transactions from an account
 ####################################
 
 Get the list of :doc:`transactions <../../concepts/transaction>` where an :doc:`account <../../concepts/account>` is involved.
