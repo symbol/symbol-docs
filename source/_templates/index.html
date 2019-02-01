@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% set title = _('Home') %}
+{% block body %}
+<div class="home jumbotron text-center gap">
+    <h1>{% trans %}NEM Developer Center{% endtrans %}</h1>
+    <p>{% trans %}Start integrating NEM into your application.{% endtrans %}</p>
+    <div class="image-container">
+        <img src="{{pathto('_static/images/nem-developers.png', 1 )}}"/>
+    </div>
+</div>
+<section class="container">
+    <div class="row custom-row">
+        <p> {% trans %}NEM is a <b>developer-friendly blockchain platform.</b> The latest NEM version, Catapult, gives you direct access to a specialized set of <b>tested</b> and <b> secure on-blockchain features</b> using your
+            favourite <b>programming language</b>.{% endtrans %}
+        </p>
+    </div>
+</section>
+<section class="home container card-container gap">
+    <div class="row top-gap">
+        <div class="col-md-6">
+            <a href="{{ pathto('getting-started/setup-workstation')}}">
+                <div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+                        <img class="align-center" src="{{pathto('_static/images/home-getting-started.png', 1)}}"/>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="card-title">{% trans %}Getting started{% endtrans %}</h3>
+                        <p class="card-text">{% trans %}Install the development kit and start coding your first blockchain app.{% endtrans %}</p>
+                        <b class="card-cta">{% trans %}START{% endtrans %}</b>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="{{ pathto('guides/category/account') }}">
+                <div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+                        <img class="align-center" src="{{pathto('_static/images/home-guides.png', 1)}}"/>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="card-title">{% trans %}Guides{% endtrans %}</h3>
+                        <p class="card-text">{% trans %}Easy-to-follow step by step guides with code examples.{% endtrans %}</p>
+                        <b class="card-cta">{% trans %}LEARN{% endtrans %}</b>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{{ pathto('concepts/account')}}">
+                <div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+                        <img class="align-center" src="{{pathto('_static/images/home-built-in-features.png', 1)}}"/>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="card-title">{% trans %}Built-in Features{% endtrans %}</h3>
+                        <p class="card-text">{% trans %}Architecture your solution connecting the features that make up the Smart Asset System.{% endtrans %}</p>
+                        <b class="card-cta">{% trans %}COMBINE{% endtrans %}</b>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="{{ pathto('references')}}">
+                <div class="card">
+                    <div class="col-sm-4 hidden-xs card-img">
+                        <img class="align-center" src="{{pathto('_static/images/home-references.png', 1)}}"/>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="card-title">{% trans %}References{% endtrans %}</h3>
+                        <p class="card-text">{% trans %}From SDKs to extensions that make blockchain development easier.{% endtrans %}</p>
+                        <b class="card-cta">{% trans %}DEVELOP{% endtrans %}</b>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -44,6 +44,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.fulltoc',
     'sphinxcontrib.ghcontributors',
+    'sphinx_tabs.tabs',
     'edit-on-github',
     'ablog'
     ]
@@ -61,7 +62,7 @@ templates_path.append(ablog.get_html_templates_path())
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'contents'
 
 # General information about the project.
 project = u'nem2-docs'
@@ -119,7 +120,7 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting started", "getting-started/what-is-nem"),
+        ("Getting started", "getting-started/setup-workstation"),
         ("Built-in features", "concepts/account"),
         ("Guides", "guides/category/account"),
         ("References", "references"),
@@ -189,6 +190,8 @@ html_title = 'NEM Developer Center'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Additional html pages
+html_additional_pages = {'index': 'index.html', 'references': 'references.html'}
 
 ## Custom style overrides
 def setup(app):
