@@ -73,7 +73,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.15'
+version = u'0.15.1'
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -121,6 +121,7 @@ html_theme_options = {
     'navbar_links': [
         ("Getting started", "getting-started/what-is-nem"),
         ("Built-in features", "concepts/account"),
+        ("Guides", "guides/category/account"),
         ("References", "references"),
     ],
 
@@ -212,7 +213,8 @@ html_sidebars = {
   'cli/**': ['localtoc.html'],
   'concepts/**': ['localtoc.html'],
   'getting-started/**': ['localtoc.html'],
-  'guides/**/**': [],
+  'guides/**/**': ['categories.html'],
+  'guides': ['categories.html'],
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],
@@ -298,8 +300,7 @@ epub_copyright = copyright
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
-
+epub_exclude_files = ['index.html, search.html, references.html, guides.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
@@ -318,6 +319,7 @@ html_scaled_image_link = False
 
 # -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
+blog_path = 'guides'
 
 blog_authors = {
     'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
@@ -326,4 +328,4 @@ blog_authors = {
 
 # -- Options for linkcheck ------------------------------------------------
 
-linkcheck_ignore = [r'http://localhost:\d+']
+linkcheck_ignore = [r'http://localhost\d+']

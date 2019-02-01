@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: namespace
+    :category: Namespace
     :excerpt: 1
     :nocomments:
 

@@ -96,7 +96,7 @@ Guides
 ******
 
 .. postlist::
-    :category: monitoring
+    :category: Monitoring
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

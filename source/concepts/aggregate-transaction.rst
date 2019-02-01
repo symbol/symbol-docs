@@ -86,7 +86,7 @@ Guides
 ******
 
 .. postlist::
-    :category: aggregate-transaction
+    :category: Aggregate Transaction
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

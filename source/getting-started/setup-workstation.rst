@@ -1,3 +1,8 @@
+.. post:: 16 Aug, 2018
+    :category: Tools
+    :excerpt: 1
+    :nocomments:
+
 ###########################
 Setting up your workstation
 ###########################

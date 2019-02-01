@@ -1,0 +1,23 @@
+{%- extends "page.html" %}
+
+{% block body %}
+
+{% if ablog.blog_archive_titles %}
+{% for post in collection %}
+<div class="section">
+    <p>
+        <a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a>
+    </p>
+</div>
+{% endfor %}
+{% else %}
+{% for post in collection|sort%}
+<div class="section">
+    <h2><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h2>
+    {{ post.to_html(collection.docname) }}
+    <p><a href="{{ pathto(post.docname) }}">{{ _("Read more ...") }}</a></p>
+    <hr>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

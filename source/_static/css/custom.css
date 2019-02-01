@@ -288,6 +288,10 @@ table-td {
     position: relative !important;
 }
 
+#sidebar a:hover{
+    text-decoration: none;
+}
+
 #sidebar ul:not(.current) {
     display: none;
 }

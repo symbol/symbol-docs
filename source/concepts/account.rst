@@ -41,7 +41,7 @@ Guides
 ******
 
 .. postlist::
-    :category: account
+    :category: Account
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle
