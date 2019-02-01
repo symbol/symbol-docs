@@ -39,8 +39,10 @@
 
                 <ul>
                     <li><a href="{{pathto('concepts/cryptography')}}">{{ gettext('Cryptography') }}</a></li>
-                    <li><a href="{{pathto('concepts/block')}}">{{ gettext('Block') }}</a></li>
                     <li><a href="{{pathto('concepts/transaction')}}">{{ gettext('Transaction') }}</a></li>
+                    <li><a href="{{pathto('concepts/block')}}">{{ gettext('Block') }}</a></li>
+                    <li><a href="{{pathto('concepts/harvesting')}}">{{ gettext('Harvesting') }}</a></li>
+                    <li><a href="{{pathto('concepts/receipt')}}">{{ gettext('Receipt') }}</a></li>
                     <li><a href="{{pathto('concepts/node')}}">{{ gettext('Node') }}</a></li>
                 </ul>
 
@@ -55,10 +57,8 @@
                     <li><a href="{{pathto('concepts/multisig-account')}}">{{ gettext('Multisig Account') }}</a></li>
                     <li><a href="{{pathto('concepts/namespace')}}">{{ gettext('Namespace') }}</a></li>
                     <li><a href="{{pathto('concepts/mosaic')}}">{{ gettext('Mosaic') }}</a></li>
-                    <li><a href="{{pathto('concepts/transfer-transaction')}}">{{ gettext('Transfer Transaction') }}</a>
-                    </li>
-                    <li><a href="{{pathto('concepts/aggregate-transaction')}}">{{ gettext('Aggregate Transaction')
-                        }}</a></li>
+                    <li><a href="{{pathto('concepts/transfer-transaction')}}">{{ gettext('Transfer Transaction') }}</a></li>
+                    <li><a href="{{pathto('concepts/aggregate-transaction')}}">{{ gettext('Aggregate Transaction') }}</a></li>
                     <li><a href="{{pathto('concepts/cross-chain-swaps')}}">{{ gettext('Cross-Chain Swaps') }}</a></li>
                 </ul>
 
@@ -88,8 +88,7 @@
         <p class="text-center top-gap">
             {%- if show_copyright %}
             {%- if hasdoc('copyright') %}
-            {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{
-            copyright }}.{% endtrans %}
+            {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
             {%- else %}
             {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
             {%- endif %}
