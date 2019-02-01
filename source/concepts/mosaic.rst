@@ -25,7 +25,7 @@ Guides
 ******
 
 .. postlist::
-    :category: mosaic
+    :category: Mosaic
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

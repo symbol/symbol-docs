@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 14 Aug, 2018
-    :category: aggregate-transaction
+    :category: Aggregate Transaction, Multisig Account
     :excerpt: 1
     :nocomments:
 

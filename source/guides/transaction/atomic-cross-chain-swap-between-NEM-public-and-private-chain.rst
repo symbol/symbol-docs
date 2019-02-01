@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: cross-chain-swaps
+    :category: Cross-Chain Swaps
     :excerpt: 1
     :nocomments:
 

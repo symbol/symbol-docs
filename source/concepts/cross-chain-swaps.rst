@@ -28,7 +28,7 @@ Guides
 ******
 
 .. postlist::
-    :category: cross-chain-swaps
+    :category: Cross-Chain Swaps
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

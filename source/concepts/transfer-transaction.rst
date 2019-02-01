@@ -17,7 +17,7 @@ Guides
 ******
 
 .. postlist::
-    :category: transfer-transaction
+    :category: Transfer Transaction
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

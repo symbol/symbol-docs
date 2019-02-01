@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 16 Aug, 2018
-    :category: blockchain
+    :category: Block
     :excerpt: 1
     :nocomments:
 

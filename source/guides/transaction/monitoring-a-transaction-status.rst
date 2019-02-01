@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 16 Jan, 2019
-    :category: monitoring, transfer-transaction
+    :category: Transfer Transaction, Monitoring
     :excerpt: 1
     :author: jorisadri
     :nocomments:
