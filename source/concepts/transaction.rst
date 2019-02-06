@@ -86,7 +86,7 @@ For example, a transfer transaction describes who is the recipient and the quant
 
 The account generates the signature `signing the first 100 bytes of the defined transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ with its private key. Then, the signature is appended to the transaction's body, resulting in a signed transaction.
 
-The hash of the transaction is generated once `the Sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
+The hash of the transaction is generated once `the sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
 
 .. _transaction-validation:
 
