@@ -1,0 +1,22 @@
+{
+   "config":[
+      {
+         "title":"test",
+         "text":"",
+         "source":"test-config.properties",
+         "descriptions":[
+            "test-configInfo.h"
+         ]
+      }
+   ],
+  "status-errors":[
+      {
+         "title":"test",
+         "text":"",
+         "source":"status.js",
+         "descriptions":[
+            "Result.h"
+         ]
+      }
+   ]
+}

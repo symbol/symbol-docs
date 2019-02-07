@@ -1,0 +1,118 @@
+{
+	"config": [{
+			"title": "config-database.properties",
+			"text": "",
+			"source": "resources/config-database.properties",
+			"descriptions": [
+				"extensions/mongo/src/DatabaseConfiguration.h"
+			]
+		},
+		{
+			"title": "config-harvesting.properties",
+			"text": "",
+			"source": "resources/config-harvesting.properties",
+			"descriptions": [
+				"extensions/harvesting/src/HarvestingConfiguration.h"
+			]
+		},
+		{
+			"title": "config-harvesting.properties",
+			"text": "",
+			"source": "resources/config-harvesting.properties",
+			"descriptions": [
+				"extensions/harvesting/src/HarvestingConfiguration.h"
+			]
+		},
+		{
+			"title": "config-logging.properties",
+			"text": "",
+			"source": "resources/config-logging.properties",
+			"descriptions": [
+				"src/catapult/config/LoggingConfiguration.h"
+			]
+		},
+		{
+			"title": "config-messaging.properties",
+			"text": "",
+			"source": "resources/config-messaging.properties",
+			"descriptions": [
+				"extensions/zeromq/src/MessagingConfiguration.h"
+			]
+		},
+		{
+			"title": "config-networkheight.properties",
+			"text": "",
+			"source": "resources/config-networkheight.properties",
+			"descriptions": [
+				"extensions/networkheight/src/NetworkHeightConfiguration.h"
+			]
+		},
+		{
+			"title": "config-network.properties",
+			"text": "",
+			"source": "resources/config-network.properties",
+			"descriptions": [
+				"src/catapult/model/NetworkInfo.h",
+				"src/catapult/model/BlockChainConfiguration.h",
+				"plugins/txes/aggregate/src/config/AggregateConfiguration.h",
+				"plugins/txes/lock_secret/src/config/SecretLockConfiguration.h",
+				"plugins/txes/lock_hash/src/config/HashLockConfiguration.h",
+				"plugins/txes/multisig/src/config/MultisigConfiguration.h",
+				"plugins/txes/namespace/src/config/NamespaceConfiguration.h",
+				"plugins/txes/property/src/config/PropertyConfiguration.h",
+				"plugins/txes/transfer/src/config/TransferConfiguration.h"
+			]
+		},
+		{
+			"title": "config-pt.properties",
+			"text": "",
+			"source": "resources/config-pt.properties",
+			"descriptions": [
+				"extensions/partialtransaction/src/PtConfiguration.h"
+			]
+		},
+		{
+			"title": "config-task.properties",
+			"text": "",
+			"source": "resources/config-task.properties",
+			"descriptions": [
+				"extensions/sync/src/TasksConfiguration.h"
+			]
+		},
+		{
+			"title": "config-timesync.properties",
+			"text": "",
+			"source": "resources/config-timesync.properties",
+			"descriptions": [
+				"extensions/timesync/src/TimeSynchronizationConfiguration.h"
+			]
+		},
+		{
+			"title": "config-user.properties",
+			"text": "",
+			"source": "resources/config-user.properties",
+			"descriptions": [
+				"src/catapult/config/UserConfiguration.h"
+			]
+		}
+	],
+    "status-errors": [{
+        "title": "Status Errors",
+        "text": "This section describes the error messages that can be returned via status channel after announcing a transaction.",
+        "source": "/catapult-sdk/src/model/status.js",
+        "descriptions": [
+            "plugins/services/signature/src/validators/Results.h",
+            "plugins/coresystem/src/validators/Results.h",
+            "plugins/txes/aggregate/src/validators/Results.h",
+            "plugins/txes/lock_hash/src/validators/Results.h",
+            "plugins/txes/lock_secret/src/validators/Results.h",
+            "plugins/txes/multisig/src/validators/Results.h",
+            "plugins/txes/namespace/src/validators/Results.h",
+            "plugins/txes/property/src/validators/Results.h",
+            "plugins/txes/transfer/src/validators/Results.h",
+            "src/catapult/chain/ChainResults.h",
+            "src/catapult/consumers/ConsumerResults.h",
+            "src/catapult/extensions/Results.h"
+        ]
+    }]
+}
