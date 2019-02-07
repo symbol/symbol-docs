@@ -2,7 +2,9 @@
 Receipt
 #######
 
-An invisible change is any state-dependent change that is not observable from the :doc:`block <block>` header or :doc:`transaction <transaction>` data. The structure that records these invisible changes is named receipt.
+Conditional state changes in the background enable complex transactions.
+
+For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`aggregate bonded transaction <aggregate-transaction>` is confirmed. When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded. This might appear as a *hidden change* that increases the :doc:`account <account>` balance. Receipts provide proof for every hidden change.
 
 The collection of receipts are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash, which is different from zero when the block has receipts.
 
