@@ -12,18 +12,18 @@ The tables are used in the [NEM Developer Center](http://nemtech.github.io), and
     
 catapult-docs-cli COMMAND [OPTIONS]
 
+| Command               | Description                                         |
+|-----------------------|-----------------------------------------------------|
+| config                | Generates catapult server configuration docs.       |
+| status-errors         | Generates catapult server/rest status errors docs.  |
+| --help                | Show this message and exit.                         |
+
+
 | Option                | Description                                         |
 |-----------------------|-----------------------------------------------------|
 | -c, --config TEXT     | The .catdocs file path.                             |
 | -s, --server TEXT     | The catapult-server folder path.                    |
 | -s, --rest TEXT       | The catapult-rest folder path.                      |
-| --help                | Show this message and exit.                         |
-
-
-| Command               | Description                                         |
-|-----------------------|-----------------------------------------------------|
-| config                | Generates catapult server configuration docs.       |
-| status-errors         | Generates catapult server/rest status errors docs.  |
 | --help                | Show this message and exit.                         |
 
 # Examples
