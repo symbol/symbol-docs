@@ -57,6 +57,6 @@ uint64: lower and higher
 
 Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: ``lower`` and ``higher``.
 
-Check `how to compact lower and higher into a compact number <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_.
+Check `how to compact lower and higher into a single value <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_.
 
 Continue: :doc:`Tools <tools>`.
