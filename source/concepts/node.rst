@@ -20,10 +20,24 @@ P2P Component
 
 The P2P nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
-The API push new transactions to the P2P network, where they are included in a block or discarded. After the block is processed:
+The API push new transactions to the P2P network, where they are :doc:`included in a block <harvesting>` or discarded. After the block is processed:
 
 - The binary of the block is saved on disk as a flat file.
 - The updated chain state is saved in memory or RocksDB (configurable).
+
+Node reputation
+===============
+
+Public networks enable anyone to run a node. Some of these nodes could share invalid information or try to disturb the network.
+
+To reduce communication attempts, the nodes keep track of the results of preceding communications.
+
+When a node connects to a remote peer, the first increments the trust towards the remote. Otherwise, the node increments the failure counter. Likewise, the node updates the trust counters accordingly after processing the data requested.
+
+From these interactions, the node assigns a weight between 500 and 10000 to every peer reached.
+
+The probability of selecting a remote node depends linearly on its weight. Every four rounds of node selections, the criteria changes to prevent |sybil|. The node selects a peer with high importance instead.
+
 
 RocksDB
 =======
@@ -94,6 +108,10 @@ Each REST component connects to one API instance, sending new transactions using
 .. |zmq| raw:: html
 
   <a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a>
+
+.. |sybil| raw:: html
+
+  <a href=" https://en.wikipedia.org/wiki/Sybil_attack" target="_blank">Sybil attacks</a>
 
 ******
 Guides
