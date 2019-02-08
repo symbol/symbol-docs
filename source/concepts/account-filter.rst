@@ -55,7 +55,7 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
     Blocking spam transactions
 
-The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality:seal`` mosaics.
+The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality.seal`` mosaics.
 
 Enhancing the account security
 ==============================

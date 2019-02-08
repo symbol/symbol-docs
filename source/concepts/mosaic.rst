@@ -14,15 +14,17 @@ Each mosaic has a set of configurable properties. During the mosaic creation, yo
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
-    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for.
-    Initial supply; Integer; Indicates the amount of mosaic in circulation. The initial supply must be in the range of 0 and 9,000,000,000.
+    Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``.
+    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Mosaics can be configured to not expire.
+    Initial supply; Integer; Indicates the amount of mosaic in circulation. The initial supply must be in the range of 0 and ``9,000,000,000``.
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
 ******
 Guides
 ******
+
+.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
 
 .. postlist::
     :category: Mosaic
@@ -57,14 +59,12 @@ Announce a mosaic definition transaction to create a new mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentId; uint64; The namespace parent Id.
+    mosaicNonce; uint32; Random nonce used to generate the mosaic id.
     mosaicId; uint64; The mosaic Id.
-    mosaicNameLength; uint8; The mosaic name lenght.
-    count; uint8; The number of elements in optional properties
+    propertiesCount; uint8; The number of elements in optional properties
     flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
     divisibility; uint8; The mosaic divisibility.
-    mosaicName; array(byte, mosaicNameLength); The mosaic name may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
-    property; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
+    properties; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
 
 .. _mosaic-supply-change-transaction:
 
@@ -144,14 +144,11 @@ Enumeration: uint8
 
 MosaicSupplyChangeDirection
 ===========================
-
 Enumeration: uint8
 
 .. csv-table::
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Increase.
-    0x01; Decrease.
-
-
+    0; Increase.
+    1; Decrease.

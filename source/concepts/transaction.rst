@@ -12,32 +12,36 @@ Transaction types
 
 .. _transaction-types:
 
-There are different types of transactions. For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
+There are different types of transactions. For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 .. csv-table::
     :header:  "Id",  "Type", "Description"
     :delim: ;
 
-    **Mosaic Transactions**;;
-    0x414D; :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; Register a new mosaic.
+    **Mosaic**;;
+    0x414D; :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; Register a new :doc:`mosaic <mosaic>`.
     0x424D; :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
-    **Namespace Transactions**;;
-    0x414E; :ref:`Register Namespace Transaction <register-namespace-transaction>`; Register a namespace to organize your assets.
+    **Namespace**;;
+    0x414E; :ref:`Register Namespace Transaction <register-namespace-transaction>`; Register a :doc:`namespace <mosaic>` to organize your assets.
+    0x424E; :ref:`Address Alias Transaction <address-alias-transaction>`; Attach a namespace name to an account.
+    0x434E; :ref:`Mosaic Alias Transaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
     **Transfer**;;
     0x4154; :ref:`Transfer Transaction <transfer-transaction>`; Send mosaics and messages between two accounts.
-    **Multisignature Transactions**;;
-    0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a multisig contract.
+    **Multisignature**;;
+    0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
     0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
     0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
     --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
-    **Account Filters**;;
+    **Account filters**;;
     0x4150; :ref:`Account Properties Address Transaction <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
     0x4250; :ref:`Account Properties Mosaic Transaction <account-properties-mosaic-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`Account Properties Entity Type Transaction <account-properties-entity-type-transaction>`; Allow or block outgoing transactions by transaction type.
-    **Cross-chain swaps Transactions**;;
-    0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a mosaic swap between different chains.
-    0x4252; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a mosaic swap between different chains.
+    **Cross-chain swaps**;;
+    0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
+    0x4252; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a token swap between different chains.
+    **Remote harvesting**;;
+    0x414C; :ref:`Account Link Transaction <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:` delegated harvesting <harvesting>`.
 
 **********************
 Defining a transaction
@@ -46,6 +50,29 @@ Defining a transaction
 Every transaction shares some common properties. Each transaction extends from the :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
 
 Transactions are defined in a :doc:`serialized form <../api/serialization>`. We recommend to `use the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+
+.. _fees:
+
+Fees
+====
+
+Transactions have an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network and run the infrastructure.
+
+The fee associated with a transaction primarily depends on the transaction’s size. The effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure the latter value to all positive values, including zero.
+
+    effective_fee = transaction::size * block::fee_multiplier
+
+A sender of a transaction must specify during the transaction definition a ``max_fee``, meaning the maximum fee the account allows to spend for this transaction.
+
+If the ``effective_fee`` is smaller or equal to the ``max_fee``, the harvester can opt to include the transaction in the block. The ``fee_multiplier`` is stored in the :ref:`block header <block-header>`, permitting to resolve which was the effective fee paid for every transaction included.
+
+The harvesting nodes can decide their transaction inclusion strategy:
+
+* **Prefer-oldest**: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.
+* **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
+* **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
+
+By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
 
 .. _transaction-signature:
 
@@ -59,7 +86,7 @@ For example, a transfer transaction describes who is the recipient and the quant
 
 The account generates the signature `signing the first 100 bytes of the defined transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ with its private key. Then, the signature is appended to the transaction's body, resulting in a signed transaction.
 
-The hash of the transaction is generated once `the Sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
+The hash of the transaction is generated once `the sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
 
 .. _transaction-validation:
 
@@ -128,7 +155,7 @@ Transaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    fee; uint64; The cost of announcing a transaction.  This fee is necessary to provide an incentive for those who secure the network. The account pays the fee  in XEM, the underlying cryptocurrency of the NEM network. Private chains can edit the network configuration to suppress the fees.
+    max_fee; uint64; The maximum fee allowed to spend for the transaction.
     deadline; uint64; The maximum amount of time to include the transaction in the blockchain.
 
 .. _embedded-transaction:
