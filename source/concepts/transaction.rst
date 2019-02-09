@@ -41,7 +41,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
     0x4252; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a token swap between different chains.
     **Remote harvesting**;;
-    0x414C; :ref:`Account Link Transaction <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:` delegated harvesting <harvesting>`.
+    0x414C; :ref:`Account Link Transaction <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:`delegated harvesting <harvesting>`.
 
 **********************
 Defining a transaction
