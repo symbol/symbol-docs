@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15\n"
+"Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 20:47+0900\n"
+"POT-Creation-Date: 2019-02-09 07:59+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -81,18 +81,20 @@ msgstr ""
 msgid ""
 "Determines up to what decimal place the mosaic can be divided. Divisibility "
 "of 3 means that a mosaic can be divided into smallest parts of 0.001 "
-"mosaics. The divisibility must be in the range of 0 and 6."
+"mosaics. The divisibility must be in the range of 0 and ``6``."
 msgstr ""
 "モザイクがどれくらいの小数点以下に分割できるかを決定します。可分性 3 はモザイクが最小で 0.001 に分割できることを意味します。可分性は 0 から"
-" 6 の範囲でなければなりません。"
+" ``6`` の範囲でなければなりません。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Duration"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Specifies the number of confirmed blocks the mosaic is rented for."
-msgstr "モザイクが借りられる承認済みブロック数を指定します。"
+msgid ""
+"Specifies the number of confirmed blocks the mosaic is rented for. Mosaics "
+"can be configured to not expire."
+msgstr "モザイクのレンタル期間の承認済みブロック数を指定します。期限が切れないモザイクを構成することが可能です。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Initial supply"
@@ -101,8 +103,8 @@ msgstr ""
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
 "Indicates the amount of mosaic in circulation. The initial supply must be in"
-" the range of 0 and 9,000,000,000."
-msgstr "モザイクの供給量の総数です。初期供給量は 0 から 9,000,000,000 の範囲でなければなりません。"
+" the range of 0 and ``9,000,000,000``."
+msgstr "モザイクの供給量の総数です。初期供給量は 0 から ``9,000,000,000`` の範囲でなければなりません。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Supply mutable"
@@ -133,11 +135,20 @@ msgstr ""
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic.rst:37
+#: ../../source/concepts/mosaic.rst:27
+msgid ""
+"⚠ The latest release introduces breaking changes. Until the SDKs are not "
+"aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 "
+"<../getting-started/setup-workstation>` to run the guides."
+msgstr ""
+"⚠ 最新リリースでは重大な変更が加えられています。まだSDKは整備されていないので、ガイドを進める場合は :doc:`catapult-service-"
+"bootstrap 0.1.0 <../getting-started/setup-workstation>` を使用することを推奨します。"
+
+#: ../../source/concepts/mosaic.rst:39
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/mosaic.rst:39
+#: ../../source/concepts/mosaic.rst:41
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -147,27 +158,27 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークとは異なる可能性があります。"
 
-#: ../../source/concepts/mosaic.rst:44
+#: ../../source/concepts/mosaic.rst:46
 msgid "MosaicDefinitionTransaction"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:46
+#: ../../source/concepts/mosaic.rst:48
 msgid "Announce a mosaic definition transaction to create a new mosaic."
 msgstr "新しいモザイクを作るためにモザイク定義トランザクションをアナウンスしてください。"
 
-#: ../../source/concepts/mosaic.rst:48 ../../source/concepts/mosaic.rst:76
+#: ../../source/concepts/mosaic.rst:50 ../../source/concepts/mosaic.rst:76
 msgid "**Version**: 0x02"
 msgstr "**バージョン**: 0x02"
 
-#: ../../source/concepts/mosaic.rst:50
+#: ../../source/concepts/mosaic.rst:52
 msgid "**Entity type**: 0x414D"
 msgstr "**エンティティタイプ**: 0x414D"
 
-#: ../../source/concepts/mosaic.rst:52 ../../source/concepts/mosaic.rst:80
+#: ../../source/concepts/mosaic.rst:54 ../../source/concepts/mosaic.rst:80
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/mosaic.rst:54 ../../source/concepts/mosaic.rst:82
+#: ../../source/concepts/mosaic.rst:56 ../../source/concepts/mosaic.rst:82
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -176,20 +187,16 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "parentId"
-msgstr ""
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1
-msgid "uint64"
+msgid "mosaicNonce"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The namespace parent Id."
-msgstr "親ネームスペースID"
+msgid "uint32"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Random nonce used to generate the mosaic id."
+msgstr "モザイクIDを生成するために使用されるランダムなノンス値"
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
@@ -197,25 +204,24 @@ msgstr "親ネームスペースID"
 msgid "mosaicId"
 msgstr ""
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "uint64"
+msgstr ""
+
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic Id."
 msgstr "モザイクID"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "mosaicNameLength"
+msgid "propertiesCount"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1
 msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic name lenght."
-msgstr "モザイク名の長さ"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "count"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
@@ -243,23 +249,7 @@ msgid "The mosaic divisibility."
 msgstr "モザイクの可分性"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "mosaicName"
-msgstr ""
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "array(byte, mosaicNameLength)"
-msgstr ""
-
-#: ../../source/concepts/mosaic.rst:1
-msgid ""
-"The mosaic name may have a maximum length of ``64`` characters. Allowed "
-"characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -."
-msgstr ""
-"モザイク名は最大 ``64`` 文字です。利用可能な文字は a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -. "
-"です。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "property"
+msgid "properties"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
@@ -344,7 +334,7 @@ msgstr ""
 msgid "MosaicFlags"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:132 ../../source/concepts/mosaic.rst:148
+#: ../../source/concepts/mosaic.rst:132 ../../source/concepts/mosaic.rst:147
 msgid "Enumeration: uint8"
 msgstr ""
 
@@ -352,7 +342,7 @@ msgstr ""
 msgid "Id"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1
 msgid "0x00"
 msgstr ""
 
@@ -360,7 +350,7 @@ msgstr ""
 msgid "No flags present."
 msgstr "フラグ無し"
 
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1
 msgid "0x01"
 msgstr ""
 
@@ -389,8 +379,16 @@ msgid "MosaicSupplyChangeDirection"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
 msgid "Increase."
 msgstr "増加"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "1"
+msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Decrease."

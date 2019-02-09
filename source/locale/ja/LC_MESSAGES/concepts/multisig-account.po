@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15\n"
+"Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 19:57+0900\n"
+"POT-Creation-Date: 2019-02-09 07:59+0900\n"
 "PO-Revision-Date: 2018-10-26 13:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
@@ -90,11 +90,12 @@ msgstr "アカウントは ``5`` マルチシグアカウントまでの連署�
 #: ../../source/concepts/multisig-account.rst:21
 msgid ""
 "Multisig accounts can have as a cosigner another multisig, up to ``3`` "
-"levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-"
-"account>`."
+"levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature "
+"transactions."
 msgstr ""
-"マルチシグアカウントは、最大 ``3`` レベルまでの別のマルチシグを連署者として持つことができます。:doc:`マルチレベルマルチシグアカウント "
-"<multi-level-multisig-account>` を参照してください。"
+"マルチシグアカウントは ``3`` "
+"階層まで、他のマルチシグアカウントを連署者にすることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに AND/OR "
+"ロジックを追加します。"
 
 #: ../../source/concepts/multisig-account.rst:25
 msgid "Examples"
@@ -178,15 +179,58 @@ msgstr ""
 msgid "Transferring an account"
 msgstr "アカウントの譲渡"
 
-#: ../../source/concepts/multisig-account.rst:70
+#: ../../source/concepts/multisig-account.rst:69
+#: ../../source/concepts/multisig-account.rst:81
+msgid "Manufacturing and Supply Chains"
+msgstr "製造業とサプライチェーン"
+
+#: ../../source/concepts/multisig-account.rst:71
+msgid "In this example, a manufacturer is shipping a pharmaceutical product."
+msgstr "これは製造者が医薬製品を発送する事例です。"
+
+#: ../../source/concepts/multisig-account.rst:73
+msgid ""
+"The product receives its quality approval :doc:`mosaic <mosaic>` only when "
+"its blockchain record shows it has a production date, safety inspection, and"
+" was shipped at the correct temperature."
+msgstr ""
+"この製品は、ブロックチェーン記録が示す製造日時、安全検査、正しい温度で出荷されたかを示したときだけに、品質認可 :doc:`モザイク <mosaic>`"
+" を受取ります。"
+
+#: ../../source/concepts/multisig-account.rst:75
+msgid ""
+"Sensors in the shipping container report temperature data every 5 minutes "
+"and consolidate it into a daily report."
+msgstr "出荷コンテナ内のセンサーが温度を5分ごとにレポートし、日次レポートとしてまとめます。"
+
+#: ../../source/concepts/multisig-account.rst:84
+#: ../../source/concepts/multisig-account.rst:94
+msgid "Fraud Detection"
+msgstr "不正検知"
+
+#: ../../source/concepts/multisig-account.rst:86
+msgid ""
+"This example shows how a high-security account can be made easier to use."
+msgstr "この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。"
+
+#: ../../source/concepts/multisig-account.rst:88
+msgid ""
+"Transactions are only approved from a hardware wallet OR your phone AND a "
+"fraud detection AI. MLMA allows a variety of security configurations at the "
+"protocol level to keep businesses and their customers hack-free."
+msgstr ""
+"トランザクションはハードウェアウォレットまたは電話と不正検知AIによってのみ承認されます。MLMA "
+"はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
+
+#: ../../source/concepts/multisig-account.rst:98
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/multisig-account.rst:82
+#: ../../source/concepts/multisig-account.rst:110
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/multisig-account.rst:84
+#: ../../source/concepts/multisig-account.rst:112
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -196,35 +240,35 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/multisig-account.rst:89
+#: ../../source/concepts/multisig-account.rst:117
 msgid "ModifyMultisigTransaction"
 msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:91
+#: ../../source/concepts/multisig-account.rst:119
 msgid "Announce a modify multisig account transaction to:"
 msgstr "マルチシグアカウント変更トランザクションのアナウンス:"
 
-#: ../../source/concepts/multisig-account.rst:93
+#: ../../source/concepts/multisig-account.rst:121
 msgid "Transform an account to multisig."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/concepts/multisig-account.rst:94
+#: ../../source/concepts/multisig-account.rst:122
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更する。"
 
-#: ../../source/concepts/multisig-account.rst:96
-msgid "**Version**: 0x01"
-msgstr "**バージョン**: 0x01"
+#: ../../source/concepts/multisig-account.rst:124
+msgid "**Version**: 0x03"
+msgstr "**バージョン**: 0x03"
 
-#: ../../source/concepts/multisig-account.rst:98
+#: ../../source/concepts/multisig-account.rst:126
 msgid "**Entity type**: 0x4155"
 msgstr "**エンティティタイプ**: 0x4155"
 
-#: ../../source/concepts/multisig-account.rst:100
+#: ../../source/concepts/multisig-account.rst:128
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/multisig-account.rst:102
+#: ../../source/concepts/multisig-account.rst:130
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -254,8 +298,7 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
 #: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
-msgid "uint8"
+msgid "int8"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
@@ -281,6 +324,10 @@ msgid "modificationsCount"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/multisig-account.rst:1
 msgid "The number of modifications."
 msgstr "変更の数"
 
@@ -298,7 +345,7 @@ msgstr ""
 msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
 msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
 
-#: ../../source/concepts/multisig-account.rst:116
+#: ../../source/concepts/multisig-account.rst:144
 msgid "CosignatoryModification"
 msgstr ""
 
@@ -326,11 +373,11 @@ msgstr ""
 msgid "The public key of the cosignatory."
 msgstr "連署者の公開鍵"
 
-#: ../../source/concepts/multisig-account.rst:128
+#: ../../source/concepts/multisig-account.rst:156
 msgid "CosignatoryModificationType"
 msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:130
+#: ../../source/concepts/multisig-account.rst:158
 msgid "Enumeration: uint8"
 msgstr ""
 
@@ -339,17 +386,17 @@ msgid "Id"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "0x00"
+msgid "0"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Add."
-msgstr "追加"
+msgid "Add cosignatory."
+msgstr "連署者を追加"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "0x01"
+msgid "1"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Remove."
-msgstr "削除"
+msgid "Remove cosignatory."
+msgstr "連署者を削除"
