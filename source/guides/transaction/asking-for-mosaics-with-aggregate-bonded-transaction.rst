@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 13 Aug, 2018
-    :category: aggregate-transaction
+    :category: Aggregate Transaction
     :excerpt: 1
     :nocomments:
 
@@ -139,7 +139,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-If all goes well, :doc:`Bob receives a notification <../transaction/debugging-transactions>`.
+If all goes well, :doc:`Bob receives a notification <../transaction/monitoring-a-transaction-status>`.
 
 ************
 What's next?

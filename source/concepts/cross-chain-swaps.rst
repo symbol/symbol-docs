@@ -23,13 +23,32 @@ The figure below illustrates the cross-chain swap protocol.
 
 When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
 
+******
+Guides
+******
+
+.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
+
+.. postlist::
+    :category: Cross-Chain Swaps
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
+*******
+Schemas
+*******
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
 .. _secret-lock-transaction:
 
-***********************
-Secret lock transaction
-***********************
+SecretLockTransaction
+=====================
 
-Use a secret lock transaction to start the cross-chain swap.
+Use a secret lock transaction to start the cross-chain swap:
 
 1. Define the mosaic units you want to transfer to a determined account.
 
@@ -43,71 +62,62 @@ The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction
 
 If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
 
-Parameters
-==========
+**Version**: 0x01
 
-    **Mosaic**
+**Entity type**: 0x4152
 
-    Locked mosaic.
+**Inlines**:
 
-    **Duration**
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
-    If reached, the mosaics will be returned to the initiator.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Hash type**
-
-    The algorithm used to hash the proof.
-
-    .. csv-table::
-        :header: "Id", "Hash type", "Description"
-        :delim: ;
-
-        0; SHA_3; Input is hashed using Sha3
-        1; Keccak; Input is hashed using Keccak
-        2; Hash_160; Input is hashed twice: first with Sha-256 and then with RIPEMD-160
-        3; Hash_256; Input is hashed twice with Sha-256
-
-    **Secret**
-
-    The proof hashed.
-
-    **Recipient**
-
-    The address who will receive the funds once unlocked.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic.
+    duration; uint64; The lock duration. If reached, the mosaics will be returned to the initiator.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
+    secret; 64 bytes (binary);  The proof hashed.
+    recipient; 25 bytes (binary); The address who will receive the funds once unlocked.
 
 .. _secret-proof-transaction:
 
-************************
-Secret proof transaction
-************************
+SecretProofTransaction
+======================
 
 Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
-The transaction must prove that knows the *proof*  that unlocks the mosaics.
+The transaction must prove that knows the *proof* that unlocks the mosaics.
 
-Parameters
-==========
+**Version**: 0x01
 
-    **Hash type**
+**Entity type**: 0x4252
 
-    The algorithm used to hash the proof.
+**Inlines**:
 
-    **Secret**
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
-    The proof hashed.
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **Proof**
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
+    secret; 64 bytes (binary); The proof hashed.
+    proofSize; uint16; The proof size in bytes.
+    proof; array(byte, proofSize); The original proof.
 
-    The original proof.
+.. _lock-hash-algorithm:
 
-**************
-Related guides
-**************
+LockHashAlgorithm
+=================
 
-.. postlist::
-    :category: cross-chain-swaps
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0 (SHA_3); Input is hashed using sha3 256.
+    1 (Keccak); Input is hashed using Keccak.
+    2 (Hash_160); Input is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    3 (Hash_256); Input is hashed twice with Sha-256 (bitcoin's OP_HASH256).

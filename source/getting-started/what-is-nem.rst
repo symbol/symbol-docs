@@ -6,9 +6,15 @@ What is ProximaX?
 Blockchain Reimagined and Evolved
 **********************
 
+<<<<<<< HEAD
 |ProximaX| is a blockchain platform built from the ground up to be simple for developers to use blockchain technology.
 
 ProximaX is built around a powerful system to customize your using of the blockchain. We call it the *Smart Asset System*. It gives you the power to use ProximaX as if it were a custom blockchain built for your application and your assets.
+=======
+|nem| is a developer-friendly blockchain platform. Rather than force you to write your own “smart contract” code from scratch, NEM gives you direct access to a specialized set of tested and secure on-blockchain :doc:`features <../concepts/account>`.
+
+NEM is suitable for an amazing variety of solutions of different classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
+>>>>>>> 06d751963cdff08a239b09259625853aff0425b5
 
 .. figure:: ../resources/images/examples/smart-assets-system.png
     :align: center
@@ -16,19 +22,20 @@ ProximaX is built around a powerful system to customize your using of the blockc
 
     The Smart Asset System
 
+<<<<<<< HEAD
 Rather than force you to write your own “smart contract” code from scratch or use off-blockchain methods that define custom assets for you application, ProximaX gives you direct access to a specialized set of tested and secure on-blockchain features.
 
 ProximaX is suitable for an amazing variety of solutions of different classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
 
+=======
+>>>>>>> 06d751963cdff08a239b09259625853aff0425b5
 *******************
 Architecting on ProximaX
 *******************
 
 ProximaX :doc:`nodes <../concepts/node>` provide a powerful, stable and secure platform where smart asset transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
-All the functionalities are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight code in any language.
-
-Some examples of possible architecture solutions:
+All the features are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight :doc:`code in any language <../sdk/languages>`.
 
 .. figure:: ../resources/images/examples/architecting-nem-solutions.png
     :align: center

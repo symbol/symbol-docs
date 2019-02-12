@@ -1,7 +1,7 @@
 :orphan:
 
-.. post:: 10 Aug, 2018
-    :category: aggregate-transaction
+.. post:: 20 Aug, 2018
+    :category: Aggregate Transaction, Multisig Account
     :excerpt: 1
     :nocomments:
 
@@ -160,13 +160,13 @@ As all required cosigners did not sign the transaction, it should be announced a
         :lines:  59-64
 
 
-1. Open a new terminal to :doc:`monitor<../transaction/debugging-transactions>` the aggregate bonded transaction.
+1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account. After :ref:`locks fund transaction <lock-funds-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

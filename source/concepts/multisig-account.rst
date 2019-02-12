@@ -18,10 +18,7 @@ Some important considerations to keep in mind:
 
 * An account can be cosigner of up to ``5`` multisig accounts.
 
-* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
-
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
-
+* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 ********
 Examples
@@ -68,38 +65,101 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
     Transferring an account
 
-.. _modify-multisig-account-transaction:
+Manufacturing and Supply Chains
+===============================
 
-***********************************
-Modify multisig account transaction
-***********************************
+In this example, a manufacturer is shipping a pharmaceutical product.
 
-Announce a modify multisig account transaction to:
+The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature.
 
-a) Transform an account to multisig.
-b) Change the configurable properties of a multisig account.
+Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
 
-    **Minimum approval delta**
+.. figure:: ../resources/images/examples/mlma-supply-chain.png
+    :align: center
+    :width: 750px
 
-    The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    Manufacturing and Supply Chains
 
-    **Minimum removal delta**
+Fraud Detection
+===============
 
-    The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+This example shows how a high-security account can be made easier to use.
 
-    **Modifications**
+Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI. MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.
 
-    Each account in the modification list can be enabled to announce and cosign transactions for its approval (1) or deleted from a the multisig account (0).
+.. figure:: ../resources/images/examples/mlma-fraud-detection.png
+    :align: center
+    :width: 550px
 
-**************
-Related guides
-**************
+    Fraud Detection
+
+******
+Guides
+******
 
 .. postlist::
-    :category: multisig-account
+    :category: Multisig Account
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle
     :excerpts:
     :sort:
 
+*******
+Schemas
+*******
+
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+
+.. _modify-multisig-account-transaction:
+
+ModifyMultisigTransaction
+=========================
+
+Announce a modify multisig account transaction to:
+
+a) Transform an account to multisig.
+b) Change the configurable properties of a multisig account.
+
+**Version**: 0x03
+
+**Entity type**: 0x4155
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    modificationsCount; uint8; The number of modifications.
+    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
+
+.. _cosignatory-modification:
+
+CosignatoryModification
+=======================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    modificationType; :ref:`CosignatoryModificationType <cosignatory-modification-type>`; The cosignatory modification type.
+    cosignatoryPublicKey; 32 bytes (binary); The public key of the cosignatory.
+
+.. _cosignatory-modification-type:
+
+CosignatoryModificationType
+===========================
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0; Add cosignatory.
+    1; Remove cosignatory.

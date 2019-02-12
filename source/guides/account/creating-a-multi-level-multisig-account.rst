@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: multisig-account, mlma
+    :category: Multisig Account
     :excerpt: 1
     :nocomments:
 
@@ -9,7 +9,7 @@
 Creating a multi-level multisig account (MLMA)
 ##############################################
 
-Create a :doc:`multi-level multisig account <../../concepts/multi-level-multisig-account>`.
+Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center

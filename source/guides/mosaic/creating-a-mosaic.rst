@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 16 Aug, 2018
-    :category: mosaic
+    :category: Mosaic
     :excerpt: 1
     :nocomments:
 

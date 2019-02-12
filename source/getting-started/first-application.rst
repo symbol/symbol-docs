@@ -94,7 +94,7 @@ Receiving an OK response does not mean the transaction is valid, which means it 
 
 We suggest opening three new terminals:
 
-1. The first terminal :doc:`monitors announced transactions<../guides/transaction/debugging-transactions>` validation errors.
+1. The first terminal :doc:`monitors announced transactions <../guides/transaction/monitoring-a-transaction-status>` validation errors.
 
 .. code-block:: bash
 
@@ -239,7 +239,7 @@ Although the transaction is created, it has not been announced to the network ye
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
-   .. code-block:: bash
+.. code-block:: bash
 
     $> nem2-cli account info --profile buyer
 

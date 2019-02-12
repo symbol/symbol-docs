@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 17 Aug, 2018
-    :category: multisig-account
+    :category: Multisig Account
     :excerpt: 1
     :nocomments:
 
@@ -178,7 +178,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  63-68
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After lock funds transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
 
 .. example-code::
 

@@ -1,8 +1,17 @@
+.. post:: 16 Aug, 2018
+    :category: Tools
+    :excerpt: 1
+    :nocomments:
+
 ###########################
 Setting up your workstation
 ###########################
 
+<<<<<<< HEAD
 This first guide will walk you through a step-by-step installation of the required tools to start developing on ProximaX Catapult.
+=======
+This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+>>>>>>> 06d751963cdff08a239b09259625853aff0425b5
 
 **********************************
 Running Catapult Service Bootstrap
@@ -20,7 +29,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
@@ -106,85 +115,99 @@ It is time to choose a programming language. Pick the one you feel most comforta
 
 Create a folder for your new project and run the instructions for the selected language.
 
-TypeScript and JavaScript
-=========================
+.. tabs::
 
-1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+    .. tab:: Typescript
 
-.. code-block:: bash
+        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
-    $> npm init
+        .. code-block:: bash
 
-2. Install nem2-sdk and rxjs library.
+            $> npm init
 
-.. code-block:: bash
+        2. Install nem2-sdk and rxjs library.
 
-    $> npm install nem2-sdk rxjs
+        .. code-block:: bash
 
+<<<<<<< HEAD
 3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for ProximaX blockchain.
+=======
+            $> npm install nem2-sdk rxjs
+>>>>>>> 06d751963cdff08a239b09259625853aff0425b5
 
-Make sure you have at least version 2.5.X installed.
+        3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
-.. code-block:: bash
+        Make sure you have at least version 2.5.X installed.
 
-    $> sudo npm install --global typescript
-    $> typescript --version
+        .. code-block:: bash
 
-4. Use `ts-node`_ to execute TypeScript files with node.
+            $> sudo npm install --global typescript
+            $> typescript --version
 
-.. code-block:: bash
+        4. Use `ts-node`_ to execute TypeScript files with node.
 
-    $> sudo npm install --global ts-node
+        .. code-block:: bash
 
-If you want to use javascript directly, you can execute node to run js files.
+            $> sudo npm install --global ts-node
 
-Java
-====
+    .. tab:: Javascript
 
-Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8.
+        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
-1. Use your favourite IDE or create a project from the command line.
+        .. code-block:: bash
 
-.. code-block:: bash
+            $> npm init
 
-    gradle init --type java-application
+        2. Install nem2-sdk and rxjs library.
 
-2. Edit ``build.gradle`` to use Maven central repository.
+        .. code-block:: bash
 
-.. code-block:: java
+            $> npm install nem2-sdk rxjs
 
-    repositories {
-        mavenCentral()
-    }
+    .. tab:: Java
 
-3. Add nem2-sdk and reactive library as a dependency.
+        1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
 
-.. code-block:: java
+        .. code-block:: bash
 
-    dependencies {
-        compile "io.nem:sdk:0.9.1"
-        compile "io.reactivex.rxjava2:rxjava:2.1.7"
-    }
+            gradle init --type java-application
 
-4. Execute ``gradle build`` and ``gradle run`` to run your program.
+        2. Edit ``build.gradle`` to use Maven central repository.
 
-C#
-====
+        .. code-block:: java
 
-1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
+            repositories {
+                mavenCentral()
+            }
 
-2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
+        3. Add nem2-sdk and reactive library as a dependency.
 
-3. Enter nem2-sdk and reactive library packages names in the terminal.
+        .. code-block:: java
 
-.. code-block:: bash
+            dependencies {
+                compile "io.nem:sdk:0.9.1"
+                compile "io.reactivex.rxjava2:rxjava:2.1.7"
+            }
 
-    $> Install-Package nem2-sdk
-    $> Install-Package System.Reactive
+        4. Execute ``gradle build`` and ``gradle run`` to run your program.
 
-Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
+    .. tab:: C#
+
+        1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
+
+        2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
+
+        3. Enter nem2-sdk and reactive library packages names in the terminal.
+
+        .. code-block:: bash
+
+            $> Install-Package nem2-sdk
+            $> Install-Package System.Reactive
+
+        Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
 
 Continue: :doc:`Writing your first application <first-application>`.
+
 
 .. _docker: https://docs.docker.com/install/
 

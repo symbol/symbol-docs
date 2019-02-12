@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.14\n"
+"Project-Id-Version: nem2-docs 0.15.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-06 05:34+0900\n"
+"POT-Creation-Date: 2019-02-02 09:26+0900\n"
 "PO-Revision-Date: 2018-12-05 20:49+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,10 +29,11 @@ msgstr "自己ペーストレーニング"
 msgid ""
 "Although you can read this documentation from start to end, we recommend you"
 " to go directly to the section you want to know more. At the end of each "
-"section, you will find specific guides to understand how to use and combine "
-"built-in features."
+"section, you will find :ref:`specific guides <category-account>` to "
+"understand how to use and combine the different built-in features."
 msgstr ""
-"このドキュメントを始めから終わりまで読めますが、もっと理解したいセクションを直接参照することを推奨します。各セクションの最後には、ビルドイン機能の使い方と組み合わせ方についての特定のガイドを見つけるでしょう。"
+"このドキュメントを最初から最後まで読み進めることができますが、もっと理解したいセクションを直接参照することを推奨します。各セクションの最後には、ビルドイン機能の使い方と組み合わせ方についての"
+" :doc:`ガイド <category-account>` があります。"
 
 #: ../../source/getting-started/training.rst:7
 msgid ""
