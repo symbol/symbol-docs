@@ -31,41 +31,25 @@ At the current moment, you can generate buffers for **C++**. Javascript and Pyth
 Schema
 ******
 
-A schema file defines the entity data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
+The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
 
-The following entities are currently supported:
+Generating transactions builders
+================================
 
-.. csv-table::
-    :header: "Schema file", "Description"
-    :delim: ;
-
-    `entity.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/entity.cats>`_ ; Describes an :ref:`entity <transaction-types>`.
-    `accountlink.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/accountlink.cats>`_ ; Describes account link transaction.
-    `hashlock.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/hashlock.cats>`_ ; Describes a :ref:`hash lock transaction <hash-lock-transaction>`.
-    `secretlock.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/secretlock.cats>`_ ; Describes a :ref:`secret lock transaction <secret-lock-transaction>`.
-    `lockhashtypes.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/lockhashtypes.cats>`_ ; Describes the available :ref:`hash algorithms <secret-lock-transaction>`.
-    `secretproof.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/secretproof.cats>`_ ; Describes a :ref:`secret proof transaction <secret-proof-transaction>`.
-    `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats>`_ ; Describes a :ref:`transfer <transfer-transaction>` transaction.
-    `transaction.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transaction.cats>`_ ; Describes a :doc:`transaction <../concepts/transaction>`.
-    `types.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_ ; Describe field types used by other schemas.
-
-Parsing a schema and generating code
-====================================
-
-Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ code to serialize and deserialize a transfer transaction:
+Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
 
 .. code-block:: bash
 
-    $> python main.py -i schemas/transfer.cats -g cpp-builder
+    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
 
-The generator creates a new file under ``_generated/cpp`` folder. Repeat the process using a different input schema ``(-i)`` or generator ``(-g)`` as needed.
+The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
 
 Writing a schema
 ================
 
 Are you writing a new catapult plugin that includes a new transaction type?
 
-In this example, we are examining how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats>`_ schema works. Follow the same steps to define a new schema.
+In this example, we are examining how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats>`_ schema works. You can adapt the same steps to define a new schema.
 
 First off, create a new file under ``schemas`` folder and define a struct for the transaction body. Think of a struct as a set of properties that we want to store in the same block of memory.
 
@@ -99,7 +83,7 @@ Secondly, define a second transaction struct in the same file. This will contain
         inline TransferTransactionBody
 
 
-Finally, define an EmbeddedTransaction struct.  This struct is used to serialize inner transactions.  The embedded transaction and the body transaction are added as inlines.
+Finally, define an EmbeddedTransaction struct. This struct is used to serialize inner transactions. The embedded transaction and the body transaction are added as inlines.
 
 .. code-block:: python
 
