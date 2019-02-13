@@ -18,16 +18,6 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 
 * **Fewer bugs**: If any bug appears in one language, it is faster to check and fix it.
 
-The best way to learn about the SDKs is through :doc:`guides <../concepts/account>`.
-
-*************************************
-Backward compatibility with NIS1 SDKs
-*************************************
-
-.. note:: Final information regarding compatibility with NIS1 is not available yet.
-
-Start planning the migration to NEM2-SDK to take advantage of new Catapult features and future releases.
-
-Check :doc:`Preparing for NEM2-SDK 1.0.0 <release-notes/00-migration>` to see new features and changes that break backward compatibility with NEM-Library.
+The best way to learn about the SDKs is through :ref:`guides <category-account>`.
 
 Continue: :doc:`Architecture <architecture>`.

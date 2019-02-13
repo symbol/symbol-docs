@@ -69,7 +69,7 @@ Example of a Repository and HTTP implementation:
 
 -  `BlockchainHttp <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainHttp.java>`_
 
-.. warning:: The **repositories return Models instead of DTOs**. You will need to code the `Models <#models>`_ before finishing the API wrapper.
+.. warning:: The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
 Models
 ======
@@ -84,7 +84,7 @@ Particular decisions to consider:
 -  ``uint64`` support: meanwhile `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64`` use that implementation instead.
 -  API conversions: The API returns the data sometimes compressed, you
    might need to convert those types for the user.
--  `Namespace <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_ ID:  At creation time you add the string name, but when you receive the Namespace/Mosaic from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace/Mosaic ``string`` name.
+-  `Namespace <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================
