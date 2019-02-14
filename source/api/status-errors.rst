@@ -73,11 +73,11 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Max_Mosaics_Exceeded, Validation failed because the credit of the mosaic would exceed the maximum different mosaics an account is allowed to own. Set by default to ``10.000`` different mosaics per account.
     Failure_Multisig_Modify_Account_In_Both_Sets, Validation failed because an account is specified to be both added and removed.
     Failure_Multisig_Modify_Multiple_Deletes, Validation failed because there are multiple removals.
-    Failure_Multisig_Modify_Redundant_Modifications, Validation failed because tehre are redundant modifications.
+    Failure_Multisig_Modify_Redundant_Modifications, Validation failed because there are redundant modifications.
     Failure_Multisig_Modify_Unknown_Multisig_Account, Validation failed because account is not in multisig cache.
     Failure_Multisig_Modify_Not_A_Cosigner, Validation failed because there is not account to be removed.
     Failure_Multisig_Modify_Already_A_Cosigner, Validation failed because the account to be added is already a cosignatory.
-    Failure_Multisig_Modify_Min_Setting_Out_Of_Range, Validation failed because thenew minimum settings are out of range.
+    Failure_Multisig_Modify_Min_Setting_Out_Of_Range, Validation failed because the new minimum settings are out of range.
     Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories, Validation failed because min settings are larger than number of cosignatories.
     Failure_Multisig_Modify_Unsupported_Modification_Type, Validation failed because the modification type is unsupported: add (0) and remove (1).
     Failure_Multisig_Modify_Max_Cosigned_Accounts, Validation failed because the cosignatory already cosigns the maximum number of accounts. An account cannot be cosignatory of more than ``5`` multisig accounts.
