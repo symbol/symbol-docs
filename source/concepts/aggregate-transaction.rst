@@ -12,13 +12,11 @@ Aggregated Transactions merge multiple transactions into one, allowing **trustle
 Aggregate complete
 ******************
 
-An aggregate transaction is  **complete** when all cosigners (for multisignature account) have signed it.
+An aggregate transaction is  **complete** when all the required participants have signed it.
 
-The cosigners can sign the transaction without using the blockchain (offline through their own localhost). Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
+The cosigners can sign the transaction without using the blockchain. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
 
 Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions.
-
-.. note:: Aggregate complete transaction has only one signing account. An aggregate transaction can involve different types of transaction. 
 
 Sending payouts
 ===============
@@ -69,7 +67,7 @@ Paying for others fees
 
 Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XEM to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee . Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
+By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
