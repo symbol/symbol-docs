@@ -54,7 +54,7 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
     :align: center
-
+    
     Aggregate bonded transaction cycle
 
 Multi-Asset Escrowed Transactions
@@ -65,7 +65,7 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
-
+    
     Multi-Asset Escrowed Transactions
 
 Paying for others fees
@@ -80,7 +80,7 @@ Since the app creator can put their own branding on the open source payment app,
 .. figure:: ../resources/images/examples/aggregate-paying-for-others-fees.png
     :align: center
     :width: 450px
-
+    
     Paying for others fees
 
 ******
@@ -104,7 +104,7 @@ Schemas
 AggregateTransaction
 ====================
 
-**Version**: 0x01
+**Version**: 0x02
 
 **Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
 
@@ -112,26 +112,45 @@ AggregateTransaction
 
 :ref:`Transaction <transaction>`
 
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    **transactions**: array of transactions
-
-    Transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-
-    **cosignatures**: array of cosignatures
-
-    An array of transaction cosignatures.
-
+    payloadSize; uint8; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
+    transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature-transaction>`.
 
 .. _cosignature-transaction:
 
-CosignatureTransaction
-======================
+DetachedCosignature
+===================
 
 Cosignature transactions are used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
 
-    **Hash**
+**Inlines**:
 
-    Aggregate bonded transaction hash to cosign.
+* :ref:`Cosignature <cosignature-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    parentHash; 32 bytes (binary);  The aggregate bonded transaction hash to cosign.
+
+.. _cosignature:
+
+Cosignature
+===========
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    signer;  32 bytes (binary); The cosigner public key.
+    signature; 64 bytes (binary); The transaction signature.
+
 
 .. _hash-lock-transaction:
 
