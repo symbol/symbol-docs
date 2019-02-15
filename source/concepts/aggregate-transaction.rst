@@ -20,10 +20,6 @@ Aggregate complete transactions enable adding more transactions per block by gat
 
 .. note:: Aggregate complete transaction has only one signing account. An aggregate transaction can involve different types of transaction. 
 
-********
-Examples
-********
-
 Sending payouts
 ===============
 
