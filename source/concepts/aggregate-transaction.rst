@@ -99,6 +99,8 @@ Guides
 Schemas
 *******
 
+
+
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 AggregateTransaction
