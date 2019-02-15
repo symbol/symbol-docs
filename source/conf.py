@@ -44,6 +44,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.fulltoc',
     'sphinxcontrib.ghcontributors',
+    'sphinx_tabs.tabs',
     'edit-on-github',
     'ablog'
     ]
@@ -61,7 +62,7 @@ templates_path.append(ablog.get_html_templates_path())
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'contents'
 
 # General information about the project.
 project = u'nem2-docs'
@@ -73,7 +74,8 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.15'
+version = u'0.16.1'
+
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -119,8 +121,9 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting started", "getting-started/what-is-nem"),
+        ("Getting started", "getting-started/setup-workstation"),
         ("Built-in features", "concepts/account"),
+        ("Guides", "guides/category/account"),
         ("References", "references"),
     ],
 
@@ -188,6 +191,8 @@ html_title = 'NEM Developer Center'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Additional html pages
+html_additional_pages = {'index': 'index.html', 'references': 'references.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -212,7 +217,8 @@ html_sidebars = {
   'cli/**': ['localtoc.html'],
   'concepts/**': ['localtoc.html'],
   'getting-started/**': ['localtoc.html'],
-  'guides/**/**': [],
+  'guides/**/**': ['categories.html'],
+  'guides': ['categories.html'],
   'libraries/**': ['localtoc.html'],
   'prototyping-tool/**': ['localtoc.html'],
   'sdk/**': ['localtoc.html'],
@@ -298,8 +304,7 @@ epub_copyright = copyright
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
-
+epub_exclude_files = ['index.html, search.html, references.html, guides.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
@@ -318,6 +323,7 @@ html_scaled_image_link = False
 
 # -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
+blog_path = 'guides'
 
 blog_authors = {
     'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
@@ -326,4 +332,4 @@ blog_authors = {
 
 # -- Options for linkcheck ------------------------------------------------
 
-linkcheck_ignore = [r'http://localhost:\d+']
+linkcheck_ignore = [r'http://localhost\d+']

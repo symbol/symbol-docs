@@ -30,19 +30,7 @@ Community SDKs
    C++ ;  ;  ;
    PHP SDK ;  ;  ;
    Ruby SDK ; ; ;
-
-************
-Ongoing work
-************
-
-The following repositories have not been tested by the community, they are under development and might be unstable.
-
-.. csv-table::
-  :header: "Language", "Repository", "Reference", "Active Developers"
-  :delim: ;
-
-  Python SDK ; |python-repo| ;  ; NEM Foundation
-
+   Python SDK ; ; ;
 
 .. |tsjs-repo| raw:: html
 

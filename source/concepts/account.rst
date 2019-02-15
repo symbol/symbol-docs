@@ -26,9 +26,9 @@ Accounts have the following properties:
 
   The amount of different :doc:`mosaics <mosaic>` the account owns.
 
-  **Filters**
+  **Importance**
 
-  Accounts may configure a set of smart rules to block announcing or receiving transactions :doc:`given a series of constraints <account-filter>`.
+  The relation between the amount of harvesting mosaics the account owns and the total mosaic supply.
 
 ****************
 Multisig Account
@@ -36,12 +36,18 @@ Multisig Account
 
 Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
 
+*******
+Filters
+*******
+
+Accounts may configure a set of smart rules to block announcing or receiving transactions :doc:`given a series of constraints <account-filter>`.
+
 ******
 Guides
 ******
 
 .. postlist::
-    :category: account
+    :category: Account
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

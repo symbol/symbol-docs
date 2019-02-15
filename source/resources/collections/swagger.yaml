@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 0.7.8
+  version: 1.0.11
   title: Catapult REST API Reference
   license:
     name: Apache 2.0
@@ -10,47 +10,46 @@ info:
 host: 'localhost:3000'
 
 tags:
-  - name: Account routes
-    description: |
-      [Account](https://nemtech.github.io/concepts/account.html) related endpoints.
-  - name: Blockchain routes
-    description: |
-      [Block](https://nemtech.github.io/concepts/block.html) related endpoints.
-  - name: Mosaic routes
-    description: |
-      [Mosaic](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
-  - name: Namespace routes
-    description: |
-      [Namespace](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
-  - name: Transaction routes
-    description: |
-      [Transaction](https://nemtech.github.io/concepts/transaction.html) related endpoints.
-  - name: Network routes
-    description: |
-      Network related endpoints.
-  - name: Node routes
-    description: |
-      [Node](https://nemtech.github.io/concepts/node.html) related endpoints.
+- name: Account routes
+  description: |
+    [Account](https://nemtech.github.io/concepts/account.html) related endpoints.
+- name: Blockchain routes
+  description: |
+    [Block](https://nemtech.github.io/concepts/block.html) related endpoints.
+- name: Mosaic routes
+  description: |
+    [Mosaic](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
+- name: Namespace routes
+  description: |
+    [Namespace](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
+- name: Transaction routes
+  description: |
+    [Transaction](https://nemtech.github.io/concepts/transaction.html) related endpoints.
+- name: Network routes
+  description: |
+    Network related endpoints.
+- name: Node routes
+  description: |
+    [Node](https://nemtech.github.io/concepts/node.html) related endpoints.
 
 schemes:
-  - http
+- http
 paths:
   '/account/{accountId}':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get account information
       description: Returns the account information.
       operationId: getAccountInfo
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: accountId
-          in: path
-          description: The public key or address of the account.
-          required: true
-          type: string
-          default: SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY
+      - name: accountId
+        in: path
+        description: The public key or address of the account.
+        required: true
+        type: string
       responses:
         '200':
           description: success
@@ -60,22 +59,22 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-  /account:
+  '/account':
     post:
       tags:
-        - Account routes
+      - Account routes
       summary: Get accounts information
       description: Returns the account information for an array of accounts.
       operationId: getAccountsInfo
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: addresses
-          in: body
-          description: An array of addresses.
-          required: true
-          schema:
-            $ref: '#/definitions/addresses'
+      - name: addresses
+        in: body
+        description: An array of addresses.
+        required: true
+        schema:
+          $ref: '#/definitions/addresses'
       responses:
         '200':
           description: success
@@ -90,29 +89,38 @@ paths:
   '/account/{publicKey}/transactions':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get confirmed transactions
       description: Gets an array of transactions for which an account is the sender or receiver.
       operationId: transactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: publicKey
-          in: path
-          description: The public key of the account.
-          required: true
-          type: string
-          default: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: publicKey
+        in: path
+        description: The public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        minimum: 10
+        maximum: 100
+        default: 10
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: |
+          The transaction id up to which transactions are returned.
+        type: string
+      - name: ordering
+        in: query
+        default: -id
+        description: |
+          The ordering criteria.
+          * -id: Descending order by id.
+          * id: Ascending order by id.
+        type: string
       responses:
         '200':
           description: success
@@ -125,29 +133,39 @@ paths:
   '/account/{publicKey}/transactions/incoming':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get incoming transactions
-      description: Gets an array of incoming transactions. A transaction is said to be incoming with respect to an account if the account is the recipient of the transaction.
+      description: |
+        Gets an array of incoming transactions. A transaction is said to be incoming with respect to an account if the account is the recipient of the transaction.
       operationId: incomingTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: publicKey
-          in: path
-          description: The public key of the account.
-          required: true
-          type: string
-          default: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: publicKey
+        in: path
+        description: The public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        default: 10
+        minimum: 10
+        maximum: 100
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: |
+          The transaction id up to which transactions are returned.
+        type: string
+      - name: ordering
+        in: query
+        default: -id
+        description: |
+          The ordering criteria.
+          * -id: Descending order by id.
+          * id: Ascending order by id.
+        type: string
       responses:
         '200':
           description: success
@@ -160,29 +178,38 @@ paths:
   '/account/{publicKey}/transactions/outgoing':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get outgoing transactions
       description: Gets an array of outgoing transactions. A transaction is said to be outgoing with respect to an account if the account is the sender of the transaction.
       operationId: outgoingTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: publicKey
-          in: path
-          description: The public key of the account.
-          required: true
-          type: string
-          default: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: publicKey
+        in: path
+        description: The public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        minimum: 10
+        maximum: 100
+        default: 10
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: |
+          The transaction id up to which transactions are returned.
+        type: string
+      - name: ordering
+        in: query
+        default: -id
+        description: |
+          The ordering criteria.
+          * -id: Descending order by id.
+          * id: Ascending order by id.
+        type: string
       responses:
         '200':
           description: success
@@ -195,29 +222,39 @@ paths:
   '/account/{publicKey}/transactions/unconfirmed':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get unconfirmed transactions
-      description: Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block.
+      description: |
+        Gets the array of transactions not included in a block where an account is the sender or receiver.
       operationId: unconfirmedTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: publicKey
-          in: path
-          description: The public key of the account.
-          required: true
-          type: string
-          default: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: publicKey
+        in: path
+        description: The public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        minimum: 10
+        maximum: 100
+        default: 10
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: |
+          The transaction id up to which transactions are returned.
+        type: string
+      - name: ordering
+        in: query
+        default: -id
+        description: |
+          The ordering criteria.
+          * -id: Descending order by id.
+          * id: Ascending order by id.
+        type: string
       responses:
         '200':
           description: success
@@ -230,29 +267,39 @@ paths:
   '/account/{publicKey}/transactions/partial':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get aggregate bonded transactions information
-      description: Gets an array of [aggregate bonded transactions](https://nemtech.github.io/concepts/aggregate-transaction.html#aggregate-bonded) where the account is the sender or requires to cosign the transaction.
+      description: |
+        Gets an array of [aggregate bonded transactions](https://nemtech.github.io/concepts/aggregate-transaction.html) where the account is the sender or requires to cosign the transaction.
       operationId: partialTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: publicKey
-          in: path
-          description: The public key of the account.
-          required: true
-          type: string
-          default: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: publicKey
+        in: path
+        description: The public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        minimum: 10
+        maximum: 100
+        default: 10
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: |
+          The transaction id up to which transactions are returned.
+        type: string
+      - name: ordering
+        in: query
+        default: -id
+        description: |
+          The ordering criteria.
+          * -id: Descending order by id.
+          * id: Ascending order by id.
+        type: string
       responses:
         '200':
           description: success
@@ -264,36 +311,37 @@ paths:
           description: invalid argument
 
   '/account/properties/{accountId}':
-      get:
-        tags:
-          - Account routes
-        summary: Get account configurable properties information
-        description: Returns [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given account.
-        operationId: getAccountProperties
-        produces:
-          - application/json
-        parameters:
-          - name: accountId
-            in: path
-            description: The public key or address of the account.
-            required: true
-            type: string
-            default: SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
-        responses:
-          '200':
-            description: success
-            schema:
-              $ref: '#/definitions/AccountPropertiesInfoDTO'
-          '404':
-            description: resource not found
-          '409':
-            description: invalid argument
-  /account/properties:
+    get:
+      tags:
+      - Account routes
+      summary: Get account configurable properties information
+      description: |
+        Returns the [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given account.
+      operationId: getAccountProperties
+      produces:
+      - application/json
+      parameters:
+      - name: accountId
+        in: path
+        description: The public key or address of the account.
+        required: true
+        type: string
+      responses:
+        '200':
+          description: success
+          schema:
+            $ref: '#/definitions/AccountPropertiesInfoDTO'
+        '404':
+          description: resource not found
+        '409':
+          description: invalid argument
+  '/account/properties':
     post:
       tags:
       - Account routes
       summary: Get account properties for given array of addresses
-      description: Returns [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given array of addresses.
+      description: |
+        Returns the [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given array of addresses.
       operationId: getAccountPropertiesFromAccounts
       produces:
       - application/json
@@ -315,23 +363,21 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-
   '/account/{accountId}/multisig':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get multisig account information
-      description: Returns [multisig account](https://nemtech.github.io/concepts/multisig-account.html) information.
+      description: Returns the [multisig account](https://nemtech.github.io/concepts/multisig-account.html) information.
       operationId: getAccountMultisig
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: accountId
-          in: path
-          description: The public key or address of the account.
-          required: true
-          type: string
-          default: SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
+      - name: accountId
+        in: path
+        description: The public key or address of the account.
+        required: true
+        type: string
       responses:
         '200':
           description: success
@@ -344,19 +390,18 @@ paths:
   '/account/{accountId}/multisig/graph':
     get:
       tags:
-        - Account routes
+      - Account routes
       summary: Get multisig account graph information
-      description: Returns [multisig account](https://nemtech.github.io/concepts/multisig-account.html) graph.
+      description: Returns the [multisig account](https://nemtech.github.io/concepts/multisig-account.html) graph.
       operationId: getAccountMultisigGraph
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: accountId
-          in: path
-          description: The public key or address of the account.
-          required: true
-          type: string
-          default: SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
+      - name: accountId
+        in: path
+        description: The public key or address of the account.
+        required: true
+        type: string
       responses:
         '200':
           description: success
@@ -371,29 +416,24 @@ paths:
   '/blocks/{height}/limit/{limit}':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
       summary: Get blocks information
-      description: Gets up to limit number of blocks after given block height from the chain.
+      description: Gets up to limit number of blocks after given block height.
       operationId: getBlocksByHeightWithLimit
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: height
-          in: path
-          description: The block's height.
-          required: true
-          type: integer
-          format: int64
-          minimum: 0
-          default: 1
-        - name: limit
-          in: path
-          description: The number of following blocks to be returned.
-          required: true
-          type: integer
-          minimum: 0
-          format: int
-          default: 25
+      - name: height
+        in: path
+        description: The height of the block. If height -1 is not a multiple of the limit provided, the inferior closest multiple + 1 is used instead.
+        required: true
+        type: integer
+      - name: limit
+        in: path
+        description: The number of blocks to be returned.
+        required: true
+        type: integer
+        enum: [25, 50, 75, 100]
       responses:
         '200':
           description: success
@@ -406,20 +446,19 @@ paths:
   '/block/{height}':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
       summary: Get block information
       description: Gets a block from the chain that has the given height.
       operationId: getBlockByHeight
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: height
-          in: path
-          description: The block's height.
-          required: true
-          type: integer
-          format: int64
-          default: 1
+      - name: height
+        in: path
+        description: The height of the block.
+        required: true
+        type: integer
+        minimum: 1
       responses:
         '200':
           description: success
@@ -432,30 +471,30 @@ paths:
   '/block/{height}/transactions':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
       summary: Get transactions from a block
-      description: Returns an array of transactions included in a block for a given block height.
+      description: Returns an array of [transactions](https://nemtech.github.io/concepts/transaction.html) included in a block for a given block height.
       operationId: getBlockTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: height
-          in: path
-          description: The block's height.
-          required: true
-          type: integer
-          format: int64
-          default: 1
-        - name: pageSize
-          in: query
-          minimum: 10
-          maximum: 100
-          description: 'The number of transactions to return for each request. The default value is 10, the minimum is 10 and the maximum is 100.'
-          type: integer
-        - name: id
-          in: query
-          description: The identifier of the transaction after which we want the transactions to be returned. If not supplied the most recent transactions are returned.
-          type: string
+      - name: height
+        in: path
+        description: The height of the block.
+        required: true
+        type: integer
+        minimum: 1
+      - name: pageSize
+        in: query
+        minimum: 10
+        maximum: 100
+        default: 10
+        description: The number of transactions to return for each request.
+        type: integer
+      - name: id
+        in: query
+        description: The transaction id up to which transactions are returned.
+        type: string
       responses:
         '200':
           description: success
@@ -467,44 +506,129 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-
-  /chain/height:
+  '/block/{height}/transaction/{hash}/merkle':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
+      summary: Get the merkle path for a given a transaction and block
+      description: Returns the merkle path for a [transaction](https://nemtech.github.io/concepts/transaction.html) included in a block. The path is the complementary data needed to calculate the merkle root. A client can compare if the calculated root equals the one recorded in the block header, verifying that the transaction was included in the block.
+      operationId: getMerkleTransaction
+      produces:
+      - application/json
+      parameters:
+      - name: height
+        in: path
+        description: The height of the block.
+        required: true
+        type: integer
+      - name: hash
+        in: path
+        description: The hash of the transaction.
+        required: true
+        type: string
+      responses:
+        '200':
+          description: success
+          schema:
+            $ref: '#/definitions/MerkleProofInfoDTO'
+        '404':
+          description: resource not found
+        '409':
+          description: invalid argument
+  '/block/{height}/receipts':
+    get:
+      tags:
+      - Blockchain routes
+      summary: Get receipts from a block
+      description: Returns the [receipts](https://nemtech.github.io/concepts/receipt.html) linked to a block.
+      operationId: getBlockReceipts
+      produces:
+      - application/json
+      parameters:
+      - name: height
+        in: path
+        description: The height of the block.
+        required: true
+        type: integer
+        minimum: 1
+      responses:
+        '200':
+          description: success
+          schema:
+            type: array
+            items:
+              type: object
+        '404':
+          description: resource not found
+        '409':
+          description: invalid argument
+  '/block/{height}/receipt/{hash}/merkle':
+    get:
+      tags:
+      - Blockchain routes
+      summary: Get the merkle path for a given a receipt statement hash and block
+      description: Returns the merkle path for a [receipt statement or resolution](https://nemtech.github.io/concepts/receipt.html) linked to a block. The path is the complementary data needed to calculate the merkle root. A client can compare if the calculated root equals the one recorded in the block header, verifying that the receipt was linked with the block.
+      operationId: getMerkleReceipts
+      produces:
+      - application/json
+      parameters:
+      - name: height
+        in: path
+        description: The height of the block.
+        required: true
+        type: integer
+      - name: hash
+        in: path
+        description: The hash of the receipt statement or resolution.
+        required: true
+        type: string
+      responses:
+        '200':
+          description: success
+          schema:
+            $ref: '#/definitions/MerkleProofInfoDTO'
+        '404':
+          description: resource not found
+        '409':
+          description: invalid argument
+  '/chain/height':
+    get:
+      tags:
+      - Blockchain routes
       summary: Get the current height of the chain
       description: Returns the current height of the block chain.
       operationId: getBlockchainHeight
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
           schema:
             $ref: '#/definitions/HeightDTO'
-  /chain/score:
+  '/chain/score':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
       summary: Get the current score of the chain
-      description: Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
+      description: |
+        Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
       operationId: getBlockchainScore
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
           schema:
             $ref: '#/definitions/BlockchainScoreDTO'
-  /diagnostic/storage:
+  '/diagnostic/storage':
     get:
       tags:
-        - Blockchain routes
+      - Blockchain routes
       summary: Get the storage information
       description: Returns statistical information about the blockchain.
       operationId: getDiagnosticStorage
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
@@ -513,19 +637,19 @@ paths:
   '/mosaic/{mosaicId}':
     get:
       tags:
-        - Mosaic routes
+      - Mosaic routes
       summary: Get mosaic information
       description: Gets the mosaic definition for a given mosaicId.
       operationId: getMosaic
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: mosaicId
-          in: path
-          description: The mosaic identifier.
-          type: string
-          required: true
-          default: d525ad41d95fcf29
+      - name: mosaicId
+        in: path
+        description: The mosaic identifier.
+        type: string
+        format: hex
+        required: true
       responses:
         '200':
           description: success
@@ -535,22 +659,22 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-  /mosaic:
+  '/mosaic':
     post:
       tags:
-        - Mosaic routes
+      - Mosaic routes
       summary: Get mosaics information for an array of mosaics
       description: Gets an array of mosaic definition.
       operationId: getMosaics
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: mosaicIds
-          in: body
-          description: An array of mosaicIds.
-          required: true
-          schema:
-            $ref: '#/definitions/mosaicIds'
+      - name: mosaicIds
+        in: body
+        description: An array of mosaicIds.
+        required: true
+        schema:
+          $ref: '#/definitions/mosaicIds'
       responses:
         '200':
           description: success
@@ -562,55 +686,22 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-  '/namespace/{namespaceId}/mosaics':
-    get:
-      tags:
-        - Mosaic routes
-      summary: Get mosaics information for a given namespace.
-      description: Gets an array of mosaic definition from mosaics created under the provided namespace.
-      operationId: getMosaicsFromNamespace
-      produces:
-        - application/json
-      parameters:
-        - name: namespaceId
-          in: path
-          description: The namespace identifier.
-          type: string
-          required: true
-          default: 84b3552d375ffa4b
-        - name: pageSize
-          in: query
-          description: The number of mosaics to return.
-          type: integer
-        - name: id
-          in: query
-          description: The mosaic id up to which mosaic definitions are returned.
-          type: string
-      responses:
-        '200':
-          description: success
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/MosaicInfoDTO'
-        '409':
-          description: invalid argument
-  /mosaic/names:
+  '/mosaic/names':
     post:
       tags:
-        - Mosaic routes
+      - Mosaic routes
       summary: Get readable names for a set of mosaics
       description: Returns friendly names for mosaics.
       operationId: getMosaicsName
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: mosaicIds
-          in: body
-          description: An array of mosaicIds.
-          required: true
-          schema:
-            $ref: '#/definitions/mosaicIds'
+      - name: mosaicIds
+        in: body
+        description: An array of mosaicIds.
+        required: true
+        schema:
+          $ref: '#/definitions/mosaicIds'
       responses:
         '200':
           description: success
@@ -625,19 +716,19 @@ paths:
   '/namespace/{namespaceId}':
     get:
       tags:
-        - Namespace routes
+      - Namespace routes
       summary: Get namespace information
       description: Gets the namespace for a given namespaceId.
       operationId: getNamespace
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: namespaceId
-          in: path
-          description: The namespace identifier.
-          type: string
-          required: true
-          default: 84b3552d375ffa4b
+      - name: namespaceId
+        in: path
+        description: The namespace identifier.
+        type: string
+        format: hex
+        required: true
       responses:
         '200':
           description: success
@@ -650,27 +741,26 @@ paths:
   '/account/{accountId}/namespaces':
     get:
       tags:
-        - Namespace routes
+      - Namespace routes
       summary: Get namespaces owned by an account
       description: Gets an array of namespaces for a given account address.
       operationId: getNamespacesFromAccount
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: accountId
-          in: path
-          description: The address or public key of the account.
-          required: true
-          type: string
-          default: SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY
-        - name: pageSize
-          in: query
-          description: The number of namespaces to return.
-          type: integer
-        - name: id
-          in: query
-          description: The namespace id up to which namespace objects are returned.
-          type: string
+      - name: accountId
+        in: path
+        description: The address or public key of the account.
+        required: true
+        type: string
+      - name: pageSize
+        in: query
+        description: The number of namespaces to return.
+        type: integer
+      - name: id
+        in: query
+        description: The namespace id up to which namespace objects are returned.
+        type: string
       responses:
         '200':
           description: success
@@ -680,30 +770,30 @@ paths:
               $ref: '#/definitions/NamespaceInfoDTO'
         '409':
           description: invalid argument
-  /account/namespaces:
+  '/account/namespaces':
     post:
       tags:
-        - Namespace routes
+      - Namespace routes
       summary: Get namespaces for given array of addresses
       description: Gets namespaces for a given array of addresses.
       operationId: getNamespacesFromAccounts
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: addresses
-          in: body
-          description: An array of addresses.
-          required: true
-          schema:
-            $ref: '#/definitions/addresses'
-        - name: pageSize
-          in: query
-          description: The number of namespaces to return.
-          type: integer
-        - name: id
-          in: query
-          description: The namespace id up to which namespace objects are returned.
-          type: string
+      - name: addresses
+        in: body
+        description: An array of addresses.
+        required: true
+        schema:
+          $ref: '#/definitions/addresses'
+      - name: pageSize
+        in: query
+        description: The number of namespaces to return.
+        type: integer
+      - name: id
+        in: query
+        description: The namespace id up to which namespace objects are returned.
+        type: string
       responses:
         '200':
           description: success
@@ -715,22 +805,22 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-  /namespace/names:
+  '/namespace/names':
     post:
       tags:
-        - Namespace routes
+      - Namespace routes
       summary: Get readable names for a set of namespaces
       description: Returns friendly names for mosaics.
       operationId: getNamespacesNames
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: namespaceIds
-          in: body
-          description: An array of namespaceIds.
-          required: true
-          schema:
-            $ref: '#/definitions/namespaceIds'
+      - name: namespaceIds
+        in: body
+        description: An array of namespaceIds.
+        required: true
+        schema:
+          $ref: '#/definitions/namespaceIds'
       responses:
         '200':
           description: success
@@ -745,19 +835,18 @@ paths:
   '/transaction/{transactionId}':
     get:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Get transaction information
       description: Returns transaction information given a transactionId or hash.
       operationId: getTransaction
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: transactionId
-          in: path
-          description: The transaction id or hash.
-          required: true
-          type: string
-          default: 5AB412B5C60E68000145A4C2
+      - name: transactionId
+        in: path
+        description: The transaction id or hash.
+        required: true
+        type: string
       responses:
         '200':
           description: success
@@ -767,22 +856,22 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-  /transaction:
+  '/transaction':
     post:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Get transactions information
       description: Returns transactions information for a given array of transactionIds.
       operationId: getTransactions
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: transactionIds
-          in: body
-          description: An array of transaction ids or hashes.
-          required: true
-          schema:
-            $ref: '#/definitions/transactionIds'
+      - name: transactionIds
+        in: body
+        description: An array of transaction ids or hashes.
+        required: true
+        schema:
+          $ref: '#/definitions/transactionIds'
       responses:
         '200':
           description: success
@@ -796,19 +885,19 @@ paths:
           description: invalid argument
     put:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Announce a new transaction
-      description: Announces a [transaction](https://nemtech.github.io/concepts/transaction.html) to the network. It is recommended to use the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api/serialization.html).
+      description: Announces a transaction to the network. It is recommended to use the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api/serialization.html).
       operationId: announceTransaction
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: payload
-          in: body
-          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
-          required: true
-          schema:
-            $ref: '#/definitions/transactionPayload'
+      - name: payload
+        in: body
+        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        required: true
+        schema:
+          $ref: '#/definitions/transactionPayload'
       responses:
         '202':
           description: success
@@ -820,22 +909,22 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-  /transaction/partial:
+  '/transaction/partial':
     put:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Announce an aggregate bonded transaction
       description: Announces an [aggregate bonded transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#aggregate-bonded) to the network.
       operationId: announcePartialTransaction
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: payload
-          in: body
-          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
-          required: true
-          schema:
-            $ref: '#/definitions/transactionPayload'
+      - name: payload
+        in: body
+        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        required: true
+        schema:
+          $ref: '#/definitions/transactionPayload'
       responses:
         '202':
           description: success
@@ -847,22 +936,22 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-  /transaction/cosignature:
+  '/transaction/cosignature':
     put:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Announce a cosignature transaction
       description: Announces a [cosignature transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#cosignature-transaction) to the network.
       operationId: announceCosignatureTransaction
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: payload
-          in: body
-          description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
-          required: true
-          schema:
-            $ref: '#/definitions/transactionPayload'
+      - name: payload
+        in: body
+        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        required: true
+        schema:
+          $ref: '#/definitions/transactionPayload'
       responses:
         '202':
           description: success
@@ -877,19 +966,18 @@ paths:
   '/transaction/{hash}/status':
     get:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Get transaction status
       description: Returns the transaction status for a given hash.
       operationId: getTransactionStatus
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: hash
-          in: path
-          description: The transaction hash.
-          required: true
-          type: string
-          default: F0078795F73549AF8DC74CBA70533250016FA45CACCD494877291CE02299C414
+      - name: hash
+        in: path
+        description: The transaction hash.
+        required: true
+        type: string
       responses:
         '200':
           description: success
@@ -899,22 +987,22 @@ paths:
           description: resource not found
         '409':
           description: invalid argument
-  /transaction/statuses:
+  '/transaction/statuses':
     post:
       tags:
-        - Transaction routes
+      - Transaction routes
       summary: Get transactions status.
       description: Returns an array of transaction statuses for a given array of transaction hashes.
       operationId: getTransactionsStatuses
       produces:
-        - application/json
+      - application/json
       parameters:
-        - name: transactionHashes
-          in: body
-          description: An array of transaction hashes.
-          required: true
-          schema:
-            $ref: '#/definitions/transactionHashes'
+      - name: transactionHashes
+        in: body
+        description: An array of transaction hashes.
+        required: true
+        schema:
+          $ref: '#/definitions/transactionHashes'
       responses:
         '200':
           description: success
@@ -926,45 +1014,46 @@ paths:
           description: invalid content
         '409':
           description: invalid argument
-  /network:
+  '/network':
     get:
       tags:
-        - Network routes
+      - Network routes
       summary: Get the current network type of the chain
       description: Returns the current network type.
       operationId: getNetworkType
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
           schema:
             $ref: '#/definitions/NetworkTypeDTO'
 
-  /node/info:
+  '/node/info':
     get:
       tags:
-        - Node routes
+      - Node routes
       summary: Get the node information
-      description: Supplies additional information about the application running on a [Node](https://nemtech.github.io/concepts/node.html).
+      description: |
+        Supplies additional information about the application running on a node.
       operationId: getNodeInfo
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
           schema:
             $ref: '#/definitions/NodeInfoDTO'
 
-  /node/time:
+  '/node/time':
     get:
       tags:
-        - Node routes
+      - Node routes
       summary: Get the node time
       description:  Supplies additional information about the application running on a node.
       operationId: getNodeTime
       produces:
-        - application/json
+      - application/json
       responses:
         '200':
           description: success
@@ -975,8 +1064,8 @@ definitions:
   AccountInfoDTO:
     type: object
     required:
-      - meta
-      - account
+    - meta
+    - account
     properties:
       meta:
         $ref: '#/definitions/AccountMetaDTO'
@@ -987,13 +1076,13 @@ definitions:
   AccountDTO:
     type: object
     required:
-      - address
-      - addressHeight
-      - publicKey
-      - publicKeyHeight
-      - mosaics
-      - importance
-      - importanceHeight
+    - address
+    - addressHeight
+    - publicKey
+    - publicKeyHeight
+    - mosaics
+    - importance
+    - importanceHeight
     properties:
       address:
         type: string
@@ -1014,8 +1103,8 @@ definitions:
   AccountPropertiesInfoDTO:
     type: object
     required:
-      - meta
-      - accountProperties
+    - meta
+    - accountProperties
     properties:
       meta:
         $ref: '#/definitions/AccountPropertiesMetaDTO'
@@ -1024,7 +1113,7 @@ definitions:
   AccountPropertiesMetaDTO:
     type: object
     required:
-     - id
+    - id
     properties:
       id:
         type: string
@@ -1032,8 +1121,8 @@ definitions:
   AccountPropertiesDTO:
     type: object
     required:
-      - address
-      - properties
+    - address
+    - properties
     properties:
       address:
         type: string
@@ -1045,8 +1134,8 @@ definitions:
   AccountPropertyDTO:
     type: object
     required:
-      - propertyType
-      - values
+    - propertyType
+    - values
     properties:
       propertyType:
         type: integer
@@ -1056,14 +1145,13 @@ definitions:
         items:
           type: object
         example:
-          - C14+w2br1wkUdGm/SNSlBwCvcksjWBkBXg==
-          - Ul6vmYP5TAEIOMMcDoHz6sn7bCdpjBaE+Q==
-
+        - C14+w2br1wkUdGm/SNSlBwCvcksjWBkBXg==
+        - Ul6vmYP5TAEIOMMcDoHz6sn7bCdpjBaE+Q==
   MultisigAccountGraphInfoDTO:
     type: object
     required:
-      - level
-      - multisigEntries
+    - level
+    - multisigEntries
     properties:
       level:
         type: integer
@@ -1074,18 +1162,18 @@ definitions:
   MultisigAccountInfoDTO:
     type: object
     required:
-      - multisig
+    - multisig
     properties:
       multisig:
         $ref: '#/definitions/MultisigDTO'
   MultisigDTO:
     type: object
     required:
-      - account
-      - minApproval
-      - minRemoval
-      - cosignatories
-      - multisigAccounts
+    - account
+    - minApproval
+    - minRemoval
+    - cosignatories
+    - multisigAccounts
     properties:
       account:
         type: string
@@ -1106,14 +1194,14 @@ definitions:
   AnnounceTransactionInfoDTO:
     type: object
     required:
-      - message
+    - message
     properties:
       message:
         type: string
   TransactionStatusDTO:
     type: object
     required:
-      - status
+    - status
     properties:
       group:
         type: string
@@ -1125,11 +1213,93 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       height:
         $ref: '#/definitions/UInt64DTO'
+  NamespaceMosaicMetaDTO:
+    type: object
+    required:
+    - active
+    - index
+    - id
+    properties:
+      active:
+        type: boolean
+      index:
+        type: integer
+      id:
+        type: string
+
+  NamespaceInfoDTO:
+    type: object
+    required:
+    - metad
+    - namespace
+    properties:
+      meta:
+        $ref: '#/definitions/NamespaceMosaicMetaDTO'
+      namespace:
+        $ref: '#/definitions/NamespaceDTO'
+  NamespaceDTO:
+    type: object
+    required:
+    - owner
+    - ownerAddres
+    - startHeight
+    - endHeight
+    - depth
+    - level0
+    - type
+    - alias
+    - parentId
+    properties:
+      owner:
+        type: string
+      ownerAddress:
+        type: string
+      startHeight:
+        $ref: '#/definitions/UInt64DTO'
+      endHeight:
+        $ref: '#/definitions/UInt64DTO'
+      depth:
+        type: integer
+      level0:
+        $ref: '#/definitions/UInt64DTO'
+      level1:
+        $ref: '#/definitions/UInt64DTO'
+      level2:
+        $ref: '#/definitions/UInt64DTO'
+      type:
+        type: integer
+      alias:
+        $ref: '#/definitions/AliasDTO'
+      parentId:
+        $ref: '#/definitions/UInt64DTO'
+  NamespaceNameDTO:
+    type: object
+    required:
+    - namespaceId
+    - name
+    properties:
+      parentId:
+        $ref: '#/definitions/UInt64DTO'
+      namespaceId:
+        $ref: '#/definitions/UInt64DTO'
+      name:
+        type: string
+  AliasDTO:
+    type: object
+    required:
+    - type
+    properties:
+      type:
+        type: integer
+      mosaicId:
+        type: string
+      address:
+        type: string
   MosaicDTO:
     type: object
     required:
-      - id
-      - amount
+    - id
+    - amount
     properties:
       id:
         $ref: '#/definitions/UInt64DTO'
@@ -1138,39 +1308,23 @@ definitions:
   MosaicInfoDTO:
     type: object
     required:
-      - meta
-      - mosaic
+    - meta
+    - mosaic
     properties:
       meta:
         $ref: '#/definitions/NamespaceMosaicMetaDTO'
       mosaic:
         $ref: '#/definitions/MosaicDefinitionDTO'
-  NamespaceMosaicMetaDTO:
-    type: object
-    required:
-      - active
-      - index
-      - id
-    properties:
-      active:
-        type: boolean
-      index:
-        type: integer
-      id:
-        type: string
   MosaicDefinitionDTO:
     type: object
     required:
-      - namespaceId
-      - mosaicId
-      - supply
-      - height
-      - owner
-      - properties
-      - levy
+    - mosaicId
+    - supply
+    - height
+    - owner
+    - properties
+    - levy
     properties:
-      namespaceId:
-        $ref: '#/definitions/UInt64DTO'
       mosaicId:
         $ref: '#/definitions/UInt64DTO'
       supply:
@@ -1181,25 +1335,23 @@ definitions:
         type: string
       properties:
         $ref: '#/definitions/MosaicPropertiesDTO'
-      levy:
-        type: object
   MosaicPropertiesDTO:
     type: array
     items:
       $ref: '#/definitions/UInt64DTO'
     example:
-      - - 0
-        - 0
-      - - 0
-        - 0
-      - - 0
-        - 0
+    - - 0
+      - 0
+    - - 0
+      - 0
+    - - 0
+      - 0
   MosaicNameDTO:
     type: object
     required:
-      - parentId
-      - mosaicId
-      - name
+    - parentId
+    - mosaicId
+    - name
     properties:
       parentId:
         $ref: '#/definitions/UInt64DTO'
@@ -1207,64 +1359,11 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       name:
         type: string
-  NamespaceInfoDTO:
-    type: object
-    required:
-      - meta
-      - namespace
-    properties:
-      meta:
-        $ref: '#/definitions/NamespaceMosaicMetaDTO'
-      namespace:
-        $ref: '#/definitions/NamespaceDTO'
-  NamespaceDTO:
-    type: object
-    required:
-      - type
-      - depth
-      - level0
-      - parentId
-      - owner
-      - startHeight
-      - endHeight
-    properties:
-      type:
-        type: integer
-      depth:
-        type: integer
-      level0:
-        $ref: '#/definitions/UInt64DTO'
-      level1:
-        $ref: '#/definitions/UInt64DTO'
-      level2:
-        $ref: '#/definitions/UInt64DTO'
-      parentId:
-        $ref: '#/definitions/UInt64DTO'
-      owner:
-        type: string
-      ownerAddress:
-        type: string
-      startHeight:
-        $ref: '#/definitions/UInt64DTO'
-      endHeight:
-        $ref: '#/definitions/UInt64DTO'
-  NamespaceNameDTO:
-    type: object
-    required:
-      - namespaceId
-      - name
-    properties:
-      parentId:
-        $ref: '#/definitions/UInt64DTO'
-      namespaceId:
-        $ref: '#/definitions/UInt64DTO'
-      name:
-        type: string
   BlockInfoDTO:
     type: object
     required:
-      - meta
-      - block
+    - meta
+    - block
     properties:
       meta:
         $ref: '#/definitions/BlockMetaDTO'
@@ -1273,10 +1372,10 @@ definitions:
   BlockMetaDTO:
     type: object
     required:
-      - hash
-      - generationHash
-      - totalFee
-      - numTransactions
+    - hash
+    - generationHash
+    - totalFee
+    - numTransactions
     properties:
       hash:
         type: string
@@ -1289,15 +1388,19 @@ definitions:
   BlockDTO:
     type: object
     required:
-      - signature
-      - signer
-      - version
-      - type
-      - height
-      - timestamp
-      - difficulty
-      - previousBlockHash
-      - blockTransactionsHash
+    - signature
+    - signer
+    - version
+    - type
+    - height
+    - timestamp
+    - difficulty
+    - feeMultiplier
+    - previousBlockHash
+    - blockTransactionsHash
+    - blockReceiptsHash
+    - stateHash
+    - beneficiaryPublicKey
     properties:
       signature:
         type: string
@@ -1313,33 +1416,52 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       difficulty:
         $ref: '#/definitions/UInt64DTO'
+      feeMultiplier:
+        type: integer
       previousBlockHash:
         type: string
       blockTransactionsHash:
         type: string
+      blockReceiptsHash:
+        type: string
+      stateHash:
+        type: string
+      beneficiaryPublicKey:
+        type: string
   HeightDTO:
     type: object
     required:
-      - height
+    - height
     properties:
       height:
         $ref: '#/definitions/UInt64DTO'
   BlockchainScoreDTO:
     type: object
     required:
-      - scoreHigh
-      - scoreLow
+    - scoreHigh
+    - scoreLow
     properties:
       scoreHigh:
         $ref: '#/definitions/UInt64DTO'
       scoreLow:
         $ref: '#/definitions/UInt64DTO'
+  MerkleProofInfoDTO:
+    type: object
+    required:
+    - payload
+    - type
+    properties:
+      payload:
+        $ref: '#/definitions/merkleProofInfoPayload'
+      type:
+        type: string
+        example: merkleProofInfo
   BlockchainStorageInfoDTO:
     type: object
     required:
-      - numBlocks
-      - numTransactions
-      - numAccounts
+    - numBlocks
+    - numTransactions
+    - numAccounts
     properties:
       numBlocks:
         type: integer
@@ -1350,8 +1472,8 @@ definitions:
   NetworkTypeDTO:
     type: object
     required:
-      - name
-      - description
+    - name
+    - description
     properties:
       name:
         type: string
@@ -1362,13 +1484,13 @@ definitions:
   NodeInfoDTO:
     type: object
     required:
-      - publicKey
-      - port
-      - networkIdentifier
-      - version
-      - roles
-      - host
-      - friendlyName
+    - publicKey
+    - port
+    - networkIdentifier
+    - version
+    - roles
+    - host
+    - friendlyName
     properties:
       publicKey:
         type: string
@@ -1398,7 +1520,7 @@ definitions:
   NodeTimeDTO:
     type: object
     required:
-      - communicationTimestamps
+    - communicationTimestamps
     properties:
       communicationTimestamps:
         $ref: '#/definitions/communicationTimestamps'
@@ -1409,8 +1531,9 @@ definitions:
         type: array
         items:
           type: string
+          format: hex
         example:
-          - d525ad41d95fcf29
+        - d525ad41d95fcf29
   namespaceIds:
     type: object
     properties:
@@ -1418,8 +1541,9 @@ definitions:
         type: array
         items:
           type: string
+          format: hex
         example:
-          - 84b3552d375ffa4b
+        - 84b3552d375ffa4b
   addresses:
     type: object
     properties:
@@ -1428,8 +1552,8 @@ definitions:
         items:
           type: string
         example:
-          - SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY
-          - SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
+        - SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY
+        - SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
   transactionIds:
     type: object
     properties:
@@ -1438,8 +1562,8 @@ definitions:
         items:
           type: string
         example:
-          - 59B8DA0F0CB2720001103922
-          - 59B8D8E60CB2720001103904
+        - 59B8DA0F0CB2720001103922
+        - 59B8D8E60CB2720001103904
   transactionHashes:
     type: object
     properties:
@@ -1448,7 +1572,7 @@ definitions:
         items:
           type: string
         example:
-          - 5AF72FE39C0515E823903918A0BFE9625DD752C7BD63969C8869F25E9D155DE5
+        - 5AF72FE39C0515E823903918A0BFE9625DD752C7BD63969C8869F25E9D155DE5
   transactionPayload:
     type: object
     properties:
@@ -1456,6 +1580,21 @@ definitions:
         type: string
         default: payload
         example: example
+  merkleProofInfoPayload:
+    type: object
+    properties:
+      merklePath:
+        type: array
+        items:
+          $ref: '#/definitions/merklePathItem'
+  merklePathItem:
+    type: object
+    properties:
+      position:
+        type: integer
+        example: 1
+      hash:
+        type: string
   communicationTimestamps:
     type: object
     properties:
@@ -1469,8 +1608,8 @@ definitions:
       type: integer
       format: int32
     example:
-      - lower
-      - higher
+    - lower
+    - higher
 externalDocs:
   description: NEM Developer Center
   url: 'https://nemtech.github.io/'

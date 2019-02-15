@@ -203,8 +203,6 @@ table-td {
     color: rgb(32, 181, 172);
 }
 
-#home,
-#reference,
 #endpoints{
     display: none;
 }
@@ -317,6 +315,7 @@ table-td {
 #sidebar > .caption:hover
 {
     background-color: #e5e3e9;
+    text-decoration: none;
 }
 
 .sidebar-current-ul,
@@ -350,7 +349,22 @@ table-td {
 
 }
 
-/* Code example */
+/* Tabs */
+
+.sphinx-tabs{
+    margin: 0px;
+    max-width: 100%;
+}
+
+.sphinx-tabs .container{
+    width: fit-content;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.sphinx-tabs .sphinx-menu{
+    padding: 0px;
+}
 
 .example-code.container {
     padding: 0px;
@@ -466,24 +480,28 @@ footer option{
 
 .home .card-img img{
     margin: 40px;
+    height: 50px;
 }
 
 .jumbotron {
     color: #fff;
     background: rgba(90, 176, 229, 1);
     background: -moz-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(90, 176, 229, 1)), color-stop(100%, rgba(76, 138, 196, 1)));
     background: -webkit-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
     background: -o-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
     background: -ms-linear-gradient(left, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
     background: linear-gradient(to right, rgba(90, 176, 229, 1) 0, rgba(76, 138, 196, 1) 100%);
-    filter: progid:DXImageTransform.Microsof
 }
 
 .jumbotron .image-container {
     position: absolute;
     width: 100%;
     left: 0;
+}
+
+.jumbotron .image-container img{
+    height: 300px;
+    margin: 0 auto;
 }
 
 .bg-gray{
@@ -539,11 +557,14 @@ ul.search li:before {
     content: none;
 }
 
-
 /* References */
 
 #reference-page .card{
     height: 135px;
+}
+
+#reference-page .card img{
+    height: 50px;
 }
 
 .subtitle-container h2{

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 17 Aug, 2018
-    :category: multisig-account
+    :category: Multisig Account
     :excerpt: 1
     :nocomments:
 

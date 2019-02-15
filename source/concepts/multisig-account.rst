@@ -18,7 +18,7 @@ Some important considerations to keep in mind:
 
 * An account can be cosigner of up to ``5`` multisig accounts.
 
-* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. See :doc:`Multi-level Multisig Account <multi-level-multisig-account>`.
+* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 ********
 Examples
@@ -65,12 +65,40 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
     Transferring an account
 
+Manufacturing and Supply Chains
+===============================
+
+In this example, a manufacturer is shipping a pharmaceutical product.
+
+The product receives its quality approval :doc:`mosaic <mosaic>` only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature.
+
+Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.
+
+.. figure:: ../resources/images/examples/mlma-supply-chain.png
+    :align: center
+    :width: 750px
+
+    Manufacturing and Supply Chains
+
+Fraud Detection
+===============
+
+This example shows how a high-security account can be made easier to use.
+
+Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI. MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.
+
+.. figure:: ../resources/images/examples/mlma-fraud-detection.png
+    :align: center
+    :width: 550px
+
+    Fraud Detection
+
 ******
 Guides
 ******
 
 .. postlist::
-    :category: multisig-account
+    :category: Multisig Account
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle
@@ -93,7 +121,7 @@ Announce a modify multisig account transaction to:
 a) Transform an account to multisig.
 b) Change the configurable properties of a multisig account.
 
-**Version**: 0x01
+**Version**: 0x03
 
 **Entity type**: 0x4155
 
@@ -105,8 +133,8 @@ b) Change the configurable properties of a multisig account.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    minRemovalDelta; uint8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    minApprovalDelta; uint8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; The number of modifications.
     modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
 
@@ -133,5 +161,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Add.
-    0x01; Remove.
+    0; Add cosignatory.
+    1; Remove cosignatory.
