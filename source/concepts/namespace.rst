@@ -51,11 +51,11 @@ The ticket seller has registered the namespace ``ticketsales`` to link it to its
 Identifying the ticket
 ======================
 
-The same company sells tickets for an event organized in different venues. The company registers a non-transferable :doc:`mosaic <mosaic>` for each function.
+The same company sells tickets for events organized in different venues. The company registers a non-transferable :doc:`mosaic <mosaic>` for each actuation.
 
-The ticket seller adds a series of subdomains on top of the root domain of ``ticketsales``. The root plus subdomains are "ticketsales.eventID.ticket".
+The ticket seller adds a series of subdomains on top of the root domain of ``ticketsales``. The root plus subdomains are ``ticketsales.event<ID>.ticket``.
 
-The company aliases one registered mosaic with ``ticketsales.event1.ticket`` namespace name.
+The company links one registered mosaic with ``ticketsales.event1.ticket`` namespace name.
 
 Identifying the buyer
 =====================
