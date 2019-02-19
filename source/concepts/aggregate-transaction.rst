@@ -54,7 +54,7 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 Multi-Asset Escrowed Transactions
 =================================
 
-In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
+In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mosaic>`. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
