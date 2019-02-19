@@ -6,7 +6,7 @@ Namespaces allow you to create an on-chain **unique place** for your business an
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
 
-You can associate a name with an account address or a :doc:`mosaic <mosaic>` identifier by announcing an :ref:`alias transaction <address-alias-transaction>`. The binding between namespaces and assets makes long account addresses rememberable and mosaics identifiers recognizable.
+An account can link a registered name (namespace or subnamespace) with an :doc:`account <account>` or a :doc:`mosaic <mosaic>` identifier.
 
 *************
 Subnamespaces
@@ -14,25 +14,55 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
 
-It is possible to create multiple subnamespaces with the same name (example: ``foo.bar`` and ``foo2.bar``, ``bar`` is the subnamespace/sub-domain).
+You can create multiple subnamespaces with the same name. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
-********
-Examples
-********
+*****
+Alias
+*****
 
-Identifying an account
+:ref:`Alias transactions<address-alias-transaction>` make long addresses rememberable and mosaics recognizable.
+
+The creator of the namespace can edit the link between a namespace and an asset. The alias relation for a given transaction can be retrieved later from the block's :doc:`receipts <receipt>`.
+
+Restrictions:
+
+- An account can only associate a name with one account or mosaic, but those can have many aliases linked.
+- An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-filter>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
+
+*******
+Example
+*******
+
+A customer buys a ticket for an event. The ticket sales company sends a ticket to the customer account.
+
+.. figure:: ../resources/images/examples/namespace-tickets.png
+    :align: center
+    :width: 500px
+
+    Recognizable mosaics and addresses
+
+Identifying the sender
 ======================
-Every time a customer buys a ticket for an event, a ticket sales company sends a ticket to the customer account.
 
-The seller company has assigned the namespace "ticketsales" to its main account. Customers can quickly recognize incoming transactions from the vendor account.
+The ticket seller has registered the namespace ``ticketsales`` to link it to its account as an alias. Customers can quickly recognize incoming transactions from the vendor account.
 
-Organizing mosaics
-==================
-The same distributor sells tickets for an event organized in different venues. The company registers a non-transferable mosaic for each function.
+Identifying the ticket
+======================
 
-Namespaces and subnamespaces are used to organize the different mosaics. Customers can send 1 ``ticketsales.eventname.ticket`` to ``alice`` instead of 1 ``0xE4EEB491`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
+The same company sells tickets for an event organized in different venues. The company registers a non-transferable :doc:`mosaic <mosaic>` for each function.
+
+The ticket seller adds a series of subdomains on top of the root domain of ``ticketsales``. The root plus subdomains are "ticketsales.eventID.ticket".
+
+The company aliases one registered mosaic with ``ticketsales.event1.ticket`` namespace name.
+
+Identifying the buyer
+=====================
+
+Alice, who wants to buy the ticket, has registered the namespace ``alice`` and assigned it to her account as an alias.
+
+The ticket vendor can send 1 ``ticketsales.event1.ticket`` to ``alice`` instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
 
 ******
 Guides
@@ -142,7 +172,7 @@ Enumeration: uint8
 .. _alias-action:
 
 Alias Action
-=============
+============
 
 Enumeration: uint8
 
