@@ -6,22 +6,50 @@ Aggregate Transaction
 
 Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
-********
-Examples
-********
+.. _aggregate-complete:
+
+******************
+Aggregate complete
+******************
+
+An aggregate transaction is  **complete** when all the required participants have signed it.
+
+The cosigners can sign the transaction without using the blockchain. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
+
+Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions.
 
 Sending payouts
 ===============
 
 Dan announces an aggregate transaction that merges two transfer transactions.
 
-As he is the only required signed, we say the aggregate transaction it is complete. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
+As he is the only required signatory, the transaction is considered complete after he signed. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
 .. figure:: ../resources/images/examples/aggregate-sending-payouts.png
     :align: center
     :width: 450px
 
     Sending payouts with aggregate complete transactions
+
+.. _aggregate-bonded:
+
+****************
+Aggregate bonded
+****************
+
+An aggregate transaction is **bonded** when it requires signatures from other participants.
+
+.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10`` XEM.
+
+Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
+
+Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature<cosignature-transaction>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
+
+.. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
+    :width: 900px
+    :align: center
+    
+    Aggregate bonded transaction cycle
 
 Multi-Asset Escrowed Transactions
 =================================
@@ -31,7 +59,7 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
-
+    
     Multi-Asset Escrowed Transactions
 
 Paying for others fees
@@ -46,40 +74,8 @@ Since the app creator can put their own branding on the open source payment app,
 .. figure:: ../resources/images/examples/aggregate-paying-for-others-fees.png
     :align: center
     :width: 450px
-
+    
     Paying for others fees
-
-.. _aggregate-complete:
-
-******************
-Aggregate complete
-******************
-
-An aggregate transaction is  **complete** when all cosigners have signed it.
-
-The different participants can sign without using the blockchain the aggregate transaction. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
-
-Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions between different participants in the same operation.
-
-.. _aggregate-bonded:
-
-****************
-Aggregate bonded
-****************
-
-An aggregate transaction is **bonded** when it requires signatures from other participants.
-
-.. note:: When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a :ref:`hash lock transaction<hash-lock-transaction>` for this aggregate with at least ``10`` XEM.
-
-Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
-
-Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature<cosignature-transaction>`, the network checks if all the required cosigners have already signed. In this situation, the transaction changes to unconfirmed state until the network accepts it, and it is included in a block once processed.
-
-.. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
-    :width: 900px
-    :align: center
-
-    Aggregate bonded transaction cycle
 
 ******
 Guides
@@ -98,6 +94,8 @@ Guides
 *******
 Schemas
 *******
+
+
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
