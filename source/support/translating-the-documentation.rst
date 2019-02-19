@@ -28,13 +28,13 @@ Adding/updating translations
 
   $>  make gettext
 
-For each documentation file, a .po file will be generated under ``_build/gettext``.
+For each documentation file, a .po file will be generated under ``build/gettext``.
 
 4. Copy translation files into ``source/locale`` with the following command. It is also used to update .po files when the documentation in English have changed:
 
 .. code-block:: bash
 
-  $>  sphinx-intl update -p _build/gettext -l <lang>
+  $>  sphinx-intl update -p build/gettext -l <lang>
 
 Replace <lang> for your `language code <https://en.wikipedia.org/wiki/ISO_639-1>`_.
 

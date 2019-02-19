@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Yoshiyuki Ieyama, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.15.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 09:26+0900\n"
+"POT-Creation-Date: 2019-02-19 10:10+0000\n"
 "PO-Revision-Date: 2018-10-26 13:36+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2018\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/44uk-"
+"works/teams/92962/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/sdk/development.rst:5
 msgid "SDK Development"
@@ -28,47 +27,39 @@ msgstr "SDK 開発"
 #: ../../source/sdk/development.rst:7
 msgid ""
 "A key objective is that interoperability becomes a natural design of the "
-"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving"
-" the best quality with the less effort."
+"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, "
+"achieving the best quality with less effort."
 msgstr ""
 
-#: ../../source/sdk/development.rst:12
+#: ../../source/sdk/development.rst:11
 msgid "Learning about Catapult"
 msgstr "Catapult について学習する"
 
-#: ../../source/sdk/development.rst:14
-msgid ""
-"In case you haven't used NEM2-SDK or Catapult in general, we encourage you "
-"to:"
-msgstr "あなたが NEM2-SDK または Catapult を使ったことがない場合、私達はあなたを応援します:"
-
-#: ../../source/sdk/development.rst:16
+#: ../../source/sdk/development.rst:13
 msgid ""
 "Review the technical documentation to become familiar with the :doc:`NEM "
 "built-in features<../concepts/account>`."
 msgstr ":doc:`NEM ビルドイン機能<../concepts/account>` に詳しくなるためにはテクニカルドキュメントを見てください。"
 
-#: ../../source/sdk/development.rst:17
+#: ../../source/sdk/development.rst:14
 msgid ""
 "Setup the `catapult in local environment via docker <https://github.com"
-"/tech-bureau/catapult-service-bootstrap>`_ or enroll the `beta program "
-"<https://mijin.io/en/product/#mijin2>`_ to access a Catapult Test Net "
-"without the need to run it yourself."
+"/tech-bureau/catapult-service-bootstrap>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:18
+#: ../../source/sdk/development.rst:15
 msgid ""
 ":doc:`Check the API reference <../api/requests>` and play with the API "
 "endpoints."
 msgstr ":doc:`API リファレンスを確認 <../api/requests>` して、API エンドポイントを利用してみてください。"
 
-#: ../../source/sdk/development.rst:19
+#: ../../source/sdk/development.rst:16
 msgid ""
 "Become familiar with the current :doc:`nem2-sdk via code examples "
 "<../concepts/account>` & :doc:`nem2-cli <../cli/overview>` ."
 msgstr ""
 
-#: ../../source/sdk/development.rst:20
+#: ../../source/sdk/development.rst:17
 msgid ""
 "`Join "
 "<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
@@ -78,577 +69,861 @@ msgstr ""
 "`<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
 " にて受け付けています。"
 
-#: ../../source/sdk/development.rst:24
+#: ../../source/sdk/development.rst:21
 msgid "Development"
 msgstr "開発"
 
-#: ../../source/sdk/development.rst:26
+#: ../../source/sdk/development.rst:23
 msgid ""
-"You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-"
-"typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2-sdk-"
-"java>`_ SDKs. The TypeScript version is the first SDK getting the latest "
-"updates. Meanwhile, Java takes longer to be updated."
+"You can base your work in `TypeScript <https://github.com/nemtech/nem2"
+"-sdk-typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2"
+"-sdk-java>`_ SDKs. The TypeScript version is the first SDK getting the "
+"latest updates. Meanwhile, Java takes longer to be updated."
 msgstr ""
 
-#: ../../source/sdk/development.rst:29
+#: ../../source/sdk/development.rst:25
 msgid ""
-"Unfortunately, TypeScript version has one specific implementation detail: "
-"the low level implementation is separated from the SDK, called `nem2"
-"-library-js <https://github.com/nemtech/nem2-library-js>`_. There was a need"
-" to create this low-level library to perform specific chain testing."
+"Unfortunately, the TypeScript version has one specific implementation "
+"detail: the low-level implementation is separated from the SDK, called "
+"`nem2-library-js <https://github.com/nemtech/nem2-library-js>`_. There "
+"was a need to create this low-level library to perform specific chain "
+"testing."
 msgstr ""
 
-#: ../../source/sdk/development.rst:32
-msgid "**The SDKs you create does not require this separate implementation**."
+#: ../../source/sdk/development.rst:28
+msgid "The SDKs you create does not require this separate implementation."
 msgstr ""
 
-#: ../../source/sdk/development.rst:34
+#: ../../source/sdk/development.rst:30
 msgid ""
 "Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change "
-"update."
+"java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code "
+"change update."
 msgstr ""
 
-#: ../../source/sdk/development.rst:37
+#: ../../source/sdk/development.rst:33
 msgid "Before starting"
 msgstr "始める前に"
 
-#: ../../source/sdk/development.rst:39
+#: ../../source/sdk/development.rst:35
 msgid ""
-"Be sure no one is already working on the SDK you want to create. Check the "
-":doc:`repository list <languages>`, if someone is already working on it, we "
+"Be sure no one is already working on the SDK you want to create. Check "
+"the :doc:`repository list <languages>` and  comment your intentions in  "
+"nem2 slack ``#sig-api`` channel. If someone is already working on it, we "
 "suggest you collaborate with him/her."
 msgstr ""
 
-#: ../../source/sdk/development.rst:42
+#: ../../source/sdk/development.rst:36
 msgid ""
 "Claim the SDK `forking this repository "
-"<https://help.github.com/articles/creating-a-pull-request/>`_ and adding a "
+"<https://help.github.com/articles/creating-a-pull-request/>`_ and add a "
 "new entry to the :doc:`repository list <languages>`."
 msgstr ""
 
-#: ../../source/sdk/development.rst:45
-msgid ""
-"Consider using one of the suggested `licenses <#recommended-licenses>`_."
+#: ../../source/sdk/development.rst:37
+msgid "Consider using one of the suggested `licenses <#recommended-licenses>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:49
+#: ../../source/sdk/development.rst:40
 msgid "Creating the project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/sdk/development.rst:51
+#: ../../source/sdk/development.rst:42
 msgid ""
-"Add a README with the instructions to install the SDK. Find :download:`here "
-"a template <../resources/templates/README_SDK.md>`."
+"Add a README with the instructions to install the SDK. You can find "
+":download:`here a template <../resources/templates/README_SDK.md>`."
 msgstr ""
 
-#: ../../source/sdk/development.rst:53
+#: ../../source/sdk/development.rst:44
+#, fuzzy
 msgid ""
-"Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-of-"
-"conduct-to-your-project/>`_. Find :download:`here an example "
-"<../resources/templates/CODE_OF_CONDUCT.md>`."
+"Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-"
+"of-conduct-to-your-project/>`_.  Download :download:`here an example code"
+" of conduct <../resources/templates/CODE_OF_CONDUCT.md>`."
 msgstr ""
-"`Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-"
-"to-your-project/>`_ を追加してください。 :download:`例はここ "
+"`Code of Conduct <https://help.github.com/articles/adding-a-code-of-"
+"conduct-to-your-project/>`_ を追加してください。 :download:`例はここ "
 "<../resources/templates/CODE_OF_CONDUCT.md>` にあります。"
 
-#: ../../source/sdk/development.rst:56
+#: ../../source/sdk/development.rst:46
 msgid ""
 "Add a `Contributors guidelines <https://help.github.com/articles/setting-"
-"guidelines-for-repository-contributors/>`_ to help others know how they can "
-"help you. Find :download:`here a CONTRIBUTING.md "
+"guidelines-for-repository-contributors/>`_ to help others know how they "
+"can help you. Find :download:`here a CONTRIBUTING.md "
 "template<../resources/templates/CONTRIBUTING.md>`."
+msgstr ""
+
+#: ../../source/sdk/development.rst:47
+msgid ""
+"Setup the Continuous Integration system. We use `travis-ci <https"
+"://travis-ci.org/>`_, but feel free to use the one suits you best."
+msgstr ""
+
+#: ../../source/sdk/development.rst:49
+msgid ""
+"A project with a good test coverage it's more likely to be used and "
+"trusted by the developers!"
+msgstr ""
+
+#: ../../source/sdk/development.rst:52
+msgid ""
+"We **strongly** suggest to do `Test-Driven Development "
+"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing"
+" (test last). If you need inspiration, you can adapt the same `tests we "
+"did <https://github.com/nemtech/nem2-sdk-"
+"typescriptjavascript/tree/master/test>`_."
+msgstr ""
+
+#: ../../source/sdk/development.rst:56
+msgid "API Wrapper"
+msgstr "API ラッパー"
+
+#: ../../source/sdk/development.rst:58
+msgid ""
+"`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle"
+" the API generation. It supports multiple languages, and hopefully, yours"
+" is on the list."
 msgstr ""
 
 #: ../../source/sdk/development.rst:60
 msgid ""
-"Setup the Continuous Integration system. We use `travis-ci <https://travis-"
-"ci.org/>`_, but feel free to use the one suits you best."
-msgstr ""
-
-#: ../../source/sdk/development.rst:64
-msgid ""
-"A project with a good test coverage it's more likely to be used and trusted "
-"by the developers!"
-msgstr ""
-
-#: ../../source/sdk/development.rst:67
-msgid ""
-"We **strongly** suggest you to do `Test-Driven Development "
-"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing "
-"(test last). If you need inspiration, you can adapt the same `tests we did "
-"<https://github.com/nemtech/nem2-sdk-typescript-"
-"javascript/tree/master/test>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:74
-msgid "API Wrapper"
-msgstr "API ラッパー"
-
-#: ../../source/sdk/development.rst:76
-msgid ""
-"The API generation can be done with `Swagger Codegen "
-"<https://swagger.io/tools/swagger-codegen/>`_. It supports multiple "
-"languages. Hopefully, yours in the list."
-msgstr ""
-
-#: ../../source/sdk/development.rst:80
-msgid ""
-"The API swagger file definition can be found `here "
+"Generate the ``DTOs`` and place them under under `sdk/infrastructure "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API "
+"swagger file definition can be found `here "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:83
+#: ../../source/sdk/development.rst:62
 msgid ""
-"`Java example <https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The code "
-"generated by swagger are the ``DTOs``."
+"2. Drop the generated client classes and  implement them using the "
+"`Repository pattern "
+"<https://martinfowler.com/eaaCatalog/repository.html>`_ returning "
+"`Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of "
+"`ReactiveX <http://reactivex.io/>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:87
-msgid ""
-"We drop the client classes and instead we implement them using the "
-"`Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ "
-"returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of"
-" `ReactiveX <http://reactivex.io/>`_."
+#: ../../source/sdk/development.rst:66
+msgid "Example of a Repository and HTTP implementation:"
 msgstr ""
 
-#: ../../source/sdk/development.rst:94
-msgid "List of interfaces:"
-msgstr "インターフェイスリスト:"
-
-#: ../../source/sdk/development.rst:96
-msgid ""
-"`AccountRepository <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/AccountRepository.java>`_"
-msgstr ""
-
-#: ../../source/sdk/development.rst:97
+#: ../../source/sdk/development.rst:68
 msgid ""
 "`BlockchainRepository <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainRepository.java>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:98
+#: ../../source/sdk/development.rst:70
 msgid ""
-"`MosaicRepository <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/MosaicRepository.java>`_"
+"`BlockchainHttp <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainHttp.java>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:99
+#: ../../source/sdk/development.rst:72
 msgid ""
-"`NamespaceRepository <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/NamespaceRepository.java>`_"
+"The **repositories return models instead of DTOs**. You will need to code"
+" the models before finishing the API wrapper."
 msgstr ""
 
-#: ../../source/sdk/development.rst:100
-msgid ""
-"`NetworkRepository <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/NetworkRepository.java>`_"
-msgstr ""
-
-#: ../../source/sdk/development.rst:101
-msgid ""
-"`TransferRepository <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/TransactionRepository.java>`_"
-msgstr ""
-
-#: ../../source/sdk/development.rst:103
-msgid ""
-"Check the `Http implementations <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/infrastructure/AccountHttp.java>`_"
-" in case you doubt about some API endpoint."
-msgstr ""
-
-#: ../../source/sdk/development.rst:107
-msgid ""
-"The **repositories return Models instead of DTOs**. You will need to code "
-"the `Models <#models>`_ before finish the API wrapper."
-msgstr ""
-
-#: ../../source/sdk/development.rst:110
+#: ../../source/sdk/development.rst:75
 msgid "Models"
 msgstr "モデル"
 
-#: ../../source/sdk/development.rst:112
+#: ../../source/sdk/development.rst:77
 msgid ""
-"`Java models example <https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/sdk/model>`_."
+"The `models <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default "
+"immutable and aim to hide the complexity, like type conversion or "
+"relationship between objects."
 msgstr ""
 
-#: ../../source/sdk/development.rst:115
-msgid ""
-"The models are by default immutable. The models aim to hide the complexity, "
-"like type conversion or relationship between objects."
-msgstr ""
-
-#: ../../source/sdk/development.rst:118
+#: ../../source/sdk/development.rst:79
 msgid ""
 "You will find in the different implementations different invariants to "
 "ensure the object is well constructed and a nicer API is published."
 msgstr ""
 
-#: ../../source/sdk/development.rst:121
+#: ../../source/sdk/development.rst:82
 msgid "Particular decisions to consider:"
 msgstr ""
 
-#: ../../source/sdk/development.rst:123
+#: ../../source/sdk/development.rst:84
 msgid ""
 "``uint64`` support: meanwhile `Java supports big numbers "
-"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for"
-" example JavaScript doesn't. The JavaScript SDK has a custom class to handle"
-" the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-"
+"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, "
+"for example JavaScript doesn't. The JavaScript SDK has a custom class to "
+"handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-"
 "javascript/blob/master/src/model/UInt64.ts>`_. If your language supports "
-"``uint64`` use that implementation. Otherwise, adapt the ``UInt64.ts`` "
-"implementation to your language."
+"``uint64`` use that implementation instead."
 msgstr ""
 
-#: ../../source/sdk/development.rst:130
+#: ../../source/sdk/development.rst:85
 msgid ""
-"API conversions: The API returns the data sometimes compressed, you might "
-"need to convert that types for the user."
+"API conversions: The API returns the data sometimes compressed, you might"
+" need to convert those types for the user."
 msgstr ""
 
-#: ../../source/sdk/development.rst:132
+#: ../../source/sdk/development.rst:87
 msgid ""
-"`Mosaics <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/mosaic/MosaicId.java>`_ & "
-"`Namespaces <https://github.com/nemtech/nem2-sdk-"
+"`Namespace <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_"
-" IDs: The namespaces and mosaics aren't strings any more compared to NIS1. "
-"As you can see in the class, the ``string`` name is optional. At creation "
-"time you add the string name, but when you receive the Namespace/Mosaic from"
-" the network, it comes in formatted as\\ ``uint64`` ID. A specific endpoint "
-"returns the Namespace/Mosaic ``string`` name. We did a Service to return the"
-" Mosaic with the ``string`` name automatically for the user, check the "
-"`implementation here <https://github.com/nemtech/nem2-sdk-typescript-"
-"javascript/blob/master/src/service/MosaicService.ts>`_ (only available in "
-"TypeScript SDK version)."
+" ID:  At creation time you add the string name, but when you receive the "
+"Namespace from the network, it comes in formatted as ``uint64`` ID. A "
+"specific endpoint returns the Namespace ``string`` name."
 msgstr ""
 
-#: ../../source/sdk/development.rst:146
+#: ../../source/sdk/development.rst:90
 msgid "Transaction Serialization"
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/sdk/development.rst:148
+#: ../../source/sdk/development.rst:92
 msgid ""
-"The Transaction Serialization will change when `catbuffer "
-"<https://github.com/nemtech/catbuffer>`_ tool is finished. Meanwhile, we "
-"will use `flatbuffers <https://google.github.io/flatbuffers/>`_."
+"A Transaction needs a particular serialization schema in binary optimized"
+" in size."
 msgstr ""
 
-#: ../../source/sdk/development.rst:150
-msgid ""
-"A Transaction needs a particular serialization schema in binary optimized in"
-" size. The transaction serialization has multiple steps to keep easy to "
-"create transactions and maintain the schema serialization."
-msgstr ""
-
-#: ../../source/sdk/development.rst:154
-msgid "**Generating the buffer classes: The easy part**"
+#: ../../source/sdk/development.rst:95
+#, fuzzy
+msgid "**Generate the buffer classes**"
 msgstr "**バッファクラスの生成: 簡単な工程**"
 
-#: ../../source/sdk/development.rst:157
+#: ../../source/sdk/development.rst:97
 msgid ""
-"Install the `flatbuffers tool "
-"<https://github.com/google/flatbuffers/releases>`_, you might need to "
-"compile it. Use version 1.7.1 or newer."
+"This section is incomplete. It will be updated with complete information "
+"once the first SDK integrates the builders generated with `catbuffer "
+"<https://github.com/nemtech/catbuffer>`_ library."
 msgstr ""
 
-#: ../../source/sdk/development.rst:160
-msgid ""
-"`Compile the schema for your language "
-"<https://google.github.io/flatbuffers/flatbuffers_guide_using_schema_compiler.html>`_."
-" `Download the flatbuffers files here "
-"<https://github.com/nemtech/guidelines/tree/master/development/sdk-"
-"development-assets/flatbuffers>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:164
-msgid ""
-"Move the generated files to your ``model/transaction`` SDK folder. `Example "
-"<https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:167
-msgid "**Creating the Schema class: The difficult part**"
+#: ../../source/sdk/development.rst:99
+#, fuzzy
+msgid "**Create the schema classes**"
 msgstr "**スキーマクラスの作成: 難しい工程**"
 
-#: ../../source/sdk/development.rst:169
+#: ../../source/sdk/development.rst:101
 msgid ""
-"Create the `Schema class <https://github.com/nemtech/nem2-sdk-"
+"`Schema class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/Schema.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:171
+#: ../../source/sdk/development.rst:102
 msgid ""
-"Create the `SchemaAttribute class <https://github.com/nemtech/nem2-sdk-"
+"`SchemaAttribute class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SchemaAttribute.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:173
+#: ../../source/sdk/development.rst:103
 msgid ""
-"Create the `ScalarAttribute class <https://github.com/nemtech/nem2-sdk-"
+"`ScalarAttribute class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ScalarAttribute.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:175
+#: ../../source/sdk/development.rst:104
 msgid ""
-"Create the `ArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"`ArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ArrayAttribute.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:177
+#: ../../source/sdk/development.rst:105
 msgid ""
-"Create the `TableAttribute class <https://github.com/nemtech/nem2-sdk-"
+"`TableAttribute class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableAttribute.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:179
+#: ../../source/sdk/development.rst:106
 msgid ""
-"Create the `TableArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"`TableArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableArrayAttribute.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:181
+#: ../../source/sdk/development.rst:107
 msgid ""
 "`Constants class <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/Constants.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:184
-msgid "**Creating the Transaction Schemas**"
+#: ../../source/sdk/development.rst:109
+#, fuzzy
+msgid "**Create the transaction schemas**"
 msgstr "**トランザクションスキーマの作成**"
 
-#: ../../source/sdk/development.rst:186
+#: ../../source/sdk/development.rst:111
 msgid ""
-"Each transaction has a Schema. It has the same type as ``flatbuffer "
+"Each transaction has a schemas. It has the same type as ``catbuffer "
 "schemas`` but using the ``Schema`` class. It's used to know where each "
-"component is located in the ``flatbuffer schema`` and remove the unnecessary"
-" bytes to create the optimized serialization."
+"component is located in the ``catbuffer schema`` and remove the "
+"unnecessary bytes to create the optimized serialization."
 msgstr ""
 
-#: ../../source/sdk/development.rst:191
+#: ../../source/sdk/development.rst:113
 msgid ""
-"`AggregateTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/AggregateTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:192
-msgid ""
-"`LockFundsTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/LockFundsTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:193
-msgid ""
-"`ModifyMultisigAccountTransactionSchema <https://github.com/nemtech/nem2"
-"-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ModifyMultisigAccountTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:194
-msgid ""
-"`MosaicDefinitionTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicDefinitionTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:195
-msgid ""
-"`MosaicSupplyChangeTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicSupplyChangeTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:196
-msgid ""
-"`RegisterNamespaceTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/RegisterNamespaceTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:197
-msgid ""
-"`SecretLockTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretLockTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:198
-msgid ""
-"`SecretProofTransactionSchema <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretProofTransactionSchema.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:199
-msgid ""
-"`TransferTransactionSchema <https://github.com/nemtech/nem2-sdk-"
+"Example: `TransferTransactionSchema <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransactionSchema.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:201
-msgid "**Using the Schemas in the Transaction Models**"
+#: ../../source/sdk/development.rst:115
+#, fuzzy
+msgid "**Using the schemas in the transaction models**"
 msgstr "**トランザクションモデルの中でスキーマを使用する**"
 
-#: ../../source/sdk/development.rst:203
+#: ../../source/sdk/development.rst:117
 msgid ""
 "The Transaction class has the abstract method `generateBytes() "
 "<https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/Transaction.java#L159>`_."
-" Each Transaction has to implement and use the previous classes, the Buffers"
-" and the Schemas, to serialize the transaction."
 msgstr ""
 
-#: ../../source/sdk/development.rst:208
+#: ../../source/sdk/development.rst:119
 msgid ""
-"`AggregateTransaction.generateBytes() <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/AggregateTransaction.java#L97>`_."
+"Each Transaction has to implement and use the previous classes, the "
+"Buffers and the Schemas, to serialize the transaction."
 msgstr ""
 
-#: ../../source/sdk/development.rst:209
+#: ../../source/sdk/development.rst:121
 msgid ""
-"`LockFundsTransaction.generateBytes() <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/LockFundsTransaction.java#L97>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:210
-msgid ""
-"`ModifyMultisigAccountTransaction.generateBytes() "
+"Example:  `TransferTransaction.generateBytes() "
 "<https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ModifyMultisigAccountTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:211
-msgid ""
-"`MosaicDefinitionTransaction.generateBytes() "
-"<https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicDefinitionTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:212
-msgid ""
-"`MosaicSupplyChangeTransaction.generateBytes() "
-"<https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicSupplyChangeTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:213
-msgid ""
-"`RegisterNamespaceTransaction.generateBytes() "
-"<https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/RegisterNamespaceTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:214
-msgid ""
-"`SecretLockTransaction.generateBytes() <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretLockTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:215
-msgid ""
-"`SecretProofTransaction.generateBytes() <https://github.com/nemtech/nem2"
-"-sdk-"
-"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretProofTransaction.java>`_."
-msgstr ""
-
-#: ../../source/sdk/development.rst:216
-msgid ""
-"`TransferTransaction.generateBytes() <https://github.com/nemtech/nem2-sdk-"
 "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransaction.java>`_."
 msgstr ""
 
-#: ../../source/sdk/development.rst:218
-msgid "**Do not forget about Cosignatory classes**, it has to be done too."
+#: ../../source/sdk/development.rst:123
+msgid ""
+"Do not forget to implement the `Cosignatory  "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_ classes."
 msgstr ""
 
-#: ../../source/sdk/development.rst:221
+#: ../../source/sdk/development.rst:126
 msgid "KeyPair and Cryptographic functions"
 msgstr "キーペアと暗号化関数"
 
-#: ../../source/sdk/development.rst:223
+#: ../../source/sdk/development.rst:128
 msgid "This section is incomplete."
 msgstr "このセクションは未完了です。"
 
-#: ../../source/sdk/development.rst:227
+#: ../../source/sdk/development.rst:130
+msgid "Implement the cryptographic purposes required to sign transactions."
+msgstr ""
+
+#: ../../source/sdk/development.rst:132
+msgid ""
+"Example: `core/crypto <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/core/crypto>`_"
+msgstr ""
+
+#: ../../source/sdk/development.rst:136
 msgid "Documenting your SDK"
 msgstr "あなたの SDK のドキュメント化"
 
-#: ../../source/sdk/development.rst:229
+#: ../../source/sdk/development.rst:138
 msgid ""
-"SDKs need to be adopted by other developers. As a contributor, no one knows "
-"better than you how a determined SDK works. Consider helping others and "
-"spread the usage of the SDK by providing :doc:`the following documentation "
-"<documentation>`."
+"The SDKs need to be adopted by other developers. As a contributor, no one"
+" knows better than you how a determined SDK works. Consider helping "
+"others and spread the usage of the SDK by providing :doc:`the following "
+"documentation <documentation>`."
 msgstr ""
 
-#: ../../source/sdk/development.rst:236
+#: ../../source/sdk/development.rst:142
 msgid "Publishing the SDK as official"
 msgstr "公式として公開されているSDK"
 
-#: ../../source/sdk/development.rst:238
+#: ../../source/sdk/development.rst:144
 msgid ""
-"When you open-source your code, :doc:`submit the repository to this page "
-"<../sdk/languages>`."
+"To become an accepted SDK, submit it  as a `NIP "
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The "
+"reason behind the NEM2 Improvement Proposal is to ensure that the new "
+"libraries are reviewed, tested and shared among NEM developers."
 msgstr ""
 
-#: ../../source/sdk/development.rst:241
-msgid ""
-"To become an accepted SDK, it should be proposed as a `NIP "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason "
-"behind the NEM2 Improvement Proposal is to ensure that the new libraries are"
-" reviewed, tested and shared among NEM developers."
-msgstr ""
-
-#: ../../source/sdk/development.rst:248
+#: ../../source/sdk/development.rst:148
 msgid "Future work"
 msgstr "今後の成果物"
 
-#: ../../source/sdk/development.rst:250
+#: ../../source/sdk/development.rst:150
 msgid ""
 "The current guideline shows what is done up to today since the SDK isn't "
-"complete. It will get updates according to the latest architecture/features."
+"complete. It will get updates according to the latest "
+"architecture/features."
 msgstr ""
 
-#: ../../source/sdk/development.rst:256
+#: ../../source/sdk/development.rst:154
 msgid "Recommended Licenses"
 msgstr "推奨するライセンス"
 
-#: ../../source/sdk/development.rst:258
+#: ../../source/sdk/development.rst:156
 msgid "MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:259
+#: ../../source/sdk/development.rst:157
 msgid ""
 "Apache-2.0: `Apache License, version 2.0 "
 "<http://www.apache.org/licenses/LICENSE-2.0>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:261
+#: ../../source/sdk/development.rst:159
 msgid ""
 "BSD-2-Clause: `OSI-approved BSD 2-clause license "
 "<https://opensource.org/licenses/BSD-2-Clause>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:263
+#: ../../source/sdk/development.rst:161
 msgid ""
 "BSD-3-Clause: `OSI-approved BSD 3-clause license "
 "<https://opensource.org/licenses/BSD-3-Clause>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:265
+#: ../../source/sdk/development.rst:163
 msgid ""
 "CC0-1.0: `Creative Commons CC0 1.0 Universal "
 "<https://creativecommons.org/publicdomain/zero/1.0/>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:267
+#: ../../source/sdk/development.rst:165
 msgid ""
 "GNU-All-Permissive: `GNU All-Permissive License "
 "<http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-"
 "Files.html>`_"
 msgstr ""
 
-#: ../../source/sdk/development.rst:269
+#: ../../source/sdk/development.rst:167
 msgid ""
-"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or newer "
-"<http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
+"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or "
+"newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
 msgstr ""
+
+#~ msgid ""
+#~ "A key objective is that interoperability"
+#~ " becomes a natural design of the "
+#~ "NEM2-SDK. Follow this guideline to "
+#~ "collaborate creating a NEM SDK, "
+#~ "achieving the best quality with the "
+#~ "less effort."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case you haven't used NEM2-SDK "
+#~ "or Catapult in general, we encourage "
+#~ "you to:"
+#~ msgstr "あなたが NEM2-SDK または Catapult を使ったことがない場合、私達はあなたを応援します:"
+
+#~ msgid ""
+#~ "Setup the `catapult in local environment"
+#~ " via docker <https://github.com/tech-bureau"
+#~ "/catapult-service-bootstrap>`_ or enroll "
+#~ "the `beta program "
+#~ "<https://mijin.io/en/product/#mijin2>`_ to access a"
+#~ " Catapult Test Net without the need"
+#~ " to run it yourself."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unfortunately, TypeScript version has one "
+#~ "specific implementation detail: the low "
+#~ "level implementation is separated from "
+#~ "the SDK, called `nem2-library-js "
+#~ "<https://github.com/nemtech/nem2-library-js>`_. There "
+#~ "was a need to create this low-"
+#~ "level library to perform specific chain"
+#~ " testing."
+#~ msgstr ""
+
+#~ msgid "**The SDKs you create does not require this separate implementation**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Be sure no one is already working"
+#~ " on the SDK you want to create."
+#~ " Check the :doc:`repository list "
+#~ "<languages>`, if someone is already "
+#~ "working on it, we suggest you "
+#~ "collaborate with him/her."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Claim the SDK `forking this repository"
+#~ " <https://help.github.com/articles/creating-a-pull-"
+#~ "request/>`_ and adding a new entry "
+#~ "to the :doc:`repository list <languages>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add a README with the instructions "
+#~ "to install the SDK. Find :download:`here"
+#~ " a template <../resources/templates/README_SDK.md>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We **strongly** suggest you to do "
+#~ "`Test-Driven Development <https://en.wikipedia.org/wiki"
+#~ "/Test-driven_development>`_ or Unit-Testing "
+#~ "(test last). If you need inspiration,"
+#~ " you can adapt the same `tests "
+#~ "we did <https://github.com/nemtech/nem2-sdk-"
+#~ "typescript-javascript/tree/master/test>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The API generation can be done "
+#~ "with `Swagger Codegen <https://swagger.io/tools"
+#~ "/swagger-codegen/>`_. It supports multiple "
+#~ "languages. Hopefully, yours in the list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The API swagger file definition can "
+#~ "be found `here "
+#~ "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Java example <https://github.com/nemtech/nem2-sdk-"
+#~ "java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The"
+#~ " code generated by swagger are the"
+#~ " ``DTOs``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We drop the client classes and "
+#~ "instead we implement them using the "
+#~ "`Repository pattern "
+#~ "<https://martinfowler.com/eaaCatalog/repository.html>`_ "
+#~ "returning `Observables "
+#~ "<https://en.wikipedia.org/wiki/Observer_pattern>`_ of "
+#~ "`ReactiveX <http://reactivex.io/>`_."
+#~ msgstr ""
+
+#~ msgid "List of interfaces:"
+#~ msgstr "インターフェイスリスト:"
+
+#~ msgid ""
+#~ "`AccountRepository <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/AccountRepository.java>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MosaicRepository <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/MosaicRepository.java>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`NamespaceRepository <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/NamespaceRepository.java>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`NetworkRepository <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/NetworkRepository.java>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`TransferRepository <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/TransactionRepository.java>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Check the `Http implementations "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/infrastructure/AccountHttp.java>`_"
+#~ " in case you doubt about some "
+#~ "API endpoint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The **repositories return Models instead "
+#~ "of DTOs**. You will need to code"
+#~ " the `Models <#models>`_ before finish "
+#~ "the API wrapper."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Java models example "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/tree/master/src/main/java/io/nem/sdk/model>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The models are by default immutable. "
+#~ "The models aim to hide the "
+#~ "complexity, like type conversion or "
+#~ "relationship between objects."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``uint64`` support: meanwhile `Java supports"
+#~ " big numbers "
+#~ "<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_,"
+#~ " for example JavaScript doesn't. The "
+#~ "JavaScript SDK has a custom class "
+#~ "to handle the `uint64 types "
+#~ "<https://github.com/nemtech/nem2-sdk-typescript-"
+#~ "javascript/blob/master/src/model/UInt64.ts>`_. If your "
+#~ "language supports ``uint64`` use that "
+#~ "implementation. Otherwise, adapt the "
+#~ "``UInt64.ts`` implementation to your language."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "API conversions: The API returns the "
+#~ "data sometimes compressed, you might "
+#~ "need to convert that types for the"
+#~ " user."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Mosaics <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/mosaic/MosaicId.java>`_"
+#~ " & `Namespaces <https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_"
+#~ " IDs: The namespaces and mosaics "
+#~ "aren't strings any more compared to "
+#~ "NIS1. As you can see in the "
+#~ "class, the ``string`` name is optional."
+#~ " At creation time you add the "
+#~ "string name, but when you receive "
+#~ "the Namespace/Mosaic from the network, "
+#~ "it comes in formatted as\\ ``uint64``"
+#~ " ID. A specific endpoint returns the"
+#~ " Namespace/Mosaic ``string`` name. We did"
+#~ " a Service to return the Mosaic "
+#~ "with the ``string`` name automatically "
+#~ "for the user, check the `implementation"
+#~ " here <https://github.com/nemtech/nem2-sdk-"
+#~ "typescript-javascript/blob/master/src/service/MosaicService.ts>`_"
+#~ " (only available in TypeScript SDK "
+#~ "version)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Transaction Serialization will change "
+#~ "when `catbuffer <https://github.com/nemtech/catbuffer>`_"
+#~ " tool is finished. Meanwhile, we will"
+#~ " use `flatbuffers "
+#~ "<https://google.github.io/flatbuffers/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A Transaction needs a particular "
+#~ "serialization schema in binary optimized "
+#~ "in size. The transaction serialization "
+#~ "has multiple steps to keep easy to"
+#~ " create transactions and maintain the "
+#~ "schema serialization."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Install the `flatbuffers tool "
+#~ "<https://github.com/google/flatbuffers/releases>`_, you "
+#~ "might need to compile it. Use "
+#~ "version 1.7.1 or newer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Compile the schema for your language"
+#~ " "
+#~ "<https://google.github.io/flatbuffers/flatbuffers_guide_using_schema_compiler.html>`_."
+#~ " `Download the flatbuffers files here "
+#~ "<https://github.com/nemtech/guidelines/tree/master/development/sdk-"
+#~ "development-assets/flatbuffers>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Move the generated files to your "
+#~ "``model/transaction`` SDK folder. `Example "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `Schema class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/Schema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `SchemaAttribute class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SchemaAttribute.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `ScalarAttribute class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ScalarAttribute.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `ArrayAttribute class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ArrayAttribute.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `TableAttribute class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableAttribute.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create the `TableArrayAttribute class "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableArrayAttribute.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Each transaction has a Schema. It "
+#~ "has the same type as ``flatbuffer "
+#~ "schemas`` but using the ``Schema`` "
+#~ "class. It's used to know where "
+#~ "each component is located in the "
+#~ "``flatbuffer schema`` and remove the "
+#~ "unnecessary bytes to create the "
+#~ "optimized serialization."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`AggregateTransactionSchema <https://github.com/nemtech/nem2"
+#~ "-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/AggregateTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`LockFundsTransactionSchema <https://github.com/nemtech/nem2"
+#~ "-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/LockFundsTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`ModifyMultisigAccountTransactionSchema "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ModifyMultisigAccountTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MosaicDefinitionTransactionSchema "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicDefinitionTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MosaicSupplyChangeTransactionSchema "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicSupplyChangeTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`RegisterNamespaceTransactionSchema "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/RegisterNamespaceTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SecretLockTransactionSchema <https://github.com/nemtech/nem2"
+#~ "-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretLockTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SecretProofTransactionSchema <https://github.com/nemtech/nem2"
+#~ "-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretProofTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`TransferTransactionSchema <https://github.com/nemtech/nem2"
+#~ "-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransactionSchema.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Transaction class has the abstract"
+#~ " method `generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/Transaction.java#L159>`_."
+#~ " Each Transaction has to implement "
+#~ "and use the previous classes, the "
+#~ "Buffers and the Schemas, to serialize"
+#~ " the transaction."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`AggregateTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/AggregateTransaction.java#L97>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`LockFundsTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/LockFundsTransaction.java#L97>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`ModifyMultisigAccountTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/ModifyMultisigAccountTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MosaicDefinitionTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicDefinitionTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MosaicSupplyChangeTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/MosaicSupplyChangeTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`RegisterNamespaceTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/RegisterNamespaceTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SecretLockTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretLockTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SecretProofTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/SecretProofTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`TransferTransaction.generateBytes() "
+#~ "<https://github.com/nemtech/nem2-sdk-"
+#~ "java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransaction.java>`_."
+#~ msgstr ""
+
+#~ msgid "**Do not forget about Cosignatory classes**, it has to be done too."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SDKs need to be adopted by other"
+#~ " developers. As a contributor, no one"
+#~ " knows better than you how a "
+#~ "determined SDK works. Consider helping "
+#~ "others and spread the usage of the"
+#~ " SDK by providing :doc:`the following "
+#~ "documentation <documentation>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you open-source your code, "
+#~ ":doc:`submit the repository to this page"
+#~ " <../sdk/languages>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To become an accepted SDK, it "
+#~ "should be proposed as a `NIP "
+#~ "<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. "
+#~ "The reason behind the NEM2 Improvement"
+#~ " Proposal is to ensure that the "
+#~ "new libraries are reviewed, tested and"
+#~ " shared among NEM developers."
+#~ msgstr ""
+
