@@ -42,10 +42,10 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
-    'sphinxcontrib.fulltoc',
     'sphinxcontrib.ghcontributors',
     'sphinx_tabs.tabs',
     'edit-on-github',
+    'fulltoc',
     'ablog'
     ]
 
