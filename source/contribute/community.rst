@@ -10,7 +10,7 @@ Discover how the open source |community| works, and get started participating:
 
 * Reach our community joining the official |slack|.
 
-* Check the :doc:`contributing guidelines <suggesting-changes>` to propose changes.
+* Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` to propose changes.
 
 * Follow the development updates on |twitter|.
 
@@ -29,10 +29,3 @@ Discover how the open source |community| works, and get started participating:
 .. |twitter| raw:: html
 
    <a href="https://twitter.com/nemtechdev" target="_blank">Twitter</a>
-
-
-
-
-
-
-

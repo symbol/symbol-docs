@@ -36,9 +36,9 @@ Catapult enables asynchronous transaction announcement. After you publish a tran
 
 At this time, the server does not ensure that the transaction is valid - for example, you don't have the amount of asset units you want to send-, hence is not sure it will be added in a block.
 
-To make sure the transaction is added in a block, you must track the :doc:`transaction status <../../concepts/transaction>` using :doc:`Listeners <../../api/websockets>`.
+To make sure the transaction is added in a block, you must track the :doc:`transaction status <../../concepts/transaction>` using :ref:`Listeners <websockets>`.
 
-:doc:`Listeners <../../api/websockets>` enable receiving notifications possible when a change in the blockchain occurs. The notification is received in real time without having to poll the API waiting for a reply.
+Listeners enable receiving notifications possible when a change in the blockchain occurs. The notification is received in real time without having to poll the API waiting for a reply.
 
 1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
@@ -59,7 +59,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
         :lines:  41-43
 
 
-3. Open a new :doc:`Listeners <../../api/websockets>`. This communicates with the API WebSocket, who will communicate you asynchronously the status of the transaction.
+3. Open a new :ref:`Listeners <websockets>`. This communicates with the API WebSocket, who will communicate you asynchronously the status of the transaction.
 
 .. example-code::
 
@@ -82,7 +82,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
         :language: bash
         :start-after: #!/bin/sh
 
-5. Monitor if there is some validation error with the transaction issued. When you receive a message from status WebSocket channel, it always means the transaction did not meet the requirements. You need to handle the error accordingly, by reviewing the :doc:`error status list <../../api/status-errors>`.
+5. Monitor if there is some validation error with the transaction issued. When you receive a message from status WebSocket channel, it always means the transaction did not meet the requirements. You need to handle the error accordingly, by reviewing the :ref:`error status list <status-errors>`.
 
 .. example-code::
 
@@ -138,7 +138,7 @@ To make sure the transaction is added in a block, you must track the :doc:`trans
         :language: bash
         :start-after: #!/bin/sh
 
-If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/api/endpoints.html#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
+If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
 
 .. note:: If you are developing a small application, and monitoring asynchronous transactions adds too much overhead to your project, consider :doc:`turning asynchronous transactions announcement into synchronous <turning-the-asynchronous-transaction-announcement-into-synchronous>`.
 

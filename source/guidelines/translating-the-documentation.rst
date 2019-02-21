@@ -47,4 +47,4 @@ Replace <lang> for your `language code <https://en.wikipedia.org/wiki/ISO_639-1>
   $> make -e SPHINXOPTS="-D language='<lang>'" livehtml
 
 
-:doc:`Submit your changes<suggesting-changes>` into the nem2-docs repository.
+:doc:`Submit your changes <suggesting-changes>` into the nem2-docs repository.

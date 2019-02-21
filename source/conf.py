@@ -74,7 +74,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.16.2'
+version = u'0.17.0'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
@@ -121,7 +121,7 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting started", "getting-started/setup-workstation"),
+        ("Getting started", "getting-started/what-is-nem"),
         ("Built-in features", "concepts/account"),
         ("Guides", "guides/category/account"),
         ("References", "references"),
@@ -192,7 +192,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'references': 'references.html'}
+html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', 'html': '404.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -204,26 +204,19 @@ def setup(app):
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
-#
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-  'api/requests': ['localtoc.html'],
-  'api/endpoints': [],
-  'api/tools': ['localtoc.html'],
-  'api/websockets': ['localtoc.html'],
-  'api/serialization': ['localtoc.html'],
-  'api/status-errors': ['localtoc.html'],
-  'cli/**': ['localtoc.html'],
-  'concepts/**': ['localtoc.html'],
-  'getting-started/**': ['localtoc.html'],
+  'api': ['globaltoc.html'],
+  'cli': ['globaltoc.html'],
+  'concepts/**': ['globaltoc.html'],
+  'getting-started/**': ['globaltoc.html'],
   'guides/**/**': ['categories.html'],
   'guides': ['categories.html'],
-  'libraries/**': ['localtoc.html'],
-  'prototyping-tool/**': ['localtoc.html'],
-  'sdk/**': ['localtoc.html'],
-  'wallet/**': ['localtoc.html'],
-  'support/**': ['localtoc.html'],
+  'guidelines/**': ['globaltoc.html'],
+  'extensions': ['globaltoc.html'],
+  'prototyping-tool': ['globaltoc.html'],
+  'sdk': ['globaltoc.html'],
+  'wallet': ['globaltoc.html'],
+  'contribute/**': ['globaltoc.html'],
   'index': [],
 }
 

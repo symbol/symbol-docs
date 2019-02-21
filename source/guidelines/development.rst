@@ -6,15 +6,110 @@ SDK Development
 
 A key objective is that interoperability becomes a natural design of the NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving the best quality with less effort.
 
-***********************
-Learning about Catapult
-***********************
+NEM2-SDK shares the same design/architecture between programming languages to accomplish the next properties:
+
+* **Fast language adaptation**: There is a library for Java, but you need it for C# for example. As both SDKs share the same design, you can re-write the library faster, adapting the syntax to your language. It also applies to examples, projects, applications...
+
+* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
+
+* **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
+
+* **Fewer bugs**: If any bug appears in one language, it is faster to check and fix it.
+
+************
+Architecture
+************
+
+**Characteristics**
+
+- **Standardized Contracts**: Guaranteeing interoperability and harmonization of data models.
+- **Loose Coupling**: Reducing the degree of component coupling fosters.
+- **Abstraction**: Increasing long-term consistency of interoperability and allowing underlying components to evolve independently.
+- **Reusability**: Enabling high-level interoperability between modules and potential component consumers.
+- **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
+- **Composability**: For components to be effectively composable they must be interoperable.
+
+**Reactive**
+
+NEM2-SDK uses intensely ReactiveX Library.
+
+- **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
+- **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
+- **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle these sort of errors.
+- **Concurrency**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
+- **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
+- **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
+
+.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
+
+- |rxjsinaction|
+- |frp|
+- |learnrxjs|
+- |rp-wiki|
+- |op-wiki|
+- |reactivex|
+
+Package Organization
+====================
+
+.. figure:: ../resources/images/diagrams/nem2-sdk-architecture.png
+    :width: 400px
+    :align: center
+
+    Package organization diagram
+
+**Infrastructure**
+
+The HTTP requests are made following the Repository Pattern, and they return NEM Domain immutable models via the Observable Pattern.
+
+**Models**
+
+The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to change the NEM Blockchain state.
+
+**Services**
+
+Common operations that require multiple :doc:`REST API <../api>` requests are handled by already provided services.
+
+.. |reactivex| raw:: html
+
+    <a href="http://reactivex.io/" target="_black">ReactiveX</a>
+
+.. |rxjsinaction| raw:: html
+
+    <a href="https://www.manning.com/books/rxjs-in-action" target="_black">RxJS in Action</a>
+
+.. |frp| raw:: html
+
+    <a href="https://www.manning.com/books/functional-reactive-programming" target="_black">Functional Reactive Programming</a>
+
+.. |rp-wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Reactive_programming" target="_black">Reactive Programming</a>
+
+.. |op-wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_black">Observer Pattern</a>
+
+.. |learnrxjs| raw:: html
+
+    <a href="https://www.learnrxjs.io/" target="_black">Learn RxJS</a>
+
+.. |rp-promise-example| raw:: html
+
+    <a href="https://www.learnrxjs.io/operators/utility/topromise.html" target="_black">example</a>
+
+
+***************
+Before starting
+***************
 
 1. Review the technical documentation to become familiar with the :doc:`NEM built-in features<../concepts/account>`.
 2. Setup the `catapult in local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
-3. :doc:`Check the API reference <../api/requests>` and play with the API endpoints.
-4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli/overview>` .
+3. :doc:`Check the API reference <../api>` and play with the API endpoints.
+4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask Catapult related questions.
+6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
+7. Claim the SDK `forking this repository <https://help.github.com/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
 ***********
 Development
@@ -28,13 +123,6 @@ was a need to create this low-level library to perform specific chain testing.
 .. note:: The SDKs you create does not require this separate implementation.
 
 Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
-
-Before starting
-===============
-
-1. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <languages>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
-2. Claim the SDK `forking this repository <https://help.github.com/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <languages>`.
-3. Consider using one of the suggested `licenses <#recommended-licenses>`_.
 
 Creating the project
 =====================
@@ -89,8 +177,7 @@ Particular decisions to consider:
 Transaction Serialization
 =========================
 
-A Transaction needs a particular serialization schema in binary
-optimized in size.
+A Transaction needs a particular serialization schema in binary optimized in size.
 
 **Generate the buffer classes**
 

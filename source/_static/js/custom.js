@@ -25,7 +25,12 @@ function initLanguageSelector() {
         languageSelector.val('en');
     }
     languageSelector.change(function () {
-        translatePathRedirect($(this).val());
+        if($(this).val() !== 'translate'){
+            translatePathRedirect($(this).val());
+        }
+        else{
+            window.location.href = 'https://www.transifex.com/nemtech/nem2docs/';
+        }
     });
 }
 
@@ -35,15 +40,27 @@ function homePageFullWidth(){
     jumbotron.closest('.content').css({"padding-bottom": "0px"});
 }
 
+
 function addSidebarClickHandler(){
     $('#sidebar .caption').click(function() {
         const nextUl = $(this).next('ul');
         if (nextUl.hasClass("show")) {
             nextUl.removeClass("show");
+            if ($(this).hasClass("sidebar-selected-ul")) {
+                $(this).removeClass("sidebar-selected-ul");
+            }
         } else {
             nextUl.addClass("show");
+            $(this).addClass("sidebar-selected-ul");
         }
     });
+}
+
+function addHoverToSidebar(){
+    const angleRight = '<span class="angle angle-right fas fa-chevron-right"></span>';
+    $( "#sidebar ul.current").prev().addClass("sidebar-current-ul");
+    $( "#sidebar .sidebar-md .caption").append(angleRight);
+
 }
 
 function addBlockCaptionInsideCodeExample(){
@@ -51,11 +68,6 @@ function addBlockCaptionInsideCodeExample(){
         $(this).next().prepend(this);
     });
     $(".literal-block-wrapper").removeClass("container");
-}
-
-
-function addHoverToSidebar(){
-    $( "#sidebar > ul.current").prev().addClass("sidebar-current-ul");
 }
 
 $( document ).ready(function() {

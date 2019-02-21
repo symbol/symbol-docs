@@ -1,6 +1,191 @@
-#############
+########
+REST API
+########
+
+**Catapult REST API** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+
+.. _http-requests:
+
+*************
+Http Requests
+*************
+
+Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **POST** requests.
+
+Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
+
+http://localhost:3000/<path-to-API-request>
+
+HTTP PUT and POST requests use JSON structures in the request body. Request returns data using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
+
+.. raw:: html
+
+    <a href="/endpoints.html"><button class="btn btn-default">Catapult REST API Endpoints</button></a>
+
+.. _tools:
+
+Tools
+=====
+
+**NEM2-SDK**
+
+The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
+
+.. note:: Consider using **NEM2-SDK** instead of calling the API directly.
+
+* :doc:`Reference <../sdk>`
+* :doc:`Guides <../concepts/account>`
+
+**Insomnia**
+
+An open source HTTP client, available for Mac, Windows and Linux.
+
+1. Download |insomnia-app| for your operative system.
+
+2. Import the :download:`Insomnia spec<resources/collections/insomnia.json>` for NEM.
+
+.. |insomnia-app| raw:: html
+
+    <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+
+.. _serialization:
+
+Serialization
+=============
+
+`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
+
+.. figure:: resources/images/diagrams/catbuffer.png
+    :width: 450px
+    :align: center
+
+    NEM2-SDK serialization module
+
+The library accomplishes the following properties:
+
+**Memory Efficiency**
+
+Large networks compute a large number of transactions. Working with binary optimized in size makes the communication faster. Furthermore, reading entities from memory buffers -or just a part of them - is memory efficient.
+
+**Flexibility**
+
+REST `transaction endpoints <https://nemtech.github.io/api/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+
+**Reusability**
+
+Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
+
+The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
+
+Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
+
+.. code-block:: bash
+
+    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+
+The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
+
+.. _http-errors:
+
+Http errors
+===========
+
+.. csv-table::
+    :header: "Status code", "Description"
+    :delim: ;
+
+    200; Ok. The request has succeeded.
+    202; Accepted. The request has been accepted for processing but the processing has not been completed.
+    400; Bad request. Check your request syntax.
+    404; Not found. The resource does not exist.
+    409; Conflict. Check your arguments.
+    500; Internal error. Unexpected condition.
+
+.. _http-status:
+
+Http status
+===========
+
+.. csv-table::
+    :header: "Key", "Description"
+    :delim: ;
+
+    code; Error identifier in camelCase.
+    message; Error explained in human-readable format.
+
+**Example**
+
+.. code-block:: json
+
+  {
+    "code": "InvalidArgument",
+    "message": "accountId has an invalid format"
+  }
+
+uint64: lower and higher
+========================
+
+Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: ``lower`` and ``higher``.
+
+Check `how to compact lower and higher into a single value <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_.
+
+.. _websockets:
+
+**********
+WebSockets
+**********
+
+WebSockets make receiving notifications possible when a transaction or event occurs in the blockchain. The notification is received in real time without having to poll the API waiting for a reply.
+
+Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with **Listeners**.
+
+Channels
+========
+
+**block**
+
+The block channel notifies for every new block. The message contains the block information.
+
+**confirmedAdded/<ADDRESS>**
+
+The confirmedAdded channel notifies when a transaction related to an address is included in a block. The message contains the transaction.
+
+**unconfirmedAdded/<ADDRESS>**
+
+The unconfirmedAdded channel notifies when a transaction related to an address is in unconfirmed state and waiting to be included in a block. The message contains the transaction.
+
+Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an aggregate bonded transaction has all required cosigners and change its state from *partial* to *unconfirmed*.
+
+**unconfirmedRemoved/<ADDRESS>**
+
+The unconfirmedRemoved channel notifies when a transaction related to an address was in unconfirmed state but is not anymore. The message contains the transaction hash.
+
+Possible scenarios when this channel notifies are: the transaction now is confirmed or the deadline has been reached and it was not included in a block.
+
+**partialAdded/<ADDRESS>**
+
+The partialAdded channel notifies when an aggregate bonded transaction related to an address is in *partial* state and waiting to have all *required cosigners*. The message contains a transaction.
+
+The scenario when this channel notifies is when an aggregate bonded transaction is announced to the network via ``PUT /transaction/partial`` HTTP endpoint.
+
+**partialRemoved/<ADDRESS>**
+
+The partialRemoved channel notifies when a transaction related to an address was in partial state but is not anymore. The message contains the transaction hash.
+
+Possible scenarios when this channel notifies are: the transaction now is in unconfirmed or the deadline has been reached and it was not included in a block.
+
+**cosignature/<ADDRESS>**
+
+The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an aggregate bonded transaction with partial state. The message contains the cosignature signed transaction.
+
+**status/<ADDRESS>**
+
+The status channel notifies when a transaction related to an address rises an error. The message contains the error message and the transaction hash.
+
+.. _status-errors:
+
 Status Errors
-#############
+=============
 
 This section describes the error messages that can be returned via status channel after announcing a transaction.
 
@@ -140,3 +325,5 @@ This section describes the error messages that can be returned via status channe
     Failure_Consumer_Remote_Chain_Too_Far_In_Future, Validation failed because the remote chain timestamp is too far in the future.
     Failure_Extension_Partial_Transaction_Cache_Prune, Validation failed because the partial transaction was pruned from the temporal cache.
     Failure_Extension_Partial_Transaction_Dependency_Removed, Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
+
+:download:`OpenAPI specification <resources/collections/swagger.yaml>`

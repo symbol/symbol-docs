@@ -85,7 +85,7 @@ REST Component
 
 **Repository:** |catapult-rest|
 
-The REST component handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :doc:`WebSockets <../api/websockets>`.
+The REST component handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :ref:`WebSockets <websockets>`.
 
 Each REST component connects to one API instance, sending new transactions using sockets.
 

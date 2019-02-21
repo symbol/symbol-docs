@@ -22,7 +22,7 @@ Architecting on NEM
 
 NEM :doc:`nodes <../concepts/node>` provide a powerful, stable and secure platform where smart asset transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
-All the features are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight :doc:`code in any language <../sdk/languages>`.
+All the features are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight :doc:`code in any language <../sdk>`.
 
 .. figure:: ../resources/images/examples/architecting-nem-solutions.png
     :align: center
