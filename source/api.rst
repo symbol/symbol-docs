@@ -69,7 +69,7 @@ Large networks compute a large number of transactions. Working with binary optim
 
 **Flexibility**
 
-REST `transaction endpoints <https://nemtech.github.io/api/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+REST `transaction endpoints <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
 
 **Reusability**
 
