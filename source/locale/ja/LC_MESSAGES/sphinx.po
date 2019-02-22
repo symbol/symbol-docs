@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"POT-Creation-Date: 2019-02-22 07:58+0000\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-"
@@ -20,208 +20,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../source/_templates/footer2.html:20
-#: ../../source/_templates/index.html:71
-#: ../../source/_templates/references.html:2
-#: ../../source/_templates/references.html:13
-msgid "References"
-msgstr "リファレンス"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
 
-#: ../../source/_templates/references.html:15
-msgid ""
-"From SDKs in your favorite languages to extensions that make blockchain "
-"development easier."
-msgstr "お好みの言語によるSDKからブロックチェーン開発を容易にする拡張機能まで"
-
-#: ../../source/_templates/references.html:23
-msgid "Clients & Apps"
-msgstr ""
-
-#: ../../source/_templates/references.html:24
-msgid "Apps to interact with the NEM blockchain."
-msgstr "NEMブロックチェーンと対話するアプリケーション"
-
-#: ../../source/_templates/footer2.html:26
-#: ../../source/_templates/references.html:33
-msgid "Client"
-msgstr ""
-
-#: ../../source/_templates/references.html:41
-msgid "Prototyping"
-msgstr ""
-
-#: ../../source/_templates/footer2.html:24
-#: ../../source/_templates/references.html:53
-msgid "SDKs"
-msgstr ""
-
-#: ../../source/_templates/references.html:54
-msgid "The"
-msgstr ""
-
-#: ../../source/_templates/references.html:54
-msgid ""
-"NEM2 Software\n"
-"                        Development Kit "
-msgstr ""
-
-#: ../../source/_templates/references.html:56
-msgid ""
-"is the primary software development tool to create NEM2 components, such "
-"as\n"
-"                        additional tools, libraries or applications."
-msgstr "NEM2 コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
-
-#: ../../source/_templates/references.html:66
-msgid "Typescript"
-msgstr ""
-
-#: ../../source/_templates/references.html:74
-msgid "Javascript"
-msgstr ""
-
-#: ../../source/_templates/references.html:82
-msgid "Java"
-msgstr ""
-
-#: ../../source/_templates/references.html:90
-msgid "C#"
-msgstr ""
-
-#: ../../source/_templates/references.html:98
-msgid "Go"
-msgstr ""
-
-#: ../../source/_templates/references.html:106
-msgid "Swift"
-msgstr ""
-
-#: ../../source/_templates/references.html:114
-msgid "PHP"
-msgstr ""
-
-#: ../../source/_templates/references.html:122
-msgid "C++"
-msgstr ""
-
-#: ../../source/_templates/references.html:130
-msgid "Python"
-msgstr ""
-
-#: ../../source/_templates/references.html:138
-msgid "Ruby"
-msgstr ""
-
-#: ../../source/_templates/references.html:150
-msgid "Extensions"
-msgstr ""
-
-#: ../../source/_templates/references.html:151
-msgid "Collection of "
-msgstr ""
-
-#: ../../source/_templates/references.html:151
-msgid "libraries"
-msgstr ""
-
-#: ../../source/_templates/references.html:152
-msgid "and tools to accelerate blockchain development. "
-msgstr "ブロックチェーン開発を加速するためのツール"
-
-#: ../../source/_templates/references.html:161
-msgid "Service Bootstrap"
-msgstr ""
-
-#: ../../source/_templates/references.html:169
-msgid "NEM2-Camel"
-msgstr ""
-
-#: ../../source/_templates/references.html:177
-msgid "Apostille"
-msgstr ""
-
-#: ../../source/_templates/references.html:185
-msgid "Non-fungible asset"
-msgstr ""
-
-#: ../../source/_templates/footer2.html:23
-#: ../../source/_templates/references.html:197
-msgid "REST API"
-msgstr ""
-
-#: ../../source/_templates/references.html:198
-msgid "Catapult REST API"
-msgstr ""
-
-#: ../../source/_templates/references.html:199
-msgid ""
-"combines HTTP and WebSockets to perform read and write actions in the NEM"
-" blockchain."
-msgstr "HTTPとWebSocketsを NEM ブロックチェーンを読み書きできるように併合させます"
-
-#: ../../source/_templates/references.html:209
-msgid "HTTP"
-msgstr ""
-
-#: ../../source/_templates/references.html:217
-msgid "WebSockets"
-msgstr ""
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:2
-msgid "Update"
-msgstr "更新"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:7
-#: ../../source/_templates/post-meta.html:5
-msgid "Author"
-msgstr "投稿者"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:16
-msgid "Location"
-msgstr "場所"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:25
-msgid "Language"
-msgstr "言語"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:34
-msgid "Category"
-msgstr "カテゴリ"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:43
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/tagcloud.html:2
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:44
-msgid "Tag"
-msgstr "タグ"
-
-#: ../../source/_templates/globaltoc.html:7
-msgid "Navigation"
-msgstr ""
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
-
-#: ../../source/_templates/navbarsearchbox.html:8
-msgid "English"
-msgstr "英語"
-
-#: ../../source/_templates/navbarsearchbox.html:9
-msgid "Japanese"
-msgstr "日本語"
-
-#: ../../source/_templates/navbarsearchbox.html:10
-#, fuzzy
-msgid "Translate"
-msgstr "トランザクション"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/authors.html:2
-#: ../../source/_templates/post-meta.html:5
-msgid "Authors"
-msgstr "投稿者"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
 
 #: ../../source/_templates/categories.html:2
 #: ../../source/_templates/collection.html:5
@@ -229,18 +34,40 @@ msgstr "投稿者"
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/collection.html:48
-#: ../../source/_templates/collection.html:26
-msgid "Read more ..."
-msgstr "もっと読む"
+#: ../../source/_templates/categories.html:21
+msgid "Courses"
+msgstr "コース"
 
 #: ../../source/_templates/footer2.html:7
 msgid "Learn"
 msgstr ""
 
+#: ../../source/_templates/footer2.html:20
+#: ../../source/_templates/index.html:71
+#: ../../source/_templates/references.html:2
+#: ../../source/_templates/references.html:13
+msgid "References"
+msgstr "リファレンス"
+
+#: ../../source/_templates/footer2.html:23
+#: ../../source/_templates/references.html:197
+msgid "REST API"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:24
+#: ../../source/_templates/references.html:53
+msgid "SDKs"
+msgstr ""
+
 #: ../../source/_templates/footer2.html:25
-msgid "Libraries"
-msgstr "ライブラリ"
+#: ../../source/_templates/references.html:150
+msgid "Extensions"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:26
+#: ../../source/_templates/references.html:33
+msgid "Client"
+msgstr ""
 
 #: ../../source/_templates/footer2.html:27
 msgid "Prototyping Tool"
@@ -282,9 +109,23 @@ msgstr ""
 msgid "Last updated on %(last_updated)s."
 msgstr "最終更新 %(last_updated)"
 
-#: ../../source/_templates/categories.html:21
-msgid "Courses"
-msgstr "コース"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/categories.html:2
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:7
+#: ../../source/_templates/post-meta.html:5
+msgid "Author"
+msgstr "投稿者"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/authors.html:2
+#: ../../source/_templates/post-meta.html:5
+msgid "Authors"
+msgstr "投稿者"
 
 #: ../../source/_templates/index.html:2
 msgid "Home"
@@ -350,37 +191,193 @@ msgstr "SDKからブロックチェーン開発を容易にする拡張機能ま
 msgid "DEVELOP"
 msgstr "開発"
 
+#: ../../source/_templates/globaltoc.html:7
+msgid "Navigation"
+msgstr ""
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:26
+msgid "Read more ..."
+msgstr "もっと読む"
+
 #: ../../source/_templates/layout.html:90
 msgid "Edit on GitHub"
 msgstr "GitHubで編集"
-
-#: ../../source/_templates/endpoints.html:2
-msgid "Endpoints"
-msgstr "エンドポイント"
 
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/archives.html:2
 msgid "Archives"
 msgstr "アーカイブ"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
+#: ../../source/_templates/references.html:15
+msgid ""
+"From SDKs in your favorite languages to extensions that make blockchain "
+"development easier."
+msgstr "お好みの言語によるSDKからブロックチェーン開発を容易にする拡張機能まで"
+
+#: ../../source/_templates/references.html:23
+msgid "Clients & Apps"
+msgstr ""
+
+#: ../../source/_templates/references.html:24
+msgid "Apps to interact with the NEM blockchain."
+msgstr "NEMブロックチェーンと対話するアプリケーション"
+
+#: ../../source/_templates/references.html:41
+msgid "Prototyping"
+msgstr ""
+
+#: ../../source/_templates/references.html:54
+msgid "The"
+msgstr ""
+
+#: ../../source/_templates/references.html:54
+msgid ""
+"NEM2 Software\n"
+"                        Development Kit "
+msgstr ""
+
+#: ../../source/_templates/references.html:56
+msgid ""
+"is the primary software development tool to create NEM2 components, such "
+"as\n"
+"                        additional tools, libraries or applications."
+msgstr "NEM2 コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
+
+#: ../../source/_templates/references.html:66
+msgid "Typescript"
+msgstr ""
+
+#: ../../source/_templates/references.html:74
+msgid "Javascript"
+msgstr ""
+
+#: ../../source/_templates/references.html:82
+msgid "Java"
+msgstr ""
+
+#: ../../source/_templates/references.html:90
+msgid "C#"
+msgstr ""
+
+#: ../../source/_templates/references.html:98
+msgid "Go"
+msgstr ""
+
+#: ../../source/_templates/references.html:106
+msgid "Swift"
+msgstr ""
+
+#: ../../source/_templates/references.html:114
+msgid "PHP"
+msgstr ""
+
+#: ../../source/_templates/references.html:122
+msgid "C++"
+msgstr ""
+
+#: ../../source/_templates/references.html:130
+msgid "Python"
+msgstr ""
+
+#: ../../source/_templates/references.html:138
+msgid "Ruby"
+msgstr ""
+
+#: ../../source/_templates/references.html:151
+msgid "Collection of "
+msgstr ""
+
+#: ../../source/_templates/references.html:151
+msgid "extensions"
+msgstr ""
+
+#: ../../source/_templates/references.html:152
+msgid "and tools to accelerate blockchain development. "
+msgstr "ブロックチェーン開発を加速するためのツール"
+
+#: ../../source/_templates/references.html:161
+msgid "Service Bootstrap"
+msgstr ""
+
+#: ../../source/_templates/references.html:169
+msgid "NEM2-Camel"
+msgstr ""
+
+#: ../../source/_templates/references.html:177
+msgid "Apostille"
+msgstr ""
+
+#: ../../source/_templates/references.html:185
+msgid "Non-fungible asset"
+msgstr ""
+
+#: ../../source/_templates/references.html:198
+msgid "Catapult REST API"
+msgstr ""
+
+#: ../../source/_templates/references.html:199
+msgid ""
+"combines HTTP and WebSockets to perform read and write actions in the NEM"
+" blockchain."
+msgstr "HTTPとWebSocketsを NEM ブロックチェーンを読み書きできるように併合させます"
+
+#: ../../source/_templates/references.html:209
+msgid "HTTP"
+msgstr ""
+
+#: ../../source/_templates/references.html:217
+msgid "WebSockets"
+msgstr ""
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/tagcloud.html:2
+msgid "Tags"
+msgstr "タグ"
 
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/recentposts.html:2
 msgid "Recent Posts"
 msgstr "最近の投稿"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
+#: ../../source/_templates/endpoints.html:2
+msgid "Endpoints"
+msgstr "エンドポイント"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/categories.html:2
-msgid "Categories"
+#: ../../source/_templates/navbarsearchbox.html:8
+msgid "English"
+msgstr "英語"
+
+#: ../../source/_templates/navbarsearchbox.html:9
+msgid "Japanese"
+msgstr "日本語"
+
+#: ../../source/_templates/navbarsearchbox.html:10
+#, fuzzy
+msgid "Translate"
+msgstr "トランザクション"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:2
+msgid "Update"
+msgstr "更新"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:16
+msgid "Location"
+msgstr "場所"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:25
+msgid "Language"
+msgstr "言語"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:34
+msgid "Category"
 msgstr "カテゴリ"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:44
+msgid "Tag"
+msgstr "タグ"
 
 #~ msgid "None"
 #~ msgstr "なし"
@@ -444,4 +441,10 @@ msgstr "カテゴリ"
 
 #~ msgid "Status Errors"
 #~ msgstr "ステータスエラー"
+
+#~ msgid "Libraries"
+#~ msgstr "ライブラリ"
+
+#~ msgid "libraries"
+#~ msgstr ""
 

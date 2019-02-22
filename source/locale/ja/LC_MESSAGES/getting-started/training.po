@@ -43,7 +43,7 @@ msgstr "ガイドレッスンを通して NEM を学びたい場合、以下の�
 
 #: ../../source/getting-started/training.rst:9
 msgid "Courses"
-msgstr "コース"
+msgstr ""
 
 #: ../../source/getting-started/training.rst:1
 msgid "Title"

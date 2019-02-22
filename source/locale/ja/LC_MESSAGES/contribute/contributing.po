@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"POT-Creation-Date: 2019-02-22 07:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,12 +53,12 @@ msgstr ":doc:`概要 <../sdk>`"
 
 #: ../../source/contribute/contributing.rst:19
 #, fuzzy
-msgid ":doc:`Developing an SDK <../guidelines/development>`"
+msgid ":doc:`Developing an SDK <../guidelines/sdk-development>`"
 msgstr ":doc:`SDK の開発 <../guidelines/sdk-development>`"
 
 #: ../../source/contribute/contributing.rst:20
 #, fuzzy
-msgid ":doc:`Documenting an SDK <../guidelines/documentation>`"
+msgid ":doc:`Documenting an SDK <../guidelines/sdk-documentation>`"
 msgstr ":doc:`SDK のドキュメント <../sdk/sdk-documentation>`"
 
 #: ../../source/contribute/contributing.rst:23
@@ -79,15 +79,15 @@ msgstr "ドキュメント"
 
 #: ../../source/contribute/contributing.rst:32
 msgid ":doc:`Writing a guide <../guidelines/writing-a-guide>`"
-msgstr ":doc:`ガイドの記述 <writing-a-guide>`"
+msgstr ":doc:`ガイドの記述 <../guidelines/writing-a-guide>`"
 
 #: ../../source/contribute/contributing.rst:33
 msgid ":doc:`Suggesting changes <../guidelines/suggesting-changes>`"
-msgstr ":doc:`変更の提案 <suggesting-changes>`"
+msgstr ":doc:`変更の提案 <../guidelines/suggesting-changes>`"
 
 #: ../../source/contribute/contributing.rst:34
 msgid ""
 ":doc:`Translating the documentation <../guidelines/translating-the-"
 "documentation>`"
-msgstr ":doc:`ドキュメントの翻訳 <translating-the-documentation>`"
+msgstr ":doc:`ドキュメントの翻訳 <../guidelines/translating-the-documentation>`"
 

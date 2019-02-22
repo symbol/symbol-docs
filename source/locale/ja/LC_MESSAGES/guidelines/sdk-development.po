@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"POT-Creation-Date: 2019-02-22 07:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,8 +117,7 @@ msgstr "NEM2-SDK は熱心に ReactiveX ライブラリを使用しています�
 msgid ""
 "**Functional**: Developers can avoid complex stateful programs using "
 "clean input/output functions over observable streams."
-msgstr ""
-"**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
+msgstr "**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
 
 #: ../../source/guidelines/sdk-development.rst:37
 msgid ""
@@ -228,14 +227,11 @@ msgstr ""
 msgid "**Services**"
 msgstr "サービス"
 
-
 #: ../../source/guidelines/sdk-development.rst:71
 msgid ""
 "Common operations that require multiple :doc:`REST API <../api>` requests"
 " are handled by already provided services."
-msgstr ""
-"複数の :doc:`REST API<../api>` "
-"要求を必要とする一般的な操作は、すでに提供されているサービスによって処理されます。"
+msgstr "複数の :doc:`REST API<../api>` 要求を必要とする一般的な操作は、すでに提供されているサービスによって処理されます。"
 
 #: ../../source/guidelines/sdk-development.rst:104
 msgid "Before starting"
@@ -611,7 +607,7 @@ msgid ""
 "The SDKs need to be adopted by other developers. As a contributor, no one"
 " knows better than you how a determined SDK works. Consider helping "
 "others and spread the usage of the SDK by providing :doc:`the following "
-"documentation <documentation>`."
+"documentation <sdk-documentation>`."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:229
@@ -681,4 +677,14 @@ msgid ""
 "LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or "
 "newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
 msgstr ""
+
+#~ msgid ""
+#~ "The SDKs need to be adopted by "
+#~ "other developers. As a contributor, no"
+#~ " one knows better than you how "
+#~ "a determined SDK works. Consider helping"
+#~ " others and spread the usage of "
+#~ "the SDK by providing :doc:`the following"
+#~ " documentation <documentation>`."
+#~ msgstr ""
 

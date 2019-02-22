@@ -39,6 +39,11 @@ h1 {
     }
 }
 
+input.form-control{
+    padding: 4px 8px;
+    height: auto;
+}
+
 /* Colors */
 .colored.green {
     color: #20b5ac;
@@ -60,7 +65,8 @@ h1 {
 }
 
 .btn-default:hover,
-.btn-default:focus {
+.btn-default:focus,
+.btn-default:active{
     background-color: transparent;
     color: #2780e3;
     border: 1px solid #2780e3;
@@ -272,6 +278,9 @@ body > .container {
 
 .navbar-default .navbar-toggle {
     color: #555;
+}
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
 }
 
 .navbar-default #dLabelGlobalToc {

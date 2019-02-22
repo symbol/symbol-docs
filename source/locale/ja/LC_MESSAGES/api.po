@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"POT-Creation-Date: 2019-02-22 07:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -322,9 +322,7 @@ msgstr ""
 msgid ""
 "Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with "
 "**Listeners**."
-msgstr ""
-":doc:`NEM2-SDK <../sdk>` でAPI WebSocket と疎通するには **Listeners** "
-"によって行います。"
+msgstr ":doc:`NEM2-SDK <../sdk>` でAPI WebSocket と疎通するには **Listeners** によって行います。"
 
 #: ../../source/api.rst:143
 msgid "Channels"
@@ -448,12 +446,13 @@ msgid "**status/<ADDRESS>**"
 msgstr ""
 
 #: ../../source/api.rst:183
+#, fuzzy
 msgid ""
 "The status channel notifies when a transaction related to an address "
 "rises an error. The message contains the error message and the "
 "transaction hash."
 msgstr ""
-"ステータスチャンネルはアドレスに関連するトランザクションで :doc:`エラー <status-errors>` "
+"ステータスチャンネルはアドレスに関連するトランザクションで :ref:`エラー <status-errors>` "
 "が発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
 
 #: ../../source/api.rst:188
@@ -704,7 +703,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Validation failed because at least one required cosigner is missing. The "
-"tranaction was announced as complete but had missing cosignatures."
+"transaction was announced as complete but had missing cosignatures."
 msgstr "必要な署名者が少なくとも1人は欠落しているため、バリデーションに失敗しました。トランザクションは完了したとアナウンスされましたが、署名がありませんでした。"
 
 #: ../../source/api.rst:1
@@ -1646,5 +1645,5 @@ msgstr ""
 
 #: ../../source/api.rst:329
 msgid ":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
-msgstr ":download:`OpenAPI 形式の仕様をダウンロード <../resources/collections/swagger.yaml>`"
+msgstr ":download:`OpenAPI 形式の仕様をダウンロード <resources/collections/swagger.yaml>`"
 
