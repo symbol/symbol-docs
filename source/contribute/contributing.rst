@@ -16,8 +16,8 @@ SDK
 ====
 
 * :doc:`Summary <../sdk>`
-* :doc:`Developing an SDK <../guidelines/development>`
-* :doc:`Documenting an SDK <../guidelines/documentation>`
+* :doc:`Developing an SDK <../guidelines/sdk-development>`
+* :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
 
 Catbuffer
 =========

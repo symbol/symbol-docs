@@ -219,7 +219,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Aggregate_Too_Many_Cosignatures, Validation failed because an aggregate has too many cosignatures. The maximum number of cosignatories allowed is ``15``.
     Failure_Aggregate_Redundant_Cosignatures, Validation failed because there are redundant cosignatures.
     Failure_Aggregate_Ineligible_Cosigners, Validation failed because at least one cosigner is ineligible.
-    Failure_Aggregate_Missing_Cosigners, Validation failed because at least one required cosigner is missing. The tranaction was announced as complete but had missing cosignatures.
+    Failure_Aggregate_Missing_Cosigners, Validation failed because at least one required cosigner is missing. The transaction was announced as complete but had missing cosignatures.
     Failure_LockHash_Invalid_Mosaic_Id, Validation failed because the lock does not allow the specified mosaic. The only mosaic allowed is ``xem``.
     Failure_LockHash_Invalid_Mosaic_Amount, Validation failed because the lock does not allow the specified amount. The minimum amount is ``10``.
     Failure_LockHash_Hash_Exists, Validation failed because the hash is already present in cache.

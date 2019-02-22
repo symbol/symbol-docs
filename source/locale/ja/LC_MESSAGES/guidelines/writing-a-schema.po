@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+# Translators:
+# Yoshiyuki Ieyama, 2019
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guidelines/writing-a-schema.rst:5
+msgid "Writing a Schema"
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:7
+msgid ""
+"Are you writing a new catapult plugin that includes a new transaction "
+"type?"
+msgstr "新しいトランザクションタイプを含む、新しい Catapult プラグインを記述しようとしていますか？"
+
+#: ../../source/guidelines/writing-a-schema.rst:9
+msgid ""
+"In this guide, we are examining how the `transfer.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_"
+" schema works. You can adapt the same steps to define a new schema."
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:11
+msgid ""
+"Create a new file under ``schemas`` folder and define a struct for the "
+"transaction body."
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:13
+msgid ""
+"Think of a struct as a set of properties that we want to store in the "
+"same block of memory."
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:15
+msgid ""
+"The transaction body contains the extra properties which differ from a "
+"basic transaction. Each attribute can have one of the types defined in "
+"`types.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_."
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:32
+msgid ""
+"Define a second transaction struct in the same file. This will contain "
+"information about the version of the entity and its identifier. The "
+"underlying transaction properties and the particular transaction body are"
+" appended as inlines."
+msgstr ""
+
+#: ../../source/guidelines/writing-a-schema.rst:45
+msgid ""
+"Define an EmbeddedTransaction struct. This struct is used to serialize "
+"inner transactions. The embedded transaction and the body transaction are"
+" added as inlines."
+msgstr ""
+

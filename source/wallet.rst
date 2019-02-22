@@ -1,8 +1,8 @@
 :orphan:
 
-#######
-Wallets
-#######
+######
+Wallet
+######
 
 *****************
 Community wallets

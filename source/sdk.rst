@@ -38,7 +38,7 @@ Community SDKs
     Ruby SDK ; ; ;
     Python SDK ; ; ;
 
-If you want to collaborate in the SDK creation, check the :doc:`SDK Development guidelines <guidelines/development>`. Then, add the repository under “Community SDKs”. You can click  the “Edit on Github” button at the top-right part of the screen.
+If you want to collaborate in the SDK creation, check the :doc:`SDK Development guidelines <guidelines/sdk-development>`. Then, add the repository under “Community SDKs”. You can click  the “Edit on Github” button at the top-right part of the screen.
 
 .. |tsjs-repo| raw:: html
 

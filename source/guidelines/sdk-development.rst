@@ -222,7 +222,7 @@ Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/src/
 Documenting your SDK
 ********************
 
-The SDKs need to be adopted by other developers. As a contributor, no one knows better than you how a determined SDK works. Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <documentation>`.
+The SDKs need to be adopted by other developers. As a contributor, no one knows better than you how a determined SDK works. Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
 
 ******************************
 Publishing the SDK as official
