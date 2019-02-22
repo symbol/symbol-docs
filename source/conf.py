@@ -192,7 +192,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', 'html': '404.html'}
+html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', '404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
