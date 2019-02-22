@@ -1,6 +1,6 @@
 /* This css file rewrites #redoc css template */
 
-body{
+body {
     overflow-x: unset;
     position: initial;
     margin: 0;
@@ -16,35 +16,39 @@ body{
 #redoc h1,
 #redoc h2,
 #redoc h3 {
-    font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif !important  ;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif !important;
     font-weight: 300 !important;
     line-height: 1.1;
     color: #333 !important;
 }
 
-#redoc h1{
+#redoc h1 {
     font-size: 39px !important;
 }
-#redoc h2{
+
+#redoc h2 {
     font-size: 30px !important;
 }
-#redoc h3{
+
+#redoc h3 {
     font-size: 20px !important;
 }
-#redoc a{
+
+#redoc a {
     color: #2780e3 !important;
 }
-#redoc a:hover{
+
+#redoc a:hover {
     text-decoration: underline;
 }
 
 /* Layout */
 
-#redoc .background{
+#redoc .background {
     display: none;
 }
 
-#redoc blockquote{
+#redoc blockquote {
     background: rgba(55, 167, 219, 1) !important;
     color: #fff !important;
     padding: 10px !important;
@@ -52,56 +56,91 @@ body{
     border: 0px !important;
 }
 
-#redoc pre{
+#redoc pre {
     color: #fff;
 }
 
-#redoc ul li{
+#redoc ul li {
     text-indent: 0 !important;
 }
-#redoc ul li::before{
+
+#redoc ul li::before {
     display: none;
+}
+
+/* Loader */
+#redoc > div:not(.redoc-wrap) {
+    padding: 100px 0px 100px 0px;
 }
 
 /* Sidebar */
 
 #redoc .menu-content {
-    background-color: #f7f5fa !important;
+    background-color: transparent;
     text-shadow: 0 1px 0 #fff;
-    border-radius: 5px;
+}
+
+#redoc .search-input{
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#redoc .menu-content > div:first-child li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#redoc .menu-content > div:first-child .scrollbar-container > div:first-child{
+    background-color: transparent;
+    border-bottom: 0px;
+}
+
+#redoc .search-icon {
+    display: none;
 }
 
 #redoc .menu-content ul li {
     padding-left: 0 !important;
 }
 
-#redoc .menu-content .operation-type{
+#redoc .menu-content .operation-type {
     font-size: 8px !important;
+    text-shadow: none;
 }
 
 #redoc .menu-content label.active,
 #redoc .menu-content label.active:hover,
 #redoc .menu-content label:hover {
-    color: #333 !important;
-    background-color: #e5e3e9 !important;
+    background-color: transparent;
+    color: #333;
 }
 
-#redoc .menu-content label.-depth1.active > span,
-#redoc .menu-content label.-depth1:hover > span {
+#redoc .menu-content label {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+#redoc .menu-content li li label:hover,
+#redoc .menu-content li li label.active {
+    text-decoration: none;
+    color: #2780e3 !important;
+}
+
+#redoc .menu-content label.-depth1.active > span {
     color: #333 !important;
     font-weight: bold !important;
 }
 
 /* Content*/
 
-#redoc .api-content{
-    margin-top: 101px;
-}
+@media screen and (max-width: 800px) {
 
-@media screen and (max-width: 800px){
-
-    .content{
+    .content {
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    #redoc > div:not(.redoc-wrap) {
+        padding: 40px 0px 40px 0px;
     }
 }

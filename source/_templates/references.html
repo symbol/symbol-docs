@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% set title = _('Reference Documentation') %}
+{% set title = _('References') %}
 
 {% block extrahead %}
 {{ super() }}
@@ -10,7 +10,7 @@
 {% block body %}
 
 <div class="jumbotron text-center gap">
-    <h1>{% trans %}Reference Documentation{% endtrans %}</h1>
+    <h1>{% trans %}References{% endtrans %}</h1>
     <div class="col-md-8 center-block">
         <p>{% trans %}From SDKs in your favorite languages to extensions that make blockchain development easier.{% endtrans %}</p>
     </div>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="card-container col-md-8 center-block">
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('cli/overview')}}">
+                        <a href="{{ pathto('cli')}}">
                             <div class="card font-icon">
                                 <i class="fas fa-terminal colored blue"></i>
                                 <h4>{% trans %}Client{% endtrans %}</h4>
@@ -35,7 +35,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('prototyping-tool/overview')}}">
+                        <a href="{{ pathto('prototyping-tool')}}">
                             <div class="card font-icon">
                                 <i class="fas fa-bezier-curve colored blue"></i>
                                 <h4>{% trans %}Prototyping{% endtrans %}</h4>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-md-8 subtitle-container text-center gap center-block">
                     <h2>{% trans %}SDKs{% endtrans %}</h2>
-                    <p>{% trans %}The{% endtrans %} <a href="{{ pathto('sdk/overview')}}"><b>{% trans%}NEM2 Software
+                    <p>{% trans %}The{% endtrans %} <a href="{{ pathto('sdk')}}"><b>{% trans%}NEM2 Software
                         Development Kit {% endtrans %}</b></a>
                         {% trans %}is the primary software development tool to create NEM2 components, such as
                         additional tools, libraries or applications.{% endtrans %}</p>
@@ -84,7 +84,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="https://github.com/nemtech/nem2-sdk-csharp">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-csharp-plain colored"></i>
                                 <h4>{% trans %}C#{% endtrans %}</h4>
@@ -92,7 +92,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="https://github.com/proximax-storage/nem2-sdk-go/">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-go-plain colored"></i>
                                 <h4>{% trans %}Go{% endtrans %}</h4>
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="https://github.com/proximax-storage/nem2-sdk-swift/">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-swift-plain colored"></i>
                                 <h4>{% trans %}Swift{% endtrans %}</h4>
@@ -108,7 +108,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('sdk/languages')}}">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-php-plain"></i>
                                 <h4>{% trans %}PHP{% endtrans %}</h4>
@@ -116,7 +116,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('sdk/languages')}}">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-cplusplus-plain"></i>
                                 <h4>{% trans %}C++{% endtrans %}</h4>
@@ -124,7 +124,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('sdk/languages')}}">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-python-plain"></i>
                                 <h4>{% trans %}Python{% endtrans %}</h4>
@@ -132,7 +132,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('sdk/languages')}}">
+                        <a href="{{ pathto('sdk')}}">
                             <div class="card font-icon">
                                 <i class="devicon-ruby-plain"></i>
                                 <h4>{% trans %}Ruby{% endtrans %}</h4>
@@ -148,8 +148,8 @@
             <div class="row">
                 <div class="col-md-8 subtitle-container text-center gap center-block">
                     <h2>{% trans %}Extensions{% endtrans %}</h2>
-                    <p>{% trans %}Collection of {% endtrans %}<a href="{{ pathto('sdk/libraries')}}"><b>{% trans
-                        %}libraries{% endtrans %}</b></a> {% trans %}and tools to accelerate blockchain development. {% endtrans %} </p>
+                    <p>{% trans %}Collection of {% endtrans %}<a href="{{ pathto('extensions')}}"><b>{% trans
+                        %}extensions{% endtrans %}</b></a> {% trans %}and tools to accelerate blockchain development. {% endtrans %} </p>
                 </div>
             </div>
             <div class="row">
@@ -195,57 +195,26 @@
             <div class="row">
                 <div class="col-md-8 text-center gap center-block">
                     <h2>{% trans %}REST API{% endtrans %}</h2>
-                    <p><a href="{{ pathto('api/requests')}}"><b>{% trans %}Catapult REST API{% endtrans %}</b></a> {%
+                    <p><a href="{{ pathto('api')}}"><b>{% trans %}Catapult REST API{% endtrans %}</b></a> {%
                         trans %}combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.{% endtrans %}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="card-container col-md-8 center-block">
+
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/requests')}}">
-                            <div class="card font-icon">
-                                <i class="fas fa-sliders-h colored green"></i>
-                                <h4>{% trans %}Requests{% endtrans %}</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/tools')}}">
-                            <div class="card font-icon">
-                                <i class="fas fa-toolbox colored green"></i>
-                                <h4>{% trans %}Tools{% endtrans %}</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/endpoints')}}">
+                        <a href="{{ pathto('api')}}">
                             <div class="card font-icon">
                                 <i class="fas fa-exchange-alt colored green"></i>
-                                <h4>{% trans %}Endpoints{% endtrans %}</h4>
+                                <h4>{% trans %}HTTP{% endtrans %}</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/serialization')}}">
-                            <div class="card font-icon">
-                                <i class="fas fa-cubes colored green"></i>
-                                <h4>{% trans %}Serialization{% endtrans %}</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/websockets')}}">
+                        <a href="{{ pathto('api')}}#websockets">
                             <div class="card font-icon">
                                 <i class="fas fa-dot-circle colored green"></i>
                                 <h4>{% trans %}WebSockets{% endtrans %}</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="{{ pathto('api/status-errors')}}">
-                            <div class="card font-icon">
-                                <i class="fas fa-times colored green"></i>
-                                <h4>{% trans %}Status Errors{% endtrans %}</h4>
                             </div>
                         </a>
                     </div>

@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-21 18:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guidelines/sdk-documentation.rst:5
+msgid "SDK Documentation"
+msgstr "SDK ドキュメント"
+
+#: ../../source/guidelines/sdk-documentation.rst:7
+msgid ""
+"SDKs need to be adopted by other developers. As a contributor, no one knows "
+"better than you how a determined SDK works. Consider helping others and "
+"spread the usage of the SDK by providing the following documentation."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:14
+msgid "Readme"
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:16
+msgid ""
+"Check if your repository has a complete README. Consider adapting the "
+":download:`here <../resources/templates/README_SDK.md>` template used by "
+"some SDKs."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:19
+msgid "Required sections:"
+msgstr "必要なセクション:"
+
+#: ../../source/guidelines/sdk-documentation.rst:21
+msgid "Requirements"
+msgstr "必須項目"
+
+#: ../../source/guidelines/sdk-documentation.rst:22
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/guidelines/sdk-documentation.rst:23
+msgid "Contributing"
+msgstr "貢献"
+
+#: ../../source/guidelines/sdk-documentation.rst:24
+msgid "License"
+msgstr "ライセンス"
+
+#: ../../source/guidelines/sdk-documentation.rst:28
+msgid "Comments and reference docs"
+msgstr "コメントとリファレンス"
+
+#: ../../source/guidelines/sdk-documentation.rst:30
+msgid ""
+"Document functions and classes with comments while you write your code. A "
+"reference generator should be able to read this comments and generate HTML "
+"as an output."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:34
+msgid ""
+"Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ "
+"for Javascript, whereas in Java we are using `Javadoc "
+"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_. "
+"Research which is the reference generator most convenient for your language."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:40
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/guidelines/sdk-documentation.rst:42
+msgid ""
+"The NEM Developer Center gathers a collection of :doc:`guides "
+"<../concepts/account>`. They show developers how to use NEM built-in "
+"features while following step-by-step use cases."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:46
+msgid ""
+"Each guide comes with at least one snippet. Snippets are executable pieces "
+"of code that solve the proposed use case."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:49
+msgid ""
+"Writing snippets helps you to compare how the SDK code looks like in "
+"contrast with others. Furthermore, you will be testing manually if the SDK "
+"behaves correctly."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:53
+msgid ""
+"`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
+"repository>`__ and clone `nem2-docs repository "
+"<https://github.com/nemtech/nem2-docs>`__."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:61
+msgid "Create a new folder under ``source/resources/examples/`` called ."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:63
+msgid ""
+"Code each example. Take `typescript snippets "
+"<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__"
+" as a reference."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:67
+msgid ""
+"Push the changes, and `create a pull request <https://services.github.com"
+"/on-demand/intro-to-github/es/crear-pull-request>`__."
+msgstr ""

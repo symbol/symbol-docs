@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 10:10+0000\n"
+"POT-Creation-Date: 2019-02-22 07:58+0000\n"
 "PO-Revision-Date: 2018-10-26 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/44uk-"
@@ -20,9 +20,102 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
+
+#: ../../source/_templates/categories.html:2
+#: ../../source/_templates/collection.html:5
+#: ../../source/_templates/index.html:41
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/_templates/categories.html:21
+msgid "Courses"
+msgstr "コース"
+
+#: ../../source/_templates/footer2.html:7
+msgid "Learn"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:20
+#: ../../source/_templates/index.html:71
+#: ../../source/_templates/references.html:2
+#: ../../source/_templates/references.html:13
+msgid "References"
+msgstr "リファレンス"
+
+#: ../../source/_templates/footer2.html:23
+#: ../../source/_templates/references.html:197
+msgid "REST API"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:24
+#: ../../source/_templates/references.html:53
+msgid "SDKs"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:25
+#: ../../source/_templates/references.html:150
+msgid "Extensions"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:26
+#: ../../source/_templates/references.html:33
+msgid "Client"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:27
+msgid "Prototyping Tool"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:33
+#, fuzzy
+msgid "Community"
+msgstr "アカウント"
+
+#: ../../source/_templates/footer2.html:37
+msgid "Join #general discussion"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:42
+msgid "Ask development questions"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:48
+msgid "Follow the dev updates"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:54
+msgid "Explore our Github"
+msgstr ""
+
+#: ../../source/_templates/footer2.html:65
+#, python-format
+msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
+msgstr ""
+
+#: ../../source/_templates/footer2.html:67
+#, python-format
+msgid "&copy; Copyright %(copyright)s."
+msgstr ""
+
+#: ../../source/_templates/footer2.html:71
+#, python-format
+msgid "Last updated on %(last_updated)s."
+msgstr "最終更新 %(last_updated)"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/categories.html:2
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
 
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:7
 #: ../../source/_templates/post-meta.html:5
@@ -34,142 +127,86 @@ msgstr "投稿者"
 msgid "Authors"
 msgstr "投稿者"
 
-#: ../../source/_templates/footer2.html:9
-msgid "Join #general discussion"
+#: ../../source/_templates/index.html:2
+msgid "Home"
+msgstr "ホーム"
+
+#: ../../source/_templates/index.html:5
+msgid "NEM Developer Center"
+msgstr "NEM 開発者センター"
+
+#: ../../source/_templates/index.html:6
+msgid "Start integrating NEM into your application."
+msgstr "あなたのアプリケーションにNEMの統合を始めましょう"
+
+#: ../../source/_templates/index.html:13
+msgid ""
+"NEM is a <b>developer-friendly blockchain platform.</b> The latest NEM "
+"version, Catapult, gives you direct access to a specialized set of "
+"<b>tested</b> and <b> secure on-blockchain features</b> using your\n"
+"            favourite <b>programming language</b>."
 msgstr ""
+"NEMは<b>開発者フレンドリーなブロックチェーンプラットフォーム</b>です。最新バージョンのNEM, "
+"Catapultはあなたのお好みの<b>プログラミング言語</b>を使って、専用の<b>テスト済み</b>で<b>安全なブロックチェーン上の機能</b>の集合へのダイレクトアクセスを提供します。"
 
-#: ../../source/_templates/footer2.html:15
-msgid "Ask development questions"
-msgstr ""
+#: ../../source/_templates/index.html:27
+msgid "Getting started"
+msgstr "入門"
 
-#: ../../source/_templates/footer2.html:22
-msgid "Follow the dev updates"
-msgstr ""
+#: ../../source/_templates/index.html:28
+msgid "Install the development kit and start coding your first blockchain app."
+msgstr "開発キットをインストールして、ブロックチェーンアプリのコーディングを始めましょう"
 
-#: ../../source/_templates/footer2.html:29
-msgid "Explore Github"
-msgstr ""
+#: ../../source/_templates/index.html:29
+msgid "START"
+msgstr "始める"
 
-#: ../../source/_templates/footer2.html:38
-msgid "Protocol"
-msgstr "プロトコル"
+#: ../../source/_templates/index.html:42
+msgid "Easy-to-follow step by step guides with code examples."
+msgstr "コード例付きのわかりやすいステップバイステップガイド"
 
-#: ../../source/_templates/footer2.html:41
-msgid "Cryptography"
-msgstr "暗号理論"
+#: ../../source/_templates/index.html:43
+msgid "LEARN"
+msgstr "学ぶ"
 
-#: ../../source/_templates/footer2.html:42
-msgid "Transaction"
-msgstr "トランザクション"
-
-#: ../../source/_templates/footer2.html:43
-msgid "Block"
-msgstr "ブロック"
-
-#: ../../source/_templates/footer2.html:44
-msgid "Harvesting"
-msgstr "ハーベスティング"
-
-#: ../../source/_templates/footer2.html:45
-msgid "Receipt"
-msgstr "レシート"
-
-#: ../../source/_templates/footer2.html:46
-msgid "Node"
-msgstr "ノード"
-
-#: ../../source/_templates/footer2.html:52
 #: ../../source/_templates/index.html:57
 msgid "Built-in Features"
 msgstr "ビルドイン機能"
 
-#: ../../source/_templates/footer2.html:55
-msgid "Account"
-msgstr "アカウント"
+#: ../../source/_templates/index.html:58
+msgid ""
+"Architecture your solution connecting the features that make up the Smart"
+" Asset System."
+msgstr "スマートアセットシステムを構成する機能を接続してソリューションを構築します"
 
-#: ../../source/_templates/footer2.html:56
-msgid "Account Filter"
-msgstr "アカウントフィルタ"
+#: ../../source/_templates/index.html:59
+msgid "COMBINE"
+msgstr "組み合わせる"
 
-#: ../../source/_templates/footer2.html:57
-msgid "Multisig Account"
-msgstr "マルチシグアカウント"
+#: ../../source/_templates/index.html:72
+msgid "From SDKs to extensions that make blockchain development easier."
+msgstr "SDKからブロックチェーン開発を容易にする拡張機能まで"
 
-#: ../../source/_templates/footer2.html:58
-msgid "Namespace"
-msgstr "ネームスペース"
+#: ../../source/_templates/index.html:73
+msgid "DEVELOP"
+msgstr "開発"
 
-#: ../../source/_templates/footer2.html:59
-msgid "Mosaic"
-msgstr "モザイク"
-
-#: ../../source/_templates/footer2.html:60
-msgid "Transfer Transaction"
-msgstr "転送トランザクション"
-
-#: ../../source/_templates/footer2.html:61
-msgid "Aggregate Transaction"
-msgstr "アグリゲートトランザクション"
-
-#: ../../source/_templates/footer2.html:62
-msgid "Cross-Chain Swaps"
-msgstr "クロスチェーンスワップ"
-
-#: ../../source/_templates/footer2.html:68
-#: ../../source/_templates/index.html:71
-msgid "References"
-msgstr "リファレンス"
-
-#: ../../source/_templates/footer2.html:71
-#: ../../source/_templates/references.html:197
-msgid "REST API"
+#: ../../source/_templates/globaltoc.html:7
+msgid "Navigation"
 msgstr ""
 
-#: ../../source/_templates/footer2.html:72
-#: ../../source/_templates/references.html:53
-msgid "SDKs"
-msgstr ""
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:26
+msgid "Read more ..."
+msgstr "もっと読む"
 
-#: ../../source/_templates/footer2.html:73
-msgid "Libraries"
-msgstr "ライブラリ"
+#: ../../source/_templates/layout.html:90
+msgid "Edit on GitHub"
+msgstr "GitHubで編集"
 
-#: ../../source/_templates/footer2.html:74
-msgid "CLI"
-msgstr ""
-
-#: ../../source/_templates/footer2.html:79
-msgid "English"
-msgstr "英語"
-
-#: ../../source/_templates/footer2.html:80
-msgid "Japanese"
-msgstr "日本語"
-
-#: ../../source/_templates/footer2.html:91
-#, python-format
-msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/footer2.html:93
-#, python-format
-msgid "&copy; Copyright %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/footer2.html:97
-#, python-format
-msgid "Last updated on %(last_updated)s."
-msgstr "最終更新 %(last_updated)"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:43
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/tagcloud.html:2
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../source/_templates/references.html:2
-#: ../../source/_templates/references.html:13
-msgid "Reference Documentation"
-msgstr ""
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
 
 #: ../../source/_templates/references.html:15
 msgid ""
@@ -184,10 +221,6 @@ msgstr ""
 #: ../../source/_templates/references.html:24
 msgid "Apps to interact with the NEM blockchain."
 msgstr "NEMブロックチェーンと対話するアプリケーション"
-
-#: ../../source/_templates/references.html:33
-msgid "Client"
-msgstr ""
 
 #: ../../source/_templates/references.html:41
 msgid "Prototyping"
@@ -250,16 +283,12 @@ msgstr ""
 msgid "Ruby"
 msgstr ""
 
-#: ../../source/_templates/references.html:150
-msgid "Extensions"
-msgstr ""
-
 #: ../../source/_templates/references.html:151
 msgid "Collection of "
 msgstr ""
 
 #: ../../source/_templates/references.html:151
-msgid "libraries"
+msgid "extensions"
 msgstr ""
 
 #: ../../source/_templates/references.html:152
@@ -292,51 +321,43 @@ msgid ""
 " blockchain."
 msgstr "HTTPとWebSocketsを NEM ブロックチェーンを読み書きできるように併合させます"
 
-#: ../../source/_templates/references.html:208
-msgid "Requests"
-msgstr "要望"
+#: ../../source/_templates/references.html:209
+msgid "HTTP"
+msgstr ""
 
-#: ../../source/_templates/references.html:216
-msgid "Tools"
-msgstr "ツール"
-
-#: ../../source/_templates/references.html:224
-msgid "Endpoints"
-msgstr "エンドポイント"
-
-#: ../../source/_templates/references.html:232
-msgid "Serialization"
-msgstr "シリアル化"
-
-#: ../../source/_templates/references.html:240
+#: ../../source/_templates/references.html:217
 msgid "WebSockets"
 msgstr ""
 
-#: ../../source/_templates/references.html:248
-msgid "Status Errors"
-msgstr "ステータスエラー"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/tagcloud.html:2
+msgid "Tags"
+msgstr "タグ"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/categories.html:2
-msgid "Categories"
-msgstr "カテゴリ"
+#: ../../source/_templates/endpoints.html:2
+msgid "Endpoints"
+msgstr "エンドポイント"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/collection.html:48
-#: ../../source/_templates/collection.html:23
-msgid "Read more ..."
-msgstr "もっと読む"
+#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
 
-#: ../../source/_templates/categories.html:2
-#: ../../source/_templates/index.html:41
-msgid "Guides"
-msgstr "ガイド"
+#: ../../source/_templates/navbarsearchbox.html:8
+msgid "English"
+msgstr "英語"
 
-#: ../../source/_templates/categories.html:18
-msgid "Courses"
-msgstr "コース"
+#: ../../source/_templates/navbarsearchbox.html:9
+msgid "Japanese"
+msgstr "日本語"
+
+#: ../../source/_templates/navbarsearchbox.html:10
+#, fuzzy
+msgid "Translate"
+msgstr "トランザクション"
 
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postcard2.html:2
 msgid "Update"
@@ -358,86 +379,72 @@ msgstr "カテゴリ"
 msgid "Tag"
 msgstr "タグ"
 
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
-
-#: ../../source/_templates/navbarsearchbox.html:7
-msgid "Edit on GitHub"
-msgstr "GitHubで編集"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
-
-#: ../../source/_templates/index.html:2
-msgid "Home"
-msgstr "ホーム"
-
-#: ../../source/_templates/index.html:5
-msgid "NEM Developer Center"
-msgstr "NEM 開発者センター"
-
-#: ../../source/_templates/index.html:6
-msgid "Start integrating NEM into your application."
-msgstr "あなたのアプリケーションにNEMの統合を始めましょう"
-
-#: ../../source/_templates/index.html:13
-msgid ""
-"NEM is a <b>developer-friendly blockchain platform.</b> The latest NEM "
-"version, Catapult, gives you direct access to a specialized set of "
-"<b>tested</b> and <b> secure on-blockchain features</b> using your\n"
-"            favourite <b>programming language</b>."
-msgstr ""
-"NEMは<b>開発者フレンドリーなブロックチェーンプラットフォーム</b>です。最新バージョンのNEM, "
-"Catapultはあなたのお好みの<b>プログラミング言語</b>を使って、専用の<b>テスト済み</b>で<b>安全なブロックチェーン上の機能</b>の集合へのダイレクトアクセスを提供します。"
-
-#: ../../source/_templates/index.html:27
-msgid "Getting started"
-msgstr "入門"
-
-#: ../../source/_templates/index.html:28
-msgid "Install the development kit and start coding your first blockchain app."
-msgstr "開発キットをインストールして、ブロックチェーンアプリのコーディングを始めましょう"
-
-#: ../../source/_templates/index.html:29
-msgid "START"
-msgstr "始める"
-
-#: ../../source/_templates/index.html:42
-msgid "Easy-to-follow step by step guides with code examples."
-msgstr "コード例付きのわかりやすいステップバイステップガイド"
-
-#: ../../source/_templates/index.html:43
-msgid "LEARN"
-msgstr "学ぶ"
-
-#: ../../source/_templates/index.html:58
-msgid ""
-"Architecture your solution connecting the features that make up the Smart"
-" Asset System."
-msgstr "スマートアセットシステムを構成する機能を接続してソリューションを構築します"
-
-#: ../../source/_templates/index.html:59
-msgid "COMBINE"
-msgstr "組み合わせる"
-
-#: ../../source/_templates/index.html:72
-msgid "From SDKs to extensions that make blockchain development easier."
-msgstr "SDKからブロックチェーン開発を容易にする拡張機能まで"
-
-#: ../../source/_templates/index.html:73
-msgid "DEVELOP"
-msgstr "開発"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
-
-#: ../../../../../../envs/docs/lib/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
-
 #~ msgid "None"
 #~ msgstr "なし"
+
+#~ msgid "Explore Github"
+#~ msgstr ""
+
+#~ msgid "Protocol"
+#~ msgstr "プロトコル"
+
+#~ msgid "Cryptography"
+#~ msgstr "暗号理論"
+
+#~ msgid "Block"
+#~ msgstr "ブロック"
+
+#~ msgid "Harvesting"
+#~ msgstr "ハーベスティング"
+
+#~ msgid "Receipt"
+#~ msgstr "レシート"
+
+#~ msgid "Node"
+#~ msgstr "ノード"
+
+#~ msgid "Account Filter"
+#~ msgstr "アカウントフィルタ"
+
+#~ msgid "Multisig Account"
+#~ msgstr "マルチシグアカウント"
+
+#~ msgid "Namespace"
+#~ msgstr "ネームスペース"
+
+#~ msgid "Mosaic"
+#~ msgstr "モザイク"
+
+#~ msgid "Transfer Transaction"
+#~ msgstr "転送トランザクション"
+
+#~ msgid "Aggregate Transaction"
+#~ msgstr "アグリゲートトランザクション"
+
+#~ msgid "Cross-Chain Swaps"
+#~ msgstr "クロスチェーンスワップ"
+
+#~ msgid "CLI"
+#~ msgstr ""
+
+#~ msgid "Reference Documentation"
+#~ msgstr ""
+
+#~ msgid "Requests"
+#~ msgstr "要望"
+
+#~ msgid "Tools"
+#~ msgstr "ツール"
+
+#~ msgid "Serialization"
+#~ msgstr "シリアル化"
+
+#~ msgid "Status Errors"
+#~ msgstr "ステータスエラー"
+
+#~ msgid "Libraries"
+#~ msgstr "ライブラリ"
+
+#~ msgid "libraries"
+#~ msgstr ""
 

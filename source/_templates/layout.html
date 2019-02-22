@@ -1,16 +1,107 @@
-{% extends "!layout.html" %}
+{% extends "basic/layout.html" %}
 
-{% block head %}
-{{ super() }}
+{% if theme_bootstrap_version == "3" %}
+{% set bootstrap_version, navbar_version = "3.3.7", "" %}
+{% set bs_span_prefix = "col-md-" %}
+{% else %}
+{% set bootstrap_version, navbar_version = "2.3.2", "-2" %}
+{% set bs_span_prefix = "span" %}
+{% endif %}
 
-{% block extrahead %}
-{{ super() }}
+{% set script_files = script_files + [
+'_static/js/jquery-1.11.0.min.js',
+'_static/js/jquery-fix.js',
+'_static/bootstrap-' + bootstrap_version + '/js/bootstrap.min.js',
+'_static/bootstrap-sphinx.js'
+]
+%}
 
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
+
+{%- set bs_content_width = render_sidebar and "7" or "12"%}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{# Sidebar: Rework into our Bootstrap nav section. #}
+{% macro navBar() %}
+{% include "navbar" + navbar_version + ".html" %}
+{% endmacro %}
+
+{% if theme_bootstrap_version == "3" %}
+{%- macro bsidebar() %}
+{%- if render_sidebar %}
+<div class="{{ bs_span_prefix }}3">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+        {%- endfor %}
+    </div>
+</div>
+{%- endif %}
+{%- endmacro %}
+{% else %}
+{%- macro bsidebar() %}
+{%- if render_sidebar %}
+<div class="{{ bs_span_prefix }}3">
+    <div id="sidebar" class="bs-sidenav well" data-spy="affix">
+        {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+        {%- endfor %}
+    </div>
+</div>
+{%- endif %}
+{%- endmacro %}
+{% endif %}
+
+{%- macro bsidebar2() %}
+{%- if render_sidebar %}
+<div class="{{ bs_span_prefix }}2">
+    <div class="bs-sidenav secondary" role="complementary">
+        {{localtoc}}
+    </div>
+</div>
+{%- endif %}
+{% endmacro %}
+
+{%- block extrahead %}
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
 {% endblock %}
-{% endblock %}
+
+{# Silence the sidebar's, relbar's #}
+{% block header %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarsourcelink %}{% endblock %}
+
+{%- block content %}
+{{ navBar() }}
+<div class="container">
+    <div class="row">
+        {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+        <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
+            {%- if edit_on_github_url %}
+            <div id="edit-on-github" class="text-right">
+                <a href="{{ edit_on_github_url }}"
+                   rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit on GitHub') }}</a>
+            </div>
+            {%- endif %}
+
+            {% block body %}{% endblock %}
+        </div>
+        {% block sidebar2 %} {{bsidebar2() }} {% endblock %}
+    </div>
+</div>
+{%- endblock %}
 
 {%- block footer %}
 {% include "footer2.html" %}
-{% endblock %}
+{%- endblock %}
+
+
 
 

@@ -2,10 +2,13 @@
 
 <div class="navbar-right hidden-sm hidden-xs">
     <a class="btn-search" href="/search.html?q=nem"><i class="fa fa-search"></i> Search</a>
-    {%- if edit_on_github_url %}
-    <a href="{{ edit_on_github_url }}"
-       rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit on GitHub') }}</a>
-    {%- endif %}
-
+    <span id="language">
+        <i class="fas fa-globe"></i>
+        <select>
+            <option id="english" value="en">{{ gettext('English') }}</option>
+            <option id="japanese" value="ja">{{ gettext('Japanese') }}</option>
+            <option id="translate" value="translate">{{ gettext('Translate') }}</option>
+        </select>
+    </span>
 </div>
 {%- endif %}

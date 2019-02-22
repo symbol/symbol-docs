@@ -1,57 +1,45 @@
 [main]
 host = https://www.transifex.com
 
+[nem2docs.api]
+file_filter = source/locale/<lang>/LC_MESSAGES/api.po
+source_file = build/gettext/api.pot
+source_lang = en
+type = PO
+
+[nem2docs.cli]
+file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
+source_file = build/gettext/cli.pot
+source_lang = en
+type = PO
+
+[nem2docs.extensions]
+file_filter = source/locale/<lang>/LC_MESSAGES/extensions.po
+source_file = build/gettext/extensions.pot
+source_lang = en
+type = PO
+
+[nem2docs.prototyping-tool]
+file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool.po
+source_file = build/gettext/prototyping-tool.pot
+source_lang = en
+type = PO
+
+[nem2docs.sdk]
+file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
+source_file = build/gettext/sdk.pot
+source_lang = en
+type = PO
+
 [nem2docs.sphinx]
 file_filter = source/locale/<lang>/LC_MESSAGES/sphinx.po
 source_file = build/gettext/sphinx.pot
 source_lang = en
 type = PO
 
-[nem2docs.api--endpoints]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/endpoints.po
-source_file = build/gettext/api/endpoints.pot
-source_lang = en
-type = PO
-
-[nem2docs.api--requests]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/requests.po
-source_file = build/gettext/api/requests.pot
-source_lang = en
-type = PO
-
-[nem2docs.api--serialization]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/serialization.po
-source_file = build/gettext/api/serialization.pot
-source_lang = en
-type = PO
-
-[nem2docs.api--status-errors]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/status-errors.po
-source_file = build/gettext/api/status-errors.pot
-source_lang = en
-type = PO
-
-[nem2docs.api--tools]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/tools.po
-source_file = build/gettext/api/tools.pot
-source_lang = en
-type = PO
-
-[nem2docs.api--websockets]
-file_filter = source/locale/<lang>/LC_MESSAGES/api/websockets.po
-source_file = build/gettext/api/websockets.pot
-source_lang = en
-type = PO
-
-[nem2docs.cli--commands]
-file_filter = source/locale/<lang>/LC_MESSAGES/cli/commands.po
-source_file = build/gettext/cli/commands.pot
-source_lang = en
-type = PO
-
-[nem2docs.cli--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/cli/overview.po
-source_file = build/gettext/cli/overview.pot
+[nem2docs.wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/wallet.po
+source_file = build/gettext/wallet.pot
 source_lang = en
 type = PO
 
@@ -139,6 +127,24 @@ source_file = build/gettext/concepts/transfer-transaction.pot
 source_lang = en
 type = PO
 
+[nem2docs.contribute--community]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/community.po
+source_file = build/gettext/contribute/community.pot
+source_lang = en
+type = PO
+
+[nem2docs.contribute--contributing]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
+source_file = build/gettext/contribute/contributing.pot
+source_lang = en
+type = PO
+
+[nem2docs.contribute--contributors]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
+source_file = build/gettext/contribute/contributors.pot
+source_lang = en
+type = PO
+
 [nem2docs.getting-started--first-application]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
 source_file = build/gettext/getting-started/first-application.pot
@@ -160,6 +166,42 @@ type = PO
 [nem2docs.getting-started--what-is-nem]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-nem.po
 source_file = build/gettext/getting-started/what-is-nem.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--development]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/development.po
+source_file = build/gettext/guidelines/development.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--documentation]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/documentation.po
+source_file = build/gettext/guidelines/documentation.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--suggesting-changes]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
+source_file = build/gettext/guidelines/suggesting-changes.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--translating-the-documentation]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/translating-the-documentation.po
+source_file = build/gettext/guidelines/translating-the-documentation.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--writing-a-guide]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-guide.po
+source_file = build/gettext/guidelines/writing-a-guide.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--writing-a-schema]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-schema.po
+source_file = build/gettext/guidelines/writing-a-schema.pot
 source_lang = en
 type = PO
 
@@ -298,108 +340,6 @@ type = PO
 [nem2docs.guides--transaction--turning-the-asynchronous-transaction-announcement-into-synchronous]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.po
 source_file = build/gettext/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
-source_lang = en
-type = PO
-
-[nem2docs.prototyping-tool--configuring-nodes]
-file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool/configuring-nodes.po
-source_file = build/gettext/prototyping-tool/configuring-nodes.pot
-source_lang = en
-type = PO
-
-[nem2docs.prototyping-tool--examples]
-file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool/examples.po
-source_file = build/gettext/prototyping-tool/examples.pot
-source_lang = en
-type = PO
-
-[nem2docs.prototyping-tool--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool/overview.po
-source_file = build/gettext/prototyping-tool/overview.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--architecture]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/architecture.po
-source_file = build/gettext/sdk/architecture.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--development]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/development.po
-source_file = build/gettext/sdk/development.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--documentation]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/documentation.po
-source_file = build/gettext/sdk/documentation.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--languages]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/languages.po
-source_file = build/gettext/sdk/languages.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--libraries]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/libraries.po
-source_file = build/gettext/sdk/libraries.pot
-source_lang = en
-type = PO
-
-[nem2docs.sdk--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk/overview.po
-source_file = build/gettext/sdk/overview.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--community]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/community.po
-source_file = build/gettext/support/community.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--contributing]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/contributing.po
-source_file = build/gettext/support/contributing.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--contributors]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/contributors.po
-source_file = build/gettext/support/contributors.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--creating-a-new-workshop]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/creating-a-new-workshop.po
-source_file = build/gettext/support/creating-a-new-workshop.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--suggesting-changes]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/suggesting-changes.po
-source_file = build/gettext/support/suggesting-changes.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--translating-the-documentation]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/translating-the-documentation.po
-source_file = build/gettext/support/translating-the-documentation.pot
-source_lang = en
-type = PO
-
-[nem2docs.support--writing-a-guide]
-file_filter = source/locale/<lang>/LC_MESSAGES/support/writing-a-guide.po
-source_file = build/gettext/support/writing-a-guide.pot
-source_lang = en
-type = PO
-
-[nem2docs.wallet--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/wallet/overview.po
-source_file = build/gettext/wallet/overview.pot
 source_lang = en
 type = PO
 

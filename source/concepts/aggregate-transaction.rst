@@ -43,7 +43,7 @@ An aggregate transaction is **bonded** when it requires signatures from other pa
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
-Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature<cosignature-transaction>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
+Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature-transaction>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
@@ -116,7 +116,7 @@ AggregateTransaction
 
     payloadSize; uint8; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
     transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature-transaction>`.
+    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature>`.
 
 .. _cosignature-transaction:
 

@@ -37,49 +37,20 @@
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: REST API
+    :caption: References
 
-    api/requests
-    api/tools
-    api/endpoints
-    api/serialization
-    api/websockets
-    api/status-errors
-
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: SDKs
-
-    sdk/overview
-    sdk/architecture
-    sdk/languages
-    sdk/libraries
+    api
+    sdk
+    cli
+    wallet
+    prototyping-tool
+    extensions
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Client
+    :caption: Contribute
 
-    cli/overview
-    cli/commands
-
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: Prototyping Tool
-
-    prototyping-tool/overview
-    prototyping-tool/configuring-nodes
-    prototyping-tool/examples
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: Support
-
-    support/community
-    support/contributing
-    support/contributors
+    contribute/contributing
+    contribute/community
+    contribute/contributors

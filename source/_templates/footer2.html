@@ -1,86 +1,60 @@
 <footer class="footer">
     <div class="container">
-        <div class="row social">
-            <div class="col-md-12">
-                <ul>
-                    <li>
-                        <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM">
-                            <i class="fab fa-slack"></i>
-                            <span>{{ gettext('Join #general discussion') }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://stackoverflow.com/tags/nem/">
-                            <i class="fab fa-stack-overflow"></i>
-                            <span>{{ gettext('Ask development questions') }}</span>
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="https://twitter.com/nemtechdev">
-                            <i class="fab fa-twitter"></i>
-                            <span>{{ gettext('Follow the dev updates') }}</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/nemtech">
-                            <i class="fab fa-github"></i>
-                            <span>{{ gettext('Explore Github') }}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="row">
 
             <div class="col-sm-4">
-                <h4>{{ gettext('Protocol') }}</h4>
+                <h4>{{ gettext('Learn') }}</h4>
 
                 <ul>
-                    <li><a href="{{pathto('concepts/cryptography')}}">{{ gettext('Cryptography') }}</a></li>
-                    <li><a href="{{pathto('concepts/transaction')}}">{{ gettext('Transaction') }}</a></li>
-                    <li><a href="{{pathto('concepts/block')}}">{{ gettext('Block') }}</a></li>
-                    <li><a href="{{pathto('concepts/harvesting')}}">{{ gettext('Harvesting') }}</a></li>
-                    <li><a href="{{pathto('concepts/receipt')}}">{{ gettext('Receipt') }}</a></li>
-                    <li><a href="{{pathto('concepts/node')}}">{{ gettext('Node') }}</a></li>
+                    <li><a href="{{pathto('getting-started/what-is-nem')}}">Getting Started</a></li>
+                    <li><a href="{{pathto('concepts/cryptography')}}">Protocol</a></li>
+                    <li><a href="{{pathto('concepts/account')}}">Built-in Features</a></li>
+                    <li><a href="{{pathto('guides/category/account')}}">Guides</a></li>
+                    <li><a href="{{pathto('references')}}">References</a></li>
+                    <li><a href="{{pathto('contribute/contributing')}}">Contribute</a></li>
                 </ul>
-
-            </div>
-
-            <div class="col-sm-4">
-                <h4>{{ gettext('Built-in Features') }}</h4>
-
-                <ul>
-                    <li><a href="{{pathto('concepts/account')}}">{{ gettext('Account') }}</a></li>
-                    <li><a href="{{pathto('concepts/account-filter')}}">{{ gettext('Account Filter') }}</a></li>
-                    <li><a href="{{pathto('concepts/multisig-account')}}">{{ gettext('Multisig Account') }}</a></li>
-                    <li><a href="{{pathto('concepts/namespace')}}">{{ gettext('Namespace') }}</a></li>
-                    <li><a href="{{pathto('concepts/mosaic')}}">{{ gettext('Mosaic') }}</a></li>
-                    <li><a href="{{pathto('concepts/transfer-transaction')}}">{{ gettext('Transfer Transaction') }}</a></li>
-                    <li><a href="{{pathto('concepts/aggregate-transaction')}}">{{ gettext('Aggregate Transaction') }}</a></li>
-                    <li><a href="{{pathto('concepts/cross-chain-swaps')}}">{{ gettext('Cross-Chain Swaps') }}</a></li>
-                </ul>
-
             </div>
 
             <div class="col-sm-4">
                 <h4>{{ gettext('References') }}</h4>
 
                 <ul>
-                    <li><a href="{{pathto('api/requests')}}">{{ gettext('REST API') }}</a></li>
-                    <li><a href="{{pathto('sdk/languages')}}">{{ gettext('SDKs') }}</a></li>
-                    <li><a href="{{pathto('sdk/libraries')}}">{{ gettext('Libraries') }}</a></li>
-                    <li><a href="{{pathto('cli/overview')}}">{{ gettext('CLI') }}</a></li>
+                    <li><a href="{{pathto('api')}}">{{ gettext('REST API') }}</a></li>
+                    <li><a href="{{pathto('sdk')}}">{{ gettext('SDKs') }}</a></li>
+                    <li><a href="{{pathto('extensions')}}">{{ gettext('Extensions') }}</a></li>
+                    <li><a href="{{pathto('cli')}}">{{ gettext('Client') }}</a></li>
+                    <li><a href="{{pathto('prototyping-tool')}}">{{ gettext('Prototyping Tool') }}</a></li>
                 </ul>
-                <div id="language">
-                    <i class="fas fa-globe"></i>
-                    <select>
-                        <option id="english" value="en">{{ gettext('English') }}</option>
-                        <option id="japanese" value="ja">{{ gettext('Japanese') }}</option>
-                    </select>
-                </div>
+            </div>
 
+
+            <div class="col-sm-4">
+                <h4>{{ gettext('Community') }}</h4>
+
+                <ul>
+                    <li>
+                        <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM"><i class="fab fa-slack"></i> <span> {{ gettext('Join #general discussion') }}</span></a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/tags/nem/">
+                            <i class="fab fa-stack-overflow"></i>
+                            <span> {{ gettext('Ask development questions') }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/nemtechdev">
+                            <i class="fab fa-twitter"></i>
+                            <span> {{ gettext('Follow the dev updates') }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/nemtech">
+                            <i class="fab fa-github"></i>
+                            <span> {{ gettext('Explore our Github') }}</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
         </div>

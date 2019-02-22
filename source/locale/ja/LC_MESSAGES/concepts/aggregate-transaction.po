@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 # Translators:
-# Yoshiyuki Ieyama, 2019
+# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16\n"
+"Project-Id-Version: nem2-docs 0.16.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2018-10-26 13:39+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-"
-"works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-02-22 07:50+0000\n"
+"PO-Revision-Date: 2019-02-13 13:08+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,27 +42,24 @@ msgid "Aggregate complete"
 msgstr "アグリゲートコンプリート"
 
 #: ../../source/concepts/aggregate-transaction.rst:15
-#, fuzzy
 msgid ""
 "An aggregate transaction is  **complete** when all the required "
 "participants have signed it."
-msgstr "全ての連署者が署名をすると、アグリゲートトランザクションは **完了** になります。"
+msgstr "要求されている参加者全員が署名をすると、アグリゲートトランザクションは **コンプリート** になります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:17
-#, fuzzy
 msgid ""
 "The cosigners can sign the transaction without using the blockchain. Once"
 " it has all the required signatures, one of them can announce it to the "
 "network. If the inner transaction setup is valid, and there is no "
 "validation error, the transactions will get executed at the same time."
-msgstr "異なる参加者は、アグリゲートトランザクションにブロックチェーンを使うことなく署名することができます。必要な署名をすべて取得したら、彼らのうちの1人がネットワークにアナウンスできます。セットアップされたインナートランザクションが正当で、バリデーションエラーがない場合、トランザクションは同時に実行されます。"
+msgstr "連署者はそのトランザクションに、ブロックチェーンを使うことなく署名することができます。必要な署名をすべて取得したら、彼らのうちの1人がネットワークにアナウンスできます。インナートランザクションのセットアップが正当で、バリデーションエラーがない場合、トランザクションは同時に実行されます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:19
-#, fuzzy
 msgid ""
 "Aggregate complete transactions enable adding more transactions per block"
 " by gathering multiple inner transactions."
-msgstr "アグリゲートコンプリートトランザクションは、同じ操作で異なる参加者間で複数のインナートランザクションを集めることで、ブロックごとにさらに多くのトランザクションを追加できます。"
+msgstr "アグリゲートコンプリートトランザクションは、複数のインナートランザクションを集めることで、ブロックへさらに多くのトランザクションを追加できます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:22
 msgid "Sending payouts"
@@ -74,14 +72,13 @@ msgid ""
 msgstr "Dan は二つの転送トランザクションを集約したアグリゲートトランザクションをアナウンスします。"
 
 #: ../../source/concepts/aggregate-transaction.rst:26
-#, fuzzy
 msgid ""
 "As he is the only required signatory, the transaction is considered "
 "complete after he signed. After announcing it to the network, Alice and "
 "Bob will receive the mosaics at the same time."
 msgstr ""
-"彼だけが署名を必要とするので、これは完了したアグリゲートトランザクションと呼びます。これがネットワークへアナウンスされると、Alice と Bob"
-" は同時にモザイクを受け取るでしょう。"
+"彼が唯一必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と "
+"Bob は同時にモザイクを受け取るでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:32
 msgid "Sending payouts with aggregate complete transactions"
@@ -98,14 +95,13 @@ msgid ""
 msgstr "アグリゲートトランザクションは、他の参加者からの署名が必要な場合に **ボンド** となることを考慮してください。"
 
 #: ../../source/concepts/aggregate-transaction.rst:42
-#, fuzzy
 msgid ""
 "Before sending an **aggregate bonded transaction**, an account must first"
 " announce a :ref:`hash lock transaction<hash-lock-transaction>` and get "
 "its confirmation with at least ``10`` XEM."
 msgstr ""
-"**アグリゲートボンドトランザクション** を送信する場合、アカウントは最初にそのアグリゲートに最低 ``10`` XEM で "
-":ref:`ハッシュロックトランザクション <hash-lock-transaction>` をアナウンスして承認される必要があります。"
+"**アグリゲートボンドトランザクション** を送信する前に、アカウントはまず :ref:`ハッシュロックトランザクション <hash-lock-"
+"transaction>` をアナウンスし、最低でも ``10`` XEM でそれが承認されている必要があります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:44
 msgid ""
@@ -117,13 +113,13 @@ msgstr "アグリゲートボンドがアナウンスされると、パーシャ
 #, fuzzy
 msgid ""
 "Every time a cosignatory signs the transaction and :ref:`announces an "
-"aggregate bonded cosignature<cosignature-transaction>`, the network "
+"aggregate bonded cosignature <cosignature-transaction>`, the network "
 "checks if all the required cosigners have signed. When all signatures are"
 " acquired, the transaction changes to unconfirmed state until the network"
 " includes it in a block."
 msgstr ""
-"連署者がトランザクションに署名し、 :ref:`アグリゲートボンド連署をアナウンスする<cosignature-transaction>` "
-"たびに、ネットワークは必要な連署者がすでに署名しているかどうかをチェックします。この時、ネットワークがそれを受け入れるまでトランザクションは未承認状態に遷移し、一度処理されるとブロックに含まれます。"
+"連署者がトランザクションに署名し :ref:`アグリゲートボンド連署をアナウンスする <cosignature>` "
+"たびに、ネットワークは必要な連署者が署名しているかどうかをチェックします。すべての署名が取得されると、ネットワークがそれをブロックに含めるまで、トランザクションは未承認状態へ遷移します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:52
 msgid "Aggregate bonded transaction cycle"
@@ -135,13 +131,12 @@ msgid "Multi-Asset Escrowed Transactions"
 msgstr "マルチアセットエスクロートランザクション"
 
 #: ../../source/concepts/aggregate-transaction.rst:57
-#, fuzzy
 msgid ""
 "In this example, Alice is buying tickets with ``currency.euro`` "
 ":doc:`mosaic <mosaic>`. When the ticket distributor cosigns the aggregate"
 " transaction, the swap will happen atomically."
 msgstr ""
-"この例では、ALICE はチケットを currency:euro "
+"この例では、ALICE はチケットを ``currency:euro``  :doc:`モザイク <mosaic>` "
 "で購入しています。チケット販売者はアグリゲートトランザクションに署名し、交換はアトミックに起こります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:66
@@ -282,7 +277,8 @@ msgid "array(byte, size - payloadSize)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "An array of transaction :ref:`cosignatures <cosignature-transaction>`."
+#, fuzzy
+msgid "An array of transaction :ref:`cosignatures <cosignature>`."
 msgstr ":doc:`連署者 <cosignature-transaction>` トランザクションの配列"
 
 #: ../../source/concepts/aggregate-transaction.rst:124
@@ -418,7 +414,4 @@ msgid ""
 "The aggregate bonded transaction hash that has to be confirmed before "
 "unlocking the mosaics."
 msgstr "モザイクをアンロックする前に、アグリゲートボンドトランザクションハッシュが承認されていなければなりません。"
-
-#~ msgid "Examples"
-#~ msgstr "例"
 
