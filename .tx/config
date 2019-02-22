@@ -1,5 +1,345 @@
 [main]
 host = https://www.transifex.com
 
+[nem2docs.api]
+file_filter = source/locale/<lang>/LC_MESSAGES/api.po
+source_file = build/gettext/api.pot
+source_lang = en
+type = PO
 
+[nem2docs.cli]
+file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
+source_file = build/gettext/cli.pot
+source_lang = en
+type = PO
+
+[nem2docs.extensions]
+file_filter = source/locale/<lang>/LC_MESSAGES/extensions.po
+source_file = build/gettext/extensions.pot
+source_lang = en
+type = PO
+
+[nem2docs.prototyping-tool]
+file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool.po
+source_file = build/gettext/prototyping-tool.pot
+source_lang = en
+type = PO
+
+[nem2docs.sdk]
+file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
+source_file = build/gettext/sdk.pot
+source_lang = en
+type = PO
+
+[nem2docs.sphinx]
+file_filter = source/locale/<lang>/LC_MESSAGES/sphinx.po
+source_file = build/gettext/sphinx.pot
+source_lang = en
+type = PO
+
+[nem2docs.wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/wallet.po
+source_file = build/gettext/wallet.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--account-filter]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-filter.po
+source_file = build/gettext/concepts/account-filter.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--account]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account.po
+source_file = build/gettext/concepts/account.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--aggregate-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/aggregate-transaction.po
+source_file = build/gettext/concepts/aggregate-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--block]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/block.po
+source_file = build/gettext/concepts/block.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--cross-chain-swaps]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cross-chain-swaps.po
+source_file = build/gettext/concepts/cross-chain-swaps.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--cryptography]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cryptography.po
+source_file = build/gettext/concepts/cryptography.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
+source_file = build/gettext/concepts/harvesting.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
+source_file = build/gettext/concepts/mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--multisig-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/multisig-account.po
+source_file = build/gettext/concepts/multisig-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/namespace.po
+source_file = build/gettext/concepts/namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--node]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/node.po
+source_file = build/gettext/concepts/node.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--receipt]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
+source_file = build/gettext/concepts/receipt.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transaction.po
+source_file = build/gettext/concepts/transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--transfer-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transfer-transaction.po
+source_file = build/gettext/concepts/transfer-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.contribute--community]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/community.po
+source_file = build/gettext/contribute/community.pot
+source_lang = en
+type = PO
+
+[nem2docs.contribute--contributing]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
+source_file = build/gettext/contribute/contributing.pot
+source_lang = en
+type = PO
+
+[nem2docs.contribute--contributors]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
+source_file = build/gettext/contribute/contributors.pot
+source_lang = en
+type = PO
+
+[nem2docs.getting-started--first-application]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
+source_file = build/gettext/getting-started/first-application.pot
+source_lang = en
+type = PO
+
+[nem2docs.getting-started--setup-workstation]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
+source_file = build/gettext/getting-started/setup-workstation.pot
+source_lang = en
+type = PO
+
+[nem2docs.getting-started--training]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/training.po
+source_file = build/gettext/getting-started/training.pot
+source_lang = en
+type = PO
+
+[nem2docs.getting-started--what-is-nem]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-nem.po
+source_file = build/gettext/getting-started/what-is-nem.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--development]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/development.po
+source_file = build/gettext/guidelines/development.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--documentation]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/documentation.po
+source_file = build/gettext/guidelines/documentation.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--suggesting-changes]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
+source_file = build/gettext/guidelines/suggesting-changes.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--translating-the-documentation]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/translating-the-documentation.po
+source_file = build/gettext/guidelines/translating-the-documentation.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--writing-a-guide]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-guide.po
+source_file = build/gettext/guidelines/writing-a-guide.pot
+source_lang = en
+type = PO
+
+[nem2docs.guidelines--writing-a-schema]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-schema.po
+source_file = build/gettext/guidelines/writing-a-schema.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--converting-an-account-to-multisig]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/converting-an-account-to-multisig.po
+source_file = build/gettext/guides/account/converting-an-account-to-multisig.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--creating-a-multi-level-multisig-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-a-multi-level-multisig-account.po
+source_file = build/gettext/guides/account/creating-a-multi-level-multisig-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--creating-and-opening-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-and-opening-an-account.po
+source_file = build/gettext/guides/account/creating-and-opening-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--getting-account-information]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-account-information.po
+source_file = build/gettext/guides/account/getting-account-information.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--getting-the-amount-of-XEM-sent-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-the-amount-of-XEM-sent-to-an-account.po
+source_file = build/gettext/guides/account/getting-the-amount-of-XEM-sent-to-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--modifying-a-multisig-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/modifying-a-multisig-account.po
+source_file = build/gettext/guides/account/modifying-a-multisig-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--reading-transactions-from-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
+source_file = build/gettext/guides/account/reading-transactions-from-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--blockchain--getting-block-by-height]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-block-by-height.po
+source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--blockchain--listening-new-blocks]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
+source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--mosaic--creating-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/creating-a-mosaic.po
+source_file = build/gettext/guides/mosaic/creating-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--mosaic--modifying-mosaic-supply]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
+source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--namespace--registering-a-namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-namespace.po
+source_file = build/gettext/guides/namespace/registering-a-namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--namespace--registering-a-subnamespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-subnamespace.po
+source_file = build/gettext/guides/namespace/registering-a-subnamespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--asking-for-mosaics-with-aggregate-bonded-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.po
+source_file = build/gettext/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
+source_file = build/gettext/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--creating-an-escrow-with-aggregate-bonded-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.po
+source_file = build/gettext/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--monitoring-a-transaction-status]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/monitoring-a-transaction-status.po
+source_file = build/gettext/guides/transaction/monitoring-a-transaction-status.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--sending-a-multisig-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-a-multisig-transaction.po
+source_file = build/gettext/guides/transaction/sending-a-multisig-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--sending-a-transfer-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-a-transfer-transaction.po
+source_file = build/gettext/guides/transaction/sending-a-transfer-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--sending-payouts-with-aggregate-complete-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-payouts-with-aggregate-complete-transaction.po
+source_file = build/gettext/guides/transaction/sending-payouts-with-aggregate-complete-transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--signing-announced-aggregate-bonded-transactions-automatically]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.po
+source_file = build/gettext/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--signing-announced-aggregate-bonded-transactions]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/signing-announced-aggregate-bonded-transactions.po
+source_file = build/gettext/guides/transaction/signing-announced-aggregate-bonded-transactions.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--transaction--turning-the-asynchronous-transaction-announcement-into-synchronous]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.po
+source_file = build/gettext/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
+source_lang = en
+type = PO
 
