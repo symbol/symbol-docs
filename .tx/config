@@ -169,15 +169,15 @@ source_file = build/gettext/getting-started/what-is-nem.pot
 source_lang = en
 type = PO
 
-[nem2docs.guidelines--development]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/development.po
-source_file = build/gettext/guidelines/development.pot
+[nem2docs.guidelines--sdk-development]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-development.po
+source_file = build/gettext/guidelines/sdk-development.pot
 source_lang = en
 type = PO
 
-[nem2docs.guidelines--documentation]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/documentation.po
-source_file = build/gettext/guidelines/documentation.pot
+[nem2docs.guidelines--sdk-documentation]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-documentation.po
+source_file = build/gettext/guidelines/sdk-documentation.pot
 source_lang = en
 type = PO
 

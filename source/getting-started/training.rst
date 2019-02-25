@@ -10,7 +10,7 @@ If you prefer to learn about NEM through guided lessons, consider taking one cou
 Courses
 *******
 
-.. csv-table:: Courses
+.. csv-table::
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
