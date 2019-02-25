@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:10+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +41,7 @@ msgstr "背景"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:22
 msgid "Sending an aggregate complete transaction"
-msgstr "アグリゲート完了トランザクションの送信"
+msgstr "アグリゲートコンプリートトランザクションの送信"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:24
 msgid ""
@@ -49,7 +49,7 @@ msgid ""
 "shared account so that if Bob is out shopping, he can buy groceries for both"
 " himself and Alice."
 msgstr ""
-"ALICE と BOB は一緒に住んでいて、それぞれのアカウントを持っています。また、BOB が外出するとき、彼が、自分と ALICE "
+"Alice と Bob は一緒に住んでいて、それぞれのアカウントを持っています。また、BOB が外出するとき、彼が、自分と Alice "
 "のために食料雑貨を購入できるように、共有アカウントも持っています。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:26
@@ -57,7 +57,7 @@ msgid ""
 "This shared account is in NEM translated as 1-of-2 multisig, meaning that "
 "one cosignatory needs to cosign the transaction to be included in a block."
 msgstr ""
-"この共有アカウントはNEMにおいて 1-of-2 "
+"この共有アカウントは NEM において 1-of-2 "
 "マルチシグと呼びます。これはトランザクションをブロックに取り込んでもらうのに、1人の連署者が必要なことを意味します。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:28
@@ -65,7 +65,7 @@ msgid ""
 "Remember that a multisig account has cosignatories accounts, and it cannot "
 "start transactions itself. Only the cosignatories can initiate transactions."
 msgstr ""
-"マルチシグアカウントは連署者アカウントを持つこと、それ自身はトランザクションを始められないことを気に留めてください。連署者だけがトランザクションを開始できます。"
+"マルチシグアカウントには連署者アカウントが紐付いていること、そのアカウント自身からはトランザクションを開始できないことを留意してください。連署者だけがトランザクションを開始することができます。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:32
 msgid "Prerequisites"
@@ -75,7 +75,7 @@ msgstr "前提条件"
 msgid ""
 "Finish :doc:`sending a transfer transaction guide <sending-a-transfer-"
 "transaction>`"
-msgstr ":doc:`転送トランザクション送信ガイド <sending-a-transfer-transaction>` を終了していること"
+msgstr ":doc:`転送トランザクション送信ガイド <sending-a-transfer-transaction>` を終了している"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:35
 msgid ""
@@ -83,7 +83,7 @@ msgid ""
 "an-account-to-multisig>`"
 msgstr ""
 ":doc:`アカウントをマルチシグへ変換ガイド <../account/converting-an-account-to-multisig>` "
-"を終了していること"
+"を終了している"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:36
 msgid "NEM2-SDK"
@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:37
 msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:38
 msgid "An multisig account with XEM"
@@ -109,14 +109,14 @@ msgstr "それではコードを見ていきましょう"
 msgid ""
 "Bob has finished filling his basket, and he is ready to pay. The cashier's "
 "screen indicates that the cost of the purchase adds up to 10 XEM."
-msgstr "BOB はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が 10 XEM と表示されています。"
+msgstr "Bob はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が 10 XEM と表示されています。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:47
 msgid ""
 "Bob needs to know which is the public key of the multisig account that he "
 "shares with Alice, and his private key to start announcing the transaction."
 msgstr ""
-"BOB は、ALICE と共有しているマルチシグアカウントの公開鍵と、トランザクションのアナウンスを開始するために彼の秘密鍵を知っている必要があります。"
+"Bob は、Alice と共有しているマルチシグアカウントの公開鍵と、トランザクションのアナウンスを開始するために彼の秘密鍵を知っている必要があります。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:51
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:74
@@ -173,7 +173,7 @@ msgid ""
 "network, all required cosigners have signed it. If valid, it will be "
 "included in a block."
 msgstr ""
-"ネットワークへアナウンスされる前にすべての連署者が署名をすると、アグリゲートトランザクションは **完了** "
+"ネットワークへアナウンスされる前にすべての連署者が署名をすると、アグリゲートトランザクションは **コンプリート** "
 "になります。正当であれば、ブロックへ取り込まれます。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:93
@@ -181,12 +181,12 @@ msgid ""
 "Remember that we are using a 1-of-2 multisig account? As Bob has one private"
 " key to sign the transaction, consider an *aggregate complete transaction*."
 msgstr ""
-"1-of-2 マルチシグアカウントを使用していることを忘れないでください。BOB はトランザクションに署名するための秘密鍵を1つ持っているので、 "
-"*アグリゲート完了トランザクション* を検討してください。"
+"1-of-2 マルチシグアカウントを使用していることを忘れないでください。Bob はトランザクションに署名するための秘密鍵を1つ持っているので、 "
+"*アグリゲートコンプリートトランザクション* を検討してください。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:112
 msgid "Sign and announce the transaction with Bob's account."
-msgstr "彼はトランザクションへ署名してアナウンスをします。"
+msgstr "Bob のアカウントでトランザクションへ署名してアナウンスをします。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:133
 msgid "What's next?"
@@ -241,8 +241,8 @@ msgid ""
 "lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce"
 " the aggregate bonded transaction <../../concepts/aggregate-transaction>`."
 msgstr ""
-"アグリゲートトランザクションがボンドとなった場合、BOB はネットワークのスパム防止のための 10 XEM "
-"でロックする必要かあります。すべての連署者がトランザクションへ署名すると、XEM の総量は BOB "
+"アグリゲートトランザクションがボンドとなった場合、Bob はネットワークのスパム防止のための 10 XEM "
+"でロックする必要かあります。すべての連署者がトランザクションへ署名すると、XEM の総量は Bob "
 "のアカウント上で再度有効になります。:ref:`ハッシュロックトランザクション <hash-lock-transaction>` が承認された後に、 "
 ":doc:`アグリゲートボンドトランザクションをアナウンス <../../concepts/aggregate-transaction>` します。"
 
@@ -259,5 +259,5 @@ msgid ""
 "Alice should :doc:`cosign the transaction <signing-announced-aggregate-"
 "bonded-transactions>` to be confirmed!"
 msgstr ""
-"ALICE は承認を得るために、 :doc:`トランザクションに連署 <signing-announced-aggregate-bonded-"
+"Alice は承認を得るために、 :doc:`トランザクションに連署 <signing-announced-aggregate-bonded-"
 "transactions>` してください！"

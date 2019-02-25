@@ -2,32 +2,34 @@
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
-# Yoshiyuki Ieyama, 2018
-#
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 08:57+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/prototyping-tool.rst:3
 msgid "Prototyping Tool"
-msgstr ""
+msgstr "プロトタイピングツール"
 
 #: ../../source/prototyping-tool.rst:8
 msgid ""
 "Create blockchain applications without coding using **NEM2 Prototyping "
 "Tool**."
-msgstr "コーディングせずに **NEM2 Prototyping Tool** を使ってブロックチェーンアプリケーションを作りましょう。"
+msgstr "コーディング無しに **NEM2 プロトタイピングツール** を使ってブロックチェーンアプリケーションを作ります。"
 
 #: ../../source/prototyping-tool.rst:10
 msgid ""
@@ -41,14 +43,14 @@ msgstr "|NEM2-Prototyping-Tool| は **Node-RED** ノードの集まりです。"
 
 #: ../../source/prototyping-tool.rst:14
 msgid ""
-"|Node-RED| is a visual programming tool to wire together hardware "
-"devices, APIs and online services."
+"|Node-RED| is a visual programming tool to wire together hardware devices, "
+"APIs and online services."
 msgstr "|Node-RED| はハードウェアやAPI、オンラインサービスと一緒に接続するための仮想的なプログラミングツールです。"
 
 #: ../../source/prototyping-tool.rst:16
 msgid ""
-"It provides a browser-based editor to wire nodes. The combination of "
-"nodes is named flows, which you can execute in a single click."
+"It provides a browser-based editor to wire nodes. The combination of nodes "
+"is named flows, which you can execute in a single click."
 msgstr "ノードを接続するブラウザベースのエディタを提供します。ノードのコンビネーションはクリックで実行できる名前付きのフローになります。"
 
 #: ../../source/prototyping-tool.rst:18
@@ -66,20 +68,20 @@ msgid ""
 "Download and run the |executable-package| for **Windows**, **Linux** or "
 "**Mac**."
 msgstr ""
-"**Windows**, **Linux** または **Mac** 向けの |executable-package| をダウンロードして、 "
-"実行してください。"
+"**Windows**, **Linux** または **Mac** 向けの |executable-package| "
+"をダウンロードして実行してください。"
 
 #: ../../source/prototyping-tool.rst:26
 msgid ""
-"Do you already have Node-RED app? Open ``Manage palette`` and install "
-"|nem2-node-red| package."
+"Do you already have Node-RED app? Open ``Manage palette`` and install |nem2"
+"-node-red| package."
 msgstr ""
 "すでに Node-RED はお持ちですか？ ``Manage palette`` を開いて |nem2-node-red| "
 "パッケージをインストールしてください。"
 
 #: ../../source/prototyping-tool.rst:32
 msgid "*Manage palette -> Install -> node-red-contrib-nem2*"
-msgstr "*Manage palette -> Install -> node-red-contrib-nem2*"
+msgstr ""
 
 #: ../../source/prototyping-tool.rst:56
 msgid "Configuring nodes"
@@ -113,20 +115,20 @@ msgstr "*NEM account* タブを開き、 **account** ノードをクリックし
 
 #: ../../source/prototyping-tool.rst:67
 msgid ""
-"The right sidebar shows you the node description, properties, input "
-"fields and returned outputs."
+"The right sidebar shows you the node description, properties, input fields "
+"and returned outputs."
 msgstr "右側のサイドバーはノードの説明、プロパティ、入力、出力を表示します。"
 
 #: ../../source/prototyping-tool.rst:69
 msgid ""
-"You have to link nodes together, connecting the previous node outputs "
-"with the following node inputs."
+"You have to link nodes together, connecting the previous node outputs with "
+"the following node inputs."
 msgstr "前のノードのアウトプットと続くノードのインプットへ繋げて、ノード同士をリンクさせてください。"
 
 #: ../../source/prototyping-tool.rst:71
 msgid ""
-"In some cases, you could configure inputs and properties directly by "
-"double-clicking a node."
+"In some cases, you could configure inputs and properties directly by double-"
+"clicking a node."
 msgstr "場合によっては、ノードをダブルクリックして、入力とプロパティを直接設定することもあります。"
 
 #: ../../source/prototyping-tool.rst:76
@@ -148,8 +150,8 @@ msgstr "ドラッグ&ドロップしてノード同士を接続します。"
 
 #: ../../source/prototyping-tool.rst:86
 msgid ""
-"Double-click on account node. Choose the ``network`` you want to use. Do "
-"the same for generateAccount node."
+"Double-click on account node. Choose the ``network`` you want to use. Do the"
+" same for generateAccount node."
 msgstr ""
 "アカウントノードをダブルクリックしてください。使用したい ``ネットワーク`` を選択してください。generateAccount "
 "ノードと同じにしてください。"
@@ -171,9 +173,9 @@ msgstr ""
 
 #: ../../source/prototyping-tool.rst:96
 msgid ""
-"Finally, find **debug** node in the node palette, under *output* tab. "
-"Link it with the account, and inside its properties change  ``output``  "
-"to ``complete msg object``."
+"Finally, find **debug** node in the node palette, under *output* tab. Link "
+"it with the account, and inside its properties change  ``output``  to "
+"``complete msg object``."
 msgstr ""
 "最後に、*アウトプット* タブの下のパレットから **debug** ノードを見つけてください。これをアカウントへ接続して、 ``output`` "
 "のプロパティを ``complete msg object`` に変更してください。"
@@ -200,10 +202,10 @@ msgstr "``Server`` 入力フィールドの横にある鉛筆のアイコンを�
 #: ../../source/prototyping-tool.rst:107
 msgid ""
 "Enter your ``custom url`` using http or https schema (e.g. "
-"http://localhost). Choose the ``network`` and ``port`` you want to use "
-"and then press ``Update``."
+"http://localhost). Choose the ``network`` and ``port`` you want to use and "
+"then press ``Update``."
 msgstr ""
-"http か https (例 http://localhost)スキーマの ``custom url`` を入力してください。あなたが使用したい "
+"http か https (例 http://localhost) スキーマの ``custom url`` を入力してください。あなたが使用したい "
 "``network`` と ``port`` を選んで ``Update`` を押下してください。"
 
 #: ../../source/prototyping-tool.rst:114
@@ -218,12 +220,12 @@ msgstr "画面の右上にある ``deploy`` ボタンをクリックします。
 
 #: ../../source/prototyping-tool.rst:118
 msgid ""
-"Check the output returned at the right sidebar, under the debug tab. NEM2"
-" nodes return outputs following the structure "
+"Check the output returned at the right sidebar, under the debug tab. NEM2 "
+"nodes return outputs following the structure "
 "``msg.nem.<name_of_the_output>``."
 msgstr ""
 "右側のサイドバーのデバッグタブの下に出力が返されたことを確認します。NEM2 ノードは "
-"``msg.,nem.<name_of_the_output>.</name_of_the_output>`` このような構造体を出力します。"
+"``msg.,nem.<name_of_the_output>`` このような構造体を出力します。"
 
 #: ../../source/prototyping-tool.rst:124
 msgid "See outputs under debug tab."
@@ -235,14 +237,14 @@ msgstr "フローのインポート"
 
 #: ../../source/prototyping-tool.rst:137
 msgid ""
-"After opening an example, copy the JSON you will find at the bottom of "
-"the site."
+"After opening an example, copy the JSON you will find at the bottom of the "
+"site."
 msgstr "例を開いたら、サイトの下部にあるボタンで JSON をコピーしてください。"
 
 #: ../../source/prototyping-tool.rst:139
 msgid ""
-"In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste "
-"the JSON flow and click Import button."
+"In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the"
+" JSON flow and click Import button."
 msgstr ""
 "Node-REDで ``Import > Clipboard from the menu`` (Ctrl-E) を選択してください。JSON "
 "フローをペーストして、インポートボタンをクリックします。"
@@ -255,13 +257,13 @@ msgstr "例"
 msgid "Basics"
 msgstr "基本"
 
-#: ../../source/prototyping-tool.rst:1
+#: ../../source/prototyping-tool.rst:1 ../../source/prototyping-tool.rst:1
 msgid "Name"
-msgstr "名前"
+msgstr "名称"
 
-#: ../../source/prototyping-tool.rst:1
+#: ../../source/prototyping-tool.rst:1 ../../source/prototyping-tool.rst:1
 msgid "Contributor"
-msgstr "貢献"
+msgstr "貢献者"
 
 #: ../../source/prototyping-tool.rst:1
 msgid ""
@@ -271,7 +273,9 @@ msgstr ""
 "`トランスファートランザクションの作成 "
 "<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
 
-#: ../../source/prototyping-tool.rst:1
+#: ../../source/prototyping-tool.rst:1 ../../source/prototyping-tool.rst:1
+#: ../../source/prototyping-tool.rst:1 ../../source/prototyping-tool.rst:1
+#: ../../source/prototyping-tool.rst:1 ../../source/prototyping-tool.rst:1
 msgid "`@jorisadri <https://github.com/jorisadri>`_"
 msgstr ""
 
@@ -332,17 +336,17 @@ msgstr ""
 
 #: ../../source/prototyping-tool.rst:168
 msgid ""
-"We love to receiving contributions from our community — you! Follow these"
-" guidelines to get your flow included in this documentation."
+"We love to receiving contributions from our community — you! Follow these "
+"guidelines to get your flow included in this documentation."
 msgstr ""
 "私たちは私たちのコミュニティ - そう、あなた！ "
 "からの貢献をを喜んで受け入れます。あなたのフローをドキュメントへ含めるために、これらのガイドラインに従ってください。"
 
 #: ../../source/prototyping-tool.rst:170
 msgid ""
-"The first step is to export the flow you have created. In Node-RED, "
-"select the flow you want to export. Open ``Export > Clipboard`` from the "
-"menu (Ctrl-E) and copy the JSON from the dialogue."
+"The first step is to export the flow you have created. In Node-RED, select "
+"the flow you want to export. Open ``Export > Clipboard`` from the menu "
+"(Ctrl-E) and copy the JSON from the dialogue."
 msgstr ""
 "最初のステップは、あなたの作ったフローをエクスポートすることです。Node-RED では、メニュー (Ctrl-E) から ``Export > "
 "Clipboard`` を開き、ダイアログから JSON をコピーしてください。"
@@ -357,8 +361,8 @@ msgstr "``Add flow`` をクリック"
 
 #: ../../source/prototyping-tool.rst:175
 msgid ""
-"Give your flow a short, descriptive title and describe what the flow does"
-" and how it is used."
+"Give your flow a short, descriptive title and describe what the flow does "
+"and how it is used."
 msgstr "あなたのフローを端的でわかりやすいタイトルを、このフローは何をするのか、どうやって使うのかを説明してください。"
 
 #: ../../source/prototyping-tool.rst:176
@@ -371,7 +375,6 @@ msgstr "``NEM2`` のタグを追加します。"
 
 #: ../../source/prototyping-tool.rst:179
 msgid ""
-"After a while, your flow and your GitHub username will be included in "
-"this page."
+"After a while, your flow and your GitHub username will be included in this "
+"page."
 msgstr "しばらくすると、あなたのフローと GitHub ユーザー名がこのページに反映されます。"
-

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,7 +141,7 @@ msgid ""
 "(signer accounts) to control her multisig account as a form of 2-factor "
 "authentication."
 msgstr ""
-"ALICE "
+"Alice "
 "は彼女の資産が決して損なわれないようにしたいと考えています。したがって、彼女は彼女の資産でマルチシグアカウントを設定し、マルチシグアカウントを制御するために2要素認証の形態として、2つのアカウント(署名者アカウント)を設定しました。"
 
 #: ../../source/concepts/multisig-account.rst:47
@@ -172,7 +172,7 @@ msgid ""
 " Alice, she becomes the owner, being the company removed in the same "
 "transaction."
 msgstr ""
-"企業は製品ごとに 1-of-1 マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が ALICE "
+"企業は製品ごとに 1-of-1 マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が Alice "
 "へ製品を販売するとき、彼女が所有者となり、同じ取引で会社の所有権が取り除かれます。"
 
 #: ../../source/concepts/multisig-account.rst:66
@@ -343,7 +343,7 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
-msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
+msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:144
 msgid "CosignatoryModification"

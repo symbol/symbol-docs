@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:04+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "アカウントフィルタ"
 
 #: ../../source/concepts/account-filter.rst:5
 msgid "Account filters feature is not implemented in the SDK yet."
-msgstr "この機能はまだSDKに実装されていません。"
+msgstr "この機能はまだ SDK に実装されていません。"
 
 #: ../../source/concepts/account-filter.rst:7
 msgid ""
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../source/concepts/account-filter.rst:21
 msgid "Address filter diagram"
-msgstr "アドレスフィルタ図"
+msgstr "アドレスフィルタダイアグラム"
 
 #: ../../source/concepts/account-filter.rst:23
 msgid ""
@@ -97,7 +97,7 @@ msgid ""
 "security, preventing the announcement by mistake of undesired transactions."
 msgstr ""
 "アカウントは送信トランザクションのアナウンスを :ref:`規則タイプ <transaction-types>` "
-"によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
+"によって許可/ブロックすることができます。それにより、セキュリティを向上させ、ミスによる意図しないトランザクションのアナウンスを防止できます。"
 
 #: ../../source/concepts/account-filter.rst:41
 msgid "Examples"
@@ -144,7 +144,7 @@ msgid ""
 "transactions where a :doc:`multisig<multisig-account>` she is a cosignatory "
 "is involved."
 msgstr ""
-"最近、ALICE は 彼女が連署者である :doc:`マルチシグ <multisig-account>` "
+"最近、Alice は 彼女が連署者である :doc:`マルチシグ <multisig-account>` "
 "のアグリゲートトランザクションに署名するために、彼女のメインアカウントだけを使用していました。"
 
 #: ../../source/concepts/account-filter.rst:65
@@ -153,7 +153,8 @@ msgid ""
 "transactions from her main account, double checking that any of the funds "
 "she owns will be transferred."
 msgstr ""
-"一時的な処置として、アリスはメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
+"一時的な処置として、Alice "
+"はメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
 
 #: ../../source/concepts/account-filter.rst:69
 msgid "Schemas"
@@ -167,7 +168,7 @@ msgid ""
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークとは異なる可能性があります。"
+"です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/account-filter.rst:76
 msgid "AccountPropertiesAddressTransaction"
@@ -324,7 +325,7 @@ msgstr ":ref:`タイプ <transaction-types>` によるトランザクション�
 
 #: ../../source/concepts/account-filter.rst:129
 msgid "**Entity type**: 0x4350"
-msgstr "**エンティティタイプ**: 0x4350"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid ""
