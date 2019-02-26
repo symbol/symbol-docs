@@ -65,7 +65,7 @@ For that reason, each actor involved should have at least one account in each bl
         :language: typescript
         :lines:  37-44
 
-1. Alice picks a random number, called ``proof``. Then, applies a SHA512 hash algorithm to it, obtaining the ``secret``.
+1. Alice picks a random number, called ``proof``. Then, applies a Sha3-256 algorithm to it, obtaining the ``secret``.
 
 .. example-code::
 
