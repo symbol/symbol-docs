@@ -28,7 +28,7 @@ import {
     Transaction,
     TransactionHttp,
     TransferTransaction,
-    XEM
+    NetworkCurrencyMosaic
 } from "nem2-sdk";
 import {filter, map, mergeMap} from "rxjs/operators";
 
@@ -36,8 +36,8 @@ const validTransaction = (transaction: Transaction, publicAccount: PublicAccount
     return transaction instanceof TransferTransaction &&
         transaction.signer!.equals(publicAccount) &&
         transaction.mosaics.length == 1 &&
-        transaction.mosaics[0].id.equals(XEM.MOSAIC_ID) &&
-        transaction.mosaics[0].amount.compact() < XEM.createRelative(100).amount.compact();
+        transaction.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID) &&
+        transaction.mosaics[0].amount.compact() < NetworkCurrencyMosaic.createRelative(100).amount.compact();
 };
 
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {

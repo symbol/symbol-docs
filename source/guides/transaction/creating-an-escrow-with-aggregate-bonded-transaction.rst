@@ -78,18 +78,18 @@ In this example, Alice and a ticket distributor want to swap the following mosai
 .. csv-table::
         :header: "Owner", "Mosaic Name", "Amount"
 
-        Alice, nem:xem, 100
+        Alice, XEM, 100
         Ticket distributor, museum:ticket, 1
 
 Before continuing, practise by setting up the namespaces and mosaics required.
 
 **Mosaics swap**
 
-Alice will send a transaction to the ticket distributor exchanging 100 nem:xem with 1 museum:ticket.
+Alice will send a transaction to the ticket distributor exchanging 100 XEM with 1 museum:ticket.
 
 1. Create two  :ref:`transfer transaction <transfer-transaction>`:
 
-A. From Alice to the ticket distributor sending 100 nem:xem
+A. From Alice to the ticket distributor sending 100 XEM
 B. From the ticket distributor to Alice sending 1 museum:ticket.
 
 2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.

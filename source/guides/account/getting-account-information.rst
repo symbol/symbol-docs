@@ -4,7 +4,7 @@
     :category: Account
     :excerpt: 1
     :nocomments:
-    
+
 ###########################
 Getting account information
 ###########################
@@ -23,9 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-The **public key** identifies your account publicly in the network. Your  **address** is derived from it, which contains further information such as network and validity check.
-
-Get more information about your account passing the address and network as a parameter.
+1. Call ``getAccountInfo`` function, passing your account's address as a parameter.
 
 .. example-code::
 
@@ -33,7 +31,7 @@ Get more information about your account passing the address and network as a par
         :caption: |getting-account-information-ts|
         :language: typescript
         :lines:  21-
-    
+
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java
         :caption: |getting-account-information-java|
         :language: java
@@ -48,12 +46,16 @@ Get more information about your account passing the address and network as a par
         :caption: |getting-account-information-cli|
         :language: bash
         :start-after: #!/bin/sh
-    
-Can you determine the account's public key? Which was the first block where this account appeared?
 
-**Checking account's balance**
+Can you determine the account's public key? The **public key** identifies your account publicly in the network. Your  **address** is derived from it, which contains further information such as network and validity check.
 
-The balance is the amount of the different **mosaics** owned by the account. How many different :doc:`mosaics <../../concepts/mosaic>` does your account own?
+If you don't have a public key assigned, that means that your account has not announced or received any transaction yet. The ``addressHeight`` and ``publicKeyHeight`` specifies the block where your address and public key first appeared.
+
+The ``importance`` field represents the numerical relation between the number of harvesting mosaics the account owns and the total mosaic supply. The greater the importance, the more chances to :doc:`harvest <../../concepts/harvesting>` new blocks.
+
+The balance is the amount of the different :doc:`mosaics <../../concepts/mosaic>` owned by the account.
+
+2.  How many different mosaics does your account hold? Call ``mosaicsAmountViewFromAddress`` function, passing your account's address as a parameter.
 
 .. example-code::
 
@@ -71,12 +73,6 @@ The balance is the amount of the different **mosaics** owned by the account. How
         :caption: |checking-balance-account-cli|
         :language: bash
         :start-after: #!/bin/sh
-
-************
-What’s next?
-************
-
-Retrieve the balance by only `filtering the nem:xem <https://www.learnrxjs.io/operators/filtering/filter.html>`_ amount.
 
 .. |getting-account-information-ts| raw:: html
 

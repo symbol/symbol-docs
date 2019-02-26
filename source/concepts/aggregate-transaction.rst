@@ -175,6 +175,6 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 nem:xem``.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 xem``.
     duration; uint64; The lock duration.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.

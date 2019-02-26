@@ -15,7 +15,7 @@ Turn asynchronous transaction announcement into synchronous with |nem2-camel|.
 Background
 **********
 
-Alice is developing an app to send 10 nem:xem to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send 10 XEM to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 

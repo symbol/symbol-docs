@@ -29,7 +29,7 @@ import {
     TransactionHttp,
     TransferTransaction,
     UInt64,
-    XEM
+    NetworkCurrencyMosaic
 } from "nem2-sdk";
 
 import {filter, mergeMap} from "rxjs/operators";
@@ -51,8 +51,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 xem'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction
@@ -65,7 +65,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

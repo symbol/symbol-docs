@@ -1,3 +1,4 @@
+/*Todo: edit guide */
 /*
  *
  * Copyright 2018 NEM
@@ -16,7 +17,15 @@
  *
  */
 
-import {AccountHttp, Address, NetworkType, PublicAccount, TransactionType, TransferTransaction, XEM} from 'nem2-sdk';
+import {
+    AccountHttp,
+    Address,
+    NetworkType,
+    PublicAccount,
+    TransactionType,
+    TransferTransaction,
+    NetworkCurrencyMosaic
+} from 'nem2-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 const accountHttp = new AccountHttp('http://localhost:3000');
@@ -34,12 +43,12 @@ accountHttp
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
         filter((_) => _.recipient.equals(address)), // Filter transactions from to account
-        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(XEM.MOSAIC_ID)), // Filter xem transactions
-        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, XEM.DIVISIBILITY)), // Map only amount in xem
+        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID)), // Filter xem transactions
+        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, NetworkCurrencyMosaic.DIVISIBILITY)), // Map relative amount
         toArray(), // Add all mosaics amounts into one array
         map((_) => _.reduce((a, b) => a + b, 0))
     )
     .subscribe(
-        total => console.log('Total xem send to account', address.pretty(), 'is:', total),
+        total => console.log('Total xem sent to account', address.pretty(), 'is:', total),
         err => console.error(err)
     );
