@@ -37,7 +37,7 @@ You will need to announce two transactions to create a mosaic:
     :delim: ;
 
     Divisibility; 0 ; The mosaic won't be divisible.
-    Duration; 1000; The mosaic will be regsitered for 1000 blocks.
+    Duration; 1000; The mosaic will be registered for 1000 blocks.
     Supply mutable; True; The mosaic supply can change at a later point.
     Transferable; True; The mosaic can be transferred between arbitrary accounts.
 
