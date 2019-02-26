@@ -40,11 +40,6 @@ Alice wants to ask Bob for 20 XEM.
         :language: typescript
         :lines:  38-46
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  30-52
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
@@ -65,11 +60,6 @@ A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
         :language: typescript
         :lines:  49-54
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  52-59
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
@@ -89,11 +79,6 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :language: typescript
         :lines: 56-61
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  60-67
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
@@ -108,11 +93,6 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :language: typescript
         :lines:  64-70
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  68-76
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
@@ -126,11 +106,6 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
         :lines:  73-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  77-103
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
@@ -154,10 +129,6 @@ As the aggregate bonded transaction has all the cosignatures required, it will b
 .. |asking-for-mosaics-with-aggregate-bonded-transaction-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java" target="_blank">View Code</a>
 
 .. |asking-for-mosaics-with-aggregate-bonded-transaction-js| raw:: html
 

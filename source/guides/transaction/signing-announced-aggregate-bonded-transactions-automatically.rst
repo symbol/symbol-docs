@@ -88,11 +88,6 @@ Try it yourself! Here you have a possible implementation:
         :language: typescript
         :lines:  35-
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java
-        :caption: |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-java|
-        :language: java
-        :lines:  40-72
-
 .. |signing-announced-aggregate-bonded-transactions-automatically-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts" target="_blank">View Code</a>
@@ -108,7 +103,3 @@ Try it yourself! Here you have a possible implementation:
 .. |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts" target="_blank">View Code</a>
-
-.. |signing-announced-aggregate-bonded-transactions-automatically-with-constraints-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.java" target="_blank">View Code</a>

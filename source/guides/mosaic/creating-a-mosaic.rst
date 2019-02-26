@@ -43,11 +43,6 @@ Our mosaic will be called ``token``, and its parent namespace will be ``foo``.
         :language: typescript
         :lines:  33-40
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
-        :caption: |creating-a-mosaic-java|
-        :language: java
-        :lines: 40-47
-
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
@@ -66,11 +61,6 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
         :language: typescript
         :lines:  43-54
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
-        :caption: |creating-a-mosaic-java|
-        :language: java
-        :lines: 49-55
-
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
@@ -87,11 +77,6 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
         :language: typescript
         :lines:  57-62
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
-        :caption: |creating-a-mosaic-java|
-        :language: java
-        :lines: 57-63
-
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
@@ -105,11 +90,6 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
         :caption: |creating-a-mosaic-ts|
         :language: typescript
         :lines:  65-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java
-        :caption: |creating-a-mosaic-java|
-        :language: java
-        :lines: 65-78
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
@@ -130,10 +110,6 @@ What's next?
 .. |creating-a-mosaic-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts" target="_blank">View Code</a>
-
-.. |creating-a-mosaic-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/mosaic/CreatingAMosaic.java" target="_blank">View Code</a>
 
 .. |creating-a-mosaic-js| raw:: html
 

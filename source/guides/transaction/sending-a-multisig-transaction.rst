@@ -53,11 +53,6 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :language: typescript
         :lines: 33-41
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines: 43-55
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
         :language: javascript

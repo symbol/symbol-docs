@@ -105,11 +105,6 @@ In case that signatures are required from other participants and the transaction
         :language: typescript
         :lines:  40-62
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  44-80
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
         :language: javascript
@@ -123,11 +118,6 @@ In case that signatures are required from other participants and the transaction
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
         :language: typescript
         :lines:  65-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  80-105
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
@@ -166,10 +156,6 @@ Afterwards, try to swap mosaics between multiple participants.
 .. |creating-an-escrow-with-aggregate-bonded-transaction-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |creating-an-escrow-with-aggregate-bonded-transaction-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java" target="_blank">View Code</a>
 
 .. |creating-an-escrow-with-aggregate-bonded-transaction-js| raw:: html
 
