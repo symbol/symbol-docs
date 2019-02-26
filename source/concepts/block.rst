@@ -24,7 +24,7 @@ Blocks are created by :doc:`accounts <account>`. The process of creating new blo
 Block Difficulty
 ****************
 
-The difficulty for a new block is calculated from the difficulties and time stamps of the last 60  blocks such that the new difficulty is equal to the average difficulty divided by the average block creation time for the last 60 blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10:sup:`15` or smaller than 10:sup:`13`.  The algorithm produces approximately one block every 15 seconds.
+The difficulty for a new block is calculated from the difficulties and time stamps of the last 60  blocks such that the new difficulty is equal to the average difficulty divided by the average block creation time for the last 60 blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10 :sup:`15` or smaller than 10 :sup:`13`.  The algorithm produces approximately one block every 15 seconds.
 
 ******
 Guides
