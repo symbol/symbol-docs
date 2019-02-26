@@ -9,78 +9,63 @@
 Creating a mosaic
 #################
 
-After creating a namespace, follow this guide to create a :doc:`mosaic<../../concepts/mosaic>` .
-
-**********
-Background
-**********
-
-Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
-
-A mosaic is like a file hosted on a domain and it represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique.
+Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>` .
 
 *************
 Prerequisites
 *************
 
-- Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
+- Finish :doc:`setup your workstation <../../getting-started/setup-workstation>`
 - NEM2-SDK or CLI
 - A text editor or IDE
-- An account with XEM and at least one namespace
+- An account with XEM
 
 ************************
 Let’s get into some code
 ************************
 
-The first step is to choose a name for your mosaic. The name of the mosaic, up to a size limit of ``64`` characters, must be unique under the domain name.
+Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 
-Our mosaic will be called ``token``, and its parent namespace will be ``foo``.
+You will need to announce two transactions to create a mosaic:
 
-.. example-code::
+1. A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to create the mosaic, with the following properties:
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
-        :caption: |creating-a-mosaic-ts|
-        :language: typescript
-        :lines:  33-40
+.. _mosaic-properties:
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
-        :caption: |creating-a-mosaic-js|
-        :language: javascript
-        :lines: 33-40
+.. csv-table::
+    :header: "Property", "Value", "Description"
+    :delim: ;
 
-It is necessary to announce two transactions when creating a mosaic:
-
-1. A :ref:`mosaic definition transaction <mosaic-definition-transaction>`, to create the mosaic.
-
-Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferable`` among accounts other than the creator and registered for ``1000 blocks``. ``foo:token`` won't be  ``divisible``.
+    Divisibility; 0 ; The mosaic won't be divisible.
+    Duration; 1000; The mosaic will be regsitered for 1000 blocks.
+    Supply mutable; True; The mosaic supply can change at a later point.
+    Transferable; True; The mosaic can be transferred between arbitrary accounts.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  43-54
+        :lines:  33-52
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 43-54
+        :lines: 33-52
 
-2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. ``foo:token`` initial supply is 1.000.000
-
-.. note:: Once you announce a MosaicSupplyChangeTransaction, you cannot change mosaic properties for this mosaic.
+2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  57-62
+        :lines:  54-60
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 57-62
+        :lines: 54-60
 
 3. Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -89,12 +74,12 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  65-
+        :lines:  63-
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 65-
+        :lines: 63-
 
     .. literalinclude:: ../../resources/examples/cli/mosaic/CreatingAMosaic.sh
         :caption: |creating-a-mosaic-cli|
@@ -105,7 +90,7 @@ Under mosaic properties, we define a mosaic with ``supplyMutable``, ``transferab
 What's next?
 ************
 
-:doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account or modify its properties following the next guide.
+:doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
 
 .. |creating-a-mosaic-ts| raw:: html
 

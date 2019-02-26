@@ -71,11 +71,6 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :language: typescript
         :lines:  44-49
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  56-63
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
         :language: javascript
@@ -94,11 +89,6 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: typescript
         :lines:  52-56
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  64-71
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
         :language: javascript
@@ -112,11 +102,6 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
         :language: typescript
         :lines:  59-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  72-78
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
@@ -144,11 +129,6 @@ As all required cosigners did not sign the transaction, it should be announced a
         :language: typescript
         :lines:  59-64
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-java|
-        :language: java
-        :lines:  62-70
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
@@ -170,11 +150,6 @@ As all required cosigners did not sign the transaction, it should be announced a
         :language: typescript
         :lines:  66-
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-java|
-        :language: java
-        :lines:  70-99
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
@@ -188,10 +163,6 @@ Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-tr
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts" target="_blank">View Code</a>
 
-.. |sending-a-multisig-transaction-aggregate-complete-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java" target="_blank">View Code</a>
-
 .. |sending-a-multisig-transaction-aggregate-complete-js| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js" target="_blank">View Code</a>
@@ -199,10 +170,6 @@ Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-tr
 .. |sending-a-multisig-transaction-aggregate-bonded-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-bonded-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java" target="_blank">View Code</a>
 
 .. |sending-a-multisig-transaction-aggregate-bonded-js| raw:: html
 

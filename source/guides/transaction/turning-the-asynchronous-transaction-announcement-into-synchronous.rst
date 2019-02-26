@@ -75,9 +75,9 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
     $> cd  build/generated-addresses/
     $> cat raw-addresses.yaml
 
- 2. Take the first key pair as Alice's account, and copy the private key. 
+2. Take the first key pair as Alice's account, and copy the private key.
  
- 2. Take the second key pair as Bob's account, and copy the address. 
+3. Take the second key pair as Bob's account, and copy the address.
 
 **Installing nem2-camel**
 

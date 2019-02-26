@@ -9,7 +9,7 @@
 Modifying mosaic supply
 #######################
 
-Did you register a :doc:`mosaic<../../concepts/mosaic>` with supplyMutable option set to true? In that case, you can increase or decrease your mosaic available supply following this guide.
+Alter the supply of a mosaic following this guide.
 
 *************
 Prerequisites
@@ -25,9 +25,9 @@ Prerequisites
 Let’s get into some code
 ************************
 
-If you have followed the previous guide, right now you should own a ``supply mutable`` mosaic.
+If you have followed the previous guide, right now you should own a ``supply mutable`` :doc:`mosaic<../../concepts/mosaic>` .
 
-Increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`.
+To increase the initial supply to ``2.000.000``, define a :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>` setting the target mosaicId.
 
 .. example-code::
 
@@ -45,7 +45,7 @@ Increase to ``2.000.000`` the initial supply. Sign and announce a :ref:`mosaic s
 What's next?
 ************
 
-Decrease your mosaic supply by changing  ``MosaicSupplyType.Increase`` for ``MosaicSupplyType.Decrease``.
+Decrease your mosaic supply by changing ``MosaicSupplyType.Increase`` to ``MosaicSupplyType.Decrease``.
 
 .. |modifying-mosaic-supply-ts| raw:: html
 

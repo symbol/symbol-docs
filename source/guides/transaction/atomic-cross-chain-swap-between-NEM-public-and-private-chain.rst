@@ -19,15 +19,15 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Background
 **********
 
-Alice and Bob want to exchange **10 alice:token for 10 bob:token**. The problem is that they are not in the same blockchain: alice:token is defined in NEM public chain, whereas bob:token is only present in a private chain using catapult technology.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice:token is defined in NEM public chain, whereas bob:token is only present in a private chain using catapult technology.
 
 .. note:: These two chain shares are SDK. You could implement atomic cross-chain swap between NEM public chain and other blockchains if they permit the secret lock/proof mechanism.
 
 One non-atomic solution could be:
 
-1) Alice sends 10 alice:token to Bob (private chain)
+1) Alice sends 10 alice tokens to Bob (private chain)
 2) Bob receives the transaction
-3) Bob sends 10 bob:token to Alice (public chain)
+3) Bob sends 10 bob tokens to Alice (public chain)
 4) Alice receives the transaction
 
 However, they do not trust each other that much. Bob could decide his mosaics to Alice. Following this guide, you will see how to make this swap possible, trusting technology.
@@ -76,7 +76,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 2. Alice creates a secret lock transaction, including:
 
-* The mosaic and amount to be sent: 10 alice:token
+* The mosaic and amount to be sent: 10 [520597229,83226871] (alice tokens)
 * The recipient address: Bob's address in private chain
 * The secret: Hashed proof.
 * The amount of time in which funds can be unlocked: 96h
@@ -104,7 +104,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 5. Bob creates a secret lock transaction TX2, which contains:
 
-* The mosaic and amount to be sent: 10 bob:token
+* The mosaic and amount to be sent: 10 [2061634929,1373884888] (bob token)
 * A recipient address: Alice's address in public chain
 * The secret that should be achieved to unlock the funds.
 * The amount of time in which funds can be unlocked: 84h

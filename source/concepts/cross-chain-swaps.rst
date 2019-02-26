@@ -27,8 +27,6 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Guides
 ******
 
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
-
 .. postlist::
     :category: Cross-Chain Swaps
     :date: %A, %B %d, %Y

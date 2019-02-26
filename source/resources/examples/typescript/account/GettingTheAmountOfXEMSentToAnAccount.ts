@@ -1,4 +1,3 @@
-/*Todo: edit guide */
 /*
  *
  * Copyright 2018 NEM
@@ -35,6 +34,8 @@ const originAccount = PublicAccount.createFromPublicKey(originPublicKey, Network
 
 const recipientAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
 const address = Address.createFromRawAddress(recipientAddress);
+const mosaicId = NetworkCurrencyMosaic.MOSAIC_ID;
+const divisibility = NetworkCurrencyMosaic.DIVISIBILITY;
 
 accountHttp
     .outgoingTransactions(originAccount)
@@ -43,8 +44,8 @@ accountHttp
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
         filter((_) => _.recipient.equals(address)), // Filter transactions from to account
-        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID)), // Filter xem transactions
-        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, NetworkCurrencyMosaic.DIVISIBILITY)), // Map relative amount
+        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter xem transactions
+        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
         toArray(), // Add all mosaics amounts into one array
         map((_) => _.reduce((a, b) => a + b, 0))
     )

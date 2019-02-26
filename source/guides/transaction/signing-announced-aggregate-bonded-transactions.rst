@@ -9,9 +9,7 @@
 Signing announced aggregate bonded transactions
 ###############################################
 
-You have probably announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
-
-This guide will show you how to cosign aggregate bonded transactions that require being signed by your account.
+This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
 
 *************
 Prerequisites
@@ -26,6 +24,8 @@ Prerequisites
 ************************
 Let’s get into some code
 ************************
+
+You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
 1. Create a function to cosign any aggregate bonded transaction.
 

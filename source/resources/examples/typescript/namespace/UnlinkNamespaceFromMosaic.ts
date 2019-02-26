@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2018 NEM
+ * Copyright 2019 NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,31 +18,34 @@
 
 import {
     Account,
+    AliasActionType,
+    AliasTransaction,
     Deadline,
     MosaicId,
-    MosaicSupplyChangeTransaction,
-    MosaicSupplyType,
+    NamespaceId,
     NetworkType,
-    TransactionHttp,
-    UInt64
-} from 'nem2-sdk';
+    TransactionHttp
+} from "nem2-sdk";
 
+// 01 - Setup
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicId = new MosaicId([520597229,83226871]); // Replace with your mosaicId
+const namespaceId = new NamespaceId('foo');
+const mosaicId = new MosaicId([520597229,83226871]);
 
-const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
+// 02 - Create and announce aliasTransaction
+const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
+    AliasActionType.Unlink,
+    namespaceId,
     mosaicId,
-    MosaicSupplyType.Increase,
-    UInt64.fromUint(2000000),
-    NetworkType.MIJIN_TEST);
+    NetworkType.MIJIN_TEST
+);
 
-const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
+const signedTransaction = account.sign(mosaicAliasTransaction);
 
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x=> console.log(x), err => console.error(err));
+    .subscribe(x => console.log(x), err => console.error(err));

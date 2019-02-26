@@ -23,20 +23,23 @@ Prerequisites
 Let’s get into some code
 ************************
 
+The underlying cryptocurrency of the NEM public network is called **XEM**. Every action on the NEM blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
+
+In this example, we are going to check how many native currency mosaic units holds an account.
+
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/GettingTheAmountOfXEMSentToAnAccount.ts
         :caption: |getting-amount-of-xem-sent-to-an-account-ts|
         :language: typescript
-        :lines:  22-
+        :lines:  30-
 
-The amount of XEM sent is displayed in your terminal.
+If you want to check another :doc:`mosaic <../../concepts/mosaic>` different than the native currency, change ``mosaicId`` and ``divisibility`` for the target mosaic properties.
 
-************
-What’s next?
-************
+.. code-block:: typescript
 
-Repeat the example by changing NEM filter for another :doc:`mosaic <../../concepts/mosaic>`.
+    const mosaicId = new MosaicId([3562970624, 976072438]);
+    const divisibility = 6;
 
 .. |getting-amount-of-xem-sent-to-an-account-ts| raw:: html
 

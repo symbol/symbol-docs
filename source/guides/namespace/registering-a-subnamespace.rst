@@ -17,7 +17,7 @@ Background
 
 Once you have a registered root namespace, you can create up to ``3`` levels of subnamespaces.
 
-Subnamespaces do not have a renting duration on its own. They have the same one as their parent namespace.
+Subnamespaces do not have a renting duration. They have the same one as their parent namespace.
 
 It is possible to create multiple subnamespaces with the same name in different namespaces (example: ``foo.bar`` and ``foo2.bar``).
 
@@ -59,6 +59,13 @@ In this example, we have registered a subnamespace called ``bar`` under ``foo`` 
         :caption: |registering-a-subnamespace-cli|
         :language: bash
         :start-after: #!/bin/sh
+
+************
+What's next?
+************
+
+When the transaction is confirmed, link a namespace with a mosaic or address.
+
 
 .. |registering-a-subnamespace-ts| raw:: html
 

@@ -38,7 +38,9 @@ Prerequisites
 Let's get into some code
 *************************
 
-1. Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, and wrap them in an :ref:`aggregate transaction <aggregate-transaction>`.
+1. Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`aggregate transaction <aggregate-transaction>`.
+
+As one private key can sign all the transactions in the aggregate, define the aggregate as *complete*. That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
 
 .. example-code::
 
@@ -51,10 +53,6 @@ Let's get into some code
         :caption: |sending-a-payouts-with-aggregate-complete-transaction-js|
         :language: javascript
         :lines:  32-54
-
-Do you know the difference between aggregate complete and aggregate bonded? In this case, one private key can sign all the transactions in the aggregate, so it is *aggregate complete*.
-
-That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
 
 2. Sign and announce the transaction.
 
@@ -74,7 +72,7 @@ That means that there is no need to lock funds to send the transaction. If valid
 What's next?
 ************
 
-Send an aggregate bonded transaction by following :doc:`creating an escrow with aggregate bonded transaction <creating-an-escrow-with-aggregate-bonded-transaction>` guide.
+Send an aggregate bonded transaction following :doc:`creating an escrow with aggregate bonded transaction <creating-an-escrow-with-aggregate-bonded-transaction>` guide.
 
 .. |sending-a-payouts-with-aggregate-complete-transaction-ts| raw:: html
 

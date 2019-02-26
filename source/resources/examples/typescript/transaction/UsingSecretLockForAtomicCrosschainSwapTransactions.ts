@@ -49,10 +49,10 @@ const hash = sha3_256.create();
 const secret = hash.update(random).hex().toUpperCase();
 const proof = random.toString('hex');
 
-// 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, MosaicId, Amount, valid for 96h }
+// 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, alice token mosaicId, Amount, valid for 96h }
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId('alice:token'), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId([520597229,83226871]), UInt64.fromUint(10)),
     UInt64.fromUint(96*60), // assuming one block per minute
     HashType.Op_Sha3_256,
     secret,
@@ -65,10 +65,10 @@ privateChainTransactionHttp
     .announce(tx1Signed)
     .subscribe(x => console.log(x),err => console.error(err));
 
-// 05 - B creates TX2 SecretLockTransaction{ H(x), A, MosaicId, Amount, valid for 84h }
+// 05 - B creates TX2 SecretLockTransaction{ H(x), A, bob token mosaic Id, Amount, valid for 84h }
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId('bob:token'), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId([2061634929,1373884888]), UInt64.fromUint(10)),
     UInt64.fromUint(84*60), // assuming one block per minute
     HashType.Op_Sha3_256,
     secret,

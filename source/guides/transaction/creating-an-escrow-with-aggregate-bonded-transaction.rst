@@ -76,21 +76,21 @@ Let's get into some code
 In this example, Alice and a ticket distributor want to swap the following mosaics.
 
 .. csv-table::
-        :header: "Owner", "Mosaic Name", "Amount"
+        :header: "Owner", "Amount", "MosaicId", "Description"
 
-        Alice, XEM, 100
-        Ticket distributor, museum:ticket, 1
+        Alice, 100, XEM, Native currency mosaic
+        Ticket distributor, 1, [520597229,83226871], Represents a museum ticket.
 
-Before continuing, practise by setting up the namespaces and mosaics required.
+Before continuing, :doc:`create the museum ticket mosaic <../mosaic/creating-a-mosaic>`.
 
 **Mosaics swap**
 
-Alice will send a transaction to the ticket distributor exchanging 100 XEM with 1 museum:ticket.
+Alice will send a transaction to the ticket distributor exchanging 100 XEM for 1 [520597229,83226871] (museum ticket).
 
 1. Create two  :ref:`transfer transaction <transfer-transaction>`:
 
 A. From Alice to the ticket distributor sending 100 XEM
-B. From the ticket distributor to Alice sending 1 museum:ticket.
+B. From the ticket distributor to Alice sending 1 [520597229,83226871].
 
 2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -126,6 +126,8 @@ In case that signatures are required from other participants and the transaction
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
+The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
+
 **********************************************
 Is it possible without aggregate transactions?
 **********************************************
@@ -139,9 +141,7 @@ Is it possible without aggregate transactions?
 What's next?
 ************
 
-The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
-
-Afterwards, try to swap mosaics between multiple participants.
+Try to swap mosaics adding a third  participant.
 
 .. figure:: ../../resources/images/examples/aggregate-escrow-2.png
     :align: center

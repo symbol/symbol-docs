@@ -14,7 +14,7 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
 
-You can create multiple subnamespaces with the same name. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
+You can create multiple subnamespaces with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 

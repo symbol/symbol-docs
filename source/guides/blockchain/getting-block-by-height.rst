@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Are you curious to see what happened in the genesis block?
+What happened in the genesis block? Run the following code to get the first created block header.
 
 .. example-code::
 

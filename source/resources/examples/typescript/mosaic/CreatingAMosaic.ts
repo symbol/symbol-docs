@@ -20,6 +20,7 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
+    MosaicId,
     MosaicDefinitionTransaction,
     MosaicProperties,
     MosaicSupplyChangeTransaction,
@@ -35,15 +36,12 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-// Replace with namespace name and mosaic name
-const namespaceName = 'foo';
-const mosaicName = 'token';
+const mosaicId = MosaicId.createRandom(account.publicAccount);
 
 // 02 - Create Mosaic Definition Transaction
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
-    mosaicName,
-    namespaceName,
+    mosaicId,
     MosaicProperties.create({
         supplyMutable: true,
         transferable: true,
