@@ -428,6 +428,8 @@ paths:
         description: The height of the block. If height -1 is not a multiple of the limit provided, the inferior closest multiple + 1 is used instead.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: limit
         in: path
         description: The number of blocks to be returned.
@@ -458,6 +460,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       responses:
         '200':
@@ -483,6 +486,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       - name: pageSize
         in: query
@@ -521,6 +525,8 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: hash
         in: path
         description: The hash of the transaction.
@@ -550,6 +556,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       responses:
         '200':
@@ -577,6 +584,8 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: hash
         in: path
         description: The hash of the receipt statement or resolution.
@@ -1230,7 +1239,7 @@ definitions:
   NamespaceInfoDTO:
     type: object
     required:
-    - metad
+    - meta
     - namespace
     properties:
       meta:
