@@ -34,8 +34,6 @@ const Account = nem2Sdk.Account,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-
-
 // 01 - Set up
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
@@ -54,7 +52,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('sending 10 xem'),
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction

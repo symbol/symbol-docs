@@ -52,7 +52,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('sending 10 xem'),
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction

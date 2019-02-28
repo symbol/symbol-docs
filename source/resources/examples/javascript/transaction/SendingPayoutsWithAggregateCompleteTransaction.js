@@ -25,7 +25,7 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
     Address = nem2Sdk.Address,
-    XEM = nem2Sdk.XEM;
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
 
 
 // 01 - Setup
@@ -40,7 +40,7 @@ const brotherAccount = Address.createFromRawAddress(brotherAddress);
 const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
 const sisterAccount = Address.createFromRawAddress(sisterAddress);
 
-const amount = XEM.createRelative(10); // 10 xem represent 10 000 000 micro xem
+const amount = NetworkCurrencyMosaic.createRelative(10); // 10 cat.currency represent 10 000 000 micro cat.currency
 
 const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);

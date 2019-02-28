@@ -75,7 +75,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 2. Alice creates a secret lock transaction, including:
 
-* The mosaic and amount to be sent: 10 [520597229,83226871] (alice tokens)
+* The mosaic and amount to be sent: ``10 [520597229,83226871]`` (alice tokens)
 * The recipient address: Bob's address in private chain
 * The secret: Hashed proof.
 * The amount of time in which funds can be unlocked: 96h
@@ -103,7 +103,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 5. Bob creates a secret lock transaction TX2, which contains:
 
-* The mosaic and amount to be sent: 10 [2061634929,1373884888] (bob token)
+* The mosaic and amount to be sent: ``10 [2061634929,1373884888]`` (bob token)
 * A recipient address: Alice's address in public chain
 * The secret that should be achieved to unlock the funds.
 * The amount of time in which funds can be unlocked: 84h

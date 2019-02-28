@@ -45,7 +45,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('sending 10 nem:NetworkCurrencyMosaic'),
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 03 - Create Aggregate Complete Transaction

@@ -50,7 +50,7 @@ const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
-    PlainMessage.create('send me 20 xem'),
+    PlainMessage.create('send me 20 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 const transferTransaction2 = TransferTransaction.create(

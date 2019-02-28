@@ -32,6 +32,7 @@ import {sha3_256} from 'js-sha3';
 import * as crypto from 'crypto';
 
 
+
 // 01 - Set up
 const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
 const alicePrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJIN);
@@ -45,9 +46,9 @@ const publicChainTransactionHttp = new TransactionHttp('http://localhost:3000');
 
 // 02 - Alice picks a random number and hashes it.
 const random = crypto.randomBytes(10);
+const proof = random.toString('hex');
 const hash = sha3_256.create();
 const secret = hash.update(random).hex().toUpperCase();
-const proof = random.toString('hex');
 
 // 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, alice token mosaicId, Amount, valid for 96h }
 const tx1 = SecretLockTransaction.create(
