@@ -36,7 +36,7 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [new Mosaic( new MosaicId([520597229,83226871]), UInt64.fromUint(10)),
+    [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(10)),
         NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
