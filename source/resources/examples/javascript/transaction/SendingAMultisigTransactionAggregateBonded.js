@@ -24,7 +24,7 @@ const Account = nem2Sdk.Account,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
@@ -33,6 +33,8 @@ const Account = nem2Sdk.Account,
     PublicAccount = nem2Sdk.PublicAccount,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
+
+
 
 // 01 - Set up
 const nodeUrl = 'http://localhost:3000';
@@ -51,8 +53,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 xem'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction
@@ -65,7 +67,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

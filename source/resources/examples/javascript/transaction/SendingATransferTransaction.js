@@ -24,7 +24,7 @@ const Account = nem2Sdk.Account,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     Address = nem2Sdk. Address;
 
 // 01 - Create Transfer Transaction
@@ -33,7 +33,7 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
+    [NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
 

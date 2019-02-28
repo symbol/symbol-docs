@@ -25,7 +25,7 @@ const Account = nem2Sdk.Account,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
@@ -45,20 +45,20 @@ const alicePrivateKey = process.env.PRIVATE_KEY;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
 const ticketDistributorPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
-const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey( ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
+const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
-    [XEM.createRelative(100)],
-    PlainMessage.create('send 100 nem:xem to distributor'),
+    [NetworkCurrencyMosaic.createRelative(100)],
+    PlainMessage.create('send 100 xem to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [new Mosaic( new MosaicId('museum:ticket'), UInt64.fromUint(1))],
-    PlainMessage.create('send 1 museum:ticket to alice'),
+    [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
+    PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Aggregate Transaction
@@ -71,7 +71,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

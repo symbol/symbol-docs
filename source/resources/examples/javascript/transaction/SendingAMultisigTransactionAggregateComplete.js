@@ -23,7 +23,7 @@ const Account = nem2Sdk.Account,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     Address = nem2Sdk.Address,
     PublicAccount = nem2Sdk.PublicAccount;
@@ -44,8 +44,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 nem:NetworkCurrencyMosaic'),
     NetworkType.MIJIN_TEST);
 
 // 03 - Create Aggregate Complete Transaction

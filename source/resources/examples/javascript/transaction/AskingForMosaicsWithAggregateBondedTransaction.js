@@ -15,7 +15,6 @@
  * limitations under the License.
  *
  */
-
 const nem2Sdk = require("nem2-sdk");
 const operators = require('rxjs/operators');
 
@@ -26,7 +25,7 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
     EmptyMessage = nem2Sdk.EmptyMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
@@ -51,13 +50,13 @@ const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
-    PlainMessage.create('send me 20 XEM'),
+    PlainMessage.create('send me 20 xem'),
     NetworkType.MIJIN_TEST);
 
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [XEM.createRelative(20)],
+    [NetworkCurrencyMosaic.createRelative(20)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 
@@ -73,7 +72,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 // 04 - Announcing the transaction with Alice account
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
