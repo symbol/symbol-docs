@@ -9,7 +9,7 @@
 Getting the amount of assets sent to an account
 ###############################################
 
-Check the amount of cat.currency you have sent to any account.
+Check the number of asset units you have sent to an account.
 
 *************
 Prerequisites
@@ -23,7 +23,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-In this example, we are going to check how many native currency mosaic units holds an account.
+In this example, we are going to check how many assets of a certain type have we sent to an account.
 
 .. example-code::
 

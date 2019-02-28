@@ -23,7 +23,7 @@ import {
     PublicAccount,
     TransactionType,
     TransferTransaction,
-    NetworkCurrencyMosaic
+    MosaicId
 } from 'nem2-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
@@ -34,8 +34,8 @@ const originAccount = PublicAccount.createFromPublicKey(originPublicKey, Network
 
 const recipientAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
 const address = Address.createFromRawAddress(recipientAddress);
-const mosaicId = NetworkCurrencyMosaic.MOSAIC_ID;
-const divisibility = NetworkCurrencyMosaic.DIVISIBILITY;
+const mosaicId = new MosaicId('7cdf3b117a3c40cc'); // Replace with mosaicId you want to check
+const divisibility = 6; // Replace with mosaic divisibility
 
 accountHttp
     .outgoingTransactions(originAccount)
@@ -44,12 +44,12 @@ accountHttp
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
         filter((_) => _.recipient.equals(address)), // Filter transactions from to account
-        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter xem transactions
+        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
         map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
         toArray(), // Add all mosaics amounts into one array
         map((_) => _.reduce((a, b) => a + b, 0))
     )
     .subscribe(
-        total => console.log('Total xem sent to account', address.pretty(), 'is:', total),
+        total => console.log('Total '+ mosaicId.toHex() +' sent to account', address.pretty(), 'is:', total),
         err => console.error(err)
     );
