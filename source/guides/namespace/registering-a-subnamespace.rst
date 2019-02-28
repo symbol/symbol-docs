@@ -26,9 +26,7 @@ Prerequisites
 *************
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM and at least one namespace
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and at least one namespace
 
 *************************
 Let’s get into some code

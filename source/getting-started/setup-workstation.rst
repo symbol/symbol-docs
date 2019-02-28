@@ -9,6 +9,8 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
+.. _setup-catapult-service-bootstrap:
+
 **********************************
 Running Catapult Service Bootstrap
 **********************************
@@ -37,9 +39,11 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
     $> curl localhost:3000/block/1
 
-***********************
-Creating a test account
-***********************
+.. _setup-getting-a-test-account:
+
+**********************
+Getting a test account
+**********************
 
 An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
@@ -55,42 +59,16 @@ Finally, the account address is generated with the public key, following the NEM
 
     $> sudo npm install --global nem2-cli
 
-2. Create an account with the command line tool.
-
-.. code-block:: bash
-
-    $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
-
-The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM blockchain used for development and testing purposes.
-
-Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
-
-3. You should be able to see the following lines in your terminal, containing the account credentials:
-
-    New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
-
-    Public Key:     33E0...6ED
-
-    Private Key:    0168...595
-
-******************************
-What is XEM and how to get it?
-******************************
-
-The underlying cryptocurrency of the NEM network is called **XEM**. Every action on the NEM blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
-
-Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
-
-1. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
 .. code-block:: bash
 
     $> cd  build/generated-addresses/
     $> cat addresses.yaml
 
-2. Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
+3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
 
-3. Load the first account as a profile in NEM2-CLI.
+4. Load the first account as a profile in NEM2-CLI.
 
 .. code-block:: bash
 
@@ -100,6 +78,16 @@ Let’s use an account which already has XEM. We will need it to register the na
     Introduce your private key: 41************************************************************FF
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
+
+You should see the following lines in your terminal, containing the account credentials:
+
+.. code-block:: bash
+
+    New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
+
+    Public Key:     33E0...6ED
+
+    Private Key:    41....FF
 
 .. _setup-development-environment:
 

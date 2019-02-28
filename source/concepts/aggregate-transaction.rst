@@ -39,7 +39,7 @@ Aggregate bonded
 
 An aggregate transaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10`` XEM.
+.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10 cat.currency``.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -65,9 +65,9 @@ In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mo
 Paying for others fees
 ======================
 
-Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XEM to pay the blockchain transaction fee.
+Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But she doesn’t have any cat.currency to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
+By creating an aggregate bonded transaction, she can convert USD to cat.currency to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -173,6 +173,6 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 xem``.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
     duration; uint64; The lock duration.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.

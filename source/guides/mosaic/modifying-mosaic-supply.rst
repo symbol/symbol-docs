@@ -16,9 +16,6 @@ Prerequisites
 *************
 
 - Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM
 - Have registered a supply mutable mosaic
 
 ************************

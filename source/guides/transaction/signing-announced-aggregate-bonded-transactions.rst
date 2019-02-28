@@ -16,10 +16,8 @@ Prerequisites
 *************
 
 - Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- Received some aggregate bonded transaction
-- NEM2-SDK
-- A text editor or IDE
-- An account with XEM
+- Have received an aggregate bonded transaction
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code

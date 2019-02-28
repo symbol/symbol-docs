@@ -56,10 +56,9 @@ Normalizing the language into NEM related concepts:
 Prerequisites
 *************
 
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`sending payouts with aggregate complete transactions <sending-payouts-with-aggregate-complete-transaction>`
-- NEM2-SDK
-- A text editor or IDE
 
 *************************
 Let's get into some code
@@ -78,19 +77,19 @@ In this example, Alice and a ticket distributor want to swap the following mosai
 .. csv-table::
         :header: "Owner", "Amount", "MosaicId", "Description"
 
-        Alice, 100, XEM, Native currency mosaic
-        Ticket distributor, 1, [520597229,83226871], Represents a museum ticket.
+        Alice, 100, cat.currency, Native currency mosaic
+        Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
 Before continuing, :doc:`create the museum ticket mosaic <../mosaic/creating-a-mosaic>`.
 
 **Mosaics swap**
 
-Alice will send a transaction to the ticket distributor exchanging 100 XEM for 1 [520597229,83226871] (museum ticket).
+Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-1. Create two  :ref:`transfer transaction <transfer-transaction>`:
+1. Create two  :ref:`transfer transactions <transfer-transaction>`:
 
-A. From Alice to the ticket distributor sending 100 XEM
-B. From the ticket distributor to Alice sending 1 [520597229,83226871].
+A. From Alice to the ticket distributor sending ``100 cat.currency``
+B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
 
 2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -110,7 +109,7 @@ In case that signatures are required from other participants and the transaction
         :language: javascript
         :lines:  40-62
 
-3. When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM. Once the ticket distributor signs the aggregate transaction, the amount of locked XEM becomes available again on Alice's account, and the exchange will get through.
+3. When an aggregate transaction is bonded, Alice will need to lock at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 

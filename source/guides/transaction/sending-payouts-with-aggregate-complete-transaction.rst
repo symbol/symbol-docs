@@ -30,9 +30,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
-- NEM2-SDK
-- A text editor or IDE
-- An account with XEM
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 *************************
 Let's get into some code

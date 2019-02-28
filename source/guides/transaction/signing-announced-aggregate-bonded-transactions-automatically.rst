@@ -16,10 +16,8 @@ Prerequisites
 *************
 
 - Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- Received some aggregate bonded transaction
-- NEM2-SDK
-- A text editor or IDE
-- An account with XEM
+- Have received some aggregate bonded transaction
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
@@ -77,7 +75,7 @@ Extend the previous function for signing transactions if they follow some constr
 * Aggregate transactions with two inner transactions.
 * Two inner transactions must be transfer transactions.
 * The transaction sending funds must have yourself as the signer.
-* The transaction sending funds should have only one mosaic, being this less than 100 XEM.
+* The transaction sending funds should have only one mosaic, being this less than ``100 cat.currency``.
 
 Try it yourself! Here you have a possible implementation:
 

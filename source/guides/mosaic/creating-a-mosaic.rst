@@ -15,10 +15,8 @@ Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>` .
 Prerequisites
 *************
 
-- Finish :doc:`setup your workstation <../../getting-started/setup-workstation>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
@@ -46,12 +44,12 @@ You will need to announce two transactions to create a mosaic:
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  33-52
+        :lines:  33-50
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 33-52
+        :lines: 33-50
 
 2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
 
@@ -60,12 +58,12 @@ You will need to announce two transactions to create a mosaic:
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  54-60
+        :lines:  52-57
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 54-60
+        :lines: 52-57
 
 3. Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -74,12 +72,12 @@ You will need to announce two transactions to create a mosaic:
     .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :caption: |creating-a-mosaic-ts|
         :language: typescript
-        :lines:  63-
+        :lines:  59-
 
     .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :caption: |creating-a-mosaic-js|
         :language: javascript
-        :lines: 63-
+        :lines: 59-
 
     .. literalinclude:: ../../resources/examples/cli/mosaic/CreatingAMosaic.sh
         :caption: |creating-a-mosaic-cli|

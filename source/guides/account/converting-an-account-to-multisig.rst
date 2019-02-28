@@ -32,11 +32,9 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 Prerequisites
 *************
 
-- Finish :doc:`creating and opening accounts guide <creating-and-opening-an-account>`
-- Text editor or IDE
-- NEM2-SDK or CLI
-- Two accounts (public keys)
-- One account with XEM
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Create :doc:`two accounts <creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code

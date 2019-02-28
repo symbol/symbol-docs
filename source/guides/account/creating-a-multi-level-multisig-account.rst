@@ -30,8 +30,7 @@ Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Text editor or IDE
-- NEM2-SDK or CLI
+- Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code

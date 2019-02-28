@@ -25,8 +25,6 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Text editor or IDE
-- NEM2-SDK or CLI
 
 ************************
 Let’s get into some code

@@ -36,9 +36,8 @@ However, they do not trust each other that much. Bob could decide his mosaics to
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- NEM2-SDK
-- A text editor or IDE
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Know how to :doc:`create mosaics <../mosaic/creating-a-mosaic>`
 
 ************************
 Let's get into some code

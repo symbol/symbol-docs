@@ -33,16 +33,15 @@ Prerequisites
 
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
-- NEM2-SDK
-- A text editor or IDE
-- An multisig account with XEM
-- An cosignatory account with XEM
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- An multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
+- An cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
 ************************
 
-Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 XEM.
+Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 cat.currency.
 
 1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
@@ -62,7 +61,7 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
 * Recipient: Grocery's address
 * Message: Grocery payment
-* Mosaics: [10 XEM]
+* Mosaics: [``10 cat.currency``]
 
 .. example-code::
 
@@ -141,7 +140,7 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. When an aggregate transaction is bonded, Bob needs to lock at least 10 cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

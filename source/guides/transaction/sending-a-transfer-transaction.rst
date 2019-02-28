@@ -16,9 +16,7 @@ Prerequisites
 #############
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********
 Background
@@ -30,7 +28,7 @@ Background
 
     Sending a transfer Transaction
 
-Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
 **Monitoring the transaction**
 
@@ -58,9 +56,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Let’s get into some code
 ************************
 
-Alice wants sends ``10 XEM`` to Bob. She wants to include a message, for example ``Welcome to NEM``.
-
-1. Create the transfer transaction, by including Bob address as the recipient, adding 10 XEM and the message requested.
+1. Create the transfer transaction, by including Bob address as the recipient, adding 10 cat.currency and the message requested.
 
 .. example-code::
 

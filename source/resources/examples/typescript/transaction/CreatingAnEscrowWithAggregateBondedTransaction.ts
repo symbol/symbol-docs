@@ -57,7 +57,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [new Mosaic(new MosaicId([520597229,83226871]), UInt64.fromUint(1))],
+    [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
 

@@ -72,7 +72,7 @@ The harvesting nodes can decide their transaction inclusion strategy:
 * **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
 * **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
+By default, the fee is paid in ``cat.currency``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
 
 .. _transaction-signature:
 

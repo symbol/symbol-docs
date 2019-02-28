@@ -19,16 +19,14 @@ Namespaces allow you to create an on-chain **unique place** for your business an
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <../../concepts/account>` creates a namespace, that will appear as unique in the network.
 
-An account can link a registered name (namespace or subnamespace) with an :doc:`account <../../concepts/account>` or a:doc:`mosaic <../../concepts/mosaic >` identifier.
+An account can link a registered name (namespace or subnamespace) with an :doc:`account <../../concepts/account>` or a :doc:`mosaic <../../concepts/mosaic>` identifier.
 
 *************
 Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code

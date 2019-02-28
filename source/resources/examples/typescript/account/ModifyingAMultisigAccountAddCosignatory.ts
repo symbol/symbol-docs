@@ -29,7 +29,7 @@ import {
     PublicAccount,
     TransactionHttp,
     UInt64,
-    XEM
+    NetworkCurrencyMosaic
 } from "nem2-sdk";
 import {filter, mergeMap} from 'rxjs/operators';
 
@@ -68,7 +68,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 // 04 - Announce transaction
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

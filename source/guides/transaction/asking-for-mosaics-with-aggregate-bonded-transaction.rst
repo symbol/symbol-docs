@@ -15,9 +15,9 @@ Ask an account to send you funds using an :ref:`aggregate bonded transaction <ag
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- A text editor or IDE
-- An account with XEM
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code
@@ -29,7 +29,7 @@ Let’s get into some code
 
     Asking for mosaics with an aggregate bonded transaction
 
-Alice wants to ask Bob for 20 XEM. 
+Alice wants to ask Bob for 20 cat.currency.
 
 1. Set up both Alice's and Bob's accounts.
 
@@ -69,7 +69,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
 * message: empty
 * receiver: Alice address
-* mosaics: 20 XEM
+* mosaics: 20 cat.currency
 * signer: Bob
 
 .. example-code::
@@ -98,7 +98,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :language: javascript
         :lines:  65-71
 
-4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
+4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 cat.currency.
 
 .. example-code::
 
