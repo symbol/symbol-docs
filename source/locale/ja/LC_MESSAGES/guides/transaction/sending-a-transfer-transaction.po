@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
-"PO-Revision-Date: 2019-02-13 13:10+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:10
 msgid "Sending a transfer transaction"
@@ -28,7 +29,7 @@ msgstr "転送トランザクションの送信"
 msgid ""
 "Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two "
 "accounts."
-msgstr ":doc:`モザイク <../../concepts/mosaic>` とメッセージを２つのアカウント間で転送します。"
+msgstr ":doc:`モザイク <../../concepts/mosaic>` とメッセージを2つのアカウント間で転送します。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:16
 msgid "Prerequisites"
@@ -38,7 +39,7 @@ msgstr "前提条件"
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了していること"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:19
 msgid "NEM2-SDK or CLI"
@@ -46,7 +47,7 @@ msgstr "NEM2-SDK または CLI"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:20
 msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:21
 msgid "An account with XEM"
@@ -62,11 +63,11 @@ msgstr "転送トランザクションの送信"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:33
 msgid ""
-"Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-"
-"BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``."
+"Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-"
+"EKP2TA-PUKF4N-Y3L5HR-IR54``."
 msgstr ""
-"ALICE は BOB のアドレスである ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54`` に"
-" 10 XEM を送ろうとしています。"
+"Alice は Bob のアドレスである ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54`` に 10"
+" XEM を送ろうとしています。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:35
 msgid "**Monitoring the transaction**"
@@ -74,23 +75,23 @@ msgstr "**トランザクションの監視**"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:37
 msgid ""
-"Once an account announces a transaction, the server will always return an"
-" OK response. Receiving an OK response does not mean the transaction is "
-"valid. A good practice is to monitor transactions before being announced."
+"Once an account announces a transaction, the server will always return an OK"
+" response. Receiving an OK response does not mean the transaction is valid. "
+"A good practice is to monitor transactions before being announced."
 msgstr ""
 "アカウントがトランザクションをアナウンスすると、サーバは常に OKを返します。OK "
 "のレスポンスを受信することは、トランザクションが正当であることを意味するわけではありません。トランザクションをアナウンスする前に監視を始めておくのがよいでしょう。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:39
 msgid ""
-"To understand the transaction lifecycle, we recommend you to open three "
-"new terminals. The first terminal :doc:`monitors announced "
+"To understand the transaction lifecycle, we recommend you to open three new "
+"terminals. The first terminal :doc:`monitors announced "
 "transactions<../transaction/monitoring-a-transaction-status>` validation "
 "errors."
 msgstr ""
 "トランザクションのライフサイクルを理解するために、ターミナルを3つ開くことをおすすめします。最初のターミナルには バリデーションエラーのある "
-":doc:`アナウンスされたトランザクションの監視 <../transaction/monitoring-a-transaction-"
-"status>` 。"
+":doc:`アナウンスされたトランザクションの監視 <../transaction/monitoring-a-transaction-status>` "
+"。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:45
 msgid ""
@@ -102,7 +103,7 @@ msgstr "``未承認`` の監視はトランザクションがネットワーク�
 msgid ""
 "Once a transaction is included, you will see it under the ``confirmed`` "
 "terminal."
-msgstr "トランザクションが取り込まれると ``confirmed`` の下に表示されるでしょう:。"
+msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:59
 msgid "Let’s get into some code"
@@ -113,13 +114,13 @@ msgid ""
 "Alice wants sends ``10 XEM`` to Bob. She wants to include a message, for "
 "example ``Welcome to NEM``."
 msgstr ""
-"ALICE は BOB に ``10 XEM`` 送ろうとしています。彼女は ``Welcome to NEM`` "
-"のようなメッセージを含めたいです。"
+"Alice は Bob に ``10 XEM`` 送ろうとしています。彼女はメッセージとして ``Welcome to NEM`` "
+"を添付しようと思っています。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:63
 msgid ""
-"Create the transfer transaction, by including Bob address as the "
-"recipient, adding 10 XEM and the message requested."
+"Create the transfer transaction, by including Bob address as the recipient, "
+"adding 10 XEM and the message requested."
 msgstr "Bob のアドレスを受信者とし、要求された10 XEM とメッセージを追加して、トランスファートランザクションを作成してください。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:67
@@ -143,15 +144,15 @@ msgstr ""
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:82
 msgid ""
 "Although the transaction is created, it has not been announced to the "
-"network yet. Alice must sign the transaction with her account first so "
-"that the network can verify its authenticity."
+"network yet. Alice must sign the transaction with her account first so that "
+"the network can verify its authenticity."
 msgstr ""
-"トランザクションは作られましたが、まだネットワークへはアナウンスされていません。ネットワークがその正当性を確認できるように、ALICE "
+"トランザクションは作られましたが、まだネットワークへはアナウンスされていません。ネットワークがその正当性を確認できるように、Alice "
 "が彼女のアカウントでトランザクションに署名をします。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:84
 msgid "Sign the transaction with Alice account."
-msgstr "ALICE のアカウントでトランザクションに署名します。"
+msgstr "Alice のアカウントでトランザクションに署名します。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:103
 msgid ""
@@ -164,31 +165,31 @@ msgid "|sending-a-transfer-transaction-cli|"
 msgstr ""
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:127
-#, fuzzy
 msgid ""
-"Open the terminal where you are monitoring account transactions "
-"``status``. It should be empty. If there is an error, you can check "
-":ref:`the error code here <status-errors>`."
+"Open the terminal where you are monitoring account transactions ``status``. "
+"It should be empty. If there is an error, you can check :ref:`the error code"
+" here <status-errors>`."
 msgstr ""
 "アカウントのトランザクションの ``ステータス`` "
-"を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は :ref:`エラーコード"
-" <status-errors>` で確認できます。"
+"を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は :ref:`エラーコード "
+"<status-errors>` で確認できます。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:129
 msgid ""
 "A new transaction should have appeared in the terminal where you are "
-"monitoring ``unconfirmed``. At this point, the transaction has reached "
-"the network, but it is not clear if it will get included in a block."
+"monitoring ``unconfirmed``. At this point, the transaction has reached the "
+"network, but it is not clear if it will get included in a block."
 msgstr ""
 "``未承認`` "
 "を監視しているターミナルに新しいトランザクションが現れたはずです。この時点でトランザクションはネットワークに到達しましたが、ブロックに取り込まれるかどうかは不明です。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:131
 msgid ""
-"If it is included in a block, the transaction gets processed, and the "
-"amount stated in the transaction gets transferred from the sender's "
-"account to the recipient's account."
-msgstr "ブロックに取り込まれた場合、トランザクションの処理が始まり、トランザクションに記載された総量が送信者アカウントから受信者アカウントへ転送されます。"
+"If it is included in a block, the transaction gets processed, and the amount"
+" stated in the transaction gets transferred from the sender's account to the"
+" recipient's account."
+msgstr ""
+"ブロックに取り込まれた場合、トランザクションの処理が始まり、トランザクションに記載された総量が送信者アカウントから受信者アカウントへ転送されます。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:135
 msgid "What's next?"
@@ -208,15 +209,15 @@ msgstr "同じトランザクションで複数のモザイクを送信する"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:147
 msgid ""
-"As you may have noticed, transfer transactions require an array of "
-"mosaics as a parameter, allowing to send transfer transactions with "
-"multiple mosaics at the same time."
-msgstr "すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とするので、一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
+"As you may have noticed, transfer transactions require an array of mosaics "
+"as a parameter, allowing to send transfer transactions with multiple mosaics"
+" at the same time."
+msgstr ""
+"すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とするので、一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:149
 msgid ""
-"If you own more than one mosaic, send them together in the same "
-"transaction:"
+"If you own more than one mosaic, send them together in the same transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信してください:"
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:153
@@ -234,4 +235,3 @@ msgstr ""
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:168
 msgid "|sending-a-transfer-transaction-with-multiple-mosaics-cli|"
 msgstr ""
-

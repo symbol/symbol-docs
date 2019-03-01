@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "暗号理論"
 msgid ""
 "NEM is using cryptography based on **Elliptic Curve Cryptography**. The "
 "choice of the underlying curve is important to guarantee security and speed."
-msgstr "NEMは、**楕円曲線暗号** に基づく暗号を使用しています。基礎となる曲線の選択は、セキュリティとスピードを保証する上で重要なことです。"
+msgstr "NEMは **楕円曲線暗号** に基づく暗号を使用しています。基礎となる曲線の選択は、セキュリティとスピードを保証する上で重要です。"
 
 #: ../../source/concepts/cryptography.rst:11
 msgid "Private and public key"
@@ -41,8 +41,8 @@ msgid ""
 "cryptographically derived from the private key. NEM is using the ``Ed25519 "
 "elliptic curve`` with the ``sha3`` hashing algorithm."
 msgstr ""
-"**秘密鍵** はランダムな256bitの整数です。**公開鍵** は秘密鍵から暗号学的に導出されます。NEM では ``Ed25519曲線`` と "
-"``sha3`` ハッシュアルゴリズムを使用しています。"
+"**秘密鍵** はランダムな 256-bit の整数です。**公開鍵** は秘密鍵から暗号学的に導出されます。NEM では ``Ed25519曲線`` "
+"と ``sha3`` ハッシュアルゴリズムを使用しています。"
 
 #: ../../source/concepts/cryptography.rst:19
 msgid "Address"
@@ -50,7 +50,7 @@ msgstr "アドレス"
 
 #: ../../source/concepts/cryptography.rst:21
 msgid "A NEM address is a base-32 :sup:`3` encoded triplet consisting of:"
-msgstr "NEM アドレスは BASE 32 :sup:`3` エンコードトリプレットです:"
+msgstr "NEM アドレスは base-32 :sup:`3` エンコードトリプレットです:"
 
 #: ../../source/concepts/cryptography.rst:23
 msgid "Network byte"
@@ -58,7 +58,7 @@ msgstr "ネットワークバイト"
 
 #: ../../source/concepts/cryptography.rst:24
 msgid "160-bit hash of the account's public key"
-msgstr "アカウントの公開鍵の 160 bit ハッシュ"
+msgstr "アカウントの公開鍵の 160-bit ハッシュ"
 
 #: ../../source/concepts/cryptography.rst:25
 msgid "4 byte checksum, to allow quick recognition of mistyped addresses."
@@ -75,11 +75,11 @@ msgstr "公開鍵に 256-bit sha3 を適用します。"
 
 #: ../../source/concepts/cryptography.rst:30
 msgid "Perform 160-bit Ripemd of hash resulting from step 1."
-msgstr "ステップ1の結果に 160 bit Ripemd ハッシュを適用します。"
+msgstr "ステップ 1 の結果に 160-bit Ripemd ハッシュを適用します。"
 
 #: ../../source/concepts/cryptography.rst:31
 msgid "Prepend version byte to Ripemd hash (either 0x68 or 0x98)."
-msgstr "Ripemd ハッシュにバージョン byte (0x68 か 0x98) を接頭します。"
+msgstr "Ripemd ハッシュにバージョンバイト (0x68 か 0x98) を接頭します。"
 
 #: ../../source/concepts/cryptography.rst:32
 msgid ""
@@ -88,7 +88,7 @@ msgstr "結果に 256-bit sha3 を適用し、最初の 4 byte をチェック�
 
 #: ../../source/concepts/cryptography.rst:33
 msgid "Concatenate output of step 3 and the checksum from step 4."
-msgstr "ステップ3の出力とステップ4のチェックサムを結合します。"
+msgstr "ステップ 3 の出力とステップ4のチェックサムを結合します。"
 
 #: ../../source/concepts/cryptography.rst:34
 msgid "Encode result using base32."

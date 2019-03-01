@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
-"PO-Revision-Date: 2019-02-13 13:09+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:06+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/getting-started/setup-workstation.rst:8
 msgid "Setting up your workstation"
@@ -26,8 +27,8 @@ msgstr "ワークステーションのセットアップ"
 
 #: ../../source/getting-started/setup-workstation.rst:10
 msgid ""
-"This first guide will walk you through a step-by-step installation of the"
-" required tools to start developing on NEM."
+"This first guide will walk you through a step-by-step installation of the "
+"required tools to start developing on NEM."
 msgstr "最初のガイドでは、NEM で開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
 #: ../../source/getting-started/setup-workstation.rst:14
@@ -37,27 +38,27 @@ msgstr "Catapult サービスのブートストラップの実行"
 #: ../../source/getting-started/setup-workstation.rst:20
 msgid ""
 "**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain "
-"network. **Catapult Rest nodes** (layer 2) provide the API gateway that "
-"the applications may use to access the blockchain and its features."
+"network. **Catapult Rest nodes** (layer 2) provide the API gateway that the "
+"applications may use to access the blockchain and its features."
 msgstr ""
 "**Catapult サーバノード** (第1層) はP2Pブロックチェーンネットワークを構築します。**Catapult Rest ノード** "
 "(第2層) はアプリケーションがブロックチェーンとその機能にアクセスするためのAPIゲートウェイを提供します。"
 
 #: ../../source/getting-started/setup-workstation.rst:22
 msgid ""
-"You are going to run a private chain for learning purposes using "
-"|catapult-service-bootstrap|. This service runs Catapult server instances"
-" and Catapult REST nodes locally."
+"You are going to run a private chain for learning purposes using |catapult-"
+"service-bootstrap|. This service runs Catapult server instances and Catapult"
+" REST nodes locally."
 msgstr ""
-"|catapult-service-bootstrap| "
-"を使用して学習用のプライベートチェーンを可動させていきます。このサービスは、Catapult サーバーインスタンスと Catapult "
-"RESTノードをローカルで実行します。"
+"|catapult-service-bootstrap| を使用して学習用のプライベートチェーンを可動させていきます。このサービスは、Catapult "
+"サーバーインスタンスと Catapult RESTノードをローカルで実行します。"
 
 #: ../../source/getting-started/setup-workstation.rst:24
 msgid ""
-"Make sure you have `docker`_ and `docker-compose`_ installed before "
-"running the following commands:"
-msgstr "以下のコマンドを実行する前に、 `docker`_ と `docker-compose`_ がインストールされていることを確認してください:"
+"Make sure you have `docker`_ and `docker-compose`_ installed before running "
+"the following commands:"
+msgstr ""
+"以下のコマンドを実行する前に、 `docker`_ と `docker-compose`_ がインストールされていることを確認してください:"
 
 #: ../../source/getting-started/setup-workstation.rst:32
 msgid ""
@@ -77,12 +78,11 @@ msgstr "テストアカウントの作成"
 
 #: ../../source/getting-started/setup-workstation.rst:44
 msgid ""
-"An account is a key pair (private and public key) associated to a mutable"
-" state stored in the NEM blockchain. In other words, you have a deposit "
-"box on the blockchain, which only you can modify with your key pair. As "
-"the name suggests, the private key has to be kept secret at all times. "
-"Anyone with access to the private key, ultimately has control over the "
-"account."
+"An account is a key pair (private and public key) associated to a mutable "
+"state stored in the NEM blockchain. In other words, you have a deposit box "
+"on the blockchain, which only you can modify with your key pair. As the name"
+" suggests, the private key has to be kept secret at all times. Anyone with "
+"access to the private key, ultimately has control over the account."
 msgstr ""
 "アカウントとは、NEM "
 "ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーペアでのみ変更をすることができます。秘密鍵はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人は誰でも、アカウントを完全にコントロールできてしまいます。"
@@ -90,26 +90,25 @@ msgstr ""
 #: ../../source/getting-started/setup-workstation.rst:46
 msgid ""
 "The **public key** is cryptographically derived from the private key. It "
-"would take millions of years to do the reverse process and therefore, the"
-" public key is safe to be shared."
+"would take millions of years to do the reverse process and therefore, the "
+"public key is safe to be shared."
 msgstr "**公開鍵** は暗号理論によって秘密鍵から算出されます。秘密鍵を公開鍵から逆算するには100万年程度はかかるため、共有しても安全です。"
 
 #: ../../source/getting-started/setup-workstation.rst:48
 msgid ""
-"Finally, the account address is generated with the public key, following "
-"the NEM blockchain protocol. Share this address instead of the public "
-"key, as it contains more information, such as a validity check or which "
-"network it uses (public, testnet or private)."
+"Finally, the account address is generated with the public key, following the"
+" NEM blockchain protocol. Share this address instead of the public key, as "
+"it contains more information, such as a validity check or which network it "
+"uses (public, testnet or private)."
 msgstr ""
 "最後に、アカウントのアドレスは、NEM "
 "ブロックチェーンプロトコルに従って、公開鍵から生成されます。このアドレスには正当性チェックや使用されているネットワーク(パブリック、テストネットまたはプライベート)などのより多くの情報が含まれているので、公開鍵の代わりにアドレスを共有してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:50
-#, fuzzy
 msgid ""
 ":doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most "
-"commonly used commands from your terminal i.e. using it to interact with "
-"the blockchain, setting up an account, sending funds, etc."
+"commonly used commands from your terminal i.e. using it to interact with the"
+" blockchain, setting up an account, sending funds, etc."
 msgstr ""
 ":doc:`NEM2-CLI <../cli>` "
 "はブロックチェーンとの疎通、アカウントのセットアップや資産の送信など、特によく使うコマンドをターミナルから実行するのに便利です。"
@@ -124,8 +123,8 @@ msgstr "コマンドラインツールでアカウントを作成します。"
 
 #: ../../source/getting-started/setup-workstation.rst:64
 msgid ""
-"The ``network flag`` is set to MIJIN_TEST. Test network is an alternative"
-" NEM blockchain used for development and testing purposes."
+"The ``network flag`` is set to MIJIN_TEST. Test network is an alternative "
+"NEM blockchain used for development and testing purposes."
 msgstr ""
 "``network フラグ`` は MIJIN_TEST にセットします。テストネットワークとは開発やテストに使うための代替の NEM "
 "ブロックチェーンです。"
@@ -140,8 +139,8 @@ msgstr ""
 
 #: ../../source/getting-started/setup-workstation.rst:68
 msgid ""
-"You should be able to see the following lines in your terminal, "
-"containing the account credentials:"
+"You should be able to see the following lines in your terminal, containing "
+"the account credentials:"
 msgstr "アカウントの認証情報を含む、以下の行がターミナルに表示されるはずです:"
 
 #: ../../source/getting-started/setup-workstation.rst:70
@@ -162,29 +161,29 @@ msgstr "XEM とは何ですか？どうやって入手できますか？"
 
 #: ../../source/getting-started/setup-workstation.rst:80
 msgid ""
-"The underlying cryptocurrency of the NEM network is called **XEM**. Every"
-" action on the NEM blockchain costs XEM, in order to provide an incentive"
-" for those who validate and secure the network."
+"The underlying cryptocurrency of the NEM network is called **XEM**. Every "
+"action on the NEM blockchain costs XEM, in order to provide an incentive for"
+" those who validate and secure the network."
 msgstr ""
 "NEM ネットワークの基軸となる暗号通貨は **XEM** と呼ばれます。NEM ブロックチェーン上のすべてのアクションはコストとして XEM "
 "を消費します。ネットワークの検証と保護を行う人へのインセンティブを提供するためです。"
 
 #: ../../source/getting-started/setup-workstation.rst:82
 msgid ""
-"Let’s use an account which already has XEM. We will need it to register "
-"the namespace and mosaic."
+"Let’s use an account which already has XEM. We will need it to register the "
+"namespace and mosaic."
 msgstr "すでに XEM を保有しているアカウントを使用しましょう。ネームスペースとモザイクを登録するのに必要です。"
 
 #: ../../source/getting-started/setup-workstation.rst:84
 msgid ""
-"Open a terminal, and go to the directory where you have download Catapult"
-" Bootstrap Service."
+"Open a terminal, and go to the directory where you have download Catapult "
+"Bootstrap Service."
 msgstr "ターミナルを開き、 Catapult Bootstrap Service をダウンロードしたディレクトリへ移動してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:91
 msgid ""
-"Under the section ``nemesis_addresses``, you will find the key pairs "
-"which contain XEM."
+"Under the section ``nemesis_addresses``, you will find the key pairs which "
+"contain XEM."
 msgstr "``nemesis_addresses`` のセクションから、XEM を保有するキーペアを見つけてください。"
 
 #: ../../source/getting-started/setup-workstation.rst:93
@@ -250,8 +249,8 @@ msgstr ""
 
 #: ../../source/getting-started/setup-workstation.rst:161
 msgid ""
-"Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. "
-"Use your favourite IDE or create a project from the command line."
+"Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use "
+"your favourite IDE or create a project from the command line."
 msgstr ""
 "新しく Java `gradle`_ プロジェクトを開いてください。`JDK`_ は最低でも JDK 8 "
 "が必要です。お気に入りのIDEを使用するか、コマンドラインからプロジェクトを作成してください。"
@@ -274,16 +273,16 @@ msgstr ""
 
 #: ../../source/getting-started/setup-workstation.rst:188
 msgid ""
-"Create a new project using a C# IDE. If it is Visual Studio, use the "
-"Package Manager Console to install the nem2-sdk."
+"Create a new project using a C# IDE. If it is Visual Studio, use the Package"
+" Manager Console to install the nem2-sdk."
 msgstr ""
 "C# IDE で新しくプロジェクトを作成します。Visual Studio であれば、nem2-sdk "
 "のインストールにパッケージマネージャコンソールを使用してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:190
 msgid ""
-"Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu"
-" command."
+"Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu "
+"command."
 msgstr "``Tools > NuGet Package Manager > Package Manager Console`` を開きます。"
 
 #: ../../source/getting-started/setup-workstation.rst:192
@@ -292,11 +291,11 @@ msgstr "nem2-sdk とリアクティブライブラリパッケージ名をター
 
 #: ../../source/getting-started/setup-workstation.rst:199
 msgid ""
-"Are you using another IDE? In that case check |different-ways-to-"
-"install-a-nuget-package|."
-msgstr "他のIDEをお使いですか？ |different-ways-to-install-a-nuget-package| を参考にしてみてください。"
+"Are you using another IDE? In that case check |different-ways-to-install-a"
+"-nuget-package|."
+msgstr ""
+"他のIDEをお使いですか？ |different-ways-to-install-a-nuget-package| を参考にしてみてください。"
 
 #: ../../source/getting-started/setup-workstation.rst:201
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>` 。"
-

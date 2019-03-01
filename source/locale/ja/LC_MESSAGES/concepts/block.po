@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:04+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,13 +43,13 @@ msgstr ""
 msgid ""
 "Blocks are stored in a database as permanent medium. NEM calls the first "
 "block in the chain the nemesis block."
-msgstr "ブロックはデータベースに永続的なメディアとして保存されます。NEMはチェーン内の最初のブロックであるネメシスブロックを呼び出します。"
+msgstr "ブロックはデータベースに永続的なメディアとして保存されます。NEM はチェーン内の最初のブロックであるネメシスブロックを呼び出します。"
 
 #: ../../source/concepts/block.rst:13
 msgid ""
 "NEM blocks complete every ``15`` seconds, making transactions confirm "
 "quickly enough for everyday use."
-msgstr "NEMブロックは ``15`` 秒毎に完了し、日々の使用に対して十分にトランザクションを承認します。"
+msgstr "NEM ブロックは ``15`` 秒毎に完了し、日々の使用に対して十分にトランザクションを承認します。"
 
 #: ../../source/concepts/block.rst:15
 msgid ""
@@ -59,7 +59,7 @@ msgid ""
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークでは異なる可能性があります。"
+"です。公開ネットワークとは異なる可能性があります。"
 
 #: ../../source/concepts/block.rst:19
 msgid "Block creation"
@@ -87,7 +87,7 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/block.rst:42
 msgid "BlockHeader"
-msgstr "ブロックヘッダ"
+msgstr ""
 
 #: ../../source/concepts/block.rst:44
 msgid "**Inlines:**"

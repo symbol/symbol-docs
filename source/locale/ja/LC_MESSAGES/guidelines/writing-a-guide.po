@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# Yoshiyuki Ieyama, 2019
-#
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:12+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guidelines/writing-a-guide.rst:5
 msgid "Writing a guide"
@@ -30,7 +31,7 @@ msgstr "新しいガイドの記述を検討してくれてありがとう！"
 
 #: ../../source/guidelines/writing-a-guide.rst:11
 msgid "Before starting"
-msgstr "はじめる前に"
+msgstr "始める前に"
 
 #: ../../source/guidelines/writing-a-guide.rst:13
 msgid ""
@@ -39,7 +40,7 @@ msgid ""
 " to be written. They have the label \"great new issue\"."
 msgstr ""
 "`nem2-docs リポジトリ issues <https://github.com/nemtech/nem2-docs/issues>`_ "
-"を開き、記述しようとしているアイディアを探してください。それらは \"great new issue\" を持っています。"
+"を開き、記述しようとしているアイディアを探してください。それらは \"great new issue\" ラベルを持っています。"
 
 #: ../../source/guidelines/writing-a-guide.rst:15
 msgid ""
@@ -142,7 +143,7 @@ msgstr "pipを使用した要求環境のインストール"
 
 #: ../../source/guidelines/writing-a-guide.rst:54
 msgid "Create a new ``rst`` file inside one of the guides folder,"
-msgstr "ガイドのフォルダ内に、新しく ``rst`` を作成します。"
+msgstr "ガイドのフォルダ内に新しく ``rst`` を作成します。"
 
 #: ../../source/guidelines/writing-a-guide.rst:60
 msgid "Use the following template to organize your content."

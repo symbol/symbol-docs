@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -156,7 +156,7 @@ msgid ""
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークとは異なる可能性があります。"
+"です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/mosaic.rst:46
 msgid "MosaicDefinitionTransaction"
@@ -356,7 +356,7 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic supply is mutable."
-msgstr "モザイク供給量は変更可能です。"
+msgstr "モザイク供給量は変更可能"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "0x02"
@@ -364,7 +364,7 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic is transferable."
-msgstr "モザイクは転送可能です。"
+msgstr "モザイクは転送可能"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "0x04"
@@ -372,7 +372,7 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic levy is mutable"
-msgstr "モザイク手数料は変更可能です。"
+msgstr "モザイク手数料は変更可能"
 
 #: ../../source/concepts/mosaic.rst:146
 msgid "MosaicSupplyChangeDirection"

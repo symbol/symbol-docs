@@ -43,7 +43,7 @@ An aggregate transaction is **bonded** when it requires signatures from other pa
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
-Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature-transaction>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
+Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
