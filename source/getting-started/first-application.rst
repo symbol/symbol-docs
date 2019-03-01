@@ -202,7 +202,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
    .. code-block:: bash
 
-       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company.ticket::1 --message enjoy_your_ticket
+       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
