@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:09+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:06+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +55,7 @@ msgid ""
 "victim of buying a fake or duplicate ticket, where the initial original "
 "vendor can't do anything to solve the issue."
 msgstr ""
-"最初の販売者ではない人からチケットを購入しても、必ずしもそのチケットの料金をさらに支払うという意味ではありません。これは、最初の販売者が問題の解決のために何もできない、偽の、もしくは複製されたチケットを購入してしまう被害者となる機会です。"
+"最初の販売者ではない人からチケットを購入しても、必ずしもそのチケットの料金をさらに支払うという意味ではありません。これは最初の販売者が、問題の解決のために何もできない、偽造もしくは複製されたチケットを購入してしまう、被害者となる機会です。"
 
 #: ../../source/getting-started/first-application.rst:15
 msgid "**What do we want to solve?**"
@@ -83,7 +83,7 @@ msgstr "未認証のチケットとその複製の防止。"
 
 #: ../../source/getting-started/first-application.rst:29
 msgid "**Why should we use NEM?**"
-msgstr "**何故NEMを使うのでしょう？**"
+msgstr "**何故 NEM を使うのでしょう？**"
 
 #: ../../source/getting-started/first-application.rst:31
 msgid "Blockchain technology makes sense in cases where:"
@@ -108,8 +108,8 @@ msgid ""
 "through **API calls** for transfer and storage of value, authorization, "
 "traceability, and identification."
 msgstr ""
-"NEMは **フレキシブルなブロックチェーン** テクノロジーです。すべてのアプリケーションロジックをブロックチェーンにアップロードする代わりに、 "
-"**API呼び出し** によってテスト済みの機能を使用して、価値、認可、トレーサビリティ、そして認証の移転と格納を行うことができます。"
+"NEM は **フレキシブルなブロックチェーン** テクノロジーです。すべてのアプリケーションロジックをブロックチェーンにアップロードする代わりに、 "
+"**API 呼び出し** によってテスト済みの機能を使用して、価値、認可、トレーサビリティ、そして認証の移転と格納を行うことができます。"
 
 #: ../../source/getting-started/first-application.rst:39
 msgid ""
@@ -256,7 +256,7 @@ msgid ""
 " ticket to the creator of the mosaic, avoiding the ticket reselling."
 msgstr ""
 "チケットを NEM モザイクとして表現しています。 :doc:`モザイク <../concepts/mosaic>` "
-"はブロックチェーン上で、モノ、チケット、クーポン、株式そして暗号通貨のような、あらゆる資産を表現します。それらは作成時に定義される変更可能なプロパティを持ちます。例えば、"
+"はブロックチェーン上で、モノ、チケット、クーポン、株式そして暗号通貨のような、あらゆる資産を表現します。それらは作成時に定義される変更可能なプロパティを持ちます。例えば"
 " **転送可能プロパティを false** "
 "に設定します。これは、チケットの転売を防止するために、チケット購入者がモザイクの作成者だけに送り返すことしかできないことを意味します。"
 
@@ -298,7 +298,7 @@ msgstr "``ticket`` という名前のモザイクを作成します。"
 msgid ""
 "It should be under the ``company`` namespace , with a total supply of "
 "``100``."
-msgstr "これは、供給量が ``100`` で、 ``company`` ネームスペース配下にあるべきです。"
+msgstr "これは供給量が ``100`` で ``company`` ネームスペース配下にあるべきです。"
 
 #: ../../source/getting-started/first-application.rst:138
 msgid "The mosaic is configured with ``transferability`` set so false."

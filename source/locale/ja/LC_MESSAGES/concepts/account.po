@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:04+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgid ""
 "account."
 msgstr ""
 "アカウントとは、NEM ブロックチェーン上に保存される変更可能な状態に関連付く **キーペア** "
-"(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーでのみ変更をすることができます。秘密鍵はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人は誰でも、アカウントを完全にコントロールできてしまいます。"
+"(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーでのみ変更をすることができます。秘密鍵はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人なら、誰でもアカウントを完全にコントロールできてしまいます。"
 
 #: ../../source/concepts/account.rst:7
 msgid ""
@@ -63,14 +63,14 @@ msgid ""
 "private key to an account can initiate any account related action."
 msgstr ""
 ":ref:`プライベートキー <keypair>` "
-"はアカウントのものです。アカウントに紐づくプライベートキーを持っているひとは誰でも、アカウントに関するアクションを実行できます。"
+"はアカウントのものです。アカウントに紐づくプライベートキーを持っている人なら、誰でもアカウントに関するアクションを実行できます。"
 
 #: ../../source/concepts/account.rst:15
 msgid ""
 "The private key must be kept secret at all costs. Make sure your private key"
 " is backed up safely somewhere offline."
 msgstr ""
-"プライベートキーはどんなにコストを掛けても必ず秘密にしてください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
+"プライベートキーはどんなコストを掛けてでも、必ず秘密にしてください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
 
 #: ../../source/concepts/account.rst:17
 msgid "**Public key**"
@@ -96,7 +96,7 @@ msgid ""
 "the derived address instead, as it is shorter and gathers more information."
 msgstr ""
 "各アカウントは一意な :ref:`アドレス <address>` "
-"を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出アドレスを共有するでしょう。"
+"を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出されたアドレスを共有するでしょう。"
 
 #: ../../source/concepts/account.rst:25
 msgid "**Mosaics**"

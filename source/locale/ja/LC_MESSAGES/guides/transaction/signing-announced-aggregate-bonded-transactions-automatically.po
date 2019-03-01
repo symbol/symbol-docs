@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:10+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:10
 msgid "Signing announced aggregate bonded transactions automatically"
-msgstr "アナウンス済みのアグリゲートボンドトランザクションへの署名の自動化"
+msgstr "アナウンス済みのアグリゲートボンドトランザクションへの署名を自動化する"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:12
 msgid "Sign automatically transactions pending to be cosigned."
@@ -38,12 +38,12 @@ msgid ""
 "Finish :doc:`creating an escrow with aggregate bonded transaction guide "
 "<creating-an-escrow-with-aggregate-bonded-transaction>`"
 msgstr ""
-":doc:`アグリゲートボンドトランザクションによるエスクローの作成ガイド <creating-an-escrow-with-aggregate-"
-"bonded-transaction>` を完了していること"
+":doc:`アグリゲートボンドトランザクションを使ったエスクローの作成ガイド <creating-an-escrow-with-aggregate-"
+"bonded-transaction>` を終了している"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:19
 msgid "Received some aggregate bonded transaction"
-msgstr "アグリゲートボンドトランザクションを受信していること"
+msgstr "アグリゲートボンドトランザクションを受信している"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:20
 msgid "NEM2-SDK"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:21
 msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:22
 msgid "An account with XEM"
@@ -63,7 +63,7 @@ msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:28
 msgid "Create a function to cosign any aggregate bonded transaction."
-msgstr "すべてのアグリゲートボンドトランザクションに署名する機能を作ります。"
+msgstr "アグリゲートボンドトランザクションに署名する関数を作成します。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:32
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:56
@@ -79,13 +79,13 @@ msgstr ""
 msgid ""
 "Create a new listener to get notified every time a new aggregate bonded "
 "transaction requires the signature of your account."
-msgstr "あなたのアカウントの署名が必要な、新しいアグリゲートボンドトランザクションを通知するリスナーを作ります。"
+msgstr "あなたのアカウントによる署名を必要とする、新しいアグリゲートボンドトランザクションを通知するリスナーを作ります。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:44
 msgid ""
 "Open the connection. You only need to open the connection once and then "
 "connect to all desired channels."
-msgstr "コネクションを開きます。一度コネクションが張られれば、望むすべてのチャンネルへつながるでしょう。"
+msgstr "コネクションを開きます。一度コネクションが張られれば、希望するすべてのチャンネルへつながるでしょう。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:46
 msgid ""
@@ -100,7 +100,7 @@ msgid ""
 " to get multisig accounts where an account is cosignatory<guide-get-"
 "multisig-account-info>`."
 msgstr ""
-"マルチシグの連署者による署名が必要なアグリゲートボンドトランザクションへ自動的に署名するには、代わりにマルチシグアドレスを参照してください。:ref:`アカウントが連署者になっているマルチシグアカウントの取得の仕方"
+"マルチシグ連署者が署名しなければならないアグリゲートボンドトランザクションを取得するには、代わりにマルチシグ公開鍵を参照してください。:ref:`アカウントが連署者である場合にマルチシグアカウントを取得する方法"
 "<guide-get-multisig-account-info>` を参照してください。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:50
@@ -109,7 +109,7 @@ msgid ""
 "Cosign each pending aggregate bonded transaction using the previously "
 "created function."
 msgstr ""
-"トランザクションを受信するごとに、まだ署名をしていないかどうかを確認します。以前に作成した機能を使って、ペンディング中の各アグリゲートボンドトランザクションに署名していきます。"
+"トランザクションごとに、あなたがまだ署名をしていないかどうかを確認します。前に作成した関数を使用して、保留中の各トランザクションに署名します。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:52
 msgid ""
@@ -131,7 +131,7 @@ msgstr "次は？"
 msgid ""
 "Extend the previous function for signing transactions if they follow some "
 "constraints."
-msgstr "いくつかの制約に従い、トランザクションへ署名するために前の関数を拡張します。"
+msgstr "いくつかの制約に従うならば、トランザクションへ署名するために前の関数を拡張します。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:77
 msgid "Aggregate transactions with two inner transactions."
@@ -143,7 +143,7 @@ msgstr "2つのインナートランザクションは転送トランザクシ�
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:79
 msgid "The transaction sending funds must have yourself as the signer."
-msgstr "この資産を送信するトランザクションは、あなたが署名者である必要があります。"
+msgstr "この資産を送信するトランザクションは、あなた自身が署名者である必要があります。"
 
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:80
 msgid ""

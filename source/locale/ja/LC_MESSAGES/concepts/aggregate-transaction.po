@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# Yoshiyuki Ieyama, 2018
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-25 12:39+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/aggregate-transaction.rst:3
 msgid "Aggregate Transaction"
@@ -28,14 +28,14 @@ msgstr "アグリゲートトランザクション"
 #: ../../source/concepts/aggregate-transaction.rst:7
 msgid ""
 "Aggregated Transactions merge multiple transactions into one, allowing "
-"**trustless swaps**, and other advanced logic. NEM does this by "
-"generating a one-time disposable smart contract. When all involved "
+"**trustless swaps**, and other advanced logic. NEM does this by generating a"
+" one-time disposable smart contract. When all involved "
 ":doc:`accounts<../concepts/account>` have cosigned the aggregate "
 "transaction, all the inner transactions are executed at the same time."
 msgstr ""
-"アグリゲートトランザクションは複数のトランザクションを一つにまとめ、 **トラストレス** な交換や高度なロジックを可能にします。NEM "
-"は一度きりの破棄可能なスマートコントラクトを生成することでこれを実現しています。アグリゲートトランザクションへ全ての :doc:`アカウント "
-"<../concepts/account>` が署名をすると、全ての内包トランザクションは同時に実行されます。"
+"アグリゲートトランザクションは複数のトランザクションを1つにまとめ、 **トラストレスな交換** やその他高度なロジックを可能にします。NEM "
+"はワンタイムの破棄可能なスマートコントラクトを生成することでこれを実現しています。アグリゲートトランザクションへ全ての :doc:`アカウント "
+"<../concepts/account>` が署名をすると、全てのインナートランザクションは同時に実行されます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:13
 msgid "Aggregate complete"
@@ -43,23 +43,25 @@ msgstr "アグリゲートコンプリート"
 
 #: ../../source/concepts/aggregate-transaction.rst:15
 msgid ""
-"An aggregate transaction is  **complete** when all the required "
-"participants have signed it."
+"An aggregate transaction is  **complete** when all the required participants"
+" have signed it."
 msgstr "要求されている参加者全員が署名をすると、アグリゲートトランザクションは **コンプリート** になります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:17
 msgid ""
-"The cosigners can sign the transaction without using the blockchain. Once"
-" it has all the required signatures, one of them can announce it to the "
-"network. If the inner transaction setup is valid, and there is no "
-"validation error, the transactions will get executed at the same time."
-msgstr "連署者はそのトランザクションに、ブロックチェーンを使うことなく署名することができます。必要な署名をすべて取得したら、彼らのうちの1人がネットワークにアナウンスできます。インナートランザクションのセットアップが正当で、バリデーションエラーがない場合、トランザクションは同時に実行されます。"
+"The cosigners can sign the transaction without using the blockchain. Once it"
+" has all the required signatures, one of them can announce it to the "
+"network. If the inner transaction setup is valid, and there is no validation"
+" error, the transactions will get executed at the same time."
+msgstr ""
+"連署者はそのトランザクションに、ブロックチェーンを使うことなく署名することができます。必要な署名をすべて取得したら、彼らのうちの1人がネットワークにアナウンスできます。インナートランザクションのセットアップが正当で、バリデーションエラーがない場合、トランザクションは同時に実行されます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:19
 msgid ""
-"Aggregate complete transactions enable adding more transactions per block"
-" by gathering multiple inner transactions."
-msgstr "アグリゲートコンプリートトランザクションは、複数のインナートランザクションを集めることで、ブロックへさらに多くのトランザクションを追加できます。"
+"Aggregate complete transactions enable adding more transactions per block by"
+" gathering multiple inner transactions."
+msgstr ""
+"アグリゲートコンプリートトランザクションは、複数のインナートランザクションを集めることで、ブロックへさらに多くのトランザクションを追加できます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:22
 msgid "Sending payouts"
@@ -69,16 +71,16 @@ msgstr "支払の送信"
 msgid ""
 "Dan announces an aggregate transaction that merges two transfer "
 "transactions."
-msgstr "Dan は二つの転送トランザクションを集約したアグリゲートトランザクションをアナウンスします。"
+msgstr "Dan は2つの転送トランザクションを集約したアグリゲートトランザクションをアナウンスします。"
 
 #: ../../source/concepts/aggregate-transaction.rst:26
 msgid ""
-"As he is the only required signatory, the transaction is considered "
-"complete after he signed. After announcing it to the network, Alice and "
-"Bob will receive the mosaics at the same time."
+"As he is the only required signatory, the transaction is considered complete"
+" after he signed. After announcing it to the network, Alice and Bob will "
+"receive the mosaics at the same time."
 msgstr ""
-"彼が唯一必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と "
-"Bob は同時にモザイクを受け取るでしょう。"
+"彼だけが必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と Bob "
+"は同時にモザイクを受け取るでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:32
 msgid "Sending payouts with aggregate complete transactions"
@@ -96,29 +98,29 @@ msgstr "アグリゲートトランザクションは、他の参加者からの
 
 #: ../../source/concepts/aggregate-transaction.rst:42
 msgid ""
-"Before sending an **aggregate bonded transaction**, an account must first"
-" announce a :ref:`hash lock transaction<hash-lock-transaction>` and get "
-"its confirmation with at least ``10`` XEM."
+"Before sending an **aggregate bonded transaction**, an account must first "
+"announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its "
+"confirmation with at least ``10`` XEM."
 msgstr ""
 "**アグリゲートボンドトランザクション** を送信する前に、アカウントはまず :ref:`ハッシュロックトランザクション <hash-lock-"
-"transaction>` をアナウンスし、最低でも ``10`` XEM でそれが承認されている必要があります。"
+"transaction>` をアナウンスし、 ``10`` XEM 以上でそれが承認されている必要があります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:44
 msgid ""
-"Once an aggregate bonded is announced, it reaches partial state and "
-"notifies its status through WebSockets or HTTP API calls."
-msgstr "アグリゲートボンドがアナウンスされると、パーシャル状態になり、WebSocket または HTTP API 呼び出しによって状態を通知します。"
+"Once an aggregate bonded is announced, it reaches partial state and notifies"
+" its status through WebSockets or HTTP API calls."
+msgstr ""
+"アグリゲートボンドがアナウンスされると、パーシャル状態になり、WebSocket または HTTP API 呼び出しによって状態を通知します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:46
-#, fuzzy
 msgid ""
 "Every time a cosignatory signs the transaction and :ref:`announces an "
-"aggregate bonded cosignature <cosignature>`, the network checks if all "
-"the required cosigners have signed. When all signatures are acquired, the"
-" transaction changes to unconfirmed state until the network includes it "
+"aggregate bonded cosignature <cosignature-transaction>`, the network checks "
+"if all the required cosigners have signed. When all signatures are acquired,"
+" the transaction changes to unconfirmed state until the network includes it "
 "in a block."
 msgstr ""
-"連署者がトランザクションに署名し :ref:`アグリゲートボンド連署をアナウンスする <cosignature>` "
+"連署者がトランザクションに署名し :ref:`アグリゲートボンド連署をアナウンスする <cosignature-transaction>` "
 "たびに、ネットワークは必要な連署者が署名しているかどうかをチェックします。すべての署名が取得されると、ネットワークがそれをブロックに含めるまで、トランザクションは未承認状態へ遷移します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:52
@@ -132,11 +134,11 @@ msgstr "マルチアセットエスクロートランザクション"
 
 #: ../../source/concepts/aggregate-transaction.rst:57
 msgid ""
-"In this example, Alice is buying tickets with ``currency.euro`` "
-":doc:`mosaic <mosaic>`. When the ticket distributor cosigns the aggregate"
-" transaction, the swap will happen atomically."
+"In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic"
+" <mosaic>`. When the ticket distributor cosigns the aggregate transaction, "
+"the swap will happen atomically."
 msgstr ""
-"この例では、ALICE はチケットを ``currency:euro``  :doc:`モザイク <mosaic>` "
+"この例では、Alice はチケットを ``currency:euro``  :doc:`モザイク <mosaic>` "
 "で購入しています。チケット販売者はアグリゲートトランザクションに署名し、交換はアトミックに起こります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:66
@@ -146,27 +148,27 @@ msgstr "他人の手数料を支払う"
 
 #: ../../source/concepts/aggregate-transaction.rst:68
 msgid ""
-"Alice sends 10 € to Bob using an app to make payments. But she doesn’t "
-"have any XEM to pay the blockchain transaction fee."
+"Alice sends 10 € to Bob using an app to make payments. But she doesn’t have "
+"any XEM to pay the blockchain transaction fee."
 msgstr ""
-"ALICE は € 10 をボブへ支払うためにアプリで送ります。しかし彼女はブロックチェーンのトランザクション手数料を支払う分の XEM "
+"Alice は € 10 を Bob へ支払うためにアプリで送ります。しかし彼女はブロックチェーンのトランザクション手数料を支払う分の XEM "
 "を持っていません。"
 
 #: ../../source/concepts/aggregate-transaction.rst:70
 msgid ""
-"By creating an aggregate bonded transaction, she can convert USD to XEM "
-"to pay the fee. Now Alice and Bob can use NEM blockchain without ever "
-"having to buy or hold XEM."
+"By creating an aggregate bonded transaction, she can convert USD to XEM to "
+"pay the fee. Now Alice and Bob can use NEM blockchain without ever having to"
+" buy or hold XEM."
 msgstr ""
-"アグリゲートボンドトランザクションを作ることで、彼女は USD を手数料のための XEM に替えることができます。これで ALICE と BOB "
-"は XEM を購入したり保有することなく、ブロックチェーンを使うことができます。"
+"アグリゲートボンドトランザクションを作ることで、彼女は USD を手数料のための XEM に替えることができます。これで Alice と Bob は "
+"XEM を購入したり保有することなく、ブロックチェーンを使うことができます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:72
 msgid ""
-"Since the app creator can put their own branding on the open source "
-"payment app, Alice and Bob may not even know they are using blockchain."
+"Since the app creator can put their own branding on the open source payment "
+"app, Alice and Bob may not even know they are using blockchain."
 msgstr ""
-"アプリの製作者は、オープンソースの支払いアプリに独自ブランドを付けることができるので、ALICE と BOB "
+"アプリの製作者は、オープンソースの支払いアプリに独自ブランドを付けることができるので、Alice と Bob "
 "は彼らがブロックチェーンを使っていることすら知らないでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:82
@@ -179,9 +181,8 @@ msgid ""
 "aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 "
 "<../getting-started/setup-workstation>` to run the guides."
 msgstr ""
-"⚠ 最新リリースでは重大な変更が加えられています。まだSDKは整備されていないので、ガイドを進める場合は :doc:`catapult-"
-"service-bootstrap 0.1.0 <../getting-started/setup-workstation>` "
-"を使用することを推奨します。"
+"⚠ 最新リリースでは重大な変更が加えられています。まだSDKは整備されていないので、ガイドを進める場合は :doc:`catapult-service-"
+"bootstrap 0.1.0 <../getting-started/setup-workstation>` を使用することを推奨します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:96
 msgid "Schemas"
@@ -189,9 +190,9 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/aggregate-transaction.rst:100
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_ . "
-"Public network configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
@@ -210,8 +211,8 @@ msgid ""
 "**Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 "
 "(:ref:`bonded<aggregate-bonded>`)"
 msgstr ""
-"**エンティティタイプ**: 0x4141 (:ref:`コンプリート<aggregate-complete>`), 0x4241 "
-"(:ref:`ボンド<aggregate-bonded>`)"
+"**エンティティタイプ**: 0x4141 (:ref:`コンプリート<aggregate-complete>`), 0x4241 (:ref:`ボンド"
+"<aggregate-bonded>`)"
 
 #: ../../source/concepts/aggregate-transaction.rst:109
 #: ../../source/concepts/aggregate-transaction.rst:128
@@ -224,13 +225,22 @@ msgid ":ref:`Transaction <transaction>`"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Description"
 msgstr "説明"
@@ -245,9 +255,9 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"The transaction payload size in bytes. In other words, the total number "
-"of bytes occupied by all inner transactions."
-msgstr "バイト単位のトランザクションのペイロードサイズ。つまり、内部トランザクションすべてによって占有されている合計バイト数。"
+"The transaction payload size in bytes. In other words, the total number of "
+"bytes occupied by all inner transactions."
+msgstr "バイト単位のトランザクションのペイロードサイズ。つまりインナートランザクションすべてによって占有されている合計バイト数。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "transactions"
@@ -260,13 +270,12 @@ msgstr ""
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
 "The array of transactions initiated by different accounts. An aggregate "
-"transaction can contain up to ``1000`` inner transactions involving up to"
-" ``15`` different cosignatories. Other aggregate transactions are not "
-"allowed as inner transactions."
+"transaction can contain up to ``1000`` inner transactions involving up to "
+"``15`` different cosignatories. Other aggregate transactions are not allowed"
+" as inner transactions."
 msgstr ""
-"異なるアカウントによって開始されたトランザクション配列です。アグリゲートトランザクションは ``1000`` "
-"までのインナートランザクションを内包でき、 ``15`` "
-"までの連署者を設定できます。他のアグリゲートトランザクションをインナートランザクションとして内包することはできません。"
+"異なるアカウントによって開始されたトランザクション配列です。アグリゲートトランザクションは ``1000`` までのインナートランザクションを内包でき、"
+" ``15`` までの連署者を設定できます。他のアグリゲートトランザクションをインナートランザクションとして内包することはできません。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "cosignatures"
@@ -277,9 +286,8 @@ msgid "array(byte, size - payloadSize)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-#, fuzzy
 msgid "An array of transaction :ref:`cosignatures <cosignature>`."
-msgstr ":doc:`連署者 <cosignature-transaction>` トランザクションの配列"
+msgstr ":ref:`連署者 <cosignature>` トランザクションの配列"
 
 #: ../../source/concepts/aggregate-transaction.rst:124
 msgid "DetachedCosignature"
@@ -287,8 +295,8 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:126
 msgid ""
-"Cosignature transactions are used to sign :ref:`announced aggregate "
-"bonded transactions <aggregate-transaction>` with missing cosignatures."
+"Cosignature transactions are used to sign :ref:`announced aggregate bonded "
+"transactions <aggregate-transaction>` with missing cosignatures."
 msgstr ""
 "署名トランザクションは、まだ署名の揃っていない :ref:`アナウンス済みのアグリゲートボンドトランザクション <aggregate-"
 "transaction>` への署名に使用します。"
@@ -301,6 +309,8 @@ msgstr ""
 msgid "parentHash"
 msgstr ""
 
+#: ../../source/concepts/aggregate-transaction.rst:1
+#: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "32 bytes (binary)"
 msgstr ""
@@ -348,13 +358,13 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:158
 msgid "**Alias**: LockFundsTransaction"
-msgstr "**別名**: ロックファンドトランザクション"
+msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:160
 msgid ""
 "Announce a hash lock transaction before sending a signed :ref:`aggregate "
-"bonded transaction<aggregate-transaction>`. This mechanism is required to"
-" prevent network spamming."
+"bonded transaction<aggregate-transaction>`. This mechanism is required to "
+"prevent network spamming."
 msgstr ""
 "署名された :ref:`アグリゲートボンドトランザクション <aggregate-transaction>` "
 "を送信する前に、ハッシュロックトランザクションをアナウンスします。このメカニズムはネットワークスパムを防止するために要求されます。"
@@ -364,14 +374,16 @@ msgid ""
 "Once the related aggregate bonded transaction is confirmed, locked funds "
 "become available again in the account that signed the initial hash lock "
 "transaction."
-msgstr "関連するアグリゲートボンドトランザクションが承認されると、ロックされた資金は、初期ハッシュロックトランザクションに署名したアカウントで再び利用可能になります。"
+msgstr ""
+"関連するアグリゲートボンドトランザクションが承認されると、ロックされた資金は、初期ハッシュロックトランザクションに署名したアカウントで再び利用可能になります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:164
 msgid ""
-"If the aggregate bonded transaction duration is reached without being "
-"signed by all cosignatories, the locked amount is collected by the block "
-"harvester at the height where the lock expires."
-msgstr "すべての連署者によって署名されずにアグリゲートボンドトランザクションが期間に達した場合、ロックされた資産は、ブロックのハーベスタによって、ロックの有効期限が切れるブロック高でハーベストされます。"
+"If the aggregate bonded transaction duration is reached without being signed"
+" by all cosignatories, the locked amount is collected by the block harvester"
+" at the height where the lock expires."
+msgstr ""
+"すべての連署者によって署名されずにアグリゲートボンドトランザクションが期間に達した場合、ロックされた資産は、ブロックのハーベスタによって、ロックの有効期限が切れるブロック高でハーベストされます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:166
 msgid "**Version**: 0x01"
@@ -391,7 +403,7 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Locked mosaic, must be at least ``10 nem:xem``."
-msgstr "ロックモザイク、最低でも ``10 nem:xem`` 必要です。"
+msgstr "ロックモザイク ``10 nem:xem`` 以上必要です。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "duration"
@@ -414,4 +426,3 @@ msgid ""
 "The aggregate bonded transaction hash that has to be confirmed before "
 "unlocking the mosaics."
 msgstr "モザイクをアンロックする前に、アグリゲートボンドトランザクションハッシュが承認されていなければなりません。"
-

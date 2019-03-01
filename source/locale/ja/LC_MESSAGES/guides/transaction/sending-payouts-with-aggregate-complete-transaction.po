@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:10+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +39,7 @@ msgstr "背景"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:18
 msgid "Dan wants to send mosaics to Alice and Bob."
-msgstr "DAN は ALICE と BOB へモザイクを送ろうと思っています。"
+msgstr "Dan は Alice と Bob へモザイクを送ろうと思っています。"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:24
 msgid "Sending transactions to different recipients atomically"
@@ -59,7 +59,7 @@ msgstr "前提条件"
 msgid ""
 "Finish :doc:`sending a transfer transaction guide <sending-a-transfer-"
 "transaction>`"
-msgstr ":doc:`転送トランザクションの送信ガイド <sending-a-transfer-transaction>` を終了していること"
+msgstr ":doc:`転送トランザクション送信ガイド <sending-a-transfer-transaction>` を終了している"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:33
 msgid "NEM2-SDK"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:34
 msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:35
 msgid "An account with XEM"
@@ -83,7 +83,7 @@ msgid ""
 "different recipients, and wrap them in an :ref:`aggregate transaction "
 "<aggregate-transaction>`."
 msgstr ""
-"DAN は2人の異なる受信者と :ref:`2つの転送トランザクション <transfer-transaction>` を作成し、それらを "
+"Dan は2人の異なる受信者と :ref:`2つの転送トランザクション <transfer-transaction>` を作成し、それらを "
 ":ref:`アグリゲートトランザクション <aggregate-transaction>` でラップします。"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:45
@@ -107,7 +107,8 @@ msgid ""
 "In this case, one private key can sign all the transactions in the "
 "aggregate, so it is *aggregate complete*."
 msgstr ""
-"アグリゲート完了とアグリゲートボンドの違いをご存知ですか？この場合、1つの秘密鍵でアグリゲート内のすべてのトランザクションに署名できるため、アグリゲートは完了になります。"
+"アグリゲートコンプリートとアグリゲートボンドの違いをご存知ですか？この場合、1つの秘密鍵でアグリゲート内のすべてのトランザクションに署名できるため、 "
+"*アグリゲートコンプリート* です。"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:62
 msgid ""

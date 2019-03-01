@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:04+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:11
 msgid "Atomic cross-chain swap between public and private network"
-msgstr "パブリックとプライベートネットワーク間のアトミッククロスチェーン交換"
+msgstr "パブリックとプライベート間のアトミッククロスチェイン交換"
 
 #: ../../source/concepts/cross-chain-swaps.rst:13
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:22
 msgid "Atomic cross-chain swap sequence diagram"
-msgstr "アトミッククロスチェーンスワップ シーケンス図"
+msgstr "アトミッククロスチェーンスワップ シーケンスダイアグラム"
 
 #: ../../source/concepts/cross-chain-swaps.rst:24
 msgid ""
@@ -73,8 +73,8 @@ msgid ""
 ":ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof "
 "transaction <secret-proof-transaction>` mechanism."
 msgstr ""
-"NEM トークンについて話すときには、本当によく :doc:`モザイク <../../concepts/mosaic>` を参照します。Catapult"
-" は :ref:`シークレットロック <secret-lock-transaction>` / :ref:`シークレット証明トランザクション "
+"NEM トークンについて語るときは、本当によく :doc:`モザイク <../../concepts/mosaic>` を参照します。Catapult "
+"は :ref:`シークレットロック <secret-lock-transaction>` / :ref:`シークレット証明トランザクション "
 "<secret-proof-transaction>` を通じてアトミックスワップを可能にします。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:28
@@ -272,7 +272,7 @@ msgstr "トランザクションはモザイクをアンロックするための
 
 #: ../../source/concepts/cross-chain-swaps.rst:94
 msgid "**Entity type**: 0x4252"
-msgstr "**エンティティタイプ**: 0x4252"
+msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "proofSize"
