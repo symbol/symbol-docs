@@ -56,7 +56,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Let’s get into some code
 ************************
 
-1. Create the transfer transaction, by including Bob address as the recipient, adding 10 cat.currency and the message requested.
+1. Create the transfer transaction, by including Bob address as the recipient, adding ``10 cat.currency`` and the message requested.
 
 .. example-code::
 

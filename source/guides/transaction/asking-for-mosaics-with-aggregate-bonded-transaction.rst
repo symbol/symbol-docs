@@ -38,12 +38,12 @@ Alice wants to ask Bob for ``20 cat.currency``.
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  38-46
+        :lines:  40-48
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  38-46
+        :lines:  40-48
 
 2. Alice creates an aggregate bonded transaction with two inner transactions:
 
@@ -58,12 +58,12 @@ A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  49-54
+        :lines:  51-56
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  49-54
+        :lines:  51-56
 
 B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
@@ -77,12 +77,12 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines: 56-61
+        :lines: 58-63
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines: 56-61
+        :lines: 58-63
 
 3.Wrap the defined transactions in an aggregate bonded transaction:
 
@@ -91,26 +91,26 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  64-70
+        :lines:  66-72
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  64-70
+        :lines:  66-72
 
-4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 cat.currency.
+4. Alice signs the aggregate bonded transaction and announces it to the network, locking first ``10 cat.currency``.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  73-
+        :lines:  75-
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  73-
+        :lines:  75-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 

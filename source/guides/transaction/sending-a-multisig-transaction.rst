@@ -34,14 +34,14 @@ Prerequisites
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
-- An multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
+- A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
 - An cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
 ************************
 
-Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 cat.currency.
+Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
 1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
@@ -126,12 +126,12 @@ As all required cosigners did not sign the transaction, it should be announced a
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
         :language: typescript
-        :lines:  59-64
+        :lines:  61-66
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
-        :lines:  59-64
+        :lines:  61-66
 
 
 1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
@@ -140,19 +140,19 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least 10 cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. When an aggregate transaction is bonded, Bob needs to lock at least ``10 cat.currency`` to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
         :language: typescript
-        :lines:  66-
+        :lines:  68-
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
-        :lines:  66-
+        :lines:  68-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 

@@ -23,13 +23,15 @@ import {
     Deadline,
     Listener,
     LockFundsTransaction,
+    Mosaic,
+    MosaicId,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     PublicAccount,
     TransactionHttp,
     TransferTransaction,
-    UInt64,
-    NetworkCurrencyMosaic
+    UInt64
 } from "nem2-sdk";
 
 import {filter, mergeMap} from "rxjs/operators";
@@ -65,7 +67,10 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
