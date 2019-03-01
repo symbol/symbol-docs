@@ -326,12 +326,13 @@ Options
     -r, --recipient <recipient>   - Recipient public key
     -m, --message <message>       - Message to the funds holder
     -x, --mosaic <mosaic>         - Mosaic you want to get in the format (mosaicId(hex)|@aliasName)::absoluteAmount
+    -c, --currency <currency>     - The network native currency mosaicId in hexadecimal
 
 Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic @cat.currency::10000000
+    $> nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic @cat.currency::10000000 --currency 0dc67fbe1cad29e3
 
 **Register root namespace**
 
