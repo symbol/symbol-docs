@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-#######################
-Getting block by height
-#######################
+#########################
+Getting a block by height
+#########################
 
 Get the :doc:`block <../../concepts/block>` information given a height.
 

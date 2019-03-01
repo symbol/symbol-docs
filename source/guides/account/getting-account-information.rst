@@ -48,7 +48,7 @@ Let’s get into some code
 
 Can you determine the account's public key? The **public key** identifies your account publicly in the network. Your  **address** is derived from it, which contains further information such as network and validity check.
 
-If you don't have a public key assigned, that means that your account has not announced or received any transaction yet. The ``addressHeight`` and ``publicKeyHeight`` specifies the block where your address and public key first appeared.
+If you don't have a public key assigned, that means that your account has not announced or received any transaction yet. The ``addressHeight`` and ``publicKeyHeight`` specify the block where your address and public key first appeared.
 
 The ``importance`` field represents the numerical relation between the number of harvesting mosaics the account owns and the total mosaic supply. The greater the importance, the more chances to :doc:`harvest <../../concepts/harvesting>` new blocks.
 

@@ -21,7 +21,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain.
+An account is a key pair (private and public key) associated with a mutable state stored in the NEM blockchain.
 
 .. example-code::
 

@@ -32,7 +32,7 @@ Blockchain technology makes sense in cases where:
 
 * There are different participants involved.
 * These participants need to trust each other.
-* There is the need to keep track of an immutable set of events.
+* There is a need to keep track of an immutable set of events.
 
 NEM is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 

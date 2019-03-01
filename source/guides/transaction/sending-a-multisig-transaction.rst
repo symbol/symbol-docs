@@ -35,7 +35,7 @@ Prerequisites
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
-- An cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
+- A cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code

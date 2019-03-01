@@ -40,7 +40,7 @@ To understand the transaction lifecycle, we recommend you to open three new term
 
     $> nem2-cli monitor status
 
-Monitoring ``unconfirmed`` shows you which transactions have reached the network, but not are not included in a block yet.
+Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
 
 .. code-block:: bash
 

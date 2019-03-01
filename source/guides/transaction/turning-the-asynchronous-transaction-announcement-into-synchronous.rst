@@ -19,7 +19,7 @@ Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to know
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 
-As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is developer's responsibility to check the transactions status and ensure it is confirmed.
+As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
 On the other hand, keeping track of transactions status adds unnecessary complexity to small projects. It also increases the difficulty when migrating from NIS1.
 

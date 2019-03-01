@@ -115,7 +115,7 @@ Create a folder for your new project and run the instructions for the selected l
 
             $> npm install nem2-sdk rxjs
 
-        3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. nem2-sdk is built with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
         Make sure you have at least version 2.5.X installed.
 

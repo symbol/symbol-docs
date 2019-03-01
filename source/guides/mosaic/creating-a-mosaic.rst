@@ -9,7 +9,7 @@
 Creating a mosaic
 #################
 
-Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>` .
+Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`.
 
 *************
 Prerequisites
