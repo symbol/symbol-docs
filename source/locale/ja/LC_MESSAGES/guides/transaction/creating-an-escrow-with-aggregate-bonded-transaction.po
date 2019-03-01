@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:10+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -147,7 +147,7 @@ msgstr "前提条件"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:59
 msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
-msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了していること"
+msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:60
 msgid ""
@@ -155,7 +155,7 @@ msgid ""
 "payouts-with-aggregate-complete-transaction>`"
 msgstr ""
 ":doc:`アグリゲート完了トランザクションによって支払いを送信 <sending-payouts-with-aggregate-complete-"
-"transaction>` を終了していること"
+"transaction>` を終了している"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:61
 msgid "NEM2-SDK"
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:62
 msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:66
 msgid "Let's get into some code"
@@ -182,7 +182,7 @@ msgstr "**要求されているアカウントとモザイクをセットアッ�
 msgid ""
 "In this example, Alice and a ticket distributor want to swap the following "
 "mosaics."
-msgstr "この例では、ALICE とチケット販売者は以下のモザイクを交換したいと思っています。"
+msgstr "この例では、Alice とチケット販売者は以下のモザイクを交換したいと思っています。"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
 msgid "Owner"
@@ -198,7 +198,7 @@ msgstr "総量"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
 msgid "Alice"
-msgstr "ALICE"
+msgstr ""
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
 msgid "nem:xem"
@@ -234,7 +234,7 @@ msgstr "**モザイク交換**"
 msgid ""
 "Alice will send a transaction to the ticket distributor exchanging 100 "
 "nem:xem with 1 museum:ticket."
-msgstr "100 nem:xem と 1 museum:ticket を交換するために、ALICE はチケット販売者にトランザクションを送ります。"
+msgstr "100 nem:xem と 1 museum:ticket を交換するために、Alice はチケット販売者にトランザクションを送ります。"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:90
 msgid "Create two  :ref:`transfer transaction <transfer-transaction>`:"
@@ -242,11 +242,11 @@ msgstr ":ref:`2つの転送トランザクション <transfer-transaction>` を�
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:92
 msgid "From Alice to the ticket distributor sending 100 nem:xem"
-msgstr "ALICE からチケット販売者へ 100 nem:xem を送信します"
+msgstr "Alice からチケット販売者へ 100 nem:xem を送信します"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:93
 msgid "From the ticket distributor to Alice sending 1 museum:ticket."
-msgstr "チケット販売者から ALICE へ 1 museum:ticket を送信します"
+msgstr "チケット販売者から Alice へ 1 museum:ticket を送信します"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:95
 msgid ""
@@ -262,8 +262,8 @@ msgid ""
 "network, all required cosigners have signed it. If valid, it will be "
 "included in a block."
 msgstr ""
-"アグリゲートトランザクションは、ネットワークに通知する前に必要なすべての連署者が署名した場合には *完了* "
-"となります。正当な場合はブロックに含まれます。"
+"ネットワークへアナウンスされる前にすべての連署者が署名をすると、アグリゲートトランザクションは **コンプリート** "
+"になります。正当であれば、ブロックへ取り込まれます。"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:99
 msgid ""
@@ -294,8 +294,8 @@ msgid ""
 "amount of locked XEM becomes available again on Alice's account, and the "
 "exchange will get through."
 msgstr ""
-"アグリゲートトランザクションがボンドであるとき、ALICE は最低 10 XEM "
-"でロックする必要があります。チケット販売者がアグリゲートトランザクションに署名すると、ロックされた XEM の総量が ALICE "
+"アグリゲートトランザクションがボンドであるとき、Alice は最低 10 XEM "
+"でロックする必要があります。チケット販売者がアグリゲートトランザクションに署名すると、ロックされた XEM の総量が Alice "
 "のアカウントで再び利用可能になり、交換が完了します。"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:137
@@ -316,7 +316,7 @@ msgstr "次のリストのようなことが起こりうるので **安全では
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:145
 msgid "The buyer does not pay."
-msgstr "買い手は支払いませんでした。"
+msgstr "買い手は支払いを行いませんでした。"
 
 #: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:146
 msgid "The seller does not send the virtual goods."

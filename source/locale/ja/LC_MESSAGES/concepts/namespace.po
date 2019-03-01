@@ -4,16 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16.2\n"
+"Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 17:58+0000\n"
-"PO-Revision-Date: 2019-02-13 13:08+0000\n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +29,8 @@ msgstr "ネームスペース"
 msgid ""
 "Namespaces allow you to create an on-chain **unique place** for your "
 "business and your assets on the NEM blockchain."
-msgstr "ネームスペースによって、NEM ブロックチェーン上にあなたのビジネスと資産のためのチェーン上の **一意な場所** を作ることができます。"
+msgstr ""
+"ネームスペースによって、NEM ブロックチェーン上に、あなたのビジネスと資産のための **一意な場所** をチェーン上に作ることができます。"
 
 #: ../../source/concepts/namespace.rst:7
 msgid ""
@@ -351,7 +351,7 @@ msgstr ""
 #: ../../source/concepts/namespace.rst:119
 #: ../../source/concepts/namespace.rst:142
 msgid "**Version**: 0x01"
-msgstr "**バージョン**: 0x01"
+msgstr ""
 
 #: ../../source/concepts/namespace.rst:121
 msgid "**Entity type**: 0x424E"
@@ -371,7 +371,7 @@ msgstr "エイリアスアクション"
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
 msgid "The id of the namespace that will become an alias."
-msgstr "このネームスペースのIDはエイリアスになります。"
+msgstr "エイリアスになるネームスペースのID"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "address"
@@ -440,7 +440,7 @@ msgstr "子ネームスペース"
 
 #: ../../source/concepts/namespace.rst:175
 msgid "Alias Action"
-msgstr "エイリアスアクション"
+msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
 msgid "Link alias."
