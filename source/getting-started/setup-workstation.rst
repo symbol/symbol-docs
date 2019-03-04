@@ -1,13 +1,8 @@
-.. post:: 16 Aug, 2018
-    :category: Tools
-    :excerpt: 1
-    :nocomments:
-
 ###########################
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This guide will walk you through a step-by-step installation of the required tools to start developing on NEM Catapult.
 
 **********************************
 Running Catapult Service Bootstrap
@@ -25,7 +20,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
@@ -47,7 +42,7 @@ The **public key** is cryptographically derived from the private key. It would t
 
 Finally, the account address is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
-:doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
+:doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
 1. Install NEM2-CLI using ``npm``.
 
@@ -90,7 +85,7 @@ Let’s use an account which already has XEM. We will need it to register the na
 
 2. Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
 
-3. Load the first account as a profile in NEM2-CLI.
+3. Load the first account as a profile in NEM2-CLI. This account identifies the company.
 
 .. code-block:: bash
 
@@ -111,95 +106,85 @@ It is time to choose a programming language. Pick the one you feel most comforta
 
 Create a folder for your new project and run the instructions for the selected language.
 
-.. tabs::
+TypeScript and JavaScript
+=========================
 
-    .. tab:: Typescript
+1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
-        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+.. code-block:: bash
 
-        .. code-block:: bash
+    $> npm init
 
-            $> npm init
+2. Install nem2-sdk and rxjs library.
 
-        2. Install nem2-sdk and rxjs library.
+.. code-block:: bash
 
-        .. code-block:: bash
+    $> npm install nem2-sdk rxjs
 
-            $> npm install nem2-sdk rxjs
+3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
-        3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+Make sure you have at least version 2.5.X installed.
 
-        Make sure you have at least version 2.5.X installed.
+.. code-block:: bash
 
-        .. code-block:: bash
+    $> sudo npm install --global typescript
+    $> typescript --version
 
-            $> sudo npm install --global typescript
-            $> typescript --version
+4. Use `ts-node`_ to execute TypeScript files with node.
 
-        4. Use `ts-node`_ to execute TypeScript files with node.
+.. code-block:: bash
 
-        .. code-block:: bash
+    $> sudo npm install --global ts-node
 
-            $> sudo npm install --global ts-node
+If you want to use javascript directly, you can execute node to run js files.
 
-    .. tab:: Javascript
+Java
+====
 
-        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8.
 
-        .. code-block:: bash
+1. Use your favourite IDE or create a project from the command line.
 
-            $> npm init
+.. code-block:: bash
 
-        2. Install nem2-sdk and rxjs library.
+    gradle init --type java-application
 
-        .. code-block:: bash
+2. Edit ``build.gradle`` to use Maven central repository.
 
-            $> npm install nem2-sdk rxjs
+.. code-block:: java
 
-    .. tab:: Java
+    repositories {
+        mavenCentral()
+    }
 
-        1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
+3. Add nem2-sdk and reactive library as a dependency.
 
-        .. code-block:: bash
+.. code-block:: java
 
-            gradle init --type java-application
+    dependencies {
+        compile "io.nem:sdk:0.9.1"
+        compile "io.reactivex.rxjava2:rxjava:2.1.7"
+    }
 
-        2. Edit ``build.gradle`` to use Maven central repository.
+4. Execute ``gradle build`` and ``gradle run`` to run your program.
 
-        .. code-block:: java
+C#
+====
 
-            repositories {
-                mavenCentral()
-            }
+1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
 
-        3. Add nem2-sdk and reactive library as a dependency.
+2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
 
-        .. code-block:: java
+3. Enter nem2-sdk and reactive library packages names in the terminal.
 
-            dependencies {
-                compile "io.nem:sdk:0.9.1"
-                compile "io.reactivex.rxjava2:rxjava:2.1.7"
-            }
+.. code-block:: bash
 
-        4. Execute ``gradle build`` and ``gradle run`` to run your program.
+    $> Install-Package nem2-sdk
+    $> Install-Package System.Reactive
 
-    .. tab:: C#
-
-        1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
-
-        2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
-
-        3. Enter nem2-sdk and reactive library packages names in the terminal.
-
-        .. code-block:: bash
-
-            $> Install-Package nem2-sdk
-            $> Install-Package System.Reactive
-
-        Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
+Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
 
 Continue: :doc:`Writing your first application <first-application>`.
-
 
 .. _docker: https://docs.docker.com/install/
 

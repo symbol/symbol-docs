@@ -18,11 +18,6 @@ livehtml:
 linkcheck:
 	sphinx-build -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
 
-alldocs:
-	sphinx-build -b html source build/html/
-	sphinx-intl build
-	sphinx-build -b html source build/html/ja -D language='ja'
-
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new

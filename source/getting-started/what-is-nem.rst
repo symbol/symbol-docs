@@ -6,15 +6,19 @@ What is NEM?
 The Smart Asset System
 **********************
 
-|nem| is a developer-friendly blockchain platform. Rather than force you to write your own “smart contract” code from scratch, NEM gives you direct access to a specialized set of tested and secure on-blockchain :doc:`features <../concepts/account>`.
+|nem| is a blockchain platform built from the ground up to be simple for developers to use blockchain technology.
 
-NEM is suitable for an amazing variety of solutions of different classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
+NEM is built around a powerful system to customize your using of the blockchain. We call it the *Smart Asset System*. It gives you the power to use NEM as if it were a custom blockchain built for your application and your assets.
 
-.. figure:: ../resources/images/examples/smart-assets-system.png
+.. figure:: ../resources/images/smart-assets-system.png
     :align: center
     :width: 600px
 
     The Smart Asset System
+
+Rather than force you to write your own “smart contract” code from scratch or use off-blockchain methods that define custom assets for you application, NEM gives you direct access to a specialized set of tested and secure on-blockchain features.
+
+NEM is suitable for an amazing variety of solutions of different classes, such as direct public transactions via a streamlined smartphone app, efficient cloud services that connect client or web applications, or a high-performance permissioned enterprise back-end for business-critical record keeping.
 
 *******************
 Architecting on NEM
@@ -22,9 +26,11 @@ Architecting on NEM
 
 NEM :doc:`nodes <../concepts/node>` provide a powerful, stable and secure platform where smart asset transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
-All the features are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight :doc:`code in any language <../sdk>`.
+All the functionalities are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight code in any language.
 
-.. figure:: ../resources/images/examples/architecting-nem-solutions.png
+Some examples of possible architecture solutions:
+
+.. figure:: ../resources/images/arquitecturing-nem-solutions.png
     :align: center
     :width: 600px
 
@@ -48,7 +54,7 @@ A gateway server links existing business contract logic, systems, or databases t
 Public and Private
 ******************
 
-.. figure:: ../resources/images/examples/public-private-blockchain.png
+.. figure:: ../resources/images/public-private-blockchain.png
     :align: center
     :width: 600px
 

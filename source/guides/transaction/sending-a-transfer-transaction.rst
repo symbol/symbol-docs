@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 10 Aug, 2018
-    :category: Transfer Transaction
+    :category: transfer-transaction
     :excerpt: 1
     :nocomments:
 
@@ -24,7 +24,7 @@ Prerequisites
 Background
 **********
 
-.. figure:: ../../resources/images/examples/transfer-transaction.png
+.. figure:: ../../resources/images/guides-transactions-transfer.png
     :align: center
     :width: 450px
 
@@ -36,7 +36,7 @@ Alice wants to send 10 XEM to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2T
 
 Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
 
-To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/monitoring-a-transaction-status>` validation errors.
+To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../transaction/debugging-transactions>` validation errors.
 
 .. code-block:: bash
 
@@ -124,7 +124,7 @@ Although the transaction is created, it has not been announced to the network ye
         :language: bash
         :start-after: #!/bin/sh
 
-4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :ref:`the error code here <status-errors>`.
+4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :doc:`the error code here <../../api/status-errors>`.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
@@ -138,7 +138,7 @@ Send multiple mosaics in the same transaction.
 
 **Adding multiple mosaics**
 
-.. figure:: ../../resources/images/examples/transfer-transaction-multiple-mosaics.png
+.. figure:: ../../resources/images/guides-transactions-transfer-multiple.png
     :align: center
     :width: 450px
 

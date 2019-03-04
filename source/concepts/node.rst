@@ -1,10 +1,10 @@
-####
-Node
-####
+#####
+Nodes
+#####
 
 The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
-.. figure:: ../resources/images/diagrams/four-layer-architecture.png
+.. figure:: ../resources/images/four-layer-architecture.png
     :width: 650px
     :align: center
 
@@ -12,55 +12,46 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
 
 The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
-*************
-P2P Component
-*************
+.. note:: Guides explaining how to run a main net node are pending to be published. See how to run :doc:`Catapult in local<../guides/running-a-node>` for testing purposes.
+
+**********************
+Catapult P2P Component
+**********************
 
 **Repository:** |catapult-server|
 
-The P2P nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
+The P2P nodes form the backbone of the blockchain. The role of the node is to verify  :doc:`transactions<transaction>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
-The API push new transactions to the P2P network, where they are :doc:`included in a block <harvesting>` or discarded. After the block is processed:
+The API nodes push new transactions to P2P nodes. If the transaction received is invalid, the P2P nodes discard it.
 
-- The binary of the block is saved on disk as a flat file.
-- The updated chain state is saved in memory or RocksDB (configurable).
+After processing a block:
 
-Node reputation
-===============
-
-Public networks enable anyone to run a node. Some of these nodes could share invalid information or try to disturb the network.
-
-To reduce communication attempts, the nodes keep track of the results of preceding communications.
-
-When a node connects to a remote peer, the first increments the trust towards the remote. Otherwise, the node increments the failure counter. Likewise, the node updates the trust counters accordingly after processing the data requested.
-
-From these interactions, the node assigns a weight between 500 and 10000 to every peer reached.
-
-The probability of selecting a remote node depends linearly on its weight. Every four rounds of node selections, the criteria changes to prevent |sybil|. The node selects a peer with high importance instead.
-
+1. The block binary is saved on disk as a flat file.
+2. The updated chain state is saved in memory or RocksDB (configurable).
 
 RocksDB
 =======
 
-|rocksdb| stores the chain state. The data structures cached are serialized and stored as value to a corresponding key. For example, a column maps the public keys to addresses. Another one, the account state entries as the value to corresponding address keys.
+|rocksdb| stores the chain state. The data structures cached are serialized and stored as value to a corresponding key. In other words, supports different “columns” (key/value pair “tables”).
 
-Storing the state in memory is usually faster than using RocksDB. However, storing state information in RocksDB demands less memory of the network nodes.
+For example, a column maps the public keys to addresses. Another one, the account state entries as the value to corresponding address keys.
 
-.. note:: Persisting the state is convenient in networks with a large number of accounts.
+Storing the state in memory is faster than using RocksDB. However, storing state information in RocksDB demands less memory the network nodes. This is primarily desirable in networks with a large number of accounts.
 
-*************
-API Component
-*************
+**********************
+Catapult API Component
+**********************
 
 **Repository:** |catapult-rest|
 
-The primary responsibility of the API is to store the data in a readable form. Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
 
-The layer :ref:`validates the transactions <transaction-validation>` received from the REST component. Additionally, the API throws the errors back via ZMQ in binary.
+The main responsibility of Catapult API components is to store the data in readable form.  Each API instance maintains a MongoDB, and optionally a RocksDB to store state.
 
-This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only pushed to P2P nodes once they are complete.
+Additionally, this layer verifies blocks and transactions. The API throws the errors to REST via ZMQ in binary.
 
-An API component can connect to multiple P2P nodes, but at least must connect to one.
+Catapult API collects cosignatures. :doc:`Aggregated bonded transactions <aggregate-transaction>` are pushed to P2P nodes once they are complete.
+
+API components can connect to multiple P2P nodes, but at least must connect to one.
 
 MongoDB
 =======
@@ -70,24 +61,24 @@ MongoDB
 The API updates the MongoDB when:
 
 - A new block / a bunch of blocks finished processing.
-- New unconfirmed transactions completed processing.
+- New unconfirmed transactions finished processing.
 
-.. note:: MongoDB should not be accessed externally.
+.. note:: The MongoDB shouldn’t be accessed externally.
 
 ZMQ
 ====
 
-|zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API server to the ZMQ endpoint, where the Catapult REST component listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
+|zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API server to the ZMQ endpoint, where the Catapult REST component listens.  It is an alternative to REST WebSockets, aimed to be used when performance is critical.
 
-**************
-REST Component
-**************
+***********************
+Catapult REST Component
+***********************
 
 **Repository:** |catapult-rest|
 
-The REST component handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :ref:`WebSockets <websockets>`.
+Catapult REST handles **JSON API** client requests. This component reads from MongoDB, formats the response, and returns it to the client. Each Catapult REST connects to one Catapult API instance.
 
-Each REST component connects to one API instance, sending new transactions using sockets.
+Additionally, Catapult REST sends new transactions to the Catapult API using sockets. The component announces events to the client via WebSockets.
 
 .. |catapult-server| raw:: html
 
@@ -108,19 +99,3 @@ Each REST component connects to one API instance, sending new transactions using
 .. |zmq| raw:: html
 
   <a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a>
-
-.. |sybil| raw:: html
-
-  <a href=" https://en.wikipedia.org/wiki/Sybil_attack" target="_blank">Sybil attacks</a>
-
-******
-Guides
-******
-
-* |running-catapult-locally|
-
-Deploy a Catapult full node for learning and development purposes.
-
-.. |running-catapult-locally| raw:: html
-
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank"><b>Running Catapult locally</b></a>

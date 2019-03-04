@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 15 Aug, 2018
-    :category: Aggregate Transaction
+    :category: aggregate-transaction
     :excerpt: 1
     :nocomments:
 

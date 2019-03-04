@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 18 Aug, 2018
-    :category: Multisig Account
+    :category: multisig-account
     :excerpt: 1
     :nocomments:
 
@@ -9,9 +9,9 @@
 Creating a multi-level multisig account (MLMA)
 ##############################################
 
-Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+Create a :doc:`multi-level multisig account <../../concepts/multi-level-multisig-account>`.
 
-.. figure:: ../../resources/images/examples/mlma-complex-1.png
+.. figure:: ../../resources/images/concepts-multisig-multilevel-1.png
     :align: center
     :width: 750px
 
@@ -100,7 +100,7 @@ What's next?
 
 Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, cosignatories are responsible for doing so.
 
-.. figure:: ../../resources/images/examples/mlma-complex-2.png
+.. figure:: ../../resources/images/concepts-multisig-multilevel-2.png
     :align: center
     :width: 750px
 
