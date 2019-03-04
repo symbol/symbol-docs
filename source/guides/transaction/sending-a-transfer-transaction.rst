@@ -70,9 +70,24 @@ Let’s get into some code
         :language: javascript
         :lines:  31-38
 
-Although the transaction is created, it has not been announced to the network yet. Alice must sign the transaction with her account first so that the network can verify its authenticity.
+As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
 
-2. Sign the transaction with Alice account.
+If you own more than one mosaic, you can send them together in the same transaction:
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-ts|
+        :language: typescript
+        :lines:  39-40
+
+    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
+        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-js|
+        :language: javascript
+        :lines:  38-39
+
+2. Sign the transaction with Alice's account, so that the network can verify its authenticity.
+
 
 .. example-code::
 
@@ -86,7 +101,7 @@ Although the transaction is created, it has not been announced to the network ye
         :language: javascript
         :lines:  41-45
 
-3. Once signed, you can :doc:`announce the transaction <../../concepts/transaction>` to the network.
+3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
@@ -105,46 +120,12 @@ Although the transaction is created, it has not been announced to the network ye
         :language: bash
         :start-after: #!/bin/sh
 
-4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :ref:`the error code here <status-errors>`.
+4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :ref:`the error code meaning here <status-errors>`.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
 If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.
 
-************
-What's next?
-************
-
-Send multiple mosaics in the same transaction.
-
-**Adding multiple mosaics**
-
-.. figure:: ../../resources/images/examples/transfer-transaction-multiple-mosaics.png
-    :align: center
-    :width: 450px
-
-    Sending multiple mosaics in the same transaction
-
-As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
-
-If you own more than one mosaic, send them together in the same transaction:
-
-.. example-code::
-
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
-        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-ts|
-        :language: typescript
-        :lines:  39-40
-
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
-        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-js|
-        :language: javascript
-        :lines:  38-39
-
-    .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransactionWithMultipleMosaics.sh
-        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-cli|
-        :language: bash
-        :start-after: #!/bin/sh
 
 .. |sending-a-transfer-transaction-ts| raw:: html
 

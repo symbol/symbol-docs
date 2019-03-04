@@ -60,7 +60,14 @@ If you want to unlink the alias, change alias action type to ``AliasActionType.U
 What's next?
 ************
 
-Send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` to an aliased account.
+Now you can set the namespace linked to the account as a recipient instead of using the complete address.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
+        :caption: |sending-a-transfer-transaction-address-alias-ts|
+        :language: typescript
+        :lines:  33-40
 
 .. |linking-a-namespace-to-an-address-ts| raw:: html
 
@@ -69,3 +76,7 @@ Send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction
 .. |linking-a-namespace-to-an-address-js| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-address-alias-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts" target="_blank">View Code</a>

@@ -59,7 +59,14 @@ If you want to unlink the alias, change alias action type to ``AliasActionType.U
 What's next?
 ************
 
-Send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` using an aliased mosaic.
+Now you can send transactions using the namespace linked to the mosaic instead of defining the complete mosaicId.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts
+        :caption: |sending-a-transfer-transaction-mosaic-alias-ts|
+        :language: typescript
+        :lines:  35-42
 
 .. |linking-a-namespace-to-a-mosaic-ts| raw:: html
 
@@ -68,3 +75,7 @@ Send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction
 .. |linking-a-namespace-to-a-mosaic-js| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-mosaic-alias-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts" target="_blank">View Code</a>
