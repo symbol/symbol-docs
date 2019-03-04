@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/contribute/contributors.rst:3
+msgid "Contributors"
+msgstr "貢献者"
+
+#: ../../source/contribute/contributors.rst:5
+msgid ""
+"The NEM Developer Center is not written from scratch. It is the sum of "
+"previous effort and documents written by the community and core developers, "
+"adapted for this new release. Thank you!"
+msgstr ""
+"NEM "
+"開発者センターはスクラッチから書かれていません。新しいリリースに合わせて、コミュニティやコア開発者の努力とこれまでに記述したドキュメントの賜物です。感謝します！"
+
+#: ../../source/contribute/contributors.rst:7
+msgid "|nem-technical-reference|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:8
+msgid "|nem-website|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:9
+msgid "|nem-nis-api-reference|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:10
+msgid "|nem-knowledge-base|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:11
+msgid "|nem-developer-guide|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:12
+msgid "|nem-blog-articles|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:13
+msgid "|nem-medium-articles|"
+msgstr ""
+
+#: ../../source/contribute/contributors.rst:15
+msgid ""
+"We want to recognize the contributors who provide content and improve the "
+"quality and completeness of this documentation."
+msgstr "私たちは、このドキュメントのコンテンツを提供し品質とドキュメントの完全性を向上させている、貢献者を表彰したいと思います。"

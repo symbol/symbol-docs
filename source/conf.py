@@ -42,9 +42,10 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
-    'sphinxcontrib.fulltoc',
     'sphinxcontrib.ghcontributors',
+    'sphinx_tabs.tabs',
     'edit-on-github',
+    'fulltoc',
     'ablog'
     ]
 
@@ -61,7 +62,7 @@ templates_path.append(ablog.get_html_templates_path())
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'contents'
 
 # General information about the project.
 project = u'nem2-docs'
@@ -73,7 +74,8 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.12'
+version = u'0.17.0'
+
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
 
@@ -83,6 +85,9 @@ release = u'Master'
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
+
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -116,8 +121,9 @@ html_theme_options = {
     'navbar_site_name': "Site",
 
     'navbar_links': [
-        ("Getting Started", "getting-started/what-is-nem"),
-        ("Guides", "guides/overview"),
+        ("Getting started", "getting-started/what-is-nem"),
+        ("Built-in features", "concepts/account"),
+        ("Guides", "guides/category/account"),
         ("References", "references"),
     ],
 
@@ -177,50 +183,40 @@ html_theme_options = {
 # of the sidebar.
 html_logo = "_static/logo-nem.svg"
 
+# Docs Title
+html_title = 'NEM Developer Center'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Additional html pages
+html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', '404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
-    app.add_stylesheet("https://use.fontawesome.com/releases/v5.0.13/css/all.css")
+    app.add_stylesheet("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700")
+    app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
 
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
-#
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-  'api/requests': ['localtoc.html'],
-  'api/endpoints': [],
-  'api/tools': ['localtoc.html'],
-  'api/websockets': ['localtoc.html'],
-  'api/status-errors': ['localtoc.html'],
-  'cli/**': ['localtoc.html'],
-  'concepts/**': ['localtoc.html'],
-  'getting-started/**': ['localtoc.html'],
-  'guides/overview': ['localtoc.html'],
-  'guides/account': ['localtoc.html'],
-  'guides/blockchain': ['localtoc.html'],
-  'guides/mosaic': ['localtoc.html'],
-  'guides/namespace': ['localtoc.html'],
-  'guides/mosaic': ['localtoc.html'],
-  'guides/running-a-node': ['localtoc.html'],
-  'guides/transaction': ['localtoc.html'],
-  'guides/workshops': ['localtoc.html'],
-  'guides/workshops/creating-a-new-workshop': ['localtoc.html'],
-  'guides/writing-a-guide': ['localtoc.html'],
-  'libraries/**': ['localtoc.html'],
-  'prototyping-tool/**': ['localtoc.html'],
-  'sdk/**': ['localtoc.html'],
-  'wallet/**': ['localtoc.html'],
-  'support/**': ['localtoc.html'],
+  'api': ['globaltoc.html'],
+  'cli': ['globaltoc.html'],
+  'concepts/**': ['globaltoc.html'],
+  'getting-started/**': ['globaltoc.html'],
+  'guides/**/**': ['categories.html'],
+  'guides': ['categories.html'],
+  'guidelines/**': ['globaltoc.html'],
+  'extensions': ['globaltoc.html'],
+  'prototyping-tool': ['globaltoc.html'],
+  'sdk': ['globaltoc.html'],
+  'wallet': ['globaltoc.html'],
+  'contribute/**': ['globaltoc.html'],
   'index': [],
 }
 
@@ -301,8 +297,7 @@ epub_copyright = copyright
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
-
+epub_exclude_files = ['index.html, search.html, references.html, guides.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
@@ -321,7 +316,13 @@ html_scaled_image_link = False
 
 # -- Options for ablog ----------------------------------------------------
 blog_baseurl = ''
+blog_path = 'guides'
+
+blog_authors = {
+    'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
+    'jorisadri': ('jorisadri', 'http://github.com/jorisadri'),
+}
 
 # -- Options for linkcheck ------------------------------------------------
 
-linkcheck_ignore = [r'http://localhost:\d+']
+linkcheck_ignore = [r'http://localhost\d+']

@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:10
+msgid "Creating an escrow with aggregate bonded transaction"
+msgstr "アグリゲートボンドトランザクションを使ったエスクローの作成"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:12
+msgid ""
+"Learn about :ref:`aggregate bonded transactions <aggregate-transaction>`, by"
+" creating an escrow."
+msgstr ""
+"エスクローの作成によって :ref:`アグリゲートボンドトランザクション <aggregate-transaction>` について学習します。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:16
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:18
+msgid ""
+"An **escrow** is a ``contractual arrangement`` in which a ``third party "
+"receives and disburses money`` or documents for the ``primary transacting "
+"parties``, with the disbursement dependent on ``conditions agreed to by the "
+"transacting parties``, or an ``account established by a broker for holding "
+"funds`` on behalf of the broker's principal or some other person ``until the"
+" consummation or termination of a transaction``; or, a trust account held in"
+" the borrower's name to pay obligations such as property taxes and insurance"
+" premiums."
+msgstr ""
+"**エスクロー** とは ``一次取引当事者`` のための ``お金や書類を第三者が受け取り`` 、``取引当事者によって合意された条件`` "
+"に応じた払い出す、またはブローカーの債務者または他の人が代理して、取引の達成または終了まで ``資産を保有するブローカーに立ち上げられた口座`` "
+"を指します。または資産税や保険料などの債務を支払うために、借り手の名前で保有されている信託口座を言います。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:20
+msgid "See full description at |escrow_wikipedia|."
+msgstr "完全な説明は |escrow_wikipedia| を参照してください。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:22
+msgid ""
+"In this example, imagine the two parties agree on a virtual service, "
+"implying that the **escrow can be immediate**."
+msgstr "この例では、2つの当事者が実質的なサービスに同意すると仮定して **エスクローが即時にできること** を意味します。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:24
+msgid "**How does it work?**"
+msgstr "**どのように動作するのか？**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:26
+msgid "Buyer and seller agree on terms"
+msgstr "買い手と売り手が規約に同意する"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:27
+msgid "Buyer submits payment to escrow"
+msgstr "買い手がエスクローへ商品代を送る"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:28
+msgid "Seller delivers goods or service to Buyer"
+msgstr "売り手が商品またはサービスを買い手へ届ける"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:29
+msgid "Buyer approves goods or service"
+msgstr "買い手は商品またはサービスを受理する"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:30
+msgid "Escrow releases payment to the seller"
+msgstr "エスクローは売り手へ商品代を開放する"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:32
+msgid "**How is it applied to NEM?**"
+msgstr "**どのように NEM に適用するのか？**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:34
+msgid "Normalizing the language into NEM related concepts:"
+msgstr "NEM に関連するコンセプトへと正規化していきます:"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:37
+msgid "**contractual arrangement**"
+msgstr "**契約上の協約**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:37
+msgid "Aggregate Transaction"
+msgstr "アグリゲートトランザクション"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:40
+msgid "**third party receives and disburses money**"
+msgstr "**第三者がお金を受け取り、払い出す**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:40
+msgid "No third party"
+msgstr "第三者無し"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:43
+msgid "**primary transacting parties**"
+msgstr "**主要取引先**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:43
+msgid "Accounts"
+msgstr "アカウント"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:46
+msgid "**conditions agreed to by the transacting parties**"
+msgstr "**取引当事者が合意した条件**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:46
+msgid "Sign transaction"
+msgstr "トランザクションに署名"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:49
+msgid "**account established by a broker for holding funds**"
+msgstr "**ブローカーが資金を保有するために設定した口座**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:49
+msgid "No account, it will happen atomically using an aggregate transaction"
+msgstr "アカウントは不要、アグリゲートトランザクションの使用により自動的に行われます"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:53
+msgid "**until the consummation or termination of a transaction**"
+msgstr "**取引の完了または終了まで**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:52
+msgid "The transaction gets included in a block"
+msgstr "トランザクションがブロックに含まれる"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:57
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:59
+msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
+msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:60
+msgid ""
+"Finish :doc:`sending payouts with aggregate complete transactions <sending-"
+"payouts-with-aggregate-complete-transaction>`"
+msgstr ""
+":doc:`アグリゲート完了トランザクションによって支払いを送信 <sending-payouts-with-aggregate-complete-"
+"transaction>` を終了している"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:61
+msgid "NEM2-SDK"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:62
+msgid "A text editor or IDE"
+msgstr "テキストエディタかIDE"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:66
+msgid "Let's get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:72
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:160
+msgid "Multi-Asset Escrowed Transactions"
+msgstr "マルチアセットエスクロートランザクション"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:74
+msgid "**Setting up the required accounts and mosaics**"
+msgstr "**要求されているアカウントとモザイクをセットアップします**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:76
+msgid ""
+"In this example, Alice and a ticket distributor want to swap the following "
+"mosaics."
+msgstr "この例では、Alice とチケット販売者は以下のモザイクを交換したいと思っています。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "Owner"
+msgstr "保有者"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "Mosaic Name"
+msgstr "モザイク名"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "Amount"
+msgstr "総量"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "Alice"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "nem:xem"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "100"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "Ticket distributor"
+msgstr "チケット販売者"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "museum:ticket"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:1
+msgid "1"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:84
+msgid ""
+"Before continuing, practise by setting up the namespaces and mosaics "
+"required."
+msgstr "続行する前に、必要なネームスペースとモザイクをセットアップしてください。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:86
+msgid "**Mosaics swap**"
+msgstr "**モザイク交換**"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:88
+msgid ""
+"Alice will send a transaction to the ticket distributor exchanging 100 "
+"nem:xem with 1 museum:ticket."
+msgstr "100 nem:xem と 1 museum:ticket を交換するために、Alice はチケット販売者にトランザクションを送ります。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:90
+msgid "Create two  :ref:`transfer transaction <transfer-transaction>`:"
+msgstr ":ref:`2つの転送トランザクション <transfer-transaction>` を作ります:"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:92
+msgid "From Alice to the ticket distributor sending 100 nem:xem"
+msgstr "Alice からチケット販売者へ 100 nem:xem を送信します"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:93
+msgid "From the ticket distributor to Alice sending 1 museum:ticket."
+msgstr "チケット販売者から Alice へ 1 museum:ticket を送信します"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:95
+msgid ""
+"Add them as ``innerTransactions`` under an :ref:`aggregate transaction "
+"<aggregate-transaction>`."
+msgstr ""
+"これらを ``インナートランザクション`` として :ref:`アグリゲートトランザクション <aggregate-transaction>` "
+"に追加します。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:97
+msgid ""
+"An aggregate Transaction is *complete* if before announcing it to the "
+"network, all required cosigners have signed it. If valid, it will be "
+"included in a block."
+msgstr ""
+"ネットワークへアナウンスされる前にすべての連署者が署名をすると、アグリゲートトランザクションは **コンプリート** "
+"になります。正当であれば、ブロックへ取り込まれます。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:99
+msgid ""
+"In case that signatures are required from other participants and the "
+"transaction is announced to the network, it is considered an aggregate "
+"bonded."
+msgstr "他の参加者からの署名が必要な状態でネットワークにアナウンスされた場合、その取引はアグリゲートボンドされたものとみなされます。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:103
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:122
+msgid "|creating-an-escrow-with-aggregate-bonded-transaction-ts|"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:108
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:127
+msgid "|creating-an-escrow-with-aggregate-bonded-transaction-java|"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:113
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:132
+msgid "|creating-an-escrow-with-aggregate-bonded-transaction-js|"
+msgstr ""
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:118
+msgid ""
+"When an aggregate transaction is bonded, Alice will need to lock at least 10"
+" XEM. Once the ticket distributor signs the aggregate transaction, the "
+"amount of locked XEM becomes available again on Alice's account, and the "
+"exchange will get through."
+msgstr ""
+"アグリゲートトランザクションがボンドであるとき、Alice は最低 10 XEM "
+"でロックする必要があります。チケット販売者がアグリゲートトランザクションに署名すると、ロックされた XEM の総量が Alice "
+"のアカウントで再び利用可能になり、交換が完了します。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:137
+msgid ""
+"The :ref:`listener implementation changes <monitoring-transactions-client-"
+"side>` when used on the client side (e.g., Angular, React, Vue)."
+msgstr ""
+"クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
+"transactions-client-side>` 。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:141
+msgid "Is it possible without aggregate transactions?"
+msgstr "この取引をアグリゲートトランザクション無しに可能でしょうか？"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:143
+msgid "**It is not secure**, since any event of the next list may happen:"
+msgstr "次のリストのようなことが起こりうるので **安全ではありません** 。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:145
+msgid "The buyer does not pay."
+msgstr "買い手は支払いを行いませんでした。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:146
+msgid "The seller does not send the virtual goods."
+msgstr "売り手は実質的な商品を送りませんでした。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:150
+msgid "What's next?"
+msgstr "次は？"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:152
+msgid ""
+"The distributor has not signed the aggregate bonded transaction yet, so "
+"exchange has not been completed. Consider reading :doc:`signing announced "
+"aggregate bonded transactions guide <signing-announced-aggregate-bonded-"
+"transactions>`."
+msgstr ""
+"販売者はまだアグリゲートボンドトランザクションに署名していないため、交換は完了していません。:doc:`アナウンスされたアグリゲートボンドトランザクションに署名をするガイド"
+" <signing-announced-aggregate-bonded-transactions>` を読むことを検討してください。"
+
+#: ../../source/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.rst:154
+msgid "Afterwards, try to swap mosaics between multiple participants."
+msgstr "その後は、複数の参加者間でモザイクの交換を試してみてください。"

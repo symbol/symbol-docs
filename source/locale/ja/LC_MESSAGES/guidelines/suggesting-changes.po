@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:11+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guidelines/suggesting-changes.rst:5
+msgid "Suggesting documentation changes"
+msgstr "ドキュメント変更の提案"
+
+#: ../../source/guidelines/suggesting-changes.rst:7
+msgid ""
+"The NEM Developer Center is an open source project and we love to receive "
+"contributions from our community — you! There are many ways to contribute, "
+"from writing guides, improving the documentation, submitting errors and "
+"requests or writing new pieces of documentation which can be incorporated "
+"into the docs itself."
+msgstr ""
+
+#: ../../source/guidelines/suggesting-changes.rst:13
+msgid "Error reports"
+msgstr "エラーの報告"
+
+#: ../../source/guidelines/suggesting-changes.rst:15
+msgid ""
+"If you think you have found an error in the NEM Developer Center, first make"
+" sure that you are testing against the latest version of NEM Developer "
+"Center - your issue may already have been fixed. If not, search our issues "
+"list on GitHub in case a similar |issue| has already been opened."
+msgstr ""
+"NEM開発センターでエラーを発見したと思われる場合は、まずNEM開発センターの最新バージョンに対してテストしていることを確認してください - "
+"あなたの問題は既に修正されている可能性があります。そうでない場合、同様の問題が既に開かれていないか、GitHub の |issue| "
+"リストを検索してください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:18
+msgid ""
+"It is very helpful if you can prepare a reproduction of the error. It makes "
+"it easier to find the problem and to fix it."
+msgstr "エラーの再現の準備をしていただけるととても助かります。問題を発見して修正するための手助けとなります。"
+
+#: ../../source/guidelines/suggesting-changes.rst:20
+msgid ""
+"Please, take into consideration the next template to report your issue:"
+msgstr "問題の報告には次のテンプレートを使うことを考慮してください:"
+
+#: ../../source/guidelines/suggesting-changes.rst:22
+msgid "**Error description**"
+msgstr "**エラーの説明**"
+
+#: ../../source/guidelines/suggesting-changes.rst:24
+msgid "Short and expressive sentence explaining what is wrong.\\"
+msgstr "何が問題であるかを説明する端的で表現力のある文章。"
+
+#: ../../source/guidelines/suggesting-changes.rst:26
+msgid "**Url or screenshot**"
+msgstr "**URLまたはスクリーンショット**"
+
+#: ../../source/guidelines/suggesting-changes.rst:28
+msgid "For faster issue detection, we would need where to find it. \\"
+msgstr "どこで問題が発生するのかを素早く発見するために必要とします。"
+
+#: ../../source/guidelines/suggesting-changes.rst:30
+msgid "Provide as much information as you can."
+msgstr "可能な限り多くの情報提供"
+
+#: ../../source/guidelines/suggesting-changes.rst:32
+msgid "Open a new |issue| here."
+msgstr "新しい |issue| をここから開いてください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:36
+msgid "Requests"
+msgstr "要望"
+
+#: ../../source/guidelines/suggesting-changes.rst:38
+msgid ""
+"If you find yourself wishing for content that does not exist in the NEM "
+"Developer Center, you are probably not alone. Most of the documentation and "
+"guides that the NEM Developer Center has today have been added because our "
+"users saw the need. Open an |issue| on our issues list on GitHub which "
+"describes the missing documentation or improvement you would like to see."
+msgstr ""
+"あなたが望んでいるコンテンツがNEM開発センターに存在しないと思っているなら、それはあなただけではないのかもしれません。現在NEM開発センターが提供しているドキュメントやガイドの多くは、ユーザーが必要と感じたため追加されました。不足しているドキュメントや必要だと思う改善は"
+" GitHub のissueリストに |issue| を開いてください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:40
+msgid ""
+"If the improvement is not related to documentation, but with a specific "
+"project, please check CONTRIBUTING.md in the project repository."
+msgstr ""
+"改善がドキュメントに関連するものではなく、特定のプロジェクトである場合は、プロジェクトリポジトリの CONTRIBUTING.md を確認してください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:44
+msgid "Contributing code and documentation changes"
+msgstr "コードやドキュメントへの貢献による変更"
+
+#: ../../source/guidelines/suggesting-changes.rst:46
+msgid ""
+"To expand and improve the NEM Developer Center, please find or open an "
+"|issue| about it first. Talk about what you would like to do. It may be that"
+" somebody is already working on it, or that there are particular issues that"
+" you should know about before implementing the change."
+msgstr ""
+"NEM開発センターを拡張し改善するには、先にそれに関する |issue| "
+"を見つけてください。そして、あなたが何をしたいかを話してください。誰かが既にそれに取り組んでいるか、変更を実装する前に知っておくべき特定の問題があるかもしれません。"
+
+#: ../../source/guidelines/suggesting-changes.rst:48
+msgid ""
+"We enjoy working with contributors to get their pull-requests accepted."
+msgstr "私たちは貢献者と協力してプルリクエストを受け入れています。"
+
+#: ../../source/guidelines/suggesting-changes.rst:51
+msgid "Contributing License Notice"
+msgstr "貢献ライセンスの通知"
+
+#: ../../source/guidelines/suggesting-changes.rst:53
+msgid ""
+"When you contribute code, you affirm that the contribution is your original "
+"work and that you license the work to the project under the project's open "
+"source license."
+msgstr ""
+"コードを投稿すると、その投稿はオリジナルの作品であり、プロジェクトのオープンソースライセンスの下でプロジェクトにライセンス供与されているとみなします。"
+
+#: ../../source/guidelines/suggesting-changes.rst:55
+msgid ""
+"Whether or not you state this explicitly, by submitting any copyrighted "
+"material via pull request, email, or other means you agree to license the "
+"material under the project's open source license and warrant that you have "
+"the legal authority to do so."
+msgstr ""
+"これを明示的に述べているかどうかにかかわらず、著作権で保護された素材をプルリクエスト、電子メール、またはその他の方法で提出することは、プロジェクトのオープンソースライセンスの下での素材のライセンスを取得することに同意し、法的権限を有することを保証します。"
+
+#: ../../source/guidelines/suggesting-changes.rst:58
+msgid "Fork and clone the repository"
+msgstr "リポジトリのフォークとクローン"
+
+#: ../../source/guidelines/suggesting-changes.rst:60
+msgid ""
+"If the documentation change is small, you can use the *\"Edit on Github\"* "
+"button at the top of the page."
+msgstr "ドキュメントの変更が小さい場合は、画面の右上にある *\"Edit on Github\"* ボタンを使用してください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:62
+msgid ""
+"For substantial changes or contributions, you may need to fork the main "
+"|repository| and clone it to your local machine. See |github-help| page for "
+"help."
+msgstr ""
+"かなりの変更もしくは貢献をする場合、 |repository| リポジトリをフォークして、あなたのマシンへクローンする必要があるかもしれません。 "
+"|github-help| を参照してください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:64
+msgid "Further instructions for specific projects are given below."
+msgstr "特定のプロジェクトへの詳細な説明は以下の通りです。"
+
+#: ../../source/guidelines/suggesting-changes.rst:67
+msgid "Submitting your changes"
+msgstr "変更の提出"
+
+#: ../../source/guidelines/suggesting-changes.rst:69
+msgid "Once your changes and tests are ready to submit for review:"
+msgstr "あなたの変更とテストがレビューに提出する準備ができたら:"
+
+#: ../../source/guidelines/suggesting-changes.rst:71
+msgid "Test your changes"
+msgstr "変更のテスト"
+
+#: ../../source/guidelines/suggesting-changes.rst:73
+msgid "Run ``make livehtml`` and preview your changes."
+msgstr "``make livehtml`` を実行し、変更した部分をプレビューしてください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:75
+msgid "Submit a pull request"
+msgstr "プルリクエストの提出"
+
+#: ../../source/guidelines/suggesting-changes.rst:77
+msgid ""
+"Push your local changes to your forked copy of the repository and |pull-"
+"request|. In the pull request, choose a title which sums up the changes that"
+" you have made, and in the body provide more details about what your changes"
+" do. Also mention the number of the issue where discussion has taken place, "
+"eg \"Closes #123\"."
+msgstr ""
+"ローカルでの変更をフォークしたリポジトリのコピーにプッシュし |pull-request| "
+"を送信します。プルリクエストであなたの変更を要約するタイトルを記入し、変更が何をしているかの詳細を本文に記入します。また、議論が行われた場合の "
+"issue 番号、例えば \"Closes＃123\" も記入します。"
+
+#: ../../source/guidelines/suggesting-changes.rst:79
+msgid ""
+"Then sit back and wait. There will probably be a discussion about the pull "
+"request and, if any changes are needed, we would love to work with you to "
+"get your pull request merged into nem2-docs."
+msgstr ""
+"それが済んだら休憩して待ちましょう。プルリクエストについての議論をして、その変更が必要な場合はプルリクエストを nem2-docs "
+"にマージするための協力をしたいと思います。"
+
+#: ../../source/guidelines/suggesting-changes.rst:81
+msgid ""
+"*CONTRIBUTING.md* is based on `CONTRIBUTING-template.md "
+"<https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-"
+"template.md>`_ , `elasticsearch/CONTRIBUTING "
+"<https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and"
+" `spark/CONTRIBUTING "
+"<https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_."
+msgstr ""

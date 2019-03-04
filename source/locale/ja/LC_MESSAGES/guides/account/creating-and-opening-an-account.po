@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"PO-Revision-Date: 2019-02-22 09:12+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:10
+msgid "Creating and opening an account"
+msgstr "アカウントを作成して開く"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:12
+msgid "Create a new :doc:`account <../../concepts/account>` and open it."
+msgstr "新しい :doc:`アカウント <../../concepts/account>` を作成して、開きます。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:19
+msgid "Text editor or IDE"
+msgstr "テキストエディタ または IDE"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:20
+msgid "NEM2-SDK or CLI"
+msgstr "NEM2-SDK または CLI"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:24
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:26
+msgid ""
+"An account is a key pair (private and public key) associated to a mutable "
+"state stored in the NEM blockchain."
+msgstr "アカウントとは、NEM ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:30
+msgid "|creating-an-account-ts|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:35
+msgid "|creating-an-account-js|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:40
+msgid "|creating-an-account-cli|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:45
+msgid ""
+"The **private key** uniquely identifies a NEM account and holds all of its "
+"power. It is a priority to make sure it is stored safely somewhere "
+"**offline** and not to share it with anyone."
+msgstr ""
+"**秘密鍵** は NEM アカウントを一意に特定し、全ての権限を保有します。**オフライン** "
+"のどこかで安全な場所にバックアップしていることが優先事項であり、誰にも共有してはいけません。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:47
+msgid ""
+"The **public key** is cryptographically derived from the private key and "
+"safe to be shared. In spite of that, it is preferable to share the "
+"**address**, which contains further information such as network and validity"
+" check."
+msgstr ""
+"**公開鍵** は秘密鍵から暗号学的に算出され、共有しても安全です。しかし、ネットワークや正当性チェックなどの情報が含まれている **アドレス** "
+"を共有する方がより好ましいです。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:49
+msgid ""
+"If you already have a private key, it is not necessary to generate a new "
+"account:"
+msgstr "既に秘密鍵を持っている場合は、新しいアカウントを作成する必要はありません:"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:53
+msgid "|opening-an-account-ts|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:58
+msgid "|opening-an-account-java|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:63
+msgid "|opening-an-account-js|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:68
+msgid "**Using a Wallet**"
+msgstr "**ウォレットを使用する**"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:70
+msgid ""
+"If the programming language of the SDK you are using allows client-side "
+"development, you can create a  wallet."
+msgstr "あなたの使用している SDK のプログラミング言語でクライアント側の開発が可能な場合は、ウォレットを開発することができます。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:72
+msgid ""
+"A wallet enables you to store your account to sign transactions, encrypting "
+"your private key with a password."
+msgstr "ウォレットは、トランザクションへの署名をするため、パスワードで秘密鍵を暗号化して、アカウントを保存できるようにします。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:76
+msgid "|creating-a-wallet-ts|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:81
+msgid "|creating-a-wallet-js|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:86
+msgid "|creating-a-wallet-cli|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:91
+msgid ""
+"Do you have a private key? You can create and open a wallet importing your "
+"private key."
+msgstr "秘密鍵をお持ちですか？あなたの秘密鍵をインポートしてウォレットを作成することができます。"
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:95
+msgid "|opening-a-wallet-ts|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:100
+msgid "|opening-a-wallet-js|"
+msgstr ""
+
+#: ../../source/guides/account/creating-and-opening-an-account.rst:105
+msgid "|opening-a-wallet-cli|"
+msgstr ""

@@ -5,7 +5,8 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-  - make html
+  - make alldocs
+
 deploy:
   provider: pages
   skip_cleanup: true

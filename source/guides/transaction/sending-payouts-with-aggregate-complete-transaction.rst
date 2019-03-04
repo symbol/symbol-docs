@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 11 Aug, 2018
-    :category: aggregate-transaction
+    :category: Aggregate Transaction
     :excerpt: 1
     :nocomments:
 
@@ -15,15 +15,15 @@ Send transactions to different accounts atomically, using an :ref:`aggregate com
 Background
 **********
 
-It is Christmas, and uncle Dan wants to send money to their nephews Alice and Bob.
+Dan wants to send mosaics to Alice and Bob.
 
-.. figure:: ../../resources/images/guides-transactions-sending-payouts.png
+.. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
     :width: 450px
 
     Sending transactions to different recipients atomically
 
-He chooses to send an aggregate complete transaction, so both of them will receive the funds at the same time.
+He chooses to send an aggregate complete transaction, so both will receive the funds at the same time.
 
 *************
 Prerequisites

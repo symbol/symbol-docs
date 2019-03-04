@@ -4,70 +4,151 @@ Mosaic
 
 Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
-Each mosaic is defined by a variety of attributes such as name, quantity, divisibility and transferability.
+A mosaic could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-A mosaic could be a token, but it could also represent a set of more specialized assets such as: reward points, shares of stock, signatures, status flags, votes or even other currencies.
+Each mosaic has a set of configurable properties. During the mosaic creation, you can define:
 
-.. _mosaic-definition-transaction:
+.. _mosaic-properties:
 
-*****************************
-Mosaic definition transaction
-*****************************
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-Mosaic definition transaction is used to create a new mosaic.
+    Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``.
+    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Mosaics can be configured to not expire.
+    Initial supply; Integer; Indicates the amount of mosaic in circulation. The initial supply must be in the range of 0 and ``9,000,000,000``.
+    Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
+    Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
-    **Namespace**
+******
+Guides
+******
 
-    A mosaic is always linked to a namespace, like a file hosted on a domain.
+.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
 
-    **Name**
+.. postlist::
+    :category: Mosaic
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
-    Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique, as the root namespace was unique, even if the rest of it is not.
-
-    Mosaics are named joining the namespace name with the mosaic name using the ':' symbol. Renting a namespace called ``nem`` and a mosaic called ``xem`` under it, the mosaic is referenced as ``nem:xem``.
-
-    Consider the following restrictions:
-
-    * Mosaic names have a size limit of ``64`` characters and must be unique under the domain name.
-
-    * Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
-
-    **Owner**
-
-    The public key of the mosaic creator.
-
-    **Properties**
-
-    The behavior of a mosaic can be customized by a set of properties. Supported properties are:
-
-    * Divisibility: Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and 6.
-
-    * Duration: The number of confirmed blocks we would like to rent our namespace for.
-
-    * Supply: The amount of mosaic in circulation. The creator can specify an initial supply of mosaics when creating the definition. The initial supply must be in the range of 0 and 9,000,000,000.
-
-    * Supply mutable: The creator can choose between a definition that allows a mosaic supply to change at a later point or an **immutable** supply. In the first case, the creator is only allowed to decrease the supply within the limits of mosaics owned.
-
-    * Transferability: The creator can choose whether the mosaic can be transferred to and from arbitrary accounts, or only allowing him/herself to be the recipient once transferred.
+*******
+Schemas
+*******
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
+.. _mosaic-definition-transaction:
+
+MosaicDefinitionTransaction
+===========================
+
+Announce a mosaic definition transaction to create a new mosaic.
+
+**Version**: 0x02
+
+**Entity type**: 0x414D
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicNonce; uint32; Random nonce used to generate the mosaic id.
+    mosaicId; uint64; The mosaic Id.
+    propertiesCount; uint8; The number of elements in optional properties
+    flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
+    divisibility; uint8; The mosaic divisibility.
+    properties; array(:ref:`MosaicProperty<mosaic-property>`, count); The optional mosaic properties.
+
 .. _mosaic-supply-change-transaction:
 
-********************************
-Mosaic supply change transaction
-********************************
+MosaicSupplyChangeTransaction
+=============================
 
-Mosaic supply change transaction is used to assign supply to a mosaic.
+Announce a supply change transaction to increase or decrease a mosaic's supply.
 
-    **Mosaic Id**
+**Version**: 0x02
 
-    Combination of namespace name and mosaic name. For example "foo.bar:token".
+**Entity type**: 0x424D
 
-    **Direction**
+**Inlines**:
 
-    Could be Increase (0) or Decrease (1).
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
 
-    **Delta**
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
 
-    The amount of supply to increase or decrease.
+    mosaicId; uint64; The id of the affected mosaic.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
+    delta; uint64; The amount of supply to increase or decrease.
+
+.. _mosaic-property:
+
+MosaicProperty
+==============
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    id; uint8; The property id. (0x02) stands for duration.
+    mosaicId; uint64; The mosaic property value.
+
+.. _mosaic:
+
+Mosaic
+======
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
+
+.. _unresolved-mosaic:
+
+UnresolvedMosaic
+================
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id.
+    amount; uint64; The amount of the mosaic.
+
+.. _mosaic-flags:
+
+MosaicFlags
+===========
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x00; No flags present.
+    0x01; The mosaic supply is mutable.
+    0x02; The mosaic is transferable.
+    0x04; The mosaic levy is mutable
+
+.. _mosaic-supply-change-direction:
+
+MosaicSupplyChangeDirection
+===========================
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0; Increase.
+    1; Decrease.
