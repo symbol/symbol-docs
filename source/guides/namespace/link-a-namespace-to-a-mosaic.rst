@@ -1,0 +1,70 @@
+:orphan:
+
+.. post:: 04 March, 2019
+    :category: Namespace, Mosaic
+    :excerpt: 1
+    :nocomments:
+
+###############################
+Linking a namespace to a mosaic
+###############################
+
+Link a :doc:`namespace <../../concepts/namespace>` to a :doc:`mosaic <../../concepts/mosaic>`.
+
+*************
+Prerequisites
+*************
+
+- Have registered one :doc:`namespace <../../concepts/namespace>`
+- Have registered one :doc:`mosaic <../../concepts/mosaic>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+
+************************
+Let’s get into some code
+************************
+
+An account can link a registered :doc:`name <../../concepts/namespace>` (namespace or subnamespace) with a :doc:`mosaic <../../concepts/mosaic>`.
+
+1. Define the namespaceId and the address you want to link.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
+        :caption: |linking-a-namespace-to-a-mosaic-ts|
+        :language: typescript
+        :lines:  31-36
+
+    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
+        :caption: |linking-a-namespace-to-a-mosaic-js|
+        :language: javascript
+        :lines: 31-36
+
+2. Announce the alias transaction.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
+        :caption: |linking-a-namespace-to-a-mosaic-ts|
+        :language: typescript
+        :lines:  39-
+
+    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
+        :caption: |linking-a-namespace-to-a-mosaic-js|
+        :language: javascript
+        :lines: 39-
+
+If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
+
+************
+What's next?
+************
+
+Send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` using an aliased mosaic.
+
+.. |linking-a-namespace-to-a-mosaic-ts| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts" target="_blank">View Code</a>
+
+.. |linking-a-namespace-to-a-mosaic-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js" target="_blank">View Code</a>

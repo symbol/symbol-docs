@@ -49,7 +49,7 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
         :lines: 30-36
 
 
-Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a  2-of-2 multisig instead. We could achieve it by increasing ``minApproval`` parameter in one unit.
+Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a 2-of-2 multisig instead. You can achieve this by increasing ``minApproval`` parameter in one unit.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
         :align: center

@@ -34,7 +34,7 @@ Let’s get into some code
 
 1. Choose a name you like. One common option is to use your company's or own name. In this example, we will register a namespace called ``foo``.
 
-2. Check if this nampespace name is available.
+2. Check if this namespace name is available.
 
 .. example-code::
 

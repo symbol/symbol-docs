@@ -53,7 +53,7 @@ Let’s get into some code
 
 **1.Creating an account for each participant**
 
-First, we identify the actors involved in the problem we want to solve:
+First, identify the actors involved in the problem we want to solve:
 
 * The ticket vendor.
 * The ticket buyer.
@@ -92,7 +92,7 @@ Accounts change the blockchain state through transactions. Once an account annou
 
 Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
 
-We suggest opening three new terminals:
+Open three new terminals:
 
 1. The first terminal :doc:`monitors announced transactions <../guides/transaction/monitoring-a-transaction-status>` validation errors.
 

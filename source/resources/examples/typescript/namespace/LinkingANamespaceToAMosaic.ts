@@ -18,10 +18,10 @@
 
 import {
     Account,
-    Address,
     AliasActionType,
     AliasTransaction,
     Deadline,
+    MosaicId,
     NamespaceId,
     NetworkType,
     TransactionHttp
@@ -33,18 +33,18 @@ const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 const namespaceId = new NamespaceId('foo');
-const address = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const mosaicId = new MosaicId('7cdf3b117a3c40cc');
 
 // 02 - Create and announce aliasTransaction
-const addressAliasTransaction = AliasTransaction.createForAddress(
+const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
-    AliasActionType.Unlink,
+    AliasActionType.Link,
     namespaceId,
-    address,
+    mosaicId,
     NetworkType.MIJIN_TEST
 );
 
-const signedTransaction = account.sign(addressAliasTransaction);
+const signedTransaction = account.sign(mosaicAliasTransaction);
 
 transactionHttp
     .announce(signedTransaction)

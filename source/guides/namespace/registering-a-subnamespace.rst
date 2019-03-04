@@ -62,7 +62,7 @@ In this example, we have registered a subnamespace called ``bar`` under ``foo`` 
 What's next?
 ************
 
-When the transaction is confirmed, link a namespace with a mosaic or address.
+When the transaction is confirmed, link a namespace with a :doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address <../namespace/link-a-namespace-to-an-address>`.
 
 
 .. |registering-a-subnamespace-ts| raw:: html
