@@ -38,15 +38,6 @@ NEM is a **flexible blockchain** technology. Instead of uploading all the applic
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
-*************
-Prerequisites
-*************
-
-- Finish :doc:`getting started section <setup-workstation>`
-- Text editor or IDE
-- NEM2-SDK and CLI
-- An account with cat.currency
-
 ************************
 Let’s get into some code
 ************************

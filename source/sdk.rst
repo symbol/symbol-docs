@@ -12,8 +12,6 @@ The best way to learn to use the SDKs is through :ref:`guides <category-account>
 Official SDKs
 *************
 
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>`.
-
 .. csv-table::
     :header: "Language", "Repository", "Reference", "Active Developers"
     :delim: ;

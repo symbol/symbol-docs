@@ -56,18 +56,20 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
-************
-What's next?
-************
+..
+    ************
+    What's next?
+    ************
 
-Now you can set the namespace linked to the account as a recipient instead of using the complete address.
+    Now you can set the namespace linked to the account as a recipient instead of using the complete address.
 
-.. example-code::
+ ..
+    .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
-        :caption: |sending-a-transfer-transaction-address-alias-ts|
-        :language: typescript
-        :lines:  33-40
+        .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
+            :caption: |sending-a-transfer-transaction-address-alias-ts|
+            :language: typescript
+            :lines:  33-40
 
 .. |linking-a-namespace-to-an-address-ts| raw:: html
 

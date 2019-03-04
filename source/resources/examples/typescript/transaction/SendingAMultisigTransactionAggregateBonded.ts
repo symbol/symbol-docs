@@ -64,6 +64,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),

@@ -121,42 +121,48 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     Sending an aggregate bonded transaction
 
-.. example-code::
-
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
-        :language: typescript
-        :lines:  61-66
-
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
-        :language: javascript
-        :lines:  61-66
-
-
 1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least ``10 cat.currency`` to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. Modify the previous code, defining the transaction as ``aggregate bonded``.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
         :language: typescript
-        :lines:  68-
+        :lines:  61-67
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
-        :lines:  68-
+        :lines:  61-67
+
+
+3. When an aggregate transaction is bonded, Bob needs to lock at least ``10 cat.currency`` to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
+        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
+        :language: typescript
+        :lines:  69-
+
+    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
+        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
+        :language: javascript
+        :lines:  69-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!
+4. :doc:`Cosign the aggregate transaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
 
 .. |sending-a-multisig-transaction-aggregate-complete-ts| raw:: html
 
