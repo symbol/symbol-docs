@@ -20,12 +20,6 @@ Block creation
 
 Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The harvesting account - called the harvester - gets the fees for the transactions in the block. This gives the harvester an incentive to add as many transactions to the block as possible.
 
-****************
-Block Difficulty
-****************
-
-The difficulty for a new block is equal to the average difficulty divided by the average block creation time for the last ``60`` blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10\ :sup:`15` or smaller than 10\ :sup:`13`\ .
-
 ******
 Guides
 ******
@@ -58,7 +52,7 @@ BlockHeader
 
     height; uint64; The height of the blockchain. Each blockchain has a unique height. Subsequent blocks differ in height by 1.
     timestamp; uint64; The number of seconds elapsed since the creation of the nemesis block.
-    difficulty; uint64; The block difficulty.
+    difficulty; uint64; The average difficulty divided by the average block creation time for the last ``60`` blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10\ :sup:`15` or smaller than 10\ :sup:`13`\ .
     feeMultiplier; uint32; The fee multiplier applied to transactions contained in block.
     previousBlockHash; 32 bytes (binary); The hash of the previous block.
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
