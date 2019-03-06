@@ -324,6 +324,12 @@ body > .container {
 
 @media (min-width: 992px){
     .navbar-right {
+        margin-right: -95px;
+    }
+}
+
+@media (min-width: 1200px){
+    .navbar-right {
         margin-right: -30px;
     }
 }
