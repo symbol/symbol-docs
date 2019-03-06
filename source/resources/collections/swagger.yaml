@@ -596,7 +596,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get the current height of the chain
-      description: Returns the current height of the block chain.
+      description: Returns the current height of the blockchain.
       operationId: getBlockchainHeight
       produces:
       - application/json
@@ -611,7 +611,11 @@ paths:
       - Blockchain routes
       summary: Get the current score of the chain
       description: |
-        Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
+        Gets the current score of the blockchain. The higher the score, the better the chain. During synchronization, nodes try to get the best blockchain in the network.
+        
+        The score for a block is derived from its difficulty and the time (in seconds) that has elapsed since the last block:
+        
+            block score = difficulty − time elasped since last block
       operationId: getBlockchainScore
       produces:
       - application/json
