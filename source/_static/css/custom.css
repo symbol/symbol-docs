@@ -61,7 +61,8 @@ h1 {
 
 .btn-default:hover,
 .btn-default:focus,
-.btn-default:active{
+.btn-default:active,
+.btn-default:active:focus{
     background-color: transparent;
     color: #2780e3;
     border: 1px solid #2780e3;
