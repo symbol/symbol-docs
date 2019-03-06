@@ -70,7 +70,7 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
 {% endblock %}
 
 {# Silence the sidebar's, relbar's #}
@@ -83,7 +83,10 @@
 {{ navBar() }}
 <div class="container">
     <div class="row">
-        {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+        {%- block sidebar1 %}
+
+        {{ bsidebar() }}
+        {% endblock %}
         <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
             {%- if edit_on_github_url %}
             <div id="edit-on-github" class="text-right">
@@ -101,15 +104,7 @@
 
 {%- block footer %}
 {% include "footer2.html" %}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script type="text/javascript"> docsearch({
-    apiKey: 'fea87a364e2d51e3729a3a4889f7fe61',
-    indexName: 'nemtech',
-    inputSelector: '#search',
-    algoliaOptions: { },
-    debug: false
-});
-</script>
+{% include "algolia.html" %}
 {%- endblock %}
 
 
