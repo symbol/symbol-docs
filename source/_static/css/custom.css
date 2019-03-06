@@ -343,8 +343,9 @@ body > .container {
     font-weight: normal;
     -webkit-appearance: none;
     padding: 0px 5px;
-
+    cursor: pointer;
 }
+
 #language option {
     color: #555;
     -webkit-animation: fadeIn 1s;
