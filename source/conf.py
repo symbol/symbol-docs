@@ -66,7 +66,7 @@ master_doc = 'contents'
 
 # General information about the project.
 project = u'nem2-docs'
-copyright = u'2018, NEM'
+copyright = u'2018-2019, NEM'
 author = u'NEM'
 
 # The version info for the project you're documenting, acts as replacement for
