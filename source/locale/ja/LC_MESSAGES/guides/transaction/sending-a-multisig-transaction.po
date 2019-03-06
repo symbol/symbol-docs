@@ -94,11 +94,11 @@ msgid "A text editor or IDE"
 msgstr "テキストエディタかIDE"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:38
-msgid "An multisig account with XEM"
+msgid "A multisig account with XEM"
 msgstr "XEMを保有しているマルチシグアカウント"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:39
-msgid "An cosignatory account with XEM"
+msgid "A cosignatory account with XEM"
 msgstr "XEMを保有している連署アカウント"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:43
