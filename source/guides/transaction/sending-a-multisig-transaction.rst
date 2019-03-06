@@ -35,8 +35,8 @@ Prerequisites
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - NEM2-SDK
 - A text editor or IDE
-- An multisig account with XEM
-- An cosignatory account with XEM
+- A multisig account with XEM
+- A cosignatory account with XEM
 
 ************************
 Let’s get into some code
