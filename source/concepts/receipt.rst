@@ -88,16 +88,12 @@ TransactionStatement
 * **version**: 0x1
 * **type**: Transaction_Group
 
-**Inlines**:
-
-* :ref:`Receipt <receipt>`
-
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
     m_source; ReceiptSource; The receipt source.
-    receipts; array(ReceiptHeader, receiptsHeadersSize);  The array of receipt headers.
+    receipts; array(:ref:`Receipt <receipt>`, receiptsSize);  The array of receipts.
 
 .. _resolution-statement:
 
@@ -106,10 +102,6 @@ ResolutionStatement
 
 * **version**: 0x1
 * **type**: Address_Alias_Resolution or Mosaic_Alias_Resolution
-
-**Inlines**:
-
-* :ref:`Receipt <receipt>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
