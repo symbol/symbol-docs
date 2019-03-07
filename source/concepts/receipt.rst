@@ -85,6 +85,13 @@ Receipt
 TransactionStatement
 ====================
 
+* **version**: 0x1
+* **type**: Transaction_Group
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
+
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
@@ -96,6 +103,13 @@ TransactionStatement
 
 ResolutionStatement
 ===================
+
+* **version**: 0x1
+* **type**: Address_Alias_Resolution or Mosaic_Alias_Resolution
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
