@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-06 11:43+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -180,7 +180,7 @@ msgid ""
 "Alice picks a random number, called ``proof``. Then, applies a SHA512 hash "
 "algorithm to it, obtaining the ``secret``."
 msgstr ""
-"Alice は ``証明`` と呼ばれるランダムな数字を選び出します。SHA512 ハッシュアルゴリズムをそれに適用して ``シークレット`` "
+"Alice は ``proof`` と呼ばれるランダムな数字を選び出します。SHA512 ハッシュアルゴリズムをそれに適用して ``secret`` "
 "を得ます。"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:77
@@ -201,7 +201,7 @@ msgstr "シークレット: ハッシュ化された証明"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:82
 msgid "The amount of time in which funds can be unlocked: 96h"
-msgstr "資産がアンロックされるまでの時間: 96h"
+msgstr "資産がアンロックされるまでの時間: 96時間"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:83
 msgid "The network: Private Chain"
@@ -214,11 +214,11 @@ msgid ""
 "one proved it, the locked funds will be returned to Alice."
 msgstr ""
 "一度アナウンスされると、誰かがシークレットにマッチする証明を発見するまで、このトランザクションはロックされたままです。一定の期間が経過してもそれが証明されなければ、ロックされた資金は"
-" ALICE に返還されます。"
+" Alice に返還されます。"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:94
 msgid "Alice signs and announces TX1 to the private chain."
-msgstr "ALICE は TX1 に署名して、プライベートチェーンへアナウンスします。"
+msgstr "Alice は TX1 に署名して、プライベートチェーンへアナウンスします。"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:103
 msgid ""
@@ -244,7 +244,7 @@ msgstr "資産をアンロックするために必要なシークレット"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:110
 msgid "The amount of time in which funds can be unlocked: 84h"
-msgstr "資産がロックされる時間: 84h"
+msgstr "資産がロックされる時間: 84時間"
 
 #: ../../source/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:111
 msgid "The network: Public Chain"
