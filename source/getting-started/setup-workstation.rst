@@ -154,7 +154,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            $> npm install nem2-sdk rxjs
+            $> npm install nem2-sdk@0.10.1 rxjs
 
     .. tab:: Java
 
