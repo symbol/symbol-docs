@@ -53,7 +53,7 @@ Finally, the account address is generated with the public key, following the NEM
 
 .. code-block:: bash
 
-    $> sudo npm install --global nem2-cli
+    $> sudo npm install --global nem2-cli@0.9.7
 
 2. Create an account with the command line tool.
 
@@ -125,7 +125,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            $> npm install nem2-sdk rxjs
+            $> npm install nem2-sdk@0.10.1 rxjs
 
         3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
