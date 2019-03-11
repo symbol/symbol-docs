@@ -1229,14 +1229,8 @@ definitions:
   NamespaceMosaicMetaDTO:
     type: object
     required:
-    - active
-    - index
     - id
     properties:
-      active:
-        type: boolean
-      index:
-        type: integer
       id:
         type: string
 
@@ -1336,6 +1330,7 @@ definitions:
     - height
     - owner
     - properties
+    - revision
     - levy
     properties:
       mosaicId:
@@ -1346,8 +1341,12 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       owner:
         type: string
+      revision:
+        type: integer
       properties:
         $ref: '#/definitions/MosaicPropertiesDTO'
+      levy:
+        type: object
   MosaicPropertiesDTO:
     type: array
     items:
