@@ -114,7 +114,7 @@ AggregateTransaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    payloadSize; uint8; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
+    payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
     transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
     cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature>`.
 
