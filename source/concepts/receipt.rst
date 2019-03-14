@@ -57,7 +57,7 @@ Catapult records invisible state changes for the following entities.
     0x4823; LockHash_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a lock hash expires.
     **SecretLock**;;;
     0x5231; LockSecret_Created; :ref:`BalanceDebit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced.
-    0x5222; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a secretlock is proved.
+    0x5222; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock recipient, mosaicId and amount locked. It is recorded when a secretlock is proved.
     0x5223; LockSecret_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a secretlock expires.
 
 *******
