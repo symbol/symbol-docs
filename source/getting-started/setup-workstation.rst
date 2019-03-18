@@ -57,7 +57,7 @@ Finally, the account address is generated with the public key, following the NEM
 
 .. code-block:: bash
 
-    $> sudo npm install --global nem2-cli
+    $> sudo npm install --global nem2-cli@0.9.7
 
 2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 

@@ -18,9 +18,9 @@ A :ref:`transaction statement <transaction-statement>` is a collection of receip
 * **Balance Change**: A mosaic credit or debit was triggered.
 * **Artifact Expiry**: An artifact (e.g. :doc:`namespace <mosaic>`, :doc:`mosaic <mosaic>`) expired.
 
-****************
-Alias resolution
-****************
+********************
+Resolution Statement
+********************
 
 When a transaction includes an :doc:`alias <namespace>`, a so called :ref:`resolution statement <resolution-statement>` reflects the resolved value for that block:
 
@@ -97,7 +97,7 @@ TransactionStatement
     :delim: ;
 
     m_source; ReceiptSource; The receipt source.
-    receipts; array(ReceiptHeader, receiptsHeadersSize);  The array of receipt headers.
+    receipts; array(:ref:`Receipt <receipt>`, receiptsSize);  The array of receipts.
 
 .. _resolution-statement:
 

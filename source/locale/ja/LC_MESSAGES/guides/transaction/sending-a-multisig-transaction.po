@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-06 11:46+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -49,7 +49,7 @@ msgid ""
 "shared account so that if Bob is out shopping, he can buy groceries for both"
 " himself and Alice."
 msgstr ""
-"Alice と Bob は一緒に住んでいて、それぞれのアカウントを持っています。また、BOB が外出するとき、彼が、自分と Alice "
+"Alice と Bob は一緒に住んでいて、それぞれのアカウントを持っています。また、Bob が外出するとき、彼が、自分と Alice "
 "のために食料雑貨を購入できるように、共有アカウントも持っています。"
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:26
