@@ -66,7 +66,7 @@ The balance is the amount of the different :doc:`mosaics <../../concepts/mosaic>
     .. literalinclude:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
         :caption: |checking-balance-account-js|
         :language: javascript
-        :lines: 29-
+        :lines: 28-
 
     .. literalinclude:: ../../resources/examples/cli/account/CheckingBalanceOfAnAccount.sh
         :caption: |checking-balance-account-cli|
