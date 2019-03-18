@@ -1,0 +1,780 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:11+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guidelines/sdk-development.rst:5
+msgid "SDK Development"
+msgstr "SDK开发"
+
+#: ../../source/guidelines/sdk-development.rst:7
+msgid ""
+"A key objective is that interoperability becomes a natural design of the "
+"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, "
+"achieving the best quality with less effort."
+msgstr "一个关键目标是使NEM2-SDK成为互通的自然设计。 按照此指南合作创建NEM SDK，以更少的工作量实现最佳质量。"
+
+#: ../../source/guidelines/sdk-development.rst:9
+msgid ""
+"NEM2-SDK shares the same design/architecture between programming "
+"languages to accomplish the next properties:"
+msgstr "NEM2-SDK在编程语言之间共享相同的设计/体系结构，以实现特性："
+
+#: ../../source/guidelines/sdk-development.rst:11
+msgid ""
+"**Fast language adaptation**: There is a library for Java, but you need "
+"it for C# for example. As both SDKs share the same design, you can re-"
+"write the library faster, adapting the syntax to your language. It also "
+"applies to examples, projects, applications..."
+msgstr ""
+"**快速语言改编**：已有一个Java库，但你需要C＃来代替它。 由于两个SDK遵循相同的设计，您可以更快地重新编写库，使语法适应您的语言。 "
+"它也适用于示例，项目，应用程序......"
+
+#: ../../source/guidelines/sdk-development.rst:13
+msgid ""
+"**Cohesion/shared knowledge cross NEM developers**: Be able to change "
+"between projects that use NEM, sharing the same design accompanied by the"
+" best practices."
+msgstr "**集合NEM开发人员的凝聚力/知识**：为了在使用NEM的项目之间进行更改，共享相同的设计的同时进行最好的实现。"
+
+#: ../../source/guidelines/sdk-development.rst:15
+msgid ""
+"**Fast SDK updates**: Migrating any improvement from a NEM2-SDK "
+"implementation to the rest is faster."
+msgstr "**快速SDK更新**：将任何改进从NEM2-SDK实现迁移到其他实现都会更快。"
+
+#: ../../source/guidelines/sdk-development.rst:17
+msgid ""
+"**Fewer bugs**: If any bug appears in one language, it is faster to check"
+" and fix it."
+msgstr "**更少的bug**：如果一种语言中出现任何bug，检查和修复它会更快。"
+
+#: ../../source/guidelines/sdk-development.rst:21
+msgid "Architecture"
+msgstr "构建"
+
+#: ../../source/guidelines/sdk-development.rst:23
+msgid "**Characteristics**"
+msgstr "**特点**"
+
+#: ../../source/guidelines/sdk-development.rst:25
+msgid ""
+"**Standardized Contracts**: Guaranteeing interoperability and "
+"harmonization of data models."
+msgstr "**标准化合同**：保证数据模型的互操作性和协调性。"
+
+#: ../../source/guidelines/sdk-development.rst:26
+msgid "**Loose Coupling**: Reducing the degree of component coupling fosters."
+msgstr "**松耦合**：减少元件耦合的程度。"
+
+#: ../../source/guidelines/sdk-development.rst:27
+msgid ""
+"**Abstraction**: Increasing long-term consistency of interoperability and"
+" allowing underlying components to evolve independently."
+msgstr "**抽象**：提高互操作性的长期一致性，并允许底层组件独立发展。"
+
+#: ../../source/guidelines/sdk-development.rst:28
+msgid ""
+"**Reusability**: Enabling high-level interoperability between modules and"
+" potential component consumers."
+msgstr "**可重用性**：在模块和潜在组件使用者之间实现高级互操作性。**特点**"
+
+#: ../../source/guidelines/sdk-development.rst:29
+msgid ""
+"**Stateless**: Increasing availability and scalability of components "
+"allowing them to interoperate more frequently and reliably."
+msgstr "**无状态**：提高组件的可用性和可扩展性，使其能够更频繁，更可靠地进行互操作。**松耦合**：减少元件耦合的程度。"
+
+#: ../../source/guidelines/sdk-development.rst:30
+msgid ""
+"**Composability**: For components to be effectively composable they must "
+"be interoperable."
+msgstr "**可组合性**：对于可有效组合的组件，它们必须是可互操作的。**标准化合同**：保证数据模型的互操作性和协调性。"
+
+#: ../../source/guidelines/sdk-development.rst:32
+msgid "**Reactive**"
+msgstr "**Reactive**"
+
+#: ../../source/guidelines/sdk-development.rst:34
+msgid "NEM2-SDK uses intensely ReactiveX Library."
+msgstr "NEM2-SDK使用优良的ReactiveX库。"
+
+#: ../../source/guidelines/sdk-development.rst:36
+msgid ""
+"**Functional**: Developers can avoid complex stateful programs using "
+"clean input/output functions over observable streams."
+msgstr "**功能**：开发人员可以使用干净的输入/输出函数来避免使用可观察流的复杂有状态程序。"
+
+#: ../../source/guidelines/sdk-development.rst:37
+msgid ""
+"**Less is more**: ReactiveX's operators often reduce what was once an "
+"elaborate challenge into a few lines of code."
+msgstr "**少即是多** ** ReactiveX的运营商经常将曾经的精心挑战减少到几行代码中。"
+
+#: ../../source/guidelines/sdk-development.rst:38
+msgid ""
+"**Async error handling**: Traditional try/catch is powerless for errors "
+"handling in asynchronous computations, but ReactiveX will offer "
+"developers the proper tools to handle these sort of errors."
+msgstr "**异步错误处理**：传统的try / catch对异步计算中的错误处理无能为力，但ReactiveX将为开发人员提供适当的工具来处理这类错误。"
+
+#: ../../source/guidelines/sdk-development.rst:39
+msgid ""
+"**Concurrency**: Observables and Schedulers in ReactiveX allow the "
+"programmer to abstract away low-level threading, synchronization, and "
+"concurrency issues."
+msgstr "**并发**：ReactiveX中的Observables和Scheduler允许程序员抽象出低级线程，同步和并发问题。"
+
+#: ../../source/guidelines/sdk-development.rst:40
+msgid ""
+"**Frontend**: Manipulation of UI events and API responses on the Web "
+"using RxJS."
+msgstr "**前端**：使用RxJS在Web上操作UI事件和API响应。"
+
+#: ../../source/guidelines/sdk-development.rst:41
+msgid ""
+"**Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and"
+" implementation independence."
+msgstr "**后端**：拥抱ReactiveX的异步性，实现并发性和实现独立性。"
+
+#: ../../source/guidelines/sdk-development.rst:43
+msgid ""
+"In case you are not familiar with ReactiveX and you still have to deliver"
+" something fast, you can convert an observable to Promise/Future by "
+"reviewing this |rp-promise-example|. However, **we encourage you to learn"
+" ReactiveX**."
+msgstr ""
+"如果您不熟悉ReactiveX并且仍需要快速交付，可以通过查看此|rp-promise-example|将observable转换为Promise"
+" / Future。 但是，**我们建议您学习ReactiveX **。"
+
+#: ../../source/guidelines/sdk-development.rst:45
+msgid "|rxjsinaction|"
+msgstr "|rxjsinaction|"
+
+#: ../../source/guidelines/sdk-development.rst:46
+msgid "|frp|"
+msgstr "|frp|"
+
+#: ../../source/guidelines/sdk-development.rst:47
+msgid "|learnrxjs|"
+msgstr "|learnrxjs|"
+
+#: ../../source/guidelines/sdk-development.rst:48
+msgid "|rp-wiki|"
+msgstr "|rp-wiki|"
+
+#: ../../source/guidelines/sdk-development.rst:49
+msgid "|op-wiki|"
+msgstr "|op-wiki|"
+
+#: ../../source/guidelines/sdk-development.rst:50
+msgid "|reactivex|"
+msgstr "|reactivex|"
+
+#: ../../source/guidelines/sdk-development.rst:53
+msgid "Package Organization"
+msgstr "Package组织"
+
+#: ../../source/guidelines/sdk-development.rst:59
+msgid "Package organization diagram"
+msgstr "Package 组织图"
+
+#: ../../source/guidelines/sdk-development.rst:61
+msgid "**Infrastructure**"
+msgstr "**Infrastructure**"
+
+#: ../../source/guidelines/sdk-development.rst:63
+msgid ""
+"The HTTP requests are made following the Repository Pattern, and they "
+"return NEM Domain immutable models via the Observable Pattern."
+msgstr "HTTP请求是在Repository Pattern之后发出的，它们通过Observable Pattern返回NEM Domain不可变模型。"
+
+#: ../../source/guidelines/sdk-development.rst:65
+msgid "**Models**"
+msgstr "**Models**"
+
+#: ../../source/guidelines/sdk-development.rst:67
+msgid ""
+"The NEM Domain models are, usually, immutable by definition. The "
+"developer cannot change its attributes. Instead, the developers have to "
+"create new Transactions and dispatch them to NEM Blockchain via "
+"TransactionHTTP, to change the NEM Blockchain state."
+msgstr ""
+"根据定义，NEM域模型通常是不可变的。 开发人员无法更改其属性。 "
+"相反，开发人员必须创建新的事务并通过TransactionHTTP将它们分发到NEM区块链，以更改NEM区块链状态。"
+
+#: ../../source/guidelines/sdk-development.rst:69
+msgid "**Services**"
+msgstr "**Services**"
+
+#: ../../source/guidelines/sdk-development.rst:71
+msgid ""
+"Common operations that require multiple :doc:`REST API <../api>` requests"
+" are handled by already provided services."
+msgstr "需要多个的常见操作 :doc:`REST API <../ api>`请求由已提供的服务处理。"
+
+#: ../../source/guidelines/sdk-development.rst:104
+msgid "Before starting"
+msgstr "在开始之前"
+
+#: ../../source/guidelines/sdk-development.rst:106
+msgid ""
+"Review the technical documentation to become familiar with the :doc:`NEM "
+"built-in features<../concepts/account>`."
+msgstr "查看技术文档以熟悉 :doc:`NEM内置功能<../ concepts / account>`。"
+
+#: ../../source/guidelines/sdk-development.rst:107
+msgid ""
+"Setup the `catapult in local environment via docker <https://github.com"
+"/tech-bureau/catapult-service-bootstrap>`_."
+msgstr ""
+"通过 `docker <https://github.com/tech-bureau/catapult-service-"
+"bootstrap>在本地环境中设置catapult`_。"
+
+#: ../../source/guidelines/sdk-development.rst:108
+msgid ":doc:`Check the API reference <../api>` and play with the API endpoints."
+msgstr ":doc:`检查API参考<../ api>`并使用API节点。"
+
+#: ../../source/guidelines/sdk-development.rst:109
+msgid ""
+"Become familiar with the current :doc:`nem2-sdk via code examples "
+"<../concepts/account>` & :doc:`nem2-cli <../cli>` ."
+msgstr "通过 :doc:`代码示例<../concepts/account>`和:doc:`nem2-cli <../cli>`熟悉当前nem2-sdk。"
+
+#: ../../source/guidelines/sdk-development.rst:110
+msgid ""
+"`Join "
+"<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
+" our Slack to ask Catapult related questions."
+msgstr ""
+"`加入<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
+" our Slack to ask Catapult related questions."
+
+#: ../../source/guidelines/sdk-development.rst:111
+msgid ""
+"Be sure no one is already working on the SDK you want to create. Check "
+"the :doc:`repository list <../sdk>` and  comment your intentions in  nem2"
+" slack ``#sig-api`` channel. If someone is already working on it, we "
+"suggest you collaborate with him/her."
+msgstr ""
+"确保没有人在使用您要创建的SDK。 检查 :doc:`repository list <../ sdk>`并在nem2 slack``＃sig-"
+"api``频道中评论你的意图。 如果有人已经在处理它，我们建议您与他/她合作。"
+
+#: ../../source/guidelines/sdk-development.rst:112
+msgid ""
+"Claim the SDK `forking this repository "
+"<https://help.github.com/articles/creating-a-pull-request/>`_ and add a "
+"new entry to the :doc:`repository list <../sdk>`."
+msgstr ""
+"声明SDK `forking此存储库<https://help.github.com/articles/creating-a-pull-"
+"request/>`_并在:doc:`repository list <../ sdk>中添加一个新条目`。"
+
+#: ../../source/guidelines/sdk-development.rst:116
+msgid "Development"
+msgstr "Development"
+
+#: ../../source/guidelines/sdk-development.rst:118
+msgid ""
+"You can base your work in `TypeScript <https://github.com/nemtech/nem2"
+"-sdk-typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2"
+"-sdk-java>`_ SDKs. The TypeScript version is the first SDK getting the "
+"latest updates. Meanwhile, Java takes longer to be updated."
+msgstr ""
+"您可以将您的工作基于`TypeScript <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript>`_和`Java <https://github.com/nemtech/nem2-sdk-java> _ SDKs。 "
+"TypeScript版本是第一个获取最新更新的SDK。与此同时，Java需要更长时间才能更新。"
+
+#: ../../source/guidelines/sdk-development.rst:120
+msgid ""
+"Unfortunately, the TypeScript version has one specific implementation "
+"detail: the low-level implementation is separated from the SDK, called "
+"`nem2-library-js <https://github.com/nemtech/nem2-library-js>`_. There "
+"was a need to create this low-level library to perform specific chain "
+"testing."
+msgstr ""
+"不幸的是，TypeScript版本有一个特定的实现细节：底层实现与SDK分离，称为`nem2-library-js "
+"<https://github.com/nemtech/nem2-library-js>`_。 需要创建这个底层库来执行特定的链测试。"
+
+#: ../../source/guidelines/sdk-development.rst:123
+msgid "The SDKs you create does not require this separate implementation."
+msgstr "您创建的SDK不需要此单独的实现。"
+
+#: ../../source/guidelines/sdk-development.rst:125
+msgid ""
+"Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code "
+"change update."
+msgstr ""
+"定期检查`Changelog <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/CHANGELOG.md>`_以确保您没有错过任何代码更改更新。"
+
+#: ../../source/guidelines/sdk-development.rst:128
+msgid "Creating the project"
+msgstr "创建项目"
+
+#: ../../source/guidelines/sdk-development.rst:130
+msgid ""
+"Add a README with the instructions to install the SDK. You can find "
+":download:`here a template <../resources/templates/README_SDK.md>`."
+msgstr ""
+"添加README以及安装SDK的说明。在:download：`这里有一个模板<../ resources / templates / "
+"README_SDK.md>`。"
+
+#: ../../source/guidelines/sdk-development.rst:132
+msgid ""
+"Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-"
+"of-conduct-to-your-project/>`_.  Download :download:`here an example code"
+" of conduct <../resources/templates/CODE_OF_CONDUCT.md>`."
+msgstr ""
+"添加 `行为准则 <https://help.github.com/articles/adding-a-code-of-conduct-to-"
+"your-project/>`_。 下载：下载：`这是一个示例行为准则<../ resources / templates / "
+"CODE_OF_CONDUCT.md>`。"
+
+#: ../../source/guidelines/sdk-development.rst:134
+msgid ""
+"Add a `Contributors guidelines <https://help.github.com/articles/setting-"
+"guidelines-for-repository-contributors/>`_ to help others know how they "
+"can help you. Find :download:`here a CONTRIBUTING.md "
+"template<../resources/templates/CONTRIBUTING.md>`."
+msgstr ""
+"添加“贡献者指南 `Contributors guidelines <https://help.github.com/articles"
+"/setting-guidelines-for-repository-contributors/>`_ 以帮助其他人了解他们如何为您提供帮助。 "
+"在:download:`这里有一个CONTRIBUTING.md模板<../ "
+"resources/templates/CONTRIBUTING.md>`。"
+
+#: ../../source/guidelines/sdk-development.rst:135
+msgid ""
+"Setup the Continuous Integration system. We use `travis-ci <https"
+"://travis-ci.org/>`_, but feel free to use the one suits you best."
+msgstr ""
+"设置Continuous Integration系统。 我们使用`travis-ci <https://travis-"
+"ci.org/>`_，但请随意使用最适合您的。"
+
+#: ../../source/guidelines/sdk-development.rst:137
+msgid ""
+"A project with a good test coverage it's more likely to be used and "
+"trusted by the developers!"
+msgstr "一个具有良好测试覆盖率的项目，它更有可能被开发人员使用和信任！"
+
+#: ../../source/guidelines/sdk-development.rst:140
+msgid ""
+"We **strongly** suggest to do `Test-Driven Development "
+"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing"
+" (test last). If you need inspiration, you can adapt the same `tests we "
+"did <https://github.com/nemtech/nem2-sdk-"
+"typescriptjavascript/tree/master/test>`_."
+msgstr ""
+"我们**强烈**建议做 `测试驱动开发<https://en.wikipedia.org/wiki/Test-"
+"driven_development>`_或单元测试（最后测试）。 "
+"如果你需要灵感，你可以调整我们做的相同的测试<https://github.com/nemtech/nem2-sdk-"
+"typescriptjavascript/tree/master/test>`_。"
+
+#: ../../source/guidelines/sdk-development.rst:144
+msgid "API Wrapper"
+msgstr "API包装器"
+
+#: ../../source/guidelines/sdk-development.rst:146
+msgid ""
+"`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle"
+" the API generation. It supports multiple languages, and hopefully, yours"
+" is on the list."
+msgstr ""
+"`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_可以处理API生成。 "
+"它支持多种语言，希望您使用的语言也在列表中。"
+
+#: ../../source/guidelines/sdk-development.rst:148
+msgid ""
+"Generate the ``DTOs`` and place them under under `sdk/infrastructure "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API "
+"swagger file definition can be found `here "
+"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_."
+msgstr ""
+"生成``DTOs``并将它们放在`sdk / infrastructure <https://github.com/nemtech/nem2"
+"-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure下>`_。 API "
+"swagger文件定义可以在这里找到`https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_。"
+
+#: ../../source/guidelines/sdk-development.rst:150
+msgid ""
+"2. Drop the generated client classes and  implement them using the "
+"`Repository pattern "
+"<https://martinfowler.com/eaaCatalog/repository.html>`_ returning "
+"`Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of "
+"`ReactiveX <http://reactivex.io/>`_."
+msgstr ""
+"2.删除生成的客户端类并使用`Repository模式<https://martinfowler.com/eaaCatalog/repository.html>`_返回`Observables"
+" <https://en.wikipedia.org/wiki/Observer_pattern>来实现它们。 `_ of`ReactiveX "
+"<http://reactivex.io/>`_。"
+
+#: ../../source/guidelines/sdk-development.rst:154
+msgid "Example of a Repository and HTTP implementation:"
+msgstr "存储库和HTTP实现的示例："
+
+#: ../../source/guidelines/sdk-development.rst:156
+msgid ""
+"`BlockchainRepository <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainRepository.java>`_"
+msgstr ""
+"`BlockchainRepository <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainRepository.java>`_"
+
+#: ../../source/guidelines/sdk-development.rst:158
+msgid ""
+"`BlockchainHttp <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainHttp.java>`_"
+msgstr ""
+"`BlockchainHttp <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainHttp.java>`_"
+
+#: ../../source/guidelines/sdk-development.rst:160
+msgid ""
+"The **repositories return models instead of DTOs**. You will need to code"
+" the models before finishing the API wrapper."
+msgstr "**存储库返回模型而不是DTO **。 在完成API包装之前，您需要对模型进行编码。"
+
+#: ../../source/guidelines/sdk-development.rst:163
+msgid "Models"
+msgstr "Models"
+
+#: ../../source/guidelines/sdk-development.rst:165
+msgid ""
+"The `models <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default "
+"immutable and aim to hide the complexity, like type conversion or "
+"relationship between objects."
+msgstr ""
+"默认情况下，模型<https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model>`_是不可变的，旨在隐藏复杂性 "
+"，类型转换或对象之间的关系。"
+
+#: ../../source/guidelines/sdk-development.rst:167
+msgid ""
+"You will find in the different implementations different invariants to "
+"ensure the object is well constructed and a nicer API is published."
+msgstr "您将在不同的实现中找到不同的不变量，以确保对象构造良好并发布更好的API。"
+
+#: ../../source/guidelines/sdk-development.rst:170
+msgid "Particular decisions to consider:"
+msgstr "要特别考虑的地方："
+
+#: ../../source/guidelines/sdk-development.rst:172
+msgid ""
+"``uint64`` support: meanwhile `Java supports big numbers "
+"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, "
+"for example JavaScript doesn't. The JavaScript SDK has a custom class to "
+"handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/UInt64.ts>`_. If your language supports "
+"``uint64`` use that implementation instead."
+msgstr ""
+"``uint64``支持：`Java支持big "
+"numbers<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_，例如JavaScript没有。"
+" JavaScript SDK有一个自定义类来处理`uint64类型<https://github.com/nemtech/nem2-sdk-"
+"typescript-javascript/blob/master/src/model/UInt64.ts>`_。 "
+"如果您的语言支持``uint64``，请使用该实现。"
+
+#: ../../source/guidelines/sdk-development.rst:173
+msgid ""
+"API conversions: The API returns the data sometimes compressed, you might"
+" need to convert those types for the user."
+msgstr "API转换：API返回有时压缩的数据，您可能需要为用户转换这些类型。"
+
+#: ../../source/guidelines/sdk-development.rst:175
+msgid ""
+"`Namespace <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_"
+" ID:  At creation time you add the string name, but when you receive the "
+"Namespace from the network, it comes in formatted as ``uint64`` ID. A "
+"specific endpoint returns the Namespace ``string`` name."
+msgstr ""
+"`Namespace <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_"
+" ID：创建时 你添加字符串名称，但是当你从网络收到命名空间时，它的格式为``uint64`` ID。 "
+"特定端点返回Namespace“`string``名称。"
+
+#: ../../source/guidelines/sdk-development.rst:178
+msgid "Transaction Serialization"
+msgstr "交易序列化"
+
+#: ../../source/guidelines/sdk-development.rst:180
+msgid ""
+"A Transaction needs a particular serialization schema in binary optimized"
+" in size."
+msgstr "事务需要二进制优化的特定序列化模式。"
+
+#: ../../source/guidelines/sdk-development.rst:182
+msgid "**Generate the buffer classes**"
+msgstr "**生成缓冲类**"
+
+#: ../../source/guidelines/sdk-development.rst:184
+msgid ""
+"This section is incomplete. It will be updated with complete information "
+"once the first SDK integrates the builders generated with `catbuffer "
+"<https://github.com/nemtech/catbuffer>`_ library."
+msgstr ""
+"本节不完整。 一旦第一个SDK集成了使用`catbuffer <https://github.com/nemtech/catbuffer>`_ "
+"library生成的构建器，它就会更新完整的信息。"
+
+#: ../../source/guidelines/sdk-development.rst:186
+msgid "**Create the schema classes**"
+msgstr "**创建架构类**"
+
+#: ../../source/guidelines/sdk-development.rst:188
+msgid ""
+"`Schema class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Schema.java>`_."
+msgstr ""
+"`Schema class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Schema.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:189
+msgid ""
+"`SchemaAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SchemaAttribute.java>`_."
+msgstr ""
+"`SchemaAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/SchemaAttribute.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:190
+msgid ""
+"`ScalarAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ScalarAttribute.java>`_."
+msgstr ""
+"`ScalarAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ScalarAttribute.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:191
+msgid ""
+"`ArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ArrayAttribute.java>`_."
+msgstr ""
+"`ArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/ArrayAttribute.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:192
+msgid ""
+"`TableAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableAttribute.java>`_."
+msgstr ""
+"`TableAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableAttribute.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:193
+msgid ""
+"`TableArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableArrayAttribute.java>`_."
+msgstr ""
+"`TableArrayAttribute class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableArrayAttribute.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:194
+msgid ""
+"`Constants class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Constants.java>`_."
+msgstr ""
+"`Constants class <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Constants.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:196
+msgid "**Create the transaction schemas**"
+msgstr "**创建交易模式**"
+
+#: ../../source/guidelines/sdk-development.rst:198
+msgid ""
+"Each transaction has a schemas. It has the same type as ``catbuffer "
+"schemas`` but using the ``Schema`` class. It's used to know where each "
+"component is located in the ``catbuffer schema`` and remove the "
+"unnecessary bytes to create the optimized serialization."
+msgstr ""
+"每个事务都有一个模式。 它与``catbuffer schemas`` 具有相同的类型，但使用 ``Schema`` 类。 "
+"它用于了解每个组件在``catbuffer schema``中的位置，并删除不必要的字节以创建优化的序列化。"
+
+#: ../../source/guidelines/sdk-development.rst:200
+msgid ""
+"Example: `TransferTransactionSchema <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransactionSchema.java>`_."
+msgstr ""
+"例子: `TransferTransactionSchema <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransactionSchema.java>`_。"
+
+#: ../../source/guidelines/sdk-development.rst:202
+msgid "**Using the schemas in the transaction models**"
+msgstr "**在交易模型中使用模式**"
+
+#: ../../source/guidelines/sdk-development.rst:204
+msgid ""
+"The Transaction class has the abstract method `generateBytes() "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Transaction.java#L159>`_."
+msgstr ""
+"Transaction类具有抽象方法 `generateBytes() <https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/Transaction.java#L159>`_."
+
+#: ../../source/guidelines/sdk-development.rst:206
+msgid ""
+"Each Transaction has to implement and use the previous classes, the "
+"Buffers and the Schemas, to serialize the transaction."
+msgstr "每个Transaction都必须实现并使用以前的类（Buffers和Schemas）来序列化事务。"
+
+#: ../../source/guidelines/sdk-development.rst:208
+msgid ""
+"Example:  `TransferTransaction.generateBytes() "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransaction.java>`_."
+msgstr ""
+"例子:  `TransferTransaction.generateBytes() "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransaction.java>`_."
+
+#: ../../source/guidelines/sdk-development.rst:210
+msgid ""
+"Do not forget to implement the `Cosignatory  "
+"<https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_ classes."
+msgstr ""
+"不要忘记实现 `Cosignatory  <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_ 类."
+
+#: ../../source/guidelines/sdk-development.rst:213
+msgid "KeyPair and Cryptographic functions"
+msgstr "密钥对和加密功能"
+
+#: ../../source/guidelines/sdk-development.rst:215
+msgid "This section is incomplete."
+msgstr "本节不完整。"
+
+#: ../../source/guidelines/sdk-development.rst:217
+msgid "Implement the cryptographic purposes required to sign transactions."
+msgstr "实现签署事务所需的加密目的。"
+
+#: ../../source/guidelines/sdk-development.rst:219
+msgid ""
+"Example: `core/crypto <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/core/crypto>`_"
+msgstr ""
+"例子: `core/crypto <https://github.com/nemtech/nem2-sdk-"
+"java/tree/master/src/main/java/io/nem/core/crypto>`_"
+
+#: ../../source/guidelines/sdk-development.rst:223
+msgid "Documenting your SDK"
+msgstr "记录您的SDK"
+
+#: ../../source/guidelines/sdk-development.rst:225
+msgid ""
+"The SDKs need to be adopted by other developers. As a contributor, no one"
+" knows better than you how a determined SDK works. Consider helping "
+"others and spread the usage of the SDK by providing :doc:`the following "
+"documentation <sdk-documentation>`."
+msgstr ""
+"SDK需要被其他开发人员使用。 作为贡献者，没有人比你更了解确定的SDK是如何工作的。 考虑通过提供 :doc:`以下文档<sdk-"
+"documentation>`来帮助他人并传播SDK的用法。"
+
+#: ../../source/guidelines/sdk-development.rst:229
+msgid "Publishing the SDK as official"
+msgstr "将SDK作为官方发布"
+
+#: ../../source/guidelines/sdk-development.rst:231
+msgid ""
+"To make an SDK officially supported, submit it as a `NIP "
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The "
+"reason behind the NEM2 Improvement Proposal is to ensure that the new "
+"libraries are reviewed, tested and shared among NEM developers."
+msgstr ""
+
+#: ../../source/guidelines/sdk-development.rst:235
+msgid "Future work"
+msgstr "接下来的工作"
+
+#: ../../source/guidelines/sdk-development.rst:237
+msgid ""
+"The current guideline shows what is done up to today since the SDK isn't "
+"complete. It will get updates according to the latest "
+"architecture/features."
+msgstr "目前的指南显示了自SDK未完成以来到目前为止所做的工作。 它将根据最新的架构/功能获得更新。"
+
+#: ../../source/guidelines/sdk-development.rst:241
+msgid "Recommended Licenses"
+msgstr "推荐的许可证"
+
+#: ../../source/guidelines/sdk-development.rst:243
+msgid "MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_"
+msgstr "MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_"
+
+#: ../../source/guidelines/sdk-development.rst:244
+msgid ""
+"Apache-2.0: `Apache License, version 2.0 "
+"<http://www.apache.org/licenses/LICENSE-2.0>`_"
+msgstr ""
+"Apache-2.0: `Apache License, version 2.0 "
+"<http://www.apache.org/licenses/LICENSE-2.0>`_"
+
+#: ../../source/guidelines/sdk-development.rst:246
+msgid ""
+"BSD-2-Clause: `OSI-approved BSD 2-clause license "
+"<https://opensource.org/licenses/BSD-2-Clause>`_"
+msgstr ""
+"BSD-2-Clause: `OSI-approved BSD 2-clause license "
+"<https://opensource.org/licenses/BSD-2-Clause>`_"
+
+#: ../../source/guidelines/sdk-development.rst:248
+msgid ""
+"BSD-3-Clause: `OSI-approved BSD 3-clause license "
+"<https://opensource.org/licenses/BSD-3-Clause>`_"
+msgstr ""
+"BSD-3-Clause: `OSI-approved BSD 3-clause license "
+"<https://opensource.org/licenses/BSD-3-Clause>`_"
+
+#: ../../source/guidelines/sdk-development.rst:250
+msgid ""
+"CC0-1.0: `Creative Commons CC0 1.0 Universal "
+"<https://creativecommons.org/publicdomain/zero/1.0/>`_"
+msgstr ""
+"CC0-1.0: `Creative Commons CC0 1.0 Universal "
+"<https://creativecommons.org/publicdomain/zero/1.0/>`_"
+
+#: ../../source/guidelines/sdk-development.rst:252
+msgid ""
+"GNU-All-Permissive: `GNU All-Permissive License "
+"<http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-"
+"Files.html>`_"
+msgstr ""
+"GNU-All-Permissive: `GNU All-Permissive License "
+"<http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-"
+"Files.html>`_"
+
+#: ../../source/guidelines/sdk-development.rst:254
+msgid ""
+"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or "
+"newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
+msgstr ""
+"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or "
+"newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
+
+#~ msgid ""
+#~ "To become an accepted SDK, submit "
+#~ "it  as a `NIP "
+#~ "<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. "
+#~ "The reason behind the NEM2 Improvement"
+#~ " Proposal is to ensure that the "
+#~ "new libraries are reviewed, tested and"
+#~ " shared among NEM developers."
+#~ msgstr ""
+#~ "要成为可接受的SDK，请将其作为 `NIP "
+#~ "<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_提交。NEM2改进提案的原因是确保在NEM开发人员之间审核，测试和共享新库。"
+

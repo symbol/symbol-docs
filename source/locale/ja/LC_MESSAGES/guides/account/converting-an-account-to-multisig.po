@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:11
 msgid "Converting an account to multisig"
@@ -27,29 +26,32 @@ msgstr "マルチシグアカウントへの変換"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:13
 msgid ""
-"Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by"
-" adding two cosignatories."
+"Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`,"
+" by adding two cosignatories."
 msgstr ""
-"2名の連署者を追加することによって 1-of-2 :doc:`マルチシグアカウント<../../concepts/multisig-account>` "
-"を作ります。"
+"2名の連署者を追加することによって 1-of-2 :doc:`マルチシグアカウント<../../concepts/multisig-"
+"account>` を作ります。"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:17
 msgid "Background"
 msgstr "背景"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:19
+#, fuzzy
 msgid ""
 "Alice and Bob live together and have separate :doc:`accounts "
-"<../../concepts/account>`. They also have a shared account so that if Bob is"
-" out shopping, he can buy groceries for both himself and Alice."
+"<../../concepts/account>`. They also have a shared account used to buy "
+"groceries. If Bob is out shopping, he can buy groceries for both himself "
+"and Alice."
 msgstr ""
 "Alice と Bob は一緒に住んでいて、それぞれの :doc:`アカウント <../../concepts/account>` "
 "を持っています。また、Bob が外出するとき、彼が、彼自身と Alice のために食料雑貨を購入できるように、共有アカウントも持っています。"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:21
+#, fuzzy
 msgid ""
-"This shared account is in NEM translated as 1-of-2 multisig, meaning that "
-"one cosignatory needs to cosign the transaction to be included in a block."
+"This shared account appears in NEM as 1-of-2 multisig, meaning that one "
+"cosignatory needs to cosign the transaction to be included in a block."
 msgstr ""
 "この共有アカウントはNEMにおいて 1-of-2 "
 "マルチシグと呼びます。これはトランザクションをブロックに取り込んでもらうのに、1人の連署者が必要なことを意味します。"
@@ -60,10 +62,10 @@ msgstr "1-of-2 マルチシグアカウントの例"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:29
 msgid ""
-"Remember that a multisig account has cosignatories accounts, and it cannot "
-"start transactions itself. Only the cosignatories can initiate transactions."
-msgstr ""
-"マルチシグアカウントには連署者アカウントが紐付いていること、そのアカウント自身からはトランザクションを開始できないことを留意してください。連署者だけがトランザクションを開始することができます。"
+"Remember that a multisig account has cosignatories accounts, and it "
+"cannot start transactions itself. Only the cosignatories can initiate "
+"transactions."
+msgstr "マルチシグアカウントには連署者アカウントが紐付いていること、そのアカウント自身からはトランザクションを開始できないことを留意してください。連署者だけがトランザクションを開始することができます。"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:33
 msgid "Prerequisites"
@@ -71,101 +73,118 @@ msgstr "前提条件"
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:35
 msgid ""
-"Finish :doc:`creating and opening accounts guide <creating-and-opening-an-"
-"account>`"
-msgstr ":doc:`アカウントの作成と開設のガイド <creating-and-opening-an-account>` を終了していること"
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ""
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:36
-msgid "Text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ""
 
 #: ../../source/guides/account/converting-an-account-to-multisig.rst:37
-msgid "NEM2-SDK or CLI"
-msgstr "NEM2-SDK または CLI"
+#, fuzzy
+msgid "Create :doc:`two accounts <creating-and-opening-an-account>`"
+msgstr ":doc:`アカウントの作成と開設のガイド <creating-and-opening-an-account>` を終了していること"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:38
-msgid "Two accounts (public keys)"
-msgstr "2つのアカウント(公開鍵)"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:39
-msgid "One account with XEM"
-msgstr "XEM を持ったアカウント1つ"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:43
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:41
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:45
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:43
+#, fuzzy
 msgid ""
-"Define who will be the cosignatories of the multisig account. Then, open the"
-" account that will be converted into multisig by providing its private key."
+"Define who will be the cosignatories of the multisig account: Alice and "
+"Bob addresses. Then, open the account that will be converted into "
+"multisig by providing its private key."
 msgstr "誰がマルチシグアカウントの連署者になるかを決めます。次に、秘密鍵を提供してマルチシグに変換されるアカウントを開きます。"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:49
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:68
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:87
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:47
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:66
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:85
 msgid "|converting-an-account-to-multisig-ts|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:54
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:73
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:92
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:52
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:71
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:90
 msgid "|converting-an-account-to-multisig-java|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:59
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:78
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:97
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:57
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:76
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:95
 msgid "|converting-an-account-to-multisig-js|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:64
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:62
+#, fuzzy
 msgid ""
-"Convert the account into a multisig account by setting a :ref:`modify "
-"multisig account transaction <modify-multisig-account-transaction>`. As they"
-" want a 1-of-2 multisig account, set the minimum signatures to 1."
+"Define a :ref:`modify multisig account transaction <modify-multisig-"
+"account-transaction>`  to convert the account into a multisig account. As"
+" they need a 1-of-2 multisig account, set the minimum signatures required"
+" to 1."
 msgstr ""
 ":ref:`マルチシグアカウント変更トランザクション <modify-multisig-account-transaction>` "
-"をセットアップすることでアカウントをマルチシグアカウントへ変換します。1-of-2 マルチシグアカウントとするため、最小署名者は 1 にセットします。"
+"をセットアップすることでアカウントをマルチシグアカウントへ変換します。1-of-2 マルチシグアカウントとするため、最小署名者は 1 "
+"にセットします。"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:83
-msgid "Sign and announce the transaciton with the canidate multisig account."
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:81
+#, fuzzy
+msgid ""
+"Sign and announce the transaction with the candidate multisig account "
+"private key."
 msgstr "マルチシグアカウント候補のトランザクションへの署名とアナウンス"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:104
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:102
 msgid ""
 "If everything goes well, Alice and Bob should be cosignatories of the "
 "multisig account."
 msgstr "すべてがうまくいけば、Alice と Bob はこのマルチシグアカウントの連署者となるでしょう。"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:106
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:104
 msgid ""
-"You could also get the list of the multisig accounts where Alice or Bob are "
-"cosignatories using ``getMultisigAccountInfo`` function."
+"You could also get the list of the multisig accounts where Alice or Bob "
+"are cosignatories using ``getMultisigAccountInfo`` function."
 msgstr ""
 "``getMultisigAccountInfo`` 関数を使って、Alice または Bob "
 "が連署者であるマルチシグアカウントの一覧を取得することもできます。"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:110
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:108
 msgid "|getting-multisig-account-cosignatories-ts|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:115
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:113
 msgid "|getting-multisig-account-cosignatories-java|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:120
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:118
 msgid "|getting-multisig-account-cosignatories-js|"
 msgstr ""
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:128
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:126
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:129
+#: ../../source/guides/account/converting-an-account-to-multisig.rst:128
+#, fuzzy
 msgid ""
-"Modify the account, converting it into a 2-of-2 multisig following "
-":doc:`modifying a multisig account <modifying-a-multisig-account>` guide."
+"Alice an Bob wants to send transactions from the multisig only when both "
+"agree. Modify the multisig account you just created, converting it into a"
+" 2-of-2 multisig following :doc:`modifying a multisig account "
+"<modifying-a-multisig-account>` guide."
 msgstr ""
-"このアカウントを :doc:`マルチシグアカウントの変更 <modifying-a-multisig-account>` ガイドに従って、2-of-2 "
-"マルチシグアカウントに変換してください。"
+"このアカウントを :doc:`マルチシグアカウントの変更 <modifying-a-multisig-account>` "
+"ガイドに従って、2-of-2 マルチシグアカウントに変換してください。"
+
+#~ msgid "Text editor or IDE"
+#~ msgstr "テキストエディタ または IDE"
+
+#~ msgid "NEM2-SDK or CLI"
+#~ msgstr "NEM2-SDK または CLI"
+
+#~ msgid "Two accounts (public keys)"
+#~ msgstr "2つのアカウント(公開鍵)"
+
+#~ msgid "One account with XEM"
+#~ msgstr "XEM を持ったアカウント1つ"
+

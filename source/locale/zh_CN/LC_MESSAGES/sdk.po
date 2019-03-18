@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 08:57+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/sdk.rst:3
+msgid "SDK"
+msgstr "软件开发工具包"
+
+#: ../../source/sdk.rst:5
+msgid ""
+"The NEM2 Software Development Kit is the primary software development "
+"tool to create NEM2 components, such as additional tools, libraries or "
+"applications. Almost all, if not all, components should use **NEM2-SDK** "
+"instead of raw API."
+msgstr "NEM2软件开发工具包是创建NEM2组件(如其他工具、库或应用程序)的主要软件开发工具。几乎所有(如果不是全部的话)组件都应该使用**NEM2-SDK**，而不是原始API。"
+
+#: ../../source/sdk.rst:7
+msgid ""
+"The new SDK enables developers to focus on their product rather than on "
+"the NEM2 Blockchain specific API details due to its higher abstraction."
+msgstr "新的SDK使开发人员能够专注于他们的产品，而不是NEM2区块链的特定API细节，因为它具有更高的抽象。"
+
+#: ../../source/sdk.rst:9
+msgid ""
+"The best way to learn to use the SDKs is through :ref:`guides <category-"
+"account>`."
+msgstr "学习使用sdk的最好方法是:ref: ' guides < categoryaccount > '。"
+
+#: ../../source/sdk.rst:13
+msgid "Supported SDKs"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Language"
+msgstr "语言"
+
+#: ../../source/sdk.rst:1
+msgid "Repository"
+msgstr "存储库"
+
+#: ../../source/sdk.rst:1
+msgid "Reference"
+msgstr "参考"
+
+#: ../../source/sdk.rst:1
+msgid "Target version"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "TypeScript & JS SDK"
+msgstr "TS和JS 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "|tsjs-repo|"
+msgstr "|tsjs-repo|"
+
+#: ../../source/sdk.rst:1
+msgid "|tsjs-reference|"
+msgstr "|tsjs-参考|"
+
+#: ../../source/sdk.rst:1
+msgid "0.3 (latest)"
+msgstr ""
+
+#: ../../source/sdk.rst:23
+msgid "Ongoing work"
+msgstr ""
+
+#: ../../source/sdk.rst:25
+msgid ""
+"⚠️ The following SDKs are not compatible with the latest version of "
+"catapult-server (0.3)."
+msgstr ""
+
+#: ../../source/sdk.rst:27
+msgid "Read the open issues to know about the current status of each project."
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Java SDK"
+msgstr "Java 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "|java-repo|"
+msgstr "|java-repo|"
+
+#: ../../source/sdk.rst:1
+msgid "|java-reference|"
+msgstr "|java-参考|"
+
+#: ../../source/sdk.rst:1
+msgid "0.1"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "C# SDK"
+msgstr "C# 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "|csharp-repo|"
+msgstr "|csharp-repo|"
+
+#: ../../source/sdk.rst:1
+msgid "Go SDK"
+msgstr "Go 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "|go-repo|"
+msgstr "|go-repo|"
+
+#: ../../source/sdk.rst:1
+msgid "Swift SDK"
+msgstr "Swift 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "|swift-repo|"
+msgstr "|swift-repo|"
+
+#: ../../source/sdk.rst:1
+msgid "C++"
+msgstr "C++"
+
+#: ../../source/sdk.rst:1
+msgid "PHP SDK"
+msgstr "PHP 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "Ruby SDK"
+msgstr "Ruby 软件开发工具包"
+
+#: ../../source/sdk.rst:1
+msgid "Python SDK"
+msgstr "Python 软件开发工具包"
+
+#: ../../source/sdk.rst:42
+msgid ""
+"If you want to create a new SDK, check the :doc:`SDK Development "
+"guidelines <guidelines/sdk-development>`."
+msgstr ""
+
+#~ msgid "Official SDKs"
+#~ msgstr "官方SDK"
+
+#~ msgid ""
+#~ "⚠ The latest release introduces breaking"
+#~ " changes. Until the SDKs are not "
+#~ "aligned, we recommend using :doc:`catapult-"
+#~ "service-bootstrap 0.1.0 <../getting-started"
+#~ "/setup-workstation>`."
+#~ msgstr ""
+#~ "⚠最新版本引入了重大更改。在sdk没有同步之前，我们建议使用:doc: ' catapult-"
+#~ "service-bootstrap 0.1.0 <../getting-started"
+#~ "/setup-workstation> '。"
+
+#~ msgid "Active Developers"
+#~ msgstr "活跃的开发人员"
+
+#~ msgid "NEM Foundation"
+#~ msgstr "NEM 基金会"
+
+#~ msgid "Community SDKs"
+#~ msgstr "软件开发工具包社区"
+
+#~ msgid "`@kodty <https://github.com/kodty>`_"
+#~ msgstr "`@kodty <https://github.com/kodty>`_"
+
+#~ msgid "`@proximax-storage <https://github.com/proximax-storage>`_"
+#~ msgstr "`@proximax-storage <https://github.com/proximax-storage>`_"
+
+#~ msgid ""
+#~ "If you want to collaborate in the"
+#~ " SDK creation, check the :doc:`SDK "
+#~ "Development guidelines <guidelines/sdk-"
+#~ "development>`. Then, add the repository "
+#~ "under “Community SDKs”. You can click"
+#~ "  the “Edit on Github” button at "
+#~ "the top-right part of the screen."
+#~ msgstr ""
+#~ "如果您想在SDK创建中进行协作，请查看:doc:“SDK开发指南<guidelines/ SDK - "
+#~ "Development >”。然后，在“Community "
+#~ "SDKs”下添加存储库。你可以点击屏幕右上角的“编辑Github”按钮。"
+

@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:12+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/account/getting-account-information.rst:10
+msgid "Getting account information"
+msgstr "获取帐户信息"
+
+#: ../../source/guides/account/getting-account-information.rst:12
+msgid ""
+"Get the public key and balance of an :doc:`account "
+"<../../concepts/account>`."
+msgstr "获取公共密钥和doc:`account <../../ concepts / account>`余额。"
+
+#: ../../source/guides/account/getting-account-information.rst:16
+msgid "Prerequisites"
+msgstr "先决条件"
+
+#: ../../source/guides/account/getting-account-information.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr "完成:doc:`入门部分<../../ getting-started / setup-workstation>`"
+
+#: ../../source/guides/account/getting-account-information.rst:19
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:23
+msgid "Let’s get into some code"
+msgstr "让我们来点代码"
+
+#: ../../source/guides/account/getting-account-information.rst:25
+#, fuzzy
+msgid ""
+"Call ``getAccountInfo`` function, passing your account's address as a "
+"parameter."
+msgstr "通过地址和网络作为参数获取有关您帐户的更多信息。"
+
+#: ../../source/guides/account/getting-account-information.rst:29
+msgid "|getting-account-information-ts|"
+msgstr "|getting-account-information-ts|"
+
+#: ../../source/guides/account/getting-account-information.rst:34
+msgid "|getting-account-information-java|"
+msgstr "|getting-account-information-java|"
+
+#: ../../source/guides/account/getting-account-information.rst:39
+msgid "|getting-account-information-js|"
+msgstr "|getting-account-information-js|"
+
+#: ../../source/guides/account/getting-account-information.rst:44
+msgid "|getting-account-information-cli|"
+msgstr "|getting-account-information-cli|"
+
+#: ../../source/guides/account/getting-account-information.rst:49
+#, fuzzy
+msgid ""
+"Can you determine the account's public key? The **public key** identifies"
+" your account publicly in the network. Your  **address** is derived from "
+"it, which contains further information such as network and validity "
+"check."
+msgstr "**公钥** 在网络中公开标识您的帐户。 您的 **地址** 来自它，地址包含更多信息，如网络和有效性检查。"
+
+#: ../../source/guides/account/getting-account-information.rst:51
+msgid ""
+"If you don't have a public key assigned, that means that your account has"
+" not announced or received any transaction yet. The ``addressHeight`` and"
+" ``publicKeyHeight`` specify the block where your address and public key "
+"first appeared."
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:53
+msgid ""
+"The ``importance`` field represents the numerical relation between the "
+"number of harvesting mosaics the account owns and the total mosaic "
+"supply. The greater the importance, the more chances to :doc:`harvest "
+"<../../concepts/harvesting>` new blocks."
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:55
+#, fuzzy
+msgid ""
+"The balance is the amount of the different :doc:`mosaics "
+"<../../concepts/mosaic>` owned by the account."
+msgstr "余额是帐户拥有的不同 **马赛克** 的数量。 您的帐户有多少不同:doc:`mosaics<../../ concepts / mosaic>`？"
+
+#: ../../source/guides/account/getting-account-information.rst:57
+msgid ""
+"How many different mosaics does your account hold? Call "
+"``mosaicsAmountViewFromAddress`` function, passing your account's address"
+" as a parameter."
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:61
+msgid "|checking-balance-account-ts|"
+msgstr "|checking-balance-account-ts|"
+
+#: ../../source/guides/account/getting-account-information.rst:66
+msgid "|checking-balance-account-js|"
+msgstr "|checking-balance-account-js|"
+
+#: ../../source/guides/account/getting-account-information.rst:71
+msgid "|checking-balance-account-cli|"
+msgstr "|checking-balance-account-cli|"
+
+#~ msgid "Text editor or IDE"
+#~ msgstr "文本编辑器或IDE"
+
+#~ msgid "NEM2-SDK or CLI"
+#~ msgstr "NEM2-SDK或CLI"
+
+#~ msgid ""
+#~ "Can you determine the account's public"
+#~ " key? Which was the first block "
+#~ "where this account appeared?"
+#~ msgstr "你能确定帐户的公钥吗？ 这是该帐户出现的第一个区块？"
+
+#~ msgid "**Checking account's balance**"
+#~ msgstr "**检查账户余额**"
+
+#~ msgid "What’s next?"
+#~ msgstr "下一步是什么？"
+
+#~ msgid ""
+#~ "Retrieve the balance by only `filtering"
+#~ " the nem:xem "
+#~ "<https://www.learnrxjs.io/operators/filtering/filter.html>`_ "
+#~ "amount."
+#~ msgstr ""
+#~ "仅通过过滤nem:xem "
+#~ "<https://www.learnrxjs.io/operators/filtering/filter.html>`_ "
+#~ "amount来检索余额。"
+

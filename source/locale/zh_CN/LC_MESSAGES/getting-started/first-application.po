@@ -1,0 +1,518 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# ivyfung8 <ivyfung@nem.my>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:06+0000\n"
+"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/getting-started/first-application.rst:3
+msgid "Writing your first application"
+msgstr "编辑你的第一个程式。"
+
+#: ../../source/getting-started/first-application.rst:5
+msgid ""
+"This guide will take you through the NEM development cycle. You will send"
+" your first transaction to the blockchain after combining some NEM :doc"
+":`built-in features <../concepts/account>`."
+msgstr ""
+"这个指南将带领你完成整个NEM创建周期。在合并一些NEM :doc:`内置功能 "
+"<../conept/account>`后，你讲把你的第一个交易发送带区块链。"
+
+#: ../../source/getting-started/first-application.rst:9
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/getting-started/first-application.rst:11
+msgid ""
+"The secondary ticket market, also known as the resale market, is the "
+"exchange of tickets that happens between individuals after they have "
+"purchased a ticket from an initial vendor. The initial vendor could be "
+"the event website, an online ticket vending platform, a shop or a stall "
+"at the entrance of the event."
+msgstr "二级票务市场，也被称为转售市场，是一些买家从商家手上购买门票后转让。供应商可以是活动网站、在线售票平台、商店或是在活动入口处的一个摊位。"
+
+#: ../../source/getting-started/first-application.rst:13
+msgid ""
+"Buying a ticket from someone that is not the initial vendor does not "
+"necessarily only mean to pay more for the ticket. The is the chance to be"
+" a victim of buying a fake or duplicate ticket, where the initial "
+"original vendor can't do anything to solve the issue."
+msgstr "从非商家手上购买门票不一定买得较贵。受害者可能会买到假门票或复制票。这非商家可解决的问题。"
+
+#: ../../source/getting-started/first-application.rst:15
+msgid "**What do we want to solve?**"
+msgstr "**我们要解决什么问题？**"
+
+#: ../../source/getting-started/first-application.rst:21
+msgid "Authorization model"
+msgstr "授权模型"
+
+#: ../../source/getting-started/first-application.rst:23
+msgid "The ticket vendor wants to set up a system to:"
+msgstr "商家要建立一个系统以："
+
+#: ../../source/getting-started/first-application.rst:25
+msgid "Identify each ticket buyer."
+msgstr "确认每个购票者。"
+
+#: ../../source/getting-started/first-application.rst:26
+msgid "Avoid ticket reselling."
+msgstr "避免门票转售。"
+
+#: ../../source/getting-started/first-application.rst:27
+msgid "Avoid non-authentic tickets and duplicate ones."
+msgstr "避免假票和复制票 。"
+
+#: ../../source/getting-started/first-application.rst:29
+msgid "**Why should we use NEM?**"
+msgstr "**为什么用NEM？**"
+
+#: ../../source/getting-started/first-application.rst:31
+msgid "Blockchain technology makes sense in cases where:"
+msgstr "区块链技术有用于以下案例："
+
+#: ../../source/getting-started/first-application.rst:33
+msgid "There are different participants involved."
+msgstr "涉及多方参与者。"
+
+#: ../../source/getting-started/first-application.rst:34
+msgid "These participants need to trust each other."
+msgstr "参与者需要互相信任。"
+
+#: ../../source/getting-started/first-application.rst:35
+#, fuzzy
+msgid "There is a need to keep track of an immutable set of events."
+msgstr "有必要追踪一组不变的事件。"
+
+#: ../../source/getting-started/first-application.rst:37
+msgid ""
+"NEM is a **flexible blockchain** technology. Instead of uploading all the"
+" application logic into the blockchain, you can use its tested features "
+"through **API calls** for transfer and storage of value, authorization, "
+"traceability, and identification."
+msgstr "NEM是一个**灵活的区块链**技术。与其把所有的应用逻辑上载到区块链，你可以使用其经过测试的功能，通过**接口调用**进行价值的转让和储存、授权、追溯和识别。"
+
+#: ../../source/getting-started/first-application.rst:39
+msgid ""
+"The rest of the code remains **off-chain**. This reduces the inherent "
+"immutability risk, as you could change the process when necessary."
+msgstr "代码仍处于**链外**。因为可以在必要时更改流程，这降低了固有的不变性风。"
+
+#: ../../source/getting-started/first-application.rst:43
+msgid "Let’s get into some code"
+msgstr "代码案例"
+
+#: ../../source/getting-started/first-application.rst:45
+msgid "**1.Creating an account for each participant**"
+msgstr "**1. 给每一个参与者创建一个账户。**"
+
+#: ../../source/getting-started/first-application.rst:47
+#, fuzzy
+msgid "First, identify the actors involved in the problem we want to solve:"
+msgstr "第一，确定案例的参与者："
+
+#: ../../source/getting-started/first-application.rst:49
+msgid "The ticket vendor."
+msgstr "门票商家。"
+
+#: ../../source/getting-started/first-application.rst:50
+msgid "The ticket buyer."
+msgstr "门票买家。"
+
+#: ../../source/getting-started/first-application.rst:52
+msgid ""
+"We have decided to represent the ticket vendor and buyer as separate "
+":doc:`accounts <../concepts/account>`. Each account is unique and "
+"identified by an address. An account has access to a deposit box in the "
+"blockchain, which can be modified with an appropriate private key."
+msgstr ""
+"我们决定以不同的:doc:`账户 "
+"<../concepts/account>`代表商家和买家。每一个账户都是独特的并以地址做为识别。账户像是区块链上的保险箱，每一个的内容可以特定的私钥更改内容。"
+
+#: ../../source/getting-started/first-application.rst:54
+#, fuzzy
+msgid ""
+"Have you loaded an account with test ``cat.currency``? If it is not the "
+"case, go back to :doc:`getting started section <setup-workstation>`. The "
+"account you have created represents the ticket vendor."
+msgstr "是否已经加载有测试XEM的账户？如果还没有，回去:doc:`入门部分 `。你创建的账户代表门票商家。"
+
+#: ../../source/getting-started/first-application.rst:56
+msgid ""
+"After running the following command, you should see on your screen a line"
+" similar to:"
+msgstr "运行以下命令后，屏幕上应该看到类似以下内容的字行："
+
+#: ../../source/getting-started/first-application.rst:71
+#, fuzzy
+msgid ""
+"This account owns ``1.000.000 cat.currency``. If your row after mosaics "
+"is empty, follow :doc:`the previous guide instructions <setup-"
+"workstation>`."
+msgstr "此账户有1.000.000 XEM。如果马赛克后的一排是空的，请依照:doc:`之前的指导说明 `。"
+
+#: ../../source/getting-started/first-application.rst:73
+msgid "Create a second account to identify the ticket buyer."
+msgstr "创建第二个账户以代表门票买家。"
+
+#: ../../source/getting-started/first-application.rst:80
+msgid "**2. Monitoring the blockchain**"
+msgstr "**2. 监控区块链**"
+
+#: ../../source/getting-started/first-application.rst:82
+msgid ""
+"Accounts change the blockchain state through transactions. Once an "
+"account announces a transaction, if properly formed, the server will "
+"return an OK response."
+msgstr "通过交易，账户更改区块链的状态。当一个账户公布一个交易，如果形成得当，服务器将回应OK。"
+
+#: ../../source/getting-started/first-application.rst:84
+msgid ""
+"Receiving an OK response does not mean the transaction is valid, which "
+"means it is still not included in a block. A good practice is to monitor "
+"transactions before being announced."
+msgstr "得到OK的回应不代表交易有效，因为它还没有收录在区块内。监控交易是个好的做法。"
+
+#: ../../source/getting-started/first-application.rst:86
+#, fuzzy
+msgid "Open three new terminals:"
+msgstr "建议开设三个新的终端："
+
+#: ../../source/getting-started/first-application.rst:88
+msgid ""
+"The first terminal :doc:`monitors announced transactions "
+"<../guides/transaction/monitoring-a-transaction-status>` validation "
+"errors."
+msgstr ""
+"第一个终端:doc:`监控公布后的交易 <../guides/transaction/monitoring-a-transaction-"
+"status>`的验证错误。"
+
+#: ../../source/getting-started/first-application.rst:94
+msgid ""
+"Monitoring ``unconfirmed`` shows you which transactions have reached the "
+"network, but are not included in a block yet."
+msgstr "监控 “未确认” 交易显示那些交易已经到达网络，但还没被收录在区块内。"
+
+#: ../../source/getting-started/first-application.rst:100
+msgid ""
+"Once a transaction is included, you will see it under the ``confirmed`` "
+"terminal."
+msgstr "一旦交易被收录，它会被显示在“确认”的终端。"
+
+#: ../../source/getting-started/first-application.rst:106
+msgid "**3. Creating the ticket**"
+msgstr "**3. 创建门票**"
+
+#: ../../source/getting-started/first-application.rst:108
+msgid ""
+"We are representing the ticket as a NEM mosaic. :doc:`Mosaics "
+"<../concepts/mosaic>` can be used to represent any asset in the "
+"blockchain, such as objects, tickets, coupons, stock share "
+"representation, and even your cryptocurrency. They have configurable "
+"properties, which are defined at the moment of their creation. For "
+"example, we opt to set **transferable property to false**. This means "
+"that the ticket buyer can only send back the ticket to the creator of the"
+" mosaic, avoiding the ticket reselling."
+msgstr ""
+"我们用NEM马赛克代表门票。:doc:`马赛克 <../concepts/mosaic>` "
+"可以用来代表任何区块链上的资产，如物件、门票、优惠券、股票、甚至是加密货币。它们具有可配置的属性，并在创建时被定义。比如，我们选择把**可转让配置设为false“。这意味着没票买家只能把门票转送会给马赛克的创造者，从而避免门票转售。"
+
+#: ../../source/getting-started/first-application.rst:110
+#, fuzzy
+msgid "Create a  mosaic named ``ticket``:"
+msgstr "创建名为“门票”的马赛克。"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Value"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Divisibility"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+#, fuzzy
+msgid ""
+"The mosaic won't be divisible, no one should be able to send “0.5 "
+"tickets”."
+msgstr "可分性设为“0”， 因为总不能只卖或发送“0.5 公司：门票”。"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Duration"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1000"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The mosaic will be registered for 1000 blocks."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Amount"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1000000"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The number of tickets you are going to create"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Supply mutable"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "True"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The mosaic supply can change at a later point."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Transferable"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "False"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The mosaic can be only transferred back to the mosaic creator."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:126
+msgid ""
+"Copy the mosaicId returned in the ``monitor confirmed`` tab after the "
+"transaction gets confirmed."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:133
+msgid "**4. Sending the ticket**"
+msgstr "**4. 发送门票**"
+
+#: ../../source/getting-started/first-application.rst:135
+#, fuzzy
+msgid ""
+"Send one ``company.ticket`` to the ticket vendor account announcing a "
+":ref:`transfer transaction <transfer-transaction>`, one of the most "
+"commonly used actions in NEM."
+msgstr "用:ref:`发送交易 `,发送“公司：门票”给商家的账户这是最常用的。"
+
+#: ../../source/getting-started/first-application.rst:137
+#, fuzzy
+msgid ""
+"Prepare the transfer transaction. The following attributes form a "
+"transfer transaction:"
+msgstr "准备转移交易。转移交易的三个主要属性："
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Deadline"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Default"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The maximum amount of time to include the transaction in the blockchain."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Recipient"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The recipient account address."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Mosaics"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1 [7cdf3b117a3c40cc] (ticket)"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The array of mosaics to send."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Message"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+#, fuzzy
+msgid "``enjoy your ticket``"
+msgstr "讯息：“享受你的门票。”"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The attached message."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Network"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "MIJIN_TEST"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "The local network identifier."
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:166
+#, fuzzy
+msgid ""
+"Although the transaction is defined, it has not been announced to the "
+"network yet."
+msgstr "纵然交易已经被创建，但它还没被公布到网络。"
+
+#: ../../source/getting-started/first-application.rst:168
+msgid ""
+"Sign the transaction the ticket vendor account first, so that the network"
+" can verify the authenticity of the transaction."
+msgstr "先签署商家账户的交易，好让网络验证交易的真实性。"
+
+#: ../../source/getting-started/first-application.rst:181
+msgid "Once signed, announce the transaction to the network."
+msgstr "签署后，把交易公布到网络。"
+
+#: ../../source/getting-started/first-application.rst:198
+msgid ""
+"When the transaction is confirmed, check that the ticket buyer has "
+"received the ticket."
+msgstr "当交易被确认后，检查买家是否以收到门票。"
+
+#: ../../source/getting-started/first-application.rst:206
+msgid "What's next?"
+msgstr "然后呢？"
+
+#: ../../source/getting-started/first-application.rst:208
+msgid "Did you solve the proposed use case?"
+msgstr "被提议的用例被解决了吗？"
+
+#: ../../source/getting-started/first-application.rst:210
+msgid "✅ Identify each ticket buyer: Creating NEM accounts for each buyer."
+msgstr "✅ 确定每一个买家: 为每一个买家创建一个账户。."
+
+#: ../../source/getting-started/first-application.rst:212
+msgid "✅ Avoid ticket reselling: Creating a non-transferable mosaic."
+msgstr "✅ 避免门票转售: 创建不可转让的马赛克。"
+
+#: ../../source/getting-started/first-application.rst:214
+#, fuzzy
+msgid ""
+"✅ Avoid non-authentic tickets and duplicate ones: Creating a unique "
+"mosaic."
+msgstr "✅ 避免假门票或复制票：创建独特的命名空间和马赛克并取名为“公司：门票”。"
+
+#: ../../source/getting-started/first-application.rst:216
+msgid ""
+"Continue learning about more :doc:`NEM built-in features "
+"<../concepts/account>` or practicing with :doc:`self-paced training "
+"<training>`."
+msgstr "继续学习 :doc:`NEM 内置功能 <../concepts/account>` 或者以 :doc:`自定进度训练 ` 作为练习。"
+
+#~ msgid "Prerequisites"
+#~ msgstr "先决条件"
+
+#~ msgid "Finish :doc:`getting started section <setup-workstation>`"
+#~ msgstr "完成:doc:`入门部分 `"
+
+#~ msgid "Text editor or IDE"
+#~ msgstr "文本编辑器或IDE。"
+
+#~ msgid "NEM2-SDK and CLI"
+#~ msgstr "NEM2-SDK 和 CLI"
+
+#~ msgid "An account with XEM"
+#~ msgstr "有XEM的账户。"
+
+#~ msgid ""
+#~ "Before creating a mosaic with the "
+#~ "ticket vendor account, you need to "
+#~ "register a namespace. A :doc:`namespace "
+#~ "<../concepts/namespace>` is a unique name "
+#~ "in the network that gives a "
+#~ "recognizable name to your assets."
+#~ msgstr ""
+#~ "在创建门票马赛克之前，你需要注册一个命名空间。:doc:`命名空间 "
+#~ "<../concepts/namespace>`是一个在网络中独特的名字。它给你的资产一个可识别的名字。"
+
+#~ msgid ""
+#~ "Register the namespace called ``company``. "
+#~ "Let's check if this name is "
+#~ "available."
+#~ msgstr "注册一个名为“公司”的命名空间。先检查此名字是否还已被用。"
+
+#~ msgid ""
+#~ "Is the namespace available? Register it"
+#~ " by setting the namespace name and"
+#~ " its renting duration expressed in "
+#~ "blocks."
+#~ msgstr "如果改命名空间还没被注册，那么你可以设置其名字和以区块作为期限单位的租赁期限。"
+
+#~ msgid ""
+#~ "Did you check what happened in "
+#~ "terminals where you are monitoring your"
+#~ " account transactions? The transaction "
+#~ "first appeared under ``unconfirmed`` terminal"
+#~ " and, after a while, got confirmed"
+#~ " ``confirmed``."
+#~ msgstr "你是否检查过监控帐户交易的终端？交易会现出现在“未确认”的终端，过了一会，会出现在“确认”的终端。"
+
+#~ msgid ""
+#~ "It should be under the ``company`` "
+#~ "namespace , with a total supply of"
+#~ " ``100``."
+#~ msgstr "它应附属于“公司”命名空间，总供应量为“100”。"
+
+#~ msgid "The mosaic is configured with ``transferability`` set so false."
+#~ msgstr "马赛克的“转让”设置“为false。"
+
+#~ msgid ""
+#~ "The recipient account address: ``SC7A4H-"
+#~ "7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``."
+#~ msgstr "收件者的账户地址: ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``."
+
+#~ msgid "An array of mosaics: ``[1 company:ticket]``."
+#~ msgstr "马赛克：``[1 公司：门票]``."
+

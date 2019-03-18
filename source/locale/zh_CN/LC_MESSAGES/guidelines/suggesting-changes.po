@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"PO-Revision-Date: 2019-02-22 09:11+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guidelines/suggesting-changes.rst:5
+msgid "Suggesting documentation changes"
+msgstr "文档更改建议"
+
+#: ../../source/guidelines/suggesting-changes.rst:7
+msgid ""
+"The NEM Developer Center is an open source project and we love to receive "
+"contributions from our community — you! There are many ways to contribute, "
+"from writing guides, improving the documentation, submitting errors and "
+"requests or writing new pieces of documentation which can be incorporated "
+"into the docs itself."
+msgstr ""
+"NEM开发人员中心是一个开源项目，我们很乐意收到社区的贡献 - 您！ "
+"通过编写指南，改进文档，提交错误和请求或编写可以合并到文档本身的新文档，有很多方法可以做出贡献。"
+
+#: ../../source/guidelines/suggesting-changes.rst:13
+msgid "Error reports"
+msgstr "Error 报告"
+
+#: ../../source/guidelines/suggesting-changes.rst:15
+msgid ""
+"If you think you have found an error in the NEM Developer Center, first make"
+" sure that you are testing against the latest version of NEM Developer "
+"Center - your issue may already have been fixed. If not, search our issues "
+"list on GitHub in case a similar |issue| has already been opened."
+msgstr ""
+"如果您认为在NEM开发人员中心发现错误，请首先确保您正在测试最新版本的NEM开发人员中心 - "
+"您的问题可能已经修复。如果没有，在GitHub上搜索我们的问题列表,以防类似的问题已经提出来。"
+
+#: ../../source/guidelines/suggesting-changes.rst:18
+msgid ""
+"It is very helpful if you can prepare a reproduction of the error. It makes "
+"it easier to find the problem and to fix it."
+msgstr "如果您可以提供error的复述，这将非常有用。 它可以帮助我们更容易地找到问题并修复它。"
+
+#: ../../source/guidelines/suggesting-changes.rst:20
+msgid ""
+"Please, take into consideration the next template to report your issue:"
+msgstr "请注意下一个报告问题的模板："
+
+#: ../../source/guidelines/suggesting-changes.rst:22
+msgid "**Error description**"
+msgstr "**Error 描述**"
+
+#: ../../source/guidelines/suggesting-changes.rst:24
+msgid "Short and expressive sentence explaining what is wrong.\\"
+msgstr "简短而富有表现力的句子解释了什么是错误的。"
+
+#: ../../source/guidelines/suggesting-changes.rst:26
+msgid "**Url or screenshot**"
+msgstr "**Url or 截图**"
+
+#: ../../source/guidelines/suggesting-changes.rst:28
+msgid "For faster issue detection, we would need where to find it. \\"
+msgstr "为了更快地检测问题，我们需要在哪里找到它。\\"
+
+#: ../../source/guidelines/suggesting-changes.rst:30
+msgid "Provide as much information as you can."
+msgstr "提供尽可能多的信息。"
+
+#: ../../source/guidelines/suggesting-changes.rst:32
+msgid "Open a new |issue| here."
+msgstr "这这里建立新 |issue| "
+
+#: ../../source/guidelines/suggesting-changes.rst:36
+msgid "Requests"
+msgstr "Requests"
+
+#: ../../source/guidelines/suggesting-changes.rst:38
+msgid ""
+"If you find yourself wishing for content that does not exist in the NEM "
+"Developer Center, you are probably not alone. Most of the documentation and "
+"guides that the NEM Developer Center has today have been added because our "
+"users saw the need. Open an |issue| on our issues list on GitHub which "
+"describes the missing documentation or improvement you would like to see."
+msgstr ""
+"如果您希望获得NEM开发人员中心中不存在的内容，那么您可能并不是一个人。NEM开发人员中心今天提供的大多数文档和指南都已添加，因为我们的用户已经看到了这种需求。"
+" 在我们GitHub上的问题列表上提交一个|issue| ，在|issue|里描述您希望看到的缺失文档或改进。"
+
+#: ../../source/guidelines/suggesting-changes.rst:40
+msgid ""
+"If the improvement is not related to documentation, but with a specific "
+"project, please check CONTRIBUTING.md in the project repository."
+msgstr "如果改进与文档无关，但与特定项目有关，请检查项目存储库中的CONTRIBUTING.md。"
+
+#: ../../source/guidelines/suggesting-changes.rst:44
+msgid "Contributing code and documentation changes"
+msgstr "贡献代码和文档更改"
+
+#: ../../source/guidelines/suggesting-changes.rst:46
+msgid ""
+"To expand and improve the NEM Developer Center, please find or open an "
+"|issue| about it first. Talk about what you would like to do. It may be that"
+" somebody is already working on it, or that there are particular issues that"
+" you should know about before implementing the change."
+msgstr ""
+"要扩展和改进NEM开发人员中心，请首先查找或提交|issue| 。谈谈你想的需求。 可能有人已在研究它，又或者在实施更改之前您应该了解某些问题。"
+
+#: ../../source/guidelines/suggesting-changes.rst:48
+msgid ""
+"We enjoy working with contributors to get their pull-requests accepted."
+msgstr "我们喜欢与贡献者合作以接受他们的pull-requests。"
+
+#: ../../source/guidelines/suggesting-changes.rst:51
+msgid "Contributing License Notice"
+msgstr "贡献许可通知"
+
+#: ../../source/guidelines/suggesting-changes.rst:53
+msgid ""
+"When you contribute code, you affirm that the contribution is your original "
+"work and that you license the work to the project under the project's open "
+"source license."
+msgstr "当您贡献代码时，您确认该贡献是您的原创作品，并且您根据项目的开源许可证将该作品许可给项目。"
+
+#: ../../source/guidelines/suggesting-changes.rst:55
+msgid ""
+"Whether or not you state this explicitly, by submitting any copyrighted "
+"material via pull request, email, or other means you agree to license the "
+"material under the project's open source license and warrant that you have "
+"the legal authority to do so."
+msgstr ""
+"无论您是否明确说明，通过拉取请求，电子邮件或其他方式提交任何受版权保护的材料，您同意根据项目的开源许可证许可该材料，并保证您具有这样做的合法权限。"
+
+#: ../../source/guidelines/suggesting-changes.rst:58
+msgid "Fork and clone the repository"
+msgstr "Fork 并clone该库"
+
+#: ../../source/guidelines/suggesting-changes.rst:60
+msgid ""
+"If the documentation change is small, you can use the *\"Edit on Github\"* "
+"button at the top of the page."
+msgstr "如果文档更改很小，您可以使用页面顶部的 *“Edit on Github”* 按钮。"
+
+#: ../../source/guidelines/suggesting-changes.rst:62
+msgid ""
+"For substantial changes or contributions, you may need to fork the main "
+"|repository| and clone it to your local machine. See |github-help| page for "
+"help."
+msgstr ""
+"对于重大更改或贡献，您可能需要派生主| repository | 并将其clone到本地计算机。 您可以到| github-help | 页面寻求帮助。"
+
+#: ../../source/guidelines/suggesting-changes.rst:64
+msgid "Further instructions for specific projects are given below."
+msgstr "下面给出了具体项目的进一步说明。"
+
+#: ../../source/guidelines/suggesting-changes.rst:67
+msgid "Submitting your changes"
+msgstr "提交您的更改"
+
+#: ../../source/guidelines/suggesting-changes.rst:69
+msgid "Once your changes and tests are ready to submit for review:"
+msgstr "一旦您的更改和测试准备好提交以供审核："
+
+#: ../../source/guidelines/suggesting-changes.rst:71
+msgid "Test your changes"
+msgstr "测试您的更改"
+
+#: ../../source/guidelines/suggesting-changes.rst:73
+msgid "Run ``make livehtml`` and preview your changes."
+msgstr "运行``make livehtml``并预览您的更改。"
+
+#: ../../source/guidelines/suggesting-changes.rst:75
+msgid "Submit a pull request"
+msgstr "提交拉取请求"
+
+#: ../../source/guidelines/suggesting-changes.rst:77
+msgid ""
+"Push your local changes to your forked copy of the repository and |pull-"
+"request|. In the pull request, choose a title which sums up the changes that"
+" you have made, and in the body provide more details about what your changes"
+" do. Also mention the number of the issue where discussion has taken place, "
+"eg \"Closes #123\"."
+msgstr ""
+"将本地更改推送到存储库的分叉副本和| pull-request |。 "
+"在拉取请求中，选择一个标题，该标题总结了您所做的更改，并在正文中提供有关您的更改的更多详细信息。 还要提到讨论的问题的数量，例如“Closes "
+"＃123”。"
+
+#: ../../source/guidelines/suggesting-changes.rst:79
+msgid ""
+"Then sit back and wait. There will probably be a discussion about the pull "
+"request and, if any changes are needed, we would love to work with you to "
+"get your pull request merged into nem2-docs."
+msgstr "之后静待回复。可能会有关于pull请求的讨论，如果需要进行任何更改，我们很乐意与您合作，将您的请求合并到nem2-docs中。"
+
+#: ../../source/guidelines/suggesting-changes.rst:81
+msgid ""
+"*CONTRIBUTING.md* is based on `CONTRIBUTING-template.md "
+"<https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-"
+"template.md>`_ , `elasticsearch/CONTRIBUTING "
+"<https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and"
+" `spark/CONTRIBUTING "
+"<https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_."
+msgstr ""
+"*CONTRIBUTING.md* 基于 `CONTRIBUTING-template.md <https://github.com/nayafia"
+"/contributing-template/blob/master/CONTRIBUTING-template.md>`_ , "
+"`elasticsearch/CONTRIBUTING "
+"<https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and"
+" `spark/CONTRIBUTING "
+"<https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_."

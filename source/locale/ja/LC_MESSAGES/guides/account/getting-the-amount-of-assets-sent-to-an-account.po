@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:10
+msgid "Getting the amount of assets sent to an account"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:12
+msgid "Check the number of asset units you have sent to an account."
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:16
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:19
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:20
+msgid ""
+"Have :doc:`sent mosaics <../transaction/sending-a-transfer-transaction>` "
+"to another account."
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:24
+msgid "Let’s get into some code"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:26
+msgid ""
+"In this example, we are going to check how many assets of a certain type "
+"have we sent to an account."
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:30
+msgid "|getting-amount-of-assets-sent-to-an-account-ts|"
+msgstr ""
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:35
+msgid ""
+"If you want to check another :doc:`mosaic <../../concepts/mosaic>` "
+"different than the native currency, change ``mosaicId`` and "
+"``divisibility`` for the target mosaic properties."
+msgstr ""
+

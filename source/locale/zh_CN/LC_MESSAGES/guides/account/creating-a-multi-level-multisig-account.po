@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:12+0000\n"
+"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:10
+msgid "Creating a multi-level multisig account (MLMA)"
+msgstr "创建多级多重帐户（MLMA）"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:12
+msgid ""
+"Create a :doc:`multi-level multisig account <../../concepts/multisig-"
+"account>`."
+msgstr "创建一个:doc:`多级多重帐户<../../ concepts / multisig-account>`。"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:18
+msgid "Three-level multisig account example"
+msgstr "三级multisig帐户示例"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:22
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:24
+msgid ""
+":doc:`Multisig accounts <../../concepts/multisig-account>` can have as "
+"cosignatories other multisig accounts. Multi-level multisig accounts add "
+"“AND/OR” logic to multi-signature transactions."
+msgstr ""
+":doc:`Multisig accounts <../../ concepts / multisig-"
+"account>`可以作为cosignatories其他multisig帐户。多级multisig帐户为多签名事务添加“AND/OR”逻辑。"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:26
+msgid "The maximum depth of a multilevel multisig account is ``3``."
+msgstr "多级多重帐户的最大深度为“3”。"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:30
+msgid "Prerequisites"
+msgstr "先决条件"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:32
+msgid ""
+"Finish :doc:`converting an account to multisig guide <converting-an-"
+"account-to-multisig>`"
+msgstr "完成:doc:`将一个帐户转换为multisig 指南 <conversion-an-account-to-multisig>`"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:33
+msgid "Know how to :doc:`create accounts <creating-and-opening-an-account>`"
+msgstr ""
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:37
+msgid "Let’s get into some code"
+msgstr "让我们来点代码"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:39
+msgid "Create multisig account #2"
+msgstr "创建multisig 账户 #2"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:43
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:62
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:81
+msgid "|creating-a-mlma-ts|"
+msgstr "|creating-a-mlma-ts|"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:48
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:67
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:86
+msgid "|creating-a-mlma-java|"
+msgstr "|creating-a-mlma-java|"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:53
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:72
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:91
+msgid "|creating-a-mlma-js|"
+msgstr "|creating-a-mlma-js|"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:58
+msgid "Create multisig account #3"
+msgstr "Create multisig account #3"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:77
+msgid "Create multisig account #1"
+msgstr "创建 multisig 账户 #1"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:98
+msgid "What's next?"
+msgstr "下一步是什么？"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:100
+#, fuzzy
+msgid ""
+"Who should cosign the transaction if Account #5 initiates an aggregate "
+"bonded transaction? Multisig accounts are not capable of cosigning "
+"transactions, the cosignatories are responsible for doing so."
+msgstr "如果账户#5启动了一个聚合绑定交易，谁应该为交易进行联合签名？Multisig 帐户不能对交易进行联合签名，cosignatories 负责这样做。"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:106
+msgid "Sending an aggregate bonded transaction from a MLMA"
+msgstr "从MLMA发送聚合保税交易。"
+
+#~ msgid "Text editor or IDE"
+#~ msgstr "文本编辑器或IDE"
+
+#~ msgid "NEM2-SDK or CLI"
+#~ msgstr "NEM2-SDK 或 CLI"
+

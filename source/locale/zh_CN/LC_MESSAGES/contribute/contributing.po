@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/contribute/contributing.rst:3
+msgid "Guidelines"
+msgstr "方针"
+
+#: ../../source/contribute/contributing.rst:5
+msgid "First off, thank you for considering contributing to NEM!"
+msgstr "首先，感谢您想为为NEM做出贡献的想法！"
+
+#: ../../source/contribute/contributing.rst:7
+msgid ""
+"Follow these guidelines for contributing to NEM projects, achieving the best"
+" quality with the less effort."
+msgstr "在为NEM项目做出贡献，请您参考以下原则，以此事半功倍。"
+
+#: ../../source/contribute/contributing.rst:9
+msgid ""
+"If you want to contribute to a existent project, read as well the "
+"CONTRIBUTING.md file of its repository."
+msgstr "如果要为现有项目做出贡献，请同时阅读其存储库的CONTRIBUTING.md文件。"
+
+#: ../../source/contribute/contributing.rst:13
+msgid "Development"
+msgstr "发展"
+
+#: ../../source/contribute/contributing.rst:16
+msgid "SDK"
+msgstr "SDK"
+
+#: ../../source/contribute/contributing.rst:18
+msgid ":doc:`Summary <../sdk>`"
+msgstr ":doc:`总结<../sdk>`"
+
+#: ../../source/contribute/contributing.rst:19
+msgid ":doc:`Developing an SDK <../guidelines/sdk-development>`"
+msgstr ":doc:`开发SDK <../guidelines/sdk-development>`"
+
+#: ../../source/contribute/contributing.rst:20
+msgid ":doc:`Documenting an SDK <../guidelines/sdk-documentation>`"
+msgstr ":doc:`编写 SDK文档 <../guidelines/sdk-documentation>`"
+
+#: ../../source/contribute/contributing.rst:23
+msgid "Catbuffer"
+msgstr "Catbuffer"
+
+#: ../../source/contribute/contributing.rst:25
+msgid ":ref:`Summary <serialization>`"
+msgstr ":ref:`总结<serialization>`"
+
+#: ../../source/contribute/contributing.rst:26
+msgid ":doc:`Writing a Schema <../guidelines/writing-a-schema>`"
+msgstr ":doc:`编写规范 <../guidelines/writing-a-schema>`"
+
+#: ../../source/contribute/contributing.rst:30
+msgid "Documentation"
+msgstr "文档"
+
+#: ../../source/contribute/contributing.rst:32
+msgid ":doc:`Writing a guide <../guidelines/writing-a-guide>`"
+msgstr ":doc:`编写引导文档 <../guidelines/writing-a-guide>`"
+
+#: ../../source/contribute/contributing.rst:33
+msgid ":doc:`Suggesting changes <../guidelines/suggesting-changes>`"
+msgstr ":doc:`建议 <../guidelines/suggesting-changes>`"
+
+#: ../../source/contribute/contributing.rst:34
+msgid ""
+":doc:`Translating the documentation <../guidelines/translating-the-"
+"documentation>`"
+msgstr ":doc:`翻译文档 <../guidelines/translating-the-documentation>`"

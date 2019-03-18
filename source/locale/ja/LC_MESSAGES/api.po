@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/api.rst:3
 msgid "REST API"
@@ -27,20 +26,21 @@ msgstr ""
 
 #: ../../source/api.rst:5
 msgid ""
-"**Catapult REST API** combines HTTP and WebSockets to perform read and write"
-" actions in the NEM blockchain."
+"**Catapult REST API** combines HTTP and WebSockets to perform read and "
+"write actions in the NEM blockchain."
 msgstr ""
 "**Catapult REST API** は HTTP と WebSockets を NEM "
 "ブロックチェーン上で読み書きアクションが実行できるように併合します。"
 
 #: ../../source/api.rst:11
-msgid "Http Requests"
+#, fuzzy
+msgid "Http requests"
 msgstr "HTTP リクエスト"
 
 #: ../../source/api.rst:13
 msgid ""
-"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
-"**POST** requests."
+"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** "
+"and **POST** requests."
 msgstr ""
 "Catapult REST はポート ``3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
 "リクエストを受け付けます。"
@@ -57,10 +57,10 @@ msgstr ""
 
 #: ../../source/api.rst:19
 msgid ""
-"HTTP PUT and POST requests use JSON structures in the request body. Request "
-"returns data using JSON structures. This kind of request cannot usually be "
-"executed from within the browser unless you use a plugin which enables you "
-"to do it."
+"HTTP PUT and POST requests use JSON structures in the request body. "
+"Request returns data using JSON structures. This kind of request cannot "
+"usually be executed from within the browser unless you use a plugin which"
+" enables you to do it."
 msgstr ""
 "HTTP PUT と POST "
 "リクエストはボディ部にJSON形式を使用します。リクエストはデータをJSON形式で返します。この種のリクエストはそれが可能なプラグインを利用しないことにはブラウザから実行することができません。"
@@ -75,8 +75,8 @@ msgstr ""
 
 #: ../../source/api.rst:32
 msgid ""
-"The **NEM2 Software Development Kit** is the primary software development "
-"tool to create NEM2 components, such as additional tools, libraries or "
+"The **NEM2 Software Development Kit** is the primary software development"
+" tool to create NEM2 components, such as additional tools, libraries or "
 "applications."
 msgstr ""
 "**NEM2 ソフトウェア開発キット** とは NEM2 "
@@ -108,8 +108,8 @@ msgstr "あなたのOS用の |insomnia-app| をダウンロードしてくださ
 
 #: ../../source/api.rst:45
 msgid ""
-"Import the :download:`Insomnia spec<resources/collections/insomnia.json>` "
-"for NEM."
+"Import the :download:`Insomnia spec<resources/collections/insomnia.json>`"
+" for NEM."
 msgstr ""
 "NEM 用の :download:`Insomnia 仕様 <resources/collections/insomnia.json>` "
 "をインポートしてください。"
@@ -121,9 +121,9 @@ msgstr "シリアル化"
 #: ../../source/api.rst:56
 msgid ""
 "`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
-"protocol to serialize and deserialize Catapult entities. The library comes "
-"with code generators for different languages. SDKs and applications use the "
-"generated code to interact with REST transaction endpoint."
+"protocol to serialize and deserialize Catapult entities. The library "
+"comes with code generators for different languages. SDKs and applications"
+" use the generated code to interact with REST transaction endpoint."
 msgstr ""
 
 #: ../../source/api.rst:62
@@ -140,9 +140,10 @@ msgstr "**効率的なメモリ使用**"
 
 #: ../../source/api.rst:68
 msgid ""
-"Large networks compute a large number of transactions. Working with binary "
-"optimized in size makes the communication faster. Furthermore, reading "
-"entities from memory buffers -or just a part of them - is memory efficient."
+"Large networks compute a large number of transactions. Working with "
+"binary optimized in size makes the communication faster. Furthermore, "
+"reading entities from memory buffers -or just a part of them - is memory "
+"efficient."
 msgstr ""
 "大きなネットワークはたくさんのトランザクションを計算します。バイナリに最適化された仕事はコミュニケーションを高速にします。さらに、メモリバッファからのエンティティ"
 " -またはそれらの一部- の読み込みはメモリを効率的に使用します。"
@@ -154,11 +155,11 @@ msgstr "**柔軟性**"
 #: ../../source/api.rst:72
 msgid ""
 "REST `transaction endpoints "
-"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
-"handle the calls to update the blockchain state. The serialized payload of a"
-" transaction is appended to the body of the POST call. These endpoints allow"
-" the addition of new functionality to the server side without modifying the "
-"API contract."
+"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_"
+" handle the calls to update the blockchain state. The serialized payload "
+"of a transaction is appended to the body of the POST call. These "
+"endpoints allow the addition of new functionality to the server side "
+"without modifying the API contract."
 msgstr ""
 
 #: ../../source/api.rst:74
@@ -167,8 +168,8 @@ msgstr "**再利用性**"
 
 #: ../../source/api.rst:76
 msgid ""
-"Applications can embed the generated code, without managing dependencies. "
-"This is particularly desirable in highly-secure environments. Besides, "
+"Applications can embed the generated code, without managing dependencies."
+" This is particularly desirable in highly-secure environments. Besides, "
 "sharing a common codebase enables the addition of new features with less "
 "effort."
 msgstr ""
@@ -176,22 +177,22 @@ msgstr ""
 #: ../../source/api.rst:78
 msgid ""
 "The `schemas define "
-"<https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities "
-"data structure. The library generates the leanest code necessary to "
+"<https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities"
+" data structure. The library generates the leanest code necessary to "
 "serialize and deserialize defined entities."
 msgstr ""
 
 #: ../../source/api.rst:80
 msgid ""
-"Generate the code for a determined schema in one of the available languages."
-" For example, run the following command to generate C++ transaction builders"
-" for a transfer transaction:"
+"Generate the code for a determined schema in one of the available "
+"languages. For example, run the following command to generate C++ "
+"transaction builders for a transfer transaction:"
 msgstr ""
 
 #: ../../source/api.rst:86
 msgid ""
-"The generator creates a new file under ``_generated/cpp_builder`` folder. "
-"Repeat the process using a different input schema ``(-s)`` or generator "
+"The generator creates a new file under ``_generated/cpp_builder`` folder."
+" Repeat the process using a different input schema ``(-s)`` or generator "
 "``(-g)`` as needed."
 msgstr ""
 
@@ -203,7 +204,7 @@ msgstr "HTTP エラー"
 msgid "Status code"
 msgstr "ステータスコード"
 
-#: ../../source/api.rst:1 ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid "Description"
 msgstr "説明"
 
@@ -221,8 +222,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Accepted. The request has been accepted for processing but the processing "
-"has not been completed."
+"Accepted. The request has been accepted for processing but the processing"
+" has not been completed."
 msgstr "Accepted リクエストは処理のために受理されましたが、処理は完了していません。"
 
 #: ../../source/api.rst:1
@@ -291,11 +292,12 @@ msgstr "uint64: lower と higher"
 
 #: ../../source/api.rst:128
 msgid ""
-"Javascript operate on 32 bit values. To enable representation up to 64 bits,"
-" the API returns numbers encoded in two parts: ``lower`` and ``higher``."
+"Javascript operate on 32 bit values. To enable representation up to 64 "
+"bits, the API returns numbers encoded in two parts: ``lower`` and "
+"``higher``."
 msgstr ""
-"Javascript は 32 bit の値を扱います。64 bit の表現を可能にするために、API は ``lower`` と ``higher``"
-" の２つの部分にエンコードされた数値を返します。"
+"Javascript は 32 bit の値を扱います。64 bit の表現を可能にするために、API は ``lower`` と "
+"``higher`` の２つの部分にエンコードされた数値を返します。"
 
 #: ../../source/api.rst:130
 msgid ""
@@ -313,9 +315,9 @@ msgstr ""
 
 #: ../../source/api.rst:138
 msgid ""
-"WebSockets make receiving notifications possible when a transaction or event"
-" occurs in the blockchain. The notification is received in real time without"
-" having to poll the API waiting for a reply."
+"WebSockets make receiving notifications possible when a transaction or "
+"event occurs in the blockchain. The notification is received in real time"
+" without having to poll the API waiting for a reply."
 msgstr ""
 "WebSockets はブロックチェーン上でトランザクションやイベントが発生した通知を受け取ることを可能にします。この通知は API "
 "の返却を待つことなくリアルタイムで行われます。"
@@ -324,8 +326,7 @@ msgstr ""
 msgid ""
 "Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with "
 "**Listeners**."
-msgstr ""
-":doc:`NEM2-SDK <../sdk>` で API WebSocket と疎通するには **Listeners** を使用します。"
+msgstr ":doc:`NEM2-SDK <../sdk>` で API WebSocket と疎通するには **Listeners** を使用します。"
 
 #: ../../source/api.rst:143
 msgid "Channels"
@@ -347,10 +348,9 @@ msgstr ""
 
 #: ../../source/api.rst:151
 msgid ""
-"The confirmedAdded channel notifies when a transaction related to an address"
-" is included in a block. The message contains the transaction."
-msgstr ""
-"承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。メッセージにはトランザクションが含まれます。"
+"The confirmedAdded channel notifies when a transaction related to an "
+"address is included in a block. The message contains the transaction."
+msgstr "承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。メッセージにはトランザクションが含まれます。"
 
 #: ../../source/api.rst:153
 msgid "**unconfirmedAdded/<ADDRESS>**"
@@ -359,21 +359,20 @@ msgstr ""
 #: ../../source/api.rst:155
 msgid ""
 "The unconfirmedAdded channel notifies when a transaction related to an "
-"address is in unconfirmed state and waiting to be included in a block. The "
-"message contains the transaction."
-msgstr ""
-"未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。メッセージにはトランザクションが含まれます。"
+"address is in unconfirmed state and waiting to be included in a block. "
+"The message contains the transaction."
+msgstr "未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。メッセージにはトランザクションが含まれます。"
 
 #: ../../source/api.rst:157
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction is "
 "announced to the network via ``PUT /transaction`` HTTP endpoint or an "
-"aggregate bonded transaction has all required cosigners and change its state"
-" from *partial* to *unconfirmed*."
+"aggregate bonded transaction has all required cosigners and change its "
+"state from *partial* to *unconfirmed*."
 msgstr ""
 "このチャンネルからの通知が届くシナリオとしては、トランザクションが ``PUT /transaction`` HTTP "
-"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い *partial* から *unconfirmed* "
-"へ変わるときです。"
+"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い *partial* から "
+"*unconfirmed* へ変わるときです。"
 
 #: ../../source/api.rst:159
 msgid "**unconfirmedRemoved/<ADDRESS>**"
@@ -382,15 +381,14 @@ msgstr ""
 #: ../../source/api.rst:161
 msgid ""
 "The unconfirmedRemoved channel notifies when a transaction related to an "
-"address was in unconfirmed state but is not anymore. The message contains "
-"the transaction hash."
-msgstr ""
-"未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
+"address was in unconfirmed state but is not anymore. The message contains"
+" the transaction hash."
+msgstr "未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
 
 #: ../../source/api.rst:163
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is "
-"confirmed or the deadline has been reached and it was not included in a "
+"Possible scenarios when this channel notifies are: the transaction now is"
+" confirmed or the deadline has been reached and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
 
@@ -422,17 +420,16 @@ msgstr ""
 
 #: ../../source/api.rst:173
 msgid ""
-"The partialRemoved channel notifies when a transaction related to an address"
-" was in partial state but is not anymore. The message contains the "
-"transaction hash."
-msgstr ""
-"パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
+"The partialRemoved channel notifies when a transaction related to an "
+"address was in partial state but is not anymore. The message contains the"
+" transaction hash."
+msgstr "パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
 
 #: ../../source/api.rst:175
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is in"
-" unconfirmed or the deadline has been reached and it was not included in a "
-"block."
+"Possible scenarios when this channel notifies are: the transaction now is"
+" in unconfirmed or the deadline has been reached and it was not included "
+"in a block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに取り込まれなくなったときです。"
 
 #: ../../source/api.rst:177
@@ -454,26 +451,27 @@ msgstr ""
 
 #: ../../source/api.rst:183
 msgid ""
-"The status channel notifies when a transaction related to an address rises "
-"an error. The message contains the error message and the transaction hash."
-msgstr ""
-"ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
+"The status channel notifies when a transaction related to an address "
+"rises an error. The message contains the error message and the "
+"transaction hash."
+msgstr "ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
 
 #: ../../source/api.rst:188
-msgid "Status Errors"
+#, fuzzy
+msgid "Status errors"
 msgstr "ステータスエラー"
 
 #: ../../source/api.rst:190
 msgid ""
-"This section describes the error messages that can be returned via status "
-"channel after announcing a transaction."
+"This section describes the error messages that can be returned via status"
+" channel after announcing a transaction."
 msgstr "このセクションでは、トランザクションをアナウンスした後に、ステータスチャンネルが返却するエラーメッセージの説明をします。"
 
 #: ../../source/api.rst:192
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_. Public network "
-"configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech"
+"/catapult-server/blob/master/resources/config-network.properties>`_. "
+"Public network configuration may differ."
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
@@ -521,8 +519,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the deadline is too far in the future. Deadlines "
-"are only allowed to lie up to ``24`` hours ahead."
+"Validation failed because the deadline is too far in the future. "
+"Deadlines are only allowed to lie up to ``24`` hours ahead."
 msgstr "デッドラインが遠すぎる未来に設定されているため、バリデーションに失敗しました。デッドラインは ``24`` 時間先までが許容されています。"
 
 #: ../../source/api.rst:1
@@ -572,8 +570,7 @@ msgid "Failure_Core_Block_Harvester_Ineligible"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid ""
-"Validation failed because a block was harvested by an ineligible harvester"
+msgid "Validation failed because a block was harvested by an ineligible harvester"
 msgstr "不適格なハーベスタによってブロックがハーベストされたため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
@@ -598,8 +595,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the account link action is invalid: link (0) and "
-"unlink (1)."
+"Validation failed because the account link action is invalid: link (0) "
+"and unlink (1)."
 msgstr "アカウントリンクアクションが妥当ではないため、バリデーションに失敗しました。リンク (0) かつ アンリンク (1)"
 
 #: ../../source/api.rst:1
@@ -616,10 +613,10 @@ msgstr "メインアカウントはすでに他のアカウントにリンクし
 msgid "Failure_AccountLink_Link_Does_Not_Exist"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid ""
-"Validation failed because the unlink data is not consistent with existing "
-"account link."
+"Validation failed because the unlink data is not consistent with existing"
+" account link."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -641,8 +638,7 @@ msgid "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid ""
-"Validation failed because the remote is not allowed to sign a transaction."
+msgid "Validation failed because the remote is not allowed to sign a transaction."
 msgstr "リモートにはトランザクションへの署名を許可されていないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
@@ -651,8 +647,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the remote is not allowed to participate in the "
-"transaction."
+"Validation failed because the remote is not allowed to participate in the"
+" transaction."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -709,8 +705,7 @@ msgstr ""
 msgid ""
 "Validation failed because at least one required cosigner is missing. The "
 "transaction was announced as complete but had missing cosignatures."
-msgstr ""
-"必要な署名者が少なくとも1人は欠落しているため、バリデーションに失敗しました。トランザクションは完了したとアナウンスされましたが、署名がありませんでした。"
+msgstr "必要な署名者が少なくとも1人は欠落しているため、バリデーションに失敗しました。トランザクションは完了したとアナウンスされましたが、署名がありませんでした。"
 
 #: ../../source/api.rst:1
 msgid "Failure_LockHash_Invalid_Mosaic_Id"
@@ -718,8 +713,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the lock does not allow the specified mosaic. The "
-"only mosaic allowed is ``xem``."
+"Validation failed because the lock does not allow the specified mosaic. "
+"The only mosaic allowed is ``xem``."
 msgstr "ロックに許可されていないモザイクが指定されたため、バリデーションに失敗しました。許可されたモザイクは ``xem`` のみです。"
 
 #: ../../source/api.rst:1
@@ -728,15 +723,15 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the lock does not allow the specified amount. The "
-"minimum amount is ``10``."
+"Validation failed because the lock does not allow the specified amount. "
+"The minimum amount is ``10``."
 msgstr "ロックに許可されていない量が指定されたため、バリデーションに失敗しました。最低量は ``10`` です。"
 
 #: ../../source/api.rst:1
 msgid "Failure_LockHash_Hash_Exists"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid "Validation failed because the hash is already present in cache."
 msgstr "ハッシュがすでにキャッシュに存在するため、バリデーションに失敗しました。"
 
@@ -746,8 +741,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the hash is not present in cache. Remember to lock"
-" before announcing aggregate bonded transactions."
+"Validation failed because the hash is not present in cache. Remember to "
+"lock before announcing aggregate bonded transactions."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -764,8 +759,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the duration is too long. Duration is allowed to "
-"lie up to ``2`` days."
+"Validation failed because the duration is too long. Duration is allowed "
+"to lie up to ``2`` days."
 msgstr "期間が長すぎるため、バリデーションに失敗しました。期間は ``2`` 日までとすることができます。"
 
 #: ../../source/api.rst:1
@@ -775,8 +770,8 @@ msgstr ""
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the hash algorithm for lock type secret is "
-"invalid. See the :doc:`available algorithms <../concepts/cross-chain-swaps>`"
-" list."
+"invalid. See the :doc:`available algorithms <../concepts/cross-chain-"
+"swaps>` list."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -797,10 +792,9 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the proof is too small or too large. It should be "
-"between ``10`` and ``1000`` bytes."
-msgstr ""
-"プルーフが小さすぎるか大きすぎるため、バリデーションに失敗しました。 ``10`` から ``1000`` バイトの間でなければなりません。"
+"Validation failed because the proof is too small or too large. It should "
+"be between ``10`` and ``1000`` bytes."
+msgstr "プルーフが小さすぎるか大きすぎるため、バリデーションに失敗しました。 ``10`` から ``1000`` バイトの間でなければなりません。"
 
 #: ../../source/api.rst:1
 msgid "Failure_LockSecret_Secret_Mismatch"
@@ -840,15 +834,15 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the duration is too long. Duration is allowed to "
-"lie up to ``30`` days."
+"Validation failed because the duration is too long. Duration is allowed "
+"to lie up to ``30`` days."
 msgstr "期間が長すぎるため、バリデーションに失敗しました。期間は ``30`` 日までが許容されています。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Mosaic_Invalid_Duration"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid ""
 "Validation failed because the duration has an invalid value. Duration is "
 "allowed to lie up to ``365`` days."
@@ -860,8 +854,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the name is invalid. The mosaic name may have a "
-"maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
+"Validation failed because the name is invalid. The mosaic name may have a"
+" maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
 "`0-to-9` and the following special characters: \\`_-"
 msgstr "モザイク名は最大 ``64`` 文字です。利用可能な文字は `a-to-z`; `0-to-9`、特別な文字として \\`_- です。"
 
@@ -869,7 +863,7 @@ msgstr "モザイク名は最大 ``64`` 文字です。利用可能な文字は 
 msgid "Failure_Mosaic_Name_Id_Mismatch"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid "Validation failed because the name and id don't match."
 msgstr "名前とIDがマッチしないため、バリデーションに失敗しました。"
 
@@ -885,7 +879,7 @@ msgstr "親の期限が切れているため、バリデーションに失敗し
 msgid "Failure_Mosaic_Id_Mismatch"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid ""
 "Validation failed because the id is not the expected id generated from "
 "signer and nonce."
@@ -895,9 +889,8 @@ msgstr ""
 msgid "Failure_Mosaic_Owner_Conflict"
 msgstr ""
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid ""
-"Validation failed because the parent owner conflicts with the child owner."
+#: ../../source/api.rst:1
+msgid "Validation failed because the parent owner conflicts with the child owner."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -906,8 +899,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the existing parent id does not match the supplied"
-" parent id."
+"Validation failed because the existing parent id does not match the "
+"supplied parent id."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -932,8 +925,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the mosaic divisibility is invalid. The specified "
-"divisibility is greater than ``6`` or negative."
+"Validation failed because the mosaic divisibility is invalid. The "
+"specified divisibility is greater than ``6`` or negative."
 msgstr "モザイク可分性が妥当ではないため、バリデーションに失敗しました。``6`` 以上または負の値が指定されました。"
 
 #: ../../source/api.rst:1
@@ -1010,8 +1003,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting mosaic supply exceeds the maximum "
-"allowed value. The range should be between 0 and ``9.000.000.000``."
+"Validation failed because the resulting mosaic supply exceeds the maximum"
+" allowed value. The range should be between 0 and ``9.000.000.000``."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1020,9 +1013,9 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the mosaic is not transferable. Only the creator "
-"of the mosaic is eligible to be the recipient of a non-transferable mosaic "
-"once transferred."
+"Validation failed because the mosaic is not transferable. Only the "
+"creator of the mosaic is eligible to be the recipient of a non-"
+"transferable mosaic once transferred."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1031,9 +1024,9 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the credit of the mosaic would exceed the maximum "
-"different mosaics an account is allowed to own. Set by default to ``10.000``"
-" different mosaics per account."
+"Validation failed because the credit of the mosaic would exceed the "
+"maximum different mosaics an account is allowed to own. Set by default to"
+" ``10.000`` different mosaics per account."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1084,7 +1077,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the account to be added is already a cosignatory."
+"Validation failed because the account to be added is already a "
+"cosignatory."
 msgstr "追加しようとしているアカウントが既に連署者になっているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
@@ -1111,8 +1105,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the modification type is unsupported: add (0) and "
-"remove (1)."
+"Validation failed because the modification type is unsupported: add (0) "
+"and remove (1)."
 msgstr "変更タイプが妥当ではないため、バリデーションに失敗しました。追加 (0) 削除 (1)"
 
 #: ../../source/api.rst:1
@@ -1121,9 +1115,9 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the cosignatory already cosigns the maximum number"
-" of accounts. An account cannot be cosignatory of more than ``5`` multisig "
-"accounts."
+"Validation failed because the cosignatory already cosigns the maximum "
+"number of accounts. An account cannot be cosignatory of more than ``5`` "
+"multisig accounts."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1155,8 +1149,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the max multisig depth is exceeded. The maximum "
-"depth of a multilevel multisig account is ``3``."
+"Validation failed because the max multisig depth is exceeded. The maximum"
+" depth of a multilevel multisig account is ``3``."
 msgstr "最大マルチシグ深度が超過しているため、バリデーションに失敗しました。マルチレベルマルチシグアカウントの最大深さは ``3`` です。"
 
 #: ../../source/api.rst:1
@@ -1180,12 +1174,13 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the namespace has an invalid name. The namespace "
-"name may have a maximum length of ``64`` characters. Allowed characters are "
-"`a-to-z`; `0-to-9` and the following special characters: \\`_-"
+"Validation failed because the namespace has an invalid name. The "
+"namespace name may have a maximum length of ``64`` characters. Allowed "
+"characters are `a-to-z`; `0-to-9` and the following special characters: "
+"\\`_-"
 msgstr ""
-"ネームスペース名が妥当ではないため、バリデーションに失敗しました。ネームスペース名は最大 ``64`` 文字です。利用可能な文字は `a-to-z`; "
-"`0-to-9` 特別な文字として \\`_- です。"
+"ネームスペース名が妥当ではないため、バリデーションに失敗しました。ネームスペース名は最大 ``64`` 文字です。利用可能な文字は "
+"`a-to-z`; `0-to-9` 特別な文字として \\`_- です。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Namespace_Name_Id_Mismatch"
@@ -1213,8 +1208,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the namespace type is invalid: rootnamespace (0) "
-"and subnamesapce (1)."
+"Validation failed because the namespace type is invalid: rootnamespace "
+"(0) and subnamesapce (1)."
 msgstr "ネームスペースタイプが妥当ではないため、バリデーションに失敗しました。ルート (0) または サブ (1)"
 
 #: ../../source/api.rst:1
@@ -1234,8 +1229,9 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting namespace would exceed the maximum "
-"allowed namespace depth. Namespaces can have up to ``3`` nested levels."
+"Validation failed because the resulting namespace would exceed the "
+"maximum allowed namespace depth. Namespaces can have up to ``3`` nested "
+"levels."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1288,7 +1284,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because alias action is invalid: link (0) and unlink (1)."
+"Validation failed because alias action is invalid: link (0) and unlink "
+"(1)."
 msgstr "エイリアスアクションが妥当ではないため、バリデーションに失敗しました。リンク (0) かつ アンリンク (1)"
 
 #: ../../source/api.rst:1
@@ -1329,8 +1326,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because unlink type is not consistent with the existing "
-"alias."
+"Validation failed because unlink type is not consistent with the existing"
+" alias."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1339,8 +1336,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because unlink data is not consistent with the existing "
-"alias."
+"Validation failed because unlink data is not consistent with the existing"
+" alias."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1389,8 +1386,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the modification type is unsupported: add (0) and"
-"  delete (1)."
+"Validation failed because the modification type is unsupported: add (0) "
+"and  delete (1)."
 msgstr "変更タイプが妥当ではないため、バリデーションに失敗しました。追加 (0) 削除 (1)"
 
 #: ../../source/api.rst:1
@@ -1423,8 +1420,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting property has too many values. The "
-"maximum number of values a property can have is ``512``."
+"Validation failed because the resulting property has too many values. The"
+" maximum number of values a property can have is ``512``."
 msgstr "結果プロパティが多すぎる値を持っているため、バリデーションに失敗しました。最大で ``512`` のプロパティ値の数が許容されています。"
 
 #: ../../source/api.rst:1
@@ -1471,8 +1468,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the message is too large.  It exceeds the limit of"
-" ``1024`` bytes."
+"Validation failed because the message is too large.  It exceeds the limit"
+" of ``1024`` bytes."
 msgstr "メッセージが長すぎるため、バリデーションに失敗しました。上限の ``1024`` バイトに達しています。"
 
 #: ../../source/api.rst:1
@@ -1491,8 +1488,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because a block was received that did not link with the "
-"existing chain."
+"Validation failed because a block was received that did not link with the"
+" existing chain."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1554,8 +1551,7 @@ msgid "Failure_Consumer_Hash_In_Recency_Cache"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid ""
-"Validation failed because the entity hash is present in the recency cache."
+msgid "Validation failed because the entity hash is present in the recency cache."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1579,8 +1575,7 @@ msgid "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid ""
-"Validation failed because the chain part contains duplicate transactions."
+msgid "Validation failed because the chain part contains duplicate transactions."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1589,7 +1584,8 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the chain part does not link to the current chain."
+"Validation failed because the chain part does not link to the current "
+"chain."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1651,3 +1647,4 @@ msgstr ""
 #: ../../source/api.rst:329
 msgid ":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
 msgstr ":download:`OpenAPI 仕様 <resources/collections/swagger.yaml>`"
+

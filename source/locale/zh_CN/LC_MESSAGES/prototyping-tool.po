@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+# Translators:
+# nem.cn <527357637@qq.com>, 2019
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 08:57+0000\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/prototyping-tool.rst:3
+msgid "Prototyping Tool"
+msgstr "原型制作工具"
+
+#: ../../source/prototyping-tool.rst:5
+msgid ""
+"⚠️ The prototyping tool is not compatible with the latest version of "
+"catapult-server (0.3)."
+msgstr ""
+
+#: ../../source/prototyping-tool.rst:10
+msgid ""
+"Create blockchain applications without coding using **NEM2 Prototyping "
+"Tool**."
+msgstr "使用 **NEM2原型工具** 创建区块链应用程序而不进行编码。"
+
+#: ../../source/prototyping-tool.rst:12
+msgid ""
+"Drag & drop NEM nodes and link them with other services in new and "
+"interesting ways for prototyping or learning purposes."
+msgstr "拖放NEM节点，并以新的、有效的方式将它们与其他服务链接，以实现原型化或学习。"
+
+#: ../../source/prototyping-tool.rst:14
+msgid "|NEM2-Prototyping-Tool| is a collection of **Node-RED** nodes."
+msgstr "|NEM2-Prototyping-Tool|是 **Node-RED** 节点的集合。"
+
+#: ../../source/prototyping-tool.rst:16
+msgid ""
+"|Node-RED| is a visual programming tool to wire together hardware "
+"devices, APIs and online services."
+msgstr "|Node-RED|是一个可视化编程工具，用于连接硬件设备、API和在线服务。"
+
+#: ../../source/prototyping-tool.rst:18
+msgid ""
+"It provides a browser-based editor to wire nodes. The combination of "
+"nodes is named flows, which you can execute in a single click."
+msgstr "它提供了一个基于浏览器的编辑器来连接节点。节点的组合称为流，您可以通过单击来执行。"
+
+#: ../../source/prototyping-tool.rst:20
+msgid ""
+"The flows created in Node-RED are stored using JSON, being exportable to "
+"share with others."
+msgstr "以Node-RED 创建的流使用JSON存储，可导出以与其他人共享。"
+
+#: ../../source/prototyping-tool.rst:24
+msgid "Installation"
+msgstr "安装"
+
+#: ../../source/prototyping-tool.rst:26
+msgid ""
+"Download and run the |executable-package| for **Windows**, **Linux** or "
+"**Mac**."
+msgstr "下载并运行可执行包用于**Windows**、**Linux**或**Mac**。"
+
+#: ../../source/prototyping-tool.rst:28
+msgid ""
+"Do you already have Node-RED app? Open ``Manage palette`` and install "
+"|nem2-node-red| package."
+msgstr "已经有了 Node-RED app?打开 ``Manage palette`` 安装 |nem2-node-red| 包。"
+
+#: ../../source/prototyping-tool.rst:34
+msgid "*Manage palette -> Install -> node-red-contrib-nem2*"
+msgstr "*Manage palette -> Install -> node-red-contrib-nem2*"
+
+#: ../../source/prototyping-tool.rst:58
+msgid "Configuring nodes"
+msgstr "配置节点"
+
+#: ../../source/prototyping-tool.rst:60
+msgid ""
+"The left sidebar is the **node palette**. You can find NEM related nodes "
+"under:"
+msgstr "左侧边栏是 **node palette**。您可以在下面找到与NEM相关的节点："
+
+#: ../../source/prototyping-tool.rst:62
+msgid "NEM2 Account"
+msgstr "NEM2 Account"
+
+#: ../../source/prototyping-tool.rst:63
+msgid "NEM2 Transactions"
+msgstr "NEM2 Transactions"
+
+#: ../../source/prototyping-tool.rst:64
+msgid "NEM2 Listeners"
+msgstr "NEM2 Listeners"
+
+#: ../../source/prototyping-tool.rst:65
+msgid "NEM2 Utility"
+msgstr "NEM2 Utility"
+
+#: ../../source/prototyping-tool.rst:67
+msgid "Open the *NEM account* tab and click once on the **account** node."
+msgstr "打开*NEM * 便签在 **account** 节点上单击。"
+
+#: ../../source/prototyping-tool.rst:69
+msgid ""
+"The right sidebar shows you the node description, properties, input "
+"fields and returned outputs."
+msgstr "右侧边栏显示节点描述、属性、输入字段和返回的输出。"
+
+#: ../../source/prototyping-tool.rst:71
+msgid ""
+"You have to link nodes together, connecting the previous node outputs "
+"with the following node inputs."
+msgstr "您必须将节点链接在一起，将前一个节点输出与以下节点输入连接起来。"
+
+#: ../../source/prototyping-tool.rst:73
+msgid ""
+"In some cases, you could configure inputs and properties directly by "
+"double-clicking a node."
+msgstr "在某些情况下，您可以通过双击节点直接配置输入和属性。"
+
+#: ../../source/prototyping-tool.rst:78
+msgid "The node palette and node help sidebars."
+msgstr "node palette和节点帮助侧栏。"
+
+#: ../../source/prototyping-tool.rst:80
+msgid ""
+"Let's link account with other nodes. As we need a ``privateKey`` as an "
+"input, we could opt to drag and drop and link **generateAccount** with "
+"**account** node, under *NEM Account*."
+msgstr ""
+"让我们将帐户与其他节点链接起来。由于我们需要一个``privatekey``作为输入，我们可以选择拖放并将**generateaccount**与**account**节点链接在*nem"
+" account*下。"
+
+#: ../../source/prototyping-tool.rst:86
+msgid "Drag and drop and link nodes together."
+msgstr "拖放并将节点链接在一起。"
+
+#: ../../source/prototyping-tool.rst:88
+msgid ""
+"Double-click on account node. Choose the ``network`` you want to use. Do "
+"the same for generateAccount node."
+msgstr "双击帐户节点。选择要使用的“网络”。对generateaccount节点执行相同的操作。"
+
+#: ../../source/prototyping-tool.rst:94
+msgid "Complete node properties."
+msgstr "完善节点属性。"
+
+#: ../../source/prototyping-tool.rst:96
+msgid ""
+"Have you seen  ``private key`` under account node properties?  Setting a "
+"property hardcoded overwrites the input. In other words, when not empty, "
+"this property will be used instead of ``privateKey`` output provided by "
+"generateAccount node."
+msgstr ""
+"您在帐户节点属性下看到  ``private key`` "
+"了吗？设置硬编码属性会覆盖输入。换句话说，当不为空时，将使用此属性，而不是由generateaccount节点提供的“privatekey”输出。"
+
+#: ../../source/prototyping-tool.rst:98
+msgid ""
+"Finally, find **debug** node in the node palette, under *output* tab. "
+"Link it with the account, and inside its properties change  ``output``  "
+"to ``complete msg object``."
+msgstr ""
+"最后，在*output*标签下找到 node "
+"palette中的**debug**。将其与帐户链接，并在其属性中将“output”更改为“complete msg object”。"
+
+#: ../../source/prototyping-tool.rst:101
+msgid "Configuring an API gateway"
+msgstr "API网关配置"
+
+#: ../../source/prototyping-tool.rst:103
+msgid ""
+"Some nodes require to configure an API gateway (e.g. **announce "
+"transaction** and **listener** nodes)."
+msgstr "有些节点需要配置API网关（如 **AnnounceTransaction**和 **Listener**节点）。"
+
+#: ../../source/prototyping-tool.rst:105
+msgid "Double-click on a node which needs this configuration."
+msgstr "双击需要此配置的节点。"
+
+#: ../../source/prototyping-tool.rst:107
+msgid "Click on the pencil icon next to the ``Server`` input field."
+msgstr "单击“Server”输入字段旁的铅笔图标。"
+
+#: ../../source/prototyping-tool.rst:109
+msgid ""
+"Enter your ``custom url`` using http or https schema (e.g. "
+"http://localhost). Choose the ``network`` and ``port`` you want to use "
+"and then press ``Update``."
+msgstr "使用http或https模式（例如http://localhost）输入“自定义URL”。选择要使用的“网络”和“端口”，然后按“更新”。"
+
+#: ../../source/prototyping-tool.rst:116
+msgid "Running a flow"
+msgstr "返回流"
+
+#: ../../source/prototyping-tool.rst:118
+msgid ""
+"Click on the ``deploy`` button, at the top-right corner of your screen. "
+"Select the square attached to the first node to run the flow."
+msgstr "单击屏幕右上角的“deploy”按钮。选择附加到第一个节点的正方形以运行流。"
+
+#: ../../source/prototyping-tool.rst:120
+msgid ""
+"Check the output returned at the right sidebar, under the debug tab. NEM2"
+" nodes return outputs following the structure "
+"``msg.nem.<name_of_the_output>``."
+msgstr "检查右边栏“调试”选项卡下返回的输出。NEM2节点遵顼``msg.nem.<name_the_output>``返回输出。"
+
+#: ../../source/prototyping-tool.rst:126
+msgid "See outputs under debug tab."
+msgstr "请参见 “调试” 选项卡下的“输出”。"
+
+#: ../../source/prototyping-tool.rst:137
+msgid "Importing a flow"
+msgstr "导入流"
+
+#: ../../source/prototyping-tool.rst:139
+msgid ""
+"After opening an example, copy the JSON you will find at the bottom of "
+"the site."
+msgstr "打开一个示例后，复制您将在站点底部找到的JSON。"
+
+#: ../../source/prototyping-tool.rst:141
+msgid ""
+"In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste "
+"the JSON flow and click Import button."
+msgstr "在Node-RED, 找到``Import > Clipboard from the menu`` (Ctrl-E)。粘贴JSON流并单击导入按钮。"
+
+#: ../../source/prototyping-tool.rst:145
+msgid "Examples"
+msgstr "Examples"
+
+#: ../../source/prototyping-tool.rst:148
+msgid "Basics"
+msgstr "Basics"
+
+#: ../../source/prototyping-tool.rst:150
+#, fuzzy
+msgid ""
+"`Create a transfer transaction "
+"<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
+msgstr ""
+"`Create transfer transaction "
+"<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
+
+#: ../../source/prototyping-tool.rst:151
+msgid ""
+"`Create namespace "
+"<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
+msgstr ""
+"`Create namespace "
+"<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
+
+#: ../../source/prototyping-tool.rst:152
+msgid ""
+"`Create mosaic "
+"<https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
+msgstr ""
+"`Create mosaic "
+"<https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
+
+#: ../../source/prototyping-tool.rst:153
+msgid ""
+"`Create multisig account "
+"<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
+msgstr ""
+"`Create multisig account "
+"<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
+
+#: ../../source/prototyping-tool.rst:154
+msgid ""
+"`Create aggregate transaction "
+"<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
+msgstr ""
+"`Create aggregate transaction "
+"<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
+
+#: ../../source/prototyping-tool.rst:155
+msgid ""
+"`Cosign aggregate transaction "
+"<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
+msgstr ""
+"`Cosign aggregate transaction "
+"<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
+
+#: ../../source/prototyping-tool.rst:158
+msgid "Applications"
+msgstr "应用"
+
+#: ../../source/prototyping-tool.rst:160
+msgid ""
+"`Simple chat "
+"<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
+msgstr ""
+"`Simple chat "
+"<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
+
+#: ../../source/prototyping-tool.rst:162
+msgid ""
+"We love to receiving contributions from our community — you! Follow these"
+" guidelines to get your flow included in this documentation."
+msgstr "我们欢迎对社区的贡献-也就是你！遵循这些指导原则，将您的流程保存在本文档中。"
+
+#: ../../source/prototyping-tool.rst:164
+msgid ""
+"The first step is to export the flow you have created. In Node-RED, "
+"select the flow you want to export. Open ``Export > Clipboard`` from the "
+"menu (Ctrl-E) and copy the JSON from the dialogue."
+msgstr ""
+"第一步是导出已创建的流。在 Node-RED 中，选择要导出的流。从菜单（ctrl-e）中打开``Export > Clipboard`` "
+"并从对话框中复制JSON。"
+
+#: ../../source/prototyping-tool.rst:166
+msgid "We are using |Node-RED-flows-repository| to share our flows."
+msgstr "我们正在使用 |Node-RED-flows-repository|来共享我们的流。"
+
+#: ../../source/prototyping-tool.rst:168
+msgid "Click ``Add flow``."
+msgstr "单击``Add flow``."
+
+#: ../../source/prototyping-tool.rst:169
+msgid ""
+"Give your flow a short, descriptive title and describe what the flow does"
+" and how it is used."
+msgstr "给流一个简短的描述性标题，并描述流的作用和使用方法。"
+
+#: ../../source/prototyping-tool.rst:170
+msgid "Paste the JSON flow you want to share."
+msgstr "粘贴要共享的JSON流。"
+
+#: ../../source/prototyping-tool.rst:171
+msgid "Add the tag ``NEM2``."
+msgstr "加上 ``NEM2``标签。"
+
+#: ../../source/prototyping-tool.rst:173
+msgid ""
+"After a while, your flow and your GitHub username will be included in "
+"this page."
+msgstr "稍后，您的流和GitHub用户名将包含在此页面中。"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Contributor"
+#~ msgstr "贡献者"
+
+#~ msgid "`@jorisadri <https://github.com/jorisadri>`_"
+#~ msgstr "`@jorisadri <https://github.com/jorisadri>`_"
+
+#~ msgid "`@planethouki <https://github.com/planethouki>`_"
+#~ msgstr "`@planethouki <https://github.com/planethouki>`_"
+

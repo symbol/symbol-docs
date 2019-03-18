@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:10
 msgid "Sending payouts with aggregate complete transaction"
@@ -27,8 +26,8 @@ msgstr "アグリゲート完了トランザクションで支払いを送信す
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:12
 msgid ""
-"Send transactions to different accounts atomically, using an :ref:`aggregate"
-" complete transaction <aggregate-transaction>`."
+"Send transactions to different accounts atomically, using an "
+":ref:`aggregate complete transaction <aggregate-transaction>`."
 msgstr ""
 ":ref:`アグリゲート完了トランザクション <aggregate-transaction>` "
 "を使用して、異なる複数のアカウントへトランザクションをアトミックに送ります。"
@@ -47,8 +46,8 @@ msgstr "異なる複数の受信者にトランザクションをアトミック
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:26
 msgid ""
-"He chooses to send an aggregate complete transaction, so both will receive "
-"the funds at the same time."
+"He chooses to send an aggregate complete transaction, so both will "
+"receive the funds at the same time."
 msgstr "彼は、アグリゲート完了トランザクションを送信することを選択するので、ふたりは資産を同時に受け取ることになります。"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:30
@@ -62,73 +61,80 @@ msgid ""
 msgstr ":doc:`転送トランザクション送信ガイド <sending-a-transfer-transaction>` を終了している"
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:33
-msgid "NEM2-SDK"
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
 msgstr ""
 
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:34
-msgid "A text editor or IDE"
-msgstr "テキストエディタかIDE"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:35
-msgid "An account with XEM"
-msgstr "XEM を保有したアカウント"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:39
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:37
 msgid "Let's get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:41
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:39
+#, fuzzy
 msgid ""
-"Dan creates two :ref:`transfer transaction <transfer-transaction>` with two "
-"different recipients, and wrap them in an :ref:`aggregate transaction "
-"<aggregate-transaction>`."
+"Dan creates two :ref:`transfer transaction <transfer-transaction>` with "
+"two different recipients, wrapping them in an :ref:`aggregate transaction"
+" <aggregate-transaction>`."
 msgstr ""
 "Dan は2人の異なる受信者と :ref:`2つの転送トランザクション <transfer-transaction>` を作成し、それらを "
 ":ref:`アグリゲートトランザクション <aggregate-transaction>` でラップします。"
 
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:41
+#, fuzzy
+msgid ""
+"As one private key can sign all the transactions in the aggregate, define"
+" the aggregate as *complete*. That means that there is no need to lock "
+"funds to send the transaction. If valid, it will be accepted by the "
+"network."
+msgstr "つまり、トランザクションを送信するために資産をロックする必要はありません。正当な場合は、ネットワークに受理されます。"
+
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:45
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:68
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:59
 msgid "|sending-a-payouts-with-aggregate-complete-transaction-ts|"
 msgstr ""
 
 #: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:50
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:73
-msgid "|sending-a-payouts-with-aggregate-complete-transaction-java|"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:55
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:78
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:64
 msgid "|sending-a-payouts-with-aggregate-complete-transaction-js|"
 msgstr ""
 
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:60
-msgid ""
-"Do you know the difference between aggregate complete and aggregate bonded? "
-"In this case, one private key can sign all the transactions in the "
-"aggregate, so it is *aggregate complete*."
-msgstr ""
-"アグリゲートコンプリートとアグリゲートボンドの違いをご存知ですか？この場合、1つの秘密鍵でアグリゲート内のすべてのトランザクションに署名できるため、 "
-"*アグリゲートコンプリート* です。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:62
-msgid ""
-"That means that there is no need to lock funds to send the transaction. If "
-"valid, it will be accepted by the network."
-msgstr "つまり、トランザクションを送信するために資産をロックする必要はありません。正当な場合は、ネットワークに受理されます。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:64
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:55
 msgid "Sign and announce the transaction."
 msgstr "署名してアナウンスします。"
 
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:85
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:71
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:87
+#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:73
+#, fuzzy
 msgid ""
-"Send an aggregate bonded transaction by following :doc:`creating an escrow "
-"with aggregate bonded transaction <creating-an-escrow-with-aggregate-bonded-"
-"transaction>` guide."
+"Send an aggregate bonded transaction following :doc:`creating an escrow "
+"with aggregate bonded transaction <creating-an-escrow-with-aggregate-"
+"bonded-transaction>` guide."
 msgstr ""
 ":doc:`アグリゲートボンドトランザクションを使ったエスクローの作成 <creating-an-escrow-with-aggregate-"
 "bonded-transaction>` ガイドに従って、アグリゲートボンドトランザクションを送信してください。"
+
+#~ msgid "NEM2-SDK"
+#~ msgstr ""
+
+#~ msgid "A text editor or IDE"
+#~ msgstr "テキストエディタかIDE"
+
+#~ msgid "An account with XEM"
+#~ msgstr "XEM を保有したアカウント"
+
+#~ msgid "|sending-a-payouts-with-aggregate-complete-transaction-java|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do you know the difference between "
+#~ "aggregate complete and aggregate bonded? "
+#~ "In this case, one private key can"
+#~ " sign all the transactions in the "
+#~ "aggregate, so it is *aggregate "
+#~ "complete*."
+#~ msgstr ""
+#~ "アグリゲートコンプリートとアグリゲートボンドの違いをご存知ですか？この場合、1つの秘密鍵でアグリゲート内のすべてのトランザクションに署名できるため、"
+#~ " *アグリゲートコンプリート* です。"
+

@@ -1,153 +1,150 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:10
 msgid "Creating a mosaic"
 msgstr "モザイクの作成"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:12
-msgid ""
-"After creating a namespace, follow this guide to create a "
-":doc:`mosaic<../../concepts/mosaic>` ."
-msgstr ""
-"ネームスペースを取得したあとは、このガイドに従って、 :doc:`モザイク<../../concepts/mosaic>` を作成しましょう。"
+#, fuzzy
+msgid "Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`."
+msgstr "ネームスペースを取得したあとは、このガイドに従って、 :doc:`モザイク<../../concepts/mosaic>` を作成しましょう。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:16
-msgid "Background"
-msgstr "背景"
+msgid "Prerequisites"
+msgstr "前提条件"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:18
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:19
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:23
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:25
 msgid ""
 "Mosaics can be used to represent any asset in the blockchain such as "
 "objects, tickets, coupons, stock share representation, and even your "
 "cryptocurrency."
-msgstr ""
-"モザイクは物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなる資産をブロックチェーン上に表現するために使用されます。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:20
-msgid ""
-"A mosaic is like a file hosted on a domain and it represents an asset. Like "
-"a website and directory, a mosaic can have the same name as other files on "
-"other domains. However,  a namespace + mosaic is always unique."
-msgstr ""
-"モザイクはドメイン上にホストされているファイルのようなもので、資産として表現されます。ウェブサイトやディレクトリと同様に、モザイクは他のドメインの他のファイルと同じ名前を持つことができます。しかし、ネームスペース"
-" + モザイクは常に一意になります。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:24
-msgid "Prerequisites"
-msgstr "前提条件"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:26
-msgid ""
-"Finish :doc:`registering a namespace guide "
-"<../namespace/registering-a-namespace>`"
-msgstr ":doc:`ネームスペースの取得ガイド <../namespace/registering-a-namespace>` を終了していること"
+msgstr "モザイクは物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなる資産をブロックチェーン上に表現するために使用されます。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:27
-msgid "NEM2-SDK or CLI"
-msgstr "NEM2-SDK または CLI"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:28
-msgid "A text editor or IDE"
-msgstr "テキストエディタかIDE"
+#, fuzzy
+msgid "You will need to announce two transactions to create a mosaic:"
+msgstr "モザイクを作成するときには、2つのトランザクションをアナウンスする必要があります。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:29
-msgid "An account with XEM and at least one namespace"
-msgstr "XEM を保有したアカウントと少なくとも1つのネームスペース"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:33
-msgid "Let’s get into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:35
+#, fuzzy
 msgid ""
-"The first step is to choose a name for your mosaic. The name of the mosaic, "
-"up to a size limit of ``64`` characters, must be unique under the domain "
-"name."
-msgstr "最初のステップは、モザイクの名前を選ぶことです。モザイク名は最大 ``64`` 文字で一意なドメイン名でなければなりません。"
+"A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to"
+" create the mosaic, with the following properties:"
+msgstr "このモザイクを作成するために :ref:`モザイク定義トランザクション <mosaic-definition-transaction>` 。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:37
-msgid ""
-"Our mosaic will be called ``token``, and its parent namespace will be "
-"``foo``."
-msgstr "モザイクは ``token`` と呼び、その親ネームスペースは ``foo`` であり、供給量は ``1,000,000`` となります。"
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Property"
+msgstr ""
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:41
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:64
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:85
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:104
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Value"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Divisibility"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "The mosaic won't be divisible."
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Duration"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "1000"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "The mosaic will be registered for 1000 blocks."
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Supply mutable"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "True"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "The mosaic supply can change at a later point."
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Transferable"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "The mosaic can be transferred between arbitrary accounts."
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:44
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:58
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:72
 msgid "|creating-a-mosaic-ts|"
 msgstr ""
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:46
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:69
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:90
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:109
-msgid "|creating-a-mosaic-java|"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:51
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:74
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:95
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:114
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:49
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:63
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:77
 msgid "|creating-a-mosaic-js|"
 msgstr ""
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:56
-msgid "It is necessary to announce two transactions when creating a mosaic:"
-msgstr "モザイクを作成するときには、2つのトランザクションをアナウンスする必要があります。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:58
-msgid ""
-"A :ref:`mosaic definition transaction <mosaic-definition-transaction>`, to "
-"create the mosaic."
-msgstr ""
-"このモザイクを作成するために :ref:`モザイク定義トランザクション <mosaic-definition-transaction>` 。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:60
-msgid ""
-"Under mosaic properties, we define a mosaic with ``supplyMutable``, "
-"``transferable`` among accounts other than the creator and registered for "
-"``1000 blocks``. ``foo:token`` won't be  ``divisible``."
-msgstr ""
-"モザイクプロパティの下に、 ``supplyMutable`` 、作成者以外のアカウント間での譲渡の ``transferable`` 、``1000 "
-"blocks`` の期間を定義します。``foo:token`` は ``可分性`` を用いません。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:79
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:54
+#, fuzzy
 msgid ""
 "A :ref:`mosaic supply change transaction <mosaic-supply-change-"
-"transaction>`, to set the supply. ``foo:token`` initial supply is 1.000.000"
+"transaction>`, to set the supply. We are going to create 1.000.000 mosaic"
+" units."
 msgstr ""
 "供給量を設定するために :ref:`モザイク供給量変更トランザクション <mosaic-supply-change-transaction>` "
 "を用います。``foo:token`` の初期供給量は 1,000,000 とします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:81
-msgid ""
-"Once you announce a MosaicSupplyChangeTransaction, you cannot change mosaic "
-"properties for this mosaic."
-msgstr "一度モザイク供給量変更トランザクションをアナウンスすると、このモザイクへのプロパティの変更はできなくなります。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:100
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:68
 msgid ""
 "Both transactions can be announced together using an :ref:`aggregate "
 "transaction <aggregate-transaction>`."
@@ -155,19 +152,91 @@ msgstr ""
 "両方のトランザクションは、 :ref:`アグリゲートトランザクション <aggregate-transaction>` "
 "を使うことで一緒にアナウンスできます。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:119
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:82
 msgid "|creating-a-mosaic-cli|"
 msgstr ""
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:126
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:89
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:128
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:91
 msgid ""
-":doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic "
-"created to another account or modify its properties following the next "
-"guide."
+":doc:`Transfer <../transaction/sending-a-transfer-transaction>` one "
+"mosaic created to another account, :doc:`modify the mosaic properties "
+"<modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic "
+"<creating-a-mosaic>`."
 msgstr ""
-"他のアカウントへ作ったモザイクを :doc:`転送 <../transaction/sending-a-transfer-transaction>` "
-"してみるか、次のガイドに従ってモザイクのプロパティを変更してみましょう。"
+
+#~ msgid "Background"
+#~ msgstr "背景"
+
+#~ msgid ""
+#~ "A mosaic is like a file hosted "
+#~ "on a domain and it represents an"
+#~ " asset. Like a website and directory,"
+#~ " a mosaic can have the same "
+#~ "name as other files on other "
+#~ "domains. However,  a namespace + mosaic"
+#~ " is always unique."
+#~ msgstr ""
+#~ "モザイクはドメイン上にホストされているファイルのようなもので、資産として表現されます。ウェブサイトやディレクトリと同様に、モザイクは他のドメインの他のファイルと同じ名前を持つことができます。しかし、ネームスペース"
+#~ " + モザイクは常に一意になります。"
+
+#~ msgid ""
+#~ "Finish :doc:`registering a namespace guide "
+#~ "<../namespace/registering-a-namespace>`"
+#~ msgstr ":doc:`ネームスペースの取得ガイド <../namespace/registering-a-namespace>` を終了していること"
+
+#~ msgid "NEM2-SDK or CLI"
+#~ msgstr "NEM2-SDK または CLI"
+
+#~ msgid "A text editor or IDE"
+#~ msgstr "テキストエディタかIDE"
+
+#~ msgid "An account with XEM and at least one namespace"
+#~ msgstr "XEM を保有したアカウントと少なくとも1つのネームスペース"
+
+#~ msgid ""
+#~ "The first step is to choose a "
+#~ "name for your mosaic. The name of"
+#~ " the mosaic, up to a size limit"
+#~ " of ``64`` characters, must be unique"
+#~ " under the domain name."
+#~ msgstr "最初のステップは、モザイクの名前を選ぶことです。モザイク名は最大 ``64`` 文字で一意なドメイン名でなければなりません。"
+
+#~ msgid ""
+#~ "Our mosaic will be called ``token``, "
+#~ "and its parent namespace will be "
+#~ "``foo``."
+#~ msgstr "モザイクは ``token`` と呼び、その親ネームスペースは ``foo`` であり、供給量は ``1,000,000`` となります。"
+
+#~ msgid "|creating-a-mosaic-java|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Under mosaic properties, we define a "
+#~ "mosaic with ``supplyMutable``, ``transferable`` "
+#~ "among accounts other than the creator"
+#~ " and registered for ``1000 blocks``. "
+#~ "``foo:token`` won't be  ``divisible``."
+#~ msgstr ""
+#~ "モザイクプロパティの下に、 ``supplyMutable`` 、作成者以外のアカウント間での譲渡の "
+#~ "``transferable`` 、``1000 blocks`` "
+#~ "の期間を定義します。``foo:token`` は ``可分性`` を用いません。"
+
+#~ msgid ""
+#~ "Once you announce a "
+#~ "MosaicSupplyChangeTransaction, you cannot change "
+#~ "mosaic properties for this mosaic."
+#~ msgstr "一度モザイク供給量変更トランザクションをアナウンスすると、このモザイクへのプロパティの変更はできなくなります。"
+
+#~ msgid ""
+#~ ":doc:`Transfer <../transaction/sending-a-transfer-"
+#~ "transaction>` one mosaic created to "
+#~ "another account or modify its properties"
+#~ " following the next guide."
+#~ msgstr ""
+#~ "他のアカウントへ作ったモザイクを :doc:`転送 <../transaction/sending-a"
+#~ "-transfer-transaction>` してみるか、次のガイドに従ってモザイクのプロパティを変更してみましょう。"
+

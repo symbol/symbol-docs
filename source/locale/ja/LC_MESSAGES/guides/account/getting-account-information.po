@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 08:56+0000\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/guides/account/getting-account-information.rst:10
 msgid "Getting account information"
@@ -42,88 +41,116 @@ msgid ""
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
 #: ../../source/guides/account/getting-account-information.rst:19
-msgid "Text editor or IDE"
-msgstr "テキストエディタ または IDE"
+msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:20
-msgid "NEM2-SDK or CLI"
-msgstr "NEM2-SDK または CLI"
-
-#: ../../source/guides/account/getting-account-information.rst:24
+#: ../../source/guides/account/getting-account-information.rst:23
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/account/getting-account-information.rst:26
+#: ../../source/guides/account/getting-account-information.rst:25
+#, fuzzy
 msgid ""
-"The **public key** identifies your account publicly in the network. Your  "
-"**address** is derived from it, which contains further information such as "
-"network and validity check."
+"Call ``getAccountInfo`` function, passing your account's address as a "
+"parameter."
+msgstr "アドレスとネットワークをパラメタとして、あなたのアカウントのより多くの情報を取得します。"
+
+#: ../../source/guides/account/getting-account-information.rst:29
+msgid "|getting-account-information-ts|"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:34
+msgid "|getting-account-information-java|"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:39
+msgid "|getting-account-information-js|"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:44
+msgid "|getting-account-information-cli|"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:49
+#, fuzzy
+msgid ""
+"Can you determine the account's public key? The **public key** identifies"
+" your account publicly in the network. Your  **address** is derived from "
+"it, which contains further information such as network and validity "
+"check."
 msgstr ""
 "**公開鍵** はネットワーク上のあなたのアカウントを特定します。あなたの **アドレス** "
 "は公開鍵から導出され、ネットワークや妥当性チェックなどの情報を含んでいます。"
 
-#: ../../source/guides/account/getting-account-information.rst:28
+#: ../../source/guides/account/getting-account-information.rst:51
 msgid ""
-"Get more information about your account passing the address and network as a"
-" parameter."
-msgstr "アドレスとネットワークをパラメタとして、あなたのアカウントのより多くの情報を取得します。"
-
-#: ../../source/guides/account/getting-account-information.rst:32
-msgid "|getting-account-information-ts|"
+"If you don't have a public key assigned, that means that your account has"
+" not announced or received any transaction yet. The ``addressHeight`` and"
+" ``publicKeyHeight`` specify the block where your address and public key "
+"first appeared."
 msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:37
-msgid "|getting-account-information-java|"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:42
-msgid "|getting-account-information-js|"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:47
-msgid "|getting-account-information-cli|"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:52
+#: ../../source/guides/account/getting-account-information.rst:53
 msgid ""
-"Can you determine the account's public key? Which was the first block where "
-"this account appeared?"
-msgstr "アカウントの公開鍵を見つけられますか？アカウントが現れたのはどのブロックでしょうか？"
+"The ``importance`` field represents the numerical relation between the "
+"number of harvesting mosaics the account owns and the total mosaic "
+"supply. The greater the importance, the more chances to :doc:`harvest "
+"<../../concepts/harvesting>` new blocks."
+msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:54
-msgid "**Checking account's balance**"
-msgstr "**アカウントの残高を確認する**"
-
-#: ../../source/guides/account/getting-account-information.rst:56
+#: ../../source/guides/account/getting-account-information.rst:55
+#, fuzzy
 msgid ""
-"The balance is the amount of the different **mosaics** owned by the account."
-" How many different :doc:`mosaics <../../concepts/mosaic>` does your account"
-" own?"
+"The balance is the amount of the different :doc:`mosaics "
+"<../../concepts/mosaic>` owned by the account."
 msgstr ""
 "残高とは、アカウントが保有している **モザイク** ごとの総量です。あなたのアカウントにはどんな :doc:`モザイク "
 "<../../concepts/mosaic>` を保有しているでしょうか？"
 
-#: ../../source/guides/account/getting-account-information.rst:60
+#: ../../source/guides/account/getting-account-information.rst:57
+msgid ""
+"How many different mosaics does your account hold? Call "
+"``mosaicsAmountViewFromAddress`` function, passing your account's address"
+" as a parameter."
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:61
 msgid "|checking-balance-account-ts|"
 msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:65
+#: ../../source/guides/account/getting-account-information.rst:66
 msgid "|checking-balance-account-js|"
 msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:70
+#: ../../source/guides/account/getting-account-information.rst:71
 msgid "|checking-balance-account-cli|"
 msgstr ""
 
-#: ../../source/guides/account/getting-account-information.rst:77
-msgid "What’s next?"
-msgstr "次は？"
+#~ msgid "Text editor or IDE"
+#~ msgstr "テキストエディタ または IDE"
 
-#: ../../source/guides/account/getting-account-information.rst:79
-msgid ""
-"Retrieve the balance by only `filtering the nem:xem "
-"<https://www.learnrxjs.io/operators/filtering/filter.html>`_ amount."
-msgstr ""
-"`nem:xemのフィルタリング "
-"<https://www.learnrxjs.io/operators/filtering/filter.html>`_ "
-"をしてその総量だけを取得してください。"
+#~ msgid "NEM2-SDK or CLI"
+#~ msgstr "NEM2-SDK または CLI"
+
+#~ msgid ""
+#~ "Can you determine the account's public"
+#~ " key? Which was the first block "
+#~ "where this account appeared?"
+#~ msgstr "アカウントの公開鍵を見つけられますか？アカウントが現れたのはどのブロックでしょうか？"
+
+#~ msgid "**Checking account's balance**"
+#~ msgstr "**アカウントの残高を確認する**"
+
+#~ msgid "What’s next?"
+#~ msgstr "次は？"
+
+#~ msgid ""
+#~ "Retrieve the balance by only `filtering"
+#~ " the nem:xem "
+#~ "<https://www.learnrxjs.io/operators/filtering/filter.html>`_ "
+#~ "amount."
+#~ msgstr ""
+#~ "`nem:xemのフィルタリング "
+#~ "<https://www.learnrxjs.io/operators/filtering/filter.html>`_ "
+#~ "をしてその総量だけを取得してください。"
+
