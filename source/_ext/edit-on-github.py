@@ -21,7 +21,7 @@ def get_github_url(app, view, path):
         path=path)
 
 def get_feedback_url(app):
-    return 'https://github.com/{project}/issues/new'.format(
+    return 'https://github.com/{project}/issues/new/choose'.format(
         project=app.config.edit_on_github_project)
 
 def html_page_context(app, pagename, templatename, context, doctree):
