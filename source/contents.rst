@@ -42,7 +42,6 @@
     api
     sdk
     cli
-    wallet
     prototyping-tool
     extensions
 

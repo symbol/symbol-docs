@@ -143,7 +143,7 @@ Create a folder for your new project and run the instructions for the selected l
         .. code-block:: bash
 
             $> npm install nem2-sdk rxjs
-
+..
     .. tab:: Java
 
         1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
@@ -170,7 +170,6 @@ Create a folder for your new project and run the instructions for the selected l
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
-
     .. tab:: C#
 
         1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.

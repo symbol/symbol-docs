@@ -228,7 +228,7 @@ The SDKs need to be adopted by other developers. As a contributor, no one knows 
 Publishing the SDK as official
 ******************************
 
-To become an accepted SDK, submit it  as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested and shared among NEM developers.
+To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested and shared among NEM developers.
 
 ***********
 Future work
