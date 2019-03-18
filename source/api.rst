@@ -7,7 +7,7 @@ REST API
 .. _http-requests:
 
 *************
-Http Requests
+Http requests
 *************
 
 Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **POST** requests.
@@ -184,7 +184,7 @@ The status channel notifies when a transaction related to an address rises an er
 
 .. _status-errors:
 
-Status Errors
+Status errors
 =============
 
 This section describes the error messages that can be returned via status channel after announcing a transaction.

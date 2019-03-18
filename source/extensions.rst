@@ -11,7 +11,7 @@ The reason behind the |NIP| is to ensure that the new library is reviewed, teste
 * Compatible with third-party projects that implement/uses the same NIP Library.
 
 ********************
-Supported Extensions
+Supported extensions
 ********************
 
 .. csv-table::
@@ -22,7 +22,7 @@ Supported Extensions
    `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.
 
 ********************
-Community Extensions
+Community extensions
 ********************
 
 .. csv-table::
