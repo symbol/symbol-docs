@@ -54,7 +54,7 @@ const secret = hash.update(random).hex().toUpperCase();
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
     new Mosaic(new MosaicId([520597229,83226871]), UInt64.fromUint(10)),
-    UInt64.fromUint(96*60), // assuming one block per minute
+    UInt64.fromUint(96*3600/15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,
@@ -70,7 +70,7 @@ privateChainTransactionHttp
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
     new Mosaic(new MosaicId([2061634929,1373884888]), UInt64.fromUint(10)),
-    UInt64.fromUint(84*60), // assuming one block per minute
+    UInt64.fromUint(84*3600/15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
