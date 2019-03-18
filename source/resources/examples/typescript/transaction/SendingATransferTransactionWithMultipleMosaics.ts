@@ -27,7 +27,7 @@ import {
     TransactionHttp,
     TransferTransaction,
     UInt64,
-    XEM
+    NetworkCurrencyMosaic
 } from 'nem2-sdk';
 
 // 01 - Create Transfer Transaction
@@ -36,8 +36,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [new Mosaic( new MosaicId('alice:token'), UInt64.fromUint(10)),
-        XEM.createRelative(10)],
+    [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(10)),
+        NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
 

@@ -26,7 +26,7 @@ import {
     PublicAccount,
     TransactionHttp,
     TransferTransaction,
-    XEM
+    NetworkCurrencyMosaic
 } from "nem2-sdk";
 
 // 01 - Set up
@@ -44,8 +44,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 03 - Create Aggregate Complete Transaction

@@ -56,10 +56,9 @@ Normalizing the language into NEM related concepts:
 Prerequisites
 *************
 
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`sending payouts with aggregate complete transactions <sending-payouts-with-aggregate-complete-transaction>`
-- NEM2-SDK
-- A text editor or IDE
 
 *************************
 Let's get into some code
@@ -76,21 +75,34 @@ Let's get into some code
 In this example, Alice and a ticket distributor want to swap the following mosaics.
 
 .. csv-table::
-        :header: "Owner", "Mosaic Name", "Amount"
+        :header: "Owner", "Amount", "MosaicId", "Description"
 
-        Alice, nem:xem, 100
-        Ticket distributor, museum:ticket, 1
+        Alice, 100, cat.currency, Native currency mosaic
+        Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
-Before continuing, practise by setting up the namespaces and mosaics required.
+Before continuing, :doc:`create the museum ticket mosaic <../mosaic/creating-a-mosaic>`.
 
 **Mosaics swap**
 
-Alice will send a transaction to the ticket distributor exchanging 100 nem:xem with 1 museum:ticket.
+Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-1. Create two  :ref:`transfer transaction <transfer-transaction>`:
+1. Create two  :ref:`transfer transactions <transfer-transaction>`:
 
-A. From Alice to the ticket distributor sending 100 nem:xem
-B. From the ticket distributor to Alice sending 1 museum:ticket.
+A. From Alice to the ticket distributor sending ``100 cat.currency``
+B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
+        :language: typescript
+        :lines:  40-62
+
+    .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
+        :language: javascript
+        :lines:  40-62
+
 
 2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
 
@@ -103,38 +115,30 @@ In case that signatures are required from other participants and the transaction
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  40-62
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  44-80
+        :lines:  65-70
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  40-62
+        :lines:  65-70
 
-3. When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM. Once the ticket distributor signs the aggregate transaction, the amount of locked XEM becomes available again on Alice's account, and the exchange will get through.
+3. When an aggregate transaction is bonded, Alice will need to lock at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  65-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  80-105
+        :lines:  72-
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  65-
+        :lines:  72-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
+
+The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
 
 **********************************************
 Is it possible without aggregate transactions?
@@ -149,9 +153,7 @@ Is it possible without aggregate transactions?
 What's next?
 ************
 
-The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
-
-Afterwards, try to swap mosaics between multiple participants.
+Try to swap mosaics adding a third  participant.
 
 .. figure:: ../../resources/images/examples/aggregate-escrow-2.png
     :align: center
@@ -166,10 +168,6 @@ Afterwards, try to swap mosaics between multiple participants.
 .. |creating-an-escrow-with-aggregate-bonded-transaction-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |creating-an-escrow-with-aggregate-bonded-transaction-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/CreatingAnEscrowWithAggregateBondedTransaction.java" target="_blank">View Code</a>
 
 .. |creating-an-escrow-with-aggregate-bonded-transaction-js| raw:: html
 

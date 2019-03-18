@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2018 NEM
+ * Copyright 2019 NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,31 +18,34 @@
 
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
+    Address = nem2Sdk.Address,
+    AliasActionType = nem2Sdk.AliasActionType,
+    AliasTransaction = nem2Sdk.AliasTransaction,
     Deadline = nem2Sdk.Deadline,
+    NamespaceId = nem2Sdk.NamespaceId,
     NetworkType = nem2Sdk.NetworkType,
-    MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
-    MosaicId = nem2Sdk.MosaicId,
-    MosaicSupplyType = nem2Sdk.MosaicSupplyType,
-    TransactionHttp = nem2Sdk.TransactionHttp,
-    UInt64 = nem2Sdk.UInt64;
+    TransactionHttp = nem2Sdk.TransactionHttp;
 
 
+// 01 - Setup
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicId = new MosaicId([520597229,83226871]); // Replace with your mosaicId
+const namespaceId = new NamespaceId('foo');
+const address = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
-const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
+// 02 - Create and announce aliasTransaction
+const addressAliasTransaction = AliasTransaction.createForAddress(
     Deadline.create(),
-    mosaicId,
-    MosaicSupplyType.Increase,
-    UInt64.fromUint(2000000),
-    NetworkType.MIJIN_TEST);
+    AliasActionType.Link,
+    namespaceId,
+    address,
+    NetworkType.MIJIN_TEST
+);
 
-const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
+const signedTransaction = account.sign(addressAliasTransaction);
 
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x=> console.log(x), err => console.error(err));
+    .subscribe(x => console.log(x), err => console.error(err));

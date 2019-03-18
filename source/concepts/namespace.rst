@@ -14,7 +14,7 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
 
-You can create multiple subnamespaces with the same name. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
+You can create multiple subnamespaces with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
@@ -102,7 +102,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
     :delim: ;
 
     namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
-    duration; uint64; The renting duration represents the number of confirmed blocks we would like to rent our namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.

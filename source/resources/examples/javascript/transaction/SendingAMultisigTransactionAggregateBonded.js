@@ -24,12 +24,14 @@ const Account = nem2Sdk.Account,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    XEM = nem2Sdk.XEM,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
     Address = nem2Sdk.Address,
+    Mosaic = nem2Sdk.Mosaic,
+    MosaicId = nem2Sdk.MosaicId,
     PublicAccount = nem2Sdk.PublicAccount,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
@@ -51,8 +53,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction
@@ -62,10 +64,14 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

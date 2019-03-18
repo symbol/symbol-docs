@@ -27,10 +27,10 @@ import {
     SecretProofTransaction,
     TransactionHttp,
     UInt64,
-    XEM
 } from 'nem2-sdk';
-import {sha3_512} from 'js-sha3';
+import {sha3_256} from 'js-sha3';
 import * as crypto from 'crypto';
+
 
 
 // 01 - Set up
@@ -46,16 +46,16 @@ const publicChainTransactionHttp = new TransactionHttp('http://localhost:3000');
 
 // 02 - Alice picks a random number and hashes it.
 const random = crypto.randomBytes(10);
-const hash = sha3_512.create();
-const secret = hash.update(random).hex().toUpperCase();
 const proof = random.toString('hex');
+const hash = sha3_256.create();
+const secret = hash.update(random).hex().toUpperCase();
 
-// 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, MosaicId, Amount, valid for 96h }
+// 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, alice token mosaicId, Amount, valid for 96h }
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId('alice:token'), UInt64.fromUint(10)),
-    UInt64.fromUint(96*60), // assuming one block per minute
-    HashType.SHA3_512,
+    new Mosaic(new MosaicId([520597229,83226871]), UInt64.fromUint(10)),
+    UInt64.fromUint(96*3600/15), // assuming one block every 15 seconds
+    HashType.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,
     NetworkType.MIJIN);
@@ -66,12 +66,12 @@ privateChainTransactionHttp
     .announce(tx1Signed)
     .subscribe(x => console.log(x),err => console.error(err));
 
-// 05 - B creates TX2 SecretLockTransaction{ H(x), A, MosaicId, Amount, valid for 84h }
+// 05 - B creates TX2 SecretLockTransaction{ H(x), A, bob token mosaic Id, Amount, valid for 84h }
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId('bob:token'), UInt64.fromUint(10)),
-    UInt64.fromUint(84*60), // assuming one block per minute
-    HashType.SHA3_512,
+    new Mosaic(new MosaicId([2061634929,1373884888]), UInt64.fromUint(10)),
+    UInt64.fromUint(84*3600/15), // assuming one block every 15 seconds
+    HashType.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
     NetworkType.MAIN_NET);
@@ -85,7 +85,7 @@ publicChainTransactionHttp
 // 07 - Alice spends TX2 transaction by sending to the public chain the SecretProofTransaction{ H(x), x }
 const tx3 = SecretProofTransaction.create(
     Deadline.create(),
-    HashType.SHA3_512,
+    HashType.Op_Sha3_256,
     secret,
     proof,
     NetworkType.MAIN_NET);
@@ -98,7 +98,7 @@ publicChainTransactionHttp
 // 08 - Bob spends TX1 transaction by sending to the private chain the SecretProofTransaction{ H(x), x }
 const tx4 = SecretProofTransaction.create(
     Deadline.create(),
-    HashType.SHA3_512,
+    HashType.Op_Sha3_256,
     secret,
     proof,
     NetworkType.MIJIN);

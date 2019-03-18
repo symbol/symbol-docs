@@ -33,16 +33,15 @@ Prerequisites
 
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
-- NEM2-SDK
-- A text editor or IDE
-- A multisig account with XEM
-- A cosignatory account with XEM
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
+- A cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
 ************************
 
-Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to 10 XEM.
+Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
 1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
@@ -53,11 +52,6 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :language: typescript
         :lines: 33-41
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines: 43-55
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
         :language: javascript
@@ -67,7 +61,7 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
 * Recipient: Grocery's address
 * Message: Grocery payment
-* Mosaics: [10 XEM]
+* Mosaics: [``10 cat.currency``]
 
 .. example-code::
 
@@ -75,11 +69,6 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
         :language: typescript
         :lines:  44-49
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  56-63
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
@@ -99,11 +88,6 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: typescript
         :lines:  52-56
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  64-71
-
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
         :language: javascript
@@ -117,11 +101,6 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
         :language: typescript
         :lines:  59-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java
-        :caption: |sending-a-multisig-transaction-aggregate-complete-java|
-        :language: java
-        :lines:  72-78
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :caption: |sending-a-multisig-transaction-aggregate-complete-js|
@@ -142,60 +121,52 @@ As all required cosigners did not sign the transaction, it should be announced a
 
     Sending an aggregate bonded transaction
 
-.. example-code::
-
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
-        :language: typescript
-        :lines:  59-64
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-java|
-        :language: java
-        :lines:  62-70
-
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
-        :language: javascript
-        :lines:  59-64
-
-
 1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
     $> nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in  Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+2. Modify the previous code, defining the transaction as ``aggregate bonded``.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
         :language: typescript
-        :lines:  66-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-java|
-        :language: java
-        :lines:  70-99
+        :lines:  61-67
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
         :language: javascript
-        :lines:  66-
+        :lines:  61-67
+
+
+3. When an aggregate transaction is bonded, Bob needs to lock at least ``10 cat.currency`` to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
+        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
+        :language: typescript
+        :lines:  69-
+
+    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
+        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
+        :language: javascript
+        :lines:  69-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` to be confirmed!
+4. :doc:`Cosign the aggregate transaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
 
 .. |sending-a-multisig-transaction-aggregate-complete-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-complete-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateComplete.java" target="_blank">View Code</a>
 
 .. |sending-a-multisig-transaction-aggregate-complete-js| raw:: html
 
@@ -204,10 +175,6 @@ Alice should :doc:`cosign the transaction <signing-announced-aggregate-bonded-tr
 .. |sending-a-multisig-transaction-aggregate-bonded-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-bonded-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/SendingAMultisigTransactionAggregateBonded.java" target="_blank">View Code</a>
 
 .. |sending-a-multisig-transaction-aggregate-bonded-js| raw:: html
 

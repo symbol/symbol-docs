@@ -14,24 +14,26 @@ Before starting
 
 2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea. 
 
-3. Check if you can classify your guide under one of the current categories. If not, create a new issue proposing a new category:
+3. Classify your guide under one of the following categories:
 
-.. csv-table:: Categories
-   :header: "Built-in feature", "Tags"
-   :delim: ;
+* Account
+* Account Filter
+* Aggregate Transaction
+* Block
+* Cross-Chain Swaps
+* Harvesting
+* Mosaic
+* Namespace
+* Node
+* Receipt
+* Transfer Transaction
+* Tools
 
-   Account ; account, multisig-account, mlma
-   Blockchain ; blockchain
-   Namespace ; namespace
-   Mosaic ; mosaic
-   Transaction; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
-   Node; transfer-transaction, aggregate-transaction, cross-chain-transaction, monitoring
+.. note:: You can suggest new categories creating a `GitHub issue <https://github.com/nemtech/nem2-docs>`_.
 
-4. You can opt to write the guide for this repository, or use your blog.
-
-*********************************
-Write a guide for this repository
-*********************************
+*****************
+Writing the guide
+*****************
 
 1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `nem2-docs <https://github.com/nemtech/nem2-docs>`_ repository.
 
@@ -64,7 +66,7 @@ Write a guide for this repository
     :orphan:
 
     .. post:: 18 Aug, 2018
-        :category: monitoring
+        :category: <category>
         :excerpt: 1
         :nocomments:
         :author: <your_name_or_username>
@@ -118,9 +120,3 @@ Write a guide for this repository
     $> make livehtml
 
 8. Push your changes and do a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the documentation writing style.
-
-**************************
-Write a guide in your blog
-**************************
-
-Create or comment an existent issue including the link of your blog post. If the content is relevant and not repeated, the repository maintainers will include your link under the guides section.

@@ -49,7 +49,7 @@ Defining a transaction
 
 Every transaction shares some common properties. Each transaction extends from the :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
 
-Transactions are defined in a :ref:`serialized form <serialization>`. We recommend to `use the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+Transactions are defined in a :ref:`serialized form <serialization>`. We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
 .. _fees:
 
@@ -72,7 +72,7 @@ The harvesting nodes can decide their transaction inclusion strategy:
 * **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
 * **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-By default, the fee is paid in ``XEM``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
+By default, the fee is paid in ``cat.currency``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
 
 .. _transaction-signature:
 

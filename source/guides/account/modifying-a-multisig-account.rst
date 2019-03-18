@@ -18,9 +18,8 @@ Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Text editor or IDE
-- NEM2-SDK or CLI
-- One multisig account
+- Have one multisignature account.
+- Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code
@@ -50,7 +49,7 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
         :lines: 30-36
 
 
-Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a  2-of-2 multisig instead. We could achieve it by increasing ``minApproval`` parameter in one unit.
+Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a 2-of-2 multisig instead. You can achieve this by increasing ``minApproval`` parameter in one unit.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
         :align: center
@@ -178,7 +177,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  63-68
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
 
 .. example-code::
 
@@ -199,7 +198,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of XEM locked becomes available again on Alice's account and Carol is added to the multisig.
+Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 

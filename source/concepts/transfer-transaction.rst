@@ -8,7 +8,7 @@ Transfer transactions are used to send :doc:`mosaics <mosaic>` between two :doc:
     :align: center
     :width: 450px
 
-    Alice sends 10 nem:xem to Bob
+    Alice sends 10 cat.currency to Bob
 
 .. note:: It is possible to send mosaics to any valid address even if the address has not previously participated in any transaction. If nobody owns the private key of the recipient's account, the funds are most likely lost forever.
 

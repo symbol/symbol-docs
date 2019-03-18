@@ -8,37 +8,38 @@ The new SDK enables developers to focus on their product rather than on the NEM2
 
 The best way to learn to use the SDKs is through :ref:`guides <category-account>`.
 
-*************
-Official SDKs
-*************
-
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>`.
-
-.. csv-table::
-    :header: "Language", "Repository", "Reference", "Active Developers"
-    :delim: ;
-
-    TypeScript & JS SDK ; |tsjs-repo|; |tsjs-reference|;  NEM Foundation
-    Java SDK ; |java-repo|; |java-reference|;  NEM Foundation
-
-
 **************
-Community SDKs
+Supported SDKs
 **************
 
 .. csv-table::
-    :header: "Language", "Repository", "Reference", "Active Developers"
+    :header: "Language", "Repository", "Reference", "Target version"
     :delim: ;
 
-    C# SDK ; |csharp-repo| ;  ; `@kodty <https://github.com/kodty>`_
-    Go SDK ; |go-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
-    Swift SDK ; |swift-repo| ;  ; `@proximax-storage <https://github.com/proximax-storage>`_
+    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|; 0.3 (latest)
+
+************
+Ongoing work
+************
+
+.. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server (0.3).
+
+Read the open issues to know about the current status of each project.
+
+.. csv-table::
+    :header: "Language", "Repository", "Reference", "Target version"
+    :delim: ;
+
+    Java SDK; |java-repo|; |java-reference|;  0.1
+    C# SDK ; |csharp-repo| ; ; 0.1
+    Go SDK ; |go-repo| ;  ; 0.1
+    Swift SDK ; |swift-repo| ;  ; 0.1
     C++ ;  ;  ;
     PHP SDK ;  ;  ;
     Ruby SDK ; ; ;
     Python SDK ; ; ;
 
-If you want to collaborate in the SDK creation, check the :doc:`SDK Development guidelines <guidelines/sdk-development>`. Then, add the repository under “Community SDKs”. You can click  the “Edit on Github” button at the top-right part of the screen.
+If you want to create a new SDK, check the :doc:`SDK Development guidelines <guidelines/sdk-development>`.
 
 .. |tsjs-repo| raw:: html
 

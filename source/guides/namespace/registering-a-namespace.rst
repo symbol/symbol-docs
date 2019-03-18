@@ -9,34 +9,32 @@
 Registering a namespace
 ########################
 
-Rregister your own :doc:`namespace <../../concepts/namespace>`.
+Register your own :doc:`namespace <../../concepts/namespace>`.
 
 **********
 Background
 **********
 
-A :doc:`namespace <../../concepts/namespace>` is an on-chain unique domain for your assets. The easiest way to understand it is by means of the domain-file analogy on the internet.
+Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
-A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However,  a namespace + mosaic is always unique.
+A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <../../concepts/account>` creates a namespace, that will appear as unique in the network.
 
-If an :doc:`account <../../concepts/account>` creates a namespace, that namespace will appear as unique in the NEM ecosystem. For example, if one were to create a namespace called ``foo``, a second person cannot create the same namespace.
+An account can link a registered name (namespace or subnamespace) with an :doc:`account <../../concepts/account>` or a :doc:`mosaic <../../concepts/mosaic>` identifier.
 
 *************
 Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- NEM2-SDK or CLI
-- A text editor or IDE
-- An account with XEM
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
 ************************
 
-Register your namespace by choosing a name you like. One common option is to use your company's or own name.  In this example, we will register a namespace called ``foo``. 
+1. Choose a name you like. One common option is to use your company's or own name. In this example, we will register a namespace called ``foo``.
 
-1. Check if this nampespace name is available.
+2. Check if this namespace name is available.
 
 .. example-code::
 
@@ -60,9 +58,9 @@ Register your namespace by choosing a name you like. One common option is to use
         :language: bash
         :start-after: #!/bin/sh
 
-2. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
+3. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
 
-.. note:: In Catapult, NEM blocks are complete every ``15`` seconds in average.
+.. note:: A new block completes every ``15`` seconds on average. You will have to renew your namespace before it expires.
 
 .. example-code::
 
@@ -90,9 +88,7 @@ Register your namespace by choosing a name you like. One common option is to use
 What's next?
 ************
 
-Now that you have registered your namespace, check how you can :doc:`create mosaics <../mosaic/creating-a-mosaic>`.
-
-When the transaction is confirmed, you can :doc:`register a subnamespace <registering-a-subnamespace>` following the next guide.
+When the transaction is confirmed, :doc:`register a subnamespace <registering-a-subnamespace>` following the next guide.
 
 .. |checking-namespace-existence-ts| raw:: html
 

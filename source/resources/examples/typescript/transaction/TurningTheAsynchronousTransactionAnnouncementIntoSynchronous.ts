@@ -24,7 +24,7 @@ import {
     NetworkType,
     TransactionHttp,
     TransferTransaction,
-    XEM
+    NetworkCurrencyMosaic
 } from 'nem2-sdk';
 
 
@@ -37,7 +37,7 @@ const recipientAddress =  Address.createFromRawAddress('SBHEVGUFDEW22FAT2EFU6UYX
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
    recipientAddress,
-    [XEM.createRelative(10)],
+    [NetworkCurrencyMosaic.createRelative(10)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 

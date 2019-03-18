@@ -16,14 +16,12 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Text editor or IDE
-- NEM2-SDK or CLI
 
 ************************
 Let’s get into some code
 ************************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain.
+An account is a key pair (private and public key) associated with a mutable state stored in the NEM blockchain.
 
 .. example-code::
 

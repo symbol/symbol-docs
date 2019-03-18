@@ -2,6 +2,8 @@
 Prototyping Tool
 ################
 
+.. note:: ⚠️ The prototyping tool is not compatible with the latest version of catapult-server (0.3).
+
 .. figure:: https://gist.githubusercontent.com/jorisadri/7061090eb3cbf724c80e4f49e03e1b94/raw/69b1b9f80594feb9a415aac8de62c769295c397b/transferTransaction.png
     :align: center
 
@@ -145,25 +147,17 @@ Examples
 Basics
 ======
 
-.. csv-table::
-    :header: "Name", "Contributor"
-    :delim: ;
-
-    `Create transfer transaction <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_ ; `@jorisadri <https://github.com/jorisadri>`_
-    `Create namespace <https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_ ; `@jorisadri <https://github.com/jorisadri>`_
-    `Create mosaic <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_ ; `@jorisadri <https://github.com/jorisadri>`_
-    `Create multisig account <https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_ ; `@jorisadri <https://github.com/jorisadri>`_
-    `Create aggregate transaction <https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_ ; `@jorisadri <https://github.com/jorisadri>`_
-    `Cosign aggregate transaction <https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_ ; `@jorisadri <https://github.com/jorisadri>`_
+* `Create a transfer transaction <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_
+* `Create namespace <https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_
+* `Create mosaic <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_
+* `Create multisig account <https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_
+* `Create aggregate transaction <https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_
+* `Cosign aggregate transaction <https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_
 
 Applications
 ============
 
-.. csv-table::
-    :header: "Name", "Contributor"
-    :delim: ;
-
-    `Simple chat <https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_ ;  `@planethouki <https://github.com/planethouki>`_
+* `Simple chat <https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_
 
 We love to receiving contributions from our community — you! Follow these guidelines to get your flow included in this documentation.
 

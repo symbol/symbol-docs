@@ -32,20 +32,11 @@ Blockchain technology makes sense in cases where:
 
 * There are different participants involved.
 * These participants need to trust each other.
-* There is the need to keep track of an immutable set of events.
+* There is a need to keep track of an immutable set of events.
 
 NEM is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
-
-*************
-Prerequisites
-*************
-
-- Finish :doc:`getting started section <setup-workstation>`
-- Text editor or IDE
-- NEM2-SDK and CLI
-- An account with XEM
 
 ************************
 Let’s get into some code
@@ -53,14 +44,14 @@ Let’s get into some code
 
 **1.Creating an account for each participant**
 
-First, we identify the actors involved in the problem we want to solve:
+First, identify the actors involved in the problem we want to solve:
 
 * The ticket vendor.
 * The ticket buyer.
 
 We have decided to represent the ticket vendor and buyer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box in the blockchain, which can be modified with an appropriate private key.
 
-Have you loaded an account with test XEM? If it is not the case, go back to :doc:`getting started section <setup-workstation>`. The account you have created represents the ticket vendor.
+Have you loaded an account with test ``cat.currency``? If it is not the case, go back to :doc:`getting started section <setup-workstation>`. The account you have created represents the ticket vendor.
 
 1. After running the following command, you should see on your screen a line similar to:
 
@@ -75,9 +66,9 @@ Have you loaded an account with test XEM? If it is not the case, go back to :doc
 
    Mosaics
 
-   3628d0b327fb1dd8:       1000000
+   0dc67fbe1cad29e3: 1000000
 
-2. This account owns 1.000.000 XEM. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>`.
+2. This account owns ``1.000.000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>`.
 
 3. Create a second account to identify the ticket buyer.
 
@@ -92,7 +83,7 @@ Accounts change the blockchain state through transactions. Once an account annou
 
 Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
 
-We suggest opening three new terminals:
+Open three new terminals:
 
 1. The first terminal :doc:`monitors announced transactions <../guides/transaction/monitoring-a-transaction-status>` validation errors.
 
@@ -116,41 +107,44 @@ We suggest opening three new terminals:
 
 We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
-Before creating a mosaic with the ticket vendor account, you need to register a namespace. A :doc:`namespace <../concepts/namespace>` is a unique name in the network that gives a recognizable name to your assets.
-
-1. Register the namespace called ``company``. Let's check if this name is available.
+1. Create a  mosaic named ``ticket``:
 
 .. code-block:: bash
 
-   $> nem2-cli namespace info --name company
+   $> nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
 
-2. Is the namespace available? Register it by setting the namespace name and its renting duration expressed in blocks.
+.. csv-table::
+    :header: "Property", "Value", "Description"
+    :delim: ;
+
+    Divisibility; 0 ; The mosaic won't be divisible, no one should be able to send “0.5 tickets”.
+    Duration; 1000; The mosaic will be registered for 1000 blocks.
+    Amount; 1000000; The number of tickets you are going to create
+    Supply mutable; True; The mosaic supply can change at a later point.
+    Transferable; False; The mosaic can be only transferred back to the mosaic creator.
+
+2. Copy the mosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
+
 
 .. code-block:: bash
 
-   $> nem2-cli transaction namespace --name foo --rootnamespace --duration 1000
-
-Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared under ``unconfirmed`` terminal and, after a while, got confirmed ``confirmed``.
-
-3.  Create a  mosaic named ``ticket``.
-
-* It should be under the ``company`` namespace , with a total supply of ``100``.
-* The mosaic is configured with ``transferability`` set so false.
-* Divisibility should be set to 0, as no one should be able to send “0.5 company:tickets”.
-
-.. code-block:: bash
-
-   $> nem2-cli transaction mosaic --mosaicname ticket--namespacename company--amount 1000000 --supplymutable --divisibility 0 --duration 1000
+   $> ...  MosaicId:7cdf3b117a3c40cc ...
 
 **4. Sending the ticket**
 
-Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
-1. Prepare the transfer transaction. Three main attributes form a transfer transaction:
+1. Prepare the transfer transaction. The following attributes form a transfer transaction:
 
-* The recipient account address: ``SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU``.
-* A message: ``enjoy your ticket``.
-* An array of mosaics: ``[1 company:ticket]``.
+.. csv-table::
+    :header: "Property", "Value", "Description"
+    :delim: ;
+
+    Deadline; Default ; The maximum amount of time to include the transaction in the blockchain.
+    Recipient; SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU; The recipient account address.
+    Mosaics; 1 [7cdf3b117a3c40cc] (ticket); The array of mosaics to send.
+    Message; ``enjoy your ticket``; The attached message.
+    Network; MIJIN_TEST; The local network identifier.
 
 .. example-code::
 
@@ -164,35 +158,12 @@ Send one ``company:ticket`` to the ticket vendor account announcing a :ref:`tran
        const transferTransaction = TransferTransaction.create(
            Deadline.create(),
            Address.createFromRawAddress('SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
-           [new Mosaic(new MosaicId(company:ticket'), UInt64.fromUint(1))],
-           PlainMessage.create(‘enjoy your ticket’'),
+           [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))], // Replace with your mosaicId
+           PlainMessage.create('enjoy your ticket'),
            NetworkType.MIJIN_TEST
        );
 
-   .. code-block:: java
-
-       import io.nem.sdk.model.account.Address;
-       import io.nem.sdk.model.blockchain.NetworkType;
-       import io.nem.sdk.model.mosaic.Mosaic;
-       import io.nem.sdk.model.mosaic.MosaicId;
-       import io.nem.sdk.model.transaction.Deadline;
-       import io.nem.sdk.model.transaction.PlainMessage;
-       import io.nem.sdk.model.transaction.TransferTransaction;
-
-       import java.math.BigInteger;
-       import java.util.Arrays;
-
-       import static java.time.temporal.ChronoUnit.HOURS;
-
-       final TransferTransaction transferTransaction = TransferTransaction.create(
-           Deadline.create(2, HOURS),
-           Address.createFromRawAddress("SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"),
-           Arrays.asList(new Mosaic(new MosaicId("company:ticket"), BigInteger.valueOf(1))),
-           PlainMessage.create("enjoy your ticket"),
-           NetworkType.MIJIN_TEST
-       );
-
-Although the transaction is created, it has not been announced to the network yet.
+Although the transaction is defined, it has not been announced to the network yet.
 
 2.  Sign the transaction the ticket vendor account first, so that the network can verify the authenticity of the transaction.
 
@@ -206,13 +177,6 @@ Although the transaction is created, it has not been announced to the network ye
 
        const signedTransaction = account.sign(transferTransaction);
 
-   .. code-block:: java
-
-       final String privateKey = "";
-
-       final Account account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
-
-       final SignedTransaction signedTransaction = account.sign(transferTransaction);
 
 3. Once signed, announce the transaction to the network.
 
@@ -227,15 +191,9 @@ Although the transaction is created, it has not been announced to the network ye
            err => console.log(err)
        );
 
-   .. code-block:: java
-
-       final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
-
-       transactionHttp.announceTransaction(signedTransaction).toFuture().get();
-
    .. code-block:: bash
 
-       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company:ticket::1 --message enjoy_your_ticket
+       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
@@ -253,6 +211,6 @@ Did you solve the proposed use case?
 
 ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
-✅ Avoid non-authentic tickets and duplicate ones: Creating a unique namespace and a mosaic named ``company:ticket``.
+✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
 Continue learning about more :doc:`NEM built-in features <../concepts/account>` or practicing with :doc:`self-paced training <training>`.

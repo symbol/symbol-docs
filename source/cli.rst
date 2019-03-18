@@ -299,7 +299,7 @@ Command
 
 Announces a :ref:`transfer transaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
 
-You can send ``multiple mosaics`` splitting them with a comma, e.g: nem:xem::10,nps:msc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 XEM is 1000000.
+You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 @cat.currency is 1000000 (divisibility 6).
 
 Options
 
@@ -307,13 +307,13 @@ Options
 
     -r, --recipient <recipient> - Recipient
     -m, --message <message>     - Transaction message
-    -t, --mosaics <mosaics>     - Mosaic in the format namespaceName:mosaicName::absoluteAmount, add multiple mosaics splitting them with a comma
+    -t, --mosaics <mosaics>     - Mosaic in the format (mosaicId(hex)|@aliasName)::absoluteAmount, add multiple mosaics splitting them with a comma
 
 Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics nem:xem::10000000
+    $> nem2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics @cat.currency::10000000
 
 **Send pull transaction**
 
@@ -325,13 +325,14 @@ Options
 
     -r, --recipient <recipient>   - Recipient public key
     -m, --message <message>       - Message to the funds holder
-    -x, --mosaic <mosaic>         - Mosaic you want to get in the format namespaceName:mosaicName::absoluteAmount
+    -x, --mosaic <mosaic>         - Mosaic you want to get in the format (mosaicId(hex)|@aliasName)::absoluteAmount
+    -c, --currency <currency>     - The network native currency mosaicId in hexadecimal
 
 Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic nem:xem::10000000
+    $> nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic @cat.currency::10000000 --currency 0dc67fbe1cad29e3
 
 **Register root namespace**
 
@@ -379,8 +380,6 @@ Options
 
 .. code-block:: bash
 
-    -m, --mosaicname <mosaicname>       - Mosaic name
-    -n, --namespacename <namespacename> - Parent namespace name
     -a, --amount <amount>               - Amount of tokens
     -t, --transferable                  - Mosaic transferable
     -s, --supplymutable                 - Mosaic supply mutable
@@ -392,14 +391,14 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction mosaic --mosaicname token --namespacename new-namespace --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+    $> nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
 
 Namespace
 =========
 
 **Info**
 
-Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this command providing the namespace name or the mosaic uint ID in the form of [3646934825,3576016193].
+Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this command providing the namespace name or the namespace uint ID in the form of [3646934825,3576016193].
 
 Options
 
@@ -419,20 +418,20 @@ Mosaic
 
 **Info**
 
-Gets information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in the form of namespaceName:mosaicName (ex: nem:xem) or the mosaic uint ID in the form of  [3646934825,3576016193].
+Gets information from a :doc:`mosaic <../concepts/mosaic>`. Use this command providing the mosaic identifier name in hexadecimal or the mosaic uint ID ([lower,higher]).
 
 Options
 
 .. code-block:: bash
 
-    -n, --name <name>   - Mosaic Id in string format
     -u, --uint <uint>   - Mosaic id in uint64 format. [number, number]
+    -h, --hex <hex>    - Mosaic id in haxadecimal format
 
 Command
 
 .. code-block:: bash
 
-    $> nem2-cli mosaic info --name nem:xem
+    $> nem2-cli mosaic info --u 7cdf3b117a3c40cc
 
 Monitoring
 ==========

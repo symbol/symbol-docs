@@ -10,27 +10,27 @@ The reason behind the |NIP| is to ensure that the new library is reviewed, teste
 * At least one implementation that successfully passes the code review.
 * Compatible with third-party projects that implement/uses the same NIP Library.
 
-*******************
-Official Extensions
-*******************
-
-.. csv-table::
-   :header: "Name", "Description", "Active Developers"
-   :delim: ;
-
-   `catapult service bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running with a running Catapult Service.; `@tech-bureau <https://github.com/tech-bureau/>`_
-   `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous. ; NEM Foundation
-
 ********************
-Community Extensions
+Supported extensions
 ********************
 
 .. csv-table::
-   :header: "Name", "Description", "Active Developers"
+   :header: "Name", "Description"
    :delim: ;
 
-   `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Blockchain notarization and timestamping with transferable, updatable, branded, and conjointly owned notarizations.; `@luxtagofficial <https://github.com/luxtagofficial/>`_
-   `Non-fungible asset library <https://github.com/aleixmorgadas/nem2-nonfungible-asset>`_ ; Work with unique and updatable assets.;`@aleixmorgadas <https://github.com/aleixmorgadas/>`_
+   `catapult service bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running with a running Catapult Service.
+   `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.
+
+********************
+Community extensions
+********************
+
+.. csv-table::
+   :header: "Name", "Description"
+   :delim: ;
+
+   `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
+   `Non-fungible asset library <https://github.com/aleixmorgadas/nem2-nonfungible-asset>`_ ; Work with unique and updatable assets.
 
 Do you need to create a NIP to create an extension? No, you don’t. In fact, we suggest not submitting a NIP until you build a extension that improves the NEM blockchain and the different projects that use it. Since the extension can be changed multiple times, developers should spend more time experimenting and learning, creating a specification later on.
 

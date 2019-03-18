@@ -21,7 +21,6 @@ const operators = require('rxjs/operators');
 
 const AccountHttp = nem2Sdk.AccountHttp,
     MosaicHttp = nem2Sdk.MosaicHttp,
-    NamespaceHttp = nem2Sdk.NamespaceHttp,
     MosaicService = nem2Sdk.MosaicService,
     Address = nem2Sdk.Address,
     mergeMap = operators.mergeMap;
@@ -29,8 +28,7 @@ const AccountHttp = nem2Sdk.AccountHttp,
 const url = 'http://localhost:3000';
 const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);
-const namespaceHttp = new NamespaceHttp(url);
-const mosaicService = new MosaicService(accountHttp, mosaicHttp, namespaceHttp);
+const mosaicService = new MosaicService(accountHttp, mosaicHttp);
 
 const address = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54");
 

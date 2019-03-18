@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2018 NEM
+ * Copyright 2019 NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,24 +23,24 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    PlainMessage = nem2Sdk.PlainMessage,
-    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
-    Address = nem2Sdk. Address;
+    NamespaceId = nem2Sdk.NamespaceId,
+    EmptyMessage = nem2Sdk.EmptyMessage,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
 
 // 01 - Create Transfer Transaction
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientAddress = new NamespaceId('foo');
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('Welcome To NEM'),
+    EmptyMessage,
     NetworkType.MIJIN_TEST);
 
 // 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY;
 
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
 

@@ -12,7 +12,7 @@ Blocks are stored in a database as permanent medium. NEM calls the first block i
 
 NEM blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. Public network configuration may differ.
 
 **************
 Block creation
