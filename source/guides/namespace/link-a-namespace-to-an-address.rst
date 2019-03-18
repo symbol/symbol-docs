@@ -69,6 +69,11 @@ Now you can send transactions to the namespace linked to the account instead of 
         :language: typescript
         :lines:  33-40
 
+    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js
+        :caption: |sending-a-transfer-transaction-address-alias-js|
+        :language: javascript
+        :lines:  31-38
+
 .. |linking-a-namespace-to-an-address-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts" target="_blank">View Code</a>
@@ -80,3 +85,7 @@ Now you can send transactions to the namespace linked to the account instead of 
 .. |sending-a-transfer-transaction-address-alias-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts" target="_blank">View Code</a>
+
+.. |sending-a-transfer-transaction-address-alias-js| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js" target="_blank">View Code</a>
