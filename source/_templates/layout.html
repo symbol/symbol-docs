@@ -92,7 +92,10 @@
             {%- if edit_on_github_url %}
             <div id="edit-on-github" class="text-right">
                 <a href="{{ edit_on_github_url }}"
-                   rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit on GitHub') }}</a>
+                   rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit') }}</a>
+                <a href="{{ feedback_on_github_url }}"
+                   rel="nofollow"><i class="far fa-comment"></i>{{ _('Feedback') }}</a>
+
             </div>
             {%- endif %}
 

@@ -123,7 +123,7 @@ html_theme_options = {
     'navbar_links': [
         ("Getting started", "getting-started/what-is-nem"),
         ("Built-in features", "concepts/account"),
-        ("Guides", "guides/category/account"),
+        ("Protocol", "concepts/cryptography"),
         ("References", "references"),
     ],
 

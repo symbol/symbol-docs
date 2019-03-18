@@ -239,6 +239,7 @@ body > .container {
 #edit-on-github a {
     color: #333;
     text-decoration: none;
+    padding-left: 10px;
 }
 
 /* Navbar */
