@@ -1,6 +1,12 @@
 [main]
 host = https://www.transifex.com
 
+[nem2docs.contents]
+file_filter = source/locale/<lang>/LC_MESSAGES/contents.po
+source_file = build/gettext/contents.pot
+source_lang = en
+type = PO
+
 [nem2docs.api]
 file_filter = source/locale/<lang>/LC_MESSAGES/api.po
 source_file = build/gettext/api.pot
@@ -337,3 +343,14 @@ source_file = build/gettext/guides/transaction/turning-the-asynchronous-transact
 source_lang = en
 type = PO
 
+[nem2docs.guides--namespace--link-a-namespace-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-a-mosaic.po
+source_file = build/gettext/guides/namespace/link-a-namespace-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--namespace--link-a-namespace-to-an-address]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-an-address.po
+source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
+source_lang = en
+type = PO
