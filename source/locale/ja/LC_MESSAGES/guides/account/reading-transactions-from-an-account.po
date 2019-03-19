@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:10
 msgid "Reading transactions from an account"
@@ -26,8 +27,8 @@ msgstr "トランザクションをアカウントから読み込む"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:12
 msgid ""
-"Get the list of :doc:`transactions <../../concepts/transaction>` where an"
-" :doc:`account <../../concepts/account>` is involved."
+"Get the list of :doc:`transactions <../../concepts/transaction>` where an "
+":doc:`account <../../concepts/account>` is involved."
 msgstr ""
 ":doc:`アカウント <../../concepts/account>` に関連する :doc:`トランザクション "
 "<../../concepts/transaction>` のリストを取得します。"
@@ -72,42 +73,29 @@ msgstr ""
 msgid ""
 "By default, the SDK provides up to 10 transactions. The page size can be "
 "increased up to 100 transactions."
-msgstr "デフォルトでは、SDK は 10 トランザクションまでを提供しています。このパラメータは 100 トランザクションまで増加することができます。"
+msgstr ""
+"デフォルトでは、SDK は 10 トランザクションまでを提供しています。このパラメータは 100 トランザクションまで増加することができます。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:50
 msgid ""
 "To `get more than 100 transactions "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
-"   you will have to make further requests. For each additional call, add "
-"to the ``QueryParams`` the optional parameter ``transactionId`` with the "
-"latest transaction identifier known returned by the previous request."
+"   you will have to make further requests. For each additional call, add to "
+"the ``QueryParams`` the optional parameter ``transactionId`` with the latest"
+" transaction identifier known returned by the previous request."
 msgstr ""
 "`100よりも多くの トランザクションの取得 "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,をするためには、あなたはさらなる要求をしなければなりません。各追加の呼び出しにおいて、``QueryParams``"
 " にオプションのパラメタである ``transactionId`` に前の要求によって返された最新のトランザクション識別子を追加してください。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:56
-#, fuzzy
 msgid ""
-"You can also get filtered the transactions received (incoming) from the "
-"ones sent (outgoing) checking the complete `accountHttp reference "
+"You can also get filtered the transactions received (incoming) from the ones"
+" sent (outgoing) checking the complete `accountHttp reference "
 "<https://nemtech.github.io/nem2-sdk-typescript-"
 "javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_."
 msgstr ""
-"誰かが送って(送信)、受け取り(受信)トランザクションをフィルタするには `accountHttp 定義 "
+"誰かが送って(送信)、受け取り(受信)トランザクションをフィルタするには `accountHttp リファレンス "
 "<https://nemtech.github.io/nem2-sdk-typescript-"
 "javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_ "
 "をチェックしてください。"
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "テキストエディタ または IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK または CLI"
-
-#~ msgid "An account that has received some transaction"
-#~ msgstr "トランザクションを受信したことがあるアカウント"
-
-#~ msgid "What's next"
-#~ msgstr "次は？"
-

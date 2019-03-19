@@ -1,59 +1,66 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-03-18 18:19+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:10
 msgid "Getting the amount of assets sent to an account"
-msgstr ""
+msgstr "アカウントへ送信したアセットの総量の取得"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:12
 msgid "Check the number of asset units you have sent to an account."
-msgstr ""
+msgstr "あなたがアカウントへ送信したアセットの量を確認しましょう。"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:16
 msgid "Prerequisites"
-msgstr ""
+msgstr "前提条件"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:18
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
-msgstr ""
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:19
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:20
 msgid ""
-"Have :doc:`sent mosaics <../transaction/sending-a-transfer-transaction>` "
-"to another account."
+"Have :doc:`sent mosaics <../transaction/sending-a-transfer-transaction>` to "
+"another account."
 msgstr ""
+"他のアカウントへ :doc:`モザイクを送信 <../transaction/sending-a-transfer-transaction>` "
+"していること"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:24
 msgid "Let’s get into some code"
-msgstr ""
+msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:26
 msgid ""
 "In this example, we are going to check how many assets of a certain type "
 "have we sent to an account."
-msgstr ""
+msgstr "この例では、アカウントに送信した特定の種類の資産の量を確認します。"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:30
 msgid "|getting-amount-of-assets-sent-to-an-account-ts|"
@@ -61,8 +68,9 @@ msgstr ""
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:35
 msgid ""
-"If you want to check another :doc:`mosaic <../../concepts/mosaic>` "
-"different than the native currency, change ``mosaicId`` and "
-"``divisibility`` for the target mosaic properties."
+"If you want to check another :doc:`mosaic <../../concepts/mosaic>` different"
+" than the native currency, change ``mosaicId`` and ``divisibility`` for the "
+"target mosaic properties."
 msgstr ""
-
+"もし他のネイティブ通貨とは異なる :doc:`モザイク <../../concepts/mosaic>` "
+"を確認したい場合は、対象とするモザイクプロパティのために ``mosaicId`` と ``divisibility`` を変えてください。"

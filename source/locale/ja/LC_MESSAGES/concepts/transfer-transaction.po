@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transfer-transaction.rst:3
 msgid "Transfer Transaction"
@@ -26,24 +27,22 @@ msgstr "転送トランザクション"
 
 #: ../../source/concepts/transfer-transaction.rst:5
 msgid ""
-"Transfer transactions are used to send :doc:`mosaics <mosaic>` between "
-"two :doc:`accounts <account>`. They can hold a messages of length "
-"``1023`` characters."
+"Transfer transactions are used to send :doc:`mosaics <mosaic>` between two "
+":doc:`accounts <account>`. They can hold a messages of length ``1023`` "
+"characters."
 msgstr ""
-"転送トランザクションは :doc:`モザイク <mosaic>` を2つの :doc:`アカウント <account>` "
-"間で送信するために使われます。 ``1023`` 文字以内のメッセージを含めることもできます。"
+"転送トランザクションは :doc:`モザイク <mosaic>` を2つの :doc:`アカウント <account>` 間で送信するために使われます。"
+" ``1023`` 文字以内のメッセージを含めることもできます。"
 
 #: ../../source/concepts/transfer-transaction.rst:11
-#, fuzzy
 msgid "Alice sends 10 cat.currency to Bob"
-msgstr "Alice は 10 nem:xem を Bob へ送る"
+msgstr "Alice は 10 cat.currency を Bob へ送る"
 
 #: ../../source/concepts/transfer-transaction.rst:13
 msgid ""
-"It is possible to send mosaics to any valid address even if the address "
-"has not previously participated in any transaction. If nobody owns the "
-"private key of the recipient's account, the funds are most likely lost "
-"forever."
+"It is possible to send mosaics to any valid address even if the address has "
+"not previously participated in any transaction. If nobody owns the private "
+"key of the recipient's account, the funds are most likely lost forever."
 msgstr ""
 "過去にトランザクションに関与したことがなくても、正当なアドレスであればモザイクを送信することができます。 "
 "もし受信するアドレスの秘密鍵を誰も持っていない場合、その資産は永久に使うことができなくなります。"
@@ -58,9 +57,9 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/transfer-transaction.rst:31
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_ . "
-"Public network configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
@@ -72,8 +71,8 @@ msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:38
 msgid ""
-"Announce a transfer transaction to send :doc:`mosaics <mosaic>` or "
-"messages between two :doc:`accounts <account>`."
+"Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages "
+"between two :doc:`accounts <account>`."
 msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
@@ -169,4 +168,3 @@ msgstr ""
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The different mosaic to be sent."
 msgstr "異なるモザイクを送信する"
-

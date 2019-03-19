@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guidelines/sdk-development.rst:5
 msgid "SDK Development"
@@ -27,24 +28,24 @@ msgstr "SDK 開発"
 #: ../../source/guidelines/sdk-development.rst:7
 msgid ""
 "A key objective is that interoperability becomes a natural design of the "
-"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, "
-"achieving the best quality with less effort."
+"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving"
+" the best quality with less effort."
 msgstr ""
 "相互運用性が NEM2-SDK の自然な設計とするのが主な目的です。このガイドラインに従って NEM SDK "
 "を共同で作成することで、少ない労力で最高の品質を実現します。"
 
 #: ../../source/guidelines/sdk-development.rst:9
 msgid ""
-"NEM2-SDK shares the same design/architecture between programming "
-"languages to accomplish the next properties:"
+"NEM2-SDK shares the same design/architecture between programming languages "
+"to accomplish the next properties:"
 msgstr "NEM2-SDK では以下のプロパティを実現するために、各プログラミング言語間で同じデザイン/アーキテクチャを共有しています:"
 
 #: ../../source/guidelines/sdk-development.rst:11
 msgid ""
-"**Fast language adaptation**: There is a library for Java, but you need "
-"it for C# for example. As both SDKs share the same design, you can re-"
-"write the library faster, adapting the syntax to your language. It also "
-"applies to examples, projects, applications..."
+"**Fast language adaptation**: There is a library for Java, but you need it "
+"for C# for example. As both SDKs share the same design, you can re-write the"
+" library faster, adapting the syntax to your language. It also applies to "
+"examples, projects, applications..."
 msgstr ""
 "**素早く言語に適応する**: Java 用のライブラリがありますが、例えば C# 用を必要とするならば、どちらの SDK "
 "も同じデザインを共有しているため、ライブラリを素早く書き直すことができ、構文を言語に合わせるだけです。それは例示、プロジェクト、アプリケーションなどにも適用されます。"
@@ -52,9 +53,10 @@ msgstr ""
 #: ../../source/guidelines/sdk-development.rst:13
 msgid ""
 "**Cohesion/shared knowledge cross NEM developers**: Be able to change "
-"between projects that use NEM, sharing the same design accompanied by the"
-" best practices."
-msgstr "**NEM 開発者間での知識の凝縮/共有**: NEM を使用するプロジェクト間で、ベストプラクティスを伴う同じデザインを共有することができます。"
+"between projects that use NEM, sharing the same design accompanied by the "
+"best practices."
+msgstr ""
+"**NEM 開発者間での知識の凝縮/共有**: NEM を使用するプロジェクト間で、ベストプラクティスを伴う同じデザインを共有することができます。"
 
 #: ../../source/guidelines/sdk-development.rst:15
 msgid ""
@@ -64,8 +66,8 @@ msgstr "**素早い SDK のアップデート**: NEM2-SDK の実装から、そ�
 
 #: ../../source/guidelines/sdk-development.rst:17
 msgid ""
-"**Fewer bugs**: If any bug appears in one language, it is faster to check"
-" and fix it."
+"**Fewer bugs**: If any bug appears in one language, it is faster to check "
+"and fix it."
 msgstr "**少ないバグ**: ある言語でバグが発生したとき、それを素早く確認し、修正が行えます。"
 
 #: ../../source/guidelines/sdk-development.rst:21
@@ -78,8 +80,8 @@ msgstr "特徴"
 
 #: ../../source/guidelines/sdk-development.rst:25
 msgid ""
-"**Standardized Contracts**: Guaranteeing interoperability and "
-"harmonization of data models."
+"**Standardized Contracts**: Guaranteeing interoperability and harmonization "
+"of data models."
 msgstr "**標準化された契約**: データモデルの相互運用性と調和を保証する。"
 
 #: ../../source/guidelines/sdk-development.rst:26
@@ -88,14 +90,14 @@ msgstr "**疎結合**: コンポーネントの結合度合いを取り除く。
 
 #: ../../source/guidelines/sdk-development.rst:27
 msgid ""
-"**Abstraction**: Increasing long-term consistency of interoperability and"
-" allowing underlying components to evolve independently."
+"**Abstraction**: Increasing long-term consistency of interoperability and "
+"allowing underlying components to evolve independently."
 msgstr "**抽象化**: 相互運用性の長期的な一貫性を高め、基礎となるコンポーネントを独立して進化させる。"
 
 #: ../../source/guidelines/sdk-development.rst:28
 msgid ""
-"**Reusability**: Enabling high-level interoperability between modules and"
-" potential component consumers."
+"**Reusability**: Enabling high-level interoperability between modules and "
+"potential component consumers."
 msgstr "**再利用性**: モジュールとコンポーネント利用者間での高いレベルの相互運用性。"
 
 #: ../../source/guidelines/sdk-development.rst:29
@@ -106,8 +108,8 @@ msgstr "**ステートレス**: コンポーネントの可用性と拡張性を
 
 #: ../../source/guidelines/sdk-development.rst:30
 msgid ""
-"**Composability**: For components to be effectively composable they must "
-"be interoperable."
+"**Composability**: For components to be effectively composable they must be "
+"interoperable."
 msgstr "**合成性**: 効果的なコンポーネントの構成のために、相互運用可能でなければなりません。"
 
 #: ../../source/guidelines/sdk-development.rst:32
@@ -120,9 +122,10 @@ msgstr "NEM2-SDK は熱心に ReactiveX ライブラリを使用しています�
 
 #: ../../source/guidelines/sdk-development.rst:36
 msgid ""
-"**Functional**: Developers can avoid complex stateful programs using "
-"clean input/output functions over observable streams."
-msgstr "**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
+"**Functional**: Developers can avoid complex stateful programs using clean "
+"input/output functions over observable streams."
+msgstr ""
+"**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
 
 #: ../../source/guidelines/sdk-development.rst:37
 msgid ""
@@ -133,8 +136,8 @@ msgstr "**少ない事で多くの事を**: 大抵の場合、ReactiveX オペ�
 #: ../../source/guidelines/sdk-development.rst:38
 msgid ""
 "**Async error handling**: Traditional try/catch is powerless for errors "
-"handling in asynchronous computations, but ReactiveX will offer "
-"developers the proper tools to handle these sort of errors."
+"handling in asynchronous computations, but ReactiveX will offer developers "
+"the proper tools to handle these sort of errors."
 msgstr ""
 "**非同期的エラーハンドリング**: 伝統的な try/catch は非同期処理でのエラー処理には無力ですが、ReactiveX "
 "はこれらのエラーを処理するための適切なツールを開発者に提供します。"
@@ -150,22 +153,22 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:40
 msgid ""
-"**Frontend**: Manipulation of UI events and API responses on the Web "
-"using RxJS."
+"**Frontend**: Manipulation of UI events and API responses on the Web using "
+"RxJS."
 msgstr "**フロントエンド**: Web上で RxJS を使用したUIイベントとAPI応答の操作。"
 
 #: ../../source/guidelines/sdk-development.rst:41
 msgid ""
-"**Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and"
-" implementation independence."
+"**Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and "
+"implementation independence."
 msgstr "**バックエンド**: ReactiveX の非同期性を利用し、同時性と実装の独立性を可能にします。"
 
 #: ../../source/guidelines/sdk-development.rst:43
 msgid ""
-"In case you are not familiar with ReactiveX and you still have to deliver"
-" something fast, you can convert an observable to Promise/Future by "
-"reviewing this |rp-promise-example|. However, **we encourage you to learn"
-" ReactiveX**."
+"In case you are not familiar with ReactiveX and you still have to deliver "
+"something fast, you can convert an observable to Promise/Future by reviewing"
+" this |rp-promise-example|. However, **we encourage you to learn "
+"ReactiveX**."
 msgstr ""
 "ReactiveX に精通しておらず、何か素早く成果物を提供しなければならない場合は、この |rp-promise-example| "
 "を見てオブザーバブルなものを Promise/Future に変換することができます。それでも **ReactiveX を学習することを推奨** "
@@ -209,8 +212,8 @@ msgstr "インフラストラクチャ"
 
 #: ../../source/guidelines/sdk-development.rst:63
 msgid ""
-"The HTTP requests are made following the Repository Pattern, and they "
-"return NEM Domain immutable models via the Observable Pattern."
+"The HTTP requests are made following the Repository Pattern, and they return"
+" NEM Domain immutable models via the Observable Pattern."
 msgstr "HTTP リクエストはリポジトリパターンに則しており、これらはオブザーバルパターンを介して、NEM の変更不可なモデルを返します。"
 
 #: ../../source/guidelines/sdk-development.rst:65
@@ -219,10 +222,10 @@ msgstr "**モデル**"
 
 #: ../../source/guidelines/sdk-development.rst:67
 msgid ""
-"The NEM Domain models are, usually, immutable by definition. The "
-"developer cannot change its attributes. Instead, the developers have to "
-"create new Transactions and dispatch them to NEM Blockchain via "
-"TransactionHTTP, to change the NEM Blockchain state."
+"The NEM Domain models are, usually, immutable by definition. The developer "
+"cannot change its attributes. Instead, the developers have to create new "
+"Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to "
+"change the NEM Blockchain state."
 msgstr ""
 "NEM "
 "ドメインモデルは通常は定義によっては不変ですが、開発者はその属性を変更できません。代わりに開発者は新しいトランザクションを作成し、TransactionHTTP"
@@ -234,9 +237,10 @@ msgstr "**サービス**"
 
 #: ../../source/guidelines/sdk-development.rst:71
 msgid ""
-"Common operations that require multiple :doc:`REST API <../api>` requests"
-" are handled by already provided services."
-msgstr "複数の :doc:`REST API <../api>` 要求を必要とする一般的な操作は、すでに提供されているサービスによって処理されます。"
+"Common operations that require multiple :doc:`REST API <../api>` requests "
+"are handled by already provided services."
+msgstr ""
+"複数の :doc:`REST API <../api>` 要求を必要とする一般的な操作は、すでに提供されているサービスによって処理されます。"
 
 #: ../../source/guidelines/sdk-development.rst:104
 msgid "Before starting"
@@ -257,7 +261,8 @@ msgstr ""
 "service-bootstrap>`_ をセットアップします。"
 
 #: ../../source/guidelines/sdk-development.rst:108
-msgid ":doc:`Check the API reference <../api>` and play with the API endpoints."
+msgid ""
+":doc:`Check the API reference <../api>` and play with the API endpoints."
 msgstr ":doc:`API リファレンスを確認 <../api>` して、API エンドポイントを利用してみてください。"
 
 #: ../../source/guidelines/sdk-development.rst:109
@@ -265,8 +270,8 @@ msgid ""
 "Become familiar with the current :doc:`nem2-sdk via code examples "
 "<../concepts/account>` & :doc:`nem2-cli <../cli>` ."
 msgstr ""
-"現在の :doc:`nem2-sdk のコード例 <../concepts/account>` と :doc:`nem2-cli "
-"<../cli>` に詳しくなる。"
+"現在の :doc:`nem2-sdk のコード例 <../concepts/account>` と :doc:`nem2-cli <../cli>` "
+"に詳しくなる。"
 
 #: ../../source/guidelines/sdk-development.rst:110
 msgid ""
@@ -280,17 +285,17 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:111
 msgid ""
-"Be sure no one is already working on the SDK you want to create. Check "
-"the :doc:`repository list <../sdk>` and  comment your intentions in  nem2"
-" slack ``#sig-api`` channel. If someone is already working on it, we "
-"suggest you collaborate with him/her."
+"Be sure no one is already working on the SDK you want to create. Check the "
+":doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack "
+"``#sig-api`` channel. If someone is already working on it, we suggest you "
+"collaborate with him/her."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:112
 msgid ""
 "Claim the SDK `forking this repository "
-"<https://help.github.com/articles/creating-a-pull-request/>`_ and add a "
-"new entry to the :doc:`repository list <../sdk>`."
+"<https://help.github.com/articles/creating-a-pull-request/>`_ and add a new "
+"entry to the :doc:`repository list <../sdk>`."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:116
@@ -299,19 +304,18 @@ msgstr "開発"
 
 #: ../../source/guidelines/sdk-development.rst:118
 msgid ""
-"You can base your work in `TypeScript <https://github.com/nemtech/nem2"
-"-sdk-typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2"
-"-sdk-java>`_ SDKs. The TypeScript version is the first SDK getting the "
-"latest updates. Meanwhile, Java takes longer to be updated."
+"You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-"
+"typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2-sdk-"
+"java>`_ SDKs. The TypeScript version is the first SDK getting the latest "
+"updates. Meanwhile, Java takes longer to be updated."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:120
 msgid ""
 "Unfortunately, the TypeScript version has one specific implementation "
-"detail: the low-level implementation is separated from the SDK, called "
-"`nem2-library-js <https://github.com/nemtech/nem2-library-js>`_. There "
-"was a need to create this low-level library to perform specific chain "
-"testing."
+"detail: the low-level implementation is separated from the SDK, called `nem2"
+"-library-js <https://github.com/nemtech/nem2-library-js>`_. There was a need"
+" to create this low-level library to perform specific chain testing."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:123
@@ -321,8 +325,8 @@ msgstr ""
 #: ../../source/guidelines/sdk-development.rst:125
 msgid ""
 "Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-"
-"java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code "
-"change update."
+"java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change "
+"update."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:128
@@ -337,37 +341,37 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:132
 msgid ""
-"Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-"
-"of-conduct-to-your-project/>`_.  Download :download:`here an example code"
-" of conduct <../resources/templates/CODE_OF_CONDUCT.md>`."
+"Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-of-"
+"conduct-to-your-project/>`_.  Download :download:`here an example code of "
+"conduct <../resources/templates/CODE_OF_CONDUCT.md>`."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:134
 msgid ""
 "Add a `Contributors guidelines <https://help.github.com/articles/setting-"
-"guidelines-for-repository-contributors/>`_ to help others know how they "
-"can help you. Find :download:`here a CONTRIBUTING.md "
+"guidelines-for-repository-contributors/>`_ to help others know how they can "
+"help you. Find :download:`here a CONTRIBUTING.md "
 "template<../resources/templates/CONTRIBUTING.md>`."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:135
 msgid ""
-"Setup the Continuous Integration system. We use `travis-ci <https"
-"://travis-ci.org/>`_, but feel free to use the one suits you best."
+"Setup the Continuous Integration system. We use `travis-ci <https://travis-"
+"ci.org/>`_, but feel free to use the one suits you best."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:137
 msgid ""
-"A project with a good test coverage it's more likely to be used and "
-"trusted by the developers!"
+"A project with a good test coverage it's more likely to be used and trusted "
+"by the developers!"
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:140
 msgid ""
 "We **strongly** suggest to do `Test-Driven Development "
-"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing"
-" (test last). If you need inspiration, you can adapt the same `tests we "
-"did <https://github.com/nemtech/nem2-sdk-"
+"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing "
+"(test last). If you need inspiration, you can adapt the same `tests we did "
+"<https://github.com/nemtech/nem2-sdk-"
 "typescriptjavascript/tree/master/test>`_."
 msgstr ""
 
@@ -377,27 +381,26 @@ msgstr "API ラッパー"
 
 #: ../../source/guidelines/sdk-development.rst:146
 msgid ""
-"`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle"
-" the API generation. It supports multiple languages, and hopefully, yours"
-" is on the list."
+"`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle "
+"the API generation. It supports multiple languages, and hopefully, yours is "
+"on the list."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:148
 msgid ""
 "Generate the ``DTOs`` and place them under under `sdk/infrastructure "
 "<https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API "
-"swagger file definition can be found `here "
+"java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API swagger"
+" file definition can be found `here "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:150
 msgid ""
 "2. Drop the generated client classes and  implement them using the "
-"`Repository pattern "
-"<https://martinfowler.com/eaaCatalog/repository.html>`_ returning "
-"`Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of "
-"`ReactiveX <http://reactivex.io/>`_."
+"`Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ "
+"returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of"
+" `ReactiveX <http://reactivex.io/>`_."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:154
@@ -418,8 +421,8 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:160
 msgid ""
-"The **repositories return models instead of DTOs**. You will need to code"
-" the models before finishing the API wrapper."
+"The **repositories return models instead of DTOs**. You will need to code "
+"the models before finishing the API wrapper."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:163
@@ -429,9 +432,9 @@ msgstr "モデル"
 #: ../../source/guidelines/sdk-development.rst:165
 msgid ""
 "The `models <https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default "
-"immutable and aim to hide the complexity, like type conversion or "
-"relationship between objects."
+"java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default immutable "
+"and aim to hide the complexity, like type conversion or relationship between"
+" objects."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:167
@@ -447,17 +450,17 @@ msgstr ""
 #: ../../source/guidelines/sdk-development.rst:172
 msgid ""
 "``uint64`` support: meanwhile `Java supports big numbers "
-"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, "
-"for example JavaScript doesn't. The JavaScript SDK has a custom class to "
-"handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-"
+"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for"
+" example JavaScript doesn't. The JavaScript SDK has a custom class to handle"
+" the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-"
 "javascript/blob/master/src/model/UInt64.ts>`_. If your language supports "
 "``uint64`` use that implementation instead."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:173
 msgid ""
-"API conversions: The API returns the data sometimes compressed, you might"
-" need to convert those types for the user."
+"API conversions: The API returns the data sometimes compressed, you might "
+"need to convert those types for the user."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:175
@@ -475,8 +478,8 @@ msgstr "トランザクションのシリアル化"
 
 #: ../../source/guidelines/sdk-development.rst:180
 msgid ""
-"A Transaction needs a particular serialization schema in binary optimized"
-" in size."
+"A Transaction needs a particular serialization schema in binary optimized in"
+" size."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:182
@@ -544,8 +547,8 @@ msgstr ""
 msgid ""
 "Each transaction has a schemas. It has the same type as ``catbuffer "
 "schemas`` but using the ``Schema`` class. It's used to know where each "
-"component is located in the ``catbuffer schema`` and remove the "
-"unnecessary bytes to create the optimized serialization."
+"component is located in the ``catbuffer schema`` and remove the unnecessary "
+"bytes to create the optimized serialization."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:200
@@ -567,8 +570,8 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:206
 msgid ""
-"Each Transaction has to implement and use the previous classes, the "
-"Buffers and the Schemas, to serialize the transaction."
+"Each Transaction has to implement and use the previous classes, the Buffers "
+"and the Schemas, to serialize the transaction."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:208
@@ -609,9 +612,9 @@ msgstr "あなたの SDK のドキュメント化"
 
 #: ../../source/guidelines/sdk-development.rst:225
 msgid ""
-"The SDKs need to be adopted by other developers. As a contributor, no one"
-" knows better than you how a determined SDK works. Consider helping "
-"others and spread the usage of the SDK by providing :doc:`the following "
+"The SDKs need to be adopted by other developers. As a contributor, no one "
+"knows better than you how a determined SDK works. Consider helping others "
+"and spread the usage of the SDK by providing :doc:`the following "
 "documentation <sdk-documentation>`."
 msgstr ""
 
@@ -622,9 +625,9 @@ msgstr "公式として公開されているSDK"
 #: ../../source/guidelines/sdk-development.rst:231
 msgid ""
 "To make an SDK officially supported, submit it as a `NIP "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The "
-"reason behind the NEM2 Improvement Proposal is to ensure that the new "
-"libraries are reviewed, tested and shared among NEM developers."
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason "
+"behind the NEM2 Improvement Proposal is to ensure that the new libraries are"
+" reviewed, tested and shared among NEM developers."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:235
@@ -634,8 +637,7 @@ msgstr "今後の成果物"
 #: ../../source/guidelines/sdk-development.rst:237
 msgid ""
 "The current guideline shows what is done up to today since the SDK isn't "
-"complete. It will get updates according to the latest "
-"architecture/features."
+"complete. It will get updates according to the latest architecture/features."
 msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:241
@@ -679,17 +681,6 @@ msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:254
 msgid ""
-"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or "
-"newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
+"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or newer "
+"<http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
 msgstr ""
-
-#~ msgid ""
-#~ "To become an accepted SDK, submit "
-#~ "it  as a `NIP "
-#~ "<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. "
-#~ "The reason behind the NEM2 Improvement"
-#~ " Proposal is to ensure that the "
-#~ "new libraries are reviewed, tested and"
-#~ " shared among NEM developers."
-#~ msgstr ""
-

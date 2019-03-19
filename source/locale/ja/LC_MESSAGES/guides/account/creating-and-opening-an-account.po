@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:10
 msgid "Creating and opening an account"
@@ -43,10 +44,9 @@ msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:24
-#, fuzzy
 msgid ""
-"An account is a key pair (private and public key) associated with a "
-"mutable state stored in the NEM blockchain."
+"An account is a key pair (private and public key) associated with a mutable "
+"state stored in the NEM blockchain."
 msgstr "アカウントとは、NEM ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:28
@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:43
 msgid ""
-"The **private key** uniquely identifies a NEM account and holds all of "
-"its power. It is a priority to make sure it is stored safely somewhere "
+"The **private key** uniquely identifies a NEM account and holds all of its "
+"power. It is a priority to make sure it is stored safely somewhere "
 "**offline** and not to share it with anyone."
 msgstr ""
 "**秘密鍵** は NEM アカウントを一意に特定し、全ての権限を保有します。**オフライン** "
@@ -74,11 +74,11 @@ msgstr ""
 msgid ""
 "The **public key** is cryptographically derived from the private key and "
 "safe to be shared. In spite of that, it is preferable to share the "
-"**address**, which contains further information such as network and "
-"validity check."
+"**address**, which contains further information such as network and validity"
+" check."
 msgstr ""
-"**公開鍵** は秘密鍵から暗号学的に算出され、共有しても安全です。しかし、ネットワークや正当性チェックなどの情報が含まれている **アドレス**"
-" を共有する方がより好ましいです。"
+"**公開鍵** は秘密鍵から暗号学的に算出され、共有しても安全です。しかし、ネットワークや正当性チェックなどの情報が含まれている **アドレス** "
+"を共有する方がより好ましいです。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:47
 msgid ""
@@ -110,8 +110,8 @@ msgstr "あなたの使用している SDK のプログラミング言語でク�
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:70
 msgid ""
-"A wallet enables you to store your account to sign transactions, "
-"encrypting your private key with a password."
+"A wallet enables you to store your account to sign transactions, encrypting "
+"your private key with a password."
 msgstr "ウォレットは、トランザクションへの署名をするため、パスワードで秘密鍵を暗号化して、アカウントを保存できるようにします。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:74
@@ -128,8 +128,8 @@ msgstr ""
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:89
 msgid ""
-"Do you have a private key? You can create and open a wallet importing "
-"your private key."
+"Do you have a private key? You can create and open a wallet importing your "
+"private key."
 msgstr "秘密鍵をお持ちですか？あなたの秘密鍵をインポートしてウォレットを作成することができます。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:93
@@ -143,10 +143,3 @@ msgstr ""
 #: ../../source/guides/account/creating-and-opening-an-account.rst:103
 msgid "|opening-a-wallet-cli|"
 msgstr ""
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "テキストエディタ または IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK または CLI"
-
