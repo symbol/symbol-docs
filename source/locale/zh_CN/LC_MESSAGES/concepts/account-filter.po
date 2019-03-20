@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # ivyfung8 <ivyfung@nem.my>, 2019
 # thilon <thilon@datamain.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: thilon <thilon@datamain.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/account-filter.rst:3
 msgid "Account Filter"
@@ -33,8 +34,8 @@ msgstr "在特定的约束下，:doc:`账户`可以配置一组智能条规以�
 
 #: ../../source/concepts/account-filter.rst:7
 msgid ""
-"The editable on-chain constraints are called filters. Accounts can "
-"configure the following types:"
+"The editable on-chain constraints are called filters. Accounts can configure"
+" the following types:"
 msgstr "可编辑的链上约束称为过滤器。 帐户可以配置以下类型："
 
 #: ../../source/concepts/account-filter.rst:11
@@ -43,26 +44,20 @@ msgstr "地址过滤器"
 
 #: ../../source/concepts/account-filter.rst:13
 msgid ""
-"An account can decide to receive transactions only from an allowed list "
-"of :doc:`addresses <account>`. Similarly, an account can specify a list "
-"of addresses that don’t want to receive transactions from."
-msgstr "帐户可以决定仅从允许的列表中接收交易<account>同样地，帐户可以指定不希望从中接收交易的地址列表。"
+"An account can decide to receive transactions only from an allowed list of "
+":doc:`addresses <account>`. Similarly, an account can specify a list of "
+"addresses that don’t want to receive transactions from."
+msgstr "帐户可以决定仅从允许的:doc:`地址 `列表中接收交易。同样地，帐户也可以指定不希望从中接收交易的地址列表。"
 
 #: ../../source/concepts/account-filter.rst:19
 msgid "Address filter diagram"
 msgstr "地址过滤器示意图"
 
-#: ../../source/concepts/account-filter.rst:21
-msgid ""
-"Allow and block filters are mutually exclusive. In other words, an "
-"account can only configure a block or an allow list per type of filter."
-msgstr "允许和禁止过滤器是互斥的。 换句话说，帐户只能为每种类型的过滤器配置禁止或允许列表。"
-
 #: ../../source/concepts/account-filter.rst:23
 msgid ""
-"By default, when there is no filter set, all the accounts in the network "
-"can announce transactions to the stated account."
-msgstr "默认情况下，如果没有设置过滤器，则网络中的所有帐户都可以向指定的帐户发起交易。"
+"By default, when there is no filter set, all the accounts in the network can"
+" announce transactions to the stated account."
+msgstr "默认情况下，如果没有设置过滤器，则网络中的所有帐户都可以向该帐户发起交易。"
 
 #: ../../source/concepts/account-filter.rst:27
 msgid "Mosaic filter"
@@ -70,11 +65,13 @@ msgstr "马赛克过滤器"
 
 #: ../../source/concepts/account-filter.rst:29
 msgid ""
-"An account can configure a filter to permit incoming transactions only if"
-" all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand,"
-" the account can refuse to accept transactions containing a mosaic listed"
-" as blocked."
-msgstr "只有在允许附加所有<mosaic>的情况下，帐户才能配置过滤器以允许传入的交易。 另一方面，该帐户可以拒绝接受包含在已阻止列表中的马赛克交易。"
+"An account can configure a filter to permit incoming transactions only if "
+"all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the"
+" account can refuse to accept transactions containing a mosaic listed as "
+"blocked."
+msgstr ""
+"只有在允许所有附加的:doc:`马赛克 <mosaic>`的情况下，帐户才能配置过滤器以允许传入的交易。 "
+"另一方面，该帐户可以拒绝接受包含在已阻止列表中的马赛克的交易。"
 
 #: ../../source/concepts/account-filter.rst:33
 msgid "EntityType filter"
@@ -83,14 +80,13 @@ msgstr "实体类型过滤器"
 #: ../../source/concepts/account-filter.rst:35
 msgid ""
 "An account can allow/block announcing outgoing transactions with a "
-":ref:`determined type <transaction-types>`. By doing so, it increases its"
-" security, preventing the announcement by mistake of undesired "
-"transactions."
-msgstr "账户可以允许或禁止发起带有<transaction-types>的交易。通过这样做，增加了自身的安全性，防止了错误地发起不希望的交易。"
+":ref:`determined type <transaction-types>`. By doing so, it increases its "
+"security, preventing the announcement by mistake of undesired transactions."
+msgstr "账户可以允许或禁止公布:ref:·确定类型`的交易。这样做不但增加自身的安全性，防止错误地公布交易。"
 
 #: ../../source/concepts/account-filter.rst:39
 msgid "Examples"
-msgstr "示例"
+msgstr "例子"
 
 #: ../../source/concepts/account-filter.rst:42
 #: ../../source/concepts/account-filter.rst:54
@@ -101,318 +97,27 @@ msgstr "阻止垃圾交易"
 msgid ""
 "A company is using the public chain to certify the quality of their "
 "products."
-msgstr "一家公司正在使用公有链来证明其产品的质量。"
+msgstr "使用公链来验证其产品的质量。"
 
 #: ../../source/concepts/account-filter.rst:46
 msgid ""
 "When the quality verification process concludes, an operator sends a "
 ":doc:`quality seal<mosaic>` to the product account."
-msgstr "当质量验证过程结束时，操作员发送一个<mosaic>到产品账户。"
+msgstr "当质量验证过程结束时，操作员发送一个 :doc:`质量印章<mosaic>·到产品账户。"
 
 #: ../../source/concepts/account-filter.rst:48
 msgid ""
-"The final customers can review the product mosaics scanning a QR code. "
-"For that reason, the company only wants to show related transactions, "
-"avoiding others to spam their products with non-related information."
-msgstr "最终客户可以查看扫描二维码的产品马赛克。 出于这个原因，该公司只想显示相关交易，避免其他人发送带有与产品无关信息的垃圾广告。"
+"The final customers can review the product mosaics scanning a QR code. For "
+"that reason, the company only wants to show related transactions, avoiding "
+"others to spam their products with non-related information."
+msgstr "最终客户可以通过扫描二维码检阅产品马赛克。 因此，该公司只需显示相关交易，避免其他人发送带有与产品无关信息。"
 
 #: ../../source/concepts/account-filter.rst:56
 msgid ""
-"The company opts to configure their product accounts filters, enabling "
-"only to receive transactions containing ``company.quality.seal`` mosaics."
+"The company opts to configure their product accounts filters, enabling only "
+"to receive transactions containing ``company.quality.seal`` mosaics."
 msgstr "该公司选择配置他们的产品帐户过滤器，只允许接收包含``company.quality.seal``马赛克的交易。"
 
 #: ../../source/concepts/account-filter.rst:59
 msgid "Enhancing the account security"
 msgstr "增强账户安全"
-
-#: ../../source/concepts/account-filter.rst:61
-msgid ""
-"Lately, Alice is only using her main account to cosign aggregate "
-"transactions where a :doc:`multisig<multisig-account>` she is a "
-"cosignatory is involved."
-msgstr "最近，爱丽丝只使用她的主要帐户汇总聚合交易，其中涉及她是一个共同签署人的<multisig-account>"
-
-#: ../../source/concepts/account-filter.rst:63
-msgid ""
-"As a temporary measure, Alice opts to disable announcing transfer "
-"transactions from her main account, double checking that any of the funds"
-" she owns will be transferred."
-msgstr "作为一项临时措施，Alice选择禁止从她的主账户宣布转账交易，仔细检查她所拥有的任何资金是否会被转移。"
-
-#: ../../source/concepts/account-filter.rst:67
-msgid "Schemas"
-msgstr "模式"
-
-#: ../../source/concepts/account-filter.rst:69
-msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_ . "
-"Public network configuration may differ."
-msgstr ""
-"配置参数是`editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_。 公共网络配置可能不同。"
-
-#: ../../source/concepts/account-filter.rst:74
-msgid "AccountPropertiesAddressTransaction"
-msgstr "AccountPropertiesAddressTransaction"
-
-#: ../../source/concepts/account-filter.rst:76
-msgid ""
-"Configure filters to prevent receiving transactions from undesired "
-"addresses."
-msgstr "配置过滤器以防止从不需要的地址接收交易。"
-
-#: ../../source/concepts/account-filter.rst:78
-#: ../../source/concepts/account-filter.rst:101
-#: ../../source/concepts/account-filter.rst:125
-msgid "**Version**: 0x01"
-msgstr "**版本**: 0x01"
-
-#: ../../source/concepts/account-filter.rst:80
-msgid "**Entity type**: 0x4150"
-msgstr "**实体类型**: 0x4150"
-
-#: ../../source/concepts/account-filter.rst:82
-#: ../../source/concepts/account-filter.rst:105
-#: ../../source/concepts/account-filter.rst:129
-#: ../../source/concepts/account-filter.rst:146
-#: ../../source/concepts/account-filter.rst:161
-#: ../../source/concepts/account-filter.rst:177
-msgid "**Inlines**:"
-msgstr "**内联**:"
-
-#: ../../source/concepts/account-filter.rst:84
-#: ../../source/concepts/account-filter.rst:107
-#: ../../source/concepts/account-filter.rst:131
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr "<transaction>或者<embedded-transaction>"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Property"
-msgstr "属性"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Type"
-msgstr "类型"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Description"
-msgstr "描述"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "propertyType"
-msgstr "propertyType"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid ":ref:`PropertyType<property-type>`"
-msgstr "<property-type>"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type."
-msgstr "属性类型"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "modificationsCount"
-msgstr "modificationsCount"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "uint8"
-msgstr "uint8"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The number of modifications."
-msgstr "修改次数"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "modifications"
-msgstr "修改"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid ""
-"array(:ref:`AddressModification <address-modification>`, "
-"modificationsCount)"
-msgstr ""
-"array(:ref:`AddressModification<address-modification>`, "
-"modificationsCount)"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The array of modifications."
-msgstr "一系列的修改"
-
-#: ../../source/concepts/account-filter.rst:97
-msgid "AccountPropertiesMosaicTransaction"
-msgstr "AccountPropertiesMosaicTransaction"
-
-#: ../../source/concepts/account-filter.rst:99
-msgid ""
-"Configure filters to prevent receiving transactions containing a specific"
-" mosaic."
-msgstr "配置过滤器以防止接收包含特定马赛克的交易。"
-
-#: ../../source/concepts/account-filter.rst:103
-msgid "**Entity type**: 0x4250"
-msgstr "**实体类型**: 0x4250"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount)"
-msgstr "array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount)"
-
-#: ../../source/concepts/account-filter.rst:121
-msgid "AccountPropertiesEntityTypeTransaction"
-msgstr "AccountPropertiesEntityTypeTransaction"
-
-#: ../../source/concepts/account-filter.rst:123
-msgid ""
-"Configure filters to prevent announcing transactions by :ref:`type "
-"<transaction-types>`."
-msgstr "通过<transaction-types>配置过滤器，以阻止发起交易"
-
-#: ../../source/concepts/account-filter.rst:127
-msgid "**Entity type**: 0x4350"
-msgstr "**实体类型**: 0x4350"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid ""
-"array(:ref:`EntityTypeModification <entity-type-modification>`, "
-"modificationsCount)"
-msgstr ""
-"array(:ref:`EntityTypeModification <entity-type-modification>`, "
-"modificationsCount)"
-
-#: ../../source/concepts/account-filter.rst:144
-msgid "AddressModification"
-msgstr "AddressModification"
-
-#: ../../source/concepts/account-filter.rst:148
-#: ../../source/concepts/account-filter.rst:163
-#: ../../source/concepts/account-filter.rst:179
-msgid ":ref:`AccountPropertiesModification<account-properties-modification>`"
-msgstr ":ref:`AccountPropertiesModification<account-properties-modification>`"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "value"
-msgstr "值"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "25 bytes (binary)"
-msgstr "25字节(二进制)"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The address to allow/block."
-msgstr "允许或阻止的地址"
-
-#: ../../source/concepts/account-filter.rst:159
-msgid "MosaicModification"
-msgstr "MosaicModification"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "uint64"
-msgstr "uint64"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The mosaic id to allow/block."
-msgstr "允许或阻止的马赛克id"
-
-#: ../../source/concepts/account-filter.rst:175
-msgid "EntityTypeModification"
-msgstr "EntityTypeModification"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "uint16"
-msgstr "uint16"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The :ref:`entity type<transaction-types>` to allow/block."
-msgstr "允许或阻止的<transaction-types>"
-
-#: ../../source/concepts/account-filter.rst:191
-msgid "AccountPropertiesModification"
-msgstr "AccountPropertiesModification"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "modificationType"
-msgstr "modificationType"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid ":ref:`PropertyModificationType<property-modification-type>`"
-msgstr ":ref:`PropertyModificationType<property-modification-type>`"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The modification type."
-msgstr "修改类型"
-
-#: ../../source/concepts/account-filter.rst:202
-msgid "PropertyType"
-msgstr "PropertyType"
-
-#: ../../source/concepts/account-filter.rst:204
-#: ../../source/concepts/account-filter.rst:221
-msgid "Enumeration: uint8"
-msgstr "Enumeration: uint8"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Id"
-msgstr "Id"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x01"
-msgstr "0x01"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type is an address."
-msgstr "属性类型是一个地址。"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x02"
-msgstr "0x02"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type is mosaic id."
-msgstr "属性类型是一个马赛克id"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x04"
-msgstr "0x04"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type is a transaction type."
-msgstr "属性类型是一个交易类型"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x05"
-msgstr "0x05"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Property type sentinel."
-msgstr "属性类型保护"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x80 + type"
-msgstr "0x80 + 类型"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property is interpreted as a blocking operation."
-msgstr "该属性被解释为阻塞操作。"
-
-#: ../../source/concepts/account-filter.rst:219
-msgid "PropertyModificationType"
-msgstr "PropertyModificationType"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "0x00"
-msgstr "0x00"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Add property value."
-msgstr "添加属性值"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "Remove property value."
-msgstr "移除属性值"
-
-#~ msgid "Account filters feature is not implemented in the SDK yet."
-#~ msgstr "账户过滤器功能还没有在SDK中实行。"
-

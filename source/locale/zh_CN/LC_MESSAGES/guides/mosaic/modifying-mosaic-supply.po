@@ -1,107 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:10
-msgid "Modifying mosaic supply"
-msgstr "修改马赛克供应"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:12
-msgid "Alter the supply of a mosaic following this guide."
-msgstr ""
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:16
-msgid "Prerequisites"
-msgstr "先觉条件"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:18
-msgid "Finish :doc:`creating a mosaic guide <creating-a-mosaic>`"
-msgstr "完成:doc:`创建马赛克指导文档 <creating-a-mosaic>`"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:19
-msgid "Have registered a supply mutable mosaic"
-msgstr "已注册供应可变的mosaic"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:23
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:25
-#, fuzzy
-msgid ""
-"If you have followed the previous guide, right now you should own a "
-"``supply mutable`` :doc:`mosaic<../../concepts/mosaic>`."
-msgstr "如果您已经按照上一个指南进行操作，那么您现在应该拥有一个``supply mutable``马赛克。"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:27
-#, fuzzy
-msgid ""
-"To increase the initial supply to ``2.000.000``, define a :ref:`mosaic "
-"supply change transaction <mosaic-supply-change-transaction>` setting the"
-" target mosaicId."
-msgstr ""
-"初始供应量增加到 ``2.000.000``。 签署并公布 :ref:`马赛克供应变更交易<mosaic-supply-change-"
-"transaction>`。"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:31
-msgid "|modifying-mosaic-supply-ts|"
-msgstr "|modifying-mosaic-supply-ts|"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:36
-msgid "|modifying-mosaic-supply-js|"
-msgstr "|modifying-mosaic-supply-js|"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:43
-msgid "What's next?"
-msgstr "下一步"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:45
-#, fuzzy
-msgid ""
-"Decrease your mosaic supply by changing ``MosaicSupplyType.Increase`` to "
-"``MosaicSupplyType.Decrease``."
-msgstr ""
-"通过更改 ``MosaicSupplyType.Increase``  的 ``MosaicSupplyType.Decrease`` "
-"来减少马赛克供应量。"
-
-#~ msgid ""
-#~ "Did you register a "
-#~ ":doc:`mosaic<../../concepts/mosaic>` with supplyMutable"
-#~ " option set to true? In that "
-#~ "case, you can increase or decrease "
-#~ "your mosaic available supply following "
-#~ "this guide."
-#~ msgstr ""
-#~ "您是否注册了 :doc:`mosaic<../../concepts/mosaic>` "
-#~ "并将supplyMutable选项设置为true？ 在这种情况下，您可以按照本指南增加或减少马赛克可用的电源。"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或 CLI"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "An account with XEM"
-#~ msgstr "拥有XEM的账户"
-
-#~ msgid "|modifying-mosaic-supply-java|"
-#~ msgstr "|modifying-mosaic-supply-java|"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

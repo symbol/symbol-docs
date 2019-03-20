@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # ivyfung8 <ivyfung@nem.my>, 2019
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/api.rst:3
 msgid "REST API"
@@ -27,19 +28,14 @@ msgstr "REST 应用程序编程接口 （API）"
 
 #: ../../source/api.rst:5
 msgid ""
-"**Catapult REST API** combines HTTP and WebSockets to perform read and "
-"write actions in the NEM blockchain."
+"**Catapult REST API** combines HTTP and WebSockets to perform read and write"
+" actions in the NEM blockchain."
 msgstr "**Catapult REST API**结合HTTP和WebSockets在NEM区块链中执行读写操作。"
-
-#: ../../source/api.rst:11
-#, fuzzy
-msgid "Http requests"
-msgstr "Http请求"
 
 #: ../../source/api.rst:13
 msgid ""
-"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** "
-"and **POST** requests."
+"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
+"**POST** requests."
 msgstr "Catapult REST 使用 ``3000``端口。它接受 **GET**, **PUT** 和**POST** 请求。"
 
 #: ../../source/api.rst:15
@@ -54,10 +50,10 @@ msgstr "http://localhost:3000/<path-to-API-request>"
 
 #: ../../source/api.rst:19
 msgid ""
-"HTTP PUT and POST requests use JSON structures in the request body. "
-"Request returns data using JSON structures. This kind of request cannot "
-"usually be executed from within the browser unless you use a plugin which"
-" enables you to do it."
+"HTTP PUT and POST requests use JSON structures in the request body. Request "
+"returns data using JSON structures. This kind of request cannot usually be "
+"executed from within the browser unless you use a plugin which enables you "
+"to do it."
 msgstr ""
 "HTTP "
 "PUT和POST请求在请求体中使用JSON结构。请求使用JSON结构返回数据。这类请求通常不能在浏览器中执行，除非您使用一个插件使您能够执行它。"
@@ -72,8 +68,8 @@ msgstr "**NEM2-SDK**"
 
 #: ../../source/api.rst:32
 msgid ""
-"The **NEM2 Software Development Kit** is the primary software development"
-" tool to create NEM2 components, such as additional tools, libraries or "
+"The **NEM2 Software Development Kit** is the primary software development "
+"tool to create NEM2 components, such as additional tools, libraries or "
 "applications."
 msgstr "**NEM2-SDK**是创建NEM2组件(如其他工具、库或应用程序)的主要软件开发工具。"
 
@@ -103,8 +99,8 @@ msgstr "请下载 |Insomnia app| 用于您的操作系统。"
 
 #: ../../source/api.rst:45
 msgid ""
-"Import the :download:`Insomnia spec<resources/collections/insomnia.json>`"
-" for NEM."
+"Import the :download:`Insomnia spec<resources/collections/insomnia.json>` "
+"for NEM."
 msgstr "导入 :download:`Insomnia spec<resources/collections/insomnia.json>`。"
 
 #: ../../source/api.rst:54
@@ -114,9 +110,9 @@ msgstr "序列化"
 #: ../../source/api.rst:56
 msgid ""
 "`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
-"protocol to serialize and deserialize Catapult entities. The library "
-"comes with code generators for different languages. SDKs and applications"
-" use the generated code to interact with REST transaction endpoint."
+"protocol to serialize and deserialize Catapult entities. The library comes "
+"with code generators for different languages. SDKs and applications use the "
+"generated code to interact with REST transaction endpoint."
 msgstr ""
 "`Catbuffer library <https://github.com/nemtech/catbuffer>`_ "
 "定义了序列化和反序列化Catapult实体的协议。该库提供了适用于不同语言的代码生成器。SDK和应用程序将使用生成的代码与REST交易端点实现交互。"
@@ -135,10 +131,9 @@ msgstr "**记忆效率 （Memory Efficiency）**"
 
 #: ../../source/api.rst:68
 msgid ""
-"Large networks compute a large number of transactions. Working with "
-"binary optimized in size makes the communication faster. Furthermore, "
-"reading entities from memory buffers -or just a part of them - is memory "
-"efficient."
+"Large networks compute a large number of transactions. Working with binary "
+"optimized in size makes the communication faster. Furthermore, reading "
+"entities from memory buffers -or just a part of them - is memory efficient."
 msgstr "大型网络计算大量交易。使用大小合适的二进制设备可以使通信更快。此外，从内存缓冲区读取实体 - 或者只是实体的一部分 - 能充分利用好内存。"
 
 #: ../../source/api.rst:70
@@ -148,15 +143,15 @@ msgstr "**灵活性（Flexibility）**"
 #: ../../source/api.rst:72
 msgid ""
 "REST `transaction endpoints "
-"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_"
-" handle the calls to update the blockchain state. The serialized payload "
-"of a transaction is appended to the body of the POST call. These "
-"endpoints allow the addition of new functionality to the server side "
-"without modifying the API contract."
+"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
+"handle the calls to update the blockchain state. The serialized payload of a"
+" transaction is appended to the body of the POST call. These endpoints allow"
+" the addition of new functionality to the server side without modifying the "
+"API contract."
 msgstr ""
 "REST的 `交易端点（transaction endpoints） "
-"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_"
-" 掌控着区块链状态更新的调用。交易的序列化酬载量被附加到了POST调用的主体中。这些端点支持在不修改API协定的情况下向服务器端添加新功能。"
+"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
+"掌控着区块链状态更新的调用。交易的序列化酬载量被附加到了POST调用的主体中。这些端点支持在不修改API协定的情况下向服务器端添加新功能。"
 
 #: ../../source/api.rst:74
 msgid "**Reusability**"
@@ -164,8 +159,8 @@ msgstr "**复用性（Reusability）**"
 
 #: ../../source/api.rst:76
 msgid ""
-"Applications can embed the generated code, without managing dependencies."
-" This is particularly desirable in highly-secure environments. Besides, "
+"Applications can embed the generated code, without managing dependencies. "
+"This is particularly desirable in highly-secure environments. Besides, "
 "sharing a common codebase enables the addition of new features with less "
 "effort."
 msgstr "应用程序可以在无需管理依赖关系的状况下嵌入生成的代码。这非常适用于安全性高的环境。此外，共享通用代码库可以用更少的工作添加新功能。"
@@ -173,8 +168,8 @@ msgstr "应用程序可以在无需管理依赖关系的状况下嵌入生成的
 #: ../../source/api.rst:78
 msgid ""
 "The `schemas define "
-"<https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities"
-" data structure. The library generates the leanest code necessary to "
+"<https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities "
+"data structure. The library generates the leanest code necessary to "
 "serialize and deserialize defined entities."
 msgstr ""
 "`模式定义（schemas define） "
@@ -183,15 +178,15 @@ msgstr ""
 
 #: ../../source/api.rst:80
 msgid ""
-"Generate the code for a determined schema in one of the available "
-"languages. For example, run the following command to generate C++ "
-"transaction builders for a transfer transaction:"
+"Generate the code for a determined schema in one of the available languages."
+" For example, run the following command to generate C++ transaction builders"
+" for a transfer transaction:"
 msgstr "使用其中一种可用语言生成已确定模式的代码。例如, 运行以下命令以生成 c++ 转让交易的交易构建器:"
 
 #: ../../source/api.rst:86
 msgid ""
-"The generator creates a new file under ``_generated/cpp_builder`` folder."
-" Repeat the process using a different input schema ``(-s)`` or generator "
+"The generator creates a new file under ``_generated/cpp_builder`` folder. "
+"Repeat the process using a different input schema ``(-s)`` or generator "
 "``(-g)`` as needed."
 msgstr ""
 "生成器在 ``_generated/cpp_builder``  文件夹下创建一个新文件。根据实际情况, 请使用不同的输入架构 \" (-s) "
@@ -205,7 +200,7 @@ msgstr "http错误"
 msgid "Status code"
 msgstr "状态代码"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Description"
 msgstr "描述"
 
@@ -223,8 +218,8 @@ msgstr "202"
 
 #: ../../source/api.rst:1
 msgid ""
-"Accepted. The request has been accepted for processing but the processing"
-" has not been completed."
+"Accepted. The request has been accepted for processing but the processing "
+"has not been completed."
 msgstr "接受。该请求已被接受进行处理，但尚未完成处理。"
 
 #: ../../source/api.rst:1
@@ -293,9 +288,8 @@ msgstr "uint64:低值和高值"
 
 #: ../../source/api.rst:128
 msgid ""
-"Javascript operate on 32 bit values. To enable representation up to 64 "
-"bits, the API returns numbers encoded in two parts: ``lower`` and "
-"``higher``."
+"Javascript operate on 32 bit values. To enable representation up to 64 bits,"
+" the API returns numbers encoded in two parts: ``lower`` and ``higher``."
 msgstr "Javascript以32位值进行操作。为了支持高达64位值，API返回编码为“低值”和“高值”两部分的数字。"
 
 #: ../../source/api.rst:130
@@ -313,9 +307,9 @@ msgstr "WebSockets"
 
 #: ../../source/api.rst:138
 msgid ""
-"WebSockets make receiving notifications possible when a transaction or "
-"event occurs in the blockchain. The notification is received in real time"
-" without having to poll the API waiting for a reply."
+"WebSockets make receiving notifications possible when a transaction or event"
+" occurs in the blockchain. The notification is received in real time without"
+" having to poll the API waiting for a reply."
 msgstr "WebSockets使得接收在区块链中发生的交易或事件的通知变得可能。实时接收通知，无需轮询API等待回复。"
 
 #: ../../source/api.rst:140
@@ -344,8 +338,8 @@ msgstr "**confirmedAdded/<ADDRESS>**"
 
 #: ../../source/api.rst:151
 msgid ""
-"The confirmedAdded channel notifies when a transaction related to an "
-"address is included in a block. The message contains the transaction."
+"The confirmedAdded channel notifies when a transaction related to an address"
+" is included in a block. The message contains the transaction."
 msgstr "当相关地址的交易被收录在区块内，confirmedAdded通道发出通知。 该通知包含该交易。"
 
 #: ../../source/api.rst:153
@@ -355,16 +349,16 @@ msgstr "**unconfirmedAdded/<ADDRESS>**"
 #: ../../source/api.rst:155
 msgid ""
 "The unconfirmedAdded channel notifies when a transaction related to an "
-"address is in unconfirmed state and waiting to be included in a block. "
-"The message contains the transaction."
+"address is in unconfirmed state and waiting to be included in a block. The "
+"message contains the transaction."
 msgstr "当相关地址的交易还在未确认并等待被收录于区块内，confirmedAdded通道发出通知。 该通知包含该交易。"
 
 #: ../../source/api.rst:157
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction is "
 "announced to the network via ``PUT /transaction`` HTTP endpoint or an "
-"aggregate bonded transaction has all required cosigners and change its "
-"state from *partial* to *unconfirmed*."
+"aggregate bonded transaction has all required cosigners and change its state"
+" from *partial* to *unconfirmed*."
 msgstr ""
 "该通道会在以下可能的情况中发出通知：通过“PUT "
 "/transaction”HTTP端点向网络宣布的交易或聚合保税交易已得到所有的共签，并将其状态从“partial”更改为“unconfirmed”。"
@@ -376,14 +370,14 @@ msgstr "**unconfirmedRemoved/<ADDRESS>**"
 #: ../../source/api.rst:161
 msgid ""
 "The unconfirmedRemoved channel notifies when a transaction related to an "
-"address was in unconfirmed state but is not anymore. The message contains"
-" the transaction hash."
+"address was in unconfirmed state but is not anymore. The message contains "
+"the transaction hash."
 msgstr "当交易不再处于未确认状态时，unconfirmedRemoved将发出通知。该通知包含该交易哈希。"
 
 #: ../../source/api.rst:163
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is"
-" confirmed or the deadline has been reached and it was not included in a "
+"Possible scenarios when this channel notifies are: the transaction now is "
+"confirmed or the deadline has been reached and it was not included in a "
 "block."
 msgstr "该通道会在以下可能的情况中发出通知：交易已被确认，或者已经到达了最后期限，但没有收录在区块中。"
 
@@ -411,16 +405,16 @@ msgstr "**partialRemoved/<ADDRESS>**"
 
 #: ../../source/api.rst:173
 msgid ""
-"The partialRemoved channel notifies when a transaction related to an "
-"address was in partial state but is not anymore. The message contains the"
-" transaction hash."
+"The partialRemoved channel notifies when a transaction related to an address"
+" was in partial state but is not anymore. The message contains the "
+"transaction hash."
 msgstr "partialremove通道在相关地址的交易不再处于partial状态时发出通知。该通知包含交易哈希。"
 
 #: ../../source/api.rst:175
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is"
-" in unconfirmed or the deadline has been reached and it was not included "
-"in a block."
+"Possible scenarios when this channel notifies are: the transaction now is in"
+" unconfirmed or the deadline has been reached and it was not included in a "
+"block."
 msgstr "该通道会在以下可能的情况中发出通知： 交易现在处于未确认状态，或者已达到截止日期，但还未被收录在区块中。"
 
 #: ../../source/api.rst:177
@@ -440,30 +434,24 @@ msgstr "**status/<ADDRESS>**"
 
 #: ../../source/api.rst:183
 msgid ""
-"The status channel notifies when a transaction related to an address "
-"rises an error. The message contains the error message and the "
-"transaction hash."
+"The status channel notifies when a transaction related to an address rises "
+"an error. The message contains the error message and the transaction hash."
 msgstr "状态通道在相关地址的交易出现错误时发出通知。该通知包含错误消息和交易哈希。"
-
-#: ../../source/api.rst:188
-#, fuzzy
-msgid "Status errors"
-msgstr "状态错误"
 
 #: ../../source/api.rst:190
 msgid ""
-"This section describes the error messages that can be returned via status"
-" channel after announcing a transaction."
+"This section describes the error messages that can be returned via status "
+"channel after announcing a transaction."
 msgstr "本节描述在宣布事务之后可以通过状态通道返回的错误消息。"
 
 #: ../../source/api.rst:192
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_. "
-"Public network configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_. Public network "
+"configuration may differ."
 msgstr ""
-"配置参数是`可更改的 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_。公共网络配置可能有所不同。"
+"配置参数是`可更改的 <https://github.com/nemtech/catapult-server/blob/master/resources"
+"/config-network.properties>`_。公共网络配置可能有所不同。"
 
 #: ../../source/api.rst:1
 msgid "Status"
@@ -507,8 +495,8 @@ msgstr "Failure_Core_Future_Deadline"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the deadline is too far in the future. "
-"Deadlines are only allowed to lie up to ``24`` hours ahead."
+"Validation failed because the deadline is too far in the future. Deadlines "
+"are only allowed to lie up to ``24`` hours ahead."
 msgstr "验证失败，因为截止日期太长。截止日期只允许24小时。"
 
 #: ../../source/api.rst:1
@@ -558,7 +546,8 @@ msgid "Failure_Core_Block_Harvester_Ineligible"
 msgstr "Failure_Core_Block_Harvester_Ineligible"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because a block was harvested by an ineligible harvester"
+msgid ""
+"Validation failed because a block was harvested by an ineligible harvester"
 msgstr "验证失败，因为区块由不合格的收获者收获。"
 
 #: ../../source/api.rst:1
@@ -583,8 +572,8 @@ msgstr "Failure_AccountLink_Invalid_Action"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the account link action is invalid: link (0) "
-"and unlink (1)."
+"Validation failed because the account link action is invalid: link (0) and "
+"unlink (1)."
 msgstr "验证失败，因为帐户链接操作无效：link（0）和unlink（1）。"
 
 #: ../../source/api.rst:1
@@ -601,10 +590,10 @@ msgstr "验证失败，因为主帐户已链接到另一个帐户。"
 msgid "Failure_AccountLink_Link_Does_Not_Exist"
 msgstr "Failure_AccountLink_Link_Does_Not_Exist"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
-"Validation failed because the unlink data is not consistent with existing"
-" account link."
+"Validation failed because the unlink data is not consistent with existing "
+"account link."
 msgstr "验证失败，因为取消链接数据与现有帐户链接不一致。"
 
 #: ../../source/api.rst:1
@@ -626,7 +615,8 @@ msgid "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
 msgstr "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because the remote is not allowed to sign a transaction."
+msgid ""
+"Validation failed because the remote is not allowed to sign a transaction."
 msgstr "验证失败，因为远程账户不允许签署事务。"
 
 #: ../../source/api.rst:1
@@ -635,8 +625,8 @@ msgstr "Failure_AccountLink_Remote_Account_Participant_Not_Allowed"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the remote is not allowed to participate in the"
-" transaction."
+"Validation failed because the remote is not allowed to participate in the "
+"transaction."
 msgstr "验证失败，因为远程账户不允许参与交易。"
 
 #: ../../source/api.rst:1
@@ -699,8 +689,8 @@ msgstr "Failure_LockHash_Invalid_Mosaic_Id"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the lock does not allow the specified mosaic. "
-"The only mosaic allowed is ``xem``."
+"Validation failed because the lock does not allow the specified mosaic. The "
+"only mosaic allowed is ``xem``."
 msgstr "验证失败，因为秘密锁不允许该的马赛克。唯一被允许的马赛克是xem。"
 
 #: ../../source/api.rst:1
@@ -709,15 +699,15 @@ msgstr "Failure_LockHash_Invalid_Mosaic_Amount"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the lock does not allow the specified amount. "
-"The minimum amount is ``10``."
+"Validation failed because the lock does not allow the specified amount. The "
+"minimum amount is ``10``."
 msgstr "验证失败，因为秘密锁不允许该金额。最低金额是``10``。"
 
 #: ../../source/api.rst:1
 msgid "Failure_LockHash_Hash_Exists"
 msgstr "Failure_LockHash_Hash_Exists"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the hash is already present in cache."
 msgstr "验证失败，因为缓存中已存在哈希。"
 
@@ -727,8 +717,8 @@ msgstr "Failure_LockHash_Hash_Does_Not_Exist"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the hash is not present in cache. Remember to "
-"lock before announcing aggregate bonded transactions."
+"Validation failed because the hash is not present in cache. Remember to lock"
+" before announcing aggregate bonded transactions."
 msgstr "验证失败，因为缓存中不存在哈希。记得在宣布聚合保税交易之前锁定。"
 
 #: ../../source/api.rst:1
@@ -745,8 +735,8 @@ msgstr "Failure_LockHash_Invalid_Duration"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the duration is too long. Duration is allowed "
-"to lie up to ``2`` days."
+"Validation failed because the duration is too long. Duration is allowed to "
+"lie up to ``2`` days."
 msgstr "验证失败，因为持续时间太长。持续时间最长可达 ``2`` 天。"
 
 #: ../../source/api.rst:1
@@ -756,8 +746,8 @@ msgstr "Failure_LockSecret_Invalid_Hash_Algorithm"
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the hash algorithm for lock type secret is "
-"invalid. See the :doc:`available algorithms <../concepts/cross-chain-"
-"swaps>` list."
+"invalid. See the :doc:`available algorithms <../concepts/cross-chain-swaps>`"
+" list."
 msgstr "验证失败，因为锁型秘密的哈希算法无效。请参阅 :doc:`可用的算法 <../concepts/cross-chain-swaps>` "
 
 #: ../../source/api.rst:1
@@ -778,8 +768,8 @@ msgstr "Failure_LockSecret_Proof_Size_Out_Of_Bounds"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the proof is too small or too large. It should "
-"be between ``10`` and ``1000`` bytes."
+"Validation failed because the proof is too small or too large. It should be "
+"between ``10`` and ``1000`` bytes."
 msgstr "验证失败，因为秘密证明太小或太大。它应该在``10`` 和 ``1000``字节之间。"
 
 #: ../../source/api.rst:1
@@ -820,15 +810,15 @@ msgstr "Failure_LockSecret_Invalid_Duration"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the duration is too long. Duration is allowed "
-"to lie up to ``30`` days."
+"Validation failed because the duration is too long. Duration is allowed to "
+"lie up to ``30`` days."
 msgstr "验证失败，因为持续时间太长。持续时间最长可达``30`` 天."
 
 #: ../../source/api.rst:1
 msgid "Failure_Mosaic_Invalid_Duration"
 msgstr "Failure_Mosaic_Invalid_Duration"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the duration has an invalid value. Duration is "
 "allowed to lie up to ``365`` days."
@@ -840,8 +830,8 @@ msgstr "Failure_Mosaic_Invalid_Name"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the name is invalid. The mosaic name may have a"
-" maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
+"Validation failed because the name is invalid. The mosaic name may have a "
+"maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
 "`0-to-9` and the following special characters: \\`_-"
 msgstr "验证失败，因为名称无效。马赛克名称最多可有``64``字符。允许的字符是 `a-到-z`; `0-到-9`以及以下特殊字符: \\`_-"
 
@@ -849,7 +839,7 @@ msgstr "验证失败，因为名称无效。马赛克名称最多可有``64``字
 msgid "Failure_Mosaic_Name_Id_Mismatch"
 msgstr "Failure_Mosaic_Name_Id_Mismatch"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the name and id don't match."
 msgstr "验证失败，因为名称和ID不匹配。"
 
@@ -865,7 +855,7 @@ msgstr "验证失败，因为父级已过期。"
 msgid "Failure_Mosaic_Id_Mismatch"
 msgstr "Failure_Mosaic_Id_Mismatch"
 
-#: ../../source/api.rst:1
+#: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the id is not the expected id generated from "
 "signer and nonce."
@@ -875,8 +865,9 @@ msgstr "验证失败，因为ID不是从签名者和nonce生成的预期ID。"
 msgid "Failure_Mosaic_Owner_Conflict"
 msgstr "Failure_Mosaic_Owner_Conflict"
 
-#: ../../source/api.rst:1
-msgid "Validation failed because the parent owner conflicts with the child owner."
+#: ../../source/api.rst:1 ../../source/api.rst:1
+msgid ""
+"Validation failed because the parent owner conflicts with the child owner."
 msgstr "验证失败，因为父级所有者与子级所有者冲突。"
 
 #: ../../source/api.rst:1
@@ -885,8 +876,8 @@ msgstr "Failure_Mosaic_Parent_Id_Conflict"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the existing parent id does not match the "
-"supplied parent id."
+"Validation failed because the existing parent id does not match the supplied"
+" parent id."
 msgstr "验证失败，因为现有父级ID与提供的父级ID不匹配。"
 
 #: ../../source/api.rst:1
@@ -911,8 +902,8 @@ msgstr "Failure_Mosaic_Invalid_Divisibility"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the mosaic divisibility is invalid. The "
-"specified divisibility is greater than ``6`` or negative."
+"Validation failed because the mosaic divisibility is invalid. The specified "
+"divisibility is greater than ``6`` or negative."
 msgstr "验证失败，因为马赛克的可分割性无效。该可分割性值大于``6``或为负数。"
 
 #: ../../source/api.rst:1
@@ -989,8 +980,8 @@ msgstr "Failure_Mosaic_Supply_Exceeded"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting mosaic supply exceeds the maximum"
-" allowed value. The range should be between 0 and ``9.000.000.000``."
+"Validation failed because the resulting mosaic supply exceeds the maximum "
+"allowed value. The range should be between 0 and ``9.000.000.000``."
 msgstr "验证失败，因为生成的马赛克供应量超过了允许的最大值。范围应介于0和``9,000,000,000``之间。"
 
 #: ../../source/api.rst:1
@@ -999,9 +990,9 @@ msgstr "Failure_Mosaic_Non_Transferable"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the mosaic is not transferable. Only the "
-"creator of the mosaic is eligible to be the recipient of a non-"
-"transferable mosaic once transferred."
+"Validation failed because the mosaic is not transferable. Only the creator "
+"of the mosaic is eligible to be the recipient of a non-transferable mosaic "
+"once transferred."
 msgstr "验证失败，因为马赛克不可转让。马赛克从创建者账户被转让后，只有其创建者有资格成为下一次转让的收件人。"
 
 #: ../../source/api.rst:1
@@ -1010,9 +1001,9 @@ msgstr "Failure_Mosaic_Max_Mosaics_Exceeded"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the credit of the mosaic would exceed the "
-"maximum different mosaics an account is allowed to own. Set by default to"
-" ``10.000`` different mosaics per account."
+"Validation failed because the credit of the mosaic would exceed the maximum "
+"different mosaics an account is allowed to own. Set by default to ``10.000``"
+" different mosaics per account."
 msgstr "验证失败，因为帐户可拥有不同马赛克的最大数量超出。默认设置为``10,000`` 。"
 
 #: ../../source/api.rst:1
@@ -1063,8 +1054,7 @@ msgstr "Failure_Multisig_Modify_Already_A_Cosigner"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the account to be added is already a "
-"cosignatory."
+"Validation failed because the account to be added is already a cosignatory."
 msgstr "验证失败，因为要添加的帐户已经是共签者。"
 
 #: ../../source/api.rst:1
@@ -1091,8 +1081,8 @@ msgstr "Failure_Multisig_Modify_Unsupported_Modification_Type"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the modification type is unsupported: add (0) "
-"and remove (1)."
+"Validation failed because the modification type is unsupported: add (0) and "
+"remove (1)."
 msgstr "验证失败，因为修改类型不受支持：add（0）和remove（1）。"
 
 #: ../../source/api.rst:1
@@ -1101,9 +1091,9 @@ msgstr "Failure_Multisig_Modify_Max_Cosigned_Accounts"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the cosignatory already cosigns the maximum "
-"number of accounts. An account cannot be cosignatory of more than ``5`` "
-"multisig accounts."
+"Validation failed because the cosignatory already cosigns the maximum number"
+" of accounts. An account cannot be cosignatory of more than ``5`` multisig "
+"accounts."
 msgstr "验证失败，因为被允许的共签帐户已超过。帐户不能成为超过 ``5`` 个共签账户的共签者。"
 
 #: ../../source/api.rst:1
@@ -1127,7 +1117,8 @@ msgid ""
 "cannot be cosignatory of itself. Neither an account can be turned into "
 "multisig having as cosignatory another multisig where the account is "
 "cosignatory."
-msgstr "验证失败，因为创建了共签多重循环。共签帐户本身不能成为本身的共签者。账户（A）也不能转变为共签账户，如果它其中的一个共签者（B）同时以该账户（A）为共签者。"
+msgstr ""
+"验证失败，因为创建了共签多重循环。共签帐户本身不能成为本身的共签者。账户（A）也不能转变为共签账户，如果它其中的一个共签者（B）同时以该账户（A）为共签者。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Multisig_Modify_Max_Multisig_Depth"
@@ -1135,8 +1126,8 @@ msgstr "Failure_Multisig_Modify_Max_Multisig_Depth"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the max multisig depth is exceeded. The maximum"
-" depth of a multilevel multisig account is ``3``."
+"Validation failed because the max multisig depth is exceeded. The maximum "
+"depth of a multilevel multisig account is ``3``."
 msgstr "验证失败，因为超出了多重深度的极限。多级共签帐户的深度极限为``3``。"
 
 #: ../../source/api.rst:1
@@ -1160,13 +1151,11 @@ msgstr "Failure_Namespace_Invalid_Name"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the namespace has an invalid name. The "
-"namespace name may have a maximum length of ``64`` characters. Allowed "
-"characters are `a-to-z`; `0-to-9` and the following special characters: "
-"\\`_-"
+"Validation failed because the namespace has an invalid name. The namespace "
+"name may have a maximum length of ``64`` characters. Allowed characters are "
+"`a-to-z`; `0-to-9` and the following special characters: \\`_-"
 msgstr ""
-"验证失败，因为命名空间的名称无效。，命名空间名称最多可有``64``字符。允许的字符是 `a-到-z`; `0-到-9`以及以下特殊字符: "
-"\\`_-"
+"验证失败，因为命名空间的名称无效。，命名空间名称最多可有``64``字符。允许的字符是 `a-到-z`; `0-到-9`以及以下特殊字符: \\`_-"
 
 #: ../../source/api.rst:1
 msgid "Failure_Namespace_Name_Id_Mismatch"
@@ -1194,8 +1183,8 @@ msgstr "Failure_Namespace_Invalid_Namespace_Type"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the namespace type is invalid: rootnamespace "
-"(0) and subnamesapce (1)."
+"Validation failed because the namespace type is invalid: rootnamespace (0) "
+"and subnamesapce (1)."
 msgstr "验证失败，因为命名空间类型无效：rootnamespace（0）和subnamesapce（1）。"
 
 #: ../../source/api.rst:1
@@ -1217,9 +1206,8 @@ msgstr "Failure_Namespace_Too_Deep"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting namespace would exceed the "
-"maximum allowed namespace depth. Namespaces can have up to ``3`` nested "
-"levels."
+"Validation failed because the resulting namespace would exceed the maximum "
+"allowed namespace depth. Namespaces can have up to ``3`` nested levels."
 msgstr "验证失败，因为生成的命名空间将超过被允许的深度。命名空间最多可含 ``3`` 层。"
 
 #: ../../source/api.rst:1
@@ -1272,8 +1260,7 @@ msgstr "Failure_Namespace_Alias_Invalid_Action"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because alias action is invalid: link (0) and unlink "
-"(1)."
+"Validation failed because alias action is invalid: link (0) and unlink (1)."
 msgstr "验证失败，因为别名操作无效：link（0）和unlink（1）。"
 
 #: ../../source/api.rst:1
@@ -1314,8 +1301,8 @@ msgstr "Failure_Namespace_Alias_Unlink_Type_Inconsistency"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because unlink type is not consistent with the existing"
-" alias."
+"Validation failed because unlink type is not consistent with the existing "
+"alias."
 msgstr "验证失败，因为unlink类型与现有别名不一致。"
 
 #: ../../source/api.rst:1
@@ -1324,8 +1311,8 @@ msgstr "Failure_Namespace_Alias_Unlink_Data_Inconsistency"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because unlink data is not consistent with the existing"
-" alias."
+"Validation failed because unlink data is not consistent with the existing "
+"alias."
 msgstr "验证失败，因为unlink数据与现有别名不一致。"
 
 #: ../../source/api.rst:1
@@ -1374,8 +1361,8 @@ msgstr "Failure_Property_Modify_Unsupported_Modification_Type"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the modification type is unsupported: add (0) "
-"and  delete (1)."
+"Validation failed because the modification type is unsupported: add (0) and"
+"  delete (1)."
 msgstr "验证失败，因为修改类型不被支持：add（0）和delete（1）。"
 
 #: ../../source/api.rst:1
@@ -1408,8 +1395,8 @@ msgstr "Failure_Property_Values_Count_Exceeded"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the resulting property has too many values. The"
-" maximum number of values a property can have is ``512``."
+"Validation failed because the resulting property has too many values. The "
+"maximum number of values a property can have is ``512``."
 msgstr "验证失败，因为属性的定值太多。属性可以拥有的最大值数是``512``。"
 
 #: ../../source/api.rst:1
@@ -1456,8 +1443,8 @@ msgstr "Failure_Transfer_Message_Too_Large"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the message is too large.  It exceeds the limit"
-" of ``1024`` bytes."
+"Validation failed because the message is too large.  It exceeds the limit of"
+" ``1024`` bytes."
 msgstr "验证失败，因为信息太大。它超过了``1024``字节数限制。"
 
 #: ../../source/api.rst:1
@@ -1476,8 +1463,8 @@ msgstr "Failure_Chain_Unlinked"
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because a block was received that did not link with the"
-" existing chain."
+"Validation failed because a block was received that did not link with the "
+"existing chain."
 msgstr "验证失败，因为接收到的区块没有链接到现有链。"
 
 #: ../../source/api.rst:1
@@ -1539,7 +1526,8 @@ msgid "Failure_Consumer_Hash_In_Recency_Cache"
 msgstr "Failure_Consumer_Hash_In_Recency_Cache"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because the entity hash is present in the recency cache."
+msgid ""
+"Validation failed because the entity hash is present in the recency cache."
 msgstr "验证失败，因为在最近缓存中存在实体哈希。"
 
 #: ../../source/api.rst:1
@@ -1563,18 +1551,13 @@ msgid "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
 msgstr "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because the chain part contains duplicate transactions."
+msgid ""
+"Validation failed because the chain part contains duplicate transactions."
 msgstr "验证失败，因为链部分包含重复交易。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Consumer_Remote_Chain_Unlinked"
 msgstr "Failure_Consumer_Remote_Chain_Unlinked"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the chain part does not link to the current "
-"chain."
-msgstr "验证失败，因为链部件没有连接到当前链。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Consumer_Remote_Chain_Mismatched_Difficulties"
@@ -1634,5 +1617,5 @@ msgstr "验证失败，因为部分交易因其依赖关系从临时缓存中被
 
 #: ../../source/api.rst:329
 msgid ":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
-msgstr ":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
-
+msgstr ""
+":download:`OpenAPI specification <resources/collections/swagger.yaml>`"

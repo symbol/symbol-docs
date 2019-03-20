@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,71 +20,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/guidelines/translating-the-documentation.rst:5
-msgid "Translating the documentation"
-msgstr "翻译文档"
-
-#: ../../source/guidelines/translating-the-documentation.rst:7
-msgid ""
-"The NEM Developer Center uses Sphinx, a Python framework to write "
-"documentation. The extension `sphinx-intl <http://www.sphinx-"
-"doc.org/en/master/intl.html>`_ permits translating documentation into "
-"multiple languages without having to host different documentation sites."
-msgstr ""
-"NEM开发人员中心使用Sphinx (Python框架)编写文档。扩展名`sphinx-intl <http://www.sphinx-"
-"doc.org/en/master/intl.html>`_ 允许将文档翻译成多种语言，而无需托管不同的文档站点。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:11
-msgid "Adding/updating translations"
-msgstr "添加/修改 翻译"
-
-#: ../../source/guidelines/translating-the-documentation.rst:13
-msgid ""
-"Clone the repository, and make sure you have Python 2.7 or 3.4+ and pip "
-"installed."
-msgstr "clone库，并确保安装了Python 2.7或3.4+和pip。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:19
-msgid "Install the project's requirements."
-msgstr "下载项目环境。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:25
-msgid "Extract the docs messages into .po files."
-msgstr "将docs消息解压缩到.po文件中。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:31
-msgid ""
-"For each documentation file, a .po file will be generated under "
-"``build/gettext``."
-msgstr "对于每个文档文件，将在``build/gettext``下生成.po文件。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:33
-msgid ""
-"Copy translation files into ``source/locale`` with the following command. It"
-" is also used to update .po files when the documentation in English have "
-"changed:"
-msgstr "使用以下命令将翻译文件复制到``source/locale``中。当英文文件更改时，po文件亦会更新。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:39
-msgid ""
-"Replace <lang> for your `language code "
-"<https://en.wikipedia.org/wiki/ISO_639-1>`_."
-msgstr " 为你的 `语言代码 <https://en.wikipedia.org/wiki/ISO_639-1>`_替换<lang>。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:41
-msgid ""
-"Translate your .po files under ``source/locale/<lang>/LC_MESSAGES/``. For "
-"each ``msgid``, provide the translated ``msgstr``."
-msgstr ""
-"在 ``source/locale/<lang>/LC_MESSAGES/``下翻译.po文件。为每个“msgstr”，提供翻译后的“msgstr”。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:43
-msgid "Generate the translated document and review the changes."
-msgstr "生成翻译后的文档并检查更改。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:50
-msgid ""
-":doc:`Submit your changes <suggesting-changes>` into the nem2-docs "
-"repository."
-msgstr ":doc: '将您的更改 <suggesting-changes>'提交到nem2-docs库中。"

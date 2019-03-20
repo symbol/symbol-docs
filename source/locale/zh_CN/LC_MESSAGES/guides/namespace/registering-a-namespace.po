@@ -1,194 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:10
-msgid "Registering a namespace"
-msgstr "注册命名空间"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:12
-#, fuzzy
-msgid "Register your own :doc:`namespace <../../concepts/namespace>`."
-msgstr "注册您的:doc:`namespace <../../concepts/namespace>`."
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:16
-msgid "Background"
-msgstr "背景"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:18
-msgid ""
-"Namespaces allow you to create an on-chain **unique place** for your "
-"business and your assets on the NEM blockchain."
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:20
-msgid ""
-"A namespace starts with a name that you choose, similar to an internet "
-"domain name. If one :doc:`account <../../concepts/account>` creates a "
-"namespace, that will appear as unique in the network."
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:22
-msgid ""
-"An account can link a registered name (namespace or subnamespace) with an"
-" :doc:`account <../../concepts/account>` or a :doc:`mosaic "
-"<../../concepts/mosaic>` identifier."
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:26
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:28
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr "完成 :doc:`入门学习指导<../../getting-started/setup-workstation>`"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:29
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:33
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:35
-#, fuzzy
-msgid ""
-"Choose a name you like. One common option is to use your company's or own"
-" name. In this example, we will register a namespace called ``foo``."
-msgstr "选择您喜欢的名称来注册您的命名空间。 一个常见的选择是使用您公司或自己的名称。 在这个例子中，我们将注册一个名为 ``foo`` 的命名空间。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:37
-#, fuzzy
-msgid "Check if this namespace name is available."
-msgstr "检查命名空间是否可用。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:41
-msgid "|checking-namespace-existence-ts|"
-msgstr "|checking-namespace-existence-ts|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:46
-msgid "|checking-namespace-existence-java|"
-msgstr "|checking-namespace-existence-java|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:51
-msgid "|checking-namespace-existence-js|"
-msgstr "|checking-namespace-existence-js|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:56
-msgid "|checking-namespace-existence-cli|"
-msgstr "|checking-namespace-existence-cli|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:61
-msgid ""
-"Is the namespace available? Try to register it before someone else does "
-"it! Announce a :ref:`register namespace transaction<register-namespace-"
-"transaction>` with the chosen name and renting duration expressed in "
-"blocks."
-msgstr ""
-"名称空间是否可用？ 请注册一个其他人没有注册过的命名空间！发布一个带有想好的名字和和以块表示租用期限的 :ref:`注册命名空间交易"
-"<register-namespace-transaction>` ，。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:63
-msgid ""
-"A new block completes every ``15`` seconds on average. You will have to "
-"renew your namespace before it expires."
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:67
-msgid "|registering-a-namespace-ts|"
-msgstr "|registering-a-namespace-ts|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:72
-msgid "|registering-a-namespace-java|"
-msgstr "|registering-a-namespace-java|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:77
-msgid "|registering-a-namespace-js|"
-msgstr "|registering-a-namespace-js|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:82
-msgid "|registering-a-namespace-cli|"
-msgstr "|registering-a-namespace-cli|"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:89
-msgid "What's next?"
-msgstr "下一步"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:91
-#, fuzzy
-msgid ""
-"When the transaction is confirmed, :doc:`register a subnamespace "
-"<registering-a-subnamespace>` following the next guide."
-msgstr "确认事务后，您可以 :doc:`注册子命名空间 <registering-a-subnamespace>`。"
-
-#~ msgid ""
-#~ "A :doc:`namespace <../../concepts/namespace>` is "
-#~ "an on-chain unique domain for your"
-#~ " assets. The easiest way to "
-#~ "understand it is by means of the"
-#~ " domain-file analogy on the internet."
-#~ msgstr ""
-#~ "一个 :doc:`namespace <../../concepts/namespace>` "
-#~ "是您资产的链上唯一域。 理解它的最简单方法是通过互联网上的域文件进行类比。"
-
-#~ msgid ""
-#~ "A mosaic is like a file hosted "
-#~ "on a domain and represents an "
-#~ "asset. Like a website and directory, "
-#~ "a mosaic can have the same name"
-#~ " as other files on other domains. "
-#~ "However,  a namespace + mosaic is "
-#~ "always unique."
-#~ msgstr "马赛克就像托管在域上的文件，代表资产。 与网站和目录一样，马赛克可以与其他域上的其他文件同名。 但是，命名空间+马赛克始终是唯一的。"
-
-#~ msgid ""
-#~ "If an :doc:`account <../../concepts/account>` "
-#~ "creates a namespace, that namespace will"
-#~ " appear as unique in the NEM "
-#~ "ecosystem. For example, if one were "
-#~ "to create a namespace called ``foo``,"
-#~ " a second person cannot create the"
-#~ " same namespace."
-#~ msgstr ""
-#~ "如果 :doc:`账户<../../concepts/account>` "
-#~ "创建一个命名空间，那么此命名空间在NEM生态系统中将独一无二。例如，如果某个账户创建了一个名为``foo``的命名空间后，其他人就再也不能创建相同的命名空间了。"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或CLI"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本剪辑器或IDE"
-
-#~ msgid "An account with XEM"
-#~ msgstr "一个拥有XEM的账户"
-
-#~ msgid "In Catapult, NEM blocks are complete every ``15`` seconds in average."
-#~ msgstr "在Catapult中, NEM块每``15``  秒完成一次创建。"
-
-#~ msgid ""
-#~ "Now that you have registered your "
-#~ "namespace, check how you can "
-#~ ":doc:`create mosaics <../mosaic/creating-a-mosaic>`."
-#~ msgstr "现在您已经注册了命名空间，请检查如何 :doc:`创建mosaic <../mosaic/creating-a-mosaic>`。"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

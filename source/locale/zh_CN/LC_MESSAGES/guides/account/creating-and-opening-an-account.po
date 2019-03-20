@@ -1,148 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:10
-msgid "Creating and opening an account"
-msgstr "创建并打开账户"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:12
-msgid "Create a new :doc:`account <../../concepts/account>` and open it."
-msgstr "创建 :doc:`账户 <../../concepts/account>` 并打开它。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:16
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:18
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr "完成 :doc:`入门学习部分 <../../getting-started/setup-workstation>`"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:22
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:24
-#, fuzzy
-msgid ""
-"An account is a key pair (private and public key) associated with a "
-"mutable state stored in the NEM blockchain."
-msgstr "帐户是与存储在NEM区块链中的可变状态相关联的密钥对（私钥和公钥）。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:28
-msgid "|creating-an-account-ts|"
-msgstr "|creating-an-account-ts|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:33
-msgid "|creating-an-account-js|"
-msgstr "|creating-an-account-js|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:38
-msgid "|creating-an-account-cli|"
-msgstr "|creating-an-account-cli|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:43
-msgid ""
-"The **private key** uniquely identifies a NEM account and holds all of "
-"its power. It is a priority to make sure it is stored safely somewhere "
-"**offline** and not to share it with anyone."
-msgstr "**私钥**使NEM账户相互区别并多账户享有控制权。确保私钥安全地存储在 **离线** 的某个地方，而不是与任何人共享它，这是一个需要注意的事项。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:45
-msgid ""
-"The **public key** is cryptographically derived from the private key and "
-"safe to be shared. In spite of that, it is preferable to share the "
-"**address**, which contains further information such as network and "
-"validity check."
-msgstr "**公钥**是从私钥加密派生的，可以安全地共享。尽管如此，还是最好共享 **地址**，其中包含更多信息，如网络和有效性检查。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:47
-msgid ""
-"If you already have a private key, it is not necessary to generate a new "
-"account:"
-msgstr "如果您已经有了私钥，则无需生成新帐户："
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:51
-msgid "|opening-an-account-ts|"
-msgstr "|opening-an-account-ts|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:56
-msgid "|opening-an-account-java|"
-msgstr "|opening-an-account-java|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:61
-msgid "|opening-an-account-js|"
-msgstr "|opening-an-account-js|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:66
-msgid "**Using a Wallet**"
-msgstr "**使用钱包**"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:68
-msgid ""
-"If the programming language of the SDK you are using allows client-side "
-"development, you can create a  wallet."
-msgstr "如果您使用的SDK的编程语言允许客户端开发，那么您可以创建一个钱包。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:70
-msgid ""
-"A wallet enables you to store your account to sign transactions, "
-"encrypting your private key with a password."
-msgstr "钱包可以让你存储你的帐户签署交易，用密码加密你的私人密钥。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:74
-msgid "|creating-a-wallet-ts|"
-msgstr "|creating-a-wallet-ts|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:79
-msgid "|creating-a-wallet-js|"
-msgstr "|creating-a-wallet-js|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:84
-msgid "|creating-a-wallet-cli|"
-msgstr "|creating-a-wallet-cli|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:89
-msgid ""
-"Do you have a private key? You can create and open a wallet importing "
-"your private key."
-msgstr "你有私人钥匙吗？您可以创建和打开一个钱包，导入您的私钥。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:93
-msgid "|opening-a-wallet-ts|"
-msgstr "|opening-a-wallet-ts|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:98
-msgid "|opening-a-wallet-js|"
-msgstr "|opening-a-wallet-js|"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:103
-msgid "|opening-a-wallet-cli|"
-msgstr "|opening-a-wallet-cli|"
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或 CLI"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,127 +20,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/guidelines/sdk-documentation.rst:5
-msgid "SDK Documentation"
-msgstr "SDK 文档"
-
-#: ../../source/guidelines/sdk-documentation.rst:7
-msgid ""
-"SDKs need to be adopted by other developers. As a contributor, no one knows "
-"better than you how a determined SDK works. Consider helping others and "
-"spread the usage of the SDK by providing the following documentation."
-msgstr ""
-"SDK需要被其他开发人员采用。作为一个贡献者，没有人比你更了解一个确定的SDK是如何工作的。考虑通过提供以下文档来帮助其他人并传播SDK的使用。"
-
-#: ../../source/guidelines/sdk-documentation.rst:14
-msgid "Readme"
-msgstr "Readme"
-
-#: ../../source/guidelines/sdk-documentation.rst:16
-msgid ""
-"Check if your repository has a complete README. Consider adapting the "
-":download:`here <../resources/templates/README_SDK.md>` template used by "
-"some SDKs."
-msgstr ""
-"检查存储你的库是否有完整的README文档。参考: :download:` "
-"这个<../resources/templates/README_SDK.md>` 模板进行调整。"
-
-#: ../../source/guidelines/sdk-documentation.rst:19
-msgid "Required sections:"
-msgstr "需要的部分："
-
-#: ../../source/guidelines/sdk-documentation.rst:21
-msgid "Requirements"
-msgstr "Requirements"
-
-#: ../../source/guidelines/sdk-documentation.rst:22
-msgid "Installation"
-msgstr "Installation"
-
-#: ../../source/guidelines/sdk-documentation.rst:23
-msgid "Contributing"
-msgstr "Contributing"
-
-#: ../../source/guidelines/sdk-documentation.rst:24
-msgid "License"
-msgstr "License"
-
-#: ../../source/guidelines/sdk-documentation.rst:28
-msgid "Comments and reference docs"
-msgstr "意见及参考文件"
-
-#: ../../source/guidelines/sdk-documentation.rst:30
-msgid ""
-"Document functions and classes with comments while you write your code. A "
-"reference generator should be able to read this comments and generate HTML "
-"as an output."
-msgstr "编写代码时使用注释记录函数和类。引用生成器应该能够读取此注释并生成HTML作为输出。"
-
-#: ../../source/guidelines/sdk-documentation.rst:34
-msgid ""
-"Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ "
-"for Javascript, whereas in Java we are using `Javadoc "
-"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_. "
-"Research which is the reference generator most convenient for your language."
-msgstr ""
-"一些引用生成器的例子是用于Javascript的`TypeDoc <https://typedoc.org/>`_ "
-"，而在Java中我们使用`Javadoc "
-"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_。想想哪一个引用生成器是你最适合你使用的语言。"
-
-#: ../../source/guidelines/sdk-documentation.rst:40
-msgid "Guides"
-msgstr "指南"
-
-#: ../../source/guidelines/sdk-documentation.rst:42
-msgid ""
-"The NEM Developer Center gathers a collection of :doc:`guides "
-"<../concepts/account>`. They show developers how to use NEM built-in "
-"features while following step-by-step use cases."
-msgstr ""
-"NEM开发中心收集了一组:doc:`指南<../concepts/account>`。他们向开发人员展示了如何在遵循逐步的用例的同时使用NEM内置功能。"
-
-#: ../../source/guidelines/sdk-documentation.rst:46
-msgid ""
-"Each guide comes with at least one snippet. Snippets are executable pieces "
-"of code that solve the proposed use case."
-msgstr "每个指南至少包含一个片段。代码段是解决所提议用例的可执行代码段。"
-
-#: ../../source/guidelines/sdk-documentation.rst:49
-msgid ""
-"Writing snippets helps you to compare how the SDK code looks like in "
-"contrast with others. Furthermore, you will be testing manually if the SDK "
-"behaves correctly."
-msgstr "编写代码片段有助于将SDK代码比较与其他代码进行比较。此外，如果SDK运行无误，您将手动进行测试。"
-
-#: ../../source/guidelines/sdk-documentation.rst:53
-msgid ""
-"`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`__ and clone `nem2-docs repository "
-"<https://github.com/nemtech/nem2-docs>`__."
-msgstr ""
-"`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`__ 然后clone `nem2-docs repository "
-"<https://github.com/nemtech/nem2-docs>`__."
-
-#: ../../source/guidelines/sdk-documentation.rst:61
-msgid "Create a new folder under ``source/resources/examples/`` called ."
-msgstr "在“source/resources/examples/`` called”下创建一个新文件夹。"
-
-#: ../../source/guidelines/sdk-documentation.rst:63
-msgid ""
-"Code each example. Take `typescript snippets "
-"<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__"
-" as a reference."
-msgstr ""
-"对每个示例进行编码。采用`typescript 代码段 "
-"<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__"
-" as a reference."
-
-#: ../../source/guidelines/sdk-documentation.rst:67
-msgid ""
-"Push the changes, and `create a pull request <https://services.github.com"
-"/on-demand/intro-to-github/es/crear-pull-request>`__."
-msgstr ""
-"Push 更改，并`创建pull请求 <https://services.github.com/on-demand/intro-to-github/es"
-"/crear-pull-request>`__."

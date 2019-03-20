@@ -1,196 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:10
-msgid "Asking for mosaics with aggregate bonded transaction"
-msgstr "聚合绑定交易需要mosaic。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:12
-msgid ""
-"Ask an account to send you funds using an :ref:`aggregate bonded "
-"transaction <aggregate-transaction>`."
-msgstr "要求账户使用以下方式向您发送资金 :ref:`聚合绑定交易 <aggregate-transaction>`。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:16
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:18
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ""
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:19
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:20
-msgid ""
-"Know how to :doc:`create accounts <../account/creating-and-opening-an-"
-"account>`"
-msgstr ""
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:24
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:30
-msgid "Asking for mosaics with an aggregate bonded transaction"
-msgstr "通过聚合绑定交易索取马赛克"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:32
-#, fuzzy
-msgid "Alice wants to ask Bob for ``20 cat.currency``."
-msgstr "Alice 想向Bob索取20 XEM。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:34
-msgid "Set up both Alice's and Bob's accounts."
-msgstr "设置Alice和Bob的帐户。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:38
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:58
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:77
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:91
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:105
-msgid "|asking-for-mosaics-with-aggregate-bonded-transaction-ts|"
-msgstr "|asking-for-mosaics-with-aggregate-bonded-transaction-ts|"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:43
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:63
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:82
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:96
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:110
-msgid "|asking-for-mosaics-with-aggregate-bonded-transaction-js|"
-msgstr "|asking-for-mosaics-with-aggregate-bonded-transaction-js|"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:48
-msgid "Alice creates an aggregate bonded transaction with two inner transactions:"
-msgstr "lice使用两个内部事务创建聚合绑定事务："
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:50
-msgid "Define the first inner :ref:`transfer transaction <transfer-transaction>`:"
-msgstr "定义第一个内部: :ref:`转让交易 <transfer-transaction>`:"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:52
-msgid "message: \"message reason\" (custom, but not empty)"
-msgstr "message: \"消息\" (自定义，不可为空)"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:53
-msgid "receiver: Bob address"
-msgstr "receiver: Bob 的地址"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:54
-msgid "signer: Alice"
-msgstr "signer: Alice"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:68
-msgid ""
-"Define the second inner :ref:`transfer transaction <transfer-"
-"transaction>`:"
-msgstr "定义第二个内部 :ref:`转让交易 <transfer-transaction>`:"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:70
-msgid "message: empty"
-msgstr "message: empty"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:71
-msgid "receiver: Alice address"
-msgstr "receiver: Alice的地址"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:72
-#, fuzzy
-msgid "mosaics: 20 cat.currency"
-msgstr "mosaics: 20 XEM"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:73
-msgid "signer: Bob"
-msgstr "signer: Bob"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:87
-msgid "3.Wrap the defined transactions in an aggregate bonded transaction:"
-msgstr "3.在聚合绑定交易中保存已定义的交易："
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:101
-#, fuzzy
-msgid ""
-"Alice signs the aggregate bonded transaction and announces it to the "
-"network, locking first ``10 cat.currency``."
-msgstr "Alice签署聚合保税交易并将其向网络进行通知，同时锁定了第一个10个XEM。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:115
-msgid ""
-"The :ref:`listener implementation changes <monitoring-transactions-"
-"client-side>` when used on the client side (e.g., Angular, React, Vue)."
-msgstr ""
-"在客户端 (如, Angular, React, Vue)使用监听者时 ，:ref:`监听者实现发生改变<monitoring-"
-"transactions-client-side>` "
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:117
-msgid ""
-"If all goes well, :doc:`Bob receives a notification "
-"<../transaction/monitoring-a-transaction-status>`."
-msgstr "如果一切顺利，:doc:`Bob会收到通知<../ transaction / monitoring-a-transaction-status>`。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:121
-msgid "What's next?"
-msgstr "下一步"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:123
-msgid ""
-"Bob has not cosigned the transaction yet. Consider reading :doc:`signing "
-"announced aggregate bonded transactions guide <signing-announced-"
-"aggregate-bonded-transactions>`."
-msgstr ""
-"Bob尚未签署该交易。思考阅读:doc:`签署已发布的聚合绑定交易指南<signing-announce-aggregate-bonded-"
-"transactions>`。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:125
-msgid ""
-"After receiving the transaction, Bob signs the ``transaction hash`` and "
-"announces the cosignature signed transaction."
-msgstr "收到交易后，Bob签署``transaction hash`` 并宣布签署了共同签署者签名的交易。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:127
-msgid ""
-"As the aggregate bonded transaction has all the cosignatures required, it"
-" will be included in a block."
-msgstr "聚合绑定交易此时得到了所需的所有共同签名，因此它将保存在一个块中。"
-
-#~ msgid ""
-#~ "Finish :doc:`creating an escrow with "
-#~ "aggregate bonded transaction guide "
-#~ "<creating-an-escrow-with-aggregate-"
-#~ "bonded-transaction>`"
-#~ msgstr ""
-#~ "完成 :doc:`使用聚合保税交易创建第三方托管指南 <creating-an-"
-#~ "escrow-with-aggregate-bonded-transaction>`"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "An account with XEM"
-#~ msgstr "一个拥有XEM的账户"
-
-#~ msgid "|asking-for-mosaics-with-aggregate-bonded-transaction-java|"
-#~ msgstr "|asking-for-mosaics-with-aggregate-bonded-transaction-java|"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

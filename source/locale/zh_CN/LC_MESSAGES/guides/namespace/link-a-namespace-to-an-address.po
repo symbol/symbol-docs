@@ -1,94 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"PO-Revision-Date: 2019-03-19 13:59+0000\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:10
-msgid "Linking a namespace to an address"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:12
-msgid ""
-"Link a :doc:`namespace <../../concepts/namespace>` to an :doc:`account "
-"<../../concepts/account>`."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:16
-msgid "Prerequisites"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:18
-msgid "Have registered one :doc:`namespace <../../concepts/namespace>`"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:19
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:23
-msgid "Let’s get into some code"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:25
-msgid ""
-"An account can link a registered :doc:`name <../../concepts/namespace>` "
-"(namespace or subnamespace) with an :doc:`account "
-"<../../concepts/account>`."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:27
-msgid "Define the namespaceId and the address you want to link."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:31
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:46
-msgid "|linking-a-namespace-to-an-address-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:36
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:51
-msgid "|linking-a-namespace-to-an-address-js|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:42
-msgid "Announce the alias transaction."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:57
-msgid ""
-"If you want to unlink the alias, change alias action type to "
-"``AliasActionType.Unlink``."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:61
-msgid "What's next?"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:63
-msgid ""
-"Now you can send transactions to the namespace linked to the account "
-"instead of using the complete address."
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:67
-msgid "|sending-a-transfer-transaction-address-alias-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:72
-msgid "|sending-a-transfer-transaction-address-alias-js|"
-msgstr ""
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
