@@ -1,32 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/blockchain/getting-block-by-height.rst:10
-#, fuzzy
 msgid "Getting a block by height"
 msgstr "ブロック高によるブロックの取得"
 
 #: ../../source/guides/blockchain/getting-block-by-height.rst:12
-msgid "Get the :doc:`block <../../concepts/block>` information given a height."
+msgid ""
+"Get the :doc:`block <../../concepts/block>` information given a height."
 msgstr "与えられたブロック高の :doc:`ブロック <../../concepts/block>` 情報を取得する。"
 
 #: ../../source/guides/blockchain/getting-block-by-height.rst:16
@@ -45,9 +46,9 @@ msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/blockchain/getting-block-by-height.rst:24
 msgid ""
-"What happened in the genesis block? Run the following code to get the "
-"first created block header."
-msgstr ""
+"What happened in the genesis block? Run the following code to get the first "
+"created block header."
+msgstr "起源ブロックで何が起こりましたか？次のコードを実行して最初に作成されたブロックのヘッダを取得します。"
 
 #: ../../source/guides/blockchain/getting-block-by-height.rst:28
 msgid "|getting-block-by-height-ts|"
@@ -80,13 +81,3 @@ msgstr ""
 #: ../../source/guides/blockchain/getting-block-by-height.rst:62
 msgid "|getting-blockchain-height-cli|"
 msgstr ""
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "テキストエディタ または IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK または CLI"
-
-#~ msgid "Are you curious to see what happened in the genesis block?"
-#~ msgstr "ジェネシスブロックで何が起きていたかを見る好奇心はありますか？"
-

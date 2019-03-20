@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-18 18:08+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:105
 msgid "Mosaic"
@@ -26,9 +27,9 @@ msgstr "モザイク"
 
 #: ../../source/concepts/mosaic.rst:5
 msgid ""
-"Mosaics are part of what makes the Smart Asset System unique and "
-"flexible. They are **fixed assets** on the NEM blockchain that can "
-"represent a set of multiple identical things that do not change."
+"Mosaics are part of what makes the Smart Asset System unique and flexible. "
+"They are **fixed assets** on the NEM blockchain that can represent a set of "
+"multiple identical things that do not change."
 msgstr ""
 "モザイクは、スマートアセットシステムに一意性と柔軟さをもたらすものの一部です。これらは、変化しない複数の同一物の集合を表すことができる、NEM "
 "ブロックチェーン上に **固定されたアセット** です。"
@@ -48,15 +49,22 @@ msgid ""
 "creation, you can define:"
 msgstr "各モザイクは設定可能なプロパティの集合を持ちます。モザイクを作成する時に定義できます:"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Description"
 msgstr "説明"
 
@@ -64,18 +72,19 @@ msgstr "説明"
 msgid "Divisibility"
 msgstr ""
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
 msgid "Integer"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Determines up to what decimal place the mosaic can be divided. "
-"Divisibility of 3 means that a mosaic can be divided into smallest parts "
-"of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``."
+"Determines up to what decimal place the mosaic can be divided. Divisibility "
+"of 3 means that a mosaic can be divided into smallest parts of 0.001 "
+"mosaics. The divisibility must be in the range of 0 and ``6``."
 msgstr ""
-"モザイクがどれくらいの小数点以下に分割できるかを決定します。可分性 3 はモザイクが最小で 0.001 に分割できることを意味します。可分性は 0"
-" から ``6`` の範囲でなければなりません。"
+"モザイクがどれくらいの小数点以下に分割できるかを決定します。可分性 3 はモザイクが最小で 0.001 に分割できることを意味します。可分性は 0 から"
+" ``6`` の範囲でなければなりません。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Duration"
@@ -83,8 +92,8 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Specifies the number of confirmed blocks the mosaic is rented for. "
-"Mosaics can be configured to not expire."
+"Specifies the number of confirmed blocks the mosaic is rented for. Mosaics "
+"can be configured to not expire."
 msgstr "モザイクのレンタル期間の承認済みブロック数を指定します。期限が切れないモザイクを構成することが可能です。"
 
 #: ../../source/concepts/mosaic.rst:1
@@ -93,22 +102,22 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Indicates the amount of mosaic in circulation. The initial supply must be"
-" in the range of 0 and ``9,000,000,000``."
+"Indicates the amount of mosaic in circulation. The initial supply must be in"
+" the range of 0 and ``9,000,000,000``."
 msgstr "モザイクの供給量の総数です。初期供給量は 0 から ``9,000,000,000`` の範囲でなければなりません。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Supply mutable"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Boolean"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"If set to true, the mosaic supply can change at a later point. Otherwise,"
-" the mosaic supply remains immutable."
+"If set to true, the mosaic supply can change at a later point. Otherwise, "
+"the mosaic supply remains immutable."
 msgstr "true にセットした場合、モザイク供給量は後の時点で変更できるようになります。そうでない場合、変更できません。"
 
 #: ../../source/concepts/mosaic.rst:1
@@ -117,10 +126,10 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"If set to true, the mosaic can be transferred between arbitrary accounts."
-" Otherwise, the mosaic can be only transferred back to the mosaic "
-"creator."
-msgstr "true にセットした場合、モザイクは任意のアカウント間で転送できます。そうでない場合、モザイクはモザイク作成者へ送り返すことしかできません。"
+"If set to true, the mosaic can be transferred between arbitrary accounts. "
+"Otherwise, the mosaic can be only transferred back to the mosaic creator."
+msgstr ""
+"true にセットした場合、モザイクは任意のアカウント間で転送できます。そうでない場合、モザイクはモザイク作成者へ送り返すことしかできません。"
 
 #: ../../source/concepts/mosaic.rst:25
 msgid "Guides"
@@ -132,9 +141,9 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/mosaic.rst:39
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_ . "
-"Public network configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
 msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
@@ -180,11 +189,16 @@ msgstr ""
 msgid "Random nonce used to generate the mosaic id."
 msgstr "モザイクIDを生成するために使用されるランダムなノンス値"
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
 msgid "mosaicId"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "uint64"
 msgstr ""
 
@@ -196,6 +210,7 @@ msgstr "モザイクID"
 msgid "propertiesCount"
 msgstr ""
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
 msgid "uint8"
 msgstr ""
@@ -290,15 +305,15 @@ msgstr "プロパティID (0x02) は期間を意味します。"
 msgid "The mosaic property value."
 msgstr "モザイクプロパティの値"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "The mosaic id."
 msgstr "モザイクID"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "amount"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "The amount of the mosaic."
 msgstr "モザイクの量"
 
@@ -314,7 +329,7 @@ msgstr ""
 msgid "Enumeration: uint8"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Id"
 msgstr ""
 
@@ -369,15 +384,3 @@ msgstr ""
 #: ../../source/concepts/mosaic.rst:1
 msgid "Decrease."
 msgstr "減少"
-
-#~ msgid ""
-#~ "⚠ The latest release introduces breaking"
-#~ " changes. Until the SDKs are not "
-#~ "aligned, we recommend using :doc:`catapult-"
-#~ "service-bootstrap 0.1.0 <../getting-started"
-#~ "/setup-workstation>` to run the guides."
-#~ msgstr ""
-#~ "⚠ 最新リリースでは重大な変更が加えられています。まだSDKは整備されていないので、ガイドを進める場合は :doc"
-#~ ":`catapult-service-bootstrap 0.1.0 "
-#~ "<../getting-started/setup-workstation>` を使用することを推奨します。"
-
