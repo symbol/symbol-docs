@@ -1412,7 +1412,7 @@ definitions:
     - blockTransactionsHash
     - blockReceiptsHash
     - stateHash
-    - beneficiaryPublicKey
+    - beneficiary
     properties:
       signature:
         type: string
@@ -1438,7 +1438,7 @@ definitions:
         type: string
       stateHash:
         type: string
-      beneficiaryPublicKey:
+      beneficiary:
         type: string
   HeightDTO:
     type: object
