@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# ivyfung8 <ivyfung@nem.my>, 2019
 # nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
-"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,10 @@ msgid ""
 "**Catapult REST API** combines HTTP and WebSockets to perform read and write"
 " actions in the NEM blockchain."
 msgstr "**Catapult REST API**结合HTTP和WebSockets在NEM区块链中执行读写操作。"
+
+#: ../../source/api.rst:11
+msgid "Http requests"
+msgstr "Http 请求"
 
 #: ../../source/api.rst:13
 msgid ""
@@ -437,6 +441,10 @@ msgid ""
 "The status channel notifies when a transaction related to an address rises "
 "an error. The message contains the error message and the transaction hash."
 msgstr "状态通道在相关地址的交易出现错误时发出通知。该通知包含错误消息和交易哈希。"
+
+#: ../../source/api.rst:188
+msgid "Status errors"
+msgstr "状态错误"
 
 #: ../../source/api.rst:190
 msgid ""
@@ -1558,6 +1566,11 @@ msgstr "验证失败，因为链部分包含重复交易。"
 #: ../../source/api.rst:1
 msgid "Failure_Consumer_Remote_Chain_Unlinked"
 msgstr "Failure_Consumer_Remote_Chain_Unlinked"
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the chain part does not link to the current chain."
+msgstr "验证失败，因为链部件没有连接到当前链。"
 
 #: ../../source/api.rst:1
 msgid "Failure_Consumer_Remote_Chain_Mismatched_Difficulties"

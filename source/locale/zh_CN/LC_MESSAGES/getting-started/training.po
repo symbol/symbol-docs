@@ -21,3 +21,125 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/getting-started/training.rst:3
+msgid "Self-paced training"
+msgstr "自定步调训练"
+
+#: ../../source/getting-started/training.rst:5
+msgid ""
+"Although you can read this documentation from start to end, we recommend you"
+" to go directly to the section you want to know more. At the end of each "
+"section, you will find :ref:`specific guides <category-account>` to "
+"understand how to use and combine the different built-in features."
+msgstr ""
+"尽管您可以从头到尾阅读此文档，但我们建议您直接转到您想了解更多信息的部分。在每个部分的末尾，您将找到:ref:`特定指南<category "
+"account>`了解如何使用和组合不同的内置功能。"
+
+#: ../../source/getting-started/training.rst:7
+msgid ""
+"If you prefer to learn about NEM through guided lessons, consider taking one"
+" course from the following list."
+msgstr "如果您喜欢通过指导课程了解NEM，请考虑从以下列表中选择一门课程。"
+
+#: ../../source/getting-started/training.rst:11
+msgid "Courses"
+msgstr "课程"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Title"
+msgstr "标题"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Description"
+msgstr "简介"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Target"
+msgstr "目标"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Active contributors"
+msgstr "活跃的贡献者"
+
+#: ../../source/getting-started/training.rst:1
+msgid ""
+"`Getting started with NEM Catapult <https://craftain.com/courses/getting-"
+"started-with-nem-catapult/>`_"
+msgstr ""
+"` NEM Catapult 入门<https://craftain.com/courses/getting-started-with-nem-"
+"catapult/>`_"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Build a decentralized blockchain app using Catapult."
+msgstr "使用Catapult构建一个去中心化的区块链应用程序。"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Developers (NEM novice)"
+msgstr "开发员（NEM新手）"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Craftain and NEM Foundation"
+msgstr "Craftain 和 NEM 基金会"
+
+#: ../../source/getting-started/training.rst:1
+msgid ""
+"`Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2"
+"-workshop-document-notarization/>`_"
+msgstr ""
+"` NEM 区块链公证 <https://nemtech.github.io/nem2-workshop-document-"
+"notarization/>`_"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Learn how digital assets can be notarized in the blockchain."
+msgstr "了解如何在区块链中公证数字资产。"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Developers (NEM advanced beginner)"
+msgstr "开发员（NEM高级初学者）"
+
+#: ../../source/getting-started/training.rst:1
+#: ../../source/getting-started/training.rst:1
+msgid "NEM Foundation"
+msgstr "NEM 基金会"
+
+#: ../../source/getting-started/training.rst:1
+msgid ""
+"`NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-"
+"applied-to-supply-chain/>`_"
+msgstr ""
+"`NEM在供应链的运用<https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-"
+"chain/>`_"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Start developing a real use case step by step."
+msgstr "开始逐步开发一个真正的用例。"
+
+#: ../../source/getting-started/training.rst:1
+msgid "Developers (NEM competent)"
+msgstr "开发员（能胜任NEM技术）"
+
+#: ../../source/getting-started/training.rst:23
+msgid "Adding a new course"
+msgstr "增加新的课程。"
+
+#: ../../source/getting-started/training.rst:25
+msgid ""
+"We suggest reviewing our `Curricular Framework "
+"<https://nemtech.github.io/nem2-curricular-framework/>`_ and forking the "
+"`NEM2-workshop-template <https://github.com/nemtech/nem2-workshop-"
+"template>`_."
+msgstr ""
+"我们建议参阅我们的 `课程框架 <https://nemtech.github.io/nem2-curricular-framework/>`_ "
+"和硬分叉 `NEM2-workshop-template <https://github.com/nemtech/nem2-workshop-"
+"template>`_."
+
+#: ../../source/getting-started/training.rst:27
+msgid "The courses published in this section must be available online."
+msgstr "在这个部分发表的课程必须在线。"
+
+#: ../../source/getting-started/training.rst:29
+msgid ""
+"Once the course is complete, add it to this page by clicking the *\"Edit on "
+"Github\"* button at the top-right part of the screen."
+msgstr "当这课程完成后，按荧幕上右上角的**Edit on Github\"*按钮，把课程加入。"

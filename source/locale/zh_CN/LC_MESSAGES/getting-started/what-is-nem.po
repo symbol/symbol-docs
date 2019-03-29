@@ -5,6 +5,7 @@
 # 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,10 +14,108 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/getting-started/what-is-nem.rst:3
+msgid "What is NEM?"
+msgstr "什么是NEM？"
+
+#: ../../source/getting-started/what-is-nem.rst:7
+#: ../../source/getting-started/what-is-nem.rst:17
+msgid "The Smart Asset System"
+msgstr "智能资产系统"
+
+#: ../../source/getting-started/what-is-nem.rst:9
+msgid ""
+"|nem| is a developer-friendly blockchain platform. Rather than force you to "
+"write your own “smart contract” code from scratch, NEM gives you direct "
+"access to a specialized set of tested and secure on-blockchain "
+":doc:`features <../concepts/account>`."
+msgstr ""
+"|nem| 是一个开发人员友好性的区块链平台。 NEM不是强迫您从头开始编写自己的 “智能合约” 代码，而是让您直接访问一组经过测试且安全的链上 "
+":doc:`功能<../ concepts / account>`。"
+
+#: ../../source/getting-started/what-is-nem.rst:11
+msgid ""
+"NEM is suitable for an amazing variety of solutions of different classes, "
+"such as direct public transactions via a streamlined smartphone app, "
+"efficient cloud services that connect client or web applications, or a high-"
+"performance permissioned enterprise back-end for business-critical record "
+"keeping."
+msgstr ""
+"NEM适用于各种不同类别的解决方案，例如通过简化的智能手机应用程序进行直接公共交易，连接客户端或网络应用程序的高效云端服务，或用于关键业务记录保存的高性能许可企业后端。"
+
+#: ../../source/getting-started/what-is-nem.rst:21
+msgid "Architecting on NEM"
+msgstr "在NEM上的架构"
+
+#: ../../source/getting-started/what-is-nem.rst:23
+msgid ""
+"NEM :doc:`nodes <../concepts/node>` provide a powerful, stable and secure "
+"platform where smart asset transactions are conducted, searched, and "
+"immutably logged to the blockchain ledger."
+msgstr ""
+"NEM :doc:`节点 <./ concepts / "
+"node>`提供一个强大，稳定和安全的平台，让智能资产交易可以进行、搜索和不可变地被记录到区块链分类账。"
+
+#: ../../source/getting-started/what-is-nem.rst:25
+msgid ""
+"All the features are available through the API interface on each node in the"
+" network itself. This means that the blockchain can be used to create a "
+"variety of architecture solutions with lightweight :doc:`code in any "
+"language <../sdk>`."
+msgstr ""
+"所有功能都可通过网络中每个节点上的API接口获得。 这意味着区块链可使用轻量级的 :doc:`任何语言的代码<../ "
+"sdk>`来创建各种体系结构解决方案。"
+
+#: ../../source/getting-started/what-is-nem.rst:31
+msgid "**Mobile app direct access**"
+msgstr "**移动应用程序直接访问**"
+
+#: ../../source/getting-started/what-is-nem.rst:33
+msgid "A lightweight app directly interfaces to blockchain features."
+msgstr "轻量级应用程序直接与区块链功能接口。"
+
+#: ../../source/getting-started/what-is-nem.rst:35
+msgid "**Client/server model**"
+msgstr "**Client/server 型号**"
+
+#: ../../source/getting-started/what-is-nem.rst:37
+msgid ""
+"A gateway server manages blockchain usage for a client app or web service."
+msgstr "网关服务器管理客户端应用程序或网络服务的区块链使用。"
+
+#: ../../source/getting-started/what-is-nem.rst:39
+msgid "**Legacy system integration**"
+msgstr "**旧版系统综合**"
+
+#: ../../source/getting-started/what-is-nem.rst:41
+msgid ""
+"A gateway server links existing business contract logic, systems, or "
+"databases to the blockchain ledger."
+msgstr "网关服务器将现有业务合同逻辑，系统或数据库链接到区块链账本。"
+
+#: ../../source/getting-started/what-is-nem.rst:49
+msgid "Public and Private"
+msgstr "共有与私有"
+
+#: ../../source/getting-started/what-is-nem.rst:55
+msgid ""
+"NEM provides both a decentralized, open and self-sustaining **public "
+"blockchain** that can be used by anyone – as well as a "
+"**permissioned/private blockchain solution** that can be provisioned "
+"specifically for your use on your servers when speed and privacy are the "
+"priority."
+msgstr ""
+"NEM提供了一个可供任何人使用的分散的、开放的和自我维持的 **公共区块链** "
+"以及可以为您在服务器上作特定规定、以速度和隐私为优先的**许可制/私链解决方案**，"
+
+#: ../../source/getting-started/what-is-nem.rst:57
+msgid "Continue: :doc:`Setting up your workstation <setup-workstation>`."
+msgstr "继续: :doc:`设置工作空间 <setup-workstation>`."

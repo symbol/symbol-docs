@@ -21,3 +21,306 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/block.rst:3 ../../source/concepts/block.rst:1
+msgid "Block"
+msgstr "区块"
+
+#: ../../source/concepts/block.rst:5
+msgid ""
+"The central element of every cryptocurrency is a public ledger called the "
+"called blockchain, which links blocks together."
+msgstr "每个加密货币的核心要素是一个称为区块链的公共账本。它有许多区块组成。"
+
+#: ../../source/concepts/block.rst:9
+msgid ""
+"Since the blocks in the chain are ordered, the complete transaction history "
+"is held in the blockchain. Subsequent blocks in the blockchain have "
+"increasing heights that differ by one."
+msgstr "由于链中的区块是有序的，因此区块链中保存了完整的交易历史记录。后续添加的区块使区块链中的的高度加一。"
+
+#: ../../source/concepts/block.rst:11
+msgid ""
+"Blocks are stored in a database as permanent medium. NEM calls the first "
+"block in the chain the nemesis block."
+msgstr "区块作为永久介质存储在数据库中。 NEM称链中的首区块为nemesis 块。"
+
+#: ../../source/concepts/block.rst:13
+msgid ""
+"NEM blocks complete every ``15`` seconds, making transactions confirm "
+"quickly enough for everyday use."
+msgstr "NEM每``15``秒生成一个区块。这可迅速确认交易，方便日常交易。"
+
+#: ../../source/concepts/block.rst:15
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_. Public network "
+"configuration may differ."
+msgstr ""
+"配置参数是`可更改的 <https://github.com/nemtech/catapult-server/blob/master/resources"
+"/config-network.properties>`_。公共网络配置可能有所不同。"
+
+#: ../../source/concepts/block.rst:19
+msgid "Block creation"
+msgstr "区块的创建"
+
+#: ../../source/concepts/block.rst:21
+msgid ""
+"Blocks are created by :doc:`accounts <account>`. The process of creating new"
+" blocks is called :doc:`harvesting <harvesting>`. The harvesting account - "
+"called the harvester - gets the fees for the transactions in the block. This"
+" gives the harvester an incentive to add as many transactions to the block "
+"as possible."
+msgstr ""
+"区块由  :doc:`账户<account>` 创建。创建新区块的过程称为 :doc:`收获<harvesting>`。 收获账户 - 称为收获者 "
+"-他们会获得区块中的交易费。这使收获者有动力尽可能将多些交易添加到区块中。"
+
+#: ../../source/concepts/block.rst:25
+msgid "Guides"
+msgstr "指南"
+
+#: ../../source/concepts/block.rst:37
+msgid "Schemas"
+msgstr "模式"
+
+#: ../../source/concepts/block.rst:42
+msgid "BlockHeader"
+msgstr "区块的首部"
+
+#: ../../source/concepts/block.rst:44
+msgid "**Inlines:**"
+msgstr "**内联：**"
+
+#: ../../source/concepts/block.rst:46
+msgid ":ref:`VerifiableEntity<verifiable-entity>`"
+msgstr ":ref:`VerifiableEntity<verifiable-entity>`"
+
+#: ../../source/concepts/block.rst:47
+msgid ":ref:`EntityBody<entity-body>`"
+msgstr ":ref:`EntityBody<entity-body>`"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
+msgid "Property"
+msgstr "属性"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
+msgid "Type"
+msgstr "类型"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/concepts/block.rst:1
+msgid "height"
+msgstr "高度"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1
+msgid "uint64"
+msgstr "uint64"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The height of the blockchain. Each blockchain has a unique height. "
+"Subsequent blocks differ in height by 1."
+msgstr "区块链的高度。 每个区块链都有各自的高度。区块与随后的区块高度相差1。"
+
+#: ../../source/concepts/block.rst:1
+msgid "timestamp"
+msgstr "时间戳"
+
+#: ../../source/concepts/block.rst:1
+msgid "The number of seconds elapsed since the creation of the nemesis block."
+msgstr "自创建nemesis 块以来经过的秒数。"
+
+#: ../../source/concepts/block.rst:1
+msgid "difficulty"
+msgstr "难度"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The average difficulty divided by the average block creation time for the "
+"last ``60`` blocks. If the new difficulty is more than 5% greater or smaller"
+" than the difficulty of the last block, then the change is capped to 5%. "
+"Additionally, difficulties are kept within certain bounds. The new "
+"difficulty is clamped to the boundaries if it is greater than 10\\ :sup:`15`"
+" or smaller than 10\\ :sup:`13`\\ ."
+msgstr ""
+"平均难度除以最后“60”个区块的平均创建时间。如果新的难度比前一个区块的难度高或低超过5%，那么难度将不会改变超过5%。除此之外，难度会保持在一定范围内。如果新的难度大于10\\"
+" :sup:`15` 或小于 10\\ :sup:`13`\\，则将新的难度限制在边界上。"
+
+#: ../../source/concepts/block.rst:1
+msgid "feeMultiplier"
+msgstr "费用乘数 （feeMultiplier）"
+
+#: ../../source/concepts/block.rst:1
+msgid "uint32"
+msgstr "uint32"
+
+#: ../../source/concepts/block.rst:1
+msgid "The fee multiplier applied to transactions contained in block."
+msgstr "用于区块中的交易的费用乘数。"
+
+#: ../../source/concepts/block.rst:1
+msgid "previousBlockHash"
+msgstr "previousBlockHash"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+msgid "32 bytes (binary)"
+msgstr "32 字节 (二进制)"
+
+#: ../../source/concepts/block.rst:1
+msgid "The hash of the previous block."
+msgstr "前一个区块的哈希值。"
+
+#: ../../source/concepts/block.rst:1
+msgid "blockTransactionHash"
+msgstr "blockTransactionHash"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The transactions included in a block are hashed forming a |merkle|. The root"
+" of the tree summarizes them."
+msgstr "块中包含的交易形成哈希并组成 |默克尔树|。树的根为总结。"
+
+#: ../../source/concepts/block.rst:1
+msgid "blockReceiptsHash"
+msgstr "blockReceiptsHash"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and "
+"linked to a :doc:`block <block>`. The block header stores the root hash."
+msgstr " 集合一起的:doc:`收据 ` 形成哈希并被组成 |默克尔树|，然后被连接到 :doc:`区块 `。根哈希储存于区块的首部。"
+
+#: ../../source/concepts/block.rst:1
+msgid "stateHash"
+msgstr "stateHash"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The state of the blockchain is stored in RocksDB for each block, forming a "
+"|patricia|. The root of the tree summarizes the state of the blockchain for "
+"a given block."
+msgstr "对于每一个区块，区块链的状态将被存储在RocksDB中，形成  |patricia tree| 。 树的根总结了该区块的区块链的状态。"
+
+#: ../../source/concepts/block.rst:1
+msgid "beneficiaryPublicKey"
+msgstr "beneficiaryPublicKey"
+
+#: ../../source/concepts/block.rst:1
+msgid "The public key of the optional beneficiary designated by harvester."
+msgstr "由收割者指定的非必须受益人的公钥。"
+
+#: ../../source/concepts/block.rst:71
+msgid "**Version**: The higher byte represents the network identifier."
+msgstr "**Version**: 较高的字节代表网络识别码。"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+msgid "Id"
+msgstr "Id"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x68 (MAIN_NET)"
+msgstr "0x68 (MAIN_NET)"
+
+#: ../../source/concepts/block.rst:1
+msgid "Public main network"
+msgstr "公共主要网络"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x98 (TEST_NET)"
+msgstr "0x98 (TEST_NET)"
+
+#: ../../source/concepts/block.rst:1
+msgid "Public test network"
+msgstr "公共测试网络"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x60 (MIJIN)"
+msgstr "0x60 (MIJIN)"
+
+#: ../../source/concepts/block.rst:1
+msgid "Private network"
+msgstr "私有网络"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x90 (MIJIN_TEST)"
+msgstr "0x90 (MIJIN_TEST)"
+
+#: ../../source/concepts/block.rst:1
+msgid "Private test network"
+msgstr "私有测试网络"
+
+#: ../../source/concepts/block.rst:82
+msgid "**Type**: The type of the block."
+msgstr "**Type**: 区块的类型。"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x8043"
+msgstr "0x8043"
+
+#: ../../source/concepts/block.rst:1
+msgid "Nemesis block"
+msgstr "Nemesis块"
+
+#: ../../source/concepts/block.rst:1
+msgid "0x8143"
+msgstr "0x8143"
+
+#: ../../source/concepts/block.rst:94
+msgid "VerifiableEntity"
+msgstr "可验证的实体 （VerifiableEntity）"
+
+#: ../../source/concepts/block.rst:1
+msgid "signature"
+msgstr "signature"
+
+#: ../../source/concepts/block.rst:1
+msgid "64 bytes (binary)"
+msgstr "64 字节 (二进制)"
+
+#: ../../source/concepts/block.rst:1
+msgid "The entity signature generated by the signer."
+msgstr "签名者生成的实体签名。"
+
+#: ../../source/concepts/block.rst:105
+msgid "EntityBody"
+msgstr "实体机构 （EntityBody）"
+
+#: ../../source/concepts/block.rst:1
+msgid "signer"
+msgstr "signer"
+
+#: ../../source/concepts/block.rst:1
+msgid "The entity signer's :doc:`public key <account>`."
+msgstr "实体签名者的 :doc:`公钥 <account>`。"
+
+#: ../../source/concepts/block.rst:1
+msgid "version"
+msgstr "version"
+
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+msgid "uint16"
+msgstr "uint16"
+
+#: ../../source/concepts/block.rst:1
+msgid "The version of the structure."
+msgstr "结构的版本。"
+
+#: ../../source/concepts/block.rst:1
+msgid "type"
+msgstr "type"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"The entity type. For transaction types, see :ref:`transaction types "
+"<transaction-types>`."
+msgstr "实体类型。 有关交易类型，请参阅 :ref:`交易类型 <transaction-types>`."

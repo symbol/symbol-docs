@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# ivyfung8 <ivyfung@nem.my>, 2019
 # thilon <thilon@datamain.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-19 13:19+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: thilon <thilon@datamain.com>, 2019\n"
+"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,6 +52,12 @@ msgstr "帐户可以决定仅从允许的:doc:`地址 `列表中接收交易。�
 #: ../../source/concepts/account-filter.rst:19
 msgid "Address filter diagram"
 msgstr "地址过滤器示意图"
+
+#: ../../source/concepts/account-filter.rst:21
+msgid ""
+"Allow and block filters are mutually exclusive. In other words, an account "
+"can only configure a block or an allow list per type of filter."
+msgstr "允许和禁止过滤器是互斥的。 换句话说，帐户只能为每种类型的过滤器配置禁止或允许列表。"
 
 #: ../../source/concepts/account-filter.rst:23
 msgid ""
@@ -121,3 +127,330 @@ msgstr "该公司选择配置他们的产品帐户过滤器，只允许接收包
 #: ../../source/concepts/account-filter.rst:59
 msgid "Enhancing the account security"
 msgstr "增强账户安全"
+
+#: ../../source/concepts/account-filter.rst:61
+msgid ""
+"Lately, Alice is only using her main account to cosign aggregate "
+"transactions where a :doc:`multisig<multisig-account>` she is a cosignatory "
+"is involved."
+msgstr "最近，爱丽丝只使用她的主要帐户签署一个 :doc:`多重签名账户`的聚合交易。她是该多重签名账户的共签者。"
+
+#: ../../source/concepts/account-filter.rst:63
+msgid ""
+"As a temporary measure, Alice opts to disable announcing transfer "
+"transactions from her main account, double checking that any of the funds "
+"she owns will be transferred."
+msgstr "作为一项临时措施，爱丽丝选择禁止她的主账户公布转让交易，仔细检查她所拥有的任何资金是否会被转移。"
+
+#: ../../source/concepts/account-filter.rst:67
+msgid "Schemas"
+msgstr "模式"
+
+#: ../../source/concepts/account-filter.rst:69
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"配置参数是`可编辑的 <https://github.com/nemtech/catapult-server/blob/master/resources"
+"/config-network.properties>`_。 公共网络配置可能有所不同。"
+
+#: ../../source/concepts/account-filter.rst:74
+msgid "AccountPropertiesAddressTransaction"
+msgstr "AccountPropertiesAddressTransaction"
+
+#: ../../source/concepts/account-filter.rst:76
+msgid ""
+"Configure filters to prevent receiving transactions from undesired "
+"addresses."
+msgstr "配置过滤器以防止从某地址接收到交易。"
+
+#: ../../source/concepts/account-filter.rst:78
+#: ../../source/concepts/account-filter.rst:101
+#: ../../source/concepts/account-filter.rst:125
+msgid "**Version**: 0x01"
+msgstr "**版本**: 0x01"
+
+#: ../../source/concepts/account-filter.rst:80
+msgid "**Entity type**: 0x4150"
+msgstr "**实体类型**: 0x4150"
+
+#: ../../source/concepts/account-filter.rst:82
+#: ../../source/concepts/account-filter.rst:105
+#: ../../source/concepts/account-filter.rst:129
+#: ../../source/concepts/account-filter.rst:146
+#: ../../source/concepts/account-filter.rst:161
+#: ../../source/concepts/account-filter.rst:177
+msgid "**Inlines**:"
+msgstr "**内联**:"
+
+#: ../../source/concepts/account-filter.rst:84
+#: ../../source/concepts/account-filter.rst:107
+#: ../../source/concepts/account-filter.rst:131
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ":ref:`交易 ` 或 :ref:`嵌入式交易（EmbeddedTransaction） `"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Property"
+msgstr "属性"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Type"
+msgstr "类型"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "propertyType"
+msgstr "propertyType"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid ":ref:`PropertyType<property-type>`"
+msgstr ":ref:`PropertyType`"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type."
+msgstr "属性类型"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "modificationsCount"
+msgstr "modificationsCount"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint8"
+msgstr "uint8"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "The number of modifications."
+msgstr "修改次数"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "modifications"
+msgstr "modifications"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array(:ref:`AddressModification <address-modification>`, modificationsCount)"
+msgstr ""
+"array(:ref:`AddressModification<address-modification>`, modificationsCount)"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "The array of modifications."
+msgstr "一系列的修改"
+
+#: ../../source/concepts/account-filter.rst:97
+msgid "AccountPropertiesMosaicTransaction"
+msgstr "AccountPropertiesMosaicTransaction"
+
+#: ../../source/concepts/account-filter.rst:99
+msgid ""
+"Configure filters to prevent receiving transactions containing a specific "
+"mosaic."
+msgstr "配置过滤器以防止接收包含特定马赛克的交易。"
+
+#: ../../source/concepts/account-filter.rst:103
+msgid "**Entity type**: 0x4250"
+msgstr "**实体类型**: 0x4250"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount)"
+msgstr ""
+"array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount)"
+
+#: ../../source/concepts/account-filter.rst:121
+msgid "AccountPropertiesEntityTypeTransaction"
+msgstr "AccountPropertiesEntityTypeTransaction"
+
+#: ../../source/concepts/account-filter.rst:123
+msgid ""
+"Configure filters to prevent announcing transactions by :ref:`type "
+"<transaction-types>`."
+msgstr "配置过滤器以防止公布特定:ref:`类型 <transaction-types>` 的交易。"
+
+#: ../../source/concepts/account-filter.rst:127
+msgid "**Entity type**: 0x4350"
+msgstr "**实体类型**: 0x4350"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array(:ref:`EntityTypeModification <entity-type-modification>`, "
+"modificationsCount)"
+msgstr ""
+"array(:ref:`EntityTypeModification <entity-type-modification>`, "
+"modificationsCount)"
+
+#: ../../source/concepts/account-filter.rst:144
+msgid "AddressModification"
+msgstr "AddressModification"
+
+#: ../../source/concepts/account-filter.rst:148
+#: ../../source/concepts/account-filter.rst:163
+#: ../../source/concepts/account-filter.rst:179
+msgid ":ref:`AccountPropertiesModification<account-properties-modification>`"
+msgstr ":ref:`AccountPropertiesModification<account-properties-modification>`"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "value"
+msgstr "定值"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "25 bytes (binary)"
+msgstr "25字节(二进制)"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The address to allow/block."
+msgstr "被允许或被阻止的地址。"
+
+#: ../../source/concepts/account-filter.rst:159
+msgid "MosaicModification"
+msgstr "MosaicModification"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint64"
+msgstr "uint64"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The mosaic id to allow/block."
+msgstr "被允许或被阻止的马赛克ID"
+
+#: ../../source/concepts/account-filter.rst:175
+msgid "EntityTypeModification"
+msgstr "EntityTypeModification"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint16"
+msgstr "uint16"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The :ref:`entity type<transaction-types>` to allow/block."
+msgstr "被允许或被阻止的:ref:`实体类型`。"
+
+#: ../../source/concepts/account-filter.rst:191
+msgid "AccountPropertiesModification"
+msgstr "AccountPropertiesModification"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "modificationType"
+msgstr "modificationType"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ":ref:`PropertyModificationType<property-modification-type>`"
+msgstr ":ref:`PropertyModificationType<property-modification-type>`"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The modification type."
+msgstr "修改类型。"
+
+#: ../../source/concepts/account-filter.rst:202
+msgid "PropertyType"
+msgstr "PropertyType"
+
+#: ../../source/concepts/account-filter.rst:204
+#: ../../source/concepts/account-filter.rst:221
+msgid "Enumeration: uint8"
+msgstr "Enumeration: uint8"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Id"
+msgstr "Id"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x01"
+msgstr "0x01"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type is an address."
+msgstr "属性类型是一个地址。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x02"
+msgstr "0x02"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type is mosaic id."
+msgstr "属性类型是一个马赛克id"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x04"
+msgstr "0x04"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type is a transaction type."
+msgstr "属性类型是一个交易类型"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x05"
+msgstr "0x05"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "Property type sentinel."
+msgstr "属性类型哨兵。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x80 + type"
+msgstr "0x80 + 类型"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property is interpreted as a blocking operation."
+msgstr "该属性被解释为阻止型操作。"
+
+#: ../../source/concepts/account-filter.rst:219
+msgid "PropertyModificationType"
+msgstr "PropertyModificationType"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x00"
+msgstr "0x00"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "Add property value."
+msgstr "添加属性值。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "Remove property value."
+msgstr "删除属性值。"

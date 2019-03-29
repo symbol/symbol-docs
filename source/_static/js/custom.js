@@ -1,4 +1,4 @@
-const translations = ['ja'];
+const translations = ['ja', 'zh_CN'];
 
 function translatePathRedirect(languageCode) {
     const path = window.location.pathname;
