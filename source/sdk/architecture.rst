@@ -27,7 +27,7 @@ Observer Pattern
 
 .. note: If you are not familiar with Reactive Programming,  .
 
-NEM2-SDK uses intensely ReactiveX Library. See |reactivex|.
+NEM2-SDK uses ReactiveX Library intensvely. See |reactivex|.
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -68,7 +68,7 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 Services
 ========
 
-Common operations that require multiple :doc:`REST API <../api/requests>` requests are handled by already provided services.
+Common operations that require multiple :doc:`REST API <../api/requests>` requests are handled by services provided.
 
 .. |reactivex| raw:: html
 

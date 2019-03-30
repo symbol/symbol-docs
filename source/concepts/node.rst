@@ -32,7 +32,7 @@ Public networks enable anyone to run a node. Some of these nodes could share inv
 
 To reduce communication attempts, the nodes keep track of the results of preceding communications.
 
-When a node connects to a remote peer, the first increments the trust towards the remote. Otherwise, the node increments the failure counter. Likewise, the node updates the trust counters accordingly after processing the data requested.
+When a node connects to a remote peer, it first increments the trust towards the remote peer. Otherwise, the node increments the failure counter. Likewise, the node updates the trust counters accordingly after processing the data requested.
 
 From these interactions, the node assigns a weight between 500 and 10000 to every peer reached.
 

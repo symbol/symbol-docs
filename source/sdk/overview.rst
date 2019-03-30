@@ -12,7 +12,7 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 
 * **Fast language adaptation**: There is a library for Java, but you need it for C# for example. As both SDKs share the same design, you can re-write the library faster, adapting the syntax to your language. It also applies to examples, projects, applications...
 
-* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
+* **Cohesion/shared knowledge across NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
 
 * **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
 
