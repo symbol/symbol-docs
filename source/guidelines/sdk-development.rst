@@ -10,7 +10,7 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 
 * **Fast language adaptation**: There is a library for Java, but you need it for C# for example. As both SDKs share the same design, you can re-write the library faster, adapting the syntax to your language. It also applies to examples, projects, applications...
 
-* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
+* **Cohesion/shared knowledge across NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
 
 * **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
 
@@ -31,7 +31,7 @@ Architecture
 
 **Reactive**
 
-NEM2-SDK uses intensely ReactiveX Library.
+NEM2-SDK uses ReactiveX Library intensely.
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -68,7 +68,7 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 
 **Services**
 
-Common operations that require multiple :doc:`REST API <../api>` requests are handled by already provided services.
+Common operations that require multiple :doc:`REST API <../api/requests>` requests are handled by services provided.
 
 .. |reactivex| raw:: html
 
