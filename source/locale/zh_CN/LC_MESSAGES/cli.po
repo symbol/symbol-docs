@@ -6,15 +6,16 @@
 # Translators:
 # thilon <thilon@datamain.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +43,8 @@ msgstr "此工具将使您能够执行最常用的操作以与区块链交互。
 msgid ""
 "**NEM2-CLI** is an open source tool built on top of the :doc:`NEM2-SDK<sdk>`"
 " Typescript. Use it in your favorite terminal program."
-msgstr "** NEM2-CLI **是一个基于`NEM2-SDK<sdk>`Typescript构建的开源工具。 可在您喜欢的终端程序中使用它。"
+msgstr ""
+"**NEM2-CLI** 是一个基于 :doc:`NEM2-SDK<sdk>` Typescript 构建的开源工具。 可在您喜欢的终端程序中使用它。"
 
 #: ../../source/cli.rst:13
 msgid "Installation"
@@ -50,7 +52,7 @@ msgstr "安装"
 
 #: ../../source/cli.rst:15
 msgid "NEM2-CLI is distributed using the node package manager ``npm``."
-msgstr "NEM2-CLI使用``npm``节点包管理器进行分发。"
+msgstr "NEM2-CLI使用 ``npm`` 节点包管理器进行分发。"
 
 #: ../../source/cli.rst:17
 msgid "To install:"
@@ -164,13 +166,13 @@ msgstr "账户"
 
 #: ../../source/cli.rst:109
 msgid "**Generate new account**"
-msgstr "*生成新账户Generate new account**"
+msgstr "**生成新账户Generate new account**"
 
 #: ../../source/cli.rst:111
 msgid ""
 "Generates a new :doc:`account <../concepts/account>`. This command generates"
 " a private key, public key and address."
-msgstr "生成一个新的:doc:`账号 <../concepts/account>`.该命令生成一个私钥、公钥和地址。"
+msgstr "生成一个新的 :doc:`账号 <../concepts/account>`. 该命令生成一个私钥、公钥和地址。"
 
 #: ../../source/cli.rst:113
 msgid ""
@@ -185,7 +187,7 @@ msgstr "**获取账户信息 Get account info**"
 msgid ""
 "Returns the account information, such as the public key, importance and "
 ":doc:`mosaics <../concepts/mosaic>` balance."
-msgstr "答复账户信息，例如，公钥、重要性和:doc:`马赛克 <../concepts/mosaic>`余额。"
+msgstr "答复账户信息，例如，公钥、重要性和 :doc:`马赛克 <../concepts/mosaic>` 余额。"
 
 #: ../../source/cli.rst:146
 msgid "**Get confirmed transactions**"
@@ -269,7 +271,7 @@ msgstr "交易 Transaction"
 msgid ""
 "Transactions are signed with the profiles configured with ``nem2-cli profile"
 " create``."
-msgstr "以 ``nem2-cli profile create``所配置的用户资料签署交易。"
+msgstr "以 ``nem2-cli profile create`` 所配置的用户资料签署交易。"
 
 #: ../../source/cli.rst:266
 msgid "**Cosign aggregate bonded transaction**"
@@ -279,7 +281,7 @@ msgstr "**共签聚合保税交易 Cosign aggregate bonded transaction***"
 msgid ""
 "Cosigns and announces an :ref:`aggregate bonded transaction <aggregate-"
 "transaction>`."
-msgstr "共签和宣布一个:ref:`聚合保税交易 <aggregate-transaction>`。"
+msgstr "共签和宣布一个 :ref:`聚合保税交易 <aggregate-transaction>`。"
 
 #: ../../source/cli.rst:282
 msgid "**Transaction info**"
@@ -299,8 +301,8 @@ msgid ""
 " exchanging value and/or data. For this transaction provide recipient, "
 "message and :doc:`mosaics <../concepts/mosaic>`."
 msgstr ""
-"宣布:ref:`转让交易 <transfer-transaction>`到一个交换价值和/或数据的账户。此交易提供了接收账户、消息和 :doc:`马赛克"
-" <../concepts/mosaic>`."
+"宣布 :ref:`转让交易 <transfer-transaction>` 到一个交换价值和/或数据的账户。此交易提供了接收账户、消息和 "
+":doc:`马赛克 <../concepts/mosaic>`."
 
 #: ../../source/cli.rst:302
 msgid ""
@@ -343,7 +345,7 @@ msgstr "**创建马赛克 Create a mosaic**"
 
 #: ../../source/cli.rst:377
 msgid "Creates a new :doc:`mosaic <../concepts/mosaic>`."
-msgstr "创建一个新的:doc:`马赛克 <../concepts/mosaic>`。"
+msgstr "创建一个新的 :doc:`马赛克 <../concepts/mosaic>`。"
 
 #: ../../source/cli.rst:397
 msgid "Namespace"
@@ -352,15 +354,6 @@ msgstr "命名空间"
 #: ../../source/cli.rst:399 ../../source/cli.rst:419
 msgid "**Info**"
 msgstr "**信息 Info**"
-
-#: ../../source/cli.rst:401
-msgid ""
-"Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this "
-"command providing the namespace name or the namespace uint ID in the form of"
-" [3646934825,3576016193]."
-msgstr ""
-"从 :doc:`命名空间 <../concepts/namespace>`取得消息。用这指令加上命名空间名字和其 uint ID "
-"[3646934825,3576016193]."
 
 #: ../../source/cli.rst:417
 msgid "Mosaic"
@@ -372,7 +365,7 @@ msgid ""
 " providing the mosaic identifier name in hexadecimal or the mosaic uint ID "
 "([lower,higher])."
 msgstr ""
-"从 :doc:`马赛克 <../concepts/mosaic>`中取的消息。用此命令加上马赛克标志十六进制名称或者马萨克uint ID "
+"从 :doc:`马赛克 <../concepts/mosaic>` 中取的消息。用此命令加上马赛克标志十六进制名称或者马萨克uint ID "
 "([低值,高值])。"
 
 #: ../../source/cli.rst:437
@@ -404,7 +397,7 @@ msgid ""
 "Monitors new confirmed :doc:`transactions <../concepts/transaction>` signed "
 "or received by an :doc:`account <../concepts/account>`."
 msgstr ""
-"监控:doc:`账户 <../concepts/account>`签署或收到的新确认:doc:`交易 "
+"监控 :doc:`账户 <../concepts/account>` 签署或收到的新确认 :doc:`交易 "
 "<../concepts/transaction>`。"
 
 #: ../../source/cli.rst:468
@@ -416,7 +409,7 @@ msgid ""
 "Monitors new unconfirmed :doc:`transactions <../concepts/transaction>` "
 "signed or received by an :doc:`account <../concepts/account>`."
 msgstr ""
-"监控:doc:`账户 <../concepts/account>`签署或收到的新为确认的:doc:`交易 "
+"监控 :doc:`账户 <../concepts/account>` 签署或收到的新为确认的 :doc:`交易 "
 "<../concepts/transaction>`。"
 
 #: ../../source/cli.rst:484
@@ -428,7 +421,7 @@ msgid ""
 "Monitors new :ref:`aggregate transactions <aggregate-transaction>` with "
 "missing signatures added to an :doc:`account <../concepts/account>`."
 msgstr ""
-"监控添加到:doc:`账户 <../concepts/account>`但缺少签名的新 :ref:`聚合交易 <aggregate-"
+"监控添加到 :doc:`账户 <../concepts/account>` 但缺少签名的新 :ref:`聚合交易 <aggregate-"
 "transaction>`"
 
 #: ../../source/cli.rst:500

@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgid ""
 "accounts to announce transactions for them. These other accounts are the "
 "multisig **cosignatories**."
 msgstr ""
-"NEM的:doc:`账户<account>`可以:doc:`转换成多重签名<../guides/account/converting-an-"
+"NEM的 :doc:`账户<account>` 可以 :doc:`转换成多重签名 <../guides/account/converting-an-"
 "account-to-"
 "multisig>`。当账户转换为多重签名后，这个账户就不能独自公布交易。它需要其他帐户，**称为共签者cosignatories** 来公布它的交易。"
 
@@ -70,8 +71,8 @@ msgid ""
 "by the multisig account. Choose wisely ``minimum removal`` parameter to "
 "avoid this situation."
 msgstr ""
-"多重签名账户是十分有用的工具，但是请谨慎地使用这个工具。一旦共签者的钥匙丢失造成最少共签者的规定个数无法达到，将导致该多重签名账户持有的资金永久丧失。请小心地选择“minimum"
-" removal”参数以避免这种情况。"
+"多重签名账户是十分有用的工具，但是请谨慎地使用这个工具。一旦共签者的钥匙丢失造成最少共签者的规定个数无法达到，将导致该多重签名账户持有的资金永久丧失。请小心地选择"
+" ``minimum removal`` 参数以避免这种情况。"
 
 #: ../../source/concepts/multisig-account.rst:15
 msgid "Some important considerations to keep in mind:"
@@ -188,7 +189,8 @@ msgid ""
 "The product receives its quality approval :doc:`mosaic <mosaic>` only when "
 "its blockchain record shows it has a production date, safety inspection, and"
 " was shipped at the correct temperature."
-msgstr "只有当产品在区块链中被记录拥有生产日期，安全证明且在正确的温度下运输时，该产品才会获得代表质量认证的:doc:`马赛克<mosaic>`。"
+msgstr ""
+"只有当产品在区块链中被记录拥有生产日期，安全证明且在正确的温度下运输时，该产品才会获得代表质量认证的 :doc:`马赛克<mosaic>`。"
 
 #: ../../source/concepts/multisig-account.rst:75
 msgid ""
@@ -227,12 +229,8 @@ msgid ""
 "server/blob/master/resources/config-network.properties>`_ . Public network "
 "configuration may differ."
 msgstr ""
-"配置参数是`可编辑的<https://github.com/nemtech/catapult-server/blob/master/resources"
-"/config-network.properties>`_ 。 公共网络配置可能有所不同。"
-
-#: ../../source/concepts/multisig-account.rst:117
-msgid "ModifyMultisigTransaction"
-msgstr "修改多重签名交易 （ModifyMultisigTransaction）"
+"配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ 。 公共网络配置可能有所不同。"
 
 #: ../../source/concepts/multisig-account.rst:119
 msgid "Announce a modify multisig account transaction to:"
@@ -258,12 +256,6 @@ msgstr "**实体类型**: 0x4155"
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/multisig-account.rst:130
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ":ref:`交易<transaction>` 或 :ref:`嵌入式交易<embedded-transaction>`"
-
 #: ../../source/concepts/multisig-account.rst:1
 #: ../../source/concepts/multisig-account.rst:1
 msgid "Property"
@@ -281,24 +273,11 @@ msgid "Description"
 msgstr "说明"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "minRemovalDelta"
-msgstr "minRemovalDelta"
-
-#: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
-msgid "int8"
-msgstr "int8"
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid ""
 "The number of signatures needed to remove a cosignatory. If we are modifying"
 " an existing multisig account, this indicates the relative change of the "
 "minimum cosignatories."
 msgstr "删除一位共签者所需的签名数量。如果我们要修改已有的多重签名帐户，则表示最小共签者数量的相对变化。"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "minApprovalDelta"
-msgstr "minApprovalDelta"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid ""
@@ -308,52 +287,16 @@ msgid ""
 msgstr "批准交易所需的签名数量。 如果我们要修改现有的多重签名帐户，则表示最小共同签署者数量的相对变化。"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "modificationsCount"
-msgstr "modificationsCount"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "uint8"
-msgstr "uint8"
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid "The number of modifications."
 msgstr "修改次数。"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "modification"
-msgstr "modification"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid ""
-"array(:ref:`CosignatoryModification <cosignatory-modification>`, "
-"modificationsCount)"
-msgstr ""
-"array(:ref:`CosignatoryModification <cosignatory-modification>`, "
-"modificationsCount)"
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
-msgstr "添加或删除的共签者:doc:`账户<account>` 数组。"
-
-#: ../../source/concepts/multisig-account.rst:144
-msgid "CosignatoryModification"
-msgstr "共签者修改 （CosignatoryModification）"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "modificationType"
-msgstr "修改类型 （modificationType）"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid ":ref:`CosignatoryModificationType <cosignatory-modification-type>`"
-msgstr ":ref:`CosignatoryModificationType `"
+msgstr "添加或删除的共签者 :doc:`账户<account>` 数组。"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "The cosignatory modification type."
 msgstr "共签者修改类型。"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "cosignatoryPublicKey"
-msgstr "共签者公钥（cosignatoryPublicKey）"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "32 bytes (binary)"
@@ -363,29 +306,13 @@ msgstr "32 字节 (二进制)"
 msgid "The public key of the cosignatory."
 msgstr "共签者的公钥。"
 
-#: ../../source/concepts/multisig-account.rst:156
-msgid "CosignatoryModificationType"
-msgstr "共签者修改类型（CosignatoryModificationType）"
-
 #: ../../source/concepts/multisig-account.rst:158
 msgid "Enumeration: uint8"
 msgstr "列举: uint8"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Id"
-msgstr "Id"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "0"
-msgstr "0"
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid "Add cosignatory."
 msgstr "添加共签者。"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "1"
-msgstr "1"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "Remove cosignatory."

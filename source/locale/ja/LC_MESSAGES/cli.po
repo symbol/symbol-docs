@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -365,15 +365,6 @@ msgstr "ネームスペース"
 #: ../../source/cli.rst:399 ../../source/cli.rst:419
 msgid "**Info**"
 msgstr "**情報**"
-
-#: ../../source/cli.rst:401
-msgid ""
-"Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this "
-"command providing the namespace name or the namespace uint ID in the form of"
-" [3646934825,3576016193]."
-msgstr ""
-":doc:`ネームスペース <../concepts/namespace>` の情報を取得します。ネームスペース名と "
-"[3646934825,3576016193] の形式でネームスペースの uint ID をコマンドに渡して使用してください。"
 
 #: ../../source/cli.rst:417
 msgid "Mosaic"

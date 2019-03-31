@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:105
 msgid "Mosaic"
-msgstr "马赛克（Mosaic）"
+msgstr "马赛克"
 
 #: ../../source/concepts/mosaic.rst:5
 msgid ""
@@ -65,10 +66,6 @@ msgstr "类型"
 msgid "Description"
 msgstr "说明"
 
-#: ../../source/concepts/mosaic.rst:1
-msgid "Divisibility"
-msgstr "可分性"
-
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
 msgid "Integer"
@@ -82,28 +79,16 @@ msgid ""
 msgstr "请确定马赛克可以分割的小数位。可分性 3 意味着马赛克最小可以分到0.001。可分性的值必须在0和 ``6`` 之间。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Duration"
-msgstr "期限"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid ""
 "Specifies the number of confirmed blocks the mosaic is rented for. Mosaics "
 "can be configured to not expire."
 msgstr "指定租用马赛克的已确认块的数量。 马赛克可以配置为不过期。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Initial supply"
-msgstr "原供应量"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid ""
 "Indicates the amount of mosaic in circulation. The initial supply must be in"
 " the range of 0 and ``9,000,000,000``."
 msgstr "表示于市面流转的马赛克数量。原供应量必须在0到 ``9,000,000,000`` 的范围内。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "Supply mutable"
-msgstr "供应量可变性"
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Boolean"
@@ -114,10 +99,6 @@ msgid ""
 "If set to true, the mosaic supply can change at a later point. Otherwise, "
 "the mosaic supply remains immutable."
 msgstr "如果设置为true，则马赛克供应量可以在以后作更改。 否则，马赛克供应量保持不变。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "Transferability"
-msgstr "可转让性"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
@@ -139,12 +120,8 @@ msgid ""
 "server/blob/master/resources/config-network.properties>`_ . Public network "
 "configuration may differ."
 msgstr ""
-"配置参数是 `可编辑的<https://github.com/nemtech/catapult-server/blob/master/resources"
-"/config-network.properties>`_ 。公共网络配置可能有所不同。"
-
-#: ../../source/concepts/mosaic.rst:44
-msgid "MosaicDefinitionTransaction"
-msgstr "马赛克定义交易 （MosaicDefinitionTransaction）"
+"配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ 。公共网络配置可能有所不同。"
 
 #: ../../source/concepts/mosaic.rst:46
 msgid "Announce a mosaic definition transaction to create a new mosaic."
@@ -162,57 +139,17 @@ msgstr "**实体类型**: 0x414D"
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/mosaic.rst:54 ../../source/concepts/mosaic.rst:80
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ":ref:`交易<transaction>` or :ref:`嵌入式交易<embedded-transaction>`"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "mosaicNonce"
-msgstr "mosaicNonce"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "uint32"
-msgstr "uint32"
-
 #: ../../source/concepts/mosaic.rst:1
 msgid "Random nonce used to generate the mosaic id."
 msgstr "用于生成马赛克ID的随机数。"
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1
-msgid "mosaicId"
-msgstr "mosaicId"
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "uint64"
-msgstr "uint64"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic Id."
 msgstr "马赛克 Id."
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "propertiesCount"
-msgstr "propertiesCount"
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1
-msgid "uint8"
-msgstr "uint8"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The number of elements in optional properties"
 msgstr "可选属性的元素数量。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "flags"
-msgstr "flags"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ":ref:`MosaicFlag<mosaic-flags>`"
@@ -223,28 +160,12 @@ msgid "The mosaic flags."
 msgstr "马赛克标志。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "divisibility"
-msgstr "divisibility"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic divisibility."
 msgstr "马赛克的可分性。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "properties"
-msgstr "properties"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "array(:ref:`MosaicProperty<mosaic-property>`, count)"
-msgstr "array(:ref:`MosaicProperty<mosaic-property>`, count)"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The optional mosaic properties."
 msgstr "可选性的马赛克属性。"
-
-#: ../../source/concepts/mosaic.rst:70
-msgid "MosaicSupplyChangeTransaction"
-msgstr "马赛克供应量改变交易 （MosaicSupplyChangeTransaction）"
 
 #: ../../source/concepts/mosaic.rst:72
 msgid ""
@@ -261,34 +182,12 @@ msgid "The id of the affected mosaic."
 msgstr "被影响的马赛克id。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "direction"
-msgstr "direction"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid ":ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`"
-msgstr ""
-":ref:`马赛克供应量改变倾向（MosaicSupplyChangeDirection）<mosaic-supply-change-"
-"direction>`"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The supply change direction."
 msgstr "供应量改变倾向。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "delta"
-msgstr "delta"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The amount of supply to increase or decrease."
 msgstr "增加或减少的量。"
-
-#: ../../source/concepts/mosaic.rst:93
-msgid "MosaicProperty"
-msgstr "MosaicProperty"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "id"
-msgstr "id"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The property id. (0x02) stands for duration."
@@ -303,76 +202,32 @@ msgid "The mosaic id."
 msgstr "马赛克id。"
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "amount"
-msgstr "amount"
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "The amount of the mosaic."
 msgstr "马赛克数量。"
-
-#: ../../source/concepts/mosaic.rst:116
-msgid "UnresolvedMosaic"
-msgstr "未解决的马赛克 （UnresolvedMosaic）"
-
-#: ../../source/concepts/mosaic.rst:128
-msgid "MosaicFlags"
-msgstr "马赛克标志 （MosaicFlags）"
 
 #: ../../source/concepts/mosaic.rst:130 ../../source/concepts/mosaic.rst:145
 msgid "Enumeration: uint8"
 msgstr "例举: uint8"
-
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "Id"
-msgstr "Id"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "0x00"
-msgstr "0x00"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "No flags present."
 msgstr "无代表标志。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "0x01"
-msgstr "0x01"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic supply is mutable."
 msgstr "马赛克供应量可变。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "0x02"
-msgstr "0x02"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic is transferable."
 msgstr "马赛克可交易。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "0x04"
-msgstr "0x04"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The mosaic levy is mutable"
 msgstr "马赛克税可变"
-
-#: ../../source/concepts/mosaic.rst:144
-msgid "MosaicSupplyChangeDirection"
-msgstr "MosaicSupplyChangeDirection"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "0"
-msgstr "0"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Increase."
 msgstr "增加"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "1"
-msgstr "1"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Decrease."

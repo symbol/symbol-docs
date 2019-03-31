@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +34,8 @@ msgid ""
 "applications. Almost all, if not all, components should use **NEM2-SDK** "
 "instead of raw API."
 msgstr ""
-"NEM2软件开发工具包是创建NEM2组件(如附带工具、库或应用程序)的主要软件开发工具。几乎所有（如果不是全部的话）组件都应该使用**NEM2-SDK**，而不是原始API。"
+"NEM2软件开发工具包是创建NEM2组件(如附带工具、库或应用程序)的主要软件开发工具。几乎所有（如果不是全部的话）组件都应该使用 "
+"**NEM2-SDK** ，而不是原始API。"
 
 #: ../../source/sdk.rst:7
 msgid ""
@@ -45,7 +47,7 @@ msgstr "新的SDK使开发人员能够专注于他们的产品，而不是NEM2�
 msgid ""
 "The best way to learn to use the SDKs is through :ref:`guides <category-"
 "account>`."
-msgstr "学习使用SDKs的最好方法是通过:ref: ' 指南 < categoryaccount > '。"
+msgstr "学习使用SDKs的最好方法是通过 :ref:`guides <category-account>`."
 
 #: ../../source/sdk.rst:13
 msgid "Supported SDKs"
@@ -72,14 +74,6 @@ msgid "TypeScript & JS SDK"
 msgstr "TypeScript & JS SDK"
 
 #: ../../source/sdk.rst:1
-msgid "|tsjs-repo|"
-msgstr "|tsjs-repo|"
-
-#: ../../source/sdk.rst:1
-msgid "|tsjs-reference|"
-msgstr "|tsjs-reference|"
-
-#: ../../source/sdk.rst:1
 msgid "0.3 (latest)"
 msgstr "0.3 (最新)"
 
@@ -96,63 +90,6 @@ msgstr "这SDKs无法和最新的catapult-server版本（0.3）兼容。"
 #: ../../source/sdk.rst:27
 msgid "Read the open issues to know about the current status of each project."
 msgstr "阅读未解决的问题以了解每个项目的当前状态。"
-
-#: ../../source/sdk.rst:1
-msgid "Java SDK"
-msgstr "Java SDK"
-
-#: ../../source/sdk.rst:1
-msgid "|java-repo|"
-msgstr "|java-repo|"
-
-#: ../../source/sdk.rst:1
-msgid "|java-reference|"
-msgstr "|java-reference|"
-
-#: ../../source/sdk.rst:1 ../../source/sdk.rst:1 ../../source/sdk.rst:1
-#: ../../source/sdk.rst:1
-msgid "0.1"
-msgstr "0.1"
-
-#: ../../source/sdk.rst:1
-msgid "C# SDK"
-msgstr "C# SDK"
-
-#: ../../source/sdk.rst:1
-msgid "|csharp-repo|"
-msgstr "|csharp-repo|"
-
-#: ../../source/sdk.rst:1
-msgid "Go SDK"
-msgstr "Go SDK"
-
-#: ../../source/sdk.rst:1
-msgid "|go-repo|"
-msgstr "|go-repo|"
-
-#: ../../source/sdk.rst:1
-msgid "Swift SDK"
-msgstr "Swift SDK"
-
-#: ../../source/sdk.rst:1
-msgid "|swift-repo|"
-msgstr "|swift-repo|"
-
-#: ../../source/sdk.rst:1
-msgid "C++"
-msgstr "C++"
-
-#: ../../source/sdk.rst:1
-msgid "PHP SDK"
-msgstr "PHP SDK"
-
-#: ../../source/sdk.rst:1
-msgid "Ruby SDK"
-msgstr "Ruby SDK"
-
-#: ../../source/sdk.rst:1
-msgid "Python SDK"
-msgstr "Python SDK"
 
 #: ../../source/sdk.rst:42
 msgid ""

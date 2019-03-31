@@ -398,7 +398,7 @@ Namespace
 
 **Info**
 
-Gets information from a :doc:`namesapce <../concepts/namespace>`. Use this command providing the namespace name or the namespace uint ID in the form of [3646934825,3576016193].
+Gets information from a :doc:`namespace <../concepts/namespace>`. Use this command providing the namespace name or the namespace uint ID in the form of [3646934825,3576016193].
 
 Options
 

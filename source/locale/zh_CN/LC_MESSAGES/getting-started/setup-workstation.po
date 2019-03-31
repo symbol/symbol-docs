@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,8 +43,8 @@ msgid ""
 "network. **Catapult Rest nodes** (layer 2) provide the API gateway that the "
 "applications may use to access the blockchain and its features."
 msgstr ""
-"**投石车服务器节点**（第一层） 组成点对点的区块链网络。**投石车REST节点**（第二层）提供可以让应用程序和区块链及其功能接驳的接口网关（API"
-" Gateway)。"
+"**投石车服务器节点** (第一层） 组成点对点的区块链网络。**投石车REST节点** "
+"(第二层）提供可以让应用程序和区块链及其功能接驳的接口网关（API Gateway)。"
 
 #: ../../source/getting-started/setup-workstation.rst:24
 msgid ""
@@ -57,7 +58,7 @@ msgstr ""
 msgid ""
 "Make sure you have `docker`_ and `docker-compose`_ installed before running "
 "the following commands:"
-msgstr "在运行以下命令之前，请确保已安装`docker`_和`docker-compose`_："
+msgstr "在运行以下命令之前，`docker`_ 和 `docker-compose`_："
 
 #: ../../source/getting-started/setup-workstation.rst:34
 msgid ""
@@ -111,7 +112,7 @@ msgstr ":doc:`NEM2-CLI <../cli>` 允许您方便地执行在终端中最常用�
 
 #: ../../source/getting-started/setup-workstation.rst:56
 msgid "Install NEM2-CLI using ``npm``."
-msgstr "使用 ``npm``下载NEM2-CLI。"
+msgstr "使用 ``npm`` 下载NEM2-CLI。"
 
 #: ../../source/getting-started/setup-workstation.rst:62
 msgid ""
@@ -126,8 +127,8 @@ msgid ""
 "units, in order to provide an incentive for those who validate and secure "
 "the network."
 msgstr ""
-"在 ``nemesis_addresses``的部分， 您会看到包含 "
-"``cat.currency``的密钥对。区块链上的所有行动都需要cat.currency，以作验证和镇守网络的犒赏。"
+"在 ``nemesis_addresses`` 的部分， 您会看到包含 ``cat.currency`` "
+"的密钥对。区块链上的所有行动都需要cat.currency，以作验证和镇守网络的犒赏。"
 
 #: ../../source/getting-started/setup-workstation.rst:71
 msgid "Load the first account as a profile in NEM2-CLI."
@@ -164,7 +165,7 @@ msgstr "Typescript"
 msgid ""
 "Create a ``package.json`` file. The minimum required Node.js version is "
 "8.9.X."
-msgstr "创建一个``package.json``文件。 Node.js所需的最低版本是8.9.X."
+msgstr "创建一个 ``package.json`` 文件。 Node.js所需的最低版本是8.9.X."
 
 #: ../../source/getting-started/setup-workstation.rst:112
 #: ../../source/getting-started/setup-workstation.rst:141
@@ -176,7 +177,7 @@ msgid ""
 "nem2-sdk is built with TypeScript language. It is recommended to use "
 "**TypeScript instead of JavaScript** when building applications for NEM "
 "blockchain."
-msgstr "nem2-sdk 是以 TypeScript 创建的。当给NEM区块链创建应用程式时，建议用 **TypeScript **。"
+msgstr "nem2-sdk 是以 TypeScript 创建的。当给NEM区块链创建应用程式时，建议用 **TypeScript**。"
 
 #: ../../source/getting-started/setup-workstation.rst:120
 msgid "Make sure you have at least version 2.5.X installed."
@@ -184,7 +185,7 @@ msgstr "确保至少安装了2.5.X版。"
 
 #: ../../source/getting-started/setup-workstation.rst:127
 msgid "Use `ts-node`_ to execute TypeScript files with node."
-msgstr "使用`ts-node`_来执行带节点的TypeScript文件。"
+msgstr "使用 `ts-node`_ 来执行带节点的TypeScript文件。"
 
 #: ../../source/getting-started/setup-workstation.rst:133
 msgid "Javascript"

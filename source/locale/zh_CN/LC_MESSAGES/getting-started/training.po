@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,8 +34,8 @@ msgid ""
 "section, you will find :ref:`specific guides <category-account>` to "
 "understand how to use and combine the different built-in features."
 msgstr ""
-"尽管您可以从头到尾阅读此文档，但我们建议您直接转到您想了解更多信息的部分。在每个部分的末尾，您将找到:ref:`特定指南<category "
-"account>`了解如何使用和组合不同的内置功能。"
+"尽管您可以从头到尾阅读此文档，但我们建议您直接转到您想了解更多信息的部分。在每个部分的末尾，您将找到 :ref:`特定指南 <category-"
+"account>` 了解如何使用和组合不同的内置功能。"
 
 #: ../../source/getting-started/training.rst:7
 msgid ""
@@ -67,7 +68,7 @@ msgid ""
 "`Getting started with NEM Catapult <https://craftain.com/courses/getting-"
 "started-with-nem-catapult/>`_"
 msgstr ""
-"` NEM Catapult 入门<https://craftain.com/courses/getting-started-with-nem-"
+"`NEM Catapult 入门 <https://craftain.com/courses/getting-started-with-nem-"
 "catapult/>`_"
 
 #: ../../source/getting-started/training.rst:1
@@ -87,7 +88,7 @@ msgid ""
 "`Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2"
 "-workshop-document-notarization/>`_"
 msgstr ""
-"` NEM 区块链公证 <https://nemtech.github.io/nem2-workshop-document-"
+"`NEM 区块链公证 <https://nemtech.github.io/nem2-workshop-document-"
 "notarization/>`_"
 
 #: ../../source/getting-started/training.rst:1
@@ -108,7 +109,7 @@ msgid ""
 "`NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-"
 "applied-to-supply-chain/>`_"
 msgstr ""
-"`NEM在供应链的运用<https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-"
+"`NEM在供应链的运用 <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-"
 "chain/>`_"
 
 #: ../../source/getting-started/training.rst:1
@@ -142,4 +143,4 @@ msgstr "在这个部分发表的课程必须在线。"
 msgid ""
 "Once the course is complete, add it to this page by clicking the *\"Edit on "
 "Github\"* button at the top-right part of the screen."
-msgstr "当这课程完成后，按荧幕上右上角的**Edit on Github\"*按钮，把课程加入。"
+msgstr "当这课程完成后，按荧幕上右上角的 *\"Edit on Github\"* 按钮，把课程加入。"

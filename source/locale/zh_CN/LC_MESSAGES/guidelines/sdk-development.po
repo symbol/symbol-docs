@@ -5,6 +5,7 @@
 # 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # 
 #, fuzzy
@@ -12,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -21,93 +22,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/guidelines/sdk-development.rst:5
-msgid "SDK Development"
-msgstr "软件开发工具包开发"
-
-#: ../../source/guidelines/sdk-development.rst:7
-msgid ""
-"A key objective is that interoperability becomes a natural design of the "
-"NEM2-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving"
-" the best quality with less effort."
-msgstr "使NEM2-SDK的互通性成为自然的设计是关键目标。 按照此指南合作创建NEM 软件开发工具包，以达到事半功倍之效。"
-
-#: ../../source/guidelines/sdk-development.rst:9
-msgid ""
-"NEM2-SDK shares the same design/architecture between programming languages "
-"to accomplish the next properties:"
-msgstr "NEM2-SDK在编程语言之间共享相同的设计/体系结构，以实现以下特性："
-
-#: ../../source/guidelines/sdk-development.rst:11
-msgid ""
-"**Fast language adaptation**: There is a library for Java, but you need it "
-"for C# for example. As both SDKs share the same design, you can re-write the"
-" library faster, adapting the syntax to your language. It also applies to "
-"examples, projects, applications..."
-msgstr ""
-"**快速语言改编**：例如，现已有一个Java库，但你需要C＃库。 由于两个SDK遵循相同的设计，您可以更快地重新编写，把语法改编到您用的语言。 "
-"它也适用于示例，项目，应用程序......"
-
-#: ../../source/guidelines/sdk-development.rst:13
-msgid ""
-"**Cohesion/shared knowledge cross NEM developers**: Be able to change "
-"between projects that use NEM, sharing the same design accompanied by the "
-"best practices."
-msgstr "**集合NEM开发人员的凝聚力/知识共享**：为了能在使用NEM的项目之间周游，共享相同的设计为最佳做法。"
-
-#: ../../source/guidelines/sdk-development.rst:15
-msgid ""
-"**Fast SDK updates**: Migrating any improvement from a NEM2-SDK "
-"implementation to the rest is faster."
-msgstr "**快速SDK更新**：将任何改进从NEM2-SDK实现到其他SDK会更快。"
-
-#: ../../source/guidelines/sdk-development.rst:21
-msgid "Architecture"
-msgstr "构建"
-
-#: ../../source/guidelines/sdk-development.rst:23
-msgid "**Characteristics**"
-msgstr "**特性**"
-
-#: ../../source/guidelines/sdk-development.rst:25
-msgid ""
-"**Standardized Contracts**: Guaranteeing interoperability and harmonization "
-"of data models."
-msgstr "**标准化合同**：保证数据模型的互通性和协调性。"
-
-#: ../../source/guidelines/sdk-development.rst:26
-msgid "**Loose Coupling**: Reducing the degree of component coupling fosters."
-msgstr "**松耦合**：减少组件耦合的程度。"
-
-#: ../../source/guidelines/sdk-development.rst:27
-msgid ""
-"**Abstraction**: Increasing long-term consistency of interoperability and "
-"allowing underlying components to evolve independently."
-msgstr "**抽象概念**：提高互通性的长期一致性，并允许底层组件独立发展。"
-
-#: ../../source/guidelines/sdk-development.rst:28
-msgid ""
-"**Reusability**: Enabling high-level interoperability between modules and "
-"potential component consumers."
-msgstr "**可重用性**：在模块和潜在组件使用者之间实现高级互通性。"
-
-#: ../../source/guidelines/sdk-development.rst:29
-msgid ""
-"**Stateless**: Increasing availability and scalability of components "
-"allowing them to interoperate more frequently and reliably."
-msgstr "**无状态**：提高组件的可用性和可扩展性，使其能够更频繁、更可靠地进行互通。"
-
-#: ../../source/guidelines/sdk-development.rst:30
-msgid ""
-"**Composability**: For components to be effectively composable they must be "
-"interoperable."
-msgstr "**可组合性**：为了让组件更有效地组合，它们必须是可互通的。"
-
-#: ../../source/guidelines/sdk-development.rst:32
-msgid "**Reactive**"
-msgstr "**Reactive**"
-
-#: ../../source/guidelines/sdk-development.rst:34
-msgid "NEM2-SDK uses intensely ReactiveX Library."
-msgstr "NEM2-SDK频繁使用ReactiveX库。"

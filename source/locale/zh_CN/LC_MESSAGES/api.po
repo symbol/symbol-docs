@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +23,11 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/api.rst:3
-msgid "REST API"
-msgstr "REST 应用程序编程接口 （API）"
-
 #: ../../source/api.rst:5
 msgid ""
 "**Catapult REST API** combines HTTP and WebSockets to perform read and write"
 " actions in the NEM blockchain."
-msgstr "**Catapult REST API**结合HTTP和WebSockets在NEM区块链中执行读写操作。"
+msgstr "**Catapult REST API** 结合HTTP和WebSockets在NEM区块链中执行读写操作。"
 
 #: ../../source/api.rst:11
 msgid "Http requests"
@@ -40,17 +37,13 @@ msgstr "Http 请求"
 msgid ""
 "Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
 "**POST** requests."
-msgstr "Catapult REST 使用 ``3000``端口。它接受 **GET**, **PUT** 和**POST** 请求。"
+msgstr "Catapult REST 使用 ``3000`` 端口。它接受 **GET**, **PUT** 和 **POST** 请求。"
 
 #: ../../source/api.rst:15
 msgid ""
 "Assuming that Catapult REST is running locally, HTTP GET requests can be "
 "executed from a browser and have the form:"
 msgstr "假设Catapult REST在本地运行，HTTP GET请求可以从浏览器执行，其形式如下:"
-
-#: ../../source/api.rst:17
-msgid "http://localhost:3000/<path-to-API-request>"
-msgstr "http://localhost:3000/<path-to-API-request>"
 
 #: ../../source/api.rst:19
 msgid ""
@@ -66,28 +59,24 @@ msgstr ""
 msgid "Tools"
 msgstr "工具"
 
-#: ../../source/api.rst:30
-msgid "**NEM2-SDK**"
-msgstr "**NEM2-SDK**"
-
 #: ../../source/api.rst:32
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
 "tool to create NEM2 components, such as additional tools, libraries or "
 "applications."
-msgstr "**NEM2-SDK**是创建NEM2组件(如其他工具、库或应用程序)的主要软件开发工具。"
+msgstr "**NEM2-SDK** 是创建NEM2组件(如其他工具、库或应用程序)的主要软件开发工具。"
 
 #: ../../source/api.rst:34
 msgid "Consider using **NEM2-SDK** instead of calling the API directly."
-msgstr "请考虑使用**NEM2-SDK**而不是直接调用API。"
+msgstr "请考虑使用 **NEM2-SDK** 而不是直接调用API。"
 
 #: ../../source/api.rst:36
 msgid ":doc:`Reference <../sdk>`"
-msgstr ":doc:`参考<../sdk>`"
+msgstr ":doc:`参考 <../sdk>`"
 
 #: ../../source/api.rst:37
 msgid ":doc:`Guides <../concepts/account>`"
-msgstr ":doc:`指南<../concepts/account>`"
+msgstr ":doc:`指南 <../concepts/account>`"
 
 #: ../../source/api.rst:39
 msgid "**Insomnia**"
@@ -99,13 +88,13 @@ msgstr "一个开源的HTTP客户端，适用于Mac、Windows和Linux。"
 
 #: ../../source/api.rst:43
 msgid "Download |insomnia-app| for your operative system."
-msgstr "请下载 |Insomnia app| 用于您的操作系统。"
+msgstr "请下载 |insomnia-app| 用于您的操作系统。"
 
 #: ../../source/api.rst:45
 msgid ""
 "Import the :download:`Insomnia spec<resources/collections/insomnia.json>` "
 "for NEM."
-msgstr "导入 :download:`Insomnia spec<resources/collections/insomnia.json>`。"
+msgstr "导入 :download:`Insomnia spec <resources/collections/insomnia.json>`。"
 
 #: ../../source/api.rst:54
 msgid "Serialization"
@@ -131,7 +120,7 @@ msgstr "该库实现以下属性:"
 
 #: ../../source/api.rst:66
 msgid "**Memory Efficiency**"
-msgstr "**记忆效率 （Memory Efficiency）**"
+msgstr "**记忆效率 （Memory Efficiency)**"
 
 #: ../../source/api.rst:68
 msgid ""
@@ -153,7 +142,7 @@ msgid ""
 " the addition of new functionality to the server side without modifying the "
 "API contract."
 msgstr ""
-"REST的 `交易端点（transaction endpoints） "
+"REST的 `交易端点（transaction endpoints)  "
 "<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
 "掌控着区块链状态更新的调用。交易的序列化酬载量被附加到了POST调用的主体中。这些端点支持在不修改API协定的情况下向服务器端添加新功能。"
 
@@ -193,8 +182,8 @@ msgid ""
 "Repeat the process using a different input schema ``(-s)`` or generator "
 "``(-g)`` as needed."
 msgstr ""
-"生成器在 ``_generated/cpp_builder``  文件夹下创建一个新文件。根据实际情况, 请使用不同的输入架构 \" (-s) "
-"\"或生成器\"-g) \"\" 重复此过程。"
+"生成器在 ``_generated/cpp_builder``  文件夹下创建一个新文件。根据实际情况, 请使用不同的输入架构 ``(-s)`` "
+"或生成器 ``(-g)`` 重复此过程。"
 
 #: ../../source/api.rst:91
 msgid "Http errors"
@@ -209,16 +198,8 @@ msgid "Description"
 msgstr "描述"
 
 #: ../../source/api.rst:1
-msgid "200"
-msgstr "200"
-
-#: ../../source/api.rst:1
 msgid "Ok. The request has succeeded."
-msgstr "ok，请求已经成功。"
-
-#: ../../source/api.rst:1
-msgid "202"
-msgstr "202"
+msgstr "ok. 请求已经成功。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -227,32 +208,16 @@ msgid ""
 msgstr "接受。该请求已被接受进行处理，但尚未完成处理。"
 
 #: ../../source/api.rst:1
-msgid "400"
-msgstr "400"
-
-#: ../../source/api.rst:1
 msgid "Bad request. Check your request syntax."
 msgstr "错误请求。检查请求语法。"
-
-#: ../../source/api.rst:1
-msgid "404"
-msgstr "404"
 
 #: ../../source/api.rst:1
 msgid "Not found. The resource does not exist."
 msgstr "未找到。 资源不存在。"
 
 #: ../../source/api.rst:1
-msgid "409"
-msgstr "409"
-
-#: ../../source/api.rst:1
 msgid "Conflict. Check your arguments."
 msgstr "冲突。检查你的参数。"
-
-#: ../../source/api.rst:1
-msgid "500"
-msgstr "500"
 
 #: ../../source/api.rst:1
 msgid "Internal error. Unexpected condition."
@@ -261,10 +226,6 @@ msgstr "内部错误。意料外情况。"
 #: ../../source/api.rst:107
 msgid "Http status"
 msgstr "Http 状态"
-
-#: ../../source/api.rst:1
-msgid "Key"
-msgstr "Key"
 
 #: ../../source/api.rst:1
 msgid "code"
@@ -294,20 +255,7 @@ msgstr "uint64:低值和高值"
 msgid ""
 "Javascript operate on 32 bit values. To enable representation up to 64 bits,"
 " the API returns numbers encoded in two parts: ``lower`` and ``higher``."
-msgstr "Javascript以32位值进行操作。为了支持高达64位值，API返回编码为“低值”和“高值”两部分的数字。"
-
-#: ../../source/api.rst:130
-msgid ""
-"Check `how to compact lower and higher into a single value "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_."
-msgstr ""
-"查看“如何将低值和高值压缩为一个值<https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>”_。"
-
-#: ../../source/api.rst:136
-msgid "WebSockets"
-msgstr "WebSockets"
+msgstr "Javascript以32位值进行操作。为了支持高达64位值，API返回编码为 ``低值`` 和 ``高值`` 两部分的数字。"
 
 #: ../../source/api.rst:138
 msgid ""
@@ -320,7 +268,7 @@ msgstr "WebSockets使得接收在区块链中发生的交易或事件的通知�
 msgid ""
 "Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with "
 "**Listeners**."
-msgstr "与API WebSockets的交互:doc: ' NEM2-SDK <../sdk> '是用**监听器**完成的。"
+msgstr "与API WebSockets的交互 :doc:`NEM2-SDK <../sdk>` 是用 **监听器** 完成的。"
 
 #: ../../source/api.rst:143
 msgid "Channels"
@@ -336,19 +284,11 @@ msgid ""
 "block information."
 msgstr "区块通道通知每个新区块的生成。消息包含区块信息。"
 
-#: ../../source/api.rst:149
-msgid "**confirmedAdded/<ADDRESS>**"
-msgstr "**confirmedAdded/<ADDRESS>**"
-
 #: ../../source/api.rst:151
 msgid ""
 "The confirmedAdded channel notifies when a transaction related to an address"
 " is included in a block. The message contains the transaction."
 msgstr "当相关地址的交易被收录在区块内，confirmedAdded通道发出通知。 该通知包含该交易。"
-
-#: ../../source/api.rst:153
-msgid "**unconfirmedAdded/<ADDRESS>**"
-msgstr "**unconfirmedAdded/<ADDRESS>**"
 
 #: ../../source/api.rst:155
 msgid ""
@@ -364,12 +304,8 @@ msgid ""
 "aggregate bonded transaction has all required cosigners and change its state"
 " from *partial* to *unconfirmed*."
 msgstr ""
-"该通道会在以下可能的情况中发出通知：通过“PUT "
-"/transaction”HTTP端点向网络宣布的交易或聚合保税交易已得到所有的共签，并将其状态从“partial”更改为“unconfirmed”。"
-
-#: ../../source/api.rst:159
-msgid "**unconfirmedRemoved/<ADDRESS>**"
-msgstr "**unconfirmedRemoved/<ADDRESS>**"
+"该通道会在以下可能的情况中发出通知：通过 ``PUT /transaction`` "
+"HTTP端点向网络宣布的交易或聚合保税交易已得到所有的共签，并将其状态从 *partial* 更改为 *unconfirmed*。"
 
 #: ../../source/api.rst:161
 msgid ""
@@ -385,10 +321,6 @@ msgid ""
 "block."
 msgstr "该通道会在以下可能的情况中发出通知：交易已被确认，或者已经到达了最后期限，但没有收录在区块中。"
 
-#: ../../source/api.rst:165
-msgid "**partialAdded/<ADDRESS>**"
-msgstr "**partialAdded/<ADDRESS>**"
-
 #: ../../source/api.rst:167
 msgid ""
 "The partialAdded channel notifies when an aggregate bonded transaction "
@@ -401,11 +333,7 @@ msgid ""
 "The scenario when this channel notifies is when an aggregate bonded "
 "transaction is announced to the network via ``PUT /transaction/partial`` "
 "HTTP endpoint."
-msgstr "此通道会在以下可能的情况中发出通知：通过“PUT /transaction/partial”HTTP端点向网络宣布聚合保税交易。"
-
-#: ../../source/api.rst:171
-msgid "**partialRemoved/<ADDRESS>**"
-msgstr "**partialRemoved/<ADDRESS>**"
+msgstr "此通道会在以下可能的情况中发出通知：通过 ``PUT /transaction/partial`` HTTP端点向网络宣布聚合保税交易。"
 
 #: ../../source/api.rst:173
 msgid ""
@@ -421,20 +349,12 @@ msgid ""
 "block."
 msgstr "该通道会在以下可能的情况中发出通知： 交易现在处于未确认状态，或者已达到截止日期，但还未被收录在区块中。"
 
-#: ../../source/api.rst:177
-msgid "**cosignature/<ADDRESS>**"
-msgstr "**cosignature/<ADDRESS>**"
-
 #: ../../source/api.rst:179
 msgid ""
 "The cosignature channel notifies when a *cosignature signed transaction* "
 "related to an address is added to an aggregate bonded transaction with "
 "partial state. The message contains the cosignature signed transaction."
 msgstr "当相关地址的*共签签名交易*添加到partial状态的聚合保税交易，cosignature通道将发出通知。该通知包含有共签名签名交易。"
-
-#: ../../source/api.rst:181
-msgid "**status/<ADDRESS>**"
-msgstr "**status/<ADDRESS>**"
 
 #: ../../source/api.rst:183
 msgid ""
@@ -458,8 +378,8 @@ msgid ""
 "server/blob/master/resources/config-network.properties>`_. Public network "
 "configuration may differ."
 msgstr ""
-"配置参数是`可更改的 <https://github.com/nemtech/catapult-server/blob/master/resources"
-"/config-network.properties>`_。公共网络配置可能有所不同。"
+"配置参数是 `可更改的 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_。公共网络配置可能有所不同。"
 
 #: ../../source/api.rst:1
 msgid "Status"
@@ -490,511 +410,280 @@ msgid "Validation result is failure."
 msgstr "验证结果为失败。"
 
 #: ../../source/api.rst:1
-msgid "Failure_Core_Past_Deadline"
-msgstr "Failure_Core_Past_Deadline"
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the deadline passed."
-msgstr "验证失败，因为截止日期已过，。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Future_Deadline"
-msgstr "Failure_Core_Future_Deadline"
+msgstr "验证失败 因为截止日期已过，。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the deadline is too far in the future. Deadlines "
 "are only allowed to lie up to ``24`` hours ahead."
-msgstr "验证失败，因为截止日期太长。截止日期只允许24小时。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Insufficient_Balance"
-msgstr "Failure_Core_Insufficient_Balance"
+msgstr "验证失败 因为截止日期太长。截止日期只允许 ``24`` 小时。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the account has an insufficient balance."
-msgstr "验证失败，因为帐户余额不足。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Too_Many_Transactions"
-msgstr "Failure_Core_Too_Many_Transactions"
+msgstr "验证失败 因为帐户余额不足。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there are too many transactions in a block."
-msgstr "验证失败，因为区块中有太多交易。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block"
-msgstr "Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block"
+msgstr "验证失败 因为区块中有太多交易。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an entity originated from the nemesis account "
 "after the nemesis block."
-msgstr "验证失败，因为Nemesis 区块之后有一个实体源于nemesis帐户。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Wrong_Network"
-msgstr "Failure_Core_Wrong_Network"
+msgstr "验证失败 因为Nemesis 区块之后有一个实体源于nemesis帐户。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the entity has the wrong network specified."
-msgstr "验证失败，因为实体指定了错误的网络。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Invalid_Address"
-msgstr "Failure_Core_Invalid_Address"
+msgstr "验证失败 因为实体指定了错误的网络。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because an address is invalid."
-msgstr "验证失败，因为地址无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Block_Harvester_Ineligible"
-msgstr "Failure_Core_Block_Harvester_Ineligible"
+msgstr "验证失败 因为地址无效。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because a block was harvested by an ineligible harvester"
-msgstr "验证失败，因为区块由不合格的收获者收获。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Hash_Exists"
-msgstr "Failure_Hash_Exists"
+msgstr "验证失败 因为区块由不合格的收获者收获。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the entity hash is already known."
-msgstr "验证失败，因为实体哈希已存在。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Signature_Not_Verifiable"
-msgstr "Failure_Signature_Not_Verifiable"
+msgstr "验证失败 因为实体哈希已存在。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the verification of the signature failed."
 msgstr "签名验证失败。"
 
 #: ../../source/api.rst:1
-msgid "Failure_AccountLink_Invalid_Action"
-msgstr "Failure_AccountLink_Invalid_Action"
-
-#: ../../source/api.rst:1
 msgid ""
 "Validation failed because the account link action is invalid: link (0) and "
 "unlink (1)."
-msgstr "验证失败，因为帐户链接操作无效：link（0）和unlink（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Link_Already_Exists"
-msgstr "Failure_AccountLink_Link_Already_Exists"
+msgstr "验证失败 因为帐户链接操作无效：link（0）和unlink（1）。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the main account is already linked to another "
 "account."
-msgstr "验证失败，因为主帐户已链接到另一个帐户。"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Link_Does_Not_Exist"
-msgstr "Failure_AccountLink_Link_Does_Not_Exist"
+msgstr "验证失败 因为主帐户已链接到另一个帐户。"
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the unlink data is not consistent with existing "
 "account link."
-msgstr "验证失败，因为取消链接数据与现有帐户链接不一致。"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Unlink_Data_Inconsistency"
-msgstr "Failure_AccountLink_Unlink_Data_Inconsistency"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Ineligible"
-msgstr "Failure_AccountLink_Remote_Account_Ineligible"
+msgstr "验证失败 因为取消链接数据与现有帐户链接不一致。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the link is attempting to convert ineligible "
 "account to remote."
-msgstr "验证失败，因为链接试图将不合格的帐户转换为远程帐户。"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
-msgstr "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
+msgstr "验证失败 因为链接试图将不合格的帐户转换为远程帐户。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the remote is not allowed to sign a transaction."
-msgstr "验证失败，因为远程账户不允许签署事务。"
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Participant_Not_Allowed"
-msgstr "Failure_AccountLink_Remote_Account_Participant_Not_Allowed"
+msgstr "验证失败 因为远程账户不允许签署事务。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the remote is not allowed to participate in the "
 "transaction."
-msgstr "验证失败，因为远程账户不允许参与交易。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Too_Many_Transactions"
-msgstr "Failure_Aggregate_Too_Many_Transactions"
+msgstr "验证失败 因为远程账户不允许参与交易。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an aggregate has too many transactions. An "
 "aggregate transaction can contain up to ``1000`` inner transactions."
-msgstr "验证失败，因为聚合具有太多交易。聚合事务最多可包含1000内部交易。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_No_Transactions"
-msgstr "Failure_Aggregate_No_Transactions"
+msgstr "验证失败 因为聚合具有太多交易。聚合事务最多可包含 ``1000`` 内部交易。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because an aggregate does not have any transactions."
-msgstr "验证失败，因为聚合交易没有任何交易。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Too_Many_Cosignatures"
-msgstr "Failure_Aggregate_Too_Many_Cosignatures"
+msgstr "验证失败 因为聚合交易没有任何交易。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an aggregate has too many cosignatures. The "
 "maximum number of cosignatories allowed is ``15``."
-msgstr "验证失败，因为聚合交易具有太多的共签。共签者的最大值为``15``。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Redundant_Cosignatures"
-msgstr "Failure_Aggregate_Redundant_Cosignatures"
+msgstr "验证失败 因为聚合交易具有太多的共签。共签者的最大值为 ``15``。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there are redundant cosignatures."
-msgstr "验证失败，因为存在多余的共签。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Ineligible_Cosigners"
-msgstr "Failure_Aggregate_Ineligible_Cosigners"
+msgstr "验证失败 因为存在多余的共签。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because at least one cosigner is ineligible."
-msgstr "验证失败，因为至少有一个共签​​者不合格。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Missing_Cosigners"
-msgstr "Failure_Aggregate_Missing_Cosigners"
+msgstr "验证失败 因为至少有一个共签​​者不合格。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because at least one required cosigner is missing. The "
 "transaction was announced as complete but had missing cosignatures."
-msgstr "验证失败，因为至少缺少一个必需的共签者。该交易已宣布完成但缺少共签。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Mosaic_Id"
-msgstr "Failure_LockHash_Invalid_Mosaic_Id"
+msgstr "验证失败 因为至少缺少一个必需的共签者。该交易已宣布完成但缺少共签。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the lock does not allow the specified mosaic. The "
 "only mosaic allowed is ``xem``."
-msgstr "验证失败，因为秘密锁不允许该的马赛克。唯一被允许的马赛克是xem。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Mosaic_Amount"
-msgstr "Failure_LockHash_Invalid_Mosaic_Amount"
+msgstr "验证失败 因为秘密锁不允许该的马赛克。唯一被允许的马赛克是 ``xem``。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the lock does not allow the specified amount. The "
 "minimum amount is ``10``."
-msgstr "验证失败，因为秘密锁不允许该金额。最低金额是``10``。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Hash_Exists"
-msgstr "Failure_LockHash_Hash_Exists"
+msgstr "验证失败 因为秘密锁不允许该金额。最低金额是 ``10``。"
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the hash is already present in cache."
-msgstr "验证失败，因为缓存中已存在哈希。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Hash_Does_Not_Exist"
-msgstr "Failure_LockHash_Hash_Does_Not_Exist"
+msgstr "验证失败 因为缓存中已存在哈希。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the hash is not present in cache. Remember to lock"
 " before announcing aggregate bonded transactions."
-msgstr "验证失败，因为缓存中不存在哈希。记得在宣布聚合保税交易之前锁定。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Inactive_Hash"
-msgstr "Failure_LockHash_Inactive_Hash"
+msgstr "验证失败 因为缓存中不存在哈希。记得在宣布聚合保税交易之前锁定。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the hash is inactive."
-msgstr "验证失败，因为哈希处于非活动状态。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Duration"
-msgstr "Failure_LockHash_Invalid_Duration"
+msgstr "验证失败 因为哈希处于非活动状态。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the duration is too long. Duration is allowed to "
 "lie up to ``2`` days."
-msgstr "验证失败，因为持续时间太长。持续时间最长可达 ``2`` 天。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Invalid_Hash_Algorithm"
-msgstr "Failure_LockSecret_Invalid_Hash_Algorithm"
+msgstr "验证失败 因为持续时间太长。持续时间最长可达 ``2`` 天。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the hash algorithm for lock type secret is "
 "invalid. See the :doc:`available algorithms <../concepts/cross-chain-swaps>`"
 " list."
-msgstr "验证失败，因为锁型秘密的哈希算法无效。请参阅 :doc:`可用的算法 <../concepts/cross-chain-swaps>` "
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Exists"
-msgstr "Failure_LockSecret_Hash_Exists"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Not_Implemented"
-msgstr "Failure_LockSecret_Hash_Not_Implemented"
+msgstr ""
+"验证失败 因为锁型秘密的哈希算法无效。请参阅 :doc:`可用的算法   <../concepts/cross-chain-swaps>` "
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the hash is not implemented yet."
-msgstr "验证失败，因为哈希尚未则行。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Proof_Size_Out_Of_Bounds"
-msgstr "Failure_LockSecret_Proof_Size_Out_Of_Bounds"
+msgstr "验证失败 因为哈希尚未则行。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the proof is too small or too large. It should be "
 "between ``10`` and ``1000`` bytes."
-msgstr "验证失败，因为秘密证明太小或太大。它应该在``10`` 和 ``1000``字节之间。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Secret_Mismatch"
-msgstr "Failure_LockSecret_Secret_Mismatch"
+msgstr "验证失败 因为秘密证明太小或太大。它应该在 ``10`` 和 ``1000`` 字节之间。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the secret does not match proof."
-msgstr "验证失败，因为秘密证据与秘密锁不符。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Unknown_Secret"
-msgstr "Failure_LockSecret_Unknown_Secret"
+msgstr "验证失败 因为秘密证据与秘密锁不符。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the secret is unknown."
-msgstr "验证失败，因为秘密锁未知。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Inactive_Secret"
-msgstr "Failure_LockSecret_Inactive_Secret"
+msgstr "验证失败 因为秘密锁未知。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the secret is inactive."
-msgstr "验证失败，因为秘密锁处于非活动状态。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Algorithm_Mismatch"
-msgstr "Failure_LockSecret_Hash_Algorithm_Mismatch"
+msgstr "验证失败 因为秘密锁处于非活动状态。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the hash algorithm does not match."
-msgstr "验证失败，因为哈希算法不匹配。"
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Invalid_Duration"
-msgstr "Failure_LockSecret_Invalid_Duration"
+msgstr "验证失败 因为哈希算法不匹配。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the duration is too long. Duration is allowed to "
 "lie up to ``30`` days."
-msgstr "验证失败，因为持续时间太长。持续时间最长可达``30`` 天."
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Duration"
-msgstr "Failure_Mosaic_Invalid_Duration"
+msgstr "验证失败 因为持续时间太长。持续时间最长可达 ``30`` 天."
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the duration has an invalid value. Duration is "
 "allowed to lie up to ``365`` days."
-msgstr "验证失败，因为持续时间值无效。持续时间最长可达``365`` 天。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Name"
-msgstr "Failure_Mosaic_Invalid_Name"
+msgstr "验证失败 因为持续时间值无效。持续时间最长可达 ``365`` 天。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the name is invalid. The mosaic name may have a "
 "maximum length of ``64`` characters. Allowed characters are `a-to-z`; "
 "`0-to-9` and the following special characters: \\`_-"
-msgstr "验证失败，因为名称无效。马赛克名称最多可有``64``字符。允许的字符是 `a-到-z`; `0-到-9`以及以下特殊字符: \\`_-"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Name_Id_Mismatch"
-msgstr "Failure_Mosaic_Name_Id_Mismatch"
+msgstr "验证失败 因为名称无效。马赛克名称最多可有 ``64`` 字符。允许的字符是 `a-到-z`; `0-到-9` 以及以下特殊字符: \\`_-"
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the name and id don't match."
-msgstr "验证失败，因为名称和ID不匹配。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Expired"
-msgstr "Failure_Mosaic_Expired"
+msgstr "验证失败 因为名称和ID不匹配。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the parent is expired."
-msgstr "验证失败，因为父级已过期。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Id_Mismatch"
-msgstr "Failure_Mosaic_Id_Mismatch"
+msgstr "验证失败 因为父级已过期。"
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the id is not the expected id generated from "
 "signer and nonce."
-msgstr "验证失败，因为ID不是从签名者和nonce生成的预期ID。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Owner_Conflict"
-msgstr "Failure_Mosaic_Owner_Conflict"
+msgstr "验证失败 因为ID不是从签名者和nonce生成的预期ID。"
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid ""
 "Validation failed because the parent owner conflicts with the child owner."
-msgstr "验证失败，因为父级所有者与子级所有者冲突。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Parent_Id_Conflict"
-msgstr "Failure_Mosaic_Parent_Id_Conflict"
+msgstr "验证失败 因为父级所有者与子级所有者冲突。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the existing parent id does not match the supplied"
 " parent id."
-msgstr "验证失败，因为现有父级ID与提供的父级ID不匹配。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Property"
-msgstr "Failure_Mosaic_Invalid_Property"
+msgstr "验证失败 因为现有父级ID与提供的父级ID不匹配。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a mosaic property is invalid."
-msgstr "验证失败，因为马赛克属性无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Flags"
-msgstr "Failure_Mosaic_Invalid_Flags"
+msgstr "验证失败 因为马赛克属性无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic flags are invalid."
-msgstr "验证失败，因为马赛克标记无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Divisibility"
-msgstr "Failure_Mosaic_Invalid_Divisibility"
+msgstr "验证失败 因为马赛克标记无效。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the mosaic divisibility is invalid. The specified "
 "divisibility is greater than ``6`` or negative."
-msgstr "验证失败，因为马赛克的可分割性无效。该可分割性值大于``6``或为负数。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Direction"
-msgstr "Failure_Mosaic_Invalid_Supply_Change_Direction"
+msgstr "验证失败 因为马赛克的可分割性无效。该可分割性值大于 ``6`` 或为负数。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the mosaic supply change direction is invalid: "
 "decrease (0) and  increase (1)."
-msgstr "验证失败，因为马赛克供应更改方向无效：减少（0）和增加（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Amount"
-msgstr "Failure_Mosaic_Invalid_Supply_Change_Amount"
+msgstr "验证失败 因为马赛克供应更改方向无效：减少（0）和增加（1）。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic supply change amount is invalid."
-msgstr "验证失败，因为马赛克供应更改量无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Id"
-msgstr "Failure_Mosaic_Invalid_Id"
+msgstr "验证失败 因为马赛克供应更改量无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic id is invalid."
-msgstr "验证失败，因为马赛克ID无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Name_Reserved"
-msgstr "Failure_Mosaic_Name_Reserved"
+msgstr "验证失败 因为马赛克ID无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic has a reserved name."
-msgstr "验证失败，因为马赛克具有保留名称。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Modification_Disallowed"
-msgstr "Failure_Mosaic_Modification_Disallowed"
+msgstr "验证失败 因为马赛克具有保留名称。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because mosaic modification is not allowed."
-msgstr "验证失败，因为不允许马赛克修改。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Modification_No_Changes"
-msgstr "Failure_Mosaic_Modification_No_Changes"
+msgstr "验证失败 因为不允许马赛克修改。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because mosaic modification would not result in any "
 "changes."
-msgstr "验证失败，因为马赛克修改不会导致任何更改。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Immutable"
-msgstr "Failure_Mosaic_Supply_Immutable"
+msgstr "验证失败 因为马赛克修改不会导致任何更改。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic supply is immutable."
-msgstr "验证失败，因为马赛克供应量是不可改变的。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Negative"
-msgstr "Failure_Mosaic_Supply_Negative"
+msgstr "验证失败 因为马赛克供应量是不可改变的。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the resulting mosaic supply is negative."
-msgstr "验证失败，因为生成的马赛克供应量为负数。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Exceeded"
-msgstr "Failure_Mosaic_Supply_Exceeded"
+msgstr "验证失败 因为生成的马赛克供应量为负数。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the resulting mosaic supply exceeds the maximum "
 "allowed value. The range should be between 0 and ``9.000.000.000``."
-msgstr "验证失败，因为生成的马赛克供应量超过了允许的最大值。范围应介于0和``9,000,000,000``之间。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Non_Transferable"
-msgstr "Failure_Mosaic_Non_Transferable"
+msgstr "验证失败 因为生成的马赛克供应量超过了允许的最大值。范围应介于0和 ``9,000,000,000`` 之间。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1004,120 +693,68 @@ msgid ""
 msgstr "验证失败，因为马赛克不可转让。马赛克从创建者账户被转让后，只有其创建者有资格成为下一次转让的收件人。"
 
 #: ../../source/api.rst:1
-msgid "Failure_Mosaic_Max_Mosaics_Exceeded"
-msgstr "Failure_Mosaic_Max_Mosaics_Exceeded"
-
-#: ../../source/api.rst:1
 msgid ""
 "Validation failed because the credit of the mosaic would exceed the maximum "
 "different mosaics an account is allowed to own. Set by default to ``10.000``"
 " different mosaics per account."
-msgstr "验证失败，因为帐户可拥有不同马赛克的最大数量超出。默认设置为``10,000`` 。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Account_In_Both_Sets"
-msgstr "Failure_Multisig_Modify_Account_In_Both_Sets"
+msgstr "验证失败 因为帐户可拥有不同马赛克的最大数量超出。默认设置为 ``10,000`` 。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an account is specified to be both added and "
 "removed."
-msgstr "验证失败，因为指定帐户同时被添加和删除。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Multiple_Deletes"
-msgstr "Failure_Multisig_Modify_Multiple_Deletes"
+msgstr "验证失败 因为指定帐户同时被添加和删除。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there are multiple removals."
-msgstr "验证失败，因为有多个账户被删除。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Redundant_Modifications"
-msgstr "Failure_Multisig_Modify_Redundant_Modifications"
+msgstr "验证失败 因为有多个账户被删除。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there are redundant modifications."
-msgstr "验证失败，因为有多余的修改。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Unknown_Multisig_Account"
-msgstr "Failure_Multisig_Modify_Unknown_Multisig_Account"
+msgstr "验证失败 因为有多余的修改。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because account is not in multisig cache."
-msgstr "验证失败，因为帐户不在共签缓存中。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Not_A_Cosigner"
-msgstr "Failure_Multisig_Modify_Not_A_Cosigner"
+msgstr "验证失败 因为帐户不在共签缓存中。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there is not account to be removed."
-msgstr "验证失败，因为没有要删除的帐户。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Already_A_Cosigner"
-msgstr "Failure_Multisig_Modify_Already_A_Cosigner"
+msgstr "验证失败 因为没有要删除的帐户。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the account to be added is already a cosignatory."
-msgstr "验证失败，因为要添加的帐户已经是共签者。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Min_Setting_Out_Of_Range"
-msgstr "Failure_Multisig_Modify_Min_Setting_Out_Of_Range"
+msgstr "验证失败 因为要添加的帐户已经是共签者。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the new minimum settings are out of range."
-msgstr "验证失败，因为新的最小设置超出范围。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories"
-msgstr "Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories"
+msgstr "验证失败 因为新的最小设置超出范围。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because min settings are larger than number of "
 "cosignatories."
-msgstr "验证失败，因为最小设置数大于共签者的数量。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Unsupported_Modification_Type"
-msgstr "Failure_Multisig_Modify_Unsupported_Modification_Type"
+msgstr "验证失败 因为最小设置数大于共签者的数量。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the modification type is unsupported: add (0) and "
 "remove (1)."
-msgstr "验证失败，因为修改类型不受支持：add（0）和remove（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Cosigned_Accounts"
-msgstr "Failure_Multisig_Modify_Max_Cosigned_Accounts"
+msgstr "验证失败 因为修改类型不受支持：add（0）和remove（1）。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the cosignatory already cosigns the maximum number"
 " of accounts. An account cannot be cosignatory of more than ``5`` multisig "
 "accounts."
-msgstr "验证失败，因为被允许的共签帐户已超过。帐户不能成为超过 ``5`` 个共签账户的共签者。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Cosigners"
-msgstr "Failure_Multisig_Modify_Max_Cosigners"
+msgstr "验证失败 因为被允许的共签帐户已超过。帐户不能成为超过 ``5`` 个共签账户的共签者。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the multisig account already has the maximum "
 "number of cosignatories. A multisig account cannot have more than ``10`` "
 "cosignatories."
-msgstr "验证失败，因为共签帐户已具有最大被允许数量的共签者。共签帐户不能有超过 ``10`` 个共签者。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Loop"
-msgstr "Failure_Multisig_Modify_Loop"
+msgstr "验证失败 因为共签帐户已具有最大被允许数量的共签者。共签帐户不能有超过 ``10`` 个共签者。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1126,36 +763,21 @@ msgid ""
 "multisig having as cosignatory another multisig where the account is "
 "cosignatory."
 msgstr ""
-"验证失败，因为创建了共签多重循环。共签帐户本身不能成为本身的共签者。账户（A）也不能转变为共签账户，如果它其中的一个共签者（B）同时以该账户（A）为共签者。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Multisig_Depth"
-msgstr "Failure_Multisig_Modify_Max_Multisig_Depth"
+"验证失败 因为创建了共签多重循环。共签帐户本身不能成为本身的共签者。账户（A）也不能转变为共签账户 "
+"如果它其中的一个共签者（B）同时以该账户（A）为共签者。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the max multisig depth is exceeded. The maximum "
 "depth of a multilevel multisig account is ``3``."
-msgstr "验证失败，因为超出了多重深度的极限。多级共签帐户的深度极限为``3``。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Operation_Not_Permitted_By_Account"
-msgstr "Failure_Multisig_Operation_Not_Permitted_By_Account"
+msgstr "验证失败 因为超出了多重深度的极限。多级共签帐户的深度极限为 ``3``。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an operation is not permitted by a multisig "
 "account. A multisig account cannot be converted into a multisig account "
 "again."
-msgstr "验证失败，因为操作不被共签帐户允许。共签帐户无法再次转换为共签帐户。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Duration"
-msgstr "Failure_Namespace_Invalid_Duration"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Name"
-msgstr "Failure_Namespace_Invalid_Name"
+msgstr "验证失败 因为操作不被共签帐户允许。共签帐户无法再次转换为共签帐户。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1163,41 +785,18 @@ msgid ""
 "name may have a maximum length of ``64`` characters. Allowed characters are "
 "`a-to-z`; `0-to-9` and the following special characters: \\`_-"
 msgstr ""
-"验证失败，因为命名空间的名称无效。，命名空间名称最多可有``64``字符。允许的字符是 `a-到-z`; `0-到-9`以及以下特殊字符: \\`_-"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Name_Id_Mismatch"
-msgstr "Failure_Namespace_Name_Id_Mismatch"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Expired"
-msgstr "Failure_Namespace_Expired"
+"验证失败 因为命名空间的名称无效。，命名空间名称最多可有 ``64`` 字符。允许的字符是 `a-到-z`; `0-到-9` 以及以下特殊字符: "
+"\\`_-"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace has expired."
-msgstr "验证失败，因为命名空间已过期。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Owner_Conflict"
-msgstr "Failure_Namespace_Owner_Conflict"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Id_Mismatch"
-msgstr "Failure_Namespace_Id_Mismatch"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Namespace_Type"
-msgstr "Failure_Namespace_Invalid_Namespace_Type"
+msgstr "验证失败 因为命名空间已过期。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the namespace type is invalid: rootnamespace (0) "
 "and subnamesapce (1)."
-msgstr "验证失败，因为命名空间类型无效：rootnamespace（0）和subnamesapce（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Root_Name_Reserved"
-msgstr "Failure_Namespace_Root_Name_Reserved"
+msgstr "验证失败 因为命名空间类型无效：rootnamespace（0）和subnamesapce（1）。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1205,430 +804,237 @@ msgid ""
 "<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
 "network.properties#L60>`_."
 msgstr ""
-"验证失败，因为rootnamespace 是`保留 <https://github.com/nemtech/catapult-"
+"验证失败 `因为rootnamespace 是保留 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties#L60>`_."
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Too_Deep"
-msgstr "Failure_Namespace_Too_Deep"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the resulting namespace would exceed the maximum "
 "allowed namespace depth. Namespaces can have up to ``3`` nested levels."
-msgstr "验证失败，因为生成的命名空间将超过被允许的深度。命名空间最多可含 ``3`` 层。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Parent_Unknown"
-msgstr "Failure_Namespace_Parent_Unknown"
+msgstr "验证失败 因为生成的命名空间将超过被允许的深度。命名空间最多可含 ``3`` 层。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace parent is unknown."
-msgstr "验证失败，因为未知命名空间父级。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Already_Exists"
-msgstr "Failure_Namespace_Already_Exists"
+msgstr "验证失败 因为未知命名空间父级。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace already exists."
-msgstr "验证失败，因为命名空间已存在。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Already_Active"
-msgstr "Failure_Namespace_Already_Active"
+msgstr "验证失败 因为命名空间已存在。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace is already active."
-msgstr "验证失败，因为命名空间已处于活动状态。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Eternal_After_Nemesis_Block"
-msgstr "Failure_Namespace_Eternal_After_Nemesis_Block"
+msgstr "验证失败 因为命名空间已处于活动状态。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because an eternal namespace was received after the "
 "nemesis block."
-msgstr "验证失败，因为在nenesis块之后收到了一个永恒的命名空间。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Max_Children_Exceeded"
-msgstr "Failure_Namespace_Max_Children_Exceeded"
+msgstr "验证失败 因为在nemesis块之后收到了一个永恒的命名空间。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the maximum number of children for a root "
 "namespace was exceeded."
-msgstr "验证失败，因为rootnamespace 的子级项数已超出极限。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Invalid_Action"
-msgstr "Failure_Namespace_Alias_Invalid_Action"
+msgstr "验证失败 因为rootnamespace 的子级项数已超出极限。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because alias action is invalid: link (0) and unlink (1)."
-msgstr "验证失败，因为别名操作无效：link（0）和unlink（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Namespace_Unknown"
-msgstr "Failure_Namespace_Alias_Namespace_Unknown"
+msgstr "验证失败 因为别名操作无效：link（0）和unlink（1）。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace does not exist."
-msgstr "验证失败，因为命名空间不存在。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Already_Exists"
-msgstr "Failure_Namespace_Alias_Already_Exists"
+msgstr "验证失败 因为命名空间不存在。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace is already linked to an alias."
-msgstr "验证失败，因为命名空间已链接到别名。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Does_Not_Exist"
-msgstr "Failure_Namespace_Alias_Does_Not_Exist"
+msgstr "验证失败 因为命名空间已链接到别名。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace is not linked to an alias."
-msgstr "验证失败，因为命名空间未链接到别名。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Owner_Conflict"
-msgstr "Failure_Namespace_Alias_Owner_Conflict"
+msgstr "验证失败 因为命名空间未链接到别名。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace has different owner."
-msgstr "验证失败，因为命名空间具有不同的持有者。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Unlink_Type_Inconsistency"
-msgstr "Failure_Namespace_Alias_Unlink_Type_Inconsistency"
+msgstr "验证失败 因为命名空间具有不同的持有者。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because unlink type is not consistent with the existing "
 "alias."
-msgstr "验证失败，因为unlink类型与现有别名不一致。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Unlink_Data_Inconsistency"
-msgstr "Failure_Namespace_Alias_Unlink_Data_Inconsistency"
+msgstr "验证失败 因为unlink类型与现有别名不一致。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because unlink data is not consistent with the existing "
 "alias."
-msgstr "验证失败，因为unlink数据与现有别名不一致。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Invalid_Address"
-msgstr "Failure_Namespace_Alias_Invalid_Address"
+msgstr "验证失败 因为unlink数据与现有别名不一致。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the aliased address is invalid."
-msgstr "验证失败，因为别名地址无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Invalid_Property_Type"
-msgstr "Failure_Property_Invalid_Property_Type"
+msgstr "验证失败 因为别名地址无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the property type is invalid."
-msgstr "验证失败，因为属性类型无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Type_Invalid"
-msgstr "Failure_Property_Modification_Type_Invalid"
+msgstr "验证失败 因为属性类型无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a modification type is invalid."
-msgstr "验证失败，因为修改类型无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Address_Invalid"
-msgstr "Failure_Property_Modification_Address_Invalid"
+msgstr "验证失败 因为修改类型无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a modification address is invalid."
-msgstr "验证失败，因为修改地址无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Operation_Type_Incompatible"
-msgstr "Failure_Property_Modification_Operation_Type_Incompatible"
+msgstr "验证失败 因为修改地址无效。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the operation type is incompatible."
-msgstr "验证失败，因为操作类型不兼容。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modify_Unsupported_Modification_Type"
-msgstr "Failure_Property_Modify_Unsupported_Modification_Type"
+msgstr "验证失败 因为操作类型不兼容。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the modification type is unsupported: add (0) and"
 "  delete (1)."
-msgstr "验证失败，因为修改类型不被支持：add（0）和delete（1）。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Redundant"
-msgstr "Failure_Property_Modification_Redundant"
+msgstr "验证失败 因为修改类型不被支持：add（0）和delete（1）。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a modification is redundant."
-msgstr "验证失败，因为修改是多余的。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Not_Allowed"
-msgstr "Failure_Property_Modification_Not_Allowed"
+msgstr "验证失败 因为修改是多余的。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because there is not a value in the container."
-msgstr "验证失败，因为容器中没有定值。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Modification_Count_Exceeded"
-msgstr "Failure_Property_Modification_Count_Exceeded"
+msgstr "验证失败 因为容器中没有定值。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the transaction has too many modifications."
-msgstr "验证失败，因为交易有太多的修改。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Values_Count_Exceeded"
-msgstr "Failure_Property_Values_Count_Exceeded"
+msgstr "验证失败 因为交易有太多的修改。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the resulting property has too many values. The "
 "maximum number of values a property can have is ``512``."
-msgstr "验证失败，因为属性的定值太多。属性可以拥有的最大值数是``512``。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Value_Invalid"
-msgstr "Failure_Property_Value_Invalid"
+msgstr "验证失败 因为属性的定值太多。属性可以拥有的最大值数是 ``512``。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the property value is invalid."
-msgstr "验证失败，因为属性值无效。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Signer_Address_Interaction_Not_Allowed"
-msgstr "Failure_Property_Signer_Address_Interaction_Not_Allowed"
+msgstr "验证失败 因为属性值无效。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the signer is not allowed to interact with an "
 "address involved in the transaction."
-msgstr "验证失败，因为签名者不允许与涉及交易的地址进行交互。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Mosaic_Transfer_Not_Allowed"
-msgstr "Failure_Property_Mosaic_Transfer_Not_Allowed"
+msgstr "验证失败 因为签名者不允许与涉及交易的地址进行交互。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the mosaic transfer is prohibited by the "
 "recipient."
-msgstr "验证失败，因为收件人禁止马赛克的转移。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Property_Transaction_Type_Not_Allowed"
-msgstr "Failure_Property_Transaction_Type_Not_Allowed"
+msgstr "验证失败 因为收件人禁止马赛克的转移。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the transaction type is not allowed to be "
 "initiated by the signer."
-msgstr "验证失败，因为签名者不被允许启动交易类型。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Transfer_Message_Too_Large"
-msgstr "Failure_Transfer_Message_Too_Large"
+msgstr "验证失败 因为签名者不被允许启动交易类型。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the message is too large.  It exceeds the limit of"
 " ``1024`` bytes."
-msgstr "验证失败，因为信息太大。它超过了``1024``字节数限制。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Transfer_Out_Of_Order_Mosaics"
-msgstr "Failure_Transfer_Out_Of_Order_Mosaics"
+msgstr "验证失败 因为信息太大。它超过了 ``1024`` 字节数限制。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the mosaics are out of order. Mosaics on a "
 "transfer transaction should be ordered by id value."
-msgstr "验证失败，因为马赛克无序。转让交易上的马赛克应该按ID值排序。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Unlinked"
-msgstr "Failure_Chain_Unlinked"
+msgstr "验证失败 因为马赛克无序。转让交易上的马赛克应该按ID值排序。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because a block was received that did not link with the "
 "existing chain."
-msgstr "验证失败，因为接收到的区块没有链接到现有链。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Not_Hit"
-msgstr "Failure_Chain_Block_Not_Hit"
+msgstr "验证失败 因为接收到的区块没有链接到现有链。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a block was received that is not a hit."
-msgstr "验证失败，因为接收到的区块不是命中的。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Inconsistent_State_Hash"
-msgstr "Failure_Chain_Block_Inconsistent_State_Hash"
+msgstr "验证失败 因为接收到的区块不是命中的。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because a block was received that has an inconsistent "
 "state hash."
-msgstr "验证失败，因为接收到的区块状态哈希不一致。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Inconsistent_Receipts_Hash"
-msgstr "Failure_Chain_Block_Inconsistent_Receipts_Hash"
+msgstr "验证失败 因为接收到的区块状态哈希不一致。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because a block was received that has an inconsistent "
 "receipts hash."
-msgstr "验证失败，因为接收到的区块的收哈希列不一致。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Unconfirmed_Cache_Too_Full"
-msgstr "Failure_Chain_Unconfirmed_Cache_Too_Full"
+msgstr "验证失败 因为接收到的区块的收哈希列不一致。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the unconfirmed cache is too full."
-msgstr "验证失败，因为未确认的缓存太满。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Empty_Input"
-msgstr "Failure_Consumer_Empty_Input"
+msgstr "验证失败 因为未确认的缓存太满。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the consumer input is empty."
-msgstr "验证失败，因为使用者的输入为空。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Block_Transactions_Hash_Mismatch"
-msgstr "Failure_Consumer_Block_Transactions_Hash_Mismatch"
+msgstr "验证失败 因为使用者的输入为空。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the block transactions hash does not match the "
 "calculated value."
-msgstr "验证失败，因为区块交易哈希与计算值不匹配。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Hash_In_Recency_Cache"
-msgstr "Failure_Consumer_Hash_In_Recency_Cache"
+msgstr "验证失败 因为区块交易哈希与计算值不匹配。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the entity hash is present in the recency cache."
-msgstr "验证失败，因为在最近缓存中存在实体哈希。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Many_Blocks"
-msgstr "Failure_Consumer_Remote_Chain_Too_Many_Blocks"
+msgstr "验证失败 因为在最近缓存中存在实体哈希。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the chain part has too many blocks."
-msgstr "验证失败，因为链部分有太多区块。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Improper_Link"
-msgstr "Failure_Consumer_Remote_Chain_Improper_Link"
+msgstr "验证失败 因为链部分有太多区块。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the chain is internally improperly linked."
-msgstr "验证失败，因为链的内部链接不正确。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
-msgstr "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
+msgstr "验证失败 因为链的内部链接不正确。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the chain part contains duplicate transactions."
-msgstr "验证失败，因为链部分包含重复交易。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Unlinked"
-msgstr "Failure_Consumer_Remote_Chain_Unlinked"
+msgstr "验证失败 因为链部分包含重复交易。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the chain part does not link to the current chain."
-msgstr "验证失败，因为链部件没有连接到当前链。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Mismatched_Difficulties"
-msgstr "Failure_Consumer_Remote_Chain_Mismatched_Difficulties"
+msgstr "验证失败 因为链部件没有连接到当前链。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the remote chain difficulties do not match the "
 "calculated difficulties."
-msgstr "验证失败，因为远程链的难度与计算的难度不一样。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Score_Not_Better"
-msgstr "Failure_Consumer_Remote_Chain_Score_Not_Better"
+msgstr "验证失败 因为远程链的难度与计算的难度不一样。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the remote chain score is not better."
-msgstr "验证失败，因为远程链的得分并不高。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Far_Behind"
-msgstr "Failure_Consumer_Remote_Chain_Too_Far_Behind"
+msgstr "验证失败 因为远程链的得分并不高。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the remote chain is too far behind."
-msgstr "验证失败，因为远程链太落后了。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Far_In_Future"
-msgstr "Failure_Consumer_Remote_Chain_Too_Far_In_Future"
+msgstr "验证失败 因为远程链太落后了。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the remote chain timestamp is too far in the "
 "future."
-msgstr "验证失败，因为远程链时间戳太遥远。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Extension_Partial_Transaction_Cache_Prune"
-msgstr "Failure_Extension_Partial_Transaction_Cache_Prune"
+msgstr "验证失败 因为远程链时间戳太遥远。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the partial transaction was pruned from the "
 "temporal cache."
-msgstr "验证失败，因为部分交易从临时缓存中被删除。"
-
-#: ../../source/api.rst:1
-msgid "Failure_Extension_Partial_Transaction_Dependency_Removed"
-msgstr "Failure_Extension_Partial_Transaction_Dependency_Removed"
+msgstr "验证失败 因为部分交易从临时缓存中被删除。"
 
 #: ../../source/api.rst:1
 msgid ""
 "Validation failed because the partial transaction was pruned from the "
 "temporal cache due to its dependency being removed."
-msgstr "验证失败，因为部分交易因其依赖关系从临时缓存中被删除。"
-
-#: ../../source/api.rst:329
-msgid ":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
-msgstr ""
-":download:`OpenAPI specification <resources/collections/swagger.yaml>`"
+msgstr "验证失败 因为部分交易因其依赖关系从临时缓存中被删除。"

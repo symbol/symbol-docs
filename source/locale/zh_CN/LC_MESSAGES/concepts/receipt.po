@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,9 +42,9 @@ msgid ""
 " appear as a *hidden change* that increases the :doc:`account <account>` "
 "balance. Receipts provide proof for every hidden change."
 msgstr ""
-"例如，一旦确认 :doc:`保税聚集交易 <aggregate-transaction>` ， :ref:`哈希锁 ` "
-"就会取消。当锁定的资金自动返回到账户时，不会有额外的 :doc:`交易<transaction>`记录。 这可能会显示为 *隐藏的变化*，导致 "
-":doc:`账户<account>`余额增加。收据为每个隐藏的变化提供证据。"
+"例如，一旦确认 :doc:`保税聚集交易 <aggregate-transaction>` ， :ref:`哈希锁 <hash-lock-"
+"transaction>` 就会取消。当锁定的资金自动返回到账户时，不会有额外的 :doc:`交易 <transaction>` 记录。 这可能会显示为"
+" *隐藏的变化*，导致 :doc:`账户<account>` 余额增加。收据为每个隐藏的变化提供证据。"
 
 #: ../../source/concepts/receipt.rst:9
 msgid ""
@@ -51,7 +52,7 @@ msgid ""
 ":doc:`block <block>`. The block header stores the root hash, which is "
 "different from zero when the block has receipts."
 msgstr ""
-"集合一起的收据被哈希处理至一个 |默克尔树| 中并连接到某个 :doc:`区块<block>`。区块的首部存储根哈希。当区块有收据时，首部不再为0。"
+"集合一起的收据被哈希处理至一个 |merkle| 中并连接到某个 :doc:`区块<block>`。区块的首部存储根哈希。当区块有收据时，首部不再为0。"
 
 #: ../../source/concepts/receipt.rst:13
 msgid "Transaction statement"
@@ -63,7 +64,7 @@ msgid ""
 "receipts linked with a transaction in a particular block. Statements can "
 "include receipts with the following basic types:"
 msgstr ""
-"集合一起的收据连接到某区块中的交易被称为:ref:`交易声明 <transaction-statement>`。声明可以包含以下基本类型的收据："
+"集合一起的收据连接到某区块中的交易被称为 :ref:`交易声明 <transaction-statement>`。声明可以包含以下基本类型的收据："
 
 #: ../../source/concepts/receipt.rst:17
 msgid "**Balance Transfer**: A mosaic transfer was triggered."
@@ -91,8 +92,8 @@ msgid ""
 ":ref:`resolution statement <resolution-statement>` reflects the resolved "
 "value for that block:"
 msgstr ""
-"当交易包含了 :doc:`别名 <namespace>`时，所谓的:ref:`决议声明 <resolution-"
-"statement>`反映该区块的决议值："
+"当交易包含了 :doc:`别名 <namespace>` 时，所谓的 :ref:`决议声明 <resolution-statement>` "
+"反映该区块的决议值："
 
 #: ../../source/concepts/receipt.rst:27
 msgid "**Address Resolution**: An account alias was used in the block."
@@ -141,68 +142,22 @@ msgid "**Core**"
 msgstr "**核心**"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "0x4321"
-msgstr "0x4321"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Harvest_Fee"
-msgstr "Harvest_Fee"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1
-msgid ":ref:`BalanceCredit <balance-change-receipt>`"
-msgstr ":ref:`BalanceCredit <balance-change-receipt>`"
-
-#: ../../source/concepts/receipt.rst:1
 msgid ""
 "The recipient, account and amount of fees received for harvesting a block. "
 "It is recorded when a block is :doc:`harvested <harvesting>`."
-msgstr "被收获的区块的收件人，帐户和收获的费用。记录一个区块被 :doc:`收获<harvest>`。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x43F1"
-msgstr "0x43F1"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Address_Alias_Resolution"
-msgstr "Address_Alias_Resolution"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid ":ref:`Alias Resolution <resolution-statement>`"
-msgstr ":ref:`别名决议 （Alias Resolution） <resolution-statement>`"
+msgstr "被收获的区块的收件人，帐户和收获的费用。记录一个区块被 :doc:`收获 <harvesting>`。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
 "The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a "
 "transaction indicates a valid address alias instead of an address."
-msgstr "未决议和已决议的:doc:`别名 <namespace>`。交易指向有效地址别名而不是地址时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x43F2"
-msgstr "0x43F2"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Mosaic_Alias_Resolution"
-msgstr "Mosaic_Alias_Resolution"
+msgstr "未决议和已决议的 :doc:`别名 <namespace>`。交易指向有效地址别名而不是地址时被记录。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
 "The unresolved and resolved alias. It is recorded when a transaction "
 "indicates a valid mosaic alias instead of a mosaicId."
 msgstr "未决议和已决议的别名。当交易指向有效的马赛克别名而不是mosaicId时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x43E1"
-msgstr "0x43E1"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Transaction_Group"
-msgstr "Transaction_Group"
-
-#: ../../source/concepts/receipt.rst:1
-msgid ":ref:`Aggregate <transaction-statement>`"
-msgstr ":ref:`Aggregate <transaction-statement>`"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
@@ -214,14 +169,6 @@ msgstr "特定资源的状态变化集合。在发出状态变更收据时被记
 msgid "**Mosaic**"
 msgstr "**马赛克**"
 
-#: ../../source/concepts/receipt.rst:1
-msgid "0x4D41"
-msgstr "0x4D41"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Mosaic_Expired"
-msgstr "Mosaic_Expired"
-
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 msgid ":ref:`ArtifactExpiry <artifact-expiry-receipt>`"
 msgstr ":ref:`文物期满 <artifact-expiry-receipt>`"
@@ -230,15 +177,7 @@ msgstr ":ref:`文物期满 <artifact-expiry-receipt>`"
 msgid ""
 "The mosaicId expiring in this block. It is recorded when a :doc:`mosaic "
 "<mosaic>` expires."
-msgstr "mosaicId在此区块中期满。当:doc:`马赛克 <mosaic>`期满时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x4D12"
-msgstr "0x4D12"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Mosaic_Levy"
-msgstr "Mosaic_Levy"
+msgstr "mosaicId在此区块中期满。当 :doc:`马赛克 <mosaic>` 期满时被记录。"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
@@ -252,14 +191,6 @@ msgid ""
 msgstr "被征收赋税之马赛克的发件人和收件人，马赛克Id和数额。当交易包含被征收赋税的马赛克时被记录。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "0x4D13"
-msgstr "0x4D13"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Mosaic_Rental_Fee"
-msgstr "Mosaic_Rental_Fee"
-
-#: ../../source/concepts/receipt.rst:1
 msgid ""
 "The sender and recipient of the mosaicId and amount representing the cost of"
 " registering the mosaic. It is recorded when a mosaic is registered."
@@ -270,26 +201,10 @@ msgid "**Namespace**"
 msgstr "**命名空间**"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "0x4E41"
-msgstr "0x4E41"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Namespace_Expired"
-msgstr "Namespace_Expired"
-
-#: ../../source/concepts/receipt.rst:1
 msgid ""
 "The namespaceId expiring in this block. It is recorded when a "
 ":doc:`namespace <namespace>` expires."
-msgstr "命名空间Id在此区块中期满。它在:doc:`命名空间 <namespace>`期满时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x4E12"
-msgstr "0x4E12"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "Namespace_Rental_Fee"
-msgstr "Namespace_Rental_Fee"
+msgstr "命名空间Id在此区块中期满。它在 :doc:`命名空间 <namespace>` 期满时被记录。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
@@ -303,44 +218,17 @@ msgid "**HashLock**"
 msgstr "**哈希锁**"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "0x4831"
-msgstr "0x4831"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockHash_Created"
-msgstr "LockHash_Created"
-
-#: ../../source/concepts/receipt.rst:1
-msgid ":ref:`BalanceDebit <balance-transfer-receipt>`"
-msgstr ":ref:`BalanceDebit <balance-transfer-receipt>`"
-
-#: ../../source/concepts/receipt.rst:1
 msgid ""
 "The lockhash  sender, mosaicId and amount locked. It is recorded when a "
 "valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced."
-msgstr "哈希锁的发件人，马赛克Id和锁定的数量。当有效的:ref:`哈希锁交易 <hash-lock-transaction>`被公布时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x4822"
-msgstr "0x4822"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockHash_Completed"
-msgstr "LockHash_Completed"
+msgstr ""
+"哈希锁的发件人，马赛克Id和锁定的数量。当有效的 :ref:`哈希锁交易 <hash-lock-transaction>` 被公布时被记录。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
 "The haslock sender, mosaicId and amount locked that is returned. It is "
 "recorded when an aggregate bonded transaction linked to the hash completes."
 msgstr "哈希锁发件人，马赛克Id和已归还的锁定金额。在连接着该哈希的保税聚合交易完成时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x4823"
-msgstr "0x4823"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockHash_Expired"
-msgstr "LockHash_Expired"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
@@ -353,44 +241,17 @@ msgid "**SecretLock**"
 msgstr "**秘密锁**"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "0x5231"
-msgstr "0x5231"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockSecret_Created"
-msgstr "LockSecret_Created"
-
-#: ../../source/concepts/receipt.rst:1
-msgid ":ref:`BalanceDebit <balance-change-receipt>`"
-msgstr ":ref:`BalanceDebit <balance-change-receipt>`"
-
-#: ../../source/concepts/receipt.rst:1
 msgid ""
 "The secretlock sender, mosaicId and amount locked. It is recorded when a "
 "valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced."
-msgstr "秘密锁发件人，马赛克Id和锁定金额。当有效的:ref:`秘密锁交易 <secret-lock-transaction>`被公布时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x5222"
-msgstr "0x5222"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockSecret_Completed"
-msgstr "LockSecret_Completed"
+msgstr ""
+"秘密锁发件人，马赛克Id和锁定金额。当有效的 :ref:`秘密锁交易 <secret-lock-transaction>` 被公布时被记录。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
 "The secretlock recipient, mosaicId and amount locked. It is recorded when a "
 "secretlock is proved."
 msgstr "秘密锁的收件人，马赛克ID和锁定金额。当秘密锁被证明时被记录。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "0x5223"
-msgstr "0x5223"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "LockSecret_Expired"
-msgstr "LockSecret_Expired"
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
@@ -408,20 +269,12 @@ msgstr "模式"
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/receipt.rst:74
-msgid ":ref:`SizePrefixedEntity <size-prefixed-entity>`"
-msgstr ":ref:`SizePrefixedEntity <size-prefixed-entity>`"
-
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 msgid "Property"
 msgstr "属性"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "version"
-msgstr "版本"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "uint16"
@@ -432,20 +285,8 @@ msgid "The receipt version."
 msgstr "收据版本。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "type"
-msgstr "类型"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "ReceiptType"
-msgstr "ReceiptType"
-
-#: ../../source/concepts/receipt.rst:1
 msgid "The receipt type."
 msgstr "收据类型。"
-
-#: ../../source/concepts/receipt.rst:86
-msgid "TransactionStatement"
-msgstr "交易声明 （TransactionStatement）"
 
 #: ../../source/concepts/receipt.rst:88 ../../source/concepts/receipt.rst:107
 #: ../../source/concepts/receipt.rst:150 ../../source/concepts/receipt.rst:171
@@ -457,43 +298,13 @@ msgstr "**版本**: 0x1"
 msgid "**type**: Transaction_Group"
 msgstr "**类型**: Transaction_Group"
 
-#: ../../source/concepts/receipt.rst:93 ../../source/concepts/receipt.rst:112
-#: ../../source/concepts/receipt.rst:155 ../../source/concepts/receipt.rst:176
-#: ../../source/concepts/receipt.rst:196
-msgid ":ref:`Receipt <receipt>`"
-msgstr ":ref:`收据<receipt>`"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "m_source"
-msgstr "m_source"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:136
-msgid "ReceiptSource"
-msgstr "收据来源 （ReceiptSource）"
-
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 msgid "The receipt source."
 msgstr "收据来源。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "receipts"
-msgstr "receipts"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "array(:ref:`Receipt <receipt>`, receiptsSize)"
-msgstr "array(:ref:`Receipt `, receiptsSize)"
-
-#: ../../source/concepts/receipt.rst:1
 msgid "The array of receipts."
 msgstr "收据数组"
-
-#: ../../source/concepts/receipt.rst:105
-msgid "ResolutionStatement"
-msgstr "决议声明 （ResolutionStatement）"
-
-#: ../../source/concepts/receipt.rst:108
-msgid "**type**: Address_Alias_Resolution or Mosaic_Alias_Resolution"
-msgstr "**类型**: Address_Alias_Resolution 或 Mosaic_Alias_Resolution"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "unresolved"
@@ -508,68 +319,24 @@ msgid "An unresolved address or unresolved mosaicId."
 msgstr "未决议的地址或未决议的马赛克Id。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "m_entries"
-msgstr "m_entries"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "array(:ref:`ResolutionEntry <resolution-entry>`, resolvedEntriesSize)"
-msgstr "array(:ref:`ResolutionEntry <resolution-entry>`, resolvedEntriesSize)"
-
-#: ../../source/concepts/receipt.rst:1
 msgid "The array of resolution entries."
 msgstr "决议条目数组。"
-
-#: ../../source/concepts/receipt.rst:124
-msgid "ResolutionEntry"
-msgstr "决议条目 （ResolutionEntry）"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "resolvedValue"
-msgstr "resolvedValue"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "A resolved address or resolved mosaicId."
 msgstr "以决议的地址或已决议的马赛克Id。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "source"
-msgstr "source"
-
-#: ../../source/concepts/receipt.rst:1
-msgid ":ref:`ReceiptSource <receipt-source>`"
-msgstr ":ref:`收据来源 <receipt-source>`"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "primaryId"
-msgstr "primaryId"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid "uint32"
-msgstr "uint32"
-
-#: ../../source/concepts/receipt.rst:1
 msgid "The transaction primary source (e.g. index within block)."
 msgstr "交易主要来源（例如块内的索引）。"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "secondaryId"
-msgstr "secondaryId"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "The transaction secondary source (e.g. index within aggregate)."
 msgstr "交易二级来源（例如聚集交易中的索引）。"
 
-#: ../../source/concepts/receipt.rst:148
-msgid "BalanceTransferReceipt"
-msgstr "余额转让交易 （BalanceTransferReceipt）"
-
 #: ../../source/concepts/receipt.rst:151
 msgid "**basicType**: 0x1"
 msgstr "**basicType**: 0x1"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "sender"
-msgstr "sender"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
@@ -581,46 +348,16 @@ msgid "The public key of the sender."
 msgstr "发件者的公钥。"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "recipient"
-msgstr "recipient"
-
-#: ../../source/concepts/receipt.rst:1
 msgid "The public key of the recipient."
 msgstr "收件者的公钥。"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid "mosaicId"
-msgstr "mosaicId"
-
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1
-msgid "uint64"
-msgstr "uint64"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 msgid "The mosaic id."
 msgstr "马赛克id。"
 
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid "amount"
-msgstr "amount"
-
 #: ../../source/concepts/receipt.rst:1
 msgid "The amount of mosaics."
 msgstr "马赛克数量。"
-
-#: ../../source/concepts/receipt.rst:169
-msgid "BalanceChangeReceipt"
-msgstr "余额改变交易 （BalanceChangeReceipt）"
-
-#: ../../source/concepts/receipt.rst:172
-msgid "**basicType**: (0x2) credit or (0x3) debit"
-msgstr "**basicType**: (0x2) 贷方或 (0x3) 借方"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "account"
-msgstr "account"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "The target account public key."
@@ -629,18 +366,6 @@ msgstr "目标账户的公钥。"
 #: ../../source/concepts/receipt.rst:1
 msgid "The amount of the mosaic."
 msgstr "马赛克数量。"
-
-#: ../../source/concepts/receipt.rst:189
-msgid "ArtifactExpiryReceipt"
-msgstr "文物期满收据 （ArtifactExpiryReceipt）"
-
-#: ../../source/concepts/receipt.rst:192
-msgid "**basicType**: 0x4"
-msgstr "**basicType**: 0x4"
-
-#: ../../source/concepts/receipt.rst:1
-msgid "artifactId"
-msgstr "artifactId"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "The id of the artifact (eg. namespace, mosaic)."

@@ -5,15 +5,16 @@
 # 
 # Translators:
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +34,8 @@ msgid ""
 ":doc:`accounts<../concepts/account>` have cosigned the aggregate "
 "transaction, all the inner transactions are executed at the same time."
 msgstr ""
-"聚合交易是NEM的一次性智能合约。它把多个交易并为一个，允许**无信任交换**及其他先进逻辑的执行。当所有参与的:doc:`账户<../concepts/account>`已签妥聚合交易，所有的内部交易将会同时执行。"
+"聚合交易是NEM的一次性智能合约。它把多个交易并为一个，允许 **无信任交换** 及其他先进逻辑的执行。当所有参与的 :doc:`账户 "
+"<../concepts/account>` 已签妥聚合交易，所有的内部交易将会同时执行。"
 
 #: ../../source/concepts/aggregate-transaction.rst:13
 msgid "Aggregate complete"
@@ -43,7 +45,7 @@ msgstr "完整聚合"
 msgid ""
 "An aggregate transaction is  **complete** when all the required participants"
 " have signed it."
-msgstr "当所有的当事人都签署完毕，这聚合交易便算是**完整** 了。"
+msgstr "当所有的当事人都签署完毕，这聚合交易便算是 **完整** 了。"
 
 #: ../../source/concepts/aggregate-transaction.rst:17
 msgid ""
@@ -89,30 +91,22 @@ msgstr "保税聚合交易"
 msgid ""
 "An aggregate transaction is **bonded** when it requires signatures from "
 "other participants."
-msgstr "当交易需要其他当事人签署时，便算是**保税**聚合交易。"
+msgstr "当交易需要其他当事人签署时，便算是 **保税** 聚合交易。"
 
 #: ../../source/concepts/aggregate-transaction.rst:42
 msgid ""
 "Before sending an **aggregate bonded transaction**, an account must first "
 "announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its "
 "confirmation with at least ``10 cat.currency``."
-msgstr "发送**保税聚合交易**之前， 账户必须限公布一个 :ref:`哈希锁交易` 并以至少 ``10 cat.currency`` 作为确定。"
+msgstr ""
+"发送 **保税聚合交易** 之前， 账户必须限公布一个 :ref:`哈希锁交易<hash-lock-transaction>` 并以至少 ``10 "
+"cat.currency`` 作为确定。"
 
 #: ../../source/concepts/aggregate-transaction.rst:44
 msgid ""
 "Once an aggregate bonded is announced, it reaches partial state and notifies"
 " its status through WebSockets or HTTP API calls."
 msgstr "当保税聚合交易公布后，它将呈现半完成状态并通过WebSocket 或 HTTP API 接口调用通知其状态。"
-
-#: ../../source/concepts/aggregate-transaction.rst:46
-msgid ""
-"Every time a cosignatory signs the transaction and :ref:`announces an "
-"aggregate bonded cosignature <cosignature>`, the network checks if all the "
-"required cosigners have signed. When all signatures are acquired, the "
-"transaction changes to unconfirmed state until the network includes it in a "
-"block."
-msgstr ""
-"每当其中一个共签者签署后并`公布保税聚合共签`交易，网络将审查是否所有的共签已完成。如果所有签名以齐全，那么该交易将会转为未确认状态，直到被搜录在区块内。"
 
 #: ../../source/concepts/aggregate-transaction.rst:52
 msgid "Aggregate bonded transaction cycle"
@@ -128,7 +122,9 @@ msgid ""
 "In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic"
 " <mosaic>`. When the ticket distributor cosigns the aggregate transaction, "
 "the swap will happen atomically."
-msgstr "在这个范例中，Alice 用``currency.euro`` :doc:`马赛克`购买门票。当售票处签署聚合交易后，原子交换自动进行。"
+msgstr ""
+"在这个范例中，Alice 用 ``currency.euro`` :doc:`马赛克 <mosaic>` "
+"购买门票。当售票处签署聚合交易后，原子交换自动进行。"
 
 #: ../../source/concepts/aggregate-transaction.rst:66
 #: ../../source/concepts/aggregate-transaction.rst:78
@@ -140,7 +136,7 @@ msgid ""
 "Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But "
 "she doesn’t have any cat.currency to pay the blockchain transaction fee."
 msgstr ""
-"Alice 以应用程序发送 ``currency.euro``付款给Bob。但她没有任何可以用以缴付区块链交易费的cat.currency。"
+"Alice 以应用程序发送 ``currency.euro`` 付款给Bob。但她没有任何可以用以缴付区块链交易费的cat.currency。"
 
 #: ../../source/concepts/aggregate-transaction.rst:70
 msgid ""
@@ -173,10 +169,6 @@ msgstr ""
 "配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ 。公共网络配置可能有所不同。"
 
-#: ../../source/concepts/aggregate-transaction.rst:101
-msgid "AggregateTransaction"
-msgstr "聚合交易 （AggregateTransaction）"
-
 #: ../../source/concepts/aggregate-transaction.rst:103
 msgid "**Version**: 0x02"
 msgstr "**版本**: 0x02"
@@ -185,17 +177,15 @@ msgstr "**版本**: 0x02"
 msgid ""
 "**Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 "
 "(:ref:`bonded<aggregate-bonded>`)"
-msgstr "**实体类型**：0x4141 (:ref:`完整`), 0x4241 (:ref:`保税`)"
+msgstr ""
+"**实体类型**：0x4141 (:ref:`完整<aggregate-complete>`), 0x4241 (:ref:`保税<aggregate-"
+"bonded>`)"
 
 #: ../../source/concepts/aggregate-transaction.rst:107
 #: ../../source/concepts/aggregate-transaction.rst:126
 #: ../../source/concepts/aggregate-transaction.rst:168
 msgid "**Inlines**:"
 msgstr "**内联**:"
-
-#: ../../source/concepts/aggregate-transaction.rst:109
-msgid ":ref:`Transaction <transaction>`"
-msgstr ":ref:`交易 `"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -219,26 +209,10 @@ msgid "Description"
 msgstr "说明"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "payloadSize"
-msgstr "酬载量 （payloadSize）"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "uint32"
-msgstr "uint32"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
 "The transaction payload size in bytes. In other words, the total number of "
 "bytes occupied by all inner transactions."
 msgstr "以字节为单位的交易酬载量。换句话说，这是所有内部交易所占的字节总数。"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "transactions"
-msgstr "交易"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array(byte, payloadSize)"
-msgstr "array(byte, payloadSize) 数组（字节，酬载量）"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
@@ -246,41 +220,17 @@ msgid ""
 "transaction can contain up to ``1000`` inner transactions involving up to "
 "``15`` different cosignatories. Other aggregate transactions are not allowed"
 " as inner transactions."
-msgstr "由不同账户发起的交易数组。聚合交易可容纳至``1000``个内部交易和``15``个共签者。内部交易中不容许其他的聚合交易。"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "cosignatures"
-msgstr "共签"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array(byte, size - payloadSize)"
-msgstr ""
-"array(byte, size - payloadSize)\n"
-"数组（字节，码 - 酬载量）"
+msgstr "由不同账户发起的交易数组。聚合交易可容纳至 ``1000`` 个内部交易和 ``15`` 个共签者。内部交易中不容许其他的聚合交易。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "An array of transaction :ref:`cosignatures <cosignature>`."
-msgstr "交易:ref:`共签者 `数组。"
-
-#: ../../source/concepts/aggregate-transaction.rst:122
-msgid "DetachedCosignature"
-msgstr " 脱离共签 （DetachedCosignature）"
+msgstr "交易 :ref:`共签者<cosignature>` 数组。"
 
 #: ../../source/concepts/aggregate-transaction.rst:124
 msgid ""
 "Cosignature transactions are used to sign :ref:`announced aggregate bonded "
 "transactions <aggregate-transaction>` with missing cosignatures."
-msgstr "共签交易，用于签署还没得到所有签名但已:ref:`公布的保税聚合交易`。"
-
-#: ../../source/concepts/aggregate-transaction.rst:128
-msgid ":ref:`Cosignature <cosignature-transaction>`"
-msgstr ":ref:`共签 <cosignature-transaction>`"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "parentHash"
-msgstr ""
-"父哈希\n"
-"(parentHash)"
+msgstr "共签交易，用于签署还没得到所有签名但已 :ref:`公布的保税聚合交易 <aggregate-transaction>`。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -291,21 +241,6 @@ msgstr "32字节(二进制)"
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "The aggregate bonded transaction hash to cosign."
 msgstr "要共签的保税聚合交易。"
-
-#: ../../source/concepts/aggregate-transaction.rst:139
-msgid "Cosignature"
-msgstr "共签"
-
-#: ../../source/concepts/aggregate-transaction.rst:141
-#: ../../source/concepts/aggregate-transaction.rst:170
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ":ref:`交易<transaction>` or :ref:`嵌入式交易<embedded-transaction>`"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "signer"
-msgstr "签署者"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "The cosigner public key."
@@ -323,22 +258,12 @@ msgstr "64 bytes (二进制)"
 msgid "The transaction signature."
 msgstr "交易签名"
 
-#: ../../source/concepts/aggregate-transaction.rst:154
-msgid "HashLockTransaction"
-msgstr "哈希锁交易（HashLockTransaction）"
-
-#: ../../source/concepts/aggregate-transaction.rst:156
-msgid "**Alias**: LockFundsTransaction"
-msgstr ""
-"**别号**：锁定资金交易\n"
-"（**Alias**: LockFundsTransaction）"
-
 #: ../../source/concepts/aggregate-transaction.rst:158
 msgid ""
 "Announce a hash lock transaction before sending a signed :ref:`aggregate "
 "bonded transaction<aggregate-transaction>`. This mechanism is required to "
 "prevent network spamming."
-msgstr "发送已签署的:ref:`保税聚合交易`之前公布哈希锁交易。这机制可以防止网络垃圾邮件。"
+msgstr "发送已签署的 :ref:`保税聚合交易<aggregate-transaction>` 之前公布哈希锁交易。这机制可以防止网络垃圾邮件。"
 
 #: ../../source/concepts/aggregate-transaction.rst:160
 msgid ""
@@ -363,32 +288,12 @@ msgid "**Entity type**: 0x4148"
 msgstr "**实体类型**: 0x4148"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "mosaic"
-msgstr "马赛克"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid ":ref:`Mosaic<mosaic>`"
-msgstr ":ref:`马赛克`"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Locked mosaic, must be at least ``10 cat.currency``."
-msgstr "被锁的马赛克必须至少``10 cat.currency``。"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "duration"
-msgstr "期限"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "uint64"
-msgstr "uint64"
+msgstr "被锁的马赛克必须至少 ``10 cat.currency``。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "The lock duration."
 msgstr "锁定期限"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "hash"
-msgstr "哈希"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""

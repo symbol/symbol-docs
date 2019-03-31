@@ -6,15 +6,16 @@
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgid ""
 "A cross-chain swap enables **trading tokens** across **different "
 "blockchains**, without using an intermediary party (eg. an exchange service)"
 " in the process."
-msgstr "跨链交换让在不使用中介的情况下跨越**不同的区块链**进行**代币交易**（例如货币交易服务）。"
+msgstr "跨链交换让在不使用中介的情况下跨越 不同的区块链 进行 代币交易（例如货币交易服务）。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:11
 msgid "Atomic cross-chain swap between public and private network"
@@ -46,8 +47,8 @@ msgid ""
 " found on the `Bitcoin Wiki "
 "<https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_."
 msgstr ""
-"特定的交易类型，通常称为 ** 哈希锁合同 Hashed TimeLock Contract **（HTLC）给交易所一个无需信任的环境。 *哈希锁 "
-"hashlocks * 和 * 时间锁 timelocks * 是这类交易的表征。您可以在`Bitcoin Wiki "
+"特定的交易类型，通常称为 **Hashed TimeLock Contract** (HTLC) 给交易所一个无需信任的环境。 *哈希锁 "
+"hashlocks* 和 * 时间锁 timelocks*  是这类交易的表征。您可以在  `Bitcoin Wiki "
 "<https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_ 上找到详尽的解释。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:15
@@ -72,8 +73,8 @@ msgid ""
 "transaction <secret-proof-transaction>` mechanism."
 msgstr ""
 "在NEM中谈论代币时，我们实际上指的是  :doc:`马赛克 <../../concepts/mosaic>` 。Catapult 通过 "
-":ref:`秘密锁 <secret-lock-transaction>` / :ref:`秘密证明交易 <secret-proof-"
-"transaction>`机制进行原子交换。"
+":ref:`秘密锁 <secret-lock-transaction>`  / :ref:`秘密证明交易 <secret-proof-"
+"transaction>` 机制进行原子交换。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:28
 msgid "Guides"
@@ -89,12 +90,8 @@ msgid ""
 "server/blob/master/resources/config-network.properties>`_ . Public network "
 "configuration may differ."
 msgstr ""
-"配置参数是 `可编辑的<https://github.com/nemtech/catapult-server/blob/master/resources"
-"/config-network.properties>`_ 。 公共网络配置可能有所不同。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:47
-msgid "SecretLockTransaction"
-msgstr "秘密锁交易 （SecretLockTransaction）"
+"配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ 。 公共网络配置可能有所不同。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:49
 msgid "Use a secret lock transaction to start the cross-chain swap:"
@@ -112,7 +109,7 @@ msgstr "随机生成一组称为 ``证明 proof`` 的字节。"
 msgid ""
 "Hash the obtained proof with one of the available algorithms to generate the"
 " ``secret``."
-msgstr "用其中一种演算法对获得的证据进行哈希处理以生成 “秘密 secret” 。"
+msgstr "用其中一种演算法对获得的证据进行哈希处理以生成 ``秘密 secret`` 。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:57
 msgid ""
@@ -124,7 +121,7 @@ msgstr "选择锁定马赛克的时间并宣布交易。"
 msgid ""
 "The specified mosaics remain locked until a valid :ref:`Secret Proof "
 "Transaction <secret-proof-transaction>` unlocks them."
-msgstr "指定的马赛克将被锁定，直到有效的  :ref:`秘密证明交易 <secret-proof-transaction>`将它们解锁。"
+msgstr "指定的马赛克将被锁定，直到有效的  :ref:`秘密证明交易 <secret-proof-transaction>` 将它们解锁。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:61
 msgid ""
@@ -146,13 +143,6 @@ msgstr "**实体类型**: 0x4152"
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/cross-chain-swaps.rst:69
-#: ../../source/concepts/cross-chain-swaps.rst:96
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ":ref:`交易<transaction>` or :ref:`嵌入式交易 <embedded-transaction>`"
-
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Property"
@@ -170,35 +160,14 @@ msgid "Description"
 msgstr "说明"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "mosaic"
-msgstr "马赛克 （mosaic)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ":ref:`Mosaic<mosaic>`"
-msgstr ":ref:`马赛克Mosaic<mosaic>`"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Locked mosaic."
 msgstr "锁定的马赛克。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "duration"
-msgstr "期限 (duration)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "uint64"
-msgstr "uint64"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ""
 "The lock duration. If reached, the mosaics will be returned to the "
 "initiator."
 msgstr "锁定期限。 如果期限已达，马赛克将返回到发起者的账户。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "hashAlgorithm"
-msgstr "哈希演算法 （hashAlgorithm）"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -212,11 +181,6 @@ msgstr "用于处理证明的哈希演算法。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "secret"
-msgstr "秘密 (secret)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "64 bytes (binary)"
 msgstr "64 字节 (二进制)"
 
@@ -226,20 +190,8 @@ msgid "The proof hashed."
 msgstr "经过哈希处理的证明。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "recipient"
-msgstr "收件者 （recipient）"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "25 bytes (binary)"
-msgstr "25字节(二进制)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "The address who will receive the funds once unlocked."
 msgstr "一旦解锁就会收到资金的地址。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:84
-msgid "SecretProofTransaction"
-msgstr "秘密证明交易 （SecretProofTransaction）"
 
 #: ../../source/concepts/cross-chain-swaps.rst:86
 msgid ""
@@ -257,24 +209,8 @@ msgid "**Entity type**: 0x4252"
 msgstr "**实体类型**: 0x4252"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "proofSize"
-msgstr "证明码 （proofSize）"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "uint16"
-msgstr "uint16"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "The proof size in bytes."
 msgstr "证明大小以字节为单位。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "proof"
-msgstr "证明 （proof）"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "array(byte, proofSize)"
-msgstr "array(byte, payloadSize) 数组（字节，酬载量）"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "The original proof."
@@ -293,34 +229,18 @@ msgid "Id"
 msgstr "Id"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "0 (Op_Sha3_256)"
-msgstr "0 (Op_Sha3_256)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Input is hashed using sha3 256."
 msgstr "输入值将以sha3 256进行哈希处理。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "1 (Op_Keccak_256)"
-msgstr "1 (Op_Keccak_256)"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Input is hashed using Keccak (ETH compatibility)."
 msgstr "输入值以Keccak (ETH兼容）形成哈希。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "2 (Op_Hash_160)"
-msgstr "2 (Op_Hash_160)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ""
 "Input is hashed twice: first with Sha-256 and then with RIPEMD-160 "
 "(bitcoin's OP_HASH160)."
 msgstr "输入值被哈希处理两次：首先是Sha-256，然后是RIPEMD-160（比特币的OP_HASH160）。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "3 (Op_Hash_256)"
-msgstr "3 (Op_Hash_256)"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Input is hashed twice with Sha-256 (bitcoin's OP_HASH256)."

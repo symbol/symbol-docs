@@ -6,15 +6,16 @@
 # Translators:
 # thilon <thilon@datamain.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr "加密技术"
 msgid ""
 "NEM is using cryptography based on **Elliptic Curve Cryptography**. The "
 "choice of the underlying curve is important to guarantee security and speed."
-msgstr "NEM使用基于**椭圆曲线加密**的加密技术。 基础曲线的选择对于保证安全性和速度非常重要。"
+msgstr "NEM使用基于 **椭圆曲线加密** 的加密技术。 基础曲线的选择对于保证安全性和速度非常重要。"
 
 #: ../../source/concepts/cryptography.rst:11
 msgid "Private and public key"
@@ -42,15 +43,12 @@ msgid ""
 "cryptographically derived from the private key. NEM is using the ``Ed25519 "
 "elliptic curve`` with the ``sha3`` hashing algorithm."
 msgstr ""
-"**私钥**是一个随机的256位整数。**公钥**是以加密方式从私钥推导而来。NEM使用``Ed25519椭圆曲线``和``sha3``哈希演算法。"
+"**私钥** 是一个随机的256位整数。**公钥** 是以加密方式从私钥推导而来。NEM使用 ``Ed25519椭圆曲线`` 和 ``sha3`` "
+"哈希演算法。"
 
 #: ../../source/concepts/cryptography.rst:19
 msgid "Address"
 msgstr "地址"
-
-#: ../../source/concepts/cryptography.rst:21
-msgid "A NEM address is a base-32 :sup:`3` encoded triplet consisting of:"
-msgstr "NEM地址是一个基数为32:sup:`3`编码的三元组，包括："
 
 #: ../../source/concepts/cryptography.rst:23
 msgid "Network byte"

@@ -5,15 +5,16 @@
 # 
 # Translators:
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +32,8 @@ msgid ""
 "your first transaction to the blockchain after combining some NEM :doc"
 ":`built-in features <../concepts/account>`."
 msgstr ""
-"这个指南将带领你完成整个NEM创建周期。在合并一些NEM :doc:`内置功能 "
-"<../conept/account>`后，你将把你的第一个交易发送到区块链。"
+"这个指南将带领你完成整个NEM创建周期。在合并一些NEM :doc:`内置功能 <../concepts/account>` "
+"后，你将把你的第一个交易发送到区块链。"
 
 #: ../../source/getting-started/first-application.rst:9
 msgid "Background"
@@ -106,13 +107,14 @@ msgid ""
 "through **API calls** for transfer and storage of value, authorization, "
 "traceability, and identification."
 msgstr ""
-"NEM是一个**灵活的区块链**技术。与其把所有的应用逻辑上载到区块链，你可以使用其经过测试的功能，通过**接口调用**进行价值的转让和储存、授权、追溯和识别。"
+"NEM是一个 **灵活的区块链** "
+"技术。与其把所有的应用逻辑上载到区块链，你可以使用其经过测试的功能，通过**接口调用**进行价值的转让和储存、授权、追溯和识别。"
 
 #: ../../source/getting-started/first-application.rst:39
 msgid ""
 "The rest of the code remains **off-chain**. This reduces the inherent "
 "immutability risk, as you could change the process when necessary."
-msgstr "代码仍处于**链外**。因为可以在必要时更改流程，这降低了固有的不变性风。"
+msgstr "代码仍处于 **链外**。因为可以在必要时更改流程，这降低了固有的不变性风。"
 
 #: ../../source/getting-started/first-application.rst:43
 msgid "Let’s get into some code"
@@ -141,15 +143,17 @@ msgid ""
 " by an address. An account has access to a deposit box in the blockchain, "
 "which can be modified with an appropriate private key."
 msgstr ""
-"我们决定以不同的:doc:`账户 "
-"<../concepts/account>`代表商家和买家。每一个账户都是独特的并以地址做为识别。账户像是区块链上的保险箱，每一个保险箱都可以用各自的私钥更改内容。"
+"我们决定以不同的 :doc:`账户 <../concepts/account>` "
+"代表商家和买家。每一个账户都是独特的并以地址做为识别。账户像是区块链上的保险箱，每一个保险箱都可以用各自的私钥更改内容。"
 
 #: ../../source/getting-started/first-application.rst:54
 msgid ""
 "Have you loaded an account with test ``cat.currency``? If it is not the "
 "case, go back to :doc:`getting started section <setup-workstation>`. The "
 "account you have created represents the ticket vendor."
-msgstr "您的账户已经载有测试 ``cat.currency``了吗？如果还没有，回去:doc:`入门部分 `。你创建的账户代表门票商家。"
+msgstr ""
+"您的账户已经载有测试 ``cat.currency`` 了吗？如果还没有，回去 :doc:`入门部分 <setup-"
+"workstation>`。你创建的账户代表门票商家。"
 
 #: ../../source/getting-started/first-application.rst:56
 msgid ""
@@ -161,7 +165,9 @@ msgstr "运行以下命令后，屏幕上应该看到类似以下内容的字行
 msgid ""
 "This account owns ``1.000.000 cat.currency``. If your row after mosaics is "
 "empty, follow :doc:`the previous guide instructions <setup-workstation>`."
-msgstr "此账户有``1,000,000 cat.currency``。如果马赛克后是空的，请依照:doc:`之前的指导说明 `。"
+msgstr ""
+"此账户有 ``1,000,000 cat.currency``。如果马赛克后是空的，请依照 :doc:`之前的指导说明 <setup-"
+"workstation>`。"
 
 #: ../../source/getting-started/first-application.rst:73
 msgid "Create a second account to identify the ticket buyer."
@@ -194,8 +200,8 @@ msgid ""
 "The first terminal :doc:`monitors announced transactions "
 "<../guides/transaction/monitoring-a-transaction-status>` validation errors."
 msgstr ""
-"第一个终端:doc:`监控公布后的交易 <../guides/transaction/monitoring-a-transaction-"
-"status>`的验证错误。"
+"第一个终端 :doc:`监控公布后的交易  <../guides/transaction/monitoring-a-transaction-"
+"status>` 的验证错误。"
 
 #: ../../source/getting-started/first-application.rst:94
 msgid ""
@@ -224,7 +230,8 @@ msgid ""
 " ticket to the creator of the mosaic, avoiding the ticket reselling."
 msgstr ""
 "我们用NEM马赛克代表门票。:doc:`马赛克 <../concepts/mosaic>` "
-"可以用来代表任何区块链上的资产，如物件、门票、优惠券、股票、甚至是加密货币。它们具有可配置的属性，并在创建时被定义。比如，我们选择把**可转让配置设为false“。这意味着门票买家只能把门票转送回给马赛克的创造者，从而避免门票转售。"
+"可以用来代表任何区块链上的资产，如物件、门票、优惠券、股票、甚至是加密货币。它们具有可配置的属性，并在创建时被定义。比如，我们选择把 "
+"**可转让配置设为false** 。这意味着门票买家只能把门票转送回给马赛克的创造者，从而避免门票转售。"
 
 #: ../../source/getting-started/first-application.rst:110
 msgid "Create a  mosaic named ``ticket``:"
@@ -246,61 +253,21 @@ msgid "Description"
 msgstr "说明"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Divisibility"
-msgstr "可分性"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "0"
-msgstr "0"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid ""
 "The mosaic won't be divisible, no one should be able to send “0.5 tickets”."
 msgstr "这马赛克不能被分割。门票不可以半张发送。"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "Duration"
-msgstr "期限"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "1000"
-msgstr "1000"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic will be registered for 1000 blocks."
 msgstr "马赛克将会被注册，维持1000个区块。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Amount"
-msgstr "数量"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "1000000"
-msgstr "1000000"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid "The number of tickets you are going to create"
 msgstr "你将创建的门票数量。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Supply mutable"
-msgstr "供应量的可变性"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "True"
-msgstr "True （可以）"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic supply can change at a later point."
 msgstr "马赛克的供应量可以被更改。"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "Transferable"
-msgstr "可转让性"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "False"
-msgstr "False (不可以）"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic can be only transferred back to the mosaic creator."
@@ -321,17 +288,15 @@ msgid ""
 "Send one ``company.ticket`` to the ticket vendor account announcing a "
 ":ref:`transfer transaction <transfer-transaction>`, one of the most commonly"
 " used actions in NEM."
-msgstr "用:ref:`发送交易 `,发送``company.ticket`` 给商家的账户。这是在NEM区块链最常用的动作。"
+msgstr ""
+"用 :ref:`发送交易 <transfer-transaction>`,发送``company.ticket`` "
+"给商家的账户。这是在NEM区块链最常用的动作。"
 
 #: ../../source/getting-started/first-application.rst:137
 msgid ""
 "Prepare the transfer transaction. The following attributes form a transfer "
 "transaction:"
 msgstr "准备转让交易。转让交易有以下属性："
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "Deadline"
-msgstr "期限"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "Default"
@@ -343,10 +308,6 @@ msgid ""
 msgstr "交易被保存在区块链中的最长时限。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Recipient"
-msgstr "收件者"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid "SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"
 msgstr "SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"
 
@@ -355,36 +316,12 @@ msgid "The recipient account address."
 msgstr "收件者帐户地址。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Mosaics"
-msgstr "马赛克"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "1 [7cdf3b117a3c40cc] (ticket)"
-msgstr "1 [7cdf3b117a3c40cc] (ticket)"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid "The array of mosaics to send."
 msgstr "被发送的马赛克组。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "Message"
-msgstr "信息"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "``enjoy your ticket``"
-msgstr "``享受你的门票``"
-
-#: ../../source/getting-started/first-application.rst:1
 msgid "The attached message."
 msgstr "附着的信息。"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "Network"
-msgstr "网络"
-
-#: ../../source/getting-started/first-application.rst:1
-msgid "MIJIN_TEST"
-msgstr "MIJIN_TEST"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The local network identifier."
@@ -438,4 +375,6 @@ msgid ""
 "Continue learning about more :doc:`NEM built-in features "
 "<../concepts/account>` or practicing with :doc:`self-paced training "
 "<training>`."
-msgstr "继续学习 :doc:`NEM 内置功能 <../concepts/account>` 或者以 :doc:`自定进度训练 ` 作为练习。"
+msgstr ""
+"继续学习 :doc:`NEM 内置功能 <../concepts/account>` 或者以 :doc:`自定进度训练 <training>` "
+"作为练习。"
