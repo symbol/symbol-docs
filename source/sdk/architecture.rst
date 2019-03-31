@@ -27,7 +27,7 @@ Observer Pattern
 
 .. note: If you are not familiar with Reactive Programming,  .
 
-NEM2-SDK uses ReactiveX Library intensvely. See |reactivex|.
+NEM2-SDK uses ReactiveX Library intensively. See |reactivex|.
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
