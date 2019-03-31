@@ -57,7 +57,7 @@ Assets ownership
 
 Multisig accounts can be used to represent the ownership of assets.
 
-A company could create a 1-of-1 multisig account for each of their products, adding themselves as the cosignatory. When the company sells the product to Alice, she becomes the owner, being the company removed in the same transaction.
+A company could create a 1-of-1 multisig account for each of their products, adding themselves as the cosignatory. When the company sells the product to Alice, she becomes the owner through the action of being added as the cosigner, and the company is removed in the same transaction.
 
 .. figure:: ../resources/images/examples/multisig-asset-ownership.png
     :align: center

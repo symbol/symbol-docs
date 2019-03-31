@@ -85,7 +85,7 @@ SecretProofTransaction
 
 Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
 
-The transaction must prove that knows the *proof* that unlocks the mosaics.
+The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
 **Version**: 0x01
 

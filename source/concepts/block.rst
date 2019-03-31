@@ -2,7 +2,7 @@
 Block
 #####
 
-The central element of every cryptocurrency is a public ledger called the called blockchain, which links blocks together.
+The central element of every cryptocurrency is a public ledger called the blockchain, which links blocks together.
 
 .. Each NEM block can contain up to ``N`` :doc:`transactions <transaction>`.
 
@@ -57,7 +57,7 @@ BlockHeader
     previousBlockHash; 32 bytes (binary); The hash of the previous block.
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
     blockReceiptsHash; 32 bytes (binary); The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash.
-    stateHash; 32 bytes (binary); The state of the blockchain is stored in RocksDB for each block, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
+    stateHash; 32 bytes (binary);  For each block, the state of the blockchain is stored in RocksDB, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
     beneficiaryPublicKey; 32 bytes (binary); The public key of the optional beneficiary designated by harvester.
 
 .. |merkle| raw:: html

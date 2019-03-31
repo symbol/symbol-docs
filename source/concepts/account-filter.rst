@@ -58,7 +58,7 @@ The company opts to configure their product accounts filters, enabling only to r
 Enhancing the account security
 ==============================
 
-Lately, Alice is only using her main account to cosign aggregate transactions where a :doc:`multisig<multisig-account>` she is a cosignatory is involved.
+Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig<multisig-account>` account.
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
 
