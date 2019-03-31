@@ -16,9 +16,9 @@ Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by add
 Background
 **********
 
-Alice and Bob live together and have separate :doc:`accounts <../../concepts/account>`. They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob live together and have separate :doc:`accounts <../../concepts/account>`. They also have a shared account used to buy groceries. If Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
+This shared account appears in NEM as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
@@ -32,17 +32,15 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 Prerequisites
 *************
 
-- Finish :doc:`creating and opening accounts guide <creating-and-opening-an-account>`
-- Text editor or IDE
-- NEM2-SDK or CLI
-- Two accounts (public keys)
-- One account with XEM
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Create :doc:`two accounts <creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code
 ************************
 
-1. Define who will be the cosignatories of the multisig account. Then, open the account that will be converted into multisig by providing its private key.
+1. Define who will be the cosignatories of the multisig account: Alice and Bob addresses. Then, open the account that will be converted into multisig by providing its private key.
 
 .. example-code::
 
@@ -61,7 +59,7 @@ Let’s get into some code
         :language: javascript
         :lines: 30-38
 
-2. Convert the account into a multisig account by setting a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`. As they want a 1-of-2 multisig account, set the minimum signatures to 1.
+2. Define a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they need a 1-of-2 multisig account, set the minimum signatures required to 1.
 
 .. example-code::
 
@@ -80,7 +78,7 @@ Let’s get into some code
         :language: javascript
         :lines: 41-54
 
-3. Sign and announce the transaciton with the canidate multisig account.
+3. Sign and announce the transaction with the candidate multisig account private key.
 
 .. example-code::
 
@@ -126,7 +124,8 @@ If everything goes well, Alice and Bob should be cosignatories of the multisig a
 ************
 What's next?
 ************
-Modify the account, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
+
+Alice an Bob wants to send transactions from the multisig only when both agree. Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
 
 .. |converting-an-account-to-multisig-ts| raw:: html
 

@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15.1\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 09:26+0900\n"
-"PO-Revision-Date: 2018-10-26 13:36+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:06+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,10 +70,10 @@ msgid ""
 "All the features are available through the API interface on each node in the"
 " network itself. This means that the blockchain can be used to create a "
 "variety of architecture solutions with lightweight :doc:`code in any "
-"language <../sdk/languages>`."
+"language <../sdk>`."
 msgstr ""
 "すべての機能はネットワーク自体の各ノードにあるAPIインタフェースを通じて利用できます。これは軽量な :doc:`あらゆる言語のコード "
-"<../sdk/languages>` を使用して、さまざまなアーキテクチャソリューションにブロックチェーンを利用できることを意味します。"
+"<../sdk>` を使用して、さまざまなアーキテクチャソリューションにブロックチェーンを利用できることを意味します。"
 
 #: ../../source/getting-started/what-is-nem.rst:31
 msgid "**Mobile app direct access**"

@@ -39,11 +39,11 @@ Aggregate bonded
 
 An aggregate transaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10`` XEM.
+.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10 cat.currency``.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
-Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature<cosignature-transaction>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
+Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
@@ -54,7 +54,7 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 Multi-Asset Escrowed Transactions
 =================================
 
-In this example, Alice is buying tickets with currency:euro. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
+In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mosaic>`. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
@@ -65,9 +65,9 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 Paying for others fees
 ======================
 
-Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XEM to pay the blockchain transaction fee.
+Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But she doesn’t have any cat.currency to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
+By creating an aggregate bonded transaction, she can convert USD to cat.currency to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -81,8 +81,6 @@ Since the app creator can put their own branding on the open source payment app,
 Guides
 ******
 
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
-
 .. postlist::
     :category: Aggregate Transaction
     :date: %A, %B %d, %Y
@@ -94,6 +92,8 @@ Guides
 *******
 Schemas
 *******
+
+
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
@@ -112,9 +112,9 @@ AggregateTransaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    payloadSize; uint8; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
+    payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
     transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature-transaction>`.
+    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature>`.
 
 .. _cosignature-transaction:
 
@@ -173,6 +173,6 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 nem:xem``.
+    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
     duration; uint64; The lock duration.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.

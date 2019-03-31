@@ -2,8 +2,6 @@
 Account Filter
 ##############
 
-.. note:: Account filters feature is not implemented in the SDK yet.
-
 :doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
 
 The editable on-chain constraints are called filters. Accounts can configure the following types:
@@ -211,8 +209,8 @@ Enumeration: uint8
 
     0x01; The property type is an address.
     0x02; The property type is mosaic id.
-    0x03; The property type is a transaction type.
-    0x04; Property type sentinel.
+    0x04; The property type is a transaction type.
+    0x05; Property type sentinel.
     0x80 + type; The property is interpreted as a blocking operation.
 
 .. _property-modification-type:

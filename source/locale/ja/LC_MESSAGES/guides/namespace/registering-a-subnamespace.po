@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15.1\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 09:26+0900\n"
-"PO-Revision-Date: 2018-10-26 13:38+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"PO-Revision-Date: 2019-02-22 09:13+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,16 +43,16 @@ msgstr "ルートネームスペースを取得すると、 ``3`` つまでの�
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:20
 msgid ""
-"Subnamespaces do not have a renting duration on its own. They have the same "
-"one as their parent namespace."
-msgstr "サブネームスペースはそれ自身の期限を持ちません。親のネームスペースと同じ期限となります。"
+"Subnamespaces do not have a renting duration. They have the same one as "
+"their parent namespace."
+msgstr "サブネームスペースはレンタル期限を持ちません。親のネームスペースと同じ期限となります。"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:22
 msgid ""
 "It is possible to create multiple subnamespaces with the same name in "
 "different namespaces (example: ``foo.bar`` and ``foo2.bar``)."
 msgstr ""
-"異なるネームスペースには、同じサブネームスペースを複数作ることができます。(`例: ``foo.bar`` and ``foo2.bar``)"
+"異なるネームスペースには、同じサブネームスペースを複数作ることができます。(例: ``foo.bar`` and ``foo2.bar``)"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:26
 msgid "Prerequisites"
@@ -60,46 +60,54 @@ msgstr "前提条件"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:28
 msgid "Finish :doc:`registering a namespace guide <registering-a-namespace>`"
-msgstr ":doc:`ネームスペースの取得ガイド <registering-a-namespace>` を終了していること"
+msgstr ":doc:`ネームスペースの取得ガイド <registering-a-namespace>` を終了している"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:29
-msgid "NEM2-SDK or CLI"
-msgstr "NEM2-SDK または CLI"
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and"
+" at least one namespace"
+msgstr ""
+":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:30
-msgid "A text editor or IDE"
-msgstr "テキストエディタ または IDE"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:31
-msgid "An account with XEM and at least one namespace"
-msgstr "XEM を保有したアカウントと少なくとも1つのネームスペース"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:35
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:33
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:37
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:35
 msgid "The first step is to choose a name for your subnamespace."
 msgstr "まずはサブネームスペースの名前を決めましょう。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:39
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:37
 msgid ""
 "In this example, we have registered a subnamespace called ``bar`` under "
 "``foo`` namespace."
-msgstr "この例では、 ``bar`` と呼ばれるサブネームスペースを ``foo`` の下に取得しています。"
+msgstr "この例では ``bar`` と呼ばれるサブネームスペースを ``foo`` の下に取得しています。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:43
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:41
 msgid "|registering-a-subnamespace-ts|"
 msgstr ""
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:48
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:46
 msgid "|registering-a-subnamespace-java|"
 msgstr ""
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:53
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
 msgid "|registering-a-subnamespace-js|"
 msgstr ""
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:58
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:56
 msgid "|registering-a-subnamespace-cli|"
 msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:63
+msgid "What's next?"
+msgstr "次は？"
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:65
+msgid ""
+"When the transaction is confirmed, link a namespace with a :doc:`mosaic "
+"<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "
+"<../namespace/link-a-namespace-to-an-address>`."
+msgstr ""
+"トランザクションが承認されると、 :doc:`モザイク <../namespace/link-a-namespace-to-a-mosaic>` または"
+" :doc:`アドレス <../namespace/link-a-namespace-to-an-address>` がネームスペースとリンクします。"

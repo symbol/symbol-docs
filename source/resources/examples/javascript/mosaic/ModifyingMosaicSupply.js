@@ -32,11 +32,11 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicID = new MosaicId('foo:token');
+const mosaicId = new MosaicId([520597229,83226871]); // Replace with your mosaicId
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
-    mosaicID,
+    mosaicId,
     MosaicSupplyType.Increase,
     UInt64.fromUint(2000000),
     NetworkType.MIJIN_TEST);

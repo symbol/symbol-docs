@@ -1,19 +1,38 @@
-{% if ablog.category %}
-<p class="caption sidebar-current-ul"><span class="caption-text">{{ gettext('Guides') }}</span></p>
+{%- macro categories() %}
 <ul class="ablog-cloud current">
     {% for coll in ablog.category %}
     {% if coll %}
     {% if pathto(coll.docname) == '#' %}
     <li class="ablog-cloud toctree-l1 current">
         <a href="{{ pathto(coll.docname) }}" class="reference internal nav-header current">
-    {% else %}
+            {% else %}
     <li class="ablog-cloud toctree-l1">
         <a href="{{ pathto(coll.docname) }}" class="reference internal nav-header">
-    {% endif %}
-    {{ coll }} ({{ coll|length }})
-    </a></li>
+            {% endif %}
+            {{ coll }} ({{ coll|length }})
+        </a></li>
     {% endif %}
     {% endfor %}
 </ul>
-<a href="{{pathto('getting-started/training')}}"><p class="caption"><span class="caption-text"><i class="fas fa-chalkboard-teacher"></i> {{ gettext('Courses') }}</span></p></a>
+{% endmacro %}
+
+{% if ablog.category %}
+
+<div class="hidden-xs hidden-sm">
+    <p class="caption sidebar-current-ul"><span class="caption-text">{{ gettext('Guides') }}</span>
+        <span class="angle angle-down fas fa-chevron-down"></span>
+    </p>
+    {{categories() }}
+    <a href="{{pathto('getting-started/training')}}"><p class="caption"><span class="caption-text"><i
+            class="fas fa-chalkboard-teacher"></i> {{ gettext('Courses') }}</span></p></a>
+</div>
+
+<div class="visible-xs visible-sm">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _('Navigation') }} <b class="caret"></b></a>
+        <ul class="dropdown-menu globaltoc">{{categories() }}</ul>
+    </li>
+
+</div>
+
 {% endif %}

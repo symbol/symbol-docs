@@ -31,7 +31,7 @@ import {
     TransactionHttp,
     TransferTransaction,
     UInt64,
-    XEM
+    NetworkCurrencyMosaic
 } from 'nem2-sdk';
 
 import {filter, mergeMap} from "rxjs/operators";
@@ -50,15 +50,15 @@ const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketD
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
-    [XEM.createRelative(100)],
-    PlainMessage.create('send 100 nem:xem to distributor'),
+    [NetworkCurrencyMosaic.createRelative(100)],
+    PlainMessage.create('send 100 xem to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [new Mosaic(new MosaicId('museum:ticket'), UInt64.fromUint(1))],
-    PlainMessage.create('send 1 museum:ticket to alice'),
+    [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
+    PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Aggregate Transaction
@@ -71,7 +71,10 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

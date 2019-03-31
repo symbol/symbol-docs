@@ -1,11 +1,7 @@
 {%- if pagename != "search" %}
 
 <div class="navbar-right hidden-sm hidden-xs">
-    <a class="btn-search" href="/search.html?q=nem"><i class="fa fa-search"></i> Search</a>
-    {%- if edit_on_github_url %}
-    <a href="{{ edit_on_github_url }}"
-       rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit on GitHub') }}</a>
-    {%- endif %}
-
+    <i class="fas fa-search"></i>
+    <input id="search" class="form-control" placeholder="Search..."/>
 </div>
 {%- endif %}

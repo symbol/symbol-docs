@@ -15,9 +15,9 @@ Ask an account to send you funds using an :ref:`aggregate bonded transaction <ag
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- A text editor or IDE
-- An account with XEM
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code
@@ -29,7 +29,7 @@ Let’s get into some code
 
     Asking for mosaics with an aggregate bonded transaction
 
-Alice wants to ask Bob for 20 XEM. 
+Alice wants to ask Bob for ``20 cat.currency``.
 
 1. Set up both Alice's and Bob's accounts.
 
@@ -38,17 +38,12 @@ Alice wants to ask Bob for 20 XEM.
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  38-46
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  30-52
+        :lines:  40-48
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  39-47
+        :lines:  40-48
 
 2. Alice creates an aggregate bonded transaction with two inner transactions:
 
@@ -63,23 +58,18 @@ A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  49-54
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  52-59
+        :lines:  51-56
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  50-55
+        :lines:  51-56
 
 B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
 * message: empty
 * receiver: Alice address
-* mosaics: 20 XEM
+* mosaics: 20 cat.currency
 * signer: Bob
 
 .. example-code::
@@ -87,17 +77,12 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines: 56-61
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  60-67
+        :lines: 58-63
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  57-62
+        :lines: 58-63
 
 3.Wrap the defined transactions in an aggregate bonded transaction:
 
@@ -106,36 +91,26 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  64-70
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  68-76
+        :lines:  66-72
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  65-71
+        :lines:  66-72
 
-4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
+4. Alice signs the aggregate bonded transaction and announces it to the network, locking first ``10 cat.currency``.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
         :language: typescript
-        :lines:  73-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-java|
-        :language: java
-        :lines:  77-103
+        :lines:  75-
 
     .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
         :language: javascript
-        :lines:  74-
+        :lines:  75-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
@@ -154,10 +129,6 @@ As the aggregate bonded transaction has all the cosignatures required, it will b
 .. |asking-for-mosaics-with-aggregate-bonded-transaction-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/transaction/AskingForMosaicsWithAggregateBondedTransaction.java" target="_blank">View Code</a>
 
 .. |asking-for-mosaics-with-aggregate-bonded-transaction-js| raw:: html
 

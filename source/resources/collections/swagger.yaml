@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 1.0.11
+  version: 1.0.12
   title: Catapult REST API Reference
   license:
     name: Apache 2.0
@@ -428,6 +428,8 @@ paths:
         description: The height of the block. If height -1 is not a multiple of the limit provided, the inferior closest multiple + 1 is used instead.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: limit
         in: path
         description: The number of blocks to be returned.
@@ -458,6 +460,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       responses:
         '200':
@@ -483,6 +486,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       - name: pageSize
         in: query
@@ -521,6 +525,8 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: hash
         in: path
         description: The hash of the transaction.
@@ -550,6 +556,7 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
         minimum: 1
       responses:
         '200':
@@ -577,6 +584,8 @@ paths:
         description: The height of the block.
         required: true
         type: integer
+        format: int64
+        minimum: 1
       - name: hash
         in: path
         description: The hash of the receipt statement or resolution.
@@ -596,7 +605,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get the current height of the chain
-      description: Returns the current height of the block chain.
+      description: Returns the current height of the blockchain.
       operationId: getBlockchainHeight
       produces:
       - application/json
@@ -611,7 +620,11 @@ paths:
       - Blockchain routes
       summary: Get the current score of the chain
       description: |
-        Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
+        Gets the current score of the blockchain. The higher the score, the better the chain. During synchronization, nodes try to get the best blockchain in the network.
+        
+        The score for a block is derived from its difficulty and the time (in seconds) that has elapsed since the last block:
+        
+            block score = difficulty − time elasped since last block
       operationId: getBlockchainScore
       produces:
       - application/json
@@ -887,14 +900,14 @@ paths:
       tags:
       - Transaction routes
       summary: Announce a new transaction
-      description: Announces a transaction to the network. It is recommended to use the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api/serialization.html).
+      description: Announces a transaction to the network. It is recommended to use the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api.html#serialization).
       operationId: announceTransaction
       produces:
       - application/json
       parameters:
       - name: payload
         in: body
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://nemtech.github.io/api.html#serialization).
         required: true
         schema:
           $ref: '#/definitions/transactionPayload'
@@ -921,7 +934,7 @@ paths:
       parameters:
       - name: payload
         in: body
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://nemtech.github.io/api.html#serialization).
         required: true
         schema:
           $ref: '#/definitions/transactionPayload'
@@ -948,7 +961,7 @@ paths:
       parameters:
       - name: payload
         in: body
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://nemtech.github.io/api.html#serialization).
         required: true
         schema:
           $ref: '#/definitions/transactionPayload'
@@ -1216,21 +1229,15 @@ definitions:
   NamespaceMosaicMetaDTO:
     type: object
     required:
-    - active
-    - index
     - id
     properties:
-      active:
-        type: boolean
-      index:
-        type: integer
       id:
         type: string
 
   NamespaceInfoDTO:
     type: object
     required:
-    - metad
+    - meta
     - namespace
     properties:
       meta:
@@ -1292,7 +1299,7 @@ definitions:
       type:
         type: integer
       mosaicId:
-        type: string
+        $ref: '#/definitions/UInt64DTO'
       address:
         type: string
   MosaicDTO:
@@ -1323,6 +1330,7 @@ definitions:
     - height
     - owner
     - properties
+    - revision
     - levy
     properties:
       mosaicId:
@@ -1333,8 +1341,12 @@ definitions:
         $ref: '#/definitions/UInt64DTO'
       owner:
         type: string
+      revision:
+        type: integer
       properties:
         $ref: '#/definitions/MosaicPropertiesDTO'
+      levy:
+        type: object
   MosaicPropertiesDTO:
     type: array
     items:

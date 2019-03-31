@@ -9,23 +9,21 @@
 Signing announced aggregate bonded transactions
 ###############################################
 
-You have probably announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
-
-This guide will show you how to cosign aggregate bonded transactions that require being signed by your account.
+This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
 
 *************
 Prerequisites
 *************
 
 - Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- Received some aggregate bonded transaction
-- NEM2-SDK
-- A text editor or IDE
-- An account with XEM
+- Have received an aggregate bonded transaction
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
 ************************
+
+You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
 1. Create a function to cosign any aggregate bonded transaction.
 

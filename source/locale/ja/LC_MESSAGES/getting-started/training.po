@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15.1\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 09:26+0900\n"
-"PO-Revision-Date: 2018-12-05 20:49+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:06+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,9 +39,9 @@ msgstr ""
 msgid ""
 "If you prefer to learn about NEM through guided lessons, consider taking one"
 " course from the following list."
-msgstr "ガイドレッスンを通して NEM を学びたい場合、以下のリストのコースを受けて見てください。"
+msgstr "ガイドレッスンを通して NEM の学習をしたい場合、以下のリストのコースを受けて見てください。"
 
-#: ../../source/getting-started/training.rst:9
+#: ../../source/getting-started/training.rst:11
 msgid "Courses"
 msgstr "コース"
 
@@ -118,11 +118,11 @@ msgstr "実際のユースケース"
 msgid "Developers (NEM competent)"
 msgstr "開発者 (NEM 熟練者)"
 
-#: ../../source/getting-started/training.rst:19
+#: ../../source/getting-started/training.rst:23
 msgid "Adding a new course"
 msgstr "新しいコースの追加"
 
-#: ../../source/getting-started/training.rst:21
+#: ../../source/getting-started/training.rst:25
 msgid ""
 "We suggest reviewing our `Curricular Framework "
 "<https://nemtech.github.io/nem2-curricular-framework/>`_ and forking the "
@@ -133,11 +133,11 @@ msgstr ""
 "framework/>`_ をレビューし `NEM2-workshop-template "
 "<https://github.com/nemtech/nem2-workshop-template>`_ をフォークすることを推奨します。"
 
-#: ../../source/getting-started/training.rst:23
+#: ../../source/getting-started/training.rst:27
 msgid "The courses published in this section must be available online."
 msgstr "このセクションの公開済みコースはオンラインで利用可能である必要があります。"
 
-#: ../../source/getting-started/training.rst:25
+#: ../../source/getting-started/training.rst:29
 msgid ""
 "Once the course is complete, add it to this page by clicking the *\"Edit on "
 "Github\"* button at the top-right part of the screen."

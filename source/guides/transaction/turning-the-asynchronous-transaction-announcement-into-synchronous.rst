@@ -15,15 +15,15 @@ Turn asynchronous transaction announcement into synchronous with |nem2-camel|.
 Background
 **********
 
-Alice is developing an app to send 10 nem:xem to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 
-As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is developer's responsibility to check the transactions status and ensure it is confirmed.
+As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
 On the other hand, keeping track of transactions status adds unnecessary complexity to small projects. It also increases the difficulty when migrating from NIS1.
 
-nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announcement, it waits for the confirmation via :doc:`WebSockets<../../api/websockets>` and returns the message to the HTTP call.
+nem2-camel aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announcement, it waits for the confirmation via :ref:`WebSockets<websockets>` and returns the message to the HTTP call.
 
 .. note:: The function ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
@@ -37,8 +37,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
-- A text editor or IDE
-- An account with XEM
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 ************************
 Let’s get into some code
@@ -66,18 +65,18 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
 **Getting Alice and Bob addresses**
 
-Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing XEM.
+Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing cat.currency.
 
-1. Find the key pairs which contain XEM under the section ``nemesis_addresses``.
+1. Find the key pairs which contain cat.currency under the section ``nemesis_addresses``.
 
 .. code-block:: bash
 
     $> cd  build/generated-addresses/
     $> cat raw-addresses.yaml
 
- 2. Take the first key pair as Alice's account, and copy the private key. 
+2. Take the first key pair as Alice's account, and copy the private key.
  
- 2. Take the second key pair as Bob's account, and copy the address. 
+3. Take the second key pair as Bob's account, and copy the address.
 
 **Installing nem2-camel**
 
@@ -93,7 +92,7 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 
 **Sending the transfer transaction**
 
-1. Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>`, sending ``10 XEM`` to Bob and signs it with her account.
+1. Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>`, sending ``10 cat.currency`` to Bob and signs it with her account.
 
 .. example-code::
 

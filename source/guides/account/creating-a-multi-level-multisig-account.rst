@@ -30,8 +30,7 @@ Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Text editor or IDE
-- NEM2-SDK or CLI
+- Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
 ************************
 Let’s get into some code
@@ -98,7 +97,7 @@ Let’s get into some code
 What's next?
 ************
 
-Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, cosignatories are responsible for doing so.
+Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, the cosignatories are responsible for doing so.
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center

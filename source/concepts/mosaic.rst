@@ -24,8 +24,6 @@ Each mosaic has a set of configurable properties. During the mosaic creation, yo
 Guides
 ******
 
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
-
 .. postlist::
     :category: Mosaic
     :date: %A, %B %d, %Y
@@ -99,7 +97,7 @@ MosaicProperty
     :delim: ;
 
     id; uint8; The property id. (0x02) stands for duration.
-    mosaicId; uint64; The mosaic property value.
+    value; uint64; The mosaic property value.
 
 .. _mosaic:
 

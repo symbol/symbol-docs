@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# planet★箒星 <syn_tok@hotmail.co.jp>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"PO-Revision-Date: 2019-03-19 13:58+0000\n"
+"Last-Translator: planet★箒星 <syn_tok@hotmail.co.jp>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:10
+msgid "Linking a namespace to a mosaic"
+msgstr "ネームスペースをモザイクへリンクする"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:12
+msgid ""
+"Link a :doc:`namespace <../../concepts/namespace>` to a :doc:`mosaic "
+"<../../concepts/mosaic>`."
+msgstr ""
+":doc:`ネームスペース <../../concepts/namespace>` を :doc:`モザイク "
+"<../../concepts/mosaic>` にリンクしましょう。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:18
+msgid "Have registered one :doc:`namespace <../../concepts/namespace>`"
+msgstr "取得済みの :doc:`ネームスペース <../../concepts/namespace>`"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:19
+msgid "Have registered one :doc:`mosaic <../../concepts/mosaic>`"
+msgstr "取得済みの :doc:`モザイク <../../concepts/mosaic>`"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:20
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:24
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:26
+msgid ""
+"An account can link a registered :doc:`name <../../concepts/namespace>` "
+"(namespace or subnamespace) with a :doc:`mosaic <../../concepts/mosaic>`."
+msgstr ""
+"アカウントは登録済みの :doc:`名前 <../../concepts/namespace>` (ネームスペースまたはサブネームスペース)を "
+":doc:`モザイク <../../concepts/mosaic>` 識別子にリンクすることができます。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:28
+msgid "Define the namespaceId and the address you want to link."
+msgstr "リンクしたいアドレスとネームスペースIDを設定します。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:32
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:46
+msgid "|linking-a-namespace-to-a-mosaic-ts|"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:37
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:51
+msgid "|linking-a-namespace-to-a-mosaic-js|"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:42
+msgid "Announce the alias transaction."
+msgstr "エイリアストランザクションのアナウンス"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:56
+msgid ""
+"If you want to unlink the alias, change alias action type to "
+"``AliasActionType.Unlink``."
+msgstr "エイリアスをアンリンクしたい場合は、タイプを ``AliasActionType.Unlink`` に変えてください。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:60
+msgid "What's next?"
+msgstr "次は？"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:62
+msgid ""
+"Now you can send transactions using the namespace linked to the mosaic "
+"instead of defining the complete mosaicId."
+msgstr "これで、モザイクIDの代わりにネームスペースでトランザクションを送信することができるようになりました。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:66
+msgid "|sending-a-transfer-transaction-mosaic-alias-ts|"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:71
+msgid "|sending-a-transfer-transaction-mosaic-alias-js|"
+msgstr ""

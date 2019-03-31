@@ -24,26 +24,22 @@ const Account = nem2Sdk.Account,
     MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
     MosaicProperties = nem2Sdk.MosaicProperties,
     MosaicSupplyType = nem2Sdk.MosaicSupplyType,
+    MosaicId = nem2Sdk.MosaicId,
+    MosaicNonce = nem2Sdk.MosaicNonce,
     TransactionHttp = nem2Sdk.TransactionHttp,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     UInt64 = nem2Sdk.UInt64;
 
 
-// 01 - Setup
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-// Replace with namespace name and mosaic name
-const namespaceName = 'foo';
-const mosaicName = 'token';
-
-// 02 - Create Mosaic Definition Transaction
+const nonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
-    mosaicName,
-    namespaceName,
+    nonce,
+    MosaicId.createFromNonce(nonce, account.publicAccount),
     MosaicProperties.create({
         supplyMutable: true,
         transferable: true,
@@ -53,7 +49,6 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     }),
     NetworkType.MIJIN_TEST);
 
-// 03 - Create Supply Change Transaction
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
@@ -61,7 +56,6 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     UInt64.fromUint(1000000),
     NetworkType.MIJIN_TEST);
 
-// 04 - Wrap both transactions inside an aggregate transaction
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [

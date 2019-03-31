@@ -27,8 +27,6 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Guides
 ******
 
-.. note:: ⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using :doc:`catapult-service-bootstrap 0.1.0 <../getting-started/setup-workstation>` to run the guides.
-
 .. postlist::
     :category: Cross-Chain Swaps
     :date: %A, %B %d, %Y
@@ -117,7 +115,7 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0 (SHA_3); Input is hashed using sha3 256.
-    1 (Keccak); Input is hashed using Keccak.
-    2 (Hash_160); Input is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
-    3 (Hash_256); Input is hashed twice with Sha-256 (bitcoin's OP_HASH256).
+    0 (Op_Sha3_256); Input is hashed using sha3 256.
+    1 (Op_Keccak_256); Input is hashed using Keccak (ETH compatibility).
+    2 (Op_Hash_160); Input is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    3 (Op_Hash_256); Input is hashed twice with Sha-256 (bitcoin's OP_HASH256).

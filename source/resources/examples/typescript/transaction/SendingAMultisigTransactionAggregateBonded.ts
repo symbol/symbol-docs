@@ -23,13 +23,15 @@ import {
     Deadline,
     Listener,
     LockFundsTransaction,
+    Mosaic,
+    MosaicId,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     PublicAccount,
     TransactionHttp,
     TransferTransaction,
-    UInt64,
-    XEM
+    UInt64
 } from "nem2-sdk";
 
 import {filter, mergeMap} from "rxjs/operators";
@@ -51,8 +53,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Create aggregate transaction
@@ -62,10 +64,14 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

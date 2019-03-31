@@ -9,6 +9,8 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
+.. _setup-catapult-service-bootstrap:
+
 **********************************
 Running Catapult Service Bootstrap
 **********************************
@@ -25,7 +27,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
+    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
     $> cd catapult-service-bootstrap
     $> docker-compose up
 
@@ -37,9 +39,11 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
     $> curl localhost:3000/block/1
 
-***********************
-Creating a test account
-***********************
+.. _setup-getting-a-test-account:
+
+**********************
+Getting a test account
+**********************
 
 An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
@@ -47,7 +51,7 @@ The **public key** is cryptographically derived from the private key. It would t
 
 Finally, the account address is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
-:doc:`NEM2-CLI <../cli/overview>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
+:doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
 1. Install NEM2-CLI using ``npm``.
 
@@ -55,42 +59,16 @@ Finally, the account address is generated with the public key, following the NEM
 
     $> sudo npm install --global nem2-cli
 
-2. Create an account with the command line tool.
-
-.. code-block:: bash
-
-    $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
-
-The ``network flag`` is set to MIJIN_TEST. Test network is an alternative NEM blockchain used for development and testing purposes.
-
-Use ``save flag`` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
-
-3. You should be able to see the following lines in your terminal, containing the account credentials:
-
-    New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
-
-    Public Key:     33E0...6ED
-
-    Private Key:    0168...595
-
-******************************
-What is XEM and how to get it?
-******************************
-
-The underlying cryptocurrency of the NEM network is called **XEM**. Every action on the NEM blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
-
-Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
-
-1. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
 .. code-block:: bash
 
     $> cd  build/generated-addresses/
     $> cat addresses.yaml
 
-2. Under the section ``nemesis_addresses``, you will find the key pairs which contain XEM.
+3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
 
-3. Load the first account as a profile in NEM2-CLI.
+4. Load the first account as a profile in NEM2-CLI.
 
 .. code-block:: bash
 
@@ -100,6 +78,16 @@ Let’s use an account which already has XEM. We will need it to register the na
     Introduce your private key: 41************************************************************FF
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
+
+You should see the following lines in your terminal, containing the account credentials:
+
+.. code-block:: bash
+
+    New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
+
+    Public Key:     33E0...6ED
+
+    Private Key:    41....FF
 
 .. _setup-development-environment:
 
@@ -127,7 +115,7 @@ Create a folder for your new project and run the instructions for the selected l
 
             $> npm install nem2-sdk rxjs
 
-        3. nem2-sdk is build with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. nem2-sdk is built with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -155,7 +143,7 @@ Create a folder for your new project and run the instructions for the selected l
         .. code-block:: bash
 
             $> npm install nem2-sdk rxjs
-
+..
     .. tab:: Java
 
         1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
@@ -182,7 +170,6 @@ Create a folder for your new project and run the instructions for the selected l
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
-
     .. tab:: C#
 
         1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.

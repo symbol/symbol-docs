@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2018
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.15.1\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 09:26+0900\n"
-"PO-Revision-Date: 2018-10-26 13:38+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2018\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:12+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,37 +38,29 @@ msgstr "前提条件"
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了していること"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:19
-msgid "Text editor or IDE"
-msgstr "テキストエディタ または IDE"
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:20
-msgid "NEM2-SDK or CLI"
-msgstr "NEM2-SDK または CLI"
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:24
+#: ../../source/guides/blockchain/listening-new-blocks.rst:22
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:28
+#: ../../source/guides/blockchain/listening-new-blocks.rst:26
 msgid "|listening-new-blocks-ts|"
 msgstr ""
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:33
+#: ../../source/guides/blockchain/listening-new-blocks.rst:31
 msgid "|listening-new-blocks-java|"
 msgstr ""
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:38
+#: ../../source/guides/blockchain/listening-new-blocks.rst:36
 msgid "|listening-new-blocks-js|"
 msgstr ""
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:43
+#: ../../source/guides/blockchain/listening-new-blocks.rst:41
 msgid "|listening-new-blocks-cli|"
 msgstr ""
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:48
+#: ../../source/guides/blockchain/listening-new-blocks.rst:46
 msgid ""
 "The :ref:`listener implementation changes <monitoring-transactions-client-"
 "side>` when used on the client side (e.g., Angular, React, Vue)."

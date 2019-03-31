@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 08:57+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/extensions.rst:3
+msgid "Extensions"
+msgstr "拡張"
+
+#: ../../source/extensions.rst:5
+msgid ""
+"Developers could opt to create extensions to add more features into NEM. "
+"However, to become an accepted extension, it should be proposed as a |NIP|."
+msgstr ""
+"開発者は NEM により多くの機能を追加する拡張を作成することもできます。しかし受理された拡張になるには |NIP| として提案する必要があります。"
+
+#: ../../source/extensions.rst:7
+msgid ""
+"The reason behind the |NIP| is to ensure that the new library is reviewed, "
+"tested and shared among NEM developers."
+msgstr "|NIP| の背景としては、NEM 開発者間でレビュー、テスト、共有された新しいライブラリを保証するためです。"
+
+#: ../../source/extensions.rst:9
+msgid "Accepted specification"
+msgstr "受理された仕様"
+
+#: ../../source/extensions.rst:10
+msgid "At least one implementation that successfully passes the code review."
+msgstr "コードレビューを正常に通過した実装が少なくとも１つあること。"
+
+#: ../../source/extensions.rst:11
+msgid ""
+"Compatible with third-party projects that implement/uses the same NIP "
+"Library."
+msgstr "同じ NIP ライブラリを実装/使用しているサードパーティープロジェクトと互換性があります。"
+
+#: ../../source/extensions.rst:15
+msgid "Supported extensions"
+msgstr "サポートされている拡張"
+
+#: ../../source/extensions.rst:1 ../../source/extensions.rst:1
+msgid "Name"
+msgstr "名称"
+
+#: ../../source/extensions.rst:1 ../../source/extensions.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`catapult service bootstrap <https://github.com/nemtech/catapult-service-"
+"bootstrap>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid ""
+"Starter project to get developers up and running with a running Catapult "
+"Service."
+msgstr "開発者を立ち上げるための Catapult サービスをスタータープロジェクト。"
+
+#: ../../source/extensions.rst:1
+msgid "`nem2-camel <https://github.com/nemtech/nem2-camel>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid ""
+"A component to turn the asynchronous transaction announcement into "
+"synchronous."
+msgstr "非同期なトランザクションのアナウンスを同期的に変えるコンポーネント"
+
+#: ../../source/extensions.rst:26
+msgid "Community extensions"
+msgstr "コミュニティの拡張"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`Apostille library <https://github.com/luxtagofficial/Apostille-library>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid ""
+"Transferable, updatable, branded, and conjointly owned blockchain "
+"notarizations."
+msgstr "譲渡可能、更新可能、ブランド付き、共同所有のブロックチェーン公証"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`Non-fungible asset library <https://github.com/aleixmorgadas/nem2"
+"-nonfungible-asset>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Work with unique and updatable assets."
+msgstr "一意で更新可能なアセットを扱う"
+
+#: ../../source/extensions.rst:35
+msgid ""
+"Do you need to create a NIP to create an extension? No, you don’t. In fact, "
+"we suggest not submitting a NIP until you build a extension that improves "
+"the NEM blockchain and the different projects that use it. Since the "
+"extension can be changed multiple times, developers should spend more time "
+"experimenting and learning, creating a specification later on."
+msgstr ""
+"拡張を作成するために NIP "
+"を作成する必要がありますか？いいえ。実際、NEMブロックチェーンとそれを使用するさまざまなプロジェクトを改善する拡張を構築するまでは、NIP "
+"を提出しないことをお勧めします。拡張は何度も変更されるので、開発者は後で仕様を作成し、実験と学習をより多くの時間を費やす必要があります。"
+
+#: ../../source/extensions.rst:37
+msgid ""
+"Add a new extension to this page by clicking the *\"Edit on Github\"* button"
+" at the top-right part of the screen."
+msgstr "新しい拡張をこのページに追加したい場合は、画面の右上にある *\"Edit on Github\"* ボタンをクリックしてください。"

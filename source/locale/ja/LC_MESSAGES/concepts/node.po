@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, NEM
+# Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.16\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-09 07:59+0900\n"
-"PO-Revision-Date: 2018-10-26 13:39+0000\n"
-"Last-Translator: Yoshiyuki Ieyama, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/44uk-works/teams/92962/ja/)\n"
+"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -81,7 +81,7 @@ msgstr "ブロックのバイナリはフラットなファイルとしてディ
 
 #: ../../source/concepts/node.rst:26
 msgid "The updated chain state is saved in memory or RocksDB (configurable)."
-msgstr "更新したチェーンの状態はメモリまたはRocksDBに保存されます。(設定可能)"
+msgstr "更新したチェーンの状態はメモリまたは RocksDB に保存されます。(設定可能)"
 
 #: ../../source/concepts/node.rst:29
 msgid "Node reputation"
@@ -113,7 +113,7 @@ msgstr ""
 msgid ""
 "From these interactions, the node assigns a weight between 500 and 10000 to "
 "every peer reached."
-msgstr "これらの相互作用からノードは到達したすべてのピアに500〜10000の重みを割り当てます。"
+msgstr "これらの相互作用からノードは到達したすべてのピアに 500 から 10000 の重みを割り当てます。"
 
 #: ../../source/concepts/node.rst:39
 msgid ""
@@ -144,7 +144,7 @@ msgid ""
 "storing state information in RocksDB demands less memory of the network "
 "nodes."
 msgstr ""
-"RocksDBを使用するよりも状態をメモリに保存しておくことのほうがより高速になります。しかし状態の情報を RocksDB "
+"RocksDB を使用するよりも状態をメモリに保存しておくことのほうがより高速になります。しかし状態の情報を RocksDB "
 "に保存しておくことで、ネットワークのノードが必要とするメモリを少なくできます。"
 
 #: ../../source/concepts/node.rst:49
@@ -243,12 +243,12 @@ msgstr "REST コンポーネント"
 msgid ""
 "The REST component handles **JSON API** client requests. This reads from "
 "MongoDB, formats the response, and returns it to the client. This component "
-"is responsible as well to return events to the client using :doc:`WebSockets"
-" <../api/websockets>`."
+"is responsible as well to return events to the client using :ref:`WebSockets"
+" <websockets>`."
 msgstr ""
 "Catapult REST コンポーネントは **JSON API** クライアントリクエストを処理します。MongoDB "
-"から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :doc:`WebSockets "
-"<../api/websockets>` でクライアントにイベントを返却する役割も果たします。"
+"から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
+"<websockets>` でクライアントにイベントを返却する役割も果たします。"
 
 #: ../../source/concepts/node.rst:90
 msgid ""

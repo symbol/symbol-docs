@@ -11,18 +11,6 @@
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Protocol
-
-    concepts/cryptography
-    concepts/block
-    concepts/transaction
-    concepts/harvesting
-    concepts/receipt
-    concepts/node
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
     :caption: Built-in Features
 
     concepts/account
@@ -37,49 +25,31 @@
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: REST API
+    :caption: Protocol
 
-    api/requests
-    api/tools
-    api/endpoints
-    api/serialization
-    api/websockets
-    api/status-errors
-
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: SDKs
-
-    sdk/overview
-    sdk/architecture
-    sdk/languages
-    sdk/libraries
+    concepts/cryptography
+    concepts/block
+    concepts/transaction
+    concepts/harvesting
+    concepts/receipt
+    concepts/node
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Client
+    :caption: References
 
-    cli/overview
-    cli/commands
-
-
-.. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: Prototyping Tool
-
-    prototyping-tool/overview
-    prototyping-tool/configuring-nodes
-    prototyping-tool/examples
+    api
+    sdk
+    cli
+    prototyping-tool
+    extensions
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Support
+    :caption: Contribute
 
-    support/community
-    support/contributing
-    support/contributors
+    contribute/contributing
+    contribute/community
+    contribute/contributors
