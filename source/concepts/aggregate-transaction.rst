@@ -67,7 +67,7 @@ Paying for others fees
 
 Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But she doesn’t have any cat.currency to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to cat.currency to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
+By creating an aggregate bonded transaction, she can convert EUR to cat.currency to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
