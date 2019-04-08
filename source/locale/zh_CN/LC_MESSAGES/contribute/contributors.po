@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,48 +20,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/contribute/contributors.rst:3
-msgid "Contributors"
-msgstr "贡献者"
-
-#: ../../source/contribute/contributors.rst:5
-msgid ""
-"The NEM Developer Center is not written from scratch. It is the sum of "
-"previous effort and documents written by the community and core developers, "
-"adapted for this new release. Thank you!"
-msgstr "NEM开发人员中心不是从零开始编写的。它是社区和核心开发人员已编写工作和文档的总和，这些工作和文档适用于此新版本。感谢您的理解！"
-
-#: ../../source/contribute/contributors.rst:7
-msgid "|nem-technical-reference|"
-msgstr "|nem-technical-reference|"
-
-#: ../../source/contribute/contributors.rst:8
-msgid "|nem-website|"
-msgstr "|nem-website|"
-
-#: ../../source/contribute/contributors.rst:9
-msgid "|nem-nis-api-reference|"
-msgstr "|nem-nis-api-reference|"
-
-#: ../../source/contribute/contributors.rst:10
-msgid "|nem-knowledge-base|"
-msgstr "|nem-knowledge-base|"
-
-#: ../../source/contribute/contributors.rst:11
-msgid "|nem-developer-guide|"
-msgstr "|nem-developer-guide|"
-
-#: ../../source/contribute/contributors.rst:12
-msgid "|nem-blog-articles|"
-msgstr "|nem-blog-articles|"
-
-#: ../../source/contribute/contributors.rst:13
-msgid "|nem-medium-articles|"
-msgstr "|nem-medium-articles|"
-
-#: ../../source/contribute/contributors.rst:15
-msgid ""
-"We want to recognize the contributors who provide content and improve the "
-"quality and completeness of this documentation."
-msgstr "我们想要结识能提供文档内容，并提高本文档质量和完整性的贡献者。"

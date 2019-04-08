@@ -1,185 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:11
-msgid "Converting an account to multisig"
-msgstr "将帐户转换为multisig"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:13
-msgid ""
-"Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`,"
-" by adding two cosignatories."
-msgstr ""
-"通过添加两个 cosignatories.创建 1-of-2 :doc:`multisig账户<../../concepts/multisig-"
-"account>`。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:17
-msgid "Background"
-msgstr "背景"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:19
-#, fuzzy
-msgid ""
-"Alice and Bob live together and have separate :doc:`accounts "
-"<../../concepts/account>`. They also have a shared account used to buy "
-"groceries. If Bob is out shopping, he can buy groceries for both himself "
-"and Alice."
-msgstr ""
-"Alice 和Bob住在一起并拥有各自：doc：`accounts <../../ concepts / "
-"account>`。他们还有一个共享帐户，这样如果Bob外出购物，他可以为自己和Alice购买杂货。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:21
-#, fuzzy
-msgid ""
-"This shared account appears in NEM as 1-of-2 multisig, meaning that one "
-"cosignatory needs to cosign the transaction to be included in a block."
-msgstr "这个共享帐户在NEM中翻译为1-of-2 multisig，这意味着事务被保存在块中需要一位cosignatory的签名 。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:27
-msgid "1-of-2 multisig account example"
-msgstr "1-of-2 multisig帐户示例"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:29
-msgid ""
-"Remember that a multisig account has cosignatories accounts, and it "
-"cannot start transactions itself. Only the cosignatories can initiate "
-"transactions."
-msgstr "请记住，multisig帐户具有cosignatories帐户，并且它本身无法启动事务。 只有cosignatories 可以发起交易。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:33
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:35
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ""
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:36
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:37
-#, fuzzy
-msgid "Create :doc:`two accounts <creating-and-opening-an-account>`"
-msgstr "完成:doc:`创建和开立帐户指南<creating-and-opening-an-account>`"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:41
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:43
-#, fuzzy
-msgid ""
-"Define who will be the cosignatories of the multisig account: Alice and "
-"Bob addresses. Then, open the account that will be converted into "
-"multisig by providing its private key."
-msgstr "定义谁将成为multisig帐户的签名者。 然后，通过提供其私钥打开将转换为multisig的帐户。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:47
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:66
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:85
-msgid "|converting-an-account-to-multisig-ts|"
-msgstr "|converting-an-account-to-multisig-ts|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:52
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:71
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:90
-msgid "|converting-an-account-to-multisig-java|"
-msgstr "|converting-an-account-to-multisig-java|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:57
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:76
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:95
-msgid "|converting-an-account-to-multisig-js|"
-msgstr "|converting-an-account-to-multisig-js|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:62
-#, fuzzy
-msgid ""
-"Define a :ref:`modify multisig account transaction <modify-multisig-"
-"account-transaction>`  to convert the account into a multisig account. As"
-" they need a 1-of-2 multisig account, set the minimum signatures required"
-" to 1."
-msgstr ""
-"通过设置 :ref:`修改multisig帐户交易 <modify-multisig-account-"
-"transaction>`将帐户转换为multisig帐户。 由于他们需要1-of-2 multisig帐户，请将最小签名设置为1。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:81
-#, fuzzy
-msgid ""
-"Sign and announce the transaction with the candidate multisig account "
-"private key."
-msgstr "使用候选multisig帐户签名并宣布交易。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:102
-msgid ""
-"If everything goes well, Alice and Bob should be cosignatories of the "
-"multisig account."
-msgstr "如果一切顺利，Alice和Bob应该是multisig帐户的签名者。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:104
-msgid ""
-"You could also get the list of the multisig accounts where Alice or Bob "
-"are cosignatories using ``getMultisigAccountInfo`` function."
-msgstr "您还可以使用``getMultisigAccountInfo``函数获取multisig帐户列表，由此得知Alice或Bob是cosignatories。"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:108
-msgid "|getting-multisig-account-cosignatories-ts|"
-msgstr "|getting-multisig-account-cosignatories-ts|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:113
-msgid "|getting-multisig-account-cosignatories-java|"
-msgstr "|getting-multisig-account-cosignatories-java|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:118
-msgid "|getting-multisig-account-cosignatories-js|"
-msgstr "|getting-multisig-account-cosignatories-js|"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:126
-msgid "What's next?"
-msgstr "下一步是什么？"
-
-#: ../../source/guides/account/converting-an-account-to-multisig.rst:128
-#, fuzzy
-msgid ""
-"Alice an Bob wants to send transactions from the multisig only when both "
-"agree. Modify the multisig account you just created, converting it into a"
-" 2-of-2 multisig following :doc:`modifying a multisig account "
-"<modifying-a-multisig-account>` guide."
-msgstr ""
-"修改帐户，将其转换为2-of-2 multisig follow:doc:`修改multisig帐户<modification-a"
-"-multisig-account>`指南。"
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或 CLI"
-
-#~ msgid "Two accounts (public keys)"
-#~ msgstr "两个帐户（公钥）"
-
-#~ msgid "One account with XEM"
-#~ msgstr "拥有XEM的账户"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

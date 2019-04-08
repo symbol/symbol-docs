@@ -1,119 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:10
-msgid "Registering a subnamespace"
-msgstr "注册子命名空间"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:12
-msgid ""
-"Register a :doc:`subnamespace <../../concepts/namespace>` following this "
-"guide."
-msgstr "通过本次指导来注册 :doc:`子命名空间 <../../concepts/namespace>`。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:16
-msgid "Background"
-msgstr "背景"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:18
-msgid ""
-"Once you have a registered root namespace, you can create up to ``3`` "
-"levels of subnamespaces."
-msgstr "当你注册了根命名空间后，你最多可以创建最多 “3” 个级别的子名称空间。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:20
-#, fuzzy
-msgid ""
-"Subnamespaces do not have a renting duration. They have the same one as "
-"their parent namespace."
-msgstr "子名称空间本身没有租用期限。 它们与父命名空间具有相同的名称。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:22
-msgid ""
-"It is possible to create multiple subnamespaces with the same name in "
-"different namespaces (example: ``foo.bar`` and ``foo2.bar``)."
-msgstr "您可以在不同的命名空间中创建多个具有相同名称的子名称空间（例如： ``foo.bar`` 和 ``foo2.bar`` ）。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:26
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:28
-msgid "Finish :doc:`registering a namespace guide <registering-a-namespace>`"
-msgstr "完成:doc:`注册命名空间指导 <registering-a-namespace>`"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:29
-msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>` "
-"and at least one namespace"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:33
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:35
-msgid "The first step is to choose a name for your subnamespace."
-msgstr "第一步是为子名称空间选择一个名称。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:37
-msgid ""
-"In this example, we have registered a subnamespace called ``bar`` under "
-"``foo`` namespace."
-msgstr "在这个例子中，我们在 ``foo`` 命名空间下注册了一个名为 ``bar`` 的子命名空间。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:41
-msgid "|registering-a-subnamespace-ts|"
-msgstr "|registering-a-subnamespace-ts|"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:46
-msgid "|registering-a-subnamespace-java|"
-msgstr "|registering-a-subnamespace-java|"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
-msgid "|registering-a-subnamespace-js|"
-msgstr "|registering-a-subnamespace-js|"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:56
-msgid "|registering-a-subnamespace-cli|"
-msgstr "|registering-a-subnamespace-cli|"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:63
-msgid "What's next?"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:65
-msgid ""
-"When the transaction is confirmed, link a namespace with a :doc:`mosaic "
-"<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "
-"<../namespace/link-a-namespace-to-an-address>`."
-msgstr ""
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或CLI"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "An account with XEM and at least one namespace"
-#~ msgstr "拥有XEM和至少一个命名空间的账号"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

@@ -97,7 +97,7 @@ MosaicProperty
     :delim: ;
 
     id; uint8; The property id. (0x02) stands for duration.
-    mosaicId; uint64; The mosaic property value.
+    value; uint64; The mosaic property value.
 
 .. _mosaic:
 

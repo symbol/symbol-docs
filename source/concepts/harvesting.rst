@@ -8,7 +8,7 @@ in the block. This gives the harvester an incentive to add as many transactions 
 
 The account importance determines the chances to create a new block. The importance is calculated as the relation between
 the number of harvesting mosaics the account owns and the total supply. To have importance greater than zero,
-the account needs to hold a minimum amount this mosaics.
+the account needs to hold a `minimum amount <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L26>`_ of this harvesting mosaic.
 
 Catapult software allows defining any :doc:`mosaic <mosaic>` for harvesting, using its configurable
 properties to fit the business needs. For example, consortium networks can distribute harvesting mosaics between the

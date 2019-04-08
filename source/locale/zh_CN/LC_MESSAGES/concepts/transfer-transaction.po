@@ -1,24 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transfer-transaction.rst:3
 msgid "Transfer Transaction"
@@ -26,25 +29,23 @@ msgstr "转让交易"
 
 #: ../../source/concepts/transfer-transaction.rst:5
 msgid ""
-"Transfer transactions are used to send :doc:`mosaics <mosaic>` between "
-"two :doc:`accounts <account>`. They can hold a messages of length "
-"``1023`` characters."
+"Transfer transactions are used to send :doc:`mosaics <mosaic>` between two "
+":doc:`accounts <account>`. They can hold a messages of length ``1023`` "
+"characters."
 msgstr ""
-"转让交易用于在两个 :doc:`账户 <account>`间发送 :doc:`马赛克<mosaic>` 。 他们可以保存长度在 ``1023`` "
-"字符以内的消息。"
+"转让交易用于在两个 :doc:`账户 <account>` 间发送 :doc:`马赛克<mosaic>` 。 交易可以收录长度在 ``1023`` "
+"字符以内的信息。"
 
 #: ../../source/concepts/transfer-transaction.rst:11
-#, fuzzy
 msgid "Alice sends 10 cat.currency to Bob"
-msgstr "Alice 发送10 nem:xem 给Bob"
+msgstr "Alice 发送 10 cat.currency 给 Bob。"
 
 #: ../../source/concepts/transfer-transaction.rst:13
 msgid ""
-"It is possible to send mosaics to any valid address even if the address "
-"has not previously participated in any transaction. If nobody owns the "
-"private key of the recipient's account, the funds are most likely lost "
-"forever."
-msgstr "马赛克可以被发送到任何有效地址，这在该地址之前没有参与任何交易的情况下也是有效的。如果没人持有收件人帐户的私钥，那么这份资金很可能永远丢失。"
+"It is possible to send mosaics to any valid address even if the address has "
+"not previously participated in any transaction. If nobody owns the private "
+"key of the recipient's account, the funds are most likely lost forever."
+msgstr "马赛克可以被发送到任何有效地址，就算该地址之前没有参与过任何交易。如果没人持有收件人帐户的私钥，那么这份资金很可能永远丢失。"
 
 #: ../../source/concepts/transfer-transaction.rst:17
 msgid "Guides"
@@ -52,26 +53,20 @@ msgstr "指南"
 
 #: ../../source/concepts/transfer-transaction.rst:29
 msgid "Schemas"
-msgstr "概要"
+msgstr "模式"
 
 #: ../../source/concepts/transfer-transaction.rst:31
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties>`_ . "
-"Public network configuration may differ."
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
 msgstr ""
 "配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ 。公共网络配置可能不同。"
+"server/blob/master/resources/config-network.properties>`_ 。公共网络配置可能有所不同。"
 
 #: ../../source/concepts/transfer-transaction.rst:36
 msgid "TransferTransaction"
 msgstr "转让交易"
-
-#: ../../source/concepts/transfer-transaction.rst:38
-msgid ""
-"Announce a transfer transaction to send :doc:`mosaics <mosaic>` or "
-"messages between two :doc:`accounts <account>`."
-msgstr "在两个 :doc:`accounts <account>`间发布转让交易来发送马赛克或消息（messages）。"
 
 #: ../../source/concepts/transfer-transaction.rst:40
 msgid "**Version**: 0x03"
@@ -85,12 +80,6 @@ msgstr "**实体类型**: 0x4154"
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/transfer-transaction.rst:46
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ":ref:`交易<transaction>` or :ref:`嵌入式交易<embedded-transaction>`"
-
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Property"
 msgstr "属性"
@@ -101,65 +90,28 @@ msgstr "类型"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Description"
-msgstr "描述"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "recipient"
-msgstr "recipient"
+msgstr "说明"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "25 bytes (binary)"
-msgstr "25 bytes (二进制)"
+msgstr "25 字节 (二进制)"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The address of the recipient account."
 msgstr "收件人帐户地址。"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "messageSize"
-msgstr "messageSize"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "uint16"
-msgstr "uint16"
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The size of the attached message."
-msgstr "附加消息的大小。"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "mosaicsCount"
-msgstr "mosaicsCount"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "uint8"
-msgstr "uint8"
+msgstr "附加信息的大小。"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The number of attached mosaics."
 msgstr "附加马赛克的数量。"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "message"
-msgstr "message"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "array(byte, messageSize)"
-msgstr "array(byte, messageSize)"
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The message type (0) and a payload of up to ``1023`` bytes."
-msgstr "消息类型（0）和最大为 ``1023`` 字节的有效负载。"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "mosaics"
-msgstr "mosaics"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount)"
-msgstr "array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount)"
+msgstr "信息类型（0）和最大为 ``1023`` 字节的有效酬载量。"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The different mosaic to be sent."
-msgstr "要发送的不同马赛克。"
-
+msgstr "要发送的各种马赛克。"

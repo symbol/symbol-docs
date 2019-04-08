@@ -1,153 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/extensions.rst:3
-msgid "Extensions"
-msgstr "扩展"
-
-#: ../../source/extensions.rst:5
-msgid ""
-"Developers could opt to create extensions to add more features into NEM. "
-"However, to become an accepted extension, it should be proposed as a "
-"|NIP|."
-msgstr "开发人员可以选择为NEM进行进一步拓展来添加更多功能。 但是，如果要成为被公共认同的扩展功能，应先将其作为 |NIP| 提出。"
-
-#: ../../source/extensions.rst:7
-msgid ""
-"The reason behind the |NIP| is to ensure that the new library is "
-"reviewed, tested and shared among NEM developers."
-msgstr " |NIP| 的出现是为了保证NEM开发人员能审查，测试和共享新库。"
-
-#: ../../source/extensions.rst:9
-msgid "Accepted specification"
-msgstr "应接受的规范"
-
-#: ../../source/extensions.rst:10
-msgid "At least one implementation that successfully passes the code review."
-msgstr "至少一个成功通过代码审查的实现。"
-
-#: ../../source/extensions.rst:11
-msgid ""
-"Compatible with third-party projects that implement/uses the same NIP "
-"Library."
-msgstr "与实现/使用相同NIP库的第三方项目兼容。"
-
-#: ../../source/extensions.rst:15
-#, fuzzy
-msgid "Supported extensions"
-msgstr "扩展"
-
-#: ../../source/extensions.rst:1
-msgid "Name"
-msgstr "名字"
-
-#: ../../source/extensions.rst:1
-msgid "Description"
-msgstr "描述"
-
-#: ../../source/extensions.rst:1
-msgid ""
-"`catapult service bootstrap <https://github.com/nemtech/catapult-service-"
-"bootstrap>`_"
-msgstr ""
-"`catapult service bootstrap <https://github.com/nemtech/catapult-service-"
-"bootstrap>`_"
-
-#: ../../source/extensions.rst:1
-msgid ""
-"Starter project to get developers up and running with a running Catapult "
-"Service."
-msgstr "入门项目旨在让开发人员进一步了解并运行Catapult Service。"
-
-#: ../../source/extensions.rst:1
-msgid "`nem2-camel <https://github.com/nemtech/nem2-camel>`_"
-msgstr "`nem2-camel <https://github.com/nemtech/nem2-camel>`_"
-
-#: ../../source/extensions.rst:1
-msgid ""
-"A component to turn the asynchronous transaction announcement into "
-"synchronous."
-msgstr "将异步事务通知转换为为同步的一个组件。"
-
-#: ../../source/extensions.rst:26
-#, fuzzy
-msgid "Community extensions"
-msgstr "社区扩展"
-
-#: ../../source/extensions.rst:1
-msgid "`Apostille library <https://github.com/luxtagofficial/Apostille-library>`_"
-msgstr "`Apostille library <https://github.com/luxtagofficial/Apostille-library>`_"
-
-#: ../../source/extensions.rst:1
-#, fuzzy
-msgid ""
-"Transferable, updatable, branded, and conjointly owned blockchain "
-"notarizations."
-msgstr "区块链公证和可转让时间戳，可更新，痕迹化和共同拥有的公证。"
-
-#: ../../source/extensions.rst:1
-msgid ""
-"`Non-fungible asset library <https://github.com/aleixmorgadas/nem2"
-"-nonfungible-asset>`_"
-msgstr ""
-"`Non-fungible asset library <https://github.com/aleixmorgadas/nem2"
-"-nonfungible-asset>`_"
-
-#: ../../source/extensions.rst:1
-msgid "Work with unique and updatable assets."
-msgstr "使用独特且可更新的资产。"
-
-#: ../../source/extensions.rst:35
-msgid ""
-"Do you need to create a NIP to create an extension? No, you don’t. In "
-"fact, we suggest not submitting a NIP until you build a extension that "
-"improves the NEM blockchain and the different projects that use it. Since"
-" the extension can be changed multiple times, developers should spend "
-"more time experimenting and learning, creating a specification later on."
-msgstr ""
-"难道只有通过NIP这一种方法来创建扩展吗？并非如此。 实际上，我们建议您在构建扩展以改进NEM区块链和使用它的不同项目之前不提交NIP。 "
-"因为扩展可以多次更改，所以开发人员应该花更多时间进行实验和学习，您可以选择稍晚一些再创建规范。"
-
-#: ../../source/extensions.rst:37
-msgid ""
-"Add a new extension to this page by clicking the *\"Edit on Github\"* "
-"button at the top-right part of the screen."
-msgstr "通过单击屏幕右上角的 *\"Edit on Github\"* 按钮，为此页面添加新扩展。"
-
-#~ msgid "Official Extensions"
-#~ msgstr "官方扩展"
-
-#~ msgid "Active Developers"
-#~ msgstr "活跃的开发者"
-
-#~ msgid "`@tech-bureau <https://github.com/tech-bureau/>`_"
-#~ msgstr "`@tech-bureau <https://github.com/tech-bureau/>`_"
-
-#~ msgid "NEM Foundation"
-#~ msgstr "NEM 基金会"
-
-#~ msgid "`@luxtagofficial <https://github.com/luxtagofficial/>`_"
-#~ msgstr "`@luxtagofficial <https://github.com/luxtagofficial/>`_"
-
-#~ msgid "`@aleixmorgadas <https://github.com/aleixmorgadas/>`_"
-#~ msgstr "`@aleixmorgadas <https://github.com/aleixmorgadas/>`_"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,59 +20,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/guidelines/writing-a-schema.rst:5
-msgid "Writing a Schema"
-msgstr "编写架构"
-
-#: ../../source/guidelines/writing-a-schema.rst:7
-msgid ""
-"Are you writing a new catapult plugin that includes a new transaction type?"
-msgstr "你在写一个包含新交易类型的新catapult插件吗？"
-
-#: ../../source/guidelines/writing-a-schema.rst:9
-msgid ""
-"In this guide, we are examining how the `transfer.cats "
-"<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_"
-" schema works. You can adapt the same steps to define a new schema."
-msgstr ""
-"在本指南中，我们正在研究`transfer.cats "
-"<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_"
-" schema是如何工作的。 您可以调整相同的步骤来定义新架构。"
-
-#: ../../source/guidelines/writing-a-schema.rst:11
-msgid ""
-"Create a new file under ``schemas`` folder and define a struct for the "
-"transaction body."
-msgstr "在``schemas``文件夹下创建一个新文件，并为事务体定义一个结构。"
-
-#: ../../source/guidelines/writing-a-schema.rst:13
-msgid ""
-"Think of a struct as a set of properties that we want to store in the same "
-"block of memory."
-msgstr "将结构视为一组我们想要存储在同一内存块中的属性。"
-
-#: ../../source/guidelines/writing-a-schema.rst:15
-msgid ""
-"The transaction body contains the extra properties which differ from a basic"
-" transaction. Each attribute can have one of the types defined in "
-"`types.cats "
-"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_."
-msgstr ""
-"事务正文包含与基本事务不同的额外属性。 "
-"每个属性都可以使用`types.catshttps://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_中定义的类型之一。"
-
-#: ../../source/guidelines/writing-a-schema.rst:32
-msgid ""
-"Define a second transaction struct in the same file. This will contain "
-"information about the version of the entity and its identifier. The "
-"underlying transaction properties and the particular transaction body are "
-"appended as inlines."
-msgstr "在同一文件中定义第二个事务结构。 这将包含有关实体版本及其标识符的信息。 底层事务属性和特定事务主体作为内联附加。"
-
-#: ../../source/guidelines/writing-a-schema.rst:45
-msgid ""
-"Define an EmbeddedTransaction struct. This struct is used to serialize inner"
-" transactions. The embedded transaction and the body transaction are added "
-"as inlines."
-msgstr "定义EmbeddedTransaction结构。 此结构用于序列化内部事务。 嵌入式事务和正文事务将作为内联添加。"

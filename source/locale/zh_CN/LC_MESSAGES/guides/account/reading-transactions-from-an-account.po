@@ -1,112 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:10
-msgid "Reading transactions from an account"
-msgstr "从帐户读取交易"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:12
-msgid ""
-"Get the list of :doc:`transactions <../../concepts/transaction>` where an"
-" :doc:`account <../../concepts/account>` is involved."
-msgstr ""
-"获取包含 :doc:`account <../../ concepts / account>` 的  :doc:`transactions "
-"<../../ concepts / transaction>` 列表。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:16
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:18
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr "完成  :doc:`入门学习部分<../../ getting-started / setup-workstation>`"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:22
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:24
-msgid ""
-"In this example, you will fetch the latest confirmed transactions for a "
-"given account using the ``accountHttp`` repository."
-msgstr "在此示例中，您将使用 ``accountHttp`` 存储库获取给定帐户的最新已确认交易。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:28
-msgid "|getting-confirmed-transactions-ts|"
-msgstr "|getting-confirmed-transactions-ts|"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:33
-msgid "|getting-confirmed-transactions-java|"
-msgstr "|getting-confirmed-transactions-java|"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:38
-msgid "|getting-confirmed-transactions-js|"
-msgstr "|getting-confirmed-transactions-js|"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:43
-msgid "|getting-confirmed-transactions-cli|"
-msgstr "|getting-confirmed-transactions-cli|"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:48
-msgid ""
-"By default, the SDK provides up to 10 transactions. The page size can be "
-"increased up to 100 transactions."
-msgstr "默认情况下，SDK最多提供10个交易。 页面大小最多可增加100个交易。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:50
-msgid ""
-"To `get more than 100 transactions "
-"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
-"   you will have to make further requests. For each additional call, add "
-"to the ``QueryParams`` the optional parameter ``transactionId`` with the "
-"latest transaction identifier known returned by the previous request."
-msgstr ""
-"想要 "
-"`获得超过100笔交易<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_，您必须提出进一步的要求。对于每个额外的调用，将可选参数``transactionId``添加到``QueryParams``，并使用前一个请求返回的最新交易标识符。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:56
-#, fuzzy
-msgid ""
-"You can also get filtered the transactions received (incoming) from the "
-"ones sent (outgoing) checking the complete `accountHttp reference "
-"<https://nemtech.github.io/nem2-sdk-typescript-"
-"javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_."
-msgstr ""
-"从发送的（传出）交易中中检查完整  `accountHttp definition <https://nemtech.github.io/nem2"
-"-sdk-typescript-"
-"javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_ "
-"来过滤收到的交易（传入）"
-
-#~ msgid "Text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "NEM2-SDK or CLI"
-#~ msgstr "NEM2-SDK 或 CLI"
-
-#~ msgid "An account that has received some transaction"
-#~ msgstr "已经接受一些交易的帐户"
-
-#~ msgid "What's next"
-#~ msgstr "接下来"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

@@ -10,7 +10,7 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 
 * **Fast language adaptation**: There is a library for Java, but you need it for C# for example. As both SDKs share the same design, you can re-write the library faster, adapting the syntax to your language. It also applies to examples, projects, applications...
 
-* **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
+* **Cohesion/shared knowledge across NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
 
 * **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
 
@@ -31,7 +31,7 @@ Architecture
 
 **Reactive**
 
-NEM2-SDK uses intensely ReactiveX Library.
+NEM2-SDK uses ReactiveX Library intensely.
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -68,7 +68,7 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 
 **Services**
 
-Common operations that require multiple :doc:`REST API <../api>` requests are handled by already provided services.
+Common operations that require multiple :doc:`REST API <../api>` requests are handled by services provided.
 
 .. |reactivex| raw:: html
 
@@ -128,9 +128,9 @@ Creating the project
 =====================
 
 1. Add a README with the instructions to install the SDK. You can find
-   :download:`here a template <../resources/templates/README_SDK.md>`.
+   :download:`a template here <../resources/templates/README_SDK.md>`.
 2. Add a `Code of
-   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.  Download :download:`here an example code of conduct <../resources/templates/CODE_OF_CONDUCT.md>`.
+   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.  Download :download:`a sample code of conduct here <../resources/templates/CODE_OF_CONDUCT.md>`.
 3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you. Find :download:`here a CONTRIBUTING.md template<../resources/templates/CONTRIBUTING.md>`.
 4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one suits you best.
 
@@ -145,7 +145,7 @@ API Wrapper
 
 `Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle the API generation. It supports multiple languages, and hopefully, yours is on the list.
 
-1. Generate the ``DTOs`` and place them under under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API swagger file definition can be found `here <https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_.
+1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API swagger file definition can be found `here <https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_.
 
 2. Drop the generated client classes and  implement them using the
 `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of
@@ -170,7 +170,7 @@ ensure the object is well constructed and a nicer API is published.
 Particular decisions to consider:
 
 -  ``uint64`` support: meanwhile `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64`` use that implementation instead.
--  API conversions: The API returns the data sometimes compressed, you
+-  API conversions: Sometimes, the data returned by API is compressed. You
    might need to convert those types for the user.
 -  `Namespace <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
 
@@ -214,7 +214,7 @@ KeyPair and Cryptographic functions
 
 .. note:: This section is incomplete.
 
-Implement the cryptographic purposes required to sign transactions.
+Implementing the cryptographic functions is required to sign transactions.
 
 Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/core/crypto>`_
 

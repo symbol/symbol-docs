@@ -1,24 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transaction.rst:3
 #: ../../source/concepts/transaction.rst:146
@@ -27,16 +30,16 @@ msgstr "交易"
 
 #: ../../source/concepts/transaction.rst:5
 msgid ""
-"A transaction generally represents a unit of work within a database "
-"system. In the case of blockchain, that is when an action signed by an "
-":doc:`account <account>` changes its state."
-msgstr "交易通常表示数据库系统中的工作单元。在区块链的定义中，表现为经由 :doc:`账户<account>` 签名来改变账户状态的操作。"
+"A transaction generally represents a unit of work within a database system. "
+"In the case of blockchain, that is when an action signed by an :doc:`account"
+" <account>` changes its state."
+msgstr "交易通常代表数据库系统中的工作单元。在区块链的定义中，表现为经由 :doc:`账户<account>` 签名来改变账户状态的操作。"
 
 #: ../../source/concepts/transaction.rst:7
 msgid ""
-"Transactions accepted by the network are stored permanently on "
-":doc:`blocks <block>`."
-msgstr "被网络接受的交易将被长久存储在 :doc:`块<block>`中。"
+"Transactions accepted by the network are stored permanently on :doc:`blocks "
+"<block>`."
+msgstr "被网络接受的交易将被长久存储在 :doc:`区块 <block>` 中。"
 
 #: ../../source/concepts/transaction.rst:11
 msgid "Transaction types"
@@ -49,7 +52,7 @@ msgid ""
 "ownership of accounts (including the use of :doc:`multisig <multisig-"
 "account>` rules), and more."
 msgstr ""
-"有很多不同类型的交易。例如，您可以在帐户之间转移 :doc:`马赛克<mosaic>` ，转移或配置帐户的所有权（包括使用 :doc:`多重签名"
+"交易的类型很多。例如，您可以在帐户之间转移 :doc:`马赛克<mosaic>` ，转移或配置帐户的所有权（包括使用 :doc:`多重签名"
 "<multisig-account>` 规则）等等。"
 
 #: ../../source/concepts/transaction.rst:1
@@ -57,80 +60,44 @@ msgid "Id"
 msgstr "Id"
 
 #: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 msgid "Type"
 msgstr "类型"
 
 #: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 msgid "Description"
-msgstr "描述"
+msgstr "说明"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Mosaic**"
 msgstr "**马赛克**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414D"
-msgstr "0x414D"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`"
-msgstr ":ref:`马赛克定义交易 <mosaic-definition-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Register a new :doc:`mosaic <mosaic>`."
 msgstr "注册一个新的 :doc:`马赛克<mosaic>`."
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x424D"
-msgstr "0x424D"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`"
-msgstr ":ref:`马赛克供应修改交易<mosaic-supply-change-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Change an existent mosaic supply."
-msgstr "改变已有马赛克的供应。"
+msgstr "改变现有马赛克的供应量。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Namespace**"
 msgstr "**命名空间**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414E"
-msgstr "0x414E"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Register Namespace Transaction <register-namespace-transaction>`"
-msgstr ":ref:`注册命名空间交易 <register-namespace-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Register a :doc:`namespace <mosaic>` to organize your assets."
 msgstr "注册一个 :doc:`命名空间 <mosaic>` 来组织你的资产。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x424E"
-msgstr "0x424E"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Address Alias Transaction <address-alias-transaction>`"
-msgstr ":ref:`地址别名事务 <address-alias-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Attach a namespace name to an account."
-msgstr "为账户附加别名。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x434E"
-msgstr "0x434E"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Mosaic Alias Transaction <mosaic-alias-transaction>`"
-msgstr ":ref:`马赛克别名事务 <mosaic-alias-transaction>`"
+msgstr "为账户附加命名空间。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Attach a namespace name to a mosaic."
-msgstr "为马赛克附加别名。"
+msgstr "为马赛克附加命名空间。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Transfer**"
@@ -141,144 +108,58 @@ msgid "0x4154"
 msgstr "0x4154"
 
 #: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Transfer Transaction <transfer-transaction>`"
-msgstr ":ref:`转让交易 <transfer-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
-msgstr "在两个账户之间发送马赛克或消息。"
+msgstr "在两个账户之间发送马赛克或信息。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Multisignature**"
 msgstr "**多重签名**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4155"
-msgstr "0x4155"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`Modify Multisig Account Transaction <modify-multisig-account-"
-"transaction>`"
-msgstr ":ref:`修改多重账户交易 <modify-multisig-account-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Create or modify a :doc:`multisig contract <multisig-account>`."
-msgstr "创建或修改 :doc:`多重合约<multisig-account>`."
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4141"
-msgstr "0x4141"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Aggregate Complete Transaction <aggregate-transaction>`"
-msgstr ":ref:`汇总完成交易<aggregate-transaction>`"
+msgstr "创建或修改 :doc:`多重签名合约<multisig-account>`."
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send transactions in batches to different accounts."
 msgstr "将交易批量发送到不同的帐户。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4241"
-msgstr "0x4241"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Aggregate Bonded Transaction <aggregate-transaction>`"
-msgstr ":ref:`汇总绑定交易 <aggregate-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Propose many transactions between different accounts."
 msgstr "汇总在不同帐户间的许多交易。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4148"
-msgstr "0x4148"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Hash Lock Transaction <hash-lock-transaction>`"
-msgstr ":ref:`哈希锁交易 <hash-lock-transaction>`"
-
-#: ../../source/concepts/transaction.rst:1
 msgid "A deposit before announcing aggregate bonded transactions."
-msgstr "发布聚合绑定交易之前的前提条件。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "--"
-msgstr "--"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Cosignature Transaction <cosignature-transaction>`"
-msgstr ":ref:`共同签名交易 <cosignature-transaction>`"
+msgstr "公布保税聚合交易之前的押金。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Cosign an aggregate bonded transaction."
-msgstr "共同签署汇总绑定交易"
+msgstr "共签保税聚合交易。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Account filters**"
-msgstr "**账户过滤**"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4150"
-msgstr "0x4150"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`Account Properties Address Transaction <account-properties-address-"
-"transaction>`"
-msgstr ":ref:`账户地址特性交易 <account-properties-address-transaction>`"
+msgstr "**账户过滤器**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Allow or block incoming transactions for a given a set of addresses."
-msgstr "允许或阻止给定一组地址的传入事务。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4250"
-msgstr "0x4250"
+msgstr "允许或阻止一组特定地址所转入的交易。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
-":ref:`Account Properties Mosaic Transaction <account-properties-mosaic-"
-"transaction>`"
-msgstr "帐户马赛克特性交易"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Allow or block incoming transactions containing a given set of mosaics."
-msgstr "允许或阻止包含给定马赛克集的传入事务。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4350"
-msgstr "0x4350"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`Account Properties Entity Type Transaction <account-properties-"
-"entity-type-transaction>`"
-msgstr ":ref:`帐户实体特性类型交易 <account-properties-entity-type-transaction>`"
+"Allow or block incoming transactions containing a given set of mosaics."
+msgstr "允许或阻止包含特定马赛克的转入交易。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Allow or block outgoing transactions by transaction type."
-msgstr "按事务类型允许或阻止传出事务。"
+msgstr "按交易类型允许或阻止转出交易。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Cross-chain swaps**"
 msgstr "**跨链交换**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4152"
-msgstr "0x4152"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Secret Lock Transaction <secret-lock-transaction>`"
-msgstr "秘密锁定交易"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Start a :doc:`token swap <cross-chain-swaps>` between different chains."
-msgstr "在不同的链之间开启 :doc:`令牌交换<cross-chain-swaps>`。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4252"
-msgstr "0x4252"
+msgid ""
+"Start a :doc:`token swap <cross-chain-swaps>` between different chains."
+msgstr "在不同的链之间开启 :doc:`代币交换<cross-chain-swaps>`。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ":ref:`Secret Proof Transaction <secret-proof-transaction>`"
@@ -286,7 +167,7 @@ msgstr ":ref:`秘密证明交易 <secret-proof-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Conclude a token swap between different chains."
-msgstr "结束跨链的令牌交换。"
+msgstr "结束跨链的代币 交换。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "**Remote harvesting**"
@@ -298,13 +179,13 @@ msgstr "0x414C"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ":ref:`Account Link Transaction <account-link-transaction>`"
-msgstr ":ref:`账户关联交易 <account-link-transaction>`"
+msgstr ":ref:`账户连系交易 <account-link-transaction>`"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
 "Delegates the account importance to a proxy account to enable "
 ":doc:`delegated harvesting <harvesting>`."
-msgstr "将帐户权限委托给代理帐户以启用 :doc:`委托收获 <harvesting>`。"
+msgstr "将帐户权限委托给代理帐户以启动 :doc:`委托收获 <harvesting>`。"
 
 #: ../../source/concepts/transaction.rst:48
 msgid "Defining a transaction"
@@ -312,22 +193,21 @@ msgstr "定义一个交易。"
 
 #: ../../source/concepts/transaction.rst:50
 msgid ""
-"Every transaction shares some common properties. Each transaction extends"
-" from the :ref:`transaction schema definition <transaction>`, adding the "
+"Every transaction shares some common properties. Each transaction extends "
+"from the :ref:`transaction schema definition <transaction>`, adding the "
 "type's particular properties."
-msgstr "每笔交易之间都有一些共同属性，它们都是经过:ref:`交易模式定义 <transaction>`拓展而来，添加了不同类型的特定属性。"
+msgstr "每笔交易之间都有一些共同属性，它们都是经过 :ref:`交易模式定义 <transaction>` 拓展而来，添加了不同类型的特定属性。"
 
 #: ../../source/concepts/transaction.rst:52
-#, fuzzy
 msgid ""
 "Transactions are defined in a :ref:`serialized form <serialization>`. We "
 "recommend `using the NEM2-SDK to define "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
 " transactions."
 msgstr ""
-"交易以 :ref:`序列化形式 <serialization>`定义， 我们建议 "
-"`使用NEM2-SDK来定义<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
-"  交易。"
+"交易以 :ref:`序列化形式 <serialization>` 定义， 我们建议 `使用NEM2-SDK "
+"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
+" 来定义交易。"
 
 #: ../../source/concepts/transaction.rst:57
 msgid "Fees"
@@ -335,18 +215,18 @@ msgstr "费用"
 
 #: ../../source/concepts/transaction.rst:59
 msgid ""
-"Transactions have an associated cost. This cost is necessary to provide "
-"an incentive for the :doc:`harvesters <harvesting>` who secure the "
-"network and run the infrastructure."
-msgstr "交易会产生相关成本。这个成本是必要的，以激励保护网络并运行基础设施的 :doc:`收获者<harvest>`。"
+"Transactions have an associated cost. This cost is necessary to provide an "
+"incentive for the :doc:`harvesters <harvesting>` who secure the network and "
+"run the infrastructure."
+msgstr "交易会产生相关成本。这个成本是必要的，以激励保护网络并运行基础设施的 :doc:`收获者 <harvesting>`。"
 
 #: ../../source/concepts/transaction.rst:61
 msgid ""
-"The fee associated with a transaction primarily depends on the "
-"transaction’s size. The effective fee is the product of the size of the "
-"transaction, and a fee multiplier set by the harvester. The node owner "
-"can configure the latter value to all positive values, including zero."
-msgstr "交易相关费用主要取决于交易的规模。有效费用是交易规模和收割机设定的费用乘数的乘积。节点所有者可以将后一个值配置为所有正值，包括零。"
+"The fee associated with a transaction primarily depends on the transaction’s"
+" size. The effective fee is the product of the size of the transaction, and "
+"a fee multiplier set by the harvester. The node owner can configure the "
+"latter value to all positive values, including zero."
+msgstr "交易相关费用主要取决于交易的规模。有效费用是交易规模和收获者设定的费用乘数的乘积。节点所有者可以将后一个值配置为任何正值，包括零。"
 
 #: ../../source/concepts/transaction.rst:63
 msgid "effective_fee = transaction::size * block::fee_multiplier"
@@ -354,55 +234,53 @@ msgstr "effective_fee = transaction::size * block::fee_multiplier"
 
 #: ../../source/concepts/transaction.rst:65
 msgid ""
-"A sender of a transaction must specify during the transaction definition "
-"a ``max_fee``, meaning the maximum fee the account allows to spend for "
-"this transaction."
-msgstr "交易的发起人必须在交易定义期间指定 ``max_fee``，这意味着帐户接受的，为此事务付出的最大费用。"
+"A sender of a transaction must specify during the transaction definition a "
+"``max_fee``, meaning the maximum fee the account allows to spend for this "
+"transaction."
+msgstr "交易的发起人必须在准备交易时指定 ``max_fee``，这是帐户愿意接受的最大费用。"
 
 #: ../../source/concepts/transaction.rst:67
 msgid ""
 "If the ``effective_fee`` is smaller or equal to the ``max_fee``, the "
 "harvester can opt to include the transaction in the block. The "
 "``fee_multiplier`` is stored in the :ref:`block header <block-header>`, "
-"permitting to resolve which was the effective fee paid for every "
-"transaction included."
+"permitting to resolve which was the effective fee paid for every transaction"
+" included."
 msgstr ""
-"如果 ``effective_fee`` 小于或等于 "
-"``max_fee``，则收割者可以选择在块中保存该事务。``fee_multiplier`` 存储在 :ref:`块的头部 <block-"
-"header>`中，为每笔交易被保存所要花费的有效费用提供参考。"
+"如果 ``effective_fee`` 小于或等于 ``max_fee``，则收割者可以选择在区块中收录该交易。``fee_multiplier`` "
+"存储在 :ref:`区块的首部 <block-header>` 中，为每笔交易被收录区块内所要花费的有效费用提供参考。"
 
 #: ../../source/concepts/transaction.rst:69
 msgid "The harvesting nodes can decide their transaction inclusion strategy:"
-msgstr "收获节点可以决定其交易保存策略："
+msgstr "收获节点可以决定其交易收录策略："
 
 #: ../../source/concepts/transaction.rst:71
 msgid ""
-"**Prefer-oldest**: Preferred for networks with high transaction "
-"throughput requirements. Include first the oldest transactions."
-msgstr "**首选最旧**：适用于具有高事务吞吐量要求的网络。优先保存最早的交易。"
+"**Prefer-oldest**: Preferred for networks with high transaction throughput "
+"requirements. Include first the oldest transactions."
+msgstr "**先入为主**：适用于具有高交易吞吐量要求的网络。优先收录最早的交易。"
 
 #: ../../source/concepts/transaction.rst:72
 msgid ""
 "**Minimize-fees**: Philanthropic nodes. Include first transactions that "
 "other nodes do not want to include."
-msgstr "**最小化费用**：慈善节点。保存其他节点不想保存的第一个事务。"
+msgstr "**最少的费用**：慈善节点。收录其他节点不想收录的交易。"
 
 #: ../../source/concepts/transaction.rst:73
 msgid ""
 "**Maximize-fees**: Most common in public networks. Include first "
 "transactions with higher fees."
-msgstr "**最大化费用**：常见于公共网络。保存较高费用的首次交易。"
+msgstr "**最多的费用**：常见于公共网络。收录较高费用的交易。"
 
 #: ../../source/concepts/transaction.rst:75
-#, fuzzy
 msgid ""
-"By default, the fee is paid in ``cat.currency``, the underlying currency "
-"of the NEM network. Private chains can edit the configuration of the "
-"network to eliminate fees, or use another :doc:`mosaic <mosaic>` that "
-"better suits their needs."
+"By default, the fee is paid in ``cat.currency``, the underlying currency of "
+"the NEM network. Private chains can edit the configuration of the network to"
+" eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits "
+"their needs."
 msgstr ""
-"默认情况下，费用是通过 ``XEM`` 进行支付，XEM是NEM网络的基础货币。私人链可以修改网络配置以取消费用，或者使用 "
-":doc:`马赛克<mosaic>` 来满足他们的需求。"
+"在预设的情况下，费用是通过NEM网络的基础货币  ``cat.currency`` 进行支付。私链可以修改网络配置以取消费用，或者使用其他合适的 "
+":doc:`马赛克<mosaic>` 。"
 
 #: ../../source/concepts/transaction.rst:81
 msgid "Signing a transaction"
@@ -413,31 +291,31 @@ msgid ""
 "Accounts must sign transactions before announcing them to the network. "
 "`Signing a transaction "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
-" expresses the account's agreement to change the network state as "
-"defined."
+" expresses the account's agreement to change the network state as defined."
 msgstr ""
-"帐户必须在将交易发布到网络之前对其进行签名。`签署交易<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
+"帐户必须在将交易公布到网络之前对其进行签名。`签署交易 "
+"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
 " 表示帐户同意按定义更改网络状态。"
 
 #: ../../source/concepts/transaction.rst:85
 msgid ""
-"For example, a transfer transaction describes who is the recipient and "
-"the quantity of mosaics to transfer. In this case, signing the "
-"transaction means to accept moving those mosaics from one account’s "
-"balance to another."
-msgstr "例如，转让交易描述了谁是收件人以及要转让的马赛克数量。在这种情况下，签署交易意味着接受将这些马赛克从一个帐户的余额中移动到另一个帐户的余额中去。"
+"For example, a transfer transaction describes who is the recipient and the "
+"quantity of mosaics to transfer. In this case, signing the transaction means"
+" to accept moving those mosaics from one account’s balance to another."
+msgstr ""
+"例如，转让交易描述了谁是收件人以及要转让的马赛克数量。在这种情况下，签署交易意味着接受将这些马赛克从一个帐户的余额中移动到另一个帐户的余额中去。"
 
 #: ../../source/concepts/transaction.rst:87
 msgid ""
 "The account generates the signature `signing the first 100 bytes of the "
 "defined transaction <https://github.com/nemtech/nem2-library-"
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" with its private key. Then, the signature is appended to the "
-"transaction's body, resulting in a signed transaction."
+" with its private key. Then, the signature is appended to the transaction's "
+"body, resulting in a signed transaction."
 msgstr ""
-"该帐户使用私钥生成签名 `签署定义交易的前100个字节<https://github.com/nemtech/nem2-library-"
+"该帐户使用私钥 `签署交易的前100个字节 <https://github.com/nemtech/nem2-library-"
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" 。 然后，签名将附加到交易的正文，从而产生一个已签名的交易。"
+" 而生成签名。 然后，签名将附加到交易的正文，从而产生一个已签名的交易。"
 
 #: ../../source/concepts/transaction.rst:89
 msgid ""
@@ -446,17 +324,17 @@ msgid ""
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
 " is applied to the serialized transaction."
 msgstr ""
-"一旦 `sha3-256算法<https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_被应用于序列化交易,该交易的哈希值就产生了"
-" 。"
+"一旦 `sha3-256演算法 <https://github.com/nemtech/nem2-library-"
+"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
+" 被应用于序列化的交易,该交易的哈希值就产生了 。"
 
 #: ../../source/concepts/transaction.rst:95
 msgid "Announcing a transaction"
-msgstr "发布一个交易"
+msgstr "公布一个交易"
 
 #: ../../source/concepts/transaction.rst:97
 msgid "Signed transactions are ready to be announced to the network."
-msgstr "已签名的交易已准备好向网络进行发布。"
+msgstr "已签名的交易已准备好向网络公布。"
 
 #: ../../source/concepts/transaction.rst:103
 msgid "Transaction cycle"
@@ -466,47 +344,47 @@ msgstr "交易周期"
 msgid ""
 "After `announcing a transaction "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_,"
-" the REST API will always return an OK response immediately. At this "
-"point, it is still unknown whether the transaction is valid."
+" the REST API will always return an OK response immediately. At this point, "
+"it is still unknown whether the transaction is valid."
 msgstr ""
-"在 `发布交易 "
-"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_后，REST"
-" API通常立刻会返回 OK 相应。此时,但目前还无从知晓交易的有效性。"
+"在  `公布交易 "
+"<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_"
+" 后，REST API通常立刻会返回 OK 相应。但这还无从知晓交易的有效性。"
 
 #: ../../source/concepts/transaction.rst:107
 msgid ""
-"The first stage of validation happens in the API nodes. If the "
-"transaction presents some error, the WebSocket throws a notification "
-"through the status channel. In the positive case, the transaction reaches"
-" the P2P network with an **unconfirmed** status.  Never rely on a "
-"transaction which has an unconfirmed state. It is not clear if it will "
-"get included in a block, as it should pass a second validation."
+"The first stage of validation happens in the API nodes. If the transaction "
+"presents some error, the WebSocket throws a notification through the status "
+"channel. In the positive case, the transaction reaches the P2P network with "
+"an **unconfirmed** status.  Never rely on a transaction which has an "
+"unconfirmed state. It is not clear if it will get included in a block, as it"
+" should pass a second validation."
 msgstr ""
-"验证的第一阶段发生在API节点中。如果事务出现某些错误，WebSocket将通过状态频道发出通知。在好的情况下，事务以 **未确认的** "
-"状态到达P2P网络。请永远不要将未经证实状态的交易作为依据。目前我们还清楚它是否会保存在一个块中，因为它应该通过第二次验证。"
+"验证的第一阶段发生在API节点中。如果交易出现某些错误，WebSocket将通过状态频道发出通知。交易会以 **未确认** "
+"的状态到达P2P网络。请不要将未确认的交易作为依据。至此，还不能确定该交易是否会被收录到区块中，因为它需要通过第二次验证。"
 
 #: ../../source/concepts/transaction.rst:109
 msgid ""
-"The second validation is done before the transaction is added in a "
-"harvested block. If valid, the harvester stores the transaction in a "
-"block, and it reaches the **confirmed** status."
-msgstr "第二次验证在将交易添加到收获块中之前完成。如果有效，则收获者把交易存储在块中，并且该交易的状态会变成 **确认**。"
+"The second validation is done before the transaction is added in a harvested"
+" block. If valid, the harvester stores the transaction in a block, and it "
+"reaches the **confirmed** status."
+msgstr "第二次验证将在交易被收录到区块中之前完成。如果交易有效，则收获者会把交易收录在区块中，该交易算是被 **确认** 了。"
 
 #: ../../source/concepts/transaction.rst:111
 msgid ""
 "Continuing the previous example, the transaction gets processed and the "
-"amount stated gets transferred from the signer's account to the "
-"recipient's account. Additionally, the transaction fee is deducted from "
-"the signer's account."
+"amount stated gets transferred from the signer's account to the recipient's "
+"account. Additionally, the transaction fee is deducted from the signer's "
+"account."
 msgstr "继续前面的例子，交易得到处理且所述金额从签名者的帐户转移到收件人的帐户。除此之外，交易费会用从签名者的账户中扣除。"
 
 #: ../../source/concepts/transaction.rst:113
 msgid ""
-"The transaction has **zero confirmations** at this point. When another "
-"block is added to the blockchain, the transaction has one confirmation. "
-"The next block added to the chain will give it two confirmations and so "
-"on."
-msgstr "此时交易有 **零确认**。 当另一个块添加到区块链时，该事务有一个确认。 添加到链中的下一个块将给出两个确认，依此类推。"
+"The transaction has **zero confirmations** at this point. When another block"
+" is added to the blockchain, the transaction has one confirmation. The next "
+"block added to the chain will give it two confirmations and so on."
+msgstr ""
+"此时交易有 **零确认**。 当另一个区块添加到区块链时，该交易有一个确认。 当再有一个区块被添加到区块链中，该交易便有两个确认。依此类推。"
 
 #: ../../source/concepts/transaction.rst:117
 msgid "Rollbacks"
@@ -514,29 +392,29 @@ msgstr "回滚"
 
 #: ../../source/concepts/transaction.rst:119
 msgid ""
-"Blockchains are designed in a way that under certain circumstances recent"
-" blocks need to be rolled back. These are essential to resolve forks of "
-"the blockchain."
-msgstr "区块链的设计为在某些情况下需要回滚到最近的区块的模式。这对于解决区块链的分叉至关重要。"
+"Blockchains are designed in a way that under certain circumstances recent "
+"blocks need to be rolled back. These are essential to resolve forks of the "
+"blockchain."
+msgstr "区块链被设计可在在某些情况下需要回滚到最近的区块。这对于解决区块链的分叉至关重要。"
 
 #: ../../source/concepts/transaction.rst:121
 msgid ""
 "The \"rewrite limit\" is the maximum number of blocks that can be rolled "
 "back. Hence, forks can only be resolved up to a certain depth too."
-msgstr " \"rewrite limit（重写限制）\" 指允许回滚的最大块数。因此，分叉也只能被解析到一定的深度。"
+msgstr " \"rewrite limit（重写限制）\" 指允许回滚的最大区块数量。因此，分叉也只能被回滚到一定的深度。"
 
 #: ../../source/concepts/transaction.rst:123
 msgid ""
-"NEM has a rewrite limit of ``360`` blocks. Once a transaction has more "
-"than 360 confirmations, it cannot be reversed."
-msgstr "NEM的重写限制为 ``360`` 块。 一旦交易超过360次确认，就再次无法撤消。"
+"NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than "
+"360 confirmations, it cannot be reversed."
+msgstr "NEM的重写限制为 ``360`` 区块。 一旦交易超过360次确认，就无法回滚。"
 
 #: ../../source/concepts/transaction.rst:125
 msgid ""
-"From experience, forks that are deeper than 20 blocks do not happen, "
-"unless there is a severe problem with the blockchain due to a bug in the "
-"code or an attack."
-msgstr "根据以往经验，除非由于代码中的错误或攻击导致区块链出现严重问题，否则一般不会发生超过20个区块的分叉。"
+"From experience, forks that are deeper than 20 blocks do not happen, unless "
+"there is a severe problem with the blockchain due to a bug in the code or an"
+" attack."
+msgstr "根据以往经验，除非代码有误或遭到攻击导致区块链出现严重问题，否则一般不会发生超过20个区块的分叉。"
 
 #: ../../source/concepts/transaction.rst:129
 msgid "Guides"
@@ -544,68 +422,27 @@ msgstr "指南"
 
 #: ../../source/concepts/transaction.rst:141
 msgid "Schemas"
-msgstr "概要"
+msgstr "模式"
 
 #: ../../source/concepts/transaction.rst:148
 #: ../../source/concepts/transaction.rst:166
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
-#: ../../source/concepts/transaction.rst:150
-#: ../../source/concepts/transaction.rst:168
-msgid ":ref:`SizePrefixedEntity<size-prefixed-entity>`"
-msgstr ":ref:`SizePrefixedEntity<size-prefixed-entity>`"
-
-#: ../../source/concepts/transaction.rst:151
-msgid ":ref:`VerifiableEntity<verifiable-entity>`"
-msgstr ":ref:`VerifiableEntity<verifiable-entity>`"
-
-#: ../../source/concepts/transaction.rst:152
-#: ../../source/concepts/transaction.rst:169
-msgid ":ref:`EntityBody<entity-body>`"
-msgstr ":ref:`EntityBody<entity-body>`"
-
+#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 msgid "Property"
 msgstr "属性"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "max_fee"
-msgstr "max_fee"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "uint64"
-msgstr "uint64"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "The maximum fee allowed to spend for the transaction."
 msgstr "允许为交易花费的最大金额。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "deadline"
-msgstr "deadline"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "The maximum amount of time to include the transaction in the blockchain."
-msgstr "交易被保存在区块链中所需最长时间。"
-
-#: ../../source/concepts/transaction.rst:164
-msgid "EmbeddedTransaction"
-msgstr "EmbeddedTransaction"
-
-#: ../../source/concepts/transaction.rst:174
-msgid "SizePrefixedEntity"
-msgstr "SizePrefixedEntity"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "size"
-msgstr "size"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "unit32"
-msgstr "unit32"
+msgid ""
+"The maximum amount of time to include the transaction in the blockchain."
+msgstr "交易可被收录在区块链中的截止日期。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "The size of the transaction."
 msgstr "交易的规模。"
-

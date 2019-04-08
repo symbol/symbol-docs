@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,39 +20,3 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/contribute/community.rst:3
-msgid "Community"
-msgstr "社区"
-
-#: ../../source/contribute/community.rst:5
-msgid ""
-"After reading the docs, you probably have some unanswered questions. Most of"
-" the documentation and guides that the NEM Developer Center has today have "
-"been added because our community saw the need."
-msgstr ""
-"阅读完文档后，您可能会产生到一些悬而未决的问题。NEM开发人员中心现在提供的大多数文档和指南都已添加到了社区，因为我们的社区认为这是有必要。"
-
-#: ../../source/contribute/community.rst:7
-msgid ""
-"Discover how the open source |community| works, and get started "
-"participating:"
-msgstr "了解 开源 | 社区 | 工作，并开始参与："
-
-#: ../../source/contribute/community.rst:9
-msgid "Ask in |stack-overflow| development related questions."
-msgstr "询问 | stack-overflow | 发展相关问题。"
-
-#: ../../source/contribute/community.rst:11
-msgid "Reach our community joining the official |slack|."
-msgstr "来我们社区加入官方| slack |。"
-
-#: ../../source/contribute/community.rst:13
-msgid ""
-"Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` "
-"to propose changes."
-msgstr "查看 :doc:`贡献指南<../ guidelines / suggesting-changes>` 以提出更改。"
-
-#: ../../source/contribute/community.rst:15
-msgid "Follow the development updates on |twitter|."
-msgstr "参考 | twitter | 上的开发更新。"

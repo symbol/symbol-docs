@@ -165,7 +165,7 @@ Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`tran
 
 Although the transaction is defined, it has not been announced to the network yet.
 
-2.  Sign the transaction the ticket vendor account first, so that the network can verify the authenticity of the transaction.
+2.  Sign the transaction of the ticket vendor account first, so that the network can verify the authenticity of the transaction.
 
 .. example-code::
 

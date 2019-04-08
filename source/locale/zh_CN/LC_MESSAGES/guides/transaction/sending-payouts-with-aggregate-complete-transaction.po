@@ -1,136 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:10
-msgid "Sending payouts with aggregate complete transaction"
-msgstr "使用聚合完整交易发送付款"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:12
-msgid ""
-"Send transactions to different accounts atomically, using an "
-":ref:`aggregate complete transaction <aggregate-transaction>`."
-msgstr "通过:ref:`聚合完成事务 <aggregate-transaction>`，以原子方式将事务发送到不同的帐户。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:16
-msgid "Background"
-msgstr "背景"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:18
-msgid "Dan wants to send mosaics to Alice and Bob."
-msgstr "Dan 想给Alice和Bob发送mosaics。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:24
-msgid "Sending transactions to different recipients atomically"
-msgstr "以原子方式将事务发送给不同的收件人"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:26
-msgid ""
-"He chooses to send an aggregate complete transaction, so both will "
-"receive the funds at the same time."
-msgstr "他选择发送一个聚合完成交易，因此他们两个会同时收到资金。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:30
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:32
-msgid ""
-"Finish :doc:`sending a transfer transaction guide <sending-a-transfer-"
-"transaction>`"
-msgstr "完成:doc:`入门学习指南<sending-a-transfer-transaction>`"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:33
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:37
-msgid "Let's get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:39
-#, fuzzy
-msgid ""
-"Dan creates two :ref:`transfer transaction <transfer-transaction>` with "
-"two different recipients, wrapping them in an :ref:`aggregate transaction"
-" <aggregate-transaction>`."
-msgstr ""
-"Dan创建了两个:ref:`转账交易 <transfer-transaction>`和两个不同的收件人，并将它们包装在:ref:`聚合交易 "
-"<aggregate-transaction>`中。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:41
-#, fuzzy
-msgid ""
-"As one private key can sign all the transactions in the aggregate, define"
-" the aggregate as *complete*. That means that there is no need to lock "
-"funds to send the transaction. If valid, it will be accepted by the "
-"network."
-msgstr "这意味着没有必要锁定资金来发送交易。 如果有效，它将被网络接受。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:45
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:59
-msgid "|sending-a-payouts-with-aggregate-complete-transaction-ts|"
-msgstr "|sending-a-payouts-with-aggregate-complete-transaction-ts|"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:50
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:64
-msgid "|sending-a-payouts-with-aggregate-complete-transaction-js|"
-msgstr "|sending-a-payouts-with-aggregate-complete-transaction-js|"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:55
-msgid "Sign and announce the transaction."
-msgstr "签署并宣布交易。"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:71
-msgid "What's next?"
-msgstr "下一步是什么？"
-
-#: ../../source/guides/transaction/sending-payouts-with-aggregate-complete-transaction.rst:73
-#, fuzzy
-msgid ""
-"Send an aggregate bonded transaction following :doc:`creating an escrow "
-"with aggregate bonded transaction <creating-an-escrow-with-aggregate-"
-"bonded-transaction>` guide."
-msgstr ""
-"通过以下方式发送聚合绑定事务:doc:`使用聚合绑定事务创建一个第三方托管指南<creation-an-escrow-with-"
-"aggregate-bonded-transaction>`。"
-
-#~ msgid "NEM2-SDK"
-#~ msgstr "NEM2-SDK"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "An account with XEM"
-#~ msgstr "拥有XEM的账户"
-
-#~ msgid "|sending-a-payouts-with-aggregate-complete-transaction-java|"
-#~ msgstr "|sending-a-payouts-with-aggregate-complete-transaction-java|"
-
-#~ msgid ""
-#~ "Do you know the difference between "
-#~ "aggregate complete and aggregate bonded? "
-#~ "In this case, one private key can"
-#~ " sign all the transactions in the "
-#~ "aggregate, so it is *aggregate "
-#~ "complete*."
-#~ msgstr "你知道聚合完成和聚合绑定之间的区别吗？ 在这种情况下，一个私钥可以对聚合中的所有事务进行签名，因此它是 *聚合完成*。"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"

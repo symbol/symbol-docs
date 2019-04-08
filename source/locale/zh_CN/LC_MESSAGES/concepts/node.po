@@ -5,15 +5,17 @@
 # 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,26 +34,21 @@ msgid ""
 "transactions are conducted, searched, and immutably logged to the blockchain"
 " ledger."
 msgstr ""
-"NEM区块链平台是由节点网络构建的。这些节点提供了一个功能强大，稳定且安全的平台，这个平台可以运行，搜索Smart "
-"Assets（智能资产）交易，并把这些交易一成不变地记录到区块链总账中。"
+"NEM区块链平台是由节点网络构建成的。这些节点提供了一个功能强大，稳定且安全的平台。这个平台可以运行、搜索、并把智能资产交易以不变式记录到区块链总账中。"
 
 #: ../../source/concepts/node.rst:11
 msgid "Catapult’s Performance Advantage: A Four-Layered Architecture"
-msgstr "Catapult（投石机）的性能优势：四层架构"
+msgstr "Catapult（投石车）的性能优势：四层架构"
 
 #: ../../source/concepts/node.rst:13
 msgid ""
 "The four-layered architecture allows developers to update any of these tiers"
 " without disrupting the others, which improves security."
-msgstr "这种四层体系结构允许开发人员在不中断其他层的情况下更新任意层，从而提高了安全性。"
+msgstr "这种四层体系结构允许开发人员在不中断其他层的情况下更新任何一层，从而提高了安全性。"
 
 #: ../../source/concepts/node.rst:17
 msgid "P2P Component"
 msgstr "P2P组件"
-
-#: ../../source/concepts/node.rst:19
-msgid "**Repository:** |catapult-server|"
-msgstr "**资源库:** |catapult-server（投石机服务器）|"
 
 #: ../../source/concepts/node.rst:21
 msgid ""
@@ -61,23 +58,23 @@ msgid ""
 ":doc:`blocks<block>`, run the consensus algorithm, create new blocks, and "
 "propagate the changes through the network."
 msgstr ""
-"P2P节点构成了区块链的主干，它们让网络更健壮，因为其他人无法通过消除单个实体来使整个网络停止工作。节点的作用是 :ref:`验证交易"
-"<transaction-validation>` 和 :doc:`blocks（块）<block>`，运行一致算法，创建新块，并通过网络传播更改。"
+"P2P节点构成了区块链的主干，它们让网络更扎实，因为无法通过消除单个实体而使整个网络停止工作。节点的作用是 :ref:`验证交易"
+"<transaction-validation>` 和 :doc:`区块<block>`，运行共识演算法，创建新块，并通过网络传播更改。"
 
 #: ../../source/concepts/node.rst:23
 msgid ""
 "The API push new transactions to the P2P network, where they are "
 ":doc:`included in a block <harvesting>` or discarded. After the block is "
 "processed:"
-msgstr "API把新交易推送到P2P网络，新交易通过网络 :doc:`被保存在块里<harvesting>` 或被丢弃。块被处理完毕后："
+msgstr "API把新交易推送到P2P网络，通过网络 :doc:`被收录在区块里<harvesting>` 或被丢弃。区块被处理完毕后："
 
 #: ../../source/concepts/node.rst:25
 msgid "The binary of the block is saved on disk as a flat file."
-msgstr "块的二进制文件作为Flat File（平面文件）保存在磁盘上。"
+msgstr "区块的二进制文件以Flat File（平面文件）方式保存在磁盘上。"
 
 #: ../../source/concepts/node.rst:26
 msgid "The updated chain state is saved in memory or RocksDB (configurable)."
-msgstr "已更新链状态保存在内存或RocksDB（可配置）中。"
+msgstr "已更新的链状态保存在内存或RocksDB（可配置）中。"
 
 #: ../../source/concepts/node.rst:29
 msgid "Node reputation"
@@ -93,7 +90,7 @@ msgstr "公共网络允许所有人运行节点。但某些节点可能共享无
 msgid ""
 "To reduce communication attempts, the nodes keep track of the results of "
 "preceding communications."
-msgstr "为了减少通信尝试，节点会跟踪之前通信的结果。"
+msgstr "为了减少通信企图，节点会跟踪之前通信的结果。"
 
 #: ../../source/concepts/node.rst:35
 msgid ""
@@ -101,20 +98,21 @@ msgid ""
 "towards the remote. Otherwise, the node increments the failure counter. "
 "Likewise, the node updates the trust counters accordingly after processing "
 "the data requested."
-msgstr "当节点连接到远程节点时，第一个节点增加对远程节点的信任。否则，节点更新失败计数器。同样，节点在处理所请求的数据之后相应地更新信任计数器。"
+msgstr ""
+"当一个节点连接到远程节点时，它首先会对该远程节点增加信任。反之，会减低对其的信任计数器减分。同样，节点在处理所请求的数据之后相应地更新信任计数器。"
 
 #: ../../source/concepts/node.rst:37
 msgid ""
 "From these interactions, the node assigns a weight between 500 and 10000 to "
 "every peer reached."
-msgstr "在这些交互中，节点为每个到达的节点分配500到10000之间的权重。"
+msgstr "在这些交互中，节点为每个联系的节点分配500到10000之间的权重。"
 
 #: ../../source/concepts/node.rst:39
 msgid ""
 "The probability of selecting a remote node depends linearly on its weight. "
 "Every four rounds of node selections, the criteria changes to prevent "
 "|sybil|. The node selects a peer with high importance instead."
-msgstr "选择远程节点的概率线性取决于该远程节点权重。 每四轮节点选择后，会变动标准来预防 |sybil| 。 该节点改为选择具有高权重的节点。"
+msgstr "选择远程节点的概率线性取决于该远程节点权重。 每四轮节点选择后，会变动标准来预防 |sybil|。 该节点选择具有高权重的节点。"
 
 #: ../../source/concepts/node.rst:43
 msgid "RocksDB"
@@ -127,7 +125,7 @@ msgid ""
 "public keys to addresses. Another one, the account state entries as the "
 "value to corresponding address keys."
 msgstr ""
-"|rocksdb| 存储了链的状态。缓存的数据结构被序列化并作为值存储到相应的密钥中。例如，列把公钥映射到地址；把帐户状态项作为对应地址密钥值。"
+"|rocksdb| 存储链的状态。缓存的数据结构被序列化并作为值存储到相应的密钥中。例如，列把公钥映射到地址；把帐户状态项作为对应地址密钥值。"
 
 #: ../../source/concepts/node.rst:47
 msgid ""
@@ -146,23 +144,20 @@ msgstr "在拥有大量账户的网络中保存状态信息是很方便的。"
 msgid "API Component"
 msgstr "API组件"
 
-#: ../../source/concepts/node.rst:55 ../../source/concepts/node.rst:86
-msgid "**Repository:** |catapult-rest|"
-msgstr "**资源库:** |catapult-rest|"
-
 #: ../../source/concepts/node.rst:57
 msgid ""
 "The primary responsibility of the API is to store the data in a readable "
 "form. Each API instance maintains a MongoDB, and optionally a RocksDB to "
 "save the state."
-msgstr "API的主要职责是以可读的形式存储数据。每个API实例都对应维护了一个MongoDB，且可选择使用RocksDB来保存状态。"
+msgstr "API的主要职责是以可读的形式存储数据。每个API实例都维持一个MongoDB，且可选择使用RocksDB来保存状态。"
 
 #: ../../source/concepts/node.rst:59
 msgid ""
 "The layer :ref:`validates the transactions <transaction-validation>` "
 "received from the REST component. Additionally, the API throws the errors "
 "back via ZMQ in binary."
-msgstr "这层`验证<transaction-validation>`从REST组件接收到交易，此外，API通过ZMQ以二进制方式返回错误。"
+msgstr ""
+"这一层 :ref:`验证<transaction-validation>` 从REST组件接收到交易。此外，API通过ZMQ以二进制方式显示错误。"
 
 #: ../../source/concepts/node.rst:61
 msgid ""
@@ -170,43 +165,35 @@ msgid ""
 ":doc:`aggregated bonded transactions <aggregate-transaction>`, that are only"
 " pushed to P2P nodes once they are complete."
 msgstr ""
-"该组件还负责收集 :doc:`汇总绑定事务 <aggregate-transaction>`，的共同签名，这些事务只有在完成后才会被推送到P2P节点。"
+"该组件还负责收集 :doc:`保税聚合交易 <aggregate-transaction>`，的共同签名。这些交易只有在完成后才会被推送到P2P节点。"
 
 #: ../../source/concepts/node.rst:63
 msgid ""
 "An API component can connect to multiple P2P nodes, but at least must "
 "connect to one."
-msgstr "API组件在可以连接到多个P2P节点的同时至少连接一个节点。"
-
-#: ../../source/concepts/node.rst:66
-msgid "MongoDB"
-msgstr "MongoDB"
+msgstr "API组件在可以连接到多个P2P节点，但至少需连接到一个节点。"
 
 #: ../../source/concepts/node.rst:68
 msgid ""
 "|mongodb| stores blocks, transactions and chain state for high query "
 "performance."
-msgstr "|mongodb| 存储块，事务和链状态以实现高查询性能。"
+msgstr "|mongodb| 存储区块，交易和链状态以实现高效查询性能。"
 
 #: ../../source/concepts/node.rst:70
 msgid "The API updates the MongoDB when:"
-msgstr "API在以下情况更新MongoDB"
+msgstr "API在以下情况更新MongoDB："
 
 #: ../../source/concepts/node.rst:72
 msgid "A new block / a bunch of blocks finished processing."
-msgstr "一个新块/一堆块完成处理后。"
+msgstr "一个新区块/一堆区块被完成处理后。"
 
 #: ../../source/concepts/node.rst:73
 msgid "New unconfirmed transactions completed processing."
-msgstr "新的未经证实的交易完成处理后。"
+msgstr "新的未确认交易被完成处理后。"
 
 #: ../../source/concepts/node.rst:75
 msgid "MongoDB should not be accessed externally."
-msgstr "不应在外部访问MongoDB。"
-
-#: ../../source/concepts/node.rst:78
-msgid "ZMQ"
-msgstr "ZMQ"
+msgstr "MongoDB不应该被外部接驳。"
 
 #: ../../source/concepts/node.rst:80
 msgid ""
@@ -215,7 +202,7 @@ msgid ""
 "endpoint, where the Catapult REST component listens. It is an alternative to"
 " REST WebSockets, aimed to be used when performance is critical."
 msgstr ""
-"|zmq| 是一个异步消息库，支持实时订阅。它将通知从API服务器传输到Catapult REST组件侦听的ZMQ端点。它是REST "
+"|zmq| 是一个支持实时订阅的异步信息库。它把通知从API服务器传输到Catapult REST组件侦听的ZMQ端点。它是REST "
 "WebSockets的替代方案，旨在性能至关重要时使用。"
 
 #: ../../source/concepts/node.rst:84
@@ -230,22 +217,18 @@ msgid ""
 " <websockets>`."
 msgstr ""
 "REST组件处理 **JSON API** 客户端请求。这实现了从MongoDB读取，格式化响应，并将其返回给客户端。此组件还负责使用 "
-":ref:`WebSockets <websockets>`将事件返回给客户端。"
+":ref:`WebSockets <websockets>` 将事件返回给客户端。"
 
 #: ../../source/concepts/node.rst:90
 msgid ""
 "Each REST component connects to one API instance, sending new transactions "
 "using sockets."
-msgstr "每个REST组件连接到一个API实例，使用sockets（接口）发送新事务。"
+msgstr "每个REST组件连接到一个API实例，使用sockets（接口）发送新交易。"
 
 #: ../../source/concepts/node.rst:118
 msgid "Guides"
 msgstr "指南"
 
-#: ../../source/concepts/node.rst:120
-msgid "|running-catapult-locally|"
-msgstr "|running-catapult-locally（本地运行投石机）|"
-
 #: ../../source/concepts/node.rst:122
 msgid "Deploy a Catapult full node for learning and development purposes."
-msgstr "请您部署Catapult全部节点以用于学习和开发。"
+msgstr "请您部署Catapult 完整节点以用于学习和开发。"

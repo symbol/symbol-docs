@@ -5,15 +5,16 @@
 # 
 # Translators:
 # ivyfung8 <ivyfung@nem.my>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:43+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: ivyfung8 <ivyfung@nem.my>, 2019\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgid ""
 "Anyone with access to the private key, ultimately has control over the "
 "account."
 msgstr ""
-"账户是一组NEM区块链上和可变状态有关的**密钥对**（私钥和公钥）。换句话说，有了账户就像有了一个在区块链上的存款箱。只有你可以以密钥对对其作出更改。顾名思义，密钥必须时刻保密。得到私钥就等同得到账户的拥有权。"
+"账户是一组NEM区块链上和可变状态有关的密钥对（私钥和公钥）。换句话说，有了账户就像有了一个在区块链上的存款箱。只有你可以以密钥对对其作出更改。顾名思义，密钥必须时刻保密。得到私钥就等同得到账户的拥有权。"
 
 #: ../../source/concepts/account.rst:7
 msgid ""
@@ -44,7 +45,8 @@ msgid ""
 " updatable: a package to be shipped, a deed to a house or a document to be "
 "notarized."
 msgstr ""
-"NEM账户是区块链上的**资产容器**，像其他区块链的账户一样，可以代表存放着的代币。但同时，它也可以代表独特及可更新**单一物件**。例如包裹、屋契或者公证文件。"
+"NEM账户是区块链上的 **资产容器**，像其他区块链的账户一样，可以代表存放着的代币。但同时，它也可以代表独特及可更新 "
+"**单一物件**。例如包裹、屋契或者公证文件。"
 
 #: ../../source/concepts/account.rst:9
 msgid "Accounts have the following properties:"
@@ -58,7 +60,7 @@ msgstr "**私钥**"
 msgid ""
 "A :ref:`private key <keypair>` is a key to an account. Anyone having the "
 "private key to an account can initiate any account related action."
-msgstr "ref:`私钥 ` 是开启账户的钥匙。拥有私钥就能启动任何和该账户有关的行动。"
+msgstr ":ref:`私钥 <keypair>` 是开启账户的钥匙。拥有私钥就能启动任何和该账户有关的行动。"
 
 #: ../../source/concepts/account.rst:15
 msgid ""
@@ -76,7 +78,8 @@ msgid ""
 "account. The public key is stored in the blockchain with the first issued "
 "transaction. An account which has not issued any transaction has its public "
 "key field empty."
-msgstr ":ref:`**公钥**` 可用来验证账户的签名。公钥会和有关账户的第一个交易一起记录在区块链。还没进行交易的账户其公钥一栏是空白的。"
+msgstr ""
+":ref:`公钥 <keypair>` 可用来验证账户的签名。公钥会和有关账户的第一个交易一起记录在区块链。还没进行交易的账户其公钥一栏是空白的。"
 
 #: ../../source/concepts/account.rst:21
 msgid "**Address**"
@@ -86,7 +89,7 @@ msgstr "**地址**"
 msgid ""
 "Each account has a unique :ref:`address <address>`. You will normally share "
 "the derived address instead, as it is shorter and gathers more information."
-msgstr "每一个账户都有独特的:ref:`地址`。通常，被公开的都是地址，因为它比较短，而且有较多的资讯。"
+msgstr "每一个账户都有独特的 :ref:`地址 <address>`。通常，被公开的都是地址，因为它比较短，而且有较多的资讯。"
 
 #: ../../source/concepts/account.rst:25
 msgid "**Mosaics**"
@@ -94,7 +97,7 @@ msgstr "**马赛克**"
 
 #: ../../source/concepts/account.rst:27
 msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
-msgstr "账户拥有:doc:`马赛克` 数目。"
+msgstr "账户拥有 :doc:`马赛克 <mosaic>` 数目。"
 
 #: ../../source/concepts/account.rst:29
 msgid "**Importance**"
@@ -119,17 +122,14 @@ msgid ""
 " of account based assets to be shared in a variety of ways between multiple "
 "parties."
 msgstr ""
-"直接在NEM区块链上配置了特殊规则后，帐户变得非常智能。这些规则定义了账户之间的关联和控制方式，以及如何更新和传输内容。其中一种重要的规则是多重签名户口的控制。它让基于账户资产的拥有权可以以多种方式和多方共享。"
+"直接在NEM区块链上配置了特殊规则后，帐户变得非常智能。这些规则定义了账户之间的关联和控制方式，以及如何更新和传输内容。One crucial type"
+" of rule is :doc:`multisig <multisig-account>` control that allows ownership"
+" of account based assets to be shared in a variety of ways between multiple "
+"parties."
 
 #: ../../source/concepts/account.rst:41
 msgid "Filters"
 msgstr "过滤器"
-
-#: ../../source/concepts/account.rst:43
-msgid ""
-"Accounts may configure a set of smart rules to block announcing or receiving"
-" transactions :doc:`given a series of constraints <account-filter>`."
-msgstr "在特定的约束下，账户可以配置一组智能条规以拦截或接受交易。"
 
 #: ../../source/concepts/account.rst:47
 msgid "Guides"

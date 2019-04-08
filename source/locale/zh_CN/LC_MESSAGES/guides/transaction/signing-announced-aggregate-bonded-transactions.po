@@ -1,125 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the nem2-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # nem.cn <527357637@qq.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.0\n"
+"Project-Id-Version: nem2-docs 0.17.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-03-29 13:28+0000\n"
 "PO-Revision-Date: 2019-02-22 09:14+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
-"Language-Team: Chinese (China) "
-"(https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:10
-msgid "Signing announced aggregate bonded transactions"
-msgstr "签署发布的聚合绑定交易"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:12
-#, fuzzy
-msgid ""
-"This guide will show you how to cosign aggregate bonded transactions that"
-" require your account's cosignature."
-msgstr "本指南将向您展示如何签署需要被您签名的聚合绑定交易。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:16
-msgid "Prerequisites"
-msgstr "先决条件"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:18
-msgid ""
-"Finish :doc:`creating an escrow with aggregate bonded transaction guide "
-"<creating-an-escrow-with-aggregate-bonded-transaction>`"
-msgstr ""
-"完成:doc:`使用聚合绑定事务指南创建一个第三方托管<creation-an-escrow-with-aggregate-bonded-"
-"transaction>"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:19
-#, fuzzy
-msgid "Have received an aggregate bonded transaction"
-msgstr "收到一些聚合绑定交易"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:20
-msgid "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ""
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:24
-msgid "Let’s get into some code"
-msgstr "让我们来点代码"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:26
-#, fuzzy
-msgid ""
-"You have announced an :ref:`aggregate bonded transaction <aggregate-"
-"transaction>`, but all required cosigners have not signed it yet."
-msgstr "您可能已经宣布:ref:`聚合绑定交易<aggregate-transaction>`，但仍有必需的合作伙伴尚未签署交易。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:28
-msgid "Create a function to cosign any aggregate bonded transaction."
-msgstr "创建一个函数来协调所有聚合绑定交易。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:32
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:52
-msgid "|signing-announced-aggregate-bonded-transactions-ts|"
-msgstr "|signing-announced-aggregate-bonded-transactions-ts|"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:37
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:62
-msgid "|signing-announced-aggregate-bonded-transactions-js|"
-msgstr "|signing-announced-aggregate-bonded-transactions-js|"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:42
-msgid ""
-"Fetch all aggregate bonded transactions pending to be signed by your "
-"account."
-msgstr "获取所有待处理的聚合绑定交易，以便您的帐户进行签名。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:44
-msgid ""
-"To fetch aggregate bonded transactions that must be signed by multisig "
-"cosignatories, refer to the multisig public key instead. See :ref:`how to"
-" get multisig accounts where an account is cosignatory<guide-get-"
-"multisig-account-info>`."
-msgstr ""
-"要获取必须由multisig "
-"cosignatories签名的聚合绑定事务，请参阅multisig公钥。请参阅:ref:`如何获取账户是cosignatory的multisig"
-" accounts<guide-get-multisig-account-info>`。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:46
-msgid ""
-"For each transaction, check if you have not already signed it. Cosign "
-"each pending transaction using the previously created function."
-msgstr "请您于每笔交易进行确认，检查您是否签署。使用先前创建的函数对每个待处理事务进行签名。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:48
-msgid ""
-"Announce ``CosignatureSignedTransaction`` to the network using the "
-"``TransactionHttp`` repository."
-msgstr "使用 ``TransactionHttp``库发布 ``CosignatureSignedTransaction``。"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:57
-msgid "|signing-announced-aggregate-bonded-transactions-java|"
-msgstr "|signing-announced-aggregate-bonded-transactions-java|"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions.rst:67
-msgid "|signing-announced-aggregate-bonded-transactions-cli|"
-msgstr "|signing-announced-aggregate-bonded-transactions-cli|"
-
-#~ msgid "NEM2-SDK"
-#~ msgstr "NEM2-SDK"
-
-#~ msgid "A text editor or IDE"
-#~ msgstr "文本编辑器或IDE"
-
-#~ msgid "An account with XEM"
-#~ msgstr "拥有XEM的账户"
-
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
