@@ -27,7 +27,8 @@ Let’s get into some code
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-**Editing minApproval**
+Editing minApproval
+===================
 
 Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
@@ -108,7 +109,8 @@ Once confirmed, the minApproval value of the multisig will be set to 2, having o
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
-**Adding a new cosignatory**
+Adding a new cosignatory
+========================
 
 Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
@@ -202,7 +204,8 @@ Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregat
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
-**Removing a cosignatory**
+Removing a cosignatory
+======================
 
 Once you have finished this guide,  delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 

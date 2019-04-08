@@ -41,6 +41,10 @@ Prerequisites
 Let’s get into some code
 ************************
 
+1-of-2 signatures required
+==========================
+
+
 Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
 1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
@@ -107,13 +111,10 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: javascript
         :lines:  59-
 
-************
-What's next?
-************
+2-of-2 signatures required
+==========================
 
-What would have happened if the account were a 2-of-2 multisig instead of a 1-of-2?
-
-As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>`.
+What would have happened if the account was a 2-of-2 multisig instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
 
 .. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
     :align: center

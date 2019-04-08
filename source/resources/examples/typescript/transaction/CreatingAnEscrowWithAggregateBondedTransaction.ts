@@ -22,7 +22,7 @@ import {
     AggregateTransaction,
     Deadline,
     Listener,
-    LockFundsTransaction,
+    HashLockTransaction,
     Mosaic,
     MosaicId,
     NetworkType,
@@ -51,7 +51,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
     [NetworkCurrencyMosaic.createRelative(100)],
-    PlainMessage.create('send 100 xem to distributor'),
+    PlainMessage.create('send 100 cat.currency to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
@@ -69,29 +69,26 @@ const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create()
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
-const lockFundsTransaction = LockFundsTransaction.create(
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(aliceAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),

@@ -21,7 +21,7 @@ import {
     AggregateTransaction,
     Deadline,
     Listener,
-    LockFundsTransaction,
+    HashLockTransaction,
     ModifyMultisigAccountTransaction,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
@@ -66,26 +66,26 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
 // 04 - Announce transaction
-const lockFundsTransaction = LockFundsTransaction.create(
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = cosignatoryAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(cosignatoryAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
