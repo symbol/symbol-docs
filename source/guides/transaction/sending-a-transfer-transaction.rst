@@ -87,10 +87,9 @@ If you own more than one mosaic, you can send them together in the same transact
         :language: javascript
         :lines:  38-39
 
-.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has divisibility 2, to send 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
 2. Sign the transaction with Alice's account, so that the network can verify its authenticity.
-
 
 .. example-code::
 
