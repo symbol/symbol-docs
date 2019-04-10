@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 1.0.12
+  version: 0.7.14
   title: Catapult REST API Reference
   license:
     name: Apache 2.0
