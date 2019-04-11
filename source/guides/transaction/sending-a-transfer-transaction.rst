@@ -30,7 +30,8 @@ Background
 
 Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
-**Monitoring the transaction**
+Monitoring the network
+======================
 
 Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
 
@@ -86,8 +87,9 @@ If you own more than one mosaic, you can send them together in the same transact
         :language: javascript
         :lines:  38-39
 
-2. Sign the transaction with Alice's account, so that the network can verify its authenticity.
+.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
+2. Sign the transaction with Alice's account, so that the network can verify its authenticity.
 
 .. example-code::
 

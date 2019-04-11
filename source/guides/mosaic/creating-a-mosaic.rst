@@ -34,10 +34,10 @@ You will need to announce two transactions to create a mosaic:
     :header: "Property", "Value", "Description"
     :delim: ;
 
-    Divisibility; 0 ; The mosaic won't be divisible.
-    Duration; 1000; The mosaic will be registered for 1000 blocks.
+    Divisibility; 0 ; The mosaic won't be divisible. Determines up to what decimal place the mosaic can be divided.
+    Duration; 1000; The mosaic will be created for the next 1000 blocks. If you want to create a non-expiring mosaic, do not set this property.
     Supply mutable; True; The mosaic supply can change at a later point.
-    Transferable; True; The mosaic can be transferred between arbitrary accounts.
+    Transferable; True; The mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
 .. example-code::
 
@@ -64,6 +64,8 @@ You will need to announce two transactions to create a mosaic:
         :caption: |creating-a-mosaic-js|
         :language: javascript
         :lines: 52-57
+
+.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has divisibility 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
 

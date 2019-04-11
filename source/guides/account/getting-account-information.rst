@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-###########################
-Getting account information
-###########################
+###############################
+Getting the account information
+###############################
 
 Get the public key and balance of an :doc:`account <../../concepts/account>`.
 
