@@ -9,7 +9,7 @@
 Sending a multisig transaction
 ##############################
 
-Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>` and learn how an :ref:`aggregate bonded transaction <aggregate-transaction>` works.
+Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>` account.
 
 **********
 Background
@@ -41,9 +41,15 @@ Prerequisites
 Let’s get into some code
 ************************
 
+1-of-2 signatures required
+==========================
+
 Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
-1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
+1. Bob needs to know:
+
+* The private key of his account.
+* The public key of the multisig account shared with Alice.
 
 .. example-code::
 
@@ -57,10 +63,10 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :language: javascript
         :lines: 33-41
 
-2. As he wants to pay the groceries with the multisig account, he defines a :ref:`transfer transaction <transfer-transaction>`.
+2. Define the following :ref:`transfer transaction <transfer-transaction>`:
 
 * Recipient: Grocery's address
-* Message: Grocery payment
+* Message: sending 10 cat.currency
 * Mosaics: [``10 cat.currency``]
 
 .. example-code::
@@ -75,11 +81,9 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :language: javascript
         :lines:  44-49
 
-3. Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching multisig public key as the signer.
+3. Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching the multisig public key as the signer.
 
-An aggregate transaction is **complete** if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
-
-Remember that we are using a 1-of-2 multisig account? As Bob has one private key to sign the transaction, consider an *aggregate complete transaction*.
+An aggregate transaction is **complete** if before announcing it to the network, all required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
 
 .. example-code::
 
@@ -93,7 +97,7 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: javascript
         :lines:  52-56
 
-4. Sign and announce the transaction with Bob's account.
+4. Sign and announce the transaction using Bob's account.
 
 .. example-code::
 
@@ -107,13 +111,10 @@ Remember that we are using a 1-of-2 multisig account? As Bob has one private key
         :language: javascript
         :lines:  59-
 
-************
-What's next?
-************
+2-of-2 signatures required
+==========================
 
-What would have happened if the account were a 2-of-2 multisig instead of a 1-of-2?
-
-As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>`.
+What would have happened if the account was a 2-of-2 multisig instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
 
 .. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
     :align: center
@@ -142,7 +143,7 @@ As all required cosigners did not sign the transaction, it should be announced a
         :lines:  61-67
 
 
-3. When an aggregate transaction is bonded, Bob needs to lock at least ``10 cat.currency`` to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+3. When an aggregate transaction is bonded, Bob needs to lock at least ``10`` cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

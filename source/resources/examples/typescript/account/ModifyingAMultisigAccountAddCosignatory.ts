@@ -30,7 +30,8 @@ import {
     NetworkType,
     PublicAccount,
     TransactionHttp,
-    UInt64
+    UInt64,
+    Mosaic, MosaicId
 } from "nem2-sdk";
 import {filter, mergeMap} from 'rxjs/operators';
 

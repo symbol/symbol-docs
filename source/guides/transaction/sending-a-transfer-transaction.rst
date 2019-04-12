@@ -57,7 +57,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Let’s get into some code
 ************************
 
-1. Create the transfer transaction, by including Bob address as the recipient, adding ``10 cat.currency`` and the message requested.
+1. Create the transfer transaction, including Bob address as the recipient and ``10 cat.currency``.
 
 .. example-code::
 
@@ -89,7 +89,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 .. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
-2. Sign the transaction with Alice's account, so that the network can verify its authenticity.
+2. Sign the transaction with Alice's account.
 
 .. example-code::
 
@@ -127,7 +127,6 @@ If you own more than one mosaic, you can send them together in the same transact
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
 If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.
-
 
 .. |sending-a-transfer-transaction-ts| raw:: html
 

@@ -27,7 +27,8 @@ Let’s get into some code
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-##Editing minApproval**
+Editing minApproval
+===================
 
 Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
@@ -93,7 +94,8 @@ Once confirmed, the minApproval value of the multisig will be set to 2, having o
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
-**Adding a new cosignatory**
+Adding a new cosignatory
+========================
 
 Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
@@ -103,9 +105,7 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
         2-of-3 multisig account example
 
-Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
-
-1. Create a multisig cosignatory modification adding Carol's account.
+1. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, since you are not increasing the ``minApprovalDelta``.
 
 .. example-code::
 
@@ -133,7 +133,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  54-59
 
-3. Wrap the modifiy multisig account transaction into an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+3.  Wrap the modifiy multisig account transaction in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
@@ -147,7 +147,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  62-68
 
-4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction with Alice's account.
+4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
 
 .. example-code::
 
@@ -177,7 +177,8 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
-**Removing a cosignatory**
+Removing a cosignatory
+======================
 
 Once you have finished this guide, delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 

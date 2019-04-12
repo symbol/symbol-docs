@@ -25,6 +25,7 @@ Background
 
 :doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
 
+
 *************
 Prerequisites
 *************
@@ -78,7 +79,6 @@ Let’s get into some code
         :language: javascript
         :lines: 95-115
 
-
 4. Announce the transactions together using an :ref:`aggregate bonded transaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
 
 .. example-code::
@@ -104,7 +104,7 @@ Let’s get into some code
 What's next?
 ************
 
-If the account #5 initiates an aggregate bonded transaction involving the account #1, which accounts should cosign the transaction ?
+If the account #5 initiates an aggregate bonded transaction involving the account #1, which accounts should cosign the transaction?
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center
