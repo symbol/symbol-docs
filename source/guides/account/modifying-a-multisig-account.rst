@@ -38,11 +38,6 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
         :language: typescript
         :lines:  30-36
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
-        :caption: |modifying-a-multisig-account-increase-min-approval-java|
-        :language: java
-        :lines: 42-46
-
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :caption: |modifying-a-multisig-account-increase-min-approval-js|
         :language: javascript
@@ -69,11 +64,6 @@ One of the accounts, for example Alice's, announces a :ref:`modify multisig acco
         :language: typescript
         :lines:  39-44
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
-        :caption: |modifying-a-multisig-account-increase-min-approval-java|
-        :language: java
-        :lines: 47-54
-
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :caption: |modifying-a-multisig-account-increase-min-approval-js|
         :language: javascript
@@ -91,11 +81,6 @@ As only one cosignature is required (1-of-2), Alice can sign the transaction and
         :caption: |modifying-a-multisig-account-increase-min-approval-ts|
         :language: typescript
         :lines:  47-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java
-        :caption: |modifying-a-multisig-account-increase-min-approval-java|
-        :language: java
-        :lines: 56-66
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :caption: |modifying-a-multisig-account-increase-min-approval-js|
@@ -129,11 +114,6 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: typescript
         :lines:  37-50
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
-        :caption: |modifying-a-multisig-account-add-cosignatory-java|
-        :language: java
-        :lines: 42-54
-
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
@@ -148,11 +128,6 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: typescript
         :lines:  53-58
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
-        :caption: |modifying-a-multisig-account-add-cosignatory-java|
-        :language: java
-        :lines: 56-62
-
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
@@ -165,46 +140,46 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :caption: |modifying-a-multisig-account-add-cosignatory-ts|
         :language: typescript
-        :lines:  61-66
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
-        :caption: |modifying-a-multisig-account-add-cosignatory-java|
-        :language: java
-        :lines: 64-70
+        :lines:  61-67
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
-        :lines:  63-68
+        :lines:  63-69
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction with Alice's account.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :caption: |modifying-a-multisig-account-add-cosignatory-ts|
         :language: typescript
-        :lines:  69-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java
-        :caption: |modifying-a-multisig-account-add-cosignatory-java|
-        :language: java
-        :lines: 72-93
+        :lines:  70-
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
-        :lines: 71-
+        :lines: 72-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
+5. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` hash with Carols's account. She has to opt-in to become a multisig cosignatory.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
+
+6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Bob's account. The amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
 **Removing a cosignatory**
 
-Once you have finished this guide,  delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
+Once you have finished this guide, delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 
 The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to 1. The multisig modification transaction is wrapped in an aggregate complete, as only one person is required to delete others from the multisig.
 
@@ -216,11 +191,6 @@ The following code shows how to remove a cosignatory of a 2-of-3 multisig accoun
         :caption: |modifying-a-multisig-account-remove-cosignatory-ts|
         :language: typescript
         :lines:  31-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountRemoveCosignatory.java
-        :caption: |modifying-a-multisig-account-remove-cosignatory-java|
-        :language: java
-        :lines: 39-71
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
         :caption: |modifying-a-multisig-account-remove-cosignatory-js|

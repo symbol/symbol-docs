@@ -66,11 +66,12 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 // 04 - Announce transaction
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
