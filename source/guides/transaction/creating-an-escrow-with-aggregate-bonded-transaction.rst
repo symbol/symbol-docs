@@ -9,7 +9,7 @@
 Creating an escrow with aggregate bonded transaction
 ####################################################
 
-Learn about :ref:`aggregate bonded transactions <aggregate-transaction>`, by creating an escrow.
+Learn about :ref:`aggregate bonded transactions <aggregate-transaction>` creating an escrow contract.
 
 **********
 Background
@@ -70,9 +70,10 @@ Let's get into some code
 
     Multi-Asset Escrowed Transactions
 
-**Setting up the required accounts and mosaics**
+Setting up the required accounts and mosaics
+============================================
 
-In this example, Alice and a ticket distributor want to swap the following mosaics.
+Alice and a ticket distributor want to swap the following mosaics.
 
 .. csv-table::
         :header: "Owner", "Amount", "MosaicId", "Description"
@@ -82,13 +83,14 @@ In this example, Alice and a ticket distributor want to swap the following mosai
 
 Before continuing, :doc:`create the museum ticket mosaic <../mosaic/creating-a-mosaic>`.
 
-**Mosaics swap**
+Creating the escrow contract
+============================
 
 Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-1. Create two  :ref:`transfer transactions <transfer-transaction>`:
+1. Create two :ref:`transfer transactions <transfer-transaction>`:
 
-A. From Alice to the ticket distributor sending ``100 cat.currency``
+A. From Alice to the ticket distributor sending ``100 cat.currency``.
 B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
 
 .. example-code::
@@ -104,7 +106,7 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
         :lines:  40-62
 
 
-2. Add them as ``innerTransactions`` under an :ref:`aggregate transaction <aggregate-transaction>`.
+2. Wrap the defined transactions in an :ref:`aggregate transaction <aggregate-transaction>`.
 
 An aggregate Transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
@@ -122,7 +124,7 @@ In case that signatures are required from other participants and the transaction
         :language: javascript
         :lines:  65-70
 
-3. When an aggregate transaction is bonded, Alice will need to lock at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
+3. When an aggregate transaction is bonded, Alice will need to :ref:`lock <hash-lock-transaction>` at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 
@@ -138,7 +140,7 @@ In case that signatures are required from other participants and the transaction
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
+The distributor has not signed the aggregate bonded transaction yet, so exchange has not been completed. Check how to :doc:`cosign the aggregate transaction <signing-announced-aggregate-bonded-transactions>` in the following guide.
 
 **********************************************
 Is it possible without aggregate transactions?

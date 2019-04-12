@@ -10,7 +10,7 @@
 Converting an account to multisig
 #################################
 
-Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by adding two cosignatories.
+Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`.
 
 **********
 Background
@@ -48,7 +48,7 @@ Let’s get into some code
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
         :lines:  31-39
-    
+
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
         :caption: |converting-an-account-to-multisig-java|
         :language: java
@@ -59,7 +59,7 @@ Let’s get into some code
         :language: javascript
         :lines: 30-38
 
-2. Define a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they need a 1-of-2 multisig account, set the minimum signatures required to 1.
+2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they want to create a 1-of-2 multisig account, set the minimum signatures required to 1.
 
 .. example-code::
 
@@ -99,9 +99,7 @@ Let’s get into some code
 
 .. _guide-get-multisig-account-info:
 
-If everything goes well, Alice and Bob should be cosignatories of the multisig account.
-
-.. note:: You could also get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
+4. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
 
 .. example-code::
 

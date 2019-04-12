@@ -48,7 +48,7 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
     :align: center
-    
+
     Aggregate bonded transaction cycle
 
 Multi-Asset Escrowed Transactions
@@ -59,7 +59,7 @@ In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mo
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
-    
+
     Multi-Asset Escrowed Transactions
 
 Paying for others fees
@@ -74,7 +74,7 @@ Since the app creator can put their own branding on the open source payment app,
 .. figure:: ../resources/images/examples/aggregate-paying-for-others-fees.png
     :align: center
     :width: 450px
-    
+
     Paying for others fees
 
 ******
@@ -155,9 +155,9 @@ HashLockTransaction
 
 **Alias**: LockFundsTransaction
 
-Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>`. This mechanism is required to prevent network spamming.
+Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>` to prevent network spamming.
 
-Once the related aggregate bonded transaction is confirmed, locked funds become available again in the account that signed the initial hash lock transaction.
+Once the related aggregate bonded transaction is confirmed, the locked funds become available in the account that signed the initial hash lock transaction.
 
 If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
 

@@ -70,7 +70,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 // 04 - Announce transaction
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    NetworkCurrency.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
