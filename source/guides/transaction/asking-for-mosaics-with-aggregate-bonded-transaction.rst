@@ -75,7 +75,7 @@ B. From Bob to Alice sending ``20 cat.currency``.
         :language: javascript
         :lines: 58-63
 
-3. Wrap the previous transactions into an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+3. Wrap the previous transactions in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
