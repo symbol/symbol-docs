@@ -5,11 +5,13 @@
     :excerpt: 1
     :nocomments:
 
-##############################################
-Creating a multi-level multisig account (MLMA)
-##############################################
+#######################################
+Creating a multi-level multisig account
+#######################################
 
 Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+
+Following this guide you will learn to create the following 3-level multisig account.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
@@ -23,8 +25,6 @@ Background
 
 :doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
-The maximum depth of a multilevel multisig account is ``3``.
-
 *************
 Prerequisites
 *************
@@ -36,7 +36,7 @@ Prerequisites
 Let’s get into some code
 ************************
 
-1. Create multisig account #2
+1. Create the multisig account #2.
 
 .. example-code::
 
@@ -55,7 +55,7 @@ Let’s get into some code
         :language: javascript
         :lines: 31-61
 
-2. Create multisig account #3
+2. Create the multisig account #3.
 
 .. example-code::
 
@@ -74,7 +74,7 @@ Let’s get into some code
         :language: javascript
         :lines: 64-99
 
-3. Create multisig account #1
+3. Create the multisig account #1.
 
 .. example-code::
 
@@ -97,7 +97,7 @@ Let’s get into some code
 What's next?
 ************
 
-Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, the cosignatories are responsible for doing so.
+If the account #5 initiates an aggregate bonded transaction involving the account #1, which accounts should cosign the transaction?
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center
