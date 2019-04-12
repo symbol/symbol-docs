@@ -25,7 +25,7 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
     Deadline = nem2Sdk.Deadline,
-    XEM = nem2Sdk.XEM,
+    Mosaic = nem2Sdk.Mosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     LockFundsTransaction = nem2Sdk.LockFundsTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
@@ -71,7 +71,10 @@ console.log(signedTransaction.hash);
 // 04 - Announce transaction
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

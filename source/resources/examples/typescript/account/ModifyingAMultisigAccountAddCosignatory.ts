@@ -29,7 +29,7 @@ import {
     PublicAccount,
     TransactionHttp,
     UInt64,
-    NetworkCurrencyMosaic
+    NetworkCurrencyMosaic, MosaicId, Mosaic
 } from "nem2-sdk";
 import {filter, mergeMap} from 'rxjs/operators';
 
@@ -69,7 +69,10 @@ console.log(signedTransaction.hash);
 // 04 - Announce transaction
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
