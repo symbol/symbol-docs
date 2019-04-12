@@ -27,7 +27,7 @@ Let’s get into some code
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-**Editing minApproval**
+##Editing minApproval**
 
 Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
@@ -95,7 +95,7 @@ Once confirmed, the minApproval value of the multisig will be set to 2, having o
 
 **Adding a new cosignatory**
 
-Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
+Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-3.png
         :align: center
@@ -103,63 +103,63 @@ Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig accou
 
         2-of-3 multisig account example
 
-Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
+Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
 
-1. Create a multisig cosignatory modification:
-
-.. example-code::
-
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
-        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
-        :language: typescript
-        :lines:  37-50
-
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :caption: |modifying-a-multisig-account-add-cosignatory-js|
-        :language: javascript
-        :lines:  39-52
-
-2. Create a modify multisig account transaction:
+1. Create a multisig cosignatory modification adding Carol's account.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :caption: |modifying-a-multisig-account-add-cosignatory-ts|
         :language: typescript
-        :lines:  53-58
+        :lines:  38-51
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
-        :lines:  55-60
+        :lines:  38-51
 
-3. Create an aggregate bonded transaction. The transaction is *aggregate bonded* because more than one cosignature is required:
+2. Create a modify multisig account transaction adding the previous modification.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :caption: |modifying-a-multisig-account-add-cosignatory-ts|
         :language: typescript
-        :lines:  61-67
+        :lines:  54-59
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
-        :lines:  63-69
+        :lines:  54-59
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction with Alice's account.
+3. Wrap the modifiy multisig account transaction into an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :caption: |modifying-a-multisig-account-add-cosignatory-ts|
         :language: typescript
-        :lines:  70-
+        :lines:  62-68
 
     .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :caption: |modifying-a-multisig-account-add-cosignatory-js|
         :language: javascript
-        :lines: 72-
+        :lines:  62-68
+
+4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction with Alice's account.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
+        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
+        :language: typescript
+        :lines:  71-
+
+    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
+        :caption: |modifying-a-multisig-account-add-cosignatory-js|
+        :language: javascript
+        :lines: 71-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
@@ -207,10 +207,6 @@ Learn more about :doc:`multi-level multisig accounts <creating-a-multi-level-mul
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts" target="_blank">View Code</a>
 
-.. |modifying-a-multisig-account-increase-min-approval-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountIncreaseMinApproval.java" target="_blank">View Code</a>
-
 .. |modifying-a-multisig-account-increase-min-approval-js| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js" target="_blank">View Code</a>
@@ -219,10 +215,6 @@ Learn more about :doc:`multi-level multisig accounts <creating-a-multi-level-mul
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts" target="_blank">View Code</a>
 
-.. |modifying-a-multisig-account-add-cosignatory-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountAddCosignatory.java" target="_blank">View Code</a>
-
 .. |modifying-a-multisig-account-add-cosignatory-js| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js" target="_blank">View Code</a>
@@ -230,10 +222,6 @@ Learn more about :doc:`multi-level multisig accounts <creating-a-multi-level-mul
 .. |modifying-a-multisig-account-remove-cosignatory-ts| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-remove-cosignatory-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/ModifyingAMultisigAccountRemoveCosignatory.java" target="_blank">View Code</a>
 
 .. |modifying-a-multisig-account-remove-cosignatory-js| raw:: html
 

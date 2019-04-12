@@ -10,7 +10,7 @@
 Converting an account to multisig
 #################################
 
-Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`, by adding two cosignatories.
+Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`.
 
 **********
 Background
@@ -45,12 +45,12 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines:  33-43
+        :lines:  39-49
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 33-43
+        :lines: 39-49
 
 2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they need a 1-of-2 multisig account, set the minimum signatures required to 1.
 
@@ -59,12 +59,12 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 46-59
+        :lines: 52-65
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 46-59
+        :lines: 52-65
 
 3. Create an :ref:`aggregate bonded transaction <aggregate-transaction>`, wrapping the modify multisig account transaction. This is necessary since Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
@@ -73,12 +73,12 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 62-65
+        :lines: 68-71
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 62-65
+        :lines: 68-71
 
 4. Sign the aggregate transaction using the private key of the multisig account.
 
@@ -87,29 +87,29 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 67-68
+        :lines: 73-74
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 67-68
+        :lines: 73-74
 
-5. Before sending an aggregate bonded transaction, the future multisig account needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
+5. Before sending an aggregate bonded transaction, the future multisig account needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that the inner transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 71-
+        :lines: 77-
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 71-
+        :lines: 77-
 
 
-6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` hash with Alice's account.
+6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Alice's account.
 
 .. code-block:: bash
 

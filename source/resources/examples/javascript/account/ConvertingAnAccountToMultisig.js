@@ -17,17 +17,23 @@
  */
 
 const nem2Sdk = require("nem2-sdk");
-const TransactionHttp = nem2Sdk.TransactionHttp,
-    Account = nem2Sdk.Account,
-    PublicAccount = nem2Sdk.PublicAccount,
-    HashLockTransaction = nem2Sdk.HashLockTransaction,
-    ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
-    Mosaic = nem2Sdk.Mosaic,
+const operators = require('rxjs/operators');
+const Account = nem2Sdk.Account,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
     Deadline = nem2Sdk.Deadline,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
+    Listener = nem2Sdk.Listener,
+    Mosaic = nem2Sdk.Mosaic,
+    MosaicId = nem2Sdk.MosaicId,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
-    NetworkType = nem2Sdk.NetworkType;
-
+    ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
+    NetworkType = nem2Sdk.NetworkType,
+    PublicAccount = nem2Sdk.PublicAccount,
+    TransactionHttp = nem2Sdk.TransactionHttp,
+    Uint64 = nem2Sdk.UInt64,
+    filter = operators.filter,
+    mergeMap = operators.mergeMap;
 
 //01 - Setup
 const nodeUrl = 'http://localhost:3000';

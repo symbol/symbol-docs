@@ -19,15 +19,21 @@
 import {
     Account,
     AggregateTransaction,
-    Deadline, Listener, HashLockTransaction,
-    ModifyMultisigAccountTransaction, Mosaic, MosaicId,
+    Deadline,
+    HashLockTransaction,
+    Listener,
+    ModifyMultisigAccountTransaction,
+    Mosaic,
+    MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
     NetworkType,
     PublicAccount,
-    TransactionHttp, UInt64
+    TransactionHttp,
+    UInt64
 } from "nem2-sdk";
 import {filter, mergeMap} from "rxjs/operators";
+
 
 //01 - Setup
 const nodeUrl = 'http://localhost:3000';

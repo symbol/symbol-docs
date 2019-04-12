@@ -5,11 +5,13 @@
     :excerpt: 1
     :nocomments:
 
-##############################################
-Creating a multi-level multisig account (MLMA)
-##############################################
+#######################################
+Creating a multi-level multisig account
+#######################################
 
 Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+
+Following this guide you will learn to create the following 3-level multisig account.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
@@ -21,9 +23,7 @@ Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
 Background
 **********
 
-:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
-
-The maximum depth of a multilevel multisig account is ``3``.
+:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
 
 *************
 Prerequisites
@@ -36,68 +36,75 @@ Prerequisites
 Let’s get into some code
 ************************
 
-1. Create multisig account #2
+1. Define the multisig account #2.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :caption:  |creating-a-mlma-ts|
         :language: typescript
-        :lines:  31-61
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
-        :caption:  |creating-a-mlma-java|
-        :language: java
-        :lines: 39-75
+        :lines:  38-60
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :caption:  |creating-a-mlma-js|
         :language: javascript
-        :lines: 31-61
+        :lines: 38-60
 
-2. Create multisig account #3
+2. Define the multisig account #3.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :caption:  |creating-a-mlma-ts|
         :language: typescript
-        :lines:  64-99
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
-        :caption:  |creating-a-mlma-java|
-        :language: java
-        :lines: 77-117
+        :lines:  63-92
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :caption:  |creating-a-mlma-js|
         :language: javascript
-        :lines: 64-99
+        :lines: 63-92
 
-3. Create multisig account #1
+3. Define the multisig account #1.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :caption:  |creating-a-mlma-ts|
         :language: typescript
-        :lines: 102-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java
-        :caption:  |creating-a-mlma-java|
-        :language: java
-        :lines: 119-149
+        :lines: 95-115
 
     .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :caption:  |creating-a-mlma-js|
         :language: javascript
-        :lines: 102-
+        :lines: 95-115
+
+
+4. Announce the transactions together using an :ref:`aggregate bonded transaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
+        :caption:  |creating-a-mlma-ts|
+        :language: typescript
+        :lines: 118-
+
+    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
+        :caption:  |creating-a-mlma-js|
+        :language: javascript
+        :lines: 118-
+
+5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
+
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile <account>
 
 ************
 What's next?
 ************
 
-Who should cosign the transaction if Account #5 initiates an aggregate bonded transaction? Multisig accounts are not capable of cosigning transactions, the cosignatories are responsible for doing so.
+If the account #5 initiates an aggregate bonded transaction involving the account #1, which accounts should cosign the transaction ?
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center
