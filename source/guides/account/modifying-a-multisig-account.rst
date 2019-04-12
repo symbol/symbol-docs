@@ -27,7 +27,8 @@ Let’s get into some code
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-**Editing minApproval**
+Editing minApproval
+===================
 
 Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
@@ -108,9 +109,10 @@ Once confirmed, the minApproval value of the multisig will be set to 2, having o
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
-**Adding a new cosignatory**
+Adding a new cosignatory
+========================
 
-Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
+Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-3.png
         :align: center
@@ -118,9 +120,8 @@ Suddenly, Alice and Bob want to add Carol as a cosignatory of the multisig accou
 
         2-of-3 multisig account example
 
-Alice creates a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding in a ``MultisigCosignatoryModification`` Carol as a cosignatory. The multisig account will become a 2-of-3, as she is not increasing the minApprovalDelta.
 
-1. Create a multisig cosignatory modification:
+1. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, since you are not increasing the ``minApprovalDelta``.
 
 .. example-code::
 
@@ -139,7 +140,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  39-52
 
-2. Create a modify multisig account transaction:
+2. Create a modify multisig account transaction adding the previous modification.
 
 .. example-code::
 
@@ -158,7 +159,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  55-60
 
-3. Create an aggregate bonded transaction. The transaction is *aggregate bonded* because more than one cosignature is required:
+3.  Wrap the modifiy multisig account transaction into an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
@@ -177,7 +178,7 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
         :language: javascript
         :lines:  63-68
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least ``10`` cat.currency. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
 
 .. example-code::
 
@@ -198,13 +199,14 @@ Alice creates a :ref:`modify multisig account transaction <modify-multisig-accou
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
+5. Once Bob :doc:`cosigns the transaction<../transaction/signing-announced-aggregate-bonded-transactions>`, the amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
-**Removing a cosignatory**
+Removing a cosignatory
+======================
 
-Once you have finished this guide,  delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
+Once you have finished this guide, delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 
 The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to 1. The multisig modification transaction is wrapped in an aggregate complete, as only one person is required to delete others from the multisig.
 

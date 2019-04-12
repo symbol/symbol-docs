@@ -45,13 +45,9 @@ Alice wants to ask Bob for ``20 cat.currency``.
         :language: javascript
         :lines:  40-48
 
-2. Alice creates an aggregate bonded transaction with two inner transactions:
+2. Create an aggregate bonded transaction with two inner transactions:
 
-A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
-
-* message: "message reason" (custom, but not empty)
-* receiver: Bob address
-* signer: Alice
+A. From Alice to Bob with the message ``send me 20 cat.currency``.
 
 .. example-code::
 
@@ -65,12 +61,7 @@ A. Define the first inner :ref:`transfer transaction <transfer-transaction>`:
         :language: javascript
         :lines:  51-56
 
-B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
-
-* message: empty
-* receiver: Alice address
-* mosaics: 20 cat.currency
-* signer: Bob
+B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
@@ -84,7 +75,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :language: javascript
         :lines: 58-63
 
-3.Wrap the defined transactions in an aggregate bonded transaction:
+3. Wrap the previous transactions in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
@@ -98,7 +89,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
         :language: javascript
         :lines:  66-72
 
-4. Alice signs the aggregate bonded transaction and announces it to the network, locking first ``10 cat.currency``.
+4. Sign the aggregate bonded transaction with Alice's account and announce it to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-transaction>` first. Alice will recover the locked mosaics if the aggregate transaction completes.
 
 .. example-code::
 
@@ -114,17 +105,7 @@ B. Define the second inner :ref:`transfer transaction <transfer-transaction>`:
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
-If all goes well, :doc:`Bob receives a notification <../transaction/monitoring-a-transaction-status>`.
-
-************
-What's next?
-************
-
-Bob has not cosigned the transaction yet. Consider reading :doc:`signing announced aggregate bonded transactions guide <signing-announced-aggregate-bonded-transactions>`.
-
-After receiving the transaction, Bob signs the ``transaction hash`` and announces the cosignature signed transaction.
-
-As the aggregate bonded transaction has all the cosignatures required, it will be included in a block.
+5. If all goes well, :doc:`Bob receives a notification to cosign the transaction<../transaction/monitoring-a-transaction-status>`. Check how to :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` with Bob's account in the following guide.
 
 .. |asking-for-mosaics-with-aggregate-bonded-transaction-ts| raw:: html
 
