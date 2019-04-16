@@ -102,7 +102,8 @@ Sending the transfer transaction
 
     .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  32-44
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Once signed, Alice :doc:`announces the transaction <../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until the transaction reaches the network, returning back the Transaction object.
 
@@ -110,7 +111,8 @@ Sending the transfer transaction
 
     .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  47-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 It is important to highlight that this transaction has an ``unconfirmed`` status. You might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before doing additional actions.
 

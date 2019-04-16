@@ -44,7 +44,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  32-38
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Sign the transaction.
 
@@ -52,7 +53,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  41-43
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 
 3. Open a new :ref:`Listeners <websockets>`. This communicates with the API WebSocket, who will communicate you asynchronously the status of the transaction.
@@ -61,7 +63,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  46-52
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Start monitoring if the WebSocket connection is alive. :doc:`Blocks <../../concepts/block>` are generated every ``15`` seconds in average, so a timeout can be raised if there is no response after 30 seconds approximately.
 
@@ -69,7 +72,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  54-63
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
     .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
         :language: bash
@@ -81,7 +85,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  65-73
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionStatusError.sh
         :language: bash
@@ -93,7 +98,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  75-80
+        :start-after:  /* start block 06 */
+        :end-before: /* end block 06 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionUnconfirmed.sh
         :language: bash
@@ -105,7 +111,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines:  82-99
+        :start-after:  /* start block 07 */
+        :end-before: /* end block 07 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionConfirmed.sh
         :language: bash
@@ -117,7 +124,8 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
     .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
-        :lines: 101-
+        :start-after:  /* start block 08 */
+        :end-before: /* end block 08 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/SendingATransferTransaction.sh
         :language: bash

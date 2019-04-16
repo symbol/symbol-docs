@@ -50,10 +50,10 @@ In case of NEM public and private chain, the same mosaic name could have a diffe
 Instead of transferring tokens between different chains, the trade will be performed inside each chain. The Secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 
 .. figure:: ../../resources/images/examples/cross-chain-swap.png
-        :align: center
-        :width: 700px
+    :align: center
+    :width: 550px
 
-        Atomic cross-chain swap between public and private network
+    Atomic cross-chain swap between public and private network
 
 For that reason, each actor involved should have at least one account in each blockchain.
 
@@ -61,7 +61,8 @@ For that reason, each actor involved should have at least one account in each bl
 
    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  37-44
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 1. Alice picks a random number, called ``proof``. Then, applies a Sha3-256 algorithm to it, obtaining the ``secret``.
 
@@ -69,7 +70,8 @@ For that reason, each actor involved should have at least one account in each bl
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  48-51
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 2. Alice creates a secret lock transaction, including:
 
@@ -83,7 +85,8 @@ For that reason, each actor involved should have at least one account in each bl
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  54-61
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If after a determined period of time no one proved it, the locked funds will be returned to Alice.
 
@@ -93,7 +96,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  64-67
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 4. Alice can tell Bob the secret. Also, he could retrieve it directly from the chain.
 
@@ -109,8 +113,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  70-77
-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
 .. note::  The amount of time in which funds can be unlocked should be a smaller time frame than TX1's. Alice knows the secret, so Bob must be sure he will have some time left after Alice releases the secret.
 
@@ -120,7 +124,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  80-83
+        :start-after:  /* start block 06 */
+        :end-before: /* end block 06 */
 
 7. Alice can announce the secret proof transaction TX3 on the public network. This transaction defines the encrypting algorithm used, the original proof and the secret. It will unlock TX2 transaction.
 
@@ -128,7 +133,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  86-96
+        :start-after:  /* start block 07 */
+        :end-before: /* end block 07 */
 
 8. The proof is revealed in the public chain. Bob does the same by announcing a secret proof transaction TX4 in the private chain.
 
@@ -136,7 +142,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
-        :lines:  99-
+        :start-after:  /* start block 08 */
+        :end-before: /* end block 08 */
 
 It is at that moment when Bob unlocks TX1 funds, and the atomic cross-chain swap concludes.
 

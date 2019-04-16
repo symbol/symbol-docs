@@ -55,11 +55,13 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines: 33-41
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines: 33-41
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Define the following :ref:`transfer transaction <transfer-transaction>`:
 
@@ -71,11 +73,13 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  44-49
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  44-49
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching the multisig public key as the signer.
 
@@ -85,11 +89,13 @@ An aggregate transaction is **complete** if before announcing it to the network,
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  52-56
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  52-56
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Sign and announce the transaction using Bob's account.
 
@@ -97,11 +103,13 @@ An aggregate transaction is **complete** if before announcing it to the network,
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
-        :lines:  59-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
-        :lines:  59-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 2-of-2 signatures required
 ==========================
@@ -126,12 +134,13 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  61-67
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  61-67
-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 3. When an aggregate transaction is bonded, Bob needs to lock at least ``10`` cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
 
@@ -139,11 +148,13 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :lines:  69-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
-        :lines:  69-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 

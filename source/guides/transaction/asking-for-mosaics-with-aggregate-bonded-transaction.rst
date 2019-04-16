@@ -37,11 +37,13 @@ Alice wants to ask Bob for ``20 cat.currency``.
 
     .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  40-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  40-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Create an aggregate bonded transaction with two inner transactions:
 
@@ -51,11 +53,13 @@ A. From Alice to Bob with the message ``send me 20 cat.currency``.
 
     .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  51-56
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  51-56
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 B. From Bob to Alice sending ``20 cat.currency``.
 
@@ -63,11 +67,13 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
     .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines: 58-63
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines: 58-63
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 3. Wrap the previous transactions in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
@@ -75,11 +81,13 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
     .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  66-72
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  66-72
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 4. Sign the aggregate bonded transaction with Alice's account and announce it to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-transaction>` first. Alice will recover the locked mosaics if the aggregate transaction completes.
 
@@ -87,11 +95,13 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
     .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  75-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  75-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 

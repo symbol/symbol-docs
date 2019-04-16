@@ -44,11 +44,13 @@ As one private key can sign all the transactions in the aggregate, define the ag
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  32-54
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  32-54
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Sign and announce the transaction.
 
@@ -56,11 +58,13 @@ As one private key can sign all the transactions in the aggregate, define the ag
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingPayoutsWithAggregateCompleteTransaction.ts
         :language: typescript
-        :lines:  57-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingPayoutsWithAggregateCompleteTransaction.js
         :language: javascript
-        :lines:  57-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 ************
 What's next?

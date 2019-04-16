@@ -29,11 +29,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 31-34
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
-        :lines:  31-34
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Create a new listener to get notified every time a new aggregate bonded transaction requires the signature of your account.
 
@@ -51,15 +53,18 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts
         :language: typescript
-        :lines: 36-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
         :language: java
-        :lines:  39-61
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
-        :lines:  36-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 ************
 What's next?
@@ -78,4 +83,5 @@ Try it yourself! Here you have a possible implementation:
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts
         :language: typescript
-        :lines:  35-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */

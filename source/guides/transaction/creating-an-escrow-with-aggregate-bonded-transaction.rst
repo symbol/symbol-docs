@@ -97,14 +97,15 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
 
     .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  40-62
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  40-62
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-
-2. Wrap the defined transactions in an :ref:`aggregate transaction <aggregate-transaction>`.
+2. Wrap the defined transactions in an :ref:`aggregate transaction <aggregate-transaction>` and sign it.
 
 An aggregate Transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
@@ -114,11 +115,13 @@ In case that signatures are required from other participants and the transaction
 
     .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  65-70
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  65-70
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. When an aggregate transaction is bonded, Alice will need to :ref:`lock <hash-lock-transaction>` at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
@@ -126,11 +129,13 @@ In case that signatures are required from other participants and the transaction
 
     .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  72-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  72-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 

@@ -21,10 +21,8 @@ import {
     AggregateTransaction,
     Deadline,
     EmptyMessage,
-    Listener,
     HashLockTransaction,
-    Mosaic,
-    MosaicId,
+    Listener,
     NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
@@ -36,7 +34,7 @@ import {
 
 import {filter, mergeMap} from 'rxjs/operators';
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -46,32 +44,38 @@ const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.M
 
 const bobPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const bobAccount = PublicAccount.createFromPublicKey(bobPublicKey, NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Create transfer transactions
+/* start block 02 */
 const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
     PlainMessage.create('send me 20 cat.currency'),
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
+/* start block 03 */
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
     [NetworkCurrencyMosaic.createRelative(20)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 03 */
 
-// 03 - Create and sign aggregate transaction with Alice account
+/* start block 04 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [transferTransaction1.toAggregate(aliceAccount.publicAccount),
         transferTransaction2.toAggregate(bobAccount)],
     NetworkType.MIJIN_TEST);
+/* end block 04 */
+
+/* start block 05 */
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
-// 04 - Announcing the transaction with Alice account
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     NetworkCurrencyMosaic.createRelative(10),
@@ -97,3 +101,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 05 */

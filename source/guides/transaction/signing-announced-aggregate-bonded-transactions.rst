@@ -31,11 +31,13 @@ You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 30-33
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  31-34
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Fetch all aggregate bonded transactions pending to be signed by your account.
 
@@ -49,15 +51,18 @@ You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
         :language: typescript
-        :lines: 34-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactions.java
         :language: java
-        :lines:  37-57
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
         :language: javascript
-        :lines:  35-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/SigningAnnouncedAggregateBondedTransactions.sh
         :language: bash

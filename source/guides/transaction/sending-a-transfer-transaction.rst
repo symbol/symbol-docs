@@ -63,11 +63,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  31-38
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  31-38
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
 
@@ -77,11 +79,13 @@ If you own more than one mosaic, you can send them together in the same transact
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
         :language: typescript
-        :lines:  39-40
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
-        :lines:  38-39
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 .. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
@@ -91,11 +95,13 @@ If you own more than one mosaic, you can send them together in the same transact
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  41-45
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  41-45
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
@@ -103,11 +109,13 @@ If you own more than one mosaic, you can send them together in the same transact
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  48-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  48-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/bash/transaction/SendingATransferTransaction.sh
         :language: bash
