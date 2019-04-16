@@ -26,8 +26,6 @@ This shared account appears in NEM as 1-of-2 multisig, meaning that one cosignat
 
     1-of-2 multisig account example
 
-Remember that a multisig account has cosignatories accounts, and it cannot start transactions itself. Only the cosignatories can initiate transactions.
-
 *************
 Prerequisites
 *************
@@ -47,17 +45,13 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines:  31-39
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
-        :caption: |converting-an-account-to-multisig-java|
-        :language: java
-        :lines: 39-49
+        :lines:  39-49
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 30-38
+        :lines: 39-49
+
 
 2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they want to create a 1-of-2 multisig account, set the minimum signatures required to 1.
 
@@ -66,40 +60,71 @@ Let’s get into some code
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 42-55
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
-        :caption: |converting-an-account-to-multisig-java|
-        :language: java
-        :lines: 51-67
+        :lines: 52-65
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 41-54
+        :lines: 52-65
 
-3. Sign and announce the transaction with the candidate multisig account private key.
+3. Create an :ref:`aggregate bonded transaction <aggregate-transaction>`, wrapping the modify multisig account transaction. This is necessary since Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
 
     .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :caption: |converting-an-account-to-multisig-ts|
         :language: typescript
-        :lines: 58-
-
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java
-        :caption: |converting-an-account-to-multisig-java|
-        :language: java
-        :lines: 68-70
+        :lines: 68-71
 
     .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :caption: |converting-an-account-to-multisig-js|
         :language: javascript
-        :lines: 57-
+        :lines: 68-71
+
+4. Sign the aggregate transaction using the private key of the multisig account.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
+        :caption: |converting-an-account-to-multisig-ts|
+        :language: typescript
+        :lines: 73-74
+
+    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
+        :caption: |converting-an-account-to-multisig-js|
+        :language: javascript
+        :lines: 73-74
+
+5. Before sending an aggregate bonded transaction, the future multisig account needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that the inner transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
+
+.. example-code::
+
+    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
+        :caption: |converting-an-account-to-multisig-ts|
+        :language: typescript
+        :lines: 77-
+
+    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
+        :caption: |converting-an-account-to-multisig-js|
+        :language: javascript
+        :lines: 77-
+
+
+6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Alice's account.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
+
+7. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Bob's account.
+
+.. code-block:: bash
+
+    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
 
 .. _guide-get-multisig-account-info:
 
-4. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
+8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
 
 .. example-code::
 

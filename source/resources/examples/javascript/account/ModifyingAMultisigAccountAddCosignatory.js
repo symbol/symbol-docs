@@ -15,12 +15,17 @@
  * limitations under the License.
  *
  */
-
 const nem2Sdk = require("nem2-sdk");
 const operators = require('rxjs/operators');
-
 const Account = nem2Sdk.Account,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
+    Deadline = nem2Sdk.Deadline,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
+    Listener = nem2Sdk.Listener,
+    Mosaic = nem2Sdk.Mosaic,
+    MosaicId = nem2Sdk.MosaicId,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
+    MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
@@ -29,9 +34,7 @@ const Account = nem2Sdk.Account,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     HashLockTransaction = nem2Sdk.HashLockTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    Listener = nem2Sdk.Listener,
-    MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
-    UInt64 = nem2Sdk.UInt64,
+    Uint64 = nem2Sdk.UInt64,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
@@ -66,6 +69,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 // 04 - Announce transaction
 const hashLockTransaction = HashLockTransaction.create(
