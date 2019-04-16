@@ -71,7 +71,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
-{% include "analytics.html" %}
+{% include "include/analytics.html" %}
 {% endblock %}
 
 {# Silence the sidebar's, relbar's #}
@@ -107,6 +107,6 @@
 {%- endblock %}
 
 {%- block footer %}
-{% include "footer2.html" %}
-{% include "algolia.html" %}
+{% include "include/footer.html" %}
+{% include "include/algolia.html" %}
 {%- endblock %}
