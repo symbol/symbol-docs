@@ -28,13 +28,11 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts
-        :caption: |linking-a-namespace-to-an-address-ts|
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts
         :language: typescript
         :lines:  31-36
 
-    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
-        :caption: |linking-a-namespace-to-an-address-js|
+    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :lines: 31-36
 
@@ -43,13 +41,11 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts
-        :caption: |linking-a-namespace-to-an-address-ts|
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts
         :language: typescript
         :lines:  39-
 
-    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
-        :caption: |linking-a-namespace-to-an-address-js|
+    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :lines: 39-
 
@@ -64,28 +60,10 @@ Now you can send transactions to the namespace linked to the account instead of 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
-        :caption: |sending-a-transfer-transaction-address-alias-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
         :language: typescript
         :lines:  33-40
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js
-        :caption: |sending-a-transfer-transaction-address-alias-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js
         :language: javascript
         :lines:  31-38
-
-.. |linking-a-namespace-to-an-address-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts" target="_blank">View Code</a>
-
-.. |linking-a-namespace-to-an-address-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-address-alias-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-address-alias-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js" target="_blank">View Code</a>

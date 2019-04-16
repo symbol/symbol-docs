@@ -34,13 +34,11 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
-        :caption: |modifying-a-multisig-account-increase-min-approval-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
         :lines:  30-36
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :caption: |modifying-a-multisig-account-increase-min-approval-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
         :lines: 30-36
 
@@ -60,13 +58,11 @@ One of the accounts, for example Alice's, announces a :ref:`modify multisig acco
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
-        :caption: |modifying-a-multisig-account-increase-min-approval-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
         :lines:  39-44
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :caption: |modifying-a-multisig-account-increase-min-approval-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
         :lines: 39-44
 
@@ -78,13 +74,11 @@ As only one cosignature is required (1-of-2), Alice can sign the transaction and
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
-        :caption: |modifying-a-multisig-account-increase-min-approval-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
         :lines:  47-
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :caption: |modifying-a-multisig-account-increase-min-approval-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
         :lines: 47-
 
@@ -109,13 +103,11 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
-        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
         :lines:  38-51
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :caption: |modifying-a-multisig-account-add-cosignatory-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
         :lines:  38-51
 
@@ -123,13 +115,11 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
-        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
         :lines:  54-59
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :caption: |modifying-a-multisig-account-add-cosignatory-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
         :lines:  54-59
 
@@ -137,13 +127,11 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
-        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
         :lines:  62-68
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :caption: |modifying-a-multisig-account-add-cosignatory-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
         :lines:  62-68
 
@@ -151,13 +139,11 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
-        :caption: |modifying-a-multisig-account-add-cosignatory-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
         :lines:  71-
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :caption: |modifying-a-multisig-account-add-cosignatory-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
         :lines: 71-
 
@@ -188,13 +174,11 @@ The following code shows how to remove a cosignatory of a 2-of-3 multisig accoun
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts
-        :caption: |modifying-a-multisig-account-remove-cosignatory-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts
         :language: typescript
         :lines:  31-
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
-        :caption: |modifying-a-multisig-account-remove-cosignatory-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
         :language: javascript
         :lines: 31-
 
@@ -203,27 +187,3 @@ What’s next?
 ************
 
 Learn more about :doc:`multi-level multisig accounts <creating-a-multi-level-multisig-account>`.
-
-.. |modifying-a-multisig-account-increase-min-approval-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-increase-min-approval-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-add-cosignatory-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-add-cosignatory-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-remove-cosignatory-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts" target="_blank">View Code</a>
-
-.. |modifying-a-multisig-account-remove-cosignatory-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js" target="_blank">View Code</a>

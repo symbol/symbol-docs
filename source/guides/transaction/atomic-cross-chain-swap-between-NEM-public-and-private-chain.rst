@@ -59,8 +59,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-   .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+   .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  37-44
 
@@ -68,8 +67,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  48-51
 
@@ -83,8 +81,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  54-61
 
@@ -94,8 +91,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  64-67
 
@@ -111,8 +107,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  70-77
 
@@ -123,8 +118,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  80-83
 
@@ -132,8 +126,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  86-96
 
@@ -141,8 +134,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
-        :caption: |using-secret-lock-for-atomic-crosschain-swap-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
         :language: typescript
         :lines:  99-
 
@@ -159,7 +151,3 @@ B. Alice does not want to swap tokens by signing Tx3. Bob will receive his refun
 C. Alice signs and announces TX3, receiving Bob's funds. Bob will have time to sign TX4, as Tx1 validity is longer than Tx2.
 
 The process is atomic but should be completed with lots of time before the deadlines.
-
-.. |using-secret-lock-for-atomic-crosschain-swap-transactions-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts" target="_blank">View Code</a>

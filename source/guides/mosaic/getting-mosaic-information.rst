@@ -25,30 +25,14 @@ Call ``getMosaic`` function, passing the mosaicId you want to check as a paramet
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/GettingMosaicInformation.ts
-        :caption: |getting-mosaic-information-ts|
+    .. viewsource:: ../../resources/examples/typescript/mosaic/GettingMosaicInformation.ts
         :language: typescript
         :lines:  21-
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/GettingMosaicInformation.js
-        :caption: |getting-mosaic-information-js|
+    .. viewsource:: ../../resources/examples/javascript/mosaic/GettingMosaicInformation.js
         :language: javascript
         :lines: 24-
 
-    .. literalinclude:: ../../resources/examples/cli/mosaic/GettingMosaicInformation.sh
-        :caption: |getting-mosaic-information-cli|
+    .. viewsource:: ../../resources/examples/bash/mosaic/GettingMosaicInformation.sh
         :language: bash
         :start-after: #!/bin/sh
-
-.. |getting-mosaic-information-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/GettingMosaicInformation.ts" target="_blank">View Code</a>
-
-.. |getting-mosaic-information-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/GettingMosaicInformation.js" target="_blank">View Code</a>
-
-.. |getting-mosaic-information-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/mosaic/GettingMosaicInformation.sh" target="_blank">View Code</a>
-

@@ -95,13 +95,11 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  40-62
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  40-62
 
@@ -114,13 +112,11 @@ In case that signatures are required from other participants and the transaction
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  65-70
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  65-70
 
@@ -128,13 +124,11 @@ In case that signatures are required from other participants and the transaction
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  72-
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
-        :caption: |creating-an-escrow-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  72-
 
@@ -166,11 +160,3 @@ Try to swap mosaics adding a third  participant.
 .. |escrow_wikipedia| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Escrow" target="_blank">Wikipedia</a>
-
-.. |creating-an-escrow-with-aggregate-bonded-transaction-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |creating-an-escrow-with-aggregate-bonded-transaction-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js" target="_blank">View Code</a>

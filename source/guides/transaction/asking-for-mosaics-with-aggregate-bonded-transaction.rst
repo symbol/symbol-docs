@@ -35,13 +35,11 @@ Alice wants to ask Bob for ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  40-48
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  40-48
 
@@ -51,13 +49,11 @@ A. From Alice to Bob with the message ``send me 20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  51-56
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  51-56
 
@@ -65,13 +61,11 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :lines: 58-63
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :lines: 58-63
 
@@ -79,13 +73,11 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  66-72
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  66-72
 
@@ -93,24 +85,14 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :lines:  75-
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :lines:  75-
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
 5. If all goes well, :doc:`Bob receives a notification to cosign the transaction<../transaction/monitoring-a-transaction-status>`. Check how to :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` with Bob's account in the following guide.
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js" target="_blank">View Code</a>

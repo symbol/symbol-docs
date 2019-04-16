@@ -41,13 +41,11 @@ You will need to announce two transactions to create a mosaic:
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
-        :caption: |creating-a-mosaic-ts|
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
         :lines:  33-50
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
-        :caption: |creating-a-mosaic-js|
+    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
         :lines: 33-50
 
@@ -55,13 +53,11 @@ You will need to announce two transactions to create a mosaic:
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
-        :caption: |creating-a-mosaic-ts|
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
         :lines:  52-57
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
-        :caption: |creating-a-mosaic-js|
+    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
         :lines: 52-57
 
@@ -71,18 +67,15 @@ You will need to announce two transactions to create a mosaic:
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
-        :caption: |creating-a-mosaic-ts|
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
         :lines:  59-
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
-        :caption: |creating-a-mosaic-js|
+    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
         :lines: 59-
 
-    .. literalinclude:: ../../resources/examples/cli/mosaic/CreatingAMosaic.sh
-        :caption: |creating-a-mosaic-cli|
+    .. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -91,15 +84,3 @@ What's next?
 ************
 
 :doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
-
-.. |creating-a-mosaic-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts" target="_blank">View Code</a>
-
-.. |creating-a-mosaic-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/CreatingAMosaic.js" target="_blank">View Code</a>
-
-.. |creating-a-mosaic-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/mosaic/CreatingAMosaic.sh" target="_blank">View Code</a>

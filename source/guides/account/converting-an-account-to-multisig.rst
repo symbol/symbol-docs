@@ -42,13 +42,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
         :lines:  39-49
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
         :lines: 39-49
 
@@ -57,13 +55,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
         :lines: 52-65
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
         :lines: 52-65
 
@@ -71,13 +67,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
         :lines: 68-71
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
         :lines: 68-71
 
@@ -85,13 +79,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
         :lines: 73-74
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
         :lines: 73-74
 
@@ -99,13 +91,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
         :lines: 77-
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
         :lines: 77-
 
@@ -128,18 +118,15 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts
-        :caption: |getting-multisig-account-cosignatories-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts
         :language: typescript
         :lines: 20-
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java
-        :caption: |getting-multisig-account-cosignatories-java|
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java
         :language: java
         :lines: 18-27
 
-    .. literalinclude:: ../../resources/examples/javascript/account/GettingMultisigAccountCosignatories.js
-        :caption: |getting-multisig-account-cosignatories-js|
+    .. viewsource:: ../../resources/examples/javascript/account/GettingMultisigAccountCosignatories.js
         :language: javascript
         :lines: 24-
 
@@ -149,27 +136,3 @@ What's next?
 ************
 
 Alice an Bob wants to send transactions from the multisig only when both agree. Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
-
-.. |converting-an-account-to-multisig-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts" target="_blank">View Code</a>
-
-.. |converting-an-account-to-multisig-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java" target="_blank">View Code</a>
-
-.. |converting-an-account-to-multisig-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ConvertingAnAccountToMultisig.js" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingMultisigAccountCosignatories.js" target="_blank">View Code</a>

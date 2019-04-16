@@ -53,13 +53,11 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
-        :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
         :lines: 33-41
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
-        :caption: |sending-a-multisig-transaction-aggregate-complete-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :lines: 33-41
 
@@ -71,13 +69,11 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
-        :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
         :lines:  44-49
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
-        :caption: |sending-a-multisig-transaction-aggregate-complete-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :lines:  44-49
 
@@ -87,13 +83,11 @@ An aggregate transaction is **complete** if before announcing it to the network,
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
-        :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
         :lines:  52-56
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
-        :caption: |sending-a-multisig-transaction-aggregate-complete-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :lines:  52-56
 
@@ -101,13 +95,11 @@ An aggregate transaction is **complete** if before announcing it to the network,
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
-        :caption: |sending-a-multisig-transaction-aggregate-complete-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts
         :language: typescript
         :lines:  59-
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
-        :caption: |sending-a-multisig-transaction-aggregate-complete-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :lines:  59-
 
@@ -132,13 +124,11 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
         :lines:  61-67
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
         :lines:  61-67
 
@@ -147,13 +137,11 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
         :lines:  69-
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
-        :caption: |sending-a-multisig-transaction-aggregate-bonded-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
         :lines:  69-
 
@@ -164,19 +152,3 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 .. code-block:: bash
 
     $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
-
-.. |sending-a-multisig-transaction-aggregate-complete-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-complete-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-bonded-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts" target="_blank">View Code</a>
-
-.. |sending-a-multisig-transaction-aggregate-bonded-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js" target="_blank">View Code</a>

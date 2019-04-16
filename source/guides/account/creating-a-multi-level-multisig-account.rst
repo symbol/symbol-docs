@@ -41,13 +41,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
         :lines:  38-60
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
         :lines: 38-60
 
@@ -55,13 +53,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
         :lines:  63-92
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
         :lines: 63-92
 
@@ -69,13 +65,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
         :lines: 95-115
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
         :lines: 95-115
 
@@ -83,13 +77,11 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
         :lines: 118-
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
         :lines: 118-
 
@@ -111,15 +103,3 @@ If the account #5 initiates an aggregate bonded transaction involving the accoun
     :width: 750px
 
     Sending an aggregate bonded transaction from a MLMA
-
-.. |creating-a-mlma-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts" target="_blank">View Code</a>
-
-.. |creating-a-mlma-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java" target="_blank">View Code</a>
-
-.. |creating-a-mlma-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js" target="_blank">View Code</a>

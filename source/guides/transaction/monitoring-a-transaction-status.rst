@@ -42,8 +42,7 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  32-38
 
@@ -51,8 +50,7 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  41-43
 
@@ -61,8 +59,7 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  46-52
 
@@ -70,13 +67,11 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  54-63
 
-    .. literalinclude:: ../../resources/examples/cli/blockchain/ListeningNewBlocks.sh
-        :caption: |listening-new-blocks-cli|
+    .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -84,13 +79,11 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  65-73
 
-    .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionStatusError.sh
-        :caption: |monitoring-transaction-status-error-cli|
+    .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionStatusError.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -98,13 +91,11 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  75-80
 
-    .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionUnconfirmed.sh
-        :caption: |monitoring-transaction-unconfirmed-cli|
+    .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionUnconfirmed.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -112,13 +103,11 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines:  82-99
 
-    .. literalinclude:: ../../resources/examples/cli/transaction/MonitoringTransactionConfirmed.sh
-        :caption: |monitoring-transaction-confirmed-cli|
+    .. viewsource:: ../../resources/examples/bash/transaction/MonitoringTransactionConfirmed.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -126,13 +115,11 @@ Listeners enable receiving notifications possible when a change in the blockchai
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
-        :caption: |monitoring-transactions-status-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/MonitoringTransactionStatus.ts
         :language: typescript
         :lines: 101-
 
-    .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransaction.sh
-        :caption: |sending-a-transfer-transaction-cli|
+    .. viewsource:: ../../resources/examples/bash/transaction/SendingATransferTransaction.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -160,27 +147,3 @@ What's next?
 ************
 
 Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see the transaction information in your terminal.
-
-.. |monitoring-transactions-status-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/MonitoringTransactionStatus.ts" target="_blank">View Code</a>
-
-.. |listening-new-blocks-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/blockchain/ListeningNewBlocks.sh" target="_blank">View Code</a>
-
-.. |monitoring-transaction-status-error-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/MonitoringTransactionStatusError.sh" target="_blank">View Code</a>
-
-.. |monitoring-transaction-unconfirmed-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/MonitoringTransactionUnconfirmed.sh" target="_blank">View Code</a>
-
-.. |monitoring-transaction-confirmed-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/MonitoringTransactionConfirmed.sh" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/SendingATransferTransaction.sh" target="_blank">View Code</a>
