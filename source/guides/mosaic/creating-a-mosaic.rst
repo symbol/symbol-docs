@@ -43,11 +43,13 @@ You will need to announce two transactions to create a mosaic:
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  33-50
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 33-50
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
 
@@ -55,11 +57,13 @@ You will need to announce two transactions to create a mosaic:
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  52-57
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 52-57
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 .. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has divisibility 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
@@ -69,11 +73,13 @@ You will need to announce two transactions to create a mosaic:
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.ts
         :language: typescript
-        :lines:  59-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
         :language: javascript
-        :lines: 59-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
         :language: bash

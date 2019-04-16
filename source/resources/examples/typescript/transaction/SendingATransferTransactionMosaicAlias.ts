@@ -32,6 +32,7 @@ import {
 // 01 - Create Transfer Transaction
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
+/* start block 01 */
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
@@ -39,6 +40,7 @@ const transferTransaction = TransferTransaction.create(
             UInt64.fromUint(10000000))],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
 // 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY as string;

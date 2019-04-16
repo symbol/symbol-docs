@@ -32,12 +32,14 @@ import {
 // 01 - Create Transfer Transaction
 const recipientAddress = new NamespaceId('foo');
 
+/* start block 01 */
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
 // 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY as string;

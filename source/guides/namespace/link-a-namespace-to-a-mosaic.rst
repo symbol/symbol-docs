@@ -31,11 +31,13 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
     .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
         :language: typescript
-        :lines:  31-36
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
-        :lines: 31-36
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Announce the alias transaction.
 
@@ -43,11 +45,13 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
     .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
         :language: typescript
-        :lines:  39-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
-        :lines: 39-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
@@ -61,8 +65,10 @@ Now you can send transactions using the namespace linked to the mosaic instead o
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts
         :language: typescript
-        :lines:  35-42
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js
         :language: javascript
-        :lines:  33-39
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */

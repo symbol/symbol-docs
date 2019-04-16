@@ -40,15 +40,18 @@ In this example, we have registered a subnamespace called ``bar`` under ``foo`` 
 
     .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringASubnamespace.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java
         :language: java
-        :lines: 39-61
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringASubnamespace.js
         :language: javascript
-        :lines: 26-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/namespace/RegisteringASubnamespace.sh
         :language: bash

@@ -30,7 +30,7 @@ const Account = nem2Sdk.Account,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     UInt64 = nem2Sdk.UInt64;
 
-
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
@@ -48,14 +48,18 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
         duration: UInt64.fromUint(1000)
     }),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
+/* start block 02 */
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
     MosaicSupplyType.Increase,
     UInt64.fromUint(1000000),
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
@@ -70,3 +74,4 @@ const signedTransaction = account.sign(aggregateTransaction);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x=> console.log(x),err => console.error(err));
+/* end block 03 */

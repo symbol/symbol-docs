@@ -27,11 +27,13 @@ Call ``getNamespace`` function, passing the namespace identifier you want to che
 
     .. viewsource:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/GettingNamespaceInformation.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/namespace/GettingNamespaceInformation.sh
         :language: bash

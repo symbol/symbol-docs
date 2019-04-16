@@ -27,11 +27,13 @@ Call ``getMosaic`` function, passing the mosaicId you want to check as a paramet
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/GettingMosaicInformation.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/mosaic/GettingMosaicInformation.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/mosaic/GettingMosaicInformation.sh
         :language: bash

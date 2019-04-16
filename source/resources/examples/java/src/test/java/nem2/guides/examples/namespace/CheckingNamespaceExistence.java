@@ -30,7 +30,7 @@ class CheckingNamespaceExistence {
 
     @Test
     void checkingNamespaceExistence() throws ExecutionException, InterruptedException, MalformedURLException {
-
+        /* start block 01 */
         final NamespaceId namespaceId = new NamespaceId("foo");
 
         final NamespaceHttp namespaceHttp = new NamespaceHttp("http://localhost:3000");
@@ -38,5 +38,6 @@ class CheckingNamespaceExistence {
         final NamespaceInfo namespaceInfo = namespaceHttp.getNamespace(namespaceId).toFuture().get();
 
         System.out.println(namespaceInfo);
+        /* end block 01 */
     }
 }

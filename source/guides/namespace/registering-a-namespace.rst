@@ -40,15 +40,18 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/namespace/CheckingNamespaceExistence.ts
         :language: typescript
-        :lines:  22-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/CheckingNamespaceExistence.java
         :language: java
-        :lines: 34-40
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/CheckingNamespaceExistence.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/namespace/CheckingNamespaceExistence.sh
         :language: bash
@@ -62,15 +65,18 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringANamespace.ts
         :language: typescript
-        :lines:  20-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringANamespace.java
         :language: java
-        :lines: 40-59
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringANamespace.js
         :language: javascript
-        :lines: 27-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
         :language: bash
