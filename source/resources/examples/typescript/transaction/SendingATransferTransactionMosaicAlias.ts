@@ -29,7 +29,7 @@ import {
     UInt64,
 } from 'nem2-sdk';
 
-// 01 - Create Transfer Transaction
+/* start block 01 */
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
 const transferTransaction = TransferTransaction.create(
@@ -39,15 +39,14 @@ const transferTransaction = TransferTransaction.create(
             UInt64.fromUint(10000000))],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY as string;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
 
-// 03 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 transactionHttp

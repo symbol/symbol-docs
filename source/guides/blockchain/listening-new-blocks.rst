@@ -23,40 +23,23 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/blockchain/ListeningNewBlocks.ts
-        :caption: |listening-new-blocks-ts|
+    .. viewsource:: ../../resources/examples/typescript/blockchain/ListeningNewBlocks.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/ListeningNewBlocks.java
-        :caption: |listening-new-blocks-java|
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/ListeningNewBlocks.java
         :language: java
-        :lines: 33-39
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/blockchain/ListeningNewBlocks.js
-        :caption: |listening-new-blocks-js|
+    .. viewsource:: ../../resources/examples/javascript/blockchain/ListeningNewBlocks.js
         :language: javascript
-        :lines: 22-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/blockchain/ListeningNewBlocks.sh
-        :caption: |listening-new-blocks-cli|
+    .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
         :language: bash
         :start-after: #!/bin/sh
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
-
-.. |listening-new-blocks-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/blockchain/ListeningNewBlocks.ts" target="_blank">View Code</a>
-
-.. |listening-new-blocks-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/blockchain/ListeningNewBlocks.java" target="_blank">View Code</a>
-
-.. |listening-new-blocks-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/blockchain/ListeningNewBlocks.js" target="_blank">View Code</a>
-
-.. |listening-new-blocks-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/blockchain/ListeningNewBlocks.sh" target="_blank">View Code</a>

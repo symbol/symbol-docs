@@ -28,11 +28,14 @@ const Account = nem2Sdk.Account,
     filter = operators.filter,
     map = operators.map;
 
+/* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account)  => {
     const cosignatureTransaction = CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
+/* end block 01 */
 
+/* start block 02 */
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
@@ -51,3 +54,4 @@ listener.open().then(() => {
         )
         .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
 });
+/* end block 02 */

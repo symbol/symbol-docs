@@ -100,19 +100,19 @@ Sending the transfer transaction
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
-        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  32-44
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Once signed, Alice :doc:`announces the transaction <../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until the transaction reaches the network, returning back the Transaction object.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
-        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  47-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 It is important to highlight that this transaction has an ``unconfirmed`` status. You might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before doing additional actions.
 
@@ -137,7 +137,3 @@ In case the Catapult REST server throws an error, the subscribe method will invo
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>
-
-.. |turning-the-asynchronous-transaction-announcement-into-synchronous-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts" target="_blank">View Code</a>

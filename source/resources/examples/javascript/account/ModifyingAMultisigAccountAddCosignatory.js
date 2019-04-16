@@ -22,23 +22,18 @@ const Account = nem2Sdk.Account,
     Deadline = nem2Sdk.Deadline,
     HashLockTransaction = nem2Sdk.HashLockTransaction,
     Listener = nem2Sdk.Listener,
-    Mosaic = nem2Sdk.Mosaic,
-    MosaicId = nem2Sdk.MosaicId,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
-    Deadline = nem2Sdk.Deadline,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
-    AggregateTransaction = nem2Sdk.AggregateTransaction,
-    HashLockTransaction = nem2Sdk.HashLockTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    Uint64 = nem2Sdk.UInt64,
+    UInt64 = nem2Sdk.UInt64,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -53,16 +48,18 @@ const newCosignatoryPublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 
 const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add,newCosignatoryAccount);
+/* end block 01 */
 
-// 02 - Create ModifyMultisigAccountTransaction
+/* start block 02 */
 const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     0,
     0,
     [multisigCosignatoryModification],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Create and sign AggregateTransaction
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
@@ -70,11 +67,12 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 console.log(signedTransaction.hash);
+/* end block 03 */
 
-// 04 - Announce transaction
+/* start block 04 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrency.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -97,3 +95,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 04 */

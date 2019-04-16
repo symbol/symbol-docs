@@ -28,26 +28,18 @@ To increase the initial supply to ``2.000.000``, define a :ref:`mosaic supply ch
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts
-        :caption: |modifying-mosaic-supply-ts|
+    .. viewsource:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts
         :language: typescript
-        :lines:  30-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/mosaic/ModifyingMosaicSupply.js
-        :caption: |modifying-mosaic-supply-js|
+    .. viewsource:: ../../resources/examples/javascript/mosaic/ModifyingMosaicSupply.js
         :language: javascript
-        :lines: 30-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 ************
 What's next?
 ************
 
 Decrease your mosaic supply by changing ``MosaicSupplyType.Increase`` to ``MosaicSupplyType.Decrease``.
-
-.. |modifying-mosaic-supply-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts" target="_blank">View Code</a>
-
-.. |modifying-mosaic-supply-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/ModifyingMosaicSupply.js" target="_blank">View Code</a>

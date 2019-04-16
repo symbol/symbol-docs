@@ -22,21 +22,18 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
-    HashLockTransaction,
     ModifyMultisigAccountTransaction,
-    Mosaic,
-    MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
+    NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
     TransactionHttp,
-    UInt64,
-    Mosaic, MosaicId
+    UInt64
 } from "nem2-sdk";
 import {filter, mergeMap} from 'rxjs/operators';
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -50,17 +47,19 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 const newCosignatoryPublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF530B1FB52389568F1';
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 
-const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add,newCosignatoryAccount);
+const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add, newCosignatoryAccount);
+/* end block 01 */
 
-// 02 - Create ModifyMultisigAccountTransaction
+/* start block 02 */
 const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     0,
     0,
     [multisigCosignatoryModification],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Create and sign AggregateTransaction
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
@@ -68,14 +67,12 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 console.log(signedTransaction.hash);
+/* end block 03 */
 
-// 04 - Announce transaction
+/* start block 04 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -98,3 +95,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 04 */

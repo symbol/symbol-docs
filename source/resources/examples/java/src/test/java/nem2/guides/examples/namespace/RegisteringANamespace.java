@@ -36,7 +36,7 @@ class RegisteringANamespace {
 
     @Test
     void registeringANamespace() throws ExecutionException, InterruptedException, MalformedURLException {
-
+        /* start block 01 */
         // Replace with private key
         final String privateKey = "";
 
@@ -57,5 +57,6 @@ class RegisteringANamespace {
         final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
 
         transactionHttp.announce(signedTransaction).toFuture().get();
+        /* end block 01 */
     }
 }

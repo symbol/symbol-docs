@@ -18,6 +18,7 @@
 
 import {AccountHttp, Address} from "nem2-sdk";
 
+/* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
 const address = Address.createFromRawAddress('SCSGBN-HYJD6P-KJHACX-3R2BI3-QUMMOY-QSNW5J-ICLK');
@@ -25,3 +26,4 @@ const address = Address.createFromRawAddress('SCSGBN-HYJD6P-KJHACX-3R2BI3-QUMMOY
 accountHttp
     .getMultisigAccountInfo(address)
     .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));
+/* end block 01 */

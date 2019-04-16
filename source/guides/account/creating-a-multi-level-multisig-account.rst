@@ -41,57 +41,57 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  38-60
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 38-60
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Define the multisig account #3.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  63-92
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 63-92
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Define the multisig account #1.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 95-115
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 95-115
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Announce the transactions together using an :ref:`aggregate bonded transaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
-        :caption:  |creating-a-mlma-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 118-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
-        :caption:  |creating-a-mlma-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 118-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
 
@@ -111,15 +111,3 @@ If the account #5 initiates an aggregate bonded transaction involving the accoun
     :width: 750px
 
     Sending an aggregate bonded transaction from a MLMA
-
-.. |creating-a-mlma-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts" target="_blank">View Code</a>
-
-.. |creating-a-mlma-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAMultilevelMultisigAccount.java" target="_blank">View Code</a>
-
-.. |creating-a-mlma-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js" target="_blank">View Code</a>
