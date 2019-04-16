@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 1.0.12
+  version: 0.7.14
   title: Catapult REST API Reference
   license:
     name: Apache 2.0
@@ -1424,7 +1424,7 @@ definitions:
     - blockTransactionsHash
     - blockReceiptsHash
     - stateHash
-    - beneficiaryPublicKey
+    - beneficiary
     properties:
       signature:
         type: string
@@ -1450,7 +1450,7 @@ definitions:
         type: string
       stateHash:
         type: string
-      beneficiaryPublicKey:
+      beneficiary:
         type: string
   HeightDTO:
     type: object

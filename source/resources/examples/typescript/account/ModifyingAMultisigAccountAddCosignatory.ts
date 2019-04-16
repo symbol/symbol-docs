@@ -22,6 +22,7 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
+    HashLockTransaction,
     ModifyMultisigAccountTransaction,
     Mosaic,
     MosaicId,

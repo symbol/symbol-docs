@@ -207,11 +207,13 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x01; The property type is an address.
-    0x02; The property type is mosaic id.
-    0x04; The property type is a transaction type.
+    0x01; The property type allows receiving transactions from an address.
+    0x02; The property type allows receiving transactions containing a mosaic id.
+    0x04; The property type allows sending transactions with a given transaction type.
     0x05; Property type sentinel.
-    0x80 + type; The property is interpreted as a blocking operation.
+    0x81; The property type blocks receiving transactions from an address.
+    0x82; The property type blocks receiving transactions containing a mosaic id.
+    0x84; The property type blocks sending transactions with a given transaction type.
 
 .. _property-modification-type:
 

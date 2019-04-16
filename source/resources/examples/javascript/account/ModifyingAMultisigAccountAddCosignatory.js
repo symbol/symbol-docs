@@ -29,6 +29,10 @@ const Account = nem2Sdk.Account,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
+    Deadline = nem2Sdk.Deadline,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     Uint64 = nem2Sdk.UInt64,
     filter = operators.filter,
@@ -70,10 +74,7 @@ console.log(signedTransaction.hash);
 // 04 - Announce transaction
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrency.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
