@@ -28,6 +28,7 @@ const Account = nem2Sdk.Account,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification;
 
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
@@ -59,3 +60,4 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 01 */

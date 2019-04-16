@@ -22,19 +22,17 @@ const Account = nem2Sdk.Account,
     Deadline = nem2Sdk.Deadline,
     HashLockTransaction = nem2Sdk.HashLockTransaction,
     Listener = nem2Sdk.Listener,
-    Mosaic = nem2Sdk.Mosaic,
-    MosaicId = nem2Sdk.MosaicId,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    Uint64 = nem2Sdk.UInt64,
+    UInt64 = nem2Sdk.UInt64,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Define multisig #2 (1-of-2)
+/* start block 01 */
 const multisig2PrivateKey = process.env.MULTISIG_2_PRIVATE_KEY;
 const multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -58,8 +56,9 @@ const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory6,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Create multisig #3 (2-of-3)
+/* start block 02 */
 const multisig3PrivateKey = process.env.MULTISIG_3_PRIVATE_KEY;
 const multisigAccount3 = Account.createFromPrivateKey(multisig3PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -90,8 +89,9 @@ const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Create multisig #1 (3-of-3)
+/* start block 03 */
 const multisig1PrivateKey = process.env.MULTISIG_1_PRIVATE_KEY;
 const multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -113,8 +113,9 @@ const convertMultisigAccount1Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 03 */
 
-// 04 - Announce the transactions.
+/* start block 04 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
@@ -127,19 +128,16 @@ console.log(signedTransaction.hash);
 
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
 const hashLockTransactionSigned = multisigAccount1.sign(hashLockTransaction);
 
-const  nodeUrl = 'http://localhost:3000';
+const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
-const listener= new Listener(nodeUrl);
+const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
 
@@ -157,3 +155,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 04 */

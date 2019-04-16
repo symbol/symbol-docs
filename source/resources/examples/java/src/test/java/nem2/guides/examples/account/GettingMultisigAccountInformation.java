@@ -15,6 +15,8 @@ public class GettingMultisigAccountInformation {
 
     @Test
     void gettingMultisigAccountInformation() throws ExecutionException, InterruptedException, MalformedURLException {
+
+        /* start block 01 */
         final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
 
         // Replace with address
@@ -25,5 +27,7 @@ public class GettingMultisigAccountInformation {
         final MultisigAccountInfo multisigAccountInfo = accountHttp.getMultisigAccountInfo(address).toFuture().get();
 
         System.out.println(multisigAccountInfo);
+        /* end block 01 */
+
     }
 }

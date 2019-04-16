@@ -28,15 +28,18 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/account/GettingAccountInformation.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java
         :language: java
-        :lines: 33-40
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/GettingAccountInformation.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/GettingAccountInformation.sh
         :language: bash
@@ -56,11 +59,13 @@ The balance is the amount of the different :doc:`mosaics <../../concepts/mosaic>
 
     .. viewsource:: ../../resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts
         :language: typescript
-        :lines:  22-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
         :language: javascript
-        :lines: 28-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/CheckingBalanceOfAnAccount.sh
         :language: bash

@@ -27,15 +27,18 @@ In this example, you will fetch the latest confirmed transactions for a given ac
 
     .. viewsource:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
         :language: java
-        :lines: 36-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/GettingConfirmedTransactions.js
         :language: javascript
-        :lines: 26-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/GettingConfirmedTransactions.sh
         :language: bash

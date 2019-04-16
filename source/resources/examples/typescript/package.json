@@ -6,7 +6,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "js-sha3": "^0.7.0",
-    "nem2-sdk": "^0.11.0",
+    "nem2-sdk": "^0.11.3",
     "rxjs": "^6.2.2"
   },
   "devDependencies": {

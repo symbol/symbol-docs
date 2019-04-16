@@ -36,12 +36,14 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :lines:  30-36
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
-        :lines: 30-36
-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a 2-of-2 multisig instead. You can achieve this by increasing ``minApproval`` parameter in one unit.
 
@@ -60,11 +62,13 @@ One of the accounts, for example Alice's, announces a :ref:`modify multisig acco
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :lines:  39-44
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
-        :lines: 39-44
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 2. Wrap the modify multisig account transaction under an aggregate transaction, attaching multisig public key as the signer.
 
@@ -76,11 +80,13 @@ As only one cosignature is required (1-of-2), Alice can sign the transaction and
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :lines:  47-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
         :language: javascript
-        :lines: 47-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 Once confirmed, the minApproval value of the multisig will be set to 2, having our 2-of-2 multisig.
 
@@ -105,11 +111,13 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  38-51
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  38-51
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Create a modify multisig account transaction adding the previous modification.
 
@@ -117,23 +125,27 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  54-59
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  54-59
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-3.  Wrap the modifiy multisig account transaction in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+3.  Wrap the modify multisig account transaction in an :ref:`aggregate bonded transaction <aggregate-transaction>` and sign it.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  62-68
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines:  62-68
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
 
@@ -141,11 +153,13 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :lines:  71-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
         :language: javascript
-        :lines: 71-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
@@ -176,11 +190,13 @@ The following code shows how to remove a cosignatory of a 2-of-3 multisig accoun
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts
         :language: typescript
-        :lines:  31-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
         :language: javascript
-        :lines: 31-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 ************
 What’s next?

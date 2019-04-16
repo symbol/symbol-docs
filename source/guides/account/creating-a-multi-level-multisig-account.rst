@@ -43,11 +43,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  38-60
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 38-60
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Define the multisig account #3.
 
@@ -55,11 +57,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines:  63-92
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 63-92
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Define the multisig account #1.
 
@@ -67,11 +71,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 95-115
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 95-115
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Announce the transactions together using an :ref:`aggregate bonded transaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
 
@@ -79,11 +85,13 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
-        :lines: 118-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js
         :language: javascript
-        :lines: 118-
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
 

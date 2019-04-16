@@ -27,11 +27,13 @@ An account is a key pair (private and public key) associated with a mutable stat
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAnAccount.ts
         :language: typescript
-        :lines:  23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAnAccount.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccount.sh
         :language: bash
@@ -47,15 +49,18 @@ If you already have a private key, it is not necessary to generate a new account
 
     .. viewsource:: ../../resources/examples/typescript/account/OpeningAnAccount.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java
         :language: java
-        :lines: 31-34
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/OpeningAnAccount.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 **Using a Wallet**
 
@@ -67,14 +72,17 @@ A wallet enables you to store your account to sign transactions, encrypting your
 
     .. viewsource:: ../../resources/examples/typescript/account/CreatingAnAccountWallet.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/CreatingAnAccountWallet.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccountWallet.sh
         :language: bash
+        :start-after:  /* start block 01 */
         :start-after: #!/bin/sh
 
 Do you have a private key? You can create and open a wallet importing your private key.
@@ -83,11 +91,13 @@ Do you have a private key? You can create and open a wallet importing your priva
 
     .. viewsource:: ../../resources/examples/typescript/account/OpeningAnAccountWallet.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/account/OpeningAnAccountWallet.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/account/OpeningAnAccountWallet.sh
         :language: bash
