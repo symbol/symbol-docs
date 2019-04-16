@@ -27,15 +27,18 @@ What happened in the genesis block? Run the following code to get the first crea
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/GettingBlockByHeight.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingBlockByHeight.java
         :language: java
-        :lines: 34-41
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/blockchain/GettingBlockByHeight.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 The following snippet returns the height of the latest block.
 
@@ -43,15 +46,18 @@ The following snippet returns the height of the latest block.
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/GettingBlockchainHeight.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingBlockchainHeight.java
         :language: java
-        :lines: 33-37
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/blockchain/GettingBlockchainHeight.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/blockchain/GettingBlockchainHeight.sh
         :language: bash

@@ -18,6 +18,7 @@
 
 import {Listener} from "nem2-sdk";
 
+/* start block 01 */
 const listener = new Listener('http://localhost:3000');
 
 listener.open().then(() => {
@@ -27,3 +28,4 @@ listener.open().then(() => {
         .subscribe(block => console.log(block), err => console.error(err));
 
 });
+/* end block 01 */

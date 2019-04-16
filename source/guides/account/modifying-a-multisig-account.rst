@@ -48,10 +48,10 @@ Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of 
 Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a 2-of-2 multisig instead. You can achieve this by increasing ``minApproval`` parameter in one unit.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
-        :align: center
-        :width: 350px
+    :align: center
+    :width: 350px
 
-        2-of-2 multisig account example
+    2-of-2 multisig account example
 
 
 One of the accounts, for example Alice's, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`, increasing ``minApprovalDelta``.
@@ -100,10 +100,10 @@ Adding a new cosignatory
 Alice and Bob want to add Carol as a cosignatory of the multisig account to achieve 2-of-3 cosignatures required.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-3.png
-        :align: center
-        :width: 350px
+    :align: center
+    :width: 350px
 
-        2-of-3 multisig account example
+    2-of-3 multisig account example
 
 1. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, since you are not increasing the ``minApprovalDelta``.
 

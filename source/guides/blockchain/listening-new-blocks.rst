@@ -25,15 +25,18 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/ListeningNewBlocks.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/ListeningNewBlocks.java
         :language: java
-        :lines: 33-39
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/javascript/blockchain/ListeningNewBlocks.js
         :language: javascript
-        :lines: 22-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
     .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
         :language: bash

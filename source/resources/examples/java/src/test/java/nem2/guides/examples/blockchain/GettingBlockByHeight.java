@@ -31,6 +31,7 @@ class GettingBlockByHeight {
 
     @Test
     void gettingBlockByHeight() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 01 */
         final BlockchainHttp blockchainHttp = new BlockchainHttp("http://localhost:3000");
 
         // Replace with block height
@@ -39,5 +40,6 @@ class GettingBlockByHeight {
         final BlockInfo blockInfo = blockchainHttp.getBlockByHeight(blockHeight).toFuture().get();
 
         System.out.print(blockInfo);
+        /* end block 01 */
     }
 }
