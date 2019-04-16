@@ -20,9 +20,12 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
+    HashLockTransaction,
     Listener,
     HashLockTransaction,
     ModifyMultisigAccountTransaction,
+    Mosaic,
+    MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
     NetworkType,
@@ -64,6 +67,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
 
 // 04 - Announce transaction
 const hashLockTransaction = HashLockTransaction.create(

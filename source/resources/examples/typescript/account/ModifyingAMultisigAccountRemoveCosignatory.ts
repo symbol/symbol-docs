@@ -56,5 +56,6 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 
-transactionHttp.announce(signedTransaction)
+transactionHttp
+    .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

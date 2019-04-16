@@ -18,17 +18,27 @@
 
 import {
     Account,
+    AggregateTransaction,
     Deadline,
+    HashLockTransaction,
+    Listener,
     ModifyMultisigAccountTransaction,
+    Mosaic,
+    MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
     NetworkType,
     PublicAccount,
-    TransactionHttp
+    TransactionHttp,
+    UInt64
 } from "nem2-sdk";
+import {filter, mergeMap} from "rxjs/operators";
+
 
 //01 - Setup
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
 const privateKey = process.env.PRIVATE_KEY as string; // Private key of the account to convert into multisig
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
@@ -54,9 +64,41 @@ const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
         )],
     NetworkType.MIJIN_TEST);
 
-//03 - Sign and announce the transaction from the account to convert into multisig
-const signedTransaction = account.sign(convertIntoMultisigTransaction);
+// 03 - Create and sign the AggregateTransaction.
+const aggregateTransaction = AggregateTransaction.createBonded(
+    Deadline.create(),
+    [convertIntoMultisigTransaction.toAggregate(account.publicAccount)],
+    NetworkType.MIJIN_TEST);
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+const signedTransaction = account.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
+
+// 04 - Announce transaction
+const hashLockTransaction = HashLockTransaction.create(
+    Deadline.create(),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
+    UInt64.fromUint(480),
+    signedTransaction,
+    NetworkType.MIJIN_TEST);
+
+const hashLockTransactionSigned = account.sign(hashLockTransaction);
+
+listener.open().then(() => {
+
+    transactionHttp
+        .announce(hashLockTransactionSigned)
+        .subscribe(x => console.log(x), err => console.error(err));
+
+    listener
+        .confirmed(account.address)
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
+        .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
+            err => console.error(err));
+});
