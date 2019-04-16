@@ -42,6 +42,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
+    'sphinxcontrib.viewsource',
     'sphinxcontrib.ghcontributors',
     'sphinx_tabs.tabs',
     'edit-on-github',
@@ -326,3 +327,14 @@ blog_authors = {
 # -- Options for linkcheck ------------------------------------------------
 
 linkcheck_ignore = [r'http://localhost\d+']
+
+# -- Options for viewsource ------------------------------------------------
+viewsource_title = 'View Code'
+
+def viewsource_resolve_link(file_path, language=None):
+    base_url = 'https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/%s/' % language
+    if language == 'java':
+        base_url += 'src/test/java/nem2/guides/examples/'
+    path_split = file_path.split('/')
+    path = "/".join(path_split[len(path_split)-2:])
+    return base_url + path

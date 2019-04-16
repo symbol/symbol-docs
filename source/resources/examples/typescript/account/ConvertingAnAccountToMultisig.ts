@@ -23,10 +23,9 @@ import {
     HashLockTransaction,
     Listener,
     ModifyMultisigAccountTransaction,
-    Mosaic,
-    MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
+    NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
     TransactionHttp,
@@ -35,7 +34,7 @@ import {
 import {filter, mergeMap} from "rxjs/operators";
 
 
-//01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -47,8 +46,9 @@ const cosignatory1PublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F
 const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, NetworkType.MIJIN_TEST);
 const cosignatory2PublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-//02 - Create ModifyMultisigAccountTransaction
+/* start block 02 */
 const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     1,
@@ -63,23 +63,24 @@ const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
             cosignatory2,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Create and sign the AggregateTransaction.
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [convertIntoMultisigTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST);
+/* end block 03 */
 
+/* start block 04 */
 const signedTransaction = account.sign(aggregateTransaction);
 console.log(signedTransaction.hash);
+/* end block 04 */
 
-// 04 - Announce transaction
+/* start block 05 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -102,3 +103,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 05 */

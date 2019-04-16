@@ -42,72 +42,72 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines:  39-49
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 39-49
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 
 2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they want to create a 1-of-2 multisig account, set the minimum signatures required to 1.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 52-65
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 52-65
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Create an :ref:`aggregate bonded transaction <aggregate-transaction>`, wrapping the modify multisig account transaction. This is necessary since Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 68-71
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 68-71
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 4. Sign the aggregate transaction using the private key of the multisig account.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 73-74
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 73-74
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 5. Before sending an aggregate bonded transaction, the future multisig account needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that the inner transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
-        :caption: |converting-an-account-to-multisig-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts
         :language: typescript
-        :lines: 77-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
-        :caption: |converting-an-account-to-multisig-js|
+    .. viewsource:: ../../resources/examples/javascript/account/ConvertingAnAccountToMultisig.js
         :language: javascript
-        :lines: 77-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
 
 6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Alice's account.
@@ -128,48 +128,23 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts
-        :caption: |getting-multisig-account-cosignatories-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts
         :language: typescript
-        :lines: 20-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java
-        :caption: |getting-multisig-account-cosignatories-java|
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java
         :language: java
-        :lines: 18-27
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/GettingMultisigAccountCosignatories.js
-        :caption: |getting-multisig-account-cosignatories-js|
+    .. viewsource:: ../../resources/examples/javascript/account/GettingMultisigAccountCosignatories.js
         :language: javascript
-        :lines: 24-
-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 ************
 What's next?
 ************
 
 Alice an Bob wants to send transactions from the multisig only when both agree. Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
-
-.. |converting-an-account-to-multisig-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts" target="_blank">View Code</a>
-
-.. |converting-an-account-to-multisig-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/ConvertingAnAccountToMultisig.java" target="_blank">View Code</a>
-
-.. |converting-an-account-to-multisig-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ConvertingAnAccountToMultisig.js" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingMultisigAccountCosignatories.ts" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/GettingMultisigAccountInformation.java" target="_blank">View Code</a>
-
-.. |getting-multisig-account-cosignatories-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingMultisigAccountCosignatories.js" target="_blank">View Code</a>

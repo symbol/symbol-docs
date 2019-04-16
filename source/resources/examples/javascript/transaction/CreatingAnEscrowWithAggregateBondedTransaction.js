@@ -36,7 +36,7 @@ const Account = nem2Sdk.Account,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -60,15 +60,18 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
     [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Aggregate Transaction
+/* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
     [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
+/* end block 02 */
 
+/* start block 03 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     NetworkCurrencyMosaic.createRelative(10),
@@ -94,3 +97,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 03 */

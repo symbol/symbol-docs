@@ -21,10 +21,8 @@ import {
     Address,
     AggregateTransaction,
     Deadline,
-    Listener,
     HashLockTransaction,
-    Mosaic,
-    MosaicId,
+    Listener,
     NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
@@ -36,7 +34,6 @@ import {
 
 import {filter, mergeMap} from "rxjs/operators";
 
-// 01 - Set up
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -49,7 +46,6 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
-// 02 - Create transfer transaction
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
@@ -57,7 +53,7 @@ const transferTransaction = TransferTransaction.create(
     PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
-// 02 - Create aggregate transaction
+/* start block 01 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [transferTransaction.toAggregate(multisigAccount)],
@@ -65,7 +61,9 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 console.log(signedTransaction.hash);
+/* end block 01 */
 
+/* start block 02 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     NetworkCurrencyMosaic.createRelative(10),
@@ -91,3 +89,4 @@ listener.open().then(() => {
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 02 */

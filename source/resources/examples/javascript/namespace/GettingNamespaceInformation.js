@@ -20,10 +20,11 @@ const nem2Sdk = require("nem2-sdk");
 
 const NamespaceHttp = nem2Sdk.NamespaceHttp;
 const NamespaceId = nem2Sdk.NamespaceId;
-
+/* start block 01 */
 const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 const namespaceId = new NamespaceId('foo');
 
 namespaceHttp
     .getNamespace(namespaceId)
     .subscribe(namespaceInfo => console.log(namespaceInfo), err => console.error(err));
+/* end block 01 */

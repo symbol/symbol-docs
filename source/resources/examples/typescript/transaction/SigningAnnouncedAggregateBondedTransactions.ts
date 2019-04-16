@@ -27,11 +27,14 @@ import {
 } from 'nem2-sdk';
 import {filter, map, mergeMap} from "rxjs/operators";
 
+/* start block 01 */
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
     const cosignatureTransaction = CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
+/* end block 01 */
 
+/* start block 02 */
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
@@ -49,3 +52,4 @@ accountHttp
     )
     .subscribe(announcedTransaction => console.log(announcedTransaction),
         err => console.error(err));
+/* end block 02 */
