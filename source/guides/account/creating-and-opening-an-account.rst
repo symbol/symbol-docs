@@ -82,7 +82,6 @@ A wallet enables you to store your account to sign transactions, encrypting your
 
     .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccountWallet.sh
         :language: bash
-        :start-after:  /* start block 01 */
         :start-after: #!/bin/sh
 
 Do you have a private key? You can create and open a wallet importing your private key.
