@@ -18,7 +18,7 @@ The **private key** is a random 256-bit integer. The **public key** is cryptogra
 Address
 *******
 
-A NEM address is a base-32 :sup:`3` encoded triplet consisting of:
+A NEM address is a base-32 encoded triplet consisting of:
 
 * Network byte
 * 160-bit hash of the account's public key
