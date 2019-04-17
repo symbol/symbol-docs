@@ -6,7 +6,11 @@ Mosaics are part of what makes the Smart Asset System unique and flexible. They 
 
 A mosaic could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-Each mosaic has a unique identifier and a set of configurable properties. During the mosaic creation, you can define:
+**********
+Properties
+**********
+
+Each mosaic has a unique identifier and a set of configurable properties. During the  :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
 
 .. _mosaic-properties:
 
@@ -19,6 +23,20 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Initial supply; Integer; Indicates the amount of mosaic in circulation. The initial supply must be in the range of 0 and ``9,000,000,000``.
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+
+*****************************
+Absolute and relative amounts
+*****************************
+
+NEM works with absolute amounts, removing the comma when the mosaic can be divisible. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+
+For example, if the mosaic has divisibility 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
+
+****
+Cost
+****
+
+The cost of creating a mosaic is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
 
 ******
 Guides

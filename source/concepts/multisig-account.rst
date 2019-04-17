@@ -6,11 +6,13 @@ Editable on-chain contracts, the most powerful way to secure funds and enable jo
 
 A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig **cosignatories**.
 
-Nevertheless, it is not always necessary to force all cosignatories to cosign the transaction. NEM allows to set up the minimum number of consignatory agreements. These properties can be edited afterwards to suit almost all needs. NEM's current implementation of multisig is *"M-of-N"*. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+The account invited to be a cosignatory has to opt-in. Nevertheless, it is not always necessary to force all cosignatories to cosign transactions associated with the multisig account.
 
-The number of minimum cosignatures to approve transactions and remove cosignatories is editable.
+NEM allows to set up the minimum number of cosignatory agreements. These properties can be edited afterward to suit almost all needs. NEM's current implementation of multisig is *"M-of-N"*. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
 
-.. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
+The minimum number of cosignatures required to approve transactions and remove cosignatories is :ref:`editable <guide-modify-a-multisig-account-min-approval>`. Similarly, cosignatories can :ref:`invite other accounts to take part in the multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  :ref:`propose to remove others <guide-modify-a-multisig-account-removing-a-cosignatory>` when the defined conditions are fulfilled.
+
+.. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If the cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
 
 Some important considerations to keep in mind:
 
