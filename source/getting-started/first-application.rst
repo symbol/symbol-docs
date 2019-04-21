@@ -12,7 +12,8 @@ The secondary ticket market, also known as the resale market, is the exchange of
 
 Buying a ticket from someone that is not the initial vendor does not necessarily only mean to pay more for the ticket. The is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can't do anything to solve the issue.
 
-**What do we want to solve?**
+What do we want to solve?
+=========================
 
 .. figure:: ../resources/images/examples/getting-started.png
     :width: 450px
@@ -26,7 +27,8 @@ a) Identify each ticket buyer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-**Why should we use NEM?**
+Why should we use NEM?
+======================
 
 Blockchain technology makes sense in cases where:
 
@@ -42,7 +44,8 @@ The rest of the code remains **off-chain**. This reduces the inherent immutabili
 Let’s get into some code
 ************************
 
-**1.Creating an account for each participant**
+Creating an account for each participant
+========================================
 
 First, identify the actors involved in the problem we want to solve:
 
@@ -77,7 +80,8 @@ Have you loaded an account with test ``cat.currency``? If it is not the case, go
    $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
 
 
-**2. Monitoring the blockchain**
+Monitoring the blockchain
+=========================
 
 Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
 
@@ -103,7 +107,8 @@ Open three new terminals:
 
    $> nem2-cli monitor confirmed
 
-**3. Creating the ticket**
+Creating the ticket
+===================
 
 We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
@@ -130,7 +135,8 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 
    $> ...  MosaicId:7cdf3b117a3c40cc ...
 
-**4. Sending the ticket**
+Sending the ticket
+==================
 
 Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 

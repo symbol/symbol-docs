@@ -9,17 +9,13 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
+.. note:: ⚠️ NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it **should not power any production Catapult instances**.
+
 .. _setup-catapult-service-bootstrap:
 
 **********************************
 Running Catapult Service Bootstrap
 **********************************
-
-.. figure:: ../resources/images/four-layer-architecture-basic.png
-    :width: 650px
-    :align: center
-
-**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
 You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
 

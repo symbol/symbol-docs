@@ -68,7 +68,7 @@ Let’s get into some code
         :caption: |registering-a-namespace-ts|
         :language: typescript
         :lines:  20-
-    
+
     .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringANamespace.java
         :caption: |registering-a-namespace-java|
         :language: java
@@ -88,7 +88,7 @@ Let’s get into some code
 What's next?
 ************
 
-When the transaction is confirmed, :doc:`register a subnamespace <registering-a-subnamespace>` following the next guide.
+When the transaction is confirmed, :doc:`create a subnamespace <registering-a-subnamespace>` following the next guide.
 
 .. |checking-namespace-existence-ts| raw:: html
 

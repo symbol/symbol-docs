@@ -30,7 +30,6 @@ Community extensions
    :delim: ;
 
    `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
-   `Non-fungible asset library <https://github.com/aleixmorgadas/nem2-nonfungible-asset>`_ ; Work with unique and updatable assets.
 
 Do you need to create a NIP to create an extension? No, you don’t. In fact, we suggest not submitting a NIP until you build a extension that improves the NEM blockchain and the different projects that use it. Since the extension can be changed multiple times, developers should spend more time experimenting and learning, creating a specification later on.
 

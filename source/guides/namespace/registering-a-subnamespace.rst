@@ -5,11 +5,11 @@
     :excerpt: 1
     :nocomments:
 
-##########################
-Registering a subnamespace
-##########################
+#######################
+Creating a subnamespace
+#######################
 
-Register a :doc:`subnamespace <../../concepts/namespace>` following this guide.
+Create a :doc:`subnamespace <../../concepts/namespace>` following this guide.
 
 **********
 Background
@@ -34,7 +34,7 @@ Let’s get into some code
 
 The first step is to choose a name for your subnamespace.
 
-In this example, we have registered a subnamespace called ``bar`` under ``foo`` namespace.
+In this example, we have created a subnamespace called ``bar`` under ``foo`` namespace.
 
 .. example-code::
 
