@@ -17,7 +17,7 @@ Background
 
 .. figure:: ../../resources/images/examples/multisig-transaction-1-of-2.png
     :align: center
-    :width: 600px
+    :width: 500px
 
     Sending an aggregate complete transaction
 
@@ -118,7 +118,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
 .. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
     :align: center
-    :width: 600px
+    :width: 500px
 
     Sending an aggregate bonded transaction
 

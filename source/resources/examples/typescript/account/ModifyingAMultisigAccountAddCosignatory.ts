@@ -22,7 +22,7 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
-    ModifyMultisigAccountTransaction,
+    ModifyMultisigAccountTransaction, Mosaic, MosaicId,
     MultisigCosignatoryModification,
     MultisigCosignatoryModificationType,
     NetworkCurrencyMosaic,
@@ -72,7 +72,10 @@ console.log(signedTransaction.hash);
 /* start block 04 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(
+        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
+        UInt64.fromUint(10000000)
+    ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
