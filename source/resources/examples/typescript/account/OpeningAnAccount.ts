@@ -18,9 +18,10 @@
 
 import {Account, NetworkType} from 'nem2-sdk';
 
-// Replace with a private key
+/* start block 01 */
 const privateKey = process.env.PRIVATE_KEY as string;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+/* end block 01 */

@@ -36,6 +36,7 @@ class SigningAnnouncedAggregateBondedTransactionsAutomatically {
 
     @Test
     void signingAnnouncedAggregateBondedTransactionsAutomatically() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 02 */
         // Replace with a private key
         final String privateKey = "";
 
@@ -59,5 +60,6 @@ class SigningAnnouncedAggregateBondedTransactionsAutomatically {
 
             transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).toFuture().get();
         }
+        /* end block 02 */
     }
 }

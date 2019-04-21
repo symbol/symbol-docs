@@ -35,15 +35,15 @@ Alice wants to ask Bob for ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  40-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  40-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Create an aggregate bonded transaction with two inner transactions:
 
@@ -51,66 +51,58 @@ A. From Alice to Bob with the message ``send me 20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  51-56
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  51-56
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines: 58-63
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines: 58-63
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 3. Wrap the previous transactions in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  66-72
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  66-72
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 4. Sign the aggregate bonded transaction with Alice's account and announce it to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-transaction>` first. Alice will recover the locked mosaics if the aggregate transaction completes.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
-        :lines:  75-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
-        :caption: |asking-for-mosaics-with-aggregate-bonded-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
         :language: javascript
-        :lines:  75-
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
 
 .. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
 5. If all goes well, :doc:`Bob receives a notification to cosign the transaction<../transaction/monitoring-a-transaction-status>`. Check how to :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` with Bob's account in the following guide.
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts" target="_blank">View Code</a>
-
-.. |asking-for-mosaics-with-aggregate-bonded-transaction-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js" target="_blank">View Code</a>

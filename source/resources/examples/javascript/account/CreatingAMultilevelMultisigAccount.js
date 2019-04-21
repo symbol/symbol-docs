@@ -15,19 +15,24 @@
  * limitations under the License.
  *
  */
-
 const nem2Sdk = require("nem2-sdk");
-
+const operators = require('rxjs/operators');
 const Account = nem2Sdk.Account,
-    PublicAccount = nem2Sdk.PublicAccount,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
+    Deadline = nem2Sdk.Deadline,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
+    Listener = nem2Sdk.Listener,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
     MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
-    Deadline = nem2Sdk.Deadline,
     NetworkType = nem2Sdk.NetworkType,
-    TransactionHttp = nem2Sdk.TransactionHttp;
+    PublicAccount = nem2Sdk.PublicAccount,
+    TransactionHttp = nem2Sdk.TransactionHttp,
+    UInt64 = nem2Sdk.UInt64,
+    filter = operators.filter,
+    mergeMap = operators.mergeMap;
 
-// 01 - Create multisig #2 (1-of-2)
+/* start block 01 */
 const multisig2PrivateKey = process.env.MULTISIG_2_PRIVATE_KEY;
 const multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -51,16 +56,9 @@ const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory6,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-const signedTransaction2 = multisigAccount2.sign(convertMultisigAccount2Transaction);
-
-transactionHttp
-    .announce(signedTransaction2)
-    .subscribe(x => console.log(x), err => console.error(err));
-
-// 02 - Create multisig #3 (2-of-3)
+/* start block 02 */
 const multisig3PrivateKey = process.env.MULTISIG_3_PRIVATE_KEY;
 const multisigAccount3 = Account.createFromPrivateKey(multisig3PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -91,14 +89,9 @@ const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-const signedTransaction3 = multisigAccount3.sign(convertMultisigAccount3Transaction);
-
-transactionHttp
-    .announce(signedTransaction3)
-    .subscribe(x => console.log(x), err => console.error(err));
-
-// 03 - Create multisig #1 (3-of-3)
+/* start block 03 */
 const multisig1PrivateKey = process.env.MULTISIG_1_PRIVATE_KEY;
 const multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, NetworkType.MIJIN_TEST);
 
@@ -120,9 +113,46 @@ const convertMultisigAccount1Transaction = ModifyMultisigAccountTransaction.crea
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);
+/* end block 03 */
 
-const signedTransaction1 = multisigAccount1.sign(convertMultisigAccount1Transaction);
+/* start block 04 */
+const aggregateTransaction = AggregateTransaction.createBonded(
+    Deadline.create(),
+    [convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
+        convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
+        convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)],
+    NetworkType.MIJIN_TEST);
 
-transactionHttp
-    .announce(signedTransaction1)
-    .subscribe(x => console.log(x), err => console.error(err));
+const signedTransaction = multisigAccount1.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
+
+const hashLockTransaction = HashLockTransaction.create(
+    Deadline.create(),
+    NetworkCurrencyMosaic.createRelative(10),
+    UInt64.fromUint(480),
+    signedTransaction,
+    NetworkType.MIJIN_TEST);
+
+const hashLockTransactionSigned = multisigAccount1.sign(hashLockTransaction);
+
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
+
+listener.open().then(() => {
+
+    transactionHttp
+        .announce(hashLockTransactionSigned)
+        .subscribe(x => console.log(x), err => console.error(err));
+
+    listener
+        .confirmed(multisigAccount1.address)
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
+        )
+        .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
+            err => console.error(err));
+});
+/* end block 04 */

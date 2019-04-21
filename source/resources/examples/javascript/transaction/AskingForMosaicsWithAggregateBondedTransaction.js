@@ -27,16 +27,14 @@ const Account = nem2Sdk.Account,
     EmptyMessage = nem2Sdk.EmptyMessage,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
-    LockFundsTransaction = nem2Sdk.LockFundsTransaction,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
     UInt64 = nem2Sdk.UInt64,
-    Mosaic = nem2Sdk.Mosaic,
-    MosaicId = nem2Sdk.MosaicId,
     Listener = nem2Sdk.Listener,
     PublicAccount = nem2Sdk.PublicAccount,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -46,8 +44,9 @@ const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.M
 
 const bobPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
 const bobAccount = PublicAccount.createFromPublicKey(bobPublicKey, NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Create transfer transactions
+/* start block 02 */
 const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
@@ -55,48 +54,50 @@ const transferTransaction1 = TransferTransaction.create(
     PlainMessage.create('send me 20 cat.currency'),
     NetworkType.MIJIN_TEST);
 
+/* end block 02 */
+
+/* start block 03 */
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
     [NetworkCurrencyMosaic.createRelative(20)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 03 */
 
-// 03 - Create and sign aggregate transaction with Alice account
+/* start block 04 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [transferTransaction1.toAggregate(aliceAccount.publicAccount),
         transferTransaction2.toAggregate(bobAccount)],
     NetworkType.MIJIN_TEST);
-
+/* end block 04 */
+/* start block 05 */
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
-// 04 - Announcing the transaction with Alice account
-const lockFundsTransaction = LockFundsTransaction.create(
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(aliceAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 05 */

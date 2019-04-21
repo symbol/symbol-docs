@@ -18,8 +18,10 @@
 
 import {BlockchainHttp} from "nem2-sdk";
 
+/* start block 01 */
 const blockchainHttp = new BlockchainHttp('http://localhost:3000');
 
 blockchainHttp
     .getBlockchainHeight()
     .subscribe(height => console.log(height.compact()), err => console.error(err));
+/* end block 01 */

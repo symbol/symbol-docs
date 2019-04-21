@@ -48,43 +48,6 @@ An open source HTTP client, available for Mac, Windows and Linux.
 
     <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
 
-.. _serialization:
-
-Serialization
-=============
-
-`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
-
-.. figure:: resources/images/diagrams/catbuffer.png
-    :width: 450px
-    :align: center
-
-    NEM2-SDK serialization module
-
-The library accomplishes the following properties:
-
-**Memory Efficiency**
-
-Large networks compute a large number of transactions. Working with binary optimized in size makes the communication faster. Furthermore, reading entities from memory buffers -or just a part of them - is memory efficient.
-
-**Flexibility**
-
-REST `transaction endpoints <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
-
-**Reusability**
-
-Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
-
-The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
-
-Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
-
-.. code-block:: bash
-
-    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
-
-The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
-
 .. _http-errors:
 
 Http errors
@@ -122,12 +85,69 @@ Http status
     "message": "accountId has an invalid format"
   }
 
-uint64: lower and higher
+UInt64: lower and higher
 ========================
 
-Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: ``lower`` and ``higher``.
+Javascript operates on **32-bit** values. The server returns numbers encoded in a UInt64 object to enable numeric representation up to **64 bits**.
 
-Check `how to compact lower and higher into a single value <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_.
+The **UInt64** object returned is composed of two 32-bit numbers: ``lower`` and ``higher``.
+
+The :doc:`nem2-sdk <sdk>` conveniently allows you to work with UInt64 values.
+
+.. code-block:: typescript
+
+    import {UInt64} from "nem2-sdk";
+
+    // Create Uint64 from [lower, higher]
+    const id = new UInt64([123456,654321]);
+
+    // UInt64 to compact number
+    console.log(id.compact());
+    // 2810287296209472
+
+    // UInt64 to Hex
+    console.log(id.toHex());
+    // 0009FBF10001E240
+
+    // Create UInt64 from hex
+    UInt64.fromHex('0009FBF10001E240');
+
+.. _serialization:
+
+Serialization
+=============
+
+`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
+
+.. figure:: resources/images/diagrams/catbuffer.png
+    :width: 450px
+    :align: center
+
+    NEM2-SDK serialization module
+
+    The library accomplishes the following properties:
+
+**Memory Efficiency**
+
+Large networks compute a large number of transactions. Working with binary optimized in size makes the communication faster. Furthermore, reading entities from memory buffers -or just a part of them - is memory efficient.
+
+**Flexibility**
+
+REST `transaction endpoints <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+
+**Reusability**
+
+Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
+
+The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
+
+Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
+
+.. code-block:: bash
+
+    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+
+The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
 
 .. _websockets:
 

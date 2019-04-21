@@ -28,7 +28,7 @@ import {
 } from 'nem2-sdk';
 
 
-// 01 - Create Transfer Transaction
+/* start block 01 */
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
 
@@ -42,8 +42,9 @@ const transferTransaction = TransferTransaction.create(
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
+/* end block 01 */
 
-// 02 - Announcing the transaction
+/* start block 02 */
 const transactionHttp = new TransactionHttp('http://0.0.0.0:9000');
 
 transactionHttp
@@ -56,3 +57,4 @@ transactionHttp
         console.error(err);
     }
 );
+/* end block 02 */

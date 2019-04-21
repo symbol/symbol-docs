@@ -28,7 +28,7 @@ import {
 } from "nem2-sdk";
 import {filter, first, map, mergeMap, skip, timeout} from "rxjs/operators";
 
-// 01 - Create Transaction
+/* start block 01 */
 const recipientAddress = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54");
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
@@ -36,13 +36,15 @@ const transferTransaction = TransferTransaction.create(
     [],
     PlainMessage.create('Test'),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Sign Transaction
+/* start block 02 */
 const privateKey = process.env.PRIVATE_KEY as string;
 const signer = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 const signedTransaction = signer.sign(transferTransaction);
+/* end block 02 */
 
-// 03 - Announce and monitor the transaction status
+/* start block 03 */
 const url = 'http://localhost:3000';
 const listener = new Listener(url);
 const transactionHttp = new TransactionHttp(url);
@@ -50,7 +52,9 @@ const transactionHttp = new TransactionHttp(url);
 const amountOfConfirmationsToSkip = 5;
 
 listener.open().then(() => {
+/* end block 03 */
 
+/* start block 04 */
     const newBlockSubscription = listener
         .newBlock()
         .pipe(timeout(30000)) // time in milliseconds when to timeout.
@@ -61,7 +65,9 @@ listener.open().then(() => {
                 console.error(error);
                 listener.terminate();
             });
+/* end block 04 */
 
+/* start block 05 */
     listener
         .status(signer.address)
         .pipe(filter(error => error.hash === signedTransaction.hash))
@@ -71,14 +77,18 @@ listener.open().then(() => {
                 listener.close();
             },
             error => console.error(error));
+/* end block 05 */
 
+/* start block 06 */
     listener
         .unconfirmedAdded(signer.address)
         .pipe(filter(transaction => (transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === signedTransaction.hash)))
         .subscribe(ignored => console.log("⏳: Transaction status changed to unconfirmed"),
             error => console.error(error));
+/* end block 06 */
 
+/* start block 07 */
     listener
         .confirmed(signer.address)
         .pipe(
@@ -97,9 +107,12 @@ listener.open().then(() => {
             newBlockSubscription.unsubscribe();
             listener.close();
         }, error => console.error(error));
+/* end block 07 */
 
+/* start block 08 */
     transactionHttp
         .announce(signedTransaction)
         .subscribe(x => console.log(x),
             error => console.error(error));
 });
+/* end block 08 */

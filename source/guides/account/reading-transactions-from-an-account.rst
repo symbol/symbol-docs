@@ -25,23 +25,22 @@ In this example, you will fetch the latest confirmed transactions for a given ac
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.ts
-        :caption: |getting-confirmed-transactions-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.ts
         :language: typescript
-        :lines:  21-
-    
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
-        :caption: |getting-confirmed-transactions-java|
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
         :language: java
-        :lines: 36-48
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/GettingConfirmedTransactions.js
-        :caption: |getting-confirmed-transactions-js|
+    .. viewsource:: ../../resources/examples/javascript/account/GettingConfirmedTransactions.js
         :language: javascript
-        :lines: 26-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/account/GettingConfirmedTransactions.sh
-        :caption: |getting-confirmed-transactions-cli|
+    .. viewsource:: ../../resources/examples/bash/account/GettingConfirmedTransactions.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -54,21 +53,3 @@ To `get more than 100 transactions <https://github.com/nemtech/nem2-docs/blob/ma
     new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
 
 You can also get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete `accountHttp reference <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
-
-.. |getting-confirmed-transactions-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingConfirmedTransactions.ts" target="_blank">View Code</a>
-
-.. |getting-confirmed-transactions-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingConfirmedTransactions.js" target="_blank">View Code</a>
-
-.. |getting-confirmed-transactions-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java" target="_blank">View Code</a>
-
-.. |getting-confirmed-transactions-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/GettingConfirmedTransactions.sh" target="_blank">View Code</a>
-
-

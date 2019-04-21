@@ -15,27 +15,25 @@
  * limitations under the License.
  *
  */
-
 const nem2Sdk = require("nem2-sdk");
 const operators = require('rxjs/operators');
-
 const Account = nem2Sdk.Account,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
+    Deadline = nem2Sdk.Deadline,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
+    Listener = nem2Sdk.Listener,
     MultisigCosignatoryModification = nem2Sdk.MultisigCosignatoryModification,
+    MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     ModifyMultisigAccountTransaction = nem2Sdk.ModifyMultisigAccountTransaction,
     NetworkType = nem2Sdk.NetworkType,
     PublicAccount = nem2Sdk.PublicAccount,
-    Deadline = nem2Sdk.Deadline,
-    Mosaic = nem2Sdk.Mosaic, MosaicId = nem2Sdk.MosaicId,
-    AggregateTransaction = nem2Sdk.AggregateTransaction,
-    LockFundsTransaction = nem2Sdk.LockFundsTransaction,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    Listener = nem2Sdk.Listener,
-    MultisigCosignatoryModificationType = nem2Sdk.MultisigCosignatoryModificationType,
     UInt64 = nem2Sdk.UInt64,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -50,49 +48,51 @@ const newCosignatoryPublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 
 const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add,newCosignatoryAccount);
+/* end block 01 */
 
-// 02 - Create ModifyMultisigAccountTransaction
+/* start block 02 */
 const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     0,
     0,
     [multisigCosignatoryModification],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Create and sign AggregateTransaction
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+console.log(signedTransaction.hash);
+/* end block 03 */
 
-// 04 - Announce transaction
-const lockFundsTransaction = LockFundsTransaction.create(
+/* start block 04 */
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = cosignatoryAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(cosignatoryAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 04 */

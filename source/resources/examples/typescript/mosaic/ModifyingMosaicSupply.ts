@@ -27,6 +27,7 @@ import {
     UInt64
 } from 'nem2-sdk';
 
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const privateKey = process.env.PRIVATE_KEY as string;
@@ -46,3 +47,4 @@ const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x=> console.log(x), err => console.error(err));
+/* end block 01 */
