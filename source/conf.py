@@ -194,7 +194,6 @@ def setup(app):
     app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
-    app.add_javascript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
