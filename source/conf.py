@@ -121,13 +121,6 @@ html_theme_options = {
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
 
-    'navbar_links': [
-        ("Getting started", "getting-started/what-is-nem"),
-        ("Built-in features", "concepts/account"),
-        ("Protocol", "concepts/cryptography"),
-        ("References", "references"),
-    ],
-
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': False,
 
@@ -193,7 +186,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', '404': '404.html'}
+html_additional_pages = {'index': 'index.html', 'endpoints': 'endpoints.html', '404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -201,7 +194,7 @@ def setup(app):
     app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
-
+    app.add_javascript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -210,8 +203,8 @@ html_sidebars = {
   'cli': ['globaltoc.html'],
   'concepts/**': ['globaltoc.html'],
   'getting-started/**': ['globaltoc.html'],
-  'guides/**/**': ['categories.html'],
-  'guides': ['categories.html'],
+  'guides/**/**': ['globaltoc.html'],
+  'guides': ['globaltoc.html'],
   'guidelines/**': ['globaltoc.html'],
   'extensions': ['globaltoc.html'],
   'prototyping-tool': ['globaltoc.html'],

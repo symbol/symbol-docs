@@ -11,6 +11,12 @@ Creating a mosaic
 
 Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`.
 
+**********
+Background
+**********
+
+Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+
 *************
 Prerequisites
 *************
@@ -22,9 +28,8 @@ Prerequisites
 Let’s get into some code
 ************************
 
-Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 
-You will need to announce two transactions to create a mosaic:
+Define two transactions to create a mosaic:
 
 1. A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to create the mosaic, with the following properties:
 

@@ -2,6 +2,8 @@
 What is NEM?
 ############
 
+This documentation introduces NEM's next core engine, code-named **Catapult**.
+
 **********************
 The Smart Asset System
 **********************
