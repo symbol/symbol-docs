@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h1>{{ gettext('Guides') }}</h1>
+<h1>{{ collection }} {{ gettext('Guides') }}</h1>
 
 {% if ablog.blog_archive_titles %}
 {% for post in collection %}
