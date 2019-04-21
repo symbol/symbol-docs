@@ -79,7 +79,7 @@
             {%- if edit_on_github_url %}
             <p class="feedback top-gap">
                 <b>{% trans %}Did you find what you were looking for?{% endtrans %}</b>
-                <a href="{{feedback_on_github_url}}">Give us your feedback.</a></p>
+                <a href="{{feedback_on_github_url}}" target="_blank">{% trans %}Give us your feedback.{% endtrans %}</a></p>
             {%- endif %}
         </div>
         {% block sidebar2 %} {{bsidebar2() }} {% endblock %}
