@@ -271,6 +271,12 @@ source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--mosaic--getting-mosaic-information]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/getting-mosaic-information.po
+source_file = build/gettext/guides/mosaic/getting-mosaic-information.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--namespace--registering-a-namespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-namespace.po
 source_file = build/gettext/guides/namespace/registering-a-namespace.pot
