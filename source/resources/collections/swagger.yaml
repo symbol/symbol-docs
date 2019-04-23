@@ -1531,17 +1531,18 @@ components:
     MosaicNameDTO:
       type: object
       required:
-      - parentId
       - mosaicId
       - name
       properties:
-        parentId:
-          $ref: "#/components/schemas/UInt64DTO"
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
         name:
-          type: string
-          description: The namespace name.
+          type: array
+          description: The mosaic linked namespace names.
+          example:
+            - cat.currency
+          items:
+            type: string
     BlockInfoDTO:
       type: object
       required:
