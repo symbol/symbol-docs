@@ -56,9 +56,9 @@ API Component
 
 The primary responsibility of the API is to store the data in a readable form. Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
 
-The layer :ref:`validates the transactions <transaction-validation>` received from the REST component. Additionally, the API throws the errors back via ZMQ in binary.
+The API :ref:`validates transactions <transaction-validation>` received from the REST component. Additionally, the broker process that stores changes in MongoDB, forwards them to ZMQ.
 
-This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only pushed to P2P nodes once they are complete.
+This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only processed once they are complete.
 
 An API component can connect to multiple P2P nodes, but at least must connect to one.
 
