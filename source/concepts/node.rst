@@ -55,9 +55,9 @@ API Component
 
 P2P nodes can be configured to have an API layer. The primary responsibility of the API is to store the data in a readable form in MongoDB.
 
-The API :ref:`validates transactions <transaction-validation>` received from the REST component. Additionally, it throws the errors back via ZMQ in binary.
+The API :ref:`validates transactions <transaction-validation>` received from the REST component. Additionally, the broker process that stores changes in MongoDB, forwards them to ZMQ.
 
-This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only pushed to P2P nodes once they are complete.
+This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only processed once they are complete.
 
 MongoDB
 =======
