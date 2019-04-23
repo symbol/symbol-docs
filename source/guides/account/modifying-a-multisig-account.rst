@@ -49,7 +49,7 @@ Multisig accounts are editable at the blockchain level. In this case, we want to
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
     :align: center
-    :width: 350px
+    :width: 300px
 
     2-of-2 multisig account example
 

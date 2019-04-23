@@ -6,7 +6,7 @@ A cross-chain swap enables **trading tokens** across **different blockchains**, 
 
 .. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
-    :width: 500px
+    :width: 400px
 
     Atomic cross-chain swap between public and private network
 
