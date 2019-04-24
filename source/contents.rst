@@ -6,7 +6,6 @@
     getting-started/what-is-nem
     getting-started/setup-workstation
     getting-started/first-application
-    getting-started/training
 
 .. toctree::
     :maxdepth: 2

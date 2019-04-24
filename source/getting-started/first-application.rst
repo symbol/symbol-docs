@@ -219,4 +219,4 @@ Did you solve the proposed use case?
 
 ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
-Continue learning about more :doc:`NEM built-in features <../concepts/account>` or practicing with :doc:`self-paced training <training>`.
+Continue learning about more :doc:`NEM built-in features <../concepts/account>`.
