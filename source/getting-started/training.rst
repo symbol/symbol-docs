@@ -1,5 +1,3 @@
-:orphan:
-
 ###################
 Self-paced training
 ###################
@@ -12,22 +10,16 @@ If you prefer to learn about NEM through guided lessons, consider taking one cou
 Courses
 *******
 
-.. note:: ⚠️ Courses are not aligned with the latest version of catapult-server (0.3).
-
 .. csv-table::
    :header: "Title", "Description", "Target", "Active contributors"
    :delim: ;
 
-   `Getting started with NEM Catapult <https://craftain.com/courses/getting-started-with-nem-catapult/>`_ ;  Build a decentralized blockchain app using Catapult.; Developers (NEM novice); Craftain and NEM Foundation
    `Notarization of documents on NEM blockchain <https://nemtech.github.io/nem2-workshop-document-notarization/>`_ ; Learn how digital assets can be notarized in the blockchain.; Developers (NEM advanced beginner); NEM Foundation
    `NEM applied to supply chain <https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/>`_ ; Start developing a real use case step by step.; Developers (NEM competent); NEM Foundation
 
-*******************
 Adding a new course
-*******************
+===================
 
-We suggest reviewing our `Curricular Framework <https://nemtech.github.io/nem2-curricular-framework/>`_ and forking the `NEM2-workshop-template <https://github.com/nemtech/nem2-workshop-template>`_.
+Are you an education provider? Check our `Curricular Framework <https://nemtech.github.io/nem2-curricular-framework/>`_ to get inspired and start creating your course.
 
-.. note:: The courses published in this section must be available online.
-
-Once the course is complete, add it to this page by clicking the *"Edit on Github"* button at the top-right part of the screen.
+Have you created a self-paced online course about NEM? Submit it to us pressing the *"Edit on Github"* button, at the top-right part of the screen.
