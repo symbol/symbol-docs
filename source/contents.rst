@@ -30,6 +30,7 @@
     concepts/block
     concepts/transaction
     concepts/harvesting
+    concepts/inflation
     concepts/receipt
     concepts/node
 
