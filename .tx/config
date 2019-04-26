@@ -85,6 +85,12 @@ source_file = build/gettext/concepts/harvesting.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--inflation]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/inflation.po
+source_file = build/gettext/concepts/inflation.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
 source_file = build/gettext/concepts/mosaic.pot

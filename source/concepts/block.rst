@@ -18,7 +18,7 @@ NEM blocks complete every ``15`` seconds, making transactions confirm quickly en
 Block creation
 **************
 
-Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The harvesting account - called the harvester - gets the fees for the transactions in the block. This gives the harvester an incentive to add as many transactions to the block as possible.
+Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The harvesting account - called the harvester - gets the :ref:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
 
 ******
 Guides
