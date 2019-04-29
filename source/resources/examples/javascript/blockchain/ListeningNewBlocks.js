@@ -21,6 +21,12 @@ const Listener = nem2Sdk.Listener;
 
 const listener = new Listener('http://localhost:3000');
 
+/**
+ * For client-side applications, the websocketInjected parameter has to be used.
+ * example:
+ * const listener = new Listener('ws://<IP Address>:3000', WebSocket);
+ */
+
 listener.open().then(() => {
 
     listener
