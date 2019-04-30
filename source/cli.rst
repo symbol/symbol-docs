@@ -386,12 +386,50 @@ Options
     -l, --levymutable                   - Mosaic levy mutable
     -d, --divisibility <divisibility>   - Mosaic divisibility, from 0 to 6
     -u, --duration <duration>           - Mosaic duration in amount of blocks
+    -e, --eternal                       - Mosaic does not expire.
 
 Command
 
 .. code-block:: bash
 
     $> nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+
+**Link a namespace to a mosaic**
+
+Links a namespace to a :doc:`mosaic <../concepts/mosaic>`.
+
+Options
+
+.. code-block:: bash
+
+    -a, --action <action>       - Alias action (0: Link, 1: Unlink)
+    -m, --mosaic <mosaic>       - Mosaic Id in in hexadecimal format
+    -n, --namespace <namespace> - Namespace name
+
+Command
+
+.. code-block:: bash
+
+    $> nem2-cli transaction mosaicalias --action 0 --mosaic 7cdf3b117a3c40cc --namespace foo
+
+
+**Link a namespace to an address**
+
+Links a namespace to an :doc:`address <../concepts/account>`.
+
+Options
+
+.. code-block:: bash
+
+    -a, --action <action>       - Alias action (0: Link, 1: Unlink)
+    -m, --address <mosaic>      - Address
+    -n, --namespace <namespace> - Namespace name
+
+Command
+
+.. code-block:: bash
+
+    $> nem2-cli transaction addressalias --action 0 --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K --namespace foo
 
 Namespace
 =========
