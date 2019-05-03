@@ -629,7 +629,7 @@ paths:
                 type: array
                 description: The array of receipts.
                 items:
-                  type: object
+                  $ref: "#/components/schemas/StatementsDTO"
         "404":
           description: resource not found
         "409":
@@ -1359,13 +1359,6 @@ components:
           type: boolean
         index:
           type: integer
-    MosaicMetaDTO:
-      type: object
-      required:
-      - id
-      properties:
-        id:
-          type: string
     NamespaceInfoDTO:
       type: object
       required:
@@ -1453,6 +1446,13 @@ components:
         address:
           type: string
           description: The aliased address.
+    MosaicMetaDTO:
+      type: object
+      required:
+      - id
+      properties:
+        id:
+          type: string
     MosaicDTO:
       type: object
       required:
@@ -1535,6 +1535,163 @@ components:
         name:
           type: string
           description: The namespace name.
+    StatementsDTO:
+      type: object
+      required:
+      - transactionStatements
+      - addressResolutionStatements
+      - mosaicResolutionStatements
+      properties:
+        transactionStatements:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionStatementDTO"
+        addressResolutionStatements:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResolutionStatementDTO"
+        mosaicResolutionStatements:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResolutionStatementDTO"
+    TransactionStatementDTO:
+      type: object
+      required:
+      - height
+      - source
+      - receipts
+      properties:
+        height:
+          $ref: "#/components/schemas/UInt64DTO"
+        source:
+          $ref: "#/components/schemas/SourceDTO"
+        receipts:
+          type: array
+          items:
+            anyOf:
+            - $ref: "#/components/schemas/BalanceTransferReceiptDTO"
+            - $ref: "#/components/schemas/BalanceChangeReceiptDTO"
+            - $ref: "#/components/schemas/ArtifactExpiryReceiptDTO"
+            - $ref: "#/components/schemas/InflationReceiptDTO"
+    ResolutionStatementDTO:
+      type: object
+      required:
+      - height
+      - unresolved
+      - resolutionEntries
+      properties:
+        height:
+          $ref: "#/components/schemas/UInt64DTO"
+        unresolved:
+          $ref: "#/components/schemas/UInt64DTO"
+        resolutionEntries:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResolutionEntryDTO"
+    ResolutionEntryDTO:
+      type: object
+      required:
+      - source
+      - resolved
+      properties:
+        source:
+          $ref: "#/components/schemas/SourceDTO"
+        resolved:
+          $ref: "#/components/schemas/UInt64DTO"
+    SourceDTO:
+      type: object
+      required:
+      - primaryId
+      - secondaryId
+      properties:
+        primaryId:
+          type: number
+        secondaryid:
+          type: number
+    BalanceTransferReceiptDTO:
+      type: object
+      required:
+      - version
+      - type
+      - sender
+      - recipient
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: The type of the receipt.
+        sender:
+          type: string
+          description: The public key of the sender.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        recipient:
+          type: string
+          description: The public key of the recipient.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+    BalanceChangeReceiptDTO:
+      type: object
+      required:
+      - version
+      - type
+      - account
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: The type of the receipt.
+        account:
+          type: string
+          description: The target account public key.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+    ArtifactExpiryReceiptDTO:
+      type: object
+      required:
+      - version
+      - type
+      - artifactId
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: The type of the receipt.
+        artifactId:
+          $ref: "#/components/schemas/UInt64DTO"
+    InflationReceiptDTO:
+      type: object
+      required:
+      - version
+      - type
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: The type of the receipt.
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
     BlockInfoDTO:
       type: object
       required:
