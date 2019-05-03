@@ -343,7 +343,7 @@ paths:
                   type: object
         "409":
           description: invalid argument
-  "/account/properties/{accountId}":
+  "/account/{accountId}/properties/":
     get:
       tags:
       - Account routes
@@ -1219,20 +1219,10 @@ components:
     AccountPropertiesInfoDTO:
       type: object
       required:
-      - meta
       - accountProperties
       properties:
-        meta:
-          $ref: "#/components/schemas/AccountPropertiesMetaDTO"
         accountProperties:
           $ref: "#/components/schemas/AccountPropertiesDTO"
-    AccountPropertiesMetaDTO:
-      type: object
-      required:
-      - id
-      properties:
-        id:
-          type: string
     AccountPropertiesDTO:
       type: object
       required:
@@ -1257,9 +1247,9 @@ components:
           type: integer
           description: |
             The account properties type:
-            * ``0x01`` (1 decimal) - The property type allows receiving transactions from an address.
-            * ``0x02`` (2 decimal) - The property type allows receiving transactions containing a mosaic id.
-            * ``0x04`` (4 decimal) - The property type allows sending transactions with a given transaction type.
+            * ``0x01`` (1 decimal) - The property type only allows receiving transactions from an address.
+            * ``0x02`` (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
+            * ``0x04`` (4 decimal) - The property type only allows sending transactions with a given transaction type.
             * ``0x05`` (5 decimal) - Property type sentinel.
             * ``0x81`` (129 decimal) - The property type blocks receiving transactions from an address.
             * ``0x82`` (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
@@ -1268,7 +1258,10 @@ components:
         values:
           type: array
           items:
-            type: string
+            anyOf:
+            - type: string
+            - type: integer
+            - $ref: "#/components/schemas/UInt64DTO"
     MultisigAccountGraphInfoDTO:
       type: object
       required:
