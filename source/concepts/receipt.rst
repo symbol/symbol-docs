@@ -14,9 +14,9 @@ Transaction statement
 
 A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked with a transaction in a particular block. Statements can include receipts with the following basic types:
 
-* **Balance Transfer**: A mosaic transfer was triggered.
-* **Balance Change**: A mosaic credit or debit was triggered.
-* **Artifact Expiry**: An artifact (e.g. :doc:`namespace <mosaic>`, :doc:`mosaic <mosaic>`) expired.
+* **Balance Transfer**: The invisible state change triggered a mosaic transfer.
+* **Balance Change**: The invisible state change changed an account balance.
+* **Artifact Expiry**: An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
 
 ********************
 Resolution Statement
@@ -36,7 +36,7 @@ Recorded receipts
 Catapult records invisible state changes for the following entities.
 
 .. csv-table::
-    :header:  "Id", "Receipt", "Type", "Description"
+    :header:  "Id", "Receipt", "Basic type", "Description"
     :delim: ;
 
     **Core**;;;
@@ -69,6 +69,8 @@ Schemas
 Receipt
 =======
 
+Conditional state changes in the background enable complex transactions.
+
 **Inlines**:
 
 * :ref:`SizePrefixedEntity <size-prefixed-entity>`
@@ -80,72 +82,12 @@ Receipt
     version; uint16; The receipt version.
     type; ReceiptType; The receipt type.
 
-.. _transaction-statement:
-
-TransactionStatement
-====================
-
-* **version**: 0x1
-* **type**: Transaction_Group
-
-**Inlines**:
-
-* :ref:`Receipt <receipt>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    m_source; ReceiptSource; The receipt source.
-    receipts; array(:ref:`Receipt <receipt>`, receiptsSize);  The array of receipts.
-
-.. _resolution-statement:
-
-ResolutionStatement
-===================
-
-* **version**: 0x1
-* **type**: Address_Alias_Resolution or Mosaic_Alias_Resolution
-
-**Inlines**:
-
-* :ref:`Receipt <receipt>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    unresolved; 25 bytes (binary) or uint64; An unresolved address or unresolved mosaicId.
-    m_entries; array(:ref:`ResolutionEntry <resolution-entry>`, resolvedEntriesSize); The array of resolution entries.
-
-.. _resolution-entry:
-
-ResolutionEntry
-===============
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    resolvedValue; 25 bytes (binary) or uint64; A resolved address or resolved mosaicId.
-    source; :ref:`ReceiptSource <receipt-source>`;  The receipt source.
-
-.. _receipt-source:
-
-ReceiptSource
-=============
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    primaryId; uint32;  The transaction primary source (e.g. index within block).
-    secondaryId; uint32; The transaction secondary source (e.g. index within aggregate).
-
 .. _balance-transfer-receipt:
 
 BalanceTransferReceipt
 ======================
+
+The invisible state change triggered a mosaic transfer.
 
 * **version**: 0x1
 * **basicType**: 0x1
@@ -168,6 +110,8 @@ BalanceTransferReceipt
 BalanceChangeReceipt
 ====================
 
+The invisible state change changed an account balance.
+
 * **version**: 0x1
 * **basicType**: (0x2) credit or (0x3) debit
 
@@ -188,6 +132,8 @@ BalanceChangeReceipt
 ArtifactExpiryReceipt
 =====================
 
+An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
+
 * **version**: 0x1
 * **basicType**: 0x4
 
@@ -199,8 +145,77 @@ ArtifactExpiryReceipt
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    artifactId; uint64; The id of the artifact (eg. namespace, mosaic).
+    artifactId; uint64; The id of the artifact.
 
+.. _transaction-statement:
+
+TransactionStatement
+====================
+
+The collection of receipts related to a transaction.
+
+* **version**: 0x1
+* **type**: Transaction_Group
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    source; :ref:`ReceiptSource <receipt-source>` ; The transaction that triggered the receipt.
+    receipts; array(:ref:`Receipt <receipt>`, receiptsSize);  The array of receipts.
+
+.. _resolution-statement:
+
+ResolutionStatement
+===================
+
+A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
+
+* **version**: 0x1
+* **type**: Address_Alias_Resolution or Mosaic_Alias_Resolution
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    unresolved; 25 bytes (binary) or uint64; An unresolved address or unresolved mosaicId.
+    resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, resolvedEntriesSize); The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
+
+<<<<<<< HEAD
+=======
+.. _resolution-entry:
+
+ResolutionEntry
+===============
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    resolvedValue; 25 bytes (binary) or uint64; A resolved address or resolved mosaicId.
+    source; :ref:`ReceiptSource <receipt-source>`;  The transaction that triggered the receipt.
+
+.. _receipt-source:
+
+ReceiptSource
+=============
+
+The transaction that triggered the receipt.
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    primaryId; uint32;  The transaction index within the block.
+    secondaryId; uint32; The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
 
 .. |merkle| raw:: html
 
