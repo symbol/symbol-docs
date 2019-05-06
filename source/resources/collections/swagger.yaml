@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: 0.7.14
+  version: 0.7.15
   title: Catapult REST API Reference
   license:
     name: Apache 2.0
@@ -720,6 +720,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/StorageInfoDTO"
+  /diagnostic/server:
+    get:
+      tags:
+      - Diagnostic routes
+      summary: Get the version of the running rest component
+      description: Returns the version of the running rest component.
+      operationId: getServerInfo
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServerDTO"
   "/mosaic/{mosaicId}":
     get:
       tags:
@@ -1896,6 +1910,27 @@ components:
           type: integer
           description: The number of accounts created.
           example: 177
+    ServerDTO:
+      type: object
+      required:
+      - serverInfo
+      properties:
+        serverInfo:
+          $ref: "#/components/schemas/ServerInfoDTO"
+    ServerInfoDTO:
+      type: object
+      required:
+      - restVersion
+      - sdkVersion
+      properties:
+        restVersion:
+          type: string
+          example: 1.0.14
+          description: The catapult-rest component version.
+        sdkVersion:
+          type: string
+          example: 0.7.14
+          description: The catapult-sdk component version.
     NetworkTypeDTO:
       type: object
       required:
