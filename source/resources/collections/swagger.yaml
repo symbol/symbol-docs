@@ -343,7 +343,7 @@ paths:
                   type: object
         "409":
           description: invalid argument
-  "/account/properties/{accountId}":
+  "/account/{accountId}/properties/":
     get:
       tags:
       - Account routes
@@ -626,10 +626,8 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                description: The array of receipts.
-                items:
-                  type: object
+                $ref: "#/components/schemas/StatementsDTO"
+
         "404":
           description: resource not found
         "409":
@@ -1190,7 +1188,7 @@ components:
         address:
           type: string
           description: >
-            The account a unique address not encoded.
+            The account unique address not encoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         addressHeight:
           $ref: "#/components/schemas/UInt64DTO"
@@ -1219,20 +1217,10 @@ components:
     AccountPropertiesInfoDTO:
       type: object
       required:
-      - meta
       - accountProperties
       properties:
-        meta:
-          $ref: "#/components/schemas/AccountPropertiesMetaDTO"
         accountProperties:
           $ref: "#/components/schemas/AccountPropertiesDTO"
-    AccountPropertiesMetaDTO:
-      type: object
-      required:
-      - id
-      properties:
-        id:
-          type: string
     AccountPropertiesDTO:
       type: object
       required:
@@ -1257,9 +1245,9 @@ components:
           type: integer
           description: |
             The account properties type:
-            * ``0x01`` (1 decimal) - The property type allows receiving transactions from an address.
-            * ``0x02`` (2 decimal) - The property type allows receiving transactions containing a mosaic id.
-            * ``0x04`` (4 decimal) - The property type allows sending transactions with a given transaction type.
+            * ``0x01`` (1 decimal) - The property type only allows receiving transactions from an address.
+            * ``0x02`` (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
+            * ``0x04`` (4 decimal) - The property type only allows sending transactions with a given transaction type.
             * ``0x05`` (5 decimal) - Property type sentinel.
             * ``0x81`` (129 decimal) - The property type blocks receiving transactions from an address.
             * ``0x82`` (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
@@ -1268,7 +1256,10 @@ components:
         values:
           type: array
           items:
-            type: string
+            anyOf:
+            - type: string
+            - type: integer
+            - $ref: "#/components/schemas/UInt64DTO"
     MultisigAccountGraphInfoDTO:
       type: object
       required:
@@ -1366,13 +1357,6 @@ components:
           type: boolean
         index:
           type: integer
-    MosaicMetaDTO:
-      type: object
-      required:
-      - id
-      properties:
-        id:
-          type: string
     NamespaceInfoDTO:
       type: object
       required:
@@ -1460,6 +1444,13 @@ components:
         address:
           type: string
           description: The aliased address.
+    MosaicMetaDTO:
+      type: object
+      required:
+      - id
+      properties:
+        id:
+          type: string
     MosaicDTO:
       type: object
       required:
@@ -1512,7 +1503,7 @@ components:
     MosaicPropertiesDTO:
       type: array
       description: |
-        Array of mosaic properties:
+        The array of mosaic properties:
         * ``First element`` - MosaicFlags
         * ``Second element`` - Divisibility
         * ``Third element`` - Duration
@@ -1532,17 +1523,205 @@ components:
       type: object
       required:
       - mosaicId
-      - name
+      - names
       properties:
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
-        name:
+        names:
           type: array
           description: The mosaic linked namespace names.
           example:
             - cat.currency
           items:
             type: string
+    StatementsDTO:
+      type: object
+      description: The collection of transaction statements and resolutions triggered for the block requested.
+      required:
+      - transactionStatements
+      - addressResolutionStatements
+      - mosaicResolutionStatements
+      properties:
+        transactionStatements:
+          type: array
+          description: The array of transaction statements for the block requested.
+          items:
+            $ref: "#/components/schemas/TransactionStatementDTO"
+        addressResolutionStatements:
+          type: array
+          description: The array of address resolutions for the block requested.
+          items:
+            $ref: "#/components/schemas/ResolutionStatementDTO"
+        mosaicResolutionStatements:
+          type: array
+          description: The array of mosaic resolutions for the block requested.
+          items:
+            $ref: "#/components/schemas/ResolutionStatementDTO"
+    TransactionStatementDTO:
+      type: object
+      description: The collection of receipts related to a transaction.
+      required:
+      - height
+      - source
+      - receipts
+      properties:
+        height:
+          $ref: "#/components/schemas/UInt64DTO"
+        source:
+          $ref: "#/components/schemas/SourceDTO"
+        receipts:
+          type: array
+          description: The array of receipts.
+          items:
+            anyOf:
+            - $ref: "#/components/schemas/BalanceTransferReceiptDTO"
+            - $ref: "#/components/schemas/BalanceChangeReceiptDTO"
+            - $ref: "#/components/schemas/ArtifactExpiryReceiptDTO"
+            - $ref: "#/components/schemas/InflationReceiptDTO"
+    ResolutionStatementDTO:
+      type: object
+      description: A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
+      required:
+      - height
+      - unresolved
+      - resolutionEntries
+      properties:
+        height:
+          $ref: "#/components/schemas/UInt64DTO"
+        unresolved:
+          $ref: "#/components/schemas/UInt64DTO"
+        resolutionEntries:
+          type: array
+          description: The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
+          items:
+            $ref: "#/components/schemas/ResolutionEntryDTO"
+    ResolutionEntryDTO:
+      type: object
+      required:
+      - source
+      - resolved
+      properties:
+        source:
+          $ref: "#/components/schemas/SourceDTO"
+        resolved:
+          $ref: "#/components/schemas/UInt64DTO"
+    SourceDTO:
+      type: object
+      description: The transaction that triggered the receipt.
+      required:
+      - primaryId
+      - secondaryId
+      properties:
+        primaryId:
+          type: number
+          description: The transaction index within the block.
+          example: 1
+        secondaryId:
+          type: number
+          description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
+          example: 0
+    BalanceTransferReceiptDTO:
+      type: object
+      description: The invisible state change triggered a mosaic transfer.
+      required:
+      - version
+      - type
+      - sender
+      - recipient
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: |
+            The type of the receipt:
+            * ``0x124D``(4685 decimal) - Mosaic_Levy
+            * ``0x134D`` (4941 decimal) - Mosaic_Rental_Fee
+            * ``0x124E`` (4686 decimal) - Namespace_Rental_Fee
+        sender:
+          type: string
+          description: The public key of the sender.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        recipient:
+          type: string
+          description: The public key of the recipient.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+    BalanceChangeReceiptDTO:
+      type: object
+      description: The invisible state change changed an account balance.
+      required:
+      - version
+      - type
+      - account
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: |
+            The type of the receipt. If it starts with 0x2 means that the balance is increased, otherwhise decreased.
+            * ``0x2143``(8515 decimal) - Harvest_Fee
+            * ``0x2248``(8776 decimal) - LockHash_Completed
+            * ``0x2348``(9032 decimal) - LockHash_Expired
+            * ``0x2252``(8786 decimal) - LockSecret_Completed
+            * ``0x2352``(9042 decimal) - LockSecret_Expired
+            * ``0x3148``(12616 decimal) - LockHash_Created
+            * ``0x3152``(12626 decimal) - LockSecret_Created
+        account:
+          type: string
+          description: The target account public key.
+          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+    ArtifactExpiryReceiptDTO:
+      type: object
+      description: An artifact namespace or mosaic expired.
+      required:
+      - version
+      - type
+      - artifactId
+      properties:
+        version:
+          type: number
+          description: The version of the receipt.
+        type:
+          type: number
+          description: |
+            The type of the receipt:
+            * ``0x414D``(16717 decimal) - Mosaic_Expired
+            * ``0x414E``(16718 decimal) - Namespace_Expired
+        artifactId:
+          $ref: "#/components/schemas/UInt64DTO"
+    InflationReceiptDTO:
+      type: object
+      description: Native currency mosaics were created due to inflation.
+      required:
+      - version
+      - type
+      - mosaicId
+      - amount
+      properties:
+        version:
+          type: number
+          description: |
+            The type of the receipt:
+            * ``0x5143``(20803  decimal) - Inflation
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
     BlockInfoDTO:
       type: object
       required:

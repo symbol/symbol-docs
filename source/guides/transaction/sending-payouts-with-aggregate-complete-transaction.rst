@@ -19,7 +19,7 @@ Dan wants to send mosaics to Alice and Bob.
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
-    :width: 450px
+    :width: 400px
 
     Sending transactions to different recipients atomically
 

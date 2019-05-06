@@ -51,7 +51,7 @@ Instead of transferring tokens between different chains, the trade will be perfo
 
 .. figure:: ../../resources/images/examples/cross-chain-swap.png
     :align: center
-    :width: 550px
+    :width: 400px
 
     Atomic cross-chain swap between public and private network
 
