@@ -1522,17 +1522,18 @@ components:
     MosaicNameDTO:
       type: object
       required:
-      - parentId
       - mosaicId
-      - name
+      - names
       properties:
-        parentId:
-          $ref: "#/components/schemas/UInt64DTO"
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
-        name:
-          type: string
-          description: The namespace name.
+        names:
+          type: array
+          description: The mosaic linked namespace names.
+          example:
+            - cat.currency
+          items:
+            type: string
     StatementsDTO:
       type: object
       description: The collection of transaction statements and resolutions triggered for the block requested.
