@@ -1229,7 +1229,7 @@ components:
       properties:
         address:
           type: string
-          description: The address of the account.
+          description: The address of the account not encoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         properties:
           type: array
