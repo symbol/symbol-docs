@@ -41,6 +41,7 @@
     :caption: References
 
     api
+    server
     sdk
     cli
     prototyping-tool
