@@ -14,7 +14,7 @@ Follow this guide to start contributing to the docs translation.
 
 1. Sign up for an account
 
-Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=nem2docs>` _ .  We recommend reading as well Transifex's `Getting Started as a Translator guide <https://docs.transifex.com/getting-started-1/translators>`_.
+Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=nem2docs>`_ .  We recommend reading as well Transifex's `Getting Started as a Translator guide <https://docs.transifex.com/getting-started-1/translators>`_.
 
 2. Join nem2-docs team and choose a language
 
