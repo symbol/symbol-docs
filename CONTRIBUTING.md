@@ -3,6 +3,7 @@
 First off, thank you for considering contributing to NEM Developer Center. 
 
 The NEM Developer Center is an open source project and we love to receive contributions from our community — you! 
+
 There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
  writing new pieces of documentation which can be incorporated into the docs itself.
 
@@ -10,8 +11,6 @@ Following these guidelines helps to communicate that you respect the time of
 the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue, assessing changes,
 and help you finalize your pull requests.
-
-Please, **don't use the issue tracker for support questions**.
 
 ## Error reports
 
@@ -25,13 +24,22 @@ find the problem and to fix it.
 
 Please, take into consideration the next template to report your issue:
 
-> **Error description**\
-> Short and expressive sentence explaining what is wrong.\
-> **Url or screenshot**\
-> For faster issue detection, we would need where to find it.
-
-Provide as much information as you can.
-
+    **Describe the error**
+    A clear and concise description of what the error is.
+    
+    **To Reproduce**
+    Steps to reproduce the behavior:
+    1. Go to '...'
+    2. Click on '....'
+    3. Scroll down to '....'
+    4. See error
+    
+    **Expected behavior**
+    A clear and concise description of what you expected to happen.
+    
+    **Screenshots**
+    If applicable, add screenshots to help explain your problem.
+    
 Open a new issue [here][github-issues].
 
 ## Requests
@@ -47,6 +55,7 @@ project repository.
 ## Contributing code and documentation changes
 
 To expand and improve the NEM Developer Center, please find or open an issue about it first. 
+
 Talk about what you would like to do. It may be that somebody is already working on it, 
 or that there are particular issues that you should know about before implementing the change.
 
@@ -58,24 +67,32 @@ When you contribute code, you affirm that the contribution is your original work
 
 Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
-### Fork and clone the repository
+### Building nem2-docs
 
 If the documentation change is small, you can use the *"Edit on Github"* button at the top of the page.
 
 For substantial changes or contributions, you may need to fork the main nem2-docs repository and clone
 it to your local machine. See [github help page](https://help.github.com/articles/fork-a-repo/) for help.
 
-Further instructions for specific projects are given below.
+First, make sure you have Python 2.7 or 3.4+ and pip installed.
+
+Then, install requirements using pip:
+
+`pip install -r requirements.txt`
+
+Run the following command and open the provided url in a browser.
+
+`make livehtml`
 
 ### Submitting your changes
 
 Once your changes and tests are ready to submit for review:
 
-1. Test your changes
+1. Test your changes.
 
     Run `make livehtml` and preview your changes.
 
-2. Submit a pull request
+2. Submit a pull request.
 
     Push your local changes to your forked copy of the repository and [submit a pull request](https://help.github.com/articles/about-pull-requests/). In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
 
