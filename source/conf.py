@@ -200,6 +200,7 @@ def setup(app):
 html_sidebars = {
   'api': ['globaltoc.html'],
   'cli': ['globaltoc.html'],
+  'server': ['globaltoc.html'],
   'concepts/**': ['globaltoc.html'],
   'getting-started/**': ['globaltoc.html'],
   'guides/**/**': ['globaltoc.html'],
