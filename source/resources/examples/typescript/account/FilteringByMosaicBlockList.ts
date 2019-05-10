@@ -36,7 +36,7 @@ const mosaicFilter = AccountPropertyTransaction.createMosaicFilter(PropertyModif
 const transaction = AccountPropertyTransaction
     .createMosaicPropertyModificationTransaction(
         Deadline.create(),
-        PropertyType.AllowAddress,
+        PropertyType.BlockMosaic,
         [mosaicFilter],
         NetworkType.MIJIN_TEST);
 /* end block 02 */

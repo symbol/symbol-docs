@@ -85,7 +85,7 @@ By default, when there is no filter set, all the accounts in the network can ann
 
 For this use case, the product account will only accept receiving transactions if they come from the company's account.
 
-1. Define the account filter modification. Add to the "allowed list" the company's address. 
+1. Define the account filter modification. Add to the "allowed list" the company's address.
 
 .. example-code::
 
@@ -112,7 +112,7 @@ For this use case, the product account will only accept receiving transactions i
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Now, you can test sending a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account: you will get an error as only "SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP" is allowed to send the transactions to the product. 
+Now, you can test sending a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account: you will get an error as only "SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP" is allowed to send the transactions to the product.
 
 On the other hand, if you try to send it from your company account and everything goes well, you will receive a confirmation message.
 
@@ -125,7 +125,7 @@ The account that represents the company owns the following mosaics:
 - ``company.quality.seal``: represents that the product has passed a quality test.
 - ``company.safety.seal``: represents that the product has passed a safety test.
 
-As you might notice, the product only should be able to receive seals and not company shares. 
+As you might notice, the product only should be able to receive seals and not company shares.
 
 We are going to narrow the type of transactions that the product can receive from the company's account. To solve this example, we are going to use negation. Instead of allowing specifically the seals, the product will block receiving transactions containing "company.share".
 
@@ -138,7 +138,7 @@ We are going to narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountPropertyTransaction``, with propertyType "MosaicBlock".  Add to the array the modification created in the previous step.
+2. Create an ``AccountPropertyTransaction``, with propertyType "BlockMosaic".  Add to the array the modification created in the previous step.
 
 .. example-code::
 
@@ -155,7 +155,7 @@ We are going to narrow the type of transactions that the product can receive fro
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
-    
+
 If everything goes well, the product account can only receive transactions from the company's account, always that does not include any "company.share" mosaic.
 
 Removing a filter
@@ -163,7 +163,7 @@ Removing a filter
 
 After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product.
 
-1. Define the account filter modification. Remove from the "allowed list" the company's address. 
+1. Define the account filter modification. Remove from the "allowed list" the company's address.
 
 .. example-code::
 
