@@ -35,7 +35,7 @@ If you are interested in building on top of NEM, check out the [NEM Developer Ce
 
 ## Contributing to the NEM Developer Center
 
-The NEM Developer Center is an open source project and we love to receive contributions from our community.  Discover how our open source [community](https://github.com/nemtech/community/) is organized, and get started participating:
+The NEM Developer Center is an open source project and we love to receive contributions from our community. Discover how our open source [community](https://github.com/nemtech/community/) is organized, and get started participating:
 
 *   Ask in [StackOverflow](https://stackoverflow.com/tags/nem/) development related questions.
 *   Reach our community joining the official [Slack](http://slack.nemtech.io/).
@@ -45,4 +45,5 @@ The NEM Developer Center is an open source project and we love to receive contri
 
 ## License
 
-Copyright (c) 2018-present NEM Licensed under the [Apache License 2.0](https://github.com/nemtech/nem2-docs/blob/master/LICENSE)
+Copyright (c) 2018-present NEM 
+Licensed under the [Apache License 2.0](https://github.com/nemtech/nem2-docs/blob/master/LICENSE)
