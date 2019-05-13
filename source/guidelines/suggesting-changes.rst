@@ -19,15 +19,29 @@ It is very helpful if you can prepare a reproduction of the error. It makes it e
 
 Please, take into consideration the next template to report your issue:
 
-   **Error description**
+    **Describe the error**
 
-   Short and expressive sentence explaining what is wrong.\
+    A clear and concise description of what the error is.
 
-   **Url or screenshot**
+    **To Reproduce**
 
-   For faster issue detection, we would need where to find it. \
+    Steps to reproduce the behavior:
 
-Provide as much information as you can.
+    1. Go to '...'
+
+    2. Click on '....'
+
+    3. Scroll down to '....'
+
+    4. See error
+
+    **Expected behavior**
+
+    A clear and concise description of what you expected to happen.
+
+    **Screenshots**
+
+    If applicable, add screenshots to help explain your problem.
 
 Open a new |issue| here.
 
@@ -54,27 +68,39 @@ When you contribute code, you affirm that the contribution is your original work
 
 Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
-Fork and clone the repository
-=============================
+Building nem2-docs
+==================
 
 If the documentation change is small, you can use the *"Edit on Github"* button at the top of the page.
 
 For substantial changes or contributions, you may need to fork the main |repository| and clone it to your local machine. See |github-help| page for help.
 
-Further instructions for specific projects are given below.
+First, make sure you have Python 2.7 or 3.4+ and pip installed.
+
+Then, install requirements using pip:
+
+.. code-block:: bash
+
+   pip install -r requirements.txt
+
+Run the following command and open the provided url in a browser.
+
+.. code-block:: bash
+
+   make livehtml
 
 Submitting your changes
 =======================
 
 Once your changes and tests are ready to submit for review:
 
-1. Test your changes
+1. Test your changes.
 
-    Run ``make livehtml`` and preview your changes.
+Run ``make livehtml`` and preview your changes.
 
-2. Submit a pull request
+2. Submit a pull request.
 
-    Push your local changes to your forked copy of the repository and |pull-request|. In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
+Push your local changes to your forked copy of the repository and |pull-request|. In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
 
 Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into nem2-docs.
 
@@ -92,14 +118,6 @@ Then sit back and wait. There will probably be a discussion about the pull reque
 
    <a href="https://help.github.com/articles/about-pull-requests/" target="_blank">submit a pull request</a>
 
-.. |contributing-md| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/CONTRIBUTING.md/" target="_blank">CONTRIBUTING.md</a>
-
 .. |repository| raw:: html
 
    <a href="https://github.com/nemtech/nem2-docs/" target="_blank">nem2-docs repository</a>
-
-.. |slack| raw:: html
-
-   <a href="https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM" target="_blank">Slack</a>

@@ -1,36 +1,49 @@
-# nem2-docs
+# NEM Developer Center
 
 The official nem2 documentation.
 
-## Requirements
+## What is NEM?
 
-First, make sure you have Python 2.7 or 3.4+ and pip installed.
+NEM is a developer-friendly blockchain platform for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features. 
 
-Then, install requirements using pip:
+Developers are able to integrate blockchain technology into their projects or create powerful dApps using NEM’s REST API. This allows creating a variety of architectural solutions with lightweight code in any language.
 
-`pip install -r requirements.txt`
+NEM provides access to both public and private blockchains, providing options to best suit the user’s needs. The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone. The private blockchain, on the other hand, offers higher speed and privacy.
 
-## Building NEM2 Documentation
+## What is Catapult?
 
-Run the following command and open the provided url in a browser.
+[Catapult](https://mijin.io/en/product/#mijin2) is NEM's next core engine. It is written in C++ and follows a 4-layered [architecture](https://nemtech.github.io/concepts/node.html), aiming to make NEM more scalable. It builds upon the achievements of its previous iteration, adding the newest innovations in blockchain technology. 
 
-`make livehtml`
+Catapult introduce new exclusive features:
 
-More information about Sphinx can be found on their [official website](http://www.sphinx-doc.org/en/master).
+*   [Aggregate Transactions](https://nemtech.github.io/concepts/aggregate-transaction.html)
+*   [Cross-chain Swaps](https://nemtech.github.io/concepts/cross-chain-swaps.html)
+*   [Multi-level Multisig Accounts](https://nemtech.github.io/concepts/multisig-account.html#manufacturing-and-supply-chains)
+*   [Account Filters](https://nemtech.github.io/concepts/account-filter.html)
 
-## Documentation and Getting Started
+Catapult will be a momentous step for NEM to be the widely utilized enterprise product it was envisioned to be. After nearly three years of development, the long-awaited update is expected to officially launch [by the end of 2019](https://blog.nem.io/nem-foundation-catapult-roadmap-and-vision/).
 
-Get started and learn about nem2 in this [official documentation][docs]
+## Getting Started
 
-## Contributing
+If you are interested in building on top of NEM, check out the [NEM Developer Center](https://nemtech.github.io/). There you will find the technical documentation necessary to get started - including setting up your development environment, step-by-step guides, and API reference.
 
-This project is developed and maintained by NEM Foundation. Contributions are welcome and appreciated. You can find [nem2-docs on GitHub][self];
-Feel free to start an issue or create a pull request. Check [CONTRIBUTING](CONTRIBUTING.md) before start.
+*   [Setting up your workstation](https://nemtech.github.io/getting-started/setup-workstation.html)
+*   [Self-paced guides](https://nemtech.github.io/#featured-guides)
+*   [Built-in features](https://nemtech.github.io/concepts/account.html)
+*   [Protocol](https://nemtech.github.io/concepts/cryptography.html)
+*   [API Reference](https://nemtech.github.io/api.html)
+
+## Contributing to the NEM Developer Center
+
+The NEM Developer Center is an open source project and we love to receive contributions from our community. Discover how our open source [community](https://github.com/nemtech/community/) is organized, and get started participating:
+
+*   Ask in [StackOverflow](https://stackoverflow.com/tags/nem/) development related questions.
+*   Reach our community joining the official [Slack](http://slack.nemtech.io/).
+*   Check the [contributing guidelines](https://nemtech.github.io/guidelines/suggesting-changes.html) to propose changes.
+*   Follow the development updates on [Twitter](https://twitter.com/nemtechdev).
+*   Explore our [GitHub](https://github.com/nemtech) repositories.
 
 ## License
 
-Copyright (c) 2018 NEM
-Licensed under the [Apache License 2.0](LICENSE)
-
-[self]: https://github.com/nemtech/nem2-docs
-[docs]: https://nemtech.github.io
+Copyright (c) 2018-present NEM 
+Licensed under the [Apache License 2.0](https://github.com/nemtech/nem2-docs/blob/master/LICENSE)
