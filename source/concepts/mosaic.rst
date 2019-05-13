@@ -148,5 +148,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0; Increase.
-    1; Decrease.
+    0; Decrease.
+    1; Increase.
