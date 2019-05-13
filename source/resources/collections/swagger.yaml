@@ -72,7 +72,7 @@ paths:
       description: Returns the account information for an array of accounts.
       operationId: getAccountsInfo
       requestBody:
-        $ref: "#/components/requestBodies/addresses"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -120,8 +120,8 @@ paths:
         in: query
         description: |
           The ordering criteria.
-          * ``-id`` - Descending order by id.
-          * ``id`` - Ascending order by id.
+          * -id - Descending order by id.
+          * id - Ascending order by id.
         schema:
           type: string
           default: -id
@@ -172,8 +172,8 @@ paths:
         in: query
         description: |
           The ordering criteria.
-          * ``-id`` - Descending order by id.
-          * ``id`` - Ascending order by id.
+          * -id - Descending order by id.
+          * id - Ascending order by id.
         schema:
           type: string
           default: -id
@@ -223,8 +223,8 @@ paths:
         in: query
         description: |
           The ordering criteria.
-          * ``-id`` - Descending order by id.
-          * ``id`` - Ascending order by id.
+          * -id - Descending order by id.
+          * id - Ascending order by id.
         schema:
           type: string
           default: -id
@@ -274,8 +274,8 @@ paths:
         in: query
         description: |
           The ordering criteria.
-          * ``-id`` - Descending order by id.
-          * ``id`` - Ascending order by id.
+          * -id - Descending order by id.
+          * id - Ascending order by id.
         schema:
           type: string
           default: -id
@@ -326,8 +326,8 @@ paths:
         in: query
         description: |
           The ordering criteria.
-          * ``-id`` - Descending order by id.
-          * ``id`` - Ascending order by id.
+          * -id - Descending order by id.
+          * id - Ascending order by id.
         schema:
           type: string
           default: -id
@@ -382,7 +382,7 @@ paths:
         a given array of addresses.
       operationId: getAccountPropertiesFromAccounts
       requestBody:
-        $ref: "#/components/requestBodies/addresses"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -887,7 +887,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: "#/components/requestBodies/addresses"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -1161,12 +1161,13 @@ components:
       description: The transaction
         [payload](https://nemtech.github.io/api.html#serialization).
       required: true
-    addresses:
+    accountIds:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/addresses"
-      description: An array of addresses.
+            oneOf:
+            - $ref: "#/components/schemas/addresses"
+            - $ref: "#/components/schemas/publicKeys"
       required: true
     mosaicIds:
       content:
@@ -1259,13 +1260,13 @@ components:
           type: integer
           description: |
             The account properties type:
-            * ``0x01`` (1 decimal) - The property type only allows receiving transactions from an address.
-            * ``0x02`` (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-            * ``0x04`` (4 decimal) - The property type only allows sending transactions with a given transaction type.
-            * ``0x05`` (5 decimal) - Property type sentinel.
-            * ``0x81`` (129 decimal) - The property type blocks receiving transactions from an address.
-            * ``0x82`` (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-            * ``0x84`` (132 decimal) -  The property type blocks sending transactions with a given transaction type
+            * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
+            * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
+            * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
+            * 0x05 (5 decimal) - Property type sentinel.
+            * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
+            * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
+            * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type
           example: 1
         values:
           type: array
@@ -1420,8 +1421,8 @@ components:
           type: integer
           description: |
             The namespace type:
-            * ``0`` -  Root namespace.
-            * ``1`` -  Subnamespace.
+            * 0 -  Root namespace.
+            * 1 -  Subnamespace.
         alias:
           $ref: "#/components/schemas/AliasDTO"
         parentId:
@@ -1449,9 +1450,9 @@ components:
           type: integer
           description: |
             The alias type:
-            * ``0`` -  No alias.
-            * ``1`` -  Mosaic id alias.
-            * ``2`` -  Addres alias.
+            * 0 -  No alias.
+            * 1 -  Mosaic id alias.
+            * 2 -  Addres alias.
           example: 0
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
@@ -1518,9 +1519,9 @@ components:
       type: array
       description: |
         The array of mosaic properties:
-        * ``First element`` - MosaicFlags
-        * ``Second element`` - Divisibility
-        * ``Third element`` - Duration
+        * First element - MosaicFlags
+        * Second element - Divisibility
+        * Third element - Duration
       items:
         $ref: "#/components/schemas/UInt64DTO"
       example:
@@ -1652,9 +1653,9 @@ components:
           type: number
           description: |
             The type of the receipt:
-            * ``0x124D``(4685 decimal) - Mosaic_Levy
-            * ``0x134D`` (4941 decimal) - Mosaic_Rental_Fee
-            * ``0x124E`` (4686 decimal) - Namespace_Rental_Fee
+            * 0x124D (4685 decimal) - Mosaic_Levy
+            * 0x134D (4941 decimal) - Mosaic_Rental_Fee
+            * 0x124E (4686 decimal) - Namespace_Rental_Fee
         sender:
           type: string
           description: The public key of the sender.
@@ -1684,13 +1685,13 @@ components:
           type: number
           description: |
             The type of the receipt. If it starts with 0x2 means that the balance is increased, otherwhise decreased.
-            * ``0x2143``(8515 decimal) - Harvest_Fee
-            * ``0x2248``(8776 decimal) - LockHash_Completed
-            * ``0x2348``(9032 decimal) - LockHash_Expired
-            * ``0x2252``(8786 decimal) - LockSecret_Completed
-            * ``0x2352``(9042 decimal) - LockSecret_Expired
-            * ``0x3148``(12616 decimal) - LockHash_Created
-            * ``0x3152``(12626 decimal) - LockSecret_Created
+            * 0x2143 (8515 decimal) - Harvest_Fee
+            * 0x2248 (8776 decimal) - LockHash_Completed
+            * 0x2348 (9032 decimal) - LockHash_Expired
+            * 0x2252 (8786 decimal) - LockSecret_Completed
+            * 0x2352 (9042 decimal) - LockSecret_Expired
+            * 0x3148 (12616 decimal) - LockHash_Created
+            * 0x3152 (12626 decimal) - LockSecret_Created
         account:
           type: string
           description: The target account public key.
@@ -1714,8 +1715,8 @@ components:
           type: number
           description: |
             The type of the receipt:
-            * ``0x414D``(16717 decimal) - Mosaic_Expired
-            * ``0x414E``(16718 decimal) - Namespace_Expired
+            * 0x414D (16717 decimal) - Mosaic_Expired
+            * 0x414E (16718 decimal) - Namespace_Expired
         artifactId:
           $ref: "#/components/schemas/UInt64DTO"
     InflationReceiptDTO:
@@ -1731,7 +1732,8 @@ components:
           type: number
           description: |
             The type of the receipt:
-            * ``0x5143``(20803  decimal) - Inflation
+            * 
+            0x5143 (20803  decimal) - Inflation
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
         amount:
@@ -1814,17 +1816,17 @@ components:
           description: |
             The block version. The higher byte represents the network
             identifier:
-            * ``0x68`` (MAIN_NET) - Public main network.
-            * ``0x98`` (TEST_NET) - Public test network.
-            * ``0x60`` (MIJIN) - Private network.
-            * ``0x90`` (MIJIN_TEST) - Private test network.
+            * 0x68 (MAIN_NET) - Public main network.
+            * 0x98 (TEST_NET) - Public test network.
+            * 0x60 (MIJIN) - Private network.
+            * 0x90 (MIJIN_TEST) - Private test network.
           example: 36867
         type:
           type: number
           description: |
             The block type:
-            * ``0x8043``  (32835 decimal) - Nemesis block.
-            * ``0x8143`` (33091 decimal) - Regular block.
+            * 0x8043  (32835 decimal) - Nemesis block.
+            * 0x8143 (33091 decimal) - Regular block.
           example: 33091
         height:
           $ref: "#/components/schemas/UInt64DTO"
@@ -1979,8 +1981,8 @@ components:
           format: int32
           description: |
             The node role:
-            * ``1`` - A peer node.
-            * ``2`` - An api node.
+            * 1 - A peer node.
+            * 2 - An api node.
           example: 2
         host:
           type: string
@@ -2030,6 +2032,16 @@ components:
           example:
           - SDRDGFTDLLCB67D4HPGIMIHPNSRYRJRT7DOBGWZY
           - SBCPGZ3S2SCC3YHBBTYDCUZV4ZZEPHM2KGCP4QXX
+    publicKeys:
+      type: object
+      properties:
+        publicKeys:
+          type: array
+          description: The array of public keys.
+          items:
+            type: string
+          example:
+          - AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
     transactionIds:
       type: object
       properties:
