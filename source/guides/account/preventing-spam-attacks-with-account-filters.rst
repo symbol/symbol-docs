@@ -15,9 +15,9 @@ Learn how to add and remove account filters.
 Background
 **********
 
-Imagine you are a company using the public chain to certify the quality of their products.
+Imagine you are a company using the public chain to certify the quality of your products.
 
-When the quality verification process concludes, an operator sends a :doc:`quality seal <../../concepts/mosaic>` to the product account.
+When the quality verification process concludes, an operator sends a :doc:`quality seal <../../concepts/mosaic>` to the product account, which the customers can review by scanning a QR code. For the convenience of the customers, you only want to show relevant transactions and prevent spam from cluttering the product account.
 
 The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
@@ -27,7 +27,7 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
     Blocking spam attacks
 
-The company opts to configure their product :doc:`account filters <../../concepts/account-filter>`, enabling only to receive transactions that follow a set of conditions.
+Thus, you opt to configure the product :doc:`account filters <../../concepts/account-filter>` to only receive transactions that follow a set of conditions.
 
 *************
 Prerequisites
@@ -42,7 +42,7 @@ Let’s get into some code
 
 Before starting solving the use case, you will need to set up two accounts with :doc:`NEM2-CLI <../../cli>`.
 
-1. Create one account to represent the product.
+1. Create an account to represent the product.
 
 .. code-block:: bash
 
@@ -57,7 +57,7 @@ Before starting solving the use case, you will need to set up two accounts with 
     Public Key:     8DC55282AC40307C230F432EE29E52BD93860C167011B11FA1BAEE124B76AB19
     Private Key:    123..456
 
-2. Create a second account for the company.
+2. Create another account for the company.
 
 .. code-block:: bash
 
@@ -72,20 +72,20 @@ Before starting solving the use case, you will need to set up two accounts with 
     Public Key:     DBA5A88911D01CE951A5DEAFD86108A029EA359BB211B399FC53B8908D6AE272
     Private Key:    654..321
 
-Next, you will configure the product's account to accept receiving transfer transactions that only contain a certain mosaic.
+Next, you will configure the product's account to only accept receiving transfer transactions that contain a specific mosaic.
 
 Blocking transactions by address
 ================================
 
-An account can decide to receive transactions only from an allowed list of :doc:`addresses <../../concepts/account>`. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+An account can decide to receive transactions only from an allowed list of :doc:`addresses <../../concepts/account>`. Similarly, an account can specify a blocked list of addresses to block transactions from.
 
-.. note:: Allow and block filters are mutually exclusive per filter type. In other words, an account can only configure a block or an allow list per type of filter.
+.. note:: Allow and block filters are mutually exclusive per filter type. In other words, an account can only be configured  to have either an allowed or blocked list per type of filter.
 
 By default, when there is no filter set, all the accounts in the network can announce transactions to the stated account.
 
-For this use case, the product account will only accept receiving transactions if they come from the company's account.
+Returning to our previous example, let us imagine that you want to configure the product account to only accept receiving transactions  that come from the company's account. You might take the following steps to do so:
 
-1. Define the account filter modification. Add to the "allowed list" the company's address.
+1. Define the account filter modification. Add to the company’s address (SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP) to the "allowed list".
 
 .. example-code::
 
@@ -112,22 +112,22 @@ For this use case, the product account will only accept receiving transactions i
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Now, you can test sending a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account: you will get an error as only "SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP" is allowed to send the transactions to the product.
+Now, if you send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account, you will get an error as only "SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP" is allowed to send the transactions to the product.
 
-On the other hand, if you try to send it from your company account and everything goes well, you will receive a confirmation message.
+On the other hand, if you send a transaction from your company account, you will receive a confirmation message as you would normally.
 
 Blocking transactions by mosaic id
 ==================================
 
-The account that represents the company owns the following mosaics:
+Imagine that the account that represents the company owns the following mosaics:
 
-- ``company.share``: represents a share of the company.
+- ``company.share``: represents shares of the company.
 - ``company.quality.seal``: represents that the product has passed a quality test.
 - ``company.safety.seal``: represents that the product has passed a safety test.
 
-As you might notice, the product only should be able to receive seals and not company shares.
+In this case, it might be useful if the product could only receive seals and not company shares.
 
-We are going to narrow the type of transactions that the product can receive from the company's account. To solve this example, we are going to use negation. Instead of allowing specifically the seals, the product will block receiving transactions containing "company.share".
+Thus, you could  narrow the type of transactions that the product can receive from the company's account through the use of negation. Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain "company.share". This is how it can be done:
 
 1. Define the account filter modification. Add the mosaic id you want to block to the "blocked list".
 
@@ -156,12 +156,12 @@ We are going to narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-If everything goes well, the product account can only receive transactions from the company's account, always that does not include any "company.share" mosaic.
+If the process was successful, the product account can now only receive transactions from the company's account that does not include any "company.share" mosaic.
 
 Removing a filter
 =================
 
-After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product.
+After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product. The account filters can be removed as easily as they were set up:
 
 1. Define the account filter modification. Remove from the "allowed list" the company's address.
 
@@ -172,7 +172,7 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountPropertyTransaction``, setting the type "AllowAddress" and passing the modification created.
+2. Create an ``AccountPropertyTransaction``, setting the type "AllowAddress". Add as well the modification created.
 
 .. example-code::
 
@@ -190,4 +190,4 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-After the transaction gets confirmed, you should be able to send transactions from any account to the product account.
+After the transaction gets confirmed, you should be able to send transactions from any account to the product account once again.
