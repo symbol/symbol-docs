@@ -100,6 +100,8 @@ Schemas
 AggregateTransaction
 ====================
 
+Announce an aggregate transaction to combine multiple transactions together.
+
 **Version**: 0x02
 
 **Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
@@ -113,8 +115,8 @@ AggregateTransaction
     :delim: ;
 
     payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature>`.
+    transactions; array<byte, payloadSize>;  The array of transactions, which can be initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    cosignatures; array<byte, size - payloadSize>; An array of transaction :ref:`cosignatures <cosignature>`.
 
 .. _cosignature-transaction:
 
@@ -155,7 +157,7 @@ HashLockTransaction
 
 **Alias**: LockFundsTransaction
 
-Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>` to prevent network spamming.
+Announce a hash lock transaction before sending an :ref:`aggregate bonded transaction<aggregate-transaction>` to prevent network spamming.
 
 Once the related aggregate bonded transaction is confirmed, the locked funds become available in the account that signed the initial hash lock transaction.
 
@@ -174,5 +176,5 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :delim: ;
 
     mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
-    duration; uint64; The lock duration.
+    duration; uint64; The lock duration. Duration is allowed to lie up to ``2`` days.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
