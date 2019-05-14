@@ -45,7 +45,7 @@ A company is using the public chain to certify the quality of their products.
 
 When the quality verification process concludes, an operator sends a :doc:`quality seal<mosaic>` to the product account.
 
-The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding others to spam their products with non-related information.
+The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
 .. figure:: ../resources/images/examples/account-properties-spam.png
     :align: center
@@ -61,6 +61,18 @@ Enhancing the account security
 Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig<multisig-account>` account.
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
+
+******
+Guides
+******
+
+.. postlist::
+    :category: Account Filter
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
 *******
 Schemas
