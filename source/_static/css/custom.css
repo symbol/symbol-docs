@@ -594,6 +594,10 @@ footer li {
     margin-bottom: 40px;
 }
 
+#featured-guides .card-title {
+    margin-top: 0px;
+}
+
 /* Guides */
 .postlist li {
     text-indent: 0 !important;
