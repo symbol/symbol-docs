@@ -409,14 +409,22 @@ body > .container.full-width {
     padding: 0px;
 }
 
+.highlight > pre {
+    background-color: #272822;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 0px;
+    color: #fff;
+}
+
 .example-code.container {
     padding: 0px;
     max-width: 100%;
 }
 
 .example-selector {
-    background-color: #e4e4e4 !important;
-    padding: 5px !important;
+    background-color: #fff;
+    padding: 5px 0 !important;
     height: 100% !important;
     margin-bottom: 0px !important;
 }
@@ -430,8 +438,8 @@ body > .container.full-width {
     background-color: transparent !important;
     float: none !important;
     display: inline-block !important;
-    margin-left: 20px !important;
     font-weight: normal !important;
+    margin: 0 5px 0 0;
 }
 
 .example-selector > li.selected {
@@ -445,6 +453,7 @@ body > .container.full-width {
     position: relative;
     text-align: right;
     height: 0;
+    padding: 0 5px;
 }
 
 .literal-block-wrapper {

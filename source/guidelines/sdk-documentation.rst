@@ -56,7 +56,7 @@ SDK behaves correctly.
 
 .. code-block:: bash
 
-    $> git clone https://github.com/<YOUR_USERNAME>/nem2-docs.git
+    git clone https://github.com/<YOUR_USERNAME>/nem2-docs.git
 
 2. Create a new folder under ``source/resources/examples/`` named as the programming language of your SDK.
 

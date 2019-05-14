@@ -145,7 +145,7 @@ Generate the code for a determined schema in one of the available languages. For
 
 .. code-block:: bash
 
-    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+    python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
 
 The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
 

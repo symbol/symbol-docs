@@ -60,7 +60,7 @@ Have you loaded an account with test ``cat.currency``? If it is not the case, go
 
 .. code-block:: bash
 
-   $> nem2-cli account info
+   nem2-cli account info
 
 
    New Account: SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
@@ -77,7 +77,7 @@ Have you loaded an account with test ``cat.currency``? If it is not the case, go
 
 .. code-block:: bash
 
-   $> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
+   nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
 
 
 Monitoring the blockchain
@@ -93,19 +93,19 @@ Open three new terminals:
 
 .. code-block:: bash
 
-   $> nem2-cli monitor status
+   nem2-cli monitor status
 
 2. Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
 
 .. code-block:: bash
 
-   $> nem2-cli monitor unconfirmed
+   nem2-cli monitor unconfirmed
 
 3. Once a transaction is included, you will see it under the ``confirmed`` terminal.
 
 .. code-block:: bash
 
-   $> nem2-cli monitor confirmed
+   nem2-cli monitor confirmed
 
 Creating the ticket
 ===================
@@ -116,7 +116,7 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 
 .. code-block:: bash
 
-   $> nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
+   nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -133,7 +133,7 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 
 .. code-block:: bash
 
-   $> ...  MosaicId:7cdf3b117a3c40cc ...
+   ...  MosaicId:7cdf3b117a3c40cc ...
 
 Sending the ticket
 ==================
@@ -199,13 +199,13 @@ Although the transaction is defined, it has not been announced to the network ye
 
    .. code-block:: bash
 
-       $> nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
+       nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
 .. code-block:: bash
 
-    $> nem2-cli account info --profile buyer
+    nem2-cli account info --profile buyer
 
 ************
 What's next?
