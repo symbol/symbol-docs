@@ -126,7 +126,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
 .. code-block:: bash
 
-    $> nem2-cli monitor aggregatebonded --address <your-address-here>
+    nem2-cli monitor aggregatebonded --address <your-address-here>
 
 2. Modify the previous code, defining the transaction as ``aggregate bonded``.
 
@@ -162,4 +162,4 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
 .. code-block:: bash
 
-    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
+    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice

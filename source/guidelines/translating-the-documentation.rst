@@ -14,19 +14,19 @@ Adding/updating translations
 
 .. code-block:: bash
 
-  $> git clone https://github.com/nemtech/nem2-docs.git
+  git clone https://github.com/nemtech/nem2-docs.git
 
 2. Install the project's requirements.
 
 .. code-block:: bash
 
-  $> pip install -r requirements.txt
+  pip install -r requirements.txt
 
 3. Extract the docs messages into .po files.
 
 .. code-block:: bash
 
-  $>  make gettext
+   make gettext
 
 For each documentation file, a .po file will be generated under ``build/gettext``.
 
@@ -34,7 +34,7 @@ For each documentation file, a .po file will be generated under ``build/gettext`
 
 .. code-block:: bash
 
-  $>  sphinx-intl update -p build/gettext -l <lang>
+   sphinx-intl update -p build/gettext -l <lang>
 
 Replace <lang> for your `language code <https://en.wikipedia.org/wiki/ISO_639-1>`_.
 
@@ -44,7 +44,7 @@ Replace <lang> for your `language code <https://en.wikipedia.org/wiki/ISO_639-1>
 
 .. code-block:: bash
 
-  $> make -e SPHINXOPTS="-D language='<lang>'" livehtml
+  make -e SPHINXOPTS="-D language='<lang>'" livehtml
 
 
 :doc:`Submit your changes <suggesting-changes>` into the nem2-docs repository.
