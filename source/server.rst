@@ -22,13 +22,9 @@ Catapult sports a :doc:`4-layer architecture <concepts/node>` design for added s
 Installation
 ************
 
-[installation-instructions]
+To set up your own working Catapult network for developing or learning purposes, it is recommended that you refer to use |catapult-service-bootstrap|. It contains the appropriate of bootstrap and setup scripts to help developers easily and properly establish a running server. The software will assist you in quickly installing the server so that you can immediately focus on your development work instead of setting up or configuring the server.
 
-********************
-Package Organization
-********************
-
-[package-organization]
+To build and run manually the catapult-server manually, follow the |instructions|.
 
 ***********************
 Configurable Parameters
@@ -40,3 +36,14 @@ Configurable Parameters
 .. |catapult-server| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
+
+.. |catapult-service-bootstrap| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
+
+
+.. |instructions| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server/blob/master/BUILDING.md" target="_blank">instructions for Ubuntu</a>
+
+
