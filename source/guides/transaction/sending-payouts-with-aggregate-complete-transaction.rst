@@ -15,15 +15,14 @@ Send transactions to different accounts atomically, using an :ref:`aggregate com
 Background
 **********
 
-Dan wants to send mosaics to Alice and Bob.
+Dan wants to send mosaics to Alice and Bob. He chooses to send an aggregate complete transaction, so both will receive the funds at the same time.
+
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
     :width: 400px
 
     Sending transactions to different recipients atomically
-
-He chooses to send an aggregate complete transaction, so both will receive the funds at the same time.
 
 *************
 Prerequisites
@@ -32,11 +31,11 @@ Prerequisites
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-*************************
+************************
 Let's get into some code
-*************************
+************************
 
-1. Dan creates two :ref:`transfer transaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`aggregate transaction <aggregate-transaction>`.
+1. Create two :ref:`transfer transaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`aggregate transaction <aggregate-transaction>`.
 
 As one private key can sign all the transactions in the aggregate, define the aggregate as *complete*. That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
 
