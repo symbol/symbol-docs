@@ -119,7 +119,7 @@ paths:
       - name: ordering
         in: query
         description: |
-          The ordering criteria.
+          The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -171,7 +171,7 @@ paths:
       - name: ordering
         in: query
         description: |
-          The ordering criteria.
+          The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -222,7 +222,7 @@ paths:
       - name: ordering
         in: query
         description: |
-          The ordering criteria.
+          The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -1255,24 +1255,23 @@ components:
       - values
       properties:
         propertyType:
-          type: integer
-          description: |
-            The account properties type:
-            * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
-            * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-            * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
-            * 0x05 (5 decimal) - Property type sentinel.
-            * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
-            * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-            * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
-          example: 1
+          $ref: "#/components/schemas/AccountPropertyTypeEnum"
         values:
+          description: The address, transaction type or mosaic id to filter.
           type: array
           items:
             anyOf:
             - type: string
             - type: integer
             - $ref: "#/components/schemas/UInt64DTO"
+    AccountPropertiesModificationTypeEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The account properties modification type:
+        * 0 - Add property.
+        * 1 - Remove property.
+      example: 0
     AccountPropertiesModificationDTO:
       type: object
       required:
@@ -1280,12 +1279,10 @@ components:
       - value
       properties:
         type:
-          description: |
-            * 0 - Add property.
-            * 1 - Remove property.
-          example: 0
+          $ref: "#/components/schemas/AccountPropertiesModificationTypeEnum"
         values:
           type: array
+          description: The address, transaction type or mosaic id to filter.
           items:
             anyOf:
             - type: string
@@ -1353,6 +1350,14 @@ components:
           - 565059F55E68F904214E8BE1D610B5BBEA4CE46CC13D246D45BC1DAE5D32A0D2
           items:
             type: string
+    MultisigModificationTypeEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The type of the modification:
+        * 0 - Add cosignatory.
+        * 1 - Remove cosignatory.
+      example: 0
     CosignatoryModificationDTO:
       type: object
       required:
@@ -1360,12 +1365,7 @@ components:
       - cosignatoryPublicKey
       properties:
         modificationType:
-          type: number
-          description: |
-            The type of the modification:
-            * 0 - Add cosignatory.
-            * 1 - Remove cosignatory.
-            example: 0
+          $ref: "#/components/schemas/MultisigModificationTypeEnum"
         cosignatoryPublicKey:
           type: string
           description: The public key of the cosignatory account.
@@ -1458,6 +1458,27 @@ components:
           type: number
           description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
           example: 0
+    ReceiptTypeEnum:
+      type: number
+      enum: [4685,4941,4686,8515,8776,9042,12616,12626,16717,16718,20803,57652,61763,62019]
+      description: |
+        The type of the receipt:
+        * 0x124D (4685 decimal) - Mosaic_Levy.
+        * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
+        * 0x124E (4686 decimal) - Namespace_Rental_Fee.
+        * 0x2143 (8515 decimal) - Harvest_Fee.
+        * 0x2248 (8776 decimal) - LockHash_Completed.
+        * 0x2348 (9032 decimal) - LockHash_Expired.
+        * 0x2252 (8786 decimal) - LockSecret_Completed.
+        * 0x2352 (9042 decimal) - LockSecret_Expired.
+        * 0x3148 (12616 decimal) - LockHash_Created.
+        * 0x3152 (12626 decimal) - LockSecret_Created.
+        * 0x414D (16717 decimal) - Mosaic_Expired.
+        * 0x414E (16718 decimal) - Namespace_Expired.
+        * 0x5143 (20803 decimal) - Inflation.
+        * 0xE134 (57652 decimal) - Transaction_Group.
+        * 0xF143 (61763 decimal) - Address_Alias_Resolution.
+        * 0xF243 (62019 decimal) - Mosaic_Alias_Resolution.
     ReceiptDTO:
       type: object
       required:
@@ -1468,25 +1489,7 @@ components:
           type: number
           description: The version of the receipt.
         type:
-          type: number
-          description: |
-            The type of the receipt:
-            * 0x124D (4685 decimal) - Mosaic_Levy.
-            * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
-            * 0x124E (4686 decimal) - Namespace_Rental_Fee.
-            * 0x2143 (8515 decimal) - Harvest_Fee.
-            * 0x2248 (8776 decimal) - LockHash_Completed.
-            * 0x2348 (9032 decimal) - LockHash_Expired.
-            * 0x2252 (8786 decimal) - LockSecret_Completed.
-            * 0x2352 (9042 decimal) - LockSecret_Expired.
-            * 0x3148 (12616 decimal) - LockHash_Created.
-            * 0x3152 (12626 decimal) - LockSecret_Created.
-            * 0x414D (16717 decimal) - Mosaic_Expired.
-            * 0x414E (16718 decimal) - Namespace_Expired.
-            * 0x5143 (20803 decimal) - Inflation.
-            * 0xE134 (57652 decimal) - Transaction_Group.
-            * 0xF143 (61763 decimal) - Address_Alias_Resolution.
-            * 0xF243 (62019 decimal) - Mosaic_Alias_Resolution.
+          $ref: "#/components/schemas/ReceiptDTO"
     BalanceTransferReceiptDTO:
       description: The invisible state change triggered a mosaic transfer.
       allOf:
@@ -1748,6 +1751,13 @@ components:
           $ref: "#/components/schemas/MosaicMetaDTO"
         mosaic:
           $ref: "#/components/schemas/MosaicDefinitionDTO"
+    MessageTypeEnum:
+      type: number
+      enum: [0]
+      description: |
+        The type of the message:
+        * 0 - Regular message.
+      example: 0
     MessageDTO:
       type: object
       required:
@@ -1755,11 +1765,7 @@ components:
       - payload
       properties:
         type:
-          type: number
-          example: 0
-          description: |
-            The type of the message:
-              * 0 - Regular message.
+          $ref: "#/components/schemas/MessageTypeEnum"
         payload:
           type: string
           description: The message content in hexadecimal.
@@ -1811,17 +1817,19 @@ components:
       - |-
         - 0
         - 0
+    MosaicPropertyIdEnum:
+      type: number
+      description: |
+        The array of mosaic properties:
+        * 0 - MosaicFlags
+        * 1 - Divisibility
+        * 2 - Duration
+      example: 0
     MosaicPropertyDTO:
       type: object
       properties:
         id:
-          type: number
-          description: |
-            The array of mosaic properties:
-            * 0 - MosaicFlags
-            * 1 - Divisibility
-            * 2 - Duration
-          example: 0
+          $ref: "#/components/schemas/MosaicPropertyIdEnum"
         value:
           $ref: "#/components/schemas/UInt64DTO"
     MosaicNameDTO:
@@ -1900,11 +1908,7 @@ components:
         level2:
           $ref: "#/components/schemas/UInt64DTO"
         type:
-          type: integer
-          description: |
-            The namespace type:
-            * 0 -  Root namespace.
-            * 1 -  Subnamespace.
+          $ref: "#/components/schemas/NamespaceTypeEnum"
         alias:
           $ref: "#/components/schemas/AliasDTO"
         parentId:
@@ -1923,19 +1927,22 @@ components:
           type: string
           description: The name of the namespace.
           example: cat
+    AliasTypeEnum:
+      type: integer
+      enum: [0,1,2]
+      description: |
+        The alias type:
+        * 0 -  No alias.
+        * 1 -  Mosaic id alias.
+        * 2 -  Addres alias.
+      example: 0
     AliasDTO:
       type: object
       required:
       - type
       properties:
         type:
-          type: integer
-          description: |
-            The alias type:
-            * 0 -  No alias.
-            * 1 -  Mosaic id alias.
-            * 2 -  Addres alias.
-          example: 0
+          $ref: "#/components/schemas/AliasTypeEnum"
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
         address:
@@ -1943,6 +1950,40 @@ components:
           description: The aliased address in hexadecimal.
 
     # Transactions endpoints
+    EntityTypeEnum:
+      type: number
+      enum: [16717,16973,16718,16974,17230,16724,16725,16705,16961,16712,16720,16976,17232,16722,16978,16716,32835,33091]
+      description: |
+        The entity type:
+        * 0x414D (16717 decimal) - Mosaic Definition Transaction.
+        * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
+        * 0x414E (16718 decimal) - Register Namespace Transaction.
+        * 0x424E (16974 decimal) - Address Alias Transaction.
+        * 0x434E (17230 decimal) - Mosaic Alias Transaction.
+        * 0x4154 (16724 decimal) - Transfer Transaction.
+        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
+        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
+        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
+        * 0x4148 (16712 decimal) - Hash Lock Transaction.
+        * 0x4150 (16720 decimal) - Account Properties Address Transaction.
+        * 0x4250 (16976 decimal) - Account Properties Mosaic Transaction.
+        * 0x4350 (17232 decimal) - Account Properties Entity Type Transaction.
+        * 0x4152 (16722 decimal) - Secret Lock Transaction.
+        * 0x4252 (16978 decimal) - Secret Proof Transaction.
+        * 0x414C (16716 decimal) - Account Link Transaction.
+        * 0x8043 (32835 decimal) - Nemesis block.
+        * 0x8143 (33091 decimal) - Regular block.
+      example: 33091
+    NetworkTypeEnum:
+      type: number
+      description: |
+        The entity version. The higher byte represents the network
+        identifier:
+        * 0x68 (MAIN_NET) - Public main network.
+        * 0x98 (TEST_NET) - Public test network.
+        * 0x60 (MIJIN) - Private network.
+        * 0x90 (MIJIN_TEST) - Private test network.
+      example: 36867
     EntityDTO:
       type: object
       required:
@@ -1955,38 +1996,9 @@ components:
           description: The public key of the entity signer formatted as hexadecimal.
           example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
         version:
-          type: number
-          description: |
-            The entity version. The higher byte represents the network
-            identifier:
-            * 0x68 (MAIN_NET) - Public main network.
-            * 0x98 (TEST_NET) - Public test network.
-            * 0x60 (MIJIN) - Private network.
-            * 0x90 (MIJIN_TEST) - Private test network.
-          example: 36867
+          $ref: "#/components/schemas/NetworkTypeEnum"
         type:
-          type: number
-          description: |
-            The entity type:
-            * 0x414D (16717 decimal) - Mosaic Definition Transaction.
-            * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
-            * 0x414E (16718 decimal) - Register Namespace Transaction.
-            * 0x424E (16974 decimal) - Address Alias Transaction.
-            * 0x434E (17230 decimal) - Mosaic Alias Transaction.
-            * 0x4154 (16724 decimal) - Transfer Transaction.
-            * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
-            * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
-            * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
-            * 0x4148 (16712 decimal) - Hash Lock Transaction.
-            * 0x4150 (16720 decimal) - Account Properties Address Transaction.
-            * 0x4250 (16976 decimal) - Account Properties Mosaic Transaction.
-            * 0x4350 (17232 decimal) - Account Properties Entity Type Transaction.
-            * 0x4152 (16722 decimal) - Secret Lock Transaction.
-            * 0x4252 (16978 decimal) - Secret Proof Transaction.
-            * 0x414C (16716 decimal) - Account Link Transaction.
-            * 0x8043  (32835 decimal) - Nemesis block.
-            * 0x8143 (33091 decimal) - Regular block.
-          example: 33091
+          $ref: "#/components/schemas/EntityTypeEnum"
     VerifiableEntityDTO:
       type: object
       required:
@@ -2135,6 +2147,14 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/MosaicDefinitionTransactionBodyDTO"
+    DirectionEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The supply modification direction:
+        * 0  - Decrease.
+        * 1  - Increase.
+      example: 0
     MosaicSupplyChangeTransactionBodyDTO:
       type: object
       required:
@@ -2147,10 +2167,7 @@ components:
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
         direction:
-          type: number
-          description: |
-            * 0  - Decrease.
-            * 1  - Increase.
+          $ref: "#/components/schemas/DirectionEnum"
         delta:
           $ref: "#/components/schemas/UInt64DTO"
     MosaicSupplyChangeTransactionDTO:
@@ -2162,6 +2179,14 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/MosaicSupplyChangeTransactionBodyDTO"
+    NamespaceTypeEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The namespace type:
+        * 0 -  Root namespace.
+        * 1 -  Subnamespace.
+      example: 0
     RegisterNamespaceTransactionBodyDTO:
       type: object
       required:
@@ -2174,11 +2199,7 @@ components:
         type:
           example: 16718
         namespaceType:
-          type: number
-          description: |
-            The namespace type:
-            * 0 -  Root namespace.
-            * 1 -  Subnamespace.
+          $ref: "#/components/schemas/NamespaceTypeEnum"
         duration:
           $ref: "#/components/schemas/UInt64DTO"
         namespaceId:
@@ -2195,6 +2216,14 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/RegisterNamespaceTransactionBodyDTO"
+    AliasActionEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The alias action:
+        * 0 -  Link alias.
+        * 1 -  Unlink alias.
+      example: 0
     AddressAliasTransactionBodyDTO:
       type: object
       required:
@@ -2205,11 +2234,7 @@ components:
         type:
           example: 16974
         aliasAction:
-          type: number
-          description: |
-            The namespace type:
-            * 0 -  Link alias.
-            * 1 -  Unlink alias.
+          $ref: "#/components/schemas/AliasActionEnum"
         namespaceId:
           $ref: "#/components/schemas/UInt64DTO"
         address:
@@ -2234,11 +2259,7 @@ components:
         type:
           example: 17230
         aliasAction:
-          type: number
-          description: |
-            The alias action:
-            * 0 -  Link alias.
-            * 1 -  Unlink alias.
+          $ref: "#/components/schemas/AliasActionEnum"
         namespaceId:
           $ref: "#/components/schemas/UInt64DTO"
         address:
@@ -2374,6 +2395,19 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/HashLockTransactionDTO"
+    AccountPropertyTypeEnum:
+      type: number
+      example: 1
+      enum: [1,2,4,5,129,130,132]
+      description: |
+        The account properties type:
+        * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
+        * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
+        * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
+        * 0x05 (5 decimal) - Property type sentinel.
+        * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
+        * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
+        * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
     AccountPropertiesTransactionBodyDTO:
       type: object
       required:
@@ -2383,17 +2417,7 @@ components:
         type:
           example: 16720
         propertyType:
-          type: number
-          example: 1
-          description: |
-            The account properties type:
-            * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
-            * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-            * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
-            * 0x05 (5 decimal) - Property type sentinel.
-            * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
-            * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-            * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
+          $ref: "#/components/schemas/AccountPropertyTypeEnum"
         modifications:
           type: array
           items:
@@ -2407,6 +2431,15 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/AccountPropertiesTransactionBodyDTO"
+    HashAlgorithmEnum:
+      type: number
+      enum: [0,1,2,3]
+      description: |
+        The hash algorithm used to hash te proof:
+        * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
+        * 1 (Op_Keccak_256)  - The proof is hashed using Keccak (ETH compatibility).
+        * 2 (Op_Hash_160)  - The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
+        * 3 (Op_Hash_256)  - The proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
     SecretLockTransactionBodyDTO:
       type: object
       required:
@@ -2426,14 +2459,7 @@ components:
         amount:
           $ref: "#/components/schemas/UInt64DTO"
         hashAlgorithm:
-          type: number
-          description: |
-            The hash algorithm used to hash te proof:
-              * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
-              * 1 (Op_Keccak_256)  - The proof is hashed using Keccak (ETH compatibility).
-              * 2 (Op_Hash_160)  - The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
-              * 3 (Op_Hash_256)  - The proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
-          example: 0
+          $ref: "#/components/schemas/HashAlgorithmEnum"
         secret:
           type: string
           description: The proof hashed.
@@ -2461,14 +2487,7 @@ components:
         type:
           example: 16978
         hashAlgorithm:
-          type: number
-          description: |
-            The hash algorithm used to hash te proof:
-              * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
-              * 1 (Op_Keccak_256)  - The proof is hashed using Keccak (ETH compatibility).
-              * 2 (Op_Hash_160)  - The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
-              * 3 (Op_Hash_256)  - The proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
-          example: 0
+          $ref: "#/components/schemas/HashAlgorithmEnum"
         secret:
           type: string
           description: The proof hashed.
@@ -2485,6 +2504,13 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
+    LinkActionEnum:
+      type: number
+      enum: [0,1]
+      description: |
+        The type of the action:
+        * 0 - Link.
+        * 1 - Unlink.
     AccountLinkTransactionBodyDTO:
       type: object
       required:
@@ -2499,11 +2525,7 @@ components:
           description:
             The public key of the remote account.
         linkAction:
-          type: number
-          description: |
-            The type of the action:
-              * 0 - Link.
-              * 1 - Unlink.
+          $ref: "#/components/schemas/LinkActionEnum"
     AccountLinkTransactionDTO:
       description: Delegates the account importance score to a proxy account.
       allOf:
@@ -2535,7 +2557,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         height:
           $ref: "#/components/schemas/UInt64DTO"
-
+      example: 0
     # Network endpoints
     NetworkTypeDTO:
       type: object
@@ -2553,6 +2575,15 @@ components:
           example: catapult development network
 
     # Node endpoints
+    RolesEnum:
+      type: integer
+      format: int
+      enum: [1,2]
+      description: |
+        The role of the node:
+        * 1 - A peer node.
+        * 2 - An api node.
+      example: 2
     NodeInfoDTO:
       type: object
       required:
@@ -2583,13 +2614,7 @@ components:
           format: int32
           example: 0
         roles:
-          type: integer
-          format: int32
-          description: |
-            The node role:
-            * 1 - A peer node.
-            * 2 - An api node.
-          example: 2
+          $ref: "#/components/schemas/RolesEnum"
         host:
           type: string
           description: The IP address of the endpoint.
