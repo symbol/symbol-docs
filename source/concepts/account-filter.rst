@@ -101,7 +101,7 @@ Configure filters to prevent receiving transactions from undesired addresses.
 
     propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`AddressModification <address-modification>`, modificationsCount); The array of modifications.
+    modifications; array<:ref:`AddressModification <address-modification>`, modificationsCount>; The array of modifications.
 
 .. _account-properties-mosaic-transaction:
 
@@ -124,7 +124,7 @@ Configure filters to prevent receiving transactions containing a specific mosaic
 
     propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount); The array of modifications.
+    modifications; array<:ref:`MosaicModification <mosaic-modification>`, modificationsCount>; The array of modifications.
 
 
 .. _account-properties-entity-type-transaction:
@@ -148,7 +148,7 @@ Configure filters to prevent announcing transactions by :ref:`type <transaction-
 
     propertyType; :ref:`PropertyType<property-type>` ; The property type.
     modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount); The array of modifications.
+    modifications; array<:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount>; The array of modifications.
 
 .. _address-modification:
 
@@ -219,9 +219,9 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x01; The property type allows receiving transactions from an address.
-    0x02; The property type allows receiving transactions containing a mosaic id.
-    0x04; The property type allows sending transactions with a given transaction type.
+    0x01; The property type only allows receiving transactions from an address.
+    0x02; The property type only allows receiving transactions containing a mosaic id.
+    0x04; The property type only allows sending transactions with a given transaction type.
     0x05; Property type sentinel.
     0x81; The property type blocks receiving transactions from an address.
     0x82; The property type blocks receiving transactions containing a mosaic id.

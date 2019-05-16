@@ -50,7 +50,7 @@ Use a secret lock transaction to start the cross-chain swap:
 
 1. Define the mosaic units you want to transfer to a determined account.
 
-2. Generate a random set of bytes called ``proof``.
+2. Generate a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
 
 3. Hash the obtained proof with one of the available algorithms to generate the ``secret``.
 
@@ -75,7 +75,7 @@ If the transaction duration is reached without being proved, the locked amount g
     :delim: ;
 
     mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic.
-    duration; uint64; The lock duration. If reached, the mosaics will be returned to the initiator.
+    duration; uint64; Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
     secret; 64 bytes (binary);  The proof hashed.
     recipient; 25 bytes (binary); The address who will receive the funds once unlocked.
@@ -104,7 +104,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
     secret; 64 bytes (binary); The proof hashed.
     proofSize; uint16; The proof size in bytes.
-    proof; array(byte, proofSize); The original proof.
+    proof; array<byte, proofSize>; The original random set of bytes.
 
 .. _lock-hash-algorithm:
 
@@ -117,7 +117,7 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0 (Op_Sha3_256); Input is hashed using sha3 256.
-    1 (Op_Keccak_256); Input is hashed using Keccak (ETH compatibility).
-    2 (Op_Hash_160); Input is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
-    3 (Op_Hash_256); Input is hashed twice with Sha-256 (bitcoin's OP_HASH256).
+    0 (Op_Sha3_256); The proof is hashed using Sha-256.
+    1 (Op_Keccak_256); The proof is hashed using Keccak (ETH compatibility).
+    2 (Op_Hash_160); The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    3 (Op_Hash_256); The proof is hashed twice with Sha-256 (bitcoin's OP_HASH256).

@@ -138,7 +138,7 @@ b) Change the configurable properties of a multisig account.
     minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; The number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
+    modification; array<:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount>; The array of cosignatory :doc:`accounts <account>` to add or delete.
 
 .. _cosignatory-modification:
 
