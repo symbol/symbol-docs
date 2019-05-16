@@ -60,6 +60,11 @@ body {
     color: #fff;
 }
 
+#redoc ul {
+    padding-left: 15px;
+    list-style: initial;
+}
+
 #redoc ul li {
     text-indent: 0 !important;
 }
