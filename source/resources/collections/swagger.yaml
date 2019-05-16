@@ -1402,12 +1402,12 @@ components:
         receipts:
           type: array
           description: The array of receipts.
-          items:
-            anyOf:
-            - $ref: "#/components/schemas/BalanceTransferReceiptDTO"
-            - $ref: "#/components/schemas/BalanceChangeReceiptDTO"
-            - $ref: "#/components/schemas/ArtifactExpiryReceiptDTO"
-            - $ref: "#/components/schemas/InflationReceiptDTO"
+          items: {}
+            #anyOf:
+            #- $ref: "#/components/schemas/BalanceTransferReceiptDTO"
+            #- $ref: "#/components/schemas/BalanceChangeReceiptDTO"
+            #- $ref: "#/components/schemas/ArtifactExpiryReceiptDTO"
+            #- $ref: "#/components/schemas/InflationReceiptDTO"
     ResolutionStatementDTO:
       type: object
       description: A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
@@ -2034,20 +2034,21 @@ components:
         meta:
           $ref: "#/components/schemas/TransactionMetaDTO"
         transaction:
-          anyOf:
-          - $ref: "#/components/schemas/MosaicDefinitionTransactionDTO"
-          - $ref: "#/components/schemas/MosaicSupplyChangeTransactionDTO"
-          - $ref: "#/components/schemas/RegisterNamespaceTransactionDTO"
-          - $ref: "#/components/schemas/AddressAliasTransactionDTO"
-          - $ref: "#/components/schemas/MosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/TransferTransactionDTO"
-          - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
-          - $ref: "#/components/schemas/AggregateTransactionDTO"
-          - $ref: "#/components/schemas/HashLockTransactionDTO"
-          - $ref: "#/components/schemas/AccountPropertiesTransactionDTO"
-          - $ref: "#/components/schemas/SecretLockTransactionDTO"
-          - $ref: "#/components/schemas/SecretProofTransactionDTO"
-          - $ref: "#/components/schemas/AccountLinkTransactionDTO"
+          $ref: "#/components/schemas/TransactionDTO"
+          #anyOf:
+          #- $ref: "#/components/schemas/MosaicDefinitionTransactionDTO"
+          #- $ref: "#/components/schemas/MosaicSupplyChangeTransactionDTO"
+          #- $ref: "#/components/schemas/RegisterNamespaceTransactionDTO"
+          #- $ref: "#/components/schemas/AddressAliasTransactionDTO"
+          #- $ref: "#/components/schemas/MosaicAliasTransactionDTO"
+          #- $ref: "#/components/schemas/TransferTransactionDTO"
+          #- $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
+          #- $ref: "#/components/schemas/AggregateTransactionDTO"
+          #- $ref: "#/components/schemas/HashLockTransactionDTO"
+          #- $ref: "#/components/schemas/AccountPropertiesTransactionDTO"
+          #- $ref: "#/components/schemas/SecretLockTransactionDTO"
+          #- $ref: "#/components/schemas/SecretProofTransactionDTO"
+          #- $ref: "#/components/schemas/AccountLinkTransactionDTO"
     EmbeddedTransactionMetaDTO:
       type: object
       required:
@@ -2079,19 +2080,20 @@ components:
         meta:
           $ref: "#/components/schemas/EmbeddedTransactionMetaDTO"
         transaction:
-          anyOf:
-          - $ref: "#/components/schemas/EmbeddedMosaicDefinitionTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedMosaicSupplyChangeTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedRegisterNamespaceTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAddressAliasTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedMosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedHashLockTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountPropertiesTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
+          $ref: "#/components/schemas/EmbeddedTransactionDTO"
+          #anyOf:
+          #- $ref: "#/components/schemas/EmbeddedMosaicDefinitionTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedMosaicSupplyChangeTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedRegisterNamespaceTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedAddressAliasTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedMosaicAliasTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedHashLockTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedAccountPropertiesTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
+          #- $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
     TransactionBodyDTO:
       type: object
       required:
