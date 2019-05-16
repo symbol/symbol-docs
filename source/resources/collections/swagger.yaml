@@ -1402,7 +1402,8 @@ components:
         receipts:
           type: array
           description: The array of receipts.
-          items: {}
+          items:
+            $ref: "#/components/schemas/ReceiptDTO"
             #anyOf:
             #- $ref: "#/components/schemas/BalanceTransferReceiptDTO"
             #- $ref: "#/components/schemas/BalanceChangeReceiptDTO"
