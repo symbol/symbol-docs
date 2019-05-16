@@ -1257,13 +1257,9 @@ components:
         propertyType:
           $ref: "#/components/schemas/AccountPropertyTypeEnum"
         values:
-          description: The address, transaction type or mosaic id to filter.
           type: array
-          items:
-            anyOf:
-            - type: string
-            - type: integer
-            - $ref: "#/components/schemas/UInt64DTO"
+          description: The address, transaction type or mosaic id to filter.
+          items: {}
     AccountPropertiesModificationTypeEnum:
       type: number
       enum: [0,1]
@@ -1283,11 +1279,7 @@ components:
         values:
           type: array
           description: The address, transaction type or mosaic id to filter.
-          items:
-            anyOf:
-            - type: string
-            - type: integer
-            - $ref: "#/components/schemas/UInt64DTO"
+          items: {}
     MultisigAccountGraphInfoDTO:
       type: object
       required:
