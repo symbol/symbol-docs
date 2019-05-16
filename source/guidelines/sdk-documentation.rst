@@ -56,9 +56,9 @@ SDK behaves correctly.
 
 .. code-block:: bash
 
-    $> git clone https://github.com/<YOUR_USERNAME>/nem2-docs.git
+    git clone https://github.com/<YOUR_USERNAME>/nem2-docs.git
 
-2. Create a new folder under ``source/resources/examples/`` called .
+2. Create a new folder under ``source/resources/examples/`` named as the programming language of your SDK.
 
 3. Code each example. Take `typescript
    snippets <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__

@@ -167,13 +167,13 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
 .. code-block:: bash
 
-    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
+    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
 
 6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Bob's account. The amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
 
 .. code-block:: bash
 
-    $> nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
+    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
