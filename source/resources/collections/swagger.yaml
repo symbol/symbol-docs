@@ -131,8 +131,8 @@ paths:
           content:
             application/json:
               schema:
-                description: The array of confirmed transactions.
                 type: array
+                description: The array of confirmed transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -183,8 +183,8 @@ paths:
           content:
             application/json:
               schema:
-                description: The array of incoming transactions.
                 type: array
+                description: The array of incoming transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -234,8 +234,8 @@ paths:
           content:
             application/json:
               schema:
-                description: The array of outgoing transactions.
                 type: array
+                description: The array of outgoing transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -2343,8 +2343,8 @@ components:
           items:
             $ref: "#/components/schemas/CosignatureDTO"
         transactions:
-          description: The array of transactions initiated by different accounts.
           type: array
+          description: The array of transactions initiated by different accounts.
           items:
             $ref: "#/components/schemas/EmbeddedTransactionInfoDTO"
     AggregateTransactionDTO:

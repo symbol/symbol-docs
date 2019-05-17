@@ -39,7 +39,7 @@ Aggregate bonded
 
 An aggregate transaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10 cat.currency``.
+.. note:: Before announcing an **aggregate bonded transaction**, an account must announce and get confirmed a :ref:`hash lock transaction<hash-lock-transaction>` locking ``10 cat.currency``.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -92,8 +92,6 @@ Guides
 *******
 Schemas
 *******
-
-
 
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
@@ -157,11 +155,15 @@ HashLockTransaction
 
 **Alias**: LockFundsTransaction
 
-Announce a hash lock transaction before sending an :ref:`aggregate bonded transaction<aggregate-transaction>` to prevent network spamming.
+Lock funds with a hash lock transaction before sending an :ref:`aggregate bonded transaction<aggregate-transaction>`. This transaction prevents spamming the partial cache with transactions that never will complete.
 
-Once the related aggregate bonded transaction is confirmed, the locked funds become available in the account that signed the initial hash lock transaction.
+After enough funds are locked, the aggregate transaction can be announced and added into the partial transactions cache.
 
-If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
+.. note:: It's not necessary to sign the aggregate and its hash lock transaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a hash lock transaction, he can ask Alice to send the hash lock funds transaction sharing the signed aggregate transaction hash.
+
+Upon completion of the aggregate, the locked funds become available in the account that signed the initial hash lock transaction.
+
+If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
 
 **Version**: 0x01
 
