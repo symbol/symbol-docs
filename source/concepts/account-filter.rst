@@ -99,8 +99,8 @@ Configure filters to prevent receiving transactions from undesired addresses.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
     modifications; array<:ref:`AddressModification <address-modification>`, modificationsCount>; The array of modifications.
 
 .. _account-properties-mosaic-transaction:
@@ -122,8 +122,8 @@ Configure filters to prevent receiving transactions containing a specific mosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
     modifications; array<:ref:`MosaicModification <mosaic-modification>`, modificationsCount>; The array of modifications.
 
 
@@ -146,8 +146,8 @@ Configure filters to prevent announcing transactions by :ref:`type <transaction-
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
     modifications; array<:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount>; The array of modifications.
 
 .. _address-modification:
