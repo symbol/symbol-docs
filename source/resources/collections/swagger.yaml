@@ -41,6 +41,7 @@ tags:
 - name: Node routes
   description: |
     [Node](https://nemtech.github.io/concepts/node.html) related endpoints.
+
 schemes:
 - http
 paths:
@@ -859,6 +860,11 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: accountsIds
+        in: body
+        required: true
+        schema:
+          $ref: "#/definitions/accountsIds"
       - name: pageSize
         in: query
         description: The number of namespaces to return.
@@ -867,11 +873,6 @@ paths:
         in: query
         description: The namespace id up to which namespace objects are returned.
         type: string
-      - name: accounstIds
-        in: body
-        required: true
-        schema:
-          $ref: "#/definitions/accountsIds"
       responses:
         "200":
           description: success
@@ -1460,7 +1461,7 @@ definitions:
         type: integer
         description: The version of the receipt.
       type:
-        $ref: "#/definitions/ReceiptDTO"
+        $ref: "#/definitions/ReceiptTypeEnum"
   BalanceTransferReceiptDTO:
     description: The invisible state change triggered a mosaic transfer.
     allOf:
