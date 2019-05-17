@@ -1148,6 +1148,23 @@ definitions:
         $ref: "#/definitions/AccountDTO"
   AccountMetaDTO:
     type: object
+    required:
+    - height
+    - hash
+    - merkleComponentHash
+    - index
+    - id
+    properties:
+      height:
+        $ref: "#/definitions/UInt64DTO"
+      hash:
+        type: string
+      merkleComponentHash:
+        type: string
+      index:
+        type: integer
+      id:
+        type: string
   AccountDTO:
     type: object
     required:
@@ -1222,7 +1239,7 @@ definitions:
         description: The address, transaction type or mosaic id to filter.
         items: {}
   AccountPropertiesModificationTypeEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The account properties modification type:
@@ -1233,7 +1250,7 @@ definitions:
     type: object
     required:
     - type
-    - value
+    - values
     properties:
       type:
         $ref: "#/definitions/AccountPropertiesModificationTypeEnum"
@@ -1304,7 +1321,7 @@ definitions:
         items:
           type: string
   MultisigModificationTypeEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The type of the modification:
@@ -1405,15 +1422,15 @@ definitions:
     - secondaryId
     properties:
       primaryId:
-        type: number
+        type: integer
         description: The transaction index within the block.
         example: 1
       secondaryId:
-        type: number
+        type: integer
         description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
         example: 0
   ReceiptTypeEnum:
-    type: number
+    type: integer
     enum: [4685,4941,4686,8515,8776,9042,12616,12626,16717,16718,20803,57652,61763,62019]
     description: |
       The type of the receipt:
@@ -1440,7 +1457,7 @@ definitions:
     - type
     properties:
       version:
-        type: number
+        type: integer
         description: The version of the receipt.
       type:
         $ref: "#/definitions/ReceiptDTO"
@@ -1549,10 +1566,10 @@ definitions:
       totalFee:
         $ref: "#/definitions/UInt64DTO"
       numTransactions:
-        type: number
+        type: integer
         example: 0
       numStatements:
-        type: number
+        type: integer
         example: 1
   BlockDTO:
     allOf:
@@ -1706,7 +1723,7 @@ definitions:
       mosaic:
         $ref: "#/definitions/MosaicDefinitionDTO"
   MessageTypeEnum:
-    type: number
+    type: integer
     enum: [0]
     description: |
       The type of the message:
@@ -1772,7 +1789,7 @@ definitions:
       - 0
       - 0
   MosaicPropertyIdEnum:
-    type: number
+    type: integer
     description: |
       The array of mosaic properties:
       * 0 - MosaicFlags
@@ -1905,7 +1922,7 @@ definitions:
 
   # Transactions endpoints
   EntityTypeEnum:
-    type: number
+    type: integer
     enum: [16717,16973,16718,16974,17230,16724,16725,16705,16961,16712,16720,16976,17232,16722,16978,16716,32835,33091]
     description: |
       The entity type:
@@ -1929,7 +1946,7 @@ definitions:
       * 0x8143 (33091 decimal) - Regular block.
     example: 33091
   NetworkTypeEnum:
-    type: number
+    type: integer
     description: |
       The entity version. The higher byte represents the network
       identifier:
@@ -1978,15 +1995,12 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
       hash:
         type: string
-        example: C8FC3FB54FDDFBCE0E8C71224990124E4EEC5AD5D30E592EDFA9524669A23810
       merkleComponentHash:
         type: string
       index:
-        type: string
-        example: 0
+        type: integer
       id:
         type: string
-        example: 0
   TransactionInfoDTO:
     type: object
     required:
@@ -2024,15 +2038,12 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
       hash:
         type: string
-        example: C8FC3FB54FDDFBCE0E8C71224990124E4EEC5AD5D30E592EDFA9524669A23810
       merkleComponentHash:
         type: string
-      type:
-        type: string
-        example: 0
+      index:
+        type: integer
       id:
         type: string
-        example: 0
   EmbeddedTransactionInfoDTO:
     type: object
     required:
@@ -2085,7 +2096,7 @@ definitions:
       type:
         example: 16717
       mosaicNonce:
-        type: number
+        type: integer
         description: Random nonce used to generate the mosaic id.
         example: 0
       mosaicId:
@@ -2104,7 +2115,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
   DirectionEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The supply modification direction:
@@ -2136,7 +2147,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
   NamespaceTypeEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The namespace type:
@@ -2173,7 +2184,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
   AliasActionEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The alias action:
@@ -2269,12 +2280,12 @@ definitions:
       minRemovalDelta:
         description: |
           The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        type: number
+        type: integer
         example: 1
       minApprovalDelta:
         description: |
           The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        type: number
+        type: integer
         example: 1
       modifications:
         type: array
@@ -2352,7 +2363,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/HashLockTransactionDTO"
   AccountPropertyTypeEnum:
-    type: number
+    type: integer
     example: 1
     enum: [1,2,4,5,129,130,132]
     description: |
@@ -2388,7 +2399,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
   HashAlgorithmEnum:
-    type: number
+    type: integer
     enum: [0,1,2,3]
     description: |
       The hash algorithm used to hash te proof:
@@ -2461,7 +2472,7 @@ definitions:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/SecretProofTransactionBodyDTO"
   LinkActionEnum:
-    type: number
+    type: integer
     enum: [0,1]
     description: |
       The type of the action:
