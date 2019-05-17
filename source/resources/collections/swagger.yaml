@@ -2174,6 +2174,8 @@ definitions:
       name:
         type: string
         description: The unique namespace name.
+      parentId:
+        $ref: "#/definitions/UInt64DTO"
   RegisterNamespaceTransactionDTO:
     description: Transaction that creates or renew a namespace.
     allOf:
@@ -2229,7 +2231,7 @@ definitions:
         $ref: "#/definitions/AliasActionEnum"
       namespaceId:
         $ref: "#/definitions/UInt64DTO"
-      address:
+      mosaicId:
         $ref: "#/definitions/UInt64DTO"
   MosaicAliasTransactionDTO:
     description: Transaction that attaches a namespace to a mosaic.
