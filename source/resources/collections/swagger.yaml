@@ -57,9 +57,9 @@ paths:
       parameters:
       - name: accountId
         in: path
+        type: string
         description: The public key or address of the account.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -109,28 +109,28 @@ paths:
       parameters:
       - name: publicKey
         in: path
+        type: string
         description: The public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
         type: integer
+        description: The number of transactions to return for each request.
         minimum: 10
         maximum: 100
         default: 10
       - name: id
         in: query
+        type: string
         description: |
           The transaction id up to which transactions are returned.
-        type: string
       - name: ordering
         in: query
+        type: string
         description: |
           The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
-        type: string
         default: -id
       responses:
         "200":
@@ -157,28 +157,28 @@ paths:
       parameters:
       - name: publicKey
         in: path
+        type: string
         description: The public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
         type: integer
+        description: The number of transactions to return for each request.
         minimum: 10
         maximum: 100
         default: 10
       - name: id
         in: query
+        type: string
         description: |
           The transaction id up to which transactions are returned.
-        type: string
       - name: ordering
         in: query
+        type: string
         description: |
           The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
-        type: string
         default: -id
       responses:
         "200":
@@ -204,9 +204,9 @@ paths:
       parameters:
       - name: publicKey
         in: path
+        type: string
         description: The public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
         description: The number of transactions to return for each request.
@@ -216,16 +216,16 @@ paths:
         default: 10
       - name: id
         in: query
+        type: string
         description: |
           The transaction id up to which transactions are returned.
-        type: string
       - name: ordering
         in: query
+        type: string
         description: |
           The ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
-        type: string
         default: -id
       responses:
         "200":
@@ -251,28 +251,28 @@ paths:
       parameters:
       - name: publicKey
         in: path
+        type: string
         description: The public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
         type: integer
+        description: The number of transactions to return for each request.
         minimum: 10
         maximum: 100
         default: 10
       - name: id
         in: query
+        type: string
         description: |
           The transaction id up to which transactions are returned.
-        type: string
       - name: ordering
         in: query
+        type: string
         description: |
           The ordering criteria.
           * -id - Descending order by id.
           * id - Ascending order by id.
-        type: string
         default: -id
       responses:
         "200":
@@ -299,28 +299,28 @@ paths:
       parameters:
       - name: publicKey
         in: path
+        type: string
         description: The public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
         type: integer
+        description: The number of transactions to return for each request.
         minimum: 10
         maximum: 100
         default: 10
       - name: id
         in: query
+        type: string
         description: |
           The transaction id up to which transactions are returned.
-        type: string
       - name: ordering
         in: query
+        type: string
         description: |
           The ordering criteria.
           * -id - Descending order by id.
           * id - Ascending order by id.
-        type: string
         default: -id
       responses:
         "200":
@@ -347,9 +347,9 @@ paths:
       parameters:
       - name: accountId
         in: path
+        type: string
         description: The public key or address of the account.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -403,9 +403,9 @@ paths:
       parameters:
       - name: accountId
         in: path
+        type: string
         description: The public key or address of the account.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -429,9 +429,9 @@ paths:
       parameters:
       - name: accountId
         in: path
+        type: string
         description: The public key or address of the account.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -455,17 +455,17 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block. If height -1 is not a multiple of the limit
           provided, the inferior closest multiple + 1 is used instead.
         required: true
-        type: integer
         format: int64
         minimum: 1
       - name: limit
         in: path
         description: The number of blocks to be returned.
-        required: true
         type: integer
+        required: true
         enum:
         - 25
         - 50
@@ -493,9 +493,9 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block.
         required: true
-        type: integer
         format: int64
         minimum: 1
       responses:
@@ -521,22 +521,22 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block.
         required: true
-        type: integer
         format: int64
         minimum: 1
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
         type: integer
+        description: The number of transactions to return for each request.
         minimum: 10
         maximum: 100
         default: 10
       - name: id
+        type: string
         in: query
         description: The transaction id up to which transactions are returned.
-        type: string
       responses:
         "200":
           description: success
@@ -566,16 +566,16 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block.
         required: true
-        type: integer
         format: int64
         minimum: 1
       - name: hash
         in: path
+        type: string
         description: The hash of the transaction.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -598,9 +598,9 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block.
         required: true
-        type: integer
         format: int64
         minimum: 1
       responses:
@@ -630,16 +630,16 @@ paths:
       parameters:
       - name: height
         in: path
+        type: integer
         description: The height of the block.
         required: true
-        type: integer
         format: int64
         minimum: 1
       - name: hash
         in: path
+        type: string
         description: The hash of the receipt statement or resolution.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -725,9 +725,9 @@ paths:
       parameters:
       - name: mosaicId
         in: path
+        type: string
         description: The mosaic identifier.
         required: true
-        type: string
         format: hex
       responses:
         "200":
@@ -804,9 +804,9 @@ paths:
       parameters:
       - name: namespaceId
         in: path
+        type: string
         description: The namespace identifier.
         required: true
-        type: string
         format: hex
       responses:
         "200":
@@ -829,17 +829,17 @@ paths:
       parameters:
       - name: accountId
         in: path
+        type: string
         description: The address or public key of the account.
         required: true
-        type: string
       - name: pageSize
         in: query
-        description: The number of namespaces to return.
         type: integer
+        description: The number of namespaces to return.
       - name: id
         in: query
-        description: The namespace id up to which namespace objects are returned.
         type: string
+        description: The namespace id up to which namespace objects are returned.
       responses:
         "200":
           description: success
@@ -867,12 +867,12 @@ paths:
           $ref: "#/definitions/accountsIds"
       - name: pageSize
         in: query
-        description: The number of namespaces to return.
         type: integer
+        description: The number of namespaces to return.
       - name: id
         in: query
-        description: The namespace id up to which namespace objects are returned.
         type: string
+        description: The namespace id up to which namespace objects are returned.
       responses:
         "200":
           description: success
@@ -924,9 +924,9 @@ paths:
       parameters:
       - name: transactionId
         in: path
+        type: string
         description: The transaction id or hash.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -1052,9 +1052,9 @@ paths:
       parameters:
       - name: hash
         in: path
+        type: string
         description: The transaction hash.
         required: true
-        type: string
       responses:
         "200":
           description: success
@@ -1189,7 +1189,7 @@ definitions:
         description: >
           The public key of an account can be used to verify signatures of the
           account. Only accounts that have already published a transaction
-          have a public key assigned to the account. Otherwise the field is
+          have a public key assigned to the account. Otherwise, the field is
           null.
         example: AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
       publicKeyHeight:
@@ -1238,10 +1238,10 @@ definitions:
       values:
         type: array
         description: The address, transaction type or mosaic id to filter.
-        items: {}
+        items:
+          type: object
   AccountPropertiesModificationTypeEnum:
     type: integer
-    enum: [0,1]
     description: |
       The account properties modification type:
       * 0 - Add property.
@@ -1258,7 +1258,8 @@ definitions:
       values:
         type: array
         description: The address, transaction type or mosaic id to filter.
-        items: {}
+        items:
+          type: object
   MultisigAccountGraphInfoDTO:
     type: object
     required:
@@ -1323,7 +1324,6 @@ definitions:
           type: string
   MultisigModificationTypeEnum:
     type: integer
-    enum: [0,1]
     description: |
       The type of the modification:
       * 0 - Add cosignatory.
@@ -1432,7 +1432,6 @@ definitions:
         example: 0
   ReceiptTypeEnum:
     type: integer
-    enum: [4685,4941,4686,8515,8776,9042,12616,12626,16717,16718,20803,57652,61763,62019]
     description: |
       The type of the receipt:
       * 0x124D (4685 decimal) - Mosaic_Levy.
@@ -1463,6 +1462,7 @@ definitions:
       type:
         $ref: "#/definitions/ReceiptTypeEnum"
   BalanceTransferReceiptDTO:
+    type: object
     description: The invisible state change triggered a mosaic transfer.
     allOf:
     - $ref: "#/definitions/ReceiptDTO"
@@ -1486,6 +1486,7 @@ definitions:
         amount:
           $ref: "#/definitions/UInt64DTO"
   BalanceChangeReceiptDTO:
+    type: object
     description: The invisible state change changed an account balance.
     allOf:
     - $ref: "#/definitions/ReceiptDTO"
@@ -1504,6 +1505,7 @@ definitions:
         amount:
           $ref: "#/definitions/UInt64DTO"
   ArtifactExpiryReceiptDTO:
+    type: object
     description: An artifact namespace or mosaic expired.
     allOf:
     - $ref: "#/definitions/ReceiptDTO"
@@ -1514,6 +1516,7 @@ definitions:
         artifactId:
           $ref: "#/definitions/UInt64DTO"
   InflationReceiptDTO:
+    type: object
     description: Native currency mosaics were created due to inflation.
     allOf:
     - $ref: "#/definitions/ReceiptDTO"
@@ -1573,6 +1576,7 @@ definitions:
         type: integer
         example: 1
   BlockDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/VerifiableEntityDTO"
     - type: object
@@ -1725,7 +1729,6 @@ definitions:
         $ref: "#/definitions/MosaicDefinitionDTO"
   MessageTypeEnum:
     type: integer
-    enum: [0]
     description: |
       The type of the message:
       * 0 - Regular message.
@@ -1901,7 +1904,6 @@ definitions:
         example: cat
   AliasTypeEnum:
     type: integer
-    enum: [0,1,2]
     description: |
       The alias type:
       * 0 -  No alias.
@@ -1924,7 +1926,6 @@ definitions:
   # Transactions endpoints
   EntityTypeEnum:
     type: integer
-    enum: [16717,16973,16718,16974,17230,16724,16725,16705,16961,16712,16720,16976,17232,16722,16978,16716,32835,33091]
     description: |
       The entity type:
       * 0x414D (16717 decimal) - Mosaic Definition Transaction.
@@ -1945,7 +1946,6 @@ definitions:
       * 0x414C (16716 decimal) - Account Link Transaction.
       * 0x8043 (32835 decimal) - Nemesis block.
       * 0x8143 (33091 decimal) - Regular block.
-    example: 33091
   NetworkTypeEnum:
     type: integer
     description: |
@@ -2079,11 +2079,13 @@ definitions:
       deadline:
         $ref: "#/definitions/UInt64DTO"
   TransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/VerifiableEntityDTO"
     - $ref: "#/definitions/EntityDTO"
     - $ref: "#/definitions/TransactionBodyDTO"
   EmbeddedTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EntityDTO"
     - $ref: "#/definitions/TransactionBodyDTO"
@@ -2094,8 +2096,6 @@ definitions:
     - mosaicId
     - properties
     properties:
-      type:
-        example: 16717
       mosaicNonce:
         type: integer
         description: Random nonce used to generate the mosaic id.
@@ -2107,17 +2107,18 @@ definitions:
         items:
           $ref: "#/definitions/MosaicPropertyDTO"
   MosaicDefinitionTransactionDTO:
+    type: object
     description: Transaction that creates a new mosaic.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
   EmbeddedMosaicDefinitionTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
   DirectionEnum:
     type: integer
-    enum: [0,1]
     description: |
       The supply modification direction:
       * 0  - Decrease.
@@ -2130,8 +2131,6 @@ definitions:
     - direction
     - delta
     properties:
-      type:
-        example: 16973
       mosaicId:
         $ref: "#/definitions/UInt64DTO"
       direction:
@@ -2139,17 +2138,18 @@ definitions:
       delta:
         $ref: "#/definitions/UInt64DTO"
   MosaicSupplyChangeTransactionDTO:
+    type: object
     description: Transaction to increase or decrease a mosaic’s supply.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
   EmbeddedMosaicSupplyChangeTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
   NamespaceTypeEnum:
     type: integer
-    enum: [0,1]
     description: |
       The namespace type:
       * 0 -  Root namespace.
@@ -2164,8 +2164,6 @@ definitions:
     - name
     - parentId
     properties:
-      type:
-        example: 16718
       namespaceType:
         $ref: "#/definitions/NamespaceTypeEnum"
       duration:
@@ -2178,17 +2176,18 @@ definitions:
       parentId:
         $ref: "#/definitions/UInt64DTO"
   RegisterNamespaceTransactionDTO:
+    type: object
     description: Transaction that creates or renew a namespace.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
   EmbeddedRegisterNamespaceTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
   AliasActionEnum:
     type: integer
-    enum: [0,1]
     description: |
       The alias action:
       * 0 -  Link alias.
@@ -2201,8 +2200,6 @@ definitions:
     - namespaceId
     - address
     properties:
-      type:
-        example: 16974
       aliasAction:
         $ref: "#/definitions/AliasActionEnum"
       namespaceId:
@@ -2211,11 +2208,13 @@ definitions:
         type: string
         description: The aliased address in hexadecimal.
   AddressAliasTransactionDTO:
+    type: object
     description: Transaction that attaches a namespace to an account.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/AddressAliasTransactionBodyDTO"
   EmbeddedAddressAliasTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/AddressAliasTransactionBodyDTO"
@@ -2226,8 +2225,6 @@ definitions:
     - namespaceId
     - mosaicId
     properties:
-      type:
-        example: 17230
       aliasAction:
         $ref: "#/definitions/AliasActionEnum"
       namespaceId:
@@ -2235,11 +2232,13 @@ definitions:
       mosaicId:
         $ref: "#/definitions/UInt64DTO"
   MosaicAliasTransactionDTO:
+    type: object
     description: Transaction that attaches a namespace to a mosaic.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/MosaicAliasTransactionBodyDTO"
   EmbeddedMosaicAliasTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/MosaicAliasTransactionBodyDTO"
@@ -2250,24 +2249,25 @@ definitions:
     - mosaics
     - message
     properties:
-      type:
-        example: 16724
       recipient:
+        type: string
         description: If the bit 0 of byte 0 is not set (like in 0x90), then it is a regular address. Else (e.g. 0x91) it represents a namespace id which starts at byte 1.
         example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
       mosaics:
-        description: The array of mosics sent to the recipient. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of a instead of a mosaicId corresponds to a mosaicId.
         type: array
+        description: The array of mosaics sent to the recipient. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of a instead of a mosaicId corresponds to a mosaicId.
         items:
           $ref: "#/definitions/MosaicDTO"
       message:
         $ref: "#/definitions/MessageDTO"
   TransferTransactionDTO:
+    type: object
     description: Transaction that transfers mosaics and messages to another account.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/TransferTransactionBodyDTO"
   EmbeddedTransferTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/TransferTransactionBodyDTO"
@@ -2278,17 +2278,15 @@ definitions:
     - minApprovalDelta
     - modifications
     properties:
-      type:
-        example: 16725
       minRemovalDelta:
+        type: integer
         description: |
           The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        type: integer
         example: 1
       minApprovalDelta:
+        type: integer
         description: |
           The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        type: integer
         example: 1
       modifications:
         type: array
@@ -2296,6 +2294,7 @@ definitions:
         items:
           $ref: "#/definitions/CosignatoryModificationDTO"
   ModifyMultisigAccountTransactionDTO:
+    type: object
     description: Transaction that creates or modifies a multisig account.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
@@ -2310,8 +2309,6 @@ definitions:
     - cosignatures
     - transactions
     properties:
-      type:
-        example: 16705
       cosignatures:
         type: array
         description: An array of transaction cosignatures.
@@ -2323,11 +2320,13 @@ definitions:
         items:
           $ref: "#/definitions/EmbeddedTransactionInfoDTO"
   AggregateTransactionDTO:
+    type: object
     description: Transaction that combines multiple transactions together.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/AggregateTransactionBodyDTO"
   CosignatureDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/VerifiableEntityDTO"
     - type: object
@@ -2345,8 +2344,6 @@ definitions:
     - duration
     - hash
     properties:
-      type:
-        example: 16712
       mosaic:
         $ref: "#/definitions/MosaicDTO"
       duration:
@@ -2357,18 +2354,19 @@ definitions:
           The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
         example: C8FC3FB54FDDFBCE0E8C71224990124E4EEC5AD5D30E592EDFA9524669A23810
   HashLockTransactionDTO:
+    type: object
     description: Transaction to lock funds before sending an aggregate bonded transaction.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/HashLockTransactionBodyDTO"
   EmbeddedHashLockTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/HashLockTransactionDTO"
   AccountPropertyTypeEnum:
     type: integer
     example: 1
-    enum: [1,2,4,5,129,130,132]
     description: |
       The account properties type:
       * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
@@ -2381,11 +2379,9 @@ definitions:
   AccountPropertiesTransactionBodyDTO:
     type: object
     required:
-    - type
+    - propertyType
     - modifications
     properties:
-      type:
-        example: 16720
       propertyType:
         $ref: "#/definitions/AccountPropertyTypeEnum"
       modifications:
@@ -2393,17 +2389,18 @@ definitions:
         items:
           $ref: "#/definitions/AccountPropertiesModificationDTO"
   AccountPropertiesTransactionDTO:
+    type: object
     description: Transaction that prevents receiving transactions from undesired addresses, mosaics or sending certain transaction types.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
   EmbeddedAccountPropertiesTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
   HashAlgorithmEnum:
     type: integer
-    enum: [0,1,2,3]
     description: |
       The hash algorithm used to hash te proof:
       * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
@@ -2420,8 +2417,6 @@ definitions:
     - secret
     - recipient
     properties:
-      type:
-        example: 16722
       duration:
         $ref: "#/definitions/UInt64DTO"
       mosaicId:
@@ -2439,11 +2434,13 @@ definitions:
         description: The address in hexadecimal that will receive the funds once the transaction is unlocked.
         example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
   SecretLockTransactionDTO:
+    type: object
     description: Transaction that sends mosaics to a recipient if the proof used is revealed. If the duration is reached, the locked funds go back to the sender of the transaction.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/SecretLockTransactionBodyDTO"
   EmbeddedSecretLockTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/SecretLockTransactionBodyDTO"
@@ -2454,8 +2451,6 @@ definitions:
     - secret
     - proof
     properties:
-      type:
-        example: 16978
       hashAlgorithm:
         $ref: "#/definitions/HashAlgorithmEnum"
       secret:
@@ -2466,17 +2461,18 @@ definitions:
         type: string
         description:  The original random set of bytes.
   SecretProofTransactionDTO:
+    type: object
     description: Transaction that revealed a proof.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/SecretProofTransactionBodyDTO"
   EmbeddedSecretProofTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/SecretProofTransactionBodyDTO"
   LinkActionEnum:
     type: integer
-    enum: [0,1]
     description: |
       The type of the action:
       * 0 - Link.
@@ -2487,21 +2483,19 @@ definitions:
     - remoteAccountKey
     - linkAction
     properties:
-      type:
-        example: 16716
       remoteAccountKey:
-        type:
-          string
-        description:
-          The public key of the remote account.
+        type: string
+        description: The public key of the remote account.
       linkAction:
         $ref: "#/definitions/LinkActionEnum"
   AccountLinkTransactionDTO:
+    type: object
     description: Delegates the account importance score to a proxy account.
     allOf:
     - $ref: "#/definitions/TransactionDTO"
     - $ref: "#/definitions/AccountLinkTransactionBodyDTO"
   EmbeddedAccountLinkTransactionDTO:
+    type: object
     allOf:
     - $ref: "#/definitions/EmbeddedTransactionDTO"
     - $ref: "#/definitions/AccountLinkTransactionBodyDTO"
@@ -2528,6 +2522,7 @@ definitions:
       height:
         $ref: "#/definitions/UInt64DTO"
     example: 0
+
   # Network endpoints
   NetworkTypeDTO:
     type: object
@@ -2547,8 +2542,6 @@ definitions:
   # Node endpoints
   RolesEnum:
     type: integer
-    format: int
-    enum: [1,2]
     description: |
       The role of the node:
       * 1 - A peer node.
