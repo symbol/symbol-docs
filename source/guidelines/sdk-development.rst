@@ -145,9 +145,19 @@ API Wrapper
 
 `Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle the API generation. It supports multiple languages, and hopefully, yours is on the list.
 
-1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API swagger file definition can be found `here <https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_.
+1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_.
 
-2. Drop the generated client classes and  implement them using the
+- `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
+
+- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger.yaml>`_
+
+We run this instruction to generate the DTOs for the JavaScript SDK:
+
+.. code-block:: bash
+
+    docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate -i /local/swagger.yaml -l javascript -t /local/es6_promise --additional-properties usePromises=true -o /local/nem2-js && rm -R nem2-js/test
+
+2. Drop the generated client classes and implement them using the
 `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of
 `ReactiveX <http://reactivex.io/>`_.
 
