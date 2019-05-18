@@ -97,7 +97,7 @@ Create a folder for your new project and run the instructions for the selected l
 
 .. tabs::
 
-    .. tab:: Typescript
+    .. tab:: TypeScript
 
         1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
@@ -126,7 +126,7 @@ Create a folder for your new project and run the instructions for the selected l
 
             sudo npm install --global ts-node
 
-    .. tab:: Javascript
+    .. tab:: JavaScript
 
         1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
