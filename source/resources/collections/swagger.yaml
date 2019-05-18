@@ -1242,6 +1242,9 @@ definitions:
           type: object
   AccountPropertiesModificationTypeEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The account properties modification type:
       * 0 - Add property.
@@ -1324,6 +1327,9 @@ definitions:
           type: string
   MultisigModificationTypeEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The type of the modification:
       * 0 - Add cosignatory.
@@ -1432,6 +1438,21 @@ definitions:
         example: 0
   ReceiptTypeEnum:
     type: integer
+    enum:
+      - 4685
+      - 4941
+      - 4686
+      - 8515
+      - 8776
+      - 9042
+      - 12616
+      - 12626
+      - 16717
+      - 16718
+      - 20803
+      - 57652
+      - 61763
+      - 62019
     description: |
       The type of the receipt:
       * 0x124D (4685 decimal) - Mosaic_Levy.
@@ -1729,6 +1750,8 @@ definitions:
         $ref: "#/definitions/MosaicDefinitionDTO"
   MessageTypeEnum:
     type: integer
+    enum:
+      - 0
     description: |
       The type of the message:
       * 0 - Regular message.
@@ -1794,6 +1817,10 @@ definitions:
       - 0
   MosaicPropertyIdEnum:
     type: integer
+    enum:
+      - 0
+      - 1
+      - 2
     description: |
       The array of mosaic properties:
       * 0 - MosaicFlags
@@ -1904,6 +1931,10 @@ definitions:
         example: cat
   AliasTypeEnum:
     type: integer
+    enum:
+      - 0
+      - 1
+      - 2
     description: |
       The alias type:
       * 0 -  No alias.
@@ -1926,6 +1957,25 @@ definitions:
   # Transactions endpoints
   EntityTypeEnum:
     type: integer
+    enum:
+      - 16717
+      - 16973
+      - 16718
+      - 16974
+      - 17230
+      - 16724
+      - 16725
+      - 16705
+      - 16961
+      - 16712
+      - 16720
+      - 16976
+      - 17232
+      - 16722
+      - 16978
+      - 16716
+      - 32835
+      - 33091
     description: |
       The entity type:
       * 0x414D (16717 decimal) - Mosaic Definition Transaction.
@@ -2119,6 +2169,9 @@ definitions:
     - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
   DirectionEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The supply modification direction:
       * 0  - Decrease.
@@ -2150,6 +2203,9 @@ definitions:
     - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
   NamespaceTypeEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The namespace type:
       * 0 -  Root namespace.
@@ -2188,6 +2244,9 @@ definitions:
     - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
   AliasActionEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The alias action:
       * 0 -  Link alias.
@@ -2367,6 +2426,14 @@ definitions:
   AccountPropertyTypeEnum:
     type: integer
     example: 1
+    enum:
+      - 1
+      - 2
+      - 4
+      - 5
+      - 129
+      - 130
+      - 132
     description: |
       The account properties type:
       * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
@@ -2401,6 +2468,11 @@ definitions:
     - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
   HashAlgorithmEnum:
     type: integer
+    enum:
+      - 0
+      - 1
+      - 2
+      - 3
     description: |
       The hash algorithm used to hash te proof:
       * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
@@ -2473,6 +2545,9 @@ definitions:
     - $ref: "#/definitions/SecretProofTransactionBodyDTO"
   LinkActionEnum:
     type: integer
+    enum:
+      - 0
+      - 1
     description: |
       The type of the action:
       * 0 - Link.
@@ -2542,6 +2617,9 @@ definitions:
   # Node endpoints
   RolesEnum:
     type: integer
+    enum:
+      - 1
+      - 2
     description: |
       The role of the node:
       * 1 - A peer node.
