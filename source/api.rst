@@ -31,8 +31,6 @@ Tools
 
 The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
 
-.. note:: Consider using **NEM2-SDK** instead of calling the API directly.
-
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`
 
