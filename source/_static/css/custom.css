@@ -90,7 +90,7 @@ input.form-control:focus {
 .alert {
     margin: 10px auto 10px auto;
     padding: 12px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .alert-info {

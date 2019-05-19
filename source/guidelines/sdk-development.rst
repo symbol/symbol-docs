@@ -149,7 +149,7 @@ API Wrapper
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
-- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger.yaml>`_
+- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger2.yaml>`_
 
 We run this instruction to generate the DTOs for the JavaScript SDK:
 

@@ -11,36 +11,23 @@ host: 'localhost:3000'
 
 tags:
 - name: Account routes
-  description: >
-    [Account](https://nemtech.github.io/concepts/account.html) related
-    endpoints.
+  description: Account related endpoints.
 - name: Block routes
-  description: |
-    [Block](https://nemtech.github.io/concepts/block.html) related endpoints.
+  description: Blockrelated endpoints.
 - name: Chain routes
-  description: |
-    [Chain](https://nemtech.github.io/concepts/block.html) related endpoints.
+  description: Chain related endpoints.
 - name: Diagnostic routes
-  description: >
-    [Diagnostic](https://nemtech.github.io/concepts/node.html) related
-    endpoints.
+  description: Diagnostic related endpoints.
 - name: Mosaic routes
-  description: >
-    [Mosaic](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
+  description: Mosaic related endpoints.
 - name: Namespace routes
-  description: >
-    [Namespace](https://nemtech.github.io/concepts/mosaic.html) related
-    endpoints.
+  description: Namespace related endpoints.
 - name: Transaction routes
-  description: >
-    [Transaction](https://nemtech.github.io/concepts/transaction.html) related
-    endpoints.
+  description: Transaction related endpoints.
 - name: Network routes
-  description: |
-    Network related endpoints.
+  description: Network related endpoints.
 - name: Node routes
-  description: |
-    [Node](https://nemtech.github.io/concepts/node.html) related endpoints.
+  description: Node related endpoints.
 
 schemes:
 - http
@@ -147,7 +134,7 @@ paths:
       tags:
       - Account routes
       summary: Get incoming transactions
-      description: >
+      description: |
         Gets an array of incoming transactions. A transaction is said to be
         incoming with respect to an account if the account is the recipient of
         the transaction.
@@ -242,7 +229,7 @@ paths:
       tags:
       - Account routes
       summary: Get unconfirmed transactions
-      description: >
+      description: |
         Gets the array of transactions not included in a block where an account
         is the sender or receiver.
       operationId: unconfirmedTransactions
@@ -289,10 +276,9 @@ paths:
       tags:
       - Account routes
       summary: Get aggregate bonded transactions information
-      description: >
-        Gets an array of [aggregate bonded
-        transactions](https://nemtech.github.io/concepts/aggregate-transaction.html)
-        where the account is the sender or requires to cosign the transaction.
+      description: |
+        Gets an array of aggregate bonded transactions where the account is the sender
+        or requires to cosign the transaction.
       operationId: partialTransactions
       produces:
       - application/json
@@ -337,10 +323,7 @@ paths:
       tags:
       - Account routes
       summary: Get account configurable properties information
-      description: >
-        Returns the [configurable
-        properties](https://nemtech.github.io/concepts/account-filter.html) for
-        a given account.
+      description: Returns the configurable properties for a given account.
       operationId: getAccountProperties
       produces:
       - application/json
@@ -364,10 +347,7 @@ paths:
       tags:
       - Account routes
       summary: Get account properties for given array of addresses
-      description: >
-        Returns the [configurable
-        properties](https://nemtech.github.io/concepts/account-filter.html) for
-        a given array of addresses.
+      description: Returns the configurable properties for a given array of addresses.
       operationId: getAccountPropertiesFromAccounts
       produces:
       - application/json
@@ -394,9 +374,7 @@ paths:
       tags:
       - Account routes
       summary: Get multisig account information
-      description: Returns the [multisig
-        account](https://nemtech.github.io/concepts/multisig-account.html)
-        information.
+      description: Returns the multisig account information.
       operationId: getAccountMultisig
       produces:
       - application/json
@@ -420,9 +398,7 @@ paths:
       tags:
       - Account routes
       summary: Get multisig account graph information
-      description: Returns the [multisig
-        account](https://nemtech.github.io/concepts/multisig-account.html)
-        graph.
+      description: Returns the multisig account graph.
       operationId: getAccountMultisigGraph
       produces:
       - application/json
@@ -512,9 +488,7 @@ paths:
       tags:
       - Block routes
       summary: Get transactions from a block
-      description: Returns an array of
-        [transactions](https://nemtech.github.io/concepts/transaction.html)
-                     included in a block for a given block height.
+      description: Returns an array of transactions included in a block for a given block height.
       operationId: getBlockTransactions
       produces:
       - application/json
@@ -554,12 +528,11 @@ paths:
       tags:
       - Block routes
       summary: Get the merkle path for a given a transaction and block
-      description: Returns the merkle path for a
-        [transaction](https://nemtech.github.io/concepts/transaction.html)
-                     included in a block. The path is the complementary data needed to
-                     calculate the merkle root. A client can compare if the calculated root
-                     equals the one recorded in the block header, verifying that the
-                     transaction was included in the block.
+      description: |
+        Returns the merkle path for a transaction included in a block. The path is the complementary data needed to
+        calculate the merkle root. A client can compare if the calculated root
+        equals the one recorded in the block header, verifying that the
+        transaction was included in the block.
       operationId: getMerkleTransaction
       produces:
       - application/json
@@ -590,8 +563,7 @@ paths:
       tags:
       - Block routes
       summary: Get receipts from a block
-      description: Returns the [receipts](https://nemtech.github.io/concepts/receipt.html)
-        linked to a block.
+      description: Returns the receipts linked to a block.
       operationId: getBlockReceipts
       produces:
       - application/json
@@ -618,12 +590,11 @@ paths:
       tags:
       - Block routes
       summary: Get the merkle path for a given a receipt statement hash and block
-      description: Returns the merkle path for a [receipt statement or
-        resolution](https://nemtech.github.io/concepts/receipt.html) linked to a
-        block. The path is the complementary data needed to calculate the merkle
-        root. A client can compare if the calculated root equals the one
-        recorded in the block header, verifying that the receipt was linked with
-        the block.
+      description: |
+        Returns the merkle path for a receipt statement or resolution linked to a block.
+        The path is the complementary data needed to calculate the merkle root. A client
+        can compare if the calculated root equals the one recorded in the block header, verifying that
+        the receipt was linked with the block.
       operationId: getMerkleReceipts
       produces:
       - application/json
@@ -668,11 +639,10 @@ paths:
       tags:
       - Chain routes
       summary: Get the current score of the chain
-      description: >
+      description: |
         Gets the current score of the blockchain. The higher the score, the
         better the chain. During synchronization, nodes try to get the best
         blockchain in the network.
-
 
         The score for a block is derived from its difficulty and the time (in seconds) that has elapsed since the last block:
 
@@ -967,9 +937,9 @@ paths:
       tags:
       - Transaction routes
       summary: Announce a new transaction
-      description: Announces a transaction to the network. It is recommended to use the
-                     NEM2-SDK to announce transactions as they should be
-        [serialized](https://nemtech.github.io/api.html#serialization).
+      description: |
+        Announces a transaction to the network. It is recommended to use the
+        NEM2-SDK to announce transactions as they should be serialized.
       operationId: announceTransaction
       produces:
       - application/json
@@ -993,9 +963,7 @@ paths:
       tags:
       - Transaction routes
       summary: Announce an aggregate bonded transaction
-      description: Announces an [aggregate bonded
-        transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#aggregate-bonded)
-        to the network.
+      description: Announces an aggregate bonded transaction to the network.
       operationId: announcePartialTransaction
       produces:
       - application/json
@@ -1019,9 +987,7 @@ paths:
       tags:
       - Transaction routes
       summary: Announce a cosignature transaction
-      description: Announces a [cosignature
-        transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#cosignature-transaction)
-        to the network.
+      description: Announces a cosignature transaction to the network.
       operationId: announceCosignatureTransaction
       produces:
       - application/json
@@ -1136,6 +1102,123 @@ paths:
           schema:
             $ref: "#/definitions/NodeTimeDTO"
 definitions:
+  # Enumerations
+  AccountPropertyTypeEnum:
+    type: integer
+    example: 1
+    enum:
+    - 1
+    - 2
+    - 4
+    - 5
+    - 129
+    - 130
+    - 132
+    description: |
+      The account properties type:
+      * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
+      * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
+      * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
+      * 0x05 (5 decimal) - Property type sentinel.
+      * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
+      * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
+      * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
+  AliasTypeEnum:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      description: |
+        The alias type:
+        * 0 -  No alias.
+        * 1 -  Mosaic id alias.
+        * 2 -  Addres alias.
+      example: 0
+  MultisigModificationTypeEnum:
+    type: integer
+    enum:
+    - 0
+    - 1
+    description: |
+      The type of the modification:
+      * 0 - Add cosignatory.
+      * 1 - Remove cosignatory.
+    example: 0
+  NamespaceTypeEnum:
+      type: integer
+      enum:
+      - 0
+      - 1
+      description: |
+        The namespace type:
+        * 0 -  Root namespace.
+        * 1 -  Subnamespace.
+      example: 0
+  NetworkTypeEnum:
+    type: integer
+    description: |
+      The entity version. The higher byte represents the network
+      identifier:
+      * 0x68 (MAIN_NET) - Public main network.
+      * 0x98 (TEST_NET) - Public test network.
+      * 0x60 (MIJIN) - Private network.
+      * 0x90 (MIJIN_TEST) - Private test network.
+    example: 36867
+  ReceiptTypeEnum:
+    type: integer
+    enum:
+    - 4685
+    - 4941
+    - 4686
+    - 8515
+    - 8776
+    - 9042
+    - 12616
+    - 12626
+    - 16717
+    - 16718
+    - 20803
+    - 57652
+    - 61763
+    - 62019
+    description: |
+      The type of the receipt:
+      * 0x124D (4685 decimal) - Mosaic_Levy.
+      * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
+      * 0x124E (4686 decimal) - Namespace_Rental_Fee.
+      * 0x2143 (8515 decimal) - Harvest_Fee.
+      * 0x2248 (8776 decimal) - LockHash_Completed.
+      * 0x2348 (9032 decimal) - LockHash_Expired.
+      * 0x2252 (8786 decimal) - LockSecret_Completed.
+      * 0x2352 (9042 decimal) - LockSecret_Expired.
+      * 0x3148 (12616 decimal) - LockHash_Created.
+      * 0x3152 (12626 decimal) - LockSecret_Created.
+      * 0x414D (16717 decimal) - Mosaic_Expired.
+      * 0x414E (16718 decimal) - Namespace_Expired.
+      * 0x5143 (20803 decimal) - Inflation.
+      * 0xE134 (57652 decimal) - Transaction_Group.
+      * 0xF143 (61763 decimal) - Address_Alias_Resolution.
+      * 0xF243 (62019 decimal) - Mosaic_Alias_Resolution.
+  RolesTypeEnum:
+    type: integer
+    enum:
+    - 1
+    - 2
+    description: |
+      The role of the node:
+      * 1 - A peer node.
+      * 2 - An api node.
+    example: 2
+  # Type
+  UInt64DTO:
+    type: array
+    items:
+      type: integer
+      format: int32
+    example:
+    - lower
+    - higher
   # Account endpoints
   AccountInfoDTO:
     type: object
@@ -1179,14 +1262,14 @@ definitions:
     properties:
       address:
         type: string
-        description: >
+        description: |
           The account unique address not encoded.
         example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
       addressHeight:
         $ref: "#/definitions/UInt64DTO"
       publicKey:
         type: string
-        description: >
+        description: |
           The public key of an account can be used to verify signatures of the
           account. Only accounts that have already published a transaction
           have a public key assigned to the account. Otherwise, the field is
@@ -1196,7 +1279,7 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
       mosaics:
         type: array
-        description: >
+        description: |
           The list of mosaics the account owns. The amount is represented in
           absolute amount. Thus a balance of 123456789 for a mosaic with
           divisibility 6 (absolute) means the account owns 123.456789 instead.
@@ -1235,29 +1318,6 @@ definitions:
     properties:
       propertyType:
         $ref: "#/definitions/AccountPropertyTypeEnum"
-      values:
-        type: array
-        description: The address, transaction type or mosaic id to filter.
-        items:
-          type: object
-  AccountPropertiesModificationTypeEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The account properties modification type:
-      * 0 - Add property.
-      * 1 - Remove property.
-    example: 0
-  AccountPropertiesModificationDTO:
-    type: object
-    required:
-    - type
-    - values
-    properties:
-      type:
-        $ref: "#/definitions/AccountPropertiesModificationTypeEnum"
       values:
         type: array
         description: The address, transaction type or mosaic id to filter.
@@ -1325,231 +1385,8 @@ definitions:
         - 565059F55E68F904214E8BE1D610B5BBEA4CE46CC13D246D45BC1DAE5D32A0D2
         items:
           type: string
-  MultisigModificationTypeEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The type of the modification:
-      * 0 - Add cosignatory.
-      * 1 - Remove cosignatory.
-    example: 0
-  CosignatoryModificationDTO:
-    type: object
-    required:
-    - modificationType
-    - cosignatoryPublicKey
-    properties:
-      modificationType:
-        $ref: "#/definitions/MultisigModificationTypeEnum"
-      cosignatoryPublicKey:
-        type: string
-        description: The public key of the cosignatory account.
-        example: 5D9513282B65A12A1B68DCB67DB64245721F7AE7822BE441FE813173803C512C
 
   # Blockchain endpoints
-  StatementsDTO:
-    type: object
-    description: The collection of transaction statements and resolutions triggered for the block requested.
-    required:
-    - transactionStatements
-    - addressResolutionStatements
-    - mosaicResolutionStatements
-    properties:
-      transactionStatements:
-        type: array
-        description: The array of transaction statements for the block requested.
-        items:
-          $ref: "#/definitions/TransactionStatementDTO"
-      addressResolutionStatements:
-        type: array
-        description: The array of address resolutions for the block requested.
-        items:
-          $ref: "#/definitions/ResolutionStatementDTO"
-      mosaicResolutionStatements:
-        type: array
-        description: The array of mosaic resolutions for the block requested.
-        items:
-          $ref: "#/definitions/ResolutionStatementDTO"
-  TransactionStatementDTO:
-    type: object
-    description: The collection of receipts related to a transaction.
-    required:
-    - height
-    - source
-    - receipts
-    properties:
-      height:
-        $ref: "#/definitions/UInt64DTO"
-      source:
-        $ref: "#/definitions/SourceDTO"
-      receipts:
-        type: array
-        description: The array of receipts.
-        items:
-          $ref: "#/definitions/ReceiptDTO"
-          #anyOf:
-          #- $ref: "#/definitions/BalanceTransferReceiptDTO"
-          #- $ref: "#/definitions/BalanceChangeReceiptDTO"
-          #- $ref: "#/definitions/ArtifactExpiryReceiptDTO"
-          #- $ref: "#/definitions/InflationReceiptDTO"
-  ResolutionStatementDTO:
-    type: object
-    description: A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
-    required:
-    - height
-    - unresolved
-    - resolutionEntries
-    properties:
-      height:
-        $ref: "#/definitions/UInt64DTO"
-      unresolved:
-        $ref: "#/definitions/UInt64DTO"
-      resolutionEntries:
-        type: array
-        description: The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
-        items:
-          $ref: "#/definitions/ResolutionEntryDTO"
-  ResolutionEntryDTO:
-    type: object
-    required:
-    - source
-    - resolved
-    properties:
-      source:
-        $ref: "#/definitions/SourceDTO"
-      resolved:
-        $ref: "#/definitions/UInt64DTO"
-  SourceDTO:
-    type: object
-    description: The transaction that triggered the receipt.
-    required:
-    - primaryId
-    - secondaryId
-    properties:
-      primaryId:
-        type: integer
-        description: The transaction index within the block.
-        example: 1
-      secondaryId:
-        type: integer
-        description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
-        example: 0
-  ReceiptTypeEnum:
-    type: integer
-    enum:
-      - 4685
-      - 4941
-      - 4686
-      - 8515
-      - 8776
-      - 9042
-      - 12616
-      - 12626
-      - 16717
-      - 16718
-      - 20803
-      - 57652
-      - 61763
-      - 62019
-    description: |
-      The type of the receipt:
-      * 0x124D (4685 decimal) - Mosaic_Levy.
-      * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
-      * 0x124E (4686 decimal) - Namespace_Rental_Fee.
-      * 0x2143 (8515 decimal) - Harvest_Fee.
-      * 0x2248 (8776 decimal) - LockHash_Completed.
-      * 0x2348 (9032 decimal) - LockHash_Expired.
-      * 0x2252 (8786 decimal) - LockSecret_Completed.
-      * 0x2352 (9042 decimal) - LockSecret_Expired.
-      * 0x3148 (12616 decimal) - LockHash_Created.
-      * 0x3152 (12626 decimal) - LockSecret_Created.
-      * 0x414D (16717 decimal) - Mosaic_Expired.
-      * 0x414E (16718 decimal) - Namespace_Expired.
-      * 0x5143 (20803 decimal) - Inflation.
-      * 0xE134 (57652 decimal) - Transaction_Group.
-      * 0xF143 (61763 decimal) - Address_Alias_Resolution.
-      * 0xF243 (62019 decimal) - Mosaic_Alias_Resolution.
-  ReceiptDTO:
-    type: object
-    required:
-    - version
-    - type
-    properties:
-      version:
-        type: integer
-        description: The version of the receipt.
-      type:
-        $ref: "#/definitions/ReceiptTypeEnum"
-  BalanceTransferReceiptDTO:
-    type: object
-    description: The invisible state change triggered a mosaic transfer.
-    allOf:
-    - $ref: "#/definitions/ReceiptDTO"
-    - type: object
-      required:
-      - sender
-      - recipient
-      - mosaicId
-      - amount
-      properties:
-        sender:
-          type: string
-          description: The public key of the sender.
-          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
-        recipient:
-          type: string
-          description: The public key of the recipient.
-          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
-        mosaicId:
-          $ref: "#/definitions/UInt64DTO"
-        amount:
-          $ref: "#/definitions/UInt64DTO"
-  BalanceChangeReceiptDTO:
-    type: object
-    description: The invisible state change changed an account balance.
-    allOf:
-    - $ref: "#/definitions/ReceiptDTO"
-    - type: object
-      required:
-      - account
-      - mosaicId
-      - amount
-      properties:
-        account:
-          type: string
-          description: The target account public key.
-          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
-        mosaicId:
-          $ref: "#/definitions/UInt64DTO"
-        amount:
-          $ref: "#/definitions/UInt64DTO"
-  ArtifactExpiryReceiptDTO:
-    type: object
-    description: An artifact namespace or mosaic expired.
-    allOf:
-    - $ref: "#/definitions/ReceiptDTO"
-    - type: object
-      required:
-      - artifactId
-      properties:
-        artifactId:
-          $ref: "#/definitions/UInt64DTO"
-  InflationReceiptDTO:
-    type: object
-    description: Native currency mosaics were created due to inflation.
-    allOf:
-    - $ref: "#/definitions/ReceiptDTO"
-    - type: object
-      required:
-      - mosaicId
-      - amount
-      properties:
-        mosaicId:
-          $ref: "#/definitions/UInt64DTO"
-        amount:
-          $ref: "#/definitions/UInt64DTO"
   BlockInfoDTO:
     type: object
     required:
@@ -1598,57 +1435,77 @@ definitions:
         example: 1
   BlockDTO:
     type: object
-    allOf:
-    - $ref: "#/definitions/VerifiableEntityDTO"
-    - type: object
-      required:
-      - height
-      - timestamp
-      - difficulty
-      - feeMultiplier
-      - previousBlockHash
-      - blockTransactionsHash
-      - blockReceiptsHash
-      - stateHash
-      - beneficiary
-      properties:
-        height:
-          $ref: "#/definitions/UInt64DTO"
-        timestamp:
-          $ref: "#/definitions/UInt64DTO"
-        difficulty:
-          $ref: "#/definitions/UInt64DTO"
-        feeMultiplier:
-          type: integer
-          description: The fee multiplier applied to transactions contained in block.
-          example: 0
-        previousBlockHash:
-          type: string
-          description: The hash of the previous block.
-          example:
-          - 0000000000000000000000000000000000000000000000000000000000000000
-        blockTransactionsHash:
-          type: string
-          description: >
-            The transactions included in a block are hashed forming a merkle
-            tree. The root of the tree summarizes them.
-          example: 8F8C6EB33332F69196AD0D30D7CD90FAC1332089DF460DF0CF4A8A28C1C17AD4
-        blockReceiptsHash:
-          type: string
-          description: >
-            The collection of receipts  are hashed into a merkle tree and linked
-            to a block. The block header stores the root hash.
-          example: sZznHmvGSZKIy1Ney2O0tKxJ4sOgk5jYYhqsua1RCRo=
-        stateHash:
-          type: string
-          description: >
-            For each block, the state of the blockchain is stored in RocksDB,
-            forming a patricia tree. The root of the tree summarizes the state of the blockchain for the given block.
-          example: 011811795453FA9FBD9DAC969085F8938BBFEDE3A3FDDC0C93B8FD6C4E7B2840
-        beneficiary:
-          type: string
-          description: The public key of the optional beneficiary designated by harvester.
-          example: 0000000000000000000000000000000000000000000000000000000000000000
+    required:
+    - signature
+    - signer
+    - version
+    - type
+    - height
+    - timestamp
+    - difficulty
+    - feeMultiplier
+    - previousBlockHash
+    - blockTransactionsHash
+    - blockReceiptsHash
+    - stateHash
+    - beneficiary
+    properties:
+      signature:
+        type: string
+        description: |
+          The signature of the block. The signature was generated by the
+          signer and can be used to validate tha the entity data was not
+          modified by a node.
+        example: D8047EB8285077D9900EDD42F4081070DDB26E08E7F15A3E29642C80CF0C7D68340682DC9868C73EB09744D6298146D8DFC02ED47070FC81FB47D6F73B33EF0A
+      signer:
+        type: string
+        description: The public key of the block harvester formatted as hexadecimal.
+        example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+      version:
+        $ref: "#/definitions/NetworkTypeEnum"
+      type:
+        type: integer
+        description: |
+          The block type:
+          * 0x8043 (32835 decimal) - Nemesis block.
+          * 0x8143 (33091 decimal) - Regular block.
+      height:
+        $ref: "#/definitions/UInt64DTO"
+      timestamp:
+        $ref: "#/definitions/UInt64DTO"
+      difficulty:
+        $ref: "#/definitions/UInt64DTO"
+      feeMultiplier:
+        type: integer
+        description: The fee multiplier applied to transactions contained in block.
+        example: 0
+      previousBlockHash:
+        type: string
+        description: The hash of the previous block.
+        example:
+        - 0000000000000000000000000000000000000000000000000000000000000000
+      blockTransactionsHash:
+        type: string
+        description: |
+          The transactions included in a block are hashed forming a merkle
+          tree. The root of the tree summarizes them.
+        example: 8F8C6EB33332F69196AD0D30D7CD90FAC1332089DF460DF0CF4A8A28C1C17AD4
+      blockReceiptsHash:
+        type: string
+        description: |
+          The collection of receipts  are hashed into a merkle tree and linked
+          to a block. The block header stores the root hash.
+        example: sZznHmvGSZKIy1Ney2O0tKxJ4sOgk5jYYhqsua1RCRo=
+      stateHash:
+        type: string
+        description: |
+          For each block, the state of the blockchain is stored in RocksDB,
+          forming a patricia tree. The root of the tree summarizes the state of the blockchain for the given block.
+        example: 011811795453FA9FBD9DAC969085F8938BBFEDE3A3FDDC0C93B8FD6C4E7B2840
+      beneficiary:
+        type: string
+        description: The public key of the optional beneficiary designated by harvester.
+        example: 0000000000000000000000000000000000000000000000000000000000000000
   HeightInfoDTO:
     type: object
     required:
@@ -1677,7 +1534,99 @@ definitions:
       type:
         type: string
         example: merkleProofInfo
-
+  StatementsDTO:
+    type: object
+    description: The collection of transaction statements and resolutions triggered for the block requested.
+    required:
+    - transactionStatements
+    - addressResolutionStatements
+    - mosaicResolutionStatements
+    properties:
+      transactionStatements:
+        type: array
+        description: The array of transaction statements for the block requested.
+        items:
+          $ref: "#/definitions/TransactionStatementDTO"
+      addressResolutionStatements:
+        type: array
+        description: The array of address resolutions for the block requested.
+        items:
+          $ref: "#/definitions/ResolutionStatementDTO"
+      mosaicResolutionStatements:
+        type: array
+        description: The array of mosaic resolutions for the block requested.
+        items:
+          $ref: "#/definitions/ResolutionStatementDTO"
+  TransactionStatementDTO:
+    type: object
+    description: The collection of receipts related to a transaction.
+    required:
+    - height
+    - source
+    - receipts
+    properties:
+      height:
+        $ref: "#/definitions/UInt64DTO"
+      source:
+        $ref: "#/definitions/SourceDTO"
+      receipts:
+        type: array
+        description: The array of receipts.
+        items:
+          $ref: "#/definitions/ReceiptDTO"
+  ResolutionStatementDTO:
+    type: object
+    description: A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
+    required:
+    - height
+    - unresolved
+    - resolutionEntries
+    properties:
+      height:
+        $ref: "#/definitions/UInt64DTO"
+      unresolved:
+        $ref: "#/definitions/UInt64DTO"
+      resolutionEntries:
+        type: array
+        description: The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
+        items:
+          $ref: "#/definitions/ResolutionEntryDTO"
+  ResolutionEntryDTO:
+    type: object
+    required:
+    - source
+    - resolved
+    properties:
+      source:
+        $ref: "#/definitions/SourceDTO"
+      resolved:
+        $ref: "#/definitions/UInt64DTO"
+  SourceDTO:
+    type: object
+    description: The transaction that triggered the receipt.
+    required:
+    - primaryId
+    - secondaryId
+    properties:
+      primaryId:
+        type: integer
+        description: The transaction index within the block.
+        example: 1
+      secondaryId:
+        type: integer
+        description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
+        example: 0
+  ReceiptDTO:
+    type: object
+    required:
+    - version
+    - type
+    properties:
+      version:
+        type: integer
+        description: The version of the receipt.
+      type:
+        $ref: "#/definitions/ReceiptTypeEnum"
   # Diagnostic endpoints
   StorageInfoDTO:
     type: object
@@ -1748,25 +1697,6 @@ definitions:
         $ref: "#/definitions/MosaicMetaDTO"
       mosaic:
         $ref: "#/definitions/MosaicDefinitionDTO"
-  MessageTypeEnum:
-    type: integer
-    enum:
-      - 0
-    description: |
-      The type of the message:
-      * 0 - Regular message.
-    example: 0
-  MessageDTO:
-    type: object
-    required:
-    - type
-    - payload
-    properties:
-      type:
-        $ref: "#/definitions/MessageTypeEnum"
-      payload:
-        type: string
-        description: The message content in hexadecimal.
   MosaicDefinitionDTO:
     type: object
     required:
@@ -1815,25 +1745,6 @@ definitions:
     - |-
       - 0
       - 0
-  MosaicPropertyIdEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-      - 2
-    description: |
-      The array of mosaic properties:
-      * 0 - MosaicFlags
-      * 1 - Divisibility
-      * 2 - Duration
-    example: 0
-  MosaicPropertyDTO:
-    type: object
-    properties:
-      id:
-        $ref: "#/definitions/MosaicPropertyIdEnum"
-      value:
-        $ref: "#/definitions/UInt64DTO"
   MosaicNameDTO:
     type: object
     required:
@@ -1929,18 +1840,6 @@ definitions:
         type: string
         description: The name of the namespace.
         example: cat
-  AliasTypeEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-      - 2
-    description: |
-      The alias type:
-      * 0 -  No alias.
-      * 1 -  Mosaic id alias.
-      * 2 -  Addres alias.
-    example: 0
   AliasDTO:
     type: object
     required:
@@ -1954,85 +1853,7 @@ definitions:
         type: string
         description: The aliased address in hexadecimal.
 
-  # Transactions endpoints
-  EntityTypeEnum:
-    type: integer
-    enum:
-      - 16717
-      - 16973
-      - 16718
-      - 16974
-      - 17230
-      - 16724
-      - 16725
-      - 16705
-      - 16961
-      - 16712
-      - 16720
-      - 16976
-      - 17232
-      - 16722
-      - 16978
-      - 16716
-      - 32835
-      - 33091
-    description: |
-      The entity type:
-      * 0x414D (16717 decimal) - Mosaic Definition Transaction.
-      * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
-      * 0x414E (16718 decimal) - Register Namespace Transaction.
-      * 0x424E (16974 decimal) - Address Alias Transaction.
-      * 0x434E (17230 decimal) - Mosaic Alias Transaction.
-      * 0x4154 (16724 decimal) - Transfer Transaction.
-      * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
-      * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
-      * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
-      * 0x4148 (16712 decimal) - Hash Lock Transaction.
-      * 0x4150 (16720 decimal) - Account Properties Address Transaction.
-      * 0x4250 (16976 decimal) - Account Properties Mosaic Transaction.
-      * 0x4350 (17232 decimal) - Account Properties Entity Type Transaction.
-      * 0x4152 (16722 decimal) - Secret Lock Transaction.
-      * 0x4252 (16978 decimal) - Secret Proof Transaction.
-      * 0x414C (16716 decimal) - Account Link Transaction.
-      * 0x8043 (32835 decimal) - Nemesis block.
-      * 0x8143 (33091 decimal) - Regular block.
-  NetworkTypeEnum:
-    type: integer
-    description: |
-      The entity version. The higher byte represents the network
-      identifier:
-      * 0x68 (MAIN_NET) - Public main network.
-      * 0x98 (TEST_NET) - Public test network.
-      * 0x60 (MIJIN) - Private network.
-      * 0x90 (MIJIN_TEST) - Private test network.
-    example: 36867
-  EntityDTO:
-    type: object
-    required:
-    - signer
-    - version
-    - type
-    properties:
-      signer:
-        type: string
-        description: The public key of the entity signer formatted as hexadecimal.
-        example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
-      version:
-        $ref: "#/definitions/NetworkTypeEnum"
-      type:
-        $ref: "#/definitions/EntityTypeEnum"
-  VerifiableEntityDTO:
-    type: object
-    required:
-    - signature
-    properties:
-      signature:
-        type: string
-        description: >
-          The signature of the entity. The signature was generated by the
-          signer and can be used to validate tha the entity data was not
-          modified by a node.
-        example: D8047EB8285077D9900EDD42F4081070DDB26E08E7F15A3E29642C80CF0C7D68340682DC9868C73EB09744D6298146D8DFC02ED47070FC81FB47D6F73B33EF0A
+  # Transaction endpoints
   TransactionMetaDTO:
     type: object
     required:
@@ -2062,518 +1883,8 @@ definitions:
         $ref: "#/definitions/TransactionMetaDTO"
       transaction:
         $ref: "#/definitions/TransactionDTO"
-        #anyOf:
-        #- $ref: "#/definitions/MosaicDefinitionTransactionDTO"
-        #- $ref: "#/definitions/MosaicSupplyChangeTransactionDTO"
-        #- $ref: "#/definitions/RegisterNamespaceTransactionDTO"
-        #- $ref: "#/definitions/AddressAliasTransactionDTO"
-        #- $ref: "#/definitions/MosaicAliasTransactionDTO"
-        #- $ref: "#/definitions/TransferTransactionDTO"
-        #- $ref: "#/definitions/ModifyMultisigAccountTransactionDTO"
-        #- $ref: "#/definitions/AggregateTransactionDTO"
-        #- $ref: "#/definitions/HashLockTransactionDTO"
-        #- $ref: "#/definitions/AccountPropertiesTransactionDTO"
-        #- $ref: "#/definitions/SecretLockTransactionDTO"
-        #- $ref: "#/definitions/SecretProofTransactionDTO"
-        #- $ref: "#/definitions/AccountLinkTransactionDTO"
-  EmbeddedTransactionMetaDTO:
-    type: object
-    required:
-    - height
-    - hash
-    - merkleComponentHash
-    - index
-    - id
-    properties:
-      height:
-        $ref: "#/definitions/UInt64DTO"
-      hash:
-        type: string
-      merkleComponentHash:
-        type: string
-      index:
-        type: integer
-      id:
-        type: string
-  EmbeddedTransactionInfoDTO:
-    type: object
-    required:
-    - meta
-    - transaction
-    properties:
-      meta:
-        $ref: "#/definitions/EmbeddedTransactionMetaDTO"
-      transaction:
-        $ref: "#/definitions/EmbeddedTransactionDTO"
-        #anyOf:
-        #- $ref: "#/definitions/EmbeddedMosaicDefinitionTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedMosaicSupplyChangeTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedRegisterNamespaceTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedAddressAliasTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedMosaicAliasTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedTransferTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedModifyMultisigAccountTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedHashLockTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedAccountPropertiesTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedSecretLockTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedSecretProofTransactionDTO"
-        #- $ref: "#/definitions/EmbeddedAccountLinkTransactionDTO"
-  TransactionBodyDTO:
-    type: object
-    required:
-    - max_fee
-    - deadline
-    properties:
-      max_fee:
-        $ref: "#/definitions/UInt64DTO"
-      deadline:
-        $ref: "#/definitions/UInt64DTO"
   TransactionDTO:
     type: object
-    allOf:
-    - $ref: "#/definitions/VerifiableEntityDTO"
-    - $ref: "#/definitions/EntityDTO"
-    - $ref: "#/definitions/TransactionBodyDTO"
-  EmbeddedTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EntityDTO"
-    - $ref: "#/definitions/TransactionBodyDTO"
-  MosaicDefinitionTransactionBodyDTO:
-    type: object
-    required:
-    - mosaicNonce
-    - mosaicId
-    - properties
-    properties:
-      mosaicNonce:
-        type: integer
-        description: Random nonce used to generate the mosaic id.
-        example: 0
-      mosaicId:
-        $ref: "#/definitions/UInt64DTO"
-      properties:
-        type: array
-        items:
-          $ref: "#/definitions/MosaicPropertyDTO"
-  MosaicDefinitionTransactionDTO:
-    type: object
-    description: Transaction that creates a new mosaic.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
-  EmbeddedMosaicDefinitionTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/MosaicDefinitionTransactionBodyDTO"
-  DirectionEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The supply modification direction:
-      * 0  - Decrease.
-      * 1  - Increase.
-    example: 0
-  MosaicSupplyChangeTransactionBodyDTO:
-    type: object
-    required:
-    - mosaicId
-    - direction
-    - delta
-    properties:
-      mosaicId:
-        $ref: "#/definitions/UInt64DTO"
-      direction:
-        $ref: "#/definitions/DirectionEnum"
-      delta:
-        $ref: "#/definitions/UInt64DTO"
-  MosaicSupplyChangeTransactionDTO:
-    type: object
-    description: Transaction to increase or decrease a mosaic’s supply.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
-  EmbeddedMosaicSupplyChangeTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/MosaicSupplyChangeTransactionBodyDTO"
-  NamespaceTypeEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The namespace type:
-      * 0 -  Root namespace.
-      * 1 -  Subnamespace.
-    example: 0
-  RegisterNamespaceTransactionBodyDTO:
-    type: object
-    required:
-    - namespaceType
-    - duration
-    - namespaceId
-    - name
-    - parentId
-    properties:
-      namespaceType:
-        $ref: "#/definitions/NamespaceTypeEnum"
-      duration:
-        $ref: "#/definitions/UInt64DTO"
-      namespaceId:
-        $ref: "#/definitions/UInt64DTO"
-      name:
-        type: string
-        description: The unique namespace name.
-      parentId:
-        $ref: "#/definitions/UInt64DTO"
-  RegisterNamespaceTransactionDTO:
-    type: object
-    description: Transaction that creates or renew a namespace.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
-  EmbeddedRegisterNamespaceTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/RegisterNamespaceTransactionBodyDTO"
-  AliasActionEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The alias action:
-      * 0 -  Link alias.
-      * 1 -  Unlink alias.
-    example: 0
-  AddressAliasTransactionBodyDTO:
-    type: object
-    required:
-    - aliasAction
-    - namespaceId
-    - address
-    properties:
-      aliasAction:
-        $ref: "#/definitions/AliasActionEnum"
-      namespaceId:
-        $ref: "#/definitions/UInt64DTO"
-      address:
-        type: string
-        description: The aliased address in hexadecimal.
-  AddressAliasTransactionDTO:
-    type: object
-    description: Transaction that attaches a namespace to an account.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/AddressAliasTransactionBodyDTO"
-  EmbeddedAddressAliasTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/AddressAliasTransactionBodyDTO"
-  MosaicAliasTransactionBodyDTO:
-    type: object
-    required:
-    - aliasAction
-    - namespaceId
-    - mosaicId
-    properties:
-      aliasAction:
-        $ref: "#/definitions/AliasActionEnum"
-      namespaceId:
-        $ref: "#/definitions/UInt64DTO"
-      mosaicId:
-        $ref: "#/definitions/UInt64DTO"
-  MosaicAliasTransactionDTO:
-    type: object
-    description: Transaction that attaches a namespace to a mosaic.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/MosaicAliasTransactionBodyDTO"
-  EmbeddedMosaicAliasTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/MosaicAliasTransactionBodyDTO"
-  TransferTransactionBodyDTO:
-    type: object
-    required:
-    - recipient
-    - mosaics
-    - message
-    properties:
-      recipient:
-        type: string
-        description: If the bit 0 of byte 0 is not set (like in 0x90), then it is a regular address. Else (e.g. 0x91) it represents a namespace id which starts at byte 1.
-        example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
-      mosaics:
-        type: array
-        description: The array of mosaics sent to the recipient. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of a instead of a mosaicId corresponds to a mosaicId.
-        items:
-          $ref: "#/definitions/MosaicDTO"
-      message:
-        $ref: "#/definitions/MessageDTO"
-  TransferTransactionDTO:
-    type: object
-    description: Transaction that transfers mosaics and messages to another account.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/TransferTransactionBodyDTO"
-  EmbeddedTransferTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/TransferTransactionBodyDTO"
-  ModifyMultisigAccountTransactionBodyDTO:
-    type: object
-    required:
-    - minRemovalDelta
-    - minApprovalDelta
-    - modifications
-    properties:
-      minRemovalDelta:
-        type: integer
-        description: |
-          The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        example: 1
-      minApprovalDelta:
-        type: integer
-        description: |
-          The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-        example: 1
-      modifications:
-        type: array
-        description: The array of cosignatory accounts to add or delete.
-        items:
-          $ref: "#/definitions/CosignatoryModificationDTO"
-  ModifyMultisigAccountTransactionDTO:
-    type: object
-    description: Transaction that creates or modifies a multisig account.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/ModifyMultisigAccountTransactionBodyDTO"
-  EmbeddedModifyMultisigAccountTransactionDTO:
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/ModifyMultisigAccountTransactionBodyDTO"
-  AggregateTransactionBodyDTO:
-    type: object
-    required:
-    - cosignatures
-    - transactions
-    properties:
-      cosignatures:
-        type: array
-        description: An array of transaction cosignatures.
-        items:
-          $ref: "#/definitions/CosignatureDTO"
-      transactions:
-        type: array
-        description: The array of transactions initiated by different accounts.
-        items:
-          $ref: "#/definitions/EmbeddedTransactionInfoDTO"
-  AggregateTransactionDTO:
-    type: object
-    description: Transaction that combines multiple transactions together.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/AggregateTransactionBodyDTO"
-  CosignatureDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/VerifiableEntityDTO"
-    - type: object
-      required:
-      - signer
-      properties:
-        signer:
-          type: string
-          description: The public key of the transaction signer.
-          example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
-  HashLockTransactionBodyDTO:
-    type: object
-    required:
-    - mosaic
-    - duration
-    - hash
-    properties:
-      mosaic:
-        $ref: "#/definitions/MosaicDTO"
-      duration:
-        $ref: "#/definitions/MosaicDTO"
-      hash:
-        type: string
-        description: >
-          The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
-        example: C8FC3FB54FDDFBCE0E8C71224990124E4EEC5AD5D30E592EDFA9524669A23810
-  HashLockTransactionDTO:
-    type: object
-    description: Transaction to lock funds before sending an aggregate bonded transaction.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/HashLockTransactionBodyDTO"
-  EmbeddedHashLockTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/HashLockTransactionDTO"
-  AccountPropertyTypeEnum:
-    type: integer
-    example: 1
-    enum:
-      - 1
-      - 2
-      - 4
-      - 5
-      - 129
-      - 130
-      - 132
-    description: |
-      The account properties type:
-      * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
-      * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-      * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
-      * 0x05 (5 decimal) - Property type sentinel.
-      * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
-      * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-      * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
-  AccountPropertiesTransactionBodyDTO:
-    type: object
-    required:
-    - propertyType
-    - modifications
-    properties:
-      propertyType:
-        $ref: "#/definitions/AccountPropertyTypeEnum"
-      modifications:
-        type: array
-        items:
-          $ref: "#/definitions/AccountPropertiesModificationDTO"
-  AccountPropertiesTransactionDTO:
-    type: object
-    description: Transaction that prevents receiving transactions from undesired addresses, mosaics or sending certain transaction types.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
-  EmbeddedAccountPropertiesTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/AccountPropertiesTransactionBodyDTO"
-  HashAlgorithmEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-      - 2
-      - 3
-    description: |
-      The hash algorithm used to hash te proof:
-      * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
-      * 1 (Op_Keccak_256)  - The proof is hashed using Keccak (ETH compatibility).
-      * 2 (Op_Hash_160)  - The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
-      * 3 (Op_Hash_256)  - The proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
-  SecretLockTransactionBodyDTO:
-    type: object
-    required:
-    - duration
-    - mosaicId
-    - amount
-    - hashAlgorithm
-    - secret
-    - recipient
-    properties:
-      duration:
-        $ref: "#/definitions/UInt64DTO"
-      mosaicId:
-        $ref: "#/definitions/UInt64DTO"
-      amount:
-        $ref: "#/definitions/UInt64DTO"
-      hashAlgorithm:
-        $ref: "#/definitions/HashAlgorithmEnum"
-      secret:
-        type: string
-        description: The proof hashed.
-        example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
-      recipient:
-        type: string
-        description: The address in hexadecimal that will receive the funds once the transaction is unlocked.
-        example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
-  SecretLockTransactionDTO:
-    type: object
-    description: Transaction that sends mosaics to a recipient if the proof used is revealed. If the duration is reached, the locked funds go back to the sender of the transaction.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/SecretLockTransactionBodyDTO"
-  EmbeddedSecretLockTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/SecretLockTransactionBodyDTO"
-  SecretProofTransactionBodyDTO:
-    type: object
-    required:
-    - hashAlgorithm
-    - secret
-    - proof
-    properties:
-      hashAlgorithm:
-        $ref: "#/definitions/HashAlgorithmEnum"
-      secret:
-        type: string
-        description: The proof hashed.
-        example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
-      proof:
-        type: string
-        description:  The original random set of bytes.
-  SecretProofTransactionDTO:
-    type: object
-    description: Transaction that revealed a proof.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/SecretProofTransactionBodyDTO"
-  EmbeddedSecretProofTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/SecretProofTransactionBodyDTO"
-  LinkActionEnum:
-    type: integer
-    enum:
-      - 0
-      - 1
-    description: |
-      The type of the action:
-      * 0 - Link.
-      * 1 - Unlink.
-  AccountLinkTransactionBodyDTO:
-    type: object
-    required:
-    - remoteAccountKey
-    - linkAction
-    properties:
-      remoteAccountKey:
-        type: string
-        description: The public key of the remote account.
-      linkAction:
-        $ref: "#/definitions/LinkActionEnum"
-  AccountLinkTransactionDTO:
-    type: object
-    description: Delegates the account importance score to a proxy account.
-    allOf:
-    - $ref: "#/definitions/TransactionDTO"
-    - $ref: "#/definitions/AccountLinkTransactionBodyDTO"
-  EmbeddedAccountLinkTransactionDTO:
-    type: object
-    allOf:
-    - $ref: "#/definitions/EmbeddedTransactionDTO"
-    - $ref: "#/definitions/AccountLinkTransactionBodyDTO"
   AnnounceTransactionInfoDTO:
     type: object
     required:
@@ -2615,16 +1926,6 @@ definitions:
         example: catapult development network
 
   # Node endpoints
-  RolesEnum:
-    type: integer
-    enum:
-      - 1
-      - 2
-    description: |
-      The role of the node:
-      * 1 - A peer node.
-      * 2 - An api node.
-    example: 2
   NodeInfoDTO:
     type: object
     required:
@@ -2655,7 +1956,7 @@ definitions:
         format: int32
         example: 0
       roles:
-        $ref: "#/definitions/RolesEnum"
+        $ref: "#/definitions/RolesTypeEnum"
       host:
         type: string
         description: The IP address of the endpoint.
@@ -2766,14 +2067,6 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
       receiveTimestamp:
         $ref: "#/definitions/UInt64DTO"
-  UInt64DTO:
-    type: array
-    items:
-      type: integer
-      format: int32
-    example:
-    - lower
-    - higher
 externalDocs:
   description: NEM Developer Center
   url: 'https://nemtech.github.io/'
