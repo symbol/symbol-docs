@@ -344,4 +344,5 @@ This section describes the error messages that can be returned via status channe
     Failure_Extension_Partial_Transaction_Cache_Prune, Validation failed because the partial transaction was pruned from the temporal cache.
     Failure_Extension_Partial_Transaction_Dependency_Removed, Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
 
-:download:`OpenAPI specification <resources/collections/swagger.yaml>`
+:download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>`
+:download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`
