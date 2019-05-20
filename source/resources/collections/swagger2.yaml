@@ -1124,17 +1124,17 @@ definitions:
       * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
       * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
   AliasTypeEnum:
-      type: integer
-      enum:
-      - 0
-      - 1
-      - 2
-      description: |
-        The alias type:
-        * 0 -  No alias.
-        * 1 -  Mosaic id alias.
-        * 2 -  Addres alias.
-      example: 0
+    type: integer
+    enum:
+    - 0
+    - 1
+    - 2
+    description: |
+      The alias type:
+      * 0 -  No alias.
+      * 1 -  Mosaic id alias.
+      * 2 -  Addres alias.
+    example: 0
   MultisigModificationTypeEnum:
     type: integer
     enum:
@@ -1146,15 +1146,15 @@ definitions:
       * 1 - Remove cosignatory.
     example: 0
   NamespaceTypeEnum:
-      type: integer
-      enum:
-      - 0
-      - 1
-      description: |
-        The namespace type:
-        * 0 -  Root namespace.
-        * 1 -  Subnamespace.
-      example: 0
+    type: integer
+    enum:
+    - 0
+    - 1
+    description: |
+      The namespace type:
+      * 0 -  Root namespace.
+      * 1 -  Subnamespace.
+    example: 0
   NetworkTypeEnum:
     type: integer
     description: |
@@ -1573,7 +1573,7 @@ definitions:
         type: array
         description: The array of receipts.
         items:
-          $ref: "#/definitions/ReceiptDTO"
+          type: object
   ResolutionStatementDTO:
     type: object
     description: A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
@@ -1616,17 +1616,6 @@ definitions:
         type: integer
         description: The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
         example: 0
-  ReceiptDTO:
-    type: object
-    required:
-    - version
-    - type
-    properties:
-      version:
-        type: integer
-        description: The version of the receipt.
-      type:
-        $ref: "#/definitions/ReceiptTypeEnum"
   # Diagnostic endpoints
   StorageInfoDTO:
     type: object
@@ -1882,9 +1871,7 @@ definitions:
       meta:
         $ref: "#/definitions/TransactionMetaDTO"
       transaction:
-        $ref: "#/definitions/TransactionDTO"
-  TransactionDTO:
-    type: object
+        type: object
   AnnounceTransactionInfoDTO:
     type: object
     required:
