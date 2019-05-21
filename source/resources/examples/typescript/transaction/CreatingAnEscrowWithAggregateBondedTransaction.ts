@@ -69,6 +69,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create()
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
+console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */

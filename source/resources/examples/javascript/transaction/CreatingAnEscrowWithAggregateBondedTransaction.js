@@ -64,11 +64,12 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
-    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),git reset --soft HEAD^1
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
+console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */
