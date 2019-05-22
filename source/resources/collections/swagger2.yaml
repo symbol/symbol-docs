@@ -1135,6 +1135,18 @@ definitions:
       * 1 -  Mosaic id alias.
       * 2 -  Addres alias.
     example: 0
+  MosaicPropertyIdEnum:
+    type: integer
+    enum:
+    - 0
+    - 1
+    - 2
+    description: |
+      The mosaic propery id means:
+      * 0 - MosaicFlags
+      * 1 - Divisibility
+      * 2 - Duration
+    example: 0
   MultisigModificationTypeEnum:
     type: integer
     enum:
@@ -1712,28 +1724,18 @@ definitions:
         description: The number of definitions for the same mosaic.
         example: 1
       properties:
-        $ref: "#/definitions/MosaicPropertiesDTO"
+        type: array
+        items:
+          $ref: "#/definitions/MosaicPropertyDTO"
       levy:
         type: object
-  MosaicPropertiesDTO:
-    type: array
-    description: |
-      The array of mosaic properties:
-      * First element - MosaicFlags
-      * Second element - Divisibility
-      * Third element - Duration
-    items:
-      $ref: "#/definitions/UInt64DTO"
-    example:
-    - |-
-      - 0
-      - 0
-    - |-
-      - 0
-      - 0
-    - |-
-      - 0
-      - 0
+  MosaicPropertyDTO:
+    type: object
+    properties:
+      id:
+        $ref: "#/definitions/MosaicPropertyIdEnum"
+      value:
+        $ref: "#/definitions/UInt64DTO"
   MosaicNameDTO:
     type: object
     required:
