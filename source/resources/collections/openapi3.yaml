@@ -2604,6 +2604,10 @@ components:
           type: string
           description: The proof hashed.
           example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
+        recipient:
+          type: string
+          description: The address in hexadecimal that received the funds.
+          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
         proof:
           type: string
           description: The original random set of bytes.
