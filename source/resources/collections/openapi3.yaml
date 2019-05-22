@@ -786,7 +786,7 @@ paths:
       - Mosaic routes
       summary: Get readable names for a set of mosaics
       description: Returns friendly names for mosaics.
-      operationId: getMosaicsName
+      operationId: getMosaicsNames
       requestBody:
         $ref: "#/components/requestBodies/mosaicIds"
       responses:
@@ -798,7 +798,7 @@ paths:
                 type: array
                 description: The array of mosaic names.
                 items:
-                  $ref: "#/components/schemas/MosaicNameDTO"
+                  $ref: "#/components/schemas/MosaicNamesDTO"
         "400":
           description: invalid content
         "409":
@@ -895,6 +895,29 @@ paths:
                 description: The array of namespaces information.
                 items:
                   $ref: "#/components/schemas/NamespaceInfoDTO"
+        "400":
+          description: invalid content
+        "409":
+          description: invalid argument
+  /account/names:
+    post:
+      tags:
+      - Account routes
+      summary:  Get readable names for a set of accountIds.
+      description: Returns friendly names for accounts.
+      operationId: getAccountsNames
+      requestBody:
+        $ref: "#/components/requestBodies/accountsIds"
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                type: array
+                description: The array of account names.
+                items:
+                  $ref: "#/components/schemas/AccountNamesDTO"
         "400":
           description: invalid content
         "409":
@@ -1439,7 +1462,7 @@ components:
         address:
           type: string
           description: |
-            The account unique address not encoded.
+            The account unique address in hexadecimal.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         addressHeight:
           $ref: "#/components/schemas/UInt64DTO"
@@ -1465,6 +1488,24 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         importanceHeight:
           $ref: "#/components/schemas/UInt64DTO"
+    AccountNamesDTO:
+      type: object
+      required:
+      - address
+      - names
+      properties:
+        address:
+          type: string
+          description: The address of the account in base 32.
+          example: SAAM2O7SSJ2A7AU3DZJMSTTRFZT5TFDPQ3ZIIJX7
+        names:
+          type: array
+          description: The mosaic linked namespace names.
+          example:
+          - alias1
+          - alias2
+          items:
+            type: string
     AccountPropertiesInfoDTO:
       type: object
       required:
@@ -2024,7 +2065,7 @@ components:
           $ref: "#/components/schemas/MosaicPropertyIdEnum"
         value:
           $ref: "#/components/schemas/UInt64DTO"
-    MosaicNameDTO:
+    MosaicNamesDTO:
       type: object
       required:
       - mosaicId
