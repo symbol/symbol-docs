@@ -741,7 +741,7 @@ paths:
       - Mosaic routes
       summary: Get readable names for a set of mosaics
       description: Returns friendly names for mosaics.
-      operationId: getMosaicsName
+      operationId: getMosaicsNames
       produces:
       - application/json
       parameters:
@@ -757,7 +757,7 @@ paths:
             type: array
             description: The array of mosaic names.
             items:
-              $ref: "#/definitions/MosaicNameDTO"
+              $ref: "#/definitions/MosaicNamesDTO"
         "400":
           description: invalid content
         "409":
@@ -851,6 +851,33 @@ paths:
             description: The array of namespaces information.
             items:
               $ref: "#/definitions/NamespaceInfoDTO"
+        "400":
+          description: invalid content
+        "409":
+          description: invalid argument
+  /account/names:
+    post:
+      tags:
+      - Account routes
+      summary: Get readable names for a set of accountIds.
+      description: Returns friendly names for accounts.
+      operationId: getAccountsNames
+      produces:
+      - application/json
+      parameters:
+      - name: accountIds
+        in: body
+        required: true
+        schema:
+          $ref: "#/definitions/accountsIds"
+      responses:
+        "200":
+          description: success
+          schema:
+            type: array
+            description: The array of account names.
+            items:
+              $ref: "#/definitions/AccountNamesDTO"
         "400":
           description: invalid content
         "409":
@@ -1275,7 +1302,7 @@ definitions:
       address:
         type: string
         description: |
-          The account unique address not encoded.
+          The account unique address in hexadecimal.
         example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
       addressHeight:
         $ref: "#/definitions/UInt64DTO"
@@ -1301,6 +1328,24 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
       importanceHeight:
         $ref: "#/definitions/UInt64DTO"
+  AccountNamesDTO:
+    type: object
+    required:
+    - address
+    - names
+    properties:
+      address:
+        type: string
+        description: The address of the account in base 32.
+        example: SAAM2O7SSJ2A7AU3DZJMSTTRFZT5TFDPQ3ZIIJX7
+      names:
+        type: array
+        description: The mosaic linked namespace names.
+        example:
+        - alias1
+        - alias2
+        items:
+          type: string
   AccountPropertiesInfoDTO:
     type: object
     required:
@@ -1736,7 +1781,7 @@ definitions:
         $ref: "#/definitions/MosaicPropertyIdEnum"
       value:
         $ref: "#/definitions/UInt64DTO"
-  MosaicNameDTO:
+  MosaicNamesDTO:
     type: object
     required:
     - mosaicId
