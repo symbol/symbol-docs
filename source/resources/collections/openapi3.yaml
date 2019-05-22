@@ -1296,7 +1296,7 @@ components:
       - 1
       - 2
       description: |
-        The array of mosaic properties:
+        The mosaic propery id means:
         * 0 - MosaicFlags
         * 1 - Divisibility
         * 2 - Duration
@@ -2012,28 +2012,11 @@ components:
           description: The number of definitions for the same mosaic.
           example: 1
         properties:
-          $ref: "#/components/schemas/MosaicPropertiesDTO"
+          type: array
+          items:
+            $ref: "#/components/schemas/MosaicPropertyDTO"
         levy:
           type: object
-    MosaicPropertiesDTO:
-      type: array
-      description: |
-        The array of mosaic properties:
-        * First element - MosaicFlags
-        * Second element - Divisibility
-        * Third element - Duration
-      items:
-        $ref: "#/components/schemas/UInt64DTO"
-      example:
-      - |-
-        - 0
-        - 0
-      - |-
-        - 0
-        - 0
-      - |-
-        - 0
-        - 0
     MosaicPropertyDTO:
       type: object
       properties:
