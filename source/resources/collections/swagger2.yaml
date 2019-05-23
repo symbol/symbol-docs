@@ -887,7 +887,7 @@ paths:
       tags:
       - Namespace routes
       summary: Get readable names for a set of namespaces
-      description: Returns friendly names for mosaics.
+      description: Returns friendly names for namespaces.
       operationId: getNamespacesNames
       produces:
       - application/json
