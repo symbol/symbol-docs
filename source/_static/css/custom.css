@@ -198,6 +198,10 @@ body > .container.full-width {
     margin: 0 0 10px 0;
 }
 
+.content ul.simple li{
+    padding-bottom: 5px;
+}
+
 .content h2 {
     font-size: 30px;
 }
