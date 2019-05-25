@@ -2,11 +2,11 @@
 Namespace
 #########
 
-Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
+Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the NEM blockchain.
 
 A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
 
-An account can link a registered name (namespace or subnamespace) with an :doc:`account <account>` or a :doc:`mosaic <mosaic>` identifier.
+An account can link a registered name (namespace or subnamespace) with an :doc:`account <../guides/namespace/link-a-namespace-to-an-address>` or a :doc:`mosaic <../guides/namespace/link-a-namespace-to-a-mosaic>` identifier.
 
 *************
 Subnamespaces
@@ -14,7 +14,7 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
 
-You can create multiple subnamespaces with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
+You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
 
@@ -30,6 +30,12 @@ Restrictions:
 
 - An account can only associate a name with one account or mosaic, but those can have many aliases linked.
 - An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-filter>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
+
+****
+Cost
+****
+
+The cost of creating a namespace is  `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, registering a namespace costs ``1 cat.currency per block`` plus transactions fees. Registering a subnamespace has a fixed cost of ``100 cat.currency`` plus transaction fees.
 
 *******
 Example
@@ -102,11 +108,11 @@ Announce a register namespace transaction to register and re-rent a namespace.
     :delim: ;
 
     namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
-    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
-    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    name; array<bytes, namespaceNameSize>; A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
 
 .. _address-alias-transaction:

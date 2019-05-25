@@ -32,11 +32,12 @@ import {
 } from "nem2-sdk";
 import {filter, map, mergeMap} from "rxjs/operators";
 
+/* start block 01 */
 const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {
     return transaction instanceof TransferTransaction &&
         transaction.signer!.equals(publicAccount) &&
         transaction.mosaics.length == 1 &&
-        transaction.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID) &&
+        transaction.mosaics[0].id.equals(NetworkCurrencyMosaic.NAMESPACE_ID) &&
         transaction.mosaics[0].amount.compact() < NetworkCurrencyMosaic.createRelative(100).amount.compact();
 };
 
@@ -66,3 +67,4 @@ listener.open().then(() => {
         .subscribe(announcedTransaction => console.log(announcedTransaction),
             err => console.error(err));
 });
+/* end block 01 */

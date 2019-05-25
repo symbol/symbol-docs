@@ -33,6 +33,7 @@ class GettingConfirmedTransactions {
 
     @Test
     void gettingConfirmedTransactions() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 01 */
         final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
 
         // Replace with public key
@@ -46,5 +47,6 @@ class GettingConfirmedTransactions {
         final List<Transaction> transactions = accountHttp.transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
 
         System.out.print(transactions);
+        /* end block 01 */
     }
 }

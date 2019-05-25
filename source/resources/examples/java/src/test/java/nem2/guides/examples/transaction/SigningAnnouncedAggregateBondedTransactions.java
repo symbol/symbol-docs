@@ -33,7 +33,7 @@ class SigningAnnouncedAggregateBondedTransactions {
 
     @Test
     void SigningAnnouncedAggregateBondedTransactions() throws ExecutionException, InterruptedException, MalformedURLException {
-
+        /* start block 02 */
         // Replace with a private key
         final String privateKey = "";
 
@@ -55,5 +55,6 @@ class SigningAnnouncedAggregateBondedTransactions {
                 })
                 .toFuture()
                 .get();
+        /* end block 02 */
     }
 }

@@ -4,15 +4,15 @@
 Writing a guide
 ###############
 
-Thank you for considering writing a new guide! 
+Thank you for considering writing a new guide!
 
 ***************
-Before starting 
+Before starting
 ***************
 
 1. Open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending to be written. They have the label "great new issue".
 
-2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea. 
+2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea.
 
 3. Classify your guide under one of the following categories:
 
@@ -39,25 +39,25 @@ Writing the guide
 
 .. code-block:: bash
 
-    $> git clone <url>
+    git clone <url>
 
-2. Make sure you have Python 2.7 or 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed. 
+2. Make sure you have Python 2.7 or 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed.
 
 .. code-block:: bash
 
-    $> python --version
+    python --version
 
 3. Install requirements using pip:
 
 .. code-block:: bash
 
-    $> pip install -r requirements.txt
+    pip install -r requirements.txt
 
 3. Create a new ``rst`` file inside one of the guides folder,
 
 .. code-block:: bash
 
-    $> mkdir source/guides/<folder_name>/<title>.rst
+    mkdir source/guides/<folder_name>/<title>.rst
 
 4. Use the following template to organize your content.
 
@@ -75,7 +75,7 @@ Writing the guide
     Title
     #####
 
-    Objective after finishing the guide. 
+    Objective after finishing the guide.
 
     **********
     Background
@@ -111,12 +111,12 @@ Writing the guide
 
     .. example-code::
 
-        .. literalinclude:: <relative_url>.ts
+        .. viewsource:: <relative_url>.ts
             :language: typescript
             :lines: 20-40
 
 7. Test and preview your changes.
 
-    $> make livehtml
+    make livehtml
 
 8. Push your changes and do a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the documentation writing style.

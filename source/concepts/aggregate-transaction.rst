@@ -39,7 +39,7 @@ Aggregate bonded
 
 An aggregate transaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before sending an **aggregate bonded transaction**, an account must first announce a :ref:`hash lock transaction<hash-lock-transaction>` and get its confirmation with at least ``10 cat.currency``.
+.. note:: Before announcing an **aggregate bonded transaction**, an account must announce and get confirmed a :ref:`hash lock transaction<hash-lock-transaction>` locking ``10 cat.currency``.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -93,12 +93,12 @@ Guides
 Schemas
 *******
 
-
-
 .. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
 
 AggregateTransaction
 ====================
+
+Announce an aggregate transaction to combine multiple transactions together.
 
 **Version**: 0x02
 
@@ -113,8 +113,8 @@ AggregateTransaction
     :delim: ;
 
     payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array(byte, payloadSize);  The array of transactions initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(byte, size - payloadSize); An array of transaction :ref:`cosignatures <cosignature>`.
+    transactions; array<byte, payloadSize>;  The array of transactions, which can be initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    cosignatures; array<byte, size - payloadSize>; An array of transaction :ref:`cosignatures <cosignature>`.
 
 .. _cosignature-transaction:
 
@@ -155,11 +155,15 @@ HashLockTransaction
 
 **Alias**: LockFundsTransaction
 
-Announce a hash lock transaction before sending a signed :ref:`aggregate bonded transaction<aggregate-transaction>` to prevent network spamming.
+Lock funds with a hash lock transaction before sending an :ref:`aggregate bonded transaction<aggregate-transaction>`. This transaction prevents spamming the partial cache with transactions that never will complete.
 
-Once the related aggregate bonded transaction is confirmed, the locked funds become available in the account that signed the initial hash lock transaction.
+After enough funds are locked, the aggregate transaction can be announced and added into the partial transactions cache.
 
-If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount is collected by the block harvester at the height where the lock expires.
+.. note:: It's not necessary to sign the aggregate and its hash lock transaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a hash lock transaction, he can ask Alice to send the hash lock funds transaction sharing the signed aggregate transaction hash.
+
+Upon completion of the aggregate, the locked funds become available in the account that signed the initial hash lock transaction.
+
+If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
 
 **Version**: 0x01
 
@@ -174,5 +178,5 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :delim: ;
 
     mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
-    duration; uint64; The lock duration.
+    duration; uint64; The lock duration. Duration is allowed to lie up to ``2`` days.
     hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.

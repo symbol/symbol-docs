@@ -1,80 +1,170 @@
 {% extends "layout.html" %}
 {% set title = _('Home') %}
+
+{% block extrahead %}
+{{ super() }}
+<link rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+{% endblock %}
+
 {% block body %}
-<div class="home jumbotron text-center gap">
-    <h1>{% trans %}NEM Developer Center{% endtrans %}</h1>
-    <p>{% trans %}Start integrating NEM into your application.{% endtrans %}</p>
-    <div class="image-container">
-        <img src="{{pathto('_static/images/nem-developers.png', 1 )}}"/>
-    </div>
-</div>
-<section class="container">
-    <div class="row custom-row">
-        <p> {% trans %}NEM is a <b>developer-friendly blockchain platform.</b> The latest NEM version, Catapult, gives you direct access to a specialized set of <b>tested</b> and <b> secure on-blockchain features</b> using your
-            favourite <b>programming language</b>.{% endtrans %}
-        </p>
-    </div>
-</section>
-<section class="home container card-container gap">
-    <div class="row top-gap">
+
+<section id="getting-started" class="row bg-blue inner-gap">
+    <div class="col-md-8 center-block">
         <div class="col-md-6">
-            <a href="{{ pathto('getting-started/what-is-nem')}}">
-                <div class="card">
-                    <div class="col-sm-4 hidden-xs card-img">
-                        <img class="align-center" src="{{pathto('_static/images/home-getting-started.png', 1)}}"/>
-                    </div>
-                    <div class="col-sm-8">
-                        <h3 class="card-title">{% trans %}Getting started{% endtrans %}</h3>
-                        <p class="card-text">{% trans %}Install the development kit and start coding your first blockchain app.{% endtrans %}</p>
-                        <b class="card-cta">{% trans %}START{% endtrans %}</b>
-                    </div>
-                </div>
-            </a>
+            <h1>{% trans %}Preview NEM's next core engine{% endtrans %}</h1>
+            <p>{% trans %}Choose a programming language to get started{% endtrans %}</p>
+            <div class="inner-gap">
+                <ul class="list-inline ">
+                    <li>
+                        <a href="{{ pathto('getting-started/setup-workstation')}}?code=typescript">
+                            <div class="card font-icon">
+                                <i class="devicon-typescript-plain colored"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="{{ pathto('getting-started/setup-workstation')}}?code=javascript">
+                        <div class="card font-icon">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                    </a></li>
+                    <li>
+                        <div class="card font-icon"  data-toggle="tooltip" data-placement="top" title="Coming soon!">
+                            <i class="devicon-java-plain"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card font-icon"  data-toggle="tooltip" data-placement="top" title="Coming soon!">
+                            <i class="devicon-python-plain"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p class="api-link"><b>{% trans %}Or connect to the {% endtrans %}<a href="{{ pathto('api')}}">{% trans %}REST API{% endtrans %}</a></b>.</p>
         </div>
         <div class="col-md-6">
-            <a href="{{ pathto('concepts/account')}}">
-                <div class="card">
-                    <div class="col-sm-4 hidden-xs card-img">
-                        <img class="align-center" src="{{pathto('_static/images/home-built-in-features.png', 1)}}"/>
-                    </div>
-                    <div class="col-sm-8">
-                        <h3 class="card-title">{% trans %}Built-in Features{% endtrans %}</h3>
-                        <p class="card-text">{% trans %}Architecture your solution connecting the features that make up the Smart Asset System.{% endtrans %}</p>
-                        <b class="card-cta">{% trans %}COMBINE{% endtrans %}</b>
-                    </div>
-                </div>
-            </a>
+            <img class="align-center hidden-sm hidden-xs" src="{{pathto('_static/images/use-cases.png', 1 )}}"/>
+        </div>
+    </div>
+</section>
+
+
+<section id="featured-guides" class="inner-gap">
+    <div class="row gap">
+        <div class="col-md-8 center-block">
+            <div class="col-md-6">
+                <h2>{% trans %}Featured Guides{% endtrans %}</h2>
+                <p>{% trans %}Step by step guides with code examples.{% endtrans %}</p>
+            </div>
         </div>
     </div>
     <div class="row">
-
-        <div class="col-md-6">
-            <a href="{{ pathto('concepts/cryptography')}}">
+        <div class="col-md-8 center-block equal-height">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="col-sm-4 hidden-xs card-img">
-                        <img class="align-center" src="{{pathto('_static/images/home-guides.png', 1)}}"/>
-                    </div>
-                    <div class="col-sm-8">
-                        <h3 class="card-title">{% trans %}Protocol{% endtrans %}</h3>
-                        <p class="card-text">{% trans %}Learn in-depth how the blockchain protocol works.{% endtrans %}</p>
-                        <b class="card-cta">{% trans %}DISCOVER{% endtrans %}</b>
-                    </div>
+                    <h3 class="card-title">{% trans %}Account{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('guides/account/creating-and-opening-an-account')}}">{% trans %}Creating an account{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/account/getting-account-information')}}">{% trans %}Getting the account information{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/account/reading-transactions-from-an-account')}}">{% trans %}Getting transactions from an account{% endtrans %}</a></li>
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/account')}}#guides">{% trans %}View More{% endtrans %}</a></p>
                 </div>
-            </a>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{% trans %}Multisignature{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('guides/account/converting-an-account-to-multisig')}}">{% trans %}Creating a multisig contract{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/transaction/sending-a-multisig-transaction')}}">{% trans %}Sending a multisig transaction{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/account/modifying-a-multisig-account')}}">{% trans %}Modifying a multisig account{% endtrans %}</a></li>
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/multisig-account')}}#guides">{% trans %}View More{% endtrans %}</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{% trans %}Assets{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('guides/mosaic/creating-a-mosaic')}}">{% trans %}Creating a mosaic{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/mosaic/getting-mosaic-information')}}">{% trans %}Getting the mosaic information{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/mosaic/modifying-mosaic-supply')}}">{% trans %}Modify a mosaic supply{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/namespace/registering-a-namespace')}}">{% trans %}Registering a namespace{% endtrans %}</a></li>
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/mosaic')}}#guides">{% trans %}View More{% endtrans %}</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{% trans %}Transactions{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('guides/transaction/sending-a-transfer-transaction')}}">{% trans %}Sending a transfer transaction{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/transaction/monitoring-a-transaction-status')}}">{% trans %}Monitoring a transaction status{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/transaction/sending-payouts-with-aggregate-complete-transaction')}}">{% trans %}Grouping transactions{% endtrans %}</a></li>
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/transaction')}}#guides">{% trans %}View More{% endtrans %}</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{% trans %}Advanced Transactions{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction')}}">{% trans %}Creating an escrow contract{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/transaction/signing-announced-aggregate-bonded-transactions')}}">{% trans %}Cosigning transactions{% endtrans %}</a></li>
+                            <li><a href="{{ pathto('guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain')}}">{% trans %}Atomic Cross-Chain Swap{% endtrans %}</a></li>
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/aggregate-transaction')}}#guides">{% trans %}View More{% endtrans %}</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{% trans %}Deploy{% endtrans %}</h3>
+                    <p class="card-text">
+                        <ul>
+                            <li><a href="{{ pathto('getting-started/setup-workstation')}}">{% trans %}Running Catapult locally{% endtrans %}</a></li>
+                            <li>{% trans %}Deploying a test net node <span class="label label-default">Coming soon</span>{% endtrans %}</li>
+                            <li>{% trans %}Configuring your network <span class="label label-default">Coming soon</span>{% endtrans %}</li>
+
+                        </ul>
+                    </p>
+                    <p class="card-cta"><a href="{{ pathto('concepts/node')}}">{% trans %}View More{% endtrans %}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="technical-documentation" class="row inner-gap bg-gray">
+    <div class="col-md-8 center-block">
+        <div class="col-md-6">
+            <div>
+                <h2>{% trans %}Technical Documentation{% endtrans %}</h2>
+                <p class="card-text">{% trans %}Architecture your solution connecting the features that make up the Smart Asset System.{% endtrans %}</p>
+            </div>
+            <div class="top-gap">
+                <ul>
+                    <li><a href="{{ pathto('getting-started/what-is-nem')}}">{% trans %}What is NEM?{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('concepts/cryptography')}}">{% trans %}Protocol{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('concepts/account')}}">{% trans %}Built-in Features{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('api')}}">{% trans %}REST API{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('sdk')}}">{% trans %}SDKs{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('cli')}}">{% trans %}Client{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('extensions')}}">{% trans %}Extensions{% endtrans %}</a></li>
+                </ul>
+            </div>
         </div>
         <div class="col-md-6">
-            <a href="{{ pathto('references')}}">
-                <div class="card">
-                    <div class="col-sm-4 hidden-xs card-img">
-                        <img class="align-center" src="{{pathto('_static/images/home-references.png', 1)}}"/>
-                    </div>
-                    <div class="col-sm-8">
-                        <h3 class="card-title">{% trans %}References{% endtrans %}</h3>
-                        <p class="card-text">{% trans %}From SDKs to extensions that make blockchain development easier.{% endtrans %}</p>
-                        <b class="card-cta">{% trans %}DEVELOP{% endtrans %}</b>
-                    </div>
-                </div>
-            </a>
+            <img class="align-center hidden-sm hidden-xs" src="{{pathto('_static/images/solution.png', 1 )}}"/>
         </div>
     </div>
 </section>

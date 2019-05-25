@@ -9,7 +9,7 @@ body {
 
 #redoc * {
     font-family: "Roboto", sans-serif !important;
-    font-weight: 400 !important;
+    font-weight: 400;
     font-size: 16px !important;
 }
 
@@ -60,6 +60,11 @@ body {
     color: #fff;
 }
 
+#redoc ul {
+    padding-left: 15px;
+    list-style: initial;
+}
+
 #redoc ul li {
     text-indent: 0 !important;
 }
@@ -74,33 +79,13 @@ body {
 }
 
 /* Sidebar */
-
 #redoc .menu-content {
-    background-color: transparent;
+    background-color: #fff;
     text-shadow: 0 1px 0 #fff;
 }
 
-#redoc .search-input{
-    margin: 0px;
-    padding-left: 0px;
-}
-
-#redoc .menu-content > div:first-child li{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#redoc .menu-content > div:first-child .scrollbar-container > div:first-child{
-    background-color: transparent;
-    border-bottom: 0px;
-}
-
-#redoc .search-icon {
-    display: none;
-}
-
 #redoc .menu-content ul li {
-    padding-left: 0 !important;
+    padding: 0;
 }
 
 #redoc .menu-content .operation-type {
@@ -115,24 +100,13 @@ body {
     color: #333;
 }
 
-#redoc .menu-content label {
-    padding-left: 0px;
-    padding-right: 30px;
-}
-
 #redoc .menu-content li li label:hover,
 #redoc .menu-content li li label.active {
     text-decoration: none;
     color: #2780e3 !important;
 }
 
-#redoc .menu-content label.-depth1.active > span {
-    color: #333 !important;
-    font-weight: bold !important;
-}
-
 /* Content*/
-
 @media screen and (max-width: 800px) {
 
     .content {
@@ -142,5 +116,11 @@ body {
 
     #redoc > div:not(.redoc-wrap) {
         padding: 40px 0px 40px 0px;
+    }
+
+    #redoc .menu-content{
+        height: calc(100vh - 64px) !important;
+        top:  64px !important;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
     }
 }

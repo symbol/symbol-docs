@@ -27,7 +27,7 @@ const Account = nem2Sdk.Account,
     PlainMessage = nem2Sdk.PlainMessage,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
-    LockFundsTransaction = nem2Sdk.LockFundsTransaction,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
     UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
     Mosaic = nem2Sdk.Mosaic,
@@ -36,7 +36,7 @@ const Account = nem2Sdk.Account,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -60,40 +60,45 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
     [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Aggregate Transaction
+/* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
-    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),git reset --soft HEAD^1
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
+console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
+/* end block 02 */
 
-const lockFundsTransaction = LockFundsTransaction.create(
+/* start block 03 */
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
         UInt64.fromUint(10000000)
     ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(aliceAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 03 */

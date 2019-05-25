@@ -4,13 +4,29 @@ Multisig Account
 
 Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
 
-A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig **cosignatories**.
+*************
+Cosignatories
+*************
 
-Nevertheless, it is not always necessary to force all cosignatories to cosign the transaction. NEM allows to set up the minimum number of consignatory agreements. These properties can be edited afterwards to suit almost all needs. NEM's current implementation of multisig is *"M-of-N"*. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. The cosignatories - other accounts - of the multisig will become the account managers.
 
-The number of minimum cosignatures to approve transactions and remove cosignatories is editable.
+From that moment on,  the multisig account cannot announce transactions by itself. One of the cosignatory has to propose the transaction involving the multisig, wrapping it in an :doc:`aggregate transaction <aggregate-transaction>`. To record the transaction in the block, the other cosignatories will have to agree.
 
-.. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
+****************************
+Minimum approval and removal
+****************************
+
+It is not always necessary to force all cosignatories to cosign transactions associated with the multisig account. NEM allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
+
+NEM's current implementation of multisig is *"M-of-N"*. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+
+Similarly, cosignatories can :ref:`invite other accounts to take part in the multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  :ref:`propose to remove others <guide-modify-a-multisig-account-removing-a-cosignatory>` when the defined conditions are fulfilled.
+
+.. note:: Multisig accounts are a powerful tool, but please use this tool with caution.  If the cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose wisely ``minimum removal`` parameter to avoid this situation.
+
+***********
+Constraints
+***********
 
 Some important considerations to keep in mind:
 
@@ -57,6 +73,7 @@ Assets ownership
 
 Multisig accounts can be used to represent the ownership of assets.
 
+
 A company could create a 1-of-1 multisig account for each of their products, adding themselves as the cosignatory. When the company sells the product to Alice, she becomes the owner through the action of being added as the cosigner, and the company is removed in the same transaction.
 
 .. figure:: ../resources/images/examples/multisig-asset-ownership.png
@@ -65,7 +82,7 @@ A company could create a 1-of-1 multisig account for each of their products, add
 
     Transferring an account
 
-Manufacturing and Supply Chains
+Manufacturing and supply chains
 ===============================
 
 In this example, a manufacturer is shipping a pharmaceutical product.
@@ -80,8 +97,9 @@ Sensors in the shipping container report temperature data every 5 minutes and co
 
     Manufacturing and Supply Chains
 
+***************
 Fraud Detection
-===============
+***************
 
 This example shows how a high-security account can be made easier to use.
 
@@ -118,8 +136,9 @@ ModifyMultisigTransaction
 
 Announce a modify multisig account transaction to:
 
-a) Transform an account to multisig.
+a) Transform an account to multisig account.
 b) Change the configurable properties of a multisig account.
+c) Add or delete cosignatories from a multisig account.
 
 **Version**: 0x03
 
@@ -136,7 +155,7 @@ b) Change the configurable properties of a multisig account.
     minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; The number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
+    modification; array<:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount>; The array of cosignatory :doc:`accounts <account>` to add or delete.
 
 .. _cosignatory-modification:
 

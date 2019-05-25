@@ -19,14 +19,15 @@
 import {
     AccountHttp,
     Address,
+    MosaicId,
     NetworkType,
     PublicAccount,
     TransactionType,
-    TransferTransaction,
-    MosaicId
+    TransferTransaction
 } from 'nem2-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
+/* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
 const originPublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
@@ -53,3 +54,4 @@ accountHttp
         total => console.log('Total '+ mosaicId.toHex() +' sent to account', address.pretty(), 'is:', total),
         err => console.error(err)
     );
+/* end block 01 */

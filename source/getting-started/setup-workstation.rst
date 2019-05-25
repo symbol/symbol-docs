@@ -9,17 +9,13 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
+.. note:: ⚠️ NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it **should not power any production Catapult instances**.
+
 .. _setup-catapult-service-bootstrap:
 
 **********************************
 Running Catapult Service Bootstrap
 **********************************
-
-.. figure:: ../resources/images/four-layer-architecture-basic.png
-    :width: 650px
-    :align: center
-
-**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
 You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
 
@@ -27,9 +23,9 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
-    $> cd catapult-service-bootstrap
-    $> docker-compose up
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
+    cd catapult-service-bootstrap
+    docker-compose up
 
 .. note:: Is catapult service bootstrap not working? Check |catapult-service-bootstrap-known-issues|.
 
@@ -37,7 +33,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    $> curl localhost:3000/block/1
+    curl localhost:3000/block/1
 
 .. _setup-getting-a-test-account:
 
@@ -57,14 +53,14 @@ Finally, the account address is generated with the public key, following the NEM
 
 .. code-block:: bash
 
-    $> sudo npm install --global nem2-cli
+    sudo npm install --global nem2-cli
 
 2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
 .. code-block:: bash
 
-    $> cd  build/generated-addresses/
-    $> cat addresses.yaml
+    cd  build/generated-addresses/
+    cat addresses.yaml
 
 3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
 
@@ -72,7 +68,7 @@ Finally, the account address is generated with the public key, following the NEM
 
 .. code-block:: bash
 
-    $> nem2-cli profile create
+    nem2-cli profile create
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Introduce your private key: 41************************************************************FF
@@ -101,19 +97,19 @@ Create a folder for your new project and run the instructions for the selected l
 
 .. tabs::
 
-    .. tab:: Typescript
+    .. tab:: TypeScript
 
         1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
         .. code-block:: bash
 
-            $> npm init
+            npm init
 
         2. Install nem2-sdk and rxjs library.
 
         .. code-block:: bash
 
-            $> npm install nem2-sdk rxjs
+            npm install nem2-sdk rxjs
 
         3. nem2-sdk is built with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -121,28 +117,28 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            $> sudo npm install --global typescript
-            $> typescript --version
+            sudo npm install --global typescript
+            typescript --version
 
         4. Use `ts-node`_ to execute TypeScript files with node.
 
         .. code-block:: bash
 
-            $> sudo npm install --global ts-node
+            sudo npm install --global ts-node
 
-    .. tab:: Javascript
+    .. tab:: JavaScript
 
         1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
 
         .. code-block:: bash
 
-            $> npm init
+            npm init
 
         2. Install nem2-sdk and rxjs library.
 
         .. code-block:: bash
 
-            $> npm install nem2-sdk rxjs
+            npm install nem2-sdk rxjs
 ..
     .. tab:: Java
 
@@ -180,8 +176,8 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            $> Install-Package nem2-sdk
-            $> Install-Package System.Reactive
+            Install-Package nem2-sdk
+            Install-Package System.Reactive
 
         Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
 

@@ -32,8 +32,7 @@ import {sha3_256} from 'js-sha3';
 import * as crypto from 'crypto';
 
 
-
-// 01 - Set up
+/* start block 01 */
 const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
 const alicePrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJIN);
 
@@ -42,47 +41,52 @@ const bobPrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJI
 
 const privateChainTransactionHttp = new TransactionHttp('http://localhost:3000');
 const publicChainTransactionHttp = new TransactionHttp('http://localhost:3000');
+/* end block 01 */
 
-
-// 02 - Alice picks a random number and hashes it.
+/* start block 02 */
 const random = crypto.randomBytes(10);
 const proof = random.toString('hex');
 const hash = sha3_256.create();
 const secret = hash.update(random).hex().toUpperCase();
+/* end block 02 */
 
-// 03 - Alice creates creates TX1 SecretLockTransaction{ H(x), B, alice token mosaicId, Amount, valid for 96h }
+/* start block 03 */
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([520597229,83226871]), UInt64.fromUint(10)),
-    UInt64.fromUint(96*3600/15), // assuming one block every 15 seconds
+    new Mosaic(new MosaicId([520597229, 83226871]), UInt64.fromUint(10)),
+    UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,
     NetworkType.MIJIN);
+/* end block 03 */
 
-// 04 - Alice sends TX1 to the private chain
+/* start block 04 */
 const tx1Signed = alicePrivateChainAccount.sign(tx1);
 privateChainTransactionHttp
     .announce(tx1Signed)
-    .subscribe(x => console.log(x),err => console.error(err));
+    .subscribe(x => console.log(x), err => console.error(err));
+/* end block 04 */
 
-// 05 - B creates TX2 SecretLockTransaction{ H(x), A, bob token mosaic Id, Amount, valid for 84h }
+/* start block 05 */
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([2061634929,1373884888]), UInt64.fromUint(10)),
-    UInt64.fromUint(84*3600/15), // assuming one block every 15 seconds
+    new Mosaic(new MosaicId([2061634929, 1373884888]), UInt64.fromUint(10)),
+    UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
     NetworkType.MAIN_NET);
+/* end block 05 */
 
-// 06 - Bob sends TX2 to public chain
+/* start block 06 */
 const tx2Signed = bobPublicChainAccount.sign(tx2);
 publicChainTransactionHttp
     .announce(tx2Signed)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 06 */
 
-// 07 - Alice spends TX2 transaction by sending to the public chain the SecretProofTransaction{ H(x), x }
+/* start block 07 */
 const tx3 = SecretProofTransaction.create(
     Deadline.create(),
     HashType.Op_Sha3_256,
@@ -94,8 +98,9 @@ const tx3Signed = alicePublicChainAccount.sign(tx3);
 publicChainTransactionHttp
     .announce(tx3Signed)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 07 */
 
-// 08 - Bob spends TX1 transaction by sending to the private chain the SecretProofTransaction{ H(x), x }
+/* start block 08 */
 const tx4 = SecretProofTransaction.create(
     Deadline.create(),
     HashType.Op_Sha3_256,
@@ -107,3 +112,4 @@ const tx4Signed = bobPrivateChainAccount.sign(tx4);
 privateChainTransactionHttp
     .announce(tx4Signed)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 08 */

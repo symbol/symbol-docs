@@ -18,9 +18,11 @@
 
 import {AccountHttp, Address} from "nem2-sdk";
 
+/* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 const address = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
 accountHttp
     .getAccountInfo(address)
     .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));
+/* end block 01 */

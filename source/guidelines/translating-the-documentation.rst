@@ -45,13 +45,11 @@ Follow these instructions to download the latest translations from Transifex.
 
   pip install transifex-client
 
-
 2. Download the latest translated files. Replace <lang> with your `language code <https://en.wikipedia.org/wiki/ISO_639-1>`_.
 
 .. code-block:: bash
 
   tx pull --mode onlyreviewed --language <lang>
-
 
 3. Compile the docs for the target language.
 
@@ -66,7 +64,6 @@ Follow these instructions to download the latest translations from Transifex.
 .. code-block:: bash
 
   set SPHINXOPTS=-D language=<lang>
-
   .\make.bat html
 
 Push new literals
@@ -95,3 +92,5 @@ Follow these instructions to publish updated source literals to Transifex.
 .. code-block:: bash
 
     tx push --source
+
+:doc:`Submit your changes <suggesting-changes>` into the nem2-docs repository.

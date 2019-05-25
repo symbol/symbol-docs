@@ -26,16 +26,16 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
-
-// 01 - Setup
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 const namespaceId = new NamespaceId('foo');
 const mosaicId = new MosaicId('7cdf3b117a3c40cc');
+/* end block 01 */
 
-// 02 - Create and announce aliasTransaction
+/* start block 02 */
 const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
     AliasActionType.Link,
@@ -49,3 +49,4 @@ const signedTransaction = account.sign(mosaicAliasTransaction);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 02 */

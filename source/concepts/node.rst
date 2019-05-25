@@ -38,7 +38,6 @@ From these interactions, the node assigns a weight between 500 and 10000 to ever
 
 The probability of selecting a remote node depends linearly on its weight. Every four rounds of node selections, the criteria changes to prevent |sybil|. The node selects a peer with high importance instead.
 
-
 RocksDB
 =======
 
@@ -52,15 +51,13 @@ Storing the state in memory is usually faster than using RocksDB. However, stori
 API Component
 *************
 
-**Repository:** |catapult-rest|
+**Repository:** |catapult-server|
 
-The primary responsibility of the API is to store the data in a readable form. Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
+P2P nodes can be configured to have an API layer. The primary responsibility of the API is to store the data in a readable form in MongoDB.
 
-The layer :ref:`validates the transactions <transaction-validation>` received from the REST component. Additionally, the API throws the errors back via ZMQ in binary.
+The API :ref:`validates transactions <transaction-validation>` received from the REST component. Additionally, it throws the errors back via ZMQ in binary.
 
 This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only pushed to P2P nodes once they are complete.
-
-An API component can connect to multiple P2P nodes, but at least must connect to one.
 
 MongoDB
 =======

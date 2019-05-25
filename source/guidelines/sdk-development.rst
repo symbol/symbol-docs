@@ -109,7 +109,7 @@ Before starting
 4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask Catapult related questions.
 6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
-7. Claim the SDK `forking this repository <https://help.github.com/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
+7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
 ***********
 Development
@@ -138,16 +138,26 @@ A project with a good test coverage it's more likely to be used and
 trusted by the developers!
 
 We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last). If you need inspiration, you can adapt the same `tests we
-did <https://github.com/nemtech/nem2-sdk-typescriptjavascript/tree/master/test>`_.
+did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
 
 API Wrapper
 ===========
 
 `Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle the API generation. It supports multiple languages, and hopefully, yours is on the list.
 
-1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_. The API swagger file definition can be found `here <https://github.com/nemtech/nem2-docs/blob/master/source/resources/collections/swagger.yaml>`_.
+1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_.
 
-2. Drop the generated client classes and  implement them using the
+- `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
+
+- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger2.yaml>`_
+
+We run this instruction to generate the DTOs for the JavaScript SDK:
+
+.. code-block:: bash
+
+    docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate -i /local/swagger.yaml -l javascript -t /local/es6_promise --additional-properties usePromises=true -o /local/nem2-js && rm -R nem2-js/test
+
+2. Drop the generated client classes and implement them using the
 `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of
 `ReactiveX <http://reactivex.io/>`_.
 

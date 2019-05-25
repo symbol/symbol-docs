@@ -26,23 +26,22 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/GettingAccountInformation.ts
-        :caption: |getting-account-information-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/GettingAccountInformation.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java
-        :caption: |getting-account-information-java|
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java
         :language: java
-        :lines: 33-40
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/GettingAccountInformation.js
-        :caption: |getting-account-information-js|
+    .. viewsource:: ../../resources/examples/javascript/account/GettingAccountInformation.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/account/GettingAccountInformation.sh
-        :caption: |getting-account-information-cli|
+    .. viewsource:: ../../resources/examples/bash/account/GettingAccountInformation.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -58,45 +57,16 @@ The balance is the amount of the different :doc:`mosaics <../../concepts/mosaic>
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts
-        :caption: |checking-balance-account-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts
         :language: typescript
-        :lines:  22-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
-        :caption: |checking-balance-account-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
         :language: javascript
-        :lines: 28-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/account/CheckingBalanceOfAnAccount.sh
-        :caption: |checking-balance-account-cli|
+    .. viewsource:: ../../resources/examples/bash/account/CheckingBalanceOfAnAccount.sh
         :language: bash
         :start-after: #!/bin/sh
-
-.. |getting-account-information-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAccountInformation.ts" target="_blank">View Code</a>
-
-.. |getting-account-information-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java" target="_blank">View Code</a>
-
-.. |getting-account-information-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingAccountInformation.js" target="_blank">View Code</a>
-
-.. |getting-account-information-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/GettingAccountInformation.sh" target="_blank">View Code</a>
-
-.. |checking-balance-account-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts" target="_blank">View Code</a>
-
-.. |checking-balance-account-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CheckingBalanceOfAnAccount.js" target="_blank">View Code</a>
-
-.. |checking-balance-account-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/CheckingBalanceOfAnAccount.sh" target="_blank">View Code</a>

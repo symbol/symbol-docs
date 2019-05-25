@@ -29,29 +29,29 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
-        :caption: |linking-a-namespace-to-a-mosaic-ts|
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
         :language: typescript
-        :lines:  31-36
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
-        :caption: |linking-a-namespace-to-a-mosaic-js|
+    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
-        :lines: 31-36
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Announce the alias transaction.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
-        :caption: |linking-a-namespace-to-a-mosaic-ts|
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts
         :language: typescript
-        :lines:  39-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-    .. literalinclude:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
-        :caption: |linking-a-namespace-to-a-mosaic-js|
+    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
-        :lines: 39-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
@@ -63,29 +63,12 @@ Now you can send transactions using the namespace linked to the mosaic instead o
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts
-        :caption: |sending-a-transfer-transaction-mosaic-alias-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts
         :language: typescript
-        :lines:  35-42
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js
-        :caption: |sending-a-transfer-transaction-mosaic-alias-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js
         :language: javascript
-        :lines:  33-39
-
-
-.. |linking-a-namespace-to-a-mosaic-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts" target="_blank">View Code</a>
-
-.. |linking-a-namespace-to-a-mosaic-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-mosaic-alias-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-mosaic-alias-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js" target="_blank">View Code</a>
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
