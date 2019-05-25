@@ -1,13 +1,9 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
-    let currentLanguage = document.documentElement.lang || "en";
     docsearch({
         apiKey: 'fea87a364e2d51e3729a3a4889f7fe61',
         indexName: 'nemtech',
         inputSelector: '#search',
-        algoliaOptions: {
-            'facetFilters': ["tags:"+currentLanguage]
-        },
         debug: false
     });
 </script>
