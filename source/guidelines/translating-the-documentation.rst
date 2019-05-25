@@ -52,13 +52,6 @@ Follow these instructions to download the latest translations from Transifex.
   tx pull --mode onlyreviewed --language <lang>
 
 3. Compile the docs for the target language.
-<<<<<<< HEAD
-
-**Linux/Mac**
-
-  make -e SPHINXOPTS="-D language='<lang>'" livehtml
-
-=======
 
 **Linux/Mac**
 
@@ -66,15 +59,12 @@ Follow these instructions to download the latest translations from Transifex.
 
   make -e SPHINXOPTS="-D language='<lang>'" livehtml
 
->>>>>>> 37fa778... Added catapult-rest 0.7.15 (#131)
 **Windows**
 
 .. code-block:: bash
 
   set SPHINXOPTS=-D language=<lang>
-
   .\make.bat html
-<<<<<<< HEAD
 
 Push new literals
 =================
@@ -83,16 +73,6 @@ Follow these instructions to publish updated source literals to Transifex.
 
 .. note:: You will need explicit permissions from the Transifex project coordinator to push source files.
 
-=======
-
-Push new literals
-=================
-
-Follow these instructions to publish updated source literals to Transifex.
-
-.. note:: You will need explicit permissions from the Transifex project coordinator to push source files.
-
->>>>>>> 37fa778... Added catapult-rest 0.7.15 (#131)
 1. Generate the literals. For each documentation file, a .po file will be created under ``build/gettext``.
 
 **Linux/Mac**
@@ -100,7 +80,6 @@ Follow these instructions to publish updated source literals to Transifex.
 .. code-block:: bash
 
   make gettext
-<<<<<<< HEAD
 
 **Windows**
 
@@ -113,17 +92,5 @@ Follow these instructions to publish updated source literals to Transifex.
 .. code-block:: bash
 
     tx push --source
-=======
 
-**Windows**
-
-.. code-block:: bash
-
-  .\make.bat gettext
-
-2. Push the source literals to Transifex.
-
-.. code-block:: bash
->>>>>>> 37fa778... Added catapult-rest 0.7.15 (#131)
-
-    tx push --source
+:doc:`Submit your changes <suggesting-changes>` into the nem2-docs repository.
