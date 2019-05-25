@@ -7,21 +7,26 @@
 # thilon <thilon@datamain.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/account-filter.rst:3
+msgid "Account Filter"
+msgstr "账户过滤器"
 
 #: ../../source/concepts/account-filter.rst:5
 msgid ""
@@ -76,11 +81,34 @@ msgstr ""
 "只有在允许所有附加的 :doc:`马赛克 <mosaic>` 的情况下，帐户才能配置过滤器以允许传入的交易。 "
 "另一方面，该帐户可以拒绝接受包含在已阻止列表中的马赛克的交易。"
 
-#: ../../source/concepts/account-filter.rst:33
+#: ../../source/concepts/account-filter.rst:32
+#: ../../source/concepts/account-filter.rst:44
+msgid "Blocking spam transactions"
+msgstr "阻止垃圾交易"
+
+#: ../../source/concepts/account-filter.rst:34
+msgid ""
+"A company is using the public chain to certify the quality of their "
+"products."
+msgstr "使用公链来验证其产品的质量。"
+
+#: ../../source/concepts/account-filter.rst:36
+msgid ""
+"When the quality verification process concludes, an operator sends a "
+":doc:`quality seal<mosaic>` to the product account."
+msgstr "当质量验证过程结束时，操作员发送一个 :doc:`质量印章<mosaic>` ·到产品账户。"
+
+#: ../../source/concepts/account-filter.rst:46
+msgid ""
+"The company opts to configure their product accounts filters, enabling only "
+"to receive transactions containing ``company.quality.seal`` mosaics."
+msgstr "该公司选择配置他们的产品帐户过滤器，只允许接收包含 ``company.quality.seal`` 马赛克的交易。"
+
+#: ../../source/concepts/account-filter.rst:50
 msgid "EntityType filter"
 msgstr "实体类型过滤器"
 
-#: ../../source/concepts/account-filter.rst:35
+#: ../../source/concepts/account-filter.rst:52
 msgid ""
 "An account can allow/block announcing outgoing transactions with a "
 ":ref:`determined type <transaction-types>`. By doing so, it increases its "
@@ -88,64 +116,22 @@ msgid ""
 msgstr ""
 "账户可以允许或禁止公布 :ref:`·确定类型`的交易 <transaction-types>`。这样做不但增加自身的安全性，防止错误地公布交易。"
 
-#: ../../source/concepts/account-filter.rst:39
-msgid "Examples"
-msgstr "例子"
-
-#: ../../source/concepts/account-filter.rst:42
-#: ../../source/concepts/account-filter.rst:54
-msgid "Blocking spam transactions"
-msgstr "阻止垃圾交易"
-
-#: ../../source/concepts/account-filter.rst:44
-msgid ""
-"A company is using the public chain to certify the quality of their "
-"products."
-msgstr "使用公链来验证其产品的质量。"
-
-#: ../../source/concepts/account-filter.rst:46
-msgid ""
-"When the quality verification process concludes, an operator sends a "
-":doc:`quality seal<mosaic>` to the product account."
-msgstr "当质量验证过程结束时，操作员发送一个 :doc:`质量印章<mosaic>` ·到产品账户。"
-
-#: ../../source/concepts/account-filter.rst:48
-msgid ""
-"The final customers can review the product mosaics scanning a QR code. For "
-"that reason, the company only wants to show related transactions, avoiding "
-"others to spam their products with non-related information."
-msgstr "最终客户可以通过扫描二维码检阅产品马赛克。 因此，该公司只需显示相关交易，避免其他人发送带有与产品无关信息。"
-
-#: ../../source/concepts/account-filter.rst:56
-msgid ""
-"The company opts to configure their product accounts filters, enabling only "
-"to receive transactions containing ``company.quality.seal`` mosaics."
-msgstr "该公司选择配置他们的产品帐户过滤器，只允许接收包含 ``company.quality.seal`` 马赛克的交易。"
-
-#: ../../source/concepts/account-filter.rst:59
+#: ../../source/concepts/account-filter.rst:55
 msgid "Enhancing the account security"
 msgstr "增强账户安全"
 
-#: ../../source/concepts/account-filter.rst:61
-msgid ""
-"Lately, Alice is only using her main account to cosign aggregate "
-"transactions where a :doc:`multisig<multisig-account>` she is a cosignatory "
-"is involved."
-msgstr ""
-"最近，爱丽丝只使用她的主要帐户签署一个 :doc:`多重签名账户<multisig-account>` 的聚合交易。她是该多重签名账户的共签者。"
-
-#: ../../source/concepts/account-filter.rst:63
+#: ../../source/concepts/account-filter.rst:59
 msgid ""
 "As a temporary measure, Alice opts to disable announcing transfer "
 "transactions from her main account, double checking that any of the funds "
 "she owns will be transferred."
 msgstr "作为一项临时措施，爱丽丝选择禁止她的主账户公布转让交易，仔细检查她所拥有的任何资金是否会被转移。"
 
-#: ../../source/concepts/account-filter.rst:67
+#: ../../source/concepts/account-filter.rst:75
 msgid "Schemas"
 msgstr "模式"
 
-#: ../../source/concepts/account-filter.rst:69
+#: ../../source/concepts/account-filter.rst:77
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -154,22 +140,28 @@ msgstr ""
 "配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_。 公共网络配置可能有所不同。"
 
-#: ../../source/concepts/account-filter.rst:78
-#: ../../source/concepts/account-filter.rst:101
-#: ../../source/concepts/account-filter.rst:125
+#: ../../source/concepts/account-filter.rst:84
+msgid ""
+"Configure filters to prevent receiving transactions from undesired "
+"addresses."
+msgstr "配置过滤器以防止从某地址接收到交易。"
+
+#: ../../source/concepts/account-filter.rst:86
+#: ../../source/concepts/account-filter.rst:109
+#: ../../source/concepts/account-filter.rst:133
 msgid "**Version**: 0x01"
 msgstr "**版本**: 0x01"
 
-#: ../../source/concepts/account-filter.rst:80
+#: ../../source/concepts/account-filter.rst:88
 msgid "**Entity type**: 0x4150"
 msgstr "**实体类型**: 0x4150"
 
-#: ../../source/concepts/account-filter.rst:82
-#: ../../source/concepts/account-filter.rst:105
-#: ../../source/concepts/account-filter.rst:129
-#: ../../source/concepts/account-filter.rst:146
-#: ../../source/concepts/account-filter.rst:161
-#: ../../source/concepts/account-filter.rst:177
+#: ../../source/concepts/account-filter.rst:90
+#: ../../source/concepts/account-filter.rst:113
+#: ../../source/concepts/account-filter.rst:137
+#: ../../source/concepts/account-filter.rst:154
+#: ../../source/concepts/account-filter.rst:169
+#: ../../source/concepts/account-filter.rst:185
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
@@ -208,38 +200,26 @@ msgstr "说明"
 #: ../../source/concepts/account-filter.rst:1
 #: ../../source/concepts/account-filter.rst:1
 #: ../../source/concepts/account-filter.rst:1
-msgid "The property type."
-msgstr "属性类型"
-
-#: ../../source/concepts/account-filter.rst:1
-#: ../../source/concepts/account-filter.rst:1
-#: ../../source/concepts/account-filter.rst:1
-msgid "The number of modifications."
-msgstr "修改次数"
-
-#: ../../source/concepts/account-filter.rst:1
-#: ../../source/concepts/account-filter.rst:1
-#: ../../source/concepts/account-filter.rst:1
 msgid "The array of modifications."
 msgstr "一系列的修改"
 
-#: ../../source/concepts/account-filter.rst:99
+#: ../../source/concepts/account-filter.rst:107
 msgid ""
 "Configure filters to prevent receiving transactions containing a specific "
 "mosaic."
 msgstr "配置过滤器以防止接收包含特定马赛克的交易。"
 
-#: ../../source/concepts/account-filter.rst:103
+#: ../../source/concepts/account-filter.rst:111
 msgid "**Entity type**: 0x4250"
 msgstr "**实体类型**: 0x4250"
 
-#: ../../source/concepts/account-filter.rst:123
+#: ../../source/concepts/account-filter.rst:131
 msgid ""
 "Configure filters to prevent announcing transactions by :ref:`type "
 "<transaction-types>`."
 msgstr "配置过滤器以防止公布特定 :ref:`类型 <transaction-types>` 的交易。"
 
-#: ../../source/concepts/account-filter.rst:127
+#: ../../source/concepts/account-filter.rst:135
 msgid "**Entity type**: 0x4350"
 msgstr "**实体类型**: 0x4350"
 
@@ -269,24 +249,8 @@ msgid "Id"
 msgstr "Id"
 
 #: ../../source/concepts/account-filter.rst:1
-msgid "The property type is an address."
-msgstr "属性类型是一个地址。"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type is mosaic id."
-msgstr "属性类型是一个马赛克id"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property type is a transaction type."
-msgstr "属性类型是一个交易类型"
-
-#: ../../source/concepts/account-filter.rst:1
 msgid "Property type sentinel."
 msgstr "属性类型哨兵。"
-
-#: ../../source/concepts/account-filter.rst:1
-msgid "The property is interpreted as a blocking operation."
-msgstr "该属性被解释为阻止型操作。"
 
 #: ../../source/concepts/account-filter.rst:1
 msgid "Add property value."

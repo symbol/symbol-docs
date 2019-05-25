@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,26 +29,7 @@ msgstr "モザイクの作成"
 msgid "Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`."
 msgstr "このガイドに従って :doc:`モザイク<../../concepts/mosaic>` を作成します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:16
-msgid "Prerequisites"
-msgstr "前提条件"
-
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:18
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:19
-msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:23
-msgid "Let’s get into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:25
 msgid ""
 "Mosaics can be used to represent any asset in the blockchain such as "
 "objects, tickets, coupons, stock share representation, and even your "
@@ -56,11 +37,26 @@ msgid ""
 msgstr ""
 "モザイクは物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなる資産をブロックチェーン上に表現するために使用されます。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:27
-msgid "You will need to announce two transactions to create a mosaic:"
-msgstr "モザイクを作成するには、2つのトランザクションをアナウンスする必要があります。"
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:22
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:24
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:25
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:29
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:34
 msgid ""
 "A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to "
 "create the mosaic, with the following properties:"
@@ -85,59 +81,32 @@ msgid "Divisibility"
 msgstr "可分性"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "0"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "The mosaic won't be divisible."
-msgstr "モザイクは可分できません。"
+msgid ""
+"The mosaic won't be divisible. Determines up to what decimal place the "
+"mosaic can be divided."
+msgstr "このモザイクは不可分です。モザイクを分割できる小数点以下の桁数を決定します。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid "Duration"
 msgstr "期間"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "1000"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "The mosaic will be registered for 1000 blocks."
-msgstr "モザイクは 1000 ブロック登録されます。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Supply mutable"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "True"
-msgstr ""
+msgid ""
+"The mosaic will be created for the next 1000 blocks. If you want to create a"
+" non-expiring mosaic, do not set this property."
+msgstr "モザイクは以降1000ブロック先まで作成されます。期限が切れないモザイクを作成したい場合はこのプロパティを設定しないでください。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid "The mosaic supply can change at a later point."
 msgstr "モザイク供給量は後に変更可能です。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Transferable"
-msgstr ""
+msgid ""
+"The mosaic can be transferred between arbitrary accounts. Otherwise, the "
+"mosaic can be only transferred back to the mosaic creator."
+msgstr "このモザイクは任意のアカウント間で転送できます。そうでない場合はモザイクをモザイク作成者へ送り返すことしかできません。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "The mosaic can be transferred between arbitrary accounts."
-msgstr "モザイクを２つのアカウント間で転送できます。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:44
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:58
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:72
-msgid "|creating-a-mosaic-ts|"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:49
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:63
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:77
-msgid "|creating-a-mosaic-js|"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:54
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:59
 msgid ""
 "A :ref:`mosaic supply change transaction <mosaic-supply-change-"
 "transaction>`, to set the supply. We are going to create 1.000.000 mosaic "
@@ -146,7 +115,17 @@ msgstr ""
 "供給量を設定するために :ref:`モザイク供給量変更トランザクション <mosaic-supply-change-transaction>` "
 "を用います。1,000,000 モザイク単位を作成していきます。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:68
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:73
+msgid ""
+"NEM mainly works with absolute amounts. To get an absolute amount, multiply "
+"the amount of assets you want to create by 10\\ :sup:`divisibility`.  For "
+"example, if the mosaic has divisibility 2, to create 10 units (relative) you"
+" should define 1000 (absolute) instead."
+msgstr ""
+"NEM は主に絶対量を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
+"を乗じてください。例えば、モザイクが可分性 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:75
 msgid ""
 "Both transactions can be announced together using an :ref:`aggregate "
 "transaction <aggregate-transaction>`."
@@ -154,15 +133,11 @@ msgstr ""
 "両方のトランザクションは、 :ref:`アグリゲートトランザクション <aggregate-transaction>` "
 "を使うことで一緒にアナウンスできます。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:82
-msgid "|creating-a-mosaic-cli|"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:89
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:95
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:91
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:97
 msgid ""
 ":doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic "
 "created to another account, :doc:`modify the mosaic properties <modifying-"

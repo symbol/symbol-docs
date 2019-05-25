@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -58,16 +58,6 @@ msgstr "それではコードを見ていきましょう"
 msgid "Create a function to cosign any aggregate bonded transaction."
 msgstr "アグリゲートボンドトランザクションに署名する関数を作成します。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:30
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:54
-msgid "|signing-announced-aggregate-bonded-transactions-automatically-ts|"
-msgstr ""
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:35
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:64
-msgid "|signing-announced-aggregate-bonded-transactions-automatically-js|"
-msgstr ""
-
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:40
 msgid ""
 "Create a new listener to get notified every time a new aggregate bonded "
@@ -112,10 +102,6 @@ msgstr ""
 "``TransactionHttp`` リポジトリを使って ``CosignatureSignedTransaction`` "
 "をネットワークへアナウンスします。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:59
-msgid "|signing-announced-aggregate-bonded-transactions-automatically-java|"
-msgstr ""
-
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:71
 msgid "What's next?"
 msgstr "次は？"
@@ -147,9 +133,3 @@ msgstr "資産を送信するトランザクションは ``100 cat.currency`` �
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:80
 msgid "Try it yourself! Here you have a possible implementation:"
 msgstr "こちらで試してみてください！ここに可能な実装をご用意しました:"
-
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:84
-msgid ""
-"|signing-announced-aggregate-bonded-transactions-automatically-with-"
-"constraints-ts|"
-msgstr ""

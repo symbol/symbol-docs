@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -71,114 +71,40 @@ msgstr "Alice は Bob へ ``20 cat.currency`` を要求したいと思ってい�
 msgid "Set up both Alice's and Bob's accounts."
 msgstr "Alice と Bob の両方のアカウントをセットアップします。"
 
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:38
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:58
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:77
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:91
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:105
-msgid "|asking-for-mosaics-with-aggregate-bonded-transaction-ts|"
-msgstr ""
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:43
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:63
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:82
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:96
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:110
-msgid "|asking-for-mosaics-with-aggregate-bonded-transaction-js|"
-msgstr ""
-
 #: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:48
-msgid ""
-"Alice creates an aggregate bonded transaction with two inner transactions:"
-msgstr "Alice は2つのインナートランザクションを含めたアグリゲートボンドトランザクションを作ります:"
+msgid "Create an aggregate bonded transaction with two inner transactions:"
+msgstr "2つのインナートランザクションを含めたアグリゲートボンドトランザクションを作ります:"
 
 #: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:50
+msgid "From Alice to Bob with the message ``send me 20 cat.currency``."
+msgstr "Alice から Bob へメッセージの ``send me 20 cat.currency`` を添えて。"
+
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:64
+msgid "From Bob to Alice sending ``20 cat.currency``."
+msgstr "Bob から Alice へ ``20 cat.currency`` を送る。"
+
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:78
 msgid ""
-"Define the first inner :ref:`transfer transaction <transfer-transaction>`:"
-msgstr "初めに、インナー :ref:`転送トランザクション <transfer-transaction>` を定義する:"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:52
-msgid "message: \"message reason\" (custom, but not empty)"
-msgstr "メッセージ: \"メッセージ 理由\" (変更可能ですが、空にはできません)"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:53
-msgid "receiver: Bob address"
-msgstr "受信アドレス: Bob のアドレス"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:54
-msgid "signer: Alice"
-msgstr "署名者: Alice"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:68
-msgid ""
-"Define the second inner :ref:`transfer transaction <transfer-transaction>`:"
-msgstr "2つ目のインナー :ref:`転送トランザクション <transfer-transaction>` を定義します:"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:70
-msgid "message: empty"
-msgstr "メッセージ: 空"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:71
-msgid "receiver: Alice address"
-msgstr "受信アドレス: Alice のアドレス"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:72
-msgid "mosaics: 20 cat.currency"
-msgstr "モザイク: 20 cat.currency"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:73
-msgid "signer: Bob"
-msgstr "署名者: Bob"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:87
-msgid "3.Wrap the defined transactions in an aggregate bonded transaction:"
-msgstr "3. 定義したトランザクションをアグリゲートボンドトランザクションに内包します:"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:101
-msgid ""
-"Alice signs the aggregate bonded transaction and announces it to the "
-"network, locking first ``10 cat.currency``."
+"Wrap the previous transactions in an :ref:`aggregate bonded transaction "
+"<aggregate-transaction>`."
 msgstr ""
-"最初に Alice はロックするのに ``10 cat.currency`` "
-"を支払い、アグリゲートボンドトランザクションに署名し、ネットワークへアナウンスします。"
+"直前のトランザクションを :ref:`アグリゲートボンドトランザクション <aggregate-transaction>` へラップします。"
 
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:115
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:92
+msgid ""
+"Sign the aggregate bonded transaction with Alice's account and announce it "
+"to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-"
+"transaction>` first. Alice will recover the locked mosaics if the aggregate "
+"transaction completes."
+msgstr ""
+"Alice のアカウントでアグリゲートボンドトランザクションに署名してネットワークへアナウンスしてください。先に :ref:`10 "
+"cat.currency のロック <hash-lock-transaction>` することを忘れないでください。Alice "
+"はアグリゲートトランザクションが完了すれば、ロックしたモザイクは戻ってきます。"
+
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:106
 msgid ""
 "The :ref:`listener implementation changes <monitoring-transactions-client-"
 "side>` when used on the client side (e.g., Angular, React, Vue)."
 msgstr ""
 "クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
 "transactions-client-side>` 。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:117
-msgid ""
-"If all goes well, :doc:`Bob receives a notification "
-"<../transaction/monitoring-a-transaction-status>`."
-msgstr ""
-"全てがうまく行くと :doc:`Bob は通知を受け取ります <../transaction/monitoring-a-transaction-"
-"status>` 。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:121
-msgid "What's next?"
-msgstr "次は？"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:123
-msgid ""
-"Bob has not cosigned the transaction yet. Consider reading :doc:`signing "
-"announced aggregate bonded transactions guide <signing-announced-aggregate-"
-"bonded-transactions>`."
-msgstr ""
-"Bob はまだトランザクションに署名をしていません。:doc:`アグリゲートボンドトランザクションへの署名のアナウンスガイド <signing-"
-"announced-aggregate-bonded-transactions>` を読んでください。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:125
-msgid ""
-"After receiving the transaction, Bob signs the ``transaction hash`` and "
-"announces the cosignature signed transaction."
-msgstr "トランザクションを受信した後、Bob は ``トランザクションハッシュ`` に署名して、連署者署名済みトランザクションをアナウンスします。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:127
-msgid ""
-"As the aggregate bonded transaction has all the cosignatures required, it "
-"will be included in a block."
-msgstr "アグリゲートボンドトランザクションに必要なすべての連署名があるので、ブロックに含まれます。"

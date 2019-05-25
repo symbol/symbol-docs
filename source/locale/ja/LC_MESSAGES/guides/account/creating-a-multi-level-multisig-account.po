@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:10
-msgid "Creating a multi-level multisig account (MLMA)"
-msgstr "マルチレベルマルチシグアカウントの作成 (MLMA)"
+msgid "Creating a multi-level multisig account"
+msgstr "マルチレベルマルチシグアカウントの作成"
 
 #: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:12
 msgid ""
@@ -31,90 +31,50 @@ msgid ""
 "account>`."
 msgstr ":doc:`マルチレベル マルチシグアカウント <../../concepts/multisig-account>` を作成します。"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:18
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:14
+msgid ""
+"Following this guide you will learn to create the following 3-level multisig"
+" account."
+msgstr "このガイドに従って、次の 3 レベルのマルチシグアカウントを作成する方法を学びます。"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:20
 msgid "Three-level multisig account example"
 msgstr "3レベルマルチシグアカウントの例"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:22
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:24
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:24
-msgid ""
-":doc:`Multisig accounts <../../concepts/multisig-account>` can have as "
-"cosignatories other multisig accounts. Multi-level multisig accounts add "
-"“AND/OR” logic to multi-signature transactions."
-msgstr ""
-":doc:`マルチシグアカウント <../../concepts/multisig-account>` "
-"は他のマルチシグアカウントを連署者とすることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに “AND/OR” "
-"ロジックを追加できます。"
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:26
-msgid "The maximum depth of a multilevel multisig account is ``3``."
-msgstr "マルチレベルマルチシグアカウントの最大深さは ``3`` です。"
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:30
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:31
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:32
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:33
 msgid ""
 "Finish :doc:`converting an account to multisig guide <converting-an-account-"
 "to-multisig>`"
 msgstr ""
 ":doc:`マルチシグアカウントへの変換ガイド <converting-an-account-to-multisig>` を終了していること"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:33
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:34
 msgid "Know how to :doc:`create accounts <creating-and-opening-an-account>`"
 msgstr ":doc:`アカウントの作成 <creating-and-opening-an-account>` 方法を理解している"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:37
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:38
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:39
-msgid "Create multisig account #2"
-msgstr "マルチシグアカウント #2 の作成"
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:43
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:62
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:81
-msgid "|creating-a-mlma-ts|"
-msgstr ""
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:48
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:67
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:86
-msgid "|creating-a-mlma-java|"
-msgstr ""
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:53
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:72
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:91
-msgid "|creating-a-mlma-js|"
-msgstr ""
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:58
-msgid "Create multisig account #3"
-msgstr "マルチシグアカウント #3 の作成"
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:77
-msgid "Create multisig account #1"
-msgstr "マルチシグアカウント #1 の作成"
-
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:98
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:105
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:100
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:107
 msgid ""
-"Who should cosign the transaction if Account #5 initiates an aggregate "
-"bonded transaction? Multisig accounts are not capable of cosigning "
-"transactions, the cosignatories are responsible for doing so."
+"If the account #5 initiates an aggregate bonded transaction involving the "
+"account #1, which accounts should cosign the transaction?"
 msgstr ""
-"アカウント #5 "
-"がアグリゲートボンドトランザクションを開始した場合、誰がトランザクションを署名するのでしょうか？マルチシグアカウントにはトランザクションへの署名する能力がないこと、署名する責任が連署者にあることに注意してください。"
+"アカウント #5 がアカウント #1 を含むアグリゲートボンドトランザクションを開始した場合、どのアカウントが取引に署名しないといけないでしょうか？"
 
-#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:106
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:113
 msgid "Sending an aggregate bonded transaction from a MLMA"
 msgstr "MLMA からのアグリゲートボンドトランザクションの送信"

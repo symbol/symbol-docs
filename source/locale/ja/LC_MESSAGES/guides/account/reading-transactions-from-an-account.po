@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -53,30 +53,14 @@ msgid ""
 "given account using the ``accountHttp`` repository."
 msgstr "この例では、 ``accountHttp`` リポジトリにアカウントを渡すことで最新の承認済トランザクションを取得します。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:28
-msgid "|getting-confirmed-transactions-ts|"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:33
-msgid "|getting-confirmed-transactions-java|"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:38
-msgid "|getting-confirmed-transactions-js|"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:43
-msgid "|getting-confirmed-transactions-cli|"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:48
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:47
 msgid ""
 "By default, the SDK provides up to 10 transactions. The page size can be "
 "increased up to 100 transactions."
 msgstr ""
 "デフォルトでは、SDK は 10 トランザクションまでを提供しています。このパラメータは 100 トランザクションまで増加することができます。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:50
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:49
 msgid ""
 "To `get more than 100 transactions "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
@@ -88,7 +72,7 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,をするためには、あなたはさらなる要求をしなければなりません。各追加の呼び出しにおいて、``QueryParams``"
 " にオプションのパラメタである ``transactionId`` に前の要求によって返された最新のトランザクション識別子を追加してください。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:56
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:55
 msgid ""
 "You can also get filtered the transactions received (incoming) from the ones"
 " sent (outgoing) checking the complete `accountHttp reference "

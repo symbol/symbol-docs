@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:105
+#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:123
 msgid "Mosaic"
 msgstr "马赛克"
 
@@ -40,12 +40,6 @@ msgid ""
 "specialized assets such as reward points, shares of stock, signatures, "
 "status flags, votes or even other currencies."
 msgstr "马赛克可以是一个代币，但它也可以是更专门的资产的集合，如奖励积分，股票，签名，状态标志，选票甚至其他货币。"
-
-#: ../../source/concepts/mosaic.rst:9
-msgid ""
-"Each mosaic has a set of configurable properties. During the mosaic "
-"creation, you can define:"
-msgstr "每个马赛克都有一组可配置的属性。 在马赛克创建过程中，您可以定义："
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
@@ -78,18 +72,6 @@ msgid ""
 "mosaics. The divisibility must be in the range of 0 and ``6``."
 msgstr "请确定马赛克可以分割的小数位。可分性 3 意味着马赛克最小可以分到0.001。可分性的值必须在0和 ``6`` 之间。"
 
-#: ../../source/concepts/mosaic.rst:1
-msgid ""
-"Specifies the number of confirmed blocks the mosaic is rented for. Mosaics "
-"can be configured to not expire."
-msgstr "指定租用马赛克的已确认块的数量。 马赛克可以配置为不过期。"
-
-#: ../../source/concepts/mosaic.rst:1
-msgid ""
-"Indicates the amount of mosaic in circulation. The initial supply must be in"
-" the range of 0 and ``9,000,000,000``."
-msgstr "表示于市面流转的马赛克数量。原供应量必须在0到 ``9,000,000,000`` 的范围内。"
-
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Boolean"
 msgstr "是非值"
@@ -106,15 +88,15 @@ msgid ""
 "Otherwise, the mosaic can be only transferred back to the mosaic creator."
 msgstr "如果设置为true，则可以在帐户于账户之间转让马赛克。 否则，马赛克只能转回给马赛克创建者。"
 
-#: ../../source/concepts/mosaic.rst:25
+#: ../../source/concepts/mosaic.rst:43
 msgid "Guides"
 msgstr "指南"
 
-#: ../../source/concepts/mosaic.rst:37
+#: ../../source/concepts/mosaic.rst:55
 msgid "Schemas"
 msgstr "模式"
 
-#: ../../source/concepts/mosaic.rst:39
+#: ../../source/concepts/mosaic.rst:57
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -123,19 +105,19 @@ msgstr ""
 "配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ 。公共网络配置可能有所不同。"
 
-#: ../../source/concepts/mosaic.rst:46
+#: ../../source/concepts/mosaic.rst:64
 msgid "Announce a mosaic definition transaction to create a new mosaic."
 msgstr "公布马赛克定义交易以创建新的马赛克。"
 
-#: ../../source/concepts/mosaic.rst:48 ../../source/concepts/mosaic.rst:74
+#: ../../source/concepts/mosaic.rst:66 ../../source/concepts/mosaic.rst:92
 msgid "**Version**: 0x02"
 msgstr "**版本**: 0x02"
 
-#: ../../source/concepts/mosaic.rst:50
+#: ../../source/concepts/mosaic.rst:68
 msgid "**Entity type**: 0x414D"
 msgstr "**实体类型**: 0x414D"
 
-#: ../../source/concepts/mosaic.rst:52 ../../source/concepts/mosaic.rst:78
+#: ../../source/concepts/mosaic.rst:70 ../../source/concepts/mosaic.rst:96
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
@@ -160,20 +142,16 @@ msgid "The mosaic flags."
 msgstr "马赛克标志。"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic divisibility."
-msgstr "马赛克的可分性。"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "The optional mosaic properties."
 msgstr "可选性的马赛克属性。"
 
-#: ../../source/concepts/mosaic.rst:72
+#: ../../source/concepts/mosaic.rst:90
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
 msgstr "公布供应量变更交易以增加或减少马赛克的供应量。"
 
-#: ../../source/concepts/mosaic.rst:76
+#: ../../source/concepts/mosaic.rst:94
 msgid "**Entity type**: 0x424D"
 msgstr "**实体类型**: 0x424D"
 
@@ -205,7 +183,7 @@ msgstr "马赛克id。"
 msgid "The amount of the mosaic."
 msgstr "马赛克数量。"
 
-#: ../../source/concepts/mosaic.rst:130 ../../source/concepts/mosaic.rst:145
+#: ../../source/concepts/mosaic.rst:148 ../../source/concepts/mosaic.rst:163
 msgid "Enumeration: uint8"
 msgstr "例举: uint8"
 
@@ -226,9 +204,9 @@ msgid "The mosaic levy is mutable"
 msgstr "马赛克税可变"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Increase."
-msgstr "增加"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "Decrease."
 msgstr "减少"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Increase."
+msgstr "增加"

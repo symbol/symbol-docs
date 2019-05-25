@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -20,16 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:10
-msgid "Registering a subnamespace"
-msgstr "サブネームスペースの取得"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:12
-msgid ""
-"Register a :doc:`subnamespace <../../concepts/namespace>` following this "
-"guide."
-msgstr "このガイドに従って、 :doc:`サブネームスペース <../../concepts/namespace>` を取得しましょう。"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:16
 msgid "Background"
@@ -77,33 +67,11 @@ msgstr "それではコードを見ていきましょう"
 msgid "The first step is to choose a name for your subnamespace."
 msgstr "まずはサブネームスペースの名前を決めましょう。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:37
-msgid ""
-"In this example, we have registered a subnamespace called ``bar`` under "
-"``foo`` namespace."
-msgstr "この例では ``bar`` と呼ばれるサブネームスペースを ``foo`` の下に取得しています。"
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:41
-msgid "|registering-a-subnamespace-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:46
-msgid "|registering-a-subnamespace-java|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
-msgid "|registering-a-subnamespace-js|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:56
-msgid "|registering-a-subnamespace-cli|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:63
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:62
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:65
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:64
 msgid ""
 "When the transaction is confirmed, link a namespace with a :doc:`mosaic "
 "<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "

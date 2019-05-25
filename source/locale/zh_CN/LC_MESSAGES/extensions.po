@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# ivyfung8 <ivyfung@nem.my>, 2019
 # nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
@@ -20,3 +21,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/extensions.rst:3
+msgid "Extensions"
+msgstr "扩展"
+
+#: ../../source/extensions.rst:5
+msgid ""
+"Developers could opt to create extensions to add more features into NEM. "
+"However, to become an accepted extension, it should be proposed as a |NIP|."
+msgstr "开发人员可以选择为NEM进行进一步拓展以添加更多功能。 但是，如果扩展的功能要被公认，应先将其作为 |NIP| 提出。"
+
+#: ../../source/extensions.rst:7
+msgid ""
+"The reason behind the |NIP| is to ensure that the new library is reviewed, "
+"tested and shared among NEM developers."
+msgstr " |NIP| 的出现是为了保证NEM开发人员们能审查、测试和共享新库。"
+
+#: ../../source/extensions.rst:9
+msgid "Accepted specification"
+msgstr "被接受的规范"
+
+#: ../../source/extensions.rst:10
+msgid "At least one implementation that successfully passes the code review."
+msgstr "至少一个则行成功通过代码审查。"
+
+#: ../../source/extensions.rst:11
+msgid ""
+"Compatible with third-party projects that implement/uses the same NIP "
+"Library."
+msgstr "与实现/使用相同NIP库的第三方项目兼容。"
+
+#: ../../source/extensions.rst:15
+msgid "Supported extensions"
+msgstr "被支持的扩展"
+
+#: ../../source/extensions.rst:1 ../../source/extensions.rst:1
+msgid "Name"
+msgstr "名字"
+
+#: ../../source/extensions.rst:1 ../../source/extensions.rst:1
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"Starter project to get developers up and running with a running Catapult "
+"Service."
+msgstr "入门项目旨在让开发人员进一步了解并运行Catapult Service。"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"A component to turn the asynchronous transaction announcement into "
+"synchronous."
+msgstr "将异步交易公布转换为同步的一个组件。"
+
+#: ../../source/extensions.rst:34
+msgid ""
+"Do you need to create a NIP to create an extension? No, you don’t. In fact, "
+"we suggest not submitting a NIP until you build a extension that improves "
+"the NEM blockchain and the different projects that use it. Since the "
+"extension can be changed multiple times, developers should spend more time "
+"experimenting and learning, creating a specification later on."
+msgstr ""
+"难道只有通过NIP这一种方法来扩展吗？并非如此。 实际上，我们建议您的扩展以在可以改进NEM区块链和使用它的不同项目之前不提交NIP。 "
+"因为扩展可以多次更改，所以开发人员应该花更多时间进行实验和学习，您可以选择稍晚一些再创建规范。"
+
+#: ../../source/extensions.rst:36
+msgid ""
+"Add a new extension to this page by clicking the *\"Edit on Github\"* button"
+" at the top-right part of the screen."
+msgstr "通过单击屏幕右上角的 *\"Edit on Github\"* 按钮，为此页面添加新扩展。"
