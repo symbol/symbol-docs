@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -89,23 +89,7 @@ msgstr ""
 msgid "Check if this namespace name is available."
 msgstr "ネームスペースが有効かどうかを確認"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:41
-msgid "|checking-namespace-existence-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:46
-msgid "|checking-namespace-existence-java|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:51
-msgid "|checking-namespace-existence-js|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:56
-msgid "|checking-namespace-existence-cli|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:61
+#: ../../source/guides/namespace/registering-a-namespace.rst:60
 msgid ""
 "Is the namespace available? Try to register it before someone else does it! "
 "Announce a :ref:`register namespace transaction<register-namespace-"
@@ -114,33 +98,17 @@ msgstr ""
 "新しいネームスペースを取得するために、選んだ名前とブロック数で示されるレンタル期間を設定した :ref:`ネームスペース登録トランザクション "
 "<register-namespace-transaction>` をアナウンスしてください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:63
+#: ../../source/guides/namespace/registering-a-namespace.rst:62
 msgid ""
 "A new block completes every ``15`` seconds on average. You will have to "
 "renew your namespace before it expires."
 msgstr "平均 ``15`` 秒ごとに新しいブロックは完了します。あなたはネームスペースが期限切れになる前に更新する必要があります。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:67
-msgid "|registering-a-namespace-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:72
-msgid "|registering-a-namespace-java|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:77
-msgid "|registering-a-namespace-js|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:82
-msgid "|registering-a-namespace-cli|"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:89
+#: ../../source/guides/namespace/registering-a-namespace.rst:87
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:91
+#: ../../source/guides/namespace/registering-a-namespace.rst:89
 msgid ""
 "When the transaction is confirmed, :doc:`register a subnamespace "
 "<registering-a-subnamespace>` following the next guide."

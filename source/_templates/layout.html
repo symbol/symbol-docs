@@ -1,12 +1,6 @@
 {% extends "basic/layout.html" %}
 
-{% if theme_bootstrap_version == "3" %}
 {% set bootstrap_version, navbar_version = "3.3.7", "" %}
-{% set bs_span_prefix = "col-md-" %}
-{% else %}
-{% set bootstrap_version, navbar_version = "2.3.2", "-2" %}
-{% set bs_span_prefix = "span" %}
-{% endif %}
 
 {% set script_files = script_files + [
 '_static/js/jquery-1.11.0.min.js',
@@ -29,10 +23,9 @@
 {% include "navbar" + navbar_version + ".html" %}
 {% endmacro %}
 
-{% if theme_bootstrap_version == "3" %}
 {%- macro bsidebar() %}
 {%- if render_sidebar %}
-<div class="{{ bs_span_prefix }}3">
+<div class="col-md-3">
     <div id="sidebar" class="bs-sidenav" role="complementary">
         {%- for sidebartemplate in sidebars %}
         {%- include sidebartemplate %}
@@ -41,23 +34,10 @@
 </div>
 {%- endif %}
 {%- endmacro %}
-{% else %}
-{%- macro bsidebar() %}
-{%- if render_sidebar %}
-<div class="{{ bs_span_prefix }}3">
-    <div id="sidebar" class="bs-sidenav well" data-spy="affix">
-        {%- for sidebartemplate in sidebars %}
-        {%- include sidebartemplate %}
-        {%- endfor %}
-    </div>
-</div>
-{%- endif %}
-{%- endmacro %}
-{% endif %}
 
 {%- macro bsidebar2() %}
 {%- if render_sidebar %}
-<div class="{{ bs_span_prefix }}2">
+<div class="col-md-2">
     <div class="bs-sidenav secondary" role="complementary">
         {{localtoc}}
     </div>
@@ -71,7 +51,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
-{% include "analytics.html" %}
+{% include "include/analytics.html" %}
 {% endblock %}
 
 {# Silence the sidebar's, relbar's #}
@@ -82,24 +62,25 @@
 
 {%- block content %}
 {{ navBar() }}
-<div class="container">
+
+<div
+        {%- if pagename != "index" %} class="container"
+        {%- else %} id="index" class="container full-width"
+        {%- endif %}>
+
     <div class="row">
+
         {%- block sidebar1 %}
 
         {{ bsidebar() }}
-        {% endblock %}
-        <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
-            {%- if edit_on_github_url %}
-            <div id="edit-on-github" class="text-right">
-                <a href="{{ edit_on_github_url }}"
-                   rel="nofollow"> <i class="fab fa-github"></i> {{ _('Edit') }}</a>
-                <a href="{{ feedback_on_github_url }}"
-                   rel="nofollow"><i class="far fa-comment"></i>{{ _('Feedback') }}</a>
-
-            </div>
-            {%- endif %}
-
+        {%- endblock %}
+        <div class="col-md-{{ bs_content_width }} content">
             {% block body %}{% endblock %}
+            {%- if edit_on_github_url %}
+            <p class="feedback top-gap">
+                <b>{% trans %}Did you find what you were looking for?{% endtrans %}</b>
+                <a href="{{feedback_on_github_url}}" target="_blank">{% trans %}Give us your feedback.{% endtrans %}</a></p>
+            {%- endif %}
         </div>
         {% block sidebar2 %} {{bsidebar2() }} {% endblock %}
     </div>
@@ -107,6 +88,6 @@
 {%- endblock %}
 
 {%- block footer %}
-{% include "footer2.html" %}
-{% include "algolia.html" %}
+{% include "include/footer.html" %}
+{% include "include/algolia.html" %}
 {%- endblock %}

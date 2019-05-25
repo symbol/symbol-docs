@@ -35,7 +35,7 @@ class RegisteringASubnamespace {
 
     @Test
     void registeringASubnamespace() throws ExecutionException, InterruptedException, MalformedURLException {
-
+        /* start block 01 */
         // Replace with private key
         final String privateKey = "";
 
@@ -59,5 +59,6 @@ class RegisteringASubnamespace {
         final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
 
         transactionHttp.announce(signedTransaction).toFuture().get();
+        /* end block 01 */
     }
 }

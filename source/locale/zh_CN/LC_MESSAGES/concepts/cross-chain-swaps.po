@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,45 +101,35 @@ msgstr "以秘密锁交易来启动跨链交换："
 msgid "Define the mosaic units you want to transfer to a determined account."
 msgstr "确定要传输到指定帐户的马赛克单位。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:53
-msgid "Generate a random set of bytes called ``proof``."
-msgstr "随机生成一组称为 ``证明 proof`` 的字节。"
-
 #: ../../source/concepts/cross-chain-swaps.rst:55
 msgid ""
 "Hash the obtained proof with one of the available algorithms to generate the"
 " ``secret``."
 msgstr "用其中一种演算法对获得的证据进行哈希处理以生成 ``秘密 secret`` 。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:57
-msgid ""
-"Select during how much time the mosaics will be locked and announce the "
-"transaction."
-msgstr "选择锁定马赛克的时间并宣布交易。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:59
+#: ../../source/concepts/cross-chain-swaps.rst:61
 msgid ""
 "The specified mosaics remain locked until a valid :ref:`Secret Proof "
 "Transaction <secret-proof-transaction>` unlocks them."
 msgstr "指定的马赛克将被锁定，直到有效的  :ref:`秘密证明交易 <secret-proof-transaction>` 将它们解锁。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:61
+#: ../../source/concepts/cross-chain-swaps.rst:63
 msgid ""
 "If the transaction duration is reached without being proved, the locked "
 "amount goes back to the initiator of the secret lock transaction."
 msgstr "如果在交易期限内没有完成解锁，那么锁定的金额将会返回到秘密锁交易的发起者账户。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:63
-#: ../../source/concepts/cross-chain-swaps.rst:90
+#: ../../source/concepts/cross-chain-swaps.rst:65
+#: ../../source/concepts/cross-chain-swaps.rst:92
 msgid "**Version**: 0x01"
 msgstr "**Version**: 0x01"
 
-#: ../../source/concepts/cross-chain-swaps.rst:65
+#: ../../source/concepts/cross-chain-swaps.rst:67
 msgid "**Entity type**: 0x4152"
 msgstr "**实体类型**: 0x4152"
 
-#: ../../source/concepts/cross-chain-swaps.rst:67
-#: ../../source/concepts/cross-chain-swaps.rst:94
+#: ../../source/concepts/cross-chain-swaps.rst:69
+#: ../../source/concepts/cross-chain-swaps.rst:96
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
@@ -162,12 +152,6 @@ msgstr "说明"
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Locked mosaic."
 msgstr "锁定的马赛克。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ""
-"The lock duration. If reached, the mosaics will be returned to the "
-"initiator."
-msgstr "锁定期限。 如果期限已达，马赛克将返回到发起者的账户。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -193,18 +177,13 @@ msgstr "经过哈希处理的证明。"
 msgid "The address who will receive the funds once unlocked."
 msgstr "一旦解锁就会收到资金的地址。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:86
+#: ../../source/concepts/cross-chain-swaps.rst:88
 msgid ""
 "Use a secret proof transaction to unlock :ref:`secret lock transactions "
 "<secret-lock-transaction>`."
 msgstr "以秘密证明交易来解锁  :ref:`秘密锁交易 <secret-lock-transaction>`。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:88
-msgid ""
-"The transaction must prove that knows the *proof* that unlocks the mosaics."
-msgstr "交易必须证明它知道用来解锁马赛克的 *证明* 。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:92
+#: ../../source/concepts/cross-chain-swaps.rst:94
 msgid "**Entity type**: 0x4252"
 msgstr "**实体类型**: 0x4252"
 
@@ -212,36 +191,14 @@ msgstr "**实体类型**: 0x4252"
 msgid "The proof size in bytes."
 msgstr "证明大小以字节为单位。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The original proof."
-msgstr "原本的证明。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:110
+#: ../../source/concepts/cross-chain-swaps.rst:112
 msgid "LockHashAlgorithm"
 msgstr "哈希锁演算法 （LockHashAlgorithm）"
 
-#: ../../source/concepts/cross-chain-swaps.rst:112
+#: ../../source/concepts/cross-chain-swaps.rst:114
 msgid "Enumeration: uint8"
 msgstr "例举: uint8"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Id"
 msgstr "Id"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Input is hashed using sha3 256."
-msgstr "输入值将以sha3 256进行哈希处理。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Input is hashed using Keccak (ETH compatibility)."
-msgstr "输入值以Keccak (ETH兼容）形成哈希。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ""
-"Input is hashed twice: first with Sha-256 and then with RIPEMD-160 "
-"(bitcoin's OP_HASH160)."
-msgstr "输入值被哈希处理两次：首先是Sha-256，然后是RIPEMD-160（比特币的OP_HASH160）。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Input is hashed twice with Sha-256 (bitcoin's OP_HASH256)."
-msgstr "使用Sha-256（比特币的OP_HASH256）对输入值进行两次哈希处理。"

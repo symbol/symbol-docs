@@ -34,33 +34,27 @@ function initLanguageSelector() {
     });
 }
 
-function homePageFullWidth(){
-    const jumbotron = $('.jumbotron');
-    jumbotron.closest('.container').css({"width": "100%", "padding": "0px"});
-    jumbotron.closest('.content').css({"padding-bottom": "0px"});
-}
-
-
-function addSidebarClickHandler(){
-    $('#sidebar .caption').click(function() {
-        const nextUl = $(this).next('ul');
-        if (nextUl.hasClass("show")) {
-            nextUl.removeClass("show");
-            if ($(this).hasClass("sidebar-selected-ul")) {
-                $(this).removeClass("sidebar-selected-ul");
-            }
-        } else {
-            nextUl.addClass("show");
-            $(this).addClass("sidebar-selected-ul");
+function setPreferredCodeTab(){
+    try{
+        let urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('code')) {
+            localStorage.setItem('preferredCodeTab', urlParams.get('code'));
         }
-    });
+    } catch(e){
+        console.log("Error:" + e);
+    }
 }
 
-function addHoverToSidebar(){
-    const angleRight = '<span class="angle angle-right fas fa-chevron-right"></span>';
-    $( "#sidebar ul.current").prev().addClass("sidebar-current-ul");
-    $( "#sidebar .sidebar-md .caption").append(angleRight);
-
+function clickPreferredCodeTab(){
+    const code = localStorage.getItem('preferredCodeTab');
+    if (code !== null){
+        if (code === 'typescript'){
+            $("[data-tab=tab-0-0]").click();
+        } else if (code === 'javascript'){
+            $("[data-tab=tab-0-1]").click();
+        }
+        $(".highlight-" + code).click();
+    }
 }
 
 function addBlockCaptionInsideCodeExample(){
@@ -71,10 +65,12 @@ function addBlockCaptionInsideCodeExample(){
 }
 
 $( document ).ready(function() {
-    homePageFullWidth();
-    addSidebarClickHandler();
     addBlockCaptionInsideCodeExample();
     initLanguageSelector();
-    addHoverToSidebar();
+    setPreferredCodeTab();
+    $('a.external').attr("target","_blank");
 });
 
+$(window).on('load', function(){
+    clickPreferredCodeTab();
+});

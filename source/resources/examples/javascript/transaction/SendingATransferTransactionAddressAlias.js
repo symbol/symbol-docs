@@ -16,7 +16,6 @@
  *
  */
 
-
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
     Deadline = nem2Sdk.Deadline,
@@ -27,7 +26,7 @@ const Account = nem2Sdk.Account,
     EmptyMessage = nem2Sdk.EmptyMessage,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
 
-// 01 - Create Transfer Transaction
+/* start block 01 */
 const recipientAddress = new NamespaceId('foo');
 
 const transferTransaction = TransferTransaction.create(
@@ -36,15 +35,14 @@ const transferTransaction = TransferTransaction.create(
     [NetworkCurrencyMosaic.createRelative(10)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Signing the transaction
 const privateKey = process.env.PRIVATE_KEY;
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
 
-// 03 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 transactionHttp

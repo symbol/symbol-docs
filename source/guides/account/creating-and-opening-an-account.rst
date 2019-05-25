@@ -25,18 +25,17 @@ An account is a key pair (private and public key) associated with a mutable stat
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAnAccount.ts
-        :caption: |creating-an-account-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAnAccount.ts
         :language: typescript
-        :lines:  23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAnAccount.js
-        :caption: |creating-an-account-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAnAccount.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/account/CreatingAnAccount.sh
-        :caption: |creating-an-account-cli|
+    .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccount.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -48,20 +47,20 @@ If you already have a private key, it is not necessary to generate a new account
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/OpeningAnAccount.ts
-        :caption: |opening-an-account-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/OpeningAnAccount.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java
-        :caption: |opening-an-account-java|
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java
         :language: java
-        :lines: 31-34
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/OpeningAnAccount.js
-        :caption: |opening-an-account-js|
+    .. viewsource:: ../../resources/examples/javascript/account/OpeningAnAccount.js
         :language: javascript
-        :lines: 23-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 **Using a Wallet**
 
@@ -71,18 +70,17 @@ A wallet enables you to store your account to sign transactions, encrypting your
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/CreatingAnAccountWallet.ts
-        :caption: |creating-a-wallet-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAnAccountWallet.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/CreatingAnAccountWallet.js
-        :caption: |creating-a-wallet-js|
+    .. viewsource:: ../../resources/examples/javascript/account/CreatingAnAccountWallet.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/account/CreatingAnAccountWallet.sh
-        :caption: |creating-a-wallet-cli|
+    .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccountWallet.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -90,65 +88,16 @@ Do you have a private key? You can create and open a wallet importing your priva
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/OpeningAnAccountWallet.ts
-        :caption: |opening-a-wallet-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/OpeningAnAccountWallet.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/account/OpeningAnAccountWallet.js
-        :caption: |opening-a-wallet-js|
+    .. viewsource:: ../../resources/examples/javascript/account/OpeningAnAccountWallet.js
         :language: javascript
-        :lines: 24-
-        
-    .. literalinclude:: ../../resources/examples/cli/account/OpeningAnAccountWallet.sh
-        :caption: |opening-a-wallet-cli|
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/bash/account/OpeningAnAccountWallet.sh
         :language: bash
         :start-after: #!/bin/sh
-
-.. |creating-an-account-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAnAccount.ts" target="_blank">View Code</a>
-
-.. |creating-an-account-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAnAccount.js" target="_blank">View Code</a>
-
-.. |creating-an-account-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/CreatingAnAccount.sh" target="_blank">View Code</a>
-
-.. |opening-an-account-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/OpeningAnAccount.ts" target="_blank">View Code</a>
-
-.. |opening-an-account-java| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java" target="_blank">View Code</a>
-
-.. |opening-an-account-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/OpeningAnAccount.js" target="_blank">View Code</a>
-
-.. |creating-a-wallet-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAnAccountWallet.ts" target="_blank">View Code</a>
-
-.. |creating-a-wallet-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAnAccountWallet.js" target="_blank">View Code</a>
-
-.. |creating-a-wallet-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/CreatingAnAccountWallet.sh" target="_blank">View Code</a>
-
-.. |opening-a-wallet-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/OpeningAnAccountWallet.ts" target="_blank">View Code</a>
-
-.. |opening-a-wallet-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/OpeningAnAccountWallet.js" target="_blank">View Code</a>
-
-.. |opening-a-wallet-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/account/OpeningAnAccountWallet.sh" target="_blank">View Code</a>

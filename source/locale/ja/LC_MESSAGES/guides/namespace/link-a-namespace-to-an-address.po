@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-03-19 13:59+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -62,40 +62,22 @@ msgstr ""
 msgid "Define the namespaceId and the address you want to link."
 msgstr "リンクしたいアドレスとネームスペースIDを設定します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:31
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:46
-msgid "|linking-a-namespace-to-an-address-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:36
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:51
-msgid "|linking-a-namespace-to-an-address-js|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:42
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:41
 msgid "Announce the alias transaction."
 msgstr "エイリアストランザクションのアナウンス"
 
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:57
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:55
 msgid ""
 "If you want to unlink the alias, change alias action type to "
 "``AliasActionType.Unlink``."
 msgstr "エイリアスをアンリンクしたい場合は、タイプを ``AliasActionType.Unlink`` に変えてください。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:61
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:59
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:63
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:61
 msgid ""
 "Now you can send transactions to the namespace linked to the account instead"
 " of using the complete address."
 msgstr "これで、完全なアドレスを使用する代わりにネームスペースでトランザクションを送信することができるようになりました。"
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:67
-msgid "|sending-a-transfer-transaction-address-alias-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:72
-msgid "|sending-a-transfer-transaction-address-alias-js|"
-msgstr ""

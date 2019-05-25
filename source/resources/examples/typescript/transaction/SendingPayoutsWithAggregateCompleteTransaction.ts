@@ -21,14 +21,14 @@ import {
     Address,
     AggregateTransaction,
     Deadline,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     TransactionHttp,
-    TransferTransaction,
-    NetworkCurrencyMosaic
+    TransferTransaction
 } from 'nem2-sdk';
 
-// 01 - Setup
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const privateKey = process.env.PRIVATE_KEY as string;
@@ -52,10 +52,12 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     NetworkType.MIJIN_TEST,
     []
 );
+/* end block 01 */
 
-// 02 - Sign and announce aggregate complete transaction
+/* start block 02 */
 const signedTransaction = account.sign(aggregateTransaction);
 
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 02 */

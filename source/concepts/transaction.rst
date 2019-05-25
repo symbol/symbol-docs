@@ -156,7 +156,7 @@ Transaction
     :delim: ;
 
     max_fee; uint64; The maximum fee allowed to spend for the transaction.
-    deadline; uint64; The maximum amount of time to include the transaction in the blockchain.
+    deadline; uint64; The maximum amount of time to include the transaction in the blockchain. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
 .. _embedded-transaction:
 

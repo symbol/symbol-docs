@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,15 +92,6 @@ msgid ""
 "preceding communications."
 msgstr "为了减少通信企图，节点会跟踪之前通信的结果。"
 
-#: ../../source/concepts/node.rst:35
-msgid ""
-"When a node connects to a remote peer, the first increments the trust "
-"towards the remote. Otherwise, the node increments the failure counter. "
-"Likewise, the node updates the trust counters accordingly after processing "
-"the data requested."
-msgstr ""
-"当一个节点连接到远程节点时，它首先会对该远程节点增加信任。反之，会减低对其的信任计数器减分。同样，节点在处理所请求的数据之后相应地更新信任计数器。"
-
 #: ../../source/concepts/node.rst:37
 msgid ""
 "From these interactions, the node assigns a weight between 500 and 10000 to "
@@ -114,11 +105,11 @@ msgid ""
 "|sybil|. The node selects a peer with high importance instead."
 msgstr "选择远程节点的概率线性取决于该远程节点权重。 每四轮节点选择后，会变动标准来预防 |sybil|。 该节点选择具有高权重的节点。"
 
-#: ../../source/concepts/node.rst:43
+#: ../../source/concepts/node.rst:42
 msgid "RocksDB"
 msgstr "RocksDB"
 
-#: ../../source/concepts/node.rst:45
+#: ../../source/concepts/node.rst:44
 msgid ""
 "|rocksdb| stores the chain state. The data structures cached are serialized "
 "and stored as value to a corresponding key. For example, a column maps the "
@@ -127,39 +118,24 @@ msgid ""
 msgstr ""
 "|rocksdb| 存储链的状态。缓存的数据结构被序列化并作为值存储到相应的密钥中。例如，列把公钥映射到地址；把帐户状态项作为对应地址密钥值。"
 
-#: ../../source/concepts/node.rst:47
+#: ../../source/concepts/node.rst:46
 msgid ""
 "Storing the state in memory is usually faster than using RocksDB. However, "
 "storing state information in RocksDB demands less memory of the network "
 "nodes."
 msgstr "将状态存储在内存中通常比使用RocksDB更快。但在RocksDB中存储状态信息需要更少的网络节点内存。"
 
-#: ../../source/concepts/node.rst:49
+#: ../../source/concepts/node.rst:48
 msgid ""
 "Persisting the state is convenient in networks with a large number of "
 "accounts."
 msgstr "在拥有大量账户的网络中保存状态信息是很方便的。"
 
-#: ../../source/concepts/node.rst:53
+#: ../../source/concepts/node.rst:52
 msgid "API Component"
 msgstr "API组件"
 
-#: ../../source/concepts/node.rst:57
-msgid ""
-"The primary responsibility of the API is to store the data in a readable "
-"form. Each API instance maintains a MongoDB, and optionally a RocksDB to "
-"save the state."
-msgstr "API的主要职责是以可读的形式存储数据。每个API实例都维持一个MongoDB，且可选择使用RocksDB来保存状态。"
-
-#: ../../source/concepts/node.rst:59
-msgid ""
-"The layer :ref:`validates the transactions <transaction-validation>` "
-"received from the REST component. Additionally, the API throws the errors "
-"back via ZMQ in binary."
-msgstr ""
-"这一层 :ref:`验证<transaction-validation>` 从REST组件接收到交易。此外，API通过ZMQ以二进制方式显示错误。"
-
-#: ../../source/concepts/node.rst:61
+#: ../../source/concepts/node.rst:60
 msgid ""
 "This component is also responsible for collecting the cosignatures of "
 ":doc:`aggregated bonded transactions <aggregate-transaction>`, that are only"
@@ -167,35 +143,29 @@ msgid ""
 msgstr ""
 "该组件还负责收集 :doc:`保税聚合交易 <aggregate-transaction>`，的共同签名。这些交易只有在完成后才会被推送到P2P节点。"
 
-#: ../../source/concepts/node.rst:63
-msgid ""
-"An API component can connect to multiple P2P nodes, but at least must "
-"connect to one."
-msgstr "API组件在可以连接到多个P2P节点，但至少需连接到一个节点。"
-
-#: ../../source/concepts/node.rst:68
+#: ../../source/concepts/node.rst:65
 msgid ""
 "|mongodb| stores blocks, transactions and chain state for high query "
 "performance."
 msgstr "|mongodb| 存储区块，交易和链状态以实现高效查询性能。"
 
-#: ../../source/concepts/node.rst:70
+#: ../../source/concepts/node.rst:67
 msgid "The API updates the MongoDB when:"
 msgstr "API在以下情况更新MongoDB："
 
-#: ../../source/concepts/node.rst:72
+#: ../../source/concepts/node.rst:69
 msgid "A new block / a bunch of blocks finished processing."
 msgstr "一个新区块/一堆区块被完成处理后。"
 
-#: ../../source/concepts/node.rst:73
+#: ../../source/concepts/node.rst:70
 msgid "New unconfirmed transactions completed processing."
 msgstr "新的未确认交易被完成处理后。"
 
-#: ../../source/concepts/node.rst:75
+#: ../../source/concepts/node.rst:72
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB不应该被外部接驳。"
 
-#: ../../source/concepts/node.rst:80
+#: ../../source/concepts/node.rst:77
 msgid ""
 "|zmq| is an asynchronous messaging library, which enables real-time "
 "subscriptions. It transports notifications from the API server to the ZMQ "
@@ -205,11 +175,11 @@ msgstr ""
 "|zmq| 是一个支持实时订阅的异步信息库。它把通知从API服务器传输到Catapult REST组件侦听的ZMQ端点。它是REST "
 "WebSockets的替代方案，旨在性能至关重要时使用。"
 
-#: ../../source/concepts/node.rst:84
+#: ../../source/concepts/node.rst:81
 msgid "REST Component"
 msgstr "REST 组件"
 
-#: ../../source/concepts/node.rst:88
+#: ../../source/concepts/node.rst:85
 msgid ""
 "The REST component handles **JSON API** client requests. This reads from "
 "MongoDB, formats the response, and returns it to the client. This component "
@@ -219,16 +189,16 @@ msgstr ""
 "REST组件处理 **JSON API** 客户端请求。这实现了从MongoDB读取，格式化响应，并将其返回给客户端。此组件还负责使用 "
 ":ref:`WebSockets <websockets>` 将事件返回给客户端。"
 
-#: ../../source/concepts/node.rst:90
+#: ../../source/concepts/node.rst:87
 msgid ""
 "Each REST component connects to one API instance, sending new transactions "
 "using sockets."
 msgstr "每个REST组件连接到一个API实例，使用sockets（接口）发送新交易。"
 
-#: ../../source/concepts/node.rst:118
+#: ../../source/concepts/node.rst:115
 msgid "Guides"
 msgstr "指南"
 
-#: ../../source/concepts/node.rst:122
+#: ../../source/concepts/node.rst:119
 msgid "Deploy a Catapult full node for learning and development purposes."
 msgstr "请您部署Catapult 完整节点以用于学习和开发。"

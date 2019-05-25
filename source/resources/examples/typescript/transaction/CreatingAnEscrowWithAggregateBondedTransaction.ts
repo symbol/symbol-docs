@@ -21,22 +21,22 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
+    HashLockTransaction,
     Listener,
-    LockFundsTransaction,
     Mosaic,
     MosaicId,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     PublicAccount,
     TransactionHttp,
     TransferTransaction,
-    UInt64,
-    NetworkCurrencyMosaic
+    UInt64
 } from 'nem2-sdk';
 
 import {filter, mergeMap} from "rxjs/operators";
 
-// 01 - Setup
+/* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -51,7 +51,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
     [NetworkCurrencyMosaic.createRelative(100)],
-    PlainMessage.create('send 100 xem to distributor'),
+    PlainMessage.create('send 100 cat.currency to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
@@ -60,40 +60,45 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
     [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
     PlainMessage.create('send 1 museum ticket to alice'),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Aggregate Transaction
+/* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
     [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
 const signedTransaction = aliceAccount.sign(aggregateTransaction);
+console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
+/* end block 02 */
 
-const lockFundsTransaction = LockFundsTransaction.create(
+/* start block 03 */
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
         UInt64.fromUint(10000000)
     ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = aliceAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(aliceAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 03 */

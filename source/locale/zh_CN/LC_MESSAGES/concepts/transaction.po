@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -305,18 +305,6 @@ msgid ""
 msgstr ""
 "例如，转让交易描述了谁是收件人以及要转让的马赛克数量。在这种情况下，签署交易意味着接受将这些马赛克从一个帐户的余额中移动到另一个帐户的余额中去。"
 
-#: ../../source/concepts/transaction.rst:87
-msgid ""
-"The account generates the signature `signing the first 100 bytes of the "
-"defined transaction <https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" with its private key. Then, the signature is appended to the transaction's "
-"body, resulting in a signed transaction."
-msgstr ""
-"该帐户使用私钥 `签署交易的前100个字节 <https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" 而生成签名。 然后，签名将附加到交易的正文，从而产生一个已签名的交易。"
-
 #: ../../source/concepts/transaction.rst:89
 msgid ""
 "The hash of the transaction is generated once `the sha3-256 algorithm "
@@ -437,11 +425,6 @@ msgstr "属性"
 #: ../../source/concepts/transaction.rst:1
 msgid "The maximum fee allowed to spend for the transaction."
 msgstr "允许为交易花费的最大金额。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-"The maximum amount of time to include the transaction in the blockchain."
-msgstr "交易可被收录在区块链中的截止日期。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "The size of the transaction."

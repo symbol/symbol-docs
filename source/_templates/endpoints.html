@@ -4,14 +4,14 @@
 {% block extrahead %}
 {{ super() }}
 <link href="_static/css/api.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.41/bundles/redoc.standalone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/redoc@v2.0.0-rc.8-1/bundles/redoc.standalone.js"></script>
 {% endblock %}
 
 {% block body %}
 
 <div id="redoc"></div>
 <script>
-    Redoc.init('_downloads/swagger.yaml', {
+    Redoc.init('_downloads/openapi3.yaml', {
         "scrollYOffset": '30',
         "suppressWarnings": true,
         "nativeScrollbars": true,

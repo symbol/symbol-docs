@@ -26,7 +26,7 @@ const Account = nem2Sdk.Account,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
-// 01 - Setup
+/* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
@@ -34,16 +34,18 @@ const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, N
 
 const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Create ModifyMultisigAccountTransaction
+/* start block 02 */
 const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
     Deadline.create(),
     1,
     0,
     [],
     NetworkType.MIJIN_TEST);
+/* end block 02 */
 
-// 03 - Wrap ModifyMultisigAccountTransaction inside an aggregate transaction and announce it
+/* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
@@ -55,3 +57,4 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 03 */

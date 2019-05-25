@@ -42,6 +42,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.examplecode',
+    'sphinxcontrib.viewsource',
     'sphinxcontrib.ghcontributors',
     'sphinx_tabs.tabs',
     'edit-on-github',
@@ -74,7 +75,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.17.4'
+version = u'0.17.5'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
@@ -95,7 +96,7 @@ gettext_compact = False
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'monokai'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -119,13 +120,6 @@ html_theme_options = {
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
-
-    'navbar_links': [
-        ("Getting started", "getting-started/what-is-nem"),
-        ("Built-in features", "concepts/account"),
-        ("Protocol", "concepts/cryptography"),
-        ("References", "references"),
-    ],
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': False,
@@ -192,7 +186,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'references': 'references.html', 'endpoints': 'endpoints.html', '404': '404.html'}
+html_additional_pages = {'index': 'index.html', 'endpoints': 'endpoints.html', '404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -201,7 +195,6 @@ def setup(app):
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
 
-
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 html_sidebars = {
@@ -209,8 +202,8 @@ html_sidebars = {
   'cli': ['globaltoc.html'],
   'concepts/**': ['globaltoc.html'],
   'getting-started/**': ['globaltoc.html'],
-  'guides/**/**': ['categories.html'],
-  'guides': ['categories.html'],
+  'guides/**/**': ['globaltoc.html'],
+  'guides': ['globaltoc.html'],
   'guidelines/**': ['globaltoc.html'],
   'extensions': ['globaltoc.html'],
   'prototyping-tool': ['globaltoc.html'],
@@ -326,3 +319,14 @@ blog_authors = {
 # -- Options for linkcheck ------------------------------------------------
 
 linkcheck_ignore = [r'http://localhost\d+']
+
+# -- Options for viewsource ------------------------------------------------
+viewsource_title = 'View Code'
+
+def viewsource_resolve_link(file_path, language=None):
+    base_url = 'https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/%s/' % language
+    if language == 'java':
+        base_url += 'src/test/java/nem2/guides/examples/'
+    path_split = file_path.split('/')
+    path = "/".join(path_split[len(path_split)-2:])
+    return base_url + path

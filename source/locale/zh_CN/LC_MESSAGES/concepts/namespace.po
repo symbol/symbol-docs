@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# nem.cn <527357637@qq.com>, 2019
 # ivyfung8 <ivyfung@nem.my>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# nem.cn <527357637@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 13:28+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: nem.cn <527357637@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/nemtech/teams/95744/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,19 +27,6 @@ msgstr ""
 msgid "Namespace"
 msgstr "命名空间"
 
-#: ../../source/concepts/namespace.rst:5
-msgid ""
-"Namespaces allow you to create an on-chain **unique place** for your "
-"business and your assets on the NEM blockchain."
-msgstr "命名空间允许您在NEM区块链上为您的企业和资产开辟一个链上的 **独特空间** 。"
-
-#: ../../source/concepts/namespace.rst:9
-msgid ""
-"An account can link a registered name (namespace or subnamespace) with an "
-":doc:`account <account>` or a :doc:`mosaic <mosaic>` identifier."
-msgstr ""
-"帐户可以将注册名称（命名空间或子命名空间）与 :doc:`账户 <account>` 或 :doc:`马赛克 <mosaic>` 标识相连接。"
-
 #: ../../source/concepts/namespace.rst:13
 msgid "Subnamespaces"
 msgstr "子命名空间"
@@ -49,13 +36,6 @@ msgid ""
 "On the internet, a domain can have a sub-domain. In NEM, namespaces can have"
 " subnamespaces."
 msgstr "名在互联网上，域明可以具有子域名。 在NEM中，命名空间可以有子命名空间。"
-
-#: ../../source/concepts/namespace.rst:17
-msgid ""
-"You can create multiple subnamespaces with the same name in different "
-"namespaces. For example, you can create the subnamespaces ``foo.bar`` and "
-"``foo2.bar``."
-msgstr "您可以在不同的根命名空间创建多个同名子命名空间。比如，您可以创建 ``foo.bar`` 和 ``foo2.bar`` 子命名空间。"
 
 #: ../../source/concepts/namespace.rst:19
 msgid ""
@@ -100,36 +80,36 @@ msgstr ""
 "账户能为其他可接受 :doc:`AddressNamespaceTransactions <account-filter>` 的账户指定名称。 "
 "但是，如果帐户想要将别名分配给马赛克ID (mosaicId），那么这个账户必须是马赛克的创建者。"
 
-#: ../../source/concepts/namespace.rst:36
+#: ../../source/concepts/namespace.rst:42
 msgid "Example"
 msgstr "例子"
 
-#: ../../source/concepts/namespace.rst:38
+#: ../../source/concepts/namespace.rst:44
 msgid ""
 "A customer buys a ticket for an event. The ticket sales company sends a "
 "ticket to the customer account."
 msgstr "一位消费者购买了一张活动门票。票务公司把票发到了消费者的账户里。"
 
-#: ../../source/concepts/namespace.rst:44
+#: ../../source/concepts/namespace.rst:50
 msgid "Recognizable mosaics and addresses"
 msgstr "可识别的马赛克和地址"
 
-#: ../../source/concepts/namespace.rst:47
+#: ../../source/concepts/namespace.rst:53
 msgid "Identifying the sender"
 msgstr "区别发件人"
 
-#: ../../source/concepts/namespace.rst:49
+#: ../../source/concepts/namespace.rst:55
 msgid ""
 "The ticket seller has registered the namespace ``ticketsales`` to link it to"
 " its account as an alias. Customers can quickly recognize incoming "
 "transactions from the vendor account."
 msgstr "票务公司事先注册好 ``ticketsales`` 命名空间 ，并将其作为别名链接到它的账户。消费者可以迅速识别从票务公司账户传来的交易。"
 
-#: ../../source/concepts/namespace.rst:52
+#: ../../source/concepts/namespace.rst:58
 msgid "Identifying the ticket"
 msgstr "区别门票"
 
-#: ../../source/concepts/namespace.rst:54
+#: ../../source/concepts/namespace.rst:60
 msgid ""
 "The same company sells tickets for events organized in different venues. The"
 " company registers a non-transferable :doc:`mosaic <mosaic>` for each "
@@ -137,7 +117,7 @@ msgid ""
 msgstr ""
 "同一家公司出售在不同场地举办的活动门票。该公司在每次开始售卖门票时都注册一个不可转让的 :doc:`马赛克（mosaic） <mosaic>`。"
 
-#: ../../source/concepts/namespace.rst:56
+#: ../../source/concepts/namespace.rst:62
 msgid ""
 "The ticket seller adds a series of subdomains on top of the root domain of "
 "``ticketsales``. The root plus subdomains are "
@@ -146,23 +126,23 @@ msgstr ""
 "票务公司在根域名 ``ticketsales`` "
 "上添加了一系列子域名。根域名加子域名为``ticketsales.event<ID>.ticket``。"
 
-#: ../../source/concepts/namespace.rst:58
+#: ../../source/concepts/namespace.rst:64
 msgid ""
 "The company links one registered mosaic with ``ticketsales.event1.ticket`` "
 "namespace name."
 msgstr "该公司将一个已注册的马赛克与 ``ticketsales.event1.ticket`` 命名空间相链接。"
 
-#: ../../source/concepts/namespace.rst:61
+#: ../../source/concepts/namespace.rst:67
 msgid "Identifying the buyer"
 msgstr "区别买家"
 
-#: ../../source/concepts/namespace.rst:63
+#: ../../source/concepts/namespace.rst:69
 msgid ""
 "Alice, who wants to buy the ticket, has registered the namespace ``alice`` "
 "and assigned it to her account as an alias."
 msgstr "想要购买门票的Alice已经注册了命名空间 ``alice`` 并将其作为别名分配给她的帐户。"
 
-#: ../../source/concepts/namespace.rst:65
+#: ../../source/concepts/namespace.rst:71
 msgid ""
 "The ticket vendor can send 1 ``ticketsales.event1.ticket`` to ``alice`` "
 "instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-"
@@ -171,15 +151,15 @@ msgstr ""
 "票务公司可以将 一个 ``ticketsales.event1.ticket`` 发送给 ``alice`` 而不是把一个 "
 "``0dc67fbe1cad29e3`` 发送给 ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``。"
 
-#: ../../source/concepts/namespace.rst:69
+#: ../../source/concepts/namespace.rst:75
 msgid "Guides"
 msgstr "指南"
 
-#: ../../source/concepts/namespace.rst:81
+#: ../../source/concepts/namespace.rst:87
 msgid "Schemas"
 msgstr "模式"
 
-#: ../../source/concepts/namespace.rst:83
+#: ../../source/concepts/namespace.rst:89
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -188,23 +168,23 @@ msgstr ""
 "配置参数是 `可编辑的 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ 。但在公共网络配置中可能有所不同。"
 
-#: ../../source/concepts/namespace.rst:90
+#: ../../source/concepts/namespace.rst:96
 msgid ""
 "Announce a register namespace transaction to register and re-rent a "
 "namespace."
 msgstr "您可以通过发布注册命名空间交易来进行注册或重新租用命名空间。"
 
-#: ../../source/concepts/namespace.rst:92
+#: ../../source/concepts/namespace.rst:98
 msgid "**Version**: 0x02"
 msgstr "**版本**: 0x02"
 
-#: ../../source/concepts/namespace.rst:94
+#: ../../source/concepts/namespace.rst:100
 msgid "**Entity type**: 0x414E"
 msgstr "**实体类型**: 0x414E"
 
-#: ../../source/concepts/namespace.rst:96
-#: ../../source/concepts/namespace.rst:123
-#: ../../source/concepts/namespace.rst:146
+#: ../../source/concepts/namespace.rst:102
+#: ../../source/concepts/namespace.rst:129
+#: ../../source/concepts/namespace.rst:152
 msgid "**Inlines**:"
 msgstr "**内联**:"
 
@@ -230,17 +210,6 @@ msgstr "已注册命名空间的类型。"
 
 #: ../../source/concepts/namespace.rst:1
 msgid ""
-"The renting duration represents the number of confirmed blocks you would "
-"like to rent the namespace for. During the renting period, it is possible to"
-" extend the rental by sending a :ref:`register namespace transaction"
-"<register-namespace-transaction>` with the extra-confirmed block to rent the"
-" namespace. When a renting period ends, the namespace will become inactive."
-msgstr ""
-"租借期限表示您想要租借该命名空间的时间长短，以已确认区块数量为单位。租借期间，可以通过发送 :ref:`注册命名空间交易 <register-"
-"namespace-transaction>` 来延长已确认区块数量的单位。当租借期完毕，命名空间将变为冻结状态。"
-
-#: ../../source/concepts/namespace.rst:1
-msgid ""
 "If it is a subdomain, a reference to parent namespace name is required."
 msgstr "子域名需要父命名空间的引用。"
 
@@ -261,18 +230,18 @@ msgstr ""
 "命名空间的名字必须是独特的，且长度不可超过 ``64`` 字符。允许包含的字符有 a, b, c, ..., z, 0, 1, 2, ..., 9, "
 "', _ , -。"
 
-#: ../../source/concepts/namespace.rst:117
+#: ../../source/concepts/namespace.rst:123
 msgid ""
 "Announce an alias transaction to attach a namespace to an account. A "
 "namespace can be assigned to any account present in the network."
 msgstr "公布别名交易以将命名空间附加到帐户。 命名空间可以分配给网络中的任何帐户。"
 
-#: ../../source/concepts/namespace.rst:119
-#: ../../source/concepts/namespace.rst:142
+#: ../../source/concepts/namespace.rst:125
+#: ../../source/concepts/namespace.rst:148
 msgid "**Version**: 0x01"
 msgstr "**版本**: 0x01"
 
-#: ../../source/concepts/namespace.rst:121
+#: ../../source/concepts/namespace.rst:127
 msgid "**Entity type**: 0x424E"
 msgstr "**实体类型**: 0x424E"
 
@@ -292,14 +261,14 @@ msgstr "25字节(二进制)"
 msgid "The aliased address."
 msgstr "有别名的地址。"
 
-#: ../../source/concepts/namespace.rst:140
+#: ../../source/concepts/namespace.rst:146
 msgid ""
 "Announce an alias transaction to attach a namespace to a mosaic. Setting an "
 "alias to a mosaic is only possible if the account announcing the transaction"
 " has created the namespace and mosaic involved."
 msgstr "公布别名交易把命名空间附加到马赛克上。要为马赛克设置别名，公布交易的帐户必须是创建相关命名空间和马赛克的账户。"
 
-#: ../../source/concepts/namespace.rst:144
+#: ../../source/concepts/namespace.rst:150
 msgid "**Entity type**: 0x434E"
 msgstr "**实体类型**: 0x434E"
 
@@ -307,8 +276,8 @@ msgstr "**实体类型**: 0x434E"
 msgid "The aliased mosaic id."
 msgstr "被附加别名的马赛克id。"
 
-#: ../../source/concepts/namespace.rst:163
-#: ../../source/concepts/namespace.rst:177
+#: ../../source/concepts/namespace.rst:169
+#: ../../source/concepts/namespace.rst:183
 msgid "Enumeration: uint8"
 msgstr "例举: uint8"
 
@@ -320,7 +289,7 @@ msgstr "根命名空间。"
 msgid "Child namespace."
 msgstr "子命名空间。"
 
-#: ../../source/concepts/namespace.rst:175
+#: ../../source/concepts/namespace.rst:181
 msgid "Alias Action"
 msgstr "别名动作"
 

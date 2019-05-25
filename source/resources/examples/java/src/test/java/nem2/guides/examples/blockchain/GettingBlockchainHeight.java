@@ -30,10 +30,12 @@ class GettingBlockchainHeight {
 
     @Test
     void gettingLastBlockchainBlock() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 01 */
         final BlockchainHttp blockchainHttp = new BlockchainHttp("http://localhost:3000");
 
         final BigInteger blockchainHeight = blockchainHttp.getBlockchainHeight().toFuture().get();
 
         System.out.print(blockchainHeight);
+        /* end block 01 */
     }
 }

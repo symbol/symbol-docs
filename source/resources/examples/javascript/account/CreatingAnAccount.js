@@ -20,6 +20,8 @@ const nem2Sdk = require("nem2-sdk");
 const NetworkType = nem2Sdk.NetworkType,
     Account = nem2Sdk.Account;
 
+/* start block 01 */
 const account = Account.generateNewAccount(NetworkType.MIJIN_TEST);
 
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+/* end block 01 */

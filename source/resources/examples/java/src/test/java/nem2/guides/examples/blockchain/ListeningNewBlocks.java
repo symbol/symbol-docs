@@ -30,6 +30,7 @@ class ListeningNewBlocks {
 
     @Test
     void listeningNewBlocks() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 01 */
         Listener listener = new Listener("http://localhost:3000");
 
         listener.open().get();
@@ -37,5 +38,6 @@ class ListeningNewBlocks {
         BlockInfo blockInfo = listener.newBlock().take(1).toFuture().get();
 
         System.out.println(blockInfo);
+        /* end block 01 */
     }
 }

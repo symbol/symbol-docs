@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,14 +61,6 @@ msgid ""
 msgstr ""
 "初期供給量を ``2,000,000`` まで増加させます。対象のモザイクIDを設定して :ref:`モザイク供給量変更トランザクション "
 "<mosaic-supply-change-transaction>` を定義してください。"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:31
-msgid "|modifying-mosaic-supply-ts|"
-msgstr ""
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:36
-msgid "|modifying-mosaic-supply-js|"
-msgstr ""
 
 #: ../../source/guides/mosaic/modifying-mosaic-supply.rst:43
 msgid "What's next?"

@@ -30,6 +30,7 @@ class GettingAccountInformation {
 
     @Test
     void gettingAccountInformation() throws ExecutionException, InterruptedException, MalformedURLException {
+        /* start block 01 */
         final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
 
         // Replace with address
@@ -38,5 +39,6 @@ class GettingAccountInformation {
         final AccountInfo accountInfo = accountHttp.getAccountInfo(Address.createFromRawAddress(address)).toFuture().get();
 
         System.out.println(accountInfo);
+        /* end block 01 */
     }
 }

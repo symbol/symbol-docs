@@ -25,18 +25,17 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
+    MosaicId = nem2Sdk.MosaicId,
+    Mosaic = nem2Sdk.Mosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
-    LockFundsTransaction = nem2Sdk.LockFundsTransaction,
+    HashLockTransaction = nem2Sdk.HashLockTransaction,
     UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
     Address = nem2Sdk.Address,
-    Mosaic = nem2Sdk.Mosaic,
-    MosaicId = nem2Sdk.MosaicId,
     PublicAccount = nem2Sdk.PublicAccount,
     filter = operators.filter,
     mergeMap = operators.mergeMap;
 
-// 01 - Set up
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -49,7 +48,6 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
-// 02 - Create transfer transaction
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
@@ -57,7 +55,7 @@ const transferTransaction = TransferTransaction.create(
     PlainMessage.create('sending 10 cat.currency'),
     NetworkType.MIJIN_TEST);
 
-// 02 - Create aggregate transaction
+/* start block 01 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [transferTransaction.toAggregate(multisigAccount)],
@@ -65,32 +63,35 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 console.log(signedTransaction.hash);
+/* end block 01 */
 
-const lockFundsTransaction = LockFundsTransaction.create(
+/* start block 02 */
+const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
     new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), // Replace with your network currency mosaic id
+        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
         UInt64.fromUint(10000000)
     ),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const lockFundsTransactionSigned = cosignatoryAccount.sign(lockFundsTransaction);
+const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction);
 
 listener.open().then(() => {
 
     transactionHttp
-        .announce(lockFundsTransactionSigned)
+        .announce(hashLockTransactionSigned)
         .subscribe(x => console.log(x), err => console.error(err));
 
     listener
         .confirmed(cosignatoryAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === lockFundsTransactionSigned.hash),
+                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
             mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
         )
         .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
             err => console.error(err));
 });
+/* end block 02 */

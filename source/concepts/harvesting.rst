@@ -80,7 +80,20 @@ Schemas
 AccountLinkTransaction
 ======================
 
-Announce an AccountLinkTransaction to delegate the account importance score to a proxy account.
+Announce an AccountLinkTransaction to delegate the account importance to a proxy account. By doing so, you can enable delegated harvesting.
+
+In order for the proxy account to be accepted as the ``remoteAccountKey`` for delegated harvesting, it needs to meet the following conditions:
+
+* It cannot own any mosaics.
+* It cannot be a cosignatory of any other account.
+* It cannot be a multisig account.
+* It cannot already be a delegated account for another account.
+* It cannot have its own delegated account.
+
+Furthermore, for the duration that the account is used as a delegated account, it is restricted from:
+
+* initiating any transactions.
+* involvement with any type of transactions.
 
 **Version**: 0x02
 

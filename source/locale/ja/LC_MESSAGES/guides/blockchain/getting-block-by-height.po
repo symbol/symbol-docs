@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -50,34 +50,6 @@ msgid ""
 "created block header."
 msgstr "起源ブロックで何が起こりましたか？次のコードを実行して最初に作成されたブロックのヘッダを取得します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:28
-msgid "|getting-block-by-height-ts|"
-msgstr ""
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:33
-msgid "|getting-block-by-height-java|"
-msgstr ""
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:38
-msgid "|getting-block-by-height-js|"
-msgstr ""
-
 #: ../../source/guides/blockchain/getting-block-by-height.rst:43
 msgid "The following snippet returns the height of the latest block."
 msgstr "以下のスニペットは最終ブロックの高さを返却します。"
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:47
-msgid "|getting-blockchain-height-ts|"
-msgstr ""
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:52
-msgid "|getting-blockchain-height-java|"
-msgstr ""
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:57
-msgid "|getting-blockchain-height-js|"
-msgstr ""
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:62
-msgid "|getting-blockchain-height-cli|"
-msgstr ""

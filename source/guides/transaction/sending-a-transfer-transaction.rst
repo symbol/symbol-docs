@@ -39,19 +39,19 @@ To understand the transaction lifecycle, we recommend you to open three new term
 
 .. code-block:: bash
 
-    $> nem2-cli monitor status
+    nem2-cli monitor status
 
 Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
 
 .. code-block:: bash
 
-    $> nem2-cli monitor unconfirmed
+    nem2-cli monitor unconfirmed
 
 Once a transaction is included, you will see it under the ``confirmed`` terminal.
 
 .. code-block:: bash
 
-    $> nem2-cli monitor confirmed
+    nem2-cli monitor confirmed
 
 ************************
 Let’s get into some code
@@ -61,15 +61,15 @@ Let’s get into some code
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
-        :caption: |sending-a-transfer-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  31-38
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
-        :caption: |sending-a-transfer-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  31-38
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
 
@@ -77,15 +77,15 @@ If you own more than one mosaic, you can send them together in the same transact
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
-        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts
         :language: typescript
-        :lines:  39-40
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
-        :caption: |sending-a-transfer-transaction-with-multiple-mosaics-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
-        :lines:  38-39
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 .. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
@@ -93,32 +93,31 @@ If you own more than one mosaic, you can send them together in the same transact
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
-        :caption: |sending-a-transfer-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  41-45
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
-        :caption: |sending-a-transfer-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  41-45
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
-        :caption: |sending-a-transfer-transaction-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts
         :language: typescript
-        :lines:  48-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-    .. literalinclude:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
-        :caption: |sending-a-transfer-transaction-js|
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransaction.js
         :language: javascript
-        :lines:  48-
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-    .. literalinclude:: ../../resources/examples/cli/transaction/SendingATransferTransaction.sh
-        :caption: |sending-a-transfer-transaction-cli|
+    .. viewsource:: ../../resources/examples/bash/transaction/SendingATransferTransaction.sh
         :language: bash
         :start-after: #!/bin/sh
 
@@ -127,27 +126,3 @@ If you own more than one mosaic, you can send them together in the same transact
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
 If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.
-
-.. |sending-a-transfer-transaction-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransaction.js" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/SendingATransferTransaction.sh" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-with-multiple-mosaics-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-with-multiple-mosaics-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js" target="_blank">View Code</a>
-
-.. |sending-a-transfer-transaction-with-multiple-mosaics-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/transaction/SendingATransferTransactionWithMultipleMosaics.sh" target="_blank">View Code</a>

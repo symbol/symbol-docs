@@ -12,7 +12,7 @@ Http requests
 
 Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
+Assuming that Catapult REST is :doc:`running locally  <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
 
 http://localhost:3000/<path-to-API-request>
 
@@ -31,8 +31,6 @@ Tools
 
 The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
 
-.. note:: Consider using **NEM2-SDK** instead of calling the API directly.
-
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`
 
@@ -47,43 +45,6 @@ An open source HTTP client, available for Mac, Windows and Linux.
 .. |insomnia-app| raw:: html
 
     <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
-
-.. _serialization:
-
-Serialization
-=============
-
-`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
-
-.. figure:: resources/images/diagrams/catbuffer.png
-    :width: 450px
-    :align: center
-
-    NEM2-SDK serialization module
-
-The library accomplishes the following properties:
-
-**Memory Efficiency**
-
-Large networks compute a large number of transactions. Working with binary optimized in size makes the communication faster. Furthermore, reading entities from memory buffers -or just a part of them - is memory efficient.
-
-**Flexibility**
-
-REST `transaction endpoints <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
-
-**Reusability**
-
-Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
-
-The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
-
-Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
-
-.. code-block:: bash
-
-    $> python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
-
-The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
 
 .. _http-errors:
 
@@ -122,12 +83,69 @@ Http status
     "message": "accountId has an invalid format"
   }
 
-uint64: lower and higher
+UInt64: lower and higher
 ========================
 
-Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: ``lower`` and ``higher``.
+Javascript operates on **32-bit** values. The server returns numbers encoded in a UInt64 object to enable numeric representation up to **64 bits**.
 
-Check `how to compact lower and higher into a single value <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37>`_.
+The **UInt64** object returned is composed of two 32-bit numbers: ``lower`` and ``higher``.
+
+The :doc:`nem2-sdk <sdk>` conveniently allows you to work with UInt64 values.
+
+.. code-block:: typescript
+
+    import {UInt64} from "nem2-sdk";
+
+    // Create Uint64 from [lower, higher]
+    const id = new UInt64([123456,654321]);
+
+    // UInt64 to compact number
+    console.log(id.compact());
+    // 2810287296209472
+
+    // UInt64 to Hex
+    console.log(id.toHex());
+    // 0009FBF10001E240
+
+    // Create UInt64 from hex
+    UInt64.fromHex('0009FBF10001E240');
+
+.. _serialization:
+
+Serialization
+=============
+
+`Catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
+
+.. figure:: resources/images/diagrams/catbuffer.png
+    :width: 450px
+    :align: center
+
+    NEM2-SDK serialization module
+
+    The library accomplishes the following properties:
+
+**Memory Efficiency**
+
+Large networks compute a large number of transactions. Working with binary optimized in size makes the communication faster. Furthermore, reading entities from memory buffers -or just a part of them - is memory efficient.
+
+**Flexibility**
+
+REST `transaction endpoints <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+
+**Reusability**
+
+Applications can embed the generated code, without managing dependencies. This is particularly desirable in highly-secure environments. Besides, sharing a common codebase enables the addition of new features with less effort.
+
+The `schemas define <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ the entities data structure. The library generates the leanest code necessary to serialize and deserialize defined entities.
+
+Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
+
+.. code-block:: bash
+
+    python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+
+The generator creates a new file under ``_generated/cpp_builder`` folder. Repeat the process using a different input schema ``(-s)`` or generator ``(-g)`` as needed.
 
 .. _websockets:
 
@@ -214,29 +232,29 @@ This section describes the error messages that can be returned via status channe
     Failure_AccountLink_Remote_Account_Ineligible, Validation failed because the link is attempting to convert ineligible account to remote.
     Failure_AccountLink_Remote_Account_Signer_Not_Allowed, Validation failed because the remote is not allowed to sign a transaction.
     Failure_AccountLink_Remote_Account_Participant_Not_Allowed, Validation failed because the remote is not allowed to participate in the transaction.
-    Failure_Aggregate_Too_Many_Transactions, Validation failed because an aggregate has too many transactions. An aggregate transaction can contain up to ``1000`` inner transactions.
+    Failure_Aggregate_Too_Many_Transactions, Validation failed because an aggregate has too many transactions.
     Failure_Aggregate_No_Transactions, Validation failed because an aggregate does not have any transactions.
-    Failure_Aggregate_Too_Many_Cosignatures, Validation failed because an aggregate has too many cosignatures. The maximum number of cosignatories allowed is ``15``.
+    Failure_Aggregate_Too_Many_Cosignatures, Validation failed because an aggregate has too many cosignatures.
     Failure_Aggregate_Redundant_Cosignatures, Validation failed because there are redundant cosignatures.
     Failure_Aggregate_Ineligible_Cosigners, Validation failed because at least one cosigner is ineligible.
     Failure_Aggregate_Missing_Cosigners, Validation failed because at least one required cosigner is missing. The transaction was announced as complete but had missing cosignatures.
-    Failure_LockHash_Invalid_Mosaic_Id, Validation failed because the lock does not allow the specified mosaic. The only mosaic allowed is ``xem``.
-    Failure_LockHash_Invalid_Mosaic_Amount, Validation failed because the lock does not allow the specified amount. The minimum amount is ``10``.
+    Failure_LockHash_Invalid_Mosaic_Id, Validation failed because the lock does not allow the specified mosaic.
+    Failure_LockHash_Invalid_Mosaic_Amount, Validation failed because the lock does not allow the specified amount.
     Failure_LockHash_Hash_Exists, Validation failed because the hash is already present in cache.
     Failure_LockHash_Hash_Does_Not_Exist, Validation failed because the hash is not present in cache. Remember to lock before announcing aggregate bonded transactions.
     Failure_LockHash_Inactive_Hash, Validation failed because the hash is inactive.
-    Failure_LockHash_Invalid_Duration, Validation failed because the duration is too long. Duration is allowed to lie up to ``2`` days.
-    Failure_LockSecret_Invalid_Hash_Algorithm, Validation failed because the hash algorithm for lock type secret is invalid. See the :doc:`available algorithms <../concepts/cross-chain-swaps>` list.
+    Failure_LockHash_Invalid_Duration, Validation failed because the duration is too long.
+    Failure_LockSecret_Invalid_Hash_Algorithm, Validation failed because the hash algorithm for lock type secret is invalid.
     Failure_LockSecret_Hash_Exists, Validation failed because the hash is already present in cache.
     Failure_LockSecret_Hash_Not_Implemented, Validation failed because the hash is not implemented yet.
-    Failure_LockSecret_Proof_Size_Out_Of_Bounds, Validation failed because the proof is too small or too large. It should be between ``10`` and ``1000`` bytes.
+    Failure_LockSecret_Proof_Size_Out_Of_Bounds, Validation failed because the proof is too small or too large.
     Failure_LockSecret_Secret_Mismatch, Validation failed because the secret does not match proof.
     Failure_LockSecret_Unknown_Secret, Validation failed because the secret is unknown.
     Failure_LockSecret_Inactive_Secret, Validation failed because the secret is inactive.
     Failure_LockSecret_Hash_Algorithm_Mismatch, Validation failed because the hash algorithm does not match.
-    Failure_LockSecret_Invalid_Duration, Validation failed because the duration is too long. Duration is allowed to lie up to ``30`` days.
-    Failure_Mosaic_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
-    Failure_Mosaic_Invalid_Name, Validation failed because the name is invalid. The mosaic name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
+    Failure_LockSecret_Invalid_Duration, Validation failed because the duration is too long.
+    Failure_Mosaic_Invalid_Duration, Validation failed because the duration has an invalid value.
+    Failure_Mosaic_Invalid_Name, Validation failed because the name is invalid.
     Failure_Mosaic_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Mosaic_Expired, Validation failed because the parent is expired.
     Failure_Mosaic_Id_Mismatch, Validation failed because the id is not the expected id generated from signer and nonce.
@@ -244,7 +262,7 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Parent_Id_Conflict, Validation failed because the existing parent id does not match the supplied parent id.
     Failure_Mosaic_Invalid_Property, Validation failed because a mosaic property is invalid.
     Failure_Mosaic_Invalid_Flags, Validation failed because the mosaic flags are invalid.
-    Failure_Mosaic_Invalid_Divisibility, Validation failed because the mosaic divisibility is invalid. The specified divisibility is greater than ``6`` or negative.
+    Failure_Mosaic_Invalid_Divisibility, Validation failed because the mosaic divisibility is invalid.
     Failure_Mosaic_Invalid_Supply_Change_Direction, Validation failed because the mosaic supply change direction is invalid: decrease (0) and  increase (1).
     Failure_Mosaic_Invalid_Supply_Change_Amount, Validation failed because the mosaic supply change amount is invalid.
     Failure_Mosaic_Invalid_Id, Validation failed because the mosaic id is invalid.
@@ -253,9 +271,9 @@ This section describes the error messages that can be returned via status channe
     Failure_Mosaic_Modification_No_Changes, Validation failed because mosaic modification would not result in any changes.
     Failure_Mosaic_Supply_Immutable, Validation failed because the mosaic supply is immutable.
     Failure_Mosaic_Supply_Negative, Validation failed because the resulting mosaic supply is negative.
-    Failure_Mosaic_Supply_Exceeded, Validation failed because the resulting mosaic supply exceeds the maximum allowed value. The range should be between 0 and ``9.000.000.000``.
+    Failure_Mosaic_Supply_Exceeded, Validation failed because the resulting mosaic supply exceeds the maximum allowed value.
     Failure_Mosaic_Non_Transferable, Validation failed because the mosaic is not transferable. Only the creator of the mosaic is eligible to be the recipient of a non-transferable mosaic once transferred.
-    Failure_Mosaic_Max_Mosaics_Exceeded, Validation failed because the credit of the mosaic would exceed the maximum different mosaics an account is allowed to own. Set by default to ``10.000`` different mosaics per account.
+    Failure_Mosaic_Max_Mosaics_Exceeded, Validation failed because the credit of the mosaic would exceed the maximum different mosaics an account is allowed to own.
     Failure_Multisig_Modify_Account_In_Both_Sets, Validation failed because an account is specified to be both added and removed.
     Failure_Multisig_Modify_Multiple_Deletes, Validation failed because there are multiple removals.
     Failure_Multisig_Modify_Redundant_Modifications, Validation failed because there are redundant modifications.
@@ -265,20 +283,20 @@ This section describes the error messages that can be returned via status channe
     Failure_Multisig_Modify_Min_Setting_Out_Of_Range, Validation failed because the new minimum settings are out of range.
     Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories, Validation failed because min settings are larger than number of cosignatories.
     Failure_Multisig_Modify_Unsupported_Modification_Type, Validation failed because the modification type is unsupported: add (0) and remove (1).
-    Failure_Multisig_Modify_Max_Cosigned_Accounts, Validation failed because the cosignatory already cosigns the maximum number of accounts. An account cannot be cosignatory of more than ``5`` multisig accounts.
-    Failure_Multisig_Modify_Max_Cosigners, Validation failed because the multisig account already has the maximum number of cosignatories. A multisig account cannot have more than ``10`` cosignatories.
+    Failure_Multisig_Modify_Max_Cosigned_Accounts, Validation failed because the cosignatory already cosigns the maximum number of accounts.
+    Failure_Multisig_Modify_Max_Cosigners, Validation failed because the multisig account already has the maximum number of cosignatories.
     Failure_Multisig_Modify_Loop, Validation failed because a multisig loop is created. A multisig account cannot be cosignatory of itself. Neither an account can be turned into multisig having as cosignatory another multisig where the account is cosignatory.
-    Failure_Multisig_Modify_Max_Multisig_Depth, Validation failed because the max multisig depth is exceeded. The maximum depth of a multilevel multisig account is ``3``.
+    Failure_Multisig_Modify_Max_Multisig_Depth, Validation failed because the max multisig depth is exceeded.
     Failure_Multisig_Operation_Not_Permitted_By_Account, Validation failed because an operation is not permitted by a multisig account. A multisig account cannot be converted into a multisig account again.
-    Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value. Duration is allowed to lie up to ``365`` days.
-    Failure_Namespace_Invalid_Name, Validation failed because the namespace has an invalid name. The namespace name may have a maximum length of ``64`` characters. Allowed characters are `a-to-z`; `0-to-9` and the following special characters: \`_-
+    Failure_Namespace_Invalid_Duration, Validation failed because the duration has an invalid value.
+    Failure_Namespace_Invalid_Name, Validation failed because the namespace has an invalid name.
     Failure_Namespace_Name_Id_Mismatch, Validation failed because the name and id don't match.
     Failure_Namespace_Expired, Validation failed because the namespace has expired.
     Failure_Namespace_Owner_Conflict, Validation failed because the parent owner conflicts with the child owner.
     Failure_Namespace_Id_Mismatch, Validation failed because the id is not the expected id generated from signer and nonce.
     Failure_Namespace_Invalid_Namespace_Type, Validation failed because the namespace type is invalid: rootnamespace (0) and subnamesapce (1).
     Failure_Namespace_Root_Name_Reserved, Validation failed because the root namespace has a `reserved name <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L60>`_.
-    Failure_Namespace_Too_Deep, Validation failed because the resulting namespace would exceed the maximum allowed namespace depth. Namespaces can have up to ``3`` nested levels.
+    Failure_Namespace_Too_Deep, Validation failed because the resulting namespace would exceed the maximum allowed namespace depth.
     Failure_Namespace_Parent_Unknown, Validation failed because the namespace parent is unknown.
     Failure_Namespace_Already_Exists, Validation failed because the namespace already exists.
     Failure_Namespace_Already_Active,Validation failed because the namespace is already active.
@@ -300,12 +318,12 @@ This section describes the error messages that can be returned via status channe
     Failure_Property_Modification_Redundant, Validation failed because a modification is redundant.
     Failure_Property_Modification_Not_Allowed, Validation failed because there is not a value in the container.
     Failure_Property_Modification_Count_Exceeded, Validation failed because the transaction has too many modifications.
-    Failure_Property_Values_Count_Exceeded, Validation failed because the resulting property has too many values. The maximum number of values a property can have is ``512``.
+    Failure_Property_Values_Count_Exceeded, Validation failed because the resulting property has too many values.
     Failure_Property_Value_Invalid, Validation failed because the property value is invalid.
     Failure_Property_Signer_Address_Interaction_Not_Allowed, Validation failed because the signer is not allowed to interact with an address involved in the transaction.
     Failure_Property_Mosaic_Transfer_Not_Allowed, Validation failed because the mosaic transfer is prohibited by the recipient.
     Failure_Property_Transaction_Type_Not_Allowed, Validation failed because the transaction type is not allowed to be initiated by the signer.
-    Failure_Transfer_Message_Too_Large, Validation failed because the message is too large.  It exceeds the limit of ``1024`` bytes.
+    Failure_Transfer_Message_Too_Large, Validation failed because the message is too large.
     Failure_Transfer_Out_Of_Order_Mosaics, Validation failed because the mosaics are out of order. Mosaics on a transfer transaction should be ordered by id value.
     Failure_Chain_Unlinked, Validation failed because a block was received that did not link with the existing chain.
     Failure_Chain_Block_Not_Hit, Validation failed because a block was received that is not a hit.
@@ -326,4 +344,5 @@ This section describes the error messages that can be returned via status channe
     Failure_Extension_Partial_Transaction_Cache_Prune, Validation failed because the partial transaction was pruned from the temporal cache.
     Failure_Extension_Partial_Transaction_Dependency_Removed, Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
 
-:download:`OpenAPI specification <resources/collections/swagger.yaml>`
+:download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>`
+:download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`

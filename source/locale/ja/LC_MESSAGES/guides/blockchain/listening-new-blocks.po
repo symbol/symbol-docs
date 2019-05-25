@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 18:08+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -44,23 +44,7 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:26
-msgid "|listening-new-blocks-ts|"
-msgstr ""
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:31
-msgid "|listening-new-blocks-java|"
-msgstr ""
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:36
-msgid "|listening-new-blocks-js|"
-msgstr ""
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:41
-msgid "|listening-new-blocks-cli|"
-msgstr ""
-
-#: ../../source/guides/blockchain/listening-new-blocks.rst:46
+#: ../../source/guides/blockchain/listening-new-blocks.rst:45
 msgid ""
 "The :ref:`listener implementation changes <monitoring-transactions-client-"
 "side>` when used on the client side (e.g., Angular, React, Vue)."

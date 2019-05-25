@@ -25,29 +25,17 @@ Call ``getNamespace`` function, passing the namespace identifier you want to che
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.ts
-        :caption: |getting-namespace-information-ts|
+    .. viewsource:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.ts
         :language: typescript
-        :lines:  21-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/javascript/namespace/GettingNamespaceInformation.js
-        :caption: |getting-namespace-information-js|
+    .. viewsource:: ../../resources/examples/javascript/namespace/GettingNamespaceInformation.js
         :language: javascript
-        :lines: 24-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-    .. literalinclude:: ../../resources/examples/cli/namespace/GettingNamespaceInformation.sh
-        :caption: |getting-namespace-information-cli|
+    .. viewsource:: ../../resources/examples/bash/namespace/GettingNamespaceInformation.sh
         :language: bash
         :start-after: #!/bin/sh
 
-.. |getting-namespace-information-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/GettingNamespaceInformation.ts" target="_blank">View Code</a>
-
-.. |getting-namespace-information-js| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/GettingNamespaceInformation.js" target="_blank">View Code</a>
-
-.. |getting-namespace-information-cli| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/cli/namespace/GettingNamespaceInformation.sh" target="_blank">View Code</a>

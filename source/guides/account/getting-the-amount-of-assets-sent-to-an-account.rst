@@ -4,7 +4,7 @@
     :category: Account
     :excerpt: 1
     :nocomments:
-    
+
 ###############################################
 Getting the amount of assets sent to an account
 ###############################################
@@ -27,10 +27,10 @@ In this example, we are going to check how many assets of a certain type have we
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.ts
-        :caption: |getting-amount-of-assets-sent-to-an-account-ts|
+    .. viewsource:: ../../resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.ts
         :language: typescript
-        :lines:  30-
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 If you want to check another :doc:`mosaic <../../concepts/mosaic>` different than the native currency, change ``mosaicId`` and ``divisibility`` for the target mosaic properties.
 
@@ -39,6 +39,3 @@ If you want to check another :doc:`mosaic <../../concepts/mosaic>` different tha
     const mosaicId = new MosaicId([3562970624, 976072438]);
     const divisibility = 6;
 
-.. |getting-amount-of-assets-sent-to-an-account-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.ts" target="_blank">View Code</a>

@@ -27,7 +27,7 @@ import {
     NetworkCurrencyMosaic,
 } from 'nem2-sdk';
 
-// 01 - Create Transfer Transaction
+/* start block 01 */
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
 
 const transferTransaction = TransferTransaction.create(
@@ -36,17 +36,20 @@ const transferTransaction = TransferTransaction.create(
     [NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
+/* end block 01 */
 
-// 02 - Signing the transaction
+/* start block 02 */
 const privateKey = process.env.PRIVATE_KEY as string;
 
 const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
 
 const signedTransaction = account.sign(transferTransaction);
+/* end block 02 */
 
-// 03 - Announcing the transaction
+/* start block 03 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
+/* end block 03 */

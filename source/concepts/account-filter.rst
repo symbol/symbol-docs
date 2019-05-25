@@ -28,16 +28,6 @@ Mosaic filter
 
 An account can configure a filter to permit incoming transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
-*****************
-EntityType filter
-*****************
-
-An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
-
-********
-Examples
-********
-
 Blocking spam transactions
 ==========================
 
@@ -45,7 +35,7 @@ A company is using the public chain to certify the quality of their products.
 
 When the quality verification process concludes, an operator sends a :doc:`quality seal<mosaic>` to the product account.
 
-The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding others to spam their products with non-related information.
+The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
 .. figure:: ../resources/images/examples/account-properties-spam.png
     :align: center
@@ -55,12 +45,30 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
 The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality.seal`` mosaics.
 
+*****************
+EntityType filter
+*****************
+
+An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
+
 Enhancing the account security
 ==============================
 
 Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig<multisig-account>` account.
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
+
+******
+Guides
+******
+
+.. postlist::
+    :category: Account Filter
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
 *******
 Schemas
@@ -87,9 +95,9 @@ Configure filters to prevent receiving transactions from undesired addresses.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`AddressModification <address-modification>`, modificationsCount); The array of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
+    modifications; array<:ref:`AddressModification <address-modification>`, modificationsCount>; The array of modifications.
 
 .. _account-properties-mosaic-transaction:
 
@@ -110,9 +118,9 @@ Configure filters to prevent receiving transactions containing a specific mosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount); The array of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
+    modifications; array<:ref:`MosaicModification <mosaic-modification>`, modificationsCount>; The array of modifications.
 
 
 .. _account-properties-entity-type-transaction:
@@ -134,9 +142,9 @@ Configure filters to prevent announcing transactions by :ref:`type <transaction-
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    propertyType; :ref:`PropertyType<property-type>` ; The property type.
-    modificationsCount; uint8; The number of modifications.
-    modifications; array(:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount); The array of modifications.
+    propertyType; :ref:`PropertyType<property-type>` ; Indicates the property type.
+    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
+    modifications; array<:ref:`EntityTypeModification <entity-type-modification>`, modificationsCount>; The array of modifications.
 
 .. _address-modification:
 
@@ -207,9 +215,9 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x01; The property type allows receiving transactions from an address.
-    0x02; The property type allows receiving transactions containing a mosaic id.
-    0x04; The property type allows sending transactions with a given transaction type.
+    0x01; The property type only allows receiving transactions from an address.
+    0x02; The property type only allows receiving transactions containing a mosaic id.
+    0x04; The property type only allows sending transactions with a given transaction type.
     0x05; Property type sentinel.
     0x81; The property type blocks receiving transactions from an address.
     0x82; The property type blocks receiving transactions containing a mosaic id.

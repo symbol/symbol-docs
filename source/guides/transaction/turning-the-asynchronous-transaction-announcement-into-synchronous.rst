@@ -52,15 +52,15 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
 .. code-block:: bash
 
-    $> git clone git@github.com:tech-bureau/catapult-service-bootstrap.git
-    $> cd catapult-service-bootstrap
-    $> docker-compose up
+    git clone git@github.com:tech-bureau/catapult-service-bootstrap.git
+    cd catapult-service-bootstrap
+    docker-compose up
 
 2. If everything goes well, after the image has been downloaded and the service is running, check if you can get the first block information:
 
 .. code-block:: bash
 
-    $> curl localhost:3000/block/1
+    curl localhost:3000/block/1
 
 Getting Alice and Bob addresses
 ===============================
@@ -71,8 +71,8 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 
 .. code-block:: bash
 
-    $> cd  build/generated-addresses/
-    $> cat raw-addresses.yaml
+    cd  build/generated-addresses/
+    cat raw-addresses.yaml
 
 2. Take the first key pair as Alice's account, and copy the private key.
 
@@ -89,7 +89,7 @@ nem2-camel acts like a proxy between the application and the REST API.
 
 .. code-block:: bash
 
-    $> java -jar nem2-camel.jar --url http://localhost:3000
+    java -jar nem2-camel.jar --url http://localhost:3000
 
 2. After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
 
@@ -100,19 +100,19 @@ Sending the transfer transaction
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
-        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  32-44
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Once signed, Alice :doc:`announces the transaction <../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until the transaction reaches the network, returning back the Transaction object.
 
 .. example-code::
 
-    .. literalinclude:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
-        :caption: |turning-the-asynchronous-transaction-announcement-into-synchronous-ts|
+    .. viewsource:: ../../resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
-        :lines:  47-
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 It is important to highlight that this transaction has an ``unconfirmed`` status. You might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before doing additional actions.
 
@@ -137,7 +137,3 @@ In case the Catapult REST server throws an error, the subscribe method will invo
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>
-
-.. |turning-the-asynchronous-transaction-announcement-into-synchronous-ts| raw:: html
-
-   <a href="https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts" target="_blank">View Code</a>

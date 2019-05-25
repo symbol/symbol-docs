@@ -18,9 +18,12 @@
 
 import {MosaicHttp, MosaicId} from 'nem2-sdk';
 
+/* start block 01 */
 const mosaicHttp = new MosaicHttp('http://localhost:3000');
 const mosaicId = new MosaicId('71415AC19C818709');
 
 mosaicHttp
     .getMosaic(mosaicId)
     .subscribe(mosaicInfo => console.log(mosaicInfo), err => console.error(err));
+/* end block 01 */
+

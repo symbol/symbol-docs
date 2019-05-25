@@ -21,13 +21,14 @@ const NetworkType = nem2Sdk.NetworkType,
     Password = nem2Sdk.Password,
     SimpleWallet = nem2Sdk.SimpleWallet;
 
+/* start block 01 */
 const password = new Password('password');
 
-// Replace with a private key
-const privateKey = process.env.PRIVATE_KEY;
+const privateKey = process.env.PRIVATE_KEY; // Replace with a private key
 
 const wallet = SimpleWallet.createFromPrivateKey('wallet-name', password, privateKey, NetworkType.MIJIN_TEST);
 
 const account = wallet.open(password);
 
 console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+/* end block 01 */

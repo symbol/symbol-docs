@@ -18,13 +18,13 @@ To install:
 
 .. code-block:: bash
 
-    $> sudo npm install --global nem2-cli
+    sudo npm install --global nem2-cli
 
 To update:
 
 .. code-block:: bash
 
-    $> sudo npm update --global nem2-cli
+    sudo npm update --global nem2-cli
 
 *************
 Configuration
@@ -38,31 +38,31 @@ Configure default profile.
 
 .. code-block:: bash
 
-    $> nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000
+    nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000
 
 NEM2-CLI supports named profiles. You can configure additional profiles by using the --profile option.
 
 .. code-block:: bash
 
-    $> nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000 --profile mijin_test_net_profile
+    nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000 --profile mijin_test_net_profile
 
 By default, NEM2-CLI will always use the default profile. To use a named profile, add the --profile option to the command.
 
 .. code-block:: bash
 
-    $> nem2-cli account info --profile mijin_test_net_profile
+    nem2-cli account info --profile mijin_test_net_profile
 
 If you are going to use named profile for multiple commands, you can use the NEM2_PROFILE environment variable at the command line.
 
 .. code-block:: bash
 
-    $> export NEM2_PROFILE=mijin_test_net_profile
+    export NEM2_PROFILE=mijin_test_net_profile
 
 If you do not have a private key to create a profile you can generate a new account, add a node url and save it as default or named profile.
 
 .. code-block:: bash
 
-    $> nem2-cli account generate --network MIJIN_TEST -s --url http://localhost:3000 --profile mijin_test_net_profile
+    nem2-cli account generate --network MIJIN_TEST -s --url http://localhost:3000 --profile mijin_test_net_profile
 
 ********
 Commands
@@ -88,7 +88,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli profile create -p 206CE7E4B16B48430FD2C216E4BB105564B21E21DEE196267B4B33C54F1023FC -n MIJIN_TEST -u http://localhost:3000
+    nem2-cli profile create -p 206CE7E4B16B48430FD2C216E4BB105564B21E21DEE196267B4B33C54F1023FC -n MIJIN_TEST -u http://localhost:3000
 
 
 **List**
@@ -99,7 +99,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli profile list
+    nem2-cli profile list
 
 .. note:: By default, NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
 
@@ -125,7 +125,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account generate --network MIJIN_TEST
+    nem2-cli account generate --network MIJIN_TEST
 
 **Get account info**
 
@@ -141,7 +141,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account info --address SDAUTVFWMVXVWWKTTEFTLGUO6HP6MR4GLEK6POJ4
+    nem2-cli account info --address SDAUTVFWMVXVWWKTTEFTLGUO6HP6MR4GLEK6POJ4
 
 **Get confirmed transactions**
 
@@ -159,9 +159,9 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account transactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+    nem2-cli account transactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
-    $> nem2-cli account transactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3 --numtransactions 40 --id 5A69C893FD331300012A001C
+    nem2-cli account transactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3 --numtransactions 40 --id 5A69C893FD331300012A001C
 
 **Get incoming transactions**
 
@@ -179,7 +179,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account incoming --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+    nem2-cli account incoming --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
 **Get outgoing transactions**
 
@@ -197,7 +197,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account outgoing --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+    nem2-cli account outgoing --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
 **Get unconfirmed transactions**
 
@@ -215,7 +215,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account unconfirmedtransactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+    nem2-cli account unconfirmedtransactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
 **Get Aggregate bonded transactions**
 
@@ -233,7 +233,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli account aggregatebonded --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+    nem2-cli account aggregatebonded --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
 Blockchain
 ==========
@@ -246,7 +246,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli blockchain height
+    nem2-cli blockchain height
 
 **Blockchain score**
 
@@ -256,7 +256,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli blockchain score
+    nem2-cli blockchain score
 
 Transaction
 ===========
@@ -277,7 +277,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction cosign --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+    nem2-cli transaction cosign --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
 
 **Transaction info**
 
@@ -293,7 +293,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+    nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
 
 **Send transfer transaction**
 
@@ -313,7 +313,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics @cat.currency::10000000
+    nem2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics @cat.currency::10000000
 
 **Send pull transaction**
 
@@ -332,7 +332,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic @cat.currency::10000000 --currency 0dc67fbe1cad29e3
+    nem2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic @cat.currency::10000000 --currency 0dc67fbe1cad29e3
 
 **Register root namespace**
 
@@ -351,7 +351,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction namespace --rootnamespace --duration 100000 --name new-namespace
+    nem2-cli transaction namespace --rootnamespace --duration 100000 --name new-namespace
 
 **Register subnamespace**
 
@@ -369,7 +369,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction namespace --subnamespace --parentname new-namespace --name new-subnamespace
+    nem2-cli transaction namespace --subnamespace --parentname new-namespace --name new-subnamespace
 
 
 **Create a mosaic**
@@ -386,12 +386,50 @@ Options
     -l, --levymutable                   - Mosaic levy mutable
     -d, --divisibility <divisibility>   - Mosaic divisibility, from 0 to 6
     -u, --duration <duration>           - Mosaic duration in amount of blocks
+    -e, --eternal                       - Mosaic does not expire.
 
 Command
 
 .. code-block:: bash
 
-    $> nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+    nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+
+**Link a namespace to a mosaic**
+
+Links a namespace to a :doc:`mosaic <../concepts/mosaic>`.
+
+Options
+
+.. code-block:: bash
+
+    -a, --action <action>       - Alias action (0: Link, 1: Unlink)
+    -m, --mosaic <mosaic>       - Mosaic Id in in hexadecimal format
+    -n, --namespace <namespace> - Namespace name
+
+Command
+
+.. code-block:: bash
+
+    nem2-cli transaction mosaicalias --action 0 --mosaic 7cdf3b117a3c40cc --namespace foo
+
+
+**Link a namespace to an address**
+
+Links a namespace to an :doc:`address <../concepts/account>`.
+
+Options
+
+.. code-block:: bash
+
+    -a, --action <action>       - Alias action (0: Link, 1: Unlink)
+    -m, --address <mosaic>      - Address
+    -n, --namespace <namespace> - Namespace name
+
+Command
+
+.. code-block:: bash
+
+    nem2-cli transaction addressalias --action 0 --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K --namespace foo
 
 Namespace
 =========
@@ -411,7 +449,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli namespace info --uint [929036875,2226345261]
+    nem2-cli namespace info --uint [929036875,2226345261]
 
 Mosaic
 ======
@@ -431,7 +469,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli mosaic info --u 7cdf3b117a3c40cc
+    nem2-cli mosaic info --u 7cdf3b117a3c40cc
 
 Monitoring
 ==========
@@ -447,7 +485,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli monitor block
+    nem2-cli monitor block
 
 **Confirmed transactions**
 
@@ -463,7 +501,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli monitor confirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+    nem2-cli monitor confirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
 
 **Unconfirmed transactions**
 
@@ -479,7 +517,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli monitor unconfirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+    nem2-cli monitor unconfirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
 
 **Aggregate bonded transactions**
 
@@ -495,7 +533,7 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli monitor aggregatebonded --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+    nem2-cli monitor aggregatebonded --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
 
 **Transaction status**
 
@@ -511,4 +549,4 @@ Command
 
 .. code-block:: bash
 
-    $> nem2-cli monitor status --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+    nem2-cli monitor status --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K

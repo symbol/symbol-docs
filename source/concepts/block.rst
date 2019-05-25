@@ -58,7 +58,7 @@ BlockHeader
     blockTransactionHash; 32 bytes (binary); The transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
     blockReceiptsHash; 32 bytes (binary); The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash.
     stateHash; 32 bytes (binary);  For each block, the state of the blockchain is stored in RocksDB, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
-    beneficiaryPublicKey; 32 bytes (binary); The public key of the optional beneficiary designated by harvester.
+    beneficiary; 32 bytes (binary); The public key of the optional beneficiary designated by harvester.
 
 .. |merkle| raw:: html
 

@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # planet★箒星 <syn_tok@hotmail.co.jp>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.2\n"
+"Project-Id-Version: nem2-docs 0.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 13:19+0000\n"
+"POT-Creation-Date: 2019-05-25 13:22+0100\n"
 "PO-Revision-Date: 2019-03-19 13:58+0000\n"
-"Last-Translator: planet★箒星 <syn_tok@hotmail.co.jp>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,16 +67,6 @@ msgstr ""
 msgid "Define the namespaceId and the address you want to link."
 msgstr "リンクしたいアドレスとネームスペースIDを設定します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:32
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:46
-msgid "|linking-a-namespace-to-a-mosaic-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:37
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:51
-msgid "|linking-a-namespace-to-a-mosaic-js|"
-msgstr ""
-
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:42
 msgid "Announce the alias transaction."
 msgstr "エイリアストランザクションのアナウンス"
@@ -96,11 +86,3 @@ msgid ""
 "Now you can send transactions using the namespace linked to the mosaic "
 "instead of defining the complete mosaicId."
 msgstr "これで、モザイクIDの代わりにネームスペースでトランザクションを送信することができるようになりました。"
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:66
-msgid "|sending-a-transfer-transaction-mosaic-alias-ts|"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:71
-msgid "|sending-a-transfer-transaction-mosaic-alias-js|"
-msgstr ""
