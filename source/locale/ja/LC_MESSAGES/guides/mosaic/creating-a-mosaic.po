@@ -29,6 +29,10 @@ msgstr "モザイクの作成"
 msgid "Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`."
 msgstr "このガイドに従って :doc:`モザイク<../../concepts/mosaic>` を作成します。"
 
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:16
+msgid "Background"
+msgstr "背景"
+
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:18
 msgid ""
 "Mosaics can be used to represent any asset in the blockchain such as "
@@ -56,6 +60,10 @@ msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するア�
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
 
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:32
+msgid "Define two transactions to create a mosaic:"
+msgstr "モザイクを作成するには2つのトランザクションを定義します:"
+
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:34
 msgid ""
 "A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to "
@@ -81,6 +89,10 @@ msgid "Divisibility"
 msgstr "可分性"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
 "The mosaic won't be divisible. Determines up to what decimal place the "
 "mosaic can be divided."
@@ -91,20 +103,51 @@ msgid "Duration"
 msgstr "期間"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "1000"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
 "The mosaic will be created for the next 1000 blocks. If you want to create a"
 " non-expiring mosaic, do not set this property."
 msgstr "モザイクは以降1000ブロック先まで作成されます。期限が切れないモザイクを作成したい場合はこのプロパティを設定しないでください。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Supply mutable"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "True"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid "The mosaic supply can change at a later point."
 msgstr "モザイク供給量は後に変更可能です。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
+msgid "Transferable"
+msgstr ""
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
 "The mosaic can be transferred between arbitrary accounts. Otherwise, the "
 "mosaic can be only transferred back to the mosaic creator."
 msgstr "このモザイクは任意のアカウント間で転送できます。そうでない場合はモザイクをモザイク作成者へ送り返すことしかできません。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:49
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:63
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:79
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts`"
+msgstr ""
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:54
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:68
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:84
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/CreatingAMosaic.js`"
+msgstr ""
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:59
 msgid ""
@@ -132,6 +175,11 @@ msgid ""
 msgstr ""
 "両方のトランザクションは、 :ref:`アグリゲートトランザクション <aggregate-transaction>` "
 "を使うことで一緒にアナウンスできます。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:89
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/mosaic/CreatingAMosaic.sh`"
+msgstr ""
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:95
 msgid "What's next?"

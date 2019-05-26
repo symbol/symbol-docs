@@ -359,6 +359,22 @@ msgstr "**モザイクの作成**"
 msgid "Creates a new :doc:`mosaic <../concepts/mosaic>`."
 msgstr "新しい :doc:`モザイク <../concepts/mosaic>` を作成します。"
 
+#: ../../source/cli.rst:397
+msgid "**Link a namespace to a mosaic**"
+msgstr "**ネームスペースをモザイクにリンク**"
+
+#: ../../source/cli.rst:399
+msgid "Links a namespace to a :doc:`mosaic <../concepts/mosaic>`."
+msgstr "ネームスペースを :doc:`モザイク <../concepts/mosaic>` にリンクする。"
+
+#: ../../source/cli.rst:416
+msgid "**Link a namespace to an address**"
+msgstr "ネームスペースをアドレスへリンク"
+
+#: ../../source/cli.rst:418
+msgid "Links a namespace to an :doc:`address <../concepts/account>`."
+msgstr "ネームスペースを :doc:`アドレス <../concepts/account>` にリンクする。"
+
 #: ../../source/cli.rst:435
 msgid "Namespace"
 msgstr "ネームスペース"

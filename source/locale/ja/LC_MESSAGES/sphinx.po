@@ -25,11 +25,157 @@ msgstr ""
 msgid "Home"
 msgstr "ホーム"
 
+#: ../../source/_templates/index.html:15
+msgid "Preview NEM's next core engine"
+msgstr "次世代 NEM のコアエンジンをプレビュー"
+
+#: ../../source/_templates/index.html:16
+msgid "Choose a programming language to get started"
+msgstr "プログラミング言語を選択してください"
+
+#: ../../source/_templates/index.html:43
+msgid "Or connect to the "
+msgstr "または API にアクセスする"
+
+#: ../../source/_templates/index.html:43
+#: ../../source/_templates/index.html:159
+#: ../../source/_templates/include/footer.html:22
+msgid "REST API"
+msgstr ""
+
+#: ../../source/_templates/index.html:56
+msgid "Featured Guides"
+msgstr "注目のガイド"
+
+#: ../../source/_templates/index.html:57
+msgid "Step by step guides with code examples."
+msgstr "コード例付きステップバイステップガイド"
+
+#: ../../source/_templates/index.html:65
+msgid "Account"
+msgstr "アカウント"
+
+#: ../../source/_templates/index.html:68
+msgid "Creating an account"
+msgstr "アカウントの作成"
+
+#: ../../source/_templates/index.html:69
+msgid "Getting the account information"
+msgstr "アカウントの情報を取得する"
+
+#: ../../source/_templates/index.html:70
+msgid "Getting transactions from an account"
+msgstr "トランザクションをアカウントから取得する"
+
+#: ../../source/_templates/index.html:73 ../../source/_templates/index.html:86
+#: ../../source/_templates/index.html:100
+#: ../../source/_templates/index.html:113
+#: ../../source/_templates/index.html:126
+#: ../../source/_templates/index.html:140
+msgid "View More"
+msgstr "もっと見る"
+
+#: ../../source/_templates/index.html:78
+msgid "Multisignature"
+msgstr "マルチシグネチャ"
+
+#: ../../source/_templates/index.html:81
+msgid "Creating a multisig contract"
+msgstr "マルチシグコントラクトの作成"
+
+#: ../../source/_templates/index.html:82
+msgid "Sending a multisig transaction"
+msgstr "マルチシグトランザクションの送信"
+
+#: ../../source/_templates/index.html:83
+msgid "Modifying a multisig account"
+msgstr "マルチシグアカウントの変更"
+
+#: ../../source/_templates/index.html:91
+msgid "Assets"
+msgstr "アセット"
+
+#: ../../source/_templates/index.html:94
+msgid "Creating a mosaic"
+msgstr "モザイクの作成"
+
+#: ../../source/_templates/index.html:95
+msgid "Getting the mosaic information"
+msgstr "モザイクの情報を取得する"
+
+#: ../../source/_templates/index.html:96
+msgid "Modify a mosaic supply"
+msgstr "モザイク供給量の変更"
+
+#: ../../source/_templates/index.html:97
+msgid "Registering a namespace"
+msgstr "ネームスペースの取得"
+
+#: ../../source/_templates/index.html:105
+msgid "Transactions"
+msgstr "トランザクション"
+
+#: ../../source/_templates/index.html:108
+msgid "Sending a transfer transaction"
+msgstr "転送トランザクションの送信"
+
+#: ../../source/_templates/index.html:109
+msgid "Monitoring a transaction status"
+msgstr "トランザクションの監視"
+
+#: ../../source/_templates/index.html:110
+msgid "Grouping transactions"
+msgstr "トランザクションのグループ"
+
+#: ../../source/_templates/index.html:118
+msgid "Advanced Transactions"
+msgstr "トランザクションの応用"
+
+#: ../../source/_templates/index.html:121
+msgid "Creating an escrow contract"
+msgstr "エスクローコントラクトの作成"
+
+#: ../../source/_templates/index.html:122
+msgid "Cosigning transactions"
+msgstr "連署トランザクション"
+
+#: ../../source/_templates/index.html:123
+msgid "Atomic Cross-Chain Swap"
+msgstr "アトミッククロスチェーンスワップ"
+
+#: ../../source/_templates/index.html:131
+msgid "Deploy"
+msgstr "デプロイ"
+
+#: ../../source/_templates/index.html:134
+msgid "Running Catapult locally"
+msgstr "ローカルで Catapult サービスを稼働"
+
+#: ../../source/_templates/index.html:135
+msgid ""
+"Deploying a test net node <span class=\"label label-default\">Coming "
+"soon</span>"
+msgstr "テストネットノードのデプロイ <span class=\"label label-default\">近日公開予定</span>"
+
+#: ../../source/_templates/index.html:136
+msgid ""
+"Configuring your network <span class=\"label label-default\">Coming "
+"soon</span>"
+msgstr "ネットワークの設定 <span class=\"label label-default\">近日公開予定</span>"
+
+#: ../../source/_templates/index.html:151
+msgid "Technical Documentation"
+msgstr "テクニカルドキュメント"
+
 #: ../../source/_templates/index.html:152
 msgid ""
 "Architecture your solution connecting the features that make up the Smart "
 "Asset System."
 msgstr "スマートアセットシステムを構成する機能を接続してソリューションを構築します"
+
+#: ../../source/_templates/index.html:156
+msgid "What is NEM?"
+msgstr "NEM とは？"
 
 #: ../../source/_templates/index.html:157
 #: ../../source/_templates/include/footer.html:11
@@ -40,6 +186,11 @@ msgstr "ビルドイン機能"
 #: ../../source/_templates/include/footer.html:12
 msgid "Protocol"
 msgstr "プロトコル"
+
+#: ../../source/_templates/index.html:160
+#: ../../source/_templates/include/footer.html:23
+msgid "SDKs"
+msgstr ""
 
 #: ../../source/_templates/index.html:161
 #: ../../source/_templates/include/footer.html:24
@@ -70,9 +221,21 @@ msgstr "カテゴリ"
 msgid "Translate"
 msgstr "翻訳する"
 
+#: ../../source/_templates/layout.html:81
+msgid "Did you find what you were looking for?"
+msgstr "お探しのものは見つかりましたか？"
+
+#: ../../source/_templates/layout.html:82
+msgid "Give us your feedback."
+msgstr "フィードバックをください。"
+
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/recentposts.html:2
 msgid "Recent Posts"
 msgstr "最近の投稿"
+
+#: ../../source/_templates/globaltoc.html:10
+msgid "Navigation"
+msgstr "ナビゲーション"
 
 #: ../../source/_templates/collection.html:5
 msgid "Guides"
@@ -129,6 +292,30 @@ msgstr "プロトタイピングツール"
 msgid "Community"
 msgstr "コミュニティ"
 
+#: ../../source/_templates/include/footer.html:36
+msgid "Join #general discussion"
+msgstr ""
+
+#: ../../source/_templates/include/footer.html:41
+msgid "Ask development questions"
+msgstr ""
+
+#: ../../source/_templates/include/footer.html:47
+msgid "Follow the dev updates"
+msgstr ""
+
+#: ../../source/_templates/include/footer.html:53
+msgid "Explore our Github"
+msgstr ""
+
+#: ../../source/_templates/include/footer.html:64
+msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
+msgstr ""
+
+#: ../../source/_templates/include/footer.html:66
+msgid "&copy; Copyright %(copyright)s."
+msgstr ""
+
 #: ../../source/_templates/include/footer.html:70
 msgid "Last updated on %(last_updated)s."
 msgstr "最終更新 %(last_updated)s"
@@ -136,6 +323,10 @@ msgstr "最終更新 %(last_updated)s"
 #: ../../../../../../envs/docs/lib/site-packages/ablog/templates/languages.html:2
 msgid "Languages"
 msgstr "言語"
+
+#: ../../source/_templates/include/navbar-right.html:5
+msgid "Edit"
+msgstr "編集"
 
 #: ../../source/_templates/endpoints.html:2
 msgid "Endpoints"

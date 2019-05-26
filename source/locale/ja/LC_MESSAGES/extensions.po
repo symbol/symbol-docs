@@ -66,9 +66,19 @@ msgstr "説明"
 
 #: ../../source/extensions.rst:1
 msgid ""
+"`catapult service bootstrap <https://github.com/nemtech/catapult-service-"
+"bootstrap>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid ""
 "Starter project to get developers up and running with a running Catapult "
 "Service."
 msgstr "開発者を立ち上げるための Catapult サービスをスタータープロジェクト。"
+
+#: ../../source/extensions.rst:1
+msgid "`nem2-camel <https://github.com/nemtech/nem2-camel>`_"
+msgstr ""
 
 #: ../../source/extensions.rst:1
 msgid ""
@@ -79,6 +89,11 @@ msgstr "非同期なトランザクションのアナウンスを同期的に変
 #: ../../source/extensions.rst:26
 msgid "Community extensions"
 msgstr "コミュニティの拡張"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`Apostille library <https://github.com/luxtagofficial/Apostille-library>`_"
+msgstr ""
 
 #: ../../source/extensions.rst:1
 msgid ""
@@ -94,8 +109,8 @@ msgid ""
 "extension can be changed multiple times, developers should spend more time "
 "experimenting and learning, creating a specification later on."
 msgstr ""
-"拡張を作成するために NIP "
-"を作成する必要がありますか？いいえ。実際、NEMブロックチェーンとそれを使用するさまざまなプロジェクトを改善する拡張を構築するまでは、NIP "
+"拡張を作成するために NIP を作成する必要がありますか？いいえ。実際 NEM "
+"ブロックチェーンとそれを使用するさまざまなプロジェクトを改善する拡張を構築するまでは、NIP "
 "を提出しないことをお勧めします。拡張は何度も変更されるので、開発者は後で仕様を作成し、実験と学習をより多くの時間を費やす必要があります。"
 
 #: ../../source/extensions.rst:36

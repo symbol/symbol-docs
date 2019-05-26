@@ -45,6 +45,15 @@ msgstr "3レベルマルチシグアカウントの例"
 msgid "Background"
 msgstr "背景"
 
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:26
+msgid ""
+":doc:`Multisig accounts <../../concepts/multisig-account>` can have as "
+"cosignatories other multisig accounts and add “AND/OR” logic to multi-"
+"signature transactions."
+msgstr ""
+":doc:`マルチシグアカウント <../../concepts/multisig-account>` "
+"は他のマルチシグアカウントを連署者とすることができ、マルチシグトランザクションに “AND/OR” ロジックを追加できます。"
+
 #: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:31
 msgid "Prerequisites"
 msgstr "前提条件"
@@ -63,6 +72,48 @@ msgstr ":doc:`アカウントの作成 <creating-and-opening-an-account>` 方法
 #: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:38
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:40
+msgid "Define the multisig account #2."
+msgstr "マルチシグアカウント #2 の定義"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:44
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:58
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:72
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:86
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAMultilevelMultisigAccount.ts`"
+msgstr ""
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:49
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:63
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:77
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:91
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAMultilevelMultisigAccount.js`"
+msgstr ""
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:54
+msgid "Define the multisig account #3."
+msgstr "マルチシグアカウント #3 の定義"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:68
+msgid "Define the multisig account #1."
+msgstr "マルチシグアカウント #1 の定義"
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:82
+msgid ""
+"Announce the transactions together using an :ref:`aggregate bonded "
+"transaction <aggregate-transaction>`. Make sure that the account #1 owns at "
+"least ``10`` cat.currency."
+msgstr ""
+
+#: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:96
+msgid ""
+"The cosignatories must opt-in to become cosignatories. :doc:`Cosign the "
+"announced aggregate transaction <../transaction/signing-announced-aggregate-"
+"bonded-transactions>` with the accounts #5, #6, #7, #8, and #4."
+msgstr ""
 
 #: ../../source/guides/account/creating-a-multi-level-multisig-account.rst:105
 msgid "What's next?"

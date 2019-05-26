@@ -25,6 +25,154 @@ msgstr ""
 msgid "Translating the documentation"
 msgstr "ドキュメントの翻訳"
 
+#: ../../source/guidelines/translating-the-documentation.rst:7
+msgid ""
+"The NEM Developer Center is translated using **Transifex**, a collaborative "
+"localization platform."
+msgstr "NEM 開発者センターは共同翻訳プラットフォームである **Transifex** を利用して翻訳されています。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:11
+msgid "Translators"
+msgstr "翻訳者"
+
+#: ../../source/guidelines/translating-the-documentation.rst:13
+msgid "Follow this guide to start contributing to the docs translation."
+msgstr "ドキュメント翻訳の貢献を始めるためにこのガイドに従ってください。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:15
+msgid "Sign up for an account"
+msgstr "アカウントの作成"
+
+#: ../../source/guidelines/translating-the-documentation.rst:17
+msgid ""
+"Create a new Transifex account `here "
+"<https://www.transifex.com/signup/?join_project=nem2docs>`_ .  We recommend "
+"reading as well Transifex's `Getting Started as a Translator guide "
+"<https://docs.transifex.com/getting-started-1/translators>`_."
+msgstr ""
+"新しい Transifex アカウントを `ここ "
+"<https://www.transifex.com/signup/?join_project=nem2docs>`_ で作成します。Transifex"
+" 提供の `翻訳者として取り組みを始めるガイド <https://docs.transifex.com/getting-"
+"started-1/translators>`_ を読むことをおすすめします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:19
+msgid "Join nem2-docs team and choose a language"
+msgstr "nem2-docs チームに参加して、言語を選択します"
+
+#: ../../source/guidelines/translating-the-documentation.rst:21
+msgid ""
+"Explore the `nem2-docs project in Transifex "
+"<https://www.transifex.com/nemtech/nem2docs/>`_. Check which languages are "
+"being translated and up to which point they are complete."
+msgstr ""
+"`Transifex 内の nem2-docs プロジェクト "
+"<https://www.transifex.com/nemtech/nem2docs/>`_ "
+"を探ります。どの言語が翻訳されているか、どの時点まで完了しているかを確認してください。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:23
+msgid ""
+"Click on `Help Translate \"nem2-docs\" "
+"<https://www.transifex.com/signup/?join_project=nem2docs>`_ button on the "
+"right side of the header, selecting the language you want to contribute."
+msgstr ""
+"貢献したい言語を選択中のヘッダーの右サイドにある `\"nem2-docs\" の翻訳ヘルプ "
+"<https://www.transifex.com/signup/?join_project=nem2docs>`_ ボタンをクリックします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:25
+msgid ""
+"The translation coordinator will approve your request. Once accepted, you "
+"will receive an email. At this moment, you will be able to start translating"
+" the docs."
+msgstr ""
+"翻訳コーディネーターがあなたのリクエストを承認します。承認されるとメールを受け取ります。この時点であなたはドキュメント翻訳を始めることができます。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:27
+msgid "Find and translate content"
+msgstr "コンテンツを見つけて翻訳する"
+
+#: ../../source/guidelines/translating-the-documentation.rst:29
+msgid ""
+"Once you have joined the team, read `Translating with the Web Editor guide "
+"<https://docs.transifex.com/translation/translating-with-the-web-editor>`_ "
+"to get started. You can also contribute by `reviewing translations done by "
+"other users <https://docs.transifex.com/translation/reviewing-strings>`_."
+msgstr ""
+"チームに参加したら取り組みを始めるために `Web エディタを使用した翻訳ガイド "
+"<https://docs.transifex.com/translation/translating-with-the-web-editor>`_ "
+"を読んでください。 `他のユーザによる翻訳のレビュー <https://docs.transifex.com/translation"
+"/reviewing-strings>`_ で貢献することも出来ます。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:33
+msgid "Developers"
+msgstr "開発者"
+
+#: ../../source/guidelines/translating-the-documentation.rst:35
+msgid ""
+"This guide explains how to interact with Transifex service using "
+"``transifex-client`` tool."
+msgstr "このガイドは ``transifex-client`` ツールを使用して Transifex サービスと疎通する方法を解説しています。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:38
+msgid "Pull latest files"
+msgstr "最新ファイルの取得"
+
+#: ../../source/guidelines/translating-the-documentation.rst:40
+msgid ""
+"Follow these instructions to download the latest translations from "
+"Transifex."
+msgstr "以下の手順に従って最新の翻訳を Transifex からダウンロードします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:42
+msgid "Install ``transifex-client``."
+msgstr "``transifex-client`` のインストール"
+
+#: ../../source/guidelines/translating-the-documentation.rst:48
+msgid ""
+"Download the latest translated files. Replace <lang> with your `language "
+"code <https://en.wikipedia.org/wiki/ISO_639-1>`_."
+msgstr ""
+"最新の翻訳ファイルをダウンロードします。 <lang> をあなたの `言語コード "
+"<https://en.wikipedia.org/wiki/ISO_639-1>`_ へ置き換えてください。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:54
+msgid "Compile the docs for the target language."
+msgstr "ターゲットとしている言語へドキュメントをコンパイルします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:56
+#: ../../source/guidelines/translating-the-documentation.rst:78
+msgid "**Linux/Mac**"
+msgstr ""
+
+#: ../../source/guidelines/translating-the-documentation.rst:62
+#: ../../source/guidelines/translating-the-documentation.rst:84
+msgid "**Windows**"
+msgstr ""
+
+#: ../../source/guidelines/translating-the-documentation.rst:70
+msgid "Push new literals"
+msgstr "新しい文言をプッシュ"
+
+#: ../../source/guidelines/translating-the-documentation.rst:72
+msgid ""
+"Follow these instructions to publish updated source literals to Transifex."
+msgstr "以下の手順に従って更新された文言ソースを Transifex へパブリッシュします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:74
+msgid ""
+"You will need explicit permissions from the Transifex project coordinator to"
+" push source files."
+msgstr "ソースファイルをプッシュするには Transifex プロジェクトコーディネーターからの明示的な許可が必要です。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:76
+msgid ""
+"Generate the literals. For each documentation file, a .po file will be "
+"created under ``build/gettext``."
+msgstr "文言を生成します。各ドキュメントファイルの .po ファイルは ``build/gettext`` に生成されます。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:90
+msgid "Push the source literals to Transifex."
+msgstr "Transifex へ文言ソースをプッシュ。"
+
 #: ../../source/guidelines/translating-the-documentation.rst:96
 msgid ""
 ":doc:`Submit your changes <suggesting-changes>` into the nem2-docs "

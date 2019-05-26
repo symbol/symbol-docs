@@ -25,6 +25,12 @@ msgstr ""
 msgid "What is NEM?"
 msgstr "NEM とは？"
 
+#: ../../source/getting-started/what-is-nem.rst:5
+msgid ""
+"This documentation introduces NEM's next core engine, code-named "
+"**Catapult**."
+msgstr "このドキュメントは次世代 NEMのコアエンジン コードネーム **Catapult** を紹介します。"
+
 #: ../../source/getting-started/what-is-nem.rst:9
 #: ../../source/getting-started/what-is-nem.rst:19
 msgid "The Smart Asset System"

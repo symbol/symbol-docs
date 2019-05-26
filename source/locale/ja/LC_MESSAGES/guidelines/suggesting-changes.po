@@ -25,6 +25,17 @@ msgstr ""
 msgid "Suggesting documentation changes"
 msgstr "ドキュメント変更の提案"
 
+#: ../../source/guidelines/suggesting-changes.rst:7
+msgid ""
+"The NEM Developer Center is an open source project and we love to receive "
+"contributions from our community — you! There are many ways to contribute, "
+"from writing guides, improving the documentation, submitting errors and "
+"requests or writing new pieces of documentation which can be incorporated "
+"into the docs itself."
+msgstr ""
+"NEM デベロッパーセンターはオープンソースプロジェクトであり、私達のコミュニティからの貢献を待っています - "
+"そう、あなた！ガイドを書くこと、ドキュメントを改良すること、エラーや要求を提出すること、あるいはドキュメント自体に組み込むことができる新しいドキュメントを書くこと、多くの方法で貢献することができます。"
+
 #: ../../source/guidelines/suggesting-changes.rst:13
 msgid "Error reports"
 msgstr "エラーの報告"
@@ -50,6 +61,54 @@ msgstr "エラーの再現の準備をしていただけるととても助かり
 msgid ""
 "Please, take into consideration the next template to report your issue:"
 msgstr "問題の報告には次のテンプレートを使うことを考慮してください:"
+
+#: ../../source/guidelines/suggesting-changes.rst:22
+msgid "**Describe the error**"
+msgstr "**エラーの説明**"
+
+#: ../../source/guidelines/suggesting-changes.rst:24
+msgid "A clear and concise description of what the error is."
+msgstr "発生したエラーについての明確で簡潔な説明。"
+
+#: ../../source/guidelines/suggesting-changes.rst:26
+msgid "**To Reproduce**"
+msgstr "**再現方法**"
+
+#: ../../source/guidelines/suggesting-changes.rst:28
+msgid "Steps to reproduce the behavior:"
+msgstr "挙動を再現する方法:"
+
+#: ../../source/guidelines/suggesting-changes.rst:30
+msgid "Go to '...'"
+msgstr ""
+
+#: ../../source/guidelines/suggesting-changes.rst:32
+msgid "Click on '....'"
+msgstr ""
+
+#: ../../source/guidelines/suggesting-changes.rst:34
+msgid "Scroll down to '....'"
+msgstr ""
+
+#: ../../source/guidelines/suggesting-changes.rst:36
+msgid "See error"
+msgstr ""
+
+#: ../../source/guidelines/suggesting-changes.rst:38
+msgid "**Expected behavior**"
+msgstr "**意図していた挙動**"
+
+#: ../../source/guidelines/suggesting-changes.rst:40
+msgid "A clear and concise description of what you expected to happen."
+msgstr "期待していた挙動についての明確で簡潔な説明。"
+
+#: ../../source/guidelines/suggesting-changes.rst:42
+msgid "**Screenshots**"
+msgstr "**スクリーンショット**"
+
+#: ../../source/guidelines/suggesting-changes.rst:44
+msgid "If applicable, add screenshots to help explain your problem."
+msgstr "該当する場合は、問題を説明するためにスクリーンショットを追加してください。"
 
 #: ../../source/guidelines/suggesting-changes.rst:46
 msgid "Open a new |issue| here."
@@ -117,6 +176,10 @@ msgid ""
 msgstr ""
 "これを明示的に述べているかどうかにかかわらず、著作権で保護された素材をプルリクエスト、電子メール、またはその他の方法で提出することは、プロジェクトのオープンソースライセンスの下での素材のライセンスを取得することに同意し、法的権限を有することを保証します。"
 
+#: ../../source/guidelines/suggesting-changes.rst:72
+msgid "Building nem2-docs"
+msgstr "nem2-docs のビルド"
+
 #: ../../source/guidelines/suggesting-changes.rst:74
 msgid ""
 "If the documentation change is small, you can use the *\"Edit on Github\"* "
@@ -132,6 +195,18 @@ msgstr ""
 "かなりの変更もしくは貢献をする場合、 |repository| リポジトリをフォークして、あなたのマシンへクローンする必要があるかもしれません。 "
 "|github-help| を参照してください。"
 
+#: ../../source/guidelines/suggesting-changes.rst:78
+msgid "First, make sure you have Python 2.7 or 3.4+ and pip installed."
+msgstr "はじめに Python 2.7 または 3.4+ と pip がインストールされていることを確認してください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:80
+msgid "Then, install requirements using pip:"
+msgstr "そして pip を使用して要求環境のインストールします:"
+
+#: ../../source/guidelines/suggesting-changes.rst:86
+msgid "Run the following command and open the provided url in a browser."
+msgstr "次のコマンドを実行して提供された URL をブラウザで開きます。"
+
 #: ../../source/guidelines/suggesting-changes.rst:93
 msgid "Submitting your changes"
 msgstr "変更の提出"
@@ -140,9 +215,17 @@ msgstr "変更の提出"
 msgid "Once your changes and tests are ready to submit for review:"
 msgstr "あなたの変更とテストがレビューに提出する準備ができたら:"
 
+#: ../../source/guidelines/suggesting-changes.rst:97
+msgid "Test your changes."
+msgstr "あなたの変更をテスト"
+
 #: ../../source/guidelines/suggesting-changes.rst:99
 msgid "Run ``make livehtml`` and preview your changes."
 msgstr "``make livehtml`` を実行し、変更した部分をプレビューしてください。"
+
+#: ../../source/guidelines/suggesting-changes.rst:101
+msgid "Submit a pull request."
+msgstr "プルリクエストの提出"
 
 #: ../../source/guidelines/suggesting-changes.rst:103
 msgid ""
@@ -164,3 +247,19 @@ msgid ""
 msgstr ""
 "それが済んだら休憩して待ちましょう。プルリクエストについての議論をして、その変更が必要な場合はプルリクエストを nem2-docs "
 "にマージするための協力をしたいと思います。"
+
+#: ../../source/guidelines/suggesting-changes.rst:107
+msgid ""
+"*CONTRIBUTING.md* is based on `CONTRIBUTING-template.md "
+"<https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-"
+"template.md>`_ , `elasticsearch/CONTRIBUTING "
+"<https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and"
+" `spark/CONTRIBUTING "
+"<https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_."
+msgstr ""
+"*CONTRIBUTING.md* は `CONTRIBUTING-template.md <https://github.com/nayafia"
+"/contributing-template/blob/master/CONTRIBUTING-template.md>`_ と "
+"`elasticsearch/CONTRIBUTING "
+"<https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ と "
+"`spark/CONTRIBUTING "
+"<https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_ をベースとしています。"

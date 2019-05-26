@@ -21,6 +21,16 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:10
+msgid "Creating a subnamespace"
+msgstr "サブネームスペースの作成"
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:12
+msgid ""
+"Create a :doc:`subnamespace <../../concepts/namespace>` following this "
+"guide."
+msgstr "このガイドに従って :doc:`サブネームスペース <../../concepts/namespace>` を作成してください。"
+
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:16
 msgid "Background"
 msgstr "背景"
@@ -66,6 +76,32 @@ msgstr "それではコードを見ていきましょう"
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:35
 msgid "The first step is to choose a name for your subnamespace."
 msgstr "まずはサブネームスペースの名前を決めましょう。"
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:37
+msgid ""
+"In this example, we have created a subnamespace called ``bar`` under ``foo``"
+" namespace."
+msgstr "この例では ``bar`` と呼ばれるサブネームスペースを ``foo`` の下に作成しています。"
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:41
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/RegisteringASubnamespace.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:46
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java`"
+msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/RegisteringASubnamespace.js`"
+msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:56
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/namespace/RegisteringASubnamespace.sh`"
+msgstr ""
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:62
 msgid "What's next?"
