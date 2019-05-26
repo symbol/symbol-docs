@@ -57,6 +57,10 @@ msgid ""
 msgstr ""
 "最初の販売者ではない人からチケットを購入しても、必ずしもそのチケットの料金をさらに支払うという意味ではありません。これは最初の販売者が、問題の解決のために何もできない、偽造もしくは複製されたチケットを購入してしまう、被害者となる機会です。"
 
+#: ../../source/getting-started/first-application.rst:16
+msgid "What do we want to solve?"
+msgstr "私達は何を解決したいのでしょう？"
+
 #: ../../source/getting-started/first-application.rst:22
 msgid "Authorization model"
 msgstr "認証モデル"
@@ -76,6 +80,10 @@ msgstr "チケットの転売防止。"
 #: ../../source/getting-started/first-application.rst:28
 msgid "Avoid non-authentic tickets and duplicate ones."
 msgstr "未認証のチケットとその複製の防止。"
+
+#: ../../source/getting-started/first-application.rst:31
+msgid "Why should we use NEM?"
+msgstr "何故NEMを使うのでしょう？"
 
 #: ../../source/getting-started/first-application.rst:33
 msgid "Blockchain technology makes sense in cases where:"
@@ -112,6 +120,10 @@ msgstr "残りのコードは **オフチェーン** のままです。これに
 #: ../../source/getting-started/first-application.rst:45
 msgid "Let’s get into some code"
 msgstr "それではコードを見ていきましょう"
+
+#: ../../source/getting-started/first-application.rst:48
+msgid "Creating an account for each participant"
+msgstr "各参加者のアカウントを作成"
 
 #: ../../source/getting-started/first-application.rst:50
 msgid "First, identify the actors involved in the problem we want to solve:"
@@ -162,6 +174,10 @@ msgstr ""
 msgid "Create a second account to identify the ticket buyer."
 msgstr "チケット販売者を識別するための2つ目のアカウントを作成します。"
 
+#: ../../source/getting-started/first-application.rst:84
+msgid "Monitoring the blockchain"
+msgstr "ブロックチェーンの監視"
+
 #: ../../source/getting-started/first-application.rst:86
 msgid ""
 "Accounts change the blockchain state through transactions. Once an account "
@@ -204,6 +220,10 @@ msgid ""
 "terminal."
 msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
 
+#: ../../source/getting-started/first-application.rst:111
+msgid "Creating the ticket"
+msgstr "チケットの作成"
+
 #: ../../source/getting-started/first-application.rst:113
 msgid ""
 "We are representing the ticket as a NEM mosaic. :doc:`Mosaics "
@@ -239,21 +259,61 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Divisibility"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "0"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid ""
 "The mosaic won't be divisible, no one should be able to send “0.5 tickets”."
 msgstr "“0.5 tickets” が送信できないように、モザイクは可分できないようにします。"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Duration"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1000"
+msgstr ""
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic will be registered for 1000 blocks."
 msgstr "モザイクは 1000 ブロック登録されます。"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Amount"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1000000"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid "The number of tickets you are going to create"
 msgstr "作成するチケットの量"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Supply mutable"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "True"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic supply can change at a later point."
 msgstr "モザイク供給量は後に変更可能です。"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Transferable"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "False"
+msgstr ""
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic can be only transferred back to the mosaic creator."
@@ -264,6 +324,10 @@ msgid ""
 "Copy the mosaicId returned in the ``monitor confirmed`` tab after the "
 "transaction gets confirmed."
 msgstr "トランザクションが承認された後に、 ``monitor confirm`` タブに返された mosaicId をコピーします。"
+
+#: ../../source/getting-started/first-application.rst:139
+msgid "Sending the ticket"
+msgstr "チケットの送信"
 
 #: ../../source/getting-started/first-application.rst:141
 msgid ""
@@ -281,21 +345,61 @@ msgid ""
 msgstr "転送トランザクションを用意します。次の属性は転送トランザクションを形作ります:"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Deadline"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Default"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid ""
 "The maximum amount of time to include the transaction in the blockchain."
 msgstr "トランザクションがブロックチェーンに取り込まれるまでの最大時間"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Recipient"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU"
+msgstr ""
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The recipient account address."
 msgstr "受信のアカウントアドレス"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Mosaics"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "1 [7cdf3b117a3c40cc] (ticket)"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid "The array of mosaics to send."
 msgstr "送信するモザイクの配列"
 
 #: ../../source/getting-started/first-application.rst:1
+msgid "Message"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "``enjoy your ticket``"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
 msgid "The attached message."
 msgstr "添付されたメッセージ"
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "Network"
+msgstr ""
+
+#: ../../source/getting-started/first-application.rst:1
+msgid "MIJIN_TEST"
+msgstr ""
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The local network identifier."
@@ -343,3 +447,9 @@ msgstr "✅ チケットの転売防止: 転送不可能なモザイクの作成
 msgid ""
 "✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic."
 msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作成"
+
+#: ../../source/getting-started/first-application.rst:222
+msgid ""
+"Continue learning about more :doc:`NEM built-in features "
+"<../concepts/account>`."
+msgstr ":doc:`NEM ビルドイン機能 <../concepts/account>` の学習を続ける。"

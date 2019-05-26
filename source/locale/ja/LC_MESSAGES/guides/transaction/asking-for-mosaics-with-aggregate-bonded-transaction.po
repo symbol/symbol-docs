@@ -71,6 +71,24 @@ msgstr "Alice は Bob へ ``20 cat.currency`` を要求したいと思ってい�
 msgid "Set up both Alice's and Bob's accounts."
 msgstr "Alice と Bob の両方のアカウントをセットアップします。"
 
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:38
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:54
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:68
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:82
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:96
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:43
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:59
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:73
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:87
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:101
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js`"
+msgstr ""
+
 #: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:48
 msgid "Create an aggregate bonded transaction with two inner transactions:"
 msgstr "2つのインナートランザクションを含めたアグリゲートボンドトランザクションを作ります:"
@@ -108,3 +126,14 @@ msgid ""
 msgstr ""
 "クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
 "transactions-client-side>` 。"
+
+#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:108
+msgid ""
+"If all goes well, :doc:`Bob receives a notification to cosign the "
+"transaction<../transaction/monitoring-a-transaction-status>`. Check how to "
+":doc:`cosign the transaction <signing-announced-aggregate-bonded-"
+"transactions>` with Bob's account in the following guide."
+msgstr ""
+"すべてがうまくいくと :doc:`ボブはそのトランザクションへ連署名する通知を受け取ります <../transaction/monitoring-a"
+"-transaction-status>` 。ガイドに従ってボブのアカウントで :doc:`トランザクションへの連署名 <signing-"
+"announced-aggregate-bonded-transactions>` する方法を確認してください。"

@@ -124,6 +124,10 @@ msgstr ""
 "リモートノードを選択する確率はその重みに比例します。4回のノード選択ごとに条件が変更され |sybil| "
 "が防止されます。代わりにノードは重要度の高いピアを選択します。"
 
+#: ../../source/concepts/node.rst:42
+msgid "RocksDB"
+msgstr ""
+
 #: ../../source/concepts/node.rst:44
 msgid ""
 "|rocksdb| stores the chain state. The data structures cached are serialized "
@@ -153,6 +157,22 @@ msgstr "状態を維持することは、大量のアカウントが存在する
 msgid "API Component"
 msgstr "API コンポーネント"
 
+#: ../../source/concepts/node.rst:56
+msgid ""
+"P2P nodes can be configured to have an API layer. The primary responsibility"
+" of the API is to store the data in a readable form in MongoDB."
+msgstr ""
+"P2P ノードは API 層を持つように構成できます。API の主な役割は MongoDB にデータを読み取り可能な形式で格納することです。"
+
+#: ../../source/concepts/node.rst:58
+msgid ""
+"The API :ref:`validates transactions <transaction-validation>` received from"
+" the REST component. Additionally, it throws the errors back via ZMQ in "
+"binary."
+msgstr ""
+"API は REST コンポーネントから受け取った :ref:`トランザクションを検証 <transaction-validation>` "
+"します。さらにエラーをバイナリで ZMQ を介してスローします。"
+
 #: ../../source/concepts/node.rst:60
 msgid ""
 "This component is also responsible for collecting the cosignatures of "
@@ -161,6 +181,10 @@ msgid ""
 msgstr ""
 "このコンポーネントは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
 "の連署名を集める役割も果たします。これらは完了となった場合にのみ、P2P ノードにプッシュされます。"
+
+#: ../../source/concepts/node.rst:63
+msgid "MongoDB"
+msgstr ""
 
 #: ../../source/concepts/node.rst:65
 msgid ""
@@ -183,6 +207,10 @@ msgstr "新しい未承認トランザクションの処理を完了しました
 #: ../../source/concepts/node.rst:72
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB は外部からアクセスされるべきではありません。"
+
+#: ../../source/concepts/node.rst:75
+msgid "ZMQ"
+msgstr ""
 
 #: ../../source/concepts/node.rst:77
 msgid ""
@@ -223,6 +251,10 @@ msgstr "各 REST コンポーネントは1つの API インスタンスに接続
 #: ../../source/concepts/node.rst:115
 msgid "Guides"
 msgstr "ガイド"
+
+#: ../../source/concepts/node.rst:117
+msgid "|running-catapult-locally|"
+msgstr ""
 
 #: ../../source/concepts/node.rst:119
 msgid "Deploy a Catapult full node for learning and development purposes."

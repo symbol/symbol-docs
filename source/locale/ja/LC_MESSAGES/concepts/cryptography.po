@@ -48,6 +48,10 @@ msgstr ""
 msgid "Address"
 msgstr "アドレス"
 
+#: ../../source/concepts/cryptography.rst:21
+msgid "A NEM address is a base-32 encoded triplet consisting of:"
+msgstr "NEM アドレスは次のものからなる base-32 でエンコードされたトリプレットです:"
+
 #: ../../source/concepts/cryptography.rst:23
 msgid "Network byte"
 msgstr "ネットワークバイト"

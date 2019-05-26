@@ -31,6 +31,17 @@ msgid ""
 "required tools to start developing on NEM."
 msgstr "最初のガイドでは、NEM で開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
+#: ../../source/getting-started/setup-workstation.rst:12
+msgid ""
+"⚠️ NEM's next core engine, code-named **Catapult**, is `under development "
+"<https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap "
+"setup is for learning and development purposes, and it **should not power "
+"any production Catapult instances**."
+msgstr ""
+"⚠️ 次世代 NEMのコアエンジン コードネーム **Catapult** は `開発中です <https://github.com/nemtech"
+"/catapult-server/milestones>`_ 。このブートストラップの設定は学習と開発を目的としており **本番の Catapult "
+"インスタンスを動かすべきものではありません** 。"
+
 #: ../../source/getting-started/setup-workstation.rst:18
 msgid "Running Catapult Service Bootstrap"
 msgstr "Catapult サービスのブートストラップの実行"
@@ -151,6 +162,10 @@ msgid ""
 "selected language."
 msgstr "新しいプロジェクトのフォルダを作り、選択した言語のインストラクションを実行しましょう。"
 
+#: ../../source/getting-started/setup-workstation.rst:100
+msgid "TypeScript"
+msgstr ""
+
 #: ../../source/getting-started/setup-workstation.rst:102
 #: ../../source/getting-started/setup-workstation.rst:131
 msgid ""
@@ -179,6 +194,10 @@ msgstr "バージョン 2.5.X 以上がインストールされていること�
 #: ../../source/getting-started/setup-workstation.rst:123
 msgid "Use `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行できます。"
+
+#: ../../source/getting-started/setup-workstation.rst:129
+msgid "JavaScript"
+msgstr ""
 
 #: ../../source/getting-started/setup-workstation.rst:184
 msgid "Continue: :doc:`Writing your first application <first-application>`."

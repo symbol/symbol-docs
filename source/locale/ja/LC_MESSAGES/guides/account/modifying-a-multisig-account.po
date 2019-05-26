@@ -78,6 +78,20 @@ msgstr ""
 "マルチシグアカウントの連署者です。マルチシグトランザクションを承認するには、彼らのうち少なくとも一つのアカウントの署名が必要です。言い換えると "
 "``最小承認数`` パラメタが現在は ``1`` に設定されているということになります。"
 
+#: ../../source/guides/account/modifying-a-multisig-account.rst:37
+#: ../../source/guides/account/modifying-a-multisig-account.rst:63
+#: ../../source/guides/account/modifying-a-multisig-account.rst:81
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts`"
+msgstr ""
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:43
+#: ../../source/guides/account/modifying-a-multisig-account.rst:68
+#: ../../source/guides/account/modifying-a-multisig-account.rst:86
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js`"
+msgstr ""
+
 #: ../../source/guides/account/modifying-a-multisig-account.rst:48
 msgid ""
 "Multisig accounts are editable at the blockchain level. In this case, we "
@@ -108,6 +122,12 @@ msgid ""
 "Create a modify multisig account transaction, increasing minAprovalDelta in "
 "one unit."
 msgstr "minApprovalDelta を 1 増やす、マルチシグアカウント変更トランザクションを作ります。"
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:73
+msgid ""
+"Wrap the modify multisig account transaction under an aggregate transaction,"
+" attaching multisig public key as the signer."
+msgstr ""
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:75
 msgid ""
@@ -161,11 +181,35 @@ msgstr ""
 ":ref:`マルチシグアカウント変更トランザクション <modify-multisig-account-transaction>` を作成し Carol"
 " を連署者として追加します。マルチシグアカウントは 2-of-3 となりますが、最小承認数は増加させていません。"
 
+#: ../../source/guides/account/modifying-a-multisig-account.rst:112
+#: ../../source/guides/account/modifying-a-multisig-account.rst:126
+#: ../../source/guides/account/modifying-a-multisig-account.rst:140
+#: ../../source/guides/account/modifying-a-multisig-account.rst:154
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts`"
+msgstr ""
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:117
+#: ../../source/guides/account/modifying-a-multisig-account.rst:131
+#: ../../source/guides/account/modifying-a-multisig-account.rst:145
+#: ../../source/guides/account/modifying-a-multisig-account.rst:159
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js`"
+msgstr ""
+
 #: ../../source/guides/account/modifying-a-multisig-account.rst:122
 msgid ""
 "Create a modify multisig account transaction adding the previous "
 "modification."
 msgstr "前の変更を追加するマルチシグアカウント変更トランザクションを作ります。"
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:136
+msgid ""
+"Wrap the modify multisig account transaction in an :ref:`aggregate bonded "
+"transaction <aggregate-transaction>` and sign it."
+msgstr ""
+"マルチシグ変更トランザクションを :ref:`アグリゲートボンドトランザクション <aggregate-transaction>` "
+"へラップし署名します。"
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:150
 msgid ""
@@ -186,6 +230,24 @@ msgid ""
 msgstr ""
 "クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
 "transactions-client-side>` 。"
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:166
+msgid ""
+":doc:`Cosign the aggregate transaction <../transaction/signing-announced-"
+"aggregate-bonded-transactions>` hash with Carols's account. She has to opt-"
+"in to become a multisig cosignatory."
+msgstr ""
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:172
+msgid ""
+":doc:`Cosign the aggregate transaction <../transaction/signing-announced-"
+"aggregate-bonded-transactions>` with Bob's account. The amount of "
+"cat.currency locked becomes available again on Alice's account and Carol is "
+"added to the multisig."
+msgstr ""
+"ボブのアカウントで :doc:`このトランザクションに署名 <../transaction/signing-announced-aggregate-"
+"bonded-transactions>` します。ロックされた cat.currency "
+"はまたアリスのアカウントで有効になり、キャロルがマルチシグへ追加されます。"
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:181
 msgid "Removing a cosignatory"
@@ -218,6 +280,16 @@ msgid ""
 msgstr ""
 "minRemoval パラメタは誰かをマルチシグから削除するために必要な署名数を表します。:ref:`minApproval パラメタの変更 "
 "<guide-modify-a-multisig-account-min-approval>` と同じ方法で増加または減少させることができます。"
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:191
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts`"
+msgstr ""
+
+#: ../../source/guides/account/modifying-a-multisig-account.rst:196
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js`"
+msgstr ""
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:203
 msgid "What’s next?"

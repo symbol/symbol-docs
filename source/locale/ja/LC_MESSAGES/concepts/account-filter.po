@@ -99,6 +99,14 @@ msgid ""
 ":doc:`quality seal<mosaic>` to the product account."
 msgstr "品質確認プロセスが終了すると、オペレータは  :doc:`品質シール <mosaic>`  を製品アカウントに送信します。"
 
+#: ../../source/concepts/account-filter.rst:38
+msgid ""
+"The final customers can review the product mosaics scanning a QR code. For "
+"that reason, the company only wants to show related transactions, avoiding "
+"that others spam their products with non-related information."
+msgstr ""
+"最終的な顧客はQRコードを読み取って、製品モザイクを検証します。そのため、会社としては関連するトランザクションだけをを見せたく、それ以外のスパムなどの製品に関係ない情報を避けたいのです。"
+
 #: ../../source/concepts/account-filter.rst:46
 msgid ""
 "The company opts to configure their product accounts filters, enabling only "
@@ -140,6 +148,10 @@ msgstr ""
 "一時的な処置として、Alice "
 "はメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
 
+#: ../../source/concepts/account-filter.rst:63
+msgid "Guides"
+msgstr "ガイド"
+
 #: ../../source/concepts/account-filter.rst:75
 msgid "Schemas"
 msgstr "スキーマ"
@@ -153,6 +165,10 @@ msgstr ""
 "設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
+
+#: ../../source/concepts/account-filter.rst:82
+msgid "AccountPropertiesAddressTransaction"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:84
 msgid ""
@@ -224,8 +240,61 @@ msgstr "説明"
 #: ../../source/concepts/account-filter.rst:1
 #: ../../source/concepts/account-filter.rst:1
 #: ../../source/concepts/account-filter.rst:1
+msgid "propertyType"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid ":ref:`PropertyType<property-type>`"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Indicates the property type."
+msgstr "プロパティの種類を示します。"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "modificationsCount"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"The number of modifications in the transaction. A maximum of ``255`` "
+"modifications per transaction is allowed."
+msgstr "トランザクション内の変更数。 トランザクションあたり最大 ``255`` 個の変更が許可されています。"
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "modifications"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array<:ref:`AddressModification <address-modification>`, modificationsCount>"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
 msgid "The array of modifications."
 msgstr "変更の配列"
+
+#: ../../source/concepts/account-filter.rst:105
+msgid "AccountPropertiesMosaicTransaction"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:107
 msgid ""
@@ -237,31 +306,178 @@ msgstr "特定のモザイクを含むトランザクションの受け取りを
 msgid "**Entity type**: 0x4250"
 msgstr "**エンティティタイプ**: 0x4250"
 
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array<:ref:`MosaicModification <mosaic-modification>`, modificationsCount>"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:129
+msgid "AccountPropertiesEntityTypeTransaction"
+msgstr ""
+
 #: ../../source/concepts/account-filter.rst:131
 msgid ""
 "Configure filters to prevent announcing transactions by :ref:`type "
 "<transaction-types>`."
 msgstr ":ref:`タイプ <transaction-types>` によるトランザクションのアナウンスを防止するフィルタの設定。"
 
+#: ../../source/concepts/account-filter.rst:135
+msgid "**Entity type**: 0x4350"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"array<:ref:`EntityTypeModification <entity-type-modification>`, "
+"modificationsCount>"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:152
+msgid "AddressModification"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:156
+#: ../../source/concepts/account-filter.rst:171
+#: ../../source/concepts/account-filter.rst:187
+msgid ":ref:`AccountPropertiesModification<account-properties-modification>`"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "value"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "25 bytes (binary)"
+msgstr ""
+
 #: ../../source/concepts/account-filter.rst:1
 msgid "The address to allow/block."
 msgstr "許可/ブロックするアドレス"
+
+#: ../../source/concepts/account-filter.rst:167
+msgid "MosaicModification"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint64"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid "The mosaic id to allow/block."
 msgstr "許可/ブロックするモザイク"
 
+#: ../../source/concepts/account-filter.rst:183
+msgid "EntityTypeModification"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "uint16"
+msgstr ""
+
 #: ../../source/concepts/account-filter.rst:1
 msgid "The :ref:`entity type<transaction-types>` to allow/block."
 msgstr "許可/ブロックする :ref:`エンティティタイプ<transaction-types>`"
+
+#: ../../source/concepts/account-filter.rst:199
+msgid "AccountPropertiesModification"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "modificationType"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ":ref:`PropertyModificationType<property-modification-type>`"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid "The modification type."
 msgstr "変更タイプ"
 
+#: ../../source/concepts/account-filter.rst:210
+msgid "PropertyType"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:212
+#: ../../source/concepts/account-filter.rst:231
+msgid "Enumeration: uint8"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x01"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type only allows receiving transactions from an address."
+msgstr "あるアドレスからのトランザクションの受信のみを許可するプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x02"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"The property type only allows receiving transactions containing a mosaic id."
+msgstr "あるモザイクIDを含むトランザクションの受信のみを許可するプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x04"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"The property type only allows sending transactions with a given transaction "
+"type."
+msgstr "特定のトランザクションタイプのトランザクションのみ送信可能にするプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x05"
+msgstr ""
+
 #: ../../source/concepts/account-filter.rst:1
 msgid "Property type sentinel."
 msgstr "プロパティタイプセンチネル"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x81"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "The property type blocks receiving transactions from an address."
+msgstr "あるアドレスからのトランザクションの受信を拒否するプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x82"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"The property type blocks receiving transactions containing a mosaic id."
+msgstr "あるモザイクIDを含むトランザクションの受信を拒否するプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x84"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid ""
+"The property type blocks sending transactions with a given transaction type."
+msgstr "特定のトランザクションタイプのトランザクションを送信不可にするプロパティタイプです。"
+
+#: ../../source/concepts/account-filter.rst:229
+msgid "PropertyModificationType"
+msgstr ""
+
+#: ../../source/concepts/account-filter.rst:1
+msgid "0x00"
+msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid "Add property value."
