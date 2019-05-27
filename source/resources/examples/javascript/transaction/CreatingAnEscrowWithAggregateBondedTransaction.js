@@ -64,7 +64,7 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
-    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),git reset --soft HEAD^1
+    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
