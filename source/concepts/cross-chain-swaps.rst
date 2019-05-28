@@ -2,7 +2,7 @@
 Cross-Chain Swaps
 #################
 
-A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (eg. an exchange service) in the process.
+A cross-chain swap enables **trading tokens** across **different blockchains**, without using an intermediary party (e.g. an exchange service) in the process.
 
 .. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
@@ -13,7 +13,14 @@ A cross-chain swap enables **trading tokens** across **different blockchains**, 
 In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (HTLC). Two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
 
 In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the locked funds are released after the deadline is reached, even if just one actor does not agree.
-The figure below illustrates the cross-chain swap protocol.
+
+********
+Protocol
+********
+
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in NEM public chain, whereas bob token is only present in a private chain using Catapult technology.
+
+.. note:: NEM's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
 
 .. figure:: ../resources/images/diagrams/cross-chain-swap-cycle.png
     :align: center
@@ -21,7 +28,37 @@ The figure below illustrates the cross-chain swap protocol.
 
     Atomic cross-chain swap sequence diagram
 
-When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
+1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
+
+2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
+
+3. Alice defines the :ref:`secret lock transaction <secret-lock-transaction>` TX1:
+
+* Mosaic: 10 alice token
+* Recipient: Bob's address (Private Chain)
+* Algorithm: h
+* Secret:  h(proof)
+* Duration: 96h
+* Network: Private Chain
+
+4. Alice announces TX1 to the private network and shares with Bob the secret.
+
+5. Bob defines announces the following :ref:`secret lock transaction <secret-lock-transaction>` TX2 to the public network:
+
+* Mosaic: 10 bob token
+* Recipient: Alice's address (Public Chain)
+* Algorithm: h
+* Secret:  h(proof)
+* Duration: 84h
+* Network: Public Chain
+
+.. note::  The amount of time in which funds can be unlocked should be a smaller time frame than TX1's. Alice knows the secret, so Bob must be sure he will have some time left after Alice releases the secret.
+
+6. Alice announces the :ref:`secret proof transaction <secret-proof-transaction>` TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret.
+
+7. Once TX3 is confirmed, the proof is revealed. TX2 transaction is unlocked and Alice receives the locked funds.
+
+8. Bob picks the proof and announces the :ref:`secret proof transaction <secret-proof-transaction>` TX4 to the private network, receiving the locked funds from TX1.
 
 ******
 Guides
@@ -46,19 +83,7 @@ Schemas
 SecretLockTransaction
 =====================
 
-Use a secret lock transaction to start the cross-chain swap:
-
-1. Define the mosaic units you want to transfer to a determined account.
-
-2. Generate a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
-
-3. Hash the obtained proof with one of the available algorithms to generate the ``secret``.
-
-.. note:: Different secret lock transactions can share the same secret, as long as the recipients are different.
-
-4. Select during how much time the mosaics will be locked and announce the Secret Lock Transaction.
-
-The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction <secret-proof-transaction>` unlocks them.
+Use a secret lock transaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction <secret-proof-transaction>` unlocks them.
 
 If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
 
@@ -110,6 +135,8 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
 LockHashAlgorithm
 =================
+
+The list of supported hashing algorithms.
 
 Enumeration: uint8
 

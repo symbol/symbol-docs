@@ -19,9 +19,7 @@ When talking about tokens in NEM, we are actually referring to :doc:`mosaics <..
 Background
 **********
 
-Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice:token is defined in NEM public chain, whereas bob:token is only present in a private chain using catapult technology.
-
-.. note:: NEM's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains using different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in NEM public chain, whereas bob token is only present in a private chain using Catapult technology.
 
 One non-atomic solution could be:
 
@@ -49,9 +47,9 @@ In case of NEM public and private chain, the same mosaic name could have a diffe
 
 Instead of transferring tokens between different chains, the trade will be performed inside each chain. The Secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 
-.. figure:: ../../resources/images/examples/cross-chain-swap.png
+.. figure:: ../../resources/images/diagrams/cross-chain-swap-cycle.png
     :align: center
-    :width: 400px
+    :width: 700px
 
     Atomic cross-chain swap between public and private network
 
@@ -73,13 +71,14 @@ For that reason, each actor involved should have at least one account in each bl
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. Alice creates a secret lock transaction, including:
+2. Alice creates a secret lock transaction TX1, including:
 
-* The mosaic and amount to be sent: ``10 [520597229,83226871]`` (alice tokens)
-* The recipient address: Bob's address in private chain
-* The secret: Hashed proof.
-* The amount of time in which funds can be unlocked: 96h
-* The network: Private Chain
+* Mosaic: ``10`` `10 [520597229,83226871]`` alice token
+* Recipient: Bob's address (Private Chain)
+* Algorithm: Sha3-256
+* Secret:  Sha3-256(proof)
+* Duration: 96h
+* Network: Private Chain
 
 .. example-code::
 
@@ -103,11 +102,12 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 5. Bob creates a secret lock transaction TX2, which contains:
 
-* The mosaic and amount to be sent: ``10 [2061634929,1373884888]`` (bob token)
-* A recipient address: Alice's address in public chain
-* The secret that should be achieved to unlock the funds.
-* The amount of time in which funds can be unlocked: 84h
-* The network: Public Chain
+* Mosaic: ``10 [2061634929,1373884888]`` bob token
+* Recipient: Alice's address (Public Chain)
+* Algorithm: Sha3-256
+* Secret:  Sha3-256(proof)
+* Duration: 84h
+* Network: Public Chain
 
 .. example-code::
 
@@ -127,7 +127,7 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 06 */
         :end-before: /* end block 06 */
 
-7. Alice can announce the secret proof transaction TX3 on the public network. This transaction defines the encrypting algorithm used, the original proof and the secret. It will unlock TX2 transaction.
+7. Alice can announce the secret proof transaction TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret. It will unlock TX2 transaction.
 
 .. example-code::
 
@@ -136,7 +136,7 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 07 */
         :end-before: /* end block 07 */
 
-8. The proof is revealed in the public chain. Bob does the same by announcing a secret proof transaction TX4 in the private chain.
+8. The proof is revealed in the public chain. Bob picks the proof and announces the :ref:`secret proof transaction <secret-proof-transaction>` TX4 to the private chain.
 
 .. example-code::
 
@@ -145,7 +145,7 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 08 */
         :end-before: /* end block 08 */
 
-It is at that moment when Bob unlocks TX1 funds, and the atomic cross-chain swap concludes.
+Bob receives TX1 funds, and the atomic cross-chain swap concludes.
 
 *************
 Is it atomic?
@@ -153,8 +153,10 @@ Is it atomic?
 
 Consider the following scenarios:
 
-A. Bob does not want to announce TX2. Alice will receive her funds back after 94 hours.
-B. Alice does not want to swap tokens by signing Tx3. Bob will receive his refund after 84h. Alice will unlock her funds as well after 94 hours.
-C. Alice signs and announces TX3, receiving Bob's funds. Bob will have time to sign TX4, as Tx1 validity is longer than Tx2.
+✅ Bob does not want to announce TX2: Alice will receive her funds back after 94 hours.
+
+✅ Alice does not want to swap tokens by signing TX3: Bob will receive his refund after 84h. Alice will unlock her funds as well after 94 hours.
+
+⚠️ Alice signs and announces TX3, receiving Bob's funds: Bob will have time to sign TX4, as TX1 validity is longer than TX2.
 
 The process is atomic but should be completed with lots of time before the deadlines.

@@ -6,29 +6,33 @@ An account is a **key pair** (private and public key) associated with a mutable 
 
 Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a **single object** that must be unique and updatable: a package to be shipped, a deed to a house or a document to be notarized.
 
+**********
+Properties
+**********
+
 Accounts have the following properties:
 
-  **Private key**
+**Private key**
 
-  A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
+A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
 
-  .. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
+.. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
 
-  **Public key**
+**Public key**
 
-  The :ref:`public key <keypair>` can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
+The :ref:`public key <keypair>` can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
-  **Address**
+**Address**
 
-  Each account has a unique :ref:`address <address>`. You will normally share the derived address instead, as it is shorter and gathers more information.
+Each account has a unique :ref:`address <address>`. You will normally share the derived address instead, as it is shorter and gathers more information.
 
-  **Mosaics**
+**Mosaics**
 
-  The amount of different :doc:`mosaics <mosaic>` the account owns.
+The amount of different :doc:`mosaics <mosaic>` the account owns.
 
-  **Importance**
+**Importance**
 
-  The relation between the amount of harvesting mosaics the account owns and the total mosaic supply.
+The relation between the amount of harvesting mosaics the account owns and the total mosaic supply.
 
 ****************
 Multisig Account

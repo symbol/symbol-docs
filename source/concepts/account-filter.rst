@@ -2,9 +2,7 @@
 Account Filter
 ##############
 
-:doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
-
-The editable on-chain constraints are called filters. Accounts can configure the following types:
+:doc:`Accounts<account>` may configure a set of smart rules to block announcing or receiving transactions given a series of constraints. The editable on-chain constraints are called **account filters**.
 
 **************
 Address filter
