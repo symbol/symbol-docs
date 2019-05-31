@@ -121,8 +121,8 @@ For example, a transfer transaction describes who is the recipient and the quant
 An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
 
 1) Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2) Sign the ``signing bytes`` with the account's private key. This will give you the transaction signature.
-3) Append the signature and signer public key to the transaction to obtain the payload.
+2) Sign the signing bytes with the account's private key. This will give you the transaction ``signature``.
+3) Append the signature and signer public key to the transaction to obtain the ``payload``.
 4) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, and the remaining transaction payload.
 
 .. code-block:: typescript
