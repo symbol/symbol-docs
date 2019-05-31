@@ -47,9 +47,43 @@ There are different types of transactions. For example, you can transfer :doc:`m
 Defining a transaction
 **********************
 
-Every transaction shares some common properties. Each transaction extends from the :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
+Transactions are defined in a :ref:`serialized form <serialization>`. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
-Transactions are defined in a :ref:`serialized form <serialization>`. We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+
+.. code-block:: typescript
+
+    import {
+        Address,
+        Deadline,
+        NetworkCurrencyMosaic,
+        NetworkType,
+        PlainMessage,
+        TransferTransaction
+    } from "nem2-sdk";
+
+    const recipientAddress = Address
+        .createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+
+    const transferTransaction = TransferTransaction.create(
+        Deadline.create(),
+        recipientAddress,
+        [NetworkCurrencyMosaic.createRelative(10)],
+        PlainMessage.create('Welcome To NEM'),
+        NetworkType.MIJIN_TEST);
+
+    console.log(transferTransaction.serialize());
+
+    /* Outputs:
+    B3000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000
+    000000000000039054410000000000000000B986E63F170
+    0000090FA39EC47E05600AFA74308A7EA607D145E371B5F
+    4F1447BC0F00010057656C636F6D6520546F204E454D44B
+    262C46CEABB858096980000000000
+    */
 
 .. _fees:
 
@@ -82,11 +116,41 @@ Signing a transaction
 
 Accounts must sign transactions before announcing them to the network. `Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
-For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account’s balance to another.
+For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
-The account generates the signature by `signing the first 100 bytes of the defined transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ with its private key. Then, the signature is appended to the transaction's body, resulting in a signed transaction.
+An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
 
-The hash of the transaction is generated once `the sha3-256 algorithm <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ is applied to the serialized transaction.
+1) Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
+2) Sign the ``signing bytes`` with the account's private key. This will give you the transaction signature.
+3) Append the signature and signer public key to the transaction to obtain the payload.
+4) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, and the remaining transaction payload.
+
+.. code-block:: typescript
+
+    import {Account} from "nem2-sdk";
+
+    const privateKey = process.env.PRIVATE_KEY as string;
+    const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+    const signedTransaction = account.sign(transferTransaction);
+
+    console.log(signedTransaction.payload);
+
+    /* Outputs:
+    B3000000F77A8DCFCB57B81F9BE5B46738F7132998F5512
+    3BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785
+    DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA624
+    9E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D
+    22A599A3D0E3039054410000000000000000265DEE3F170
+    0000090FA39EC47E05600AFA74308A7EA607D145E371B5F
+    4F1447BC0F00010057656C636F6D6520546F204E454D44B
+    262C46CEABB858096980000000000
+     */
+
+    console.log(signedTransaction.hash);
+
+    /* Outputs:
+    21C4D9583CE1887BE7187D4B65B67567B45D5E6114AEE155C0CD266B6AA6A302
+     */
 
 .. _transaction-validation:
 
@@ -94,15 +158,31 @@ The hash of the transaction is generated once `the sha3-256 algorithm <https://g
 Announcing a transaction
 ************************
 
-Signed transactions are ready to be announced to the network.
+Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_.
+
+.. example-code::
+
+    .. code-block:: typescript
+
+        import {TransactionHttp} from "nem2-sdk";
+
+        const transactionHttp = new TransactionHttp('http://localhost:3000');
+
+        transactionHttp
+            .announce(signedTransaction)
+            .subscribe(x => console.log(x), err => console.error(err));
+
+    .. code-block:: bash
+
+        curl -X PUT -H "Content-type: application/json" -d '{"payload":"B3000000F77A8DCFCB57B81F9BE5B46738F7132998F55123BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA6249E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D22A599A3D0E3039054410000000000000000265DEE3F1700000090FA39EC47E05600AFA74308A7EA607D145E371B5F4F1447BC0F00010057656C636F6D6520546F204E454D44B262C46CEABB858096980000000000"}' http://localhost:3000/transaction
+
+After announcing the transaction, the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
 
 .. figure:: ../resources/images/diagrams/transaction-cycle.png
     :width: 800px
     :align: center
 
     Transaction cycle
-
-After `announcing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47>`_, the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
 
 The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
 
