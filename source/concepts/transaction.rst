@@ -124,7 +124,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 2) Prepend the nemesis block generation hash to the signing bytes.
 3) Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 4) Append the signature and signer public key to the transaction to obtain the ``payload``.
-5) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, block generation hash, and the remaining transaction payload.
+5) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 
