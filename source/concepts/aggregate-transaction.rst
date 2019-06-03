@@ -113,8 +113,8 @@ Announce an aggregate transaction to combine multiple transactions together.
     :delim: ;
 
     payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array<byte, payloadSize>;  The array of transactions, which can be initiated by different accounts. An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array<byte, size - payloadSize>; An array of transaction :ref:`cosignatures <cosignature>`.
+    transactions; array(Transaction, size=payloadSize);  The array of transactions, which can be initiated by different accounts.  An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    cosignatures; array(Cosignature, __FILL__); An array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
 
 .. _cosignature-transaction:
 

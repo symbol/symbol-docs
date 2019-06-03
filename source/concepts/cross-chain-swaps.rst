@@ -130,7 +130,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     secret; 64 bytes (binary); The proof hashed.
     recipient; 25 bytes (binary); The address that receives the funds once unlocked.
     proofSize; uint16; The proof size in bytes.
-    proof; array<byte, proofSize>; The original random set of bytes.
+    proof; array(byte, proofSize); The original random set of bytes.
 
 .. _lock-hash-algorithm:
 
