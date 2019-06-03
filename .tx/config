@@ -175,6 +175,12 @@ source_file = build/gettext/getting-started/what-is-nem.pot
 source_lang = en
 type = PO
 
+[nem2docs.guidelines--generating-transaction-builders]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
+source_file = build/gettext/guidelines/generating-transaction-builders.pot
+source_lang = en
+type = PO
+
 [nem2docs.guidelines--sdk-development]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-development.po
 source_file = build/gettext/guidelines/sdk-development.pot
