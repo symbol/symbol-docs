@@ -21,7 +21,7 @@ class Parser(ABC):
         pass
 
 
-class ConfigurationDocsParser(Parser):
+class PropertiesDocsParser(Parser):
 
     def __init__(self, source_file, description_files, server_path):
         _description_files = []
@@ -116,7 +116,6 @@ class StatusErrorsDocsParser(Parser):
         for path in self.description_files:
             try:
                 with open(path, encoding='utf-8') as file:
-                    entity = None
                     antepenultimate_line = ''
                     penulimate_line = ''
                     lines = file.readlines()
@@ -125,9 +124,10 @@ class StatusErrorsDocsParser(Parser):
                         if ("///" in penulimate_line) and ("DEFINE" in line) and (";" in line):
                             line_split = line.split('(')
                             # get key
-                            if not entity:
-                                entity = clean_entity(line_split[0])
-                            key = 'Failure_' + entity + '_' + line_split[1].split(',')[0]
+                            entity = clean_entity(line_split[0])
+                            key = entity + '_' + line_split[1].split(',')[0]
+                            if 'Neutral' not in entity:
+                                key = 'Failure_' + key
                             # get description
                             description = ''
                             if "///" in antepenultimate_line:

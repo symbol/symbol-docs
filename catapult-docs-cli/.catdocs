@@ -8,12 +8,22 @@
 			]
 		},
 		{
-			"title": "config-harvesting.properties",
+			"title": "config-extensions-broker.properties",
 			"text": "",
-			"source": "resources/config-harvesting.properties",
-			"descriptions": [
-				"extensions/harvesting/src/HarvestingConfiguration.h"
-			]
+			"source": "resources/config-extensions-broker.properties",
+			"descriptions": []
+		},
+		{
+			"title": "config-extensions-recovery.properties",
+			"text": "",
+			"source": "resources/config-extensions-recovery.properties",
+			"descriptions": []
+		},
+		{
+			"title": "config-extensions-server.properties",
+			"text": "",
+			"source": "resources/config-extensions-server.properties",
+			"descriptions": []
 		},
 		{
 			"title": "config-harvesting.properties",
@@ -24,9 +34,23 @@
 			]
 		},
 		{
-			"title": "config-logging.properties",
+			"title": "config-inflation.properties",
 			"text": "",
-			"source": "resources/config-logging.properties",
+			"source": "resources/config-inflation.properties",
+			"descriptions": []
+		},
+		{
+			"title": "config-logging-recovery.properties",
+			"text": "",
+			"source": "resources/config-logging-recovery.properties",
+			"descriptions": [
+				"src/catapult/config/LoggingConfiguration.h"
+			]
+		},
+		{
+			"title": "config-logging-server.properties",
+			"text": "",
+			"source": "resources/config-logging-server.properties",
 			"descriptions": [
 				"src/catapult/config/LoggingConfiguration.h"
 			]
@@ -39,15 +63,7 @@
 				"extensions/zeromq/src/MessagingConfiguration.h"
 			]
 		},
-		{
-			"title": "config-networkheight.properties",
-			"text": "",
-			"source": "resources/config-networkheight.properties",
-			"descriptions": [
-				"extensions/networkheight/src/NetworkHeightConfiguration.h"
-			]
-		},
-		{
+        {
 			"title": "config-network.properties",
 			"text": "",
 			"source": "resources/config-network.properties",
@@ -61,6 +77,22 @@
 				"plugins/txes/namespace/src/config/NamespaceConfiguration.h",
 				"plugins/txes/property/src/config/PropertyConfiguration.h",
 				"plugins/txes/transfer/src/config/TransferConfiguration.h"
+			]
+		},
+		{
+			"title": "config-networkheight.properties",
+			"text": "",
+			"source": "resources/config-networkheight.properties",
+			"descriptions": [
+				"extensions/networkheight/src/NetworkHeightConfiguration.h"
+			]
+		},
+		{
+			"title": "config-node.properties",
+			"text": "",
+			"source": "resources/config-node.properties",
+			"descriptions": [
+				"src/catapult/config/NodeConfiguration.h"
 			]
 		},
 		{
@@ -101,18 +133,21 @@
         "text": "This section describes the error messages that can be returned via status channel after announcing a transaction.",
         "source": "/catapult-sdk/src/model/status.js",
         "descriptions": [
+            "plugins/services/hashcache/src/validators/Results.h",
             "plugins/services/signature/src/validators/Results.h",
             "plugins/coresystem/src/validators/Results.h",
+            "plugins/txes/account_link/src/validators/Results.h",
             "plugins/txes/aggregate/src/validators/Results.h",
             "plugins/txes/lock_hash/src/validators/Results.h",
             "plugins/txes/lock_secret/src/validators/Results.h",
+    	    "plugins/txes/mosaic/src/validators/Results.h",
             "plugins/txes/multisig/src/validators/Results.h",
             "plugins/txes/namespace/src/validators/Results.h",
             "plugins/txes/property/src/validators/Results.h",
             "plugins/txes/transfer/src/validators/Results.h",
             "src/catapult/chain/ChainResults.h",
             "src/catapult/consumers/ConsumerResults.h",
-            "src/catapult/extensions/Results.h"
+            "src/catapult/extensions/Results.h"	
         ]
     }]
 }

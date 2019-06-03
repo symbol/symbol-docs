@@ -10,7 +10,7 @@ def runner():
 
 
 def test_cli_config(runner):
-    result = runner.invoke(main, ['config', '--config', 'tests/example/.catdocs', '--server', 'tests/example/'])
+    result = runner.invoke(main, ['properties', '--config', 'tests/example/.catdocs', '--server', 'tests/example/'])
     assert result.exit_code == 0
     assert not result.exception
 

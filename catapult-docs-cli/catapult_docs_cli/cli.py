@@ -1,7 +1,7 @@
 import click
 import json
-from .commands import ConfigurationDocsParser, StatusErrorsDocsParser
-from .models import Title, Text, ConfigTable, StatusErrorsTable
+from .commands import PropertiesDocsParser, StatusErrorsDocsParser
+from .models import Title, Text, PropertiesTable, StatusErrorsTable
 
 
 def load_config(config):
@@ -12,12 +12,12 @@ def load_config(config):
         click.ClickException('Operation failed: .catdocs file was not found.')
 
 
-def config_docs_command(config, server_path):
+def properties_docs_command(config, server_path):
     for c in config['config']:
         Title(c['title']).print()
         if c['text']:
             Text(c['text']).print()
-        ConfigTable(ConfigurationDocsParser(c['source'], c['descriptions'], server_path).parse()).print()
+        PropertiesTable(PropertiesDocsParser(c['source'], c['descriptions'], server_path).parse()).print()
 
 
 def status_errors_docs_command(config, server_path, rest_path):
@@ -37,8 +37,8 @@ def status_errors_docs_command(config, server_path, rest_path):
 def main(command, config, server, rest):
     config = load_config(config)
 
-    if command == 'config':
-        config_docs_command(config, server)
+    if command == 'properties':
+        properties_docs_command(config, server)
     elif command == 'status-errors':
         status_errors_docs_command(config, server, rest)
     else:

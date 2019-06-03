@@ -1,4 +1,4 @@
-from catapult_docs_cli.models import Text, Title, ConfigTable, StatusErrorsTable
+from catapult_docs_cli.models import Text, Title, PropertiesTable, StatusErrorsTable
 
 
 def test_model_text():
@@ -16,7 +16,7 @@ def test_model_title():
 
 
 def test_config_table():
-    table = ConfigTable([{'key': 'property', 'type': 'type', 'description': 'description', 'default': 'default'}])
+    table = PropertiesTable([{'key': 'property', 'type': 'type', 'description': 'description', 'default': 'default'}])
     assert table.rows == [{'key': 'property', 'type': 'type', 'description': 'description', 'default': 'default'}]
     assert table.header == ['Property', 'Type', 'Description', 'Default']
     expected_header_formatted = '.. csv-table::\n    :header: "Property", "Type", ' \
@@ -28,11 +28,11 @@ def test_config_table():
 
 
 def test_status_errors_table():
-    table = StatusErrorsTable([{'key': 'status', 'code': 'code', 'description': 'description'}])
-    assert table.rows == [{'key': 'status', 'code': 'code', 'description': 'description'}]
-    assert table.header == ['Status', 'Code', 'Description']
-    expected_header_formatted = '.. csv-table::\n    :header: "Status", "Code", "Description"\n    :delim: ;'
-    expected_rows_formatted = '\n    status; code; description'
+    table = StatusErrorsTable([{'key': 'key', 'code': 'code', 'description': 'description'}])
+    assert table.rows == [{'key': 'key', 'code': 'code', 'description': 'description'}]
+    assert table.header == ['Id', 'Status', 'Description']
+    expected_header_formatted = '.. csv-table::\n    :header: "Id", "Status", "Description"\n    :delim: ;'
+    expected_rows_formatted = '\n    code; key; description'
     assert table._build_header() == expected_header_formatted
     assert table._format_rows() == expected_rows_formatted
     assert table.print() == expected_header_formatted + '\n' + expected_rows_formatted

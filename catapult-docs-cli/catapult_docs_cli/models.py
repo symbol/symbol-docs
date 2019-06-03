@@ -58,7 +58,7 @@ class Table(ABC):
         return result
 
 
-class ConfigTable(Table):
+class PropertiesTable(Table):
 
     def __init__(self, rows):
         Table.__init__(self, ['Property', 'Type', 'Description', 'Default'], rows)
@@ -77,7 +77,7 @@ class ConfigTable(Table):
 class StatusErrorsTable(Table):
 
     def __init__(self, rows):
-        Table.__init__(self, ['Status', 'Code', 'Description'], rows)
+        Table.__init__(self, ['Id', 'Status', 'Description'], rows)
 
     def _format_rows(self):
         result = ''
@@ -85,5 +85,5 @@ class StatusErrorsTable(Table):
             key = row['key']
             code = row['code']
             description = '' if 'description' not in row else row['description']
-            result += '\n' + indent(key + "; " + code + "; " + description, 4)
+            result += '\n' + indent(code + "; " + key + "; " + description, 4)
         return result

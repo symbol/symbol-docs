@@ -2,7 +2,7 @@
 
 Exports some documentation from catapult code into reStructuredText tables.
 
-The tables are used in the [NEM Developer Center](http://nemtech.github.io), and to get readable changelogs of the configuration properties and status errors.
+The generated tables are used in the [NEM Developer Center](http://nemtech.github.io).
 
 # Installation
 
@@ -14,8 +14,8 @@ catapult-docs-cli COMMAND [OPTIONS]
 
 | Command               | Description                                         |
 |-----------------------|-----------------------------------------------------|
-| config                | Generates catapult server configuration docs.       |
-| status-errors         | Generates catapult server/rest status errors docs.  |
+| properties            | Generates catapult-server properties docs.          |
+| status-errors         | Generates catapult-rest status errors docs.         |
 | --help                | Show this message and exit.                         |
 
 
@@ -28,21 +28,21 @@ catapult-docs-cli COMMAND [OPTIONS]
 
 # Examples
     
-## Generate configuration docs
+## Generate catapult-server properties docs
 
-``catapult-docs-cli config --config .catdocs --server catapult-server/``
+``catapult-docs-cli properties --config .catdocs --server catapult-server/``
 
-## Generate status-errors docs
+## Generate catapult-rest status-errors docs
 
 ``catapult-docs-cli status-errors --config .catdocs --server catapult-server/ --rest catapult-rest/``
     
 ## Export generated docs to a file
 
-``catapult-docs-cli config > config.rst``
+``catapult-docs-cli properties > properties.rst``
 
 ## Compare differences between two versions
 
-``diff config_bison.rst config_cow.rst``
+``diff properties_bison.rst properties_cow.rst``
 
 
 # License

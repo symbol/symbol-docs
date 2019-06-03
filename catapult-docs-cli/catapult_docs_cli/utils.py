@@ -36,5 +36,6 @@ def clean_entity(entity):
         .title() \
         .replace('hash', 'Hash', 1) \
         .replace('secret', 'Secret', 1) \
+        .replace('Neutral', 'Neutral_') \
         .rstrip()\
         .replace(' ', '')
