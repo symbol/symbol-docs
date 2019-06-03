@@ -166,7 +166,7 @@ The collection of receipts related to a transaction.
     :delim: ;
 
     source; :ref:`ReceiptSource <receipt-source>` ; The transaction that triggered the receipt.
-    receipts; array<:ref:`Receipt <receipt>`, receiptsSize>;  The array of receipts.
+    receipts; array(:ref:`Receipt <receipt>`, size=receiptsSize);  The array of receipts.
 
 .. _resolution-statement:
 
@@ -187,7 +187,7 @@ A resolution statement keeps the relation between a namespace alias used in a tr
     :delim: ;
 
     unresolved; 25 bytes (binary) or uint64; An unresolved address or unresolved mosaicId.
-    resolutionEntries; array<:ref:`ResolutionEntry <resolution-entry>`, resolvedEntriesSize>; The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
+    resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
 
 .. _resolution-entry:
 

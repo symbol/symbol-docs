@@ -129,7 +129,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
     secret; 64 bytes (binary); The proof hashed.
     proofSize; uint16; The proof size in bytes.
-    proof; array<byte, proofSize>; The original random set of bytes.
+    proof; array(byte, proofSize); The original random set of bytes.
 
 .. _lock-hash-algorithm:
 

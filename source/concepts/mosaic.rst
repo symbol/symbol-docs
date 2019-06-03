@@ -80,7 +80,7 @@ Announce a mosaic definition transaction to create a new mosaic.
     propertiesCount; uint8; The number of elements in optional properties
     flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
     divisibility; uint8; The mosaic divisibility. The maximum divisibility is ``6``.
-    properties; array<:ref:`MosaicProperty<mosaic-property>`, count>; The optional mosaic properties.
+    properties; array(:ref:`MosaicProperty<mosaic-property>`, propertiesCount); The optional mosaic properties.
 
 .. _mosaic-supply-change-transaction:
 

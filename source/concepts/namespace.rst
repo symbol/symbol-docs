@@ -112,7 +112,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
-    name; array<bytes, namespaceNameSize>; A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
 
 
 .. _address-alias-transaction:
