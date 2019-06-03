@@ -16,38 +16,41 @@ There are different types of transactions. For example, you can transfer :doc:`m
 
 .. csv-table::
     :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
     :delim: ;
 
     **Mosaic**;;
-    0x414D; :ref:`Mosaic Definition Transaction <mosaic-definition-transaction>`; Register a new :doc:`mosaic <mosaic>`.
-    0x424D; :ref:`Mosaic Supply Change Transaction <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
+    0x414D; :ref:`Mosaic Definition <mosaic-definition-transaction>`; Register a new :doc:`mosaic <mosaic>`.
+    0x424D; :ref:`Mosaic Supply Change <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
     **Namespace**;;
-    0x414E; :ref:`Register Namespace Transaction <register-namespace-transaction>`; Register a :doc:`namespace <mosaic>` to organize your assets.
-    0x424E; :ref:`Address Alias Transaction <address-alias-transaction>`; Attach a namespace name to an account.
-    0x434E; :ref:`Mosaic Alias Transaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
+    0x414E; :ref:`Register Namespace <register-namespace-transaction>`; Register a :doc:`namespace <mosaic>` to organize your assets.
+    0x424E; :ref:`Address Alias <address-alias-transaction>`; Attach a namespace name to an account.
+    0x434E; :ref:`Mosaic Alias <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
     **Transfer**;;
-    0x4154; :ref:`Transfer Transaction <transfer-transaction>`; Send mosaics and messages between two accounts.
+    0x4154; :ref:`Transfer <transfer-transaction>`; Send mosaics and messages between two accounts.
     **Multisignature**;;
-    0x4155; :ref:`Modify Multisig Account Transaction <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
-    0x4141; :ref:`Aggregate Complete Transaction <aggregate-transaction>`; Send transactions in batches to different accounts.
-    0x4241; :ref:`Aggregate Bonded Transaction <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x4148; :ref:`Hash Lock Transaction <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
-    --; :ref:`Cosignature Transaction <cosignature-transaction>`; Cosign an aggregate bonded transaction.
+    0x4155; :ref:`Modify Multisig Account <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
+    0x4141; :ref:`Aggregate Complete <aggregate-transaction>`; Send transactions in batches to different accounts.
+    0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose many transactions between different accounts.
+    0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
+    --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     **Account filters**;;
-    0x4150; :ref:`Account Properties Address Transaction <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
-    0x4250; :ref:`Account Properties Mosaic Transaction <account-properties-mosaic-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`Account Properties Entity Type Transaction <account-properties-entity-type-transaction>`; Allow or block outgoing transactions by transaction type.
+    0x4150; :ref:`Account Properties Address <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
+    0x4250; :ref:`Account Properties Mosaic <account-properties-mosaic-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`Account Properties Entity Type <account-properties-entity-type-transaction>`; Allow or block outgoing transactions by transaction type.
     **Cross-chain swaps**;;
-    0x4152; :ref:`Secret Lock Transaction <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
-    0x4252; :ref:`Secret Proof Transaction <secret-proof-transaction>`; Conclude a token swap between different chains.
+    0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
+    0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.
     **Remote harvesting**;;
-    0x414C; :ref:`Account Link Transaction <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:`delegated harvesting <harvesting>`.
+    0x414C; :ref:`Account Link <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:`delegated harvesting <harvesting>`.
+
+.. _transaction-definition:
 
 **********************
 Defining a transaction
 **********************
 
-Transactions are defined in a :ref:`serialized form <serialization>`. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
+Transactions are defined in a [serialized](https://github.com/nemtech/catbuffer) form. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
 We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
