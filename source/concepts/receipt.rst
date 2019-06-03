@@ -39,6 +39,7 @@ Catapult records invisible state changes for the following entities.
 .. csv-table::
     :header:  "Id", "Receipt", "Basic type", "Description"
     :delim: ;
+    :widths: 15 30 25 30
 
     **Core**;;;
     0x2143; Harvest_Fee; :ref:`BalanceCredit <balance-change-receipt>`; The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is :doc:`harvested <harvesting>`.
