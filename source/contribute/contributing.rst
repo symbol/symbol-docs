@@ -8,22 +8,15 @@ Follow these guidelines for contributing to NEM projects, achieving the best qua
 
 .. note:: If you want to contribute to a existent project, read as well the CONTRIBUTING.md file of its repository.
 
-***********
-Development
-***********
-
+***
 SDK
-====
+***
 
 * :doc:`Summary <../sdk>`
 * :doc:`Developing an SDK <../guidelines/sdk-development>`
 * :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
-
-Catbuffer
-=========
-
-* :ref:`Summary <serialization>`
-* :doc:`Writing a Schema <../guidelines/writing-a-schema>`
+* :doc:`Generating transaction builders <../guidelines/generating-transaction-builders>`
+* :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
 
 *************
 Documentation

@@ -36,6 +36,8 @@ Some important considerations to keep in mind:
 
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
+* :ref:`Multisig modification transactions <modify-multisig-account-transaction>` must be wrapped in an :doc:`aggregate transaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
+
 ********
 Examples
 ********
@@ -155,7 +157,7 @@ c) Add or delete cosignatories from a multisig account.
     minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; The number of modifications.
-    modification; array<:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount>; The array of cosignatory :doc:`accounts <account>` to add or delete.
+    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
 
 .. _cosignatory-modification:
 

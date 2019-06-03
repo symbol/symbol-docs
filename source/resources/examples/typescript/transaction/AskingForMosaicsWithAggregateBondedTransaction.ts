@@ -23,8 +23,6 @@ import {
     EmptyMessage,
     HashLockTransaction,
     Listener,
-    Mosaic,
-    MosaicId,
     NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
@@ -80,10 +78,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    new Mosaic(
-        new MosaicId('0dc67fbe1cad29e3'), //Replace with your network currency mosaic id
-        UInt64.fromUint(10000000)
-    ),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);

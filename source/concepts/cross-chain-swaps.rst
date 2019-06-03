@@ -103,7 +103,7 @@ If the transaction duration is reached without being proved, the locked amount g
     duration; uint64; Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
     secret; 64 bytes (binary);  The proof hashed.
-    recipient; 25 bytes (binary); The address who will receive the funds once unlocked.
+    recipient; 25 bytes (binary); The address that receives the funds once unlocked.
 
 .. _secret-proof-transaction:
 
@@ -128,8 +128,9 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
     secret; 64 bytes (binary); The proof hashed.
+    recipient; 25 bytes (binary); The address that receives the funds once unlocked.
     proofSize; uint16; The proof size in bytes.
-    proof; array<byte, proofSize>; The original random set of bytes.
+    proof; array(byte, proofSize); The original random set of bytes.
 
 .. _lock-hash-algorithm:
 

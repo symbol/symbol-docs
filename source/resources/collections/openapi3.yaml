@@ -1007,7 +1007,7 @@ paths:
       summary: Announce a new transaction
       description: Announces a transaction to the network. It is recommended to use the
                      NEM2-SDK to announce transactions as they should be
-        [serialized](https://nemtech.github.io/api.html#serialization).
+        [serialized](https://nemtech.github.io/concepts/transaction.html#defining-a-transaction).
       operationId: announceTransaction
       requestBody:
         $ref: "#/components/requestBodies/transactionPayload"

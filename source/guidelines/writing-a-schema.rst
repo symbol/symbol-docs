@@ -8,7 +8,19 @@ Are you writing a new catapult plugin that includes a new transaction type?
 
 In this guide, we are examining how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_ schema works. You can adapt the same steps to define a new schema.
 
-1. Create a new file under ``schemas`` folder and define a struct for the transaction body.
+************
+Instructions
+************
+
+1. Clone the catbuffer repository.
+
+.. code-block:: bash
+
+    git clone https://github.com/nemtech/catbuffer.git
+
+2. Create a new file under ``schemas`` folder. In our case, we have called the file ``transfer.cats``.
+
+3. Define the struct for the transaction body.
 
 Think of a struct as a set of properties that we want to store in the same block of memory.
 
@@ -42,7 +54,7 @@ The transaction body contains the extra properties which differ from a basic tra
         inline TransferTransactionBody
 
 
-3. Define an EmbeddedTransaction struct. This struct is used to serialize inner transactions. The embedded transaction and the body transaction are added as inlines.
+3. Define an EmbeddedTransaction struct to serialize the inner transactions within an aggregate. The embedded transaction and the body transaction are added as inlines.
 
 .. code-block:: python
 
@@ -50,3 +62,13 @@ The transaction body contains the extra properties which differ from a basic tra
     struct EmbeddedTransaction
         inline SizePrefixedEntity
         inline EntityBody
+
+
+4. The catbuffer library allows you to generate the transaction builders from the schema defined. For example, run the following command to generate C++ code:
+
+.. code-block:: bash
+
+    python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+
+The generator creates the transaction builders file under ``_generated/cpp_builder`` folder.
+
