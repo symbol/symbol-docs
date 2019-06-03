@@ -17,6 +17,7 @@ A :ref:`transaction statement <transaction-statement>` is a collection of receip
 * **Balance Transfer**: The invisible state change triggered a mosaic transfer.
 * **Balance Change**: The invisible state change changed an account balance.
 * **Artifact Expiry**: An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
+* **Inflation Receipt**: Native currency mosaics were created due to :doc:`inflation <inflation>`.
 
 ********************
 Resolution Statement
@@ -44,6 +45,7 @@ Catapult records invisible state changes for the following entities.
     0xF143; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
     0xF243; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaicId.
     0xE143; Transaction_Group;  :ref:`Aggregate <transaction-statement>`; A collection of state changes for a given source. It is recorded when a state change receipt is issued.
+    0x5143; Inflation; :ref:`Inflation <inflation-receipt>`; The amount of native currency mosaics created. The receipt is recorded when the network has inflation configured, and a new block triggers the creation of currency mosaics.
     **Mosaic**;;;
     0x414D; Mosaic_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The mosaicId expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` expires.
     0x124D; Mosaic_Levy; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the levied mosaic, the mosaicId and amount. It is recorded when a transaction has a levied mosaic.
@@ -146,6 +148,25 @@ An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
     :delim: ;
 
     artifactId; uint64; The id of the artifact.
+
+.. _inflation-receipt:
+
+InflationReceipt
+================
+
+* **version**: 0x1
+* **basicType**: 0x5
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; uint64; The mosaic id created.
+    amount; uint64; The amount created.
 
 .. _transaction-statement:
 

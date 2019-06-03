@@ -36,6 +36,8 @@ Some important considerations to keep in mind:
 
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
+* :ref:`Multisig modification transactions <modify-multisig-account-transaction>` must be wrapped in an :doc:`aggregate transaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
+
 ********
 Examples
 ********
