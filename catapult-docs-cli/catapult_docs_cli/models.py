@@ -11,9 +11,9 @@ class Title:
         tag = ''
         i = 0
         while i < len(self.title):
-            tag += '#'
+            tag += '='
             i += 1
-        result = tag + '\n' + self.title + '\n' + tag
+        result = self.title + '\n' + tag
         return result
 
     def print(self):

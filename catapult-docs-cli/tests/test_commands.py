@@ -8,10 +8,10 @@ def test_properties_docs_parser():
     assert parser._parse_source_file() == [{'key': '**header**'}, {'key': 'variableName', 'default': 'test'}]
     assert parser._parse_description_files() == [{'key': 'variableName',
                                                          'type': 'array uint16',
-                                                         'description': 'Returns the parameter. *Note*: body.'}]
+                                                         'description': 'Set to true the parameter. *Note*: body.'}]
     assert parser.parse() == [{'key': '**header**'}, {'key': 'variableName',
                                                              'type': 'array uint16',
-                                                             'description': 'Returns the parameter. *Note*: body.',
+                                                             'description': 'Set to true the parameter. *Note*: body.',
                                                              'default': 'test'}]
 
 

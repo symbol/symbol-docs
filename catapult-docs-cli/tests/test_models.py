@@ -11,7 +11,7 @@ def test_model_title():
     title = Title('test')
     assert title.title == 'test'
     expected_title_formatted = title._format_tag()
-    assert expected_title_formatted == '####\ntest\n####'
+    assert expected_title_formatted == 'test\n===='
     assert expected_title_formatted == title._format_tag()
 
 

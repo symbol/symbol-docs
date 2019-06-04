@@ -19,7 +19,7 @@ def clean_dicts(dicts):
 
 
 def clean_line(description):
-    return description.replace('\\c', 'Returns') \
+    return description.replace('\\c', 'Set to') \
         .replace('\\a ', '') \
         .replace('\\note', '*Note*:')\
         .replace('std::', '')\

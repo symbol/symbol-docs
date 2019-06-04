@@ -17,8 +17,8 @@ def test_clean_dicts():
 
 
 def test_clean_lines():
-    line = '\\c the \\a parameter.\n \\note Teststd::.'
-    assert clean_line(line) == 'Returns the parameter. *Note*: Test.'
+    line = '\\c true the \\a parameter.\n \\note Teststd::.'
+    assert clean_line(line) == 'Set to true the parameter. *Note*: Test.'
 
 
 def test_clean_entity():
