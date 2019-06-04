@@ -245,11 +245,11 @@ config-network.properties
     minProofSize; uint16_t; Minimum size of a proof in bytes.; 1
     maxProofSize; uint16_t; Maximum size of a proof in bytes.; 1000
     **plugin:catapult.plugins.mosaic**; ; ;
-    maxMosaicsPerAccount; ; ; 10'000
-    maxMosaicDuration; ; ; 3650d
-    maxMosaicDivisibility; ; ; 6
-    mosaicRentalFeeSinkPublicKey; ; ; 53E140B5947F104CABC2D6FE8BAEDBC30EF9A0609C717D9613DE593EC2A266D3
-    mosaicRentalFee; ; ; 500'000'000
+    maxMosaicsPerAccount; uint16_t; Maximum number of mosaics that an account can own.; 10'000
+    maxMosaicDuration; utils::BlockSpan; Maximum mosaic duration.; 3650d
+    maxMosaicDivisibility; uint8_t; Maximum mosaic divisibility.; 6
+    mosaicRentalFeeSinkPublicKey; Key; Public key of the mosaic rental fee sink account.; 53E140B5947F104CABC2D6FE8BAEDBC30EF9A0609C717D9613DE593EC2A266D3
+    mosaicRentalFee; Amount; Mosaic rental fee.; 500'000'000
     **plugin:catapult.plugins.multisig**; ; ;
     maxMultisigDepth; uint8_t; Maximum number of multisig levels.; 3
     maxCosignersPerAccount; uint8_t; Maximum number of cosigners per account.; 10
