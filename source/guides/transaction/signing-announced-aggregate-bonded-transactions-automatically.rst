@@ -56,11 +56,6 @@ Let’s get into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.java
-        :language: java
-        :start-after:  /* start block 02 */
-        :end-before: /* end block 02 */
-
     .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js
         :language: javascript
         :start-after:  /* start block 02 */

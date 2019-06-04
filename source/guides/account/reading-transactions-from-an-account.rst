@@ -30,11 +30,6 @@ In this example, you will fetch the latest confirmed transactions for a given ac
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
-        :language: java
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
     .. viewsource:: ../../resources/examples/javascript/account/GettingConfirmedTransactions.js
         :language: javascript
         :start-after:  /* start block 01 */

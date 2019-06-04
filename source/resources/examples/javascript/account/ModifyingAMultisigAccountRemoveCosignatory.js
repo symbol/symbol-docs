@@ -31,13 +31,13 @@ const Account = nem2Sdk.Account,
 /* start block 01 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
-const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryToRemovePublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF530B1FB52389568F1';
+const cosignatoryToRemovePublicKey = process.env.COSIGNATORY_TO_REMOVE_PUBLIC_KEY;
 const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
+const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY;
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
 const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Remove,cosignatoryToRemove);
@@ -55,7 +55,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     NetworkType.MIJIN_TEST,
     []);
 
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)

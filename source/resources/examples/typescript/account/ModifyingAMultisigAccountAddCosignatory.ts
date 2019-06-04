@@ -38,13 +38,13 @@ const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
-const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY as string;
+const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
-const newCosignatoryPublicKey = 'CD4EE677BD0642C93910CB93214954A9D70FBAAE1FFF1FF530B1FB52389568F1';
+const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY as string;
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 
 const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add, newCosignatoryAccount);
@@ -65,7 +65,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST);
 
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
@@ -77,7 +78,7 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction);
+const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
 listener.open().then(() => {
 

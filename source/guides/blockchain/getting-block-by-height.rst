@@ -30,11 +30,6 @@ What happened in the genesis block? Run the following code to get the first crea
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingBlockByHeight.java
-        :language: java
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
     .. viewsource:: ../../resources/examples/javascript/blockchain/GettingBlockByHeight.js
         :language: javascript
         :start-after:  /* start block 01 */
@@ -46,11 +41,6 @@ The following snippet returns the height of the latest block.
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/GettingBlockchainHeight.ts
         :language: typescript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingBlockchainHeight.java
-        :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

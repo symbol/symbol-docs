@@ -43,11 +43,6 @@ In this example, we have created a subnamespace called ``bar`` under ``foo`` nam
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java
-        :language: java
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
     .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringASubnamespace.js
         :language: javascript
         :start-after:  /* start block 01 */

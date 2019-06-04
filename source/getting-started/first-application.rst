@@ -170,7 +170,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
 2.  Sign the transaction with the ticket vendor account, so that the network can verify the authenticity of the transaction.
 
-.. note:: To make your transaction only valid for your network, you will have to include the first block generation hash when signing your transaction. Open ``http://localhost:3000/block/1`` in a new tab and copy ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 

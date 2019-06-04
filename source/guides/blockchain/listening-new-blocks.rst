@@ -28,11 +28,6 @@ Let’s get into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/ListeningNewBlocks.java
-        :language: java
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
     .. viewsource:: ../../resources/examples/javascript/blockchain/ListeningNewBlocks.js
         :language: javascript
         :start-after:  /* start block 01 */

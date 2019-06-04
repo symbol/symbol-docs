@@ -91,6 +91,8 @@ If you own more than one mosaic, you can send them together in the same transact
 
 2. Sign the transaction with Alice's account.
 
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransaction.ts

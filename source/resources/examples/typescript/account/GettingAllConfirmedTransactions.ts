@@ -27,7 +27,6 @@ const pageSize = 100;
 const allTransactions = true;
 
 const publicKey = process.env.PUBLIC_KEY as string;
-
 const publicAccount = PublicAccount
     .createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 

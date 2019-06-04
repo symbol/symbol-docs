@@ -44,7 +44,7 @@ accountHttp
         mergeMap((_) => _), // Transform transaction array to single transactions to process them
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
-        filter((_) => _.recipient.equals(address)), // Filter transactions from to account
+        filter((_) => _.recipient instanceof Address &&_.recipient.equals(address)), // Filter transactions from to account
         filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
         map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
         toArray(), // Add all mosaics amounts into one array

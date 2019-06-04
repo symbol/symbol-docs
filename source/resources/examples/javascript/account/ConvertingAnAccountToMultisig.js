@@ -39,12 +39,12 @@ const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
-const privateKey = process.env.PRIVATE_KEY; // Private key of the account to convert into multisig
+const privateKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const cosignatory1PublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
+const cosignatory1PublicKey = process.env.COSIGNATORY_1_PUBLIC_KEY;
 const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, NetworkType.MIJIN_TEST);
-const cosignatory2PublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
+const cosignatory2PublicKey = process.env.COSIGNATORY_2_PUBLIC_KEY;
 const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -73,7 +73,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 /* end block 03 */
 
 /* start block 04 */
-const signedTransaction = account.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 04 */
 
@@ -85,7 +86,7 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = account.sign(hashLockTransaction);
+const hashLockTransactionSigned = account.sign(hashLockTransaction, networkGenerationHash);
 
 listener.open().then(() => {
 

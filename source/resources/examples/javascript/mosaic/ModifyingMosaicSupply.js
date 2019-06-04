@@ -42,7 +42,9 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     UInt64.fromUint(2000000),
     NetworkType.MIJIN_TEST);
 
-const signedTransaction = account.sign(mosaicSupplyChangeTransaction);
+
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)

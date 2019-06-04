@@ -42,10 +42,10 @@ const transferTransaction = TransferTransaction.create(
 /* end block 01 */
 
 const privateKey = process.env.PRIVATE_KEY as string;
-
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
-const signedTransaction = account.sign(transferTransaction);
+const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 

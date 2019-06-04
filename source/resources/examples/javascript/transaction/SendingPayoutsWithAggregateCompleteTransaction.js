@@ -54,7 +54,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 /* end block 01 */
 
 /* start block 02 */
-const signedTransaction = account.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)

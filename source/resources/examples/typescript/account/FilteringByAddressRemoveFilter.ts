@@ -18,6 +18,7 @@
 
 import {
     Account,
+    AccountPropertyModification,
     AccountPropertyTransaction,
     Address,
     Deadline,
@@ -29,7 +30,7 @@ import {
 
 /* start block 01 */
 const companyAddress = Address.createFromRawAddress('SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP');
-const addressFilter = AccountPropertyTransaction.createAddressFilter(PropertyModificationType.Remove, companyAddress);
+const addressFilter = AccountPropertyModification.createForAddress(PropertyModificationType.Remove, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
@@ -43,8 +44,9 @@ const transaction = AccountPropertyTransaction
 
 /* start block 03 */
 const productPrivateKey = process.env.PRIVATE_KEY as string;
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST)
-const signedTransaction = productAccount.sign(transaction);
+const signedTransaction = productAccount.sign(transaction,networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp

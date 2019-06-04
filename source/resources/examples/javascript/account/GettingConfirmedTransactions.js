@@ -26,7 +26,7 @@ const AccountHttp = nem2Sdk.AccountHttp,
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-const publicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
+const publicKey = process.env.PUBLIC_KEY as string;
 const publicAccount =  PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
