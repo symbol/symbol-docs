@@ -38,6 +38,36 @@ Cost
 
 The cost of creating a mosaic is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
 
+*******
+Example
+*******
+
+A private company, ComfyClothingCompany, decides that it wants to go public. Instead of a traditional IPO, the company decides to do an STO to issue tokens through the NEM platform.
+
+Thus, the company must create a mosaic to represent shares to their company. Here is how the company might configure the mosaic properties:
+
+.. csv-table::
+    :header: "Property", "Configuration"
+    :delim: ;
+
+    Duration; undefined
+    Divisibility; 2
+    Initial supply; 1000000000 (10.000.000,00)
+    Supply mutable; true
+    Transferability; true
+
+**Duration:** Shares of the company should exist as long as the company is in business. The ComfyClothingCompany leaves this property ``undefined``, creating a non-expiring mosaic representing their assets.
+
+**Divisibility:** Although brokerages and investment firms can fractionalize shares, the traditional minimum number of shares an investor can purchase from the open market is 1.
+
+However, NEM mosaics offer more flexibility in tokenizing their company shares. ComfyClothingCompany chooses the divisibility to be ``2``, allowing the smallest fraction of their shares to be 0.01.
+
+Fractional ownership, along with the ability to trade 24/7, brings additional liquidity to the market. These same characteristics also open up the market to smaller investors.
+
+**Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10.000.000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
+
+**Transferability:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
+
 ******
 Guides
 ******
