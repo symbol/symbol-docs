@@ -18,7 +18,7 @@ Catapult-server provides increased flexibility for the node owners. The same sof
 
 * **API node** (API Component): The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated.
 
-You can test catapult-server software deploying your own network for development or learning purposes with |catapult-service-bootstrap|. It contains the appropriate of bootstrap and setup scripts to help developers easily and properly establish a running server. The software will assist you in quickly installing the server so that you can immediately focus on your development work instead of setting up or configuring the server.
+You can test catapult-server software deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
 
 To build and run catapult-server only, follow the |instructions|.
 
@@ -130,7 +130,7 @@ config-harvesting.properties
 
     **harvesting**; ; ;
     harvestKey; string; Harvest key.;
-    isAutoHarvestingEnabled; bool; Returns true if auto harvesting is enabled.; false
+    isAutoHarvestingEnabled; bool; Set to true if auto harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of unlocked accounts.; 5
     beneficiary; string; Public key of the account receiving part of the harvested fee.; 0000000000000000000000000000000000000000000000000000000000000000
 
@@ -211,8 +211,8 @@ config-network.properties
     publicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF
     generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6
     **chain**; ; ;
-    shouldEnableVerifiableState; bool; Returns true if block chain should calculate state hashes so that state is fully verifiable at each block.; true
-    shouldEnableVerifiableReceipts; bool; Returns true if block chain should calculate receipts so that state changes are fully verifiable at each block.; true
+    shouldEnableVerifiableState; bool; Set to true if block chain should calculate state hashes so that state is fully verifiable at each block.; true
+    shouldEnableVerifiableReceipts; bool; Set to true if block chain should calculate receipts so that state changes are fully verifiable at each block.; true
     currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x0DC6'7FBE'1CAD'29E3
     harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x2651'4E2A'1EF3'3824
     blockGenerationTargetTime; utils::TimeSpan; Targeted time between blocks.; 15s
@@ -234,8 +234,8 @@ config-network.properties
     **plugin:catapult.plugins.aggregate**; ; ;
     maxTransactionsPerAggregate; uint32_t; Maximum number of transactions per aggregate.; 1'000
     maxCosignaturesPerAggregate; uint8_t; Maximum number of cosignatures per aggregate.; 15
-    enableStrictCosignatureCheck; bool; Returns true if cosignatures must exactly match component signers. Returns false if cosignatures should be validated externally.; false
-    enableBondedAggregateSupport; bool; Returns true if bonded aggregates should be allowed. Returns false if bonded aggregates should be rejected.; true
+    enableStrictCosignatureCheck; bool; Set to true if cosignatures must exactly match component signers. Set to false if cosignatures should be validated externally.; false
+    enableBondedAggregateSupport; bool; Set to true if bonded aggregates should be allowed. Set to false if bonded aggregates should be rejected.; true
     maxBondedTransactionLifetime; utils::TimeSpan; Maximum lifetime a bonded transaction can have before it expires.; 48h
     **plugin:catapult.plugins.lockhash**; ; ;
     lockedFundsPerAggregate; Amount; Amount that has to be locked per aggregate in partial cache.; 10'000'000
@@ -288,11 +288,11 @@ config-node.properties
     **node**; ; ;
     port; unsigned short; Server port.; 7900
     apiPort; unsigned short; Server api port.; 7901
-    shouldAllowAddressReuse; bool; Returns true if the server should reuse ports already in use.; false
-    shouldUseSingleThreadPool; bool; Returns true if a single thread pool should be used, Returns false if multiple thread pools should be used.; false
-    shouldUseCacheDatabaseStorage; bool; Returns true if cache data should be saved in a database.; true
-    shouldEnableAutoSyncCleanup; bool; Returns true if temporary sync files should be automatically cleaned up. *Note*: This should be Returns false if broker process is running.; true
-    shouldEnableTransactionSpamThrottling; bool; Returns true if transaction spam throttling should be enabled.; true
+    shouldAllowAddressReuse; bool; Set to true if the server should reuse ports already in use.; false
+    shouldUseSingleThreadPool; bool; Set to true if a single thread pool should be used, Set to false if multiple thread pools should be used.; false
+    shouldUseCacheDatabaseStorage; bool; Set to true if cache data should be saved in a database.; true
+    shouldEnableAutoSyncCleanup; bool; Set to true if temporary sync files should be automatically cleaned up. *Note*: This should be Set to false if broker process is running.; true
+    shouldEnableTransactionSpamThrottling; bool; Set to true if transaction spam throttling should be enabled.; true
     transactionSpamThrottlingMaxBoostFee; Amount; Maximum fee that will boost a transaction through the spam throttle when spam throttling is enabled.; 10'000'000
     maxBlocksPerSyncAttempt; uint32_t; Maximum number of blocks per sync attempt.; 400
     maxChainBytesPerSyncAttempt; utils::FileSize; Maximum chain bytes per sync attempt.; 100MB
@@ -307,14 +307,14 @@ config-node.properties
     connectTimeout; utils::TimeSpan; Timeout for connecting to a peer.; 10s
     syncTimeout; utils::TimeSpan; Timeout for syncing with a peer.; 60s
     socketWorkingBufferSize; utils::FileSize; Initial socket working buffer size (socket reads will attempt to read buffers of roughly this size).; 512KB
-    socketWorkingBufferSensitivity; uint32_t; Socket working buffer sensitivity (lower values will cause memory to be more aggressively reclaimed). *Note*: Returns 0 will disable memory reclamation.; 100
+    socketWorkingBufferSensitivity; uint32_t; Socket working buffer sensitivity (lower values will cause memory to be more aggressively reclaimed). *Note*: Set to 0 will disable memory reclamation.; 100
     maxPacketDataSize; utils::FileSize; Maximum packet data size.; 150MB
     blockDisruptorSize; uint32_t; Size of the block disruptor circular buffer.; 4096
     blockElementTraceInterval; uint32_t; Multiple of elements at which a block element should be traced through queue and completion.; 1
     transactionDisruptorSize; uint32_t; Size of the transaction disruptor circular buffer.; 16384
     transactionElementTraceInterval; uint32_t; Multiple of elements at which a transaction element should be traced through queue and completion.; 10
-    shouldAbortWhenDispatcherIsFull; bool; Returns true if the process should terminate when any dispatcher is full.; true
-    shouldAuditDispatcherInputs; bool; Returns true if all dispatcher inputs should be audited.; true
+    shouldAbortWhenDispatcherIsFull; bool; Set to true if the process should terminate when any dispatcher is full.; true
+    shouldAuditDispatcherInputs; bool; Set to true if all dispatcher inputs should be audited.; true
     outgoingSecurityMode; ionet::ConnectionSecurityMode; Security mode of outgoing connections initiated by this node.; None
     incomingSecurityModes; ionet::ConnectionSecurityMode; Accepted security modes of incoming connections initiated by other nodes.; None
     maxCacheDatabaseWriteBatchSize; utils::FileSize; Maximum cache database write batch size.; 5MB
@@ -429,14 +429,13 @@ config-user.properties
     dataDirectory; string; Data directory.; ../data
     pluginsDirectory; string; Plugins directory.; .
 
-
 .. |catapult-server| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
+   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
 
 .. |instructions| raw:: html
 
