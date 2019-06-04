@@ -16,13 +16,13 @@ Supported SDKs
     :header: "Language", "Repository", "Reference", "Target version"
     :delim: ;
 
-    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|; 0.3 (latest)
+    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|; 0.4 (latest)
 
 ************
 Ongoing work
 ************
 
-.. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server (0.3).
+.. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server (0.4).
 
 Read the open issues to know about the current status of each project.
 
@@ -68,7 +68,3 @@ If you want to create a new SDK, check the :doc:`SDK Development guidelines <gui
 .. |go-repo| raw:: html
 
     <a href="https://github.com/proximax-storage/nem2-sdk-go/" target="_blank">Repository</a>
-
-.. |python-repo| raw:: html
-
-    <a href="https://github.com/nemtech/nem2-sdk-python/" target="_blank">Repository</a>
