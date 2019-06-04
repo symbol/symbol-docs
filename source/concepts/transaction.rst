@@ -124,17 +124,21 @@ For example, a transfer transaction describes who is the recipient and the quant
 An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
 
 1) Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2) Sign the signing bytes with the account's private key. This will give you the transaction ``signature``.
-3) Append the signature and signer public key to the transaction to obtain the ``payload``.
-4) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, and the remaining transaction payload.
+2) Get the nemesis block generation hash. You can query ``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value.
+3) Prepend the nemesis block generation hash to the signing bytes.
+4) Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
+5) Append the signer's signature and public key to the transaction to obtain the ``payload``.
+6) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 
     import {Account} from "nem2-sdk";
 
     const privateKey = process.env.PRIVATE_KEY as string;
+    const generationHash = process.env.GENERATION_HASH as string;
     const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
-    const signedTransaction = account.sign(transferTransaction);
+
+    const signedTransaction = account.sign(transferTransaction, generationHash);
 
     console.log(signedTransaction.payload);
 

@@ -121,6 +121,7 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
+    :widths: 20 20 60
 
     Divisibility; 0 ; The mosaic won't be divisible, no one should be able to send “0.5 tickets”.
     Duration; 1000; The mosaic will be registered for 1000 blocks.
@@ -145,61 +146,61 @@ Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`tran
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
+    :widths: 20 20 60
 
     Deadline; Default ; The maximum amount of time to include the transaction in the blockchain.
     Recipient; SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU; The recipient account address.
     Mosaics; 1 [7cdf3b117a3c40cc] (ticket); The array of mosaics to send.
-    Message; ``enjoy your ticket``; The attached message.
+    Message; enjoy your ticket; The attached message.
     Network; MIJIN_TEST; The local network identifier.
 
 .. example-code::
 
-   .. code-block:: typescript
+    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-       import {
-           Account, Address, Deadline, UInt64, NetworkType, PlainMessage, TransferTransaction, Mosaic, MosaicId,
-           TransactionHttp
-       } from 'nem2-sdk';
-
-       const transferTransaction = TransferTransaction.create(
-           Deadline.create(),
-           Address.createFromRawAddress('SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU'),
-           [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))], // Replace with your mosaicId
-           PlainMessage.create('enjoy your ticket'),
-           NetworkType.MIJIN_TEST
-       );
+    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 Although the transaction is defined, it has not been announced to the network yet.
 
-2.  Sign the transaction of the ticket vendor account first, so that the network can verify the authenticity of the transaction.
+2.  Sign the transaction with the ticket vendor account, so that the network can verify the authenticity of the transaction.
+
+.. note:: To make your transaction only valid for your network, you will have to include the first block generation hash when signing your transaction. Open ``http://localhost:3000/block/1`` in a new tab and copy ``meta.generationHash`` value.
 
 .. example-code::
 
-   .. code-block:: typescript
+    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-       const privateKey = process.env.PRIVATE_KEY;
+    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
-       const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-       const signedTransaction = account.sign(transferTransaction);
-
-
-3. Once signed, announce the transaction to the network.
+3. Once signed, you can announce the transaction to the network.
 
 .. example-code::
 
-   .. code-block:: typescript
+    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-       const transactionHttp = new TransactionHttp('http://localhost:3000');
+    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
-       transactionHttp.announce(signedTransaction).subscribe(
-           x => console.log(x),
-           err => console.log(err)
-       );
+    .. code-block:: bash
 
-   .. code-block:: bash
-
-       nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
+        nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
@@ -211,7 +212,7 @@ Although the transaction is defined, it has not been announced to the network ye
 What's next?
 ************
 
-Did you solve the proposed use case?
+Did you solve the use case?
 
 ✅ Identify each ticket buyer: Creating NEM accounts for each buyer.
 
