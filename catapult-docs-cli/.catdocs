@@ -74,6 +74,7 @@
 				"plugins/txes/lock_secret/src/config/SecretLockConfiguration.h",
 				"plugins/txes/lock_hash/src/config/HashLockConfiguration.h",
 				"plugins/txes/multisig/src/config/MultisigConfiguration.h",
+				"plugins/txes/mosaic/src/config/MosaicConfiguration.h",
 				"plugins/txes/namespace/src/config/NamespaceConfiguration.h",
 				"plugins/txes/property/src/config/PropertyConfiguration.h",
 				"plugins/txes/transfer/src/config/TransferConfiguration.h"
@@ -147,7 +148,7 @@
             "plugins/txes/transfer/src/validators/Results.h",
             "src/catapult/chain/ChainResults.h",
             "src/catapult/consumers/ConsumerResults.h",
-            "src/catapult/extensions/Results.h"	
+            "src/catapult/extensions/Results.h"
         ]
     }]
 }
