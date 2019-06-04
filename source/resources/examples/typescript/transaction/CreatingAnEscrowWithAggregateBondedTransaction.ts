@@ -41,10 +41,10 @@ const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
-const alicePrivateKey = process.env.PRIVATE_KEY as string;
+const alicePrivateKey = process.env.ALICE_PRIVATE_KEY as string;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
-const ticketDistributorPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
+const ticketDistributorPublicKey = process.env.TICKET_DISTRIBUTOR_PUBLIC_KEY as string;
 const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
@@ -68,7 +68,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create()
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     NetworkType.MIJIN_TEST);
 
-const signedTransaction = aliceAccount.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
 /* end block 02 */
 
@@ -80,7 +81,7 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
 listener.open().then(() => {
 

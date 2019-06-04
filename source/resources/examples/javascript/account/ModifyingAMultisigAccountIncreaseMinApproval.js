@@ -32,7 +32,7 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const multisigAccountPublicKey = '202B3861F34F6141E120742A64BC787D6EBC59C9EFB996F4856AA9CBEE11CD31';
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -52,7 +52,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     NetworkType.MIJIN_TEST,
     []);
 
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)

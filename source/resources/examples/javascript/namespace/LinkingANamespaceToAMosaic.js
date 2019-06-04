@@ -27,10 +27,6 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-const privateKey = process.env.PRIVATE_KEY;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
 const namespaceId = new NamespaceId('foo');
 const mosaicId = new MosaicId('7cdf3b117a3c40cc');
 /* end block 01 */
@@ -44,8 +40,12 @@ const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     NetworkType.MIJIN_TEST
 );
 
-const signedTransaction = account.sign(mosaicAliasTransaction);
+const privateKey = process.env.PRIVATE_KEY;
+const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(mosaicAliasTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

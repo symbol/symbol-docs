@@ -69,7 +69,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     NetworkType.MIJIN_TEST,
     []);
 
-const signedTransaction = account.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)

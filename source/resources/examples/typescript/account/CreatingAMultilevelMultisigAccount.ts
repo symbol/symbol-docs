@@ -37,10 +37,10 @@ import {filter, mergeMap} from "rxjs/operators";
 const multisig2PrivateKey = process.env.MULTISIG_2_PRIVATE_KEY as string;
 const multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryAccount5PublicKey = '7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246';
+const cosignatoryAccount5PublicKey = process.env.COSIGNATORY_5_PUBLIC_KEY as string;
 const cosignatory5 = PublicAccount.createFromPublicKey(cosignatoryAccount5PublicKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryAccount6PublicKey = '28AE57EC0E81967880C483BE99D4B6AF38E5DCD9F8B89D41F2E7619CFDB447C5';
+const cosignatoryAccount6PublicKey = process.env.COSIGNATORY_6_PUBLIC_KEY as string;
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, NetworkType.MIJIN_TEST);
 
 const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.create(
@@ -63,13 +63,13 @@ const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.crea
 const multisig3PrivateKey = process.env.MULTISIG_3_PRIVATE_KEY as string;
 const multisigAccount3 = Account.createFromPrivateKey(multisig3PrivateKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryAccount7PublicKey = 'DAD5B5B7F7AE4ACEAB3F6A5FE05EA3186208D219A04B6C047C39A2B0EFF49511';
+const cosignatoryAccount7PublicKey = process.env.COSIGNATORY_7_PUBLIC_KEY as string;
 const cosignatory7 = PublicAccount.createFromPublicKey(cosignatoryAccount7PublicKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryAccount8PublicKey = 'E29302E0AF530292EABEDADF2DE2953BBFBB0BDD9A1F51FA0C857E87828BABA9';
+const cosignatoryAccount8PublicKey = process.env.COSIGNATORY_8_PUBLIC_KEY as string;
 const cosignatory8 = PublicAccount.createFromPublicKey(cosignatoryAccount8PublicKey, NetworkType.MIJIN_TEST);
 
-const cosignatoryAccount4PublicKey = '473233D6B89671DCA4D334CF1059C31356CBF18120E484E33EEA9BDC09EEA515';
+const cosignatoryAccount4PublicKey = process.env.COSIGNATORY_4_PUBLIC_KEY as string;
 const cosignatory4 = PublicAccount.createFromPublicKey(cosignatoryAccount4PublicKey, NetworkType.MIJIN_TEST);
 
 const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.create(
@@ -124,7 +124,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(
         convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)],
     NetworkType.MIJIN_TEST);
 
-const signedTransaction = multisigAccount1.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const hashLockTransaction = HashLockTransaction.create(
@@ -134,7 +135,7 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = multisigAccount1.sign(hashLockTransaction);
+const hashLockTransactionSigned = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);

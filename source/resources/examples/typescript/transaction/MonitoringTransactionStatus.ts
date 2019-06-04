@@ -41,7 +41,8 @@ const transferTransaction = TransferTransaction.create(
 /* start block 02 */
 const privateKey = process.env.PRIVATE_KEY as string;
 const signer = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const signedTransaction = signer.sign(transferTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = signer.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 
 /* start block 03 */

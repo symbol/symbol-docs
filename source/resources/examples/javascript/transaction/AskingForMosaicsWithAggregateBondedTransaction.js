@@ -42,7 +42,7 @@ const listener = new Listener(nodeUrl);
 const alicePrivateKey = process.env.ALICE_PRIVATE_KEY;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
-const bobPublicKey = 'F82527075248B043994F1CAFD965F3848324C9ABFEC506BC05FBCF5DD7307C9D';
+const bobPublicKey = process.env.BOB_PUBLIC_KEY;
 const bobAccount = PublicAccount.createFromPublicKey(bobPublicKey, NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -53,7 +53,6 @@ const transferTransaction1 = TransferTransaction.create(
     [],
     PlainMessage.create('send me 20 cat.currency'),
     NetworkType.MIJIN_TEST);
-
 /* end block 02 */
 
 /* start block 03 */
@@ -72,8 +71,10 @@ const aggregateTransaction = AggregateTransaction.createBonded(
         transferTransaction2.toAggregate(bobAccount)],
     NetworkType.MIJIN_TEST);
 /* end block 04 */
+
 /* start block 05 */
-const signedTransaction = aliceAccount.sign(aggregateTransaction);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
@@ -82,7 +83,7 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction);
+const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
 listener.open().then(() => {
 

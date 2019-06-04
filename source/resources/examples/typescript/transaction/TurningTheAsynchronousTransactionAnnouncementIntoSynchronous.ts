@@ -29,9 +29,6 @@ import {
 
 
 /* start block 01 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
-
 const recipientAddress =  Address.createFromRawAddress('SBHEVGUFDEW22FAT2EFU6UYXRKLTC6HFOPB4CRSE');
 
 const transferTransaction = TransferTransaction.create(
@@ -41,7 +38,10 @@ const transferTransaction = TransferTransaction.create(
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 
-const signedTransaction = account.sign(transferTransaction);
+const privateKey = process.env.PRIVATE_KEY as string;
+const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 
 /* start block 02 */

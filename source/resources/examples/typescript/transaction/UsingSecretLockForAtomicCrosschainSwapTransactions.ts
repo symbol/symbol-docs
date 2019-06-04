@@ -41,6 +41,10 @@ const bobPrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJI
 
 const privateChainTransactionHttp = new TransactionHttp('http://localhost:3000');
 const publicChainTransactionHttp = new TransactionHttp('http://localhost:3000');
+
+const publicChainGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+
 /* end block 01 */
 
 /* start block 02 */
@@ -62,7 +66,7 @@ const tx1 = SecretLockTransaction.create(
 /* end block 03 */
 
 /* start block 04 */
-const tx1Signed = alicePrivateChainAccount.sign(tx1);
+const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx1Signed)
     .subscribe(x => console.log(x), err => console.error(err));
@@ -80,7 +84,7 @@ const tx2 = SecretLockTransaction.create(
 /* end block 05 */
 
 /* start block 06 */
-const tx2Signed = bobPublicChainAccount.sign(tx2);
+const tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx2Signed)
     .subscribe(x => console.log(x), err => console.error(err));
@@ -91,10 +95,11 @@ const tx3 = SecretProofTransaction.create(
     Deadline.create(),
     HashType.Op_Sha3_256,
     secret,
+    alicePublicChainAccount.address,
     proof,
     NetworkType.MAIN_NET);
 
-const tx3Signed = alicePublicChainAccount.sign(tx3);
+const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx3Signed)
     .subscribe(x => console.log(x), err => console.error(err));
@@ -105,10 +110,11 @@ const tx4 = SecretProofTransaction.create(
     Deadline.create(),
     HashType.Op_Sha3_256,
     secret,
+    bobPrivateChainAccount.address,
     proof,
     NetworkType.MIJIN);
 
-const tx4Signed = bobPrivateChainAccount.sign(tx4);
+const tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx4Signed)
     .subscribe(x => console.log(x), err => console.error(err));
