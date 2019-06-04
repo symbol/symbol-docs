@@ -83,6 +83,8 @@ Let’s get into some code
 
 4. Sign the aggregate transaction using the private key of the multisig account.
 
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/account/ConvertingAnAccountToMultisig.ts

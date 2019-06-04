@@ -47,7 +47,9 @@ Listeners enable receiving notifications possible when a change in the blockchai
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Sign the transaction.
+2. Sign the transaction with your account.
+
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
