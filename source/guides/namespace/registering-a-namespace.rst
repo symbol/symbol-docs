@@ -43,11 +43,6 @@ Let’s get into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/CheckingNamespaceExistence.java
-        :language: java
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
     .. viewsource:: ../../resources/examples/javascript/namespace/CheckingNamespaceExistence.js
         :language: javascript
         :start-after:  /* start block 01 */
@@ -65,11 +60,6 @@ Let’s get into some code
 
     .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringANamespace.ts
         :language: typescript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringANamespace.java
-        :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
