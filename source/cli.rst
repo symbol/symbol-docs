@@ -430,6 +430,22 @@ Command
 
     nem2-cli transaction addressalias --action 0 --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K --namespace foo
 
+**Status**
+
+Gets the confirmation status of a transaction.
+
+Options
+
+.. code-block:: bash
+
+    -h, --hash <hash>   - Transaction hash
+
+Command
+
+.. code-block:: bash
+
+    nem2-cli transaction status -h 285A4B9A8ED41BD3DEF389667CA512F1038FBCA2D7A9E4188AF1D5292ACE79A4
+
 Namespace
 =========
 
