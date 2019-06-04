@@ -49,7 +49,6 @@ Catapult records invisible state changes for the following entities.
     0x5143; Inflation; :ref:`Inflation <inflation-receipt>`; The amount of native currency mosaics created. The receipt is recorded when the network has inflation configured, and a new block triggers the creation of currency mosaics.
     **Mosaic**;;;
     0x414D; Mosaic_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The mosaicId expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` expires.
-    0x124D; Mosaic_Levy; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the levied mosaic, the mosaicId and amount. It is recorded when a transaction has a levied mosaic.
     0x134D; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
     **Namespace**;;;
     0x414E; Namespace_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The namespaceId expiring in this block. It is recorded when a :doc:`namespace <namespace>` expires.

@@ -1373,7 +1373,6 @@ components:
       - 62019
       description: |
         The type of the receipt:
-        * 0x124D (4685 decimal) - Mosaic_Levy.
         * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
         * 0x124E (4686 decimal) - Namespace_Rental_Fee.
         * 0x2143 (8515 decimal) - Harvest_Fee.
@@ -2036,7 +2035,6 @@ components:
       - owner
       - properties
       - revision
-      - levy
       properties:
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
@@ -2056,8 +2054,6 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/MosaicPropertyDTO"
-        levy:
-          type: object
     MosaicPropertyDTO:
       type: object
       properties:

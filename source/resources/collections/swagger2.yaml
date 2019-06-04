@@ -1223,7 +1223,6 @@ definitions:
     - 62019
     description: |
       The type of the receipt:
-      * 0x124D (4685 decimal) - Mosaic_Levy.
       * 0x134D (4941 decimal) - Mosaic_Rental_Fee.
       * 0x124E (4686 decimal) - Namespace_Rental_Fee.
       * 0x2143 (8515 decimal) - Harvest_Fee.
@@ -1752,7 +1751,6 @@ definitions:
     - owner
     - properties
     - revision
-    - levy
     properties:
       mosaicId:
         $ref: "#/definitions/UInt64DTO"
@@ -1772,8 +1770,6 @@ definitions:
         type: array
         items:
           $ref: "#/definitions/MosaicPropertyDTO"
-      levy:
-        type: object
   MosaicPropertyDTO:
     type: object
     properties:

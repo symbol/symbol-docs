@@ -383,7 +383,6 @@ Options
     -a, --amount <amount>               - Amount of tokens
     -t, --transferable                  - Mosaic transferable
     -s, --supplymutable                 - Mosaic supply mutable
-    -l, --levymutable                   - Mosaic levy mutable
     -d, --divisibility <divisibility>   - Mosaic divisibility, from 0 to 6
     -u, --duration <duration>           - Mosaic duration in amount of blocks
     -e, --eternal                       - Mosaic does not expire.

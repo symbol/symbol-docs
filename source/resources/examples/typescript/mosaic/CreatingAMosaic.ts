@@ -44,7 +44,6 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     MosaicProperties.create({
         supplyMutable: true,
         transferable: true,
-        levyMutable: false,
         divisibility: 0,
         duration: UInt64.fromUint(1000)
     }),
