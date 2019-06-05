@@ -193,6 +193,12 @@ source_file = build/gettext/guidelines/sdk-documentation.pot
 source_lang = en
 type = PO
 
+[nem2docs.guidelines--style-guide]
+file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/style-guide.po
+source_file = build/gettext/guidelines/style-guide.pot
+source_lang = en
+type = PO
+
 [nem2docs.guidelines--suggesting-changes]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
 source_file = build/gettext/guidelines/suggesting-changes.pot

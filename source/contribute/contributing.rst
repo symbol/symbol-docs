@@ -22,6 +22,7 @@ SDK
 Documentation
 *************
 
-* :doc:`Writing a guide <../guidelines/writing-a-guide>`
+* :doc:`Style guide <../guidelines/style-guide>`
 * :doc:`Suggesting changes <../guidelines/suggesting-changes>`
+* :doc:`Writing a guide <../guidelines/writing-a-guide>`
 * :doc:`Translating the documentation <../guidelines/translating-the-documentation>`
