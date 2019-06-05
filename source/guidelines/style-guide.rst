@@ -79,6 +79,7 @@ Tone
 .. csv-table::
     :header: "Do", "Don't"
     :delim: ;
+
     Use American English variant.; Use UK Spelling/grammar: "colo**u**r".
     Be friendly, maintaining a professionalism.; Use too much contractions, slang, colloquialism, buzz words, excessive exclamation marks.
     Use active voice & present tense by default.; Use passive voice.
