@@ -113,7 +113,8 @@ Writing the guide
 
         .. viewsource:: <relative_url>.ts
             :language: typescript
-            :lines: 20-40
+            :start-after:  /* start block 01*/
+            :end-before: /* end block 01 */
 
 7. Test and preview your changes.
 
