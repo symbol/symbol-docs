@@ -289,6 +289,12 @@ source_file = build/gettext/guides/mosaic/creating-a-mosaic.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--mosaic--getting-mosaic-information]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/getting-mosaic-information.po
+source_file = build/gettext/guides/mosaic/getting-mosaic-information.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--mosaic--modifying-mosaic-supply]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
 source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
