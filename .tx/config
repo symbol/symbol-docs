@@ -367,6 +367,12 @@ source_file = build/gettext/guides/transaction/turning-the-asynchronous-transact
 source_lang = en
 type = PO
 
+[nem2docs.guides--namespace--getting-namespace-information]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/getting-namespace-information.po
+source_file = build/gettext/guides/namespace/getting-namespace-information.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--namespace--link-a-namespace-to-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-a-mosaic.po
 source_file = build/gettext/guides/namespace/link-a-namespace-to-a-mosaic.pot
