@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -108,6 +108,20 @@ msgid ""
 "``10 cat.currency``."
 msgstr "Bob のアドレスが受信者の ``10 cat.currency`` とした転送トランザクションを作成してください。"
 
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:64
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:98
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:112
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:69
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:103
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:117
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransaction.js`"
+msgstr ""
+
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:74
 msgid ""
 "As you may have noticed, transfer transactions require an array of mosaics "
@@ -121,6 +135,16 @@ msgid ""
 "If you own more than one mosaic, you can send them together in the same "
 "transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信できます:"
+
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:80
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:85
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js`"
+msgstr ""
 
 #: ../../source/guides/transaction/sending-a-transfer-transaction.rst:90
 msgid ""
@@ -138,13 +162,27 @@ msgstr ""
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:106
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:94
+msgid ""
+"To make the transaction only valid for your network, include the first block"
+" generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
+"copy the ``meta.generationHash`` value."
+msgstr ""
+"自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
+"``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
+
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:108
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:124
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:122
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/SendingATransferTransaction.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:126
 msgid ""
 "Open the terminal where you are monitoring account transactions ``status``. "
 "It should be empty. If there is an error, you can check :ref:`the error code"
@@ -154,7 +192,7 @@ msgstr ""
 "を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は :ref:`エラーコード "
 "<status-errors>` で意味を確認できます。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:126
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:128
 msgid ""
 "A new transaction should have appeared in the terminal where you are "
 "monitoring ``unconfirmed``. At this point, the transaction has reached the "
@@ -163,7 +201,7 @@ msgstr ""
 "``未承認`` "
 "を監視しているターミナルに新しいトランザクションが現れたはずです。この時点でトランザクションはネットワークに到達しましたが、ブロックに取り込まれるかどうかは不明です。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:128
+#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:130
 msgid ""
 "If it is included in a block, the transaction gets processed, and the amount"
 " stated in the transaction gets transferred from the sender's account to the"

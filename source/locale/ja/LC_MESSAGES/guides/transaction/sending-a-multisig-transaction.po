@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -129,6 +129,22 @@ msgstr "彼のアカウントの秘密鍵"
 msgid "The public key of the multisig account shared with Alice."
 msgstr "Alice と共有しているマルチシグアカウントの公開鍵。"
 
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:56
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:74
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:90
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:104
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateComplete.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:61
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:79
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:95
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:109
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateComplete.js`"
+msgstr ""
+
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:66
 msgid ""
 "Define the following :ref:`transfer transaction <transfer-transaction>`:"
@@ -198,6 +214,18 @@ msgstr ""
 msgid ""
 "Modify the previous code, defining the transaction as ``aggregate bonded``."
 msgstr "前のコードを変更して、トランザクション`を ``アグリゲートボンド`` として定義します。"
+
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:135
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:149
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingAMultisigTransactionAggregateBonded.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:140
+#: ../../source/guides/transaction/sending-a-multisig-transaction.rst:154
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingAMultisigTransactionAggregateBonded.js`"
+msgstr ""
 
 #: ../../source/guides/transaction/sending-a-multisig-transaction.rst:145
 msgid ""

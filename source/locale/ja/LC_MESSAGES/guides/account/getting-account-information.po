@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -56,7 +56,22 @@ msgid ""
 "parameter."
 msgstr "アカウントのアドレスをパラメタとして ``getAccountInfo`` 関数に渡して呼び出してください。"
 
-#: ../../source/guides/account/getting-account-information.rst:48
+#: ../../source/guides/account/getting-account-information.rst:29
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAccountInformation.ts`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:34
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingAccountInformation.js`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:39
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/GettingAccountInformation.sh`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:43
 msgid ""
 "Can you determine the account's public key? The **public key** identifies "
 "your account publicly in the network. Your  **address** is derived from it, "
@@ -65,7 +80,7 @@ msgstr ""
 "アカウントの公開鍵を確認できますか？**公開鍵** はネットワーク上のあなたのアカウントを特定します。あなたの **アドレス** "
 "は公開鍵から導出され、ネットワークや妥当性チェックなどの情報を含んでいます。"
 
-#: ../../source/guides/account/getting-account-information.rst:50
+#: ../../source/guides/account/getting-account-information.rst:45
 msgid ""
 "If you don't have a public key assigned, that means that your account has "
 "not announced or received any transaction yet. The ``addressHeight`` and "
@@ -75,7 +90,7 @@ msgstr ""
 "公開鍵が割り当てられていない場合、それはあなたのアカウントがまだトランザクションをアナウンスまたは受信していないことを意味します。 "
 "``addressHeight`` と ``publicKeyHeight`` はあなたのアドレスと公開鍵が最初に現れたブロックを指します。"
 
-#: ../../source/guides/account/getting-account-information.rst:52
+#: ../../source/guides/account/getting-account-information.rst:47
 msgid ""
 "The ``importance`` field represents the numerical relation between the "
 "number of harvesting mosaics the account owns and the total mosaic supply. "
@@ -86,13 +101,13 @@ msgstr ""
 "フィールドはアカウントが所有するハーベスティングモザイクの数と総モザイク供給の間の数値的関係を表します。重要性が高ければ高いほど、新しいブロックを "
 ":doc:`ハーベスト <../../concepts/harvesting>` する機会が増えます。"
 
-#: ../../source/guides/account/getting-account-information.rst:54
+#: ../../source/guides/account/getting-account-information.rst:49
 msgid ""
 "The balance is the amount of the different :doc:`mosaics "
 "<../../concepts/mosaic>` owned by the account."
 msgstr "残高はそのアカウントが所有するいろいろな :doc:`mosaics <../../concepts/mosaic>` の量です。"
 
-#: ../../source/guides/account/getting-account-information.rst:56
+#: ../../source/guides/account/getting-account-information.rst:51
 msgid ""
 "How many different mosaics does your account hold? Call "
 "``mosaicsAmountViewFromAddress`` function, passing your account's address as"
@@ -100,3 +115,18 @@ msgid ""
 msgstr ""
 "あなたのアカウントにはいくつのモザイクがありますか？アカウントのアドレスをパラメタとして "
 "``mosaicsAmountViewFromAddress`` 関数に渡して呼び出してください。"
+
+#: ../../source/guides/account/getting-account-information.rst:55
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:60
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CheckingBalanceOfAnAccount.js`"
+msgstr ""
+
+#: ../../source/guides/account/getting-account-information.rst:65
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/CheckingBalanceOfAnAccount.sh`"
+msgstr ""

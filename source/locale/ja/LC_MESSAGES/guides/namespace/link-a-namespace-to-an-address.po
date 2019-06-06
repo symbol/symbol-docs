@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-03-19 13:59+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -62,6 +62,18 @@ msgstr ""
 msgid "Define the namespaceId and the address you want to link."
 msgstr "リンクしたいアドレスとネームスペースIDを設定します。"
 
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:31
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:45
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:36
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:50
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js`"
+msgstr ""
+
 #: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:41
 msgid "Announce the alias transaction."
 msgstr "エイリアストランザクションのアナウンス"
@@ -81,3 +93,13 @@ msgid ""
 "Now you can send transactions to the namespace linked to the account instead"
 " of using the complete address."
 msgstr "これで、完全なアドレスを使用する代わりにネームスペースでトランザクションを送信することができるようになりました。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:65
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-an-address.rst:70
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js`"
+msgstr ""

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -58,6 +58,18 @@ msgstr "それではコードを見ていきましょう"
 msgid "Create a function to cosign any aggregate bonded transaction."
 msgstr "アグリゲートボンドトランザクションに署名する関数を作成します。"
 
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:30
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:54
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.ts`"
+msgstr ""
+
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:35
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:59
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomatically.js`"
+msgstr ""
+
 #: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:40
 msgid ""
 "Create a new listener to get notified every time a new aggregate bonded "
@@ -102,34 +114,39 @@ msgstr ""
 "``TransactionHttp`` リポジトリを使って ``CosignatureSignedTransaction`` "
 "をネットワークへアナウンスします。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:71
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:66
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:73
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:68
 msgid ""
 "Extend the previous function for signing transactions if they follow some "
 "constraints."
 msgstr "いくつかの制約に従うならば、トランザクションへ署名するために前の関数を拡張します。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:75
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:70
 msgid "Aggregate transactions with two inner transactions."
 msgstr "2つのインナートランザクションを含むアグリゲートトランザクション"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:76
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:71
 msgid "Two inner transactions must be transfer transactions."
 msgstr "2つのインナートランザクションは転送トランザクションでなければなりません。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:77
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:72
 msgid "The transaction sending funds must have yourself as the signer."
 msgstr "この資産を送信するトランザクションは、あなた自身が署名者である必要があります。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:78
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:73
 msgid ""
 "The transaction sending funds should have only one mosaic, being this less "
 "than ``100 cat.currency``."
 msgstr "資産を送信するトランザクションは ``100 cat.currency`` 未満の1つのモザイクだけを持つようにしてください。"
 
-#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:80
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:75
 msgid "Try it yourself! Here you have a possible implementation:"
 msgstr "こちらで試してみてください！ここに可能な実装をご用意しました:"
+
+#: ../../source/guides/transaction/signing-announced-aggregate-bonded-transactions-automatically.rst:79
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints.ts`"
+msgstr ""

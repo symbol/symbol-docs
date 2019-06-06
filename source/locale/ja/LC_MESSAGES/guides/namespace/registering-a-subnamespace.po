@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -90,24 +90,19 @@ msgstr ""
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:46
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/java/src/test/java/nem2/guides/examples/namespace/RegisteringASubnamespace.java`"
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/RegisteringASubnamespace.js`"
 msgstr ""
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:51
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/RegisteringASubnamespace.js`"
-msgstr ""
-
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:56
-msgid ""
 ":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/namespace/RegisteringASubnamespace.sh`"
 msgstr ""
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:62
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:57
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:64
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:59
 msgid ""
 "When the transaction is confirmed, link a namespace with a :doc:`mosaic "
 "<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "

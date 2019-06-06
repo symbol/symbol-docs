@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:123
+#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:153
 msgid "Mosaic"
 msgstr "モザイク"
 
@@ -59,6 +59,7 @@ msgstr ""
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
@@ -75,7 +76,7 @@ msgstr "タイプ"
 msgid "Description"
 msgstr "説明"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Divisibility"
 msgstr ""
 
@@ -93,7 +94,7 @@ msgstr ""
 "モザイクがどれくらいの小数点以下に分割できるかを決定します。可分性 3 はモザイクが最小で 0.001 に分割できることを意味します。可分性は 0 から"
 " ``6`` の範囲でなければなりません。"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Duration"
 msgstr ""
 
@@ -101,12 +102,12 @@ msgstr ""
 msgid ""
 "Specifies the number of confirmed blocks the mosaic is rented for. To create"
 " non-expiring mosaics, leave this property undefined.  Duration is allowed "
-"to lie up to ``365`` days."
+"to lie up to ``3650`` days (10 years)."
 msgstr ""
 "モザイクのレンタル期間の承認済みブロック数を指定します。期限の切れないモザイクを作るためにはプロパティを未定義のままにしてください。期間は "
-"``365`` 日まで許可されています。"
+"``3650`` 日(10年)まで許可されています。"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Initial supply"
 msgstr ""
 
@@ -116,7 +117,7 @@ msgid ""
 "the range of 0 and ``9,000,000,000``."
 msgstr "モザイクの供給量の総数です。合計供給量は 0 から ``9,000,000,000`` の範囲でなければなりません。"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Supply mutable"
 msgstr ""
 
@@ -130,7 +131,7 @@ msgid ""
 "the mosaic supply remains immutable."
 msgstr "true にセットした場合、モザイク供給量は後の時点で変更できるようになります。そうでない場合、変更できません。"
 
-#: ../../source/concepts/mosaic.rst:1
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "Transferability"
 msgstr ""
 
@@ -171,16 +172,111 @@ msgid ""
 "network.properties>`_. By default, it has a cost of ``500 cat.currency`` "
 "plus transaction fees."
 msgstr ""
+"モザイク作成のコストは `ネットワークごとに設定可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ です。デフォルトでは、このコストは "
+"``500 cat.currency`` とトランザクション手数料です。"
 
 #: ../../source/concepts/mosaic.rst:43
+msgid "Example"
+msgstr "例"
+
+#: ../../source/concepts/mosaic.rst:45
+msgid ""
+"A private company, ComfyClothingCompany, decides that it wants to go public."
+" Instead of a traditional IPO, the company decides to do an STO to issue "
+"tokens through the NEM platform."
+msgstr ""
+"非上場会社である ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は NEM "
+"プラットフォームを通じてトークンを発行するために STO を行うことにしました。"
+
+#: ../../source/concepts/mosaic.rst:47
+msgid ""
+"Thus, the company must create a mosaic to represent shares to their company."
+" Here is how the company might configure the mosaic properties:"
+msgstr "そのため、会社は自分の会社に株式を表現するためにモザイクを作成する必要があります。モザイクプロパティを設定する方法は次のとおりです:"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "undefined"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "2"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "1000000000 (10.000.000,00)"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid "true"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:59
+msgid ""
+"**Duration:** Shares of the company should exist as long as the company is "
+"in business. The ComfyClothingCompany leaves this property ``undefined``, "
+"creating a non-expiring mosaic representing their assets."
+msgstr ""
+"**Duration:** 会社の株式は会社が事業を営んでいる限り存在するはずです。ComfyClothingCompany はこのプロパティを "
+"``undefined`` として、資産を表現する期限切れがないモザイクを作成します。"
+
+#: ../../source/concepts/mosaic.rst:61
+msgid ""
+"**Divisibility:** Although brokerages and investment firms can fractionalize"
+" shares, the traditional minimum number of shares an investor can purchase "
+"from the open market is 1."
+msgstr ""
+"**Divisibility:** 証券会社や投資会社は株式を分割することができますが、投資家が公開市場から購入できる伝統的な最小株式数は 1 です。"
+
+#: ../../source/concepts/mosaic.rst:63
+msgid ""
+"However, NEM mosaics offer more flexibility in tokenizing their company "
+"shares. ComfyClothingCompany chooses the divisibility to be ``2``, allowing "
+"the smallest fraction of their shares to be 0.01."
+msgstr ""
+"ただし、NEM モザイクでは自社の株式をトークン化する場合の柔軟性が向上しています。ComfyClothingCompany は可分性を ``2`` "
+"に選択し、その株式の最小端数が 0.01 になるようにします。"
+
+#: ../../source/concepts/mosaic.rst:65
+msgid ""
+"Fractional ownership, along with the ability to trade 24/7, brings "
+"additional liquidity to the market. These same characteristics also open up "
+"the market to smaller investors."
+msgstr ""
+"分別所有権は 24 時間 365 日の取引能力と共に、市場にさらなる流動性をもたらします。これらの同じ特性は小規模投資家にも市場を開放します。"
+
+#: ../../source/concepts/mosaic.rst:67
+msgid ""
+"**Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a "
+"typical startup amount of ``10.000.000`` authorized shares. As the company "
+"grows, it could choose to increase the number of shares, so the supply "
+"mutable is set to ``true``."
+msgstr ""
+"**Supply:** ComfyClothingCompany はモザイクの初期供給量を、一般的なスタートアップにおける授権株式の量である "
+"``10,000.000`` に設定します。会社が成長するにつれて、株式数を増やすことを選択できるので供給可変性は ``true`` に設定されます。"
+
+#: ../../source/concepts/mosaic.rst:69
+msgid ""
+"**Transferability:** Once the initial shares are distributed, the shares "
+"will be on the market to be traded in public. Thus, the transferability "
+"property needs to be set to ``true``."
+msgstr ""
+"**Transferability:** 初期株式が分配されるとその株式は上場して公開されます。したがって譲渡性は ``true`` "
+"に設定する必要があります。"
+
+#: ../../source/concepts/mosaic.rst:73
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic.rst:55
+#: ../../source/concepts/mosaic.rst:85
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/mosaic.rst:57
+#: ../../source/concepts/mosaic.rst:87
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -190,27 +286,27 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/mosaic.rst:62
+#: ../../source/concepts/mosaic.rst:92
 msgid "MosaicDefinitionTransaction"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:64
+#: ../../source/concepts/mosaic.rst:94
 msgid "Announce a mosaic definition transaction to create a new mosaic."
 msgstr "新しいモザイクを作るためにモザイク定義トランザクションをアナウンスしてください。"
 
-#: ../../source/concepts/mosaic.rst:66 ../../source/concepts/mosaic.rst:92
+#: ../../source/concepts/mosaic.rst:96 ../../source/concepts/mosaic.rst:122
 msgid "**Version**: 0x02"
 msgstr "**バージョン**: 0x02"
 
-#: ../../source/concepts/mosaic.rst:68
+#: ../../source/concepts/mosaic.rst:98
 msgid "**Entity type**: 0x414D"
 msgstr "**エンティティタイプ**: 0x414D"
 
-#: ../../source/concepts/mosaic.rst:70 ../../source/concepts/mosaic.rst:96
+#: ../../source/concepts/mosaic.rst:100 ../../source/concepts/mosaic.rst:126
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/mosaic.rst:72 ../../source/concepts/mosaic.rst:98
+#: ../../source/concepts/mosaic.rst:102 ../../source/concepts/mosaic.rst:128
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -284,24 +380,24 @@ msgid "properties"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "array<:ref:`MosaicProperty<mosaic-property>`, count>"
+msgid "array(:ref:`MosaicProperty<mosaic-property>`, propertiesCount)"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "The optional mosaic properties."
 msgstr "オプションのモザイクプロパティ"
 
-#: ../../source/concepts/mosaic.rst:88
+#: ../../source/concepts/mosaic.rst:118
 msgid "MosaicSupplyChangeTransaction"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:90
+#: ../../source/concepts/mosaic.rst:120
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
 msgstr "モザイクの供給量を増加または減少させるために供給量変更トランザクションをアナウンスする。"
 
-#: ../../source/concepts/mosaic.rst:94
+#: ../../source/concepts/mosaic.rst:124
 msgid "**Entity type**: 0x424D"
 msgstr "**エンティティタイプ**: 0x424D"
 
@@ -329,7 +425,7 @@ msgstr ""
 msgid "The amount of supply to increase or decrease."
 msgstr "モザイク供給量の増加または減少の総量。"
 
-#: ../../source/concepts/mosaic.rst:111
+#: ../../source/concepts/mosaic.rst:141
 msgid "MosaicProperty"
 msgstr ""
 
@@ -361,15 +457,15 @@ msgstr ""
 msgid "The amount of the mosaic."
 msgstr "モザイクの量"
 
-#: ../../source/concepts/mosaic.rst:134
+#: ../../source/concepts/mosaic.rst:164
 msgid "UnresolvedMosaic"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:146
+#: ../../source/concepts/mosaic.rst:176
 msgid "MosaicFlags"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:148 ../../source/concepts/mosaic.rst:163
+#: ../../source/concepts/mosaic.rst:178 ../../source/concepts/mosaic.rst:192
 msgid "Enumeration: uint8"
 msgstr ""
 
@@ -401,15 +497,7 @@ msgstr ""
 msgid "The mosaic is transferable."
 msgstr "モザイクは転送可能"
 
-#: ../../source/concepts/mosaic.rst:1
-msgid "0x04"
-msgstr ""
-
-#: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic levy is mutable"
-msgstr "モザイク手数料は変更可能"
-
-#: ../../source/concepts/mosaic.rst:162
+#: ../../source/concepts/mosaic.rst:191
 msgid "MosaicSupplyChangeDirection"
 msgstr ""
 

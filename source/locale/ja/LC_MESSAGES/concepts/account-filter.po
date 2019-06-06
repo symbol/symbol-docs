@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,22 +28,18 @@ msgstr "アカウントフィルタ"
 #: ../../source/concepts/account-filter.rst:5
 msgid ""
 ":doc:`Accounts<account>` may configure a set of smart rules to block "
-"announcing or receiving transactions given a series of constraints."
+"announcing or receiving transactions given a series of constraints. The "
+"editable on-chain constraints are called **account filters**."
 msgstr ""
 ":doc:`アカウント <account>`  "
-"はスマートなルールの集合を構成し、一連の制約の下、アナウンスまたはトランザクションを受信をブロックすることができます。"
+"はスマートなルールの集合を構成し、一連の制約の下、アナウンスまたはトランザクションを受信をブロックすることができます。この変更可能な制約は "
+"**アカウントフィルタ** と呼ばれます。"
 
-#: ../../source/concepts/account-filter.rst:7
-msgid ""
-"The editable on-chain constraints are called filters. Accounts can configure"
-" the following types:"
-msgstr "この編集可能な制約はフィルタと呼びます。アカウントは以下のタイプに設定できます:"
-
-#: ../../source/concepts/account-filter.rst:11
+#: ../../source/concepts/account-filter.rst:9
 msgid "Address filter"
 msgstr "アドレスフィルタ"
 
-#: ../../source/concepts/account-filter.rst:13
+#: ../../source/concepts/account-filter.rst:11
 msgid ""
 "An account can decide to receive transactions only from an allowed list of "
 ":doc:`addresses <account>`. Similarly, an account can specify a list of "
@@ -52,27 +48,27 @@ msgstr ""
 "アカウントは許可リストの :doc:`アドレス <account>` "
 "からだけ、トランザクションの受信を決定することができます。同様に、アカウントはトランザクションを受信したくないアドレスのリストを指定することもできます。"
 
-#: ../../source/concepts/account-filter.rst:19
+#: ../../source/concepts/account-filter.rst:17
 msgid "Address filter diagram"
 msgstr "アドレスフィルタダイアグラム"
 
-#: ../../source/concepts/account-filter.rst:21
+#: ../../source/concepts/account-filter.rst:19
 msgid ""
 "Allow and block filters are mutually exclusive. In other words, an account "
 "can only configure a block or an allow list per type of filter."
 msgstr "許可とブロックのフィルタは相互に排他的です。つまり、アカウントはフィルタタイプごとにブロックまたは許可リストを構成することしかできません。"
 
-#: ../../source/concepts/account-filter.rst:23
+#: ../../source/concepts/account-filter.rst:21
 msgid ""
 "By default, when there is no filter set, all the accounts in the network can"
 " announce transactions to the stated account."
 msgstr "デフォルトでは、フィルタセットがない場合、ネットワーク内のすべてのアカウントが指定されたアカウントにトランザクションをアナウンスできます。"
 
-#: ../../source/concepts/account-filter.rst:27
+#: ../../source/concepts/account-filter.rst:25
 msgid "Mosaic filter"
 msgstr "モザイクフィルタ"
 
-#: ../../source/concepts/account-filter.rst:29
+#: ../../source/concepts/account-filter.rst:27
 msgid ""
 "An account can configure a filter to permit incoming transactions only if "
 "all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the"
@@ -82,24 +78,24 @@ msgstr ""
 "アカウントは、許可した :doc:`モザイク <mosaic>` "
 "が添付されている場合にだけ、受信トランザクションを許可するフィルターを構成できます。一方で、アカウントはブロックリストにあるモザイクを含んでいるトランザクションを拒否できます。"
 
-#: ../../source/concepts/account-filter.rst:32
-#: ../../source/concepts/account-filter.rst:44
+#: ../../source/concepts/account-filter.rst:30
+#: ../../source/concepts/account-filter.rst:42
 msgid "Blocking spam transactions"
 msgstr "スパムトランザクションのブロック"
 
-#: ../../source/concepts/account-filter.rst:34
+#: ../../source/concepts/account-filter.rst:32
 msgid ""
 "A company is using the public chain to certify the quality of their "
 "products."
 msgstr "企業は自社製品の品質を証明するためにパブリックチェーンを使用しています。"
 
-#: ../../source/concepts/account-filter.rst:36
+#: ../../source/concepts/account-filter.rst:34
 msgid ""
 "When the quality verification process concludes, an operator sends a "
 ":doc:`quality seal<mosaic>` to the product account."
 msgstr "品質確認プロセスが終了すると、オペレータは  :doc:`品質シール <mosaic>`  を製品アカウントに送信します。"
 
-#: ../../source/concepts/account-filter.rst:38
+#: ../../source/concepts/account-filter.rst:36
 msgid ""
 "The final customers can review the product mosaics scanning a QR code. For "
 "that reason, the company only wants to show related transactions, avoiding "
@@ -107,17 +103,17 @@ msgid ""
 msgstr ""
 "最終的な顧客はQRコードを読み取って、製品モザイクを検証します。そのため、会社としては関連するトランザクションだけをを見せたく、それ以外のスパムなどの製品に関係ない情報を避けたいのです。"
 
-#: ../../source/concepts/account-filter.rst:46
+#: ../../source/concepts/account-filter.rst:44
 msgid ""
 "The company opts to configure their product accounts filters, enabling only "
 "to receive transactions containing ``company.quality.seal`` mosaics."
 msgstr "会社は ``company.quality.seal`` モザイクだけを受け入れるフィルタを製品アカウントに構成することにしました。"
 
-#: ../../source/concepts/account-filter.rst:50
+#: ../../source/concepts/account-filter.rst:48
 msgid "EntityType filter"
 msgstr "エンティティタイプフィルタ"
 
-#: ../../source/concepts/account-filter.rst:52
+#: ../../source/concepts/account-filter.rst:50
 msgid ""
 "An account can allow/block announcing outgoing transactions with a "
 ":ref:`determined type <transaction-types>`. By doing so, it increases its "
@@ -126,11 +122,11 @@ msgstr ""
 "アカウントは送信トランザクションのアナウンスを :ref:`規則タイプ <transaction-types>` "
 "によって許可/ブロックすることができます。それにより、セキュリティを向上させ、ミスによる意図しないトランザクションのアナウンスを防止できます。"
 
-#: ../../source/concepts/account-filter.rst:55
+#: ../../source/concepts/account-filter.rst:53
 msgid "Enhancing the account security"
 msgstr "アカウントのセキュリティ向上"
 
-#: ../../source/concepts/account-filter.rst:57
+#: ../../source/concepts/account-filter.rst:55
 msgid ""
 "Lately, Alice is only using her main account to cosign aggregate "
 "transactions where she is a cosignatory for the :doc:`multisig<multisig-"
@@ -139,7 +135,7 @@ msgstr ""
 "最近 Alice は、メインアカウントを彼女が連署者である :doc:`マルチシグ <multisig-account>` "
 "アカウントのアグリゲートトランザクションに署名するためだけに使用しています。"
 
-#: ../../source/concepts/account-filter.rst:59
+#: ../../source/concepts/account-filter.rst:57
 msgid ""
 "As a temporary measure, Alice opts to disable announcing transfer "
 "transactions from her main account, double checking that any of the funds "
@@ -148,15 +144,15 @@ msgstr ""
 "一時的な処置として、Alice "
 "はメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
 
-#: ../../source/concepts/account-filter.rst:63
+#: ../../source/concepts/account-filter.rst:61
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/account-filter.rst:75
+#: ../../source/concepts/account-filter.rst:73
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/account-filter.rst:77
+#: ../../source/concepts/account-filter.rst:75
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -166,38 +162,38 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/account-filter.rst:82
+#: ../../source/concepts/account-filter.rst:80
 msgid "AccountPropertiesAddressTransaction"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:84
+#: ../../source/concepts/account-filter.rst:82
 msgid ""
 "Configure filters to prevent receiving transactions from undesired "
 "addresses."
 msgstr "望まないアドレスからトランザクションの受け取りを防ぐフィルタの設定。"
 
-#: ../../source/concepts/account-filter.rst:86
-#: ../../source/concepts/account-filter.rst:109
-#: ../../source/concepts/account-filter.rst:133
+#: ../../source/concepts/account-filter.rst:84
+#: ../../source/concepts/account-filter.rst:107
+#: ../../source/concepts/account-filter.rst:131
 msgid "**Version**: 0x01"
 msgstr "**バージョン**: 0x01"
 
-#: ../../source/concepts/account-filter.rst:88
+#: ../../source/concepts/account-filter.rst:86
 msgid "**Entity type**: 0x4150"
 msgstr "**エンティティタイプ**: 0x4150"
+
+#: ../../source/concepts/account-filter.rst:88
+#: ../../source/concepts/account-filter.rst:111
+#: ../../source/concepts/account-filter.rst:135
+#: ../../source/concepts/account-filter.rst:152
+#: ../../source/concepts/account-filter.rst:167
+#: ../../source/concepts/account-filter.rst:183
+msgid "**Inlines**:"
+msgstr "**インライン**"
 
 #: ../../source/concepts/account-filter.rst:90
 #: ../../source/concepts/account-filter.rst:113
 #: ../../source/concepts/account-filter.rst:137
-#: ../../source/concepts/account-filter.rst:154
-#: ../../source/concepts/account-filter.rst:169
-#: ../../source/concepts/account-filter.rst:185
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/account-filter.rst:92
-#: ../../source/concepts/account-filter.rst:115
-#: ../../source/concepts/account-filter.rst:139
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -283,7 +279,7 @@ msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid ""
-"array<:ref:`AddressModification <address-modification>`, modificationsCount>"
+"array(:ref:`AddressModification <address-modification>`, modificationsCount)"
 msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
@@ -292,52 +288,52 @@ msgstr ""
 msgid "The array of modifications."
 msgstr "変更の配列"
 
-#: ../../source/concepts/account-filter.rst:105
+#: ../../source/concepts/account-filter.rst:103
 msgid "AccountPropertiesMosaicTransaction"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:107
+#: ../../source/concepts/account-filter.rst:105
 msgid ""
 "Configure filters to prevent receiving transactions containing a specific "
 "mosaic."
 msgstr "特定のモザイクを含むトランザクションの受け取りを防ぐフィルタの設定。"
 
-#: ../../source/concepts/account-filter.rst:111
+#: ../../source/concepts/account-filter.rst:109
 msgid "**Entity type**: 0x4250"
 msgstr "**エンティティタイプ**: 0x4250"
 
 #: ../../source/concepts/account-filter.rst:1
 msgid ""
-"array<:ref:`MosaicModification <mosaic-modification>`, modificationsCount>"
+"array(:ref:`MosaicModification <mosaic-modification>`, modificationsCount)"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:129
+#: ../../source/concepts/account-filter.rst:127
 msgid "AccountPropertiesEntityTypeTransaction"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:131
+#: ../../source/concepts/account-filter.rst:129
 msgid ""
 "Configure filters to prevent announcing transactions by :ref:`type "
 "<transaction-types>`."
 msgstr ":ref:`タイプ <transaction-types>` によるトランザクションのアナウンスを防止するフィルタの設定。"
 
-#: ../../source/concepts/account-filter.rst:135
+#: ../../source/concepts/account-filter.rst:133
 msgid "**Entity type**: 0x4350"
 msgstr ""
 
 #: ../../source/concepts/account-filter.rst:1
 msgid ""
-"array<:ref:`EntityTypeModification <entity-type-modification>`, "
-"modificationsCount>"
+"array(:ref:`EntityTypeModification <entity-type-modification>`, "
+"modificationsCount)"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:152
+#: ../../source/concepts/account-filter.rst:150
 msgid "AddressModification"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:156
-#: ../../source/concepts/account-filter.rst:171
-#: ../../source/concepts/account-filter.rst:187
+#: ../../source/concepts/account-filter.rst:154
+#: ../../source/concepts/account-filter.rst:169
+#: ../../source/concepts/account-filter.rst:185
 msgid ":ref:`AccountPropertiesModification<account-properties-modification>`"
 msgstr ""
 
@@ -355,7 +351,7 @@ msgstr ""
 msgid "The address to allow/block."
 msgstr "許可/ブロックするアドレス"
 
-#: ../../source/concepts/account-filter.rst:167
+#: ../../source/concepts/account-filter.rst:165
 msgid "MosaicModification"
 msgstr ""
 
@@ -367,7 +363,7 @@ msgstr ""
 msgid "The mosaic id to allow/block."
 msgstr "許可/ブロックするモザイク"
 
-#: ../../source/concepts/account-filter.rst:183
+#: ../../source/concepts/account-filter.rst:181
 msgid "EntityTypeModification"
 msgstr ""
 
@@ -379,7 +375,7 @@ msgstr ""
 msgid "The :ref:`entity type<transaction-types>` to allow/block."
 msgstr "許可/ブロックする :ref:`エンティティタイプ<transaction-types>`"
 
-#: ../../source/concepts/account-filter.rst:199
+#: ../../source/concepts/account-filter.rst:197
 msgid "AccountPropertiesModification"
 msgstr ""
 
@@ -395,12 +391,12 @@ msgstr ""
 msgid "The modification type."
 msgstr "変更タイプ"
 
-#: ../../source/concepts/account-filter.rst:210
+#: ../../source/concepts/account-filter.rst:208
 msgid "PropertyType"
 msgstr ""
 
-#: ../../source/concepts/account-filter.rst:212
-#: ../../source/concepts/account-filter.rst:231
+#: ../../source/concepts/account-filter.rst:210
+#: ../../source/concepts/account-filter.rst:229
 msgid "Enumeration: uint8"
 msgstr ""
 
@@ -471,7 +467,7 @@ msgid ""
 "The property type blocks sending transactions with a given transaction type."
 msgstr "特定のトランザクションタイプのトランザクションを送信不可にするプロパティタイプです。"
 
-#: ../../source/concepts/account-filter.rst:229
+#: ../../source/concepts/account-filter.rst:227
 msgid "PropertyModificationType"
 msgstr ""
 

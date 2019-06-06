@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -114,11 +114,32 @@ msgstr ""
 "アナウンスしたいトランザクションを定義して下さい。この場合、メッセージとして ``Test`` を ``SD5DT3-CH4BLA-BL5HIM-"
 "EKP2TA-PUKF4N-Y3L5HR-IR54`` へ送ろうとしています。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:50
-msgid "Sign the transaction."
-msgstr "トランザクションへ署名"
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:45
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:56
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:66
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:75
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:88
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:101
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:114
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:127
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/MonitoringTransactionStatus.ts`"
+msgstr ""
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:60
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:50
+msgid "Sign the transaction with your account."
+msgstr "あなたのアカウントでトランザクションに署名します。"
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:52
+msgid ""
+"To make the transaction only valid for your network, include the first block"
+" generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
+"copy the ``meta.generationHash`` value."
+msgstr ""
+"自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
+"``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:62
 msgid ""
 "Open a new :ref:`Listeners <websockets>`. This communicates with the API "
 "WebSocket, who will communicate you asynchronously the status of the "
@@ -127,7 +148,7 @@ msgstr ""
 "新しい :ref:`リスナ <websockets>` を開いてください。これは API WebSocket "
 "と疎通し、トランザクションの状態を非同期にあなたへ伝えます。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:69
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:71
 msgid ""
 "Start monitoring if the WebSocket connection is alive. :doc:`Blocks "
 "<../../concepts/block>` are generated every ``15`` seconds in average, so a "
@@ -137,7 +158,12 @@ msgstr ""
 "WebSocket のコネクションが有効ならばモニタリングをスタートします。 :doc:`ブロック <../../concepts/block>` は "
 "平均 ``15`` 秒毎で生成されるので、30秒間ほどレスポンスがない場合、タイムアウトが発生します。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:82
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:80
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/blockchain/ListeningNewBlocks.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:84
 msgid ""
 "Monitor if there is some validation error with the transaction issued. When "
 "you receive a message from status WebSocket channel, it always means the "
@@ -148,7 +174,12 @@ msgstr ""
 "チャンネルからメッセージを受け取る場合、それはトランザクションが要件を満たさなかったことを意味します。エラーを適切にハンドリングするためには "
 ":ref:`エラーステータスリスト <status-errors>` を参照してください。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:95
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:93
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/MonitoringTransactionStatusError.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:97
 msgid ""
 "Monitor as well if the transaction reaches the network. When you receive a "
 "message from unconfirmed WebSocket channel, the transaction is valid and is "
@@ -159,7 +190,12 @@ msgstr ""
 "トランザクションがネットワークに到達したかどうかも監視します。未承認 WebSocket "
 "チャンネルからメッセージを受け取る場合、トランザクションは妥当であり、ブロックに取りこまれるのを待っている状態です。2回目のバリデーションが最終的に確認される前に行われるため、これはトランザクションが含まれるのが確定したことを意味するものではありません。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:108
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:106
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/MonitoringTransactionUnconfirmed.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:110
 msgid ""
 "Monitor when the transaction gets included in a block. When included, "
 "transaction can still be :doc:`rolled-back <../../concepts/transaction>` "
@@ -172,11 +208,21 @@ msgstr ""
 "<https://gist.github.com/aleixmorgadas/3d856d318e60f901be09dbd23467b374>`_ "
 "であると、決めることができます。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:121
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:119
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/MonitoringTransactionConfirmed.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:123
 msgid "Finally, announce the transaction to the network."
 msgstr "最後に、トランザクションをネットワークへアナウンスします。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:134
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:132
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/SendingATransferTransaction.sh`"
+msgstr ""
+
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:136
 msgid ""
 "If you missed the WebSocket response, check the transaction status after by "
 "calling the `transaction status "
@@ -188,7 +234,7 @@ msgstr ""
 "<https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ "
 "エンドポイントを呼び出すことで、トランザクションの状態を確認できます。失敗したトランザクションの状態は永続的ではなく、最終的には除去されます。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:136
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:138
 msgid ""
 "If you are developing a small application, and monitoring asynchronous "
 "transactions adds too much overhead to your project, consider :doc:`turning "
@@ -199,18 +245,18 @@ msgstr ""
 " <turning-the-asynchronous-transaction-announcement-into-synchronous>` "
 "ことを検討してください。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:142
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:144
 msgid "Troubleshooting: Monitoring transactions on the client side"
 msgstr "トラブルシューティング: クライアントサイドでのトランザクションの監視"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:144
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:146
 msgid ""
 "The nem2-sdk for typescript base Listener was designed to work on Node.js "
 "backend environments."
 msgstr ""
 "Typescript ベースの nem2-sdk の Listener はバックエンドの Node.js で動作するように設計されています。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:146
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:148
 msgid ""
 "To make the code work in the client side (e.g., Angular, React, Vue.), pass "
 "the browser implementation of the WebSocket to the Listener."
@@ -218,11 +264,11 @@ msgstr ""
 "このコードをクライアントサイド(例: Angular, React, Vue)で動作させるためには、WebSocket "
 "のブラウザ実装をリスナーに渡します。"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:155
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:157
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:157
+#: ../../source/guides/transaction/monitoring-a-transaction-status.rst:159
 msgid ""
 "Run your application and try to :doc:`send a transfer transaction "
 "<../transaction/sending-a-transfer-transaction>` to the selected account. If"
