@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -167,20 +167,20 @@ msgstr ""
 #: ../../source/concepts/node.rst:58
 msgid ""
 "The API :ref:`validates transactions <transaction-validation>` received from"
-" the REST component. Additionally, it throws the errors back via ZMQ in "
-"binary."
+" the REST component. Additionally, the broker process that stores changes in"
+" MongoDB, forwards them to ZMQ."
 msgstr ""
-"API は REST コンポーネントから受け取った :ref:`トランザクションを検証 <transaction-validation>` "
-"します。さらにエラーをバイナリで ZMQ を介してスローします。"
+"API は REST コンポーネントから受け取った :ref:`トランザクションの検証 <transaction-validation>` をし、さらに"
+" MongoDB への変更の保存、ZMQ へ転送のブローカープロセスも行います。"
 
 #: ../../source/concepts/node.rst:60
 msgid ""
 "This component is also responsible for collecting the cosignatures of "
 ":doc:`aggregated bonded transactions <aggregate-transaction>`, that are only"
-" pushed to P2P nodes once they are complete."
+" processed once they are complete."
 msgstr ""
 "このコンポーネントは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
-"の連署名を集める役割も果たします。これらは完了となった場合にのみ、P2P ノードにプッシュされます。"
+"の連署名を集める役割も果たし、それが完成したときにだけ処理されます。"
 
 #: ../../source/concepts/node.rst:63
 msgid "MongoDB"

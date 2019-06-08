@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -79,7 +79,7 @@ msgid ""
 " after he signed. After announcing it to the network, Alice and Bob will "
 "receive the mosaics at the same time."
 msgstr ""
-"彼だけが必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と Bob "
+"彼だけが必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると Alice と Bob "
 "は同時にモザイクを受け取るでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:32
@@ -260,13 +260,13 @@ msgid "transactions"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array<byte, payloadSize>"
+msgid "array(Transaction, size=payloadSize)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"The array of transactions, which can be initiated by different accounts. An "
-"aggregate transaction can contain up to ``1000`` inner transactions "
+"The array of transactions, which can be initiated by different accounts.  An"
+" aggregate transaction can contain up to ``1000`` inner transactions "
 "involving up to ``15`` different cosignatories. Other aggregate transactions"
 " are not allowed as inner transactions."
 msgstr ""
@@ -278,12 +278,14 @@ msgid "cosignatures"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array<byte, size - payloadSize>"
+msgid "array(Cosignature, __FILL__)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "An array of transaction :ref:`cosignatures <cosignature>`."
-msgstr ":ref:`連署者 <cosignature>` トランザクションの配列"
+msgid ""
+"An array of transaction :ref:`cosignatures <cosignature>`. Fills the "
+"remaining body space after transactions."
+msgstr ":ref:`連署者 <cosignature>` トランザクションの配列。トランザクションの後ろの残りの本体スペースを埋めます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:122
 msgid "DetachedCosignature"
@@ -299,7 +301,7 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:128
 msgid ":ref:`Cosignature <cosignature-transaction>`"
-msgstr ""
+msgstr ":ref:`連署者 <cosignature-transaction>`"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "parentHash"

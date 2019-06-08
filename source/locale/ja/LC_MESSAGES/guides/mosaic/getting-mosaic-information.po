@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"PO-Revision-Date: 2019-06-06 23:26+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:10
+msgid "Getting the mosaic information"
+msgstr "モザイクの情報を取得する"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:12
+msgid ""
+"Get the ownership, divisibility, duration, and flags for a given "
+":doc:`mosaic <../../concepts/mosaic>` identifier."
+msgstr ":doc:`モザイク <../../concepts/mosaic>` 識別子による所有権、可分性、期間、フラグの取得"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:18
+msgid "Finish :doc:`creating a mosaic guide <creating-a-mosaic>`"
+msgstr ":doc:`モザイクの作成ガイド <creating-a-mosaic>` を終了していること"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:22
+msgid "Let’s get into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:24
+msgid ""
+"Call ``getMosaic`` function, passing the mosaicId you want to check as a "
+"parameter."
+msgstr "確認したいモザイクIDをパラメタとして ``getMosaic``` 関数に渡して呼び出してください。"
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:28
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/GettingMosaicInformation.ts`"
+msgstr ""
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:33
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/GettingMosaicInformation.js`"
+msgstr ""
+
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:38
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/mosaic/GettingMosaicInformation.sh`"
+msgstr ""

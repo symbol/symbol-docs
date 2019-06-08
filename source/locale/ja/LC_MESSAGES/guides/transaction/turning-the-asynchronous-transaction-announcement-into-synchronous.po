@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:14+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -95,6 +95,10 @@ msgstr ""
 "は、トランザクションがネットワークへ到着し、バリデーションチェックにエラーが無い場合、成功を返します。追加のアクションを実行する前に "
 ":doc:`幾分かの承認を待つ <../../concepts/transaction>` 必要があるかもしれません。"
 
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:33
+msgid "nem2-camel"
+msgstr ""
+
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:37
 msgid "Prerequisites"
 msgstr "前提条件"
@@ -165,6 +169,10 @@ msgstr "最初のキーペアを Alice のアカウントにすることにし�
 msgid "Take the second key pair as Bob's account, and copy the address."
 msgstr "二つ目のキーペアを Bob のアカウントにすることにしてアドレスをコピーします。"
 
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:82
+msgid "Installing nem2-camel"
+msgstr ""
+
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:84
 msgid "nem2-camel acts like a proxy between the application and the REST API."
 msgstr "nem2-camel はアプリケーションと REST API の間のプロキシとして動作します。"
@@ -192,6 +200,12 @@ msgid ""
 msgstr ""
 "Alice は :doc:`転送トランザクション <../../concepts/transfer-transaction>` を作成し ``10 "
 "cat.currency`` を Bob へ送ります。"
+
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:103
+#: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:112
+msgid ""
+":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts`"
+msgstr ""
 
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:108
 msgid ""

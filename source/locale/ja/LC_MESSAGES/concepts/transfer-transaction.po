@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.5\n"
+"Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:22+0100\n"
+"POT-Creation-Date: 2019-06-05 15:08+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -65,6 +65,10 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
+#: ../../source/concepts/transfer-transaction.rst:36
+msgid "TransferTransaction"
+msgstr ""
+
 #: ../../source/concepts/transfer-transaction.rst:38
 msgid ""
 "Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages "
@@ -106,20 +110,60 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transfer-transaction.rst:1
+msgid "recipient"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "25 bytes (binary)"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The address of the recipient account."
 msgstr "受信アカウントのアドレス"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "messageSize"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "uint16"
+msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The size of the attached message."
 msgstr "添付されたメッセージのサイズ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
+msgid "mosaicsCount"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The number of attached mosaics."
 msgstr "添付されたモザイクの数"
 
 #: ../../source/concepts/transfer-transaction.rst:1
+msgid "message"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "array(byte, messageSize)"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
 msgid "The message type (0) and a payload of up to ``1023`` bytes."
 msgstr "メッセージタイプ (0) と ``1023`` バイトまでのペイロード"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "mosaics"
+msgstr ""
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount)"
+msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "The different mosaic to be sent."
