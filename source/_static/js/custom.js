@@ -62,6 +62,8 @@ function addBlockCaptionInsideCodeExample(){
         $(this).next().prepend(this);
     });
     $(".literal-block-wrapper").removeClass("container");
+    $(".example-code").addClass("visible");
+
 }
 
 $( document ).ready(function() {

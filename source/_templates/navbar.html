@@ -3,10 +3,10 @@
     <div class="container">
         <div class="navbar-header col-md-3 col-sm-5">
             <a class="navbar-brand" href="{{ pathto('index') }}">
-                {%- block sidebarlogo %}
-                {%- if logo %}<span><img src="{{ pathto('_static/' + logo, 1) }}"></span>{%- endif %}
-                {%- endblock %}
-                {% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}
+                {% block sidebarlogo %}
+                {% if logo %}<span><img src="{{ pathto('_static/' + logo, 1) }}" alt="NEM logo"></span>{% endif %}
+                {% endblock %}
+                {% if theme_navbar_title %}{{ theme_navbar_title|e }}{% else %}{{ project|e }}{% endif %}
             </a>
         </div>
         <div class="navbar-nav col-md-6 col-sm-7 hidden-xs">

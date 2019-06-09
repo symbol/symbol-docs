@@ -5,19 +5,27 @@
 
             <div class="col-sm-4">
                 <h4>{{ gettext('Learn') }}</h4>
-
                 <ul>
-                    <li><a href="{{pathto('getting-started/what-is-nem')}}">{{ gettext('Getting Started') }}</a></li>
-                    <li><a href="{{pathto('concepts/account')}}">{{ gettext('Built-in Features') }}</a></li>
-                    <li><a href="{{pathto('concepts/cryptography')}}">{{ gettext('Protocol') }}</a></li>
-                    <li><a href="{{pathto('api')}}">{{ gettext('References') }}</a></li>
-                    <li><a href="{{pathto('contribute/contributing')}}">{{ gettext('Contribute') }}</a></li>
+                    <li>
+                        <a href="{{pathto('getting-started/what-is-nem')}}">{{ gettext('Getting Started') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{pathto('concepts/account')}}">{{ gettext('Built-in Features') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{pathto('concepts/cryptography')}}">{{ gettext('Protocol') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{pathto('api')}}">{{ gettext('References') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{pathto('contribute/contributing')}}">{{ gettext('Contribute') }}</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="col-sm-4">
                 <h4>{{ gettext('References') }}</h4>
-
                 <ul>
                     <li><a href="{{pathto('api')}}">{{ gettext('REST API') }}</a></li>
                     <li><a href="{{pathto('sdk')}}">{{ gettext('SDKs') }}</a></li>
@@ -30,10 +38,11 @@
 
             <div class="col-sm-4">
                 <h4>{{ gettext('Community') }}</h4>
-
                 <ul>
                     <li>
-                        <a href="http://slack.nemtech.io/"><i class="fab fa-slack"></i> <span> {{ gettext('Join #general discussion') }}</span></a>
+                        <a href="http://slack.nemtech.io/">
+                            <i class="fab fa-slack"></i> <span> {{ gettext('Join #general discussion') }}</span>
+                        </a>
                     </li>
                     <li>
                         <a href="https://stackoverflow.com/tags/nem/">
@@ -59,16 +68,16 @@
         </div>
 
         <p class="text-center top-gap">
-            {%- if show_copyright %}
-            {%- if hasdoc('copyright') %}
+            {% if show_copyright %}
+            {% if hasdoc('copyright') %}
             {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-            {%- else %}
+            {% else %}
             {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-            {%- endif %}
-            {%- endif %}
-            {%- if last_updated %}
+            {% endif %}
+            {% endif %}
+            {% if last_updated %}
             {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-            {%- endif %}
+            {% endif %}
         </p>
     </div>
 </footer>

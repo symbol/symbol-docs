@@ -177,8 +177,8 @@ Enumeration: uint8
 
 .. _alias-action:
 
-Alias Action
-============
+AliasAction
+===========
 
 Enumeration: uint8
 
