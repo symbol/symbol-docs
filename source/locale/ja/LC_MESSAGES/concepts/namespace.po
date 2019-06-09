@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-09 08:17+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -465,7 +465,7 @@ msgid "Child namespace."
 msgstr "子ネームスペース"
 
 #: ../../source/concepts/namespace.rst:181
-msgid "Alias Action"
+msgid "AliasAction"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1

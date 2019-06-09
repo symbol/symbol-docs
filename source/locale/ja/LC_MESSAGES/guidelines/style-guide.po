@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-09 08:17+0100\n"
 "PO-Revision-Date: 2019-06-05 14:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -214,7 +214,7 @@ msgstr "基本フォーマット"
 
 #: ../../source/guidelines/style-guide.rst:93
 msgid "Sustaining a uniform format is also essential for consistency."
-msgstr ""
+msgstr "統一なフォーマットを維持することも一貫性のために不可欠です。"
 
 #: ../../source/guidelines/style-guide.rst:1
 #: ../../source/guidelines/style-guide.rst:1
@@ -228,7 +228,7 @@ msgstr "例"
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid "Defining new or important vocabulary."
-msgstr ""
+msgstr "新しい語彙または重要な語彙を定義する。"
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid "**Private Key** is a random 256-integer."
@@ -236,7 +236,7 @@ msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid "Emphasizing important differences."
-msgstr ""
+msgstr "重要な違いを強調する。"
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid ""
@@ -246,7 +246,7 @@ msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid "Writing headers for a table."
-msgstr ""
+msgstr "テーブルのヘッダを書く。"
 
 #: ../../source/guidelines/style-guide.rst:1
 msgid "This table."

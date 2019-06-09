@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.17.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-09 08:17+0100\n"
 "PO-Revision-Date: 2019-02-22 09:14+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -171,7 +171,7 @@ msgstr "二つ目のキーペアを Bob のアカウントにすることにし�
 
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:82
 msgid "Installing nem2-camel"
-msgstr ""
+msgstr "nem2-camel のインストール"
 
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:84
 msgid "nem2-camel acts like a proxy between the application and the REST API."
