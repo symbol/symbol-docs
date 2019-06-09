@@ -121,7 +121,7 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
-    :widths: 20 20 60
+    :widths: 20 30 50
 
     Divisibility; 0 ; The mosaic won't be divisible, no one should be able to send “0.5 tickets”.
     Duration; 1000; The mosaic will be registered for 1000 blocks.
@@ -146,11 +146,11 @@ Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`tran
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
-    :widths: 20 20 60
+    :widths: 20 30 50
 
     Deadline; Default ; The maximum amount of time to include the transaction in the blockchain.
-    Recipient; SC7A4H-7CYCSH-4CP4XI-ZS4G2G-CDZ7JP-PR5FRG-2VBU; The recipient account address.
-    Mosaics; 1 [7cdf3b117a3c40cc] (ticket); The array of mosaics to send.
+    Recipient; SC7A4H...2VBU; The recipient account address.
+    Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
     Network; MIJIN_TEST; The local network identifier.
 

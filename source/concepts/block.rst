@@ -49,6 +49,7 @@ BlockHeader
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
+    :widths: 30 30 40
 
     height; uint64; The height of the blockchain. Each blockchain has a unique height. Subsequent blocks differ in height by 1.
     timestamp; uint64; The number of seconds elapsed since the creation of the nemesis block.
