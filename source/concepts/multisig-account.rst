@@ -99,9 +99,8 @@ Sensors in the shipping container report temperature data every 5 minutes and co
 
     Manufacturing and Supply Chains
 
-***************
 Fraud Detection
-***************
+===============
 
 This example shows how a high-security account can be made easier to use.
 

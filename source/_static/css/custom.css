@@ -336,16 +336,14 @@ body > .container.full-width {
 }
 
 .bs-sidenav ul ul > li > a {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 30px;
+    padding: 3px 20px;
     font-size: 90%;
 }
 
 .bs-sidenav ul ul ul > li > a {
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 40px;
+    padding-left: 30px;
     font-size: 90%;
     white-space: nowrap;
     overflow: hidden;
@@ -366,6 +364,10 @@ body > .container.full-width {
     display: none;
 }
 
+.bs-sidenav.secondary .nav-header {
+    display: none;
+}
+
 .bs-sidenav a:hover,
 .bs-sidenav a:focus {
     background-color: transparent;
@@ -377,7 +379,7 @@ body > .container.full-width {
 }
 
 #sidebar .toctree-l1 > a {
-    padding-left: 10px;
+    padding-left: 0;
     padding-bottom: 5px;
     margin: 0;
 }
