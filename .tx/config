@@ -349,6 +349,12 @@ source_file = build/gettext/guides/transaction/sending-a-transfer-transaction.po
 source_lang = en
 type = PO
 
+[nem2docs.guides--transaction--sending-an-encrypted-message]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-an-encrypted-message.po
+source_file = build/gettext/guides/transaction/sending-an-encrypted-message.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--transaction--sending-payouts-with-aggregate-complete-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-payouts-with-aggregate-complete-transaction.po
 source_file = build/gettext/guides/transaction/sending-payouts-with-aggregate-complete-transaction.pot
