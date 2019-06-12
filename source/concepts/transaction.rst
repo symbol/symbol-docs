@@ -50,7 +50,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
 Defining a transaction
 **********************
 
-Transactions are defined in a [serialized](https://github.com/nemtech/catbuffer) form. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
+Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
 We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
