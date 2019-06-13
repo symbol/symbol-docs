@@ -63,8 +63,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-.. |apostille| raw:: html
-
-   <a href="https://apostille.io/" target="_blank">Apostille</a>
-
