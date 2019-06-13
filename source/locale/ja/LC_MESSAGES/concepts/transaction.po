@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -319,14 +319,14 @@ msgstr "トランザクションの定義"
 
 #: ../../source/concepts/transaction.rst:53
 msgid ""
-"Transactions are defined in a "
-"[serialized](https://github.com/nemtech/catbuffer) form. Each transaction "
-"extends from the :ref:`transaction schema definition <transaction>`, "
-"combining the type's particular properties. You can find the description of "
-"the additional properties under the :ref:`\"Schema\" section <transfer-"
-"transaction>`, at the end of each built-in feature description."
+"Transactions are defined in a `serialized "
+"<https://github.com/nemtech/catbuffer>`_ form. Each transaction extends from"
+" the :ref:`transaction schema definition <transaction>`, combining the "
+"type's particular properties. You can find the description of the additional"
+" properties under the :ref:`\"Schema\" section <transfer-transaction>`, at "
+"the end of each built-in feature description."
 msgstr ""
-"トランザクションは [serialized](https://github.com/nemtech/catbuffer) "
+"トランザクションは `シリアライズ済み <https://github.com/nemtech/catbuffer>`_ "
 "形式で定義されます。各トランザクションは :ref:`トランザクション定義スキーマ <transaction>` "
 "を継承し、型の特定のプロパティが組み合わされます。追加プロパティの説明は :ref:`\"スキーマ\" セクション <transfer-"
 "transaction>` の下、それぞれの組み込み機能の説明の最後にあります。"
@@ -581,23 +581,15 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:208
 msgid ""
-"The \"rewrite limit\" is the maximum number of blocks that can be rolled "
-"back. Hence, forks can only be resolved up to a certain depth too."
-msgstr "\"書き換え制限\" とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
+"The |rewrite-limit| is the maximum number of blocks that can be rolled back."
+" Hence, forks can only be resolved up to a certain depth too."
+msgstr "|rewrite-limit| とはロールバック可能なブロックの最大数です。したがってフォークでは特定の深さまでしか解決できません。"
 
 #: ../../source/concepts/transaction.rst:210
 msgid ""
-"NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than "
-"360 confirmations, it cannot be reversed."
-msgstr ""
-"NEMの書き換え限界は ``360`` ブロックです。トランザクションが 360 ブロック以上の承認を得ると、それを元に戻すことはできません。"
-
-#: ../../source/concepts/transaction.rst:212
-msgid ""
-"From experience, forks that are deeper than 20 blocks do not happen, unless "
-"there is a severe problem with the blockchain due to a bug in the code or an"
-" attack."
-msgstr "経験上、コードや攻撃のバグによりブロックチェーンに重大な問題がない限り、20 ブロックよりも深いフォークは起こりません。"
+"NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than "
+"40 confirmations, it cannot be reversed."
+msgstr "NEMの書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
 #: ../../source/concepts/transaction.rst:216
 msgid "Guides"

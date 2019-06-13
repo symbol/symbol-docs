@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -259,3 +259,21 @@ msgstr ""
 #: ../../source/concepts/node.rst:119
 msgid "Deploy a Catapult full node for learning and development purposes."
 msgstr "Catapult フルノードを学習と開発目的でデプロイする。"
+
+#: ../../source/concepts/node.rst:125
+msgid ""
+"**Deploying a test net node** (:doc:`upcoming <../guidelines/suggesting-"
+"changes>`)"
+msgstr "**テストネットノードのデプロイ** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"
+
+#: ../../source/concepts/node.rst:127
+msgid ""
+"**Configuring a private network** (:doc:`upcoming <../guidelines/suggesting-"
+"changes>`)"
+msgstr "**プライベートネットワークの設定** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"
+
+#: ../../source/concepts/node.rst:129
+msgid ""
+"**Creating a custom plugin** (:doc:`upcoming <../guidelines/suggesting-"
+"changes>`)"
+msgstr "**カスタムプラグインの作成** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"

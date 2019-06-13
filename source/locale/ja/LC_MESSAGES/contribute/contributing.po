@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -37,9 +37,11 @@ msgstr "これらのガイドラインに従って、NEM プロジェクトに�
 
 #: ../../source/contribute/contributing.rst:9
 msgid ""
-"If you want to contribute to a existent project, read as well the "
-"CONTRIBUTING.md file of its repository."
-msgstr "既存のプロジェクトに貢献したい場合は、そのリポジトリの CONTRIBUTING.md ファイルも読んでください"
+"If you want to contribute to an existent project, read as well the "
+"CONTRIBUTING.md file that you will find at the root-level folder of the "
+"project."
+msgstr ""
+"既存のプロジェクトに貢献したい場合は、そのリポジトリのプロジェクトフォルダのルートにある CONTRIBUTING.md ファイルを読んでください"
 
 #: ../../source/contribute/contributing.rst:13
 msgid "SDK"
