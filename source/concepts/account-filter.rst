@@ -26,6 +26,16 @@ Mosaic filter
 
 An account can configure a filter to permit incoming transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
+*****************
+EntityType filter
+*****************
+
+An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
+
+********
+Examples
+********
+
 Blocking spam transactions
 ==========================
 
@@ -42,12 +52,6 @@ The final customers can review the product mosaics scanning a QR code. For that 
     Blocking spam transactions
 
 The company opts to configure their product accounts filters, enabling only to receive transactions containing ``company.quality.seal`` mosaics.
-
-*****************
-EntityType filter
-*****************
-
-An account can allow/block announcing outgoing transactions with a :ref:`determined type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
 
 Enhancing the account security
 ==============================
