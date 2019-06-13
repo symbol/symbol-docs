@@ -11,9 +11,9 @@ Sending a transfer transaction
 
 Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two accounts.
 
-#############
+*************
 Prerequisites
-#############
+*************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`

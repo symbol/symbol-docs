@@ -11,9 +11,9 @@ Sending an encrypted message
 
 Send an encrypted message that only can be read by the recipient account.
 
-#############
+*************
 Prerequisites
-#############
+*************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
