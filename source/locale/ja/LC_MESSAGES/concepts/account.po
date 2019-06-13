@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,39 +30,47 @@ msgstr "アカウント"
 msgid ""
 "An account is a **key pair** (private and public key) associated with a "
 "mutable state stored on the NEM blockchain. In other words, you have a "
-"deposit box in the blockchain, which only you can modify with your key pair."
-" As the name suggests, the private key has to be kept secret at all times. "
-"Anyone with access to the private key, ultimately has control over the "
-"account."
+"**deposit box**, which only you can modify with your private key."
 msgstr ""
-"アカウントとは、NEM ブロックチェーン上に保存される変更可能な状態に関連付く **キーペア** "
-"(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーでのみ変更をすることができます。秘密鍵はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人なら、誰でもアカウントを完全にコントロールできてしまいます。"
+"アカウントとは NEM ブロックチェーン上に保存される、変更可能な状態に関連付く **キーペア**  "
+"(秘密鍵と公開鍵)です。言い換えるとブロックチェーン上にある、あなたの秘密鍵でのみ変更をすることができる **金庫** です。"
 
 #: ../../source/concepts/account.rst:7
 msgid ""
-"Think about NEM accounts as a **container for assets** in the blockchain. An"
-" account could represent a deposit of tokens, like most blockchains. "
-"However, it could also represent a **single object** that must be unique and"
-" updatable: a package to be shipped, a deed to a house or a document to be "
-"notarized."
+"The private key has to be kept secret at all times. Anyone with access to "
+"the private key, ultimately has control over the account."
+msgstr ""
+"秘密鍵はその名の通り、必ず秘密にしておかなければなりません。秘密鍵にアクセスできる人なら誰でもアカウントを完全にコントロールできてしまいます。"
+
+#: ../../source/concepts/account.rst:9
+msgid ""
+"Think of an account as **container for assets**. It can be used to hold XEM "
+"or other mosaics, whether they are tokens or specialized assets."
 msgstr ""
 "NEM アカウントをブロックチェーン内の **資産のコンテナ** "
-"として考えてみてください。よくあるブロックチェーンのように、アカウントは預け入れられたトークンを表現します。しかし、唯一の更新可能な: "
-"出荷されるパッケージ、家の譲渡証書、公証書類のような **単一のオブジェクト** としても表現できます。"
+"として考えてみてください。よくあるブロックチェーンのように、アカウントは預け入れられたトークンを表現します。"
 
 #: ../../source/concepts/account.rst:11
+msgid ""
+"Moreover, NEM accounts can also represent **non-fungible assets** that must "
+"be unique and updatable: a package to be shipped, a house deed or a document"
+" to be notarized."
+msgstr ""
+"さらに、NEM アカウントは一意でかつ更新可能な **代替できない資産** : 出荷パッケージ、家屋譲渡証書、公証文書を表現することができます。"
+
+#: ../../source/concepts/account.rst:15
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/concepts/account.rst:13
+#: ../../source/concepts/account.rst:17
 msgid "Accounts have the following properties:"
 msgstr "アカウントは以下のプロパティを持ちます:"
 
-#: ../../source/concepts/account.rst:15
+#: ../../source/concepts/account.rst:19
 msgid "**Private key**"
 msgstr "**秘密鍵**"
 
-#: ../../source/concepts/account.rst:17
+#: ../../source/concepts/account.rst:21
 msgid ""
 "A :ref:`private key <keypair>` is a key to an account. Anyone having the "
 "private key to an account can initiate any account related action."
@@ -69,18 +78,18 @@ msgstr ""
 ":ref:`プライベートキー <keypair>` "
 "はアカウントのものです。アカウントに紐づくプライベートキーを持っている人なら、誰でもアカウントに関するアクションを実行できます。"
 
-#: ../../source/concepts/account.rst:19
+#: ../../source/concepts/account.rst:23
 msgid ""
 "The private key must be kept secret at all costs. Make sure your private key"
 " is backed up safely somewhere offline."
 msgstr ""
 "プライベートキーはどんなコストを掛けてでも、必ず秘密にしてください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
 
-#: ../../source/concepts/account.rst:21
+#: ../../source/concepts/account.rst:25
 msgid "**Public key**"
 msgstr "**公開鍵**"
 
-#: ../../source/concepts/account.rst:23
+#: ../../source/concepts/account.rst:27
 msgid ""
 "The :ref:`public key <keypair>` can be used to verify signatures of the "
 "account. The public key is stored in the blockchain with the first issued "
@@ -90,11 +99,11 @@ msgstr ""
 ":ref:`公開鍵 <keypair>` "
 "はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
 
-#: ../../source/concepts/account.rst:25
+#: ../../source/concepts/account.rst:29
 msgid "**Address**"
 msgstr "**アドレス**"
 
-#: ../../source/concepts/account.rst:27
+#: ../../source/concepts/account.rst:31
 msgid ""
 "Each account has a unique :ref:`address <address>`. You will normally share "
 "the derived address instead, as it is shorter and gathers more information."
@@ -102,46 +111,51 @@ msgstr ""
 "各アカウントは一意な :ref:`アドレス <address>` "
 "を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出されたアドレスを共有するでしょう。"
 
-#: ../../source/concepts/account.rst:29
+#: ../../source/concepts/account.rst:33
 msgid "**Mosaics**"
 msgstr "**モザイク**"
 
-#: ../../source/concepts/account.rst:31
+#: ../../source/concepts/account.rst:35
 msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
 
-#: ../../source/concepts/account.rst:33
+#: ../../source/concepts/account.rst:37
 msgid "**Importance**"
 msgstr "**インポータンス**"
 
-#: ../../source/concepts/account.rst:35
+#: ../../source/concepts/account.rst:39
 msgid ""
 "The relation between the amount of harvesting mosaics the account owns and "
 "the total mosaic supply."
 msgstr "アカウントが保有するハーベスティングモザイク量と総モザイク供給量の関係。"
 
-#: ../../source/concepts/account.rst:39
+#: ../../source/concepts/account.rst:43
 msgid "Multisig Account"
 msgstr "マルチシグアカウント"
 
-#: ../../source/concepts/account.rst:41
+#: ../../source/concepts/account.rst:45
 msgid ""
 "Accounts become truly smart when configured with special rules – directly on"
 " the NEM blockchain – that define how they relate and control each other, as"
-" well as how their contents can be updated and transferred. One crucial type"
-" of rule is :doc:`multisig <multisig-account>` control that allows ownership"
-" of account based assets to be shared in a variety of ways between multiple "
-"parties."
+" well as how their contents can be updated and transferred."
 msgstr ""
-"どのように相互に関連して制御するか、どのようにその内容を更新や転送をするかの定義を、直接 NEM "
-"ブロックチェーン上に特別なルールとして設定しておけば、アカウントはとてもスマートなものになります。1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる"
-" :doc:`マルチシグ <multisig-account>` コントロールです。"
+"どのように相互に関連して制御するか、どのようにその内容を更新や転送をするかの定義を直接 NEM "
+"ブロックチェーン上に特別なルールとして設定しておけば、アカウントはとてもスマートなものになります。"
 
-#: ../../source/concepts/account.rst:45
+#: ../../source/concepts/account.rst:47
+msgid ""
+"One crucial type of rule is :doc:`multisig <multisig-account>` control that "
+"allows ownership of account based assets to be shared in a variety of ways "
+"between multiple parties."
+msgstr ""
+"1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる :doc:`マルチシグ <multisig-"
+"account>` コントロールです。"
+
+#: ../../source/concepts/account.rst:51
 msgid "Filters"
 msgstr "フィルタ"
 
-#: ../../source/concepts/account.rst:47
+#: ../../source/concepts/account.rst:53
 msgid ""
 "Accounts may configure a set of smart rules to block announcing or receiving"
 " transactions :doc:`given a series of constraints <account-filter>`."
@@ -149,6 +163,6 @@ msgstr ""
 "アカウントはスマートなルールの集合を構成し、 :doc:`一連の制約 <account-filter>` "
 "の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
 
-#: ../../source/concepts/account.rst:51
+#: ../../source/concepts/account.rst:57
 msgid "Guides"
 msgstr "ガイド"

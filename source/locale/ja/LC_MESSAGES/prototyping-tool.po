@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,10 +27,8 @@ msgid "Prototyping Tool"
 msgstr "プロトタイピングツール"
 
 #: ../../source/prototyping-tool.rst:5
-msgid ""
-"⚠️ The prototyping tool is not compatible with the latest version of "
-"catapult-server (0.3)."
-msgstr "⚠️ プロトタイピングツールは最新バージョンの catapult-server (0.3) と互換性がありません。"
+msgid "⚠️ The prototyping tool is only compatible with catapult-server 0.1."
+msgstr "⚠️ プロトタイピングツールは catapult-server 0.1 だけに対応しています。"
 
 #: ../../source/prototyping-tool.rst:10
 msgid ""
@@ -237,39 +236,31 @@ msgstr ""
 msgid "See outputs under debug tab."
 msgstr "debug タブの下の出力を確認してください。"
 
-#: ../../source/prototyping-tool.rst:137
+#: ../../source/prototyping-tool.rst:139
 msgid "Importing a flow"
 msgstr "フローのインポート"
 
-#: ../../source/prototyping-tool.rst:139
-msgid ""
-"After opening an example, copy the JSON you will find at the bottom of the "
-"site."
-msgstr "例を開いたら、サイトの下部にあるボタンで JSON をコピーしてください。"
-
 #: ../../source/prototyping-tool.rst:141
-msgid ""
-"In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the"
-" JSON flow and click Import button."
-msgstr ""
-"Node-REDで ``Import > Clipboard from the menu`` (Ctrl-E) を選択してください。JSON "
-"フローをペーストして、インポートボタンをクリックします。"
+msgid "In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E)."
+msgstr "Node-REDで ``Import > Clipboard from the menu`` (Ctrl-E) を選択してください。"
 
-#: ../../source/prototyping-tool.rst:145
-msgid "Examples"
-msgstr "例"
+#: ../../source/prototyping-tool.rst:143
+msgid "Paste the JSON flow and click ``Import`` button."
+msgstr "JSON フローをペーストして ``Import`` ボタンをクリックします。"
 
-#: ../../source/prototyping-tool.rst:148
+#: ../../source/prototyping-tool.rst:146
 msgid "Basics"
 msgstr "基本"
 
-#: ../../source/prototyping-tool.rst:150
+#: ../../source/prototyping-tool.rst:148
 msgid ""
 "`Create a transfer transaction "
 "<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
 msgstr ""
+"`転送トランザクションの作成 "
+"<https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_"
 
-#: ../../source/prototyping-tool.rst:151
+#: ../../source/prototyping-tool.rst:149
 msgid ""
 "`Create namespace "
 "<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
@@ -277,14 +268,14 @@ msgstr ""
 "`ネームスペースの作成 "
 "<https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_"
 
-#: ../../source/prototyping-tool.rst:152
+#: ../../source/prototyping-tool.rst:150
 msgid ""
 "`Create mosaic "
 "<https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
 msgstr ""
 "`モザイクの作成 <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_"
 
-#: ../../source/prototyping-tool.rst:153
+#: ../../source/prototyping-tool.rst:151
 msgid ""
 "`Create multisig account "
 "<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
@@ -292,7 +283,7 @@ msgstr ""
 "`マルチシグアカウントの作成 "
 "<https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_"
 
-#: ../../source/prototyping-tool.rst:154
+#: ../../source/prototyping-tool.rst:152
 msgid ""
 "`Create aggregate transaction "
 "<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
@@ -300,7 +291,7 @@ msgstr ""
 "`アグリゲートトランザクションの作成 "
 "<https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_"
 
-#: ../../source/prototyping-tool.rst:155
+#: ../../source/prototyping-tool.rst:153
 msgid ""
 "`Cosign aggregate transaction "
 "<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
@@ -308,11 +299,11 @@ msgstr ""
 "`アグリゲートトランザクションへの署名 "
 "<https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_"
 
-#: ../../source/prototyping-tool.rst:158
+#: ../../source/prototyping-tool.rst:156
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: ../../source/prototyping-tool.rst:160
+#: ../../source/prototyping-tool.rst:158
 msgid ""
 "`Simple chat "
 "<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
@@ -321,46 +312,49 @@ msgstr ""
 "<https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_"
 
 #: ../../source/prototyping-tool.rst:162
+msgid "Exporting a flow"
+msgstr "フローのエクスポート"
+
+#: ../../source/prototyping-tool.rst:164
+msgid "In Node-RED, select the flow you want to export."
+msgstr "Node-RED でエクスポートしたいフローを選択します。"
+
+#: ../../source/prototyping-tool.rst:166
 msgid ""
-"We love to receiving contributions from our community — you! Follow these "
-"guidelines to get your flow included in this documentation."
+"Open ``Export > Clipboard`` from the menu (Ctrl-E) and copy the JSON from "
+"the dialogue."
+msgstr "メニュー (Ctrl-E) から ``Export > Clipboard`` を開き、ダイアログから JSON をコピーしてください。"
+
+#: ../../source/prototyping-tool.rst:169
+msgid "Sharing a flow"
+msgstr "フローの共有"
+
+#: ../../source/prototyping-tool.rst:171
+msgid ""
+"We love receiving contributions from our community — you! Follow this guide "
+"to get your flow included in this documentation."
 msgstr ""
 "私たちは私たちのコミュニティ - そう、あなた！ "
 "からの貢献をを喜んで受け入れます。あなたのフローをドキュメントへ含めるために、これらのガイドラインに従ってください。"
 
-#: ../../source/prototyping-tool.rst:164
-msgid ""
-"The first step is to export the flow you have created. In Node-RED, select "
-"the flow you want to export. Open ``Export > Clipboard`` from the menu "
-"(Ctrl-E) and copy the JSON from the dialogue."
-msgstr ""
-"最初のステップは、あなたの作ったフローをエクスポートすることです。Node-RED では、メニュー (Ctrl-E) から ``Export > "
-"Clipboard`` を開き、ダイアログから JSON をコピーしてください。"
-
-#: ../../source/prototyping-tool.rst:166
+#: ../../source/prototyping-tool.rst:173
 msgid "We are using |Node-RED-flows-repository| to share our flows."
 msgstr "私たちはフローの共有に |Node-RED-flows-repository| を使用しています。"
 
-#: ../../source/prototyping-tool.rst:168
-msgid "Click ``Add flow``."
+#: ../../source/prototyping-tool.rst:175
+msgid "Click ``Add flow`` button."
 msgstr "``Add flow`` をクリック"
 
-#: ../../source/prototyping-tool.rst:169
+#: ../../source/prototyping-tool.rst:176
 msgid ""
 "Give your flow a short, descriptive title and describe what the flow does "
 "and how it is used."
 msgstr "あなたのフローを端的でわかりやすいタイトルを、このフローは何をするのか、どうやって使うのかを説明してください。"
 
-#: ../../source/prototyping-tool.rst:170
+#: ../../source/prototyping-tool.rst:177
 msgid "Paste the JSON flow you want to share."
 msgstr "共有したいフローの JSON をペーストしてください。"
 
-#: ../../source/prototyping-tool.rst:171
+#: ../../source/prototyping-tool.rst:178
 msgid "Add the tag ``NEM2``."
 msgstr "``NEM2`` のタグを追加します。"
-
-#: ../../source/prototyping-tool.rst:173
-msgid ""
-"After a while, your flow and your GitHub username will be included in this "
-"page."
-msgstr "しばらくすると、あなたのフローと GitHub ユーザー名がこのページに反映されます。"

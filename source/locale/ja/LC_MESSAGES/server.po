@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-13 11:26+0100\n"
+"PO-Revision-Date: 2019-06-13 10:27+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/server.rst:3
+msgid "Server"
+msgstr "サーバ"
+
+#: ../../source/server.rst:5
+msgid ""
+"As a blockchain platform, NEM relies on a decentralized network of nodes to "
+"provide a powerful, stable, and secure platform for Smart Asset "
+"transactions."
+msgstr ""
+"ブロックチェーンプラットフォームである NEM "
+"はスマートアセットトランザクションの強力で、安定した、安全なプラットフォームを提供するために、非中央集権ネットワークのノードに依存しています。"
+
+#: ../../source/server.rst:7
+msgid ""
+"These nodes are deployed using |catapult-server| software, a C++ rewrite of "
+"the previous Java-written NEM distributed ledger that has been running for "
+"more than 4 years."
+msgstr ""
+"これらのノードは4年以上稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-server|"
+" ソフトウェアを使用してデプロイされます。"
+
+#: ../../source/server.rst:9
+msgid ""
+"Through its multi-tier architecture, it is possible to isolate the peer-to-"
+"peer network and implement better API integration flows with the proposed "
+"REST API layer."
+msgstr ""
+"その多層アーキテクチャーを通じて、ピアツーピアネットワークの分離と提案された REST APIレイヤーを使用して、より優れた API "
+"統合フローを実装することが可能です。"
+
+#: ../../source/server.rst:11
+msgid ""
+"Also, Catapult offers private networks the ability to add their own "
+"transaction types by developing **plugins** for the catapult-server nodes."
+msgstr ""
+"また Catapult ではプライベートネットワーク向けに catapult-server ノード用の **プラグイン** "
+"を開発することで独自のトランザクションタイプを追加する機能を提供します。"
+
+#: ../../source/server.rst:15
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/server.rst:17
+msgid ""
+"Catapult-server provides increased flexibility for the node owners. The same"
+" software can be used to configure two different types of :doc:`nodes "
+"<concepts/node>`:"
+msgstr ""
+"Catapult-server はノード所有者の柔軟性を向上します。同じソフトウェアは異なる2種類の :doc:`ノード "
+"<concepts/node>` に設定することができます:"
+
+#: ../../source/server.rst:19
+msgid ""
+"**Peer node** (P2P Component): The peer node verifies or discards the "
+"transactions once the API pushes them into the P2P network. It runs the "
+"consensus algorithm, creates new blocks, and propagates the changes through "
+"the network."
+msgstr ""
+"**Peer ノード** (P2P コンポーネント): Peer ノードは API がトランザクションを P2P "
+"ネットワークにプッシュすると、それを検証または破棄します。ノードはコンセンサスアルゴリズムを実行して新しいブロックを作成し、そしてネットワークを通して変更を伝播します。"
+
+#: ../../source/server.rst:21
+msgid ""
+"**API node** (API Component): The primary responsibility of the API node is "
+"to properly store data in the MongoDB database once transactions are "
+"validated."
+msgstr ""
+"**API ノード** (API コンポーネント): API ノードの主な役割はトランザクションが検証された後に MongoDB "
+"データベースにデータを正しく保存することです。"
+
+#: ../../source/server.rst:23
+msgid ""
+"You can test catapult-server software deploying your own network for "
+"development or learning purposes with |catapult-service-bootstrap|."
+msgstr ""
+"|catapult-service-bootstrap| で開発目的または学習目的で独自のネットワークを展開する catapult-server "
+"ソフトウェアをテストすることができます。"
+
+#: ../../source/server.rst:25
+msgid "To build and run catapult-server only, follow the |instructions|."
+msgstr "catapult-server だけをビルドして動作させるにはこの |instructions| に従ってください。"
+
+#: ../../source/server.rst:29
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/server.rst:31
+msgid "|running-catapult-locally|"
+msgstr ""
+
+#: ../../source/server.rst:33
+msgid "Deploy a Catapult full node for learning and development purposes."
+msgstr "Catapult フルノードを学習と開発目的でデプロイする。"
+
+#: ../../source/server.rst:39
+msgid ""
+"**Deploying a test net node** (:doc:`upcoming <guidelines/suggesting-"
+"changes>`)"
+msgstr "**テストネットノードのデプロイ** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"
+
+#: ../../source/server.rst:41
+msgid ""
+"**Configuring a private network** (:doc:`upcoming <guidelines/suggesting-"
+"changes>`)"
+msgstr "**プライベートネットワークの設定** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"
+
+#: ../../source/server.rst:43
+msgid ""
+"**Creating a custom plugin** (:doc:`upcoming <guidelines/suggesting-"
+"changes>`)"
+msgstr "**カスタムプラグインの作成** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"
