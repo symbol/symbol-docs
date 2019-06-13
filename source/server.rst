@@ -4,11 +4,11 @@ Server
 
 As a blockchain platform, NEM relies on a decentralized network of nodes to provide a powerful, stable, and secure platform for Smart Asset transactions.
 
+These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running for more than 4 years.
+
 Through its multi-tier architecture, it is possible to isolate the peer-to-peer network and implement better API integration flows with the proposed REST API layer.
 
 Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
-
-|catapult-server| is a C++ rewrite of the previous Java-written NEM distributed ledger that has been running for more than 4 years.
 
 ************
 Installation
@@ -36,21 +36,15 @@ Deploy a Catapult full node for learning and development purposes.
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank"><b>Running Catapult locally</b></a>
 
-* **Deploying a test net node** (upcoming)
+* **Deploying a test net node** (:doc:`upcoming <guidelines/suggesting-changes>`)
 
-`Participate <https://github.com/nemtech/nem2-docs/issues/143>`_
+* **Configuring a private network** (:doc:`upcoming <guidelines/suggesting-changes>`)
 
-* **Configuring a private network** (upcoming)
-
-`Participate <https://github.com/nemtech/nem2-docs/issues/143>`_
-
-* **Creating a custom plugin** (upcoming)
-
-`Participate <https://github.com/nemtech/nem2-docs/issues/143>`_
+* **Creating a custom plugin** (:doc:`upcoming <guidelines/suggesting-changes>`)
 
 .. |catapult-server| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
