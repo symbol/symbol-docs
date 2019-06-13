@@ -12,7 +12,7 @@ Aggregated Transactions merge multiple transactions into one, allowing **trustle
 
     Example of an aggregate transaction between two participants
 
-When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
+When all involved :doc:`accounts <../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
 .. _aggregate-complete:
 
