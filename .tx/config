@@ -37,6 +37,12 @@ source_file = build/gettext/sdk.pot
 source_lang = en
 type = PO
 
+[nem2docs.server]
+file_filter = source/locale/<lang>/LC_MESSAGES/server.po
+source_file = build/gettext/server.pot
+source_lang = en
+type = PO
+
 [nem2docs.sphinx]
 file_filter = source/locale/<lang>/LC_MESSAGES/sphinx.po
 source_file = build/gettext/sphinx.pot

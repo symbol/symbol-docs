@@ -209,6 +209,7 @@ html_sidebars = {
   'prototyping-tool': ['globaltoc.html'],
   'sdk': ['globaltoc.html'],
   'wallet': ['globaltoc.html'],
+  'server': ['globaltoc.html'],
   'contribute/**': ['globaltoc.html'],
   'index': [],
 }

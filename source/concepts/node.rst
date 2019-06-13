@@ -121,3 +121,9 @@ Deploy a Catapult full node for learning and development purposes.
 .. |running-catapult-locally| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank"><b>Running Catapult locally</b></a>
+
+* **Deploying a test net node** (:doc:`upcoming <../guidelines/suggesting-changes>`)
+
+* **Configuring a private network** (:doc:`upcoming <../guidelines/suggesting-changes>`)
+
+* **Creating a custom plugin** (:doc:`upcoming <../guidelines/suggesting-changes>`)
