@@ -23,17 +23,17 @@ Prerequisites
 Background
 **********
 
-Alice wants to timestamp a message on the blockchain. However, Alice knows that sending a transfer transaction to the public network will make the content of the message publicly available.
+Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
-We decide to use cryptography to make the message only readable by Alice and the recipient address of the transaction, in this case, an account that represents an academic certificate.
+Alice knows that sending a transfer transaction with a plain message through the public network will make the content of the message publicly available.
 
-NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
+Thus, Alice sends an encrypted message that is only readable by herself and those with access to the academic certificate.
 
 ************************
 Let’s get into some code
 ************************
 
-1. Create an account for Alice, and another for the certificate  using ``nem2-cli``:
+1. Create an account for Alice, and another for the certificate  using ``nem2-cli``.
 
 .. code-block:: bash
 
@@ -73,9 +73,6 @@ Let’s get into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-
-.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
-
 4. Sign the transaction with Alice's account.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
@@ -105,4 +102,4 @@ Let’s get into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-If you managed to read the message, try to decrypt it using another account to ensure that only the defined participants can read the encrypted content.
+If you managed to read the message, try to decrypt it using another unrelated account to ensure that only the defined participants can read the encrypted content.

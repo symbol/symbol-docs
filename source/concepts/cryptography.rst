@@ -12,7 +12,7 @@ The key pair pair consists of a private key and a public key:
 
 * **Private key**: A random 256-bit integer used to sign :ref:`entities <verifiable-entity>`.
 
-* **Public key**: The public identifier of the key pair. Proves that the the entity was signed with the paired private key.
+* **Public key**: The public identifier of the key pair. Proves that the entity was signed with the paired private key.
 
 The public key is cryptographically derived from the private key. Catapult uses the |edwards| with the digital signature algorithm called |Ed25519|.
 
@@ -59,7 +59,7 @@ The following steps are performed to `convert a public key <https://github.com/n
 3. add the network identifier byte in front of (2).
 4. concatenate (3) and the checksum of (3).
 
-From the explanation above, you can create an address without interacting with the blockchain. The blockchain only tracks addresses involved in at least one transaction.
+As you can see, you can create an address without interacting with the blockchain. The blockchain only tracks addresses involved in at least one transaction.
 
 .. |edwards| raw:: html
 

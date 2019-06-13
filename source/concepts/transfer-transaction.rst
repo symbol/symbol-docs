@@ -24,20 +24,22 @@ It is possible to send mosaics to any valid address, even if the address has not
 Mosaics
 *******
 
-A :doc:`mosaic <mosaic>` could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
+A :doc:`mosaic <mosaic>` could be a token, but it could also be more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-You can send a set of different mosaics in the same transaction.
+You can send a combination of different mosaics in the same transaction.
 
 *******
 Message
 *******
 
-A transfer transaction can hold a message of length ``1023`` characters, making them suitable for timestamping data permanently on the blockchain.
+A transfer transaction can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
 
 The messages attached are visible by default to all network participants.
 
 Encrypted message
 =================
+
+Encrypted messages are only accessible by the sender and the recipient.
 
 NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
 
