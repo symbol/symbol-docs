@@ -22,14 +22,13 @@ import {Account, Deadline, NetworkType, PublicAccount, TransactionHttp, Transfer
 const alicePrivateKey = process.env.ALICE_PRIVATE_KEY as string;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
-const certificatePublicKey = process.env.CERTIFICATE_PUBLIC_ACCOUNT as string;
+const certificatePublicKey = process.env.CERTIFICATE_PUBLIC_KEY as string;
 const certificatePublicAccount = PublicAccount.createFromPublicKey(certificatePublicKey, NetworkType.MIJIN_TEST);
 
 const encryptedMessage = aliceAccount.encryptMessage('This message is secret', certificatePublicAccount);
 /* end block 01 */
 
 /* start block 02 */
-
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     certificatePublicAccount.address,
@@ -39,11 +38,9 @@ const transferTransaction = TransferTransaction.create(
 /* end block 02 */
 
 /* start block 03 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
