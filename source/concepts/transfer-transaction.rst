@@ -14,7 +14,7 @@ Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages betw
 Recipient
 *********
 
-The recipient is the address of the :ref:`account <account>` that receives the transfer transaction.
+The recipient is the address of the :doc:`account <account>` that receives the transfer transaction.
 
 It is possible to send mosaics to any valid address, even if the address has not previously participated in any transaction.
 
