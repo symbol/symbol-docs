@@ -51,6 +51,6 @@
     :hidden:
     :caption: Contribute
 
-    contribute/contributing
     contribute/community
+    contribute/contributing
     contribute/contributors

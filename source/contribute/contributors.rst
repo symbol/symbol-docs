@@ -12,11 +12,7 @@ The NEM Developer Center is not written from scratch. It is the sum of previous 
 * |nem-blog-articles|
 * |nem-medium-articles|
 
-We want to recognize the contributors who provide content and improve the quality and completeness of this documentation.
-
-..  ghcontributors::
-   :owner: nemtech
-   :repository: nem2-docs
+We want to recognize as well the work of the |contributors| who provide content, open new |issues|, and improve the quality and completeness of this documentation.
 
 .. |nem-technical-reference| raw:: html
 
@@ -46,3 +42,10 @@ We want to recognize the contributors who provide content and improve the qualit
 
    <a href="https://medium.com/nemofficial" target="_blank">NEM Medium articles</a>
 
+.. |contributors| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/graphs/contributors" target="_blank">contributors</a>
+
+.. |issues| raw:: html
+
+   <a href="https://github.com/nemtech/nem2-docs/issues" target="_blank">issues</a>
