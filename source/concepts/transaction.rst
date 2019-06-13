@@ -205,11 +205,11 @@ Rollbacks
 
 Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back. These are essential to resolve forks of the blockchain.
 
-The "rewrite limit" is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
+The |rewrite-limit| is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
+NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
 
-From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
+.. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 ******
 Guides
@@ -265,3 +265,8 @@ SizePrefixedEntity
     :delim: ;
 
     size; unit32; The size of the transaction.
+
+.. |rewrite-limit| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L19" target="_blank">rewrite limit</a>
+

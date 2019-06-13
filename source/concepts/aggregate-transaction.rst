@@ -4,7 +4,15 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
+Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
+
+.. figure:: ../resources/images/examples/aggregate-escrow-1.png
+    :align: center
+    :width: 450px
+
+    Example of an aggregate transaction between two participants
+
+When all involved :doc:`accounts<../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
 .. _aggregate-complete:
 
@@ -17,19 +25,6 @@ An aggregate transaction is  **complete** when all the required participants hav
 The cosigners can sign the transaction without using the blockchain. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
 
 Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions.
-
-Sending payouts
-===============
-
-Dan announces an aggregate transaction that merges two transfer transactions.
-
-As he is the only required signatory, the transaction is considered complete after he signed. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
-
-.. figure:: ../resources/images/examples/aggregate-sending-payouts.png
-    :align: center
-    :width: 450px
-
-    Sending payouts with aggregate complete transactions
 
 .. _aggregate-bonded:
 
@@ -51,6 +46,23 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
 
     Aggregate bonded transaction cycle
 
+********
+Examples
+********
+
+Sending payouts
+===============
+
+Dan announces an aggregate transaction that merges two transfer transactions.
+
+As Dan is the only required signatory, the transaction is considered complete after he signed. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
+
+.. figure:: ../resources/images/examples/aggregate-sending-payouts.png
+    :align: center
+    :width: 450px
+
+    Sending payouts with aggregate complete transactions
+
 Multi-Asset Escrowed Transactions
 =================================
 
@@ -65,9 +77,9 @@ In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mo
 Paying for others fees
 ======================
 
-Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But she doesn’t have any cat.currency to pay the blockchain transaction fee.
+Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But Alice doesn't own cat.currency to pay the transaction fee.
 
-By creating an aggregate bonded transaction, she can convert EUR to cat.currency to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
+By creating an aggregate bonded transaction, Alice can convert EUR to cat.currency to pay the fee. Now, Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 

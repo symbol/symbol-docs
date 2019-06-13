@@ -2,7 +2,7 @@
 Prototyping Tool
 ################
 
-.. note:: ⚠️ The prototyping tool is not compatible with the latest version of catapult-server (0.3).
+.. note:: ⚠️ The prototyping tool is only compatible with catapult-server 0.1.
 
 .. figure:: https://gist.githubusercontent.com/jorisadri/7061090eb3cbf724c80e4f49e03e1b94/raw/69b1b9f80594feb9a415aac8de62c769295c397b/transferTransaction.png
     :align: center
@@ -133,16 +133,14 @@ Running a flow
 
     <a href="https://github.com/nemtech/nem2-prototyping-tool/releases" target="_blank">Download the app</a>
 
+
+****************
 Importing a flow
-================
+****************
 
-After opening an example, copy the JSON you will find at the bottom of the site.
+1. In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E).
 
-In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E). Paste the JSON flow and click Import button.
-
-********
-Examples
-********
+2. Paste the JSON flow and click ``Import`` button.
 
 Basics
 ======
@@ -159,18 +157,25 @@ Applications
 
 * `Simple chat <https://flows.nodered.org/flow/e8bfbab9d73e0f35ed6b4c9a9f7e4958>`_
 
-We love to receiving contributions from our community — you! Follow these guidelines to get your flow included in this documentation.
+****************
+Exporting a flow
+****************
 
-The first step is to export the flow you have created. In Node-RED, select the flow you want to export. Open ``Export > Clipboard`` from the menu (Ctrl-E) and copy the JSON from the dialogue.
+1. In Node-RED, select the flow you want to export.
+
+2. Open ``Export > Clipboard`` from the menu (Ctrl-E) and copy the JSON from the dialogue.
+
+Sharing a flow
+==============
+
+We love receiving contributions from our community — you! Follow this guide to get your flow included in this documentation.
 
 We are using |Node-RED-flows-repository| to share our flows.
 
-1. Click ``Add flow``.
+1. Click ``Add flow`` button.
 2. Give your flow a short, descriptive title and describe what the flow does and how it is used.
 3. Paste the JSON flow you want to share.
 4. Add the tag ``NEM2``.
-
-After a while, your flow and your GitHub username will be included in this page.
 
 .. |Node-RED-flows-repository| raw:: html
 

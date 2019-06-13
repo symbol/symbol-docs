@@ -6,7 +6,7 @@ First off, thank you for considering contributing to NEM!
 
 Follow these guidelines for contributing to NEM projects, achieving the best quality with the less effort.
 
-.. note:: If you want to contribute to a existent project, read as well the CONTRIBUTING.md file of its repository.
+.. note:: If you want to contribute to an existent project, read as well the CONTRIBUTING.md file that you will find at the root-level folder of the project.
 
 ***
 SDK

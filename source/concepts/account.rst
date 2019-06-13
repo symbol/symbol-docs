@@ -2,9 +2,13 @@
 Account
 #######
 
-An account is a **key pair** (private and public key) associated with a mutable state stored on the NEM blockchain. In other words, you have a deposit box in the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a **key pair** (private and public key) associated with a mutable state stored on the NEM blockchain. In other words, you have a **deposit box**, which only you can modify with your private key.
 
-Think about NEM accounts as a **container for assets** in the blockchain. An account could represent a deposit of tokens, like most blockchains. However, it could also represent a **single object** that must be unique and updatable: a package to be shipped, a deed to a house or a document to be notarized.
+.. note:: The private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+
+Think of an account as **container for assets**. It can be used to hold XEM or other mosaics, whether they are tokens or specialized assets.
+
+Moreover, NEM accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
 
 **********
 Properties
@@ -38,7 +42,9 @@ The relation between the amount of harvesting mosaics the account owns and the t
 Multisig Account
 ****************
 
-Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred. One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
+Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred.
+
+One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account based assets to be shared in a variety of ways between multiple parties.
 
 *******
 Filters
