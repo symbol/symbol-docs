@@ -140,7 +140,7 @@ Importing a flow
 
 1. In Node-RED, select ``Import > Clipboard from the menu`` (Ctrl-E).
 
-2. Paste the JSON flow and click Import button.
+2. Paste the JSON flow and click ``Import`` button.
 
 Basics
 ======
@@ -161,17 +161,18 @@ Applications
 Exporting a flow
 ****************
 
-We love receiving contributions from our community — you! Follow these guidelines to get your flow included in this documentation.
-
-The first step is to export the flow you have created:
-
 1. In Node-RED, select the flow you want to export.
 
 2. Open ``Export > Clipboard`` from the menu (Ctrl-E) and copy the JSON from the dialogue.
 
+Sharing a flow
+==============
+
+We love receiving contributions from our community — you! Follow this guide to get your flow included in this documentation.
+
 We are using |Node-RED-flows-repository| to share our flows.
 
-1. Click ``Add flow``.
+1. Click ``Add flow`` button.
 2. Give your flow a short, descriptive title and describe what the flow does and how it is used.
 3. Paste the JSON flow you want to share.
 4. Add the tag ``NEM2``.
