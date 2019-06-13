@@ -2,7 +2,7 @@
 Server
 ######
 
-The Catapult technology provides with a multi-tier architecture to enhance the integration of business processes and general performance for the blockchain network.
+As a blockchain platform, NEM relies on a decentralized network of nodes to provide a powerful, stable, and secure platform for Smart Asset transactions.
 
 Through its multi-tier architecture, it is possible to isolate the peer-to-peer network and implement better API integration flows with the proposed REST API layer.
 
