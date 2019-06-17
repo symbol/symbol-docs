@@ -72,7 +72,7 @@ paths:
       description: Returns the account information for an array of accounts.
       operationId: getAccountsInfo
       requestBody:
-        $ref: "#/components/requestBodies/accountsIds"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -381,7 +381,7 @@ paths:
         a given array of addresses.
       operationId: getAccountPropertiesFromAccounts
       requestBody:
-        $ref: "#/components/requestBodies/accountsIds"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -694,7 +694,7 @@ paths:
 
         The score for a block is derived from its difficulty and the time (in seconds) that has elapsed since the last block:
 
-            block score = difficulty − time elasped since last block
+            block score = difficulty − time elapsed since last block
       operationId: getBlockchainScore
       responses:
         "200":
@@ -884,7 +884,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: "#/components/requestBodies/accountsIds"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -907,7 +907,7 @@ paths:
       description: Returns friendly names for accounts.
       operationId: getAccountsNames
       requestBody:
-        $ref: "#/components/requestBodies/accountsIds"
+        $ref: "#/components/requestBodies/accountIds"
       responses:
         "200":
           description: success
@@ -1169,11 +1169,11 @@ servers:
 - url: http://localhost:3000
 components:
   requestBodies:
-    accountsIds:
+    accountIds:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/accountsIds"
+            $ref: "#/components/schemas/accountIds"
       required: true
     transactionPayload:
       content:
@@ -2779,7 +2779,7 @@ components:
             format: hex
           example:
           - 84b3552d375ffa4b
-    accountsIds:
+    accountIds:
       type: object
       properties:
         publicKeys:

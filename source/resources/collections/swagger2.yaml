@@ -66,11 +66,11 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: accountsIds
+      - name: accountIds
         in: body
         required: true
         schema:
-          $ref: "#/definitions/accountsIds"
+          $ref: "#/definitions/accountIds"
       responses:
         "200":
           description: success
@@ -352,11 +352,11 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: accounstIds
+      - name: accountIds
         in: body
         required: true
         schema:
-          $ref: "#/definitions/accountsIds"
+          $ref: "#/definitions/accountIds"
       responses:
         "200":
           description: success
@@ -646,7 +646,7 @@ paths:
 
         The score for a block is derived from its difficulty and the time (in seconds) that has elapsed since the last block:
 
-            block score = difficulty − time elasped since last block
+            block score = difficulty − time elapsed since last block
       operationId: getBlockchainScore
       produces:
       - application/json
@@ -830,11 +830,11 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: accountsIds
+      - name: accountIds
         in: body
         required: true
         schema:
-          $ref: "#/definitions/accountsIds"
+          $ref: "#/definitions/accountIds"
       - name: pageSize
         in: query
         type: integer
@@ -869,7 +869,7 @@ paths:
         in: body
         required: true
         schema:
-          $ref: "#/definitions/accountsIds"
+          $ref: "#/definitions/accountIds"
       responses:
         "200":
           description: success
@@ -892,7 +892,7 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: accountsIds
+      - name: namespaceIds
         in: body
         required: true
         schema:
@@ -2026,7 +2026,7 @@ definitions:
           format: hex
         example:
         - 84b3552d375ffa4b
-  accountsIds:
+  accountIds:
     type: object
     properties:
       publicKeys:
