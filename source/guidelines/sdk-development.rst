@@ -175,7 +175,6 @@ Example:
     let enumsMap: {[index: string]: any} = {
         "AccountPropertyTypeEnum": AccountPropertyTypeEnum,
         "AliasTypeEnum": AliasTypeEnum,
-        "ResolutionStatementDTO": ResolutionStatementDTO,
         "MosaicPropertyIdEnum": MosaicPropertyIdEnum,
         "MultisigModificationTypeEnum": MultisigModificationTypeEnum,
         "NamespaceTypeEnum": NamespaceTypeEnum,
@@ -223,6 +222,7 @@ Example:
         "NodeInfoDTO": NodeInfoDTO,
         "NodeTimeDTO": NodeTimeDTO,
         "ResolutionEntryDTO": ResolutionEntryDTO,
+        "ResolutionStatementDTO": ResolutionStatementDTO,
         "ServerDTO": ServerDTO,
         "ServerInfoDTO": ServerInfoDTO,
         "SourceDTO": SourceDTO,
