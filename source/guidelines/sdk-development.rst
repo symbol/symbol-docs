@@ -115,17 +115,12 @@ Before starting
 Development
 ***********
 
-You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_ and `Java <https://github.com/nemtech/nem2-sdk-java>`_ SDKs. The TypeScript version is the first SDK getting the latest updates. Meanwhile, Java takes longer to be updated.
+You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_. The TypeScript version is the first SDK getting the latest updates. Meanwhile, Java takes longer to be updated.
 
-Unfortunately, the TypeScript version has one specific implementation detail: the low-level implementation is separated from the SDK, called `nem2-library-js <https://github.com/nemtech/nem2-library-js>`_. There
-was a need to create this low-level library to perform specific chain testing.
-
-.. note:: The SDKs you create does not require this separate implementation.
-
-Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-java/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
+Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
 Creating the project
-=====================
+====================
 
 1. Add a README with the instructions to install the SDK. You can find
    :download:`a template here <../resources/templates/README_SDK.md>`.
@@ -134,8 +129,7 @@ Creating the project
 3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you. Find :download:`here a CONTRIBUTING.md template<../resources/templates/CONTRIBUTING.md>`.
 4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one suits you best.
 
-A project with a good test coverage it's more likely to be used and
-trusted by the developers!
+A project with a good test coverage it's more likely to be used and trusted by the developers!
 
 We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last). If you need inspiration, you can adapt the same `tests we
 did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
@@ -143,46 +137,133 @@ did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>
 API Wrapper
 ===========
 
-`Swagger Codegen <https://swagger.io/tools/swagger-codegen/>`_ can handle the API generation. It supports multiple languages, and hopefully, yours is on the list.
+The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API generation. It supports multiple languages, and hopefully, yours is on the list.
 
-1. Generate the ``DTOs`` and place them under `sdk/infrastructure <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/infrastructure>`_.
+These are the steps we are following to generate the Typescript DTOs (data transfer objects):
 
-- `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
-
-- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger2.yaml>`_
-
-We run this instruction to generate the DTOs for the JavaScript SDK:
+1. Download the latest Open API definition.
 
 .. code-block:: bash
 
-    docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate -i /local/swagger.yaml -l javascript -t /local/es6_promise --additional-properties usePromises=true -o /local/nem2-js && rm -R nem2-js/test
+    git clone git@github.com:nemtech/nem2-docs
+    cd nem2-docs && mkdir sdks && cd sdks
+    cp ../source/resources/collections/swagger.yaml .
 
-2. Drop the generated client classes and implement them using the
+- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger2.yaml>`_
+
+2. Copy the ``templates folder`` from ``{nem2-sdk-typescript-javascript}/infrastructure/`` into a new folder.
+
+3. Download the OpenAPI generator and generate the DTOs.
+
+.. code-block:: bash
+
+    brew install openapi-generator
+    openapi-generator generate -i ./swagger2.yaml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
+
+- `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
+
+4. As the typescript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list. You can jump this step if the code generator for your language supports them.
+
+* Open the generated file ``./nem2-ts-sdk/model/models.ts`` in your favorite editor.
+* Search for line contains ``let enumsMap: {[index: string]: any}``.
+* Move all ``xxxTypeEnum`` entries from below ``typeMap`` into ``enumsMap``.
+
+Example:
+
+.. code-block:: typescript
+
+    let enumsMap: {[index: string]: any} = {
+        "AccountPropertyTypeEnum": AccountPropertyTypeEnum,
+        "AliasTypeEnum": AliasTypeEnum,
+        "MosaicPropertyIdEnum": MosaicPropertyIdEnum,
+        "MultisigModificationTypeEnum": MultisigModificationTypeEnum,
+        "NamespaceTypeEnum": NamespaceTypeEnum,
+        "ReceiptTypeEnum": ReceiptTypeEnum,
+        "RolesTypeEnum": RolesTypeEnum,
+    }
+
+    let typeMap: {[index: string]: any} = {
+        "AccountDTO": AccountDTO,
+        "AccountIds": AccountIds,
+        "AccountInfoDTO": AccountInfoDTO,
+        "AccountMetaDTO": AccountMetaDTO,
+        "AccountNamesDTO": AccountNamesDTO,
+        "AccountPropertiesDTO": AccountPropertiesDTO,
+        "AccountPropertiesInfoDTO": AccountPropertiesInfoDTO,
+        "AccountPropertyDTO": AccountPropertyDTO,
+        "AliasDTO": AliasDTO,
+        "AnnounceTransactionInfoDTO": AnnounceTransactionInfoDTO,
+        "BlockDTO": BlockDTO,
+        "BlockInfoDTO": BlockInfoDTO,
+        "BlockMetaDTO": BlockMetaDTO,
+        "BlockchainScoreDTO": BlockchainScoreDTO,
+        "CommunicationTimestamps": CommunicationTimestamps,
+        "Cosignature": Cosignature,
+        "HeightInfoDTO": HeightInfoDTO,
+        "MerklePathItem": MerklePathItem,
+        "MerkleProofInfo": MerkleProofInfo,
+        "MerkleProofInfoDTO": MerkleProofInfoDTO,
+        "MosaicDTO": MosaicDTO,
+        "MosaicDefinitionDTO": MosaicDefinitionDTO,
+        "MosaicIds": MosaicIds,
+        "MosaicInfoDTO": MosaicInfoDTO,
+        "MosaicMetaDTO": MosaicMetaDTO,
+        "MosaicNamesDTO": MosaicNamesDTO,
+        "MosaicPropertyDTO": MosaicPropertyDTO,
+        "MultisigAccountGraphInfoDTO": MultisigAccountGraphInfoDTO,
+        "MultisigAccountInfoDTO": MultisigAccountInfoDTO,
+        "MultisigDTO": MultisigDTO,
+        "NamespaceDTO": NamespaceDTO,
+        "NamespaceIds": NamespaceIds,
+        "NamespaceInfoDTO": NamespaceInfoDTO,
+        "NamespaceMetaDTO": NamespaceMetaDTO,
+        "NamespaceNameDTO": NamespaceNameDTO,
+        "NetworkTypeDTO": NetworkTypeDTO,
+        "NodeInfoDTO": NodeInfoDTO,
+        "NodeTimeDTO": NodeTimeDTO,
+        "ResolutionEntryDTO": ResolutionEntryDTO,
+        "ResolutionStatementDTO": ResolutionStatementDTO,
+        "ServerDTO": ServerDTO,
+        "ServerInfoDTO": ServerInfoDTO,
+        "SourceDTO": SourceDTO,
+        "StatementsDTO": StatementsDTO,
+        "StorageInfoDTO": StorageInfoDTO,
+        "TransactionHashes": TransactionHashes,
+        "TransactionIds": TransactionIds,
+        "TransactionInfoDTO": TransactionInfoDTO,
+        "TransactionMetaDTO": TransactionMetaDTO,
+        "TransactionPayload": TransactionPayload,
+        "TransactionStatementDTO": TransactionStatementDTO,
+        "TransactionStatusDTO": TransactionStatusDTO,
+    }
+
+5. Copy the generated files into the `nem2-sdk infrastructure folder <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/src/infrastructure>`_.
+
+6. Drop the generated client classes and implement them using the
 `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of
 `ReactiveX <http://reactivex.io/>`_.
 
 Example of a Repository and HTTP implementation:
 
--  `BlockchainRepository <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainRepository.java>`_
+-  `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
 
--  `BlockchainHttp <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/infrastructure/BlockchainHttp.java>`_
+-  `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
 
-.. warning:: The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
+7. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
 Models
 ======
 
 The `models <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default immutable and aim to hide the complexity, like type conversion or relationship between objects.
 
-You will find in the different implementations different invariants to
-ensure the object is well constructed and a nicer API is published.
+You will find in the different implementations different invariants to ensure the object is well constructed and a nicer API is published.
 
 Particular decisions to consider:
 
 -  ``uint64`` support: meanwhile `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64`` use that implementation instead.
 -  API conversions: Sometimes, the data returned by API is compressed. You
    might need to convert those types for the user.
--  `Namespace <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/namespace/NamespaceId.java>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
+-  `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================
