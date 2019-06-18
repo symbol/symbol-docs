@@ -75,8 +75,8 @@ For that reason, each actor involved should have at least one account in each bl
 
 * Mosaic: ``10`` `10 [520597229,83226871]`` alice token
 * Recipient: Bob's address (Private Chain)
-* Algorithm: Sha3-256
-* Secret:  Sha3-256(proof)
+* Algorithm: SHA3-256
+* Secret:  SHA3-256(proof)
 * Duration: 96h
 * Network: Private Chain
 
@@ -104,8 +104,8 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 * Mosaic: ``10 [2061634929,1373884888]`` bob token
 * Recipient: Alice's address (Public Chain)
-* Algorithm: Sha3-256
-* Secret:  Sha3-256(proof)
+* Algorithm: SHA3-256
+* Secret:  SHA3-256(proof)
 * Duration: 84h
 * Network: Public Chain
 
