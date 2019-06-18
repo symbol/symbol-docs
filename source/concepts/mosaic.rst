@@ -52,7 +52,7 @@ Thus, the company must create a mosaic to represent shares to their company. Her
 
     Duration; undefined
     Divisibility; 2
-    Initial supply; 1000000000 (10.000.000,00)
+    Initial supply; 1000000000 (10,000,000.00)
     Supply mutable; true
     Transferability; true
 
@@ -64,7 +64,7 @@ However, NEM mosaics offer more flexibility in tokenizing their company shares. 
 
 Fractional ownership, along with the ability to trade 24/7, brings additional liquidity to the market. These same characteristics also open up the market to smaller investors.
 
-**Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10.000.000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
+**Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
 
 **Transferability:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
 

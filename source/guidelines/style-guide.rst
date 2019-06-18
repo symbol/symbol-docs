@@ -100,6 +100,7 @@ Sustaining a uniform format is also essential for consistency.
     Emphasizing important differences.; If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
     Writing headers for a table.; This table.
     Writing titles.; Basic formatting (first letter capitalized).
+    Writing numbers; 1,000.5. Use the period (full stop) as the decimal separator.
     Referencing variable values, functions or file names.; NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
     Warning the reader.; Use notes. :doc:`Example <../getting-started/setup-workstation>`
     Providing helpful hyperlinks throughout your article.; Transfer transactions are used to send :doc:`mosaics <../concepts/mosaic>` between two :doc:`accounts <../concepts/account>`.
@@ -137,7 +138,7 @@ List of terms that are prone to be written in different ways.
     Catapult; catapult, NEM Catapult
     Node.js; nodejs, node.js
     RxJS; rxjs
-    Sha-256; SHA256, SHA-256
+    SHA-256; SHA256, Sha-256
     SDK; Sdk, Sdk
     TypeScript; typescript, Typescript
     MongoDB; mongodb, Mongodb
