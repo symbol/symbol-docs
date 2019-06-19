@@ -4,9 +4,36 @@ Namespace
 
 Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the NEM blockchain.
 
-A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <account>` creates a namespace, that will appear as unique in the NEM ecosystem.
+****
+Name
+****
+
+A namespace starts with a name that you choose, similar to an internet domain name. The name must appear as unique  in the network, and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
 
 An account can link a registered name (namespace or subnamespace) with an :doc:`account <../guides/namespace/link-a-namespace-to-an-address>` or a :doc:`mosaic <../guides/namespace/link-a-namespace-to-a-mosaic>` identifier.
+
+********
+Duration
+********
+
+.. figure:: ../resources/images/diagrams/namespace-life-cycle.png
+    :width: 800px
+    :align: center
+
+    Namespace life-cycle
+
+At the time of the namespace **registration**, you have to set the number of confirmed blocks you would like to rent the namespace for.
+
+The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
+
+
+    duration (blocks) ≈ 86400 (seconds in a day) / blockGenerationTargetTime (seconds)
+
+During the renting period, the namespace owner can create subnamespaces and alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the extra-confirmed number of blocks.
+
+The network can define a **grace period**, that enables the namespace owner to renew the namespace for a certain amount of additional blocks before becomes available for registration.
+
+When the grace period ends, the existent aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
 
 *************
 Subnamespaces
@@ -30,6 +57,7 @@ Restrictions:
 
 - An account can only associate a name with one account or mosaic, but those can have many aliases linked.
 - An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-filter>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
+
 
 ****
 Cost
@@ -112,7 +140,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
-    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, ', _ , -.
+    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
 
 .. _address-alias-transaction:
