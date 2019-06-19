@@ -34,9 +34,9 @@ Prerequisites
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 - Create :doc:`two accounts <creating-and-opening-an-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Define who will be the cosignatories of the multisig account: Alice and Bob addresses. Then, open the account that will be converted into multisig by providing its private key.
 

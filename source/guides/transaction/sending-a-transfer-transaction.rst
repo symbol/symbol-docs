@@ -53,9 +53,9 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 
     nem2-cli monitor confirmed
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Create the transfer transaction, including Bob address as the recipient and ``10 cat.currency``.
 

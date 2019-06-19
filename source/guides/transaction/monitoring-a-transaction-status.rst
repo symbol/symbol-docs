@@ -26,9 +26,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Catapult enables asynchronous transaction announcement. After you publish a transaction, the API node will always accept it if it is well-formed.
 

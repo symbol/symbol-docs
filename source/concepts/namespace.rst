@@ -12,29 +12,6 @@ A namespace starts with a name that you choose, similar to an internet domain na
 
 An account can link a registered name (namespace or subnamespace) with an :doc:`account <../guides/namespace/link-a-namespace-to-an-address>` or a :doc:`mosaic <../guides/namespace/link-a-namespace-to-a-mosaic>` identifier.
 
-********
-Duration
-********
-
-.. figure:: ../resources/images/diagrams/namespace-life-cycle.png
-    :width: 800px
-    :align: center
-
-    Namespace life-cycle
-
-At the time of the namespace **registration**, you have to set the number of confirmed blocks you would like to rent the namespace for.
-
-The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
-
-
-    duration (blocks) ≈ 86400 (seconds in a day) / blockGenerationTargetTime (seconds)
-
-During the renting period, the namespace owner can create subnamespaces and alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the extra-confirmed number of blocks.
-
-The network can define a **grace period**, that enables the namespace owner to renew the namespace for a certain amount of additional blocks before becomes available for registration.
-
-When the grace period ends, the existent aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
-
 *************
 Subnamespaces
 *************
@@ -49,19 +26,42 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` links namespaces to accounts and mosaics.
+:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts, and mosaics.
 
 An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes long addresses rememberable and mosaics recognizable.
 
-The creator of the namespace starts linking the namespace to an account or mosaic. This link is editable at a later time, unlinking the previously set alias.
+Only the creator of the namespace can link the namespace to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias.
 
-The block receipts :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
+The block :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
 Restrictions:
 
-- An account can only associate a namespace with one account or mosaic, but those can have many aliases linked.
+- A namespace can be associated with only one account or mosaic, but each account or mosaic can be linked to multiple namespaces.
 - An account can assign a namespace to any account that permits receiving :doc:`AddressLinkTransactions <account-filter>`.
 - An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
+
+********
+Duration
+********
+
+.. figure:: ../resources/images/diagrams/namespace-life-cycle.png
+    :width: 800px
+    :align: center
+
+    Namespace life-cycle
+
+At the time of the namespace **registration**, you must set the number of confirmed blocks you would like to rent the namespace for.
+
+The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
+
+
+    duration (blocks) ≈ 86400 (seconds in a day) / blockGenerationTargetTime (seconds)
+
+During the renting period, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
+
+The network can define a **grace period** that enables the namespace owner to renew the namespace for a certain amount of additional blocks past the expiration date before it becomes publicly available for registration.
+
+When the grace period ends, the existing aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
 
 ****
 Cost
@@ -140,7 +140,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
     :delim: ;
 
     namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
-    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra-confirmed block to rent the namespace. When a renting period ends, the namespace will become inactive.
+    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra number of blocks to rent the namespace. When a renting period ends, the namespace will become inactive.
     parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
     namespaceId; uint64; The id of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.

@@ -37,9 +37,9 @@ Prerequisites
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Know how to :doc:`create mosaics <../mosaic/creating-a-mosaic>`
 
-************************
-Let's get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Trading tokens directly from one blockchain to the other is not possible, due to the technological differences between them.
 

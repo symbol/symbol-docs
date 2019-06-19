@@ -19,9 +19,9 @@ Prerequisites
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 .. figure:: ../../resources/images/examples/aggregate-asking-for-mosaics.png
     :align: center

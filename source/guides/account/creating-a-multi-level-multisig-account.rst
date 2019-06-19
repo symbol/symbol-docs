@@ -33,9 +33,9 @@ Prerequisites
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Define the multisig account #2.
 

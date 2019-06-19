@@ -15,9 +15,9 @@ Extend a :doc:`namespace <../../concepts/namespace>` registration period.
 Background
 **********
 
-Namespaces are registered for a certain amount of blocks. The owner can **extend the registration period** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the extra-confirmed number of blocks.
+Namespaces are registered for a certain amount of blocks. The owner can **extend the registration period** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
 
-Before starting this guide, you should have :doc:`registered a namespace <registering-a-namespace>`. We are extending the rental of the namespace named ``foo``, but you should use the name of the namespace you have registered.
+In this guide, we are going to show how to extend the rental period of a namespace. The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
 
 *************
 Prerequisites
@@ -26,9 +26,9 @@ Prerequisites
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and at least one namespace
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Get your namespace information, and inspect the value of the property ``endHeight``.
 
@@ -46,9 +46,9 @@ Let’s get into some code
     startHeight:    52000
     endHeight:      53000
 
-The namespace ``foo`` will become inactive at height ``5300``. The next step is to know which is the current height, to calculate in how many blocks your namespace will become inactive.
+The information shows that the namespace``foo`` will become inactive at height ``5300``. The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
 
-2. Check the current blockchain.
+2. Check the current blockchain height.
 
 .. code-block:: bash
 
@@ -56,7 +56,7 @@ The namespace ``foo`` will become inactive at height ``5300``. The next step is 
 
     52500
 
-As you can see, the namespace is going to expire in ``500`` blocks (5300-52500).  To not lose all the subnamespaces and aliases created in 500 blocks for now, we are going to extend the namespace duration.
+As you can see, the namespace is going to expire in ``500`` blocks (53000-52500).  To avoid losing all the subnamespaces and aliases linked to foo, we are going to extend the namespace duration.
 
 3. Extend the namespace duration for ``1000`` more blocks.
 
@@ -80,7 +80,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (5300-52500).
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 
-4. Validate that ``endHeight`` has increased in ``1000`` block units.
+4. Validate that ``endHeight`` has increased by ``1000`` block units.
 
 .. code-block:: bash
 
@@ -94,4 +94,4 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     type:           Root namespace
     owner:          SAKT3C-...-X4ND
     startHeight:    52000
-    endHeight:      53000
+    endHeight:      54000

@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 In this example, you will fetch the latest confirmed transactions for a given account using the ``accountHttp`` repository.
 

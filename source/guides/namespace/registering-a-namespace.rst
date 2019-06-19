@@ -28,9 +28,9 @@ Prerequisites
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Choose a name you like. One common option is to use your company's or own name. In this example, we will register a namespace called ``foo``.
 
