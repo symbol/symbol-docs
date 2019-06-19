@@ -19,7 +19,7 @@
 import {Account, Deadline, NetworkType, RegisterNamespaceTransaction, TransactionHttp, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
-const namespaceName = "foo"; //Replace with an unique namespace name
+const namespaceName = "foo";
 
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
     Deadline.create(),

@@ -49,15 +49,19 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Alias
 *****
 
-:ref:`Alias transactions<address-alias-transaction>` make long addresses rememberable and mosaics recognizable.
+:ref:`Alias transactions <address-alias-transaction>` links namespaces to accounts and mosaics.
 
-The creator of the namespace can edit the link between a namespace and an asset. The alias relation for a given transaction can be retrieved later from the block's :doc:`receipts <receipt>`.
+An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes long addresses rememberable and mosaics recognizable.
+
+The creator of the namespace starts linking the namespace to an account or mosaic. This link is editable at a later time, unlinking the previously set alias.
+
+The block receipts :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
 Restrictions:
 
-- An account can only associate a name with one account or mosaic, but those can have many aliases linked.
-- An account can assign a name to any account that permits receiving :doc:`AddressLinkTransactions <account-filter>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
-
+- An account can only associate a namespace with one account or mosaic, but those can have many aliases linked.
+- An account can assign a namespace to any account that permits receiving :doc:`AddressLinkTransactions <account-filter>`.
+- An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
 
 ****
 Cost
