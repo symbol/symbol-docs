@@ -35,9 +35,9 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
     --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     **Account filters**;;
-    0x4150; :ref:`Account Properties Address <account-properties-address-transaction>`; Allow or block incoming transactions for a given a set of addresses.
-    0x4250; :ref:`Account Properties Mosaic <account-properties-mosaic-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`Account Properties Entity Type <account-properties-entity-type-transaction>`; Allow or block outgoing transactions by transaction type.
+    0x4150; :ref:`Account Properties Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
+    0x4250; :ref:`Account Properties Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`Account Properties Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
     **Cross-chain swaps**;;
     0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
     0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.

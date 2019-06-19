@@ -1,15 +1,15 @@
 :orphan:
 
 .. post:: 07 May, 2019
-    :category: Account Filter
+    :category: Account Restrictions
     :excerpt: 1
     :nocomments:
 
-############################################
-Preventing spam attacks with account filters
-############################################
+#################################################
+Preventing spam attacks with account restrictions
+#################################################
 
-Learn how to add and remove account filters.
+Learn how to add and remove account restrictions.
 
 **********
 Background
@@ -21,13 +21,13 @@ When the quality verification process concludes, an operator sends a :doc:`quali
 
 The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
-.. figure:: ../../resources/images/examples/account-properties-spam.png
+.. figure:: ../../resources/images/examples/account-restrictions-spam.png
     :align: center
     :width: 450px
 
     Blocking spam attacks
 
-Thus, you opt to configure the product :doc:`account filters <../../concepts/account-filter>` to only receive transactions that follow a set of conditions.
+Thus, you opt to configure the product :doc:`account restrictions <../../concepts/account-restrictions>` to only receive transactions that follow a set of conditions.
 
 *************
 Prerequisites
@@ -79,26 +79,26 @@ Blocking transactions by address
 
 An account can decide to receive transactions only from an allowed list of :doc:`addresses <../../concepts/account>`. Similarly, an account can specify a blocked list of addresses to block transactions from.
 
-.. note:: Allow and block filters are mutually exclusive per filter type. In other words, an account can only be configured  to have either an allowed or blocked list per type of filter.
+.. note:: Allow and block restrictions are mutually exclusive per restriction type. In other words, an account can only be configured  to have either an allowed or blocked list per type of restriction.
 
-By default, when there is no filter set, all the accounts in the network can announce transactions to the stated account.
+By default, when there is no restriction set, all the accounts in the network can announce transactions to the stated account.
 
 Returning to our previous example, let us imagine that you want to configure the product account to only accept receiving transactions  that come from the company's account. You might take the following steps to do so:
 
-1. Define the account filter modification. Add to the company’s address (SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP) to the "allowed list".
+1. Define the account restriction modification. Add to the company’s address (SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP) to the "allowed list".
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressAllowList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionAllowList.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountPropertyTransaction``, with propertyType "AllowAddress".  Add to the array the modification created in the previous step.
+2. Create an ``AccountRestrictionTransaction``, with restrictionType "AllowAddress".  Add to the array the modification created in the previous step.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressAllowList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionAllowList.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -107,7 +107,7 @@ Returning to our previous example, let us imagine that you want to configure the
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressAllowList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionAllowList.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
@@ -129,20 +129,20 @@ In this case, it might be useful if the product could only receive seals and not
 
 Thus, you could  narrow the type of transactions that the product can receive from the company's account through the use of negation. Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain "company.share". This is how it can be done:
 
-1. Define the account filter modification. Add the mosaic id you want to block to the "blocked list".
+1. Define the account restriction modification. Add the mosaic id you want to block to the "blocked list".
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByMosaicBlockList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountMosaicRestrictionBlockList.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountPropertyTransaction``, with propertyType "BlockMosaic".  Add to the array the modification created in the previous step.
+2. Create an ``AccountRestrictionTransaction``, with restrictionType "BlockMosaic".  Add to the array the modification created in the previous step.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByMosaicBlockList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountMosaicRestrictionBlockList.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -151,32 +151,32 @@ Thus, you could  narrow the type of transactions that the product can receive fr
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByMosaicBlockList.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountMosaicRestrictionBlockList.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
 If the process was successful, the product account can now only receive transactions from the company's account that does not include any "company.share" mosaic.
 
-Removing a filter
-=================
+Removing a restriction
+======================
 
-After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product. The account filters can be removed as easily as they were set up:
+After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product. The account restrictions can be removed as easily as they were set up:
 
-1. Define the account filter modification. Remove from the "allowed list" the company's address.
+1. Define the account restriction modification. Remove from the "allowed list" the company's address.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressRemoveFilter.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionRemoveRestriction.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountPropertyTransaction``, setting the type "AllowAddress". Add as well the modification created.
+2. Create an ``AccountRestrictionTransaction``, setting the type "AllowAddress". Add as well the modification created.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressRemoveFilter.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionRemoveRestriction.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -185,7 +185,7 @@ After the company sells the product to the final client, they want to remove the
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/account/FilteringByAddressRemoveFilter.ts
+    .. viewsource:: ../../resources/examples/typescript/account/AccountAddressRestrictionRemoveRestriction.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

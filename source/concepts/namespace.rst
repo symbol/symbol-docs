@@ -29,7 +29,7 @@ The creator of the namespace can edit the link between a namespace and an asset.
 Restrictions:
 
 - An account can only associate a name with one account or mosaic, but those can have many aliases linked.
-- An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-filter>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
+- An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-restrictions>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
 
 ****
 Cost

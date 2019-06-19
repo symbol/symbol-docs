@@ -14,12 +14,12 @@
     :caption: Built-in Features
 
     concepts/account
-    concepts/account-filter
-    concepts/multisig-account
-    concepts/namespace
     concepts/mosaic
+    concepts/namespace
     concepts/transfer-transaction
     concepts/aggregate-transaction
+    concepts/account-restrictions
+    concepts/multisig-account
     concepts/cross-chain-swaps
 
 .. toctree::
