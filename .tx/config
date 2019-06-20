@@ -319,9 +319,9 @@ source_file = build/gettext/guides/namespace/registering-a-subnamespace.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--namespace--extending-the-namespace-registration-period]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/extending-the-namespace-registration-period.po
-source_file = build/gettext/guides/namespace/extending-the-namespace-registration-period.pot
+[nem2docs.guides--namespace--extending-a-namespace-registration-period]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/extending-a-namespace-registration-period.po
+source_file = build/gettext/guides/namespace/extending-a-namespace-registration-period.pot
 source_lang = en
 type = PO
 
