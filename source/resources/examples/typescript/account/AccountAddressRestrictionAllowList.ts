@@ -20,8 +20,8 @@ import {
     Account,
     AccountPropertyModification,
     AccountPropertyTransaction,
+    Address,
     Deadline,
-    MosaicId,
     NetworkType,
     PropertyModificationType,
     PropertyType,
@@ -29,23 +29,23 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-const companyShareMosaicId = new MosaicId('2b890153b7a18ff2'); // Replace with the mosaic id representing the company share.
-const mosaicFilter = AccountPropertyModification.createForMosaic(PropertyModificationType.Add, companyShareMosaicId);
+const companyAddress = Address.createFromRawAddress('SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP');
+const addressRestriction = AccountPropertyModification.createForAddress(PropertyModificationType.Add, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
 const transaction = AccountPropertyTransaction
-    .createMosaicPropertyModificationTransaction(
+    .createAddressPropertyModificationTransaction(
         Deadline.create(),
-        PropertyType.BlockMosaic,
-        [mosaicFilter],
+        PropertyType.AllowAddress,
+        [addressRestriction],
         NetworkType.MIJIN_TEST);
 /* end block 02 */
 
 /* start block 03 */
 const productPrivateKey = process.env.PRIVATE_KEY as string;
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST)
+const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST);
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');

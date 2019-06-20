@@ -49,12 +49,6 @@ source_file = build/gettext/sphinx.pot
 source_lang = en
 type = PO
 
-[nem2docs.concepts--account-filter]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-filter.po
-source_file = build/gettext/concepts/account-filter.pot
-source_lang = en
-type = PO
-
 [nem2docs.concepts--account]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account.po
 source_file = build/gettext/concepts/account.pot
@@ -130,6 +124,12 @@ type = PO
 [nem2docs.concepts--transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transaction.po
 source_file = build/gettext/concepts/transaction.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--account-restrictions]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restrictions.po
+source_file = build/gettext/concepts/account-restrictions.pot
 source_lang = en
 type = PO
 
@@ -265,9 +265,9 @@ source_file = build/gettext/guides/account/modifying-a-multisig-account.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--account--preventing-spam-attacks-with-account-filters]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/preventing-spam-attacks-with-account-filters.po
-source_file = build/gettext/guides/account/preventing-spam-attacks-with-account-filters.pot
+[nem2docs.guides--account--preventing-spam-attacks-with-account-restrictions]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/preventing-spam-attacks-with-account-restrictions.po
+source_file = build/gettext/guides/account/preventing-spam-attacks-with-account-restrictions.pot
 source_lang = en
 type = PO
 
