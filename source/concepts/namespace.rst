@@ -26,7 +26,7 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts, and mosaics.
+:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics.
 
 An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes long addresses rememberable and mosaics recognizable.
 
@@ -59,7 +59,7 @@ The maximum namespace duration is ``365`` days. By default, the network is confi
 
 During the renting period, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
 
-The network can define a **grace period** that enables the namespace owner to renew the namespace for a certain amount of additional blocks past the expiration date before it becomes publicly available for registration.
+The network `can define <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ a **grace period** that enables the namespace owner to renew the namespace for a certain amount of additional blocks past the expiration date before it becomes publicly available for registration.
 
 When the grace period ends, the existing aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
 
