@@ -18,9 +18,9 @@ Prerequisites
 - Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
 - Have registered a supply mutable mosaic
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 If you have followed the previous guide, right now you should own a ``supply mutable`` :doc:`mosaic<../../concepts/mosaic>`.
 

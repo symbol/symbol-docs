@@ -37,9 +37,9 @@ Prerequisites
 - A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
 - A cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1-of-2 signatures required
 ==========================

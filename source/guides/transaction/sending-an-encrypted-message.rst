@@ -29,9 +29,9 @@ Alice knows that sending a transfer transaction with a plain message through the
 
 Thus, Alice sends an encrypted message that is only readable by herself and those with access to the academic certificate.
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Create an account for Alice, and another for the certificate  using ``nem2-cli``.
 

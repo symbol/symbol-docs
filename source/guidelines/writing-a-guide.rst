@@ -91,9 +91,9 @@ Writing the guide
     - B
     - C
 
-    ************************
-    Let’s get into some code
-    ************************
+    **********************
+    Getting into some code
+    **********************
 
     Present the code and step-by-step explanation.
 

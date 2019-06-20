@@ -40,9 +40,9 @@ NEM is a **flexible blockchain** technology. Instead of uploading all the applic
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Creating an account for each participant
 ========================================
@@ -71,7 +71,7 @@ Have you loaded an account with test ``cat.currency``? If it is not the case, go
 
    0dc67fbe1cad29e3: 1000000
 
-2. This account owns ``1.000.000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>`.
+2. This account owns ``1,000,000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>`.
 
 3. Create a second account to identify the ticket buyer.
 

@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Call ``getNamespace`` function, passing the namespace identifier you want to check as a parameter.
 

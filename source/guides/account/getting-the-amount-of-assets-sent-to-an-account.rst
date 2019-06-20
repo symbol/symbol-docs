@@ -19,9 +19,9 @@ Prerequisites
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 - Have :doc:`sent mosaics <../transaction/sending-a-transfer-transaction>` to another account.
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 In this example, we are going to check how many assets of a certain type have we sent to an account.
 

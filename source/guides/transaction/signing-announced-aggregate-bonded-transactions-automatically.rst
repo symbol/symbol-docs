@@ -19,9 +19,9 @@ Prerequisites
 - Have received some aggregate bonded transaction
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Create a function to cosign any aggregate bonded transaction.
 

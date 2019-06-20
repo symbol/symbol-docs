@@ -145,7 +145,7 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0 (Op_Sha3_256); The proof is hashed using Sha-256.
+    0 (Op_Sha3_256); The proof is hashed using SHA3-256.
     1 (Op_Keccak_256); The proof is hashed using Keccak (ETH compatibility).
-    2 (Op_Hash_160); The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
-    3 (Op_Hash_256); The proof is hashed twice with Sha-256 (bitcoin's OP_HASH256).
+    2 (Op_Hash_160); The proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    3 (Op_Hash_256); The proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).

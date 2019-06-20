@@ -24,9 +24,9 @@ Prerequisites
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Define two transactions to create a mosaic:
 

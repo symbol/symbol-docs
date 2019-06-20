@@ -36,9 +36,9 @@ Prerequisites
 - Finish :doc:`sending a transfer transaction guide <../transaction/sending-a-transfer-transaction>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Before starting solving the use case, you will need to set up two accounts with :doc:`NEM2-CLI <../../cli>`.
 

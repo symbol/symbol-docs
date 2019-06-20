@@ -54,9 +54,9 @@ Prerequisites
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`sending payouts with aggregate complete transactions <sending-payouts-with-aggregate-complete-transaction>`
 
-*************************
-Let's get into some code
-*************************
+**********************
+Getting into some code
+**********************
 
 .. figure:: ../../resources/images/examples/aggregate-escrow-1.png
     :align: center
