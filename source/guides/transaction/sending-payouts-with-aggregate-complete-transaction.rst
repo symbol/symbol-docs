@@ -31,9 +31,9 @@ Prerequisites
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let's get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 1. Create two :ref:`transfer transaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`aggregate transaction <aggregate-transaction>`.
 

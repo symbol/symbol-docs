@@ -21,9 +21,9 @@ Prerequisites
 - Have one multisignature account.
 - Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 .. _guide-modify-a-multisig-account-min-approval:
 

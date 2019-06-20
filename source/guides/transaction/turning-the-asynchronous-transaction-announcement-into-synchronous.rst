@@ -39,9 +39,9 @@ Prerequisites
 - Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Running Catapult Service in local
 =================================

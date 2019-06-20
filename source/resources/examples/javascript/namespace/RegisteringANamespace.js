@@ -25,7 +25,7 @@ const Account = nem2Sdk.Account,
     UInt64 = nem2Sdk.UInt64;
 
 /* start block 01 */
-const namespaceName = "foo"; //Replace with an unique namespace name
+const namespaceName = "foo";
 
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
     Deadline.create(),

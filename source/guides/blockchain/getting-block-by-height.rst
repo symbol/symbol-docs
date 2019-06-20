@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 What happened in the genesis block? Run the following code to get the first created block header.
 

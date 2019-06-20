@@ -19,9 +19,9 @@ Prerequisites
 - Have registered one :doc:`mosaic <../../concepts/mosaic>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 An account can link a registered :doc:`name <../../concepts/namespace>` (namespace or subnamespace) with a :doc:`mosaic <../../concepts/mosaic>`.
 

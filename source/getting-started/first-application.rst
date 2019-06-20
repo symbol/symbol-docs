@@ -40,9 +40,9 @@ NEM is a **flexible blockchain** technology. Instead of uploading all the applic
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Creating an account for each participant
 ========================================

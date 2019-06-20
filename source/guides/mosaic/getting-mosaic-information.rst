@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 Call ``getMosaic`` function, passing the mosaicId you want to check as a parameter.
 

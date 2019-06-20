@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 An account is a key pair (private and public key) associated with a mutable state stored in the NEM blockchain.
 

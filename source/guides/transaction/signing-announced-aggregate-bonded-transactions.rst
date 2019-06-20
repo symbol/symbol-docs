@@ -19,9 +19,9 @@ Prerequisites
 - Have received an aggregate bonded transaction
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-************************
-Let’s get into some code
-************************
+**********************
+Getting into some code
+**********************
 
 You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
