@@ -55,11 +55,11 @@ At the time of the namespace **registration**, you must set the number of confir
 The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
 
 
-    duration (blocks) ≈ 86400 (seconds in a day) / blockGenerationTargetTime (seconds)
+    duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds
 
 During the renting period, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
 
-The network `can define <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ a **grace period** that enables the namespace owner to renew the namespace for a certain amount of additional blocks past the expiration date before it becomes publicly available for registration.
+The network `can define <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
 
 When the grace period ends, the existing aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
 

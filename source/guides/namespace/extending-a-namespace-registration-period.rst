@@ -46,7 +46,7 @@ Getting into some code
     startHeight:    52000
     endHeight:      53000
 
-The information shows that the namespace``foo`` will become inactive at height ``5300``. The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
+The information shows that the namespace ``foo`` will become inactive at height ``5300``. The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
 
 2. Check the current blockchain height.
 
@@ -76,7 +76,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :language: bash
         :start-after: #!/bin/sh
 
-.. note:: Use the following formula to convert approximately days to blocks ``duration (blocks) ≈ 86400 (seconds in a day) / blockGenerationTargetTime (seconds)``. The blockGenerationTargetTime is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_.
+.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_.
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 
