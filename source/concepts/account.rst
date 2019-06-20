@@ -4,8 +4,6 @@ Account
 
 An account is a **key pair** (private and public key) associated with a mutable state stored on the NEM blockchain. In other words, you have a **deposit box**, which only you can modify with your private key.
 
-.. note:: The private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
-
 Think of an account as **container for assets**. It can be used to hold XEM or other mosaics, whether they are tokens or specialized assets.
 
 Moreover, NEM accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
@@ -18,9 +16,9 @@ Accounts have the following properties:
 
 **Private key**
 
-A :ref:`private key <keypair>` is a key to an account. Anyone having the private key to an account can initiate any account related action.
+A :ref:`private key <keypair>` is a key to an account. Anyone with access to the private key, ultimately has control over the account.
 
-.. note:: The private key must be kept secret at all costs. Make sure your private key is backed up safely somewhere offline.
+.. note:: The private key has to be kept secret at all times.  Make sure your private key is backed up safely somewhere offline.
 
 **Public key**
 
