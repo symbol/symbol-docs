@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-09 08:17+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-02-22 09:14+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -115,7 +115,7 @@ msgid ""
 msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:44
-msgid "Let’s get into some code"
+msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/transaction/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:47

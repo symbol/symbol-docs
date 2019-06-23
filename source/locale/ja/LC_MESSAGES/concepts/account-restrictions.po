@@ -1,0 +1,495 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.17.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
+"PO-Revision-Date: 2019-06-20 21:56+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/account-restrictions.rst:3
+msgid "Account Restrictions"
+msgstr "アカウントの制限"
+
+#: ../../source/concepts/account-restrictions.rst:5
+msgid ""
+":doc:`Accounts <account>` may configure a set of smart rules to block "
+"announcing or receiving transactions given a series of restrictions."
+msgstr ""
+":doc:`アカウント <account>`  "
+"はスマートなルールの集合を構成し、一連の制限の下、アナウンスまたはトランザクションを受信をブロックすることができます。"
+
+#: ../../source/concepts/account-restrictions.rst:9
+msgid "Address restriction"
+msgstr "アドレス制限"
+
+#: ../../source/concepts/account-restrictions.rst:11
+msgid ""
+"An account can decide to receive transactions only from an allowed list of "
+":doc:`addresses <account>`. Similarly, an account can specify a list of "
+"addresses that don't want to receive transactions from."
+msgstr ""
+"アカウントは許可リストの :doc:`アドレス <account>` "
+"からのみトランザクションを受信できるようにすることができます。同様にアカウントはトランザクションをブロックしたいアドレスのブロックリストを指定することもできます。"
+
+#: ../../source/concepts/account-restrictions.rst:17
+msgid "Address restriction diagram"
+msgstr "アドレス制限ダイアグラム"
+
+#: ../../source/concepts/account-restrictions.rst:19
+msgid ""
+"Allow and block restrictions are mutually exclusive. In other words, an "
+"account can only configure a block or an allow list per type of restriction."
+msgstr "許可とブロックの制限は相互に排他的です。つまり、アカウントは制限タイプごとにブロックまたは許可リストを構成することしかできません。"
+
+#: ../../source/concepts/account-restrictions.rst:21
+msgid ""
+"By default, when there is no restriction set, all the accounts in the "
+"network can announce transactions to the stated account."
+msgstr "デフォルトでは、制限セットがない場合、ネットワーク内のすべてのアカウントが指定されたアカウントにトランザクションをアナウンスできます。"
+
+#: ../../source/concepts/account-restrictions.rst:25
+msgid "Mosaic restriction"
+msgstr "モザイク制限"
+
+#: ../../source/concepts/account-restrictions.rst:27
+msgid ""
+"An account can configure a restriction to permit incoming transactions only "
+"if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, "
+"the account can refuse to accept transactions containing a mosaic listed as "
+"blocked."
+msgstr ""
+"アカウントは許可した :doc:`モザイク <mosaic>` "
+"が添付されている場合にだけ、受信トランザクションを許可する制限を構成できます。一方で、アカウントはブロックリストにあるモザイクを含んでいるトランザクションを拒否できます。"
+
+#: ../../source/concepts/account-restrictions.rst:31
+msgid "Operation restriction"
+msgstr "操作制限"
+
+#: ../../source/concepts/account-restrictions.rst:33
+msgid ""
+"An account can allow/block announcing outgoing transactions with a "
+":ref:`determined operation type <transaction-types>`. By doing so, it "
+"increases its security, preventing the announcement by mistake of undesired "
+"transactions."
+msgstr ""
+"アカウントは送信トランザクションのアナウンスを :ref:`規則操作タイプ <transaction-types>` "
+"によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
+
+#: ../../source/concepts/account-restrictions.rst:37
+msgid "Examples"
+msgstr "例"
+
+#: ../../source/concepts/account-restrictions.rst:40
+#: ../../source/concepts/account-restrictions.rst:52
+msgid "Blocking spam transactions"
+msgstr "スパムトランザクションのブロック"
+
+#: ../../source/concepts/account-restrictions.rst:42
+msgid ""
+"A company is using the public chain to certify the quality of their "
+"products."
+msgstr "企業は自社製品の品質を証明するためにパブリックチェーンを使用しています。"
+
+#: ../../source/concepts/account-restrictions.rst:44
+msgid ""
+"When the quality verification process concludes, an operator sends a "
+":doc:`quality seal<mosaic>` to the product account."
+msgstr "品質確認プロセスが終了すると、オペレータは  :doc:`品質シール <mosaic>`  を製品アカウントに送信します。"
+
+#: ../../source/concepts/account-restrictions.rst:46
+msgid ""
+"The final customers can review the product mosaics scanning a QR code. For "
+"that reason, the company only wants to show related transactions, avoiding "
+"that others spam their products with non-related information."
+msgstr ""
+"最終的な顧客はQRコードを読み取って、製品モザイクを検証します。そのため、会社としては関連するトランザクションだけをを見せたく、それ以外のスパムなどの製品に関係ない情報を避けたいのです。"
+
+#: ../../source/concepts/account-restrictions.rst:54
+msgid ""
+"The company opts to configure their product accounts restrictions, enabling "
+"only to receive transactions containing ``company.quality.seal`` mosaics."
+msgstr "会社は ``company.quality.seal`` モザイクだけを受け入れる制限を製品アカウントに構成することにしました。"
+
+#: ../../source/concepts/account-restrictions.rst:57
+msgid "Enhancing the account security"
+msgstr "アカウントのセキュリティ向上"
+
+#: ../../source/concepts/account-restrictions.rst:59
+msgid ""
+"Lately, Alice is only using her main account to cosign aggregate "
+"transactions where she is a cosignatory for the :doc:`multisig <multisig-"
+"account>` account."
+msgstr ""
+"最近 Alice は、メインアカウントを彼女が連署者である :doc:`マルチシグ <multisig-account>` "
+"アカウントのアグリゲートトランザクションに署名するためだけに使用しています。"
+
+#: ../../source/concepts/account-restrictions.rst:61
+msgid ""
+"As a temporary measure, Alice opts to disable announcing transfer "
+"transactions from her main account, double checking that any of the funds "
+"she owns will be transferred."
+msgstr ""
+"一時的な処置として、アリスはメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
+
+#: ../../source/concepts/account-restrictions.rst:65
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/concepts/account-restrictions.rst:77
+msgid "Schemas"
+msgstr "スキーマ"
+
+#: ../../source/concepts/account-restrictions.rst:79
+msgid ""
+"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ . Public network "
+"configuration may differ."
+msgstr ""
+"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
+"server/blob/master/resources/config-network.properties>`_ "
+"です。公開ネットワークとは異なる可能性があります。"
+
+#: ../../source/concepts/account-restrictions.rst:84
+msgid "AccountAddressRestrictionTransaction"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:86
+msgid ""
+"Configure restrictions to prevent receiving transactions from undesired "
+"addresses."
+msgstr "望まないアドレスからトランザクションの受け取りを防ぐ制限の設定。"
+
+#: ../../source/concepts/account-restrictions.rst:88
+#: ../../source/concepts/account-restrictions.rst:111
+#: ../../source/concepts/account-restrictions.rst:134
+msgid "**Version**: 0x01"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:90
+msgid "**Entity type**: 0x4150"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:92
+#: ../../source/concepts/account-restrictions.rst:115
+#: ../../source/concepts/account-restrictions.rst:138
+#: ../../source/concepts/account-restrictions.rst:155
+#: ../../source/concepts/account-restrictions.rst:170
+#: ../../source/concepts/account-restrictions.rst:185
+msgid "**Inlines**:"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:94
+#: ../../source/concepts/account-restrictions.rst:117
+#: ../../source/concepts/account-restrictions.rst:140
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "restrictionType"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ":ref:`AccountRestrictionType <account-restriction-type>`"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Indicates the account restriction type."
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "modificationsCount"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The number of modifications in the transaction. A maximum of ``255`` "
+"modifications per transaction is allowed."
+msgstr "トランザクション内の変更数。 トランザクションあたり最大 ``255`` 個の変更が許可されています。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "modifications"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"array(:ref:`AccountAddressRestrictionModification <account-address-"
+"restriction-modification>`, modificationsCount)"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "The array of modifications."
+msgstr "変更の配列"
+
+#: ../../source/concepts/account-restrictions.rst:107
+msgid "AccountMosaicRestrictionTransaction"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:109
+msgid ""
+"Configure restrictions to prevent receiving transactions containing a "
+"specific mosaic."
+msgstr "特定のモザイクを含むトランザクションの受け取りを防ぐ制限の設定。"
+
+#: ../../source/concepts/account-restrictions.rst:113
+msgid "**Entity type**: 0x4250"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"array(:ref:`AccountMosaicRestrictionModification <account-mosaic-"
+"restriction-modification>`, modificationsCount)"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:130
+msgid "AccountOperationRestrictionTransaction"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:132
+msgid ""
+"Configure restrictions to prevent announcing transactions by :ref:`type "
+"<transaction-types>`."
+msgstr ":ref:`タイプ <transaction-types>` によるトランザクションのアナウンスを防止する制限の設定。"
+
+#: ../../source/concepts/account-restrictions.rst:136
+msgid "**Entity type**: 0x4350"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"array(:ref:`AccountOperationRestrictionModification <account-operation-"
+"restriction-modification>`, modificationsCount)"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:153
+msgid "AccountAddressRestrictionModification"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:157
+#: ../../source/concepts/account-restrictions.rst:172
+#: ../../source/concepts/account-restrictions.rst:187
+msgid ""
+":ref:`AccountRestrictionModification <account-restriction-modification>`"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "value"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "25 bytes (binary)"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "The address to allow/block."
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:168
+msgid "AccountMosaicRestrictionModification"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "uint64"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "The mosaic id to allow/block."
+msgstr "許可/ブロックするモザイク"
+
+#: ../../source/concepts/account-restrictions.rst:183
+msgid "AccountOperationRestrictionModification"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "uint16"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "The :ref:`entity type <transaction-types>` to allow/block."
+msgstr "許可/ブロックする :ref:`エンティティタイプ<transaction-types>`"
+
+#: ../../source/concepts/account-restrictions.rst:199
+msgid "AccountRestrictionModification"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "modificationType"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+":ref:`AccountRestrictionModificationType <account-restriction-modification-"
+"type>`"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "The modification type."
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:210
+msgid "AccountRestrictionType"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:212
+#: ../../source/concepts/account-restrictions.rst:231
+msgid "Enumeration: uint8"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x01"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type only allows receiving transactions from an "
+"address."
+msgstr "あるアドレスからのトランザクションの受信のみを許可するアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x02"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type only allows receiving transactions containing a"
+" mosaic id."
+msgstr "あるモザイクIDを含むトランザクションの受信のみを許可するアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x04"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type only allows sending transactions with a given "
+"transaction type."
+msgstr "特定のトランザクションタイプのトランザクションのみ送信可能にするアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x05"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Account restriction sentinel."
+msgstr "アカウント制限センチネル"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x81"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type blocks receiving transactions from an address."
+msgstr "あるアドレスからのトランザクションの受信をブロックするアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x82"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type blocks receiving transactions containing a "
+"mosaic id."
+msgstr "あるモザイクIDを含むトランザクションの受信をブロックするアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x84"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid ""
+"The account restriction type blocks sending transactions with a given "
+"transaction type."
+msgstr "特定のトランザクションタイプのトランザクションの送信をブロックするアカウント制限タイプです。"
+
+#: ../../source/concepts/account-restrictions.rst:229
+msgid "AccountRestrictionModificationType"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "0x00"
+msgstr ""
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Add account restriction value."
+msgstr "アカウント制限値の追加"
+
+#: ../../source/concepts/account-restrictions.rst:1
+msgid "Remove account restriction value."
+msgstr "アカウント制限値の削除"
