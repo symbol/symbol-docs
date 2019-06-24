@@ -127,7 +127,7 @@ RegisterNamespaceTransaction
 
 Announce a register namespace transaction to register and re-rent a namespace.
 
-**Version**: 0x02
+**Version**: 0x01
 
 **Entity type**: 0x414E
 

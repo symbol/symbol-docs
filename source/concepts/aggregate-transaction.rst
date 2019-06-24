@@ -112,7 +112,7 @@ AggregateTransaction
 
 Announce an aggregate transaction to combine multiple transactions together.
 
-**Version**: 0x02
+**Version**: 0x01
 
 **Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
 
