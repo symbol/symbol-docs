@@ -20,7 +20,7 @@ A :ref:`transaction statement <transaction-statement>` is a collection of receip
 * **Inflation Receipt**: Native currency mosaics were created due to :doc:`inflation <inflation>`.
 
 ********************
-Resolution Statement
+Resolution statement
 ********************
 
 When a transaction includes an :doc:`alias <namespace>`, a so called :ref:`resolution statement <resolution-statement>` reflects the resolved value for that block:
