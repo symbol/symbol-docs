@@ -95,7 +95,7 @@ Furthermore, for the duration that the account is used as a delegated account, i
 * initiating any transactions.
 * involvement with any type of transactions.
 
-**Version**: 0x02
+**Version**: 0x01
 
 **Entity type**: 0x414C
 

@@ -93,7 +93,7 @@ MosaicDefinitionTransaction
 
 Announce a mosaic definition transaction to create a new mosaic.
 
-**Version**: 0x02
+**Version**: 0x01
 
 **Entity type**: 0x414D
 
@@ -119,7 +119,7 @@ MosaicSupplyChangeTransaction
 
 Announce a supply change transaction to increase or decrease a mosaic's supply.
 
-**Version**: 0x02
+**Version**: 0x01
 
 **Entity type**: 0x424D
 

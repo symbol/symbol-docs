@@ -141,7 +141,7 @@ a) Transform an account to multisig account.
 b) Change the configurable properties of a multisig account.
 c) Add or delete cosignatories from a multisig account.
 
-**Version**: 0x03
+**Version**: 0x01
 
 **Entity type**: 0x4155
 

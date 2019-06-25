@@ -70,7 +70,7 @@ TransferTransaction
 
 Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages between two :doc:`accounts <account>`.
 
-**Version**: 0x03
+**Version**: 0x01
 
 **Entity type**: 0x4154
 
