@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-09 08:17+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-06-05 14:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -261,6 +261,14 @@ msgid "Basic formatting (first letter capitalized)."
 msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1
+msgid "Writing numbers"
+msgstr ""
+
+#: ../../source/guidelines/style-guide.rst:1
+msgid "1,000.5. Use the period (full stop) as the decimal separator."
+msgstr ""
+
+#: ../../source/guidelines/style-guide.rst:1
 msgid "Referencing variable values, functions or file names."
 msgstr ""
 
@@ -297,11 +305,11 @@ msgid ""
 "Break information and actions into bulleted or numbered lists when possible."
 msgstr ""
 
-#: ../../source/guidelines/style-guide.rst:109
+#: ../../source/guidelines/style-guide.rst:110
 msgid "Code snippets"
 msgstr ""
 
-#: ../../source/guidelines/style-guide.rst:111
+#: ../../source/guidelines/style-guide.rst:112
 msgid "Common practices to include code snippets in a document."
 msgstr ""
 
@@ -333,17 +341,17 @@ msgid ""
 "divide code blocks. :doc:`Example <writing-a-guide>`"
 msgstr ""
 
-#: ../../source/guidelines/style-guide.rst:121
+#: ../../source/guidelines/style-guide.rst:122
 msgid ""
 "If you are writing a guide, you might find helpful this :doc:`guideline "
 "<writing-a-guide>`."
 msgstr ""
 
-#: ../../source/guidelines/style-guide.rst:125
+#: ../../source/guidelines/style-guide.rst:126
 msgid "Glossary"
 msgstr "用語集"
 
-#: ../../source/guidelines/style-guide.rst:127
+#: ../../source/guidelines/style-guide.rst:128
 msgid "List of terms that are prone to be written in different ways."
 msgstr "頻繁に表記ゆれの傾向がある用語のリスト。"
 
@@ -412,11 +420,11 @@ msgid "rxjs"
 msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1
-msgid "Sha-256"
+msgid "SHA-256"
 msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1
-msgid "SHA256, SHA-256"
+msgid "SHA256, Sha-256"
 msgstr ""
 
 #: ../../source/guidelines/style-guide.rst:1

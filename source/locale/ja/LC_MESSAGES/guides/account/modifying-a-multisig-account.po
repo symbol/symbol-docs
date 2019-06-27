@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -60,7 +60,7 @@ msgid "Know how to :doc:`create accounts <creating-and-opening-an-account>`"
 msgstr ":doc:`アカウントの作成 <creating-and-opening-an-account>` 方法を理解している"
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:26
-msgid "Let’s get into some code"
+msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/account/modifying-a-multisig-account.rst:31

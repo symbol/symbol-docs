@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -416,8 +416,8 @@ msgid "0 (Op_Sha3_256)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof is hashed using Sha-256."
-msgstr "Sha-256 によってハッシュ化された proof"
+msgid "The proof is hashed using SHA3-256."
+msgstr "SHA3-256 によってハッシュ化された proof"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "1 (Op_Keccak_256)"
@@ -433,15 +433,15 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ""
-"The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 "
+"The proof is hashed twice: first with SHA-256 and then with RIPEMD-160 "
 "(bitcoin's OP_HASH160)."
 msgstr ""
-"最初に Sha-256 を、その後 RIPEMD-160 によって2回のハッシュ化された proof (bitcoin's OP_HASH160)"
+"最初に SHA-256 を、その後 RIPEMD-160 によって2回のハッシュ化された proof (bitcoin's OP_HASH160)"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "3 (Op_Hash_256)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof is hashed twice with Sha-256 (bitcoin's OP_HASH256)."
-msgstr "Sha-256 によって2回のハッシュ化されたproof (bitcoin's OP_HASH256)"
+msgid "The proof is hashed twice with SHA-256 (bitcoin's OP_HASH256)."
+msgstr "SHA-256 によって2回のハッシュ化されたproof (bitcoin's OP_HASH256)"

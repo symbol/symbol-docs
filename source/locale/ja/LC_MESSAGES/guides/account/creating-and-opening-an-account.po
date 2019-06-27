@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -40,14 +40,14 @@ msgid ""
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:22
-msgid "Let’s get into some code"
+msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:24
 msgid ""
 "An account is a key pair (private and public key) associated with a mutable "
 "state stored in the NEM blockchain."
-msgstr "アカウントとは、NEM ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。"
+msgstr "アカウントとは NEM ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:28
 msgid ""
@@ -113,7 +113,7 @@ msgstr "あなたの使用している SDK のプログラミング言語でク�
 msgid ""
 "A wallet enables you to store your account to sign transactions, encrypting "
 "your private key with a password."
-msgstr "ウォレットは、トランザクションへの署名をするため、パスワードで秘密鍵を暗号化して、アカウントを保存できるようにします。"
+msgstr "ウォレットはトランザクションに署名するためのアカウントを保管し、秘密鍵をパスワードで暗号化できます。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:68
 msgid ""

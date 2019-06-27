@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.6\n"
+"Project-Id-Version: nem2-docs 0.17.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:08+0100\n"
+"POT-Creation-Date: 2019-06-20 22:54+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -249,17 +249,17 @@ msgstr "出荷コンテナ内のセンサーが温度を5分ごとにレポー�
 msgid "Manufacturing and Supply Chains"
 msgstr "製造業とサプライチェーン"
 
-#: ../../source/concepts/multisig-account.rst:104
-#: ../../source/concepts/multisig-account.rst:114
+#: ../../source/concepts/multisig-account.rst:103
+#: ../../source/concepts/multisig-account.rst:113
 msgid "Fraud Detection"
 msgstr "不正検知"
 
-#: ../../source/concepts/multisig-account.rst:106
+#: ../../source/concepts/multisig-account.rst:105
 msgid ""
 "This example shows how a high-security account can be made easier to use."
 msgstr "この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。"
 
-#: ../../source/concepts/multisig-account.rst:108
+#: ../../source/concepts/multisig-account.rst:107
 msgid ""
 "Transactions are only approved from a hardware wallet OR your phone AND a "
 "fraud detection AI. MLMA allows a variety of security configurations at the "
@@ -268,15 +268,15 @@ msgstr ""
 "トランザクションはハードウェアウォレットまたは電話と不正検知 AI によってのみ承認されます。MLMA "
 "はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
 
-#: ../../source/concepts/multisig-account.rst:118
+#: ../../source/concepts/multisig-account.rst:117
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/multisig-account.rst:130
+#: ../../source/concepts/multisig-account.rst:129
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/multisig-account.rst:132
+#: ../../source/concepts/multisig-account.rst:131
 msgid ""
 "Configuration parameters are `editable <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ . Public network "
@@ -286,39 +286,39 @@ msgstr ""
 "server/blob/master/resources/config-network.properties>`_ "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/multisig-account.rst:137
+#: ../../source/concepts/multisig-account.rst:136
 msgid "ModifyMultisigTransaction"
 msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:139
+#: ../../source/concepts/multisig-account.rst:138
 msgid "Announce a modify multisig account transaction to:"
 msgstr "マルチシグアカウント変更トランザクションのアナウンス:"
 
-#: ../../source/concepts/multisig-account.rst:141
+#: ../../source/concepts/multisig-account.rst:140
 msgid "Transform an account to multisig account."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/concepts/multisig-account.rst:142
+#: ../../source/concepts/multisig-account.rst:141
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更"
 
-#: ../../source/concepts/multisig-account.rst:143
+#: ../../source/concepts/multisig-account.rst:142
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
-#: ../../source/concepts/multisig-account.rst:145
+#: ../../source/concepts/multisig-account.rst:144
 msgid "**Version**: 0x03"
 msgstr "**バージョン**: 0x03"
 
-#: ../../source/concepts/multisig-account.rst:147
+#: ../../source/concepts/multisig-account.rst:146
 msgid "**Entity type**: 0x4155"
 msgstr "**エンティティタイプ**: 0x4155"
 
-#: ../../source/concepts/multisig-account.rst:149
+#: ../../source/concepts/multisig-account.rst:148
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/multisig-account.rst:151
+#: ../../source/concepts/multisig-account.rst:150
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -395,7 +395,7 @@ msgstr ""
 msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
 msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
 
-#: ../../source/concepts/multisig-account.rst:165
+#: ../../source/concepts/multisig-account.rst:164
 msgid "CosignatoryModification"
 msgstr ""
 
@@ -423,11 +423,11 @@ msgstr ""
 msgid "The public key of the cosignatory."
 msgstr "連署者の公開鍵"
 
-#: ../../source/concepts/multisig-account.rst:177
+#: ../../source/concepts/multisig-account.rst:176
 msgid "CosignatoryModificationType"
 msgstr ""
 
-#: ../../source/concepts/multisig-account.rst:179
+#: ../../source/concepts/multisig-account.rst:178
 msgid "Enumeration: uint8"
 msgstr ""
 
