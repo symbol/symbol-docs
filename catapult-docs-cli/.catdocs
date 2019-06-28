@@ -76,7 +76,7 @@
 				"plugins/txes/multisig/src/config/MultisigConfiguration.h",
 				"plugins/txes/mosaic/src/config/MosaicConfiguration.h",
 				"plugins/txes/namespace/src/config/NamespaceConfiguration.h",
-				"plugins/txes/property/src/config/PropertyConfiguration.h",
+				"plugins/txes/restriction_account/src/config/AccountRestrictionConfiguration.h",
 				"plugins/txes/transfer/src/config/TransferConfiguration.h"
 			]
 		},
@@ -144,7 +144,7 @@
     	    "plugins/txes/mosaic/src/validators/Results.h",
             "plugins/txes/multisig/src/validators/Results.h",
             "plugins/txes/namespace/src/validators/Results.h",
-            "plugins/txes/property/src/validators/Results.h",
+            "plugins/txes/restriction_account/src/validators/Results.h",
             "plugins/txes/transfer/src/validators/Results.h",
             "src/catapult/chain/ChainResults.h",
             "src/catapult/consumers/ConsumerResults.h",

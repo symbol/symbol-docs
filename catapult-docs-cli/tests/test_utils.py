@@ -22,5 +22,6 @@ def test_clean_lines():
 
 
 def test_clean_entity():
-    assert clean_entity('DEFINE_LOCKHASH__RESULT') == 'LockHash'
+    assert clean_entity('DEFINE_HASH_LOCK_RESULT') == 'LockHash'
+    assert clean_entity('DEFINE_SECRET_LOCK_RESULT') == 'LockSecret'
     assert clean_entity('DEFINE_ACCOUNT_LINK_RESULT') == 'AccountLink'
