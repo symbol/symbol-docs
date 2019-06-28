@@ -34,6 +34,7 @@
     concepts/inflation
     concepts/receipt
     concepts/node
+    concepts/consensus-algorithm
 
 .. toctree::
     :maxdepth: 2

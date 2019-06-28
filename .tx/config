@@ -67,6 +67,12 @@ source_file = build/gettext/concepts/block.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--consensus-algorithm]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/consensus-algorithm.po
+source_file = build/gettext/concepts/consensus-algorithm.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--cross-chain-swaps]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cross-chain-swaps.po
 source_file = build/gettext/concepts/cross-chain-swaps.pot
