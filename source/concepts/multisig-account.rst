@@ -2,7 +2,7 @@
 Multisig Account
 ################
 
-Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
+Multisig :doc:`accounts <account>` require additional signatures to initiate actions/transfers.
 
 *************
 Cosignatories
@@ -10,7 +10,9 @@ Cosignatories
 
 A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. The cosignatories - other accounts - of the multisig will become the account managers.
 
-From that moment on,  the multisig account cannot announce transactions by itself. One of the cosignatory has to propose the transaction involving the multisig, wrapping it in an :doc:`aggregate transaction <aggregate-transaction>`. To record the transaction in the block, the other cosignatories will have to agree.
+From that moment on, the multisig account cannot announce transactions by itself. A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an :doc:`aggregate transaction <aggregate-transaction>`.
+
+To record the transaction in the block, the other cosignatories will have to agree.
 
 ****************************
 Minimum approval and removal
@@ -27,8 +29,6 @@ Similarly, cosignatories can :ref:`invite other accounts to take part in the mul
 ***********
 Constraints
 ***********
-
-Some important considerations to keep in mind:
 
 * Multisig accounts can have up to ``10`` cosignatories.
 

@@ -4,11 +4,13 @@ Account Restrictions
 
 :doc:`Accounts <account>` may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.
 
+The account owners - plural in case of multisig accounts - can edit the account restrictions at a later time announcing the specific :ref:`account restriction transaction <account-address-restriction-transaction>`.
+
 *******************
 Address restriction
 *******************
 
-An account can decide to receive transactions only from an allowed list of :doc:`addresses <account>`. Similarly, an account can specify a list of addresses that don't want to receive transactions from.
+An account can decide to only **receive** transactions from a list of allowed :doc:`addresses <account>`. Similarly, the account can define a list of blocked addresses.
 
 .. figure:: ../resources/images/diagrams/account-restrictions-address.png
     :align: center
@@ -18,19 +20,19 @@ An account can decide to receive transactions only from an allowed list of :doc:
 
 .. note:: Allow and block restrictions are mutually exclusive. In other words, an account can only configure a block or an allow list per type of restriction.
 
-By default, when there is no restriction set, all the accounts in the network can announce transactions to the stated account.
+By default, when there are no restrictions set, all the accounts in the network can announce transactions to the unrestricted account.
 
 ******************
 Mosaic restriction
 ******************
 
-An account can configure a restriction to permit incoming transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+An account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
 *********************
 Operation restriction
 *********************
 
-An account can allow/block announcing outgoing transactions with a :ref:`determined operation type <transaction-types>`. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
+An account can allow/block announcing **outgoing** transactions with a :ref:`determined operation type <transaction-types>`. By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
 
 ********
 Examples
@@ -39,7 +41,7 @@ Examples
 Blocking spam transactions
 ==========================
 
-A company is using the public chain to certify the quality of their products.
+A pharmaceutical company is using the public chain to certify the quality of their products.
 
 When the quality verification process concludes, an operator sends a :doc:`quality seal<mosaic>` to the product account.
 
@@ -51,14 +53,14 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
     Blocking spam transactions
 
-The company opts to configure their product accounts restrictions, enabling only to receive transactions containing ``company.quality.seal`` mosaics.
+The company opts to configure their product accounts restrictions, enabling only to receive transactions containing ``pharmaceutical.quality.seal`` mosaics.
 
 Enhancing the account security
 ==============================
 
 Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
 
-As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
+As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
 
 ******
 Guides
