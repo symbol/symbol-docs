@@ -10,19 +10,46 @@ Through its multi-tier architecture, it is possible to isolate the peer-to-peer 
 
 Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
 
+**********
+Node types
+**********
+
+Catapult-server provides increased flexibility for the node owners. The same software can be used to configure three different types of :doc:`nodes <concepts/node>`:
+
+* **Peer node**: The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
+
+* **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
+
+* **Dual node**: The dual node combines a peer and API nodes into a single server instance.
+
+********************
+Package organization
+********************
+
+**Repository**: |catapult-server|
+
+.. csv-table::
+   :header: "Folder name", "Description"
+   :delim: ;
+
+   /extensions; Modules that add features to the bare catapult-server. They range from extensions that are critical like consensus and networking to optional extensions like ZMQ messaging and other API conveniences.
+   /external; Implementations of the hashing algorithms used.
+   /plugins;  Modules that introduce new and different ways to alter the chain's state via transactions.
+   /resources; Node and network configurable properties.
+   /scripts; Utility scripts for developers.
+   /sdk; Reusable code used by tests and tools.
+   /seed; Nemesis blocks used in tests.
+   /src; Catapult's core engine.
+   /tests; Collection of tests.
+   /tools; Tools to deploy and monitor networks and nodes.
+
 ************
 Installation
 ************
 
-Catapult-server provides increased flexibility for the node owners. The same software can be used to configure two different types of :doc:`nodes <concepts/node>`:
+Test catapult-server software deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
 
-* **Peer node** (P2P Component): The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-
-* **API node** (API Component): The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated.
-
-You can test catapult-server software deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
-
-To build and run catapult-server only, follow the |instructions|.
+You can create a new catapult-server image following the building |instructions|.
 
 ******
 Guides
