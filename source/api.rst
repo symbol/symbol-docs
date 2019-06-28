@@ -2,7 +2,15 @@
 REST API
 ########
 
-**Catapult REST API** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+**Catapult REST** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+
+************
+Installation
+************
+
+**Repository**: |catapult-rest|
+
+Test catapult-rest deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
 
 .. _http-requests:
 
@@ -14,37 +22,15 @@ Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **PO
 
 Assuming that Catapult REST is :doc:`running locally  <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
 
-http://localhost:3000/<path-to-API-request>
+    http://localhost:3000/<path-to-API-request>
 
-HTTP PUT and POST requests use JSON structures in the request body. Request returns data using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
+HTTP PUT and POST requests use JSON structures in the request body. Request returns data using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
+
+Get the complete list of available endpoints by clicking on the button below:
 
 .. raw:: html
 
-    <a href="/endpoints.html"><button class="btn btn-default">Catapult REST API Endpoints</button></a>
-
-.. _tools:
-
-Tools
-=====
-
-**NEM2-SDK**
-
-The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
-
-* :doc:`Reference <../sdk>`
-* :doc:`Guides <../concepts/account>`
-
-**Insomnia**
-
-An open source HTTP client, available for Mac, Windows and Linux.
-
-1. Download |insomnia-app| for your operative system.
-
-2. Import the :download:`Insomnia spec<resources/collections/insomnia.json>` for NEM.
-
-.. |insomnia-app| raw:: html
-
-    <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+    <a href="/endpoints.html"><button class="btn btn-default">REST API Endpoints</button></a>
 
 .. _http-errors:
 
@@ -301,3 +287,39 @@ This section describes the error messages that can be returned via status channe
 
 :download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>`
 :download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`
+
+.. _tools:
+
+*****
+Tools
+*****
+We recommend using one of the following tools to interact with the available endpoints.
+
+NEM2-SDK
+========
+
+The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
+
+* :doc:`Reference <../sdk>`
+* :doc:`Guides <../concepts/account>`
+
+Insomnia
+========
+
+An open source HTTP client, available for Mac, Windows and Linux.
+
+1. Download |insomnia-app| for your operative system.
+
+2. Import the :download:`Insomnia spec<resources/collections/insomnia.json>` for NEM.
+
+.. |insomnia-app| raw:: html
+
+    <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+
+.. |catapult-service-bootstrap| raw:: html
+
+   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+
+.. |catapult-rest| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-rest" target="_blank">catapult-rest</a>
