@@ -13,12 +13,12 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
 The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
 *************
-P2P Component
+P2P component
 *************
 
 **Repository:** |catapult-server|
 
-The P2P nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
+The peer nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
 The API push new transactions to the P2P network, where they are :doc:`included in a block <harvesting>` or discarded. After the block is processed:
 
@@ -48,23 +48,23 @@ Storing the state in memory is usually faster than using RocksDB. However, stori
 .. note:: Persisting the state is convenient in networks with a large number of accounts.
 
 *************
-API Component
+API component
 *************
 
 **Repository:** |catapult-server|
 
-P2P nodes can be configured to have an API layer. The primary responsibility of the API is to store the data in a readable form in MongoDB.
+Peer nodes can be configured to have an API layer. The primary responsibility of an API node is to store the data in a readable form in MongoDB.
 
-The API :ref:`validates transactions <transaction-validation>` received from the REST component. Additionally, the broker process that stores changes in MongoDB, forwards them to ZMQ.
+The API nodes :ref:`validate transactions <transaction-validation>` received from the REST nodes. Additionally, the broker process that stores changes in MongoDB, forwards them to ZMQ.
 
-This component is also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only processed once they are complete.
+API nodes are also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only processed once they are complete.
 
 MongoDB
 =======
 
 |mongodb| stores blocks, transactions and chain state for high query performance.
 
-The API updates the MongoDB when:
+The API node updates the linked MongoDB instance when:
 
 - A new block / a bunch of blocks finished processing.
 - New unconfirmed transactions completed processing.
@@ -74,17 +74,17 @@ The API updates the MongoDB when:
 ZMQ
 ====
 
-|zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API server to the ZMQ endpoint, where the Catapult REST component listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
+|zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API node to the ZMQ endpoint, where Catapult REST listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
 
 **************
-REST Component
+REST component
 **************
 
 **Repository:** |catapult-rest|
 
-The REST component handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :ref:`WebSockets <websockets>`.
+The REST node handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :ref:`WebSockets <websockets>`.
 
-Each REST component connects to one API instance, sending new transactions using sockets.
+Each REST node connects to one API instance, sending new transactions using sockets.
 
 .. |catapult-server| raw:: html
 
