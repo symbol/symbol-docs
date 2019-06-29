@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.8\n"
+"Project-Id-Version: nem2-docs 0.17.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 22:54+0100\n"
+"POT-Creation-Date: 2019-06-28 17:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -214,8 +214,9 @@ msgid ""
 msgstr "複数の転送トランザクションを集約するためにアグリゲートトランザクションをアナウンスします。"
 
 #: ../../source/concepts/aggregate-transaction.rst:115
-msgid "**Version**: 0x02"
-msgstr "**バージョン**: 0x02"
+#: ../../source/concepts/aggregate-transaction.rst:180
+msgid "**Version**: 0x01"
+msgstr "**バージョン**: 0x01"
 
 #: ../../source/concepts/aggregate-transaction.rst:117
 msgid ""
@@ -411,10 +412,6 @@ msgid ""
 "block harvester at the height where the lock expires."
 msgstr ""
 "すべての連署者によって署名されずにアグリゲートボンドトランザクションが期間に達した場合、ロックされた資産はブロックのハーベスタによってロックの有効期限が切れるブロック高でハーベストされ報酬となります。"
-
-#: ../../source/concepts/aggregate-transaction.rst:180
-msgid "**Version**: 0x01"
-msgstr "**バージョン**: 0x01"
 
 #: ../../source/concepts/aggregate-transaction.rst:182
 msgid "**Entity type**: 0x4148"
