@@ -10,11 +10,11 @@ The harvesting :doc:`account <account>` - called the harvester - gets the :ref:`
 Eligibility criteria
 ********************
 
-The :doc:`importance score <account>` of the account determines the chances of creating a new block. This score is calculated as the relation between the number of :ref:`harvesting mosaics <harvesting-mosaic>` the account owns and the total supply available.
+The :ref:`importance score <importance-calculation>` determines the probability of an account to harvest the next block in case the account has harvesting turned on and all other accounts are harvesting too.
 
 .. note:: Configuration parameters are editable. The importance score calculation formula and the minimum amount required to harvest may differ for the public network configuration.
 
-The account needs to hold a `minimum amount <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L26>`_ of this harvesting mosaic to have importance greater than zero.
+The account needs to hold a `minimum amount <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L30>`_ of this harvesting mosaic to have importance greater than zero.
 
 Harvesting account owners can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
@@ -51,7 +51,9 @@ Delegated harvesting
 
 Delegated harvesting enables an account to use a proxy private key that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
 
-After an account activates delegated harvesting, its importance score is transferred to a remote account. The remote account inherits the importance of the original account. Security-wise, sharing a proxy private key with a remote node does not compromise the original account since:
+After an account activates delegated harvesting, its importance score is transferred to a remote account. The remote account inherits the importance of the original account.
+
+Security-wise, sharing a proxy private key with a remote node does not compromise the original account since:
 
 * The remote account has zero balance.
 * The remote account by itself can't transfer the importance to another account.

@@ -30,11 +30,11 @@
     concepts/cryptography
     concepts/block
     concepts/transaction
+    concepts/consensus-algorithm
     concepts/harvesting
     concepts/inflation
     concepts/receipt
     concepts/node
-    concepts/consensus-algorithm
 
 .. toctree::
     :maxdepth: 2
