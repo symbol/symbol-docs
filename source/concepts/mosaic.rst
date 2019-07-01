@@ -19,8 +19,8 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     :delim: ;
 
     Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``.
-    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. To create non-expiring mosaics, leave this property undefined.  Duration is allowed to lie up to ``3650`` days (10 years).
-    Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000``.
+    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). To create non-expiring mosaics, leave this property undefined.
+    Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
