@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.8\n"
+"Project-Id-Version: nem2-docs 0.17.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 22:54+0100\n"
+"POT-Creation-Date: 2019-06-28 17:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,7 +46,7 @@ msgid ""
 msgstr "4層アーキテクチャにより、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。"
 
 #: ../../source/concepts/node.rst:17
-msgid "P2P Component"
+msgid "P2P component"
 msgstr "P2P コンポーネント"
 
 #: ../../source/concepts/node.rst:19 ../../source/concepts/node.rst:54
@@ -55,13 +55,13 @@ msgstr "**リポジトリ:** |catapult-server|"
 
 #: ../../source/concepts/node.rst:21
 msgid ""
-"The P2P nodes form the backbone of the blockchain, making the network robust"
-" since it cannot be shut down by eliminating a single entity. The role of "
-"the node is to :ref:`verify transactions <transaction-validation>` and "
+"The peer nodes form the backbone of the blockchain, making the network "
+"robust since it cannot be shut down by eliminating a single entity. The role"
+" of the node is to :ref:`verify transactions <transaction-validation>` and "
 ":doc:`blocks<block>`, run the consensus algorithm, create new blocks, and "
 "propagate the changes through the network."
 msgstr ""
-"P2P "
+"Peer "
 "ノードは、単一のエンティティを排除してもシャットダウンできない、堅牢なネットワークであるブロックチェーンのバックボーンを構成します。ノードの役割は "
 ":ref:`トランザクション <transaction-validation>` と :doc:`ブロック <block>` "
 "を検証すること、コンセンサスアルゴリズムの実行、新しいブロックの生成、ネットワークへの変更の伝播を実行することです。"
@@ -154,32 +154,33 @@ msgid ""
 msgstr "状態を維持することは、大量のアカウントが存在するネットワークにおいて都合が良いことです。"
 
 #: ../../source/concepts/node.rst:52
-msgid "API Component"
-msgstr "API コンポーネント"
+msgid "API component"
+msgstr ""
 
 #: ../../source/concepts/node.rst:56
 msgid ""
-"P2P nodes can be configured to have an API layer. The primary responsibility"
-" of the API is to store the data in a readable form in MongoDB."
+"Peer nodes can be configured to have an API layer. The primary "
+"responsibility of an API node is to store the data in a readable form in "
+"MongoDB."
 msgstr ""
-"P2P ノードは API 層を持つように構成できます。API の主な役割は MongoDB にデータを読み取り可能な形式で格納することです。"
+"Peer ノードは API 層を持つように構成できます。API ノードの主たる役割は MongoDB にデータを読み取り可能な形式で格納することです。"
 
 #: ../../source/concepts/node.rst:58
 msgid ""
-"The API :ref:`validates transactions <transaction-validation>` received from"
-" the REST component. Additionally, the broker process that stores changes in"
-" MongoDB, forwards them to ZMQ."
+"The API nodes :ref:`validate transactions <transaction-validation>` received"
+" from the REST nodes. Additionally, the broker process that stores changes "
+"in MongoDB, forwards them to ZMQ."
 msgstr ""
-"API は REST コンポーネントから受け取った :ref:`トランザクションの検証 <transaction-validation>` をし、さらに"
+"API ノードは REST ノードから受け取った :ref:`トランザクションの検証 <transaction-validation>` を行い、さらに"
 " MongoDB への変更の保存、ZMQ へ転送のブローカープロセスも行います。"
 
 #: ../../source/concepts/node.rst:60
 msgid ""
-"This component is also responsible for collecting the cosignatures of "
+"API nodes are also responsible for collecting the cosignatures of "
 ":doc:`aggregated bonded transactions <aggregate-transaction>`, that are only"
 " processed once they are complete."
 msgstr ""
-"このコンポーネントは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
+"API ノードは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
 "の連署名を集める役割も果たし、それが完成したときにだけ処理されます。"
 
 #: ../../source/concepts/node.rst:63
@@ -193,8 +194,8 @@ msgid ""
 msgstr "|mongodb| はブロック、トランザクションとチェーン状態をハイパフォーマンスの実現のために保存します。"
 
 #: ../../source/concepts/node.rst:67
-msgid "The API updates the MongoDB when:"
-msgstr "APIは次の場合にMongoDBを更新します:"
+msgid "The API node updates the linked MongoDB instance when:"
+msgstr "次の場合に API ノードはリンクした MongoDB を更新します:"
 
 #: ../../source/concepts/node.rst:69
 msgid "A new block / a bunch of blocks finished processing."
@@ -215,17 +216,17 @@ msgstr ""
 #: ../../source/concepts/node.rst:77
 msgid ""
 "|zmq| is an asynchronous messaging library, which enables real-time "
-"subscriptions. It transports notifications from the API server to the ZMQ "
-"endpoint, where the Catapult REST component listens. It is an alternative to"
-" REST WebSockets, aimed to be used when performance is critical."
+"subscriptions. It transports notifications from the API node to the ZMQ "
+"endpoint, where Catapult REST listens. It is an alternative to REST "
+"WebSockets, aimed to be used when performance is critical."
 msgstr ""
-"|zmq| はリアルタイムの購読を可能にする非同期メッセージングライブラリです。API サーバーから ZMQ エンドポイントに通知を転送し、それを "
-"Catapult REST コンポーネントがリスンします。これは REST WebSocket "
+"|zmq| はリアルタイムの購読を可能にする非同期メッセージングライブラリです。API ノードから ZMQ エンドポイントに通知を転送し、それを "
+"Catapult REST が購読します。これは REST WebSocket "
 "に代わるもので、パフォーマンスが重要な場合に使用することを目的としています。"
 
 #: ../../source/concepts/node.rst:81
-msgid "REST Component"
-msgstr "REST コンポーネント"
+msgid "REST component"
+msgstr ""
 
 #: ../../source/concepts/node.rst:83
 msgid "**Repository:** |catapult-rest|"
@@ -233,20 +234,20 @@ msgstr "**リポジトリ:** |catapult-rest|"
 
 #: ../../source/concepts/node.rst:85
 msgid ""
-"The REST component handles **JSON API** client requests. This reads from "
-"MongoDB, formats the response, and returns it to the client. This component "
-"is responsible as well to return events to the client using :ref:`WebSockets"
-" <websockets>`."
+"The REST node handles **JSON API** client requests. This reads from MongoDB,"
+" formats the response, and returns it to the client. This component is "
+"responsible as well to return events to the client using :ref:`WebSockets "
+"<websockets>`."
 msgstr ""
-"Catapult REST コンポーネントは **JSON API** クライアントリクエストを処理します。MongoDB "
+"Catapult REST ノードは **JSON API** クライアントリクエストを処理します。MongoDB "
 "から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
 "<websockets>` でクライアントにイベントを返却する役割も果たします。"
 
 #: ../../source/concepts/node.rst:87
 msgid ""
-"Each REST component connects to one API instance, sending new transactions "
-"using sockets."
-msgstr "各 REST コンポーネントは1つの API インスタンスに接続し、ソケットを使用して新しいトランザクションを送信します。"
+"Each REST node connects to one API instance, sending new transactions using "
+"sockets."
+msgstr "各 REST ノードは1つの API インスタンスに接続し、ソケットを使用して新しいトランザクションを送信します。"
 
 #: ../../source/concepts/node.rst:115
 msgid "Guides"

@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.8\n"
+"Project-Id-Version: nem2-docs 0.17.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 22:54+0100\n"
+"POT-Creation-Date: 2019-06-28 17:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,9 +28,9 @@ msgstr "マルチシグアカウント"
 
 #: ../../source/concepts/multisig-account.rst:5
 msgid ""
-"Editable on-chain contracts, the most powerful way to secure funds and "
-"enable joint accounts."
-msgstr "編集可能なオンチェーンコントラクトは、資産を安全に共有アカウントで扱うのにとても強力な方法です。"
+"Multisig :doc:`accounts <account>` require additional signatures to initiate"
+" actions/transfers."
+msgstr "マルチシグ :doc:`アカウント <account>` はアクション/転送を実行するために追加の署名を必要とします。"
 
 #: ../../source/concepts/multisig-account.rst:9
 msgid "Cosignatories"
@@ -46,21 +47,25 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:13
 msgid ""
-"From that moment on,  the multisig account cannot announce transactions by "
-"itself. One of the cosignatory has to propose the transaction involving the "
+"From that moment on, the multisig account cannot announce transactions by "
+"itself. A multisig cosignatory has to propose a transaction involving the "
 "multisig, wrapping it in an :doc:`aggregate transaction <aggregate-"
-"transaction>`. To record the transaction in the block, the other "
-"cosignatories will have to agree."
+"transaction>`."
 msgstr ""
 "この瞬間からマルチシグアカウントはそれ自信からトランザクションをアナウンスできなくなります。連署者のうち 1 人がマルチシグに関係した "
-":doc:`アグリゲートトランザクション <aggregate-transaction>` "
-"でラップしたトランザクションを提案する必要があります。このトランザクションをブロックに記録するには、他の連署者の同意が必要です。"
+":doc:`アグリゲートトランザクション <aggregate-transaction>` でラップしたトランザクションを提案する必要があります。"
 
-#: ../../source/concepts/multisig-account.rst:17
+#: ../../source/concepts/multisig-account.rst:15
+msgid ""
+"To record the transaction in the block, the other cosignatories will have to"
+" agree."
+msgstr "このトランザクションをブロックに記録するには、他の連署者の同意が必要です。"
+
+#: ../../source/concepts/multisig-account.rst:19
 msgid "Minimum approval and removal"
 msgstr "最小承認数と削除数"
 
-#: ../../source/concepts/multisig-account.rst:19
+#: ../../source/concepts/multisig-account.rst:21
 msgid ""
 "It is not always necessary to force all cosignatories to cosign transactions"
 " associated with the multisig account. NEM allows to set up the minimum "
@@ -72,7 +77,7 @@ msgstr ""
 "は連署者の同意の最小数の設定が可能です。大抵のニーズに合わせてこれらのプロパティを :ref:`編集 <guide-modify-a-multisig-"
 "account-min-approval>` することができます。"
 
-#: ../../source/concepts/multisig-account.rst:21
+#: ../../source/concepts/multisig-account.rst:23
 msgid ""
 "NEM's current implementation of multisig is *\"M-of-N\"*. This means that M "
 "can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, "
@@ -81,7 +86,7 @@ msgstr ""
 "NEM における現在のマルチシグ実装は *\"M-of-N\"* です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4,"
 " 2-of-2, 4-of-9, 9-of-10 などです。"
 
-#: ../../source/concepts/multisig-account.rst:23
+#: ../../source/concepts/multisig-account.rst:25
 msgid ""
 "Similarly, cosignatories can :ref:`invite other accounts to take part in the"
 " multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  "
@@ -92,7 +97,7 @@ msgstr ""
 "account-add-new-cosignatory>`  または  :ref:`参加者に除名の提案 <guide-modify-a"
 "-multisig-account-removing-a-cosignatory>` をすることができます。"
 
-#: ../../source/concepts/multisig-account.rst:25
+#: ../../source/concepts/multisig-account.rst:27
 msgid ""
 "Multisig accounts are a powerful tool, but please use this tool with "
 "caution.  If the cosignatories keys get lost and minimum approval is not "
@@ -103,13 +108,9 @@ msgstr ""
 "マルチシグアカウントは強力なツールですが、このツールの使用には慎重になってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントの保有する資産へのアクセスが永久に不可能になります。この状況を回避するには"
 " ``最小限の除去`` パラメータをよく考えて設定してください。"
 
-#: ../../source/concepts/multisig-account.rst:29
+#: ../../source/concepts/multisig-account.rst:31
 msgid "Constraints"
 msgstr "制約"
-
-#: ../../source/concepts/multisig-account.rst:31
-msgid "Some important considerations to keep in mind:"
-msgstr "心に留めておくべき重要な考慮事項"
 
 #: ../../source/concepts/multisig-account.rst:33
 msgid "Multisig accounts can have up to ``10`` cosignatories."
@@ -307,8 +308,8 @@ msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
 #: ../../source/concepts/multisig-account.rst:144
-msgid "**Version**: 0x03"
-msgstr "**バージョン**: 0x03"
+msgid "**Version**: 0x01"
+msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:146
 msgid "**Entity type**: 0x4155"

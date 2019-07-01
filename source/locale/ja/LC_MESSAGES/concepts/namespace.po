@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.8\n"
+"Project-Id-Version: nem2-docs 0.17.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 22:54+0100\n"
+"POT-Creation-Date: 2019-06-28 17:22+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -323,8 +323,10 @@ msgid ""
 msgstr "ネームスペース取得トランザクションはネームスペースの取得と再取得に使用します。"
 
 #: ../../source/concepts/namespace.rst:130
-msgid "**Version**: 0x02"
-msgstr "**バージョン**: 0x02"
+#: ../../source/concepts/namespace.rst:157
+#: ../../source/concepts/namespace.rst:180
+msgid "**Version**: 0x01"
+msgstr ""
 
 #: ../../source/concepts/namespace.rst:132
 msgid "**Entity type**: 0x414E"
@@ -454,11 +456,6 @@ msgid ""
 "namespace can be assigned to any account present in the network."
 msgstr ""
 "ネームスペースをアカウントへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースはネットワーク上に存在するいかなるアカウントにも割り当てることができます。"
-
-#: ../../source/concepts/namespace.rst:157
-#: ../../source/concepts/namespace.rst:180
-msgid "**Version**: 0x01"
-msgstr ""
 
 #: ../../source/concepts/namespace.rst:159
 msgid "**Entity type**: 0x424E"
