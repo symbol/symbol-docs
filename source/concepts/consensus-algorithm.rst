@@ -16,7 +16,7 @@ Factors
 
 The algorithm considers the following factors to improve the ecosystem’s health perspective:
 
-* **Stake**: The total amount of the :ref:`harvesting currency mosaic <harvesting-mosaic>` owned. Owners with larger balances should have the incentive to see the ecosystem flourish.
+* **Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-mosaic>` owned. Owners with larger balances should have the incentive to see the ecosystem flourish.
 * **Transactions**: The total amount of fees paid by an account. Being an active account in the network is encouraged.
 * **Nodes**: The number of times an account is the beneficiary of a block. The network incentives active accounts running nodes for securing the network.
 
