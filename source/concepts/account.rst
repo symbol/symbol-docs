@@ -34,7 +34,7 @@ The amount of different :doc:`mosaics <mosaic>` the account owns.
 
 **Importance**
 
-The relation between the amount of harvesting mosaics the account owns and the total mosaic supply.
+The :ref:`importance score <importance-calculation>` determines the probability of an account to harvest the next block in case the account has :doc:`harvesting <harvesting>` turned on and all other accounts are harvesting too.
 
 ****************
 Multisig Account
