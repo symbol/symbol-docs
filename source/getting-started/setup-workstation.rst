@@ -25,7 +25,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
     git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
     cd catapult-service-bootstrap
-    docker-compose up
+    ./cmds/start-all -b -d
 
 .. note:: Is catapult service bootstrap not working? Check |catapult-service-bootstrap-known-issues|.
 
