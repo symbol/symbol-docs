@@ -20,7 +20,7 @@ The algorithm considers the following factors to improve the ecosystem’s healt
 * **Transactions**: The total amount of fees paid by an account. Being an active account in the network should be encouraged.
 * **Nodes**: The number of times an account is a beneficiary of a block. The network should incentivize active accounts running nodes for securing the network.
 
-All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest` a block.
+All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
 
 The account needs to hold a minimum amount of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance greater than zero.
 
