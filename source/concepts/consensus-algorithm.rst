@@ -17,8 +17,8 @@ Factors
 The algorithm considers the following factors to improve the ecosystem’s health perspective:
 
 * **Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-mosaic>` owned. Owners with larger balances should have the incentive to see the ecosystem flourish.
-* **Transactions**: The total amount of fees paid by an account. Being an active account in the network is encouraged.
-* **Nodes**: The number of times an account is the beneficiary of a block. The network incentives active accounts running nodes for securing the network.
+* **Transactions**: The total amount of fees paid by an account. Being an active account in the network should be encouraged.
+* **Nodes**: The number of times an account is a beneficiary of a block. The network should incentivize active accounts running nodes for securing the network.
 
 All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest` a block.
 
@@ -54,11 +54,11 @@ Each network can define their own consensus algorithm |constants|.
 Calculation
 ***********
 
-The importance can be calculated for each account as:
+The importance can be calculated for each account in the following manner:
 
     (1 - a) * (S') + a * || p / (S') * (t * (T') + n * (N')) ||
 
-The combination of Transaction Score and Node Score have a multiplier effect when Stake Score is low. Conversely, the multiplier effect is insignificant when Stake Score is high.
+The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low. Conversely, the multiplier effect is insignificant when Stake Score is high.
 
 .. |pos| raw:: html
 
