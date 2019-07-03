@@ -103,6 +103,12 @@ source_file = build/gettext/concepts/mosaic.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--mosaic-restrictions]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restrictions.po
+source_file = build/gettext/concepts/momosaic-restrictionssaic.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--multisig-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/multisig-account.po
 source_file = build/gettext/concepts/multisig-account.pot

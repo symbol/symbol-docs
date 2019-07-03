@@ -22,7 +22,9 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). To create non-expiring mosaics, leave this property undefined.
     Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
-    Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+    Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+    Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restrictions>`.
+
 
 *****************************
 Absolute and relative amounts
@@ -184,6 +186,7 @@ Enumeration: uint8
     0x00; No flags present.
     0x01; The mosaic supply is mutable.
     0x02; The mosaic is transferable.
+    0x04; The mosaic is restrictable.
 
 .. _mosaic-supply-change-direction:
 

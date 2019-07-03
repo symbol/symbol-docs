@@ -19,6 +19,7 @@
     concepts/transfer-transaction
     concepts/aggregate-transaction
     concepts/account-restrictions
+    concepts/mosaic-restrictions
     concepts/multisig-account
     concepts/cross-chain-swaps
 
