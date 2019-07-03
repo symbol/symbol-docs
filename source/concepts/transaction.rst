@@ -39,13 +39,13 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`Account Restriction Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
     **Mosaic restrictions**;;
-    0x4151; :ref:`Mosaic Restriction Global <mosaic-global-restriction-transaction>`;
-    0x4251; :ref:`Mosaic Restriction Address <mosaic-address-restriction-transaction>`;
+    0x4151; :ref:`Mosaic Restriction Global <mosaic-global-restriction-transaction>`; Set a global restriction to a mosaic.
+    0x4251; :ref:`Mosaic Restriction Address <mosaic-address-restriction-transaction>`; Set a mosaic restriction to an specific address.
     **Cross-chain swaps**;;
     0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
     0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.
     **Remote harvesting**;;
-    0x414C; :ref:`Account Link <account-link-transaction>`; Delegates the account importance to a proxy account to enable :doc:`delegated harvesting <harvesting>`.
+    0x414C; :ref:`Account Link <account-link-transaction>`; Delegate the account importance to a proxy account.
 
 .. _transaction-definition:
 
