@@ -16,7 +16,7 @@ The block creating currency mosaics record an inflation receipt. The receipt gat
 Configuration
 *************
 
-The `inflation configuration <https://github.com/nemtech/catapult-server/blob/master/resources/config-inflation.properties>`_ defines the amount of currency mosaics created per block. Besides, the incrementing ratio can vary depending on the block height. The last height determines the amount of inflation per block that will be created from then on.
+The :properties:`minimum amount <config-inflation.properties>` defines the amount of currency mosaics created per block. Besides, the incrementing ratio can vary depending on the block height. The last height determines the amount of inflation per block that will be created from then on.
 
 .. code-block:: bash
 

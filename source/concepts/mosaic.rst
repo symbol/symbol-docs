@@ -36,7 +36,7 @@ For example, if the mosaic has divisibility 2, to create or send 10 units (relat
 Cost
 ****
 
-The cost of creating a mosaic is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
+The cost of creating a mosaic is :properties:`configurable per network <config-network.properties>`. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
 
 *******
 Example
@@ -84,7 +84,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _mosaic-definition-transaction:
 
@@ -106,11 +106,11 @@ Announce a mosaic definition transaction to create a new mosaic.
     :delim: ;
 
     mosaicNonce; uint32; Random nonce used to generate the mosaic id.
-    mosaicId; uint64; The mosaic Id.
-    propertiesCount; uint8; The number of elements in optional properties
-    flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
-    divisibility; uint8; The mosaic divisibility. The maximum divisibility is ``6``.
-    properties; array(:ref:`MosaicProperty<mosaic-property>`, propertiesCount); The optional mosaic properties.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
+    propertiesCount; uint8; Number of elements in optional properties
+    flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
+    divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
+    properties; array(:ref:`MosaicProperty <mosaic-property>`, propertiesCount); Optional mosaic properties.
 
 .. _mosaic-supply-change-transaction:
 
@@ -131,9 +131,9 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The id of the affected mosaic.
-    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
-    delta; uint64; The amount of supply to increase or decrease.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; Supply change direction.
+    delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
 
 .. _mosaic-property:
 
@@ -144,19 +144,20 @@ MosaicProperty
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    id; uint8; The property id. (0x02) stands for duration.
+    id; uint8; Mosaic property identifier. (0x02) stands for duration.
     value; uint64; The mosaic property value.
 
 .. _mosaic:
 
 Mosaic
 ======
+
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of the mosaic.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Mosaic identifier.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of the mosaic.
 
 .. _unresolved-mosaic:
 
@@ -167,8 +168,8 @@ UnresolvedMosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of the mosaic.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Mosaic identifier.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of the mosaic.
 
 .. _mosaic-flags:
 
@@ -182,8 +183,8 @@ Enumeration: uint8
     :delim: ;
 
     0x00; No flags present.
-    0x01; The mosaic supply is mutable.
-    0x02; The mosaic is transferable.
+    0x01; Mosaic supports supply changes even when mosaic owner owns partial supply.
+    0x02; Mosaic supports transfers between arbitrary accounts. When not set, mosaic can only be transferred to and from mosaic owner.
 
 .. _mosaic-supply-change-direction:
 

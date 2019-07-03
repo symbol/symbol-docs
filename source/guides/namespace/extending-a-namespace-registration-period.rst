@@ -76,7 +76,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :language: bash
         :start-after: #!/bin/sh
 
-.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_.
+.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is :properties:`configurable per network <config-network.properties>`.
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 

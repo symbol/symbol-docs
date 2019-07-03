@@ -105,7 +105,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 AggregateTransaction
 ====================
@@ -124,9 +124,9 @@ Announce an aggregate transaction to combine multiple transactions together.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    payloadSize; uint32; The transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array(Transaction, size=payloadSize);  The array of transactions, which can be initiated by different accounts.  An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(Cosignature, __FILL__); An array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
+    payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
+    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    cosignatures; array(:ref:`Cosignature <cosignature>`, __FILL__); Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
 
 .. _cosignature-transaction:
 
@@ -143,7 +143,7 @@ Cosignature transactions are used to sign :ref:`announced aggregate bonded trans
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentHash; 32 bytes (binary);  The aggregate bonded transaction hash to cosign.
+    parentHash; :schema:`Hash256 <types.cats#L9>`;  Aggregate bonded transaction hash to cosign.
 
 .. _cosignature:
 
@@ -156,8 +156,8 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signer;  32 bytes (binary); The cosigner public key.
-    signature; 64 bytes (binary); The transaction signature.
+    signer; :schema:`Key <types.cats#L11>`; Cosigner public key.
+    signature; :schema:`Signature <types.cats#L12>`; Transaction signature.
 
 
 .. _hash-lock-transaction:
@@ -189,6 +189,6 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
-    duration; uint64; The lock duration. Duration is allowed to lie up to ``2`` days.
-    hash; 32 bytes (binary); The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
+    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Lock duration. Duration is allowed to lie up to ``2`` days.
+    hash; :schema:`Hash256 <types.cats#L9>`; Aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
