@@ -128,7 +128,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _modify-multisig-account-transaction:
 
@@ -153,10 +153,10 @@ c) Add or delete cosignatories from a multisig account.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    minRemovalDelta; int8; The number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    minApprovalDelta; int8; The number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    modificationsCount; uint8; The number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); The array of cosignatory :doc:`accounts <account>` to add or delete.
+    minRemovalDelta; int8; Number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    minApprovalDelta; int8; Number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
+    modificationsCount; uint8; Number of modifications.
+    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); Array of cosignatory :doc:`accounts <account>` to add or delete.
 
 .. _cosignatory-modification:
 
@@ -167,8 +167,8 @@ CosignatoryModification
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    modificationType; :ref:`CosignatoryModificationType <cosignatory-modification-type>`; The cosignatory modification type.
-    cosignatoryPublicKey; 32 bytes (binary); The public key of the cosignatory.
+    modificationType; :ref:`CosignatoryModificationType <cosignatory-modification-type>`; Cosignatory modification type.
+    cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Public key of the cosignatory.
 
 .. _cosignatory-modification-type:
 

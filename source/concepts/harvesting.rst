@@ -14,7 +14,7 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 
 .. note:: Configuration parameters are editable. The importance score calculation formula and the minimum amount required to harvest may differ for the public network configuration.
 
-The account needs to hold a `minimum amount <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L30>`_ of this harvesting mosaic to have importance greater than zero.
+The account needs to hold a :properties:`minimum amount <config-network.properties>` of this harvesting mosaic to have importance greater than zero.
 
 Harvesting account owners can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
@@ -24,7 +24,7 @@ Harvesting account owners can use their importance scores to create new blocks e
 Harvesting mosaic
 *****************
 
-Catapult software allows the `definition <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L13>`_ of any :doc:`mosaic <mosaic>` for harvesting purposes to fit the business needs. The catapult test network names this mosaic ``cat.harvest``.
+Catapult software allows the :properties:`definition <config-network.properties>` of any :doc:`mosaic <mosaic>` for harvesting purposes to fit the business needs. The catapult test network names this mosaic ``cat.harvest``.
 
 For example, consortium networks can distribute harvesting mosaics between the companies that are running the infrastructure, while other participants need to pay fees in the form of :ref:`currency mosaic <fees>` to consume services.
 
@@ -109,8 +109,8 @@ Furthermore, for the duration that the account is used as a delegated account, i
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    remoteAccountKey; 32 bytes (binary); The public key of the remote account.
-    linkAction; :ref:`LinkAction <link-action>`; The account link action.
+    remoteAccountKey; :schema:`Key <types.cats#L11>`; Public key of the remote account.
+    linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _link-action:
 
@@ -123,5 +123,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0; Link.
-    1; Unlink.
+    0; Link account.
+    1; Unlink account.

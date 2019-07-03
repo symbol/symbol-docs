@@ -41,6 +41,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.extlinks',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
@@ -330,3 +331,8 @@ def viewsource_resolve_link(file_path, language=None):
     path_split = file_path.split('/')
     path = "/".join(path_split[len(path_split)-2:])
     return base_url + path
+
+# -- Custom extlinks -----------------------------------------------------
+
+extlinks = {'schema': ('https://github.com/nemtech/catbuffer/tree/master/schemas/%s', 'file '),
+            'properties': ('https://github.com/nemtech/catapult-server/blob/master/resources/%s', 'file ')}

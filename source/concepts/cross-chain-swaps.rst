@@ -76,7 +76,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _secret-lock-transaction:
 
@@ -99,11 +99,11 @@ If the transaction duration is reached without being proved, the locked amount g
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`Mosaic<mosaic>`; Locked mosaic.
-    duration; uint64; Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
-    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
-    secret; 64 bytes (binary);  The proof hashed.
-    recipient; 25 bytes (binary); The address that receives the funds once unlocked.
+    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
+    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
+    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
 
 .. _secret-proof-transaction:
 
@@ -126,11 +126,11 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; The algorithm used to hash the proof.
-    secret; 64 bytes (binary); The proof hashed.
-    recipient; 25 bytes (binary); The address that receives the funds once unlocked.
-    proofSize; uint16; The proof size in bytes.
-    proof; array(byte, proofSize); The original random set of bytes.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
+    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
+    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
+    proofSize; uint16; Proof size in bytes.
+    proof; array(byte, proofSize); Original random set of bytes.
 
 .. _lock-hash-algorithm:
 
@@ -145,7 +145,7 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0 (Op_Sha3_256); The proof is hashed using SHA3-256.
-    1 (Op_Keccak_256); The proof is hashed using Keccak (ETH compatibility).
-    2 (Op_Hash_160); The proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
-    3 (Op_Hash_256); The proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).
+    0 (Op_Sha3_256); Proof is hashed using SHA3-256.
+    1 (Op_Keccak_256); Proof is hashed using Keccak (ETH compatibility).
+    2 (Op_Hash_160); Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    3 (Op_Hash_256); Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).

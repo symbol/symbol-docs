@@ -61,7 +61,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _transfer-transaction:
 
@@ -82,11 +82,11 @@ Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages betw
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    recipient; 25 bytes (binary); The address of the recipient account.
-    messageSize; uint16; The size of the attached message.
-    mosaicsCount; uint8; The number of attached mosaics.
-    message; array(byte, messageSize); The :ref:`message-type` and a payload of up to ``1023`` bytes.
-    mosaics; array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount); The array of mosaic to send.
+    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address of the recipient.
+    messageSize; uint16; Size of the attached message.
+    mosaicsCount; uint8; Number of attached mosaics.
+    message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.
+    mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Array of mosaics to send.
 
 .. _message-type:
 
