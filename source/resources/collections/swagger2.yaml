@@ -1335,8 +1335,8 @@ definitions:
     properties:
       address:
         type: string
-        description: The address of the account in base 32.
-        example: SAAM2O7SSJ2A7AU3DZJMSTTRFZT5TFDPQ3ZIIJX7
+        description: The address of the account in hexadecimal.
+        example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
       names:
         type: array
         description: The mosaic linked namespace names.
