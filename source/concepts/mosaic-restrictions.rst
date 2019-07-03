@@ -130,8 +130,8 @@ MosaicGlobalRestrictionTransaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; UnresolvedMosaicId; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
-    referenceMosaicId; UnresolvedMosaicId; The restrictions depend directly on global restrictions set on another mosaic.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the reference mosaic. The mosaic global restriction for the mosaic id depend on global restrictions set on the reference mosaic.
     restrictionKey; uint64; Restriction key.
     previousRestrictionValue; uint64; Previous restriction value.
     previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
@@ -155,9 +155,9 @@ MosaicAddressRestrictionTransaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; UnresolvedMosaicId; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
     restrictionKey; uint64; Restriction key.
-    targetAddress; UnresolvedAddress; Affected Address.
+    targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Affected Address.
     previousRestrictionValue; uint64; Previous restriction value.
     newRestrictionValue; uint64; New restriction value.
 
