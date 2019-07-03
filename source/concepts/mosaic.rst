@@ -131,7 +131,7 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Identifier of the affected mosaic.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic.
     direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; Supply change direction.
     delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
 

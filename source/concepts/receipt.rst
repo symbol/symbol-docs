@@ -207,7 +207,7 @@ A resolution statement keeps the relation between a namespace alias used in a tr
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    unresolved; :schema:`UnresolvedAddress <types.cats#L7>` or :schema:`UnresolvedMosaicId <types.cats#L3>`;; Unresolved address or unresolved mosaic identifier.
+    unresolved; :schema:`UnresolvedAddress <types.cats#L7>` or :schema:`UnresolvedMosaicId <types.cats#L3>`; Unresolved address or unresolved mosaic identifier.
     resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); Array of resolution entries linked to the unresolved namespace identifier. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
 
 .. _resolution-entry:
@@ -219,7 +219,7 @@ ResolutionEntry
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    resolvedValue; :schema:`Address <types.cats#L8>` or :schema:`MosaicId <types.cats#L4>`; Resolved address or resolved mosaic id.
+    resolvedValue; :schema:`Address <types.cats#L8>` or :schema:`MosaicId <types.cats#L4>`; Resolved address or resolved mosaic identifier.
     source; :ref:`ReceiptSource <receipt-source>`;  Information about the transaction that triggered the receipt.
 
 .. _receipt-source:
@@ -234,7 +234,7 @@ The transaction that triggered the receipt.
     :delim: ;
 
     primaryId; uint32;  Transaction index within the block.
-    secondaryId; uint32; Transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
+    secondaryId; uint32; Transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary identifier is set to 0.
 
 .. |merkle| raw:: html
 
