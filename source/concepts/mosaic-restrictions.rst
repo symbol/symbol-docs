@@ -118,6 +118,8 @@ Schemas
 MosaicGlobalRestrictionTransaction
 ==================================
 
+Announce a mosaic global restriction transaction to set a restriction rule to a mosaic.
+
 **Version**: 0x01
 
 **Entity type**: 0x4151
@@ -142,6 +144,8 @@ MosaicGlobalRestrictionTransaction
 
 MosaicAddressRestrictionTransaction
 ===================================
+
+Announce a mosaic address restriction transaction to set a restriction rule to an address.
 
 **Version**: 0x01
 
