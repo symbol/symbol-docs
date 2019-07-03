@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.9\n"
+"Project-Id-Version: nem2-docs 0.18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-28 17:22+0100\n"
+"POT-Creation-Date: 2019-07-02 15:31+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -47,13 +47,12 @@ msgstr "適格基準"
 
 #: ../../source/concepts/harvesting.rst:13
 msgid ""
-"The :doc:`importance score <account>` of the account determines the chances "
-"of creating a new block. This score is calculated as the relation between "
-"the number of :ref:`harvesting mosaics <harvesting-mosaic>` the account owns"
-" and the total supply available."
+"The :ref:`importance score <importance-calculation>` determines the "
+"probability of an account to harvest the next block in case the account has "
+"harvesting turned on and all other accounts are harvesting too."
 msgstr ""
-"アカウントの :doc:`インポータンススコア <account>` は新しいブロックを生成する機会を決定します。このスコアはアカウントが保有する "
-":ref:`ハーベスティングモザイク <harvesting-mosaic>` の数量とその有効な合計供給量との間の相対として計算されます。"
+":ref:`インポータンススコア <importance-calculation>` "
+"はそのアカウントがハーベスティングがオンになっていて、他のすべてのアカウントもハーベストしている場合に、アカウントが次のブロックをハーベストする確率を決定します。"
 
 #: ../../source/concepts/harvesting.rst:15
 msgid ""
@@ -66,12 +65,12 @@ msgstr ""
 #: ../../source/concepts/harvesting.rst:17
 msgid ""
 "The account needs to hold a `minimum amount <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties#L26>`_ of "
+"/catapult-server/blob/master/resources/config-network.properties#L30>`_ of "
 "this harvesting mosaic to have importance greater than zero."
 msgstr ""
 "このアカウントはインポータンスを 0 より大きい値にするために、ハーベスティングモザイクの `最小保有量 "
 "<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
-"network.properties#L26>`_ を保有する必要があります。"
+"network.properties#L30>`_ を保有する必要があります。"
 
 #: ../../source/concepts/harvesting.rst:19
 msgid ""
@@ -164,42 +163,47 @@ msgstr ""
 msgid ""
 "After an account activates delegated harvesting, its importance score is "
 "transferred to a remote account. The remote account inherits the importance "
-"of the original account. Security-wise, sharing a proxy private key with a "
-"remote node does not compromise the original account since:"
+"of the original account."
 msgstr ""
-"アカウントがデリゲートハーベスティングをアクティブすると、インポータンススコアがリモートアカウントへ転送されていきます。このリモートアカウントは元のアカウントのインポータンスを継承します。セキュリティ面において、プロキシ秘密鍵をリモートノードと共有しても、次の理由から元のアカウントが危険にさらされることはありません:"
+"アカウントのデリゲートハーベスティングを有効になると、そのインポータンススコアがリモートアカウントに転送されます。リモートアカウントは元のアカウントの重要性を継承します。"
 
 #: ../../source/concepts/harvesting.rst:56
+msgid ""
+"Security-wise, sharing a proxy private key with a remote node does not "
+"compromise the original account since:"
+msgstr "セキュリティについて、リモートノードとプロキシ秘密鍵を共有しても次の理由から元のアカウントが侵害されることはありません:"
+
+#: ../../source/concepts/harvesting.rst:58
 msgid "The remote account has zero balance."
 msgstr "リモートアカウントは残高0です。"
 
-#: ../../source/concepts/harvesting.rst:57
+#: ../../source/concepts/harvesting.rst:59
 msgid ""
 "The remote account by itself can't transfer the importance to another "
 "account."
 msgstr "リモートアカウントそれ自身だけでは、インポータンスを他のアカウントに移すことはできません。"
 
-#: ../../source/concepts/harvesting.rst:58
+#: ../../source/concepts/harvesting.rst:60
 msgid "The original account receives the resulting fees."
 msgstr "元のアカウントは結果の手数料を受け取ります。"
 
-#: ../../source/concepts/harvesting.rst:60
+#: ../../source/concepts/harvesting.rst:62
 msgid ""
 "Remote harvesters may not receive the entire reward if the following "
 "conditions are met:"
 msgstr "以下の条件を満たす場合、リモートハーベスターは全報酬を受け取ることができません:"
 
-#: ../../source/concepts/harvesting.rst:62
+#: ../../source/concepts/harvesting.rst:64
 msgid "The network harvesting sharing rate is greater than 0."
 msgstr "ネットワークハーベスティング共有率が 0 より大きい。"
 
-#: ../../source/concepts/harvesting.rst:63
+#: ../../source/concepts/harvesting.rst:65
 msgid ""
 "The node selected has defined a :ref:`beneficiary account <local-"
 "harvesting>`."
 msgstr ":ref:`受益者アカウント <local-harvesting>` を定義している選択されたノード。"
 
-#: ../../source/concepts/harvesting.rst:65
+#: ../../source/concepts/harvesting.rst:67
 msgid "Comparison between local and delegated harvesting"
 msgstr "ローカルとデリゲートハーベスティングの比較"
 
@@ -253,22 +257,22 @@ msgstr "トータル報酬。ノード所有者は報酬の一部を受取アカ
 msgid "Total reward - beneficiary share."
 msgstr "合計報酬 - 受益者分配"
 
-#: ../../source/concepts/harvesting.rst:76
+#: ../../source/concepts/harvesting.rst:78
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/harvesting.rst:81
+#: ../../source/concepts/harvesting.rst:83
 msgid "AccountLinkTransaction"
 msgstr ""
 
-#: ../../source/concepts/harvesting.rst:83
+#: ../../source/concepts/harvesting.rst:85
 msgid ""
 "Announce an AccountLinkTransaction to delegate the account importance to a "
 "proxy account. By doing so, you can enable delegated harvesting."
 msgstr ""
 "アカウントのインポータンスをプロキシアカウントにデリゲートするために、アカウントリンクトランザクションをアナウンスします。そうすることで、デリゲートハーベスティングが有効にできます。"
 
-#: ../../source/concepts/harvesting.rst:85
+#: ../../source/concepts/harvesting.rst:87
 msgid ""
 "In order for the proxy account to be accepted as the ``remoteAccountKey`` "
 "for delegated harvesting, it needs to meet the following conditions:"
@@ -276,53 +280,53 @@ msgstr ""
 "デリゲートハーベスティングのために ``remoteAccountKey`` "
 "として代理アカウントが受け入れられるために、以下の条件を満たす必要があります:"
 
-#: ../../source/concepts/harvesting.rst:87
+#: ../../source/concepts/harvesting.rst:89
 msgid "It cannot own any mosaics."
 msgstr "モザイクを保有することはできません。"
 
-#: ../../source/concepts/harvesting.rst:88
+#: ../../source/concepts/harvesting.rst:90
 msgid "It cannot be a cosignatory of any other account."
 msgstr "他のいかなるアカウントの連署者になることはできません。"
 
-#: ../../source/concepts/harvesting.rst:89
+#: ../../source/concepts/harvesting.rst:91
 msgid "It cannot be a multisig account."
 msgstr "マルチシグアカウントになることはできません。"
 
-#: ../../source/concepts/harvesting.rst:90
+#: ../../source/concepts/harvesting.rst:92
 msgid "It cannot already be a delegated account for another account."
 msgstr "別のアカウントのデリゲートアカウントにはできません。"
 
-#: ../../source/concepts/harvesting.rst:91
+#: ../../source/concepts/harvesting.rst:93
 msgid "It cannot have its own delegated account."
 msgstr "自身のデリゲートアカウントになることはできません。"
 
-#: ../../source/concepts/harvesting.rst:93
+#: ../../source/concepts/harvesting.rst:95
 msgid ""
 "Furthermore, for the duration that the account is used as a delegated "
 "account, it is restricted from:"
 msgstr "さらにアカウントがデリゲートアカウントとして使用されている間は、次のことが制限されます:"
 
-#: ../../source/concepts/harvesting.rst:95
+#: ../../source/concepts/harvesting.rst:97
 msgid "initiating any transactions."
 msgstr "いかなるトランザクションの開始。"
 
-#: ../../source/concepts/harvesting.rst:96
+#: ../../source/concepts/harvesting.rst:98
 msgid "involvement with any type of transactions."
 msgstr "あらゆる種類のトランザクションへの関与。"
 
-#: ../../source/concepts/harvesting.rst:98
+#: ../../source/concepts/harvesting.rst:100
 msgid "**Version**: 0x01"
 msgstr ""
 
-#: ../../source/concepts/harvesting.rst:100
+#: ../../source/concepts/harvesting.rst:102
 msgid "**Entity type**: 0x414C"
 msgstr "**エンティティタイプ**: 0x414C"
 
-#: ../../source/concepts/harvesting.rst:102
+#: ../../source/concepts/harvesting.rst:104
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/harvesting.rst:104
+#: ../../source/concepts/harvesting.rst:106
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -367,11 +371,11 @@ msgstr ""
 msgid "The account link action."
 msgstr "アカウントリンクアクション"
 
-#: ../../source/concepts/harvesting.rst:116
+#: ../../source/concepts/harvesting.rst:118
 msgid "LinkAction"
 msgstr ""
 
-#: ../../source/concepts/harvesting.rst:118
+#: ../../source/concepts/harvesting.rst:120
 msgid "Enumeration: uint8"
 msgstr ""
 
