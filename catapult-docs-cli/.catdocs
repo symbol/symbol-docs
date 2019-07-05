@@ -40,6 +40,14 @@
 			"descriptions": []
 		},
 		{
+			"title": "config-logging-broker.properties",
+			"text": "",
+			"source": "resources/config-logging-recovery.properties",
+			"descriptions": [
+				"src/catapult/config/LoggingConfiguration.h"
+			]
+		},
+		{
 			"title": "config-logging-recovery.properties",
 			"text": "",
 			"source": "resources/config-logging-recovery.properties",
