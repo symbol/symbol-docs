@@ -1581,15 +1581,12 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
   MerkleProofInfoDTO:
     type: object
-    required:
-    - payload
-    - type
     properties:
-      payload:
-        $ref: "#/definitions/merkleProofInfo"
-      type:
-        type: string
-        example: merkleProofInfo
+      merklePath:
+        type: array
+        description: The complementary data needed to calculate the merkle root.
+        items:
+          $ref: "#/definitions/merklePathItem"
   StatementsDTO:
     type: object
     description: The collection of transaction statements and resolutions triggered for the block requested.
@@ -2083,14 +2080,6 @@ definitions:
       signer:
         type: string
         description: The signer of the transaction.
-  merkleProofInfo:
-    type: object
-    properties:
-      merklePath:
-        type: array
-        description: The complementary data needed to calculate the merkle root.
-        items:
-          $ref: "#/definitions/merklePathItem"
   merklePathItem:
     type: object
     properties:

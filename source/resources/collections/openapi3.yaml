@@ -1782,15 +1782,12 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
     MerkleProofInfoDTO:
       type: object
-      required:
-      - payload
-      - type
       properties:
-        payload:
-          $ref: "#/components/schemas/merkleProofInfo"
-        type:
-          type: string
-          example: merkleProofInfo
+        merklePath:
+          type: array
+          description: The complementary data needed to calculate the merkle root.
+          items:
+            $ref: "#/components/schemas/merklePathItem"
     # Diagnostic endpoints
     StorageInfoDTO:
       type: object
@@ -2836,14 +2833,6 @@ components:
         signer:
           type: string
           description: The signer of the transaction.
-    merkleProofInfo:
-      type: object
-      properties:
-        merklePath:
-          type: array
-          description: The complementary data needed to calculate the merkle root.
-          items:
-            $ref: "#/components/schemas/merklePathItem"
     merklePathItem:
       type: object
       properties:
