@@ -21,7 +21,7 @@ Prerequisites
 Getting into some code
 **********************
 
-In this example, you will fetch the latest confirmed transactions for a given account using the ``accountHttp`` repository.
+Use the `accountHttp <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_  repository to get the latest confirmed transactions for a given account.
 
 .. example-code::
 
@@ -46,5 +46,3 @@ To `get more than 100 transactions <https://github.com/nemtech/nem2-docs/blob/ma
 .. code-block:: typescript
 
     new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
-
-You can also get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete `accountHttp reference <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_.
