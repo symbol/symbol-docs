@@ -400,6 +400,14 @@ body > .container.full-width {
     margin-bottom: 20px;
 }
 
+#sidebar .dropdown a {
+    padding-left: 10px;
+}
+
+#sidebar .dropdown a:hover{
+    background-color: transparent;
+}
+
 #sidebar .caption {
     padding: 10px 30px 10px 0;
     margin: 0;
