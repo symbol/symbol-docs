@@ -40,7 +40,7 @@ The NEM Developer Center is an open source project and we love to receive contri
 *   Ask in [StackOverflow](https://stackoverflow.com/tags/nem/) development related questions.
 *   Reach our community joining the official [Slack](http://slack.nemtech.io/).
 *   Check the [contributing guidelines](https://nemtech.github.io/guidelines/suggesting-changes.html) to propose changes.
-*   Follow the development updates on [Twitter](https://twitter.com/nemtechdev).
+*   Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
 *   Explore our [GitHub](https://github.com/nemtech) repositories.
 
 ## License
