@@ -198,19 +198,7 @@ def setup(app):
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 html_sidebars = {
-  'api': ['globaltoc.html'],
-  'cli': ['globaltoc.html'],
-  'concepts/**': ['globaltoc.html'],
-  'getting-started/**': ['globaltoc.html'],
-  'guides/**/**': ['globaltoc.html'],
-  'guides': ['globaltoc.html'],
-  'guidelines/**': ['globaltoc.html'],
-  'extensions': ['globaltoc.html'],
-  'prototyping-tool': ['globaltoc.html'],
-  'sdk': ['globaltoc.html'],
-  'wallet': ['globaltoc.html'],
-  'server': ['globaltoc.html'],
-  'contribute/**': ['globaltoc.html'],
+  '**': ['globaltoc.html'],
   'index': [],
 }
 
