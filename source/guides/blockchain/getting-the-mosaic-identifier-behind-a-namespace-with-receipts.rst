@@ -5,7 +5,7 @@ Getting the asset identifier behind a namespace with receipts
 #############################################################
 
 .. post:: 11 Jul, 2019
-    :category: Receipt
+    :category: Receipt, Mosaic
     :excerpt: 1
     :nocomments:
 
