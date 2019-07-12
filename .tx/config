@@ -283,9 +283,9 @@ source_file = build/gettext/guides/account/reading-transactions-from-an-account.
 source_lang = en
 type = PO
 
-[nem2docs.guides--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
+[nem2docs.guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
-source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
+source_file = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
 source_lang = en
 type = PO
 

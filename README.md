@@ -19,7 +19,7 @@ Catapult introduce new exclusive features:
 *   [Aggregate Transactions](https://nemtech.github.io/concepts/aggregate-transaction.html)
 *   [Cross-chain Swaps](https://nemtech.github.io/concepts/cross-chain-swaps.html)
 *   [Multi-level Multisig Accounts](https://nemtech.github.io/concepts/multisig-account.html#manufacturing-and-supply-chains)
-*   [Account Filters](https://nemtech.github.io/concepts/account-filter.html)
+*   [Account Restrictions](https://nemtech.github.io/concepts/account-restriction.html)
 
 Catapult will be a momentous step for NEM to be the widely utilized enterprise product it was envisioned to be. After nearly three years of development, the long-awaited update is expected to officially launch [by the end of 2019](https://blog.nem.io/nem-foundation-catapult-roadmap-and-vision/).
 
