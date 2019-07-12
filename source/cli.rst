@@ -52,11 +52,12 @@ By default, NEM2-CLI will always use the default profile. To use a named profile
 
     nem2-cli account info --profile mijin_test_net_profile
 
-If you are going to use named profile for multiple commands, you can use the NEM2_PROFILE environment variable at the command line.
+..
+    If you are going to use named profile for multiple commands, you can use the NEM2_PROFILE environment variable at the command line.
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    export NEM2_PROFILE=mijin_test_net_profile
+        export NEM2_PROFILE=mijin_test_net_profile
 
 If you do not have a private key to create a profile you can generate a new account, add a node url and save it as default or named profile.
 
@@ -465,6 +466,23 @@ Command
 .. code-block:: bash
 
     nem2-cli namespace info --uint [929036875,2226345261]
+
+**Owned**
+
+Gets all the :doc:`namespaces <../concepts/namespace>` owned by an account.
+
+Options
+
+.. code-block:: bash
+
+    -a, --address <address> - Address
+
+Command
+
+.. code-block:: bash
+
+    nem2-cli namespace owned --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+
 
 Mosaic
 ======

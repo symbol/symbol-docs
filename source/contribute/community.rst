@@ -28,4 +28,4 @@ Discover how the open source |community| works, and get started participating:
 
 .. |twitter| raw:: html
 
-   <a href="https://twitter.com/nemtechdev" target="_blank">Twitter</a>
+   <a href="https://twitter.com/NEMofficial" target="_blank">Twitter</a>
