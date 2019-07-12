@@ -68,7 +68,9 @@ listener.open().then(() => {
     transactionHttp
         .announce(signedTransaction)
         .subscribe(x => console.log(x), err => console.error(err));
+/* end block 03 */
 
+/* start block 04 */
     listener
         .confirmed(account.address)
         .pipe(
@@ -93,4 +95,4 @@ listener.open().then(() => {
             });
         }, err => console.log(err));
 });
-/* end block 03 */
+/* end block 04 */
