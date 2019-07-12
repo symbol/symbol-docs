@@ -2,7 +2,7 @@
 Self-paced training
 ###################
 
-Although you can read this documentation from start to end, we recommend you to go directly to the section you want to know more. At the end of each section, you will find **specific guides** to understand how to use and combine the different built-in features.
+Although you can read this documentation from start to end, we recommend you to go directly to the section you want to know more. At the end of each section, you will find :ref:`guides <blog-categories>` to understand how to use and combine the different built-in features.
 
 If you prefer to learn about NEM through guided lessons, consider taking one course from the following list.
 

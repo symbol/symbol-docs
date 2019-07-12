@@ -15,7 +15,7 @@ Get the resolution for a given alias and transaction using receipts.
 Background
 **********
 
-Catapult permits using short and human-readable names for your accounts and mosaics, instead of long and challenging to memorize strings. Accounts can link their registered :doc:`namespaces <namespaces>` to other accounts or mosaics announcing an :ref:`alias transaction <alias-transaction>`.
+Catapult permits using short and human-readable names for your accounts and mosaics, instead of long and challenging to memorize strings. Accounts can link their registered :doc:`namespaces <../../concepts/namespace>` to other accounts or mosaics announcing an :ref:`alias transaction <mosaic-alias-transaction>`.
 
 Imagine a ticket vendor sending tickets to their customers on the NEM blockchain. The company could send 1 ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. However, it is more convenient to define the same transaction as 1 ``ticketsales.event1.ticket`` to ``@alice`` instead, considering that the account and mosaic were aliased previously.
 
@@ -29,7 +29,7 @@ You can query directly from the network which is the current mosaic identifier b
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/receipt/GettingTheCurrentMosaicIdentifierBehindANamespace.ts
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -58,7 +58,7 @@ First, we are going to announce a transfer transaction using ``cat.currency`` in
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/receipt/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -67,7 +67,7 @@ First, we are going to announce a transfer transaction using ``cat.currency`` in
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/receipt/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -76,7 +76,7 @@ First, we are going to announce a transfer transaction using ``cat.currency`` in
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/receipt/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
