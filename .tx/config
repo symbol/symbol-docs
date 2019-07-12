@@ -133,9 +133,9 @@ source_file = build/gettext/concepts/transaction.pot
 source_lang = en
 type = PO
 
-[nem2docs.concepts--account-restrictions]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restrictions.po
-source_file = build/gettext/concepts/account-restrictions.pot
+[nem2docs.concepts--account-restriction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restriction.po
+source_file = build/gettext/concepts/account-restriction.pot
 source_lang = en
 type = PO
 
@@ -280,6 +280,12 @@ type = PO
 [nem2docs.guides--account--reading-transactions-from-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
 source_file = build/gettext/guides/account/reading-transactions-from-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
+source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
 source_lang = en
 type = PO
 

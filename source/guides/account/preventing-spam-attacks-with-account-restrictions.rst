@@ -27,7 +27,7 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
     Blocking spam attacks
 
-Thus, you opt to configure the product :doc:`account restrictions <../../concepts/account-restrictions>` to only receive transactions that follow a set of conditions.
+Thus, you opt to configure the product :doc:`account restrictions <../../concepts/account-restriction>` to only receive transactions that follow a set of conditions.
 
 *************
 Prerequisites

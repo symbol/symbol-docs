@@ -1,6 +1,6 @@
-####################
-Account Restrictions
-####################
+###################
+Account Restriction
+###################
 
 :doc:`Accounts <account>` may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.
 
