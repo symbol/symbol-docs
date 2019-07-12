@@ -6,7 +6,7 @@ The NEM2 Software Development Kit is the primary software development tool to cr
 
 The new SDK enables developers to focus on their product rather than on the NEM2 Blockchain specific API details due to its higher abstraction.
 
-The best way to learn to use the SDKs is through :ref:`guides <category-account>`.
+The best way to learn to use the SDKs is through :ref:`guides <blog-categories>`.
 
 **************
 Supported SDKs
