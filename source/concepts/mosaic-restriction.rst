@@ -1,6 +1,6 @@
-###################
-Mosaic Restrictions
-###################
+##################
+Mosaic Restriction
+##################
 
 Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact - send or receive - with the asset.
 

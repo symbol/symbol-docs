@@ -34,7 +34,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose many transactions between different accounts.
     0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
     --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
-    **Account restrictions**;;
+    **Account restriction**;;
     0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
     0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`Account Restriction Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.

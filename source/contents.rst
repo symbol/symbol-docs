@@ -18,8 +18,8 @@
     concepts/namespace
     concepts/transfer-transaction
     concepts/aggregate-transaction
-    concepts/account-restrictions
-    concepts/mosaic-restrictions
+    concepts/account-restriction
+    concepts/mosaic-restriction
     concepts/multisig-account
     concepts/cross-chain-swaps
 

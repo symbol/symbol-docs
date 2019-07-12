@@ -48,7 +48,7 @@ One crucial type of rule is :doc:`multisig <multisig-account>` control that allo
 Restrictions
 ************
 
-Accounts may configure a set of smart rules to block announcing or receiving transactions :doc:`given a series of restrictions <account-restrictions>`.
+Accounts may configure a set of smart rules to block announcing or receiving transactions :doc:`given a series of restrictions <account-restriction>`.
 
 ******
 Guides
