@@ -22,7 +22,7 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). To create non-expiring mosaics, leave this property undefined.
     Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
-    Transferability; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+    Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
 
 *****************************
 Absolute and relative amounts
@@ -54,7 +54,7 @@ Thus, the company must create a mosaic to represent shares to their company. Her
     Divisibility; 2
     Initial supply; 1000000000 (10,000,000.00)
     Supply mutable; true
-    Transferability; true
+    Transferable; true
 
 **Duration:** Shares of the company should exist as long as the company is in business. The ComfyClothingCompany leaves this property ``undefined``, creating a non-expiring mosaic representing their assets.
 
@@ -66,7 +66,7 @@ Fractional ownership, along with the ability to trade 24/7, brings additional li
 
 **Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
 
-**Transferability:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
+**Transferable:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
 
 ******
 Guides
