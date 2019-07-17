@@ -301,6 +301,12 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--migration--migrating-from-nis1-to-catapult]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
+source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--mosaic--creating-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/creating-a-mosaic.po
 source_file = build/gettext/guides/mosaic/creating-a-mosaic.pot
