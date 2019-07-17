@@ -20,7 +20,8 @@ NEM2-SDK shares the same design/architecture between programming languages to ac
 Architecture
 ************
 
-**Characteristics**
+Characteristics
+===============
 
 - **Standardized Contracts**: Guaranteeing interoperability and harmonization of data models.
 - **Loose Coupling**: Reducing the degree of component coupling fosters.
@@ -28,26 +29,6 @@ Architecture
 - **Reusability**: Enabling high-level interoperability between modules and potential component consumers.
 - **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
 - **Composability**: For components to be effectively composable they must be interoperable.
-
-**Reactive**
-
-NEM2-SDK uses ReactiveX Library intensely.
-
-- **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
-- **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
-- **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle these sort of errors.
-- **Concurrency**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
-- **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
-- **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
-
-.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
-
-- |rxjsinaction|
-- |frp|
-- |learnrxjs|
-- |rp-wiki|
-- |op-wiki|
-- |reactivex|
 
 Package Organization
 ====================
@@ -69,6 +50,27 @@ The NEM Domain models are, usually, immutable by definition. The developer canno
 **Services**
 
 Common operations that require multiple :doc:`REST API <../api>` requests are handled by services provided.
+
+Reactive
+========
+
+NEM2-SDK uses ReactiveX Library intensely.
+
+- **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
+- **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
+- **Async error handling**: Traditional try/catch is powerless for errors handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle these sort of errors.
+- **Concurrency**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
+- **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
+- **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
+
+.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
+
+- |rxjsinaction|
+- |frp|
+- |learnrxjs|
+- |rp-wiki|
+- |op-wiki|
+- |reactivex|
 
 .. |reactivex| raw:: html
 

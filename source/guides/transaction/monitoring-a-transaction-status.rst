@@ -3,7 +3,6 @@
 .. post:: 16 Jan, 2019
     :category: Transfer Transaction, Monitoring
     :excerpt: 1
-    :author: jorisadri
     :nocomments:
 
 ###############################
