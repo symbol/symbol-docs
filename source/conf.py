@@ -297,7 +297,7 @@ edit_on_github_branch = 'master'
 html_scaled_image_link = False
 
 # -- Options for ablog ----------------------------------------------------
-blog_baseurl = ''
+blog_baseurl = '/'
 blog_path = 'guides'
 
 blog_authors = {
