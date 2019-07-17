@@ -5,7 +5,7 @@ Node
 The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
 
 .. figure:: ../resources/images/diagrams/four-layer-architecture.png
-    :width: 650px
+    :width: 500px
     :align: center
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
@@ -17,6 +17,12 @@ Peer node
 *********
 
 **Repository:** |catapult-server|
+
+.. figure:: ../resources/images/diagrams/peer-detail.png
+    :width: 200px
+    :align: center
+
+    Peer node communication
 
 The peer nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
@@ -53,9 +59,15 @@ API node
 
 **Repository:** |catapult-server|
 
+.. figure:: ../resources/images/diagrams/api-detail.png
+    :width: 400px
+    :align: center
+
+    API node communication
+
 The catapult-server software allows you to configure peer nodes as API nodes. The primary responsibility of an API node is to store the data in a readable form in MongoDB.
 
-Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue - called ``spool``. A broker service consumes the data from the ``spool``  and updates MongoDB accordingly. Once a block is processed, the broker service notifies the changes to catapult-rest instances using ZMQ.
+Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue called ``spool``. A broker service consumes the data from the spool and updates MongoDB accordingly. Once a block is processed, the broker service notifies the changes to catapult-rest instances using ZMQ.
 
 API nodes are also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, which are only processed once they are complete.
 
@@ -81,6 +93,12 @@ REST node
 *********
 
 **Repository:** |catapult-rest|
+
+.. figure:: ../resources/images/diagrams/rest-detail.png
+    :width: 450px
+    :align: center
+
+    REST node communication
 
 The REST nodes handle :doc:`JSON API <../api>` client requests. A node reads from MongoDB, formats the response, and returns it to the client. This component is also responsible for returning events to the client using :ref:`WebSockets <websockets>`.
 
