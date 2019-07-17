@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-06-04 17:22+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,15 +61,12 @@ msgstr "設定"
 
 #: ../../source/concepts/inflation.rst:19
 msgid ""
-"The `inflation configuration <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-inflation.properties>`_ defines the "
+"The :properties:`minimum amount <config-inflation.properties>` defines the "
 "amount of currency mosaics created per block. Besides, the incrementing "
 "ratio can vary depending on the block height. The last height determines the"
 " amount of inflation per block that will be created from then on."
 msgstr ""
-"`インフレーション設定 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-inflation.properties>`_ "
-"はブロック毎に生成される通貨モザイクの量を定義します。"
+":properties:`最小量 <config-inflation.properties>` はブロック毎に生成される通貨モザイクの量を定義します。"
 
 #: ../../source/concepts/inflation.rst:27
 msgid ""

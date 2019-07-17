@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -81,8 +81,11 @@ msgstr ""
 #: ../../source/concepts/namespace.rst:23
 msgid ""
 "Namespaces can have up to ``3`` levels, a namespace and its two levels of "
-"subnamespace domains."
-msgstr "ネームスペースは、ネームスペースと2階層のサブネームスペースドメインの ``3`` 階層まで持つことができます。"
+"subnamespace domains. A subnamespaces has the same duration as its parent "
+"namespace."
+msgstr ""
+"ネームスペースは、ネームスペースと2階層のサブネームスペースドメインの ``3`` "
+"階層まで持つことができます。サブネームスペースはこの親ネームスペースと同じ有効期間を持ちます。"
 
 #: ../../source/concepts/namespace.rst:27
 msgid "Alias"
@@ -131,18 +134,18 @@ msgstr "アカウントは１つのアカウントまたはモザイクに名前
 #: ../../source/concepts/namespace.rst:40
 msgid ""
 "An account can assign a name to any account that permits receiving "
-":doc:`AddressNamespaceTransactions <account-restrictions>`. In contrast, if "
+":doc:`AddressNamespaceTransactions <account-restriction>`. In contrast, if "
 "the account wants to assign the alias to a mosaicId, it should be the "
 "creator of the mosaic."
 msgstr ""
-"アカウントは :doc:`アドレスネームスペーストランザクション <account-restrictions>` "
+"アカウントは :doc:`アドレスネームスペーストランザクション <account-restriction>` "
 "の受信を許可している、あらゆるアカウントへ名前を割り当てることができます。対照的に、アカウントがエイリアスをモザイクIDに割り当てたい場合は、モザイク作成者でなければなりません。"
 
 #: ../../source/concepts/namespace.rst:41
 msgid ""
 "An account can only link the alias to a mosaicId when the account is the "
 "creator of the mosaic."
-msgstr "アカウントがモザイク作成者である場合、アカウントはエイリアスを mosaicId にだけリンクできます。"
+msgstr "アカウントがモザイク作成者である場合は、エイリアスを mosaicId にだけリンクできます。"
 
 #: ../../source/concepts/namespace.rst:45
 msgid "Duration"
@@ -184,14 +187,12 @@ msgstr ""
 
 #: ../../source/concepts/namespace.rst:62
 msgid ""
-"The network `can define <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ a **grace period**"
-" that enables the namespace owner to renew the namespace past the expiration"
-" date before it becomes publicly available for registration."
+"The network :properties:`can define <config-network.properties>` a **grace "
+"period** that enables the namespace owner to renew the namespace past the "
+"expiration date before it becomes publicly available for registration."
 msgstr ""
-"ネットワークはネームスペース所有者が有効期限を過ぎて登録可能になる前に、名前空間を更新することを可能にする **猶予期間** を `定義する "
-"<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
-"network.properties>`_ ことができます。"
+"ネットワークはネームスペース所有者が有効期限を過ぎて登録可能になる前に、名前空間を更新することを可能にする **猶予期間** を "
+":properties:`定義  <config-network.properties>` することができます。"
 
 #: ../../source/concepts/namespace.rst:64
 msgid ""
@@ -208,14 +209,12 @@ msgstr "コスト"
 
 #: ../../source/concepts/namespace.rst:70
 msgid ""
-"The cost of creating a namespace is  `configurable per network "
-"<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
-"network.properties>`_. By default, registering a namespace costs ``1 "
+"The cost of creating a namespace is :properties:`configurable per network "
+"<config-network.properties>`. By default, registering a namespace costs ``1 "
 "cat.currency per block`` plus transactions fees. Registering a subnamespace "
 "has a fixed cost of ``100 cat.currency`` plus transaction fees."
 msgstr ""
-"ネームスペース作成のコストは `ネットワークごとに設定可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"ネームスペース作成のコストは :properties:`ネットワークごとに設定可能 <config-network.properties>` "
 "です。デフォルトでは、ネームスペース作成のコストは ``1 ブロックごとに 1 cat.currency`` "
 "とトランザクション手数料です。サブネームスペースの登録は ``100 cat.currency`` の固定コストとトランザクション手数料です。"
 
@@ -304,12 +303,10 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/namespace.rst:121
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/namespace.rst:126
@@ -373,41 +370,37 @@ msgid ":ref:`NamespaceType <namespace-type>`"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
-msgid "The type of the registered namespace."
+msgid "Type of the registered namespace."
 msgstr "登録ネームスペースのタイプ"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "duration"
 msgstr ""
 
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "uint64"
+#: ../../source/concepts/namespace.rst:1
+msgid ":schema:`BlockDuration <types.cats#L2>`"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
 msgid ""
-"The renting duration represents the number of confirmed blocks you would "
-"like to rent the namespace for. Duration is allowed to lie up to ``365`` "
-"days. During the renting period, it is possible to extend the rental by "
-"sending a :ref:`register namespace transaction<register-namespace-"
-"transaction>` with the extra number of blocks to rent the namespace. When a "
-"renting period ends, the namespace will become inactive."
+"Number of confirmed blocks you would like to rent the namespace for. "
+"Duration is allowed to lie up to ``365`` days. Required for root namespaces."
 msgstr ""
-"レンタル期間はネームスペースのレンタルを希望する承認済みブロック数を表します。期間は ``365`` "
-"日までとすることができます。レンタル期間中に延長したいブロック数の :ref:`ネームスペース登録トランザクション<register-"
-"namespace-transaction>` "
-"を送信して、ネームスペースをレンタルすることによって、レンタル期間を延長することが可能です。レンタル期間が終わると、ネームスペースは非活性になります。"
+"ネームスペースをレンタルしたい期間の承認済みブロック数を指定します。期間は ``365`` "
+"日まで許可されています。ルートネームスペースでは必須項目です。"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "parentId"
 msgstr ""
 
+#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
+#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
+msgid ":schema:`NamespaceId <namespace/namespace_types.cats#L1>`"
+msgstr ""
+
 #: ../../source/concepts/namespace.rst:1
-msgid ""
-"If it is a subdomain, a reference to parent namespace name is required."
-msgstr "それがサブネームスペースの場合、親ネームスペースへの参照は必須です。"
+msgid "Identifier of the parent namespace. Required for subnamespaces."
+msgstr "親ネームスペースの識別子。サブネームスペースでは必須項目です。"
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
 #: ../../source/concepts/namespace.rst:1
@@ -415,8 +408,8 @@ msgid "namespaceId"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
-msgid "The id of the namespace."
-msgstr "ネームスペースのID"
+msgid "Identifier of the namespace."
+msgstr "ネームスペースの識別子"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "namespaceNameSize"
@@ -470,24 +463,24 @@ msgid ":ref:`AliasAction <alias-action>`"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "The alias action."
+msgid "Alias action."
 msgstr "エイリアスアクション"
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "The id of the namespace that will become an alias."
-msgstr "エイリアスになるネームスペースのID"
+msgid "Identifier of the namespace that will become an alias."
+msgstr "エイリアスになるネームスペースの識別子"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "address"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
-msgid "25 bytes (binary)"
+msgid ":schema:`Address <types.cats#L8>`"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
-msgid "The aliased address."
-msgstr "エイリアスアドレス"
+msgid "Aliased address."
+msgstr ""
 
 #: ../../source/concepts/namespace.rst:176
 msgid "MosaicAliasTransaction"
@@ -510,8 +503,12 @@ msgid "mosaicId"
 msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
-msgid "The aliased mosaic id."
-msgstr "エイリアスモザイクID"
+msgid ":schema:`MosaicId <types.cats#L4>`"
+msgstr ""
+
+#: ../../source/concepts/namespace.rst:1
+msgid "Identifier of the aliased mosaic."
+msgstr "エイリアス付加済みモザイクの識別子"
 
 #: ../../source/concepts/namespace.rst:199
 msgid "NamespaceType"

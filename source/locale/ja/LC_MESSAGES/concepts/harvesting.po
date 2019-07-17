@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -64,13 +64,12 @@ msgstr ""
 
 #: ../../source/concepts/harvesting.rst:17
 msgid ""
-"The account needs to hold a `minimum amount <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties#L30>`_ of "
-"this harvesting mosaic to have importance greater than zero."
+"The account needs to hold a :properties:`minimum amount <config-"
+"network.properties>` of this harvesting mosaic to have importance greater "
+"than zero."
 msgstr ""
-"このアカウントはインポータンスを 0 より大きい値にするために、ハーベスティングモザイクの `最小保有量 "
-"<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
-"network.properties#L30>`_ を保有する必要があります。"
+"このアカウントは 0 より大きい重要度を持つためにこのハーベスティングモザイクを :properties:`最低限の残高 <config-"
+"network.properties>` だけ保有する必要があります。"
 
 #: ../../source/concepts/harvesting.rst:19
 msgid ""
@@ -87,15 +86,14 @@ msgstr "ハーベスティングモザイク"
 
 #: ../../source/concepts/harvesting.rst:27
 msgid ""
-"Catapult software allows the `definition <https://github.com/nemtech"
-"/catapult-server/blob/master/resources/config-network.properties#L13>`_ of "
-"any :doc:`mosaic <mosaic>` for harvesting purposes to fit the business "
-"needs. The catapult test network names this mosaic ``cat.harvest``."
+"Catapult software allows the :properties:`definition <config-"
+"network.properties>` of any :doc:`mosaic <mosaic>` for harvesting purposes "
+"to fit the business needs. The catapult test network names this mosaic "
+"``cat.harvest``."
 msgstr ""
 "Catapult ソフトウェアはビジネスニーズに合わせて構成可能なプロパティを使用して、ハーベスティング用の :doc:`モザイク <mosaic>` "
-"を `定義 <https://github.com/nemtech/catapult-server/blob/master/resources"
-"/config-network.properties#L13>`_ することが許可されています。Catapult テストネットワークはこのモザイクを "
-"``cat.harvest`` と命名しています。"
+"を :properties:`定義 <config-network.properties>` することが許可されています。Catapult "
+"テストネットワークはこのモザイクを ``cat.harvest`` と命名しています。"
 
 #: ../../source/concepts/harvesting.rst:29
 msgid ""
@@ -352,12 +350,12 @@ msgid "remoteAccountKey"
 msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "32 bytes (binary)"
+msgid ":schema:`Key <types.cats#L11>`"
 msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "The public key of the remote account."
-msgstr "リモートアカウントの公開鍵"
+msgid "Public key of the remote account."
+msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
 msgid "linkAction"
@@ -368,8 +366,8 @@ msgid ":ref:`LinkAction <link-action>`"
 msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "The account link action."
-msgstr "アカウントリンクアクション"
+msgid "Account link action."
+msgstr ""
 
 #: ../../source/concepts/harvesting.rst:118
 msgid "LinkAction"
@@ -388,13 +386,13 @@ msgid "0"
 msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "Link."
-msgstr "リンク"
+msgid "Link account."
+msgstr "アカウントを関連付ける"
 
 #: ../../source/concepts/harvesting.rst:1
 msgid "1"
 msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "Unlink."
-msgstr "アンリンク"
+msgid "Unlink account."
+msgstr "アカウントの関連付けをやめる"

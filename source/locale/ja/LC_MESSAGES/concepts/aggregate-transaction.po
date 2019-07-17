@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -135,8 +135,8 @@ msgid ""
 "complete after he signed. After announcing it to the network, Alice and Bob "
 "will receive the mosaics at the same time."
 msgstr ""
-"彼が唯一必須の署名者なので、署名した後、トランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と Bob "
-"は同時にモザイクを受け取るでしょう。"
+"Dan が唯一必須の署名者なので、署名した後にトランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と "
+"Bob は同時にモザイクを受け取るでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:64
 msgid "Sending payouts with aggregate complete transactions"
@@ -153,7 +153,7 @@ msgid ""
 " <mosaic>`. When the ticket distributor cosigns the aggregate transaction, "
 "the swap will happen atomically."
 msgstr ""
-"この例では、Alice はチケットを ``currency:euro``  :doc:`モザイク <mosaic>` "
+"この例では Alice がチケットを ``currency:euro``  :doc:`モザイク <mosaic>` "
 "で購入しています。チケット販売者はアグリゲートトランザクションに署名し、交換はアトミックに起こります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:78
@@ -196,12 +196,10 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/aggregate-transaction.rst:108
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/aggregate-transaction.rst:111
@@ -267,8 +265,8 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"The transaction payload size in bytes. In other words, the total number of "
-"bytes occupied by all inner transactions."
+"Transaction payload size in bytes. In other words, the total number of bytes"
+" occupied by all inner transactions."
 msgstr "バイト単位のトランザクションのペイロードサイズ。つまりインナートランザクションすべてによって占有されている合計バイト数。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -276,31 +274,30 @@ msgid "transactions"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array(Transaction, size=payloadSize)"
+msgid "array(:ref:`Transaction <transaction>`, size=payloadSize)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"The array of transactions, which can be initiated by different accounts.  An"
-" aggregate transaction can contain up to ``1000`` inner transactions "
-"involving up to ``15`` different cosignatories. Other aggregate transactions"
-" are not allowed as inner transactions."
+"Array of inner transactions.  An aggregate transaction can contain up to "
+"``1000`` inner transactions involving up to ``15`` different cosignatories. "
+"Other aggregate transactions are not allowed as inner transactions."
 msgstr ""
-"異なるアカウントによって開始されたトランザクション配列です。アグリゲートトランザクションは ``1000`` までのインナートランザクションを内包し "
-"``15`` までの連署者を設定できます。他のアグリゲートトランザクションをインナートランザクションとして内包することはできません。"
+"内包されたトランザクションの配列です。アグリゲートトランザクションは ``1000`` までのインナートランザクションを内包でき ``15`` "
+"までの連署者を設定できます。他のアグリゲートトランザクションをインナートランザクションとして内包することはできません。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "cosignatures"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "array(Cosignature, __FILL__)"
+msgid "array(:ref:`Cosignature <cosignature>`, __FILL__)"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"An array of transaction :ref:`cosignatures <cosignature>`. Fills the "
-"remaining body space after transactions."
+"Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining "
+"body space after transactions."
 msgstr ":ref:`連署者 <cosignature>` トランザクションの配列。トランザクションの後ろの残りの本体スペースを埋めます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:134
@@ -325,13 +322,12 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "32 bytes (binary)"
+msgid ":schema:`Hash256 <types.cats#L9>`"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "The aggregate bonded transaction hash to cosign."
-msgstr "署名するアグリゲートボンドトランザクションハッシュ"
+msgid "Aggregate bonded transaction hash to cosign."
+msgstr "署名すべきアグリゲートボンドトランザクションハッシュ"
 
 #: ../../source/concepts/aggregate-transaction.rst:151
 msgid "Cosignature"
@@ -351,7 +347,11 @@ msgid "signer"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "The cosigner public key."
+msgid ":schema:`Key <types.cats#L11>`"
+msgstr ""
+
+#: ../../source/concepts/aggregate-transaction.rst:1
+msgid "Cosigner public key."
 msgstr "連署者の公開鍵"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -359,11 +359,11 @@ msgid "signature"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "64 bytes (binary)"
+msgid ":schema:`Signature <types.cats#L12>`"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "The transaction signature."
+msgid "Transaction signature."
 msgstr "トランザクションの署名"
 
 #: ../../source/concepts/aggregate-transaction.rst:166
@@ -422,7 +422,7 @@ msgid "mosaic"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid ":ref:`Mosaic<mosaic>`"
+msgid ":ref:`UnresolvedMosaic <unresolved-mosaic>`"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -434,11 +434,11 @@ msgid "duration"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "uint64"
+msgid ":schema:`BlockDuration <types.cats#L2>`"
 msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "The lock duration. Duration is allowed to lie up to ``2`` days."
+msgid "Lock duration. Duration is allowed to lie up to ``2`` days."
 msgstr "ロック期間。期間は ``2`` 日までとすることができます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
@@ -447,6 +447,6 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
-"The aggregate bonded transaction hash that has to be confirmed before "
-"unlocking the mosaics."
+"Aggregate bonded transaction hash that has to be confirmed before unlocking "
+"the mosaics."
 msgstr "モザイクをアンロックする前に、アグリゲートボンドトランザクションハッシュが承認されていなければなりません。"

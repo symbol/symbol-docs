@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/receipt.rst:3 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:72
+#: ../../source/concepts/receipt.rst:84
 msgid "Receipt"
 msgstr "レシート"
 
-#: ../../source/concepts/receipt.rst:5 ../../source/concepts/receipt.rst:74
+#: ../../source/concepts/receipt.rst:5 ../../source/concepts/receipt.rst:86
 msgid ""
 "Conditional state changes in the background enable complex transactions."
 msgstr "バックグラウンドでの条件付き状態変更は、複雑なトランザクションを可能にします。"
@@ -133,7 +133,7 @@ msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
 msgid "Basic type"
-msgstr ""
+msgstr "基本タイプ"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
@@ -417,17 +417,21 @@ msgid ""
 msgstr "アカウントが受信するロックされたモザイク、モザイクIDとその量。シークレットロックの期限が切れたときに記録されます。"
 
 #: ../../source/concepts/receipt.rst:67
+msgid "Guides"
+msgstr ""
+
+#: ../../source/concepts/receipt.rst:79
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/receipt.rst:76 ../../source/concepts/receipt.rst:97
-#: ../../source/concepts/receipt.rst:120 ../../source/concepts/receipt.rst:142
-#: ../../source/concepts/receipt.rst:160 ../../source/concepts/receipt.rst:181
-#: ../../source/concepts/receipt.rst:202
+#: ../../source/concepts/receipt.rst:88 ../../source/concepts/receipt.rst:109
+#: ../../source/concepts/receipt.rst:132 ../../source/concepts/receipt.rst:154
+#: ../../source/concepts/receipt.rst:172 ../../source/concepts/receipt.rst:193
+#: ../../source/concepts/receipt.rst:214
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/receipt.rst:78
+#: ../../source/concepts/receipt.rst:90
 msgid ":ref:`SizePrefixedEntity <size-prefixed-entity>`"
 msgstr ""
 
@@ -456,7 +460,7 @@ msgid "uint16"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The receipt version."
+msgid "Receipt version."
 msgstr "レシートバージョン"
 
 #: ../../source/concepts/receipt.rst:1
@@ -468,30 +472,30 @@ msgid "ReceiptType"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The receipt type."
+msgid "Receipt type."
 msgstr "レシートタイプ"
 
-#: ../../source/concepts/receipt.rst:90
+#: ../../source/concepts/receipt.rst:102
 msgid "BalanceTransferReceipt"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:92
+#: ../../source/concepts/receipt.rst:104
 msgid "The invisible state change triggered a mosaic transfer."
 msgstr "モザイク転送によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:94 ../../source/concepts/receipt.rst:117
-#: ../../source/concepts/receipt.rst:139 ../../source/concepts/receipt.rst:157
-#: ../../source/concepts/receipt.rst:178 ../../source/concepts/receipt.rst:199
+#: ../../source/concepts/receipt.rst:106 ../../source/concepts/receipt.rst:129
+#: ../../source/concepts/receipt.rst:151 ../../source/concepts/receipt.rst:169
+#: ../../source/concepts/receipt.rst:190 ../../source/concepts/receipt.rst:211
 msgid "**version**: 0x1"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:95
+#: ../../source/concepts/receipt.rst:107
 msgid "**basicType**: 0x1"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:99 ../../source/concepts/receipt.rst:122
-#: ../../source/concepts/receipt.rst:144 ../../source/concepts/receipt.rst:162
-#: ../../source/concepts/receipt.rst:183 ../../source/concepts/receipt.rst:204
+#: ../../source/concepts/receipt.rst:111 ../../source/concepts/receipt.rst:134
+#: ../../source/concepts/receipt.rst:156 ../../source/concepts/receipt.rst:174
+#: ../../source/concepts/receipt.rst:195 ../../source/concepts/receipt.rst:216
 msgid ":ref:`Receipt <receipt>`"
 msgstr ""
 
@@ -500,12 +504,11 @@ msgid "sender"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1
-msgid "32 bytes (binary)"
+msgid ":schema:`Key <types.cats#L11>`"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The public key of the sender."
+msgid "Public key of the sender."
 msgstr "送信者の公開鍵"
 
 #: ../../source/concepts/receipt.rst:1
@@ -513,8 +516,12 @@ msgid "recipient"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The public key of the recipient."
-msgstr "受信者の公開鍵"
+msgid ":schema:`Address <types.cats#L8>`"
+msgstr ""
+
+#: ../../source/concepts/receipt.rst:1
+msgid "Address of the recipient."
+msgstr "受信者のアドレス"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
@@ -522,34 +529,37 @@ msgid "mosaicId"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
-msgid "uint64"
+msgid ":schema:`MosaicId <types.cats#L4>`"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid "The mosaic id."
-msgstr "モザイクID"
+msgid "Identifier of the mosaic."
+msgstr "モザイクの識別子"
 
 #: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
 msgid "amount"
 msgstr ""
 
+#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
 #: ../../source/concepts/receipt.rst:1
-msgid "The amount of mosaics."
-msgstr "モザイクの量"
+msgid ":schema:`Amount <types.cats#L1>`"
+msgstr ""
 
-#: ../../source/concepts/receipt.rst:113
+#: ../../source/concepts/receipt.rst:1
+msgid "Amount of mosaics to send."
+msgstr "送信するモザイクの量"
+
+#: ../../source/concepts/receipt.rst:125
 msgid "BalanceChangeReceipt"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:115
+#: ../../source/concepts/receipt.rst:127
 msgid "The invisible state change changed an account balance."
 msgstr "アカウントの残高変化によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:118
+#: ../../source/concepts/receipt.rst:130
 msgid "**basicType**: (0x2) credit or (0x3) debit"
 msgstr ""
 
@@ -558,25 +568,25 @@ msgid "account"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The target account public key."
-msgstr "ターゲットのアカウント公開鍵"
+msgid "Public key of the target account."
+msgstr "ターゲットアカウントの公開鍵"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The amount of the mosaic."
-msgstr "モザイクの量"
+msgid "Amount of mosaics to increase or decrease."
+msgstr "モザイクの増加または減少の量"
 
-#: ../../source/concepts/receipt.rst:135
+#: ../../source/concepts/receipt.rst:147
 msgid "ArtifactExpiryReceipt"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:137
+#: ../../source/concepts/receipt.rst:149
 msgid ""
 "An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) "
 "expired."
 msgstr ""
 "アーティファクト (例 :doc:`ネームスペース <namespace>` 、 :doc:`モザイク <mosaic>` ) の期限が切れた。"
 
-#: ../../source/concepts/receipt.rst:140
+#: ../../source/concepts/receipt.rst:152
 msgid "**basicType**: 0x4"
 msgstr ""
 
@@ -585,34 +595,42 @@ msgid "artifactId"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The id of the artifact."
-msgstr "アーティファクトのID"
+msgid ""
+":schema:`MosaicId <types.cats#L4>` or :schema:`NamespaceId "
+"<namespace/namespace_types.cats#L1>`"
+msgstr ""
+":schema:`MosaicId <types.cats#L4>` または :schema:`NamespaceId "
+"<namespace/namespace_types.cats#L1>`"
 
-#: ../../source/concepts/receipt.rst:155
+#: ../../source/concepts/receipt.rst:1
+msgid "Identifier of the artifact."
+msgstr "アーティファクトの識別子"
+
+#: ../../source/concepts/receipt.rst:167
 msgid "InflationReceipt"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:158
+#: ../../source/concepts/receipt.rst:170
 msgid "**basicType**: 0x5"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The mosaic id created."
-msgstr "作成されたモザイクID"
+msgid "Identifier of the mosaic that has been created."
+msgstr "作成されたモザイクの識別子"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The amount created."
-msgstr "作成された量"
+msgid "Number of mosaics created."
+msgstr "作成されたモザイクの数"
 
-#: ../../source/concepts/receipt.rst:174
+#: ../../source/concepts/receipt.rst:186
 msgid "TransactionStatement"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:176
+#: ../../source/concepts/receipt.rst:188
 msgid "The collection of receipts related to a transaction."
 msgstr "トランザクションに関するレシートのコレクション。"
 
-#: ../../source/concepts/receipt.rst:179
+#: ../../source/concepts/receipt.rst:191
 msgid "**type**: Transaction_Group"
 msgstr ""
 
@@ -624,9 +642,8 @@ msgstr ""
 msgid ":ref:`ReceiptSource <receipt-source>`"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:230
-msgid "The transaction that triggered the receipt."
+#: ../../source/concepts/receipt.rst:1
+msgid "Transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクション。"
 
 #: ../../source/concepts/receipt.rst:1
@@ -638,20 +655,20 @@ msgid "array(:ref:`Receipt <receipt>`, size=receiptsSize)"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The array of receipts."
+msgid "Array of receipts."
 msgstr "レシートの配列"
 
-#: ../../source/concepts/receipt.rst:195
+#: ../../source/concepts/receipt.rst:207
 msgid "ResolutionStatement"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:197
+#: ../../source/concepts/receipt.rst:209
 msgid ""
 "A resolution statement keeps the relation between a namespace alias used in "
 "a transaction and the real address or mosaicId."
 msgstr "解決ステートメントはトランザクションで使用されるネームスペースエイリアスと実際のアドレスまたは mosaicId 間の関係を保持します。"
 
-#: ../../source/concepts/receipt.rst:200
+#: ../../source/concepts/receipt.rst:212
 msgid "**type**: Address_Alias_Resolution or Mosaic_Alias_Resolution"
 msgstr ""
 
@@ -659,13 +676,17 @@ msgstr ""
 msgid "unresolved"
 msgstr ""
 
-#: ../../source/concepts/receipt.rst:1 ../../source/concepts/receipt.rst:1
-msgid "25 bytes (binary) or uint64"
+#: ../../source/concepts/receipt.rst:1
+msgid ""
+":schema:`UnresolvedAddress <types.cats#L7>` or :schema:`UnresolvedMosaicId "
+"<types.cats#L3>`"
 msgstr ""
+":schema:`UnresolvedAddress <types.cats#L7>` または :schema:`UnresolvedMosaicId "
+"<types.cats#L3>`"
 
 #: ../../source/concepts/receipt.rst:1
-msgid "An unresolved address or unresolved mosaicId."
-msgstr "未解決アドレスまたは未解決モザイクID"
+msgid "Unresolved address or unresolved mosaic identifier."
+msgstr "未解決アドレスまたは未解決モザイクの識別子"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "resolutionEntries"
@@ -678,15 +699,15 @@ msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
-"The array of resolution entries linked to the unresolved namespaceId. It is "
-"an array instead of a single UInt64 field since within one block the "
+"Array of resolution entries linked to the unresolved namespace identifier. "
+"It is an array instead of a single UInt64 field since within one block the "
 "resolution might change for different sources due to alias related "
 "transactions."
 msgstr ""
-"未解決 namespaceId にリンクされている解決エントリの配列。1 "
+"未解決のネームスペース識別子にリンクされている解決エントリの配列。1 "
 "ブロック内でエイリアス関連のトランザクションが原因で解決が異なるソースで変わる可能性があるため、これは単一の UInt64 フィールドではなく配列です。"
 
-#: ../../source/concepts/receipt.rst:216
+#: ../../source/concepts/receipt.rst:228
 msgid "ResolutionEntry"
 msgstr ""
 
@@ -695,12 +716,26 @@ msgid "resolvedValue"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "A resolved address or resolved mosaicId."
-msgstr "解決済みアドレスまたは解決済みモザイクID"
+msgid ""
+":schema:`Address <types.cats#L8>` or :schema:`MosaicId <types.cats#L4>`"
+msgstr ""
+":schema:`Address <types.cats#L8>` または :schema:`MosaicId <types.cats#L4>`"
 
-#: ../../source/concepts/receipt.rst:228
+#: ../../source/concepts/receipt.rst:1
+msgid "Resolved address or resolved mosaic identifier."
+msgstr "解決済みアドレスまたは解決済みモザイクの識別子"
+
+#: ../../source/concepts/receipt.rst:1
+msgid "Information about the transaction that triggered the receipt."
+msgstr "レシートをトリガしたトランザクションの情報。"
+
+#: ../../source/concepts/receipt.rst:240
 msgid "ReceiptSource"
 msgstr ""
+
+#: ../../source/concepts/receipt.rst:242
+msgid "The transaction that triggered the receipt."
+msgstr "レシートをトリガしたトランザクション。"
 
 #: ../../source/concepts/receipt.rst:1
 msgid "primaryId"
@@ -711,7 +746,7 @@ msgid "uint32"
 msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
-msgid "The transaction index within the block."
+msgid "Transaction index within the block."
 msgstr "ブロック内のトランザクションインデックス。"
 
 #: ../../source/concepts/receipt.rst:1
@@ -720,8 +755,9 @@ msgstr ""
 
 #: ../../source/concepts/receipt.rst:1
 msgid ""
-"The transaction index inside within the aggregate transaction. If the "
-"transaction is not an inner transaction, then the secondary id is set to 0."
+"Transaction index inside within the aggregate transaction. If the "
+"transaction is not an inner transaction, then the secondary identifier is "
+"set to 0."
 msgstr ""
-"アグリゲートトランザクション内のトランザクションのインデックス。トランザクションがインナートランザクションではない場合、セカンダリIDは 0 "
+"アグリゲートトランザクション内のトランザクションのインデックス。トランザクションがインナートランザクションではない場合、セカンダリ識別子は 0 "
 "に設定されます。"

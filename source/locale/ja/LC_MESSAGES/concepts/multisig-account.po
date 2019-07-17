@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -279,12 +279,10 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/multisig-account.rst:131
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/multisig-account.rst:136
@@ -354,9 +352,9 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid ""
-"The number of signatures needed to remove a cosignatory. If we are modifying"
-" an existing multisig account, this indicates the relative change of the "
-"minimum cosignatories."
+"Number of signatures needed to remove a cosignatory. If we are modifying an "
+"existing multisig account, this indicates the relative change of the minimum"
+" cosignatories."
 msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/concepts/multisig-account.rst:1
@@ -365,9 +363,9 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid ""
-"The number of signatures needed to approve a transaction. If we are "
-"modifying an existing multisig account, this indicates the relative change "
-"of the minimum cosignatories."
+"Number of signatures needed to approve a transaction. If we are modifying an"
+" existing multisig account, this indicates the relative change of the "
+"minimum cosignatories."
 msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/concepts/multisig-account.rst:1
@@ -379,7 +377,7 @@ msgid "uint8"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "The number of modifications."
+msgid "Number of modifications."
 msgstr "変更の数"
 
 #: ../../source/concepts/multisig-account.rst:1
@@ -393,7 +391,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "The array of cosignatory :doc:`accounts <account>` to add or delete."
+msgid "Array of cosignatory :doc:`accounts <account>` to add or delete."
 msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
 
 #: ../../source/concepts/multisig-account.rst:164
@@ -409,7 +407,7 @@ msgid ":ref:`CosignatoryModificationType <cosignatory-modification-type>`"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "The cosignatory modification type."
+msgid "Cosignatory modification type."
 msgstr "連署者変更タイプ"
 
 #: ../../source/concepts/multisig-account.rst:1
@@ -417,11 +415,11 @@ msgid "cosignatoryPublicKey"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "32 bytes (binary)"
+msgid ":schema:`Key <types.cats#L11>`"
 msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "The public key of the cosignatory."
+msgid "Public key of the cosignatory."
 msgstr "連署者の公開鍵"
 
 #: ../../source/concepts/multisig-account.rst:176
