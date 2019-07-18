@@ -70,9 +70,6 @@ $(document).ready(function () {
     addBlockCaptionInsideCodeExample();
     initLanguageSelector();
     setPreferredCodeTab();
-    $('a.external').attr("target", "_blank");
-});
-
-$(window).on('load', function () {
     clickPreferredCodeTab();
+    $('a.external').attr("target", "_blank");
 });

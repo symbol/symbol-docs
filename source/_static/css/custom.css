@@ -459,13 +459,23 @@ body > .container.full-width {
 /* Tabs */
 .sphinx-tabs {
     margin: 0;
+    padding: 0;
     max-width: 100%;
 }
 
-.sphinx-tabs .container {
-    width: initial;
-    margin: 0;
+.sphinx-tabs .ui.sphinx-menu,
+.sphinx-tabs .ui.segment {
     font-size: 16px;
+}
+
+.sphinx-tabs .tabular.menu .item {
+    max-width: 100%;
+    margin: 0;
+    width: auto;
+}
+
+.sphinx-tabs .tabular.menu .item .container{
+    width: auto;
 }
 
 .sphinx-tabs .sphinx-menu {
