@@ -118,7 +118,7 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 
 **Minimum approval**: Defines how many cosignatories are required for any other type of transaction.
 
-Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process). In order to facilitate this process, transactions with type :ref:`ModifyMultisigAccount <modify-multisig-account-transaction>` must be wrapped in an :ref:`aggregate transaction <aggregate-bonded-transaction>`.
+Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process). In order to facilitate this process, transactions with type :ref:`ModifyMultisigAccount <modify-multisig-account-transaction>` must be wrapped in an :ref:`aggregate transaction <aggregate-transaction>`.
 
 * Guide: :doc:`Converting an account to multisignature <../account/converting-an-account-to-multisig>`
 
