@@ -62,9 +62,9 @@ The first notable change about transactions is that the status response is recei
 
 Additionally, there is only one transfer transaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
 
-****************************
-Max fee & effective paid fee
-****************************
+****************
+Transaction fees
+****************
 
 The fee that needs to be paid for a transaction now depends on the transaction size and node owners can specify a positive (or zero) fee multiplier. The **effective fee** paid for a transaction can be calculated reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
 
@@ -104,9 +104,9 @@ To get the real identifier behind an aliased address or mosaic, the client appli
 
 * Guide: :doc:`Getting the asset identifier behind a namespace with receipts <../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts>`
 
-**************************
-Multi-Signature Management
-**************************
+*************************
+Multisignature management
+*************************
 
 With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other - so-called client-side - multisignature implementations.
 
