@@ -2,72 +2,84 @@
 Node
 ####
 
-The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
+The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
 
 .. figure:: ../resources/images/diagrams/four-layer-architecture.png
-    :width: 650px
+    :width: 500px
     :align: center
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
 The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
-*************
-P2P component
-*************
+*********
+Peer node
+*********
 
 **Repository:** |catapult-server|
 
+.. figure:: ../resources/images/diagrams/peer-detail.png
+    :width: 200px
+    :align: center
+
+    Peer node communication
+
 The peer nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to :ref:`verify transactions <transaction-validation>` and :doc:`blocks<block>`, run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
-The API push new transactions to the P2P network, where they are :doc:`included in a block <harvesting>` or discarded. After the block is processed:
+The API nodes push new transactions to the P2P network, where they are :doc:`included in a block <harvesting>` or discarded. After the block is processed, the node saves:
 
-- The binary of the block is saved on disk as a flat file.
-- The updated chain state is saved in memory or RocksDB (configurable).
+* The binary of each block as a flat-file on disk.
+* The updated chain state in memory or RocksDB (configurable).
+
+RocksDB
+=======
+
+Peer nodes store the chain state in |rocksdb|. The data structures cached are serialized and stored as values to corresponding keys. For example, one particular column maps the public keys to addresses. Another one, the account state entries as the values to corresponding address keys.
+
+Storing the state in memory is usually faster than using RocksDB. However, storing state information in RocksDB demands less memory of the network nodes.
+
+.. note:: Persisting the state in RocksDB is convenient in networks with a large number of accounts.
 
 Node reputation
 ===============
 
 Public networks enable anyone to run a node. Some of these nodes could share invalid information or try to disturb the network.
 
-To reduce communication attempts, the nodes keep track of the results of preceding communications.
+To reduce miscommunication attempts, the nodes keep track of the results of preceding communications. Every node with P2P capabilities keeps a success and a failure counter for every other peer node that it has interacted with.
 
-When a node connects to a remote peer, it first increments the trust towards the remote peer. Otherwise, the node increments the failure counter. Likewise, the node updates the trust counters accordingly after processing the data requested.
+Nodes update the counters accordingly after processing the data requested. If a node successfully connects to a remote peer, it first increments the success counter towards the remote peer. If the communication attempt fails,  the node increments the remote peer’s failure counter. Likewise, the node updates the peer counters accordingly after processing data shared.
 
-From these interactions, the node assigns a weight between 500 and 10000 to every peer reached.
+Extrapolating from these scores, the node assigns a weight between 500 and 10000 to every peer reached.
 
-The probability of selecting a remote node depends linearly on its weight. Every four rounds of node selections, the criteria changes to prevent |sybil|. The node selects a peer with high importance instead.
+The probability of selecting a remote node to read data from depends linearly on its weight. Every four rounds of node selections, the criteria changes to prevent |sybil|. Then the node selects a peer with high importance.
 
-RocksDB
-=======
-
-|rocksdb| stores the chain state. The data structures cached are serialized and stored as value to a corresponding key. For example, a column maps the public keys to addresses. Another one, the account state entries as the value to corresponding address keys.
-
-Storing the state in memory is usually faster than using RocksDB. However, storing state information in RocksDB demands less memory of the network nodes.
-
-.. note:: Persisting the state is convenient in networks with a large number of accounts.
-
-*************
-API component
-*************
+********
+API node
+********
 
 **Repository:** |catapult-server|
 
-Peer nodes can be configured to have an API layer. The primary responsibility of an API node is to store the data in a readable form in MongoDB.
+.. figure:: ../resources/images/diagrams/api-detail.png
+    :width: 400px
+    :align: center
 
-The API nodes :ref:`validate transactions <transaction-validation>` received from the REST nodes. Additionally, the broker process that stores changes in MongoDB, forwards them to ZMQ.
+    API node communication
 
-API nodes are also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, that are only processed once they are complete.
+The catapult-server software allows you to configure peer nodes as API nodes. The primary responsibility of an API node is to store the data in a readable form in MongoDB.
+
+Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue called ``spool``. A broker service consumes the data from the spool and updates MongoDB accordingly. Once a block is processed, the broker service notifies the changes to catapult-rest instances using ZMQ.
+
+API nodes are also responsible for collecting the cosignatures of :doc:`aggregated bonded transactions <aggregate-transaction>`, which are only processed once they are complete.
 
 MongoDB
 =======
 
-|mongodb| stores blocks, transactions and chain state for high query performance.
+|mongodb| stores blocks, transactions, and chain states for high query performance.
 
-The API node updates the linked MongoDB instance when:
+The broker service updates the linked MongoDB instance when:
 
-- A new block / a bunch of blocks finished processing.
-- New unconfirmed transactions completed processing.
+* A new block / a bunch of blocks finish processing.
+* New unconfirmed transactions complete processing.
 
 .. note:: MongoDB should not be accessed externally.
 
@@ -76,15 +88,21 @@ ZMQ
 
 |zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API node to the ZMQ endpoint, where Catapult REST listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
 
-**************
-REST component
-**************
+*********
+REST node
+*********
 
 **Repository:** |catapult-rest|
 
-The REST node handles **JSON API** client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using :ref:`WebSockets <websockets>`.
+.. figure:: ../resources/images/diagrams/rest-detail.png
+    :width: 450px
+    :align: center
 
-Each REST node connects to one API instance, sending new transactions using sockets.
+    REST node communication
+
+The REST nodes handle :doc:`JSON API <../api>` client requests. A node reads from MongoDB, formats the response, and returns it to the client. This component is also responsible for returning events to the client using :ref:`WebSockets <websockets>`.
+
+Each REST node connects to one API instance to send new transactions requests triggered from the client-side and receive updates in real-time using sockets.
 
 .. |catapult-server| raw:: html
 

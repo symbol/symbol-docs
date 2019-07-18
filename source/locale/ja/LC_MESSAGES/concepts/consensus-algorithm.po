@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -136,8 +136,12 @@ msgid "Constants"
 msgstr "制約"
 
 #: ../../source/concepts/consensus-algorithm.rst:41
-msgid "Each network can define their own consensus algorithm |constants|."
-msgstr "各ネットワークは独自の合意アルゴリズム |constants| を定義できます。"
+msgid ""
+"Each network can define their own consensus algorithm :properties:`constants"
+" <config-network.properties>`."
+msgstr ""
+"各ネットワークは独自のコンセンサスアルゴリズム :properties:`定数 <config-network.properties>` "
+"を定義できます。"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Constant"

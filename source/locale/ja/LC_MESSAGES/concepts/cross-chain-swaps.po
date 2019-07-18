@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -211,13 +211,11 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/cross-chain-swaps.rst:79
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークとは異なる可能性があります。"
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
+"です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:84
 msgid "SecretLockTransaction"
@@ -283,7 +281,7 @@ msgid "mosaic"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ":ref:`Mosaic<mosaic>`"
+msgid ":ref:`UnresolvedMosaic <unresolved-mosaic>`"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -295,7 +293,7 @@ msgid "duration"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "uint64"
+msgid ":schema:`BlockDuration <types.cats#L2>`"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -316,7 +314,7 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The algorithm used to hash the proof."
+msgid "Algorithm used to hash the proof."
 msgstr "proof に使用されているハッシュアルゴリズム"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -326,12 +324,12 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "64 bytes (binary)"
+msgid ":schema:`Hash256 <types.cats#L9>`"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof hashed."
+msgid "Proof hashed."
 msgstr "ハッシュ化された証明"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -341,12 +339,12 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "25 bytes (binary)"
+msgid ":schema:`UnresolvedAddress <types.cats#L7>`"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The address that receives the funds once unlocked."
+msgid "Address that receives the funds once unlocked."
 msgstr "ロック解除後、ファンドを受け取るアドレス"
 
 #: ../../source/concepts/cross-chain-swaps.rst:111
@@ -380,7 +378,7 @@ msgid "uint16"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof size in bytes."
+msgid "Proof size in bytes."
 msgstr "バイト換算のプルーフサイズ"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -392,7 +390,7 @@ msgid "array(byte, proofSize)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The original random set of bytes."
+msgid "Original random set of bytes."
 msgstr "元のランダムなバイト列"
 
 #: ../../source/concepts/cross-chain-swaps.rst:138
@@ -416,7 +414,7 @@ msgid "0 (Op_Sha3_256)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof is hashed using SHA3-256."
+msgid "Proof is hashed using SHA3-256."
 msgstr "SHA3-256 によってハッシュ化された proof"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -424,7 +422,7 @@ msgid "1 (Op_Keccak_256)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof is hashed using Keccak (ETH compatibility)."
+msgid "Proof is hashed using Keccak (ETH compatibility)."
 msgstr "Keccak によってハッシュ化された proof (ETH 互換)"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
@@ -433,7 +431,7 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ""
-"The proof is hashed twice: first with SHA-256 and then with RIPEMD-160 "
+"Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 "
 "(bitcoin's OP_HASH160)."
 msgstr ""
 "最初に SHA-256 を、その後 RIPEMD-160 によって2回のハッシュ化された proof (bitcoin's OP_HASH160)"
@@ -443,5 +441,5 @@ msgid "3 (Op_Hash_256)"
 msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "The proof is hashed twice with SHA-256 (bitcoin's OP_HASH256)."
+msgid "Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256)."
 msgstr "SHA-256 によって2回のハッシュ化されたproof (bitcoin's OP_HASH256)"

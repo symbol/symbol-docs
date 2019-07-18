@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -168,14 +168,12 @@ msgstr "コスト"
 
 #: ../../source/concepts/mosaic.rst:39
 msgid ""
-"The cost of creating a mosaic is `configurable per network "
-"<https://github.com/nemtech/catapult-server/blob/master/resources/config-"
-"network.properties>`_. By default, it has a cost of ``500 cat.currency`` "
-"plus transaction fees."
+"The cost of creating a mosaic is :properties:`configurable per network "
+"<config-network.properties>`. By default, it has a cost of ``500 "
+"cat.currency`` plus transaction fees."
 msgstr ""
-"モザイク作成のコストは `ネットワークごとに設定可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ です。デフォルトでは、このコストは "
-"``500 cat.currency`` とトランザクション手数料です。"
+"モザイク作成のコストは :properties:`ネットワークごとに設定可能 <config-network.properties>`  "
+"です。デフォルトでは、このコストは ``500 cat.currency`` とトランザクション手数料です。"
 
 #: ../../source/concepts/mosaic.rst:43
 msgid "Example"
@@ -247,8 +245,7 @@ msgid ""
 "Fractional ownership, along with the ability to trade 24/7, brings "
 "additional liquidity to the market. These same characteristics also open up "
 "the market to smaller investors."
-msgstr ""
-"分別所有権は 24 時間 365 日の取引能力と共に、市場にさらなる流動性をもたらします。これらの同じ特性は小規模投資家にも市場を開放します。"
+msgstr "分別所有権は 24/7 の取引能力と共に、市場にさらなる流動性をもたらします。これらの同じ特性は小規模投資家にも市場を開放します。"
 
 #: ../../source/concepts/mosaic.rst:67
 msgid ""
@@ -279,12 +276,10 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/mosaic.rst:87
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ . Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/mosaic.rst:92
@@ -333,15 +328,12 @@ msgid "mosaicId"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "uint64"
+msgid ":schema:`MosaicId <types.cats#L4>`"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic Id."
-msgstr "モザイクID"
+msgid "Identifier of the mosaic."
+msgstr "モザイクの識別子"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "propertiesCount"
@@ -353,7 +345,7 @@ msgid "uint8"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The number of elements in optional properties"
+msgid "Number of elements in optional properties"
 msgstr "オプションプロパティの要素数"
 
 #: ../../source/concepts/mosaic.rst:1
@@ -361,31 +353,31 @@ msgid "flags"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid ":ref:`MosaicFlag<mosaic-flags>`"
+msgid ":ref:`MosaicFlag <mosaic-flags>`"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic flags."
-msgstr "モザイクフラグ"
+msgid "Mosaic flags."
+msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "divisibility"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic divisibility. The maximum divisibility is ``6``."
-msgstr "モザイクの可分性。最大値は ``6`` です。"
+msgid "Mosaic divisibility. Maximum divisibility is ``6``."
+msgstr "モザイクの可分性。最大値は ``6`` 。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "properties"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "array(:ref:`MosaicProperty<mosaic-property>`, propertiesCount)"
+msgid "array(:ref:`MosaicProperty <mosaic-property>`, propertiesCount)"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The optional mosaic properties."
+msgid "Optional mosaic properties."
 msgstr "オプションのモザイクプロパティ"
 
 #: ../../source/concepts/mosaic.rst:118
@@ -402,9 +394,13 @@ msgstr "モザイクの供給量を増加または減少させるために供給
 msgid "**Entity type**: 0x424D"
 msgstr "**エンティティタイプ**: 0x424D"
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
+msgid ":schema:`UnresolvedMosaicId <types.cats#L3>`"
+msgstr ""
+
 #: ../../source/concepts/mosaic.rst:1
-msgid "The id of the affected mosaic."
-msgstr "影響のあったモザイクのID"
+msgid "Identifier of the affected mosaic."
+msgstr "影響を受けたモザイクの識別子"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "direction"
@@ -415,15 +411,20 @@ msgid ":ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The supply change direction."
+msgid "Supply change direction."
 msgstr "供給量変更の方向"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "delta"
 msgstr ""
 
+#: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 #: ../../source/concepts/mosaic.rst:1
-msgid "The amount of supply to increase or decrease."
+msgid ":schema:`Amount <types.cats#L1>`"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Amount of supply to increase or decrease."
 msgstr "モザイク供給量の増加または減少の総量。"
 
 #: ../../source/concepts/mosaic.rst:141
@@ -435,11 +436,15 @@ msgid "id"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The property id. (0x02) stands for duration."
-msgstr "プロパティID (0x02) は期間を意味します。"
+msgid "Mosaic property identifier. (0x02) stands for duration."
+msgstr "プロパティ識別子 (0x02) は期間を意味します。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "value"
+msgstr ""
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "uint64"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
@@ -447,26 +452,26 @@ msgid "The mosaic property value."
 msgstr "モザイクプロパティの値"
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "The mosaic id."
-msgstr "モザイクID"
+msgid "Mosaic identifier."
+msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
 msgid "amount"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1 ../../source/concepts/mosaic.rst:1
-msgid "The amount of the mosaic."
-msgstr "モザイクの量"
+msgid "Amount of the mosaic."
+msgstr ""
 
-#: ../../source/concepts/mosaic.rst:164
+#: ../../source/concepts/mosaic.rst:165
 msgid "UnresolvedMosaic"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:176
+#: ../../source/concepts/mosaic.rst:177
 msgid "MosaicFlags"
 msgstr ""
 
-#: ../../source/concepts/mosaic.rst:178 ../../source/concepts/mosaic.rst:192
+#: ../../source/concepts/mosaic.rst:179 ../../source/concepts/mosaic.rst:193
 msgid "Enumeration: uint8"
 msgstr ""
 
@@ -487,18 +492,21 @@ msgid "0x01"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic supply is mutable."
-msgstr "モザイク供給量は変更可能"
+msgid ""
+"Mosaic supports supply changes even when mosaic owner owns partial supply."
+msgstr "モザイクの所有者が供給量を部分的に保有している場合でも、モザイクは供給の変更をサポートします。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "0x02"
 msgstr ""
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "The mosaic is transferable."
-msgstr "モザイクは転送可能"
+msgid ""
+"Mosaic supports transfers between arbitrary accounts. When not set, mosaic "
+"can only be transferred to and from mosaic owner."
+msgstr "モザイクは任意のアカウント間の振替をサポートします。not を設定した場合はモザイクはモザイクの所有者との間でしか転送できません。"
 
-#: ../../source/concepts/mosaic.rst:191
+#: ../../source/concepts/mosaic.rst:192
 msgid "MosaicSupplyChangeDirection"
 msgstr ""
 

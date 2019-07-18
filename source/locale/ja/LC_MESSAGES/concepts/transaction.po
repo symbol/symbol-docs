@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.0\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-02 15:31+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -221,8 +221,8 @@ msgid "Cosign an aggregate bonded transaction."
 msgstr "アグリゲートボンドトランザクションへ連署します。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Account filters**"
-msgstr ""
+msgid "**Account restrictions**"
+msgstr "**アカウント制限**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "0x4150"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
-":ref:`Account Properties Address <account-address-restriction-transaction>`"
+":ref:`Account Address Restriction<account-address-restriction-transaction>`"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
-":ref:`Account Properties Mosaic <account-mosaic-restriction-transaction>`"
+":ref:`Account Mosaic Restriction <account-mosaic-restriction-transaction>`"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
@@ -257,7 +257,7 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
-":ref:`Account Properties Entity Type <account-operation-restriction-"
+":ref:`Account Operation Restriction <account-operation-restriction-"
 "transaction>`"
 msgstr ""
 
@@ -307,11 +307,8 @@ msgid ":ref:`Account Link <account-link-transaction>`"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid ""
-"Delegates the account importance to a proxy account to enable "
-":doc:`delegated harvesting <harvesting>`."
-msgstr ""
-":doc:`デリゲートハーベスティング <harvesting>` を有効にするために、アカウントのインポータンスをプロキシアカウントへ移譲します。"
+msgid "Delegate the account importance to a proxy account."
+msgstr "アカウントのインポータンスをプロキシアカウントへ移譲する。"
 
 #: ../../source/concepts/transaction.rst:51
 msgid "Defining a transaction"
@@ -581,9 +578,12 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:208
 msgid ""
-"The |rewrite-limit| is the maximum number of blocks that can be rolled back."
-" Hence, forks can only be resolved up to a certain depth too."
-msgstr "|rewrite-limit| とはロールバック可能なブロックの最大数です。したがってフォークでは特定の深さまでしか解決できません。"
+"The :properties:`rewrite limit <config-network.properties>` is the maximum "
+"number of blocks that can be rolled back. Hence, forks can only be resolved "
+"up to a certain depth too."
+msgstr ""
+":properties:`書き換え制限 <config-network.properties>` "
+"とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
 #: ../../source/concepts/transaction.rst:210
 msgid ""
@@ -600,21 +600,25 @@ msgid "Schemas"
 msgstr "スキーマ"
 
 #: ../../source/concepts/transaction.rst:235
-#: ../../source/concepts/transaction.rst:253
+msgid "Serialization of a transaction."
+msgstr "トランザクションのシリアル化"
+
+#: ../../source/concepts/transaction.rst:237
+#: ../../source/concepts/transaction.rst:257
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/transaction.rst:237
-#: ../../source/concepts/transaction.rst:255
+#: ../../source/concepts/transaction.rst:239
+#: ../../source/concepts/transaction.rst:259
 msgid ":ref:`SizePrefixedEntity<size-prefixed-entity>`"
 msgstr ""
 
-#: ../../source/concepts/transaction.rst:238
+#: ../../source/concepts/transaction.rst:240
 msgid ":ref:`VerifiableEntity<verifiable-entity>`"
 msgstr ""
 
-#: ../../source/concepts/transaction.rst:239
-#: ../../source/concepts/transaction.rst:256
+#: ../../source/concepts/transaction.rst:241
+#: ../../source/concepts/transaction.rst:260
 msgid ":ref:`EntityBody<entity-body>`"
 msgstr ""
 
@@ -628,12 +632,11 @@ msgid "max_fee"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-msgid "uint64"
+msgid ":schema:`Amount <types.cats#L1>`"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid "The maximum fee allowed to spend for the transaction."
+msgid "Maximum fee allowed to spend for the transaction."
 msgstr "トランザクションに最大の手数料を支払うことが許可されています。"
 
 #: ../../source/concepts/transaction.rst:1
@@ -641,18 +644,35 @@ msgid "deadline"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid ""
-"The maximum amount of time to include the transaction in the blockchain. "
-"Deadlines are only allowed to lie up to ``24`` hours ahead."
-msgstr "トランザクションをブロックチェーンに含める最大時間。デッドラインは ``24`` 時間先までが許容されています。"
+msgid ":schema:`Timestamp <types.cats#L5>`"
+msgstr ""
 
-#: ../../source/concepts/transaction.rst:251
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+"Number of seconds elapsed since the creation of the nemesis block. If a "
+"transaction does not get included in a block before the deadline is reached,"
+" it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead."
+msgstr ""
+"ネメシスブロックが作成されてから経過した秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
+"時間先までが許容されています。"
+
+#: ../../source/concepts/transaction.rst:253
 msgid "EmbeddedTransaction"
 msgstr ""
 
-#: ../../source/concepts/transaction.rst:261
+#: ../../source/concepts/transaction.rst:255
+msgid ""
+"Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
+"transaction."
+msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
+
+#: ../../source/concepts/transaction.rst:265
 msgid "SizePrefixedEntity"
 msgstr ""
+
+#: ../../source/concepts/transaction.rst:267
+msgid "Serialization of an entity that has a prefixed size."
+msgstr "サイズをプレフィックスしたエンティティのシリアル化"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "size"
@@ -663,5 +683,5 @@ msgid "unit32"
 msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
-msgid "The size of the transaction."
+msgid "Size of the transaction."
 msgstr "トランザクションのサイズ"
