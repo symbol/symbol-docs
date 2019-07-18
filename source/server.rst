@@ -8,7 +8,13 @@ These nodes are deployed using |catapult-server| software, a C++ rewrite of the 
 
 Through its multi-tier architecture, it is possible to isolate the peer-to-peer network and implement better API integration flows with the proposed REST API layer.
 
-The same software can be used to configure three different types of :doc:`nodes <concepts/node>`:
+Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
+
+************
+Installation
+************
+
+**Catapult server** can be used to configure three different types of :doc:`nodes <concepts/node>`:
 
 * **Peer node**: The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
 
@@ -16,15 +22,7 @@ The same software can be used to configure three different types of :doc:`nodes 
 
 * **Dual node**: The dual node combines a peer and API nodes into a single server instance.
 
-Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
-
-************
-Installation
-************
-
-Test catapult-server software deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
-
-You can create a new catapult-server image following the building |instructions|.
+You can create a new catapult-server image following the building |instructions|, but we recommend deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
 
 Troubleshooting
 ===============
