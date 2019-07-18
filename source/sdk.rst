@@ -2,44 +2,44 @@
 SDK
 ####
 
-The NEM2 Software Development Kit is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications. Almost all, if not all, components should use **NEM2-SDK** instead of raw API.
+The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries, or applications.
 
-The new SDK enables developers to focus on their product rather than on the NEM2 Blockchain specific API details due to its higher abstraction.
+It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
-The best way to learn to use the SDKs is through :ref:`guides <blog-categories>`.
+Learn how to use NEM's SDK following the :ref:`guided implementation examples <blog-categories>`.
 
-**************
-Supported SDKs
-**************
+*******************
+Supported languages
+*******************
 
 .. csv-table::
-    :header: "Language", "Repository", "Reference", "Target version"
+    :header: "Language", "Repository", "Reference"
     :delim: ;
 
-    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|; 0.4 (latest)
+    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|
 
 ************
 Ongoing work
 ************
 
-.. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server (0.4).
+.. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server.
 
-Read the open issues to know about the current status of each project.
+Read the |protocol-compatibility-report| to know more about the status of each project.
 
 .. csv-table::
-    :header: "Language", "Repository", "Reference", "Target version"
+    :header: "Language", "Repository", "Reference"
     :delim: ;
 
-    Java SDK; |java-repo|; |java-reference|;  0.1
-    C# SDK ; |csharp-repo| ; ; 0.1
-    Go SDK ; |go-repo| ;  ; 0.1
-    Swift SDK ; |swift-repo| ;  ; 0.1
-    C++ ;  ;  ;
-    PHP SDK ;  ;  ;
-    Ruby SDK ; ; ;
-    Python SDK ; ; ;
+    Java SDK; |java-repo|; |java-reference|
+    C# SDK ; |csharp-repo| ;
+    Go SDK ; |go-repo| ;
+    Swift SDK ; |swift-repo| ;
+    C++ ;  ;
+    PHP SDK ;  ;
+    Ruby SDK ; ;
+    Python SDK ; ;
 
-If you want to create a new SDK, check the :doc:`SDK Development guidelines <guidelines/sdk-development>`.
+If you want to create a new SDK, check the :doc:`development guidelines <guidelines/sdk-development>`.
 
 .. |tsjs-repo| raw:: html
 
@@ -68,3 +68,8 @@ If you want to create a new SDK, check the :doc:`SDK Development guidelines <gui
 .. |go-repo| raw:: html
 
     <a href="https://github.com/proximax-storage/nem2-sdk-go/" target="_blank">Repository</a>
+
+.. |protocol-compatibility-report| raw:: html
+
+    <a href="https://github.com/nemtech/community/blob/master/projects-status.md#protocol-version-compatibilities/" target="_blank">protocol compatibility report</a>
+

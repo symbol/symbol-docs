@@ -54,6 +54,8 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
+.. _sending-a-transfer-transaction-to-an-aliased-address:
+
 ************
 What's next?
 ************

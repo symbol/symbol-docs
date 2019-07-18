@@ -300,10 +300,7 @@ html_scaled_image_link = False
 blog_baseurl = '/'
 blog_path = 'guides'
 
-blog_authors = {
-    'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
-    'jorisadri': ('jorisadri', 'http://github.com/jorisadri'),
-}
+blog_authors = {}
 
 # -- Options for linkcheck ------------------------------------------------
 
