@@ -199,6 +199,7 @@ def setup(app):
 # to template names.
 html_sidebars = {
   '**': ['globaltoc.html'],
+  'endpoints': [],
   'index': [],
 }
 
