@@ -34,7 +34,7 @@ Only the creator of the namespace can link the namespace to an account or mosaic
 
 The block :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
-Restrictions:
+**Restrictions:**
 
 - An account can only associate a name with one account or mosaic, but those can have many aliases linked.
 - An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-restriction>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
@@ -44,24 +44,35 @@ Restrictions:
 Duration
 ********
 
+At the time of the namespace **registration**, you must set the number of confirmed blocks you would like to rent the namespace for.
+
+The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
+
+    duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds
+
 .. figure:: ../resources/images/diagrams/namespace-life-cycle.png
     :width: 800px
     :align: center
 
     Namespace life-cycle
 
-At the time of the namespace **registration**, you must set the number of confirmed blocks you would like to rent the namespace for.
-
-The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
-
-
-    duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds
-
-During the renting period, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
+During the **renting period**, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
 
 The network :properties:`can define <config-network.properties>` a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
 
-When the grace period ends, the existing aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
+When the grace period ends, the namespace is **deleted**. At this point in time, the namespace becomes **available** for its registration again.
+
+.. csv-table:: Permissions by namespace status
+    :header: "Action", "Available", "Registration Period", "Grace Period"
+    :delim: ;
+
+    Register a new namespace; ✔️; ❌; ❌
+    Renew the namespace;   ❌; ✔️; ✔️
+    Create subnamespaces;   ❌; ✔️; ❌
+    Link an alias to an address;   ❌; ✔️; ❌
+    Link an alias to a mosaic;   ❌; ✔️; ❌
+    Send a transaction with an aliased mosaic;   ❌; ✔️; ❌
+    Send a transaction to an aliased address;   ❌; ✔️; ❌
 
 ****
 Cost
