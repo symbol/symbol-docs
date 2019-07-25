@@ -1,5 +1,5 @@
 .. post:: 16 Aug, 2018
-    :category: Tools
+    :category: Network
     :excerpt: 1
     :nocomments:
 
@@ -25,7 +25,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
     git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
     cd catapult-service-bootstrap
-    ./cmds/start-all -b -d
+    ./cmds/start-all -d
 
 .. note:: Is catapult service bootstrap not working? Check |catapult-service-bootstrap-known-issues|.
 

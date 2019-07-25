@@ -7,6 +7,7 @@
     getting-started/setup-workstation
     getting-started/first-application
     getting-started/training
+    guides/migration/migrating-from-nis1-to-catapult
 
 .. toctree::
     :maxdepth: 2

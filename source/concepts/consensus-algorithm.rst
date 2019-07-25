@@ -38,7 +38,7 @@ The network calculates the following sub scores for all high-value accounts for 
 Constants
 *********
 
-Each network can define their own consensus algorithm |constants|.
+Each network can define their own consensus algorithm :properties:`constants <config-network.properties>`.
 
 .. csv-table::
     :header: "Constant", "Value", "Description"
@@ -63,14 +63,3 @@ The combination of Transaction Score and Node Score has a multiplier effect when
 .. |pos| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>
-
-.. |minimum-amount-of-harvesting-mosaics| raw:: html
-
-    <a href="https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L30" target="_blank">minimum amount of harvesting mosaics</a>
-
-.. |constants| raw:: html
-
-    <a href="https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L18" target="_blank">constants</a>
-
-
-

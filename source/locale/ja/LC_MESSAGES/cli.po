@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.9\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-28 17:22+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -95,68 +95,63 @@ msgstr ""
 "デフォルトでは、NEM2-CLI は常にデフォルトプロファイルを使用します。名前付きプロファイルを使用する場合は、コマンドに --profile "
 "オプションを追加します。"
 
-#: ../../source/cli.rst:55
-msgid ""
-"If you are going to use named profile for multiple commands, you can use the"
-" NEM2_PROFILE environment variable at the command line."
-msgstr "名前付きプロファイルを複数のコマンドで使いたい場合は、NEM2_PROFILE 環境変数を使うことができます。"
-
-#: ../../source/cli.rst:61
+#: ../../source/cli.rst:62
 msgid ""
 "If you do not have a private key to create a profile you can generate a new "
 "account, add a node url and save it as default or named profile."
 msgstr ""
 "プロファイルを作成する秘密鍵がない場合は、新しいアカウントを生成し、ノード URL を追加して、デフォルトまたは名前付きプロファイルとして保存します。"
 
-#: ../../source/cli.rst:69
+#: ../../source/cli.rst:70
 msgid "Commands"
 msgstr "コマンド"
 
-#: ../../source/cli.rst:72
+#: ../../source/cli.rst:73
 msgid "Profile"
 msgstr "プロファイル"
 
-#: ../../source/cli.rst:74
+#: ../../source/cli.rst:75
 msgid "**Create**"
 msgstr "**作成**"
 
-#: ../../source/cli.rst:76
+#: ../../source/cli.rst:77
 msgid "Creates a new profile."
 msgstr "プロファイルの作成。"
 
-#: ../../source/cli.rst:78 ../../source/cli.rst:115 ../../source/cli.rst:134
-#: ../../source/cli.rst:150 ../../source/cli.rst:170 ../../source/cli.rst:188
-#: ../../source/cli.rst:206 ../../source/cli.rst:224 ../../source/cli.rst:270
-#: ../../source/cli.rst:286 ../../source/cli.rst:304 ../../source/cli.rst:322
-#: ../../source/cli.rst:341 ../../source/cli.rst:360 ../../source/cli.rst:379
-#: ../../source/cli.rst:400 ../../source/cli.rst:419 ../../source/cli.rst:437
-#: ../../source/cli.rst:456 ../../source/cli.rst:476 ../../source/cli.rst:509
-#: ../../source/cli.rst:525 ../../source/cli.rst:541 ../../source/cli.rst:557
+#: ../../source/cli.rst:79 ../../source/cli.rst:116 ../../source/cli.rst:135
+#: ../../source/cli.rst:151 ../../source/cli.rst:171 ../../source/cli.rst:189
+#: ../../source/cli.rst:207 ../../source/cli.rst:225 ../../source/cli.rst:271
+#: ../../source/cli.rst:287 ../../source/cli.rst:305 ../../source/cli.rst:323
+#: ../../source/cli.rst:342 ../../source/cli.rst:361 ../../source/cli.rst:380
+#: ../../source/cli.rst:401 ../../source/cli.rst:420 ../../source/cli.rst:438
+#: ../../source/cli.rst:457 ../../source/cli.rst:474 ../../source/cli.rst:494
+#: ../../source/cli.rst:527 ../../source/cli.rst:543 ../../source/cli.rst:559
+#: ../../source/cli.rst:575
 msgid "Options"
 msgstr "オプション"
 
-#: ../../source/cli.rst:87 ../../source/cli.rst:98 ../../source/cli.rst:124
-#: ../../source/cli.rst:140 ../../source/cli.rst:158 ../../source/cli.rst:178
-#: ../../source/cli.rst:196 ../../source/cli.rst:214 ../../source/cli.rst:232
-#: ../../source/cli.rst:245 ../../source/cli.rst:255 ../../source/cli.rst:276
-#: ../../source/cli.rst:292 ../../source/cli.rst:312 ../../source/cli.rst:331
-#: ../../source/cli.rst:350 ../../source/cli.rst:368 ../../source/cli.rst:390
-#: ../../source/cli.rst:408 ../../source/cli.rst:427 ../../source/cli.rst:443
-#: ../../source/cli.rst:463 ../../source/cli.rst:483 ../../source/cli.rst:499
-#: ../../source/cli.rst:515 ../../source/cli.rst:531 ../../source/cli.rst:547
-#: ../../source/cli.rst:563
+#: ../../source/cli.rst:88 ../../source/cli.rst:99 ../../source/cli.rst:125
+#: ../../source/cli.rst:141 ../../source/cli.rst:159 ../../source/cli.rst:179
+#: ../../source/cli.rst:197 ../../source/cli.rst:215 ../../source/cli.rst:233
+#: ../../source/cli.rst:246 ../../source/cli.rst:256 ../../source/cli.rst:277
+#: ../../source/cli.rst:293 ../../source/cli.rst:313 ../../source/cli.rst:332
+#: ../../source/cli.rst:351 ../../source/cli.rst:369 ../../source/cli.rst:391
+#: ../../source/cli.rst:409 ../../source/cli.rst:428 ../../source/cli.rst:444
+#: ../../source/cli.rst:464 ../../source/cli.rst:480 ../../source/cli.rst:501
+#: ../../source/cli.rst:517 ../../source/cli.rst:533 ../../source/cli.rst:549
+#: ../../source/cli.rst:565 ../../source/cli.rst:581
 msgid "Command"
 msgstr "コマンド"
 
-#: ../../source/cli.rst:94
+#: ../../source/cli.rst:95
 msgid "**List**"
 msgstr "**リスト**"
 
-#: ../../source/cli.rst:96
+#: ../../source/cli.rst:97
 msgid "Gets the list of stored accounts."
 msgstr "保存されているアカウントの一覧。"
 
-#: ../../source/cli.rst:104
+#: ../../source/cli.rst:105
 msgid ""
 "By default, NEM2-CLI will always use the default profile to connect to a "
 "node and set default options such as: address, public key and sign "
@@ -167,51 +162,51 @@ msgstr ""
 "は、デフォルトではノードの接続にデフォルトプロファイルを常に使用し、アドレス、公開鍵、秘密鍵による署名トランザクションなどにデフォルトオプションをセットします。名前付きプロファイルを使う場合は、いずれのコマンドにも"
 " --profile オプションを付けてください。"
 
-#: ../../source/cli.rst:107
+#: ../../source/cli.rst:108
 msgid "Account"
 msgstr "アカウント"
 
-#: ../../source/cli.rst:109
+#: ../../source/cli.rst:110
 msgid "**Generate new account**"
 msgstr "**アカウントの生成**"
 
-#: ../../source/cli.rst:111
+#: ../../source/cli.rst:112
 msgid ""
 "Generates a new :doc:`account <../concepts/account>`. This command generates"
 " a private key, public key and address."
 msgstr ""
 "新しい :doc:`アカウント <../concepts/account>` を生成します。このコマンドは秘密鍵と公開鍵、そしてアドレスを生成します。"
 
-#: ../../source/cli.rst:113
+#: ../../source/cli.rst:114
 msgid ""
 "Generated accounts can be stored as named profiles by adding a node url."
 msgstr "生成されたアカウントはノード URL を追加することで名前付きプロファイルとして保存されます。"
 
-#: ../../source/cli.rst:130
+#: ../../source/cli.rst:131
 msgid "**Get account info**"
 msgstr "**アカウント情報の取得**"
 
-#: ../../source/cli.rst:132
+#: ../../source/cli.rst:133
 msgid ""
 "Returns the account information, such as the public key, importance and "
 ":doc:`mosaics <../concepts/mosaic>` balance."
 msgstr "公開鍵、インポータンスそして :doc:`モザイク <../concepts/mosaic>` の残高などのアカウント情報を返却します。"
 
-#: ../../source/cli.rst:146
+#: ../../source/cli.rst:147
 msgid "**Get confirmed transactions**"
 msgstr "**承認済トランザクションの取得**"
 
-#: ../../source/cli.rst:148
+#: ../../source/cli.rst:149
 msgid ""
 "Gets an array of transactions for which an account is the sender or "
 "receiver."
 msgstr "アカウントが送信者または受信者であるトランザクションの配列を取得します。"
 
-#: ../../source/cli.rst:166
+#: ../../source/cli.rst:167
 msgid "**Get incoming transactions**"
 msgstr "**受信トランザクションの取得**"
 
-#: ../../source/cli.rst:168
+#: ../../source/cli.rst:169
 msgid ""
 "Gets an array of incoming transactions. A transaction is said to be incoming"
 " with respect to an account if the account is the recipient of the "
@@ -219,54 +214,54 @@ msgid ""
 msgstr ""
 "受信トランザクションの配列を取得します。アカウントがトランザクションの受信者である場合、トランザクションはアカウントに関して受信と言われます。"
 
-#: ../../source/cli.rst:184
+#: ../../source/cli.rst:185
 msgid "**Get outgoing transactions**"
 msgstr "**送信トランザクションの取得**"
 
-#: ../../source/cli.rst:186
+#: ../../source/cli.rst:187
 msgid ""
 "Gets an array of outgoing transactions. A transaction is said to be outgoing"
 " with respect to an account if the account is the sender of the transaction."
 msgstr ""
 "送信トランザクションの配列を取得します。アカウントがトランザクションの送信者である場合、トランザクションはアカウントに関して送信と言われます。"
 
-#: ../../source/cli.rst:202
+#: ../../source/cli.rst:203
 msgid "**Get unconfirmed transactions**"
 msgstr "**承認済トランザクションの取得**"
 
-#: ../../source/cli.rst:204
+#: ../../source/cli.rst:205
 msgid ""
 "Gets the array of transactions for which an account is the sender or "
 "receiver and which have not yet been included in a block."
 msgstr "アカウントが送信者または受信者であり、まだブロックに含まれていないトランザクションの配列を取得します。"
 
-#: ../../source/cli.rst:220
+#: ../../source/cli.rst:221
 msgid "**Get Aggregate bonded transactions**"
 msgstr "**アグリゲートボンドトランザクションの取得**"
 
-#: ../../source/cli.rst:222
+#: ../../source/cli.rst:223
 msgid ""
 "Gets an array of aggregate bonded transactions where the account is the "
 "sender or requires to cosign the transaction."
 msgstr "アカウントが送信者またはトランザクションに連署が必要な、アグリゲートボンドトランザクションの配列を取得します。"
 
-#: ../../source/cli.rst:239
+#: ../../source/cli.rst:240
 msgid "Blockchain"
 msgstr "ブロックチェーン"
 
-#: ../../source/cli.rst:241
+#: ../../source/cli.rst:242
 msgid "**Blockchain height**"
 msgstr "**ブロックチェーン高**"
 
-#: ../../source/cli.rst:243
+#: ../../source/cli.rst:244
 msgid "Returns the current height of the block chain."
 msgstr "現在のブロックチェーン高を返却します。"
 
-#: ../../source/cli.rst:251
+#: ../../source/cli.rst:252
 msgid "**Blockchain score**"
 msgstr "**ブロックチェーンスコア**"
 
-#: ../../source/cli.rst:253
+#: ../../source/cli.rst:254
 msgid ""
 "Gets the current score of the block chain. The higher the score, the better "
 "the chain. During synchronization, nodes try to get the best block chain in "
@@ -274,39 +269,39 @@ msgid ""
 msgstr ""
 "現在のブロックチェーンスコアを取得します。高いスコアほど良いスコアです。同期が行われる間、ノードはネットワーク内で一番良いブロックの取得を試みます。"
 
-#: ../../source/cli.rst:262
+#: ../../source/cli.rst:263
 msgid "Transaction"
 msgstr "トランザクション"
 
-#: ../../source/cli.rst:264
+#: ../../source/cli.rst:265
 msgid ""
 "Transactions are signed with the profiles configured with ``nem2-cli profile"
 " create``."
 msgstr "トランザクションは ``nem2-cli profile create`` によって設定されたプロファイルによって署名されます。"
 
-#: ../../source/cli.rst:266
+#: ../../source/cli.rst:267
 msgid "**Cosign aggregate bonded transaction**"
 msgstr "**連署アグリゲートボンドトランザクション**"
 
-#: ../../source/cli.rst:268
+#: ../../source/cli.rst:269
 msgid ""
 "Cosigns and announces an :ref:`aggregate bonded transaction <aggregate-"
 "transaction>`."
 msgstr ":ref:`アグリゲートボンドトランザクション <aggregate-transaction>` への署名とアナウンス。"
 
-#: ../../source/cli.rst:282
+#: ../../source/cli.rst:283
 msgid "**Transaction info**"
 msgstr "**トランザクション情報**"
 
-#: ../../source/cli.rst:284
+#: ../../source/cli.rst:285
 msgid "Returns transaction information given a hash."
 msgstr "与えられたハッシュを持つトランザクションの情報を返却します。"
 
-#: ../../source/cli.rst:298
+#: ../../source/cli.rst:299
 msgid "**Send transfer transaction**"
 msgstr "**転送トランザクションの送信**"
 
-#: ../../source/cli.rst:300
+#: ../../source/cli.rst:301
 msgid ""
 "Announces a :ref:`transfer transaction <transfer-transaction>` to an account"
 " exchanging value and/or data. For this transaction provide recipient, "
@@ -315,7 +310,7 @@ msgstr ""
 "値またはデータを交換するアカウントに :ref:`転送トランザクション <transfer-transaction>` "
 "をアナウンスします。このトランザクションでは、受信者、メッセージそして :doc:`モザイク <../concepts/mosaic>` を提供します。"
 
-#: ../../source/cli.rst:302
+#: ../../source/cli.rst:303
 msgid ""
 "You can send ``multiple mosaics`` splitting them with a comma, e.g: "
 "@cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after ::"
@@ -325,74 +320,74 @@ msgstr ""
 "@cat.currency::10000000,7cdf3b117a3c40cc::10。:: の後の ``モザイク総量`` は ``絶対数`` なので"
 " 1 @cat.currency は 1000000 (可分数 6) と表します。"
 
-#: ../../source/cli.rst:318
+#: ../../source/cli.rst:319
 msgid "**Send pull transaction**"
 msgstr "**プルトランザクションの送信**"
 
-#: ../../source/cli.rst:320
+#: ../../source/cli.rst:321
 msgid ""
 "Requests :doc:`mosaics <../concepts/mosaic>` from an account. The other "
 "account has to cosign the transaction."
 msgstr ""
 "アカウントから :doc:`モザイク <../concepts/mosaic>` を要求します。他のアカウントでトランザクションに署名が必要です。"
 
-#: ../../source/cli.rst:337
+#: ../../source/cli.rst:338
 msgid "**Register root namespace**"
 msgstr "**ルートネームスペースの取得**"
 
-#: ../../source/cli.rst:339
+#: ../../source/cli.rst:340
 msgid "Registers a root :doc:`namespace <../concepts/namespace>`."
 msgstr "ルート :doc:`ネームスペース <../concepts/namespace>` を登録します。"
 
-#: ../../source/cli.rst:356
+#: ../../source/cli.rst:357
 msgid "**Register subnamespace**"
 msgstr "**サブネームスペースの取得**"
 
-#: ../../source/cli.rst:358
+#: ../../source/cli.rst:359
 msgid "Registers a :doc:`subnamespace <../concepts/namespace>`."
 msgstr ":doc:`サブネームスペース <../concepts/namespace>` を登録します。"
 
-#: ../../source/cli.rst:375
+#: ../../source/cli.rst:376
 msgid "**Create a mosaic**"
 msgstr "**モザイクの作成**"
 
-#: ../../source/cli.rst:377
+#: ../../source/cli.rst:378
 msgid "Creates a new :doc:`mosaic <../concepts/mosaic>`."
 msgstr "新しい :doc:`モザイク <../concepts/mosaic>` を作成します。"
 
-#: ../../source/cli.rst:396
+#: ../../source/cli.rst:397
 msgid "**Link a namespace to a mosaic**"
 msgstr "**ネームスペースをモザイクにリンク**"
 
-#: ../../source/cli.rst:398
+#: ../../source/cli.rst:399
 msgid "Links a namespace to a :doc:`mosaic <../concepts/mosaic>`."
 msgstr "ネームスペースを :doc:`モザイク <../concepts/mosaic>` にリンクする。"
 
-#: ../../source/cli.rst:415
+#: ../../source/cli.rst:416
 msgid "**Link a namespace to an address**"
 msgstr "ネームスペースをアドレスへリンク"
 
-#: ../../source/cli.rst:417
+#: ../../source/cli.rst:418
 msgid "Links a namespace to an :doc:`address <../concepts/account>`."
 msgstr "ネームスペースを :doc:`アドレス <../concepts/account>` にリンクする。"
 
-#: ../../source/cli.rst:433
+#: ../../source/cli.rst:434
 msgid "**Status**"
 msgstr "**ステータス**"
 
-#: ../../source/cli.rst:435
+#: ../../source/cli.rst:436
 msgid "Gets the confirmation status of a transaction."
 msgstr "トランザクションの承認状態を取得する。"
 
-#: ../../source/cli.rst:450
+#: ../../source/cli.rst:451
 msgid "Namespace"
 msgstr "ネームスペース"
 
-#: ../../source/cli.rst:452 ../../source/cli.rst:472
+#: ../../source/cli.rst:453 ../../source/cli.rst:490
 msgid "**Info**"
 msgstr "**情報**"
 
-#: ../../source/cli.rst:454
+#: ../../source/cli.rst:455
 msgid ""
 "Gets information from a :doc:`namespace <../concepts/namespace>`. Use this "
 "command providing the namespace name or the namespace uint ID in the form of"
@@ -402,10 +397,19 @@ msgstr ""
 "[3646934825,3576016193] の形式でネームスペースの uint ID をコマンドに渡して使用してください。"
 
 #: ../../source/cli.rst:470
+msgid "**Owned**"
+msgstr "**保有**"
+
+#: ../../source/cli.rst:472
+msgid ""
+"Gets all the :doc:`namespaces <../concepts/namespace>` owned by an account."
+msgstr "アカウントが保有するすべて :doc:`ネームスペース <../concepts/namespace>` の取得。"
+
+#: ../../source/cli.rst:488
 msgid "Mosaic"
 msgstr "モザイク"
 
-#: ../../source/cli.rst:474
+#: ../../source/cli.rst:492
 msgid ""
 "Gets information from a :doc:`mosaic <../concepts/mosaic>`. Use this command"
 " providing the mosaic identifier name in hexadecimal or the mosaic uint ID "
@@ -414,31 +418,31 @@ msgstr ""
 ":doc:`モザイク <../concepts/mosaic>` の情報を取得します。16進数形式のモザイク識別子名またはモザイク uint ID "
 "([lower,higher]) をコマンドに渡して使用してください。"
 
-#: ../../source/cli.rst:490
+#: ../../source/cli.rst:508
 msgid "Monitoring"
 msgstr "モニタリング"
 
-#: ../../source/cli.rst:492
+#: ../../source/cli.rst:510
 msgid ""
 "The NEM2 command line interface has a set of monitoring commands to track "
 "events in the NEM blockchain."
 msgstr "NEM2 コマンドラインインターフェイスには NEM ブロックチェーンのイベントをモニタリングするコマンドがあります。"
 
-#: ../../source/cli.rst:495
+#: ../../source/cli.rst:513
 msgid "**Block**"
 msgstr "**ブロック**"
 
-#: ../../source/cli.rst:497
+#: ../../source/cli.rst:515
 msgid ""
 "Monitors new confirmed :doc:`blocks <../concepts/block>` harvested in the "
 "blockchain."
 msgstr "ブロックチェーン上でハーベストされた、承認済の新しい :doc:`ブロック <../concepts/block>` を監視します。"
 
-#: ../../source/cli.rst:505
+#: ../../source/cli.rst:523
 msgid "**Confirmed transactions**"
 msgstr "**承認済トランザクション**"
 
-#: ../../source/cli.rst:507
+#: ../../source/cli.rst:525
 msgid ""
 "Monitors new confirmed :doc:`transactions <../concepts/transaction>` signed "
 "or received by an :doc:`account <../concepts/account>`."
@@ -446,11 +450,11 @@ msgstr ""
 ":doc:`アカウント <../concepts/account>` が署名または受信した、新しく承認済になった :doc:`トランザクション "
 "<../concepts/transaction>` を監視します。"
 
-#: ../../source/cli.rst:521
+#: ../../source/cli.rst:539
 msgid "**Unconfirmed transactions**"
 msgstr "**未承認トランザクション**"
 
-#: ../../source/cli.rst:523
+#: ../../source/cli.rst:541
 msgid ""
 "Monitors new unconfirmed :doc:`transactions <../concepts/transaction>` "
 "signed or received by an :doc:`account <../concepts/account>`."
@@ -458,11 +462,11 @@ msgstr ""
 ":doc:`アカウント <../concepts/account>` が署名または受信した、新しく未承認になった :doc:`トランザクション "
 "<../concepts/transaction>` を監視します。"
 
-#: ../../source/cli.rst:537
+#: ../../source/cli.rst:555
 msgid "**Aggregate bonded transactions**"
 msgstr "**アグリゲートボンドトランザクション**"
 
-#: ../../source/cli.rst:539
+#: ../../source/cli.rst:557
 msgid ""
 "Monitors new :ref:`aggregate transactions <aggregate-transaction>` with "
 "missing signatures added to an :doc:`account <../concepts/account>`."
@@ -470,10 +474,10 @@ msgstr ""
 "署名の不足している新しい :ref:`アグリゲートトランザクション <aggregate-transaction>` が :doc:`アカウント "
 "<../concepts/account>` に追加されたことを監視します。"
 
-#: ../../source/cli.rst:553
+#: ../../source/cli.rst:571
 msgid "**Transaction status**"
 msgstr "**トランザクションの状態**"
 
-#: ../../source/cli.rst:555
+#: ../../source/cli.rst:573
 msgid "Monitors :doc:`account <../concepts/account>` validation errors."
 msgstr ":doc:`アカウント <../concepts/account>` のバリデーションエラーを監視します。"

@@ -38,7 +38,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
     0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`Account Restriction Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
-    **Mosaic restrictions**;;
+    **Mosaic restriction**;;
     0x4151; :ref:`Mosaic Restriction Global <mosaic-global-restriction-transaction>`; Set a global restriction to a mosaic.
     0x4251; :ref:`Mosaic Restriction Address <mosaic-address-restriction-transaction>`; Set a mosaic restriction to an specific address.
     **Cross-chain swaps**;;
@@ -208,7 +208,7 @@ Rollbacks
 
 Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back. These are essential to resolve forks of the blockchain.
 
-The |rewrite-limit| is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
+The :properties:`rewrite limit <config-network.properties>` is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
 NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
 
@@ -235,6 +235,8 @@ Schemas
 Transaction
 ===========
 
+Serialization of a transaction.
+
 **Inlines**:
 
 * :ref:`SizePrefixedEntity<size-prefixed-entity>`
@@ -245,13 +247,15 @@ Transaction
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    max_fee; uint64; The maximum fee allowed to spend for the transaction.
-    deadline; uint64; The maximum amount of time to include the transaction in the blockchain. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
+    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of seconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
 .. _embedded-transaction:
 
 EmbeddedTransaction
 ===================
+
+Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 
 **Inlines**:
 
@@ -263,13 +267,10 @@ EmbeddedTransaction
 SizePrefixedEntity
 ==================
 
+Serialization of an entity that has a prefixed size.
+
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    size; unit32; The size of the transaction.
-
-.. |rewrite-limit| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties#L19" target="_blank">rewrite limit</a>
-
+    size; unit32; Size of the transaction.

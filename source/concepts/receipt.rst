@@ -62,6 +62,18 @@ Catapult records invisible state changes for the following entities.
     0x2252; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock recipient, mosaicId and amount locked. It is recorded when a secretlock is proved.
     0x2352; LockSecret_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a secretlock expires.
 
+******
+Guides
+******
+
+.. postlist::
+    :category: Receipt
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
@@ -81,8 +93,8 @@ Conditional state changes in the background enable complex transactions.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    version; uint16; The receipt version.
-    type; ReceiptType; The receipt type.
+    version; uint16; Receipt version.
+    type; ReceiptType; Receipt type.
 
 .. _balance-transfer-receipt:
 
@@ -102,10 +114,10 @@ The invisible state change triggered a mosaic transfer.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    sender; 32 bytes (binary); The public key of the sender.
-    recipient; 32 bytes (binary); The public key of the recipient.
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of mosaics.
+    sender; :schema:`Key <types.cats#L11>`; Public key of the sender.
+    recipient; :schema:`Address <types.cats#L8>`; Address of the recipient.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to send.
 
 .. _balance-change-receipt:
 
@@ -125,9 +137,9 @@ The invisible state change changed an account balance.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    account; 32 bytes (binary); The target account public key.
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of the mosaic.
+    account; :schema:`Key <types.cats#L11>`; Public key of the target account.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to increase or decrease.
 
 .. _artifact-expiry-receipt:
 
@@ -147,7 +159,7 @@ An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    artifactId; uint64; The id of the artifact.
+    artifactId; :schema:`MosaicId <types.cats#L4>` or :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the artifact.
 
 .. _inflation-receipt:
 
@@ -165,8 +177,8 @@ InflationReceipt
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The mosaic id created.
-    amount; uint64; The amount created.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic that has been created.
+    amount; :schema:`Amount <types.cats#L1>`; Number of mosaics created.
 
 .. _transaction-statement:
 
@@ -186,8 +198,8 @@ The collection of receipts related to a transaction.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    source; :ref:`ReceiptSource <receipt-source>` ; The transaction that triggered the receipt.
-    receipts; array(:ref:`Receipt <receipt>`, size=receiptsSize);  The array of receipts.
+    source; :ref:`ReceiptSource <receipt-source>` ; Transaction that triggered the receipt.
+    receipts; array(:ref:`Receipt <receipt>`, size=receiptsSize);  Array of receipts.
 
 .. _resolution-statement:
 
@@ -207,8 +219,8 @@ A resolution statement keeps the relation between a namespace alias used in a tr
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    unresolved; 25 bytes (binary) or uint64; An unresolved address or unresolved mosaicId.
-    resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); The array of resolution entries linked to the unresolved namespaceId. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
+    unresolved; :schema:`UnresolvedAddress <types.cats#L7>` or :schema:`UnresolvedMosaicId <types.cats#L3>`; Unresolved address or unresolved mosaic identifier.
+    resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); Array of resolution entries linked to the unresolved namespace identifier. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
 
 .. _resolution-entry:
 
@@ -219,8 +231,8 @@ ResolutionEntry
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    resolvedValue; 25 bytes (binary) or uint64; A resolved address or resolved mosaicId.
-    source; :ref:`ReceiptSource <receipt-source>`;  The transaction that triggered the receipt.
+    resolvedValue; :schema:`Address <types.cats#L8>` or :schema:`MosaicId <types.cats#L4>`; Resolved address or resolved mosaic identifier.
+    source; :ref:`ReceiptSource <receipt-source>`;  Information about the transaction that triggered the receipt.
 
 .. _receipt-source:
 
@@ -233,8 +245,8 @@ The transaction that triggered the receipt.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    primaryId; uint32;  The transaction index within the block.
-    secondaryId; uint32; The transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary id is set to 0.
+    primaryId; uint32;  Transaction index within the block.
+    secondaryId; uint32; Transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary identifier is set to 0.
 
 .. |merkle| raw:: html
 

@@ -342,16 +342,14 @@ paths:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
           description: invalid argument
-  "/account/{accountId}/properties/":
+  "/account/{accountId}/restrictions/":
     get:
       tags:
       - Account routes
-      summary: Get account configurable properties information
+      summary: Get the account restrictions
       description: |
-        Returns the [configurable
-        properties](https://nemtech.github.io/concepts/account-filter.html) for
-        a given account.
-      operationId: getAccountProperties
+        Returns the [account restrictions](https://nemtech.github.io/concepts/account-properties.html) for a given account.
+      operationId: getAccountRestrictions
       parameters:
       - name: accountId
         in: path
@@ -365,21 +363,18 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AccountPropertiesInfoDTO"
+                $ref: "#/components/schemas/AccountRestrictionsInfoDTO"
         "404":
           description: resource not found
         "409":
           description: invalid argument
-  /account/properties:
+  /account/restrictions:
     post:
       tags:
       - Account routes
-      summary: Get account properties for given array of addresses
-      description: |
-        Returns the [configurable
-        properties](https://nemtech.github.io/concepts/account-filter.html) for
-        a given array of addresses.
-      operationId: getAccountPropertiesFromAccounts
+      summary: Get account restrictions for given array of addresses
+      description: Returns the account restrictions for a given array of addresses.
+      operationId: getAccountRestrictionsFromAccounts
       requestBody:
         $ref: "#/components/requestBodies/accountIds"
       responses:
@@ -389,9 +384,9 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of account properties information.
+                description: The array of account restrictions.
                 items:
-                  $ref: "#/components/schemas/AccountPropertiesInfoDTO"
+                  $ref: "#/components/schemas/AccountRestrictionsInfoDTO"
         "400":
           description: invalid content
         "409":
@@ -1217,7 +1212,7 @@ components:
         * 1 -  Mosaic id alias.
         * 2 -  Addres alias.
       example: 0
-    AccountPropertyTypeEnum:
+    AccountRestrictionTypeEnum:
       type: integer
       example: 1
       enum:
@@ -1229,21 +1224,21 @@ components:
       - 130
       - 132
       description: |
-        The account properties type:
-        * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
-        * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-        * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
-        * 0x05 (5 decimal) - Property type sentinel.
-        * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
-        * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-        * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
-    AccountPropertiesModificationTypeEnum:
+        The account restriction type:
+        * 0x01 (1 decimal) - Allow only receiving transactions from an address.
+        * 0x02 (2 decimal) - Allow only receiving transactions containing a mosaic id.
+        * 0x04 (4 decimal) - Allow only sending transactions with a given transaction type.
+        * 0x05 (5 decimal) - Restriction type sentinel.
+        * 0x81 (129 decimal) - Block receiving transactions from an address.
+        * 0x82 (130 decimal) - Block receiving transactions containing a mosaic id.
+        * 0x84 (132 decimal) -  Block sending transactions with a given transaction type.
+    AccountRestrictionModificationTypeEnum:
       type: integer
       enum:
       - 0
       - 1
       description: |
-        The account properties modification type:
+        The account restrictions modification type:
         * 0 - Add property.
         * 1 - Remove property.
       example: 0
@@ -1280,9 +1275,9 @@ components:
         * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
         * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
         * 0x4148 (16712 decimal) - Hash Lock Transaction.
-        * 0x4150 (16720 decimal) - Account Properties Address Transaction.
-        * 0x4250 (16976 decimal) - Account Properties Mosaic Transaction.
-        * 0x4350 (17232 decimal) - Account Properties Entity Type Transaction.
+        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
+        * 0x4250 (16976 decimal) - Account Operation Mosaic Transaction.
+        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
         * 0x4152 (16722 decimal) - Secret Lock Transaction.
         * 0x4252 (16978 decimal) - Secret Proof Transaction.
         * 0x414C (16716 decimal) - Account Link Transaction.
@@ -1501,8 +1496,8 @@ components:
       properties:
         address:
           type: string
-          description: The address of the account in base 32.
-          example: SAAM2O7SSJ2A7AU3DZJMSTTRFZT5TFDPQ3ZIIJX7
+          description: The address of the account in hexadecimal.
+          example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         names:
           type: array
           description: The mosaic linked namespace names.
@@ -1511,50 +1506,50 @@ components:
           - alias2
           items:
             type: string
-    AccountPropertiesInfoDTO:
+    AccountRestrictionsInfoDTO:
       type: object
       required:
-      - accountProperties
+      - accountRestrictions
       properties:
-        accountProperties:
-          $ref: "#/components/schemas/AccountPropertiesDTO"
-    AccountPropertiesDTO:
+        accountRestrictions:
+          $ref: "#/components/schemas/AccountRestrictionsDTO"
+    AccountRestrictionsDTO:
       type: object
       required:
       - address
-      - properties
+      - restrictions
       properties:
         address:
           type: string
           description: The address of the account in hexadecimal.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
-        properties:
+        restrictions:
           type: array
           items:
-            $ref: "#/components/schemas/AccountPropertyDTO"
-    AccountPropertyDTO:
+            $ref: "#/components/schemas/AccountRestrictionDTO"
+    AccountRestrictionDTO:
       type: object
       required:
-      - propertyType
+      - restrictionType
       - values
       properties:
-        propertyType:
-          $ref: "#/components/schemas/AccountPropertyTypeEnum"
+        restrictionType:
+          $ref: "#/components/schemas/AccountRestrictionTypeEnum"
         values:
           type: array
-          description: The address, transaction type or mosaic id to filter.
+          description: The address, transaction type or mosaic id to restrict.
           items: {}
-    AccountPropertiesModificationDTO:
+    AccountRestrictionModificationDTO:
       type: object
       required:
       - type
       - values
       properties:
         type:
-          $ref: "#/components/schemas/AccountPropertiesModificationTypeEnum"
+          $ref: "#/components/schemas/AccountRestrictionModificationTypeEnum"
         values:
           type: array
-          description: The address, transaction type or mosaic id to filter.
+          description: The address, transaction type or mosaic id to restrict.
           items: {}
     MultisigAccountGraphInfoDTO:
       type: object
@@ -1782,15 +1777,12 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
     MerkleProofInfoDTO:
       type: object
-      required:
-      - payload
-      - type
       properties:
-        payload:
-          $ref: "#/components/schemas/merkleProofInfo"
-        type:
-          type: string
-          example: merkleProofInfo
+        merklePath:
+          type: array
+          description: The complementary data needed to calculate the merkle root.
+          items:
+            $ref: "#/components/schemas/merklePathItem"
     # Diagnostic endpoints
     StorageInfoDTO:
       type: object
@@ -2213,7 +2205,7 @@ components:
           - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/AggregateTransactionDTO"
           - $ref: "#/components/schemas/HashLockTransactionDTO"
-          - $ref: "#/components/schemas/AccountPropertiesTransactionDTO"
+          - $ref: "#/components/schemas/AccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/SecretLockTransactionDTO"
           - $ref: "#/components/schemas/SecretProofTransactionDTO"
           - $ref: "#/components/schemas/AccountLinkTransactionDTO"
@@ -2254,7 +2246,7 @@ components:
           - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedHashLockTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountPropertiesTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedAccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
@@ -2553,30 +2545,30 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/HashLockTransactionDTO"
-    AccountPropertiesTransactionBodyDTO:
+    AccountRestrictionTransactionBodyDTO:
       type: object
       required:
       - propertyType
       - modifications
       properties:
         propertyType:
-          $ref: "#/components/schemas/AccountPropertyTypeEnum"
+          $ref: "#/components/schemas/AccountRestrictionTypeEnum"
         modifications:
           type: array
           items:
-            $ref: "#/components/schemas/AccountPropertiesModificationDTO"
-    AccountPropertiesTransactionDTO:
+            $ref: "#/components/schemas/AccountRestrictionModificationDTO"
+    AccountRestrictionTransactionDTO:
       type: object
       description: Transaction that prevents receiving transactions from undesired
         addresses, mosaics or sending certain transaction types.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/AccountPropertiesTransactionBodyDTO"
-    EmbeddedAccountPropertiesTransactionDTO:
+      - $ref: "#/components/schemas/AccountRestrictionTransactionBodyDTO"
+    EmbeddedAccountRestrictionTransactionDTO:
       type: object
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/AccountPropertiesTransactionBodyDTO"
+      - $ref: "#/components/schemas/AccountRestrictionTransactionBodyDTO"
     SecretLockTransactionBodyDTO:
       type: object
       required:
@@ -2836,14 +2828,6 @@ components:
         signer:
           type: string
           description: The signer of the transaction.
-    merkleProofInfo:
-      type: object
-      properties:
-        merklePath:
-          type: array
-          description: The complementary data needed to calculate the merkle root.
-          items:
-            $ref: "#/components/schemas/merklePathItem"
     merklePathItem:
       type: object
       properties:

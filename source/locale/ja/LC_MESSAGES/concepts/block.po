@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.9\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-28 17:22+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -51,21 +51,11 @@ msgid ""
 "quickly enough for everyday use."
 msgstr "NEM ブロックは ``15`` 秒毎に完了し、日々の使用に対して十分にトランザクションを承認します。"
 
-#: ../../source/concepts/block.rst:15
-msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_. Public network "
-"configuration may differ."
-msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/block.rst:19
+#: ../../source/concepts/block.rst:17
 msgid "Block creation"
 msgstr "ブロック生成"
 
-#: ../../source/concepts/block.rst:21
+#: ../../source/concepts/block.rst:19
 msgid ""
 "Blocks are created by :doc:`accounts <account>`. The process of creating new"
 " blocks is called :doc:`harvesting <harvesting>`. The harvesting account - "
@@ -78,27 +68,39 @@ msgstr ""
 ":ref:`手数料 <fees>` と :doc:`インフレーション <inflation>` "
 "を受け取ります。これによりハーベスターにはできるだけ多くのトランザクションをブロックに追加するインセンティブが与えられます。"
 
-#: ../../source/concepts/block.rst:25
+#: ../../source/concepts/block.rst:23
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:37
+#: ../../source/concepts/block.rst:35
 msgid "Schemas"
 msgstr "スキーマ"
+
+#: ../../source/concepts/block.rst:37
+msgid ""
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
+msgstr ""
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
+"です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/block.rst:42
 msgid "BlockHeader"
 msgstr "ブロックヘッダ"
 
 #: ../../source/concepts/block.rst:44
+msgid "Serialization of the block header."
+msgstr "ブロックヘッダのシリアル化"
+
+#: ../../source/concepts/block.rst:46
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
-#: ../../source/concepts/block.rst:46
+#: ../../source/concepts/block.rst:48
 msgid ":ref:`VerifiableEntity<verifiable-entity>`"
 msgstr ""
 
-#: ../../source/concepts/block.rst:47
+#: ../../source/concepts/block.rst:49
 msgid ":ref:`EntityBody<entity-body>`"
 msgstr ""
 
@@ -123,22 +125,25 @@ msgid "height"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-#: ../../source/concepts/block.rst:1
 msgid "uint64"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
-"The height of the blockchain. Each blockchain has a unique height. "
-"Subsequent blocks differ in height by 1."
-msgstr "ブロックチェーンの高さ。各ブロックチェーンは一意な高さを持っています。後ろに続くブロックとは 1 だけ高さが異なります。"
+"Height of the blockchain. Each block has a unique height. Subsequent blocks "
+"differ in height by 1."
+msgstr "ブロックチェーンの高さ。各ブロックは一意な高さを持っています。後ろに続くブロックとは 1 だけ高さが異なります。"
 
 #: ../../source/concepts/block.rst:1
 msgid "timestamp"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The number of seconds elapsed since the creation of the nemesis block."
+msgid ":schema:`Timestamp <types.cats#L5>`"
+msgstr ""
+
+#: ../../source/concepts/block.rst:1
+msgid "Number of seconds elapsed since the creation of the nemesis block."
 msgstr "ネメシスブロックが生成されてから経過した秒です。"
 
 #: ../../source/concepts/block.rst:1
@@ -147,9 +152,9 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
-"The average difficulty divided by the average block creation time for the "
-"last ``60`` blocks. If the new difficulty is more than 5% greater or smaller"
-" than the difficulty of the last block, then the change is capped to 5%. "
+"Average difficulty divided by the average block creation time for the last "
+"``60`` blocks. If the new difficulty is more than 5% greater or smaller than"
+" the difficulty of the last block, then the change is capped to 5%. "
 "Additionally, difficulties are kept within certain bounds. The new "
 "difficulty is clamped to the boundaries if it is greater than 10\\ :sup:`15`"
 " or smaller than 10\\ :sup:`13`\\ ."
@@ -167,7 +172,7 @@ msgid "uint32"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The fee multiplier applied to transactions contained in block."
+msgid "Fee multiplier applied to transactions contained in block."
 msgstr "手数料乗数はブロックに含まれるトランザクションに適用されます。"
 
 #: ../../source/concepts/block.rst:1
@@ -176,12 +181,11 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "32 bytes (binary)"
+msgid ":schema:`Hash256 <types.cats#L9>`"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The hash of the previous block."
+msgid "Hash of the previous block."
 msgstr "前ブロックのハッシュ"
 
 #: ../../source/concepts/block.rst:1
@@ -190,8 +194,8 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
-"The transactions included in a block are hashed forming a |merkle|. The root"
-" of the tree summarizes them."
+"Transactions included in a block are hashed forming a |merkle|. The root of "
+"the tree summarizes them."
 msgstr "ブロックに含まれたトランザクションは |merkle| としてハッシュ化されます。この木のルートはそれらを要約しています。"
 
 #: ../../source/concepts/block.rst:1
@@ -200,7 +204,7 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
-"The collection of :doc:`receipts <receipt>` are hashed into a |merkle| and "
+"Collection of :doc:`receipts <receipt>` are hashed into a |merkle| and "
 "linked to a :doc:`block <block>`. The block header stores the root hash."
 msgstr ""
 ":doc:`レシート <receipt>` の集合はハッシュ化されて |merkle| に入り :doc:`ブロック <block>` "
@@ -223,11 +227,15 @@ msgstr ""
 msgid "beneficiary"
 msgstr ""
 
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
+msgid ":schema:`Key <types.cats#L11>`"
+msgstr ""
+
 #: ../../source/concepts/block.rst:1
-msgid "The public key of the optional beneficiary designated by harvester."
+msgid "Public key of the optional beneficiary designated by harvester."
 msgstr "ハーベスタによって指定されたオプション受益者の公開鍵。"
 
-#: ../../source/concepts/block.rst:72
+#: ../../source/concepts/block.rst:74
 msgid "**Version**: The higher byte represents the network identifier."
 msgstr "**バージョン**: 高位バイトはネットワーク識別子を示します。"
 
@@ -267,7 +275,7 @@ msgstr ""
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/concepts/block.rst:83
+#: ../../source/concepts/block.rst:85
 msgid "**Type**: The type of the block."
 msgstr "**タイプ**: ブロックタイプ"
 
@@ -283,33 +291,45 @@ msgstr "ネメシスブロック"
 msgid "0x8143"
 msgstr ""
 
-#: ../../source/concepts/block.rst:95
+#: ../../source/concepts/block.rst:97
 msgid "VerifiableEntity"
 msgstr ""
+
+#: ../../source/concepts/block.rst:99
+msgid "Serialization of an entity that should be signed by an account."
+msgstr "アカウントによって署名されるべきエンティティのシリアル化。"
 
 #: ../../source/concepts/block.rst:1
 msgid "signature"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "64 bytes (binary)"
+msgid ":schema:`Signature <types.cats#L12>`"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The entity signature generated by the signer."
+msgid "Entity signature generated by the signer."
 msgstr "署名者により生成されたエンティティの署名。"
 
-#: ../../source/concepts/block.rst:106
+#: ../../source/concepts/block.rst:110
 msgid "EntityBody"
 msgstr ""
+
+#: ../../source/concepts/block.rst:112
+msgid ""
+"Serialization of an entity. An entity could be a block, a :doc:`transaction "
+"<transaction>` or a :doc:`receipt <receipt>`."
+msgstr ""
+"エンティティのシリアル化。エンティティはブロック、 :doc:`トランザクション <transaction>` または :doc:`レシート "
+"<receipt>` となります。"
 
 #: ../../source/concepts/block.rst:1
 msgid "signer"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The entity signer's :doc:`public key <account>`."
-msgstr "エンティティ署名者の :doc:`公開鍵 <account>`"
+msgid "Public key of the signer of the entity."
+msgstr "エンティティの署名者の公開鍵"
 
 #: ../../source/concepts/block.rst:1
 msgid "version"
@@ -320,7 +340,7 @@ msgid "uint16"
 msgstr ""
 
 #: ../../source/concepts/block.rst:1
-msgid "The version of the structure."
+msgid "Version of the structure."
 msgstr "構造体のバージョン"
 
 #: ../../source/concepts/block.rst:1
@@ -329,7 +349,7 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
-"The entity type. For transaction types, see :ref:`transaction types "
+"Entity type. For transaction types, see :ref:`transaction types "
 "<transaction-types>`."
 msgstr ""
 "エンティティタイプ。トランザクションタイプについては :ref:`トランザクションタイプ <transaction-types>` を参照してください。"

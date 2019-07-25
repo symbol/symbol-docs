@@ -10,7 +10,7 @@ A mosaic could be a token, but it could also be a collection of more specialized
 Properties
 **********
 
-Each mosaic has a unique identifier and a set of configurable properties. During the  :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
+Each mosaic has a unique identifier and a set of configurable properties. During the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
 
 .. _mosaic-properties:
 
@@ -23,8 +23,11 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+<<<<<<< HEAD
     Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restrictions>`.
 
+=======
+>>>>>>> master
 
 *****************************
 Absolute and relative amounts
@@ -38,7 +41,7 @@ For example, if the mosaic has divisibility 2, to create or send 10 units (relat
 Cost
 ****
 
-The cost of creating a mosaic is `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
+The cost of creating a mosaic is :properties:`configurable per network <config-network.properties>`. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
 
 *******
 Example
@@ -56,7 +59,7 @@ Thus, the company must create a mosaic to represent shares to their company. Her
     Divisibility; 2
     Initial supply; 1000000000 (10,000,000.00)
     Supply mutable; true
-    Transferability; true
+    Transferable; true
 
 **Duration:** Shares of the company should exist as long as the company is in business. The ComfyClothingCompany leaves this property ``undefined``, creating a non-expiring mosaic representing their assets.
 
@@ -68,7 +71,7 @@ Fractional ownership, along with the ability to trade 24/7, brings additional li
 
 **Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
 
-**Transferability:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
+**Transferable:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
 
 ******
 Guides
@@ -86,7 +89,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _mosaic-definition-transaction:
 
@@ -108,11 +111,11 @@ Announce a mosaic definition transaction to create a new mosaic.
     :delim: ;
 
     mosaicNonce; uint32; Random nonce used to generate the mosaic id.
-    mosaicId; uint64; The mosaic Id.
-    propertiesCount; uint8; The number of elements in optional properties
-    flags; :ref:`MosaicFlag<mosaic-flags>`; The mosaic flags.
-    divisibility; uint8; The mosaic divisibility. The maximum divisibility is ``6``.
-    properties; array(:ref:`MosaicProperty<mosaic-property>`, propertiesCount); The optional mosaic properties.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
+    propertiesCount; uint8; Number of elements in optional properties
+    flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
+    divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
+    properties; array(:ref:`MosaicProperty <mosaic-property>`, propertiesCount); Optional mosaic properties.
 
 .. _mosaic-supply-change-transaction:
 
@@ -133,9 +136,9 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The id of the affected mosaic.
-    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; The supply change direction.
-    delta; uint64; The amount of supply to increase or decrease.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic.
+    direction; :ref:`MosaicSupplyChangeDirection<mosaic-supply-change-direction>`; Supply change direction.
+    delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
 
 .. _mosaic-property:
 
@@ -146,19 +149,20 @@ MosaicProperty
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    id; uint8; The property id. (0x02) stands for duration.
+    id; uint8; Mosaic property identifier. (0x02) stands for duration.
     value; uint64; The mosaic property value.
 
 .. _mosaic:
 
 Mosaic
 ======
+
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of the mosaic.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Mosaic identifier.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of the mosaic.
 
 .. _unresolved-mosaic:
 
@@ -169,8 +173,8 @@ UnresolvedMosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; uint64; The mosaic id.
-    amount; uint64; The amount of the mosaic.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Mosaic identifier.
+    amount; :schema:`Amount <types.cats#L1>`; Amount of the mosaic.
 
 .. _mosaic-flags:
 
@@ -184,9 +188,9 @@ Enumeration: uint8
     :delim: ;
 
     0x00; No flags present.
-    0x01; The mosaic supply is mutable.
-    0x02; The mosaic is transferable.
-    0x04; The mosaic is restrictable.
+    0x01; Mosaic supports supply changes even when mosaic owner owns partial supply.
+    0x02; Mosaic supports transfers between arbitrary accounts. When not set, mosaic can only be transferred to and from mosaic owner.
+    0x04; Mosaic owner can add rules to restrict which accounts are enabled to send and receive the mosaic.
 
 .. _mosaic-supply-change-direction:
 

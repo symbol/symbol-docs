@@ -139,9 +139,9 @@ source_file = build/gettext/concepts/transaction.pot
 source_lang = en
 type = PO
 
-[nem2docs.concepts--account-restrictions]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restrictions.po
-source_file = build/gettext/concepts/account-restrictions.pot
+[nem2docs.concepts--account-restriction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restriction.po
+source_file = build/gettext/concepts/account-restriction.pot
 source_lang = en
 type = PO
 
@@ -289,6 +289,12 @@ source_file = build/gettext/guides/account/reading-transactions-from-an-account.
 source_lang = en
 type = PO
 
+[nem2docs.guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
+source_file = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--blockchain--getting-block-by-height]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-block-by-height.po
 source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
@@ -298,6 +304,12 @@ type = PO
 [nem2docs.guides--blockchain--listening-new-blocks]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
 source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--migration--migrating-from-nis1-to-catapult]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
+source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot
 source_lang = en
 type = PO
 

@@ -41,6 +41,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.extlinks',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
@@ -74,7 +75,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.18.0'
+version = u'0.18.2'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
@@ -197,19 +198,8 @@ def setup(app):
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 html_sidebars = {
-  'api': ['globaltoc.html'],
-  'cli': ['globaltoc.html'],
-  'concepts/**': ['globaltoc.html'],
-  'getting-started/**': ['globaltoc.html'],
-  'guides/**/**': ['globaltoc.html'],
-  'guides': ['globaltoc.html'],
-  'guidelines/**': ['globaltoc.html'],
-  'extensions': ['globaltoc.html'],
-  'prototyping-tool': ['globaltoc.html'],
-  'sdk': ['globaltoc.html'],
-  'wallet': ['globaltoc.html'],
-  'server': ['globaltoc.html'],
-  'contribute/**': ['globaltoc.html'],
+  '**': ['globaltoc.html'],
+  'endpoints': [],
   'index': [],
 }
 
@@ -308,13 +298,10 @@ edit_on_github_branch = 'master'
 html_scaled_image_link = False
 
 # -- Options for ablog ----------------------------------------------------
-blog_baseurl = ''
+blog_baseurl = '/'
 blog_path = 'guides'
 
-blog_authors = {
-    'dgarcia360': ('dgarcia360', 'http://github.com/dgarcia360'),
-    'jorisadri': ('jorisadri', 'http://github.com/jorisadri'),
-}
+blog_authors = {}
 
 # -- Options for linkcheck ------------------------------------------------
 
@@ -330,3 +317,8 @@ def viewsource_resolve_link(file_path, language=None):
     path_split = file_path.split('/')
     path = "/".join(path_split[len(path_split)-2:])
     return base_url + path
+
+# -- Custom extlinks -----------------------------------------------------
+
+extlinks = {'schema': ('https://github.com/nemtech/catbuffer/tree/master/schemas/%s', 'file '),
+            'properties': ('https://github.com/nemtech/catapult-server/blob/master/resources/%s', 'file ')}

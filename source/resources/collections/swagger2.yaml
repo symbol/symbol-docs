@@ -318,13 +318,13 @@ paths:
               $ref: "#/definitions/TransactionInfoDTO"
         "409":
           description: invalid argument
-  "/account/{accountId}/properties/":
+  "/account/{accountId}/restrictions/":
     get:
       tags:
       - Account routes
-      summary: Get account configurable properties information
-      description: Returns the configurable properties for a given account.
-      operationId: getAccountProperties
+      summary: Get the account restrictions
+      description: Returns the account restrictions for a given account.
+      operationId: getAccountRestrictions
       produces:
       - application/json
       parameters:
@@ -337,18 +337,18 @@ paths:
         "200":
           description: success
           schema:
-            $ref: "#/definitions/AccountPropertiesInfoDTO"
+            $ref: "#/definitions/AccountRestrictionsInfoDTO"
         "404":
           description: resource not found
         "409":
           description: invalid argument
-  /account/properties:
+  /account/restrictions:
     post:
       tags:
       - Account routes
-      summary: Get account properties for given array of addresses
-      description: Returns the configurable properties for a given array of addresses.
-      operationId: getAccountPropertiesFromAccounts
+      summary: Get account restrictions for given array of addresses
+      description: Returns the account restrictions for a given array of addresses.
+      operationId: getAccountRestrictionsFromAccounts
       produces:
       - application/json
       parameters:
@@ -362,9 +362,9 @@ paths:
           description: success
           schema:
             type: array
-            description: The array of account properties information.
+            description: The array of account restrictions.
             items:
-              $ref: "#/definitions/AccountPropertiesInfoDTO"
+              $ref: "#/definitions/AccountRestrictionsInfoDTO"
         "400":
           description: invalid content
         "409":
@@ -1130,7 +1130,7 @@ paths:
             $ref: "#/definitions/NodeTimeDTO"
 definitions:
   # Enumerations
-  AccountPropertyTypeEnum:
+  AccountRestrictionTypeEnum:
     type: integer
     example: 1
     enum:
@@ -1142,14 +1142,14 @@ definitions:
     - 130
     - 132
     description: |
-      The account properties type:
-      * 0x01 (1 decimal) - The property type only allows receiving transactions from an address.
-      * 0x02 (2 decimal) - The property type only allows receiving transactions containing a mosaic id.
-      * 0x04 (4 decimal) - The property type only allows sending transactions with a given transaction type.
-      * 0x05 (5 decimal) - Property type sentinel.
-      * 0x81 (129 decimal) - The property type blocks receiving transactions from an address.
-      * 0x82 (130 decimal) - The property type blocks receiving transactions containing a mosaic id.
-      * 0x84 (132 decimal) -  The property type blocks sending transactions with a given transaction type.
+      The account restriction type:
+      * 0x01 (1 decimal) - Allow only receiving transactions from an address.
+      * 0x02 (2 decimal) - Allow only receiving transactions containing a mosaic id.
+      * 0x04 (4 decimal) - Allow only sending transactions with a given transaction type.
+      * 0x05 (5 decimal) - Restriction type sentinel.
+      * 0x81 (129 decimal) - Block receiving transactions from an address.
+      * 0x82 (130 decimal) - Block receiving transactions containing a mosaic id.
+      * 0x84 (132 decimal) -  Block sending transactions with a given transaction type.
   AliasTypeEnum:
     type: integer
     enum:
@@ -1335,8 +1335,8 @@ definitions:
     properties:
       address:
         type: string
-        description: The address of the account in base 32.
-        example: SAAM2O7SSJ2A7AU3DZJMSTTRFZT5TFDPQ3ZIIJX7
+        description: The address of the account in hexadecimal.
+        example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
       names:
         type: array
         description: The mosaic linked namespace names.
@@ -1345,38 +1345,38 @@ definitions:
         - alias2
         items:
           type: string
-  AccountPropertiesInfoDTO:
+  AccountRestrictionsInfoDTO:
     type: object
     required:
-    - accountProperties
+    - accountRestrictions
     properties:
-      accountProperties:
-        $ref: "#/definitions/AccountPropertiesDTO"
-  AccountPropertiesDTO:
+      accountRestrictions:
+        $ref: "#/definitions/AccountRestrictionsDTO"
+  AccountRestrictionsDTO:
     type: object
     required:
     - address
-    - properties
+    - restrictions
     properties:
       address:
         type: string
         description: The address of the account in hexadecimal.
         example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
-      properties:
+      restrictions:
         type: array
         items:
-          $ref: "#/definitions/AccountPropertyDTO"
-  AccountPropertyDTO:
+          $ref: "#/definitions/AccountRestrictionDTO"
+  AccountRestrictionDTO:
     type: object
     required:
-    - propertyType
+    - restrictionType
     - values
     properties:
-      propertyType:
-        $ref: "#/definitions/AccountPropertyTypeEnum"
+      restrictionType:
+        $ref: "#/definitions/AccountRestrictionTypeEnum"
       values:
         type: array
-        description: The address, transaction type or mosaic id to filter.
+        description: The address, transaction type or mosaic id to restrict.
         items:
           type: object
   MultisigAccountGraphInfoDTO:
@@ -1581,15 +1581,12 @@ definitions:
         $ref: "#/definitions/UInt64DTO"
   MerkleProofInfoDTO:
     type: object
-    required:
-    - payload
-    - type
     properties:
-      payload:
-        $ref: "#/definitions/merkleProofInfo"
-      type:
-        type: string
-        example: merkleProofInfo
+      merklePath:
+        type: array
+        description: The complementary data needed to calculate the merkle root.
+        items:
+          $ref: "#/definitions/merklePathItem"
   StatementsDTO:
     type: object
     description: The collection of transaction statements and resolutions triggered for the block requested.
@@ -2083,14 +2080,6 @@ definitions:
       signer:
         type: string
         description: The signer of the transaction.
-  merkleProofInfo:
-    type: object
-    properties:
-      merklePath:
-        type: array
-        description: The complementary data needed to calculate the merkle root.
-        items:
-          $ref: "#/definitions/merklePathItem"
   merklePathItem:
     type: object
     properties:

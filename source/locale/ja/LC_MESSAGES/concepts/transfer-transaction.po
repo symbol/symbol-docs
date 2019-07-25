@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.17.9\n"
+"Project-Id-Version: nem2-docs 0.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-28 17:22+0100\n"
+"POT-Creation-Date: 2019-07-12 11:51+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -146,12 +146,10 @@ msgstr "スキーマ"
 
 #: ../../source/concepts/transfer-transaction.rst:64
 msgid ""
-"Configuration parameters are `editable <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_. Public network "
-"configuration may differ."
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
 msgstr ""
-"設定パラメータは `編集可能 <https://github.com/nemtech/catapult-"
-"server/blob/master/resources/config-network.properties>`_ "
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
 #: ../../source/concepts/transfer-transaction.rst:69
@@ -204,12 +202,12 @@ msgid "recipient"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "25 bytes (binary)"
+msgid ":schema:`UnresolvedAddress <types.cats#L7>`"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "The address of the recipient account."
-msgstr "受信アカウントのアドレス"
+msgid "Address of the recipient."
+msgstr "受信者のアドレス"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "messageSize"
@@ -220,7 +218,7 @@ msgid "uint16"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "The size of the attached message."
+msgid "Size of the attached message."
 msgstr "添付されたメッセージのサイズ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
@@ -232,7 +230,7 @@ msgid "uint8"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "The number of attached mosaics."
+msgid "Number of attached mosaics."
 msgstr "添付されたモザイクの数"
 
 #: ../../source/concepts/transfer-transaction.rst:1
@@ -244,19 +242,20 @@ msgid "array(byte, messageSize)"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "The :ref:`message-type` and a payload of up to ``1023`` bytes."
-msgstr ":ref:`message-type` と ``1023`` バイトまでのペイロード"
+msgid ""
+":ref:`Message type <message-type>` and a payload of up to ``1023`` bytes."
+msgstr ":ref:`message-type <message-type>` と ``1023`` バイトまでのペイロード"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "mosaics"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "array(:ref:`UnresolvedMosaic<unresolved-mosaic>`, mosaicsCount)"
+msgid "array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount)"
 msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "The array of mosaic to send."
+msgid "Array of mosaics to send."
 msgstr "送信するモザイクの配列"
 
 #: ../../source/concepts/transfer-transaction.rst:94

@@ -75,7 +75,7 @@ Delegating the KYC process to a specialized company
 
 Following the previous example, ComfyClothingCompany delegates the KYC process to a company specialized in KYC & AML.
 
-The  KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{ Is_Verified, EQ, 1}`` to the mosaic.
+The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{ Is_Verified, EQ, 1}`` to the mosaic.
 
 The KYC provider also defines the following permission tiers:
 
@@ -102,7 +102,7 @@ Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` uni
     ******
 
     .. postlist::
-        :category: Mosaic Restrictions
+        :category: Mosaic Restriction
         :date: %A, %B %d, %Y
         :format: {title}
         :list-style: circle

@@ -20,7 +20,7 @@ On the internet, a domain can have a sub-domain. In NEM, namespaces can have sub
 
 You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
 
-Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains.
+Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespaces has the same duration as its parent namespace.
 
 *****
 Alias
@@ -59,7 +59,7 @@ The maximum namespace duration is ``365`` days. By default, the network is confi
 
 During the renting period, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
 
-The network `can define <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
+The network :properties:`can define <config-network.properties>` a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
 
 When the grace period ends, the existing aliases and subnamespaces are pruned, becoming **inactive**. Hence, other accounts can now register the namespace again.
 
@@ -67,7 +67,7 @@ When the grace period ends, the existing aliases and subnamespaces are pruned, b
 Cost
 ****
 
-The cost of creating a namespace is  `configurable per network <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_. By default, registering a namespace costs ``1 cat.currency per block`` plus transactions fees. Registering a subnamespace has a fixed cost of ``100 cat.currency`` plus transaction fees.
+The cost of creating a namespace is :properties:`configurable per network <config-network.properties>`. By default, registering a namespace costs ``1 cat.currency per block`` plus transactions fees. Registering a subnamespace has a fixed cost of ``100 cat.currency`` plus transaction fees.
 
 *******
 Example
@@ -118,7 +118,7 @@ Guides
 Schemas
 *******
 
-.. note:: Configuration parameters are `editable <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ . Public network configuration may differ.
+.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
 .. _register-namespace-transaction:
 
@@ -139,10 +139,10 @@ Announce a register namespace transaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceType; :ref:`NamespaceType <namespace-type>`; The type of the registered namespace.
-    duration; uint64; The renting duration represents the number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. During the renting period, it is possible to extend the rental by sending a :ref:`register namespace transaction<register-namespace-transaction>` with the extra number of blocks to rent the namespace. When a renting period ends, the namespace will become inactive.
-    parentId; uint64; If it is a subdomain, a reference to parent namespace name is required.
-    namespaceId; uint64; The id of the namespace.
+    namespaceType; :ref:`NamespaceType <namespace-type>`; Type of the registered namespace.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
+    parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the parent namespace. Required for subnamespaces.
+    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace.
     namespaceNameSize; uint8; The size of the namespace name.
     name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
@@ -166,9 +166,9 @@ Announce an alias transaction to attach a namespace to an account. A namespace c
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; The alias action.
-    namespaceId; uint64; The id of the namespace that will become an alias.
-    address; 25 bytes (binary); The aliased address.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
+    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
+    address; :schema:`Address <types.cats#L8>`; Aliased address.
 
 .. _mosaic-alias-transaction:
 
@@ -189,9 +189,9 @@ Announce an alias transaction to attach a namespace to a mosaic. Setting an alia
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; The alias action.
-    namespaceId; uint64; The id of the namespace that will become an alias.
-    mosaicId; uint64; The aliased mosaic id.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
+    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the aliased mosaic.
 
 .. _namespace-type:
 
