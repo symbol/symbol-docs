@@ -60,7 +60,7 @@ During the **renting period**, the namespace owner can create subnamespaces, ali
 
 The network :properties:`can define <config-network.properties>` a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
 
-When the grace period ends, the namespace is **deleted**. At this point in time, the namespace becomes **available** for its registration again.
+When the grace period ends, the namespace is **deleted**. At this point, the namespace becomes **available** for its registration again.
 
 .. csv-table:: Permissions by namespace status
     :header: "Action", "Available", "Registration Period", "Grace Period"
