@@ -2,7 +2,7 @@
 Metadata
 ########
 
-Catapult provides you with transactions to associate metadata to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>`.
+Catapult provides you with an option to associate metadata to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a transaction.
 
 The most common uses of metadata are:
 
@@ -10,7 +10,7 @@ The most common uses of metadata are:
 * Validate the value attached to an asset to enable users in your application to perform an off-chain action.
 
 Metadata is uniquely **identified** by the tuple ``{ signer, target-id, metadata-key }``.
-Including signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
+Including a signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
 
 The **value** linked to an identifier is a string up to ``1024`` characters.
 The client application is responsible for encrypting the message or keeping it visible for every blockchain participant.
@@ -20,14 +20,14 @@ Persistence
 ***********
 
 Metadata entries are stored in the blockchain - like a regular transfer transaction - but also as a **key-value state**.
-Without metadata feature, an application had to process the whole account transaction history off-chain to get the transaction message latest value.
-Having metadata accessible by key reduces client applications reading time significantly.
+
+This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history off-chain to obtain the latest transaction message value.
 
 ***********
 Permissions
 ***********
 
-The account, namespace or mosaic owner must **opt-in** all metadata requests received by giving explicit permission. In practice, this means that all metadata transactions must be wrapped in an aggregate transaction.
+The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all metadata transactions must be wrapped in an aggregate transaction.
 
 The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
 
