@@ -35,7 +35,21 @@ The target account should cosign the aggregate to record the metadata on the blo
 Examples
 ********
 
-To do.
+Adding a certificate to an account
+==================================
+
+Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then tags the account with a metadata transaction.
+
+Alice a recent graduate and wants her educational certificate accredited to her NEM account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
+
+Access management
+=================
+
+The HR department of the SneakersCompany uses the NEM blockchain for access management of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
+
+When a new employee, Cathy, is hired, the HR department creates a new work account for her. For security reasons, HR sets the metadata of the account to {company, CAN_USE_APP, 9-18}. Each time Cathy attempts to access the company apps suite, the company app validates that Cathy has permission and that the time falls under 9:00-18:00 before granting her admission.
+
+On the other hand, if Derek, who has no permissions, attempts to access the company apps suite, the company app will reject his request.
 
 *******
 Schemas
