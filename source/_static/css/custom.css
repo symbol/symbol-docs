@@ -483,11 +483,10 @@ body > .container.full-width {
 }
 
 .highlight > pre {
-    background-color: #272822;
+    background-color: #f7f5fa;
     border-radius: 4px;
     padding: 8px 12px;
     border: 0;
-    color: #fff;
 }
 
 .example-code {
