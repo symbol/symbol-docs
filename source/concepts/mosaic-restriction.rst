@@ -10,13 +10,13 @@ Not all the mosaics of a given network will be subject to mosaic restrictions. T
 
 .. note:: A mosaic only supports the mosaic restrictions feature if the ``restrictable`` property has been set to true at its creation.
 
-Mosaic restrictions are editable over time, empowering the mosaic creator to control who can send and receive the mosaic as needed.
+Mosaic restrictions are **editable** over time, empowering the mosaic creator to control who can send and receive the mosaic as needed.
 
 ******************
 Global restriction
 ******************
 
-The mosaic global restrictions are the network-wide rules that will determine whether an account will be able to transact a given mosaic.
+The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to transact a given mosaic.
 
 One mosaic can handle multiple global restrictions. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
 
@@ -39,7 +39,7 @@ Address restriction
 
 Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.
 
-The mosaic creator can modify the permissions of an account by sending a mosaic restriction transaction targeting the account address. The :ref:`mosaic address restriction transaction <mosaic-address-restriction-transaction>` is composed of:
+The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`mosaic address restriction transaction <mosaic-address-restriction-transaction>` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -61,17 +61,28 @@ Examples
 Verifying accounts that can buy assets
 ======================================
 
+.. figure:: ../resources/images/examples/mosaic-restriction.png
+    :align: center
+    :width: 400px
+
+    Example of a mosaic restriction
+
 ComfyClothingCompany creates the mosaic ``comfyclothing.shares``.
 
 For regulatory reasons, the company wants only the participants that have passed the KYC process  to buy and transact the asset. So the company adds the restriction tier ``{Can_Buy, EQ, 1}`` to the mosaic ``comfyclothing.shares``.
 
-Alice is interested in investing in ComfyClothingCompany so she passes the KYC process. Once Alice has been verified, the company tags Alice’s account with the mosaic address restriction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``. Alice can now buy ``comfyclothing.shares`` and start transacting it with other accounts.
+Alice is interested in investing in ComfyClothingCompany so she passes the KYC process. Once Alice has been verified, the company tags Alice’s account with the mosaic address restriction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``.
 
-Bob, on the other hand, is not be able to buy or even receive the asset because he is not verified and tagged accordingly.
-
+Alice can now buy ``comfyclothing.shares`` and start transacting it with other accounts. Bob, on the other hand, is not be able to buy or even receive the asset because he is not verified and tagged accordingly.
 
 Delegating the KYC process to a specialized company
 ===================================================
+
+.. figure:: ../resources/images/examples/mosaic-restriction-delegated.png
+    :align: center
+    :width: 400px
+
+    Example of a delegated mosaic restriction
 
 Following the previous example, ComfyClothingCompany delegates the KYC process to a company specialized in KYC & AML.
 
@@ -92,7 +103,7 @@ The KYC provider encounters 3 potential investors:
 
 * Alice provides a valid passport but no proof of address. The KYC provider awards Alice’s account with the mosaic restriction ``{kyc, Is_Verified, 1}``.
 * Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
-* Carol provides a valid passport and proof of address. The KYC providerawards Carol’s account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
+* Carol provides a valid passport and proof of address. The KYC provider awards Carol’s account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
 
 Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice - who has not provided a valid proof of address - will not be able to receive shares.
 
