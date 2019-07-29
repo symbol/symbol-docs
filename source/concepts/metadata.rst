@@ -19,7 +19,7 @@ The client application is responsible for encrypting the message or keeping it v
 Persistence
 ***********
 
-Metadata entries are stored in the blockchain - like a regular transfer transaction - but also as a **key-value state**.
+Metadata entries are stored in the blockchain—like the message of a regular :doc:`transfer transaction <transfer-transaction>`—but also as a **key-value state**.
 
 This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history off-chain to obtain the latest transaction message value.
 
@@ -38,16 +38,30 @@ Examples
 Adding a certificate to an account
 ==================================
 
-Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then tags the account with a metadata transaction.
+.. figure:: ../resources/images/examples/metadata-certificate.png
+    :align: center
+    :width: 400px
+
+    Metadata used to attach relevant information to an asset
+
+Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a metadata transaction**.
 
 Alice a recent graduate and wants her educational certificate accredited to her NEM account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
 
 Access management
 =================
 
-The HR department of the SneakersCompany uses the NEM blockchain for access management of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
+.. figure:: ../resources/images/examples/metadata-access-control.png
+    :align: center
+    :width: 450px
 
-When a new employee, Cathy, is hired, the HR department creates a new work account for her. For security reasons, HR sets the metadata of the account to {company, CAN_USE_APP, 9-18}. Each time Cathy attempts to access the company apps suite, the company app validates that Cathy has permission and that the time falls under 9:00-18:00 before granting her admission.
+    Validating metadata to restrict performing an off-chain action
+
+The HR department of the SneakersCompany uses the NEM blockchain for **access management** of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
+
+When a new employee, Carol, is hired, the HR department creates a new work account for her. For security reasons, HR sets the metadata of the account to ``{company, ACCESS, 9-18}``.
+
+Each time Carol attempts to access the company apps suite, the company app validates that Carol has permission and that the time falls under *9:00-18:00* before granting her admission.
 
 On the other hand, if Derek, who has no permissions, attempts to access the company apps suite, the company app will reject his request.
 
@@ -80,7 +94,9 @@ Announce an account metadata transaction to associate a key-value state to an ac
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
-    value; array(byte, valueSize); Value data.
+    value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
+
+
 
 .. _mosaic-metadata-transaction:
 
@@ -105,8 +121,8 @@ Announce a mosaic metadata transaction to associate a key-value state to a mosai
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
-    valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
-    value; array(byte, valueSize); Value data.
+    valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
+    value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
 
 .. _namespace-metadata-transaction:
 
@@ -131,5 +147,5 @@ Announce a namespace metadata transaction to associate a key-value state to a na
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.
-    valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
-    value; array(byte, valueSize); Value data.
+    valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
+    value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
