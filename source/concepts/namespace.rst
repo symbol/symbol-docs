@@ -69,10 +69,8 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Register a new namespace; ✔️; ❌; ❌
     Renew the namespace;   ❌; ✔️; ✔️
     Create subnamespaces;   ❌; ✔️; ❌
-    Link an alias to an address;   ❌; ✔️; ❌
-    Link an alias to a mosaic;   ❌; ✔️; ❌
-    Send a transaction with an aliased mosaic;   ❌; ✔️; ❌
-    Send a transaction to an aliased address;   ❌; ✔️; ❌
+    Link an alias to an address or mosaic;   ❌; ✔️; ❌
+    Send a transaction using an alias;   ❌; ✔️; ❌
 
 ****
 Cost
