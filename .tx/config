@@ -103,9 +103,9 @@ source_file = build/gettext/concepts/mosaic.pot
 source_lang = en
 type = PO
 
-[nem2docs.concepts--mosaic-restrictions]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restrictions.po
-source_file = build/gettext/concepts/momosaic-restrictionssaic.pot
+[nem2docs.concepts--mosaic-restriction]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restriction.po
+source_file = build/gettext/concepts/mosaic-restriction.pot
 source_lang = en
 type = PO
 
