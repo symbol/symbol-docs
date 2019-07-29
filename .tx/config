@@ -97,6 +97,12 @@ source_file = build/gettext/concepts/inflation.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--metadata]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/metadata.po
+source_file = build/gettext/concepts/metadata.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
 source_file = build/gettext/concepts/mosaic.pot

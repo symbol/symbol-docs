@@ -17,6 +17,7 @@
     concepts/account
     concepts/mosaic
     concepts/namespace
+    concepts/metadata
     concepts/transfer-transaction
     concepts/aggregate-transaction
     concepts/account-restriction
