@@ -67,7 +67,7 @@ Guides
 ******
 
 .. postlist::
-    :category: Account Restrictions
+    :category: Account Restriction
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

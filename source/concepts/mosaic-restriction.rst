@@ -1,0 +1,196 @@
+##################
+Mosaic Restriction
+##################
+
+Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact - send or receive - with the asset.
+
+This feature has been specifically tailored for **Security Token Offerings (STO)**. In contrast to the unregulated tokens that were introduced through ICOs, security tokens are blockchain based representation of value that is subject to regulation under security laws, and thus need a way to bypass blockchain autonomy.
+
+Not all the mosaics of a given network will be subject to mosaic restrictions. The feature will only affect those to which the issuer adds the ``restrictable`` property explicitly at the moment of its creation. This property appears disabled by default, as it is undesirable for autonomous tokens like the public network currency.
+
+.. note:: A mosaic only supports the mosaic restrictions feature if the ``restrictable`` property has been set to true at its creation.
+
+Mosaic restrictions are **editable** over time, empowering the mosaic creator to control who can send and receive the mosaic as needed.
+
+******************
+Global restriction
+******************
+
+The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to transact a given mosaic.
+
+One mosaic can handle multiple global restrictions. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    Mosaic Id; MosaicId; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    Restriction Key; uint64; Restriction key.
+    Restriction Value; uint64; Restriction value.
+    Restriction Type; uint8; Type of constraint to apply. For example, the restriction value should be equal (EQ). See more :ref:`restriction types <mosaic-restriction-type>`.
+
+Only accounts tagged with the key identifiers and values that meet the conditions will be able to execute transactions involving the mosaic.
+
+Additionally, the mosaic creator can define restrictions that depend directly on global restrictions set on another mosaic - known as **reference mosaic**. The referenced mosaic and the restricted mosaic do not necessarily have to be created by the same account, enabling the delegation of mosaic permissions to a third party.
+
+*******************
+Address restriction
+*******************
+
+Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.
+
+The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`mosaic address restriction transaction <mosaic-address-restriction-transaction>` is composed of:
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    Mosaic Id; MosaicId; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    Target Address; address; Affected address.
+    Restriction Key; uint64; Restriction key.
+    Restriction Value; uint64; Restriction value.
+
+If the conditions match with the appropriate values set in the global restrictions, the account will be able to transact with the mosaic.
+
+Otherwise, the account needs to request the mosaic creator to be granted elevated permissions or wait until the global restrictions are changed.
+
+********
+Examples
+********
+
+Verifying accounts that can buy assets
+======================================
+
+.. figure:: ../resources/images/examples/mosaic-restriction.png
+    :align: center
+    :width: 400px
+
+    Example of a mosaic restriction
+
+ComfyClothingCompany creates the mosaic ``comfyclothing.shares``.
+
+For regulatory reasons, the company wants only the participants that have passed the KYC process  to buy and transact the asset. So the company adds the restriction tier ``{Can_Buy, EQ, 1}`` to the mosaic ``comfyclothing.shares``.
+
+Alice is interested in investing in ComfyClothingCompany so she passes the KYC process. Once Alice has been verified, the company tags Alice’s account with the mosaic address restriction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``.
+
+Alice can now buy ``comfyclothing.shares`` and start transacting it with other accounts. Bob, on the other hand, is not be able to buy or even receive the asset because he is not verified and tagged accordingly.
+
+Delegating the KYC process to a specialized company
+===================================================
+
+.. figure:: ../resources/images/examples/mosaic-restriction-delegated.png
+    :align: center
+    :width: 400px
+
+    Example of a delegated mosaic restriction
+
+Following the previous example, ComfyClothingCompany delegates the KYC process to a company specialized in KYC & AML.
+
+The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{ Is_Verified, EQ, 1}`` to the mosaic.
+
+The KYC provider also defines the following permission tiers:
+
+.. csv-table::
+    :header: "Key", "Operator", "Value", "Description"
+    :delim: ;
+
+    Is_Verified; EQ; 1; The client has issued a valid passport.
+    Is_Verified; EQ; 2; The client has issued a valid proof of address and passport.
+
+ComfyClothingCompany decides that only accounts with the restriction ``{ KYC::Is_Verified, 2}`` should be enabled to transfer shares. For this reason, the company adds the global mosaic restriction ``{ kyc::Is_Verified, EQ, 2}`` to the mosaic  ``comfyclothing.shares``.
+
+The KYC provider encounters 3 potential investors:
+
+* Alice provides a valid passport but no proof of address. The KYC provider awards Alice’s account with the mosaic restriction ``{kyc, Is_Verified, 1}``.
+* Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
+* Carol provides a valid passport and proof of address. The KYC provider awards Carol’s account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
+
+Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice - who has not provided a valid proof of address - will not be able to receive shares.
+
+..
+    ******
+    Guides
+    ******
+
+    .. postlist::
+        :category: Mosaic Restriction
+        :date: %A, %B %d, %Y
+        :format: {title}
+        :list-style: circle
+        :excerpts:
+        :sort:
+
+*******
+Schemas
+*******
+
+.. _mosaic-global-restriction-transaction:
+
+MosaicGlobalRestrictionTransaction
+==================================
+
+Announce a mosaic global restriction transaction to set a restriction rule to a mosaic.
+
+**Version**: 0x01
+
+**Entity type**: 0x4151
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the reference mosaic. The mosaic global restriction for the mosaic id depend on global restrictions set on the reference mosaic.
+    restrictionKey; uint64; Restriction key.
+    previousRestrictionValue; uint64; Previous restriction value.
+    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
+    newRestrictionValue; uint64; New restriction value.
+    newRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; New restriction type.
+
+.. _mosaic-address-restriction-transaction:
+
+MosaicAddressRestrictionTransaction
+===================================
+
+Announce a mosaic address restriction transaction to set a restriction rule to an address.
+
+**Version**: 0x01
+
+**Entity type**: 0x4251
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
+    restrictionKey; uint64; Restriction key.
+    targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Affected Address.
+    previousRestrictionValue; uint64; Previous restriction value.
+    newRestrictionValue; uint64; New restriction value.
+
+.. _mosaic-restriction-type:
+
+MosaicRestrictionType
+=====================
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0; Uninitialized value indicating no restriction.
+    1 (EQ); Allow if equal.
+    2 (NE); Allow if not equal.
+    3 (LT); Allow if less than.
+    4 (LTE); Allow if allow if less than or equal.
+    5 (GT); Allow if greater than.
+    6 (GTE); Allow if greater than or equal.

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 07 May, 2019
-    :category: Account Restrictions
+    :category: Account Restriction
     :excerpt: 1
     :nocomments:
 
