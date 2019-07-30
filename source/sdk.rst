@@ -30,9 +30,10 @@ Read the |protocol-compatibility-report| to know more about the status of each p
     :header: "Language", "Repository", "Reference"
     :delim: ;
 
-    Java SDK; |java-repo|; |java-reference|
+    Dart SDK ; |dart-repo| ;
     C# SDK ; |csharp-repo| ;
     Go SDK ; |go-repo| ;
+    Java SDK; |java-repo|; |java-reference|
     Swift SDK ; |swift-repo| ;
     C++ ;  ;
     PHP SDK ;  ;
@@ -68,6 +69,10 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 .. |go-repo| raw:: html
 
     <a href="https://github.com/proximax-storage/nem2-sdk-go/" target="_blank">Repository</a>
+
+.. |dart-repo| raw:: html
+
+    <a href="https://github.com/fajarvm/nem2-sdk-dart/" target="_blank">Repository</a>
 
 .. |protocol-compatibility-report| raw:: html
 

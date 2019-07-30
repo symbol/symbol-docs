@@ -15,21 +15,28 @@ Supported extensions
 ********************
 
 .. csv-table::
-   :header: "Name", "Description"
-   :delim: ;
+    :header: "Name", "Description"
+    :delim: ;
 
-   `catapult service bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running with a running Catapult Service.
-   `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.
+    `catapult service bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running with a running Catapult Service.
+    `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.
 
-********************
-Community extensions
-********************
+************
+Ongoing work
+************
 
 .. csv-table::
    :header: "Name", "Description"
    :delim: ;
 
-   `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
+    `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
+    `nem2-faucet <https://github.com/44uk/nem2-faucet/>`_; Faucet application for Catapult.
+    `nem2-hd-wallets <https://github.com/nemfoundation/nem2-hd-wallets/>`_; Experimental library to handle hyper deterministic wallets for Catapult.
+    `nem2-nonfungible-asset <https://github.com/nemfoundation/nem2-nonfungible-asset/>`_; Experimental library to handle non-fungible assets for Catapult.
+    `nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-sharing/>`_; Implementing Shamir's secret sharing on Catapult.
+    `nem2-qr-library <https://github.com/nemfoundation/nem2-qr-library/>`_; Experimental library to generate QR specification for Catapult.
+    `nem2-uri-scheme <https://github.com/nemfoundation/nem2-uri-scheme/>`_; Experimental library to handle uri scheme for Catapult.
+    `nem2-wallet-browserextension <https://github.com/nemfoundation/nem2-wallet-browserextension/>`_; Experimental browser wallet for Catapult.
 
 Do you need to create a NIP to create an extension? No, you don’t. In fact, we suggest not submitting a NIP until you build a extension that improves the NEM blockchain and the different projects that use it. Since the extension can be changed multiple times, developers should spend more time experimenting and learning, creating a specification later on.
 
