@@ -19,6 +19,12 @@ There are different types of transactions. For example, you can transfer :doc:`m
     :widths: 20 30 50
     :delim: ;
 
+    **Remote harvesting**;;
+    0x414C; :ref:`Account Link <account-link-transaction>`; Delegate the account importance to a proxy account.
+    **Aggregate**;;
+    0x4141; :ref:`Aggregate Complete <aggregate-transaction>`; Send transactions in batches to different accounts.
+    0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
     **Mosaic**;;
     0x414D; :ref:`Mosaic Definition <mosaic-definition-transaction>`; Register a new mosaic.
     0x424D; :ref:`Mosaic Supply Change <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
@@ -30,14 +36,13 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4144; :ref:`Account Metadata Transaction <account-metadata-transaction>`; Associate a key-value state to an account.
     0x4144; :ref:`Mosaic Metadata Transaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
     0x4144; :ref:`Namespace Metadata Transaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
-    **Transfer**;;
-    0x4154; :ref:`Transfer <transfer-transaction>`; Send mosaics and messages between two accounts.
     **Multisignature**;;
     0x4155; :ref:`Modify Multisig Account <modify-multisig-account-transaction>`; Create or modify a multisig contract.
-    0x4141; :ref:`Aggregate Complete <aggregate-transaction>`; Send transactions in batches to different accounts.
-    0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    **Hash Lock**;;
     0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
-    --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
+    **Secret Lock**;;
+    0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a token swap between different chains.
+    0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.
     **Account restriction**;;
     0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
     0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
@@ -45,11 +50,8 @@ There are different types of transactions. For example, you can transfer :doc:`m
     **Mosaic restriction**;;
     0x4151; :ref:`Mosaic Restriction Global <mosaic-global-restriction-transaction>`; Set a global restriction to a mosaic.
     0x4251; :ref:`Mosaic Restriction Address <mosaic-address-restriction-transaction>`; Set a mosaic restriction to an specific address.
-    **Cross-chain swaps**;;
-    0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
-    0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.
-    **Remote harvesting**;;
-    0x414C; :ref:`Account Link <account-link-transaction>`; Delegate the account importance to a proxy account.
+    **Transfer**;;
+    0x4154; :ref:`Transfer <transfer-transaction>`; Send mosaics and messages between two accounts.
 
 .. _transaction-definition:
 
@@ -130,12 +132,12 @@ For example, a transfer transaction describes who is the recipient and the quant
 
 An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
 
-1) Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2) Get the nemesis block generation hash. You can query ``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value.
-3) Prepend the nemesis block generation hash to the signing bytes.
-4) Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
-5) Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6) Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
+2. Get the nemesis block generation hash. You can query ``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value.
+3. Prepend the nemesis block generation hash to the signing bytes.
+4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
+5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
+6. Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 

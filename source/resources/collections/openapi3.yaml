@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: 0.7.16
+  version: 0.7.17
   title: Catapult REST Endpoints
   license:
     name: Apache 2.0
@@ -49,7 +49,7 @@ paths:
       parameters:
       - name: accountId
         in: path
-        description: The public key or address of the account.
+        description: Public key or address of the account.
         required: true
         schema:
           type: string
@@ -80,7 +80,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of accounts information.
+                description: Array of accounts information.
                 items:
                   $ref: "#/components/schemas/AccountInfoDTO"
         "400":
@@ -98,13 +98,13 @@ paths:
       parameters:
       - name: publicKey
         in: path
-        description: The public key of the account.
+        description: Public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -113,13 +113,13 @@ paths:
       - name: id
         in: query
         description: |
-          The transaction id up to which transactions are returned.
+          Transaction identifier up to which transactions are returned.
         schema:
           type: string
       - name: ordering
         in: query
         description: |
-          The ordering criteria:
+          Ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -132,7 +132,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of confirmed transactions.
+                description: Array of confirmed transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -150,13 +150,13 @@ paths:
       parameters:
       - name: publicKey
         in: path
-        description: The public key of the account.
+        description: Public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -165,13 +165,13 @@ paths:
       - name: id
         in: query
         description: |
-          The transaction id up to which transactions are returned.
+          Transaction identifier up to which transactions are returned.
         schema:
           type: string
       - name: ordering
         in: query
         description: |
-          The ordering criteria:
+          Ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -184,7 +184,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of incoming transactions.
+                description: Array of incoming transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -201,13 +201,13 @@ paths:
       parameters:
       - name: publicKey
         in: path
-        description: The public key of the account.
+        description: Public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -216,13 +216,13 @@ paths:
       - name: id
         in: query
         description: |
-          The transaction id up to which transactions are returned.
+          Transaction identifier up to which transactions are returned.
         schema:
           type: string
       - name: ordering
         in: query
         description: |
-          The ordering criteria:
+          Ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -235,7 +235,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of outgoing transactions.
+                description: Array of outgoing transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -252,13 +252,13 @@ paths:
       parameters:
       - name: publicKey
         in: path
-        description: The public key of the account.
+        description: Public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -267,13 +267,13 @@ paths:
       - name: id
         in: query
         description: |
-          The transaction id up to which transactions are returned.
+          Transaction identifier up to which transactions are returned.
         schema:
           type: string
       - name: ordering
         in: query
         description: |
-          The ordering criteria.
+          Ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -286,7 +286,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of unconfirmed transactions.
+                description: Array of unconfirmed transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -303,13 +303,13 @@ paths:
       parameters:
       - name: publicKey
         in: path
-        description: The public key of the account.
+        description: Public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -318,13 +318,13 @@ paths:
       - name: id
         in: query
         description: |
-          The transaction id up to which transactions are returned.
+          Transaction identifier up to which transactions are returned.
         schema:
           type: string
       - name: ordering
         in: query
         description: |
-          The ordering criteria.
+          Ordering criteria:
           * -id - Descending order by id.
           * id - Ascending order by id.
         schema:
@@ -337,7 +337,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of aggregate bonded transactions.
+                description: Array of aggregate bonded transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "409":
@@ -353,7 +353,7 @@ paths:
       parameters:
       - name: accountId
         in: path
-        description: The public key or address of the account.
+        description: Public key or address of the account.
         required: true
         schema:
           type: string
@@ -384,7 +384,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of account restrictions.
+                description: Array of account restrictions.
                 items:
                   $ref: "#/components/schemas/AccountRestrictionsInfoDTO"
         "400":
@@ -403,7 +403,7 @@ paths:
       parameters:
       - name: accountId
         in: path
-        description: The public key or address of the account.
+        description: Public key or address of the account.
         required: true
         schema:
           type: string
@@ -430,7 +430,7 @@ paths:
       parameters:
       - name: accountId
         in: path
-        description: The public key or address of the account.
+        description: Public key or address of the account.
         required: true
         schema:
           type: string
@@ -457,7 +457,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block. If height -1 is not a multiple of the limit
+        description: Height of the block. If height -1 is not a multiple of the limit
           provided, the inferior closest multiple + 1 is used instead.
         required: true
         schema:
@@ -466,7 +466,7 @@ paths:
           minimum: 1
       - name: limit
         in: path
-        description: The number of blocks to be returned.
+        description: Number of blocks to be returned.
         required: true
         schema:
           type: integer
@@ -482,7 +482,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of blocks information.
+                description: Array of blocks information.
                 items:
                   $ref: "#/components/schemas/BlockInfoDTO"
         "409":
@@ -497,7 +497,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: Height of the block.
         required: true
         schema:
           type: integer
@@ -526,7 +526,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: Height of the block.
         required: true
         schema:
           type: integer
@@ -534,7 +534,7 @@ paths:
           minimum: 1
       - name: pageSize
         in: query
-        description: The number of transactions to return for each request.
+        description: Number of transactions to return for each request.
         schema:
           type: integer
           minimum: 10
@@ -542,7 +542,7 @@ paths:
           default: 10
       - name: id
         in: query
-        description: The transaction id up to which transactions are returned.
+        description: Transaction identifier up to which transactions are returned.
         schema:
           type: string
       responses:
@@ -552,7 +552,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of transactions.
+                description: Array of transactions.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "404":
@@ -574,7 +574,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: Height of the block.
         required: true
         schema:
           type: integer
@@ -582,7 +582,7 @@ paths:
           minimum: 1
       - name: hash
         in: path
-        description: The hash of the transaction.
+        description: Hash of the transaction.
         required: true
         schema:
           type: string
@@ -608,7 +608,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: Height of the block.
         required: true
         schema:
           type: integer
@@ -640,7 +640,7 @@ paths:
       parameters:
       - name: height
         in: path
-        description: The height of the block.
+        description: Height of the block.
         required: true
         schema:
           type: integer
@@ -648,7 +648,7 @@ paths:
           minimum: 1
       - name: hash
         in: path
-        description: The hash of the receipt statement or resolution.
+        description: Hash of the receipt statement or resolution.
         required: true
         schema:
           type: string
@@ -736,7 +736,7 @@ paths:
       parameters:
       - name: mosaicId
         in: path
-        description: The mosaic identifier.
+        description: Identifier of the mosaic.
         required: true
         schema:
           type: string
@@ -768,7 +768,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of mosaics information.
+                description: Array of mosaics information.
                 items:
                   $ref: "#/components/schemas/MosaicInfoDTO"
         "400":
@@ -791,7 +791,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of mosaic names.
+                description: Array of mosaic names.
                 items:
                   $ref: "#/components/schemas/MosaicNamesDTO"
         "400":
@@ -808,7 +808,7 @@ paths:
       parameters:
       - name: namespaceId
         in: path
-        description: The namespace identifier.
+        description: Identifier of the namespace.
         required: true
         schema:
           type: string
@@ -834,18 +834,18 @@ paths:
       parameters:
       - name: accountId
         in: path
-        description: The address or public key of the account.
+        description: Address or public key of the account.
         required: true
         schema:
           type: string
       - name: pageSize
         in: query
-        description: The number of namespaces to return.
+        description: Number of namespaces to return.
         schema:
           type: integer
       - name: id
         in: query
-        description: The namespace id up to which namespace objects are returned.
+        description: Namespace identifier to which namespace objects are returned.
         schema:
           type: string
       responses:
@@ -855,7 +855,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of namespaces information.
+                description: Array of namespaces information.
                 items:
                   $ref: "#/components/schemas/NamespaceInfoDTO"
         "409":
@@ -870,12 +870,12 @@ paths:
       parameters:
       - name: pageSize
         in: query
-        description: The number of namespaces to return.
+        description: Number of namespaces to return.
         schema:
           type: integer
       - name: id
         in: query
-        description: The namespace id up to which namespace objects are returned.
+        description: Namespace identifier to which namespace objects are returned.
         schema:
           type: string
       requestBody:
@@ -887,7 +887,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of namespaces information.
+                description: Array of namespaces information.
                 items:
                   $ref: "#/components/schemas/NamespaceInfoDTO"
         "400":
@@ -910,7 +910,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of account names.
+                description: Array of account names.
                 items:
                   $ref: "#/components/schemas/AccountNamesDTO"
         "400":
@@ -937,7 +937,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of namespace names.
+                description: Array of namespace names.
                 items:
                   $ref: "#/components/schemas/NamespaceNameDTO"
         "400":
@@ -954,7 +954,7 @@ paths:
       parameters:
       - name: transactionId
         in: path
-        description: The transaction id or hash.
+        description: Identifier of the transaction or hash.
         required: true
         schema:
           type: string
@@ -989,7 +989,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of transactions information.
+                description: Array of transactions information.
                 items:
                   $ref: "#/components/schemas/TransactionInfoDTO"
         "400":
@@ -1071,7 +1071,7 @@ paths:
       parameters:
       - name: hash
         in: path
-        description: The transaction hash.
+        description: Hash of the transaction.
         required: true
         schema:
           type: string
@@ -1107,7 +1107,7 @@ paths:
             application/json:
               schema:
                 type: array
-                description: The array of transactions status.
+                description: Array of transactions status.
                 items:
                   $ref: "#/components/schemas/TransactionStatusDTO"
         "400":
@@ -1196,7 +1196,7 @@ components:
       - 0
       - 1
       description: |
-        The alias action:
+        Alias action:
         * 0 -  Link alias.
         * 1 -  Unlink alias.
       example: 0
@@ -1207,7 +1207,7 @@ components:
       - 1
       - 2
       description: |
-        The alias type:
+        Type of alias:
         * 0 -  No alias.
         * 1 -  Mosaic id alias.
         * 2 -  Addres alias.
@@ -1224,7 +1224,7 @@ components:
       - 130
       - 132
       description: |
-        The account restriction type:
+        Type of account restriction:
         * 0x01 (1 decimal) - Allow only receiving transactions from an address.
         * 0x02 (2 decimal) - Allow only receiving transactions containing a mosaic id.
         * 0x04 (4 decimal) - Allow only sending transactions with a given transaction type.
@@ -1238,49 +1238,53 @@ components:
       - 0
       - 1
       description: |
-        The account restrictions modification type:
+        Type of account restriction modification:
         * 0 - Add property.
         * 1 - Remove property.
       example: 0
     EntityTypeEnum:
       type: integer
       enum:
+      - 16716
+      - 16705
+      - 16961
       - 16717
       - 16973
+      - 16725
       - 16718
       - 16974
       - 17230
-      - 16724
-      - 16725
-      - 16705
-      - 16961
       - 16712
+      - 16722
+      - 16978
       - 16720
       - 16976
       - 17232
-      - 16722
-      - 16978
-      - 16716
+      - 16721
+      - 16977
+      - 16724
       - 32835
       - 33091
       description: |
-        The entity type:
+        Type of entity:
+        * 0x414C (16716 decimal) - Account Link Transaction.
+        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
+        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
         * 0x414D (16717 decimal) - Mosaic Definition Transaction.
         * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
+        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
         * 0x414E (16718 decimal) - Register Namespace Transaction.
         * 0x424E (16974 decimal) - Address Alias Transaction.
         * 0x434E (17230 decimal) - Mosaic Alias Transaction.
-        * 0x4154 (16724 decimal) - Transfer Transaction.
-        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
-        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
-        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
         * 0x4148 (16712 decimal) - Hash Lock Transaction.
-        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
-        * 0x4250 (16976 decimal) - Account Operation Mosaic Transaction.
-        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
         * 0x4152 (16722 decimal) - Secret Lock Transaction.
         * 0x4252 (16978 decimal) - Secret Proof Transaction.
-        * 0x414C (16716 decimal) - Account Link Transaction.
+        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
+        * 0x4250 (16976 decimal) - Account Mosaic Restriction Transaction.
+        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
+        * 0x4151 (16721 decimal) - Mosaic Global Restriction Transaction.
+        * 0x4251 (16977 decimal) - Mosaic Address Restriction Transaction.
+        * 0x4154 (16724 decimal) - Transfer Transaction.
         * 0x8043 (32835 decimal) - Nemesis block.
         * 0x8143 (33091 decimal) - Regular block.
     HashAlgorithmEnum:
@@ -1291,18 +1295,18 @@ components:
       - 2
       - 3
       description: |
-        The hash algorithm used to hash te proof:
-        * 0 (Op_Sha3_256)  - The proof is hashed using sha3 256.
-        * 1 (Op_Keccak_256)  - The proof is hashed using Keccak (ETH compatibility).
-        * 2 (Op_Hash_160)  - The proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
-        * 3 (Op_Hash_256)  - The proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
+        Algorithm used to hash te proof:
+        * 0 (Op_Sha3_256) - Proof is hashed using sha3 256.
+        * 1 (Op_Keccak_256) - Proof is hashed using Keccak (ETH compatibility).
+        * 2 (Op_Hash_160) - Proof is hashed twice: first with Sha-256 and then with RIPEMD-160 (bitcoin’s OP_HASH160).
+        * 3 (Op_Hash_256) - Proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
     LinkActionEnum:
       type: integer
       enum:
       - 0
       - 1
       description: |
-        The type of the action:
+        Type of action:
         * 0 - Link.
         * 1 - Unlink.
     MessageTypeEnum:
@@ -1310,7 +1314,7 @@ components:
       enum:
       - 0
       description: |
-        The type of the message:
+        Type of message:
         * 0 - Regular message.
       example: 0
     MosaicPropertyIdEnum:
@@ -1320,28 +1324,47 @@ components:
       - 1
       - 2
       description: |
-        The mosaic propery id means:
+        Identifier of the mosaic property:
         * 0 - MosaicFlags
         * 1 - Divisibility
         * 2 - Duration
       example: 0
-    MosaicDirectionEnum:
+    MosaicSupplyChangeDirectionEnum:
       type: integer
       enum:
       - 0
       - 1
       description: |
-        The supply modification direction:
+        Direction of mosaic supply change:
         * 0  - Decrease.
         * 1  - Increase.
       example: 0
+    MosaicRestrictionTypeEnum:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      description: |
+        Type of mosaic restriction.
+        * 0 - Uninitialized value indicating no restriction.
+        * 1(EQ) - Allow if equal.
+        * 2 (NE) -  Allow if not equal.
+        * 3 (LT) - Allow if less than.
+        * 4 (LE) - Allow if less than or equal.
+        * 5 (GT) - Allow if greater than.
+        * 6 (GE) - Allow if greater than or equal.
     MultisigModificationTypeEnum:
       type: integer
       enum:
       - 0
       - 1
       description: |
-        The type of the modification:
+        Type of modification:
         * 0 - Add cosignatory.
         * 1 - Remove cosignatory.
       example: 0
@@ -1351,7 +1374,7 @@ components:
       - 0
       - 1
       description: |
-        The namespace type:
+        Type of namespace:
         * 0 -  Root namespace.
         * 1 -  Subnamespace.
       example: 0
@@ -1373,7 +1396,7 @@ components:
       - 61763
       - 62019
       description: |
-        The type of the receipt:
+        Type of receipt:
         * 0x124D (4685 decimal) - Mosaic_Rental_Fee.
         * 0x134E (4942 decimal) - Namespace_Rental_Fee.
         * 0x2143 (8515 decimal) - Harvest_Fee.
@@ -1393,7 +1416,7 @@ components:
     NetworkTypeEnum:
       type: integer
       description: |
-        The entity version. The higher byte represents the network
+        Version of the entity. The higher byte represents the network
         identifier:
         * 0x68 (MAIN_NET) - Public main network.
         * 0x98 (TEST_NET) - Public test network.
@@ -1406,9 +1429,9 @@ components:
       - 1
       - 2
       description: |
-        The role of the node:
-        * 1 - A peer node.
-        * 2 - An api node.
+        Role of the node:
+        * 1 - Peer node.
+        * 2 - Api node.
       example: 2
     # Type
     UInt64DTO:
@@ -1463,15 +1486,14 @@ components:
         address:
           type: string
           description: |
-            The account unique address in hexadecimal.
+            Address of the account decoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         addressHeight:
           $ref: "#/components/schemas/UInt64DTO"
         publicKey:
           type: string
           description: |
-            The public key of an account can be used to verify signatures of the
-            account. Only accounts that have already published a transaction
+            Public key of the account. Only accounts that have already published a transaction
             have a public key assigned to the account. Otherwise, the field is
             null.
           example: AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
@@ -1480,7 +1502,7 @@ components:
         mosaics:
           type: array
           description: |
-            The list of mosaics the account owns. The amount is represented in
+            List of mosaics the account owns. The amount is represented in
             absolute amount. Thus a balance of 123456789 for a mosaic with
             divisibility 6 (absolute) means the account owns 123.456789 instead.
           items:
@@ -1497,11 +1519,11 @@ components:
       properties:
         address:
           type: string
-          description: The address of the account in hexadecimal.
+          description: Address of the account decoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         names:
           type: array
-          description: The mosaic linked namespace names.
+          description: Account linked namespace names.
           example:
           - alias1
           - alias2
@@ -1522,7 +1544,7 @@ components:
       properties:
         address:
           type: string
-          description: The address of the account in hexadecimal.
+          description: Address of the account decoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         restrictions:
           type: array
@@ -1538,7 +1560,7 @@ components:
           $ref: "#/components/schemas/AccountRestrictionTypeEnum"
         values:
           type: array
-          description: The address, transaction type or mosaic id to restrict.
+          description: Address, transaction type, or mosaic id to restrict.
           items: {}
     AccountRestrictionModificationDTO:
       type: object
@@ -1550,7 +1572,7 @@ components:
           $ref: "#/components/schemas/AccountRestrictionModificationTypeEnum"
         values:
           type: array
-          description: The address, transaction type or mosaic id to restrict.
+          description: Address, transaction type, or mosaic id to restrict.
           items: {}
     MultisigAccountGraphInfoDTO:
       type: object
@@ -1560,11 +1582,11 @@ components:
       properties:
         level:
           type: integer
-          description: The level of the multisig account.
+          description: Level of the multisig account.
           example: 0
         multisigEntries:
           type: array
-          description: The array of multisig accounts for this level.
+          description: Array of multisig accounts for this level.
           items:
             $ref: "#/components/schemas/MultisigAccountInfoDTO"
     MultisigAccountInfoDTO:
@@ -1585,23 +1607,23 @@ components:
       properties:
         account:
           type: string
-          description: The account public key.
+          description: Public key of the account.
           example: AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
         accountAddress:
           type: string
-          description: The account address in hexadecimal.
+          description: Address of the account decoded.
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         minApproval:
           type: integer
-          description: The number of signatures needed to approve a transaction.
+          description: Number of signatures needed to approve a transaction.
           example: 2
         minRemoval:
-          description: The number of signatures needed to remove a cosignatory.
+          description: Number of signatures needed to remove a cosignatory.
           type: integer
           example: 1
         cosignatories:
           type: array
-          description: The array of public keys of the cosignatory accounts.
+          description: Array of public keys of the cosignatory accounts.
           example:
           - 5D9513282B65A12A1B68DCB67DB64245721F7AE7822BE441FE813173803C512C
           - AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
@@ -1609,7 +1631,7 @@ components:
             type: string
         multisigAccounts:
           type: array
-          description: The array of multisig accounts where the account is cosignatory.
+          description: Array of multisig accounts where the account is cosignatory.
           example:
           - 565059F55E68F904214E8BE1D610B5BBEA4CE46CC13D246D45BC1DAE5D32A0D2
           items:
@@ -1624,7 +1646,7 @@ components:
           $ref: "#/components/schemas/MultisigModificationTypeEnum"
         cosignatoryPublicKey:
           type: string
-          description: The public key of the cosignatory account.
+          description: Public key of the cosignatory account.
           example: 5D9513282B65A12A1B68DCB67DB64245721F7AE7822BE441FE813173803C512C
     # Blockchain endpoints
     BlockInfoDTO:
@@ -1682,7 +1704,7 @@ components:
       properties:
         signer:
           type: string
-          description: The public key of the entity signer formatted as hexadecimal.
+          description: Public key of the signer account.
           example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
         version:
           $ref: "#/components/schemas/NetworkTypeEnum"
@@ -1696,8 +1718,8 @@ components:
         signature:
           type: string
           description: |
-            The signature of the entity. The signature was generated by the
-            signer and can be used to validate tha the entity data was not
+            Signature of the entity generated by the
+            signer. It is used to validate tha the entity data was not
             modified by a node.
           example: D8047EB8285077D9900EDD42F4081070DDB26E08E7F15A3E29642C80CF0C7D68340682DC9868C73EB09744D6298146D8DFC02ED47070FC81FB47D6F73B33EF0A
     BlockDTO:
@@ -1725,23 +1747,23 @@ components:
             $ref: "#/components/schemas/UInt64DTO"
           feeMultiplier:
             type: integer
-            description: The fee multiplier applied to transactions contained in block.
+            description: Fee multiplier applied to transactions contained in block.
             example: 0
           previousBlockHash:
             type: string
-            description: The hash of the previous block.
+            description: Hash of the previous block.
             example:
             - 0
           blockTransactionsHash:
             type: string
             description: |
-              The transactions included in a block are hashed forming a merkle
+              Transactions included in a block are hashed forming a merkle
               tree. The root of the tree summarizes them.
             example: 8F8C6EB33332F69196AD0D30D7CD90FAC1332089DF460DF0CF4A8A28C1C17AD4
           blockReceiptsHash:
             type: string
             description: |
-              The collection of receipts  are hashed into a merkle tree and
+              Collection of receipts  are hashed into a merkle tree and
               linked
 
               to a block. The block header stores the root hash.
@@ -1756,7 +1778,7 @@ components:
             example: 011811795453FA9FBD9DAC969085F8938BBFEDE3A3FDDC0C93B8FD6C4E7B2840
           beneficiary:
             type: string
-            description: The public key of the optional beneficiary designated by
+            description: Public key of the optional beneficiary designated by
               harvester.
             example: 0
     HeightInfoDTO:
@@ -1781,7 +1803,7 @@ components:
       properties:
         merklePath:
           type: array
-          description: The complementary data needed to calculate the merkle root.
+          description: Complementary data needed to calculate the merkle root.
           items:
             $ref: "#/components/schemas/merklePathItem"
     # Diagnostic endpoints
@@ -1794,19 +1816,19 @@ components:
       properties:
         numBlocks:
           type: integer
-          description: The number of blocks stored.
+          description: Number of blocks stored.
           example: 245053
         numTransactions:
           type: integer
-          description: The number of transactions stored.
+          description: Number of transactions stored.
           example: 58590
         numAccounts:
           type: integer
-          description: The number of accounts created.
+          description: Number of accounts created.
           example: 177
     StatementsDTO:
       type: object
-      description: The collection of transaction statements and resolutions triggered for
+      description: Collection of transaction statements and resolutions triggered for
         the block requested.
       required:
       - transactionStatements
@@ -1815,22 +1837,22 @@ components:
       properties:
         transactionStatements:
           type: array
-          description: The array of transaction statements for the block requested.
+          description: Array of transaction statements for the block requested.
           items:
             $ref: "#/components/schemas/TransactionStatementDTO"
         addressResolutionStatements:
           type: array
-          description: The array of address resolutions for the block requested.
+          description: Array of address resolutions for the block requested.
           items:
             $ref: "#/components/schemas/ResolutionStatementDTO"
         mosaicResolutionStatements:
           type: array
-          description: The array of mosaic resolutions for the block requested.
+          description: Array of mosaic resolutions for the block requested.
           items:
             $ref: "#/components/schemas/ResolutionStatementDTO"
     TransactionStatementDTO:
       type: object
-      description: The collection of receipts related to a transaction.
+      description: Collection of receipts related to a transaction.
       required:
       - height
       - source
@@ -1842,7 +1864,7 @@ components:
           $ref: "#/components/schemas/SourceDTO"
         receipts:
           type: array
-          description: The array of receipts.
+          description: Array of receipts.
           items:
             anyOf:
             - $ref: "#/components/schemas/BalanceTransferReceiptDTO"
@@ -1864,7 +1886,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         resolutionEntries:
           type: array
-          description: The array of resolution entries linked to the unresolved
+          description: Array of resolution entries linked to the unresolved
             namespaceId. It is an array instead of a single UInt64 field since
             within one block the resolution might change for different sources
             due to alias related transactions.
@@ -1882,18 +1904,18 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
     SourceDTO:
       type: object
-      description: The transaction that triggered the receipt.
+      description: Transaction that triggered the receipt.
       required:
       - primaryId
       - secondaryId
       properties:
         primaryId:
           type: integer
-          description: The transaction index within the block.
+          description: Transaction index within the block.
           example: 1
         secondaryId:
           type: integer
-          description: The transaction index inside within the aggregate transaction. If
+          description: Transaction index inside within the aggregate transaction. If
             the transaction is not an inner transaction, then the secondary id
             is set to 0.
           example: 0
@@ -1905,12 +1927,12 @@ components:
       properties:
         version:
           type: integer
-          description: The version of the receipt.
+          description: Version of the receipt.
         type:
           $ref: "#/components/schemas/ReceiptTypeEnum"
     BalanceTransferReceiptDTO:
       type: object
-      description: The invisible state change triggered a mosaic transfer.
+      description: Invisible state change that triggered a mosaic transfer.
       allOf:
       - $ref: "#/components/schemas/ReceiptDTO"
       - type: object
@@ -1922,11 +1944,11 @@ components:
         properties:
           sender:
             type: string
-            description: The public key of the sender.
+            description: Public key of the sender.
             example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
           recipient:
             type: string
-            description: The public key of the recipient.
+            description: Public key of the recipient.
             example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
           mosaicId:
             $ref: "#/components/schemas/UInt64DTO"
@@ -1934,7 +1956,7 @@ components:
             $ref: "#/components/schemas/UInt64DTO"
     BalanceChangeReceiptDTO:
       type: object
-      description: The invisible state change changed an account balance.
+      description: Invisible state change that changed an account balance.
       allOf:
       - $ref: "#/components/schemas/ReceiptDTO"
       - type: object
@@ -1945,7 +1967,7 @@ components:
         properties:
           account:
             type: string
-            description: The target account public key.
+            description: Public key of the target account.
             example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
           mosaicId:
             $ref: "#/components/schemas/UInt64DTO"
@@ -1964,7 +1986,7 @@ components:
             $ref: "#/components/schemas/UInt64DTO"
     InflationReceiptDTO:
       type: object
-      description: Native currency mosaics were created due to inflation.
+      description: Native currency mosaics that were created due to inflation.
       allOf:
       - $ref: "#/components/schemas/ReceiptDTO"
       - type: object
@@ -1992,11 +2014,11 @@ components:
         restVersion:
           type: string
           example: 1.0.14
-          description: The catapult-rest component version.
+          description: catapult-rest component version.
         sdkVersion:
           type: string
           example: 0.7.14
-          description: The catapult-sdk component version.
+          description: catapult-sdk component version.
     # Mosaics endpoints
     MosaicMetaDTO:
       type: object
@@ -2043,11 +2065,11 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         owner:
           type: string
-          description: The public key of the mosaic owner.
+          description: Public key of the mosaic owner.
           example: EFF9BC7472263D03EF6362B1F200FD3061BCD1BABE78F82119FB88811227CE85
         revision:
           type: integer
-          description: The number of definitions for the same mosaic.
+          description: Number of definitions for the same mosaic.
           example: 1
         properties:
           type: array
@@ -2070,7 +2092,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         names:
           type: array
-          description: The mosaic linked namespace names.
+          description: Mosaic linked namespace names.
           example:
           - cat.currency
           items:
@@ -2114,11 +2136,11 @@ components:
       properties:
         owner:
           type: string
-          description: The public key of the owner of the namespace.
+          description: Public key of the owner of the namespace.
           example: EFF9BC7472263D03EF6362B1F200FD3061BCD1BABE78F82119FB88811227CE85
         ownerAddress:
           type: string
-          description: The address of the owner of the namespace in hexadecimal.
+          description: Address of the owner of the namespace decoded.
           example: 906CBD9B8EC88014F7A4181B00C1837646BD46E504E3D72C44
         startHeight:
           $ref: "#/components/schemas/UInt64DTO"
@@ -2126,7 +2148,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         depth:
           type: integer
-          description: The level of the namespace.
+          description: Level of the namespace.
           example: 1
         level0:
           $ref: "#/components/schemas/UInt64DTO"
@@ -2152,7 +2174,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         name:
           type: string
-          description: The name of the namespace.
+          description: Name of the namespace.
           example: cat
     AliasDTO:
       type: object
@@ -2165,7 +2187,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         address:
           type: string
-          description: The aliased address in hexadecimal.
+          description: Aliased address decoded.
 
     # Transaction endpoints
     TransactionMetaDTO:
@@ -2197,19 +2219,21 @@ components:
           $ref: "#/components/schemas/TransactionMetaDTO"
         transaction:
           anyOf:
+          - $ref: "#/components/schemas/AccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/AggregateTransactionDTO"
           - $ref: "#/components/schemas/MosaicDefinitionTransactionDTO"
           - $ref: "#/components/schemas/MosaicSupplyChangeTransactionDTO"
+          - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/RegisterNamespaceTransactionDTO"
           - $ref: "#/components/schemas/AddressAliasTransactionDTO"
           - $ref: "#/components/schemas/MosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/TransferTransactionDTO"
-          - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
-          - $ref: "#/components/schemas/AggregateTransactionDTO"
           - $ref: "#/components/schemas/HashLockTransactionDTO"
-          - $ref: "#/components/schemas/AccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/SecretLockTransactionDTO"
           - $ref: "#/components/schemas/SecretProofTransactionDTO"
-          - $ref: "#/components/schemas/AccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/AccountRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/AddressMosaicRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/TransferTransactionDTO"
     EmbeddedTransactionMetaDTO:
       type: object
       required:
@@ -2239,18 +2263,20 @@ components:
           $ref: "#/components/schemas/EmbeddedTransactionMetaDTO"
         transaction:
           anyOf:
+          - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicDefinitionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicSupplyChangeTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedRegisterNamespaceTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedAddressAliasTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedHashLockTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedAccountRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedGlobalMosaicRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedAddressMosaicRestrictionTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
     TransactionBodyDTO:
       type: object
       required:
@@ -2272,6 +2298,28 @@ components:
       allOf:
       - $ref: "#/components/schemas/EntityDTO"
       - $ref: "#/components/schemas/TransactionBodyDTO"
+    AccountLinkTransactionBodyDTO:
+      type: object
+      required:
+        - remoteAccountKey
+        - linkAction
+      properties:
+        remoteAccountKey:
+          type: string
+          description: Public key of the remote account.
+        linkAction:
+          $ref: "#/components/schemas/LinkActionEnum"
+    AccountLinkTransactionDTO:
+      type: object
+      description: Delegates the account importance score to a proxy account.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
+    EmbeddedAccountLinkTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
     MosaicDefinitionTransactionBodyDTO:
       type: object
       required:
@@ -2289,9 +2337,43 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/MosaicPropertyDTO"
+    AggregateTransactionBodyDTO:
+      type: object
+      required:
+        - cosignatures
+        - transactions
+      properties:
+        cosignatures:
+          type: array
+          description: Array of transaction cosignatures.
+          items:
+            $ref: "#/components/schemas/CosignatureDTO"
+        transactions:
+          type: array
+          description: Array of transactions initiated by different accounts.
+          items:
+            $ref: "#/components/schemas/EmbeddedTransactionInfoDTO"
+    AggregateTransactionDTO:
+      type: object
+      description: Transaction to combine multiple transactions together.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/AggregateTransactionBodyDTO"
+    CosignatureDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/VerifiableEntityDTO"
+        - type: object
+          required:
+            - signer
+          properties:
+            signer:
+              type: string
+              description: Public key of the signer account.
+              example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
     MosaicDefinitionTransactionDTO:
       type: object
-      description: Transaction that creates a new mosaic.
+      description: Transaction to create a new mosaic.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
       - $ref: "#/components/schemas/MosaicDefinitionTransactionBodyDTO"
@@ -2310,12 +2392,12 @@ components:
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
         direction:
-          $ref: "#/components/schemas/MosaicDirectionEnum"
+          $ref: "#/components/schemas/MosaicSupplyChangeDirectionEnum"
         delta:
           $ref: "#/components/schemas/UInt64DTO"
     MosaicSupplyChangeTransactionDTO:
       type: object
-      description: Transaction to increase or decrease a mosaic’s supply.
+      description: Transaction to increase or decrease the supply of a mosaic.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
       - $ref: "#/components/schemas/MosaicSupplyChangeTransactionBodyDTO"
@@ -2324,6 +2406,42 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/MosaicSupplyChangeTransactionBodyDTO"
+    ModifyMultisigAccountTransactionBodyDTO:
+      type: object
+      required:
+        - minRemovalDelta
+        - minApprovalDelta
+        - modifications
+      properties:
+        minRemovalDelta:
+          type: integer
+          description: |
+            Number of signatures needed to remove a cosignatory. If we are
+            modifying an existing multisig account, this indicates the relative
+            change of the minimum cosignatories.
+          example: 1
+        minApprovalDelta:
+          type: integer
+          description: |
+            Number of signatures needed to approve a transaction. If we are
+            modifying an existing multisig account, this indicates the relative
+            change of the minimum cosignatories.
+          example: 1
+        modifications:
+          type: array
+          description: Array of cosignatory accounts to add or delete.
+          items:
+            $ref: "#/components/schemas/CosignatoryModificationDTO"
+    ModifyMultisigAccountTransactionDTO:
+      type: object
+      description: Transaction to create or modify a multisig account.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
+    EmbeddedModifyMultisigAccountTransactionDTO:
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
     RegisterNamespaceTransactionBodyDTO:
       type: object
       required:
@@ -2341,12 +2459,12 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         name:
           type: string
-          description: The unique namespace name.
+          description: Name of the namespace.
         parentId:
           $ref: "#/components/schemas/UInt64DTO"
     RegisterNamespaceTransactionDTO:
       type: object
-      description: Transaction that creates or renew a namespace.
+      description: Transaction to create or renew a namespace.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
       - $ref: "#/components/schemas/RegisterNamespaceTransactionBodyDTO"
@@ -2368,10 +2486,10 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         address:
           type: string
-          description: The aliased address in hexadecimal.
+          description: Aliased address decoded.
     AddressAliasTransactionDTO:
       type: object
-      description: Transaction that attaches a namespace to an account.
+      description: Transaction to link a namespace to an account.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
       - $ref: "#/components/schemas/AddressAliasTransactionBodyDTO"
@@ -2395,7 +2513,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
     MosaicAliasTransactionDTO:
       type: object
-      description: Transaction that attaches a namespace to a mosaic.
+      description: Transaction to link a namespace to a mosaic.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
       - $ref: "#/components/schemas/MosaicAliasTransactionBodyDTO"
@@ -2414,110 +2532,7 @@ components:
           $ref: "#/components/schemas/MessageTypeEnum"
         payload:
           type: string
-          description: The message content in hexadecimal.
-    TransferTransactionBodyDTO:
-      type: object
-      required:
-      - recipient
-      - mosaics
-      - message
-      properties:
-        recipient:
-          type: string
-          description: If the bit 0 of byte 0 is not set (like in 0x90), then it is a
-            regular address. Else (e.g. 0x91) it represents a namespace id which
-            starts at byte 1.
-          example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
-        mosaics:
-          type: array
-          description: The array of mosaics sent to the recipient. If the most significant
-            bit of byte 0 is set, a namespaceId (alias) is used instead of a
-            instead of a mosaicId corresponds to a mosaicId.
-          items:
-            $ref: "#/components/schemas/MosaicDTO"
-        message:
-          $ref: "#/components/schemas/MessageDTO"
-    TransferTransactionDTO:
-      type: object
-      description: Transaction that transfers mosaics and messages to another account.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/TransferTransactionBodyDTO"
-    EmbeddedTransferTransactionDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/TransferTransactionBodyDTO"
-    ModifyMultisigAccountTransactionBodyDTO:
-      type: object
-      required:
-      - minRemovalDelta
-      - minApprovalDelta
-      - modifications
-      properties:
-        minRemovalDelta:
-          type: integer
-          description: |
-            The number of signatures needed to remove a cosignatory. If we are
-            modifying an existing multisig account, this indicates the relative
-            change of the minimum cosignatories.
-          example: 1
-        minApprovalDelta:
-          type: integer
-          description: |
-            The number of signatures needed to approve a transaction. If we are
-            modifying an existing multisig account, this indicates the relative
-            change of the minimum cosignatories.
-          example: 1
-        modifications:
-          type: array
-          description: The array of cosignatory accounts to add or delete.
-          items:
-            $ref: "#/components/schemas/CosignatoryModificationDTO"
-    ModifyMultisigAccountTransactionDTO:
-      type: object
-      description: Transaction that creates or modifies a multisig account.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
-    EmbeddedModifyMultisigAccountTransactionDTO:
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
-    AggregateTransactionBodyDTO:
-      type: object
-      required:
-      - cosignatures
-      - transactions
-      properties:
-        cosignatures:
-          type: array
-          description: An array of transaction cosignatures.
-          items:
-            $ref: "#/components/schemas/CosignatureDTO"
-        transactions:
-          type: array
-          description: The array of transactions initiated by different accounts.
-          items:
-            $ref: "#/components/schemas/EmbeddedTransactionInfoDTO"
-    AggregateTransactionDTO:
-      type: object
-      description: Transaction that combines multiple transactions together.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/AggregateTransactionBodyDTO"
-    CosignatureDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/VerifiableEntityDTO"
-      - type: object
-        required:
-        - signer
-        properties:
-          signer:
-            type: string
-            description: The public key of the transaction signer.
-            example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
+          description: Content of the message in hexadecimal.
     HashLockTransactionBodyDTO:
       type: object
       required:
@@ -2532,7 +2547,7 @@ components:
         hash:
           type: string
           description: |
-            The aggregate bonded transaction hash that has to be confirmed
+            Hash of the aggregate bonded transaction that has to be confirmed
             before unlocking the mosaics.
           example: C8FC3FB54FDDFBCE0E8C71224990124E4EEC5AD5D30E592EDFA9524669A23810
     HashLockTransactionDTO:
@@ -2546,6 +2561,78 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/HashLockTransactionDTO"
+    SecretLockTransactionBodyDTO:
+      type: object
+      required:
+        - duration
+        - mosaicId
+        - amount
+        - hashAlgorithm
+        - secret
+        - recipient
+      properties:
+        duration:
+          $ref: "#/components/schemas/UInt64DTO"
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+        hashAlgorithm:
+          $ref: "#/components/schemas/HashAlgorithmEnum"
+        secret:
+          type: string
+          description: Proof hashed.
+          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
+        recipient:
+          type: string
+          description: Address of the recipiend account decoded. This account will receive the funds once the
+            transaction is unlocked.
+          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
+    SecretLockTransactionDTO:
+      type: object
+      description: Transaction to sends mosaics to a recipient if the proof used is
+        revealed. If the duration is reached, the locked funds go back to the
+        sender of the transaction.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
+    EmbeddedSecretLockTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
+    SecretProofTransactionBodyDTO:
+      type: object
+      required:
+        - hashAlgorithm
+        - secret
+        - proof
+      properties:
+        hashAlgorithm:
+          $ref: "#/components/schemas/HashAlgorithmEnum"
+        secret:
+          type: string
+          description: Proof hashed.
+          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
+        recipient:
+          type: string
+          description: Address of the recipient account decoded. This account will receive the funds once the
+            transaction is unlocked.
+          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
+        proof:
+          type: string
+          description: Original random set of bytes.
+    SecretProofTransactionDTO:
+      type: object
+      description: Transaction to reveal a proof.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
+    EmbeddedSecretProofTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
     AccountRestrictionTransactionBodyDTO:
       type: object
       required:
@@ -2560,7 +2647,7 @@ components:
             $ref: "#/components/schemas/AccountRestrictionModificationDTO"
     AccountRestrictionTransactionDTO:
       type: object
-      description: Transaction that prevents receiving transactions from undesired
+      description: Transaction to prevent receiving transactions from undesired
         addresses, mosaics or sending certain transaction types.
       allOf:
       - $ref: "#/components/schemas/TransactionDTO"
@@ -2570,99 +2657,106 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/AccountRestrictionTransactionBodyDTO"
-    SecretLockTransactionBodyDTO:
+    AddressMosaicRestrictionTransactionBodyDTO:
       type: object
       required:
-      - duration
-      - mosaicId
-      - amount
-      - hashAlgorithm
-      - secret
-      - recipient
+        - mosaicId
+        - restrictionKey
+        - targetAddress
+        - previousRestrictionValue
+        - newRestrictionValue
       properties:
-        duration:
-          $ref: "#/components/schemas/UInt64DTO"
         mosaicId:
           $ref: "#/components/schemas/UInt64DTO"
-        amount:
+        restrictionKey:
           $ref: "#/components/schemas/UInt64DTO"
-        hashAlgorithm:
-          $ref: "#/components/schemas/HashAlgorithmEnum"
-        secret:
+        targetAddress:
           type: string
-          description: The proof hashed.
-          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
-        recipient:
-          type: string
-          description: The address in hexadecimal that will receive the funds once the
-            transaction is unlocked.
-          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
-    SecretLockTransactionDTO:
+          description: Address of the target account decoded.
+        previousRestrictionValue:
+          $ref: "#/components/schemas/UInt64DTO"
+        newRestrictionValue:
+          $ref: "#/components/schemas/UInt64DTO"
+    AddressMosaicRestrictionTransactionDTO:
       type: object
-      description: Transaction that sends mosaics to a recipient if the proof used is
-        revealed. If the duration is reached, the locked funds go back to the
-        sender of the transaction.
+      description: Transaction to set a restriction rule to an address.
       allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
-    EmbeddedSecretLockTransactionDTO:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/AddressMosaicRestrictionTransactionBodyDTO"
+    EmbeddedAddressMosaicRestrictionTransactionDTO:
       type: object
       allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
-    SecretProofTransactionBodyDTO:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/AddressMosaicRestrictionTransactionBodyDTO"
+    GlobalMosaicRestrictionTransactionBodyDTO:
       type: object
       required:
-      - hashAlgorithm
-      - secret
-      - proof
+        - mosaicId
+        - referenceMosaicId
+        - restrictionKey
+        - previousRestrictionValue
+        - previousRestrictionType
+        - newRestrictionValue
+        - newRestrictionType
       properties:
-        hashAlgorithm:
-          $ref: "#/components/schemas/HashAlgorithmEnum"
-        secret:
-          type: string
-          description: The proof hashed.
-          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
-        recipient:
-          type: string
-          description: The address in hexadecimal that received the funds.
-          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
-        proof:
-          type: string
-          description: The original random set of bytes.
-    SecretProofTransactionDTO:
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        referenceMosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        restrictionKey:
+          $ref: "#/components/schemas/UInt64DTO"
+        previousRestrictionValue:
+          $ref: "#/components/schemas/UInt64DTO"
+        previousRestrictionType:
+          $ref: "#/components/schemas/MosaicRestrictionTypeEnum"
+        newRestrictionValue:
+          $ref: "#/components/schemas/UInt64DTO"
+        newRestrictionType:
+          $ref: "#/components/schemas/MosaicRestrictionTypeEnum"
+    GlobalMosaicRestrictionTransactionDTO:
       type: object
-      description: Transaction that revealed a proof.
+      description: Transaction to set a network-wide restriction rule to a mosaic.
       allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
-    EmbeddedSecretProofTransactionDTO:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionBodyDTO"
+    EmbeddedGlobalMosaicRestrictionTransactionDTO:
       type: object
       allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
-    AccountLinkTransactionBodyDTO:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionBodyDTO"
+    TransferTransactionBodyDTO:
       type: object
       required:
-      - remoteAccountKey
-      - linkAction
+        - recipient
+        - mosaics
+        - message
       properties:
-        remoteAccountKey:
+        recipient:
           type: string
-          description: The public key of the remote account.
-        linkAction:
-          $ref: "#/components/schemas/LinkActionEnum"
-    AccountLinkTransactionDTO:
+          description: Address of the recipiend account decoded. If the bit 0 of byte 0 is not set (like in 0x90), then it is a
+            regular address. Else (e.g. 0x91) it represents a namespace id which
+            starts at byte 1.
+          example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
+        mosaics:
+          type: array
+          description: Array of mosaics sent to the recipient. If the most significant
+            bit of byte 0 is set, a namespaceId (alias) is used instead of a
+            instead of a mosaicId corresponds to a mosaicId.
+          items:
+            $ref: "#/components/schemas/MosaicDTO"
+        message:
+          $ref: "#/components/schemas/MessageDTO"
+    TransferTransactionDTO:
       type: object
-      description: Delegates the account importance score to a proxy account.
+      description: Transaction to transfer mosaics and a message to another account.
       allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
-    EmbeddedAccountLinkTransactionDTO:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/TransferTransactionBodyDTO"
+    EmbeddedTransferTransactionDTO:
       type: object
       allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/TransferTransactionBodyDTO"
     AnnounceTransactionInfoDTO:
       type: object
       required:
@@ -2695,7 +2789,7 @@ components:
       properties:
         name:
           type: string
-          description: The name of the network.
+          description: Name of the network.
           example: mijinTest
         description:
           type: string
@@ -2716,11 +2810,11 @@ components:
       properties:
         publicKey:
           type: string
-          description: The public key used to identify the node.
+          description: Public key used to identify the node.
           example: EB6839C7E6BD0031FDD5F8CB5137E9BC950D7EE7756C46B767E68F3F58C24390
         port:
           type: integer
-          description: The port used for the communication.
+          description: Port used for the communication.
           format: int32
           example: 7900
         networkIdentifier:
@@ -2729,18 +2823,18 @@ components:
           example: 144
         version:
           type: integer
-          description: The version of the application.
+          description: Version of the application.
           format: int32
           example: 0
         roles:
           $ref: "#/components/schemas/RolesTypeEnum"
         host:
           type: string
-          description: The IP address of the endpoint.
+          description: IP address of the endpoint.
           example: 127.0.0.1
         friendlyName:
           type: string
-          description: The name of the node.
+          description: Name of the node.
           example: api-node-0
     NodeTimeDTO:
       type: object
@@ -2755,7 +2849,7 @@ components:
       properties:
         mosaicIds:
           type: array
-          description: The array of mosaic identifiers.
+          description: Array of mosaic identifiers.
           items:
             type: string
             format: hex
@@ -2766,7 +2860,7 @@ components:
       properties:
         namespaceIds:
           type: array
-          description: The array of namespace identifiers.
+          description: Array of namespace identifiers.
           items:
             type: string
             format: hex
@@ -2777,14 +2871,14 @@ components:
       properties:
         publicKeys:
           type: array
-          description: The array of public keys.
+          description: Array of public keys.
           items:
             type: string
           example:
           - AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
         addresses:
           type: array
-          description: The array of addresses.
+          description: Array of addresses.
           items:
             type: string
           example:
@@ -2795,7 +2889,7 @@ components:
       properties:
         transactionIds:
           type: array
-          description: The array of transaction ids.
+          description: Array of transaction ids.
           items:
             type: string
           example:
@@ -2806,7 +2900,7 @@ components:
       properties:
         hashes:
           type: array
-          description: The array of transaction hashes.
+          description: Array of transaction hashes.
           items:
             type: string
           example:
@@ -2816,19 +2910,19 @@ components:
       properties:
         payload:
           type: string
-          description: The transaction payload.
+          description: Transaction payload.
     cosignature:
       type: object
       properties:
         parentHash:
           type: string
-          description: The hash of parent aggregate transaction that has been signed by a cosignatory of the transaction.
+          description: Hash of parent aggregate transaction that has been signed by a cosignatory of the transaction.
         signature:
           type: string
-          description: The signatures generated by signing the parent aggregate transaction hash.
+          description: Signatures generated by signing the parent aggregate transaction hash.
         signer:
           type: string
-          description: The signer of the transaction.
+          description: Signer of the transaction.
     merklePathItem:
       type: object
       properties:
