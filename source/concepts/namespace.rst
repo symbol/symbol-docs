@@ -4,13 +4,17 @@ Namespace
 
 Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the NEM blockchain.
 
+.. figure:: ../resources/images/examples/namespace-setup.png
+    :align: center
+    :width: 450px
+
+    Organizing assets with namespaces
+
 ****
 Name
 ****
 
-A namespace starts with a name that you choose, similar to an internet domain name. The name must appear as unique  in the network, and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
-
-An account can link a registered name (namespace or subnamespace) with an :doc:`account <../guides/namespace/link-a-namespace-to-an-address>` or a :doc:`mosaic <../guides/namespace/link-a-namespace-to-a-mosaic>` identifier.
+A namespace starts with a name that you choose, similar to an internet domain name. The name must appear as **unique in the network**, and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
 
 *************
 Subnamespaces
@@ -26,18 +30,16 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics.
+:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
-An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes long addresses rememberable and mosaics recognizable.
-
-Only the creator of the namespace can link the namespace to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias.
+The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
 The block :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
 **Restrictions:**
 
 - An account can only associate a name with one account or mosaic, but those can have many aliases linked.
-- An account can assign a name to any account that permits receiving :doc:`AddressNamespaceTransactions <account-restriction>`. In contrast, if the account wants to assign the alias to a mosaicId, it should be the creator of the mosaic.
+- An account can assign a name to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
 - An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
 
 ********
@@ -93,23 +95,23 @@ A customer buys a ticket for an event. The ticket sales company sends a ticket t
 Identifying the sender
 ======================
 
-The ticket seller has registered the namespace ``ticketsales`` to link it to its account as an alias. Customers can quickly recognize incoming transactions from the vendor account.
+The ticket seller has registered the namespace ``ticketcompany`` to link it to its account as an alias. Customers can quickly recognize incoming transactions from the vendor account.
 
 Identifying the ticket
 ======================
 
 The same company sells tickets for events organized in different venues. The company registers a non-transferable :doc:`mosaic <mosaic>` for each actuation.
 
-The ticket seller adds a series of subdomains on top of the root domain of ``ticketsales``. The root plus subdomains are ``ticketsales.event<ID>.ticket``.
+The ticket seller adds a series of subdomains on top of the root domain of ``ticketcompany``. The root plus subdomains are ``ticketcompany.event<ID>.ticket``.
 
-The company links one registered mosaic with ``ticketsales.event1.ticket`` namespace name.
+The company links one registered mosaic with ``ticketcompany.event1.ticket`` namespace name.
 
 Identifying the buyer
 =====================
 
 Alice, who wants to buy the ticket, has registered the namespace ``alice`` and assigned it to her account as an alias.
 
-The ticket vendor can send 1 ``ticketsales.event1.ticket`` to ``alice`` instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
+The ticket vendor can send 1 ``ticketcompany.event1.ticket`` to ``alice`` instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
 
 ******
 Guides
