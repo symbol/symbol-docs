@@ -85,7 +85,7 @@ By default, when there is no restriction set, all the accounts in the network ca
 
 Returning to our previous example, let us imagine that you want to configure the product account to only accept receiving transactions  that come from the company's account. You might take the following steps to do so:
 
-1. Define the account restriction modification. Add to the company’s address (SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP) to the "allowed list".
+1. Define the account restriction modification. Add to the company’s address ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list.
 
 .. example-code::
 
@@ -112,7 +112,7 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Now, if you send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account, you will get an error as only "SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP" is allowed to send the transactions to the product.
+Now, if you send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account, you will get an error as only ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` is allowed to send the transactions to the product.
 
 On the other hand, if you send a transaction from your company account, you will receive a confirmation message as you would normally.
 
@@ -127,9 +127,9 @@ Imagine that the account that represents the company owns the following mosaics:
 
 In this case, it might be useful if the product could only receive seals and not company shares.
 
-Thus, you could  narrow the type of transactions that the product can receive from the company's account through the use of negation. Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain "company.share". This is how it can be done:
+Thus, you could narrow the type of transactions that the product can receive from the company's account through the use of negation. Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain ``company.share``. This is how it can be done:
 
-1. Define the account restriction modification. Add the mosaic id you want to block to the "blocked list".
+1. Define the account restriction modification. Add the mosaic id you want to block to the blocked list.
 
 .. example-code::
 
@@ -138,7 +138,7 @@ Thus, you could  narrow the type of transactions that the product can receive fr
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountRestrictionTransaction``, with restrictionType "BlockMosaic".  Add to the array the modification created in the previous step.
+2. Create an ``AccountRestrictionTransaction``, with restrictionType ``BlockMosaic``.  Add to the array the modification created in the previous step.
 
 .. example-code::
 
@@ -156,14 +156,14 @@ Thus, you could  narrow the type of transactions that the product can receive fr
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-If the process was successful, the product account can now only receive transactions from the company's account that does not include any "company.share" mosaic.
+If the process was successful, the product account can now only receive transactions from the company's account that does not include any ``company.share`` mosaic.
 
 Removing a restriction
 ======================
 
 After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product. The account restrictions can be removed as easily as they were set up:
 
-1. Define the account restriction modification. Remove from the "allowed list" the company's address.
+1. Define the account restriction modification. Remove from the allowed list the company's address.
 
 .. example-code::
 
@@ -172,7 +172,7 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountRestrictionTransaction``, setting the type "AllowAddress". Add as well the modification created.
+2. Create an ``AccountRestrictionTransaction``, setting the type ``AllowAddress``. Add as well the modification created.
 
 .. example-code::
 

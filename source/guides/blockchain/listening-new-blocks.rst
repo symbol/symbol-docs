@@ -36,5 +36,3 @@ Getting into some code
     .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
         :language: bash
         :start-after: #!/bin/sh
-
-.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).

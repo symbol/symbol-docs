@@ -103,6 +103,4 @@ B. From Bob to Alice sending ``20 cat.currency``.
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
-.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
-
 5. If all goes well, :doc:`Bob receives a notification to cosign the transaction<../transaction/monitoring-a-transaction-status>`. Check how to :doc:`cosign the transaction <signing-announced-aggregate-bonded-transactions>` with Bob's account in the following guide.
