@@ -33,7 +33,6 @@ import {
 } from "nem2-sdk";
 import {filter, mergeMap} from "rxjs/operators";
 
-
 /* start block 01 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
