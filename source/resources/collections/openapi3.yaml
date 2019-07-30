@@ -1265,22 +1265,24 @@ components:
       - 33091
       description: |
         Type of entity:
+        * 0x414C (16716 decimal) - Account Link Transaction.
+        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
+        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
         * 0x414D (16717 decimal) - Mosaic Definition Transaction.
         * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
+        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
         * 0x414E (16718 decimal) - Register Namespace Transaction.
         * 0x424E (16974 decimal) - Address Alias Transaction.
         * 0x434E (17230 decimal) - Mosaic Alias Transaction.
-        * 0x4154 (16724 decimal) - Transfer Transaction.
-        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
-        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
-        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
         * 0x4148 (16712 decimal) - Hash Lock Transaction.
-        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
-        * 0x4250 (16976 decimal) - Account Operation Mosaic Transaction.
-        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
         * 0x4152 (16722 decimal) - Secret Lock Transaction.
         * 0x4252 (16978 decimal) - Secret Proof Transaction.
-        * 0x414C (16716 decimal) - Account Link Transaction.
+        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
+        * 0x4250 (16976 decimal) - Account Mosaic Restriction Transaction.
+        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
+        * 0x4151 (16721 decimal) - Mosaic Global Restriction Transaction.
+        * 0x4251 (16977 decimal) - Mosaic Address Restriction Transaction.
+        * 0x4154 (16724 decimal) - Transfer Transaction.
         * 0x8043 (32835 decimal) - Nemesis block.
         * 0x8143 (33091 decimal) - Regular block.
     HashAlgorithmEnum:
@@ -2215,21 +2217,21 @@ components:
           $ref: "#/components/schemas/TransactionMetaDTO"
         transaction:
           anyOf:
+          - $ref: "#/components/schemas/AccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/AggregateTransactionDTO"
           - $ref: "#/components/schemas/MosaicDefinitionTransactionDTO"
           - $ref: "#/components/schemas/MosaicSupplyChangeTransactionDTO"
+          - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/RegisterNamespaceTransactionDTO"
           - $ref: "#/components/schemas/AddressAliasTransactionDTO"
           - $ref: "#/components/schemas/MosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/TransferTransactionDTO"
-          - $ref: "#/components/schemas/ModifyMultisigAccountTransactionDTO"
-          - $ref: "#/components/schemas/AggregateTransactionDTO"
           - $ref: "#/components/schemas/HashLockTransactionDTO"
+          - $ref: "#/components/schemas/SecretLockTransactionDTO"
+          - $ref: "#/components/schemas/SecretProofTransactionDTO"
           - $ref: "#/components/schemas/AccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionDTO"
           - $ref: "#/components/schemas/AddressMosaicRestrictionTransactionDTO"
-          - $ref: "#/components/schemas/SecretLockTransactionDTO"
-          - $ref: "#/components/schemas/SecretProofTransactionDTO"
-          - $ref: "#/components/schemas/AccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/TransferTransactionDTO"
     EmbeddedTransactionMetaDTO:
       type: object
       required:
@@ -2259,20 +2261,20 @@ components:
           $ref: "#/components/schemas/EmbeddedTransactionMetaDTO"
         transaction:
           anyOf:
+          - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicDefinitionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicSupplyChangeTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedRegisterNamespaceTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedAddressAliasTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedMosaicAliasTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedModifyMultisigAccountTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedHashLockTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedAccountRestrictionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedGlobalMosaicRestrictionTransactionDTO"
           - $ref: "#/components/schemas/EmbeddedAddressMosaicRestrictionTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedSecretLockTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedSecretProofTransactionDTO"
-          - $ref: "#/components/schemas/EmbeddedAccountLinkTransactionDTO"
+          - $ref: "#/components/schemas/EmbeddedTransferTransactionDTO"
     TransactionBodyDTO:
       type: object
       required:
@@ -2294,6 +2296,28 @@ components:
       allOf:
       - $ref: "#/components/schemas/EntityDTO"
       - $ref: "#/components/schemas/TransactionBodyDTO"
+    AccountLinkTransactionBodyDTO:
+      type: object
+      required:
+        - remoteAccountKey
+        - linkAction
+      properties:
+        remoteAccountKey:
+          type: string
+          description: Public key of the remote account.
+        linkAction:
+          $ref: "#/components/schemas/LinkActionEnum"
+    AccountLinkTransactionDTO:
+      type: object
+      description: Delegates the account importance score to a proxy account.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
+    EmbeddedAccountLinkTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
     MosaicDefinitionTransactionBodyDTO:
       type: object
       required:
@@ -2311,6 +2335,40 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/MosaicPropertyDTO"
+    AggregateTransactionBodyDTO:
+      type: object
+      required:
+        - cosignatures
+        - transactions
+      properties:
+        cosignatures:
+          type: array
+          description: Array of transaction cosignatures.
+          items:
+            $ref: "#/components/schemas/CosignatureDTO"
+        transactions:
+          type: array
+          description: Array of transactions initiated by different accounts.
+          items:
+            $ref: "#/components/schemas/EmbeddedTransactionInfoDTO"
+    AggregateTransactionDTO:
+      type: object
+      description: Transaction to combine multiple transactions together.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/AggregateTransactionBodyDTO"
+    CosignatureDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/VerifiableEntityDTO"
+        - type: object
+          required:
+            - signer
+          properties:
+            signer:
+              type: string
+              description: Public key of the signer account.
+              example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
     MosaicDefinitionTransactionDTO:
       type: object
       description: Transaction to create a new mosaic.
@@ -2346,6 +2404,42 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/MosaicSupplyChangeTransactionBodyDTO"
+    ModifyMultisigAccountTransactionBodyDTO:
+      type: object
+      required:
+        - minRemovalDelta
+        - minApprovalDelta
+        - modifications
+      properties:
+        minRemovalDelta:
+          type: integer
+          description: |
+            Number of signatures needed to remove a cosignatory. If we are
+            modifying an existing multisig account, this indicates the relative
+            change of the minimum cosignatories.
+          example: 1
+        minApprovalDelta:
+          type: integer
+          description: |
+            Number of signatures needed to approve a transaction. If we are
+            modifying an existing multisig account, this indicates the relative
+            change of the minimum cosignatories.
+          example: 1
+        modifications:
+          type: array
+          description: Array of cosignatory accounts to add or delete.
+          items:
+            $ref: "#/components/schemas/CosignatoryModificationDTO"
+    ModifyMultisigAccountTransactionDTO:
+      type: object
+      description: Transaction to create or modify a multisig account.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
+    EmbeddedModifyMultisigAccountTransactionDTO:
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
     RegisterNamespaceTransactionBodyDTO:
       type: object
       required:
@@ -2437,109 +2531,6 @@ components:
         payload:
           type: string
           description: Content of the message in hexadecimal.
-    TransferTransactionBodyDTO:
-      type: object
-      required:
-      - recipient
-      - mosaics
-      - message
-      properties:
-        recipient:
-          type: string
-          description: Address of the recipiend account decoded. If the bit 0 of byte 0 is not set (like in 0x90), then it is a
-            regular address. Else (e.g. 0x91) it represents a namespace id which
-            starts at byte 1.
-          example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
-        mosaics:
-          type: array
-          description: Array of mosaics sent to the recipient. If the most significant
-            bit of byte 0 is set, a namespaceId (alias) is used instead of a
-            instead of a mosaicId corresponds to a mosaicId.
-          items:
-            $ref: "#/components/schemas/MosaicDTO"
-        message:
-          $ref: "#/components/schemas/MessageDTO"
-    TransferTransactionDTO:
-      type: object
-      description: Transaction to transfer mosaics and a message to another account.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/TransferTransactionBodyDTO"
-    EmbeddedTransferTransactionDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/TransferTransactionBodyDTO"
-    ModifyMultisigAccountTransactionBodyDTO:
-      type: object
-      required:
-      - minRemovalDelta
-      - minApprovalDelta
-      - modifications
-      properties:
-        minRemovalDelta:
-          type: integer
-          description: |
-            Number of signatures needed to remove a cosignatory. If we are
-            modifying an existing multisig account, this indicates the relative
-            change of the minimum cosignatories.
-          example: 1
-        minApprovalDelta:
-          type: integer
-          description: |
-            Number of signatures needed to approve a transaction. If we are
-            modifying an existing multisig account, this indicates the relative
-            change of the minimum cosignatories.
-          example: 1
-        modifications:
-          type: array
-          description: Array of cosignatory accounts to add or delete.
-          items:
-            $ref: "#/components/schemas/CosignatoryModificationDTO"
-    ModifyMultisigAccountTransactionDTO:
-      type: object
-      description: Transaction to create or modify a multisig account.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
-    EmbeddedModifyMultisigAccountTransactionDTO:
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/ModifyMultisigAccountTransactionBodyDTO"
-    AggregateTransactionBodyDTO:
-      type: object
-      required:
-      - cosignatures
-      - transactions
-      properties:
-        cosignatures:
-          type: array
-          description: Array of transaction cosignatures.
-          items:
-            $ref: "#/components/schemas/CosignatureDTO"
-        transactions:
-          type: array
-          description: Array of transactions initiated by different accounts.
-          items:
-            $ref: "#/components/schemas/EmbeddedTransactionInfoDTO"
-    AggregateTransactionDTO:
-      type: object
-      description: Transaction to combine multiple transactions together.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/AggregateTransactionBodyDTO"
-    CosignatureDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/VerifiableEntityDTO"
-      - type: object
-        required:
-        - signer
-        properties:
-          signer:
-            type: string
-            description: Public key of the signer account.
-            example: D799E559AB735A5E62187306E80C1679EE3E1170532280C968D974E351CB412F
     HashLockTransactionBodyDTO:
       type: object
       required:
@@ -2568,6 +2559,78 @@ components:
       allOf:
       - $ref: "#/components/schemas/EmbeddedTransactionDTO"
       - $ref: "#/components/schemas/HashLockTransactionDTO"
+    SecretLockTransactionBodyDTO:
+      type: object
+      required:
+        - duration
+        - mosaicId
+        - amount
+        - hashAlgorithm
+        - secret
+        - recipient
+      properties:
+        duration:
+          $ref: "#/components/schemas/UInt64DTO"
+        mosaicId:
+          $ref: "#/components/schemas/UInt64DTO"
+        amount:
+          $ref: "#/components/schemas/UInt64DTO"
+        hashAlgorithm:
+          $ref: "#/components/schemas/HashAlgorithmEnum"
+        secret:
+          type: string
+          description: Proof hashed.
+          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
+        recipient:
+          type: string
+          description: Address of the recipiend account decoded. This account will receive the funds once the
+            transaction is unlocked.
+          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
+    SecretLockTransactionDTO:
+      type: object
+      description: Transaction to sends mosaics to a recipient if the proof used is
+        revealed. If the duration is reached, the locked funds go back to the
+        sender of the transaction.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
+    EmbeddedSecretLockTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
+    SecretProofTransactionBodyDTO:
+      type: object
+      required:
+        - hashAlgorithm
+        - secret
+        - proof
+      properties:
+        hashAlgorithm:
+          $ref: "#/components/schemas/HashAlgorithmEnum"
+        secret:
+          type: string
+          description: Proof hashed.
+          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
+        recipient:
+          type: string
+          description: Address of the recipient account decoded. This account will receive the funds once the
+            transaction is unlocked.
+          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
+        proof:
+          type: string
+          description: Original random set of bytes.
+    SecretProofTransactionDTO:
+      type: object
+      description: Transaction to reveal a proof.
+      allOf:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
+    EmbeddedSecretProofTransactionDTO:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
     AccountRestrictionTransactionBodyDTO:
       type: object
       required:
@@ -2607,14 +2670,14 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         targetAddress:
           type: string
-          description: Address of the account decoded.
+          description: Address of the target account decoded.
         previousRestrictionValue:
           $ref: "#/components/schemas/UInt64DTO"
         newRestrictionValue:
           $ref: "#/components/schemas/UInt64DTO"
     AddressMosaicRestrictionTransactionDTO:
       type: object
-      description: Transaction to ...
+      description: Transaction to set a restriction rule to an address.
       allOf:
         - $ref: "#/components/schemas/TransactionDTO"
         - $ref: "#/components/schemas/AddressMosaicRestrictionTransactionBodyDTO"
@@ -2650,7 +2713,7 @@ components:
           $ref: "#/components/schemas/MosaicRestrictionTypeEnum"
     GlobalMosaicRestrictionTransactionDTO:
       type: object
-      description: Transaction to ...
+      description: Transaction to set a network-wide restriction rule to a mosaic.
       allOf:
         - $ref: "#/components/schemas/TransactionDTO"
         - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionBodyDTO"
@@ -2659,100 +2722,39 @@ components:
       allOf:
         - $ref: "#/components/schemas/EmbeddedTransactionDTO"
         - $ref: "#/components/schemas/GlobalMosaicRestrictionTransactionBodyDTO"
-    SecretLockTransactionBodyDTO:
+    TransferTransactionBodyDTO:
       type: object
       required:
-      - duration
-      - mosaicId
-      - amount
-      - hashAlgorithm
-      - secret
-      - recipient
+        - recipient
+        - mosaics
+        - message
       properties:
-        duration:
-          $ref: "#/components/schemas/UInt64DTO"
-        mosaicId:
-          $ref: "#/components/schemas/UInt64DTO"
-        amount:
-          $ref: "#/components/schemas/UInt64DTO"
-        hashAlgorithm:
-          $ref: "#/components/schemas/HashAlgorithmEnum"
-        secret:
-          type: string
-          description: Proof hashed.
-          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
         recipient:
           type: string
-          description: Address of the recipiend account decoded. This account will receive the funds once the
-            transaction is unlocked.
-          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
-    SecretLockTransactionDTO:
+          description: Address of the recipiend account decoded. If the bit 0 of byte 0 is not set (like in 0x90), then it is a
+            regular address. Else (e.g. 0x91) it represents a namespace id which
+            starts at byte 1.
+          example: 909B5339654B16CF86F55EAEB1C8708A033286B3EBB314A792
+        mosaics:
+          type: array
+          description: Array of mosaics sent to the recipient. If the most significant
+            bit of byte 0 is set, a namespaceId (alias) is used instead of a
+            instead of a mosaicId corresponds to a mosaicId.
+          items:
+            $ref: "#/components/schemas/MosaicDTO"
+        message:
+          $ref: "#/components/schemas/MessageDTO"
+    TransferTransactionDTO:
       type: object
-      description: Transaction to sends mosaics to a recipient if the proof used is
-        revealed. If the duration is reached, the locked funds go back to the
-        sender of the transaction.
+      description: Transaction to transfer mosaics and a message to another account.
       allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
-    EmbeddedSecretLockTransactionDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/SecretLockTransactionBodyDTO"
-    SecretProofTransactionBodyDTO:
-      type: object
-      required:
-      - hashAlgorithm
-      - secret
-      - proof
-      properties:
-        hashAlgorithm:
-          $ref: "#/components/schemas/HashAlgorithmEnum"
-        secret:
-          type: string
-          description: Proof hashed.
-          example: 759DE013523D2C36F54BA184611AC887C6C994412E28B35221098E084050249B
-        recipient:
-          type: string
-          description: Address of the recipiend account decoded. This account will receive the funds once the
-            transaction is unlocked.
-          example: 90829855740901BAA6EF35C91CF00D0059212BF49FBAEC3277
-        proof:
-          type: string
-          description: Original random set of bytes.
-    SecretProofTransactionDTO:
-      type: object
-      description: Transaction to reveal a proof.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
-    EmbeddedSecretProofTransactionDTO:
+        - $ref: "#/components/schemas/TransactionDTO"
+        - $ref: "#/components/schemas/TransferTransactionBodyDTO"
+    EmbeddedTransferTransactionDTO:
       type: object
       allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/SecretProofTransactionBodyDTO"
-    AccountLinkTransactionBodyDTO:
-      type: object
-      required:
-      - remoteAccountKey
-      - linkAction
-      properties:
-        remoteAccountKey:
-          type: string
-          description: Public key of the remote account.
-        linkAction:
-          $ref: "#/components/schemas/LinkActionEnum"
-    AccountLinkTransactionDTO:
-      type: object
-      description: Delegates the account importance score to a proxy account.
-      allOf:
-      - $ref: "#/components/schemas/TransactionDTO"
-      - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
-    EmbeddedAccountLinkTransactionDTO:
-      type: object
-      allOf:
-      - $ref: "#/components/schemas/EmbeddedTransactionDTO"
-      - $ref: "#/components/schemas/AccountLinkTransactionBodyDTO"
+        - $ref: "#/components/schemas/EmbeddedTransactionDTO"
+        - $ref: "#/components/schemas/TransferTransactionBodyDTO"
     AnnounceTransactionInfoDTO:
       type: object
       required:
