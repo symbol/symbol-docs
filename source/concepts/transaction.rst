@@ -44,7 +44,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a token swap between different chains.
     0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.
     **Account restriction**;;
-    0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
+    0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming and outgoing transactions for a given a set of addresses.
     0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`Account Restriction Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
     **Mosaic restriction**;;

@@ -1197,8 +1197,8 @@ components:
       - 1
       description: |
         Alias action:
-        * 0 -  Link alias.
-        * 1 -  Unlink alias.
+        * 0 - Link alias.
+        * 1 - Unlink alias.
       example: 0
     AliasTypeEnum:
       type: integer
@@ -1208,9 +1208,9 @@ components:
       - 2
       description: |
         Type of alias:
-        * 0 -  No alias.
-        * 1 -  Mosaic id alias.
-        * 2 -  Addres alias.
+        * 0 - No alias.
+        * 1 - Mosaic id alias.
+        * 2 - Addres alias.
       example: 0
     AccountRestrictionTypeEnum:
       type: integer
@@ -1225,13 +1225,15 @@ components:
       - 132
       description: |
         Type of account restriction:
-        * 0x01 (1 decimal) - Allow only receiving transactions from an address.
-        * 0x02 (2 decimal) - Allow only receiving transactions containing a mosaic id.
-        * 0x04 (4 decimal) - Allow only sending transactions with a given transaction type.
-        * 0x05 (5 decimal) - Restriction type sentinel.
-        * 0x81 (129 decimal) - Block receiving transactions from an address.
-        * 0x82 (130 decimal) - Block receiving transactions containing a mosaic id.
-        * 0x84 (132 decimal) -  Block sending transactions with a given transaction type.
+        * 0x01 (1 decimal) - Allow only incoming transactions from a given address.
+        * 0x02 (2 decimal) - Allow only incoming transactions containing a a given mosaic identifier.
+        * 0x04 (4 decimal) - Allow only outgoing transactions with a given transaction type.
+        * 0x05 (5 decimal) - Account restriction sentinel.
+        * 0x41 (65 decimal) - Allow only outgoing transactions to a given address.
+        * 0x81 (129 decimal) - Block incoming transactions from a given address.
+        * 0x82 (130 decimal) - Block incoming transactions containing a given mosaic identifier.
+        * 0x84 (132 decimal) - Block outgoing transactions with a given transaction type.
+        * 0xC1 (193 decimal) - Block outgoing transactions to a given address.
     AccountRestrictionModificationTypeEnum:
       type: integer
       enum:
@@ -1250,10 +1252,10 @@ components:
       - 16961
       - 16717
       - 16973
-      - 16725
-      - 16718
       - 16974
       - 17230
+      - 16725
+      - 16718
       - 16712
       - 16722
       - 16978
@@ -1267,24 +1269,24 @@ components:
       - 33091
       description: |
         Type of entity:
-        * 0x414C (16716 decimal) - Account Link Transaction.
-        * 0x4141 (16705 decimal) - Aggregate Complete Transaction.
-        * 0x4241 (16961 decimal) - Aggregate Bonded Transaction.
-        * 0x414D (16717 decimal) - Mosaic Definition Transaction.
-        * 0x424D (16973 decimal) - Mosaic Supply Change Transaction.
-        * 0x4155 (16725 decimal) - Modify Multisig Account Transaction.
-        * 0x414E (16718 decimal) - Register Namespace Transaction.
-        * 0x424E (16974 decimal) - Address Alias Transaction.
-        * 0x434E (17230 decimal) - Mosaic Alias Transaction.
-        * 0x4148 (16712 decimal) - Hash Lock Transaction.
-        * 0x4152 (16722 decimal) - Secret Lock Transaction.
-        * 0x4252 (16978 decimal) - Secret Proof Transaction.
-        * 0x4150 (16720 decimal) - Account Address Restriction Transaction.
-        * 0x4250 (16976 decimal) - Account Mosaic Restriction Transaction.
-        * 0x4350 (17232 decimal) - Account Operation Restriction Transaction.
-        * 0x4151 (16721 decimal) - Mosaic Global Restriction Transaction.
-        * 0x4251 (16977 decimal) - Mosaic Address Restriction Transaction.
-        * 0x4154 (16724 decimal) - Transfer Transaction.
+        * 0x414C (16716 decimal) - AccountLinkTransaction.
+        * 0x4141 (16705 decimal) - AggregateCompleteTransaction.
+        * 0x4241 (16961 decimal) - AggregateBondedTransaction.
+        * 0x414D (16717 decimal) - MosaicDefinitionTransaction.
+        * 0x424D (16973 decimal) - MosaicSupplyChangeTransaction.
+        * 0x424E (16974 decimal) - AddressAliasTransaction.
+        * 0x434E (17230 decimal) - MosaicAliasTransaction.
+        * 0x4155 (16725 decimal) - ModifyMultisigAccountTransaction.
+        * 0x414E (16718 decimal) - RegisterNamespaceTransaction.
+        * 0x4148 (16712 decimal) - HashLockTransaction.
+        * 0x4152 (16722 decimal) - SecretLockTransaction.
+        * 0x4252 (16978 decimal) - SecretProofTransaction.
+        * 0x4150 (16720 decimal) - AccountAddressRestrictionTransaction.
+        * 0x4250 (16976 decimal) - AccountMosaicRestrictionTransaction.
+        * 0x4350 (17232 decimal) - AccountOperationRestrictionTransaction.
+        * 0x4151 (16721 decimal) - MosaicGlobalRestrictionTransaction.
+        * 0x4251 (16977 decimal) - MosaicAddressRestrictionTransaction.
+        * 0x4154 (16724 decimal) - TransferTransaction.
         * 0x8043 (32835 decimal) - Nemesis block.
         * 0x8143 (33091 decimal) - Regular block.
     HashAlgorithmEnum:
@@ -1353,7 +1355,7 @@ components:
         Type of mosaic restriction.
         * 0 - Uninitialized value indicating no restriction.
         * 1(EQ) - Allow if equal.
-        * 2 (NE) -  Allow if not equal.
+        * 2 (NE) - Allow if not equal.
         * 3 (LT) - Allow if less than.
         * 4 (LE) - Allow if less than or equal.
         * 5 (GT) - Allow if greater than.
@@ -1375,8 +1377,8 @@ components:
       - 1
       description: |
         Type of namespace:
-        * 0 -  Root namespace.
-        * 1 -  Subnamespace.
+        * 0 - Root namespace.
+        * 1 - Subnamespace.
       example: 0
     ReceiptTypeEnum:
       type: integer

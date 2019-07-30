@@ -6,11 +6,22 @@ Account Restriction
 
 The account owners - plural in case of multisig accounts - can edit the account restrictions at a later time announcing the specific :ref:`account restriction transaction <account-address-restriction-transaction>`.
 
+.. csv-table:: Restriction types
+    :widths: 40 30 30
+    :header: "Restriction", "Incoming Transactions", "Outgoing Transactions"
+    :delim: ;
+
+    AccountAddressRestriction; ✔️; ✔️
+    AccountMosaicRestriction;✔️ ;  ❌
+    AccountOperationRestriction;❌; ✔️
+
 *******************
 Address restriction
 *******************
 
-An account can decide to only **receive** transactions from a list of allowed :doc:`addresses <account>`. Similarly, the account can define a list of blocked addresses.
+An account can decide to **only receive** transactions from a list of allowed **addresses**. Alternatively, the account can define a list of blocked addresses.
+
+Restricting **incoming transactions** is useful when the account will be only receiving transactions from known addresses, or when the account wants to block transactions coming from unknown senders.
 
 .. figure:: ../resources/images/diagrams/account-restrictions-address.png
     :align: center
@@ -22,11 +33,15 @@ An account can decide to only **receive** transactions from a list of allowed :d
 
 By default, when there are no restrictions set, all the accounts in the network can announce transactions to the unrestricted account.
 
+Additionally, an account can decide to apply address restrictions to the **outgoing transactions**, limiting the accounts allowed that are valid recipients.
+
 ******************
 Mosaic restriction
 ******************
 
-An account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+
+Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated to their activity.
 
 *********************
 Operation restriction
@@ -85,7 +100,7 @@ Schemas
 AccountAddressRestrictionTransaction
 ====================================
 
-Configure restrictions to prevent receiving transactions from undesired addresses.
+Configure restrictions to prevent receiving or sending transactions from/to undesired addresses.
 
 **Version**: 0x01
 
@@ -215,13 +230,15 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x01; Allow only receiving transactions from an address.
-    0x02; Allow only receiving transactions containing a mosaic id.
-    0x04; Allow only sending transactions with a given transaction type.
+    0x01; Allow only incoming transactions from a given address.
+    0x02; Allow only incoming transactions containing a a given mosaic identifier.
+    0x04; Allow only outgoing transactions with a given transaction type.
     0x05; Account restriction sentinel.
-    0x81; Block receiving transactions from an address.
-    0x82; Block receiving transactions containing a mosaic id.
-    0x84; Block sending transactions with a given transaction type.
+    0x41; Allow only outgoing transactions to a given address.
+    0x81; Block incoming transactions from a given address.
+    0x82; Block incoming transactions containing a given mosaic identifier.
+    0x84; Block outgoing transactions with a given transaction type.
+    0xC1; Block outgoing transactions to a given address.
 
 .. _account-restriction-modification-type:
 

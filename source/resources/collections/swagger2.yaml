@@ -1138,18 +1138,22 @@ definitions:
       - 2
       - 4
       - 5
+      - 65
       - 129
       - 130
       - 132
+      - 193
     description: |
       Type of account restriction:
-      * 0x01 (1 decimal) - Allow only receiving transactions from an address.
-      * 0x02 (2 decimal) - Allow only receiving transactions containing a mosaic id.
-      * 0x04 (4 decimal) - Allow only sending transactions with a given transaction type.
-      * 0x05 (5 decimal) - Restriction type sentinel.
-      * 0x81 (129 decimal) - Block receiving transactions from an address.
-      * 0x82 (130 decimal) - Block receiving transactions containing a mosaic id.
-      * 0x84 (132 decimal) -  Block sending transactions with a given transaction type.
+      * 0x01 (1 decimal) - Allow only incoming transactions from a given address.
+      * 0x02 (2 decimal) - Allow only incoming transactions containing a a given mosaic identifier.
+      * 0x04 (4 decimal) - Allow only outgoing transactions with a given transaction type.
+      * 0x05 (5 decimal) - Account restriction sentinel.
+      * 0x41 (65 decimal) - Allow only outgoing transactions to a given address.
+      * 0x81 (129 decimal) - Block incoming transactions from a given address.
+      * 0x82 (130 decimal) - Block incoming transactions containing a given mosaic identifier.
+      * 0x84 (132 decimal) - Block outgoing transactions with a given transaction type.
+      * 0xC1 (193 decimal) - Block outgoing transactions to a given address.
   AliasTypeEnum:
     type: integer
     enum:
@@ -1158,9 +1162,9 @@ definitions:
       - 2
     description: |
       Type of alias:
-      * 0 -  No alias.
-      * 1 -  Mosaic id alias.
-      * 2 -  Addres alias.
+      * 0 - No alias.
+      * 1 - Mosaic id alias.
+      * 2 - Addres alias.
     example: 0
   MosaicPropertyIdEnum:
     type: integer
@@ -1181,8 +1185,8 @@ definitions:
       - 1
     description: |
       Type of namespace:
-      * 0 -  Root namespace.
-      * 1 -  Subnamespace.
+      * 0 - Root namespace.
+      * 1 - Subnamespace.
     example: 0
   NetworkTypeEnum:
     type: integer
