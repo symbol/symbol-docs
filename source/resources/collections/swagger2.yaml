@@ -110,7 +110,7 @@ paths:
           in: query
           type: string
           description: |
-           Transaction identifierentifier up to which transactions are returned.
+           Transaction identifier up to which transactions are returned.
         - name: ordering
           in: query
           type: string
@@ -158,7 +158,7 @@ paths:
           in: query
           type: string
           description: |
-           Transaction identifierentifier up to which transactions are returned.
+           Transaction identifier up to which transactions are returned.
         - name: ordering
           in: query
           type: string
@@ -205,7 +205,7 @@ paths:
           in: query
           type: string
           description: |
-           Transaction identifierentifier up to which transactions are returned.
+           Transaction identifier up to which transactions are returned.
         - name: ordering
           in: query
           type: string
@@ -252,7 +252,7 @@ paths:
           in: query
           type: string
           description: |
-           Transaction identifierentifier up to which transactions are returned.
+           Transaction identifier up to which transactions are returned.
         - name: ordering
           in: query
           type: string
@@ -299,7 +299,7 @@ paths:
           in: query
           type: string
           description: |
-           Transaction identifierentifier up to which transactions are returned.
+           Transaction identifier up to which transactions are returned.
         - name: ordering
           in: query
           type: string
@@ -510,7 +510,7 @@ paths:
         - name: id
           type: string
           in: query
-          description: Transaction identifierentifier up to which transactions are returned.
+          description: Transaction identifier up to which transactions are returned.
       responses:
         "200":
           description: success
