@@ -21,11 +21,17 @@ Background
 
     Sending an aggregate complete transaction
 
-Alice and Bob live together and have separate accounts. They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
+This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
-Remember that a multisig account has cosignatories accounts, and it cannot start transactions itself. Only the cosignatories can initiate transactions.
+.. figure:: ../../resources//images/examples/multisig-1-of-2.png
+    :align: center
+    :width: 350px
+
+    1-of-2 multisig account example
+
+In this guide, you will send a transaction from a multisig account.
 
 *************
 Prerequisites
@@ -44,12 +50,11 @@ Getting into some code
 1-of-2 signatures required
 ==========================
 
-Bob has finished filling his basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
+Bob has finished filling the basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
-1. Bob needs to know:
+Let's develop the piece of code present in Bob's mobile wallet that enables him to send multisig transactions.
 
-* The private key of his account.
-* The public key of the multisig account shared with Alice.
+1. Define the private key of Bob's account and the public key of the multisig account shared with Alice.
 
 .. example-code::
 
@@ -81,9 +86,9 @@ Bob has finished filling his basket, and he is ready to pay. The cashier's scree
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Wrap the transfer transaction under an :ref:`aggregate transaction <aggregate-transaction>`, attaching the multisig public key as the signer.
+3. Wrap the transfer transaction in an :ref:`aggregate transaction <aggregate-transaction>`, attaching the multisig public key as the signer.
 
-An aggregate transaction is **complete** if before announcing it to the network, all required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
+An aggregate transaction is **complete** if before announcing it to the network, all the required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
 
 .. example-code::
 
@@ -122,7 +127,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
     Sending an aggregate bonded transaction
 
-1. Open a new terminal to :doc:`monitor<../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
+1. Open a new terminal to :doc:`monitor <../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
 
 .. code-block:: bash
 
@@ -155,8 +160,6 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
-
-.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
 4. :doc:`Cosign the aggregate transaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
 

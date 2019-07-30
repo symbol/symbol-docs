@@ -11,7 +11,7 @@ Modifying a multisig account
 
 Modify an existing :doc:`multisig account<../../concepts/multisig-account>`.
 
-First, you are going to turn a 1-of-2 multisig account into a 2-of-2. Then, you will add a new cosignatory, becoming a 2-of-3. After removing a cosignatory, you will know how to perform all sort of modifications to multisig accounts.
+First, you are going to turn a 1-of-2 multisig account into a 2-of-2. Then, you will **add a new cosignatory**, becoming a 2-of-3. Finally, **after removing a cosignatory**, you will know how to perform all sort of modifications to multisig accounts.
 
 *************
 Prerequisites
@@ -30,20 +30,7 @@ Getting into some code
 Editing minApproval
 ===================
 
-Alice and Bob are cosignatories of the 1-of-2 multisig account. At least one of their account's signatures is required to authorize multisig transactions. In other words, the ``minApproval`` parameter of the multisig is currently set to ``1``.
-
-.. example-code::
-
-    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
-        :language: typescript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :language: javascript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
+Alice and Bob are cosignatories of the 1-of-2 multisig account. This means that at least one of their account's signatures is required to authorize multisig transactions. In other words, we can say that the ``minApproval`` parameter of the multisig is currently set to ``1``.
 
 Multisig accounts are editable at the blockchain level. In this case, we want to make both cosignatories required, shifting to a 2-of-2 multisig instead. You can achieve this by increasing ``minApproval`` parameter in one unit.
 
@@ -53,10 +40,25 @@ Multisig accounts are editable at the blockchain level. In this case, we want to
 
     2-of-2 multisig account example
 
+One of the accounts, for example Alice's, will announce a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` to increase ``minApprovalDelta``.
 
-One of the accounts, for example Alice's, announces a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` wrapped in an :ref:`aggregate transaction <aggregate-transaction>`, increasing ``minApprovalDelta``.
+1. First, define Alice account as the cosignatory and the multisig account using its public key.
 
-1. Create a modify multisig account transaction, increasing minAprovalDelta in one unit.
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+
+    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+
+2. Define a modify multisig account transaction to increase the ``minAprovalDelta`` in one unit.
 
 .. example-code::
 
@@ -70,7 +72,7 @@ One of the accounts, for example Alice's, announces a :ref:`modify multisig acco
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. Wrap the modify multisig account transaction under an aggregate transaction, attaching multisig public key as the signer.
+3. Wrap the modify multisig account transaction in an aggregate transaction, attaching the multisig public key as the signer.
 
 An aggregate transaction is *complete* if, before announcing it to the network, all required cosignatories have signed it. If valid, it will be included in a block.
 
@@ -88,9 +90,9 @@ As only one cosignature is required (1-of-2), Alice can sign the transaction and
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Once confirmed, the minApproval value of the multisig will be set to 2, having our 2-of-2 multisig.
+Once confirmed, the ``minApproval`` value of the multisig will be set to 2, having our 2-of-2 multisig.
 
-.. note:: If you want to decrease the minApproval parameter, going back to a 1-of-2 multisig, set minApprovalDelta with a negative value. In this case ``-1``.
+.. note:: If you want to decrease the ``minApproval`` parameter, set ``minApprovalDelta`` with a negative value. In this case ``-1``.
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
@@ -161,8 +163,6 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
-
 5. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` hash with Carols's account. She has to opt-in to become a multisig cosignatory.
 
 .. code-block:: bash
@@ -182,9 +182,9 @@ Removing a cosignatory
 
 Once you have finished this guide, delete a cosignatory from the multisig. Multisig accounts can be converted again into regular accounts by removing all cosignatories. Make sure you own the multisig private key!
 
-The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to 1. The multisig modification transaction is wrapped in an aggregate complete, as only one person is required to delete others from the multisig.
+The following code shows how to remove a cosignatory of a 2-of-3 multisig account with ``minRemoval`` set to ``1``. The multisig modification transaction is wrapped in an aggregate complete, as only one account is required to delete others from the multisig.
 
-.. note:: The minRemoval parameter indicates the number of required signatures to delete someone from the multisig. You can increase or decrease it the same way you :ref:`modify minApproval parameter<guide-modify-a-multisig-account-min-approval>`.
+.. note:: The ``minRemoval`` parameter indicates the number of required signatures to delete an account from the multisig. You can increase or decrease it the same way you :ref:`modify minApproval parameter <guide-modify-a-multisig-account-min-approval>`.
 
 .. example-code::
 

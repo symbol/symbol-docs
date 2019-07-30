@@ -16,15 +16,17 @@ Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`.
 Background
 **********
 
-Alice and Bob live together and have separate :doc:`accounts <../../concepts/account>`. They also have a shared account used to buy groceries. If Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
+This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
     :width: 350px
 
     1-of-2 multisig account example
+
+In this guide, you are going to create a 1-of-2 multisig account. In future guides, you will learn how to increase the minimum number of cosignatures required, as well as invite and remove cosignatories from the multisig account.
 
 *************
 Prerequisites
@@ -38,7 +40,7 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Define who will be the cosignatories of the multisig account: Alice and Bob addresses. Then, open the account that will be converted into multisig by providing its private key.
+1. First, define the accounts that will be cosginatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
 
 .. example-code::
 
@@ -52,8 +54,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-
-2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the account into a multisig account. As they want to create a 1-of-2 multisig account, set the minimum signatures required to 1.
+2. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>`  to convert the shared account into a multisig account. As you want to create a 1-of-2 multisig account, set the minimum signatures required to ``1``.
 
 .. example-code::
 
@@ -144,4 +145,4 @@ Getting into some code
 What's next?
 ************
 
-Alice an Bob wants to send transactions from the multisig only when both agree. Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`modifying a multisig account <modifying-a-multisig-account>` guide.
+Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`the next guide <modifying-a-multisig-account>`.

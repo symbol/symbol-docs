@@ -105,7 +105,7 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
 
 2. Wrap the defined transactions in an :ref:`aggregate transaction <aggregate-transaction>` and sign it.
 
-An aggregate Transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
+An aggregate transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
 In case that signatures are required from other participants and the transaction is announced to the network, it is considered an aggregate bonded.
 
@@ -134,8 +134,6 @@ In case that signatures are required from other participants and the transaction
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
-
-.. note:: The :ref:`listener implementation changes <monitoring-transactions-client-side>` when used on the client side (e.g., Angular, React, Vue).
 
 The distributor has not signed the aggregate bonded transaction yet, so the exchange has not been completed.
 
