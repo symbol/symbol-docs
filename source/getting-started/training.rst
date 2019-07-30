@@ -20,6 +20,4 @@ Courses
 Adding a new course
 ===================
 
-Are you an education provider? Check our `Curricular Framework <https://nemtech.github.io/nem2-curricular-framework/>`_ to get inspired and start creating your course.
-
 Have you created a self-paced online course about NEM? Submit it to us pressing the *"Edit on Github"* button, at the top-right part of the screen.

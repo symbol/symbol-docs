@@ -75,7 +75,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.18.2'
+version = u'0.18.3'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
@@ -96,7 +96,7 @@ gettext_compact = False
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'monokai'
+pygments_style = 'autumn'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
