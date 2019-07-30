@@ -20,24 +20,31 @@ There are different types of transactions. For example, you can transfer :doc:`m
     :delim: ;
 
     **Mosaic**;;
-    0x414D; :ref:`Mosaic Definition <mosaic-definition-transaction>`; Register a new :doc:`mosaic <mosaic>`.
+    0x414D; :ref:`Mosaic Definition <mosaic-definition-transaction>`; Register a new mosaic.
     0x424D; :ref:`Mosaic Supply Change <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
     **Namespace**;;
-    0x414E; :ref:`Register Namespace <register-namespace-transaction>`; Register a :doc:`namespace <mosaic>` to organize your assets.
+    0x414E; :ref:`Register Namespace <register-namespace-transaction>`; Register namespaces to organize your assets.
     0x424E; :ref:`Address Alias <address-alias-transaction>`; Attach a namespace name to an account.
     0x434E; :ref:`Mosaic Alias <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
+    **Metadata**;;
+    0x4144; :ref:`Account Metadata Transaction <account-metadata-transaction>`; Associate a key-value state to an account.
+    0x4144; :ref:`Mosaic Metadata Transaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
+    0x4144; :ref:`Namespace Metadata Transaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
     **Transfer**;;
     0x4154; :ref:`Transfer <transfer-transaction>`; Send mosaics and messages between two accounts.
     **Multisignature**;;
-    0x4155; :ref:`Modify Multisig Account <modify-multisig-account-transaction>`; Create or modify a :doc:`multisig contract <multisig-account>`.
+    0x4155; :ref:`Modify Multisig Account <modify-multisig-account-transaction>`; Create or modify a multisig contract.
     0x4141; :ref:`Aggregate Complete <aggregate-transaction>`; Send transactions in batches to different accounts.
-    0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose many transactions between different accounts.
-    0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  A deposit before announcing aggregate bonded transactions.
+    0x4241; :ref:`Aggregate Bonded <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    0x4148; :ref:`Hash Lock <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
     --; :ref:`Cosignature <cosignature-transaction>`; Cosign an aggregate bonded transaction.
-    **Account restrictions**;;
-    0x4150; :ref:`Account Address Restriction<account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
-    0x4250; :ref:`Account Mosaic Restriction <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`Account Operation Restriction <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
+    **Account restriction**;;
+    0x4150; :ref:`Account Restriction Address <account-address-restriction-transaction>`; Allow or block incoming transactions for a given a set of addresses.
+    0x4250; :ref:`Account Restriction Mosaic <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`Account Restriction Entity Type <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
+    **Mosaic restriction**;;
+    0x4151; :ref:`Mosaic Restriction Global <mosaic-global-restriction-transaction>`; Set a global restriction to a mosaic.
+    0x4251; :ref:`Mosaic Restriction Address <mosaic-address-restriction-transaction>`; Set a mosaic restriction to an specific address.
     **Cross-chain swaps**;;
     0x4152; :ref:`Secret Lock <secret-lock-transaction>`; Start a :doc:`token swap <cross-chain-swaps>` between different chains.
     0x4252; :ref:`Secret Proof <secret-proof-transaction>`; Conclude a token swap between different chains.

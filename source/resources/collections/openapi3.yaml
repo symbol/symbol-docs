@@ -1245,22 +1245,24 @@ components:
     EntityTypeEnum:
       type: integer
       enum:
+      - 16716
+      - 16705
+      - 16961
       - 16717
       - 16973
+      - 16725
       - 16718
       - 16974
       - 17230
-      - 16724
-      - 16725
-      - 16705
-      - 16961
       - 16712
+      - 16722
+      - 16978
       - 16720
       - 16976
       - 17232
-      - 16722
-      - 16978
-      - 16716
+      - 16721
+      - 16977
+      - 16724
       - 32835
       - 33091
       description: |
@@ -1393,7 +1395,6 @@ components:
       - 57652
       - 61763
       - 62019
-      description: |
         Type of receipt:
         * 0x124D (4685 decimal) - Mosaic_Rental_Fee.
         * 0x134E (4942 decimal) - Namespace_Rental_Fee.

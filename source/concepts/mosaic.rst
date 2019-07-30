@@ -10,7 +10,7 @@ A mosaic could be a token, but it could also be a collection of more specialized
 Properties
 **********
 
-Each mosaic has a unique identifier and a set of configurable properties. During the  :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
+Each mosaic has a unique identifier and a set of configurable properties. During the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
 
 .. _mosaic-properties:
 
@@ -23,6 +23,10 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
     Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
     Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+    Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
+
+=======
+>>>>>>> master
 
 *****************************
 Absolute and relative amounts
@@ -185,6 +189,7 @@ Enumeration: uint8
     0x00; No flags present.
     0x01; Mosaic supports supply changes even when mosaic owner owns partial supply.
     0x02; Mosaic supports transfers between arbitrary accounts. When not set, mosaic can only be transferred to and from mosaic owner.
+    0x04; Mosaic owner can add rules to restrict which accounts are enabled to send and receive the mosaic.
 
 .. _mosaic-supply-change-direction:
 
