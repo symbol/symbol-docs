@@ -1395,6 +1395,7 @@ components:
       - 57652
       - 61763
       - 62019
+      description: |
         Type of receipt:
         * 0x124D (4685 decimal) - Mosaic_Rental_Fee.
         * 0x134E (4942 decimal) - Namespace_Rental_Fee.
