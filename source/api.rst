@@ -204,6 +204,11 @@ This section describes the error messages that can be returned via status channe
     0x80520007; Failure_LockSecret_Inactive_Secret; Validation failed because secret is inactive.
     0x80520008; Failure_LockSecret_Hash_Algorithm_Mismatch; Validation failed because hash algorithm does not match.
     0x80520009; Failure_LockSecret_Invalid_Duration; Validation failed because duration is too long.
+    0x80440001; Failure_Metadata_Value_Too_Small; Validation failed because the metadata value is too small.
+    0x80440002; Failure_Metadata_Value_Too_Large; Validation failed because the metadata value is too large.
+    0x80440003; Failure_Metadata_Value_Size_Delta_Too_Large; Validation failed because the metadata value size delta is larger in magnitude than the value size.
+    0x80440004; Failure_Metadata_Value_Size_Delta_Mismatch; Validation failed because the metadata value size delta does not match expected value based on the current state.
+    0x80440005; Failure_Metadata_Value_Change_Irreversible; Validation failed because a metadata value change (truncation) is irreversible.
     0x804D0001; Failure_Mosaic_Invalid_Duration; Validation failed because the duration has an invalid value.
     0x804D0002; Failure_Mosaic_Invalid_Name; Validation failed because the name is invalid.
     0x804D0003; Failure_Mosaic_Name_Id_Mismatch; Validation failed because the name and id don't match.
@@ -224,6 +229,7 @@ This section describes the error messages that can be returned via status channe
     0x804D006F; Failure_Mosaic_Supply_Exceeded; Validation failed because the resulting mosaic supply exceeds the maximum allowed value.
     0x804D0070; Failure_Mosaic_Non_Transferable; Validation failed because the mosaic is not transferable.
     0x804D0071; Failure_Mosaic_Max_Mosaics_Exceeded; Validation failed because the credit of the mosaic would exceed the maximum of different mosaics an account is allowed to own.
+    0x804D0072; Failure_Mosaic_Required_Property_Flag_Unset; Validation failed because the mosaic has at least one required property flag unset.
     0x80550001; Failure_Multisig_Modify_Account_In_Both_Sets; Validation failed because account is specified to be both added and removed.
     0x80550002; Failure_Multisig_Modify_Multiple_Deletes; Validation failed because multiple removals are present.
     0x80550003; Failure_Multisig_Modify_Redundant_Modifications; Validation failed because redundant modifications are present.
@@ -253,13 +259,12 @@ This section describes the error messages that can be returned via status channe
     0x804E006A; Failure_Namespace_Eternal_After_Nemesis_Block; Validation failed because an eternal namespace was received after the nemesis block.
     0x804E006B; Failure_Namespace_Max_Children_Exceeded; Validation failed because the maximum number of children for a root namespace was exceeded.
     0x804E006C; Failure_Namespace_Alias_Invalid_Action; Validation failed because alias action is invalid.
-    0x804E006D; Failure_Namespace_Alias_Namespace_Unknown; Validation failed because namespace does not exist.
+    0x804E006D; Failure_Namespace_Unknown; Validation failed because namespace does not exist.
     0x804E006E; Failure_Namespace_Alias_Already_Exists; Validation failed because namespace is already linked to an alias.
     0x804E006F; Failure_Namespace_Alias_Does_Not_Exist; Validation failed because namespace is not linked to an alias.
-    0x804E0070; Failure_Namespace_Alias_Owner_Conflict; Validation failed because namespace has different owner.
-    0x804E0071; Failure_Namespace_Alias_Unlink_Type_Inconsistency; Validation failed because unlink type is not consistent with existing alias.
-    0x804E0072; Failure_Namespace_Alias_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing alias.
-    0x804E0073; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
+    0x804E0070; Failure_Namespace_Alias_Unlink_Type_Inconsistency; Validation failed because unlink type is not consistent with existing alias.
+    0x804E0071; Failure_Namespace_Alias_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing alias.
+    0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
     0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type; Validation failed because the account restriction type is invalid.
     0x80500002; Failure_RestrictionAccount_Modification_Type_Invalid; Validation failed because a modification type is invalid.
     0x80500003; Failure_RestrictionAccount_Modification_Address_Invalid; Validation failed because a modification address is invalid.
@@ -270,9 +275,17 @@ This section describes the error messages that can be returned via status channe
     0x80500008; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
     0x80500009; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
     0x8050000A; Failure_RestrictionAccount_Value_Invalid; Validation failed because the account restriction value is invalid.
-    0x8050000B; Failure_RestrictionAccount_Signer_Address_Interaction_Not_Allowed; Validation failed because the signer is not allowed to interact with an address involved in the transaction.
+    0x8050000B; Failure_RestrictionAccount_Address_Interaction_Not_Allowed; Validation failed because the addresses involved in the transaction are not allowed to interact.
     0x8050000C; Failure_RestrictionAccount_Mosaic_Transfer_Not_Allowed; Validation failed because the mosaic transfer is prohibited by the recipient.
     0x8050000D; Failure_RestrictionAccount_Transaction_Type_Not_Allowed; Validation failed because the transaction type is not allowed to be initiated by the signer.
+    0x80510001; Failure_RestrictionMosaic_Invalid_Restriction_Type; Validation failed because the mosaic restriction type is invalid.
+    0x80510002; Failure_RestrictionMosaic_Previous_Does_Not_Match; Validation failed because specified previous value does not match current value.
+    0x80510003; Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero; Validation failed because specified previous value is nonzero.
+    0x80510004; Failure_RestrictionMosaic_Max_Restrictions_Exceeded; Validation failed because the maximum number of restrictions would be exeeded.
+    0x80510005; Failure_RestrictionMosaic_Cannot_Delete_Nonexistent_Restriction; Validation failed because nonexistent restriction cannot be deleted.
+    0x80510006; Failure_RestrictionMosaic_Global_Restriction_Does_Not_Exist; Validation failed because required global restriction does not exist.
+    0x80510007; Failure_RestrictionMosaic_Global_Restriction_Invalid; Validation failed because mosaic has invalid global restriction.
+    0x80510008; Failure_RestrictionMosaic_Account_Unauthorized; Validation failed because account is unauthorized to move mosaic.
     0x80540001; Failure_Transfer_Message_Too_Large; Validation failed because the message is too large.
     0x80540002; Failure_Transfer_Out_Of_Order_Mosaics; Validation failed because mosaics are out of order.
     0x80FF0001; Failure_Chain_Unlinked; Validation failed because a block was received that did not link with the existing chain.
