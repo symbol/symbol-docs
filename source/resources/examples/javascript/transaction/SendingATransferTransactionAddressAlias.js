@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2019 NEM
+ * Copyright 2018-present NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,10 +38,10 @@ const transferTransaction = TransferTransaction.create(
 /* end block 01 */
 
 const privateKey = process.env.PRIVATE_KEY;
+const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const signedTransaction = account.sign(transferTransaction);
+const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 

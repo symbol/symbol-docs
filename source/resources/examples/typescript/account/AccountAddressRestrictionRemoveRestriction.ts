@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2019 NEM
+ * Copyright 2018-present NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,26 +18,26 @@
 
 import {
     Account,
-    AccountPropertyModification,
-    AccountPropertyTransaction,
+    AccountRestrictionModification,
+    AccountRestrictionTransaction,
     Address,
     Deadline,
     NetworkType,
-    PropertyModificationType,
-    PropertyType,
+    RestrictionModificationType,
+    RestrictionType,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
 const companyAddress = Address.createFromRawAddress('SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP');
-const addressRestriction = AccountPropertyModification.createForAddress(PropertyModificationType.Remove, companyAddress);
+const addressRestriction = AccountRestrictionModification.createForAddress(RestrictionModificationType.Remove, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
-const transaction = AccountPropertyTransaction
-    .createAddressPropertyModificationTransaction(
+const transaction = AccountRestrictionTransaction
+    .createAddressRestrictionModificationTransaction(
         Deadline.create(),
-        PropertyType.AllowAddress,
+        RestrictionType.AllowAddress,
         [addressRestriction],
         NetworkType.MIJIN_TEST);
 /* end block 02 */

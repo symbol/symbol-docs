@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2019 NEM
+ * Copyright 2018-present NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,11 +22,14 @@ import {
     BlockHttp,
     Deadline,
     Listener,
-    Mosaic, MosaicAlias,
+    Mosaic,
+    MosaicAlias,
     MosaicId,
     NamespaceId,
     NetworkType,
     PlainMessage,
+    ResolutionEntry,
+    ResolutionStatement,
     TransactionHttp,
     TransferTransaction,
     UInt64,
@@ -85,13 +88,12 @@ listener.open().then(() => {
             filter((resolutionStatement) => resolutionStatement.unresolved instanceof MosaicId &&
                 resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex())
         )
-        .subscribe(receipt => {
-            receipt.resolutionEntries.map(entry => {
+        .subscribe((resolutionStatement:ResolutionStatement) => {
+            resolutionStatement.resolutionEntries.map((entry:ResolutionEntry) => {
                 const entryResolved = <MosaicAlias> entry.resolved;
                 console.log("Resolved MosaicId: ", entryResolved.mosaicId.toHex());
                 console.log("PrimaryId: ", entry.source.primaryId);
                 console.log("SecondaryId: ", entry.source.secondaryId);
-
             });
         }, err => console.log(err));
 });

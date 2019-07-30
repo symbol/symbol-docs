@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2018 NEM
+ * Copyright 2018-present NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,6 @@ import {
     UInt64
 } from "nem2-sdk";
 import {filter, mergeMap} from "rxjs/operators";
-
 
 /* start block 01 */
 const nodeUrl = 'http://localhost:3000';

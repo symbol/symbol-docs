@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2019 NEM
+ * Copyright 2018-present NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,26 +18,26 @@
 
 import {
     Account,
-    AccountPropertyModification,
-    AccountPropertyTransaction,
+    AccountRestrictionModification,
+    AccountRestrictionTransaction,
     Deadline,
     MosaicId,
     NetworkType,
-    PropertyModificationType,
-    PropertyType,
+    RestrictionModificationType,
+    RestrictionType,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
 const companyShareMosaicId = new MosaicId('2b890153b7a18ff2'); // Replace with the mosaic id representing the company share.
-const mosaicRestriction = AccountPropertyModification.createForMosaic(PropertyModificationType.Add, companyShareMosaicId);
+const mosaicRestriction = AccountRestrictionModification.createForMosaic(RestrictionModificationType.Add, companyShareMosaicId);
 /* end block 01 */
 
 /* start block 02 */
-const transaction = AccountPropertyTransaction
-    .createMosaicPropertyModificationTransaction(
+const transaction = AccountRestrictionTransaction
+    .createMosaicRestrictionModificationTransaction(
         Deadline.create(),
-        PropertyType.BlockMosaic,
+        RestrictionType.BlockMosaic,
         [mosaicRestriction],
         NetworkType.MIJIN_TEST);
 /* end block 02 */
