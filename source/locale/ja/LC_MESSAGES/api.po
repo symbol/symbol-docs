@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.1\n"
+"Project-Id-Version: nem2-docs 0.18.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 11:51+0100\n"
+"POT-Creation-Date: 2019-07-30 21:00+0100\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -897,6 +897,72 @@ msgid "Failure_LockSecret_Invalid_Duration"
 msgstr ""
 
 #: ../../source/api.rst:1
+msgid "0x80440001"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Metadata_Value_Too_Small"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because the metadata value is too small."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80440002"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Metadata_Value_Too_Large"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because the metadata value is too large."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80440003"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Metadata_Value_Size_Delta_Too_Large"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the metadata value size delta is larger in "
+"magnitude than the value size."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80440004"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Metadata_Value_Size_Delta_Mismatch"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the metadata value size delta does not match "
+"expected value based on the current state."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80440005"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Metadata_Value_Change_Irreversible"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because a metadata value change (truncation) is "
+"irreversible."
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid "0x804D0001"
 msgstr ""
 
@@ -1149,6 +1215,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/api.rst:1
+msgid "0x804D0072"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_Mosaic_Required_Property_Flag_Unset"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the mosaic has at least one required property flag"
+" unset."
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid "0x80550001"
 msgstr ""
 
@@ -1384,7 +1464,7 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace type is invalid."
-msgstr ""
+msgstr "ネームスペースタイプが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E0065"
@@ -1396,7 +1476,7 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the root namespace has a reserved name."
-msgstr ""
+msgstr "ルートネームスペースは既に予約済みのため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E0066"
@@ -1474,7 +1554,7 @@ msgstr ""
 msgid ""
 "Validation failed because the maximum number of children for a root "
 "namespace was exceeded."
-msgstr ""
+msgstr "ルートネームスペースに対する子の最大数を超えているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E006C"
@@ -1486,19 +1566,19 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because alias action is invalid."
-msgstr ""
+msgstr "エイリアスアクションが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E006D"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Namespace_Unknown"
+msgid "Failure_Namespace_Unknown"
 msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because namespace does not exist."
-msgstr ""
+msgstr "ネームスペースは存在しないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E006E"
@@ -1510,7 +1590,7 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because namespace is already linked to an alias."
-msgstr ""
+msgstr "ネームスペースはすでにエイリアスにリンクされているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E006F"
@@ -1522,22 +1602,10 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because namespace is not linked to an alias."
-msgstr ""
+msgstr "ネームスペースはエイリアスにリンクされていないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x804E0070"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Owner_Conflict"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because namespace has different owner."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0071"
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1550,7 +1618,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid "0x804E0072"
+msgid "0x804E0071"
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1563,7 +1631,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid "0x804E0073"
+msgid "0x804E0072"
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1584,7 +1652,7 @@ msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the account restriction type is invalid."
-msgstr ""
+msgstr "モザイク制限タイプが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "0x80500002"
@@ -1700,13 +1768,13 @@ msgid "0x8050000B"
 msgstr ""
 
 #: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Signer_Address_Interaction_Not_Allowed"
+msgid "Failure_RestrictionAccount_Address_Interaction_Not_Allowed"
 msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
-"Validation failed because the signer is not allowed to interact with an "
-"address involved in the transaction."
+"Validation failed because the addresses involved in the transaction are not "
+"allowed to interact."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1735,6 +1803,106 @@ msgstr ""
 msgid ""
 "Validation failed because the transaction type is not allowed to be "
 "initiated by the signer."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510001"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Invalid_Restriction_Type"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because the mosaic restriction type is invalid."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510002"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Previous_Does_Not_Match"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because specified previous value does not match current "
+"value."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510003"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because specified previous value is nonzero."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510004"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Max_Restrictions_Exceeded"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the maximum number of restrictions would be "
+"exeeded."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510005"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Cannot_Delete_Nonexistent_Restriction"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because nonexistent restriction cannot be deleted."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510006"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Global_Restriction_Does_Not_Exist"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because required global restriction does not exist."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510007"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Global_Restriction_Invalid"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because mosaic has invalid global restriction."
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "0x80510008"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Failure_RestrictionMosaic_Account_Unauthorized"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Validation failed because account is unauthorized to move mosaic."
 msgstr ""
 
 #: ../../source/api.rst:1
@@ -1996,7 +2164,7 @@ msgid ""
 "temporal cache due to its dependency being removed."
 msgstr ""
 
-#: ../../source/api.rst:297
+#: ../../source/api.rst:310
 msgid ""
 ":download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>` "
 ":download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`"
@@ -2004,21 +2172,21 @@ msgstr ""
 ":download:`OpenAPI 2 仕様 <resources/collections/swagger2.yaml>` "
 ":download:`OpenAPI 3 仕様 <resources/collections/openapi3.yaml>`"
 
-#: ../../source/api.rst:304
+#: ../../source/api.rst:317
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/api.rst:305
+#: ../../source/api.rst:318
 msgid ""
 "We recommend using one of the following tools to interact with the available"
 " endpoints."
 msgstr "有効なエンドポイントと疎通するために以下のツールを推奨します:"
 
-#: ../../source/api.rst:308
+#: ../../source/api.rst:321
 msgid "NEM2-SDK"
 msgstr ""
 
-#: ../../source/api.rst:310
+#: ../../source/api.rst:323
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
 "tool to create NEM2 components, such as additional tools, libraries or "
@@ -2027,27 +2195,27 @@ msgstr ""
 "**NEM2 ソフトウェア開発キット** とは NEM2 "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
-#: ../../source/api.rst:312
+#: ../../source/api.rst:325
 msgid ":doc:`Reference <../sdk>`"
 msgstr ":doc:`リファレンス <../sdk>`"
 
-#: ../../source/api.rst:313
+#: ../../source/api.rst:326
 msgid ":doc:`Guides <../concepts/account>`"
 msgstr ":doc:`ガイド <../concepts/account>`"
 
-#: ../../source/api.rst:316
+#: ../../source/api.rst:329
 msgid "Insomnia"
 msgstr ""
 
-#: ../../source/api.rst:318
+#: ../../source/api.rst:331
 msgid "An open source HTTP client, available for Mac, Windows and Linux."
 msgstr "Mac, Windows, Linux 向けのオープンソースの HTTP クライアント。"
 
-#: ../../source/api.rst:320
+#: ../../source/api.rst:333
 msgid "Download |insomnia-app| for your operative system."
 msgstr "あなたのOS用の |insomnia-app| をダウンロードしてください。"
 
-#: ../../source/api.rst:322
+#: ../../source/api.rst:335
 msgid ""
 "Import the :download:`Insomnia spec<resources/collections/insomnia.json>` "
 "for NEM."

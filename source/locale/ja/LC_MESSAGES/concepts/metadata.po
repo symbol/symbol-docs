@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.18.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"PO-Revision-Date: 2019-07-30 20:01+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/metadata.rst:3
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: ../../source/concepts/metadata.rst:5
+msgid ""
+"Catapult provides you with an option to associate metadata to an "
+":doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace "
+"<namespace>` with a transaction."
+msgstr ""
+"Catapult にはトランザクションとともに :doc:`アカウント <account>`, :doc:`モザイク <mosaic>`,  "
+":doc:`ネームスペース <namespace>` にメタデータを関連付ける手段が用意されています。"
+
+#: ../../source/concepts/metadata.rst:7
+msgid "The most common uses of metadata are:"
+msgstr "メタデータの一般的な使い方:"
+
+#: ../../source/concepts/metadata.rst:9
+msgid "Attach relevant information to your assets."
+msgstr "あなたのアセットに関連する情報の添付。"
+
+#: ../../source/concepts/metadata.rst:10
+msgid ""
+"Validate the value attached to an asset to enable users in your application "
+"to perform an off-chain action."
+msgstr "アセットに付加された価値を検証して、アプリケーション内のユーザがチェーン外のアクションを実行できるようにします。"
+
+#: ../../source/concepts/metadata.rst:12
+msgid ""
+"Metadata is uniquely **identified** by the tuple ``{ signer, target-id, "
+"metadata-key }``. Including a signer in this composite identifier allows "
+"multiple accounts to specify the same metadata without conflict."
+msgstr ""
+"メタデータはタプル ``{signer, target-id, metadata-key}`` によって一意に **識別** "
+"されます。この複合識別子に署名者を含めることで、複数のアカウントで競合することなく同じメタデータを指定できます。"
+
+#: ../../source/concepts/metadata.rst:15
+msgid ""
+"The **value** linked to an identifier is a string up to ``1024`` characters."
+" The client application is responsible for encrypting the message or keeping"
+" it visible for every blockchain participant."
+msgstr ""
+"識別子にリンクされた **value** は ``1024`` "
+"文字までの文字列です。クライアントアプリケーションはメッセージを暗号化するか、またはすべてのブロックチェーン参加者が見える必要があります。"
+
+#: ../../source/concepts/metadata.rst:20
+msgid "Persistence"
+msgstr "永続性"
+
+#: ../../source/concepts/metadata.rst:22
+msgid ""
+"Metadata entries are stored in the blockchain—like the message of a regular "
+":doc:`transfer transaction <transfer-transaction>`—but also as a **key-value"
+" state**."
+msgstr ""
+"メタデータエントリはブロックチェーンに格納されます — :doc:`転送トランザクション <transfer-transaction>` "
+"の通常メッセージのように — が、 **key-value state** です。"
+
+#: ../../source/concepts/metadata.rst:24
+msgid ""
+"This feature reduces the reading time of client applications; metadata "
+"allows information to be accessed by keys instead of processing the entire "
+"account transaction history off-chain to obtain the latest transaction "
+"message value."
+msgstr ""
+"この機能によりクライアントアプリケーションの読み込み時間が短縮されます; "
+"メタデータを使用すると最新のトランザクションメッセージ値を取得するために、アカウントのトランザクション履歴全体をオフチェーンで処理する代わりにキーで情報にアクセスできます。"
+
+#: ../../source/concepts/metadata.rst:28
+msgid "Permissions"
+msgstr "パーミッション"
+
+#: ../../source/concepts/metadata.rst:30
+msgid ""
+"The account, namespace or mosaic owner must **opt-in** to all metadata "
+"requests received by giving explicit permission. In practice, this means "
+"that all metadata transactions must be wrapped in an aggregate transaction."
+msgstr ""
+"アカウント、名前空間、またはモザイクの所有者は明示的なアクセス許可を与えることによって受信したすべてのメタデータ要求に **オプトイン** "
+"する必要があります。これはすべてのメタデータトランザクションをアグリゲートトランザクションにラップする必要があることを意味します。"
+
+#: ../../source/concepts/metadata.rst:32
+msgid ""
+"The target account should cosign the aggregate to record the metadata on the"
+" blockchain and update the asset state."
+msgstr "対象アカウントはメタデータをブロックチェーンに記録して、アセットの状態を更新するためにアグリゲートに署名をする必要があります。"
+
+#: ../../source/concepts/metadata.rst:36
+msgid "Examples"
+msgstr "例"
+
+#: ../../source/concepts/metadata.rst:39
+msgid "Adding a certificate to an account"
+msgstr "アカウントに証明書を追加する。"
+
+#: ../../source/concepts/metadata.rst:45
+msgid "Metadata used to attach relevant information to an asset"
+msgstr "メタデータはアセットに関連情報を添付するのに使用されます"
+
+#: ../../source/concepts/metadata.rst:47
+msgid ""
+"Bob works as a digital notary that stamp accounts on the NEM blockchain. "
+"When a customer comes to Bob to notarize a document, he checks the "
+"authentication of the customer’s documents then **tags the account with a "
+"metadata transaction**."
+msgstr ""
+"Bob はスタンプが NEM ブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
+"の元へ訪れると、彼は顧客のドキュメントの認証をチェックし **アカウントにメタデータトランザクションをタグ付け** をします。"
+
+#: ../../source/concepts/metadata.rst:49
+msgid ""
+"Alice a recent graduate and wants her educational certificate accredited to "
+"her NEM account to avoid the hassle of repeatedly providing verification of "
+"her degree. So she goes to Bob and provides him with proof of her degree. "
+"Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s "
+"account with metadata that signifies her degree."
+msgstr ""
+"最近 Alice は卒業したので、彼女の学歴確認を繰り返し提供するという面倒を避けるために、彼女の教育証明書が彼女の NEM "
+"アカウントに認定されることを望んでいます。それで彼女は Bob の元に訪れ、学位証明を彼に提供します。Alice が Bob に手数料を支払うと Bob"
+" は真正性を検証し Alice のアカウントに学歴を表すメタデータをスタンプします。"
+
+#: ../../source/concepts/metadata.rst:52
+msgid "Access management"
+msgstr "アクセス管理"
+
+#: ../../source/concepts/metadata.rst:58
+msgid "Validating metadata to restrict performing an off-chain action"
+msgstr "オフチェーンアクションの実行を制限するためのメタデータのバリデーション"
+
+#: ../../source/concepts/metadata.rst:60
+msgid ""
+"The HR department of the SneakersCompany uses the NEM blockchain for "
+"**access management** of sensitive work resources. Each account is tagged "
+"with the metadata that regulates its access to the company apps suite."
+msgstr ""
+"SneakersCompany の人事部門は機密作業リソースの **アクセス管理** に NEM "
+"ブロックチェーンを使用しています。各アカウントには会社のアプリスイートへのアクセスを規制するメタデータがタグ付けされています。"
+
+#: ../../source/concepts/metadata.rst:62
+msgid ""
+"When a new employee, Carol, is hired, the HR department creates a new work "
+"account for her. For security reasons, HR sets the metadata of the account "
+"to ``{company, ACCESS, 9-18}``."
+msgstr ""
+"新しい従業員の Carol が雇われると、人事部は彼女の仕事用アカウントを新規作成します。セキュリティ上の理由で人事部はアカウントのメタデータとして "
+"``{company, ACCESS, 9-18}`` を設定します。"
+
+#: ../../source/concepts/metadata.rst:64
+msgid ""
+"Each time Carol attempts to access the company apps suite, the company app "
+"validates that Carol has permission and that the time falls under "
+"*9:00-18:00* before granting her admission."
+msgstr ""
+"Carol が会社のアプリスイートにアクセスしようとするたびに、会社アプリは Carol に許可があること、および彼女の入室を許可する前に、時刻が "
+"*9:00-18:00* の範囲内にあることを検証します。"
+
+#: ../../source/concepts/metadata.rst:66
+msgid ""
+"On the other hand, if Derek, who has no permissions, attempts to access the "
+"company apps suite, the company app will reject his request."
+msgstr "一方で権限を持たない Derek が会社のアプリスイートにアクセスしようとすると会社のアプリは彼のリクエストを拒否します。"
+
+#: ../../source/concepts/metadata.rst:70
+msgid "Schemas"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:72
+msgid ""
+"Configuration parameters are :properties:`editable <config-"
+"network.properties>`. Public network configuration may differ."
+msgstr ""
+"設定パラメータは :properties:`編集可能 <config-network.properties>` "
+"です。公開ネットワークでは異なる可能性があります。"
+
+#: ../../source/concepts/metadata.rst:77
+msgid "AccountMetadataTransaction"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:79
+msgid ""
+"Announce an account metadata transaction to associate a key-value state to "
+"an account."
+msgstr "アカウントメタデータトランザクションをアナウンスして Key-Value 状態をアカウントに関連付けます。"
+
+#: ../../source/concepts/metadata.rst:81
+#: ../../source/concepts/metadata.rst:108
+#: ../../source/concepts/metadata.rst:134
+msgid "**Version**: 0x01"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:83
+msgid "**Entity type**: 0x4144"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:85
+#: ../../source/concepts/metadata.rst:112
+#: ../../source/concepts/metadata.rst:138
+msgid "**Inlines**:"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:87
+#: ../../source/concepts/metadata.rst:114
+#: ../../source/concepts/metadata.rst:140
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "targetPublicKey"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid ":schema:`Key <types.cats#L11>`"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Public key of the target account."
+msgstr "対象アカウントの公開鍵"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "scopedMetadataKey"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "uint64"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "Metadata key scoped to source, target and type."
+msgstr "メタデータキーのスコープは source, target, type です。"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "valueSizeDelta"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "int16"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "Change in value size in bytes."
+msgstr "値のサイズをバイト単位で変更する"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "valueSize"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "uint16"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Value size in bytes. The maximum size is ``1024``."
+msgstr "値のバイトサイズ。最大サイズは ``1024`` です。"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "value"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid "array(byte, valueSize)"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+#: ../../source/concepts/metadata.rst:1
+msgid ""
+"Difference between the previous value and new value. You can calculate value"
+" as ``xor(previous-value, new-value)``. If there is no previous value, use "
+"directly the new value."
+msgstr ""
+"前の値と新しい値の差分。値は ``xor(previous-value, new-value)`` "
+"として計算できます。以前の値がない場合は新しい値を直接使用します。"
+
+#: ../../source/concepts/metadata.rst:104
+msgid "MosaicMetadataTransaction"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:106
+msgid ""
+"Announce a mosaic metadata transaction to associate a key-value state to a "
+"mosaic."
+msgstr "モザイクメタデータトランザクションをアナウンスして Key-Value 状態をモザイクに関連付けます。"
+
+#: ../../source/concepts/metadata.rst:110
+msgid "**Entity type**:  0x4244"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Public key of the target mosaic owner."
+msgstr "対象のモザイク所有者の公開鍵"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+msgid "targetId"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid ":schema:`UnresolvedMosaicId <types.cats#L3>`"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Target mosaic identifier."
+msgstr "対象のモザイク識別子"
+
+#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
+msgid "New value size in bytes. The maximum size is ``1024``."
+msgstr "新しい値のバイトサイズ。最大サイズは ``1024`` です。"
+
+#: ../../source/concepts/metadata.rst:130
+msgid "NamespaceMetadataTransaction"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:132
+msgid ""
+"Announce a namespace metadata transaction to associate a key-value state to "
+"a namespace."
+msgstr "ネームスペースメタデータトランザクションをアナウンスして Key-Value 状態をネームスペースに関連付けます。"
+
+#: ../../source/concepts/metadata.rst:136
+msgid "**Entity type**:  0x4344"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Public key of the target namespace owner."
+msgstr "対象のネームスペース所有者の公開鍵"
+
+#: ../../source/concepts/metadata.rst:1
+msgid ":schema:`NamespaceId <namespace/namespace_types.cats#L1>`"
+msgstr ""
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Target namespace identifier."
+msgstr "対象のネームスペース識別子"

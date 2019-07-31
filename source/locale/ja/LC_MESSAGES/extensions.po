@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.1\n"
+"Project-Id-Version: nem2-docs 0.18.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 11:51+0100\n"
+"POT-Creation-Date: 2019-07-30 21:00+0100\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -87,8 +87,8 @@ msgid ""
 msgstr "非同期なトランザクションのアナウンスを同期的に変えるコンポーネント"
 
 #: ../../source/extensions.rst:26
-msgid "Community extensions"
-msgstr "コミュニティの拡張"
+msgid "Ongoing work"
+msgstr "開発中"
 
 #: ../../source/extensions.rst:1
 msgid ""
@@ -101,7 +101,70 @@ msgid ""
 "notarizations."
 msgstr "譲渡可能、更新可能、ブランド付き、共同所有のブロックチェーン公証"
 
-#: ../../source/extensions.rst:34
+#: ../../source/extensions.rst:1
+msgid "`nem2-faucet <https://github.com/44uk/nem2-faucet/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Faucet application for Catapult."
+msgstr "Catapult 用フォーセットアプリケーション"
+
+#: ../../source/extensions.rst:1
+msgid "`nem2-hd-wallets <https://github.com/nemfoundation/nem2-hd-wallets/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid ""
+"Experimental library to handle hyper deterministic wallets for Catapult."
+msgstr "Catapult 用 HD ウォレットを扱うための実験的ライブラリ。"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`nem2-nonfungible-asset <https://github.com/nemfoundation/nem2-nonfungible-"
+"asset/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Experimental library to handle non-fungible assets for Catapult."
+msgstr "Catapult 用代替不可能アセットを扱うための実験的ライブラリ。"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-"
+"sharing/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Implementing Shamir's secret sharing on Catapult."
+msgstr "Catapult でシャミア秘密共有を実装する。"
+
+#: ../../source/extensions.rst:1
+msgid "`nem2-qr-library <https://github.com/nemfoundation/nem2-qr-library/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Experimental library to generate QR specification for Catapult."
+msgstr "Catapult 用の QR 仕様を生成するための実験的ライブラリ。"
+
+#: ../../source/extensions.rst:1
+msgid "`nem2-uri-scheme <https://github.com/nemfoundation/nem2-uri-scheme/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Experimental library to handle uri scheme for Catapult."
+msgstr "Catapult 用の URI スキームを処理するための実験的ライブラリ。"
+
+#: ../../source/extensions.rst:1
+msgid ""
+"`nem2-wallet-browserextension <https://github.com/nemfoundation/nem2-wallet-"
+"browserextension/>`_"
+msgstr ""
+
+#: ../../source/extensions.rst:1
+msgid "Experimental browser wallet for Catapult."
+msgstr "Catapult 用の実験的ブラウザウォレット"
+
+#: ../../source/extensions.rst:41
 msgid ""
 "Do you need to create a NIP to create an extension? No, you don’t. In fact, "
 "we suggest not submitting a NIP until you build a extension that improves "
@@ -113,7 +176,7 @@ msgstr ""
 "ブロックチェーンとそれを使用するさまざまなプロジェクトを改善する拡張を構築するまでは、NIP "
 "を提出しないことをお勧めします。拡張は何度も変更されるので、開発者は後で仕様を作成し、実験と学習をより多くの時間を費やす必要があります。"
 
-#: ../../source/extensions.rst:36
+#: ../../source/extensions.rst:43
 msgid ""
 "Add a new extension to this page by clicking the *\"Edit on Github\"* button"
 " at the top-right part of the screen."

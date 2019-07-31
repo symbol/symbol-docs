@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.1\n"
+"Project-Id-Version: nem2-docs 0.18.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 11:51+0100\n"
+"POT-Creation-Date: 2019-07-30 21:00+0100\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -103,15 +103,6 @@ msgid "Adding a new course"
 msgstr "新しいコースの追加"
 
 #: ../../source/getting-started/training.rst:23
-msgid ""
-"Are you an education provider? Check our `Curricular Framework "
-"<https://nemtech.github.io/nem2-curricular-framework/>`_ to get inspired and"
-" start creating your course."
-msgstr ""
-"あなたは教育機関ですか？私たちの `カリキュラムフレームワーク <https://nemtech.github.io/nem2-curricular-"
-"framework/>`_ を確認してください。インスピレーションを得て、コースの作成を始めましょう。"
-
-#: ../../source/getting-started/training.rst:25
 msgid ""
 "Have you created a self-paced online course about NEM? Submit it to us "
 "pressing the *\"Edit on Github\"* button, at the top-right part of the "
