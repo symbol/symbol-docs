@@ -231,7 +231,7 @@ Enumeration: uint8
     :delim: ;
 
     0x01; Allow only incoming transactions from a given address.
-    0x02; Allow only incoming transactions containing a a given mosaic identifier.
+    0x02; Allow only incoming transactions containing a given mosaic identifier.
     0x04; Allow only outgoing transactions with a given transaction type.
     0x05; Account restriction sentinel.
     0x41; Allow only outgoing transactions to a given address.
