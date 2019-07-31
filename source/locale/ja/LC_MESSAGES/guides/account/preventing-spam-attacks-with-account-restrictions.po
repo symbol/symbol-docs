@@ -217,7 +217,7 @@ msgstr "``company.quality.seal``: 製品の品質テストの合格を表現"
 msgid ""
 "``company.safety.seal``: represents that the product has passed a safety "
 "test."
-msgstr "``company.quality.seal``: 製品の安全テストの合格を表現"
+msgstr "``company.safety.seal``: 製品の安全テストの合格を表現"
 
 #: ../../source/guides/account/preventing-spam-attacks-with-account-restrictions.rst:128
 msgid ""
