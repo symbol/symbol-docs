@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.1\n"
+"Project-Id-Version: nem2-docs 0.18.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 11:51+0100\n"
+"POT-Creation-Date: 2019-07-30 21:00+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -120,14 +120,6 @@ msgstr ""
 "はアグリゲートトランザクションが完了すれば、ロックしたモザイクは戻ってきます。"
 
 #: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:106
-msgid ""
-"The :ref:`listener implementation changes <monitoring-transactions-client-"
-"side>` when used on the client side (e.g., Angular, React, Vue)."
-msgstr ""
-"クライアントサイドで使用する場合は(例, Angular, React, Vue) :ref:`リスナーの実装は変わります <monitoring-"
-"transactions-client-side>` 。"
-
-#: ../../source/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.rst:108
 msgid ""
 "If all goes well, :doc:`Bob receives a notification to cosign the "
 "transaction<../transaction/monitoring-a-transaction-status>`. Check how to "
