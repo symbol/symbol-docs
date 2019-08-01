@@ -26,7 +26,6 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
 
 =======
->>>>>>> master
 
 *****************************
 Absolute and relative amounts
