@@ -232,13 +232,13 @@ Enumeration: uint8
 
     0x01; Allow only incoming transactions from a given address.
     0x02; Allow only incoming transactions containing a given mosaic identifier.
-    0x04; Allow only outgoing transactions with a given transaction type.
     0x05; Account restriction sentinel.
     0x41; Allow only outgoing transactions to a given address.
+    0x44; Allow only outgoing transactions with a given transaction type.
     0x81; Block incoming transactions from a given address.
     0x82; Block incoming transactions containing a given mosaic identifier.
-    0x84; Block outgoing transactions with a given transaction type.
     0xC1; Block outgoing transactions to a given address.
+    0xC4; Block outgoing transactions with a given transaction type.
 
 .. _account-restriction-modification-type:
 
