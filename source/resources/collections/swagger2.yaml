@@ -1146,14 +1146,14 @@ definitions:
     description: |
       Type of account restriction:
       * 0x01 (1 decimal) - Allow only incoming transactions from a given address.
-     * 0x02 (2 decimal) - Allow only incoming transactions containing a given mosaic identifier.
-     * 0x05 (5 decimal) - Account restriction sentinel.
-     * 0x41 (65 decimal) - Allow only outgoing transactions to a given address.
-     * 0x44 (68 decimal) - Allow only outgoing transactions with a given transaction type.
-     * 0x81 (129 decimal) - Block incoming transactions from a given address.
-     * 0x82 (130 decimal) - Block incoming transactions containing a given mosaic identifier.
-     * 0xC1 (193 decimal) - Block outgoing transactions to a given address.
-     * 0xC4 (196 decimal) - Block outgoing transactions with a given transaction type.
+      * 0x02 (2 decimal) - Allow only incoming transactions containing a given mosaic identifier.
+      * 0x05 (5 decimal) - Account restriction sentinel.
+      * 0x41 (65 decimal) - Allow only outgoing transactions to a given address.
+      * 0x44 (68 decimal) - Allow only outgoing transactions with a given transaction type.
+      * 0x81 (129 decimal) - Block incoming transactions from a given address.
+      * 0x82 (130 decimal) - Block incoming transactions containing a given mosaic identifier.
+      * 0xC1 (193 decimal) - Block outgoing transactions to a given address.
+      * 0xC4 (196 decimal) - Block outgoing transactions with a given transaction type.
   AliasTypeEnum:
     type: integer
     enum:
