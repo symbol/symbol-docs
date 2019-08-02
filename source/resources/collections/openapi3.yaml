@@ -1457,23 +1457,6 @@ components:
           $ref: "#/components/schemas/AccountDTO"
     AccountMetaDTO:
       type: object
-      required:
-      - height
-      - hash
-      - merkleComponentHash
-      - index
-      - id
-      properties:
-        height:
-          $ref: "#/components/schemas/UInt64DTO"
-        hash:
-          type: string
-        merkleComponentHash:
-          type: string
-        index:
-          type: integer
-        id:
-          type: string
     AccountDTO:
       type: object
       required:
@@ -1481,6 +1464,9 @@ components:
       - addressHeight
       - publicKey
       - publicKeyHeight
+      - accountType
+      - linkedAccountKey
+      - activityBuckets
       - mosaics
       - importance
       - importanceHeight
@@ -1501,12 +1487,30 @@ components:
           example: AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
         publicKeyHeight:
           $ref: "#/components/schemas/UInt64DTO"
+        accountType:
+          type: integer
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+          description: |
+            * 0 - Unlinked.
+            * 1 - Balance-holding account that is linked to a remote harvester account.
+            * 2 - Remote harvester account that is linked to a balance-holding account.
+            * 3 - Remote harvester eligible account that is unlinked.
+        linkedAccountKey:
+          type: string
+        activityBuckets:
+          type: array
+          items:
+            type: object
         mosaics:
           type: array
           description: |
-            List of mosaics the account owns. The amount is represented in
+            Mosaic units owned. The amount is represented in
             absolute amount. Thus a balance of 123456789 for a mosaic with
-            divisibility 6 (absolute) means the account owns 123.456789 instead.
+            divisibility 6 (absolute) means the account owns 123.456789.
           items:
             $ref: "#/components/schemas/MosaicDTO"
         importance:
