@@ -107,6 +107,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -159,6 +160,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -210,6 +212,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -261,6 +264,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -312,6 +316,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -470,6 +475,7 @@ paths:
         required: true
         schema:
           type: integer
+          format: int32
           enum:
           - 25
           - 50
@@ -537,6 +543,7 @@ paths:
         description: Number of transactions to return for each request.
         schema:
           type: integer
+          format: int32
           minimum: 10
           maximum: 100
           default: 10
@@ -843,6 +850,7 @@ paths:
         description: Number of namespaces to return.
         schema:
           type: integer
+          format: int32
       - name: id
         in: query
         description: Namespace identifier to which namespace objects are returned.
@@ -873,6 +881,7 @@ paths:
         description: Number of namespaces to return.
         schema:
           type: integer
+          format: int32
       - name: id
         in: query
         description: Namespace identifier to which namespace objects are returned.
@@ -1192,6 +1201,7 @@ components:
     # Enumerations
     AliasActionEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1202,6 +1212,7 @@ components:
       example: 0
     AliasTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1214,6 +1225,7 @@ components:
       example: 0
     AccountRestrictionTypeEnum:
       type: integer
+      format: int32
       example: 1
       enum:
       - 1
@@ -1238,6 +1250,7 @@ components:
         * 0xC4 (196 decimal) - Block outgoing transactions with a given transaction type.
     AccountRestrictionModificationTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1248,6 +1261,7 @@ components:
       example: 0
     EntityTypeEnum:
       type: integer
+      format: int32
       enum:
       - 16716
       - 16705
@@ -1293,6 +1307,7 @@ components:
         * 0x8143 (33091 decimal) - Regular block.
     HashAlgorithmEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1306,6 +1321,7 @@ components:
         * 3 (Op_Hash_256) - Proof is hashed twice with Sha-256 (bitcoin’s OP_HASH256).
     LinkActionEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1315,6 +1331,7 @@ components:
         * 1 - Unlink.
     MessageTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       description: |
@@ -1323,6 +1340,7 @@ components:
       example: 0
     MosaicPropertyIdEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1335,6 +1353,7 @@ components:
       example: 0
     MosaicSupplyChangeDirectionEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1345,6 +1364,7 @@ components:
       example: 0
     MosaicRestrictionTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1364,6 +1384,7 @@ components:
         * 6 (GE) - Allow if greater than or equal.
     MultisigModificationTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1374,6 +1395,7 @@ components:
       example: 0
     NamespaceTypeEnum:
       type: integer
+      format: int32
       enum:
       - 0
       - 1
@@ -1384,6 +1406,7 @@ components:
       example: 0
     ReceiptTypeEnum:
       type: integer
+      format: int32
       enum:
       - 4685
       - 4942
@@ -1419,6 +1442,7 @@ components:
         * 0xF243 (62019 decimal) - Mosaic_Alias_Resolution.
     NetworkTypeEnum:
       type: integer
+      format: int32
       description: |
         Version of the entity. The higher byte represents the network
         identifier:
@@ -1429,6 +1453,7 @@ components:
       example: 36867
     RolesTypeEnum:
       type: integer
+      format: int32
       enum:
       - 1
       - 2
@@ -1442,7 +1467,7 @@ components:
       type: array
       items:
         type: integer
-        format: int32
+        format: int64
       example:
       - lower
       - higher
@@ -1459,23 +1484,6 @@ components:
           $ref: "#/components/schemas/AccountDTO"
     AccountMetaDTO:
       type: object
-      required:
-      - height
-      - hash
-      - merkleComponentHash
-      - index
-      - id
-      properties:
-        height:
-          $ref: "#/components/schemas/UInt64DTO"
-        hash:
-          type: string
-        merkleComponentHash:
-          type: string
-        index:
-          type: integer
-        id:
-          type: string
     AccountDTO:
       type: object
       required:
@@ -1483,6 +1491,9 @@ components:
       - addressHeight
       - publicKey
       - publicKeyHeight
+      - accountType
+      - linkedAccountKey
+      - activityBuckets
       - mosaics
       - importance
       - importanceHeight
@@ -1503,12 +1514,31 @@ components:
           example: AC1A6E1D8DE5B17D2C6B1293F1CAD3829EEACF38D09311BB3C8E5A880092DE26
         publicKeyHeight:
           $ref: "#/components/schemas/UInt64DTO"
+        accountType:
+          type: integer
+          format: int32
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+          description: |
+            * 0 - Unlinked.
+            * 1 - Balance-holding account that is linked to a remote harvester account.
+            * 2 - Remote harvester account that is linked to a balance-holding account.
+            * 3 - Remote harvester eligible account that is unlinked.
+        linkedAccountKey:
+          type: string
+        activityBuckets:
+          type: array
+          items:
+            type: object
         mosaics:
           type: array
           description: |
-            List of mosaics the account owns. The amount is represented in
+            Mosaic units owned. The amount is represented in
             absolute amount. Thus a balance of 123456789 for a mosaic with
-            divisibility 6 (absolute) means the account owns 123.456789 instead.
+            divisibility 6 (absolute) means the account owns 123.456789.
           items:
             $ref: "#/components/schemas/MosaicDTO"
         importance:
@@ -1586,6 +1616,7 @@ components:
       properties:
         level:
           type: integer
+          format: int32
           description: Level of the multisig account.
           example: 0
         multisigEntries:
@@ -1619,11 +1650,13 @@ components:
           example: 9081FCCB41F8C8409A9B99E485E0E28D23BD6304EF7215E01A
         minApproval:
           type: integer
+          format: int32
           description: Number of signatures needed to approve a transaction.
           example: 2
         minRemoval:
           description: Number of signatures needed to remove a cosignatory.
           type: integer
+          format: int32
           example: 1
         cosignatories:
           type: array
@@ -1695,9 +1728,11 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         numTransactions:
           type: integer
+          format: int32
           example: 0
         numStatements:
           type: integer
+          format: int32
           example: 1
     EntityDTO:
       type: object
@@ -1751,13 +1786,14 @@ components:
             $ref: "#/components/schemas/UInt64DTO"
           feeMultiplier:
             type: integer
+            format: int32
             description: Fee multiplier applied to transactions contained in block.
             example: 0
           previousBlockHash:
             type: string
             description: Hash of the previous block.
             example:
-            - 0
+            - 0000000000000000000000000000000000000000000000000000000000000000
           blockTransactionsHash:
             type: string
             description: |
@@ -1820,14 +1856,17 @@ components:
       properties:
         numBlocks:
           type: integer
+          format: int64
           description: Number of blocks stored.
           example: 245053
         numTransactions:
           type: integer
+          format: int64
           description: Number of transactions stored.
           example: 58590
         numAccounts:
           type: integer
+          format: int64
           description: Number of accounts created.
           example: 177
     StatementsDTO:
@@ -1915,10 +1954,12 @@ components:
       properties:
         primaryId:
           type: integer
+          format: int32
           description: Transaction index within the block.
           example: 1
         secondaryId:
           type: integer
+          format: int32
           description: Transaction index inside within the aggregate transaction. If
             the transaction is not an inner transaction, then the secondary id
             is set to 0.
@@ -1931,6 +1972,7 @@ components:
       properties:
         version:
           type: integer
+          format: int32
           description: Version of the receipt.
         type:
           $ref: "#/components/schemas/ReceiptTypeEnum"
@@ -2073,6 +2115,7 @@ components:
           example: EFF9BC7472263D03EF6362B1F200FD3061BCD1BABE78F82119FB88811227CE85
         revision:
           type: integer
+          format: int32
           description: Number of definitions for the same mosaic.
           example: 1
         properties:
@@ -2115,6 +2158,7 @@ components:
           type: boolean
         index:
           type: integer
+          format: int32
     NamespaceInfoDTO:
       type: object
       required:
@@ -2152,6 +2196,7 @@ components:
           $ref: "#/components/schemas/UInt64DTO"
         depth:
           type: integer
+          format: int32
           description: Level of the namespace.
           example: 1
         level0:
@@ -2211,6 +2256,7 @@ components:
           type: string
         index:
           type: integer
+          format: int32
         id:
           type: string
     TransactionInfoDTO:
@@ -2255,6 +2301,7 @@ components:
           type: string
         index:
           type: integer
+          format: int32
         id:
           type: string
     EmbeddedTransactionInfoDTO:
@@ -2333,6 +2380,7 @@ components:
       properties:
         mosaicNonce:
           type: integer
+          format: int32
           description: Random nonce used to generate the mosaic id.
           example: 0
         mosaicId:
@@ -2419,6 +2467,7 @@ components:
       properties:
         minRemovalDelta:
           type: integer
+          format: int32
           description: |
             Number of signatures needed to remove a cosignatory. If we are
             modifying an existing multisig account, this indicates the relative
@@ -2426,6 +2475,7 @@ components:
           example: 1
         minApprovalDelta:
           type: integer
+          format: int32
           description: |
             Number of signatures needed to approve a transaction. If we are
             modifying an existing multisig account, this indicates the relative
@@ -2932,6 +2982,7 @@ components:
       properties:
         position:
           type: integer
+          format: uint32
           example: 1
         hash:
           type: string
