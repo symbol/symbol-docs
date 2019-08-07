@@ -124,11 +124,9 @@ Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-j
 Creating the project
 ====================
 
-1. Add a README with the instructions to install the SDK. You can find
-   :download:`a template here <../resources/templates/README_SDK.md>`.
-2. Add a `Code of
-   Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.  Download :download:`a sample code of conduct here <../resources/templates/CODE_OF_CONDUCT.md>`.
-3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you. Find :download:`here a CONTRIBUTING.md template<../resources/templates/CONTRIBUTING.md>`.
+1. Add a README with the instructions to install the SDK.
+2. Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
+3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
 4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one suits you best.
 
 A project with a good test coverage it's more likely to be used and trusted by the developers!
@@ -151,7 +149,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
     cd nem2-docs && mkdir sdks && cd sdks
     cp ../source/resources/collections/swagger.yaml .
 
-- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-docs/master/source/resources/collections/swagger2.yaml>`_
+- `Open API definition <https://raw.githubusercontent.com/nemtech/nem2-openapi/master/spec/openapi3.yaml>`_
 
 2. Copy the ``templates folder`` from ``{nem2-sdk-typescript-javascript}/infrastructure/`` into a new folder.
 
@@ -160,7 +158,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 .. code-block:: bash
 
     brew install openapi-generator
-    openapi-generator generate -i ./swagger2.yaml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
+    openapi-generator generate -i ./openapi3.yaml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
@@ -263,44 +261,13 @@ You will find in the different implementations different invariants to ensure th
 Particular decisions to consider:
 
 -  ``uint64`` support: meanwhile `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64`` use that implementation instead.
--  API conversions: Sometimes, the data returned by API is compressed. You
-   might need to convert those types for the user.
+-  API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
 -  `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================
 
-A Transaction needs a particular serialization schema in binary optimized in size.
-
-**Generate the buffer classes**
-
-.. note:: This section is incomplete. It will be updated with complete information once the first SDK integrates the builders generated with `catbuffer <https://github.com/nemtech/catbuffer>`_ library.
-
-**Create the schema classes**
-
-1. `Schema class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/Schema.java>`_.
-2. `SchemaAttribute class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/SchemaAttribute.java>`_.
-3. `ScalarAttribute class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/ScalarAttribute.java>`_.
-4. `ArrayAttribute class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/ArrayAttribute.java>`_.
-5. `TableAttribute class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableAttribute.java>`_.
-6. `TableArrayAttribute class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/TableArrayAttribute.java>`_.
-7. `Constants class <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/Constants.java>`_.
-
-**Create the transaction schemas**
-
-Each transaction has a schemas. It has the same type as ``catbuffer schemas`` but using the ``Schema`` class. It's used to know where each component is located in the ``catbuffer schema`` and remove the unnecessary bytes to create the optimized serialization.
-
-Example: `TransferTransactionSchema <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransactionSchema.java>`_.
-
-**Using the schemas in the transaction models**
-
-The Transaction class has the abstract method `generateBytes() <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/Transaction.java#L159>`_.
-
-Each Transaction has to implement and use the previous classes, the Buffers and the Schemas, to serialize the transaction.
-
-Example:  `TransferTransaction.generateBytes() <https://github.com/nemtech/nem2-sdk-java/blob/master/src/main/java/io/nem/sdk/model/transaction/TransferTransaction.java>`_.
-
-.. note:: Do not forget to implement the `Cosignatory  <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/model/transaction>`_ classes.
+.. note:: This section is incomplete.
 
 KeyPair and Cryptographic functions
 ===================================
@@ -315,19 +282,13 @@ Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/src/
 Documenting your SDK
 ********************
 
-The SDKs need to be adopted by other developers. As a contributor, no one knows better than you how a determined SDK works. Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
+The SDKs need to be adopted by other developers. As a contributor, no one knows better than you how a determined SDK works. Consider helping others and spread the usage of the SDK providing :doc:`the following documentation <sdk-documentation>`.
 
 ******************************
 Publishing the SDK as official
 ******************************
 
 To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested and shared among NEM developers.
-
-***********
-Future work
-***********
-
-The current guideline shows what is done up to today since the SDK isn't complete. It will get updates according to the latest architecture/features.
 
 ********************
 Recommended Licenses
