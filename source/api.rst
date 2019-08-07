@@ -32,43 +32,6 @@ Get the complete list of available endpoints by clicking on the button below:
 
     <a href="/endpoints.html"><button class="btn btn-default">REST API Endpoints</button></a>
 
-.. _http-errors:
-
-Http errors
-===========
-
-.. csv-table::
-    :header: "Status code", "Description"
-    :delim: ;
-
-    200; Ok. The request has succeeded.
-    202; Accepted. The request has been accepted for processing but the processing has not been completed.
-    400; Bad request. Check your request syntax.
-    404; Not found. The resource does not exist.
-    409; Conflict. Check your arguments.
-    500; Internal error. Unexpected condition.
-
-.. _http-status:
-
-Http status
-===========
-
-.. csv-table::
-    :header: "Key", "Description"
-    :delim: ;
-
-    code; Error identifier in camelCase.
-    message; Error explained in human-readable format.
-
-**Example**
-
-.. code-block:: json
-
-  {
-    "code": "InvalidArgument",
-    "message": "accountId has an invalid format"
-  }
-
 UInt64: lower and higher
 ========================
 
@@ -307,9 +270,6 @@ This section describes the error messages that can be returned via status channe
     0x80450001; Failure_Extension_Partial_Transaction_Cache_Prune; Validation failed because the partial transaction was pruned from the temporal cache.
     0x80450002; Failure_Extension_Partial_Transaction_Dependency_Removed; Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
 
-:download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>`
-:download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`
-
 .. _tools:
 
 *****
@@ -332,11 +292,15 @@ An open source HTTP client, available for Mac, Windows and Linux.
 
 1. Download |insomnia-app| for your operative system.
 
-2. Import the :download:`Insomnia spec<resources/collections/insomnia.json>` for NEM.
+2. Import the |insomnia-spec| for NEM.
 
 .. |insomnia-app| raw:: html
 
     <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+
+.. |insomnia-spec| raw:: html
+
+    <a href="https://github.com/nemtech/nem2-openapi/blob/master/spec/insomnia.json/" target="_blank">Insomnia spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
