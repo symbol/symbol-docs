@@ -5,8 +5,6 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-  - openapi-spec-validator source/resources/collections/swagger2.yaml --schema 2.0
-  - openapi-spec-validator source/resources/collections/openapi3.yaml --schema 3.0
   - make alldocs
 
 deploy:
