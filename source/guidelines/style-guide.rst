@@ -140,6 +140,8 @@ List of terms that are prone to be written in different ways.
     RxJS; rxjs
     SHA-256; SHA256, Sha-256
     SDK; Sdk, Sdk
+    TransferTransaction, Transfer Transaction, transfer transaction
+    transfer transactions, TransferTransactions
     TypeScript; typescript, Typescript
     MongoDB; mongodb, Mongodb
     Smart Asset System; Smart asset system
