@@ -4,7 +4,7 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-AggregateTransactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
+aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
@@ -53,7 +53,7 @@ Examples
 Sending multiple transactions together
 ======================================
 
-Dan announces an AggregateTransaction that merges two TransferTransactions.
+Dan announces an AggregateTransaction that merges two transfer transactions.
 
 As Dan is the only required signatory, the transaction is considered complete after he signed. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
@@ -125,7 +125,7 @@ Announce an AggregateTransaction to combine multiple transactions together.
     :delim: ;
 
     payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An AggregateTransaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other AggregateTransactions are not allowed as inner transactions.
+    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An AggregateTransaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
     cosignatures; array(:ref:`Cosignature <cosignature>`, __FILL__); Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
 
 .. _cosignature-transaction:

@@ -554,7 +554,7 @@ Command
 
 **AggregateBondedTransactions**
 
-Monitors new :ref:`AggregateTransactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
+Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
 
 Options
 

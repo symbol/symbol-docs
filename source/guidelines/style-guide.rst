@@ -103,7 +103,7 @@ Sustaining a uniform format is also essential for consistency.
     Writing numbers; 1,000.5. Use the period (full stop) as the decimal separator.
     Referencing variable values, functions or file names.; NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
     Warning the reader.; Use notes. :doc:`Example <../getting-started/setup-workstation>`
-    Providing helpful hyperlinks throughout your article.; TransferTransactions are used to send :doc:`mosaics <../concepts/mosaic>` between two :doc:`accounts <../concepts/account>`.
+    Providing helpful hyperlinks throughout your article.; transfer transactions are used to send :doc:`mosaics <../concepts/mosaic>` between two :doc:`accounts <../concepts/account>`.
     Explaining a difficult concept with many steps.; Break information and actions into bulleted or numbered lists when possible.
 
 Code snippets

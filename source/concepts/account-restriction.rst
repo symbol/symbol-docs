@@ -73,9 +73,9 @@ The company opts to configure their product accounts restrictions, enabling only
 Enhancing the account security
 ==============================
 
-Lately, Alice is only using her main account to cosign AggregateTransactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
+Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
 
-As a temporary security measure, Alice opts to disable announcing TransferTransactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
+As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
 
 ******
 Guides

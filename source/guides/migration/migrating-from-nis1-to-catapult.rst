@@ -60,7 +60,7 @@ The first notable change about transactions is that the status response is recei
 * Protocol: |catapult-schemas|
 * Guide: :doc:`Monitoring a transaction status <../transaction/monitoring-a-transaction-status>`
 
-Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 TransferTransactions which, in their first version, attached XEM without using the mosaics array.
+Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
 
 ****************
 Transaction fees
@@ -81,7 +81,7 @@ In fact, in NIS1, it happened that namespaces would expire altogether with asset
 
 With Catapult, mosaics are configured to have their own ``duration`` instead, as well as being assigned a unique ``nonce`` value.
 
-Lastly, **levies are not available on Catapult**, those must be reproduced with AggregateTransactions instead.
+Lastly, **levies are not available on Catapult**, those must be reproduced with aggregate transactions instead.
 
 * Guide: :doc:`Creating a mosaic  <../mosaic/creating-a-mosaic>`
 * Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
@@ -122,7 +122,7 @@ Additionally, cosignatories that are added to multisignature accounts now have t
 
 * Guide: :doc:`Converting an account to multisignature <../account/converting-an-account-to-multisig>`
 
-2. Multi-Signature transactions work with :doc:`AggregateTransactions <../../concepts/aggregate-transaction>`.
+2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 
 The new AggregateTransaction permits to wrap multiple transactions together involving different participants. If all the participants cosign the aggregate, the inner transactions are included atomically in the block. Otherwise, none of the transactions will get confirmed.
 

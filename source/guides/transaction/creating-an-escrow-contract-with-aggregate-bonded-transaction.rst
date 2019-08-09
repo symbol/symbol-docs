@@ -34,7 +34,7 @@ For this example, imagine that the two parties agree on a virtual service, imply
 
 Normalizing the language into NEM related concepts:
 
-* **contractual arrangement**: A new type of transaction called Aggregate Transaction.
+* **contractual arrangement**: A new type of transaction called AggregateTransaction.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
@@ -84,7 +84,7 @@ Creating the escrow contract
 
 Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-1. Create two :ref:`TransferTransactions <transfer-transaction>`:
+1. Create two :ref:`transfer transactions <transfer-transaction>`:
 
 A. From Alice to the ticket distributor sending ``100 cat.currency``.
 B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
@@ -140,7 +140,7 @@ The distributor has not signed the AggregateBondedTransaction yet, so the exchan
 Copy the AggregateTransaction hash, and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` in the following guide.
 
 **********************************************
-Is it possible without AggregateTransactions?
+Is it possible without aggregate transactions?
 **********************************************
 
 **It is not secure**, since:

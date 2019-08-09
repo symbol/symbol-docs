@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 10 Aug, 2018
-    :category: TransferTransaction
+    :category: Transfer Transaction
     :excerpt: 1
     :nocomments:
 
@@ -71,7 +71,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-As you may have noticed, TransferTransactions require an array of mosaics as a parameter, allowing to send TransferTransactions with multiple mosaics at the same time.
+As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
 
 If you own more than one mosaic, you can send them together in the same transaction:
 

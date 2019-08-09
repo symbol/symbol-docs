@@ -1,8 +1,8 @@
 ####################
-TransferTransaction
+Transfer Transaction
 ####################
 
-TransferTransactions are used to send :doc:`mosaics <mosaic>` and messages between two :doc:`accounts <account>`.
+Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages between two :doc:`accounts <account>`.
 
 .. figure:: ../resources/images/examples/transfer-transaction.png
     :align: center
@@ -50,7 +50,7 @@ Guides
 ******
 
 .. postlist::
-    :category: TransferTransaction
+    :category: Transfer Transaction
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

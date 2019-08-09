@@ -67,7 +67,7 @@ What's next?
 Extend the previous function for signing transactions if they follow some constraints.
 
 * Aggregate transactions with two inner transactions.
-* Two inner transactions must be TransferTransactions.
+* Two inner transactions must be transfer transactions.
 * The transaction sending funds must have yourself as the signer.
 * The transaction sending funds should have only one mosaic, being this less than ``100 cat.currency``.
 

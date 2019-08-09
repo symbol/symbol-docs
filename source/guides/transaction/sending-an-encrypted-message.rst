@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 12 Jun, 2019
-    :category: TransferTransaction
+    :category: Transfer Transaction
     :excerpt: 1
     :nocomments:
 

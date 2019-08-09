@@ -72,7 +72,7 @@ Before starting solving the use case, you will need to set up two accounts with 
     Public Key:     DBA5A88911D01CE951A5DEAFD86108A029EA359BB211B399FC53B8908D6AE272
     Private Key:    654..321
 
-Next, you will configure the product's account to only accept receiving TransferTransactions that contain a specific mosaic.
+Next, you will configure the product's account to only accept receiving transfer transactions that contain a specific mosaic.
 
 Blocking transactions by address
 ================================
