@@ -220,7 +220,7 @@ Command
 
 **Get AggregateBondedTransactions**
 
-Gets an array of AggregateBondedTransactions where the account is the sender or requires to cosign the transaction.
+Gets an array of aggregate bonded transactions where the account is the sender or requires to cosign the transaction.
 
 Options
 
@@ -552,7 +552,7 @@ Command
 
     nem2-cli monitor unconfirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
 
-**AggregateBondedTransactions**
+**aggregate bonded transactions**
 
 Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
 

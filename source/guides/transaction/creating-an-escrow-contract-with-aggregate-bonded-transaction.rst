@@ -9,7 +9,7 @@
 Creating an escrow contract
 ###########################
 
-Learn about :ref:`AggregateBondedTransactions <aggregate-transaction>` creating an escrow contract.
+Learn about :ref:`aggregate bonded transactions <aggregate-transaction>` creating an escrow contract.
 
 **********
 Background

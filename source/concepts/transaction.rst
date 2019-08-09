@@ -39,7 +39,7 @@ There are different types of transactions. For example, you can transfer :doc:`m
     **Multisignature**;;
     0x4155; :ref:`MultisigModificationAccountTransaction <multisig-account-modification-transaction>`; Create or modify a multisig contract.
     **Hash Lock**;;
-    0x4148; :ref:`HashLockTransaction <hash-lock-transaction>`;  Lock a deposit needed to announce AggregateBondedTransactions.
+    0x4148; :ref:`HashLockTransaction <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
     **Secret Lock**;;
     0x4152; :ref:`SecretLockTransaction <secret-lock-transaction>`; Start a token swap between different chains.
     0x4252; :ref:`SecretProofTransaction <secret-proof-transaction>`; Conclude a token swap between different chains.

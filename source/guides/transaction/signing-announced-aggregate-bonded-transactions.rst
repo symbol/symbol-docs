@@ -5,11 +5,11 @@
     :excerpt: 1
     :nocomments:
 
-#####################################
-Cosigning AggregateBondedTransactions
-#####################################
+#######################################
+Cosigning aggregate bonded transactions
+#######################################
 
-This guide will show you how to cosign AggregateBondedTransactions that require your account's cosignature.
+This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
 
 *************
 Prerequisites
@@ -38,9 +38,9 @@ You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`,
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Fetch all AggregateBondedTransactions pending to be signed by your account.
+2. Fetch all aggregate bonded transactions pending to be signed by your account.
 
-.. note:: To fetch AggregateBondedTransactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To fetch aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 3. For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
 

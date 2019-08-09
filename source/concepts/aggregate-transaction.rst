@@ -24,7 +24,7 @@ An AggregateTransaction is  **complete** when all the required participants have
 
 The cosigners can sign the transaction without using the blockchain. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
 
-AggregateCompleteTransactions enable adding more transactions per block by gathering multiple inner transactions.
+Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions.
 
 .. _aggregate-bonded:
 
@@ -61,7 +61,7 @@ As Dan is the only required signatory, the transaction is considered complete af
     :align: center
     :width: 450px
 
-    Sending payouts with AggregateCompleteTransactions
+    Sending payouts with aggregate complete transactions
 
 Multi-asset escrowed transactions
 =================================

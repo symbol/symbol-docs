@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-###################################################
-Cosigning AggregateBondedTransactions automatically
-###################################################
+#####################################################
+Cosigning aggregate bonded transactions automatically
+#####################################################
 
 Sign automatically transactions pending to be cosigned.
 
@@ -42,7 +42,7 @@ Getting into some code
 
 4. Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
 
-.. note:: To automatically sign AggregateBondedTransactions that must be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 5. For each received transaction, check if you have not already signed it.  Cosign each pending AggregateBondedTransaction using the previously created function.
 
