@@ -28,7 +28,7 @@ The transaction body contains the extra properties which differ from a basic tra
 
 .. code-block:: python
 
-    # binary layout for a TransferTransaction
+    # binary layout for a transfer transaction
     struct TransferTransactionBody
         # transaction recipient
         recipient = UnresolvedAddress
@@ -45,7 +45,7 @@ The transaction body contains the extra properties which differ from a basic tra
 
 .. code-block:: python
 
-    # binary layout for a non-embedded TransferTransaction
+    # binary layout for a non-embedded transfer transaction
     struct TransferTransaction
         const uint8 version = 3
         const EntityType entityType = 0x4154
