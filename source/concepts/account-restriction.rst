@@ -4,7 +4,7 @@ Account Restriction
 
 :doc:`Accounts <account>` may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.
 
-The account owners - plural in case of multisig accounts - can edit the account restrictions at a later time announcing the specific :ref:`account restriction transaction <account-address-restriction-transaction>`.
+The account owners - plural in case of multisig accounts - can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
 
 .. csv-table:: Restriction types
     :widths: 40 30 30
@@ -73,9 +73,9 @@ The company opts to configure their product accounts restrictions, enabling only
 Enhancing the account security
 ==============================
 
-Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
+Lately, Alice is only using her main account to cosign AggregateTransactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
 
-As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
+As a temporary security measure, Alice opts to disable announcing TransferTransactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
 
 ******
 Guides
@@ -217,7 +217,7 @@ AccountRestrictionModification
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    modificationType; :ref:`AccountRestrictionModificationType <account-restriction-modification-type>` ; Type of the account restriction modification.
+    modificationAction; :ref:`AccountRestrictionModificationAction <account-restriction-modification-action>` ; Modification action.
 
 .. _account-restriction-type:
 
@@ -240,10 +240,10 @@ Enumeration: uint8
     0xC1; Block outgoing transactions to a given address.
     0xC4; Block outgoing transactions with a given transaction type.
 
-.. _account-restriction-modification-type:
+.. _account-restriction-modification-action:
 
-AccountRestrictionModificationType
-==================================
+AccountRestrictionModificationAction
+====================================
 
 Enumeration: uint8
 
@@ -251,5 +251,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Add account restriction value.
-    0x01; Remove account restriction value.
+    0x00; Remove account restriction value.
+    0x01; Add account restriction value.

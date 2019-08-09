@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 12 Jun, 2019
-    :category: Transfer Transaction
+    :category: TransferTransaction
     :excerpt: 1
     :nocomments:
 
@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`sending a TransferTransaction guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********
@@ -25,7 +25,7 @@ Background
 
 Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
-Alice knows that sending a transfer transaction with a plain message through the public network will make the content of the message publicly available.
+Alice knows that sending a TransferTransaction with a plain message through the public network will make the content of the message publicly available.
 
 Thus, Alice sends an encrypted message that is only readable by herself and those with access to the academic certificate.
 
@@ -64,7 +64,7 @@ Getting into some code
         :end-before: /* end block 01 */
 
 
-3. Attach the encrypted message to a transfer transaction, setting the certificate address as the recipient.
+3. Attach the encrypted message to a TransferTransaction, setting the certificate address as the recipient.
 
 .. example-code::
 

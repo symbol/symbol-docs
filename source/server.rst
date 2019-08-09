@@ -18,7 +18,7 @@ Installation
 
 * **Peer node**: The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
 
-* **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
+* **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated. They also identify and store partial AggregateBondedTransactions.
 
 * **Dual node**: The dual node combines a peer and API nodes into a single server instance.
 

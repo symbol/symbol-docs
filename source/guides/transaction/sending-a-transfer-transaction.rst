@@ -1,12 +1,12 @@
 :orphan:
 
 .. post:: 10 Aug, 2018
-    :category: Transfer Transaction
+    :category: TransferTransaction
     :excerpt: 1
     :nocomments:
 
 ##############################
-Sending a transfer transaction
+Sending a TransferTransaction
 ##############################
 
 Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two accounts.
@@ -26,7 +26,7 @@ Background
     :align: center
     :width: 450px
 
-    Sending a transfer Transaction
+    Sending a TransferTransaction
 
 Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
@@ -57,7 +57,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Getting into some code
 **********************
 
-1. Create the transfer transaction, including Bob address as the recipient and ``10 cat.currency``.
+1. Create the TransferTransaction, including Bob address as the recipient and ``10 cat.currency``.
 
 .. example-code::
 
@@ -71,7 +71,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
+As you may have noticed, TransferTransactions require an array of mosaics as a parameter, allowing to send TransferTransactions with multiple mosaics at the same time.
 
 If you own more than one mosaic, you can send them together in the same transaction:
 

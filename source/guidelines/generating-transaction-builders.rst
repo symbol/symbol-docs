@@ -44,7 +44,7 @@ Instructions
 
     git clone https://github.com/nemtech/catbuffer.git
 
-2. Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a transfer transaction:
+2. Generate the code for a determined schema in one of the available languages. For example, run the following command to generate C++ transaction builders for a TransferTransaction:
 
 .. code-block:: bash
 

@@ -36,7 +36,7 @@ On the other hand, keeping track of transactions status adds unnecessary complex
 Prerequisites
 *************
 
-- Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`sending a TransferTransaction guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********************
@@ -93,10 +93,10 @@ nem2-camel acts like a proxy between the application and the REST API.
 
 2. After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
 
-Sending the transfer transaction
+Sending the TransferTransaction
 ================================
 
-1. Alice creates a :doc:`Transfer Transaction <../../concepts/transfer-transaction>`, sending ``10 cat.currency`` to Bob.
+1. Alice creates a :doc:`TransferTransaction <../../concepts/transfer-transaction>`, sending ``10 cat.currency`` to Bob.
 
 .. example-code::
 

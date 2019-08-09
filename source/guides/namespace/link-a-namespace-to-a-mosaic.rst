@@ -39,7 +39,7 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Announce the alias transaction.
+2. Announce the AliasTransaction.
 
 .. example-code::
 

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 16 Jan, 2019
-    :category: Transfer Transaction, Monitoring
+    :category: TransferTransaction, Monitoring
     :excerpt: 1
     :nocomments:
 
@@ -155,4 +155,4 @@ To make the code work in the client side (e.g., Angular, React, Vue.), pass the 
 What's next?
 ************
 
-Run your application and try to :doc:`send a transfer transaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see the transaction information in your terminal.
+Run your application and try to :doc:`send a TransferTransaction <../transaction/sending-a-transfer-transaction>` to the selected account. If all goes well, you will see the transaction information in your terminal.

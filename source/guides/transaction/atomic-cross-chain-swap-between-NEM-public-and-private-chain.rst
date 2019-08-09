@@ -13,7 +13,7 @@ Atomic cross-chain swap between NEM public and private chain
 
 This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
 
-When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`secret proof transaction <secret-proof-transaction>` mechanism.
+When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`secret lock <secret-lock-transaction>` / :ref:`SecretProofTransaction <secret-proof-transaction>` mechanism.
 
 **********
 Background
@@ -57,7 +57,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-   .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+   .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -66,12 +66,12 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. Alice creates a secret lock transaction TX1, including:
+2. Alice creates a SecretLockTransaction TX1, including:
 
 * Mosaic: ``10`` `10 [520597229,83226871]`` alice token
 * Recipient: Bob's address (Private Chain)
@@ -82,7 +82,7 @@ For that reason, each actor involved should have at least one account in each bl
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
@@ -93,14 +93,14 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
 4. Alice can tell Bob the secret. Also, he could retrieve it directly from the chain.
 
-5. Bob creates a secret lock transaction TX2, which contains:
+5. Bob creates a SecretLockTransaction TX2, which contains:
 
 * Mosaic: ``10 [2061634929,1373884888]`` bob token
 * Recipient: Alice's address (Public Chain)
@@ -111,7 +111,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
@@ -122,25 +122,25 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 06 */
         :end-before: /* end block 06 */
 
-7. Alice can announce the secret proof transaction TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret. It will unlock TX2 transaction.
+7. Alice can announce the SecretProofTransaction TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret. It will unlock TX2 transaction.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 07 */
         :end-before: /* end block 07 */
 
-8. The proof is revealed in the public chain. Bob picks the proof and announces the :ref:`secret proof transaction <secret-proof-transaction>` TX4 to the private chain.
+8. The proof is revealed in the public chain. Bob picks the proof and announces the :ref:`SecretProofTransaction <secret-proof-transaction>` TX4 to the private chain.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/UsingSecretLockForAtomicCrosschainSwapTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CrossChainSwap.ts
         :language: typescript
         :start-after:  /* start block 08 */
         :end-before: /* end block 08 */

@@ -145,12 +145,12 @@ Importing a flow
 Basics
 ======
 
-* `Create a transfer transaction <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_
+* `Create a TransferTransaction <https://flows.nodered.org/flow/7061090eb3cbf724c80e4f49e03e1b94>`_
 * `Create namespace <https://flows.nodered.org/flow/3d87669bfc71e99f29f5ad82ba2a402e>`_
 * `Create mosaic <https://flows.nodered.org/flow/04a643b66a8e0daa1e12fa61e3b36b7c>`_
 * `Create multisig account <https://flows.nodered.org/flow/ba75b67684b2a1bc2af849cc70a7c4b5>`_
-* `Create aggregate transaction <https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_
-* `Cosign aggregate transaction <https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_
+* `Create AggregateTransaction <https://flows.nodered.org/flow/50aa98fd20e62ee1af8507df8634f840>`_
+* `Cosign AggregateTransaction <https://flows.nodered.org/flow/522d512fb0b5e0ad16a65a8c909fd95a>`_
 
 Applications
 ============

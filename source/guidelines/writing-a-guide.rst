@@ -26,7 +26,7 @@ Before starting
 * Namespace
 * Node
 * Receipt
-* Transfer Transaction
+* TransferTransaction
 * Tools
 
 .. note:: You can suggest new categories creating a `GitHub issue <https://github.com/nemtech/nem2-docs>`_.

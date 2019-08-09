@@ -16,7 +16,7 @@ Cosignatories
 
 A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. The cosignatories - other accounts - of the multisig will become the account managers.
 
-From that moment on, the multisig account cannot announce transactions by itself. A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an :doc:`aggregate transaction <aggregate-transaction>`.
+From that moment on, the multisig account cannot announce transactions by itself. A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
 To record the transaction in the block, the other cosignatories will have to agree.
 
@@ -42,7 +42,7 @@ Constraints
 
 * Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
-* :ref:`Multisig modification transactions <modify-multisig-account-transaction>` must be wrapped in an :doc:`aggregate transaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
+* :ref:`Multisig modification transactions <multisig-account-modification-transaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
 
 ********
 Examples
@@ -130,12 +130,12 @@ Schemas
 
 .. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
-.. _modify-multisig-account-transaction:
+.. _multisig-account-modification-transaction:
 
-ModifyMultisigTransaction
-=========================
+MultisigAccountModificationTransaction
+======================================
 
-Announce a modify multisig account transaction to:
+Announce a MultisigAccountModificationTransaction to:
 
 a) Transform an account to multisig account.
 b) Change the configurable properties of a multisig account.
@@ -156,7 +156,7 @@ c) Add or delete cosignatories from a multisig account.
     minRemovalDelta; int8; Number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; Number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     modificationsCount; uint8; Number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); Array of cosignatory :doc:`accounts <account>` to add or delete.
+    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); Attached cosignatory modifications.
 
 .. _cosignatory-modification:
 
@@ -167,13 +167,13 @@ CosignatoryModification
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    modificationType; :ref:`CosignatoryModificationType <cosignatory-modification-type>`; Cosignatory modification type.
-    cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Public key of the cosignatory.
+    modificationAction; :ref:`CosignatoryModificationAction <cosignatory-modification-action>`; Modification Action.
+    cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Cosignatory account public key.
 
-.. _cosignatory-modification-type:
+.. _cosignatory-modification-action:
 
-CosignatoryModificationType
-===========================
+CosignatoryModificationAction
+=============================
 
 Enumeration: uint8
 
@@ -181,5 +181,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0; Add cosignatory.
-    1; Remove cosignatory.
+    0x00; Remove cosignatory.
+    0x01; Add cosignatory.

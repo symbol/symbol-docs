@@ -5,43 +5,42 @@
     :excerpt: 1
     :nocomments:
 
-###############################################
-Signing announced aggregate bonded transactions
-###############################################
+#####################################
+Cosigning AggregateBondedTransactions
+#####################################
 
-This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
+This guide will show you how to cosign AggregateBondedTransactions that require your account's cosignature.
 
 *************
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- Have received an aggregate bonded transaction
+- Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********************
 Getting into some code
 **********************
 
-You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
+You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
-1. Create a function to cosign any aggregate bonded transaction.
+1. Create a function to cosign any AggregateBondedTransaction.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CosigningAggregateBondedTransactions.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CosigningAggregateBondedTransactions.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Fetch all aggregate bonded transactions pending to be signed by your account.
+2. Fetch all AggregateBondedTransactions pending to be signed by your account.
 
-.. note:: To fetch aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To fetch AggregateBondedTransactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 3. For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
 
@@ -49,16 +48,16 @@ You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CosigningAggregateBondedTransactions.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CosigningAggregateBondedTransactions.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/bash/transaction/SigningAnnouncedAggregateBondedTransactions.sh
+    .. viewsource:: ../../resources/examples/bash/transaction/CosigningAggregateBondedTransactions.sh
         :language: bash
         :lines:  3
