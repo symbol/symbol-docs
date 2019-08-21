@@ -36,7 +36,7 @@ On the other hand, keeping track of transactions status adds unnecessary complex
 Prerequisites
 *************
 
-- Finish :doc:`sending a TransferTransaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********************

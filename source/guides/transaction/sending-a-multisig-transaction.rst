@@ -31,7 +31,7 @@ In this guide, you will send a transaction from a multisig account.
 Prerequisites
 *************
 
-- Finish :doc:`sending a TransferTransaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`

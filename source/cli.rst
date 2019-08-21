@@ -218,7 +218,7 @@ Command
 
     nem2-cli account unconfirmedtransactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
-**Get AggregateBondedTransactions**
+**Get aggregate bonded transactions**
 
 Gets an array of aggregate bonded transactions where the account is the sender or requires to cosign the transaction.
 
@@ -552,7 +552,7 @@ Command
 
     nem2-cli monitor unconfirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
 
-**aggregate bonded transactions**
+**Aggregate bonded transactions**
 
 Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
 

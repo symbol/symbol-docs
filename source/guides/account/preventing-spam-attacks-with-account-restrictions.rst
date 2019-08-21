@@ -33,7 +33,7 @@ Thus, you opt to configure the product :doc:`account restrictions <../../concept
 Prerequisites
 *************
 
-- Finish :doc:`sending a TransferTransaction guide <../transaction/sending-a-transfer-transaction>`
+- Finish :doc:`sending mosaics and messages between two accounts guide <../transaction/sending-a-transfer-transaction>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 **********************

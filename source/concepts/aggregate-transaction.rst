@@ -4,7 +4,7 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
+Aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
@@ -133,7 +133,7 @@ Announce an AggregateTransaction to combine multiple transactions together.
 DetachedCosignature
 ===================
 
-CosignatureTransactions are used to sign :ref:`announced AggregateBondedTransactions <aggregate-transaction>` with missing cosignatures.
+Cosignature transactions are used to sign :ref:`announced AggregateBondedTransactions <aggregate-transaction>` with missing cosignatures.
 
 **Inlines**:
 

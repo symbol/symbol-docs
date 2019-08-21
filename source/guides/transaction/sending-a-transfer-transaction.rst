@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-##############################
-Sending a TransferTransaction
-##############################
+#################################################
+Sending mosaics and messages between two accounts
+#################################################
 
 Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two accounts.
 
