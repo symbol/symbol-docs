@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-####################################################
-Creating an escrow with aggregate bonded transaction
-####################################################
+###########################
+Creating an escrow contract
+###########################
 
 Learn about :ref:`aggregate bonded transactions <aggregate-transaction>` creating an escrow contract.
 
@@ -34,15 +34,15 @@ For this example, imagine that the two parties agree on a virtual service, imply
 
 Normalizing the language into NEM related concepts:
 
-* **contractual arrangement**: A new type of transaction called Aggregate Transaction.
+* **contractual arrangement**: A new type of transaction called AggregateTransaction.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
 * **primary transacting parties**: NEM accounts will represent the participants.
 
-* **conditions agreed to by the transacting parties**: When every participant signs the aggregate transaction.
+* **conditions agreed to by the transacting parties**: When every participant signs the AggregateTransaction.
 
-* **account established by a broker for holding funds**: There will not be an intermediate account, the exchange will happen atomically using an aggregate transaction.
+* **account established by a broker for holding funds**: There will not be an intermediate account, the exchange will happen atomically using an AggregateTransaction.
 
 * **until the consummation or termination of a transaction**: The transaction gets included in a block or expires.
 
@@ -52,7 +52,7 @@ Prerequisites
 
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
-- Finish :doc:`sending payouts with aggregate complete transactions <sending-payouts-with-aggregate-complete-transaction>`
+- Finish :doc:`sending multiple transactions together guide <sending-multiple-transactions-together-with-aggregate-complete-transaction>`
 
 **********************
 Getting into some code
@@ -93,51 +93,51 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`aggregate transaction <aggregate-transaction>` and sign it.
+2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it.
 
-An aggregate transaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
+An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
 
 In case that signatures are required from other participants and the transaction is announced to the network, it is considered an aggregate bonded.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. When an aggregate transaction is bonded, Alice will need to :ref:`lock <hash-lock-transaction>` at least ``10 cat.currency``. Once the ticket distributor signs the aggregate transaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
+3. When an AggregateTransaction is bonded, Alice will need to :ref:`lock <hash-lock-transaction>` at least ``10 cat.currency``. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-The distributor has not signed the aggregate bonded transaction yet, so the exchange has not been completed.
+The distributor has not signed the AggregateBondedTransaction yet, so the exchange has not been completed.
 
-Copy the aggregate transaction hash, and check how to :doc:`cosign the aggregate transaction <signing-announced-aggregate-bonded-transactions>` in the following guide.
+Copy the AggregateTransaction hash, and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` in the following guide.
 
 **********************************************
 Is it possible without aggregate transactions?
@@ -148,7 +148,7 @@ Is it possible without aggregate transactions?
 - Alice could decide not to pay the distributor after receiving the ticket.
 - The distributor could choose not to send the ticket after receiving the payment.
 
-Using the aggregate transaction feature we ensure that multiple transactions are executed at the same time when all the participants agree.
+Using the AggregateTransaction feature we ensure that multiple transactions are executed at the same time when all the participants agree.
 
 ************
 What's next?

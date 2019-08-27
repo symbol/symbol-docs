@@ -5,9 +5,9 @@
     :excerpt: 1
     :nocomments:
 
-###############################################
-Signing announced aggregate bonded transactions
-###############################################
+#######################################
+Cosigning aggregate bonded transactions
+#######################################
 
 This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
 
@@ -15,26 +15,25 @@ This guide will show you how to cosign aggregate bonded transactions that requir
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow with aggregate bonded transaction guide <creating-an-escrow-with-aggregate-bonded-transaction>`
-- Have received an aggregate bonded transaction
+- Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
 **********************
 Getting into some code
 **********************
 
-You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
+You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
-1. Create a function to cosign any aggregate bonded transaction.
+1. Create a function to cosign any AggregateBondedTransaction.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CosigningAggregateBondedTransactions.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CosigningAggregateBondedTransactions.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -49,16 +48,16 @@ You have announced an :ref:`aggregate bonded transaction <aggregate-transaction>
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SigningAnnouncedAggregateBondedTransactions.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/CosigningAggregateBondedTransactions.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SigningAnnouncedAggregateBondedTransactions.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/CosigningAggregateBondedTransactions.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/bash/transaction/SigningAnnouncedAggregateBondedTransactions.sh
+    .. viewsource:: ../../resources/examples/bash/transaction/CosigningAggregateBondedTransactions.sh
         :language: bash
         :lines:  3

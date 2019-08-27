@@ -15,7 +15,7 @@ Extend a :doc:`namespace <../../concepts/namespace>` registration period.
 Background
 **********
 
-Namespaces are registered for a certain amount of blocks. The owner can **extend the registration period** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
+Namespaces are registered for a certain amount of blocks. The owner can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
 In this guide, we are going to show how to extend the rental period of a namespace. The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
 

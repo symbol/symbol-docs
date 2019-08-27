@@ -60,7 +60,7 @@ The first notable change about transactions is that the status response is recei
 * Protocol: |catapult-schemas|
 * Guide: :doc:`Monitoring a transaction status <../transaction/monitoring-a-transaction-status>`
 
-Additionally, there is only one transfer transaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
+Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
 
 ****************
 Transaction fees
@@ -87,7 +87,7 @@ Lastly, **levies are not available on Catapult**, those must be reproduced with 
 * Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
 * Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
 
-Namespaces can still refer to mosaics byways of :ref:`alias transactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
+Namespaces can still refer to mosaics byways of :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
 
 Also, root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
 
@@ -96,8 +96,8 @@ Also, root namespaces have a ``duration`` field that is **expressed in a count o
 
 In order to facilitate the transfer of mosaics, a mosaic owner should register a namespace and alias the mosaic with that namespace. End-users can **send transactions using the alias** to refer to the mosaic.
 
-* Guide: :ref:`Sending a transfer transaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
-* Guide: :ref:`Sending a transfer transaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
+* Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
+* Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
 
 When a transaction includes an alias, a so-called **resolution** reflects the resolved value of that alias in the block.
 To get the real identifier behind an aliased address or mosaic, the client application needs to fetch the related :doc:`resolution receipt <../../concepts/receipt>` linked to the block where the transaction gets included.
@@ -118,13 +118,13 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 
 **Minimum approval**: Defines how many cosignatories are required for any other type of transaction.
 
-Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process). In order to facilitate this process, transactions with type :ref:`ModifyMultisigAccount <modify-multisig-account-transaction>` must be wrapped in an :ref:`aggregate transaction <aggregate-transaction>`.
+Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process). In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.
 
 * Guide: :doc:`Converting an account to multisignature <../account/converting-an-account-to-multisig>`
 
 2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 
-The new aggregate transaction permits to wrap multiple transactions together involving different participants. If all the participants cosign the aggregate, the inner transactions are included atomically in the block. Otherwise, none of the transactions will get confirmed.
+The new AggregateTransaction permits to wrap multiple transactions together involving different participants. If all the participants cosign the aggregate, the inner transactions are included atomically in the block. Otherwise, none of the transactions will get confirmed.
 
 To send a multisig transaction as in NIS1, the initiator of the transaction has to add it **as an inner transaction of the aggregate**. Then, the minimum number of cosignatories defined in the multisignature will have to cosign the aggregate to allow announcing transactions from the shared account.
 

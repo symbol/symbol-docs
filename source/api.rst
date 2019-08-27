@@ -84,7 +84,7 @@ The confirmedAdded channel notifies when a transaction related to an address is 
 
 The unconfirmedAdded channel notifies when a transaction related to an address is in unconfirmed state and waiting to be included in a block. The message contains the transaction.
 
-Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an aggregate bonded transaction has all required cosigners and change its state from *partial* to *unconfirmed*.
+Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from *partial* to *unconfirmed*.
 
 **unconfirmedRemoved/<ADDRESS>**
 
@@ -94,9 +94,9 @@ Possible scenarios when this channel notifies are: the transaction now is confir
 
 **partialAdded/<ADDRESS>**
 
-The partialAdded channel notifies when an aggregate bonded transaction related to an address is in *partial* state and waiting to have all *required cosigners*. The message contains a transaction.
+The partialAdded channel notifies when an AggregateBondedTransaction related to an address is in *partial* state and waiting to have all *required cosigners*. The message contains a transaction.
 
-The scenario when this channel notifies is when an aggregate bonded transaction is announced to the network via ``PUT /transaction/partial`` HTTP endpoint.
+The scenario when this channel notifies is when an AggregateBondedTransaction is announced to the network via ``PUT /transaction/partial`` HTTP endpoint.
 
 **partialRemoved/<ADDRESS>**
 
@@ -106,7 +106,7 @@ Possible scenarios when this channel notifies are: the transaction now is in unc
 
 **cosignature/<ADDRESS>**
 
-The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an aggregate bonded transaction with partial state. The message contains the cosignature signed transaction.
+The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an AggregateBondedTransaction with partial state. The message contains the cosignature signed transaction.
 
 **status/<ADDRESS>**
 

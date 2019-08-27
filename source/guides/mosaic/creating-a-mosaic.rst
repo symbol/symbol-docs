@@ -30,7 +30,7 @@ Getting into some code
 
 Define two transactions to create a mosaic:
 
-1. A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to create the mosaic, with the following properties:
+1. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to create the mosaic, with the following properties:
 
 .. _mosaic-properties:
 
@@ -55,7 +55,7 @@ Define two transactions to create a mosaic:
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. A :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
+2. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
 
 .. example-code::
 
@@ -71,7 +71,7 @@ Define two transactions to create a mosaic:
 
 .. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has divisibility 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
-3. Both transactions can be announced together using an :ref:`aggregate transaction <aggregate-transaction>`.
+3. Both transactions can be announced together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 

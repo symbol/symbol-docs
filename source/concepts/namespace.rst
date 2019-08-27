@@ -30,7 +30,7 @@ Namespaces can have up to ``3`` levels, a namespace and its two levels of subnam
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
+:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
 The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
@@ -58,7 +58,7 @@ The maximum namespace duration is ``365`` days. By default, the network is confi
 
     Namespace life-cycle
 
-During the **renting period**, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`register namespace transaction <register-namespace-transaction>` with the desired number of additional blocks.
+During the **renting period**, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
 The network :properties:`can define <config-network.properties>` a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration.
 
@@ -131,12 +131,12 @@ Schemas
 
 .. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
-.. _register-namespace-transaction:
+.. _namespace-registration-transaction:
 
-RegisterNamespaceTransaction
-============================
+NamespaceRegistrationTransaction
+================================
 
-Announce a register namespace transaction to register and re-rent a namespace.
+Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
 
 **Version**: 0x01
 
@@ -150,12 +150,12 @@ Announce a register namespace transaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceType; :ref:`NamespaceType <namespace-type>`; Type of the registered namespace.
+    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
-    parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the parent namespace. Required for subnamespaces.
-    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace.
-    namespaceNameSize; uint8; The size of the namespace name.
-    name; array(bytes, namespaceNameSize); A namespace name must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
+    parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
+    id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+    nameSize; uint8; Namespace name size in bytes.
+    name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
 
 .. _address-alias-transaction:
@@ -163,7 +163,7 @@ Announce a register namespace transaction to register and re-rent a namespace.
 AddressAliasTransaction
 =======================
 
-Announce an alias transaction to attach a namespace to an account. A namespace can be assigned to any account present in the network.
+Announce an AliasTransaction to attach a namespace to an account. A namespace can be assigned to any account present in the network.
 
 **Version**: 0x01
 
@@ -186,7 +186,7 @@ Announce an alias transaction to attach a namespace to an account. A namespace c
 MosaicAliasTransaction
 ======================
 
-Announce an alias transaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
+Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
 
 **Version**: 0x01
 
@@ -202,12 +202,12 @@ Announce an alias transaction to attach a namespace to a mosaic. Setting an alia
 
     aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the aliased mosaic.
+    mosaicId; :schema:`MosaicId <types.cats#L4>`; Aliased mosaic identifier.
 
-.. _namespace-type:
+.. _namespace-registration-type:
 
-NamespaceType
-=============
+NamespaceRegistrationType
+=========================
 
 Enumeration: uint8
 
@@ -229,5 +229,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0; Link alias.
-    1; Unlink alias.
+    0x00; Unlink alias.
+    0x01; Link alias.

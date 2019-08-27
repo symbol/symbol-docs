@@ -32,7 +32,7 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 
 2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
 
-3. Alice defines the :ref:`secret lock transaction <secret-lock-transaction>` TX1:
+3. Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` TX1:
 
 * Mosaic: 10 alice token
 * Recipient: Bob's address (Private Chain)
@@ -43,7 +43,7 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 
 4. Alice announces TX1 to the private network and shares with Bob the secret.
 
-5. Bob defines announces the following :ref:`secret lock transaction <secret-lock-transaction>` TX2 to the public network:
+5. Bob defines announces the following :ref:`SecretLockTransaction <secret-lock-transaction>` TX2 to the public network:
 
 * Mosaic: 10 bob token
 * Recipient: Alice's address (Public Chain)
@@ -54,11 +54,11 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 
 .. note::  The amount of time in which funds can be unlocked should be a smaller time frame than TX1's. Alice knows the secret, so Bob must be sure he will have some time left after Alice releases the secret.
 
-6. Alice announces the :ref:`secret proof transaction <secret-proof-transaction>` TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret.
+6. Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>` TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret.
 
 7. Once TX3 is confirmed, the proof is revealed. TX2 transaction is unlocked and Alice receives the locked funds.
 
-8. Bob picks the proof and announces the :ref:`secret proof transaction <secret-proof-transaction>` TX4 to the private network, receiving the locked funds from TX1.
+8. Bob picks the proof and announces the :ref:`SecretProofTransaction <secret-proof-transaction>` TX4 to the private network, receiving the locked funds from TX1.
 
 ******
 Guides
@@ -83,9 +83,9 @@ Schemas
 SecretLockTransaction
 =====================
 
-Use a secret lock transaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`Secret Proof Transaction <secret-proof-transaction>` unlocks them.
+Use a SecretLockTransaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
 
-If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the secret lock transaction.
+If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
 
 **Version**: 0x01
 
@@ -100,17 +100,17 @@ If the transaction duration is reached without being proved, the locked amount g
     :delim: ;
 
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
     secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
-    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
 
 .. _secret-proof-transaction:
 
 SecretProofTransaction
 ======================
 
-Use a secret proof transaction to unlock :ref:`secret lock transactions <secret-lock-transaction>`.
+Use a SecretProofTransaction to unlock :ref:`SecretLockTransactions <secret-lock-transaction>`.
 
 The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
@@ -128,7 +128,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
     secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
-    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
     proofSize; uint16; Proof size in bytes.
     proof; array(byte, proofSize); Original random set of bytes.
 

@@ -5,11 +5,11 @@
     :excerpt: 1
     :nocomments:
 
-####################################################
-Asking for mosaics with aggregate bonded transaction
-####################################################
+##################
+Requesting mosaics
+##################
 
-Ask an account to send you funds using an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+Ask an account to send you funds using an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
 
 *************
 Prerequisites
@@ -27,7 +27,7 @@ Getting into some code
     :align: center
     :width: 450px
 
-    Asking for mosaics with an aggregate bonded transaction
+    Asking for mosaics with an AggregateBondedTransaction
 
 Alice wants to ask Bob for ``20 cat.currency``.
 
@@ -35,28 +35,28 @@ Alice wants to ask Bob for ``20 cat.currency``.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/RequestingMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/RequestingMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an aggregate bonded transaction with two inner transactions:
+2. Create an AggregateBondedTransaction with two inner transactions:
 
 A. From Alice to Bob with the message ``send me 20 cat.currency``.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/RequestingMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/RequestingMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -65,40 +65,40 @@ B. From Bob to Alice sending ``20 cat.currency``.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/RequestingMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/RequestingMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-3. Wrap the previous transactions in an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+3. Wrap the previous transactions in an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/RequestingMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/RequestingMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-4. Sign the aggregate bonded transaction with Alice's account and announce it to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-transaction>` first. Alice will recover the locked mosaics if the aggregate transaction completes.
+4. Sign the AggregateBondedTransaction with Alice's account and announce it to the network. Remember to :ref:`lock 10 cat.currency <hash-lock-transaction>` first. Alice will recover the locked mosaics if the AggregateTransaction completes.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/AskingForMosaicsWithAggregateBondedTransaction.ts
+    .. viewsource:: ../../resources/examples/typescript/transaction/RequestingMosaicsWithAggregateBondedTransaction.ts
         :language: typescript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/AskingForMosaicsWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/javascript/transaction/RequestingMosaicsWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */

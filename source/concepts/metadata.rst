@@ -19,7 +19,7 @@ The client application is responsible for encrypting the message or keeping it v
 Persistence
 ***********
 
-Metadata entries are stored in the blockchain—like the message of a regular :doc:`transfer transaction <transfer-transaction>`—but also as a **key-value state**.
+Metadata entries are stored in the blockchain—like the message of a regular :doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value state**.
 
 This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history off-chain to obtain the latest transaction message value.
 
@@ -27,7 +27,7 @@ This feature reduces the reading time of client applications; metadata allows in
 Permissions
 ***********
 
-The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all metadata transactions must be wrapped in an aggregate transaction.
+The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an AggregateTransaction.
 
 The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
 
@@ -44,7 +44,7 @@ Adding a certificate to an account
 
     Metadata used to attach relevant information to an asset
 
-Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a metadata transaction**.
+Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
 
 Alice a recent graduate and wants her educational certificate accredited to her NEM account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
 
@@ -76,7 +76,7 @@ Schemas
 AccountMetadataTransaction
 ==========================
 
-Announce an account metadata transaction to associate a key-value state to an account.
+Announce an AccountMetadataTransaction to associate a key-value state to an account.
 
 **Version**: 0x01
 
@@ -90,7 +90,7 @@ Announce an account metadata transaction to associate a key-value state to an ac
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L11>` ; Public key of the target account.
+    targetPublicKey; :schema:`Key <types.cats#L11>` ; Metadata target public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
@@ -103,7 +103,7 @@ Announce an account metadata transaction to associate a key-value state to an ac
 MosaicMetadataTransaction
 =========================
 
-Announce a mosaic metadata transaction to associate a key-value state to a mosaic.
+Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
 
 **Version**: 0x01
 
@@ -117,9 +117,9 @@ Announce a mosaic metadata transaction to associate a key-value state to a mosai
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L11>` ; Public key of the target mosaic owner.
+    targetPublicKey; :schema:`Key <types.cats#L11>` ; Target mosaic owner public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
-    targetId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Target mosaic identifier.
+    targetMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
@@ -129,7 +129,7 @@ Announce a mosaic metadata transaction to associate a key-value state to a mosai
 NamespaceMetadataTransaction
 ============================
 
-Announce a namespace metadata transaction to associate a key-value state to a namespace.
+Announce a NamespaceMetadataTransaction to associate a key-value state to a namespace.
 
 **Version**: 0x01
 
@@ -143,9 +143,9 @@ Announce a namespace metadata transaction to associate a key-value state to a na
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L11>` ; Public key of the target namespace owner.
+    targetPublicKey; :schema:`Key <types.cats#L11>` ; Target namespace owner public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
-    targetId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
+    targetNamespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.

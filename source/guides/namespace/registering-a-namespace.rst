@@ -52,7 +52,7 @@ Getting into some code
         :language: bash
         :start-after: #!/bin/sh
 
-3. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`register namespace transaction<register-namespace-transaction>` with the chosen name and renting duration expressed in blocks.
+3. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-transaction>` with the chosen name and renting duration expressed in blocks.
 
 .. note:: A new block completes every ``15`` seconds on average. You will have to renew your namespace before it expires.
 

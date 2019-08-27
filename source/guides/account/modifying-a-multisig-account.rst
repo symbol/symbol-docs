@@ -18,7 +18,6 @@ Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Have one multisignature account.
 - Know how to :doc:`create accounts <creating-and-opening-an-account>`
 
 **********************
@@ -40,7 +39,7 @@ Multisig accounts are editable at the blockchain level. In this case, we want to
 
     2-of-2 multisig account example
 
-One of the accounts, for example Alice's, will announce a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` to increase ``minApprovalDelta``.
+One of the accounts, for example Alice's, will announce a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to increase ``minApprovalDelta``.
 
 1. First, define Alice account as the cosignatory and the multisig account using its public key.
 
@@ -58,7 +57,7 @@ One of the accounts, for example Alice's, will announce a :ref:`modify multisig 
         :end-before: /* end block 01 */
 
 
-2. Define a modify multisig account transaction to increase the ``minAprovalDelta`` in one unit.
+2. Define a MultisigAccountModificationTransaction to increase the ``minAprovalDelta`` in one unit.
 
 .. example-code::
 
@@ -72,9 +71,9 @@ One of the accounts, for example Alice's, will announce a :ref:`modify multisig 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Wrap the modify multisig account transaction in an aggregate transaction, attaching the multisig public key as the signer.
+3. Wrap the MultisigAccountModificationTransaction in an AggregateTransaction, attaching the multisig public key as the signer.
 
-An aggregate transaction is *complete* if, before announcing it to the network, all required cosignatories have signed it. If valid, it will be included in a block.
+An AggregateTransaction is *complete* if, before announcing it to the network, all required cosignatories have signed it. If valid, it will be included in a block.
 
 As only one cosignature is required (1-of-2), Alice can sign the transaction and announce it to the network.
 
@@ -107,7 +106,7 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
 
     2-of-3 multisig account example
 
-1. Create a :ref:`modify multisig account transaction <modify-multisig-account-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, since you are not increasing the ``minApprovalDelta``.
+1. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` adding Carol as a cosignatory. The multisig account will become a 2-of-3, since you are not increasing the ``minApprovalDelta``.
 
 .. example-code::
 
@@ -121,7 +120,7 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create a modify multisig account transaction adding the previous modification.
+2. Create a MultisigAccountModificationTransaction adding the previous modification.
 
 .. example-code::
 
@@ -135,7 +134,7 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3.  Wrap the modify multisig account transaction in an :ref:`aggregate bonded transaction <aggregate-transaction>` and sign it.
+3.  Wrap the MultisigAccountModificationTransaction in an :ref:`AggregateBondedTransaction <aggregate-transaction>` and sign it.
 
 .. example-code::
 
@@ -149,7 +148,7 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Before sending an aggregate bonded transaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the hash lock transaction has been confirmed, announce the aggregate transaction.
+4. Before sending an AggregateBondedTransaction, Alice needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that transactions are cosigned. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
 
 .. example-code::
 
@@ -163,13 +162,13 @@ Alice and Bob want to add Carol as a cosignatory of the multisig account to achi
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` hash with Carols's account. She has to opt-in to become a multisig cosignatory.
+5. :doc:`Cosign the AggregateTransaction <../transaction/signing-announced-aggregate-bonded-transactions>` hash with Carols's account. She has to opt-in to become a multisig cosignatory.
 
 .. code-block:: bash
 
     nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
 
-6. :doc:`Cosign the aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Bob's account. The amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
+6. :doc:`Cosign the AggregateTransaction <../transaction/signing-announced-aggregate-bonded-transactions>` with Bob's account. The amount of cat.currency locked becomes available again on Alice's account and Carol is added to the multisig.
 
 .. code-block:: bash
 

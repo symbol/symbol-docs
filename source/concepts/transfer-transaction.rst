@@ -14,7 +14,7 @@ Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages betw
 Recipient
 *********
 
-The recipient is the address of the :doc:`account <account>` that receives the transfer transaction.
+The recipient is the address of the :doc:`account <account>` that receives the TransferTransaction.
 
 It is possible to send mosaics to any valid address, even if the address has not previously participated in any transaction.
 
@@ -32,7 +32,7 @@ You can send a combination of different mosaics in the same transaction.
 Message
 *******
 
-A transfer transaction can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
+A TransferTransaction can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
 
 The messages attached are visible by default to all network participants.
 
@@ -68,7 +68,7 @@ Schemas
 TransferTransaction
 ===================
 
-Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages between two :doc:`accounts <account>`.
+Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages between two :doc:`accounts <account>`.
 
 **Version**: 0x01
 
@@ -82,11 +82,11 @@ Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages betw
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Address of the recipient.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Transaction recipient.
     messageSize; uint16; Size of the attached message.
     mosaicsCount; uint8; Number of attached mosaics.
     message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.
-    mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Array of mosaics to send.
+    mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Attached mosaics to send.
 
 .. _message-type:
 

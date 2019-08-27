@@ -4,7 +4,7 @@ Receipt
 
 Conditional state changes in the background enable complex transactions.
 
-For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`aggregate bonded transaction <aggregate-transaction>` is confirmed. When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded. This might appear as a *hidden change* that increases the :doc:`account <account>` balance. Receipts provide proof for every hidden change.
+For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`AggregateBondedTransaction <aggregate-transaction>` is confirmed. When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded. This might appear as a *hidden change* that increases the :doc:`account <account>` balance. Receipts provide proof for every hidden change.
 
 The collection of receipts are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash, which is different from zero when the block has receipts.
 
@@ -56,7 +56,7 @@ Catapult records invisible state changes for the following entities.
     0x134E; Namespace_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
     **HashLock**;;;
     0x3148; LockHash_Created; :ref:`BalanceDebit <balance-change-receipt>`; The lockhash  sender, mosaicId and amount locked. It is recorded when a valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced.
-    0x2248; LockHash_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The hashlock sender, mosaicId and amount locked that is returned. It is recorded when an aggregate bonded transaction linked to the hash completes.
+    0x2248; LockHash_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The hashlock sender, mosaicId and amount locked that is returned. It is recorded when an AggregateBondedTransaction linked to the hash completes.
     0x2348; LockHash_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a lock hash expires.
     **SecretLock**;;;
     0x3152; LockSecret_Created; :ref:`BalanceDebit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced.
@@ -247,7 +247,7 @@ The transaction that triggered the receipt.
     :delim: ;
 
     primaryId; uint32;  Transaction index within the block.
-    secondaryId; uint32; Transaction index inside within the aggregate transaction. If the transaction is not an inner transaction, then the secondary identifier is set to 0.
+    secondaryId; uint32; Transaction index inside within the AggregateTransaction. If the transaction is not an inner transaction, then the secondary identifier is set to 0.
 
 .. |merkle| raw:: html
 
