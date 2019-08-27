@@ -82,7 +82,7 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    recipient; :schema:`UnresolvedAddress <types.cats#L7>`; Transaction recipient.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Transaction recipient.
     messageSize; uint16; Size of the attached message.
     mosaicsCount; uint8; Number of attached mosaics.
     message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.

@@ -156,7 +156,7 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signer; :schema:`Key <types.cats#L11>`; Cosigner public key.
+    signerPublicKey; :schema:`Key <types.cats#L11>`; Cosigner public key.
     signature; :schema:`Signature <types.cats#L12>`; Transaction signature.
 
 
