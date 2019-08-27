@@ -25,12 +25,6 @@ source_file = build/gettext/extensions.pot
 source_lang = en
 type = PO
 
-[nem2docs.prototyping-tool]
-file_filter = source/locale/<lang>/LC_MESSAGES/prototyping-tool.po
-source_file = build/gettext/prototyping-tool.pot
-source_lang = en
-type = PO
-
 [nem2docs.sdk]
 file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
 source_file = build/gettext/sdk.pot

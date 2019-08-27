@@ -48,7 +48,6 @@
     server
     sdk
     cli
-    prototyping-tool
     extensions
 
 .. toctree::
