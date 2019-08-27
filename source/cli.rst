@@ -218,7 +218,7 @@ Command
 
     nem2-cli account unconfirmedtransactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
 
-**Get Aggregate bonded transactions**
+**Get aggregate bonded transactions**
 
 Gets an array of aggregate bonded transactions where the account is the sender or requires to cosign the transaction.
 
@@ -264,15 +264,15 @@ Transaction
 
 Transactions are signed with the profiles configured with ``nem2-cli profile create``.
 
-**Cosign aggregate bonded transaction**
+**Cosign AggregateBondedTransaction**
 
-Cosigns and announces an :ref:`aggregate bonded transaction <aggregate-transaction>`.
+Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
 
 Options
 
 .. code-block:: bash
 
-    -h, --hash <hash>       - Aggregate bonded transaction hash to be signed
+    -h, --hash <hash>       - AggregateBondedTransaction hash to be signed
 
 Command
 
@@ -296,9 +296,9 @@ Command
 
     nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
 
-**Send transfer transaction**
+**Send TransferTransaction**
 
-Announces a :ref:`transfer transaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
+Announces a :ref:`TransferTransaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
 
 You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 @cat.currency is 1000000 (divisibility 6).
 

@@ -33,7 +33,7 @@ Thus, you opt to configure the product :doc:`account restrictions <../../concept
 Prerequisites
 *************
 
-- Finish :doc:`sending a transfer transaction guide <../transaction/sending-a-transfer-transaction>`
+- Finish :doc:`sending mosaics and messages between two accounts guide <../transaction/sending-a-transfer-transaction>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 **********************
@@ -112,7 +112,7 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Now, if you send a :doc:`transfer transaction <../transaction/sending-a-transfer-transaction>` from another account, you will get an error as only ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` is allowed to send the transactions to the product.
+Now, if you send a :doc:`TransferTransaction <../transaction/sending-a-transfer-transaction>` from another account, you will get an error as only ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` is allowed to send the transactions to the product.
 
 On the other hand, if you send a transaction from your company account, you will receive a confirmation message as you would normally.
 

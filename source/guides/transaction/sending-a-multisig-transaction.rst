@@ -19,17 +19,11 @@ Background
     :align: center
     :width: 500px
 
-    Sending an aggregate complete transaction
+    Sending an AggregateCompleteTransaction
 
 Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
 This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
-
-.. figure:: ../../resources//images/examples/multisig-1-of-2.png
-    :align: center
-    :width: 350px
-
-    1-of-2 multisig account example
 
 In this guide, you will send a transaction from a multisig account.
 
@@ -37,7 +31,7 @@ In this guide, you will send a transaction from a multisig account.
 Prerequisites
 *************
 
-- Finish :doc:`sending a transfer transaction guide <sending-a-transfer-transaction>`
+- Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../account/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
 - A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
@@ -68,7 +62,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define the following :ref:`transfer transaction <transfer-transaction>`:
+2. Define the following :ref:`TransferTransaction <transfer-transaction>`:
 
 * Recipient: Grocery's address
 * Message: sending 10 cat.currency
@@ -86,9 +80,9 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Wrap the transfer transaction in an :ref:`aggregate transaction <aggregate-transaction>`, attaching the multisig public key as the signer.
+3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer.
 
-An aggregate transaction is **complete** if before announcing it to the network, all the required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
+An AggregateTransaction is **complete** if before announcing it to the network, all the required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
 
 .. example-code::
 
@@ -125,9 +119,9 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
     :align: center
     :width: 500px
 
-    Sending an aggregate bonded transaction
+    Sending an AggregateBondedTransaction
 
-1. Open a new terminal to :doc:`monitor <../transaction/monitoring-a-transaction-status>` the aggregate bonded transaction.
+1. Open a new terminal to :doc:`monitor <../transaction/monitoring-a-transaction-status>` the AggregateBondedTransaction.
 
 .. code-block:: bash
 
@@ -147,7 +141,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. When an aggregate transaction is bonded, Bob needs to lock at least ``10`` cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`hash lock transaction <hash-lock-transaction>` has been confirmed, :doc:`announce the aggregate bonded transaction <../../concepts/aggregate-transaction>`.
+3. When an AggregateTransaction is bonded, Bob needs to lock at least ``10`` cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 
@@ -161,7 +155,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. :doc:`Cosign the aggregate transaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
+4. :doc:`Cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
 
 .. code-block:: bash
 

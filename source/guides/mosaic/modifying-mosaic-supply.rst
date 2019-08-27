@@ -24,7 +24,7 @@ Getting into some code
 
 If you have followed the previous guide, right now you should own a ``supply mutable`` :doc:`mosaic<../../concepts/mosaic>`.
 
-To increase the initial supply to ``2.000.000``, define a :ref:`mosaic supply change transaction <mosaic-supply-change-transaction>` setting the target mosaicId.
+To increase the initial supply to ``2.000.000``, define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` setting the target mosaicId.
 
 .. example-code::
 

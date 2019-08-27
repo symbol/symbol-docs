@@ -139,9 +139,9 @@ We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosai
 Sending the ticket
 ==================
 
-Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`transfer transaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
-1. Prepare the transfer transaction. The following attributes form a transfer transaction:
+1. Prepare the TransferTransaction. The following attributes form a TransferTransaction:
 
 .. csv-table::
     :header: "Property", "Value", "Description"

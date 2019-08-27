@@ -4,15 +4,15 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
+Aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
 
-    Example of an aggregate transaction between two participants
+    Example of an AggregateTransaction between two participants
 
-When all involved :doc:`accounts <../concepts/account>` have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
+When all involved :doc:`accounts <../concepts/account>` have cosigned the AggregateTransaction, all the inner transactions are executed at the same time.
 
 .. _aggregate-complete:
 
@@ -20,7 +20,7 @@ When all involved :doc:`accounts <../concepts/account>` have cosigned the aggreg
 Aggregate complete
 ******************
 
-An aggregate transaction is  **complete** when all the required participants have signed it.
+An AggregateTransaction is  **complete** when all the required participants have signed it.
 
 The cosigners can sign the transaction without using the blockchain. Once it has all the required signatures, one of them can announce it to the network. If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
 
@@ -32,9 +32,9 @@ Aggregate complete transactions enable adding more transactions per block by gat
 Aggregate bonded
 ****************
 
-An aggregate transaction is **bonded** when it requires signatures from other participants.
+An AggregateTransaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before announcing an **aggregate bonded transaction**, an account must announce and get confirmed a :ref:`hash lock transaction<hash-lock-transaction>` locking ``10 cat.currency``.
+.. note:: Before announcing an **AggregateBondedTransaction**, an account must announce and get confirmed a :ref:`HashLockTransaction<hash-lock-transaction>` locking ``10 cat.currency``.
 
 Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls.
 
@@ -44,16 +44,16 @@ Every time a cosignatory signs the transaction and :ref:`announces an aggregate 
     :width: 900px
     :align: center
 
-    Aggregate bonded transaction cycle
+    AggregateBondedTransaction cycle
 
 ********
 Examples
 ********
 
-Sending payouts
-===============
+Sending multiple transactions together
+======================================
 
-Dan announces an aggregate transaction that merges two transfer transactions.
+Dan announces an AggregateTransaction that merges two transfer transactions.
 
 As Dan is the only required signatory, the transaction is considered complete after he signed. After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
 
@@ -63,10 +63,10 @@ As Dan is the only required signatory, the transaction is considered complete af
 
     Sending payouts with aggregate complete transactions
 
-Multi-Asset Escrowed Transactions
+Multi-asset escrowed transactions
 =================================
 
-In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mosaic>`. When the ticket distributor cosigns the aggregate transaction, the swap will happen atomically.
+In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic <mosaic>`. When the ticket distributor cosigns the AggregateTransaction, the swap will happen atomically.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
@@ -79,7 +79,7 @@ Paying for others fees
 
 Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But Alice doesn't own cat.currency to pay the transaction fee.
 
-By creating an aggregate bonded transaction, Alice can convert EUR to cat.currency to pay the fee. Now, Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
+By creating an AggregateBondedTransaction, Alice can convert EUR to cat.currency to pay the fee. Now, Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -110,7 +110,7 @@ Schemas
 AggregateTransaction
 ====================
 
-Announce an aggregate transaction to combine multiple transactions together.
+Announce an AggregateTransaction to combine multiple transactions together.
 
 **Version**: 0x01
 
@@ -125,7 +125,7 @@ Announce an aggregate transaction to combine multiple transactions together.
     :delim: ;
 
     payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An aggregate transaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An AggregateTransaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
     cosignatures; array(:ref:`Cosignature <cosignature>`, __FILL__); Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
 
 .. _cosignature-transaction:
@@ -133,7 +133,7 @@ Announce an aggregate transaction to combine multiple transactions together.
 DetachedCosignature
 ===================
 
-Cosignature transactions are used to sign :ref:`announced aggregate bonded transactions <aggregate-transaction>` with missing cosignatures.
+Cosignature transactions are used to sign :ref:`announced AggregateBondedTransactions <aggregate-transaction>` with missing cosignatures.
 
 **Inlines**:
 
@@ -143,7 +143,7 @@ Cosignature transactions are used to sign :ref:`announced aggregate bonded trans
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentHash; :schema:`Hash256 <types.cats#L9>`;  Aggregate bonded transaction hash to cosign.
+    parentHash; :schema:`Hash256 <types.cats#L9>`;  AggregateBondedTransaction hash to cosign.
 
 .. _cosignature:
 
@@ -156,7 +156,7 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signer; :schema:`Key <types.cats#L11>`; Cosigner public key.
+    signerPublicKey; :schema:`Key <types.cats#L11>`; Cosigner public key.
     signature; :schema:`Signature <types.cats#L12>`; Transaction signature.
 
 
@@ -167,15 +167,15 @@ HashLockTransaction
 
 **Alias**: LockFundsTransaction
 
-Lock funds with a hash lock transaction before sending an :ref:`aggregate bonded transaction<aggregate-transaction>`. This transaction prevents spamming the partial cache with transactions that never will complete.
+Lock funds with a HashLockTransaction before sending an :ref:`AggregateBondedTransaction<aggregate-transaction>`. This transaction prevents spamming the partial cache with transactions that never will complete.
 
-After enough funds are locked, the aggregate transaction can be announced and added into the partial transactions cache.
+After enough funds are locked, the AggregateTransaction can be announced and added into the partial transactions cache.
 
-.. note:: It's not necessary to sign the aggregate and its hash lock transaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a hash lock transaction, he can ask Alice to send the hash lock funds transaction sharing the signed aggregate transaction hash.
+.. note:: It's not necessary to sign the aggregate and its HashLockTransaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a HashLockTransaction, he can ask Alice to send the hash lock funds transaction sharing the signed AggregateTransaction hash.
 
-Upon completion of the aggregate, the locked funds become available in the account that signed the initial hash lock transaction.
+Upon completion of the aggregate, the locked funds become available in the account that signed the initial HashLockTransaction.
 
-If the aggregate bonded transaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
+If the AggregateBondedTransaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
 
 **Version**: 0x01
 
@@ -189,6 +189,6 @@ If the aggregate bonded transaction duration is reached without being signed by 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic, must be at least ``10 cat.currency``.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Lock duration. Duration is allowed to lie up to ``2`` days.
-    hash; :schema:`Hash256 <types.cats#L9>`; Aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
+    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic`(`10 cat.currency``).
+    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``2`` days.
+    hash; :schema:`Hash256 <types.cats#L9>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.

@@ -79,7 +79,7 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`aggregate bonded transaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
+4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
 
 .. example-code::
 
@@ -93,7 +93,7 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced aggregate transaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
+5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced AggregateTransaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
 
 
 .. code-block:: bash
@@ -104,10 +104,10 @@ Getting into some code
 What's next?
 ************
 
-If the account #5 initiates an aggregate bonded transaction involving the account #1, which accounts should cosign the transaction?
+If the account #5 initiates an AggregateBondedTransaction involving the account #1, which accounts should cosign the transaction?
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center
     :width: 750px
 
-    Sending an aggregate bonded transaction from a MLMA
+    Sending an AggregateBondedTransaction from a MLMA
