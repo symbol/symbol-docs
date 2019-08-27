@@ -34,8 +34,8 @@ There are different types of transactions. For example, you can transfer :doc:`m
     0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
     **Metadata**;;
     0x4144; :ref:`AccountMetadataTransaction <account-metadata-transaction>`; Associate a key-value state to an account.
-    0x4144; :ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
-    0x4144; :ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
+    0x4244; :ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
+    0x4344; :ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
     **Multisignature**;;
     0x4155; :ref:`MultisigModificationAccountTransaction <multisig-account-modification-transaction>`; Create or modify a multisig contract.
     **Hash Lock**;;
