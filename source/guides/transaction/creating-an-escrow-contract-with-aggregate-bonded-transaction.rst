@@ -28,10 +28,10 @@ For this example, imagine that the two parties agree on a virtual service, imply
 4. The buyer approves goods or service.
 5. The escrow releases payment to the seller.
 
-How is it applied to NEM?
-=========================
+How to create an escrow contract with NEM
+=========================================
 
-Normalizing the language into NEM related concepts:
+Normalizing the previous description into NEM related concepts:
 
 * **contractual arrangement**: A new type of transaction called :ref:`AggregateTransaction <aggregate-transaction>`.
 
