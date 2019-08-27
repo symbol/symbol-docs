@@ -9,7 +9,7 @@
 Linking a namespace to a mosaic
 ###############################
 
-Link a :doc:`namespace <../../concepts/namespace>` to a :doc:`mosaic <../../concepts/mosaic>`.
+Link a namespace to a mosaic.
 
 *************
 Prerequisites
@@ -23,9 +23,9 @@ Prerequisites
 Getting into some code
 **********************
 
-An account can link a registered :doc:`name <../../concepts/namespace>` (namespace or subnamespace) with a :doc:`mosaic <../../concepts/mosaic>`.
+To make **mosaics** easier to use and organize them, an account can link a registered :doc:`name <../../concepts/namespace>` to any :doc:`mosaic <../../concepts/mosaic>` it has created.
 
-1. Define the namespaceId and the address you want to link.
+Before starting, you must have registered a :doc:`namespace <../../concepts/namespace>` first. If you already have registered a namespace, define the namespace identifier and the mosaic identifier you want to alias.
 
 .. example-code::
 
@@ -39,7 +39,7 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Announce the AliasTransaction.
+Then, announce the **AliasTransaction** that links the namespace and the mosaic.
 
 .. example-code::
 
@@ -52,6 +52,10 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceMosaic.sh
+        :language: bash
+        :start-after: #!/bin/sh
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 

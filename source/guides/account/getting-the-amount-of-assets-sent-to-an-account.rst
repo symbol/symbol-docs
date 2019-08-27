@@ -23,7 +23,7 @@ Prerequisites
 Getting into some code
 **********************
 
-In this example, we are going to check how many assets of a certain type have we sent to an account.
+In this code example, we are going to check how many assets of a certain type have we sent to an account.
 
 .. example-code::
 
@@ -38,4 +38,3 @@ If you want to check another :doc:`mosaic <../../concepts/mosaic>` different tha
 
     const mosaicId = new MosaicId([3562970624, 976072438]);
     const divisibility = 6;
-

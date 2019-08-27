@@ -9,22 +9,19 @@
 Creating a multi-level multisig account
 #######################################
 
-Create a :doc:`multi-level multisig account <../../concepts/multisig-account>`.
+Create a multi-level multisig account.
 
-Following this guide you will learn to create the following 3-level multisig account.
+**********
+Background
+**********
+
+:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions. Following this guide you will create the following **3-level multisig account**.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
     :width: 750px
 
     Three-level multisig account example
-
-**********
-Background
-**********
-
-:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
-
 
 *************
 Prerequisites
@@ -37,7 +34,7 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Define the multisig account #2.
+1. Define the **multisig account #2**.
 
 .. example-code::
 
@@ -51,7 +48,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define the multisig account #3.
+2. Define the **multisig account #3**.
 
 .. example-code::
 
@@ -65,7 +62,7 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Define the multisig account #1.
+3. Define the **multisig account #1**.
 
 .. example-code::
 
@@ -79,7 +76,7 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. Make sure that the account #1 owns at least ``10`` cat.currency.
+4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 cat.currency** to announce the transaction.
 
 .. example-code::
 
@@ -93,8 +90,7 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced AggregateTransaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts #5, #6, #7, #8, and #4.
-
+5. The cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced AggregateTransaction <../transaction/signing-announced-aggregate-bonded-transactions>` with the accounts **#5**, **#6**, **#7**, **#8,** and **#4**.
 
 .. code-block:: bash
 
@@ -104,7 +100,7 @@ Getting into some code
 What's next?
 ************
 
-If the account #5 initiates an AggregateBondedTransaction involving the account #1, which accounts should cosign the transaction?
+If the **account #5** initiates an **AggregateBondedTransaction** involving the **account #1**, which accounts should cosign the transaction?
 
 .. figure:: ../../resources/images/examples/mlma-complex-2.png
     :align: center

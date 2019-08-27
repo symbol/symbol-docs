@@ -9,7 +9,7 @@
 Getting the mosaic information
 ##############################
 
-Get the ownership, divisibility, duration, and flags for a given :doc:`mosaic <../../concepts/mosaic>` identifier.
+Get the ownership, divisibility, duration, and flags for a given mosaic identifier.
 
 *************
 Prerequisites
@@ -20,8 +20,6 @@ Prerequisites
 **********************
 Getting into some code
 **********************
-
-Call ``getMosaic`` function, passing the mosaicId you want to check as a parameter.
 
 .. example-code::
 

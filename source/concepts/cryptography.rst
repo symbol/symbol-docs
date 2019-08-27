@@ -24,7 +24,7 @@ You can find the |implementation| under the ``crypto`` module of catapult-server
 Address
 *******
 
-A NEM address is a base-32 encoded triplet consisting of:
+A NEM address is a **base-32 encoded triplet** consisting of:
 
 * The network byte.
 * The 160-bit hash of the account's public key.

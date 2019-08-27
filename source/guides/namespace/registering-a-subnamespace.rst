@@ -9,17 +9,17 @@
 Creating a subnamespace
 #######################
 
-Create a :doc:`subnamespace <../../concepts/namespace>` following this guide.
+Create subnamespaces to organize your assets.
 
 **********
 Background
 **********
 
-Once you have a registered root namespace, you can create up to ``3`` levels of subnamespaces.
+Once you have a registered root :doc:`namespace <../../concepts/namespace>`, you can create up to ``3`` levels of subnamespaces to **organize your assets**.
 
-Subnamespaces do not have a renting duration. They have the same one as their parent namespace.
+Unlike root namespaces, the subnamespaces do not have a **renting duration**. They share the duration with its parent namespace.
 
-It is possible to create multiple subnamespaces with the same name in different namespaces (example: ``foo.bar`` and ``foo2.bar``).
+It is possible to create multiple subnamespaces with the same name in different namespaces (example: ``foo.bar`` and ``foo2.bar``), but the combination rootnamespace + subnamespace must remain unique.
 
 *************
 Prerequisites
@@ -32,9 +32,7 @@ Prerequisites
 Getting into some code
 **********************
 
-The first step is to choose a name for your subnamespace.
-
-In this example, we have created a subnamespace called ``bar`` under ``foo`` namespace.
+This code example creates a subnamespace called ``bar`` under the namespace ``foo``.
 
 .. example-code::
 
@@ -56,4 +54,4 @@ In this example, we have created a subnamespace called ``bar`` under ``foo`` nam
 What's next?
 ************
 
-When the transaction is confirmed, link a namespace with a :doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address <../namespace/link-a-namespace-to-an-address>`.
+When the transaction is confirmed, link the subnamespace with a :doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address <../namespace/link-a-namespace-to-an-address>`.

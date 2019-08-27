@@ -9,7 +9,7 @@
 Getting the namespace information
 #################################
 
-Get the ownership and duration for a given :doc:`namespace <../../concepts/namespace>` identifier.
+Get the ownership and duration for a given namespace identifier.
 
 *************
 Prerequisites
@@ -20,8 +20,6 @@ Prerequisites
 **********************
 Getting into some code
 **********************
-
-Call ``getNamespace`` function, passing the namespace identifier you want to check as a parameter.
 
 .. example-code::
 

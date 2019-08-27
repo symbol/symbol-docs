@@ -2,13 +2,13 @@
 Block
 #####
 
-The central element of every cryptocurrency is a public ledger called the blockchain, which links blocks together.
+The central element of every cryptocurrency is a public ledger called the **blockchain**, which links blocks together.
 
 .. Each NEM block can contain up to ``N`` :doc:`transactions <transaction>`.
 
-Since the blocks in the chain are ordered, the complete transaction history is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
+Since the blocks in the chain are ordered, the complete **transaction history** is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
 
-Blocks are stored in a database as permanent medium. NEM calls the first block in the chain the nemesis block.
+Blocks are stored in a database as permanent medium. NEM calls the first block in the chain the **nemesis block**.
 
 NEM blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
 
@@ -16,7 +16,7 @@ NEM blocks complete every ``15`` seconds, making transactions confirm quickly en
 Block creation
 **************
 
-Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The harvesting account - called the harvester - gets the :ref:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
+Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The **harvesting account** - called the harvester - gets the :ref:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
 
 ******
 Guides

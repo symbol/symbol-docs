@@ -23,7 +23,7 @@ What do we want to solve?
 
 The ticket vendor wants to set up a system to:
 
-a) Identify each ticket buyer.
+a) Identify each ticket customer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
@@ -50,13 +50,13 @@ Creating an account for each participant
 First, identify the actors involved in the problem we want to solve:
 
 * The ticket vendor.
-* The ticket buyer.
+* The customer.
 
-We have decided to represent the ticket vendor and buyer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box in the blockchain, which can be modified with an appropriate private key.
+We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box in the blockchain, which can be modified with an appropriate private key.
 
-Have you loaded an account with test ``cat.currency``? If it is not the case, go back to :doc:`getting started section <setup-workstation>`. The account you have created represents the ticket vendor.
+The account you have loaded in NEM2-CLI represents the **ticket vendor**.
 
-1. After running the following command, you should see on your screen a line similar to:
+1. Have you loaded an account with test ``cat.currency``? After running the following command, you should see on your screen a line similar to:
 
 .. code-block:: bash
 
@@ -71,13 +71,13 @@ Have you loaded an account with test ``cat.currency``? If it is not the case, go
 
    0dc67fbe1cad29e3: 1000000
 
-2. This account owns ``1,000,000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>`.
+2. This account owns ``1,000,000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
 
-3. Create a second account to identify the ticket buyer.
+3. Create a second account to identify the **customer**.
 
 .. code-block:: bash
 
-   nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
+   nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile customer
 
 
 Monitoring the blockchain
@@ -85,7 +85,7 @@ Monitoring the blockchain
 
 Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to monitor transactions before being announced.
+Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to **monitor transactions** before being announced.
 
 Open three new terminals:
 
@@ -110,9 +110,9 @@ Open three new terminals:
 Creating the ticket
 ===================
 
-We are representing the ticket as a NEM mosaic. :doc:`Mosaics <../concepts/mosaic>` can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mosaics** can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
-1. Create a  mosaic named ``ticket``:
+1. Create a mosaic named ``ticket``:
 
 .. code-block:: bash
 
@@ -141,7 +141,7 @@ Sending the ticket
 
 Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
-1. Prepare the TransferTransaction. The following attributes form a TransferTransaction:
+1. Prepare the **TransferTransaction**. The following attributes form a TransferTransaction:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -202,22 +202,22 @@ Although the transaction is defined, it has not been announced to the network ye
 
         nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
-4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
+4. When the transaction is confirmed, check if the customer has received the ticket.
 
 .. code-block:: bash
 
-    nem2-cli account info --profile buyer
+    nem2-cli account info --profile customer
 
-************
-What's next?
-************
-
+***************************
 Did you solve the use case?
+***************************
 
-✅ Identify each ticket buyer: Creating NEM accounts for each buyer.
 
-✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
-✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
+*  ✅ Identify each ticket customer: Creating NEM accounts for each customer.
+
+*  ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
+
+* ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
 Continue learning about more :doc:`NEM built-in features <../concepts/account>`.

@@ -9,7 +9,7 @@
 Creating an escrow contract
 ###########################
 
-Learn about :ref:`aggregate bonded transactions <aggregate-transaction>` creating an escrow contract.
+Learn about aggregate bonded transactions creating an escrow contract.
 
 **********
 Background
@@ -18,9 +18,7 @@ Background
     An **escrow** is a *contractual arrangement* in which a *third party receives and disburses money*
     or documents for the *primary transacting parties*. This disbursement is dependent on the
     *conditions agreed by the transacting parties*, or an *account established by a broker for holding funds*
-    on behalf of the broker’s principal or some other person until the consummation or termination of a transaction.
-
-See the full description at |escrow_wikipedia|.
+    on behalf of the broker’s principal or some other person until the consummation or termination of a transaction. See the full description at |escrow_wikipedia|.
 
 For this example, imagine that the two parties agree on a virtual service, implying that the escrow can be executed immediately:
 
@@ -30,11 +28,12 @@ For this example, imagine that the two parties agree on a virtual service, imply
 4. The buyer approves goods or service.
 5. The escrow releases payment to the seller.
 
-**How is it applied to NEM?**
+How to create an escrow contract with NEM
+=========================================
 
-Normalizing the language into NEM related concepts:
+Normalizing the previous description into NEM related concepts:
 
-* **contractual arrangement**: A new type of transaction called AggregateTransaction.
+* **contractual arrangement**: A new type of transaction called :ref:`AggregateTransaction <aggregate-transaction>`.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
@@ -75,21 +74,19 @@ Alice and a ticket distributor want to swap the following mosaics.
         Alice, 100, cat.currency, Native currency mosaic
         Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
-Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency.
-
-Then, :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor account. This new mosaic will represent the ticket.
+Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor account. This new mosaic will represent the ticket.
 
 Creating the escrow contract
 ============================
 
 Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-1. Create two :ref:`transfer transactions <transfer-transaction>`:
+1. Define two transfer transactions:
 
 A. From Alice to the ticket distributor sending ``100 cat.currency``.
 B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
 
-.. note:: The museum ticket does not have the id 7cdf3b117a3c40cc in your network. Replace the MosaicId for the one you have created in the previous step.
+.. note:: The museum ticket does not have the id 7cdf3b117a3c40cc in your network. Replace the mosaic identifier for the one you have created in the previous step.
 
 .. example-code::
 
@@ -103,11 +100,7 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it.
-
-An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block.
-
-In case that signatures are required from other participants and the transaction is announced to the network, it is considered an aggregate bonded.
+2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants and the transaction is announced to the network, it is considered *bonded*.
 
 .. example-code::
 
@@ -121,7 +114,7 @@ In case that signatures are required from other participants and the transaction
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. When an AggregateTransaction is bonded, Alice will need to :ref:`lock <hash-lock-transaction>` at least ``10 cat.currency``. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
+3. When an **AggregateTransaction is bonded**, Alice will need to **lock 10 cat.currency** to prevent spamming the network. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 
@@ -137,7 +130,7 @@ In case that signatures are required from other participants and the transaction
 
 The distributor has not signed the AggregateBondedTransaction yet, so the exchange has not been completed.
 
-Copy the AggregateTransaction hash, and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` in the following guide.
+4. Copy the **AggregateTransaction hash** from (2), and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` following the next guide.
 
 **********************************************
 Is it possible without aggregate transactions?

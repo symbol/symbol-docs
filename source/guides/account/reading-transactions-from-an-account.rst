@@ -9,7 +9,7 @@
 Reading transactions from an account
 ####################################
 
-Get the list of :doc:`transactions <../../concepts/transaction>` where an :doc:`account <../../concepts/account>` is involved.
+Get the list of transactions where an account is involved.
 
 *************
 Prerequisites

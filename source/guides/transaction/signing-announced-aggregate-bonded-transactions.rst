@@ -24,7 +24,7 @@ Getting into some code
 
 You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
 
-1. Create a function to cosign any AggregateBondedTransaction.
+1. Create a function to cosign any **AggregateBondedTransaction**.
 
 .. example-code::
 

@@ -9,7 +9,7 @@
 Listening to new blocks
 #######################
 
-Get notified when a new :doc:`block <../../concepts/block>` is included.
+Get notified when a new block is included.
 
 *************
 Prerequisites

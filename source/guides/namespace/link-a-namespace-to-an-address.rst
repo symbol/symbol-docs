@@ -9,7 +9,7 @@
 Linking a namespace to an address
 #################################
 
-Link a :doc:`namespace <../../concepts/namespace>` to an :doc:`account <../../concepts/account>`.
+Link a namespace to an account.
 
 *************
 Prerequisites
@@ -22,9 +22,9 @@ Prerequisites
 Getting into some code
 **********************
 
-An account can link a registered :doc:`name <../../concepts/namespace>` (namespace or subnamespace) with an :doc:`account <../../concepts/account>`.
+To make **long addresses** easier to use, an account can link a registered :doc:`name <../../concepts/namespace>` to an :doc:`account <../../concepts/account>`.
 
-1. Define the namespaceId and the address you want to link.
+Before starting, you must have registered a :doc:`namespace <../../concepts/namespace>` first. If you already have registered a namespace, define the namespace identifier and the address you want to alias.
 
 .. example-code::
 
@@ -38,7 +38,7 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Announce the AliasTransaction.
+Then, announce the **AliasTransaction** that links the namespace and the address.
 
 .. example-code::
 
@@ -51,6 +51,10 @@ An account can link a registered :doc:`name <../../concepts/namespace>` (namespa
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceAddress.sh
+        :language: bash
+        :start-after: #!/bin/sh
 
 If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
