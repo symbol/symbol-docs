@@ -9,13 +9,13 @@
 Creating a mosaic
 #################
 
-Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`.
+Tokenize an asset using mosaics.
 
 **********
 Background
 **********
 
-Mosaics can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+:doc:`Mosaics <../../concepts/mosaic>` can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 
 *************
 Prerequisites
@@ -28,9 +28,9 @@ Prerequisites
 Getting into some code
 **********************
 
-Define two transactions to create a mosaic:
+To create a mosaic, we need to define two transactions.
 
-1. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to create the mosaic, with the following properties:
+1. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to select the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
 .. _mosaic-properties:
 
@@ -55,7 +55,7 @@ Define two transactions to create a mosaic:
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the supply. We are going to create 1.000.000 mosaic units.
+2. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**. We are going to create **1.000.000** mosaic units.
 
 .. example-code::
 
@@ -69,9 +69,9 @@ Define two transactions to create a mosaic:
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: NEM mainly works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has divisibility 2, to create 10 units (relative) you should define 1000 (absolute) instead.
+NEM mainly works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
-3. Both transactions can be announced together using an :ref:`AggregateTransaction <aggregate-transaction>`.
+3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 

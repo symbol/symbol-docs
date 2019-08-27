@@ -20,11 +20,11 @@ A namespace starts with a name that you choose, similar to an internet domain na
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
+On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to identify and organize assets.
 
-You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``.
+You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
 
-Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespaces has the same duration as its parent namespace.
+Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
 *****
 Alias

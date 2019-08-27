@@ -2,7 +2,7 @@
 Node
 ####
 
-The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
+The NEM blockchain platform is built from a **network of nodes**. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
 
 .. figure:: ../resources/images/diagrams/four-layer-architecture.png
     :width: 500px
@@ -10,7 +10,7 @@ The NEM blockchain platform is built from a network of nodes. These nodes provid
 
     Catapult’s Performance Advantage: A Four-Layered Architecture
 
-The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
+The **four-layered architecture** allows developers to update any of these tiers without disrupting the others, which improves security.
 
 *********
 Peer node

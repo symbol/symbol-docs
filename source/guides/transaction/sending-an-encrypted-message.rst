@@ -25,9 +25,9 @@ Background
 
 Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
-Alice knows that sending a TransferTransaction with a plain message through the public network will make the content of the message publicly available.
+Alice knows that sending a TransferTransaction with a **plain message** through the public network will make the content of the message publicly available.
 
-Thus, Alice sends an encrypted message that is only readable by herself and those with access to the academic certificate.
+Thus, Alice sends an **encrypted message** that is only readable by herself and those with access to the academic certificate.
 
 **********************
 Getting into some code
@@ -54,7 +54,7 @@ Getting into some code
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 
-2. Create an encrypted message for the certificate, signing it with Alice's account.
+2. Create an **encrypted message** for the certificate, signing it with Alice's account.
 
 .. example-code::
 
@@ -64,7 +64,7 @@ Getting into some code
         :end-before: /* end block 01 */
 
 
-3. Attach the encrypted message to a TransferTransaction, setting the certificate address as the recipient.
+3. Attach the encrypted message to a **TransferTransaction**, setting the certificate address as the recipient.
 
 .. example-code::
 
@@ -93,7 +93,7 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-6. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now decrypt the message using either the certificate account or address account.
+6. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
 

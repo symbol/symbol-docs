@@ -9,7 +9,7 @@
 Getting a block by height
 #########################
 
-Get the :doc:`block <../../concepts/block>` information given a height.
+Get the block information given a height.
 
 *************
 Prerequisites

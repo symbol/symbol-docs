@@ -25,7 +25,7 @@ Imagine a ticket vendor sending tickets to their customers on the NEM blockchain
 
     Recognizable mosaics and addresses
 
-To ensure the transactions are being sent to the correct place with the correct mosaic, you can directly query the network about the current mosaic identifier behind a namespace by running the following snippet:
+To ensure the transactions are being sent to the correct place with the correct mosaic, you can directly query the network about the **current mosaic identifier behind a namespace** by running the following snippet:
 
 .. example-code::
 
@@ -34,13 +34,13 @@ To ensure the transactions are being sent to the correct place with the correct 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-However, the same method cannot be used to verify transactions of the past. This is due to the facts that:
+However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
 
 * Transactions using aliased mosaics or accounts are stored in the blockchain using the namespace identifier, not the real address or mosaic id behind it.
 * Links are editable. The namespace owner can link its namespace to another asset.
 * Namespaces expire. The namespace link could be deleted.
 
-At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`. For each block, Catapult nodes store receipts that contain every invisible state change that cannot be retrieved directly from the transaction or block header.
+At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`. For each block, Catapult nodes store receipts that contain every **invisible state change** that cannot be retrieved directly from the transaction or block header.
 
 *************
 Prerequisites
@@ -53,9 +53,9 @@ Prerequisites
 Getting into some code
 **********************
 
-In this example, we are going to announce a TransferTransaction using ``cat.currency`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the block height where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
+In this example, we are going to announce a **TransferTransaction** using ``cat.currency`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
 
-1. Define the mosaic you want to send. Use a linked namespace identifier (e.g. cat.currency) instead of the mosaic identifier.
+1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. cat.currency) instead of the mosaic identifier.
 
 .. example-code::
 
@@ -64,7 +64,7 @@ In this example, we are going to announce a TransferTransaction using ``cat.curr
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Attach the mosaic to a TransferTransaction.
+2. Attach the mosaic to a **TransferTransaction**.
 
 .. example-code::
 
@@ -73,7 +73,7 @@ In this example, we are going to announce a TransferTransaction using ``cat.curr
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Announce the TransferTransaction, and wait until it is confirmed.
+3. Announce the **TransferTransaction**, and wait until it is confirmed.
 
 .. example-code::
 
@@ -82,7 +82,7 @@ In this example, we are going to announce a TransferTransaction using ``cat.curr
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Then, retrieve the receipts attached to the block where the receipt was confirmed. The RxJs filters will look for the namespace resolution inside the mosaicResolutionStatements collection.
+4. Then, retrieve the receipts attached to the block where the receipt was confirmed. The **RxJs filters** will look for the namespace resolution inside the ``mosaicResolutionStatements`` collection.
 
 .. example-code::
 
@@ -107,4 +107,4 @@ The receipt source ``primaryId`` references the transaction where the alias firs
 What is next?
 *************
 
-Receipts do not only store resolutions for aliases, but also every invisible state change that is not directly retrievable from transactions or the block header. You can check under the :doc:`receipts documentation <../../concepts/receipt>` the complete list of changes logged.
+Receipts do not only store resolutions for aliases, but also every invisible state change that is not directly retrievable from transactions or the block header. You can check under the :doc:`receipts documentation <../../concepts/receipt>` the **complete list of changes logged**.

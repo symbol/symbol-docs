@@ -4,7 +4,7 @@ Mosaic
 
 Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
 
-A mosaic could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
+A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
 **********
 Properties
@@ -31,9 +31,9 @@ Each mosaic has a unique identifier and a set of configurable properties. During
 Absolute and relative amounts
 *****************************
 
-NEM works with absolute amounts, removing the comma when the mosaic can be divisible. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+NEM works with **absolute amounts**, removing the comma when the mosaic can be divisible. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
-For example, if the mosaic has divisibility 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
+For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
 
 ****
 Cost

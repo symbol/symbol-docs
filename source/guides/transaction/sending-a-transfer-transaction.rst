@@ -9,7 +9,7 @@
 Sending mosaics and messages between two accounts
 #################################################
 
-Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two accounts.
+Transfer mosaics and messages between two accounts.
 
 *************
 Prerequisites
@@ -57,7 +57,7 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 Getting into some code
 **********************
 
-1. Create the TransferTransaction, including Bob address as the recipient and ``10 cat.currency``.
+1. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 cat.currency``.
 
 .. example-code::
 

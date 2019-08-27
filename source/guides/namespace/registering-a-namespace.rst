@@ -9,17 +9,17 @@
 Registering a namespace
 ########################
 
-Register your own :doc:`namespace <../../concepts/namespace>`.
+Create a unique place for your assets.
 
 **********
 Background
 **********
 
-Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
+:doc:`Namespaces <../../concepts/namespace>` allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
 
-A namespace starts with a name that you choose, similar to an internet domain name. If one :doc:`account <../../concepts/account>` creates a namespace, that will appear as unique in the network.
+A namespace starts with a name you choose, similar to an internet domain name. If one :doc:`account <../../concepts/account>` creates a namespace, this will appear as unique in the network.
 
-An account can link a registered name (namespace or subnamespace) with an :doc:`account <../../concepts/account>` or a :doc:`mosaic <../../concepts/mosaic>` identifier.
+An account can use the registered namespaces to alias :doc:`addresses <../../concepts/account>` or :doc:`mosaics <../../concepts/mosaic>` identifiers.
 
 *************
 Prerequisites
@@ -32,9 +32,10 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Choose a name you like. One common option is to use your company's or own name. In this example, we will register a namespace called ``foo``.
+1. Choose a **unique name** for your namespace. One common option is to use your company's or own name.
+For this example, we are going to register a namespace named ``foo``.
 
-2. Check if this namespace name is available.
+2. Check if your namespace name is **available**.
 
 .. example-code::
 
@@ -54,7 +55,7 @@ Getting into some code
 
 3. Is the namespace available? Try to register it before someone else does it! Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-transaction>` with the chosen name and renting duration expressed in blocks.
 
-.. note:: A new block completes every ``15`` seconds on average. You will have to renew your namespace before it expires.
+.. note:: A new block completes every ``15`` seconds on average. Also, the maximum duration you can register a namespace for is ``a year``.
 
 .. example-code::
 
@@ -71,6 +72,8 @@ Getting into some code
     .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
         :language: bash
         :start-after: #!/bin/sh
+
+To keep the ownership of your namespace, you will have to :doc:`extend its duration before it expires <extending-a-namespace-registration-period>`.
 
 ************
 What's next?

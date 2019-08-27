@@ -9,7 +9,7 @@
 Extending a namespace registration period
 #########################################
 
-Extend a :doc:`namespace <../../concepts/namespace>` registration period.
+Extend a namespace registration period.
 
 **********
 Background

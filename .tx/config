@@ -349,21 +349,15 @@ source_file = build/gettext/guides/namespace/extending-a-namespace-registration-
 source_lang = en
 type = PO
 
-[nem2docs.guides--transaction--asking-for-mosaics-with-aggregate-bonded-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.po
-source_file = build/gettext/guides/transaction/asking-for-mosaics-with-aggregate-bonded-transaction.pot
-source_lang = en
-type = PO
-
 [nem2docs.guides--transaction--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
 source_file = build/gettext/guides/transaction/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--transaction--creating-an-escrow-with-aggregate-bonded-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.po
-source_file = build/gettext/guides/transaction/creating-an-escrow-with-aggregate-bonded-transaction.pot
+[nem2docs.guides--transaction--creating-an-escrow-contract-with-aggregate-bonded-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/creating-an-escrow-contract-with-aggregate-bonded-transaction.po
+source_file = build/gettext/guides/transaction/creating-an-escrow-contract-with-aggregate-bonded-transaction.pot
 source_lang = en
 type = PO
 
@@ -391,9 +385,9 @@ source_file = build/gettext/guides/transaction/sending-an-encrypted-message.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--transaction--sending-payouts-with-aggregate-complete-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-payouts-with-aggregate-complete-transaction.po
-source_file = build/gettext/guides/transaction/sending-payouts-with-aggregate-complete-transaction.pot
+[nem2docs.guides--transaction--sending-multiple-transactions-together-with-aggregate-complete-transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transaction/sending-multiple-transactions-together-with-aggregate-complete-transaction.po
+source_file = build/gettext/guides/transaction/sending-multiple-transactions-together-with-aggregate-complete-transaction.pot
 source_lang = en
 type = PO
 
