@@ -169,13 +169,11 @@ HashLockTransaction
 
 Lock funds with a HashLockTransaction before sending an :ref:`AggregateBondedTransaction<aggregate-transaction>`. This transaction prevents spamming the partial cache with transactions that never will complete.
 
-After enough funds are locked, the AggregateTransaction can be announced and added into the partial transactions cache.
+After enough funds are locked (``10 cat.currency`` by default), the AggregateTransaction can be announced and added into the partial transactions cache.
 
-.. note:: It's not necessary to sign the aggregate and its HashLockTransaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a HashLockTransaction, he can ask Alice to send the hash lock funds transaction sharing the signed AggregateTransaction hash.
+.. note:: It's not necessary to sign the aggregate and its HashLockTransaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a HashLockTransaction, he can ask Alice to send the hash lock funds transaction for him sharing the signed AggregateTransaction hash.
 
-Upon completion of the aggregate, the locked funds become available in the account that signed the initial HashLockTransaction.
-
-If the AggregateBondedTransaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
+Upon completion of the aggregate, the locked funds become available in the account that signed the initial HashLockTransaction. If the AggregateBondedTransaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
 
 **Version**: 0x01
 
