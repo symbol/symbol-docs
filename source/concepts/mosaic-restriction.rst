@@ -170,7 +170,7 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
     restrictionKey; uint64; Restriction key.
     targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address being restricted.
     previousRestrictionValue; uint64; Previous restriction value.

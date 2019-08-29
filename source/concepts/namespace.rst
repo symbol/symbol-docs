@@ -150,11 +150,11 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
+    namespaceType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
     parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
-    id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
-    nameSize; uint8; Namespace name size in bytes.
+    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+    namespaceNameSize; uint8; Namespace name size in bytes.
     name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
 
@@ -229,5 +229,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Unlink alias.
-    0x01; Link alias.
+    0x00; Link alias.
+    0x01; Unlink alias.

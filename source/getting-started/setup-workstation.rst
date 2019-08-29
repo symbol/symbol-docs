@@ -23,7 +23,7 @@ You are going to run a private chain for learning purposes using |catapult-servi
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.6.0.1
     cd catapult-service-bootstrap
     ./cmds/start-all -d
 
@@ -51,7 +51,7 @@ The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonl
 
 .. code-block:: bash
 
-    sudo npm install --global nem2-cli
+    npm install --global nem2-cli@0.13.0
 
 2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
 
@@ -107,7 +107,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install nem2-sdk@0.13.1 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -136,7 +136,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install nem2-sdk@0.13.1 rxjs
 ..
     .. tab:: Java
 

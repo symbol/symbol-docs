@@ -115,6 +115,6 @@ Serialization of an entity. An entity could be a block, a :doc:`transaction <tra
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signerPublicKey; :schema:`Key <types.cats#L11>`; Public key of the signer of the entity.
+    signer; :schema:`Key <types.cats#L11>`; Public key of the signer of the entity.
     version; uint16; Version of the structure.
     type; uint16; Entity type.

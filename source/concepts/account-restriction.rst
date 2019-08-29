@@ -251,5 +251,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Remove account restriction value.
-    0x01; Add account restriction value.
+    0x00; Add account restriction value.
+    0x01; Remove account restriction value.
