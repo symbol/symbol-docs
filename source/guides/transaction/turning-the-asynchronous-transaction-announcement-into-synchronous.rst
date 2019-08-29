@@ -23,9 +23,9 @@ As a result, the developer does not have to wait until the server returns a resp
 
 On the other hand, keeping track of transactions status adds unnecessary complexity to small projects. It also increases the difficulty when migrating from NIS1.
 
-**nem2-camel** aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When it detects a transaction announcement, it waits for the confirmation via :ref:`WebSockets<websockets>` and returns the message to the HTTP call.
+**nem2-camel** aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When nem2-camel detects a transaction announcement, it waits for the confirmation via :ref:`WebSockets<websockets>` and returns the message to the HTTP call.
 
-.. note:: The function ``TransactionHttp.announceSync`` allows announcing transactions synchronously when using  nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+.. note:: The function ``TransactionHttp.announceSync()`` allows announcing transactions synchronously when using nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
 .. figure:: ../../resources/images/diagrams/nem2-camel-proxy.png
     :align: center
@@ -54,7 +54,7 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
     git clone git@github.com:tech-bureau/catapult-service-bootstrap.git
     cd catapult-service-bootstrap
-    docker-compose up
+    ./cmds/start-all -d
 
 2. If everything goes well, after the image has been downloaded and the service is running, check if you can get the first block information:
 
@@ -114,7 +114,7 @@ Sending the TransferTransaction
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-It is important to highlight that this transaction has an ``unconfirmed`` status. You might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before doing additional actions.
+The transaction has an ``unconfirmed`` status. You might still need to :doc:`wait  for several confirmations <../../concepts/transaction>` before doing additional actions.
 
 In case the Catapult REST server throws an error, the subscribe method will invoke the ``error function`` returning a ``TransactionStatus`` object.
 

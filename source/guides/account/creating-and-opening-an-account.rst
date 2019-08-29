@@ -5,11 +5,11 @@
     :excerpt: 1
     :nocomments:
 
-###############################
-Creating and opening an account
-###############################
+###################
+Creating an account
+###################
 
-Create a new :doc:`account <../../concepts/account>` and open it.
+Set up a new NEM account.
 
 *************
 Prerequisites
@@ -21,7 +21,10 @@ Prerequisites
 Getting into some code
 **********************
 
-An account is a key pair (private and public key) associated with a mutable state stored in the NEM blockchain.
+Creating an account
+===================
+
+Run the following code snippet to create an account.
 
 .. example-code::
 
@@ -43,7 +46,7 @@ The **private key** uniquely identifies a NEM account and holds all of its power
 
 The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
 
-If you already have a private key, it is not necessary to generate a new account:
+If you already have a private key, you can use it to define a new ``Account`` object.
 
 .. example-code::
 
@@ -57,11 +60,13 @@ If you already have a private key, it is not necessary to generate a new account
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-**Using a Wallet**
+Creating a wallet
+=================
 
-If the programming language of the SDK you are using allows client-side development, you can create a  wallet.
+If the programming language of the SDK you are using allows **client-side** development, you will be able to create a wallet.
+A **wallet** enables you to store your account to sign transactions, **encrypting your private key** with a password.
 
-A wallet enables you to store your account to sign transactions, encrypting your private key with a password.
+Run the following code snippet to create an account.
 
 .. example-code::
 
@@ -79,7 +84,7 @@ A wallet enables you to store your account to sign transactions, encrypting your
         :language: bash
         :start-after: #!/bin/sh
 
-Do you have a private key? You can create and open a wallet importing your private key.
+Do you have a private key? You can create and open a wallet importing a private key.
 
 .. example-code::
 

@@ -17,7 +17,7 @@ Background
 
 Imagine you are a company using the public chain to certify the quality of your products.
 
-When the quality verification process concludes, an operator sends a :doc:`quality seal <../../concepts/mosaic>` to the product account, which the customers can review by scanning a QR code. For the convenience of the customers, you only want to show relevant transactions and prevent spam from cluttering the product account.
+When the quality verification process concludes, an operator sends a :doc:`quality seal <../../concepts/mosaic>` to the product account, which the customers can review by scanning a QR code. For the convenience of the customers, you only want to **show relevant transactions** and prevent spam from cluttering the product account.
 
 The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
@@ -85,7 +85,7 @@ By default, when there is no restriction set, all the accounts in the network ca
 
 Returning to our previous example, let us imagine that you want to configure the product account to only accept receiving transactions  that come from the company's account. You might take the following steps to do so:
 
-1. Define the account restriction modification. Add to the company’s address ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list.
+1. Define the **AccountRestrictionModification**. Add to the company’s address ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list.
 
 .. example-code::
 
@@ -94,7 +94,7 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountRestrictionTransaction``, with restrictionType "AllowAddress".  Add to the array the modification created in the previous step.
+2. Create an **AccountRestrictionTransaction**, with restrictionType ``AllowAddress``.  Add to the array the modification created in the previous step.
 
 .. example-code::
 
@@ -129,7 +129,7 @@ In this case, it might be useful if the product could only receive seals and not
 
 Thus, you could narrow the type of transactions that the product can receive from the company's account through the use of negation. Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain ``company.share``. This is how it can be done:
 
-1. Define the account restriction modification. Add the mosaic id you want to block to the blocked list.
+1. Define the **AccountRestrictionModification**. Add the mosaic id you want to block to the blocked list.
 
 .. example-code::
 
@@ -138,7 +138,7 @@ Thus, you could narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountRestrictionTransaction``, with restrictionType ``BlockMosaic``.  Add to the array the modification created in the previous step.
+2. Create an **AccountRestrictionTransaction**, with restrictionType ``BlockMosaic``.  Add to the array the modification created in the previous step.
 
 .. example-code::
 
@@ -163,7 +163,7 @@ Removing a restriction
 
 After the company sells the product to the final client, they want to remove the condition that only allowed the company's account to send transactions to the product. The account restrictions can be removed as easily as they were set up:
 
-1. Define the account restriction modification. Remove from the allowed list the company's address.
+1. Define the **AccountRestrictionModification**. Remove from the allowed list the company's address.
 
 .. example-code::
 
@@ -172,7 +172,7 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an ``AccountRestrictionTransaction``, setting the type ``AllowAddress``. Add as well the modification created.
+2. Create an **AccountRestrictionTransaction**, setting the type ``AllowAddress``. Add as well the modification created.
 
 .. example-code::
 

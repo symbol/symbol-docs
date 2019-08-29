@@ -9,7 +9,7 @@
 Sending a multisig transaction
 ##############################
 
-Send a transaction involving a :doc:`multisig <../../concepts/multisig-account>` account.
+Send a transaction involving a multisig account.
 
 **********
 Background
@@ -113,7 +113,7 @@ An AggregateTransaction is **complete** if before announcing it to the network, 
 2-of-2 signatures required
 ==========================
 
-What would have happened if the account was a 2-of-2 multisig instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
+What would have happened if the account was a **2-of-2 multisig** instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
 
 .. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
     :align: center
@@ -121,13 +121,13 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
 
     Sending an AggregateBondedTransaction
 
-1. Open a new terminal to :doc:`monitor <../transaction/monitoring-a-transaction-status>` the AggregateBondedTransaction.
+1. Open a new terminal to :doc:`monitor <../transaction/monitoring-a-transaction-status>` the **AggregateBondedTransaction**.
 
 .. code-block:: bash
 
     nem2-cli monitor aggregatebonded --address <your-address-here>
 
-2. Modify the previous code, defining the transaction as ``aggregate bonded``.
+2. Modify the previous code, defining the transaction as  **bonded**.
 
 .. example-code::
 
@@ -141,7 +141,7 @@ What would have happened if the account was a 2-of-2 multisig instead of a 1-of-
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. When an AggregateTransaction is bonded, Bob needs to lock at least ``10`` cat.currency to avoid network spamming. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
+3. When an AggregateTransaction is bonded, Bob needs to **lock at least 10 cat.currency** to prevent spamming the network. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 

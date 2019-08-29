@@ -10,7 +10,7 @@
 Converting an account to multisig
 #################################
 
-Create a 1-of-2 :doc:`multisig account<../../concepts/multisig-account>`.
+Create a 1-of-2 multisig account.
 
 **********
 Background
@@ -68,7 +68,7 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the MultisigAccountModificationTransaction. This is necessary since Alice and Bob must opt-in to become cosignatories of the new multisig account.
+3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**. This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
 
@@ -82,7 +82,7 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Sign the AggregateTransaction using the private key of the multisig account.
+4. Sign the **AggregateTransaction** using the private key of the multisig account.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
@@ -98,7 +98,7 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Before sending an AggregateBondedTransaction, the future multisig account needs to :ref:`lock <hash-lock-transaction>` at least ``10`` cat.currency. This transaction is required to prevent network spamming and ensure that the inner transactions are cosigned. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
+5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 
@@ -145,4 +145,4 @@ Getting into some code
 What's next?
 ************
 
-Modify the multisig account you just created, converting it into a 2-of-2 multisig following :doc:`the next guide <modifying-a-multisig-account>`.
+Modify the multisig account you just created, converting it into a **2-of-2 multisig** following :doc:`the next guide <modifying-a-multisig-account>`.

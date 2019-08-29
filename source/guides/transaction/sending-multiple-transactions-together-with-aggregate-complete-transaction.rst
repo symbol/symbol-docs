@@ -9,14 +9,15 @@
 Sending multiple transactions together
 ######################################
 
-Send transactions to different accounts atomically, using an :ref:`AggregateCompleteTransaction <aggregate-transaction>`.
+Send transactions to different accounts at the same time, using aggregate transactions.
 
 **********
 Background
 **********
 
-Dan wants to send mosaics to Alice and Bob. He chooses to send an AggregateCompleteTransaction, so both will receive the funds at the same time.
+Dan wants to send mosaics to Alice and Bob. He could achieve this sending a couple of **TransferTransactions**.
 
+However, to make sure Alice and Bob receive the funds at the same time, we are going to define an :ref:`AggregateTransaction <aggregate-transaction>`.
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
@@ -35,9 +36,8 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Create two :ref:`TransferTransaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`AggregateTransaction <aggregate-transaction>`.
-
-As one private key can sign all the transactions in the aggregate, define the aggregate as *complete*. That means that there is no need to lock funds to send the transaction. If valid, it will be accepted by the network.
+1. Define two :ref:`TransferTransaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`AggregateTransaction <aggregate-transaction>`.
+As one private key can sign all the transactions in the aggregate, we can define the transaction as *complete*.
 
 .. example-code::
 

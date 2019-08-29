@@ -27,8 +27,6 @@ You are going to run a private chain for learning purposes using |catapult-servi
     cd catapult-service-bootstrap
     ./cmds/start-all -d
 
-.. note:: Is catapult service bootstrap not working? Check |catapult-service-bootstrap-known-issues|.
-
 2. Check if you can get the first block information:
 
 .. code-block:: bash
@@ -41,13 +39,13 @@ You are going to run a private chain for learning purposes using |catapult-servi
 Getting a test account
 **********************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the **private key** has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
+Finally, the account **address** is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
-:doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
+The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
 1. Install NEM2-CLI using ``npm``.
 
@@ -111,7 +109,7 @@ Create a folder for your new project and run the instructions for the selected l
 
             npm install nem2-sdk rxjs
 
-        3. nem2-sdk is built with TypeScript language. It is recommended to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -199,10 +197,6 @@ Continue: :doc:`Writing your first application <first-application>`.
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
-
-.. |catapult-service-bootstrap-known-issues| raw:: html
-
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap#known-issues" target="_blank">these troubleshooting tips</a>
 
 .. |different-ways-to-install-a-nuget-package| raw:: html
 

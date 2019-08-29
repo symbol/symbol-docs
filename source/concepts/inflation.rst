@@ -8,15 +8,15 @@ Catapult engine supports increasing the native currency supply as time passes. T
 Distribution
 ************
 
-Networks with inflation configured can increase the currency mosaic **per block**. In this case, the block reward includes the mosaics created due to inflation. The :doc:`harvester <harvesting>` collects the newly created mosaics, sharing them with the beneficiary when set.
+Networks with inflation configured can **increase the currency mosaic per block**. In this case, the block reward includes the mosaics created due to inflation. The :doc:`harvester <harvesting>` collects the newly created mosaics, sharing them with the beneficiary when set.
 
-The block creating currency mosaics record an inflation receipt. The receipt gathers the amount of mosaics created.
+The block creating currency mosaics record an :doc:`inflation receipt <receipt>`, listing the amount of mosaics created.
 
 *************
 Configuration
 *************
 
-The :properties:`minimum amount <config-inflation.properties>` defines the amount of currency mosaics created per block. Besides, the incrementing ratio can vary depending on the block height. The last height determines the amount of inflation per block that will be created from then on.
+The :properties:`starting-at-height-1 <config-inflation.properties>` property defines the amount of currency mosaics created per block. Besides, the incrementing ratio can vary depending on the block height. The last height determines the amount of inflation per block that will be created from then on.
 
 .. code-block:: bash
 

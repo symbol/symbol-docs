@@ -9,7 +9,7 @@
 Getting the account information
 ###############################
 
-Get the public key and balance of an :doc:`account <../../concepts/account>`.
+Get the public key and balance of an account.
 
 *************
 Prerequisites
