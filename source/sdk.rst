@@ -33,7 +33,7 @@ Read the |protocol-compatibility-report| to know more about the status of each p
     Dart SDK ; |dart-repo| ;
     C# SDK ; |csharp-repo| ;
     Go SDK ; |go-repo| ;
-    Java SDK; |java-repo|; |java-reference|
+    Java SDK; |java-repo|;
     Swift SDK ; |swift-repo| ;
     C++ ;  ;
     PHP SDK ;  ;
@@ -54,10 +54,6 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
     <a href="https://github.com/nemtech/nem2-sdk-java" target="_blank">Repository</a>
 
-.. |java-reference| raw:: html
-
-    <a href="https://nemtech.github.io/nem2-sdk-java/" target="_blank">Documentation</a>
-
 .. |csharp-repo| raw:: html
 
     <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">Repository</a>
@@ -76,5 +72,5 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
 .. |protocol-compatibility-report| raw:: html
 
-    <a href="https://github.com/nemtech/community/blob/master/projects-status.md#protocol-version-compatibilities/" target="_blank">protocol compatibility report</a>
+    <a href="https://github.com/nemtech/community/blob/master/projects-status.md" target="_blank">protocol compatibility report</a>
 
