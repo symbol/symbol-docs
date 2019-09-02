@@ -31,8 +31,6 @@ def clean_entity(entity):
         .lstrip() \
         .replace('DEFINE_', '') \
         .replace('_RESULT', '') \
-        .replace('HASH_LOCK', 'LOCK_HASH') \
-        .replace('SECRET_LOCK', 'LOCK_SECRET') \
         .lower() \
         .replace('_', ' ')\
         .title() \

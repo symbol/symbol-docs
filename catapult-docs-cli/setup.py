@@ -11,7 +11,7 @@ setup(
     url='https://github.com/nemtech/catapult-docs-cli',
     license='MIT',
     author='dgarcia360',
-    author_email='david@nemeurope.eu',
+    author_email='david@nem.foundation',
     description='Exports some documentation from catapult code into reStructuredText tables.',
     long_description=__doc__,
     packages=find_packages(exclude=['tests']),

@@ -1,16 +1,20 @@
-# catapult docs cli
+# catapult-docs-cli
 
 Exports some documentation from catapult code into reStructuredText tables.
 
 The generated tables are used in the [NEM Developer Center](http://nemtech.github.io).
 
-# Installation
+## Installation
 
-    $ pip install .
+```
+pip install .
+```
 
-# Usage    
-    
+## Usage 
+   
+```  
 catapult-docs-cli COMMAND [OPTIONS]
+```
 
 | Command               | Description                                         |
 |-----------------------|-----------------------------------------------------|
@@ -26,27 +30,33 @@ catapult-docs-cli COMMAND [OPTIONS]
 | -s, --rest TEXT       | The catapult-rest folder path.                      |
 | --help                | Show this message and exit.                         |
 
-# Examples
+## Examples
     
-## Generate catapult-server properties docs
+### Generate catapult-server properties docs
 
-``catapult-docs-cli properties --config .catdocs --server catapult-server/``
+```
+catapult-docs-cli properties --config .catdocs --server catapult-server/
+```
 
-## Generate catapult-rest status-errors docs
 
-``catapult-docs-cli status-errors --config .catdocs --server catapult-server/ --rest catapult-rest/``
+### Generate catapult-rest status-errors docs
+
+```
+catapult-docs-cli status-errors --config .catdocs --server catapult-server/ --rest catapult-rest/
+```
     
-## Export generated docs to a file
+### Export generated docs to a file
 
-``catapult-docs-cli properties > properties.rst``
+```
+catapult-docs-cli properties > properties.rst
+```
 
-## Compare differences between two versions
+### Compare differences between two versions
 
-``diff properties_bison.rst properties_cow.rst``
+```
+diff properties_bison.rst properties_cow.rst``
+```
 
-
-# License
+## License
 
 [MIT License](LICENSE.md)
-
-
