@@ -54,7 +54,7 @@ catapult-docs-cli properties > properties.rst
 ### Compare differences between two versions
 
 ```
-diff properties_bison.rst properties_cow.rst``
+diff properties_bison.rst properties_cow.rst
 ```
 
 ## License
