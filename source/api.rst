@@ -2,7 +2,7 @@
 REST API
 ########
 
-**Catapult REST** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+The **REST server** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
 
 ************
 Installation
@@ -10,7 +10,43 @@ Installation
 
 **Repository**: |catapult-rest|
 
-Test catapult-rest deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
+.. note:: catapult-rest is already included in |catapult-service-bootstrap|. Follow the :doc:`package's installation instructions <getting-started/setup-workstation>` to deploy a network for development or learning purposes.
+
+To install catapult-rest from scratch, you will need:
+
+- NodeJS version 8 or 9
+- |yarn| dependency manager
+- |catapult-server| configured as an :doc:`API node <server>`.
+
+1. Edit ``rest/resources/rest.json`` configuration:
+
+.. csv-table::
+    :header: "Parameter", "Description", "Example"
+    :widths: 20 40 40
+    :delim: ;
+
+    clientPrivateKey; REST client private key.;  000...000
+    db.url;  MongoDB :properties:`connection URL <config-database.properties#L3>`; mongodb://localhost:27017/
+    apiNode.host; API node connection host.; 127.0.0.1
+    apiNode.port; API node :properties:`connection port <config-database.properties#L3>`.; 7900
+    api.publicKey; API node :properties:`public key <config-user.properties#L4>`.; FFFF...FFF
+    websocket.mq.host; ZeroMQ connection host.;  127.0.0.1
+    websocket.mq.port; ZeroMQ :properties:`connection port <config-messaging.properties#L3>`. ; 7902
+
+.. note:: Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you are running catapult-server on a VPS, you can bind the ports to your local development environment creating an **SSH tunnel**: ``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 <USER>@<VPS_IP>``
+
+2. Install the project's dependencies:
+
+.. code-block:: bash
+
+    ./yarn_setup.sh
+
+3. Run catapult-rest:
+
+.. code-block:: bash
+
+    cd rest
+    yarn start resources/rest.json
 
 .. _http-requests:
 
@@ -295,6 +331,10 @@ An open source HTTP client, available for Mac, Windows and Linux.
 
 2. Import the |insomnia-spec| for NEM.
 
+.. |yarn| raw:: html
+
+    <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
+
 .. |insomnia-app| raw:: html
 
     <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
@@ -306,6 +346,10 @@ An open source HTTP client, available for Mac, Windows and Linux.
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+
+.. |catapult-server| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
 
 .. |catapult-rest| raw:: html
 
