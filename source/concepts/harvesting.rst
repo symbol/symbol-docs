@@ -84,7 +84,7 @@ AccountLinkTransaction
 
 Announce an AccountLinkTransaction to delegate the account importance to a proxy account. By doing so, you can enable delegated harvesting.
 
-In order for the proxy account to be accepted as the ``remoteAccountKey`` for delegated harvesting, it needs to meet the following conditions:
+In order for the proxy account to be accepted as the ``remotePublicKey`` for delegated harvesting, it needs to meet the following conditions:
 
 * It cannot own any mosaics.
 * It cannot be a cosignatory of any other account.
@@ -109,7 +109,7 @@ Furthermore, for the duration that the account is used as a delegated account, i
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    remoteAccountKey; :schema:`Key <types.cats#L11>`; Remote account public key.
+    remotePublicKey; :schema:`Key <types.cats#L11>`; Remote account public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _link-action:
@@ -123,5 +123,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Link account.
-    0x01; Unlink account.
+    0x00; Unlink account.
+    0x01; Link account.
