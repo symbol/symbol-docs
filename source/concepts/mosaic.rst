@@ -25,8 +25,6 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
     Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
 
-=======
-
 *****************************
 Absolute and relative amounts
 *****************************
@@ -35,11 +33,13 @@ NEM works with **absolute amounts**, removing the comma when the mosaic can be d
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
 
-****
-Cost
-****
+**********
+Rental fee
+**********
 
-The cost of creating a mosaic is :properties:`configurable per network <config-network.properties>`. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
+Accounts willing to create a mosaic pay a :ref:`transaction fee <fee>` to support the network, and an extra rental fee. The fees are deducted from the account's balance after announcing a valid **MosaicDefinitionTransaction**.
+
+By default, registering a mosaic has an associated :properties:`configurable cost <config-network.properties>` of ``500 cat.currency``. The **network dynamically adjusts the mosaic rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 *******
 Example

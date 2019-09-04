@@ -56,6 +56,8 @@ Calculation
 
 The importance can be calculated for each account in the following manner:
 
+.. math::
+
     (1 - a) * (S') + a * || p / (S') * (t * (T') + n * (N')) ||
 
 The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low. Conversely, the multiplier effect is insignificant when Stake Score is high.

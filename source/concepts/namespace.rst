@@ -74,11 +74,23 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
 
-****
-Cost
-****
+**********
+Rental fee
+**********
 
-The cost of creating a namespace is :properties:`configurable per network <config-network.properties>`. By default, registering a namespace costs ``1 cat.currency per block`` plus transactions fees. Registering a subnamespace has a fixed cost of ``100 cat.currency`` plus transaction fees.
+Accounts willing to register a namespace pay a :ref:`transaction fee <fee>` to support the network, and an extra rental fee. The fees are deducted from the account's balance after announcing a valid **NamespaceRegistrationTransaction**.
+
+The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
+
+.. csv-table::
+    :header: "Property", "Value"
+    :delim: ;
+
+    Registering a namespace; ``1 cat.currency`` per block
+    Extending a namespace duration; ``1 cat.currency`` per block
+    Creating a subnamespace; ``100 cat.currency``
+
+The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 *******
 Example
@@ -156,7 +168,6 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
     namespaceNameSize; uint8; Namespace name size in bytes.
     name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
-
 
 .. _address-alias-transaction:
 

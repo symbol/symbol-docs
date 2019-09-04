@@ -32,24 +32,24 @@ import sphinx_bootstrap_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
+extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
+    'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.imgmath',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'sphinx.ext.extlinks',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
     'sphinxcontrib.examplecode',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
     'edit-on-github',
     'fulltoc',
     'ablog'
-    ]
-
+]
 
 # Add any paths that contain templates here, relative to this directory.
 import ablog
