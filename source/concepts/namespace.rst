@@ -14,7 +14,7 @@ Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespa
 Name
 ****
 
-A namespace starts with a name that you choose, similar to an internet domain name. The name must appear as **unique in the network**, and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
+Namespaces function similarly to internet domains. Creating a namespace starts with choosing a name that you will use to refer to an account or asset. The name must be **unique in the network**, and may have a maximum length of ``64`` characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
 
 *************
 Subnamespaces
@@ -22,9 +22,9 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to identify and organize assets.
 
-You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
-
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
+
+You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
 
 *****
 Alias
@@ -78,7 +78,7 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
 Rental fee
 **********
 
-Accounts willing to register a namespace pay a :ref:`transaction fee <fee>` to support the network, and an extra rental fee. The fees are deducted from the account's balance after announcing a valid **NamespaceRegistrationTransaction**.
+Accounts willing to register a namespace have to pay a :ref:`transaction fee <fee>` to support the network, and an extra rental fee. The fees are deducted from the account's balance after announcing a valid **NamespaceRegistrationTransaction**.
 
 The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
 
