@@ -167,7 +167,7 @@ CosignatoryModification
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    modificationType; :ref:`CosignatoryModificationAction <cosignatory-modification-action>`; Modification Action.
+    modificationAction; :ref:`CosignatoryModificationAction <cosignatory-modification-action>`; Modification Action.
     cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Cosignatory account public key.
 
 .. _cosignatory-modification-action:
@@ -181,5 +181,5 @@ Enumeration: uint8
     :header: "Id", "Description"
     :delim: ;
 
-    0x00; Add cosignatory.
-    0x01; Remove cosignatory.
+    0x00; Remove cosignatory.
+    0x01; Add cosignatory.

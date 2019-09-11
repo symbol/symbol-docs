@@ -96,8 +96,6 @@ Announce an AccountMetadataTransaction to associate a key-value state to an acco
     valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
 
-
-
 .. _mosaic-metadata-transaction:
 
 MosaicMetadataTransaction
@@ -119,7 +117,7 @@ Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
 
     targetPublicKey; :schema:`Key <types.cats#L11>` ; Target mosaic owner public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
-    targetId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Target mosaic identifier.
+    targetMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
@@ -145,7 +143,7 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
 
     targetPublicKey; :schema:`Key <types.cats#L11>` ; Target namespace owner public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
-    targetId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
+    targetNamespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.

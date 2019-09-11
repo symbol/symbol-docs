@@ -108,12 +108,11 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicNonce; uint32; Random nonce used to generate the mosaic id.
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
-    propertiesCount; uint8; Number of elements in optional properties
+    nonce; uint32; Random nonce used to generate the mosaic id.
+    id; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
     divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
-    properties; array(:ref:`MosaicProperty <mosaic-property>`, propertiesCount); Optional mosaic properties.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic divisibility. Maximum divisibility is ``6``.
 
 .. _mosaic-supply-change-transaction:
 
@@ -137,18 +136,6 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Affected mosaic identifier.
     direction; :ref:`MosaicSupplyChangeAction<mosaic-supply-change-action>`; Supply change direction.
     delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
-
-.. _mosaic-property:
-
-MosaicProperty
-==============
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    id; uint8; Mosaic property identifier. (0x02) stands for duration.
-    value; uint64; The mosaic property value.
 
 .. _mosaic:
 

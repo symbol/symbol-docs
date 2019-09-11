@@ -115,8 +115,8 @@ The invisible state change triggered a mosaic transfer.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    sender; :schema:`Key <types.cats#L11>`; Public key of the sender.
-    recipient; :schema:`Address <types.cats#L8>`; Address of the recipient.
+    senderPublicKey; :schema:`Key <types.cats#L11>`; Public key of the sender.
+    recipientAddress; :schema:`Address <types.cats#L8>`; Address of the recipient.
     mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to send.
 
@@ -138,7 +138,7 @@ The invisible state change changed an account balance.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    account; :schema:`Key <types.cats#L11>`; Public key of the target account.
+    targetPublicKey; :schema:`Key <types.cats#L11>`; Public key of the target account.
     mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to increase or decrease.
 
