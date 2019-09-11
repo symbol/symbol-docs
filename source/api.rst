@@ -2,7 +2,7 @@
 REST API
 ########
 
-**Catapult REST** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+The **REST server** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
 
 ************
 Installation
@@ -10,7 +10,43 @@ Installation
 
 **Repository**: |catapult-rest|
 
-Test catapult-rest deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
+.. note:: catapult-rest is already included in |catapult-service-bootstrap|. Follow the :doc:`package's installation instructions <getting-started/setup-workstation>` to deploy a network for development or learning purposes.
+
+To install catapult-rest from scratch, you will need:
+
+- NodeJS version 8 or 9
+- |yarn| dependency manager
+- |catapult-server| configured as an :doc:`API node <server>`.
+
+1. Edit ``rest/resources/rest.json`` configuration:
+
+.. csv-table::
+    :header: "Parameter", "Description", "Example"
+    :widths: 20 40 40
+    :delim: ;
+
+    clientPrivateKey; REST client private key.;  000...000
+    db.url;  MongoDB :properties:`connection URL <config-database.properties#L3>`; mongodb://localhost:27017/
+    apiNode.host; API node connection host.; 127.0.0.1
+    apiNode.port; API node :properties:`connection port <config-database.properties#L3>`.; 7900
+    api.publicKey; API node :properties:`public key <config-user.properties#L4>`.; FFFF...FFF
+    websocket.mq.host; ZeroMQ connection host.;  127.0.0.1
+    websocket.mq.port; ZeroMQ :properties:`connection port <config-messaging.properties#L3>`. ; 7902
+
+.. note:: Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you are running catapult-server on a VPS, you can bind the ports to your local development environment creating an **SSH tunnel**: ``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 <USER>@<VPS_IP>``
+
+2. Install the project's dependencies:
+
+.. code-block:: bash
+
+    ./yarn_setup.sh
+
+3. Run catapult-rest:
+
+.. code-block:: bash
+
+    cd rest
+    yarn start resources/rest.json
 
 .. _http-requests:
 
@@ -137,36 +173,37 @@ This section describes the error messages that can be returned via status channe
     0x80430008; Failure_Core_Invalid_Version; Validation failed because entity version is invalid.
     0x80430009; Failure_Core_Invalid_Transaction_Fee; Validation failed because a transaction fee is invalid.
     0x8043000A; Failure_Core_Block_Harvester_Ineligible; Validation failed because a block was harvested by an ineligible harvester.
+    0x8043000B; Failure_Core_Zero_Address; Validation failed because an address is zero.
+    0x8043000C; Failure_Core_Zero_Public_Key; Validation failed because a public key is zero.
     0x81490001; Failure_Hash_Exists; Validation failed because the entity hash is already known.
     0x80530001; Failure_Signature_Not_Verifiable; Validation failed because the verification of the signature failed.
     0x804C0001; Failure_AccountLink_Invalid_Action; Validation failed because account link action is invalid.
     0x804C0002; Failure_AccountLink_Link_Already_Exists; Validation failed because main account is already linked to another account.
-    0x804C0003; Failure_AccountLink_Link_Does_Not_Exist; Validation failed because main account is not linked to another account.
+    0x804C0003; Failure_AccountLink_Unknown_Link; Validation failed because main account is not linked to another account.
     0x804C0004; Failure_AccountLink_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing account link.
     0x804C0005; Failure_AccountLink_Remote_Account_Ineligible; Validation failed because link is attempting to convert ineligible account to remote.
-    0x804C0006; Failure_AccountLink_Remote_Account_Signer_Not_Allowed; Validation failed because remote is not allowed to sign a transaction.
-    0x804C0007; Failure_AccountLink_Remote_Account_Participant_Not_Allowed; Validation failed because remote is not allowed to participate in the transaction.
+    0x804C0006; Failure_AccountLink_Remote_Account_Signer_Prohibited; Validation failed because remote is not allowed to sign a transaction.
+    0x804C0007; Failure_AccountLink_Remote_Account_Participant_Prohibited; Validation failed because remote is not allowed to participate in the transaction.
     0x80410001; Failure_Aggregate_Too_Many_Transactions; Validation failed because aggregate has too many transactions.
     0x80410002; Failure_Aggregate_No_Transactions; Validation failed because aggregate does not have any transactions.
     0x80410003; Failure_Aggregate_Too_Many_Cosignatures; Validation failed because aggregate has too many cosignatures.
     0x80410004; Failure_Aggregate_Redundant_Cosignatures; Validation failed because redundant cosignatures are present.
-    0x80410005; Failure_Aggregate_Ineligible_Cosigners; Validation failed because at least one cosigner is ineligible.
-    0x80410006; Failure_Aggregate_Missing_Cosigners; Validation failed because at least one required cosigner is missing.
+    0x80410005; Failure_Aggregate_Ineligible_Cosignatories; Validation failed because at least one cosignatory is ineligible.
+    0x80410006; Failure_Aggregate_Missing_Cosignatures; Validation failed because at least one required cosignature is missing.
     0x80480001; Failure_LockHash_Invalid_Mosaic_Id; Validation failed because lock does not allow the specified mosaic.
     0x80480002; Failure_LockHash_Invalid_Mosaic_Amount; Validation failed because lock does not allow the specified amount.
-    0x80480003; Failure_LockHash_Hash_Exists; Validation failed because hash is already present in cache.
-    0x80480004; Failure_LockHash_Hash_Does_Not_Exist; Validation failed because hash is not present in cache.
+    0x80480003; Failure_LockHash_Hash_Already_Exists; Validation failed because hash is already present in cache.
+    0x80480004; Failure_LockHash_Unknown_Hash; Validation failed because hash is not present in cache.
     0x80480005; Failure_LockHash_Inactive_Hash; Validation failed because hash is inactive.
     0x80480006; Failure_LockHash_Invalid_Duration; Validation failed because duration is too long.
     0x80520001; Failure_LockSecret_Invalid_Hash_Algorithm; Validation failed because hash algorithm for lock type secret is invalid.
-    0x80520002; Failure_LockSecret_Hash_Exists; Validation failed because hash is already present in cache.
-    0x80520003; Failure_LockSecret_Hash_Not_Implemented; Validation failed because hash is not implemented yet.
-    0x80520004; Failure_LockSecret_Proof_Size_Out_Of_Bounds; Validation failed because proof is too small or too large.
-    0x80520005; Failure_LockSecret_Secret_Mismatch; Validation failed because secret does not match proof.
-    0x80520006; Failure_LockSecret_Unknown_Composite_Key; Validation failed because composite key is unknown.
-    0x80520007; Failure_LockSecret_Inactive_Secret; Validation failed because secret is inactive.
-    0x80520008; Failure_LockSecret_Hash_Algorithm_Mismatch; Validation failed because hash algorithm does not match.
-    0x80520009; Failure_LockSecret_Invalid_Duration; Validation failed because duration is too long.
+    0x80520002; Failure_LockSecret_Hash_Already_Exists; Validation failed because hash is already present in cache.
+    0x80520003; Failure_LockSecret_Proof_Size_Out_Of_Bounds; Validation failed because proof is too small or too large.
+    0x80520004; Failure_LockSecret_Secret_Mismatch; Validation failed because secret does not match proof.
+    0x80520005; Failure_LockSecret_Unknown_Composite_Key; Validation failed because composite key is unknown.
+    0x80520006; Failure_LockSecret_Inactive_Secret; Validation failed because secret is inactive.
+    0x80520007; Failure_LockSecret_Hash_Algorithm_Mismatch; Validation failed because hash algorithm does not match.
+    0x80520008; Failure_LockSecret_Invalid_Duration; Validation failed because duration is too long.
     0x80440001; Failure_Metadata_Value_Too_Small; Validation failed because the metadata value is too small.
     0x80440002; Failure_Metadata_Value_Too_Large; Validation failed because the metadata value is too large.
     0x80440003; Failure_Metadata_Value_Size_Delta_Too_Large; Validation failed because the metadata value size delta is larger in magnitude than the value size.
@@ -182,7 +219,7 @@ This section describes the error messages that can be returned via status channe
     0x804D0065; Failure_Mosaic_Invalid_Property; Validation failed because a mosaic property is invalid.
     0x804D0066; Failure_Mosaic_Invalid_Flags; Validation failed because the mosaic flags are invalid.
     0x804D0067; Failure_Mosaic_Invalid_Divisibility; Validation failed because the mosaic divisibility is invalid.
-    0x804D0068; Failure_Mosaic_Invalid_Supply_Change_Direction; Validation failed because the mosaic supply change direction is invalid.
+    0x804D0068; Failure_Mosaic_Invalid_Supply_Change_Action; Validation failed because the mosaic supply change action is invalid.
     0x804D0069; Failure_Mosaic_Invalid_Supply_Change_Amount; Validation failed because the mosaic supply change amount is invalid.
     0x804D006A; Failure_Mosaic_Invalid_Id; Validation failed because the mosaic id is invalid.
     0x804D006B; Failure_Mosaic_Modification_Disallowed; Validation failed because mosaic modification is not allowed.
@@ -193,27 +230,27 @@ This section describes the error messages that can be returned via status channe
     0x804D0070; Failure_Mosaic_Non_Transferable; Validation failed because the mosaic is not transferable.
     0x804D0071; Failure_Mosaic_Max_Mosaics_Exceeded; Validation failed because the credit of the mosaic would exceed the maximum of different mosaics an account is allowed to own.
     0x804D0072; Failure_Mosaic_Required_Property_Flag_Unset; Validation failed because the mosaic has at least one required property flag unset.
-    0x80550001; Failure_Multisig_Modify_Account_In_Both_Sets; Validation failed because account is specified to be both added and removed.
-    0x80550002; Failure_Multisig_Modify_Multiple_Deletes; Validation failed because multiple removals are present.
-    0x80550003; Failure_Multisig_Modify_Redundant_Modifications; Validation failed because redundant modifications are present.
-    0x80550004; Failure_Multisig_Modify_Unknown_Multisig_Account; Validation failed because account is not in multisig cache.
-    0x80550005; Failure_Multisig_Modify_Not_A_Cosigner; Validation failed because account to be removed is not present.
-    0x80550006; Failure_Multisig_Modify_Already_A_Cosigner; Validation failed because account to be added is already a cosignatory.
-    0x80550007; Failure_Multisig_Modify_Min_Setting_Out_Of_Range; Validation failed because new minimum settings are out of range.
-    0x80550008; Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories; Validation failed because min settings are larger than number of cosignatories.
-    0x80550009; Failure_Multisig_Modify_Unsupported_Modification_Type; Validation failed because the modification type is unsupported.
-    0x8055000A; Failure_Multisig_Modify_Max_Cosigned_Accounts; Validation failed because the cosignatory already cosigns the maximum number of accounts.
-    0x8055000B; Failure_Multisig_Modify_Max_Cosigners; Validation failed because the multisig account already has the maximum number of cosignatories.
-    0x8055000C; Failure_Multisig_Modify_Loop; Validation failed because a multisig loop is created.
-    0x8055000D; Failure_Multisig_Modify_Max_Multisig_Depth; Validation failed because the max multisig depth is exceeded.
-    0x8055000E; Failure_Multisig_Operation_Not_Permitted_By_Account; Validation failed because an operation is not permitted by a multisig account.
+    0x80550001; Failure_Multisig_Account_In_Both_Sets; Validation failed because account is specified to be both added and removed.
+    0x80550002; Failure_Multisig_Multiple_Deletes; Validation failed because multiple removals are present.
+    0x80550003; Failure_Multisig_Redundant_Modifications; Validation failed because redundant modifications are present.
+    0x80550004; Failure_Multisig_Unknown_Multisig_Account; Validation failed because account is not in multisig cache.
+    0x80550005; Failure_Multisig_Not_A_Cosignatory; Validation failed because account to be removed is not present.
+    0x80550006; Failure_Multisig_Already_A_Cosignatory; Validation failed because account to be added is already a cosignatory.
+    0x80550007; Failure_Multisig_Min_Setting_Out_Of_Range; Validation failed because new minimum settings are out of range.
+    0x80550008; Failure_Multisig_Min_Setting_Larger_Than_Num_Cosignatories; Validation failed because min settings are larger than number of cosignatories.
+    0x80550009; Failure_Multisig_Invalid_Modification_Action; Validation failed because the modification action is invalid.
+    0x8055000A; Failure_Multisig_Max_Cosigned_Accounts; Validation failed because the cosignatory already cosigns the maximum number of accounts.
+    0x8055000B; Failure_Multisig_Max_Cosignatories; Validation failed because the multisig account already has the maximum number of cosignatories.
+    0x8055000C; Failure_Multisig_Loop; Validation failed because a multisig loop is created.
+    0x8055000D; Failure_Multisig_Max_Multisig_Depth; Validation failed because the max multisig depth is exceeded.
+    0x8055000E; Failure_Multisig_Operation_Prohibited_By_Account; Validation failed because an operation is not permitted by a multisig account.
     0x804E0001; Failure_Namespace_Invalid_Duration; Validation failed because the duration has an invalid value.
     0x804E0002; Failure_Namespace_Invalid_Name; Validation failed because the name is invalid.
     0x804E0003; Failure_Namespace_Name_Id_Mismatch; Validation failed because the name and id don't match.
     0x804E0004; Failure_Namespace_Expired; Validation failed because the parent is expired.
     0x804E0005; Failure_Namespace_Owner_Conflict; Validation failed because the parent owner conflicts with the child owner.
     0x804E0006; Failure_Namespace_Id_Mismatch; Validation failed because the id is not the expected id generated from signer and nonce.
-    0x804E0064; Failure_Namespace_Invalid_Namespace_Type; Validation failed because the namespace type is invalid.
+    0x804E0064; Failure_Namespace_Invalid_Registration_Type; Validation failed because the namespace registration type is invalid.
     0x804E0065; Failure_Namespace_Root_Name_Reserved; Validation failed because the root namespace has a reserved name.
     0x804E0066; Failure_Namespace_Too_Deep; Validation failed because the resulting namespace would exceed the maximum allowed namespace depth.
     0x804E0067; Failure_Namespace_Parent_Unknown; Validation failed because the namespace parent is unknown.
@@ -224,31 +261,30 @@ This section describes the error messages that can be returned via status channe
     0x804E006C; Failure_Namespace_Alias_Invalid_Action; Validation failed because alias action is invalid.
     0x804E006D; Failure_Namespace_Unknown; Validation failed because namespace does not exist.
     0x804E006E; Failure_Namespace_Alias_Already_Exists; Validation failed because namespace is already linked to an alias.
-    0x804E006F; Failure_Namespace_Alias_Does_Not_Exist; Validation failed because namespace is not linked to an alias.
+    0x804E006F; Failure_Namespace_Unknown_Alias; Validation failed because namespace is not linked to an alias.
     0x804E0070; Failure_Namespace_Alias_Unlink_Type_Inconsistency; Validation failed because unlink type is not consistent with existing alias.
     0x804E0071; Failure_Namespace_Alias_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing alias.
     0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
     0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type; Validation failed because the account restriction type is invalid.
-    0x80500002; Failure_RestrictionAccount_Modification_Type_Invalid; Validation failed because a modification type is invalid.
-    0x80500003; Failure_RestrictionAccount_Modification_Address_Invalid; Validation failed because a modification address is invalid.
+    0x80500002; Failure_RestrictionAccount_Invalid_Modification_Action; Validation failed because a modification action is invalid.
+    0x80500003; Failure_RestrictionAccount_Invalid_Modification_Address; Validation failed because a modification address is invalid.
     0x80500004; Failure_RestrictionAccount_Modification_Operation_Type_Incompatible; Validation failed because the operation type is incompatible. *Note*: This indicates that the existing restrictions have a different operation type than that specified in the notification.
-    0x80500005; Failure_RestrictionAccount_Modify_Unsupported_Modification_Type; Validation failed because the modification type is unsupported.
-    0x80500006; Failure_RestrictionAccount_Modification_Redundant; Validation failed because a modification is redundant.
-    0x80500007; Failure_RestrictionAccount_Modification_Not_Allowed; Validation failed because a value is not in the container.
-    0x80500008; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
-    0x80500009; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
-    0x8050000A; Failure_RestrictionAccount_Value_Invalid; Validation failed because the account restriction value is invalid.
-    0x8050000B; Failure_RestrictionAccount_Address_Interaction_Not_Allowed; Validation failed because the addresses involved in the transaction are not allowed to interact.
-    0x8050000C; Failure_RestrictionAccount_Mosaic_Transfer_Not_Allowed; Validation failed because the mosaic transfer is prohibited by the recipient.
-    0x8050000D; Failure_RestrictionAccount_Transaction_Type_Not_Allowed; Validation failed because the transaction type is not allowed to be initiated by the signer.
+    0x80500005; Failure_RestrictionAccount_Modification_Redundant; Validation failed because a modification is redundant.
+    0x80500006; Failure_RestrictionAccount_Invalid_Modification; Validation failed because a value is not in the container.
+    0x80500007; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
+    0x80500008; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
+    0x80500009; Failure_RestrictionAccount_Invalid_Value; Validation failed because the account restriction value is invalid.
+    0x8050000A; Failure_RestrictionAccount_Address_Interaction_Prohibited; Validation failed because the addresses involved in the transaction are not allowed to interact.
+    0x8050000B; Failure_RestrictionAccount_Mosaic_Transfer_Prohibited; Validation failed because the mosaic transfer is prohibited by the recipient.
+    0x8050000C; Failure_RestrictionAccount_Operation_Type_Prohibited; Validation failed because the operation type is not allowed to be initiated by the signer.
     0x80510001; Failure_RestrictionMosaic_Invalid_Restriction_Type; Validation failed because the mosaic restriction type is invalid.
-    0x80510002; Failure_RestrictionMosaic_Previous_Does_Not_Match; Validation failed because specified previous value does not match current value.
+    0x80510002; Failure_RestrictionMosaic_Previous_Value_Mismatch; Validation failed because specified previous value does not match current value.
     0x80510003; Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero; Validation failed because specified previous value is nonzero.
     0x80510004; Failure_RestrictionMosaic_Max_Restrictions_Exceeded; Validation failed because the maximum number of restrictions would be exeeded.
     0x80510005; Failure_RestrictionMosaic_Cannot_Delete_Nonexistent_Restriction; Validation failed because nonexistent restriction cannot be deleted.
-    0x80510006; Failure_RestrictionMosaic_Global_Restriction_Does_Not_Exist; Validation failed because required global restriction does not exist.
-    0x80510007; Failure_RestrictionMosaic_Global_Restriction_Invalid; Validation failed because mosaic has invalid global restriction.
-    0x80510008; Failure_RestrictionMosaic_Account_Unauthorized; Validation failed because account is unauthorized to move mosaic.
+    0x80510006; Failure_RestrictionMosaic_Unknown_Global_Restriction; Validation failed because required global restriction does not exist.
+    0x80510007; Failure_RestrictionMosaic_Invalid_Global_Restriction; Validation failed because mosaic has invalid global restriction.
+    0x80510008; Failure_RestrictionMosaic_Account_Unauthorized; Validation failed because account lacks proper permissions to move mosaic.
     0x80540001; Failure_Transfer_Message_Too_Large; Validation failed because the message is too large.
     0x80540002; Failure_Transfer_Out_Of_Order_Mosaics; Validation failed because mosaics are out of order.
     0x80FF0001; Failure_Chain_Unlinked; Validation failed because a block was received that did not link with the existing chain.
@@ -267,6 +303,7 @@ This section describes the error messages that can be returned via status channe
     0x80FE0009; Failure_Consumer_Remote_Chain_Score_Not_Better; Validation failed because the remote chain score is not better.
     0x80FE000A; Failure_Consumer_Remote_Chain_Too_Far_Behind; Validation failed because the remote chain is too far behind.
     0x80FE000B; Failure_Consumer_Remote_Chain_Too_Far_In_Future; Validation failed because the remote chain timestamp is too far in the future.
+    0x80FE000C; Failure_Consumer_Batch_Signature_Not_Verifiable; Validation failed because the verification of the signature failed during a batch operation.
     0x80450001; Failure_Extension_Partial_Transaction_Cache_Prune; Validation failed because the partial transaction was pruned from the temporal cache.
     0x80450002; Failure_Extension_Partial_Transaction_Dependency_Removed; Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
 
@@ -294,6 +331,10 @@ An open source HTTP client, available for Mac, Windows and Linux.
 
 2. Import the |insomnia-spec| for NEM.
 
+.. |yarn| raw:: html
+
+    <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
+
 .. |insomnia-app| raw:: html
 
     <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
@@ -305,6 +346,10 @@ An open source HTTP client, available for Mac, Windows and Linux.
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+
+.. |catapult-server| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
 
 .. |catapult-rest| raw:: html
 
