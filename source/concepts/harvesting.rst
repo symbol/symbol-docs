@@ -49,11 +49,17 @@ Local harvesting is secure as long as no one accesses your node instance, which 
 Delegated harvesting
 ********************
 
-Delegated harvesting enables an account to use a **proxy private** key that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
+Delegated harvesting enables an account to use a **proxy private key** that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
 
-After an account activates delegated harvesting, its **importance score** is transferred to a **remote account**. The remote account inherits the importance of the original account.
+To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
 
-Security-wise, **sharing a proxy private key with** a remote node does not compromise the original account since:
+Then, the account needs to send a **special encrypted message** to the node via a :doc:`TransferTransaction <transfer-transaction>`. The message must contain the remote's account **proxy private key**  encrypted using AES, so that only the recipient will be able to decipher it.
+
+The node receives an encrypted message using WebSockets. Once the node decrypts the private key of the potential delegated harvester, the node owner can save the account on disk if the candidate meets the requirements. Even if the node disconnects temporarily, for whatever reason, the persistent delegated harvesters will be reestablished once the node reconnects to the network.
+
+Additionally, the use of encrypted message creates a backup of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can retrieve the data by querying the blockchain.
+
+Security-wise, **sharing a proxy private key** with a node does not compromise the original account since:
 
 * The remote account has zero balance.
 * The remote account by itself can't transfer the importance to another account.
@@ -68,10 +74,10 @@ Remote harvesters may not receive the entire reward if the following conditions 
     :header: "", "Local harvesting", "Delegated harvesting"
     :delim: ;
 
-    **Configuration** ; Setup node.; Activate remote harvesting.
-    **Cost** ; The node maintenance (electricity, cost VPN).; The activation transaction fee.
+    **Configuration** ; Setup a node.; Activate remote harvesting.
+    **Cost** ; The node maintenance (electricity, cost VPN).; AccountLinkTransaction + TransferTransaction announcement fees.
     **Security**; The node stores the private key.;  A proxy private key is shared with a node.
-    **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - beneficiary share.
+    **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - node's beneficiary share.
 
 *******
 Schemas
@@ -82,15 +88,15 @@ Schemas
 AccountLinkTransaction
 ======================
 
-Announce an AccountLinkTransaction to delegate the account importance to a proxy account. By doing so, you can enable delegated harvesting.
+Announce an AccountLinkTransaction to delegate the account importance to a remote account.
 
-In order for the proxy account to be accepted as the ``remoteAccountKey`` for delegated harvesting, it needs to meet the following conditions:
+In order for the remote account to be accepted for delegated harvesting, it needs to meet the following conditions:
 
 * It cannot own any mosaics.
 * It cannot be a cosignatory of any other account.
 * It cannot be a multisig account.
-* It cannot already be a delegated account for another account.
-* It cannot have its own delegated account.
+* It cannot already be a remote account for another account.
+* It cannot be its own remote account.
 
 Furthermore, for the duration that the account is used as a delegated account, it is restricted from:
 
