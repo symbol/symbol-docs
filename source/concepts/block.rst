@@ -109,7 +109,7 @@ Serialization of an entity that should be signed by an account.
 EntityBody
 ==========
 
-Serialization of an entity. An entity could be a block, a :doc:`transaction <transaction>` or a :doc:`receipt <receipt>`.
+Serialization of an entity. An entity could be a block or a :doc:`transaction <transaction>`.
 
 .. csv-table::
     :header: "Property", "Type", "Description"
