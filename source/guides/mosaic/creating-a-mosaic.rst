@@ -32,8 +32,6 @@ To create a mosaic, we need to define two transactions.
 
 1. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to select the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
-.. _mosaic-properties:
-
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;

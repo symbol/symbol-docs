@@ -6,13 +6,13 @@ Mosaics are part of what makes the Smart Asset System unique and flexible. They 
 
 A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
+.. _mosaic-properties:
+
 **********
 Properties
 **********
 
 Each mosaic has a unique identifier and a set of configurable properties. During the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
-
-.. _mosaic-properties:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -37,7 +37,7 @@ For example, if the mosaic has **divisibility** 2, to create or send 10 units (r
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fee>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
 By default, registering a mosaic has an associated :properties:`configurable cost <config-network.properties>` of ``500 cat.currency``. The **network dynamically adjusts the mosaic rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
