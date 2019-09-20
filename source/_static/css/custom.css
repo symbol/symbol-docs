@@ -711,6 +711,12 @@ ul.postlist-style-circle .first {
     display: inline;
 }
 
+/* Mermaid */
+.mermaid svg {
+    max-width: 100%;
+    overflow: visible;
+}
+
 /* Print rules */
 @media print {
     .bs-sidenav, footer {
