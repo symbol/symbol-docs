@@ -14,9 +14,7 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 
 .. note:: Configuration parameters are editable. The importance score calculation formula and the minimum amount required to harvest may differ for the public network configuration.
 
-The account needs to hold a :properties:`minimum amount <config-network.properties>` of this harvesting mosaic to have importance greater than zero.
-
-Harvesting account owners can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
+The account needs to hold a :properties:`minimum amount <config-network.properties>` of this harvesting mosaic to have importance greater than zero. Harvesting account owners can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
 .. _harvesting-mosaic:
 
@@ -51,13 +49,36 @@ Delegated harvesting
 
 Delegated harvesting enables an account to use a **proxy private key** that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
 
+.. mermaid::
+    :caption: Delegated harvesting activation diagram
+    :alt: Delegated harvesting activation diagram
+    :align: center
+
+    sequenceDiagram
+        participant Account
+        participant Network
+        participant Node
+        Account ->>  Network: AccountLinkTransaction(remotePublicKey)
+        activate Network
+        Network -->> Account: Confirms transaction
+        deactivate Network
+        Account ->>  Network: TransferTransaction(nodePublicKey, encryptedRemotePrivateKey)
+        activate Network
+        Network -->> Account: Confirms the transaction
+        deactivate Network
+        Network -->> Node: Sends notification
+        opt eligible remote account
+            Node ->> Node: Adds delegated harvester
+            Node ->> Node: Saves remote private key on disk
+        end
+
 To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
 
 Then, the account needs to send a **special encrypted message** to the node via a :doc:`TransferTransaction <transfer-transaction>`. The message must contain the remote's account **proxy private key**  encrypted using AES, so that only the recipient will be able to decipher it.
 
-The node receives an encrypted message using WebSockets. Once the node decrypts the private key of the potential delegated harvester, the node owner can save the account on disk if the candidate meets the requirements. Even if the node disconnects temporarily, for whatever reason, the persistent delegated harvesters will be reestablished once the node reconnects to the network.
+The node receives an encrypted message using :ref:`WebSockets <websockets>`. Once the node decrypts the private key of the potential delegated harvester, the node owner can **add the remote account as a delegated harvester** if the candidate meets the requirements.
 
-Additionally, the use of encrypted message creates a backup of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can retrieve the data by querying the blockchain.
+As the remote private key is **saved on disk**, even if the node disconnects temporarily, the persistent delegated harvesters will be reestablished once the node reconnects to the network. Additionally, the use of encrypted message creates a **backup** of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can retrieve the data by querying the blockchain.
 
 Security-wise, **sharing a proxy private key** with a node does not compromise the original account since:
 
