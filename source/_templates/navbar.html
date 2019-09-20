@@ -1,7 +1,7 @@
 <div id="navbar"
      class="{{ theme_navbar_class }} navbar-default {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}">
     <div class="container">
-        <div class="navbar-header col-md-3 col-sm-5">
+        <div class="navbar-header col-md-3 col-sm-5 col-xs-12">
             <a class="navbar-brand" href="{{ pathto('index') }}">
                 {% block sidebarlogo %}
                 {% if logo %}<span><img src="{{ pathto('_static/' + logo, 1) }}" alt="NEM logo"></span>{% endif %}
@@ -9,10 +9,10 @@
                 {% if theme_navbar_title %}{{ theme_navbar_title|e }}{% else %}{{ project|e }}{% endif %}
             </a>
         </div>
-        <div class="navbar-nav col-md-6 col-sm-7 hidden-xs">
+        <div id="search-box" class="col-md-6 col-sm-7 col-xs-12">
             {% include "include/searchbox.html" %}
         </div>
-        <div class="navbar-right col-md-3">
+        <div class="navbar-right col-md-3 hidden-xs hidden-sm">
             <ul>
                 {% include "include/navbar-right.html" %}
             </ul>

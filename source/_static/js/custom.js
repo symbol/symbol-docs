@@ -63,7 +63,10 @@ function addBlockCaptionInsideCodeExample() {
     });
     $(".literal-block-wrapper").removeClass("container");
     $(".example-code").addClass("visible");
+}
 
+function addTargetBlankAttributeToExternalLinks() {
+    $('a.external').attr("target", "_blank");
 }
 
 $(document).ready(function () {
@@ -71,5 +74,5 @@ $(document).ready(function () {
     initLanguageSelector();
     setPreferredCodeTab();
     clickPreferredCodeTab();
-    $('a.external').attr("target", "_blank");
+    addTargetBlankAttributeToExternalLinks();
 });
