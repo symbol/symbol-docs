@@ -25,8 +25,6 @@ Each mosaic has a unique identifier and a set of configurable properties. During
     Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
     Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
 
-=======
-
 *****************************
 Absolute and relative amounts
 *****************************
@@ -35,11 +33,13 @@ NEM works with **absolute amounts**, removing the comma when the mosaic can be d
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
 
-****
-Cost
-****
+**********
+Rental fee
+**********
 
-The cost of creating a mosaic is :properties:`configurable per network <config-network.properties>`. By default, it has a cost of ``500 cat.currency`` plus transaction fees.
+To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+
+By default, registering a mosaic has an associated :properties:`configurable cost <config-network.properties>` of ``500 cat.currency``. The **network dynamically adjusts the mosaic rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 *******
 Example
@@ -108,12 +108,11 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicNonce; uint32; Random nonce used to generate the mosaic id.
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
-    propertiesCount; uint8; Number of elements in optional properties
+    nonce; uint32; Random nonce used to generate the mosaic id.
+    id; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
     divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
-    properties; array(:ref:`MosaicProperty <mosaic-property>`, propertiesCount); Optional mosaic properties.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic divisibility. Maximum divisibility is ``6``.
 
 .. _mosaic-supply-change-transaction:
 
@@ -137,18 +136,6 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Affected mosaic identifier.
     direction; :ref:`MosaicSupplyChangeAction<mosaic-supply-change-action>`; Supply change direction.
     delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
-
-.. _mosaic-property:
-
-MosaicProperty
-==============
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    id; uint8; Mosaic property identifier. (0x02) stands for duration.
-    value; uint64; The mosaic property value.
 
 .. _mosaic:
 

@@ -58,10 +58,10 @@ Serialization of the block header.
     difficulty; uint64; Average difficulty divided by the average block creation time for the last ``60`` blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10\ :sup:`15` or smaller than 10\ :sup:`13`\ .
     feeMultiplier; uint32; Fee multiplier applied to transactions contained in block.
     previousBlockHash; :schema:`Hash256 <types.cats#L9>`; Hash of the previous block.
-    blockTransactionHash; :schema:`Hash256 <types.cats#L9>`; Transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
-    blockReceiptsHash; :schema:`Hash256 <types.cats#L9>`; Collection of :doc:`receipts <receipt>` are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash.
+    transactionHash; :schema:`Hash256 <types.cats#L9>`; Transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
+    receiptsHash; :schema:`Hash256 <types.cats#L9>`; Collection of :doc:`receipts <receipt>` are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash.
     stateHash; :schema:`Hash256 <types.cats#L9>`;  For each block, the state of the blockchain is stored in RocksDB, forming a |patricia|. The root of the tree summarizes the state of the blockchain for a given block.
-    beneficiary; :schema:`Key <types.cats#L11>`; Public key of the optional beneficiary designated by harvester.
+    beneficiaryPublicKey; :schema:`Key <types.cats#L11>`; Public key of the optional beneficiary designated by harvester.
 
 .. |merkle| raw:: html
 
@@ -109,12 +109,12 @@ Serialization of an entity that should be signed by an account.
 EntityBody
 ==========
 
-Serialization of an entity. An entity could be a block, a :doc:`transaction <transaction>` or a :doc:`receipt <receipt>`.
+Serialization of an entity. An entity could be a block or a :doc:`transaction <transaction>`.
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signer; :schema:`Key <types.cats#L11>`; Public key of the signer of the entity.
+    signerPublicKey; :schema:`Key <types.cats#L11>`; Public key of the signer of the entity.
     version; uint16; Version of the structure.
     type; uint16; Entity type.

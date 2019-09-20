@@ -39,7 +39,7 @@ Address restriction
 
 Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.
 
-The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`MosaicAddressRestrictionTransaction transaction <mosaic-address-restriction-transaction>` is composed of:
+The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -144,7 +144,7 @@ Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mos
     :delim: ;
 
     mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
-    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic id depend on global restrictions set on the reference mosaic.
+    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
     restrictionKey; uint64; Restriction key relative to the reference mosaic identifier.
     previousRestrictionValue; uint64; Previous restriction value.
     previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
@@ -173,7 +173,7 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
     mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
     restrictionKey; uint64; Restriction key.
     targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address being restricted.
-    previousRestrictionValue; uint64; Previous restriction value.
+    previousRestrictionValue; uint64; Previous restriction value. Set ``previousRestrictionValue`` to ``FFFFFFFFFFFFFFFF`` if the target address does not have a previous restriction value for this mosaic identifier and restriction key.
     newRestrictionValue; uint64; New restriction value.
 
 .. _mosaic-restriction-type:

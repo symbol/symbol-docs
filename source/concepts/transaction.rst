@@ -106,7 +106,9 @@ Transactions have an associated cost. This cost is necessary to provide an incen
 
 The fee associated with a transaction primarily depends on the transaction’s size. The effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure the latter value to all positive values, including zero.
 
-    effective_fee = transaction::size * block::fee_multiplier
+.. math::
+
+    effectiveFee = transaction::size * block::feeMultiplier
 
 A sender of a transaction must specify during the transaction definition a ``max_fee``, meaning the maximum fee the account allows to spend for this transaction.
 

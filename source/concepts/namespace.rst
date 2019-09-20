@@ -14,7 +14,7 @@ Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespa
 Name
 ****
 
-A namespace starts with a name that you choose, similar to an internet domain name. The name must appear as **unique in the network**, and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
+Namespaces function similarly to internet domains. Creating a namespace starts with choosing a name that you will use to refer to an account or asset. The name must be **unique in the network**, and may have a maximum length of ``64`` characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
 
 *************
 Subnamespaces
@@ -22,9 +22,9 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to identify and organize assets.
 
-You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
-
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
+
+You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
 
 *****
 Alias
@@ -74,11 +74,23 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
 
-****
-Cost
-****
+**********
+Rental fee
+**********
 
-The cost of creating a namespace is :properties:`configurable per network <config-network.properties>`. By default, registering a namespace costs ``1 cat.currency per block`` plus transactions fees. Registering a subnamespace has a fixed cost of ``100 cat.currency`` plus transaction fees.
+To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+
+The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
+
+.. csv-table::
+    :header: "Property", "Value"
+    :delim: ;
+
+    Registering a namespace; ``1 cat.currency`` per block
+    Extending a namespace duration; ``1 cat.currency`` per block
+    Creating a subnamespace; ``100 cat.currency``
+
+The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 *******
 Example
@@ -150,13 +162,12 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
+    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
     parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
-    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
-    namespaceNameSize; uint8; Namespace name size in bytes.
+    id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+    nameSize; uint8; Namespace name size in bytes.
     name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
-
 
 .. _address-alias-transaction:
 
