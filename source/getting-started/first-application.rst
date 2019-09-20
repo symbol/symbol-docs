@@ -148,7 +148,7 @@ Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`Tran
     :delim: ;
     :widths: 20 30 50
 
-    Deadline; Default ; The maximum amount of time to include the transaction in the blockchain.
+    Deadline; Default (2 hours) ; The maximum amount of time to include the transaction in the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
     Recipient; SC7A4H...2VBU; The recipient account address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
