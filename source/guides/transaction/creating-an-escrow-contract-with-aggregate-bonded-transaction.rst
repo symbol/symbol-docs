@@ -74,17 +74,16 @@ Alice and a ticket distributor want to swap the following mosaics.
         Alice, 100, cat.currency, Native currency mosaic
         Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
-Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor account. This new mosaic will represent the ticket.
+Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
 
 Creating the escrow contract
 ============================
 
-Alice will send a transaction to the ticket distributor exchanging ``100 cat.currency`` for ``1 7cdf3b117a3c40cc`` (museum ticket).
+1. Open a new file, and define two transfer transactions:
 
-1. Define two transfer transactions:
+a. A TransferTransaction from Alice to the ticket distributor sending ``100 cat.currency``.
 
-A. From Alice to the ticket distributor sending ``100 cat.currency``.
-B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
+b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
 
 .. note:: The museum ticket does not have the id 7cdf3b117a3c40cc in your network. Replace the mosaic identifier for the one you have created in the previous step.
 
@@ -100,7 +99,7 @@ B. From the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum t
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants and the transaction is announced to the network, it is considered *bonded*.
+2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants — the ticket distributor — it is considered *bonded*.
 
 .. example-code::
 

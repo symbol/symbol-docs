@@ -39,11 +39,13 @@ const brotherAccount = Address.createFromRawAddress(brotherAddress);
 const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
 const sisterAccount = Address.createFromRawAddress(sisterAddress);
 
-const amount = NetworkCurrencyMosaic.createRelative(10); // 10 cat.currency represent 10 000 000 micro cat.currency
+const amount = NetworkCurrencyMosaic.createRelative(10);
 
 const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
+/* end block 01 */
 
+/* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [brotherTransferTransaction.toAggregate(account.publicAccount),
@@ -51,13 +53,13 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     NetworkType.MIJIN_TEST,
     []
 );
-/* end block 01 */
+/* end block 02 */
 
-/* start block 02 */
+/* start block 03 */
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
-/* end block 02 */
+/* end block 03 */

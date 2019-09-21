@@ -36,8 +36,7 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Define two :ref:`TransferTransaction <transfer-transaction>` with two different recipients, wrapping them in an :ref:`AggregateTransaction <aggregate-transaction>`.
-As one private key can sign all the transactions in the aggregate, we can define the transaction as *complete*.
+1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send 10 cat.currency to different recipients.
 
 .. example-code::
 
@@ -51,7 +50,7 @@ As one private key can sign all the transactions in the aggregate, we can define
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Sign and announce the transaction.
+2. Wrapping them in an :ref:`AggregateTransaction <aggregate-transaction>`, and add Dan's public account as the required signer. As one private key — Dan's account — can sign all the transactions in the aggregate, we can define the transaction as *complete*.
 
 .. example-code::
 
@@ -64,6 +63,20 @@ As one private key can sign all the transactions in the aggregate, we can define
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+
+3. Sign and announce the transaction with Dan's account.
+
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/transaction/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/javascript/transaction/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 ************
 What's next?
