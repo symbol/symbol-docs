@@ -112,11 +112,7 @@ Creating the ticket
 
 We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mosaics** can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
-1. Create a mosaic named ``ticket``:
-
-.. code-block:: bash
-
-   nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
+1. Create a new mosaic to represent the ticket configured as follows with the ticket vendor account.
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -129,8 +125,11 @@ We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mo
     Supply mutable; True; The mosaic supply can change at a later point.
     Transferable; False; The mosaic can be only transferred back to the mosaic creator.
 
-2. Copy the mosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
+.. code-block:: bash
 
+   nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
+
+2. Copy the mosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
 
 .. code-block:: bash
 
@@ -139,17 +138,17 @@ We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mo
 Sending the ticket
 ==================
 
-Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in NEM.
 
-1. Prepare the **TransferTransaction**. The following attributes form a TransferTransaction:
+1. Prepare the **TransferTransaction** with the following values.
 
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
     :widths: 20 30 50
 
-    Deadline; Default ; The maximum amount of time to include the transaction in the blockchain.
-    Recipient; SC7A4H...2VBU; The recipient account address.
+    Deadline; Default (2 hours); The maximum amount of time to include the transaction in the blockchain.
+    Recipient; SC7A4H...2VBU; The recipient account address. In this case, the customer's address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
     Network; MIJIN_TEST; The local network identifier.
@@ -168,7 +167,7 @@ Send one ``company.ticket`` to the ticket vendor account announcing a :ref:`Tran
 
 Although the transaction is defined, it has not been announced to the network yet.
 
-2.  Sign the transaction with the ticket vendor account, so that the network can verify the authenticity of the transaction.
+2.  Sign the transaction with the **ticket vendor account**, so that the network can verify the authenticity of the transaction.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
