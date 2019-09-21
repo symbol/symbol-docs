@@ -6,7 +6,7 @@ html {
 
 body {
     padding-top: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100%;
     position: relative;
     font-size: 16px;
@@ -554,6 +554,7 @@ body > .container.full-width {
 
 #search-box .search-box-input .algolia-autocomplete .ds-dropdown-menu{
     min-width: 100px;
+    width: 100%;
 }
 
 #search-box .search-box-input .algolia-autocomplete input,
@@ -713,7 +714,7 @@ ul.postlist-style-circle .first {
 
 /* Mermaid */
 .mermaid svg {
-    max-width: 100%;
+    max-width: 100% !important;
     overflow: visible;
 }
 
