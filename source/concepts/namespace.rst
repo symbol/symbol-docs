@@ -20,7 +20,7 @@ Namespaces function similarly to internet domains. Creating a namespace starts w
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to identify and organize assets.
+On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to **identify and organize assets**.
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
@@ -30,7 +30,7 @@ You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-s
 Alias
 *****
 
-:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
+:ref:`AliasTransactions <address-alias-transaction>` **link namespaces to accounts and mosaics**. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
 The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
@@ -91,39 +91,6 @@ The default namespace rental fees are :properties:`configurable per network <con
     Creating a subnamespace; ``100 cat.currency``
 
 The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
-
-*******
-Example
-*******
-
-A customer buys a ticket for an event. The ticket sales company sends a ticket to the customer account.
-
-.. figure:: ../resources/images/examples/namespace-tickets.png
-    :align: center
-    :width: 500px
-
-    Recognizable mosaics and addresses
-
-Identifying the sender
-======================
-
-The ticket seller has registered the namespace ``ticketcompany`` to link it to its account as an alias. Customers can quickly recognize incoming transactions from the vendor account.
-
-Identifying the ticket
-======================
-
-The same company sells tickets for events organized in different venues. The company registers a non-transferable :doc:`mosaic <mosaic>` for each actuation.
-
-The ticket seller adds a series of subdomains on top of the root domain of ``ticketcompany``. The root plus subdomains are ``ticketcompany.event<ID>.ticket``.
-
-The company links one registered mosaic with ``ticketcompany.event1.ticket`` namespace name.
-
-Identifying the buyer
-=====================
-
-Alice, who wants to buy the ticket, has registered the namespace ``alice`` and assigned it to her account as an alias.
-
-The ticket vendor can send 1 ``ticketcompany.event1.ticket`` to ``alice`` instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
 
 ******
 Guides
