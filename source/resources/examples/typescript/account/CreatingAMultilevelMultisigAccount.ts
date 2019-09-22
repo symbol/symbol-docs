@@ -22,9 +22,9 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
-    ModifyMultisigAccountTransaction,
+    MultisigAccountModificationTransaction,
     MultisigCosignatoryModification,
-    MultisigCosignatoryModificationType,
+    CosignatoryModificationAction,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -43,17 +43,17 @@ const cosignatory5 = PublicAccount.createFromPublicKey(cosignatoryAccount5Public
 const cosignatoryAccount6PublicKey = process.env.COSIGNATORY_6_PUBLIC_KEY as string;
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, NetworkType.MIJIN_TEST);
 
-const convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.create(
+const convertMultisigAccount2Transaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     1,
     1,
     [
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory5,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory6,
         )],
     NetworkType.MIJIN_TEST);
@@ -72,21 +72,21 @@ const cosignatory8 = PublicAccount.createFromPublicKey(cosignatoryAccount8Public
 const cosignatoryAccount4PublicKey = process.env.COSIGNATORY_4_PUBLIC_KEY as string;
 const cosignatory4 = PublicAccount.createFromPublicKey(cosignatoryAccount4PublicKey, NetworkType.MIJIN_TEST);
 
-const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.create(
+const convertMultisigAccount3Transaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     2,
     1,
     [
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory7,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory8,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);
@@ -96,21 +96,21 @@ const convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.crea
 const multisig1PrivateKey = process.env.MULTISIG_1_PRIVATE_KEY as string;
 const multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, NetworkType.MIJIN_TEST);
 
-const convertMultisigAccount1Transaction = ModifyMultisigAccountTransaction.create(
+const convertMultisigAccount1Transaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     3,
     1,
     [
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             multisigAccount2.publicAccount,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             multisigAccount3.publicAccount,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory4,
         )],
     NetworkType.MIJIN_TEST);

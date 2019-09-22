@@ -21,15 +21,16 @@ import {
     Address,
     Deadline,
     EmptyMessage,
+    NetworkCurrencyMosaic,
     NetworkType,
     TransactionHttp,
-    TransferTransaction,
-    NetworkCurrencyMosaic
+    TransferTransaction
 } from 'nem2-sdk';
 
 
 /* start block 01 */
-const recipientAddress =  Address.createFromRawAddress('SBHEVGUFDEW22FAT2EFU6UYXRKLTC6HFOPB4CRSE');
+const rawRecipientAddress = process.env.RECIPIENT_ADDRESS as string;
+const recipientAddress =  Address.createFromRawAddress(rawRecipientAddress);
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),

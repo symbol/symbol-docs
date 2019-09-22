@@ -41,7 +41,7 @@ a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to selec
     :delim: ;
 
     Divisibility; 0 ; Although brokerages and investment firms can fractionalize shares, the traditional minimum number of shares an investor can purchase from the open market is 1.
-    Duration; undefined; Shares of the company should exist as long as the company is in business. The ComfyClothingCompany leaves this property ``undefined``, creating a non-expiring mosaic representing their assets.
+    Duration; 0; Shares of the company should exist as long as the company is in business. The ComfyClothingCompany sets this property to ``0``, creating a non-expiring mosaic.
     Supply mutable; True; ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
     Transferable; True; Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
     Restrictable; True; Since STOs are regulated, the mosaic owner should be able to restrict which accounts can transact with the mosaic.

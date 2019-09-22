@@ -30,14 +30,15 @@ const Account = nem2Sdk.Account,
     NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
 
 // 01 - Create Transfer Transaction
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientRawAddress = process.env.RECIPIENT_RAW_ADDRESS;
+const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     /* start block 01 */
     [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1000)),
-        NetworkCurrencyMosaic.createRelative(10)],
+            NetworkCurrencyMosaic.createRelative(10)],
     /* end block 01 */
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);

@@ -23,11 +23,14 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     TransferTransaction = nem2Sdk.TransferTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp,
+    Mosaic = nem2Sdk.Mosaic,
     NamespaceId = nem2Sdk.NamespaceId,
-    EmptyMessage = nem2Sdk.EmptyMessage;
+    EmptyMessage = nem2Sdk.EmptyMessage,
+    UInt64 = nem2Sdk.UInt64;
 
 /* start block 01 */
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientRawAddress = process.env.RECIPIENT_RAW_ADDRESS;
+const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),

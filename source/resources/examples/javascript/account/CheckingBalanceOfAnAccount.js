@@ -31,7 +31,8 @@ const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);
 const mosaicService = new MosaicService(accountHttp, mosaicHttp);
 
-const address = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54");
+const rawAddress = process.env.ADDRESS;
+const address = Address.createFromRawAddress(rawAddress);
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)

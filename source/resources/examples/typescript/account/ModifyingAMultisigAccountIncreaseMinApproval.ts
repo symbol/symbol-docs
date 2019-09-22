@@ -20,7 +20,7 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
-    ModifyMultisigAccountTransaction,
+    MultisigAccountModificationTransaction,
     NetworkType,
     PublicAccount,
     TransactionHttp
@@ -37,7 +37,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 /* end block 01 */
 
 /* start block 02 */
-const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
+const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     1,
     0,
@@ -48,7 +48,7 @@ const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
+    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST,
     []);
 

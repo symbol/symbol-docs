@@ -22,7 +22,7 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
     MosaicId = nem2Sdk.MosaicId,
-    MosaicSupplyType = nem2Sdk.MosaicSupplyType,
+    MosaicSupplyChangeAction = nem2Sdk.MosaicSupplyChangeAction,
     TransactionHttp = nem2Sdk.TransactionHttp,
     UInt64 = nem2Sdk.UInt64;
 
@@ -33,15 +33,15 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicId = new MosaicId([520597229,83226871]); // Replace with your mosaicId
+const mosaicIdHexa = process.env.MOSAIC_ID_HEXA;
+const mosaicId = new MosaicId(mosaicIdHexa);
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicId,
-    MosaicSupplyType.Increase,
+    MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(2000000),
     NetworkType.MIJIN_TEST);
-
 
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);

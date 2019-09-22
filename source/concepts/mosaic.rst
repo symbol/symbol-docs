@@ -31,7 +31,7 @@ For example, if the mosaic has **divisibility** 2, to create or send 10 units (r
 Duration
 ========
 
-Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). You can also create **non-expiring mosaics** leaving this property ``undefined``.
+Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). You can also create **non-expiring mosaics** setting this property to ``0``.
 
 *****
 Flags
@@ -113,7 +113,7 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
     id; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
     divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic divisibility. Maximum divisibility is ``6``.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic duration expressed in blocks. Duration is allowed to lie up to ``3650`` days (10 years). If set to 0, the mosaic is non-expiring.
 
 .. _mosaic-supply-change-transaction:
 

@@ -19,12 +19,12 @@
 import {
     Account,
     AggregateTransaction,
+    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
     Listener,
-    ModifyMultisigAccountTransaction,
+    MultisigAccountModificationTransaction,
     MultisigCosignatoryModification,
-    MultisigCosignatoryModificationType,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -47,11 +47,11 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY as string;
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
 
-const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Add, newCosignatoryAccount);
+const multisigCosignatoryModification = new MultisigCosignatoryModification(CosignatoryModificationAction.Add, newCosignatoryAccount);
 /* end block 01 */
 
 /* start block 02 */
-const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
+const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     0,
     0,
@@ -62,7 +62,7 @@ const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
-    [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
+    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST);
 
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;

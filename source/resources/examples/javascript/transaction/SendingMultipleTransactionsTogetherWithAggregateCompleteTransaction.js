@@ -33,23 +33,23 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const brotherAddress = 'SDG4WG-FS7EQJ-KFQKXM-4IUCQG-PXUW5H-DJVIJB-OXJG';
-const brotherAccount = Address.createFromRawAddress(brotherAddress);
+const aliceAddress =  process.env.ALICE_ADDRESS;
+const aliceAccount = Address.createFromRawAddress(aliceAddress);
 
-const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
-const sisterAccount = Address.createFromRawAddress(sisterAddress);
+const bobAddress = process.env.BOB_ADDRESS;
+const bobAccount = Address.createFromRawAddress(bobAddress);
 
 const amount = NetworkCurrencyMosaic.createRelative(10);
 
-const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
-const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
+const aliceTransferTransaction = TransferTransaction.create(Deadline.create(), aliceAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
+const bobTransferTransaction = TransferTransaction.create(Deadline.create(), bobAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 /* end block 01 */
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [brotherTransferTransaction.toAggregate(account.publicAccount),
-        sisterTransferTransaction.toAggregate(account.publicAccount)],
+    [aliceTransferTransaction.toAggregate(account.publicAccount),
+            bobTransferTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST,
     []
 );

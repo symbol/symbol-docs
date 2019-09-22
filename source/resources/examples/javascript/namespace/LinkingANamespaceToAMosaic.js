@@ -18,7 +18,7 @@
 
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
-    AliasActionType = nem2Sdk.AliasActionType,
+    AliasAction = nem2Sdk.AliasAction,
     AliasTransaction = nem2Sdk.AliasTransaction,
     Deadline = nem2Sdk.Deadline,
     MosaicId = nem2Sdk.MosaicId,
@@ -27,14 +27,16 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
 /* start block 01 */
-const namespaceId = new NamespaceId('foo');
-const mosaicId = new MosaicId('7cdf3b117a3c40cc');
+const namespaceName = process.env.NAMESPACE_NAME;
+const namespaceId = new NamespaceId(namespaceName);
+const mosaicIdHexa = process.env.MOSAIC_ID_HEXA;
+const mosaicId = new MosaicId(mosaicIdHexa);
 /* end block 01 */
 
 /* start block 02 */
 const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
-    AliasActionType.Link,
+    AliasAction.Link,
     namespaceId,
     mosaicId,
     NetworkType.MIJIN_TEST
