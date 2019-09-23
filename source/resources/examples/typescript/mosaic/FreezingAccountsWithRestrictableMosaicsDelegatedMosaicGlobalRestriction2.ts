@@ -31,7 +31,7 @@ import {
 const mosaicIdHexa = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHexa);
 const referenceMosaicIdHexa = process.env.MOSAIC_ID as string;
-const referenceMosaicId = new MosaicId(mosaicIdHexa);
+const referenceMosaicId = new MosaicId(referenceMosaicIdHexa);
 /* end block 01 */
 
 /* start block 02 */

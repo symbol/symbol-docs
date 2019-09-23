@@ -17,13 +17,13 @@
  */
 
 import {
-    Account, AggregateTransaction,
+    Account,
+    AggregateTransaction,
     Deadline,
-    MosaicDefinitionTransaction,
+    MosaicDefinitionTransaction, MosaicFlags,
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicNonce,
-    MosaicProperties,
     MosaicRestrictionType,
     NetworkType,
     TransactionHttp,
@@ -42,13 +42,9 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     mosaicNonce,
     MosaicId.createFromNonce(mosaicNonce, account.publicAccount),
-    MosaicProperties.create({
-        supplyMutable: true,
-        transferable: true,
-        divisibility: 0,
-        duration: UInt64.fromUint(1000),
-        restrictable: true
-    }),
+    MosaicFlags.create(true, true, true),
+    0,
+    UInt64.fromUint(1000),
     NetworkType.MIJIN_TEST);
 
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
