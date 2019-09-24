@@ -18,15 +18,13 @@
 
 import {
     Account,
-    Address,
     Deadline,
     EmptyMessage,
-    Mosaic,
-    NamespaceId, NetworkCurrencyMosaic,
+    NamespaceId,
+    NetworkCurrencyMosaic,
     NetworkType,
     TransactionHttp,
     TransferTransaction,
-    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */

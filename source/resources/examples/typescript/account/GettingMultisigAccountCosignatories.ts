@@ -21,7 +21,8 @@ import {AccountHttp, Address} from "nem2-sdk";
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-const address = Address.createFromRawAddress('SCSGBN-HYJD6P-KJHACX-3R2BI3-QUMMOY-QSNW5J-ICLK');
+const rawAddress = process.env.ADDRESS as string;
+const address = Address.createFromRawAddress(rawAddress);
 
 accountHttp
     .getMultisigAccountInfo(address)

@@ -19,7 +19,7 @@
 import {
     Account,
     Address,
-    AliasActionType,
+    AliasAction,
     AliasTransaction,
     Deadline,
     NamespaceId,
@@ -28,14 +28,16 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-const namespaceId = new NamespaceId('foo');
-const address = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const namespaceName = process.env.NAMESPACE_NAME as string;
+const namespaceId = new NamespaceId(namespaceName);
+const rawAddress = process.env.ADDRESS as string;
+const address = Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 
 /* start block 02 */
 const addressAliasTransaction = AliasTransaction.createForAddress(
     Deadline.create(),
-    AliasActionType.Link,
+    AliasAction.Link,
     namespaceId,
     address,
     NetworkType.MIJIN_TEST

@@ -18,7 +18,7 @@
 
 import {
     Account,
-    AliasActionType,
+    AliasAction,
     AliasTransaction,
     Deadline,
     MosaicId,
@@ -28,14 +28,16 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-const namespaceId = new NamespaceId('foo');
-const mosaicId = new MosaicId('7cdf3b117a3c40cc');
+const namespaceName = process.env.NAMESPACE_NAME as string;
+const namespaceId = new NamespaceId(namespaceName);
+const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
+const mosaicId = new MosaicId(mosaicIdHexa);
 /* end block 01 */
 
 /* start block 02 */
 const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
-    AliasActionType.Link,
+    AliasAction.Link,
     namespaceId,
     mosaicId,
     NetworkType.MIJIN_TEST

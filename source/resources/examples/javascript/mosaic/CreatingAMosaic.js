@@ -22,8 +22,8 @@ const Account = nem2Sdk.Account,
     NetworkType = nem2Sdk.NetworkType,
     MosaicDefinitionTransaction = nem2Sdk.MosaicDefinitionTransaction,
     MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
-    MosaicProperties = nem2Sdk.MosaicProperties,
-    MosaicSupplyType = nem2Sdk.MosaicSupplyType,
+    MosaicFlags = nem2Sdk.MosaicFlags,
+    MosaicSupplyChangeAction = nem2Sdk.MosaicSupplyChangeAction,
     MosaicId = nem2Sdk.MosaicId,
     MosaicNonce = nem2Sdk.MosaicNonce,
     TransactionHttp = nem2Sdk.TransactionHttp,
@@ -40,12 +40,9 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     nonce,
     MosaicId.createFromNonce(nonce, account.publicAccount),
-    MosaicProperties.create({
-        supplyMutable: true,
-        transferable: true,
-        divisibility: 0,
-        duration: UInt64.fromUint(1000)
-    }),
+    MosaicFlags.create(true, true, true),
+    0,
+    UInt64.fromUint(0),
     NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -53,7 +50,7 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
-    MosaicSupplyType.Increase,
+    MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(1000000),
     NetworkType.MIJIN_TEST);
 /* end block 02 */

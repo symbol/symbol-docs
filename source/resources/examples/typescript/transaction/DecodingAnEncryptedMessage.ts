@@ -37,7 +37,10 @@ transactionHttp
     )
     .subscribe(transaction => {
         console.log("Raw message: ", transaction.message.payload);
-        console.log("Message: ", certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
+        console.log("Message: ", certificateAccount.decryptMessage(
+            transaction.message,
+            alicePublicAccount,
+            NetworkType.MIJIN_TEST).payload);
     }, (err => console.log(err)));
 /* end block 01 */
 

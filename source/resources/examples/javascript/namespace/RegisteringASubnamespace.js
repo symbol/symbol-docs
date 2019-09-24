@@ -20,14 +20,14 @@ const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
     Deadline = nem2Sdk.Deadline,
     NetworkType = nem2Sdk.NetworkType,
-    RegisterNamespaceTransaction = nem2Sdk.RegisterNamespaceTransaction,
+    NamespaceRegistrationTransaction = nem2Sdk.NamespaceRegistrationTransaction,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
 /* start block 01 */
 const rootNamespaceName = 'foo';
 const subnamespaceName = 'bar';
 
-const registerNamespaceTransaction = RegisterNamespaceTransaction.createSubNamespace(
+const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.createSubNamespace(
     Deadline.create(),
     subnamespaceName,
     rootNamespaceName,
@@ -36,7 +36,7 @@ const registerNamespaceTransaction = RegisterNamespaceTransaction.createSubNames
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-const signedTransaction = account.sign(registerNamespaceTransaction, networkGenerationHash);
+const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp

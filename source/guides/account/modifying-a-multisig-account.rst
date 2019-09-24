@@ -50,24 +50,12 @@ One of the accounts, for example Alice's, will announce a :ref:`MultisigAccountM
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :language: javascript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
-
 2. Define a **MultisigAccountModificationTransaction** to increase the ``minAprovalDelta`` in one unit.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :start-after:  /* start block 02 */
-        :end-before: /* end block 02 */
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -81,11 +69,6 @@ As only one cosignature is required (1-of-2), Alice can sign the transaction and
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
-        :start-after:  /* start block 03 */
-        :end-before: /* end block 03 */
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountIncreaseMinApproval.js
-        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -115,22 +98,12 @@ Alice and Bob want to **add Carol** as a cosignatory of the multisig account to 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :language: javascript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
 2. Create a **MultisigAccountModificationTransaction** adding the previous modification.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :start-after:  /* start block 02 */
-        :end-before: /* end block 02 */
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -143,22 +116,12 @@ Alice and Bob want to **add Carol** as a cosignatory of the multisig account to 
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :language: javascript
-        :start-after:  /* start block 03 */
-        :end-before: /* end block 03 */
-
 4. Before sending an **AggregateBondedTransaction**, Alice needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
-        :start-after:  /* start block 04 */
-        :end-before: /* end block 04 */
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountAddCosignatory.js
-        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -189,11 +152,6 @@ The **minRemoval parameter** indicates the number of required signatures to dele
 
     .. viewsource:: ../../resources/examples/typescript/account/ModifyingAMultisigAccountRemoveCosignatory.ts
         :language: typescript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
-    .. viewsource:: ../../resources/examples/javascript/account/ModifyingAMultisigAccountRemoveCosignatory.js
-        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

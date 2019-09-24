@@ -30,7 +30,8 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientRawAddress = process.env.RECIPIENT_RAW_ADDRESS as string;
+const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),

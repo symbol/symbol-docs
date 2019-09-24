@@ -20,9 +20,9 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
-    ModifyMultisigAccountTransaction,
+    MultisigAccountModificationTransaction,
     MultisigCosignatoryModification,
-    MultisigCosignatoryModificationType,
+    CosignatoryModificationAction,
     NetworkType,
     PublicAccount,
     TransactionHttp
@@ -40,9 +40,9 @@ const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemov
 const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const multisigCosignatoryModification = new MultisigCosignatoryModification(MultisigCosignatoryModificationType.Remove,cosignatoryToRemove);
+const multisigCosignatoryModification = new MultisigCosignatoryModification(CosignatoryModificationAction.Remove,cosignatoryToRemove);
 
-const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
+const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     0,
     0,
@@ -51,7 +51,7 @@ const modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [modifyMultisigAccountTransaction.toAggregate(multisigAccount)],
+    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST,
     []);
 
