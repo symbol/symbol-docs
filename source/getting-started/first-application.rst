@@ -147,7 +147,7 @@ Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction 
     :delim: ;
     :widths: 20 30 50
 
-    Deadline; Default (2 hours); The maximum amount of time to include the transaction in the blockchain.
+    Deadline; Default (2 hours) ; The maximum amount of time to include the transaction in the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
     Recipient; SC7A4H...2VBU; The recipient account address. In this case, the customer's address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
@@ -211,11 +211,9 @@ Although the transaction is defined, it has not been announced to the network ye
 Did you solve the use case?
 ***************************
 
+* ✅ Identify each ticket customer: Creating NEM accounts for each customer.
 
-
-*  ✅ Identify each ticket customer: Creating NEM accounts for each customer.
-
-*  ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
+* ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
 * ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
