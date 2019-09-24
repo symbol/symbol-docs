@@ -6,7 +6,7 @@ html {
 
 body {
     padding-top: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100%;
     position: relative;
     font-size: 16px;
@@ -230,7 +230,6 @@ body > .container.full-width {
 }
 
 .navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
     color: #555;
@@ -239,7 +238,6 @@ body > .container.full-width {
 .navbar-default .navbar-right {
     padding-top: 14px;
     text-align: right;
-    display: none;
 }
 
 .navbar-default .navbar-right ul {
@@ -264,10 +262,6 @@ body > .container.full-width {
 }
 
 @media screen and (min-width: 992px) {
-    .navbar-default .navbar-right {
-        display: block;
-    }
-
     .navbar-default .navbar-brand {
         font-size: 90%;
     }
@@ -544,18 +538,27 @@ body > .container.full-width {
 }
 
 /* Search box */
-.search-box {
+#search-box {
+    padding: 5px 0px;
+}
+
+#search-box .search-box-input {
     width: 100%;
     margin: 0 auto;
     display: block;
 }
 
-.search-box .algolia-autocomplete {
+#search-box .search-box-input .algolia-autocomplete {
     width: 100%;
 }
 
-.search-box .algolia-autocomplete input,
-.search-box #search {
+#search-box .search-box-input .algolia-autocomplete .ds-dropdown-menu{
+    min-width: 100px;
+    width: 100%;
+}
+
+#search-box .search-box-input .algolia-autocomplete input,
+#search-box .search-box-input #search {
     width: 100%;
     padding: 0 10px;
     height: 45px;
@@ -565,28 +568,34 @@ body > .container.full-width {
     background-color: #F5F6FC;
 }
 
-.search-box .algolia-autocomplete input:focus {
+#search-box .search-box-input .algolia-autocomplete input:focus {
     border: 1px solid #2780e3;
     transition: 0.4s ease;
 }
 
-.search-box .algolia-autocomplete input:focus::-webkit-input-placeholder {
+#search-box .search-box-input .algolia-autocomplete input:focus::-webkit-input-placeholder {
     transition: opacity 0.4s ease;
     opacity: 0;
 }
 
-.search-box .algolia-autocomplete input:focus::-moz-placeholder {
+#search-box .search-box-input .algolia-autocomplete input:focus::-moz-placeholder {
     transition: opacity 0.4s ease;
     opacity: 0;
 }
 
-.search-box i {
+#search-box .search-box-input i {
     position: relative;
     float: right;
     top: -30px;
     height: 0;
     right: 10px;
     color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  #search-box {
+      padding: 0px;
+  }
 }
 
 /* Footer */
@@ -701,6 +710,32 @@ ul.postlist-style-circle {
 
 ul.postlist-style-circle .first {
     display: inline;
+}
+
+/* Mermaid */
+.mermaid svg {
+    max-width: 100% !important;
+    overflow: visible;
+}
+
+.mermaid .edgeLabel{
+    font-weight:  normal;
+    background-color: #fff;
+}
+
+.mermaid .note{
+    stroke: #555;
+    fill: #f7f5fa;
+}
+
+.mermaid .actor,
+.mermaid .node rect{
+    stroke: #555;
+    fill: #fff;
+}
+
+.mermaid text.actor tspan{
+    fill: #555;
 }
 
 /* Print rules */

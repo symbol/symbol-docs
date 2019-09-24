@@ -101,3 +101,4 @@ Enumeration: uint8
 
     0x00; Plain message.
     0x01; Encrypted message.
+    0xFE; Persistent harvesting delegation.

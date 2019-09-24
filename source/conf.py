@@ -44,6 +44,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.examplecode',
+    'sphinxcontrib.mermaid',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
     'edit-on-github',
