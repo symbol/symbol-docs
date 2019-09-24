@@ -22,17 +22,15 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 
 .. note:: NEM's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
 
-.. figure:: ../resources/images/diagrams/cross-chain-swap-cycle.png
+.. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
+    :caption: Atomic cross-chain swap sequence diagram
     :align: center
-    :width: 700px
-
-    Atomic cross-chain swap sequence diagram
 
 1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
 
 2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
 
-3. Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` TX1:
+3. Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` **TX1**:
 
 * Mosaic: 10 alice token
 * Recipient: Bob's address (Private Chain)
@@ -41,9 +39,9 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 * Duration: 96h
 * Network: Private Chain
 
-4. Alice announces TX1 to the private network and shares with Bob the secret.
+4. Alice **announces TX1 to the private network** and **shares with Bob the secret**.
 
-5. Bob defines announces the following :ref:`SecretLockTransaction <secret-lock-transaction>` TX2 to the public network:
+5. Bob defines announces the following **SecretLockTransaction TX2** to the **public network**:
 
 * Mosaic: 10 bob token
 * Recipient: Alice's address (Public Chain)
@@ -54,11 +52,11 @@ Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The proble
 
 .. note::  The amount of time in which funds can be unlocked should be a smaller time frame than TX1's. Alice knows the secret, so Bob must be sure he will have some time left after Alice releases the secret.
 
-6. Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>` TX3 to the public network. This transaction defines the encrypting algorithm used, the original proof and the secret.
+6. Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>` **TX3** to the **public network**. This transaction defines the encrypting algorithm used, the original proof and the secret.
 
-7. Once TX3 is confirmed, the proof is revealed. TX2 transaction is unlocked and Alice receives the locked funds.
+7. Once TX3 is confirmed, the **proof** is revealed. **TX2 transaction is unlocked** and Alice receives the locked funds.
 
-8. Bob picks the proof and announces the :ref:`SecretProofTransaction <secret-proof-transaction>` TX4 to the private network, receiving the locked funds from TX1.
+8. Bob picks the proof and announces the **SecretProofTransaction TX4** to the **private network**, receiving the locked funds from **TX1**.
 
 ******
 Guides

@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant Alice
+    participant Private Chain
+    participant Public Chain
+    participant Bob
+    Note over Alice: proof = 'random'
+    Note over Alice: h = sha_256()
+    Note over Alice: secret = h(proof)
+    Alice ->>  Private Chain: announces TX1(secret)
+    Note right of Alice: TX1 waits for proof
+    Alice -->> Bob: tells secret
+    Bob ->> Public Chain: announces TX2(secret)
+    Note left of Bob: TX2 waits for proof
+    Alice ->>  Public Chain: announces TX3(proof, secret)
+    Note left of Public Chain: proof becomes public
+    Note left of Bob: TX2 executes
+    Note left of Bob: Alice receives funds
+    Bob ->>  Private Chain: announces TX4(proof, secret)
+    Note right of Alice: TX1 executes
+    Note right of Alice: Bob receives funds

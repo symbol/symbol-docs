@@ -47,11 +47,9 @@ In case of NEM public and private chain, the same mosaic name could have a diffe
 
 Instead of transferring tokens between different chains, the trade will be performed inside each chain. The secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 
-.. figure:: ../../resources/images/diagrams/cross-chain-swap-cycle.png
+.. mermaid:: ../../resources/diagrams/cross-chain-swap.mmd
+    :caption: Atomic cross-chain swap sequence diagram
     :align: center
-    :width: 700px
-
-    Atomic cross-chain swap between public and private network
 
 For that reason, each actor involved should have at least one account in each blockchain.
 

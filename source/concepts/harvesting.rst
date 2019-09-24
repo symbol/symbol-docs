@@ -38,6 +38,10 @@ An eligible account can harvest new blocks by running a node. To harvest locally
 
 Besides, each node can set a **beneficiary public key** to share a percentage of the harvesting rewards (:ref:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio configurable for each network. When the node does not define a beneficiary, all the rewards go to the block signer.
 
+.. mermaid:: ../resources/diagrams/beneficiary.mmd
+    :caption: Rewards division when the network's sharing ratio equals 10%
+    :align: center
+
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
 .. _delegated-harvesting:
@@ -50,28 +54,10 @@ An eligible account may also delegate its importance score to a :ref:`remote nod
 
 Delegated harvesting enables an account to use a **proxy private key** that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
 
-.. mermaid::
+.. mermaid:: ../resources/diagrams/delegated-harvesting-activation.mmd
     :caption: Delegated harvesting activation diagram
     :alt: Delegated harvesting activation diagram
     :align: center
-
-    sequenceDiagram
-        participant Account
-        participant Network
-        participant Node
-        Account ->>  Network: AccountLinkTransaction(remotePublicKey)
-        activate Network
-        Network -->> Account: Confirms transaction
-        deactivate Network
-        Account ->>  Network: TransferTransaction(nodePublicKey, encryptedRemotePrivateKey)
-        activate Network
-        Network -->> Account: Confirms the transaction
-        deactivate Network
-        Network -->> Node: Sends notification
-        opt eligible remote account
-            Node ->> Node: Adds delegated harvester
-            Node ->> Node: Saves remote private key on disk
-        end
 
 To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
 

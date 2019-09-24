@@ -718,6 +718,26 @@ ul.postlist-style-circle .first {
     overflow: visible;
 }
 
+.mermaid .edgeLabel{
+    font-weight:  normal;
+    background-color: #fff;
+}
+
+.mermaid .note{
+    stroke: #555;
+    fill: #f7f5fa;
+}
+
+.mermaid .actor,
+.mermaid .node rect{
+    stroke: #555;
+    fill: #fff;
+}
+
+.mermaid text.actor tspan{
+    fill: #555;
+}
+
 /* Print rules */
 @media print {
     .bs-sidenav, footer {
