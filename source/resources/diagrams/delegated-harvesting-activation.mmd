@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Account
+    participant Network
+    participant Node
+    Account ->>  Network: AccountLinkTransaction(remotePublicKey)
+    activate Network
+    Network -->> Account: Confirms transaction
+    deactivate Network
+    Account ->>  Network: TransferTransaction(nodePublicKey, encryptedRemotePrivateKey)
+    activate Network
+    Network -->> Account: Confirms the transaction
+    deactivate Network
+    Network -->> Node: Sends notification
+    opt eligible remote account
+        Node ->> Node: Adds delegated harvester
+        Node ->> Node: Saves remote private key on disk
+    end

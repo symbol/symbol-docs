@@ -24,8 +24,8 @@ const AccountHttp = nem2Sdk.AccountHttp,
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-const address = Address.createFromRawAddress('SCSGBN-HYJD6P-KJHACX-3R2BI3-QUMMOY-QSNW5J-ICLK');
-
+const rawAddress = process.env.ADDRESS;
+const address = Address.createFromRawAddress(rawAddress);
 accountHttp
     .getMultisigAccountInfo(address)
     .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));

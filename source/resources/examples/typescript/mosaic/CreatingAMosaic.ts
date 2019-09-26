@@ -20,12 +20,12 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
-    MosaicId,
     MosaicDefinitionTransaction,
-    MosaicProperties,
-    MosaicSupplyChangeTransaction,
-    MosaicSupplyType,
+    MosaicFlags,
+    MosaicId,
     MosaicNonce,
+    MosaicSupplyChangeAction,
+    MosaicSupplyChangeTransaction,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -41,12 +41,9 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     nonce,
     MosaicId.createFromNonce(nonce, account.publicAccount),
-    MosaicProperties.create({
-        supplyMutable: true,
-        transferable: true,
-        divisibility: 0,
-        duration: UInt64.fromUint(1000)
-    }),
+    MosaicFlags.create(true, true, true),
+    0,
+    UInt64.fromUint(0),
     NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -54,7 +51,7 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
-    MosaicSupplyType.Increase,
+    MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(1000000),
     NetworkType.MIJIN_TEST);
 /* end block 02 */

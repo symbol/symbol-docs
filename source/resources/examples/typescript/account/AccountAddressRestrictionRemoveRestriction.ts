@@ -23,21 +23,22 @@ import {
     Address,
     Deadline,
     NetworkType,
-    RestrictionModificationType,
-    RestrictionType,
+    AccountRestrictionModificationAction,
+    AccountRestrictionType,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
-const companyAddress = Address.createFromRawAddress('SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP');
-const addressRestriction = AccountRestrictionModification.createForAddress(RestrictionModificationType.Remove, companyAddress);
+const companyRawAddress = process.env.COMPANY_ADDRESS as string;
+const companyAddress = Address.createFromRawAddress(companyRawAddress);
+const addressRestriction = AccountRestrictionModification.createForAddress(AccountRestrictionModificationAction.Remove, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
         Deadline.create(),
-        RestrictionType.AllowAddress,
+        AccountRestrictionType.AllowIncomingAddress,
         [addressRestriction],
         NetworkType.MIJIN_TEST);
 /* end block 02 */

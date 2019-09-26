@@ -68,33 +68,6 @@ Get the complete list of available endpoints by clicking on the button below:
 
     <a href="/endpoints.html"><button class="btn btn-default">REST API Endpoints</button></a>
 
-UInt64: lower and higher
-========================
-
-Javascript operates on **32-bit** values. The server returns numbers encoded in a UInt64 object to enable numeric representation up to **64 bits**.
-
-The **UInt64** object returned is composed of two 32-bit numbers: ``lower`` and ``higher``.
-
-The :doc:`nem2-sdk <sdk>` conveniently allows you to work with UInt64 values.
-
-.. code-block:: typescript
-
-    import {UInt64} from "nem2-sdk";
-
-    // Create Uint64 from [lower, higher]
-    const id = new UInt64([123456,654321]);
-
-    // UInt64 to compact number
-    console.log(id.compact());
-    // 2810287296209472
-
-    // UInt64 to Hex
-    console.log(id.toHex());
-    // 0009FBF10001E240
-
-    // Create UInt64 from hex
-    UInt64.fromHex('0009FBF10001E240');
-
 .. _websockets:
 
 **********
@@ -103,7 +76,7 @@ WebSockets
 
 WebSockets make receiving notifications possible when a transaction or event occurs in the blockchain. The notification is received in real time without having to poll the API waiting for a reply.
 
-Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with **Listeners**.
+The interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with **Listeners**.
 
 Channels
 ========

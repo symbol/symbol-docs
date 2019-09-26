@@ -25,7 +25,10 @@ const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.M
 const certificatePublicKey = process.env.CERTIFICATE_PUBLIC_KEY as string;
 const certificatePublicAccount = PublicAccount.createFromPublicKey(certificatePublicKey, NetworkType.MIJIN_TEST);
 
-const encryptedMessage = aliceAccount.encryptMessage('This message is secret', certificatePublicAccount);
+const encryptedMessage = aliceAccount
+    .encryptMessage('This message is secret',
+        certificatePublicAccount,
+        NetworkType.MIJIN_TEST);
 /* end block 01 */
 
 /* start block 02 */

@@ -22,9 +22,9 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
-    ModifyMultisigAccountTransaction,
+    MultisigAccountModificationTransaction,
     MultisigCosignatoryModification,
-    MultisigCosignatoryModificationType,
+    CosignatoryModificationAction,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -48,17 +48,17 @@ const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, Ne
 /* end block 01 */
 
 /* start block 02 */
-const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
+const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     1,
     1,
     [
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory1,
         ),
         new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.Add,
+            CosignatoryModificationAction.Add,
             cosignatory2,
         )],
     NetworkType.MIJIN_TEST);
@@ -67,7 +67,7 @@ const convertIntoMultisigTransaction = ModifyMultisigAccountTransaction.create(
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
-    [convertIntoMultisigTransaction.toAggregate(account.publicAccount)],
+    [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST);
 /* end block 03 */
 

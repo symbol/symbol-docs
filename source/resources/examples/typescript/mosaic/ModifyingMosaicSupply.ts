@@ -20,8 +20,8 @@ import {
     Account,
     Deadline,
     MosaicId,
+    MosaicSupplyChangeAction,
     MosaicSupplyChangeTransaction,
-    MosaicSupplyType,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -33,12 +33,13 @@ const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicId = new MosaicId([520597229,83226871]); // Replace with your mosaicId
+const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
+const mosaicId = new MosaicId(mosaicIdHexa);
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicId,
-    MosaicSupplyType.Increase,
+    MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(2000000),
     NetworkType.MIJIN_TEST);
 

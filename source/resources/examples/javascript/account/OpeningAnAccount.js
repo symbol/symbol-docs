@@ -22,7 +22,6 @@ const NetworkType = nem2Sdk.NetworkType,
 
 /* start block 01 */
 const privateKey = process.env.PRIVATE_KEY;
-
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
 console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);

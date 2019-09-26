@@ -56,7 +56,7 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
         UInt64.fromHex('1FE'),
         bobAddress,
         UInt64.fromHex('FFFFFFFFFFFFFFFF'),
-        UInt64.fromUint(1),
+        UInt64.fromUint(2),
         NetworkType.MIJIN_TEST);
 
 const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
@@ -66,7 +66,7 @@ const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
         UInt64.fromUint(1),
         carolAddress,
         UInt64.fromHex('FFFFFFFFFFFFFFFF'),
-        UInt64.fromUint(1),
+        UInt64.fromUint(2),
         NetworkType.MIJIN_TEST);
 
 const privateKey = process.env.PRIVATE_KEY as string;

@@ -43,7 +43,7 @@ const transaction = MosaicGlobalRestrictionTransaction
         UInt64.fromHex('1FE'),
         UInt64.fromUint(0),
         MosaicRestrictionType.NONE,
-        UInt64.fromUint(1),
+        UInt64.fromUint(2),
         MosaicRestrictionType.EQ,
         NetworkType.MIJIN_TEST);
 /* end block 02 */

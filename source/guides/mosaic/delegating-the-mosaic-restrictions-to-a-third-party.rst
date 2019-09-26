@@ -17,8 +17,8 @@ Background
 
 Another company, **ComfyClothingCompany** wants to conduct an STO. In this case, they want to **delegate the KYC process** to a company specialized in KYC & AML.
 
-If you have followed the previous guide :doc:`freezing accounts with restrictable mosaics  <freezing-accounts-with-restrictable-mosaics>`,
-you have seen how to restrict accounts from transacting with a given mosaic combining different key-values to match the global :doc:`mosaic restriction <../../concepts/mosaic-restriction>` set to this mosaic.
+If you have followed the previous guide (:doc:`freezing accounts with restrictable mosaics  <freezing-accounts-with-restrictable-mosaics>`),
+you know how to restrict accounts from transacting a given mosaic by combining different key-values to match the global :doc:`mosaic restriction <../../concepts/mosaic-restriction>`.
 
 In this guide, instead of using the key-values assigned to the same mosaic we are restricting, we are going to take them from a mosaic held
 by another account.
@@ -35,13 +35,13 @@ Prerequisites
 Getting into some code
 **********************
 
-1. Start by register a new ``restrictable`` mosaic. We will refer to it from now on as ``cc.shares``.
+1. Start by registering a new ``restrictable`` mosaic. We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash
 
     nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --restrictable --divisibility 0 --eternal
 
-2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic the global restriction ``{ kyc, Is_Verified, EQ, 1}`` to the mosaic. We decide to represent ``Is_Verified`` as ``0x1FE`` in hexadecimal.
+2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, Is_Verified, EQ, 1}`` to the mosaic. We decide to represent ``Is_Verified`` as ``0x1FE`` in hexadecimal.
 
 .. example-code::
 
@@ -50,7 +50,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-The KYC provider also defines the following permission tiers:
+The KYC provider defines the following permission tiers:
 
 .. csv-table::
     :header: "Key", "Operator", "Value", "Description"
@@ -59,9 +59,9 @@ The KYC provider also defines the following permission tiers:
     Is_Verified; EQ; 1; The client has issued a valid passport.
     Is_Verified; EQ; 2; The client has issued a valid proof of address and passport.
 
-ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::Is_Verified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the global mosaic restriction ``{ kyc::Is_Verified, EQ, 2}`` to the mosaic  ``ccf.shares``. To take the restriction from another mosaic, we are going to use the field ``referenceId``.
+ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::Is_Verified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::Is_Verified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, we are going to use the field ``referenceId``.
 
-3. Announce a **MosaicGlobalRestrictionTransaction** setting ``cc.shares`` as the ``targetMosaicId``, and ``kyc`` as the ``referenceMosaicId``, and ``Is_Verified`` as the key.
+3. Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and ``Is_Verified`` as the key.
 
 .. example-code::
 
@@ -70,7 +70,7 @@ ComfyClothingCompany decides that only accounts with the restriction ``{cc.share
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-4. The KYC provider has encountered three potential investors:
+4. The KYC provider has encounters three potential investors:
 
 * Alice provides a valid passport but no proof of address. The KYC provider awards Alice's account with the mosaic restriction ``{kyc, Is_Verified, 1}``.
 * Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.

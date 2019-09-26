@@ -16,7 +16,7 @@
  *
  */
 
-import {AccountHttp, NetworkType, PublicAccount, QueryParams} from "nem2-sdk";
+import {AccountHttp, Address, QueryParams} from "nem2-sdk";
 import {concatMap, expand, toArray} from "rxjs/operators";
 import {EMPTY} from 'rxjs'
 
@@ -26,15 +26,14 @@ const accountHttp = new AccountHttp(nodeUrl);
 const pageSize = 100;
 const allTransactions = true;
 
-const publicKey = process.env.PUBLIC_KEY as string;
-const publicAccount = PublicAccount
-    .createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
+const rawAddress = process.env.ADDRESS as string;
+const address = Address.createFromRawAddress(rawAddress);
 
 accountHttp
-    .transactions(publicAccount, new QueryParams(pageSize, undefined))
+    .transactions(address, new QueryParams(pageSize, undefined))
     .pipe(
         expand( (transactions) => transactions.length >= pageSize && allTransactions
-            ? accountHttp.transactions(publicAccount, new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
+            ? accountHttp.transactions(address, new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
             : EMPTY),
         concatMap(transactions => transactions),
         toArray()

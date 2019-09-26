@@ -39,7 +39,7 @@ Address restriction
 
 Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.
 
-The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`MosaicAddressRestrictionTransaction transaction <mosaic-address-restriction-transaction>` is composed of:
+The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address. The :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"

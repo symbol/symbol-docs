@@ -17,7 +17,7 @@ Background
 
 Let's say a company, CharlieChocolateFactory, wants to go public by tokenizing their shares and conducting an STO. They create a mosaic ``ccf.shares`` and configure it to be **restrictable**. To comply with regulations, the company wants only the participants that have passed the **KYC/AML** process to buy and transact their stock.
 
-In this guide, we are going to use Catapult's :doc:`mosaic restriction <../../concepts/mosaic-restriction>` feature to define which participants who can transact with ``ccf.shares``.
+In this guide, we are going to use Catapult's :doc:`Mosaic Restriction <../../concepts/mosaic-restriction>` feature to define rules that determine which participants can transact with ``ccf.shares``.
 
 *************
 Prerequisites
@@ -32,13 +32,13 @@ Getting into some code
 Creating a restrictable mosaic
 ==============================
 
-Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their definition accept mosaic restrictions.
+Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
 
-1. Start creating a new restrictable mosaic with NEM2-CLI.
+1. Start creating a new restrictable mosaic with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-and-opening-an-account>`.
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaic
+    nem2-cli transaction mosaic --profile ccfactory
 
     Do you want an eternal mosaic? [y/n]: y
     Introduce mosaic divisibility: 0
@@ -52,10 +52,10 @@ Before starting to work with Mosaic Restrictions, we need to have created a rest
 
 2. Then, copy and save the mosaic identifier. We will need it later to define restrictions.
 
-Setting a Global Restriction
-============================
+Setting a Mosaic Global Restriction
+===================================
 
-The company wants to add a restriction to only permit accounts with elevated statuses to interact with the asset. To achieve so, the company will add a global restriction as ``{ccf.shares, KYC, EQ = 1}``, which can be read as "only allow accounts to transact with the ``ccf.shares`` mosaic if their ``KYC`` restriction key for it has a value equal to 1".
+The company wants to add a restriction to only permit accounts with elevated statuses to interact with the asset. To achieve this, the company will add a mosaic global restriction as ``{ccf.shares, KYC, EQ = 1}``, which can be read as "only allow accounts to transact with the ``ccf.shares`` mosaic if their ``KYC`` restriction key for it has a value equal to 1".
 
 .. figure:: ../../resources/images/examples/mosaic-restriction-sto.png
     :align: center
@@ -63,7 +63,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
 
     Use case diagram
 
-1. Start opening a new TypeScript file. Then, place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64. Commonly, the CharlieChocolateFactory will keep the meaning of this value in a separate database. In our case, we will consider that ``0xFF`` stands for ``KYC``.
+1. Open a new TypeScript file. Then, place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64. Commonly, the CharlieChocolateFactory will keep the meaning of this value in a separate database. In our case, we will consider that ``0xFF`` stands for ``KYC``.
 
 .. example-code::
 
@@ -72,9 +72,9 @@ The company wants to add a restriction to only permit accounts with elevated sta
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass as arguments the mosaicId and keys you have defined in the previous step. For now, we will not use the property ``referenceMosaicId``, so we can define it as ``UInt.fromHex('0')``.
+2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaicId and keys you have defined in the previous step as arguments. For now, we will not use the property ``referenceMosaicId``, so we can define it as ``UInt.fromHex('0')``.
 
-The SDK also requests  the previous mosaic restriction value for this key and mosaic, and which type it had. As it is the first global restriction we are announcing, set the ```previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
+The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the ```previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
 
 .. example-code::
 
@@ -98,7 +98,8 @@ Assigning Mosaic Address Restrictions
 
 When investors complete the KYC/AML process, the CharlieChocolateFactory alters their accounts with a **MosaicAddressRestrictionTransaction** with parameters ``ccf.shares, KYC, 1``, allowing certified investors to participate in the STO. Others who have not provided the necessary information will not be able to receive or trade the asset.
 
-Alice, a potential investor, passes the KYC process. Once Alice has been verified, the company tags Alice's account with the mosaic address restriction ``{ccf.shares, Alice, KYC, 1}``. On the other hand Bob, another account that wants to invest did not pass the KYC process, receiving the mosaic address Restriction ``{ccf.shares, Bob, KYC, 0}``.
+Alice, a potential investor, passes the KYC process. Once Alice has been verified, the company tags Alice's account with the mosaic address restriction ``{ccf.shares, Alice, KYC, 1}``. On the other hand, Bob, another interested investor, did not pass the KYC process. Bob’s account is not eligible to receive ``ccf.shares`` as it does not meet the mosaic global restriction requirements. Nevertheless, CharlieCholocalteFatory decides to tag the account with the **mosaic address restriction** ``{ccf.shares, Bob, KYC, 0}``. Doing so, they know that Bob has attempted and failed the KYC process.
+
 
 1. Define both **MosaicAddressRestrictionTransaction** for Alice and Bob accounts as follows:
 
@@ -112,7 +113,7 @@ Alice, a potential investor, passes the KYC process. Once Alice has been verifie
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Once again, you will have to provide previous values set for these mosaic address restrictions. Since it is the first time we are appending one for this mosaic and key to these accounts, we have to use the sentinel value ``FFFFFFFFFFFFFFFF``.
+Once again, you will have to provide previous values set for these mosaic address restrictions. Since it is the first time we are appending one mosaic address restriction for this mosaic and key to these accounts, we have to use the sentinel value ``FFFFFFFFFFFFFFFF``.
 
 2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's owner account.
 
@@ -123,9 +124,9 @@ Once again, you will have to provide previous values set for these mosaic addres
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Once the transaction gets confirmed, let's try to send mosaics to Alice's and Bob's accounts.
+3. Once the transaction gets confirmed, try to send mosaics to Alice's and Bob's accounts.
 
-You should be able to send ``ccf.shares`` to Alice without any problems. Plus, Alice will be able to transfer mosaics with other accounts with restrictions set to ``{ccf.shares, KYC, 1}``.
+You should be able to send ``ccf.shares`` to Alice without any problems. Additionally, Alice will be able to transfer mosaics with other accounts with restrictions set to ``{ccf.shares, KYC, 1}``.
 
 .. code-block:: bash
 

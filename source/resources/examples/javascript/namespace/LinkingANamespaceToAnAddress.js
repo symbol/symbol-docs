@@ -19,7 +19,7 @@
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
     Address = nem2Sdk.Address,
-    AliasActionType = nem2Sdk.AliasActionType,
+    AliasAction = nem2Sdk.AliasAction,
     AliasTransaction = nem2Sdk.AliasTransaction,
     Deadline = nem2Sdk.Deadline,
     NamespaceId = nem2Sdk.NamespaceId,
@@ -27,14 +27,16 @@ const Account = nem2Sdk.Account,
     TransactionHttp = nem2Sdk.TransactionHttp;
 
 /* start block 01 */
-const namespaceId = new NamespaceId('foo');
-const address = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const namespaceName = process.env.NAMESPACE_NAME;
+const namespaceId = new NamespaceId(namespaceName);
+const rawAddress = process.env.ADDRESS;
+const address = Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 
 /* start block 02 */
 const addressAliasTransaction = AliasTransaction.createForAddress(
     Deadline.create(),
-    AliasActionType.Link,
+    AliasAction.Link,
     namespaceId,
     address,
     NetworkType.MIJIN_TEST

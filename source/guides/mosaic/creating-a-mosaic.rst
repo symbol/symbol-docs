@@ -15,7 +15,9 @@ Tokenize an asset using mosaics.
 Background
 **********
 
-:doc:`Mosaics <../../concepts/mosaic>` can be used to represent any asset in the blockchain such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+A private company, ComfyClothingCompany, decides that it wants to go public. Instead of a traditional IPO, the company decides to do an STO to issue tokens through the NEM platform.
+
+In this guide, we are going to help this company to **create the tokens for their STO** using :doc:`mosaics <../../concepts/mosaic>` built-in feature and the NEM2-SDK.
 
 *************
 Prerequisites
@@ -28,18 +30,21 @@ Prerequisites
 Getting into some code
 **********************
 
-To create a mosaic, we need to define two transactions.
+1. Before starting this guide, make sure you have an :doc:`account loaded with cat.currency  <../../getting-started/setup-workstation>`.
 
-1. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to select the **mosaic properties**. In this example, we are going to create a mosaic configured as:
+2. Then, the company must create a mosaic to represent shares to their company. To do so, you will have to create a new file and define two transactions:
+
+a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
 
-    Divisibility; 0 ; The mosaic won't be divisible. Determines up to what decimal place the mosaic can be divided.
-    Duration; 1000; The mosaic will be created for the next 1000 blocks. If you want to create a non-expiring mosaic, do not set this property.
-    Supply mutable; True; The mosaic supply can change at a later point.
-    Transferable; True; The mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+    Divisibility; 0 ; Although brokerages and investment firms can fractionalize shares, the traditional minimum number of shares an investor can purchase from the open market is 1.
+    Duration; 0; Shares of the company should exist as long as the company is in business. The ComfyClothingCompany sets this property to ``0``, creating a non-expiring mosaic.
+    Supply mutable; True; ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
+    Transferable; True; Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
+    Restrictable; True; Since STOs are regulated, the mosaic owner should be able to restrict which accounts can transact with the mosaic.
 
 .. example-code::
 
@@ -53,7 +58,7 @@ To create a mosaic, we need to define two transactions.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**. We are going to create **1.000.000** mosaic units.
+b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**. We are going to create **1,000,000** mosaic units.
 
 .. example-code::
 
@@ -67,7 +72,7 @@ To create a mosaic, we need to define two transactions.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-NEM mainly works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
@@ -89,8 +94,4 @@ NEM mainly works with **absolute amounts**. To get an absolute amount, multiply 
         :language: bash
         :start-after: #!/bin/sh
 
-************
-What's next?
-************
-
-:doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
+Once the transaction gets confirmed, you can try to :doc:`transfer <../transaction/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.

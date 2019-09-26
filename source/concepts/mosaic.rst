@@ -6,32 +6,63 @@ Mosaics are part of what makes the Smart Asset System unique and flexible. They 
 
 A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
+Each mosaic has a unique identifier represented as a **64-bit unsigned integer** and a set of configurable properties and flags that can be defined during the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`.
+
 .. _mosaic-properties:
 
 **********
 Properties
 **********
 
-Each mosaic has a unique identifier and a set of configurable properties. During the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`, you can define:
+Divisibility
+============
 
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
+Determines the decimal place to which the mosaic can be divided. Divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001. The divisibility must be in the range of 0 and 6.
 
-    Divisibility; Integer; Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``.
-    Duration; Integer; Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). To create non-expiring mosaics, leave this property undefined.
-    Initial supply; Integer; Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units (absolute amount).
-    Supply mutable; Boolean; If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
-    Transferable; Boolean; If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
-    Restrictable; Boolean; If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
+Initial supply
+==============
 
-*****************************
-Absolute and relative amounts
-*****************************
+Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-NEM works with **absolute amounts**, removing the comma when the mosaic can be divisible. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
+
+Duration
+========
+
+Specifies the number of confirmed blocks the mosaic is rented for. Duration is allowed to lie up to ``3650`` days (10 years). You can also create **non-expiring mosaics** setting this property to ``0``.
+
+*****
+Flags
+*****
+
+Supply mutable
+==============
+
+If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
+
+Transferable
+============
+
+.. figure:: ../resources/images/examples/mosaic-transferable.png
+    :align: center
+    :width: 400px
+
+    Example of a non-transferable mosaic
+
+If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can only be transferred back to the mosaic creator.
+
+Restrictable
+============
+
+.. figure:: ../resources/images/examples/mosaic-restriction-delegated.png
+    :align: center
+    :width: 400px
+
+    Example of a mosaic restriction
+
+If set to true, the mosaic owner can configure custom :doc:`restrictions <mosaic-restriction>`.
 
 **********
 Rental fee
@@ -40,36 +71,6 @@ Rental fee
 To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
 By default, registering a mosaic has an associated :properties:`configurable cost <config-network.properties>` of ``500 cat.currency``. The **network dynamically adjusts the mosaic rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
-
-*******
-Example
-*******
-
-A private company, ComfyClothingCompany, decides that it wants to go public. Instead of a traditional IPO, the company decides to do an STO to issue tokens through the NEM platform.
-
-Thus, the company must create a mosaic to represent shares to their company. Here is how the company might configure the mosaic properties:
-
-.. csv-table::
-    :header: "Property", "Configuration"
-    :delim: ;
-
-    Duration; undefined
-    Divisibility; 2
-    Initial supply; 1000000000 (10,000,000.00)
-    Supply mutable; true
-    Transferable; true
-
-**Duration:** Shares of the company should exist as long as the company is in business. The ComfyClothingCompany leaves this property ``undefined``, creating a non-expiring mosaic representing their assets.
-
-**Divisibility:** Although brokerages and investment firms can fractionalize shares, the traditional minimum number of shares an investor can purchase from the open market is 1.
-
-However, NEM mosaics offer more flexibility in tokenizing their company shares. ComfyClothingCompany chooses the divisibility to be ``2``, allowing the smallest fraction of their shares to be 0.01.
-
-Fractional ownership, along with the ability to trade 24/7, brings additional liquidity to the market. These same characteristics also open up the market to smaller investors.
-
-**Supply:** ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
-
-**Transferable:** Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
 
 ******
 Guides
@@ -112,7 +113,7 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
     id; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
     divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic divisibility. Maximum divisibility is ``6``.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic duration expressed in blocks. Duration is allowed to lie up to ``3650`` days (10 years). If set to 0, the mosaic is non-expiring.
 
 .. _mosaic-supply-change-transaction:
 

@@ -16,17 +16,17 @@
  *
  */
 
-import {AccountHttp, NetworkType, PublicAccount, QueryParams} from "nem2-sdk";
+import {AccountHttp, Address, QueryParams} from "nem2-sdk";
 
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-const publicKey = process.env.PUBLIC_KEY as string;
-const publicAccount =  PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
+const rawAddress = process.env.ADDRESS as string;
+const address = Address.createFromRawAddress(rawAddress);
 
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
 accountHttp
-    .transactions(publicAccount, new QueryParams(pageSize))
+    .transactions(address, new QueryParams(pageSize))
     .subscribe(transactions => console.log(transactions), err => console.error(err));
 /* end block 01 */
