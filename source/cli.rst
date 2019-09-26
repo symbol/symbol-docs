@@ -1,6 +1,6 @@
-######
-Client
-######
+####
+CLI
+####
 
 The NEM2 Command Line Interface is a unified tool to interact with the NEM blockchain.
 
