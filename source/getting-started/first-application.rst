@@ -60,25 +60,39 @@ The account you have loaded in NEM2-CLI represents the **ticket vendor**.
 
 .. code-block:: bash
 
-   nem2-cli account info
+    nem2-cli account info
 
+    Account Information
+    ┌───────────────────┬──────────────────────────────────────────────────────────────────┐
+    │ Property          │ Value                                                            │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address           │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address Height    │ 1                                                                │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key        │ 654..321                                                         │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key Height │ 3442                                                             │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Importance        │ 0                                                                │
+    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Importance Height │ 0                                                                │
+    └───────────────────┴──────────────────────────────────────────────────────────────────┘
 
-   New Account: SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
+    Balance Information
+    ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+    │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+    ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+    │ 0DC67FBE1CAD29E3 │ 1,000,000       │ 1000000000000   │ Never             │
+    └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-   [...]
-
-   Mosaics
-
-   0dc67fbe1cad29e3: 1000000
-
-2. This account owns ``1,000,000 cat.currency``. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
+2. This account owns ``1,000,000 cat.currency`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
 
 3. Create a second account to identify the **customer**.
 
 .. code-block:: bash
 
    nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile customer
-
 
 Monitoring the blockchain
 =========================

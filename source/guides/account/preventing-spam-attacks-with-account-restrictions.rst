@@ -49,13 +49,20 @@ Before starting solving the use case, you will need to set up two accounts with 
     nem2-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Do you want to save it? [y/n]: y
+    Do you want to save account? [y/n]: y
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): product
 
-    New Account:    SDFRDC-F6RXWX-EOOTVI-RLCNUK-KYRSU6-MXW2FC-OR4V
-    Public Key:     8DC55282AC40307C230F432EE29E52BD93860C167011B11FA1BAEE124B76AB19
-    Private Key:    123..456
+    New Account
+    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
+    │ Property    │ Value                                                            │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address     │ SDFRDC-F6RXWX-EOOTVI-RLCNUK-KYRSU6-MXW2FC-OR4V                   │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key  │ 8DC55282AC40307C230F432EE29E52BD93860C167011B11FA1BAEE124B76AB19 │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Private Key │ 123..456                                                         │
+    └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 2. Create another account for the company.
 
@@ -64,13 +71,20 @@ Before starting solving the use case, you will need to set up two accounts with 
     nem2-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Do you want to save it? [y/n]: y
+    Do you want to save account? [y/n]: y
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): company
 
-    New Account:    SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP
-    Public Key:     DBA5A88911D01CE951A5DEAFD86108A029EA359BB211B399FC53B8908D6AE272
-    Private Key:    654..321
+    New Account
+    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
+    │ Property    │ Value                                                            │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address     │ SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP                   │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key  │ DBA5A88911D01CE951A5DEAFD86108A029EA359BB211B399FC53B8908D6AE272 │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Private Key │ 654..321                                                         │
+    └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 Next, you will configure the product's account to only accept receiving transfer transactions that contain a specific mosaic.
 

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli blockchain height
+nem2-cli chain height
