@@ -77,11 +77,17 @@ You should see the following lines in your terminal, containing the account cred
 
 .. code-block:: bash
 
-    New Account:    SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
+    Profile stored correctly
 
-    Public Key:     33E0...6ED
-
-    Private Key:    41....FF
+    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
+    │ Property    │ Value                                                            │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key  │ 654...321                                                        │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Private Key │ 123...456                                                        │
+    └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 .. _setup-development-environment:
 
