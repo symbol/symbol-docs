@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli transaction namespace --subnamespace --parentname foo --name bar
+nem2-cli transaction namespace --subnamespace --parent-name foo --name bar
