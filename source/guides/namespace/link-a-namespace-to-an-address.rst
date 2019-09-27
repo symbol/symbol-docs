@@ -68,12 +68,12 @@ Now you can send transactions to the namespace linked to the account instead of 
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionAddressAlias.ts
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionAddressAlias.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionAddressAlias.js
+    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionAddressAlias.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

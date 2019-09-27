@@ -103,7 +103,7 @@ Receiving an OK response does not mean the transaction is valid, which means it 
 
 Open three new terminals:
 
-1. The first terminal :doc:`monitors announced transactions <../guides/transaction/monitoring-a-transaction-status>` validation errors.
+1. The first terminal :doc:`monitors announced transactions <../guides/monitor/monitoring-a-transaction-status>` validation errors.
 
 .. code-block:: bash
 
@@ -169,12 +169,12 @@ Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction 
 
 .. example-code::
 
-    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -187,12 +187,12 @@ Although the transaction is defined, it has not been announced to the network ye
 
 .. example-code::
 
-    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -201,12 +201,12 @@ Although the transaction is defined, it has not been announced to the network ye
 
 .. example-code::
 
-    .. viewsource:: ../resources/examples/typescript/transaction/FirstApplication.ts
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.ts
         :language: typescript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../resources/examples/javascript/transaction/FirstApplication.js
+    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

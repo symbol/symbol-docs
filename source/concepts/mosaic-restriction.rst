@@ -6,7 +6,7 @@ Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accoun
 
 This feature has been specifically tailored for **Security Token Offerings (STO)**. In contrast to the unregulated tokens that were introduced through ICOs, security tokens are blockchain based representation of value that is subject to regulation under security laws, and thus need a way to bypass blockchain autonomy.
 
-Not all the mosaics of a given network will be subject to mosaic restrictions. The feature will only affect those to which the issuer adds the ``restrictable`` property explicitly at the moment of its creation. This property appears disabled by default, as it is undesirable for autonomous tokens like the public network currency.
+Not all the mosaics of a given network will be subject to mosaic restrictions. The feature will only affect those to which the issuer adds the ``restrictable`` :ref:`property <mosaic-properties>` explicitly at the moment of its creation. This property appears disabled by default, as it is undesirable for autonomous tokens like the public network currency.
 
 .. note:: A mosaic only supports the mosaic restrictions feature if the ``restrictable`` property has been set to true at its creation.
 
@@ -67,11 +67,9 @@ Verifying accounts that can buy assets
 
     Example of a mosaic restriction
 
-ComfyClothingCompany creates the mosaic ``comfyclothing.shares``.
+ComfyClothingCompany creates the mosaic ``comfyclothing.shares``. For regulatory reasons, the company wants only the participants that have passed the KYC process to buy and transact the asset. So the company adds the restriction tier ``{comfyclothing.shares, Can_Buy, EQ = 1}`` to the mosaic ``comfyclothing.shares``.
 
-For regulatory reasons, the company wants only the participants that have passed the KYC process  to buy and transact the asset. So the company adds the restriction tier ``{Can_Buy, EQ, 1}`` to the mosaic ``comfyclothing.shares``.
-
-Alice is interested in investing in ComfyClothingCompany so she passes the KYC process. Once Alice has been verified, the company tags Alice’s account with the MosaicAddressRestrictionTransaction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``.
+Alice, a potential investor, is interested in investing in ComfyClothingCompany so she passes the KYC process. Once Alice has been verified, the company tags Alice's account with the MosaicAddressRestrictionTransaction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``.
 
 Alice can now buy ``comfyclothing.shares`` and start transacting it with other accounts. Bob, on the other hand, is not be able to buy or even receive the asset because he is not verified and tagged accordingly.
 
@@ -86,7 +84,7 @@ Delegating the KYC process to a specialized company
 
 Following the previous example, ComfyClothingCompany delegates the KYC process to a company specialized in KYC & AML.
 
-The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{ Is_Verified, EQ, 1}`` to the mosaic.
+The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{kyc, Is_Verified, EQ = 1}`` to the mosaic.
 
 The KYC provider also defines the following permission tiers:
 
@@ -97,7 +95,7 @@ The KYC provider also defines the following permission tiers:
     Is_Verified; EQ; 1; The client has issued a valid passport.
     Is_Verified; EQ; 2; The client has issued a valid proof of address and passport.
 
-ComfyClothingCompany decides that only accounts with the restriction ``{ KYC::Is_Verified, 2}`` should be enabled to transfer shares. For this reason, the company adds the global mosaic restriction ``{ kyc::Is_Verified, EQ, 2}`` to the mosaic  ``comfyclothing.shares``.
+ComfyClothingCompany decides that only accounts with the restriction ``{ kyc::Is_Verified, 2}`` should be enabled to transfer ``cc.shares``. For this reason, the company adds the global mosaic restriction ``{comfyclothing.shares, kyc::Is_Verified, EQ = 2}``.
 
 The KYC provider encounters 3 potential investors:
 
@@ -107,18 +105,18 @@ The KYC provider encounters 3 potential investors:
 
 Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice - who has not provided a valid proof of address - will not be able to receive shares.
 
-..
-    ******
-    Guides
-    ******
 
-    .. postlist::
-        :category: Mosaic Restriction
-        :date: %A, %B %d, %Y
-        :format: {title}
-        :list-style: circle
-        :excerpts:
-        :sort:
+******
+Guides
+******
+
+.. postlist::
+    :category: Mosaic Restriction
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
 *******
 Schemas

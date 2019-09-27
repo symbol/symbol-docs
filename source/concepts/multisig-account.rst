@@ -14,7 +14,7 @@ Multisig :doc:`accounts <account>` require additional signatures to initiate act
 Cosignatories
 *************
 
-A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/account/converting-an-account-to-multisig>`. The cosignatories - other accounts - of the multisig will become the account managers.
+A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/multisig/converting-an-account-to-multisig>`. The cosignatories - other accounts - of the multisig will become the account managers.
 
 From that moment on, the multisig account cannot announce transactions by itself. A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an :doc:`AggregateTransaction <aggregate-transaction>`.
 

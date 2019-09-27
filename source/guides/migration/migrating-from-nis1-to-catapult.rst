@@ -58,7 +58,7 @@ The first notable change about transactions is that the status response is recei
 
 * Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`
 * Protocol: |catapult-schemas|
-* Guide: :doc:`Monitoring a transaction status <../transaction/monitoring-a-transaction-status>`
+* Guide: :doc:`Monitoring a transaction status <../monitor/monitoring-a-transaction-status>`
 
 Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
 
@@ -120,7 +120,7 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 
 Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process). In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.
 
-* Guide: :doc:`Converting an account to multisignature <../account/converting-an-account-to-multisig>`
+* Guide: :doc:`Converting an account to multisignature <../multisig/converting-an-account-to-multisig>`
 
 2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 
@@ -128,7 +128,7 @@ The new AggregateTransaction permits to wrap multiple transactions together invo
 
 To send a multisig transaction as in NIS1, the initiator of the transaction has to add it **as an inner transaction of the aggregate**. Then, the minimum number of cosignatories defined in the multisignature will have to cosign the aggregate to allow announcing transactions from the shared account.
 
-* Guide: :doc:`Sending a multisignature transaction <../transaction/sending-a-multisig-transaction>`
+* Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a-multisig-transaction>`
 
 **********
 Need help?

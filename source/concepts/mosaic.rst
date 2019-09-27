@@ -17,14 +17,14 @@ Properties
 Divisibility
 ============
 
-Determines up to what decimal place the mosaic can be divided. Divisibility of 3 means that a mosaic can be divided into smallest parts of 0.001 mosaics. The divisibility must be in the range of 0 and ``6``.
+Determines the decimal place to which the mosaic can be divided. Divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001. The divisibility must be in the range of 0 and 6.
 
 Initial supply
 ==============
 
 Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-NEM works with **absolute amounts**, removing the comma when the mosaic can be divisible. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
 
@@ -51,7 +51,7 @@ Transferable
 
     Example of a non-transferable mosaic
 
-If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can be only transferred back to the mosaic creator.
+If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can only be transferred back to the mosaic creator.
 
 Restrictable
 ============

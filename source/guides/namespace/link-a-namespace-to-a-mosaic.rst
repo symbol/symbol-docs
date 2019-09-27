@@ -69,12 +69,12 @@ Now you can send transactions using the namespace linked to the mosaic instead o
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionMosaicAlias.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js
+    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionMosaicAlias.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

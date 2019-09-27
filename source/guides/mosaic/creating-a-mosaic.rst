@@ -34,7 +34,7 @@ Getting into some code
 
 2. Then, the company must create a mosaic to represent shares to their company. To do so, you will have to create a new file and define two transactions:
 
-a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to select the **mosaic properties**. In this example, we are going to create a mosaic configured as:
+a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -58,7 +58,7 @@ a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to selec
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**. We are going to create **1.000.000** mosaic units.
+b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**. We are going to create **1,000,000** mosaic units.
 
 .. example-code::
 
@@ -72,7 +72,7 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-NEM mainly works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
@@ -94,4 +94,4 @@ NEM mainly works with **absolute amounts**. To get an absolute amount, multiply 
         :language: bash
         :start-after: #!/bin/sh
 
-Once the transaction gets confirmed, you can try to :doc:`transfer <../transaction/sending-a-transfer-transaction>` one mosaic created to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
+Once the transaction gets confirmed, you can try to :doc:`transfer <../transfer/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
