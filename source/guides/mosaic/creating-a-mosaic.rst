@@ -94,4 +94,4 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :language: bash
         :start-after: #!/bin/sh
 
-Once the transaction gets confirmed, you can try to :doc:`transfer <../transaction/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
+Once the transaction gets confirmed, you can try to :doc:`transfer <../transfer/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
