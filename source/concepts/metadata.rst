@@ -27,7 +27,7 @@ This feature reduces the reading time of client applications; metadata allows in
 Permissions
 ***********
 
-The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an AggregateTransaction.
+The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
 The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
 

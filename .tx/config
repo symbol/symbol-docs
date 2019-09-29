@@ -410,6 +410,12 @@ source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-acco
 source_lang = en
 type = PO
 
+[nem2docs.guides--restriction--getting-account-restrictions-attached-to-an-address]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-account-restrictions-attached-to-an-address.po
+source_file = build/gettext/guides/restriction/getting-account-restrictions-attached-to-an-address.pot
+source_lang = en
+type = PO
+
 
 [nem2docs.guides--restriction--delegating-the-mosaic-restrictions-to-a-third-party]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-the-mosaic-restrictions-to-a-third-party.po
