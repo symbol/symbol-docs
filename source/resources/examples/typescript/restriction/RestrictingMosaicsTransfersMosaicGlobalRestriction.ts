@@ -22,6 +22,7 @@ import {
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicRestrictionType,
+    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -30,7 +31,7 @@ import {
 /* start block 01 */
 const mosaicIdHexa = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHexa);
-const key = 'FF';
+const key = new UInt64(NamespaceMosaicIdGenerator.namespaceId('KYC'));
 /* end block 01 */
 
 /* start block 02 */
@@ -39,7 +40,7 @@ const transaction = MosaicGlobalRestrictionTransaction
         Deadline.create(),
         mosaicId, // mosaicId
         new MosaicId([0,0]), // referenceMosaicId
-        UInt64.fromHex(key), // restrictionKey
+        key, // restrictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue

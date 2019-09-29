@@ -23,6 +23,7 @@ import {
     Deadline,
     MosaicAddressRestrictionTransaction,
     MosaicId,
+    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -51,7 +52,7 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        UInt64.fromHex('FF'), // restrictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId('KYC')), // restictionKey
         bobAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(0), // newRestrictionValue

@@ -20,11 +20,13 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
-    MosaicDefinitionTransaction, MosaicFlags,
+    MosaicDefinitionTransaction,
+    MosaicFlags,
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicNonce,
     MosaicRestrictionType,
+    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -52,7 +54,7 @@ const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
         Deadline.create(),
         mosaicId, // mosaicId
         mosaicDefinitionTransaction.mosaicId, // referenceMosaicId
-        UInt64.fromHex('1FE'), // restrictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId('Is_Verified')), //restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue
