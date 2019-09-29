@@ -45,7 +45,7 @@ Getting into some code
 
     nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany
 
-2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, Is_Verified, EQ, 1}`` to the mosaic. We decide to represent ``Is_Verified`` as ``0x1FE`` in hexadecimal.
+2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, Is_Verified, EQ, 1}`` to the mosaic.
 
 .. example-code::
 

@@ -22,6 +22,7 @@ import {
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicRestrictionType,
+    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -40,7 +41,7 @@ const transaction = MosaicGlobalRestrictionTransaction
         Deadline.create(),
         mosaicId,
         referenceMosaicId,
-        UInt64.fromHex('1FE'),
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId('Is_Verified')), //restictionKey
         UInt64.fromUint(0),
         MosaicRestrictionType.NONE,
         UInt64.fromUint(2),

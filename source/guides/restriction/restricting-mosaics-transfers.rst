@@ -63,7 +63,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
 
     Use case diagram
 
-1. Open a new TypeScript file. Then, place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64. Commonly, the CharlieChocolateFactory will keep the meaning of this value in a separate database. In our case, we will consider that ``0xFF`` stands for ``KYC``.
+1. Open a new TypeScript file. Then, place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64.
 
 .. example-code::
 
