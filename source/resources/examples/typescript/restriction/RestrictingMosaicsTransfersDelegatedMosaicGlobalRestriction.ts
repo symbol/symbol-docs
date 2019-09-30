@@ -45,7 +45,7 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     0,
     UInt64.fromUint(0),
     NetworkType.MIJIN_TEST);
-console.log(mosaicDefinitionTransaction.mosaicId);
+console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 
 const key = 'IsVerified'.toLowerCase();
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
