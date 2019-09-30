@@ -50,7 +50,6 @@ const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
         mosaicId, // mosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
         aliceAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(1), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
@@ -60,7 +59,6 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
         mosaicId, // mosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         bobAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(2), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
@@ -70,7 +68,6 @@ const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
         mosaicId, // mosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         carolAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'),  // previousRestrictionValue
         UInt64.fromUint(2), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 

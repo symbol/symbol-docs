@@ -41,13 +41,14 @@ const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         sharesId,  // mosaicId
-        kycId, // referenceMosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(2), // newRestrictionValue
         MosaicRestrictionType.EQ,  // newRestrictionType
-        NetworkType.MIJIN_TEST);
+        NetworkType.MIJIN_TEST,
+        kycId, // referenceMosaicId
+    );
 
 const comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY as string;
 const comfyClothingCompnayAccount = Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, NetworkType.MIJIN_TEST);

@@ -39,7 +39,6 @@ const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new MosaicId([0,0]), // referenceMosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
