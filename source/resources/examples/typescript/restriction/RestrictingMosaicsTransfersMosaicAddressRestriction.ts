@@ -42,7 +42,7 @@ const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        UInt64.fromHex('FF'), // restrictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId('KYC')), // restrictionKey
         aliceAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(1), // newRestrictionValue
