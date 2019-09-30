@@ -48,14 +48,13 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     0,
     UInt64.fromUint(1000),
     NetworkType.MIJIN_TEST);
-console.log('MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 
 const key = 'IsVerified'.toLowerCase();
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        mosaicDefinitionTransaction.mosaicId, // referenceMosaicId
+        new MosaicId([0,0]), // referenceMosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), //restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
