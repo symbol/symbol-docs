@@ -35,6 +35,7 @@ const mosaicId = new MosaicId(mosaicIdHexa);
 
 const aliceRawAddress = 'SDDOLW-ESKH33-YYW5XF-42F3ZJ-ZL6JIA-DP4TFT-H6RH';
 const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
+
 const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
 
