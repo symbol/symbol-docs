@@ -35,18 +35,21 @@ const mosaicId = new MosaicId(mosaicIdHexa);
 
 const aliceRawAddress = 'SDDOLW-ESKH33-YYW5XF-42F3ZJ-ZL6JIA-DP4TFT-H6RH';
 const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
+
 const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
+
 const carolRawAddress = 'SC5ZKF-GHOMJQ-RN2HEM-GYL5QU-YF7IOQ-E3IHC2-ZICE';
 const carolAddress = Address.createFromRawAddress(carolRawAddress);
+
+const key = 'IsVerified'.toLowerCase();
 
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        UInt64.fromHex('1FE'), // restrictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
         aliceAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(1), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
@@ -54,9 +57,8 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId('Is_Verified')), // restictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         bobAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(2), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
@@ -64,28 +66,27 @@ const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId('Is_Verified')), // restictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         carolAddress, // address
-        UInt64.fromHex('FFFFFFFFFFFFFFFF'),  // previousRestrictionValue
         UInt64.fromUint(2), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY as string;
+const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
-        aliceMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
-        bobMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
-        carolMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount)
+        aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)
     ],
     NetworkType.MIJIN_TEST,
     []
 );
 
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');

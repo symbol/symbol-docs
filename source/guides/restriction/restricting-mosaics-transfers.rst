@@ -72,7 +72,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaicId and keys you have defined in the previous step as arguments. For now, we will not use the property ``referenceMosaicId``, so we can define it as ``UInt.fromHex('0')``.
+2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaicId and keys you have defined in the previous step as arguments.
 
 The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the ```previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
 
@@ -113,8 +113,6 @@ Alice, a potential investor, passes the KYC process. Once Alice has been verifie
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Once again, you will have to provide previous values set for these mosaic address restrictions. Since it is the first time we are appending one mosaic address restriction for this mosaic and key to these accounts, we have to use the sentinel value ``FFFFFFFFFFFFFFFF``.
-
 2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's owner account.
 
 .. example-code::
@@ -130,10 +128,10 @@ You should be able to send ``ccf.shares`` to Alice without any problems. Additio
 
 .. code-block:: bash
 
-     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics <ID>::1
+     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 634a8ac3fc2b65b3::1
 
 However, when you send the same mosaic to Bob's account, you should get the error ``Failure_RestrictionMosaic_Account_Unauthorized`` through the :ref:`status error channel <status-errors>` as he is not allowed to transact with ``ccf.shares``.
 
 .. code-block:: bash
 
-     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics <ID>::1
+     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 634a8ac3fc2b65b3::1
