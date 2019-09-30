@@ -352,7 +352,7 @@ type = PO
 
 [nem2docs.guides--multisig--converting-an-account-to-multisig]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/converting-an-account-to-multisig.po
-source_file = build/gettext/multisig/account/converting-an-account-to-multisig.pot
+source_file = build/gettext/guides/multisig/converting-an-account-to-multisig.pot
 source_lang = en
 type = PO
 
@@ -363,8 +363,8 @@ source_lang = en
 type = PO
 
 [nem2docs.guides--multisig--modifying-a-multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/multisig/account/modifying-a-multisig-account.po
-source_file = build/gettext/guides/account/modifying-a-multisig-account.pot
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/modifying-a-multisig-account.po
+source_file = build/gettext/guides/multisig/modifying-a-multisig-account.pot
 source_lang = en
 type = PO
 

@@ -113,7 +113,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.13.1 rxjs
+            npm install nem2-sdk@0.13.3 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
