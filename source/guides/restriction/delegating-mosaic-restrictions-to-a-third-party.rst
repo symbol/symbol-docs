@@ -5,11 +5,11 @@
     :excerpt: 1
     :nocomments:
 
-###################################################
-Delegating the mosaic restrictions to a third party
-###################################################
+###############################################
+Delegating mosaic restrictions to a third party
+###############################################
 
-Take the restrictions rules from a third party mosaic.
+Allow another account to add restrictions to your mosaics.
 
 **********
 Background
@@ -49,7 +49,7 @@ Getting into some code
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction2.ts
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -69,7 +69,7 @@ ComfyClothingCompany decides that only accounts with the restriction ``{cc.share
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.ts
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction2.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

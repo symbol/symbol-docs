@@ -417,9 +417,9 @@ source_lang = en
 type = PO
 
 
-[nem2docs.guides--restriction--delegating-the-mosaic-restrictions-to-a-third-party]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-the-mosaic-restrictions-to-a-third-party.po
-source_file = build/gettext/guides/restriction/delegating-the-mosaic-restrictions-to-a-third-party.pot
+[nem2docs.guides--restriction--delegating-mosaic-restrictions-to-a-third-party]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.po
+source_file = build/gettext/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.pot
 source_lang = en
 type = PO
 

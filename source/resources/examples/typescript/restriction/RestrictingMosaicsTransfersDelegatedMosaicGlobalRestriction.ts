@@ -33,29 +33,27 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHexa = process.env.MOSAIC_ID as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
-
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY as string;
+const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, NetworkType.MIJIN_TEST);
 
 const mosaicNonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     mosaicNonce,
-    MosaicId.createFromNonce(mosaicNonce, account.publicAccount),
+    MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount),
     MosaicFlags.create(true, true, true),
     0,
-    UInt64.fromUint(1000),
+    UInt64.fromUint(0),
     NetworkType.MIJIN_TEST);
+console.log(mosaicDefinitionTransaction.mosaicId);
 
 const key = 'IsVerified'.toLowerCase();
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
-        mosaicId, // mosaicId
+        mosaicDefinitionTransaction.mosaicId, // mosaicId
         new MosaicId([0,0]), // referenceMosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), //restictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue
@@ -67,12 +65,12 @@ const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
-        mosaicDefinitionTransaction.toAggregate(account.publicAccount),
-        mosaicGlobalRestrictionTransaction.toAggregate(account.publicAccount)],
+        mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)],
     NetworkType.MIJIN_TEST,
     []
 );
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');

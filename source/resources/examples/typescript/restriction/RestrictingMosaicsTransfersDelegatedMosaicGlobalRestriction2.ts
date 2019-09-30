@@ -29,38 +29,35 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHexa = process.env.MOSAIC_ID as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const sharesIdHexa = process.env.SHARES_ID as string;
+const sharesId = new MosaicId(sharesIdHexa);
 
-const referenceMosaicIdHexa = process.env.REFERENCE_MOSAIC_ID as string;
-const referenceMosaicId = new MosaicId(referenceMosaicIdHexa);
-/* end block 01 */
+const kycIdHexa = process.env.KYC_ID as string;
+const kycId = new MosaicId(kycIdHexa);
 
-/* start block 02 */
 const key = 'IsVerified'.toLowerCase();
 
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
-        mosaicId,
-        referenceMosaicId,
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), //restictionKey
-        UInt64.fromUint(0),
-        MosaicRestrictionType.NONE,
-        UInt64.fromUint(2),
-        MosaicRestrictionType.EQ,
+        sharesId,  // mosaicId
+        kycId, // referenceMosaicId
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
+        UInt64.fromUint(0), // previousRestrictionValue
+        MosaicRestrictionType.NONE, // previousRestrictionType
+        UInt64.fromUint(2), // newRestrictionValue
+        MosaicRestrictionType.EQ,  // newRestrictionType
         NetworkType.MIJIN_TEST);
-/* end block 02 */
 
-/* start block 03 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY as string;
+const comfyClothingCompnayAccount = Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, NetworkType.MIJIN_TEST);
+
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const signedTransaction = account.sign(transaction, networkGenerationHash);
+const signedTransaction = comfyClothingCompnayAccount.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
-/* end block 03 */
+/* end block 01 */

@@ -30,8 +30,8 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHexa = process.env.MOSAIC_ID as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const sharesIdHexa = process.env.SHARES_ID as string;
+const sharesId = new MosaicId(sharesIdHexa);
 
 const aliceRawAddress = 'SDDOLW-ESKH33-YYW5XF-42F3ZJ-ZL6JIA-DP4TFT-H6RH';
 const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
@@ -40,10 +40,11 @@ const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
 
 const key = 'KYC'.toLowerCase();
+
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
         Deadline.create(),
-        mosaicId, // mosaicId
+        sharesId, // mosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
         aliceAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
@@ -53,7 +54,7 @@ const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
 const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
         Deadline.create(),
-        mosaicId, // mosaicId
+        sharesId, // mosaicId
         new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         bobAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
@@ -62,20 +63,20 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY as string;
+const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
-        aliceMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
-        bobMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount)],
+        aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)],
     NetworkType.MIJIN_TEST,
     []
 );
 
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
