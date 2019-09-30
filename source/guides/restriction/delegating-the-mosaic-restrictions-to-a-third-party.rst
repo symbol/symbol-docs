@@ -45,7 +45,7 @@ Getting into some code
 
     nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany
 
-2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, Is_Verified, EQ, 1}`` to the mosaic.
+2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, IsVerified, EQ, 1}`` to the mosaic.
 
 .. example-code::
 
@@ -60,12 +60,12 @@ The KYC provider defines the following permission tiers:
     :header: "Key", "Operator", "Value", "Description"
     :delim: ;
 
-    Is_Verified; EQ; 1; The client has issued a valid passport.
-    Is_Verified; EQ; 2; The client has issued a valid proof of address and passport.
+    IsVerified; EQ; 1; The client has issued a valid passport.
+    IsVerified; EQ; 2; The client has issued a valid proof of address and passport.
 
-ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::Is_Verified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::Is_Verified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, we are going to use the field ``referenceId``.
+ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, we are going to use the field ``referenceId``.
 
-3. Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and ``Is_Verified`` as the key.
+3. Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and ``IsVerified`` as the key.
 
 .. example-code::
 
@@ -76,9 +76,9 @@ ComfyClothingCompany decides that only accounts with the restriction ``{cc.share
 
 4. The KYC provider has encounters three potential investors:
 
-* Alice provides a valid passport but no proof of address. The KYC provider awards Alice's account with the mosaic restriction ``{kyc, Is_Verified, 1}``.
-* Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
-* Carol provides a valid passport and proof of address. The KYC provider awards Carol's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
+* Alice provides a valid passport but no proof of address. The KYC provider awards Alice's account with the mosaic restriction ``{kyc, IsVerified, 1}``.
+* Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, IsVerified, 2}``.
+* Carol provides a valid passport and proof of address. The KYC provider awards Carol's account with the mosaic restriction ``{kyc, IsVerified, 2}``.
 
 The KYC provider has to tag the accounts accordingly sending mosaic address restrictions.
 

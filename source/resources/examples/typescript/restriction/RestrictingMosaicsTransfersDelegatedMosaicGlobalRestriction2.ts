@@ -36,12 +36,14 @@ const referenceMosaicId = new MosaicId(referenceMosaicIdHexa);
 /* end block 01 */
 
 /* start block 02 */
+const key = 'IsVerified'.toLowerCase();
+
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId,
         referenceMosaicId,
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId('Is_Verified')), //restictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), //restictionKey
         UInt64.fromUint(0),
         MosaicRestrictionType.NONE,
         UInt64.fromUint(2),

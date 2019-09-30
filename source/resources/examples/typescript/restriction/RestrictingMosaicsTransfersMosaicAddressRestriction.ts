@@ -38,11 +38,12 @@ const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
 const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
 
+const key = 'KYC'.toLowerCase();
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId('KYC')), // restrictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
         aliceAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(1), // newRestrictionValue
@@ -52,7 +53,7 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId('KYC')), // restictionKey
+        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
         bobAddress, // address
         UInt64.fromHex('FFFFFFFFFFFFFFFF'), // previousRestrictionValue
         UInt64.fromUint(0), // newRestrictionValue
