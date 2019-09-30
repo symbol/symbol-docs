@@ -74,22 +74,22 @@ const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
         UInt64.fromUint(2), // newRestrictionValue
         NetworkType.MIJIN_TEST);
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY as string;
+const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
-        aliceMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
-        bobMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
-        carolMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount)
+        aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+        carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)
     ],
     NetworkType.MIJIN_TEST,
     []
 );
 
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
