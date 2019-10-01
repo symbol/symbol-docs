@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,17 +22,12 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/api.rst:3
-msgid "REST API"
-msgstr ""
-
 #: ../../source/api.rst:5
 msgid ""
-"**Catapult REST** combines HTTP and WebSockets to perform read and write "
+"The **REST server** combines HTTP and WebSockets to perform read and write "
 "actions in the NEM blockchain."
 msgstr ""
-"**Catapult REST** は HTTP と WebSockets を NEM "
-"ブロックチェーン上で読み書きアクションが実行できるように併合します。"
+"**REST サーバ** は HTTP と WebSockets を NEM ブロックチェーン上で読み書きアクションが実行できるように併合します。"
 
 #: ../../source/api.rst:9
 msgid "Installation"
@@ -44,17 +39,51 @@ msgstr "**リポジトリ**: |catapult-rest|"
 
 #: ../../source/api.rst:13
 msgid ""
-"Test catapult-rest deploying your own network for development or learning "
-"purposes with |catapult-service-bootstrap|."
+"catapult-rest is already included in |catapult-service-bootstrap|. Follow "
+"the :doc:`package's installation instructions <getting-started/setup-"
+"workstation>` to deploy a network for development or learning purposes."
 msgstr ""
-"|catapult-service-bootstrap| で開発目的または学習目的で独自のネットワークを展開する catapult-rest "
-"ソフトウェアをテストすることができます。"
+"catapult-rest はすでに |catapult-service-bootstrap| に含まれています。開発または学習を目的に "
+":doc:`パッケージのインストール手順 <getting-started/setup-workstation>` "
+"に従って、ネットワークをデプロイしてください。"
+
+#: ../../source/api.rst:15
+msgid "To install catapult-rest from scratch, you will need:"
+msgstr "catapult-rest をスクラッチからインストールするには、次が必要です:"
+
+#: ../../source/api.rst:17
+msgid "NodeJS version 8 or 9"
+msgstr "NodeJS バージョン 8 または 9"
+
+#: ../../source/api.rst:18
+msgid "|yarn| dependency manager"
+msgstr "|yarn| 依存関係マネージャ"
 
 #: ../../source/api.rst:19
+msgid "|catapult-server| configured as an :doc:`API node <server>`."
+msgstr "|catapult-server| は :doc:`API ノード <server>` として設定されています。"
+
+#: ../../source/api.rst:21
+msgid "Edit ``rest/resources/rest.json`` configuration:"
+msgstr "``rest/resources/rest.json`` 設定を編集します:"
+
+#: ../../source/api.rst:1 ../../source/api.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/api.rst:1
+msgid "ZeroMQ connection host."
+msgstr "ZeroMQ 接続ホスト"
+
+#: ../../source/api.rst:44
+msgid "Run catapult-rest:"
+msgstr "catapult-rest の起動:"
+
+#: ../../source/api.rst:55
 msgid "Http requests"
 msgstr "HTTP リクエスト"
 
-#: ../../source/api.rst:21
+#: ../../source/api.rst:57
 msgid ""
 "Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
 "**POST** requests."
@@ -62,7 +91,7 @@ msgstr ""
 "Catapult REST はポート ``3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
 "リクエストを受け付けます。"
 
-#: ../../source/api.rst:23
+#: ../../source/api.rst:59
 msgid ""
 "Assuming that Catapult REST is :doc:`running locally  <getting-started"
 "/setup-workstation>`, HTTP GET requests can be executed from a browser and "
@@ -71,11 +100,7 @@ msgstr ""
 "Catapult REST が :doc:`ローカルで動いている <getting-started/setup-workstation>` "
 "と仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
 
-#: ../../source/api.rst:25
-msgid "http://localhost:3000/<path-to-API-request>"
-msgstr ""
-
-#: ../../source/api.rst:27
+#: ../../source/api.rst:63
 msgid ""
 "HTTP PUT and POST requests use JSON structures in the request body. Request "
 "returns data using JSON structures. This kind of request cannot usually be "
@@ -86,131 +111,13 @@ msgstr ""
 "リクエストはボディ部にJSON形式を使用します。リクエストはデータをJSON形式で返します。この種のリクエストはそれが可能な :ref:`プラグイン "
 "<tools>` を利用しないことにはブラウザから実行することができません。"
 
-#: ../../source/api.rst:29
+#: ../../source/api.rst:65
 msgid ""
 "Get the complete list of available endpoints by clicking on the button "
 "below:"
 msgstr "利用可能なエンドポイントの完全なリストを入手するには下のボタンをクリックしてください:"
 
-#: ../../source/api.rst:38
-msgid "Http errors"
-msgstr "HTTP エラー"
-
-#: ../../source/api.rst:1
-msgid "Status code"
-msgstr "ステータスコード"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Description"
-msgstr "説明"
-
-#: ../../source/api.rst:1
-msgid "200"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Ok. The request has succeeded."
-msgstr "OK リクエストは成功しました。"
-
-#: ../../source/api.rst:1
-msgid "202"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Accepted. The request has been accepted for processing but the processing "
-"has not been completed."
-msgstr "Accepted リクエストは処理のために受理されましたが、処理は完了していません。"
-
-#: ../../source/api.rst:1
-msgid "400"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Bad request. Check your request syntax."
-msgstr "Bad request リクエストのシンタックスを確認してください。"
-
-#: ../../source/api.rst:1
-msgid "404"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Not found. The resource does not exist."
-msgstr "Not Found リソースは存在しません。"
-
-#: ../../source/api.rst:1
-msgid "409"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Conflict. Check your arguments."
-msgstr "Conflict 引数を確認してください。"
-
-#: ../../source/api.rst:1
-msgid "500"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Internal error. Unexpected condition."
-msgstr "Internal error 予期しない状態です。"
-
-#: ../../source/api.rst:54
-msgid "Http status"
-msgstr "HTTP ステータス"
-
-#: ../../source/api.rst:1
-msgid "Key"
-msgstr "キー"
-
-#: ../../source/api.rst:1
-msgid "code"
-msgstr "コード"
-
-#: ../../source/api.rst:1
-msgid "Error identifier in camelCase."
-msgstr "キャメルケースによるエラー識別子"
-
-#: ../../source/api.rst:1
-msgid "message"
-msgstr "メッセージ"
-
-#: ../../source/api.rst:1
-msgid "Error explained in human-readable format."
-msgstr "人間が読めるフォーマットによるエラー説明"
-
-#: ../../source/api.rst:63
-msgid "**Example**"
-msgstr "**例**"
-
-#: ../../source/api.rst:73
-msgid "UInt64: lower and higher"
-msgstr "UInt64: 低位と高位"
-
-#: ../../source/api.rst:75
-msgid ""
-"Javascript operates on **32-bit** values. The server returns numbers encoded"
-" in a UInt64 object to enable numeric representation up to **64 bits**."
-msgstr ""
-"Javascript は **32 bit** 値を操作します。サーバーは最大 **64 bit** 値の数値表現を可能にするために UInt64 "
-"オブジェクトにエンコードした数値を返します。"
-
 #: ../../source/api.rst:77
-msgid ""
-"The **UInt64** object returned is composed of two 32-bit numbers: ``lower`` "
-"and ``higher``."
-msgstr "返却される **UInt64** オブジェクトは2つの 32-bit 数から成り立ちます: ``lower`` と ``higher``。"
-
-#: ../../source/api.rst:79
-msgid ""
-"The :doc:`nem2-sdk <sdk>` conveniently allows you to work with UInt64 "
-"values."
-msgstr ":doc:`nem2-sdk <sdk>` は UInt64 値を便利に扱うことができます。"
-
-#: ../../source/api.rst:103
-msgid "WebSockets"
-msgstr ""
-
-#: ../../source/api.rst:105
 msgid ""
 "WebSockets make receiving notifications possible when a transaction or event"
 " occurs in the blockchain. The notification is received in real time without"
@@ -219,43 +126,28 @@ msgstr ""
 "WebSockets はブロックチェーン上でトランザクションやイベントが発生した通知を受け取ることを可能にします。この通知は API "
 "の返却を待つことなくリアルタイムで行われます。"
 
-#: ../../source/api.rst:107
-msgid ""
-"Interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with "
-"**Listeners**."
-msgstr ""
-":doc:`NEM2-SDK <../sdk>` で API WebSocket と疎通するには **Listeners** を使用します。"
-
-#: ../../source/api.rst:110
+#: ../../source/api.rst:82
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:112
+#: ../../source/api.rst:84
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:114
+#: ../../source/api.rst:86
 msgid ""
 "The block channel notifies for every new block. The message contains the "
 "block information."
 msgstr "ブロックチャンネルは新しいブロックごとに通知します。メッセージにはブロックの情報が含まれます。"
 
-#: ../../source/api.rst:116
-msgid "**confirmedAdded/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:118
+#: ../../source/api.rst:90
 msgid ""
 "The confirmedAdded channel notifies when a transaction related to an address"
 " is included in a block. The message contains the transaction."
 msgstr ""
 "承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。メッセージにはトランザクションが含まれます。"
 
-#: ../../source/api.rst:120
-msgid "**unconfirmedAdded/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:122
+#: ../../source/api.rst:94
 msgid ""
 "The unconfirmedAdded channel notifies when a transaction related to an "
 "address is in unconfirmed state and waiting to be included in a block. The "
@@ -263,22 +155,18 @@ msgid ""
 msgstr ""
 "未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。メッセージにはトランザクションが含まれます。"
 
-#: ../../source/api.rst:124
+#: ../../source/api.rst:96
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction is "
 "announced to the network via ``PUT /transaction`` HTTP endpoint or an "
-"aggregate bonded transaction has all required cosigners and change its state"
-" from *partial* to *unconfirmed*."
+"AggregateBondedTransaction has all required cosigners and change its state "
+"from *partial* to *unconfirmed*."
 msgstr ""
-"このチャンネルからの通知が届くシナリオとしては、トランザクションが ``PUT /transaction`` HTTP "
-"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い *partial* から *unconfirmed* "
-"へ変わるときです。"
+"トランザクションが ``PUT /transaction`` HTTP "
+"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、 *partial* から *未承認* "
+"へ変わるとき、このチャンネルからの通知が届く可能性があります。"
 
-#: ../../source/api.rst:126
-msgid "**unconfirmedRemoved/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:128
+#: ../../source/api.rst:100
 msgid ""
 "The unconfirmedRemoved channel notifies when a transaction related to an "
 "address was in unconfirmed state but is not anymore. The message contains "
@@ -286,40 +174,32 @@ msgid ""
 msgstr ""
 "未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:130
+#: ../../source/api.rst:102
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is "
 "confirmed or the deadline has been reached and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
 
-#: ../../source/api.rst:132
-msgid "**partialAdded/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:134
+#: ../../source/api.rst:106
 msgid ""
-"The partialAdded channel notifies when an aggregate bonded transaction "
-"related to an address is in *partial* state and waiting to have all "
-"*required cosigners*. The message contains a transaction."
+"The partialAdded channel notifies when an AggregateBondedTransaction related"
+" to an address is in *partial* state and waiting to have all *required "
+"cosigners*. The message contains a transaction."
 msgstr ""
 "パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが *partial* な状態にあり、すべての *必要な連署者* "
 "を待機しているときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:136
+#: ../../source/api.rst:108
 msgid ""
-"The scenario when this channel notifies is when an aggregate bonded "
-"transaction is announced to the network via ``PUT /transaction/partial`` "
-"HTTP endpoint."
+"The scenario when this channel notifies is when an "
+"AggregateBondedTransaction is announced to the network via ``PUT "
+"/transaction/partial`` HTTP endpoint."
 msgstr ""
 "このチャンネルが通知するシナリオとしては、アグリゲートボンドトランザクションが ``PUT /transaction/partial`` "
 "経由でネットワークへアナウンスされたときです。"
 
-#: ../../source/api.rst:138
-msgid "**partialRemoved/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:140
+#: ../../source/api.rst:112
 msgid ""
 "The partialRemoved channel notifies when a transaction related to an address"
 " was in partial state but is not anymore. The message contains the "
@@ -327,146 +207,70 @@ msgid ""
 msgstr ""
 "パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:142
+#: ../../source/api.rst:114
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is in"
 " unconfirmed or the deadline has been reached and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに取り込まれなくなったときです。"
 
-#: ../../source/api.rst:144
-msgid "**cosignature/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:146
+#: ../../source/api.rst:118
 msgid ""
 "The cosignature channel notifies when a *cosignature signed transaction* "
-"related to an address is added to an aggregate bonded transaction with "
-"partial state. The message contains the cosignature signed transaction."
+"related to an address is added to an AggregateBondedTransaction with partial"
+" state. The message contains the cosignature signed transaction."
 msgstr ""
 "連署チャネルはアドレスに関連する *連署署名トランザクション* "
 "が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。メッセージには連署したトランザクションが含まれます。"
 
-#: ../../source/api.rst:148
-msgid "**status/<ADDRESS>**"
-msgstr ""
-
-#: ../../source/api.rst:150
+#: ../../source/api.rst:122
 msgid ""
 "The status channel notifies when a transaction related to an address rises "
 "an error. The message contains the error message and the transaction hash."
 msgstr ""
 "ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:155
+#: ../../source/api.rst:127
 msgid "Status errors"
 msgstr "ステータスエラー"
 
-#: ../../source/api.rst:157
+#: ../../source/api.rst:129
 msgid ""
 "This section describes the error messages that can be returned via status "
 "channel after announcing a transaction."
 msgstr "このセクションでは、トランザクションをアナウンスした後に、ステータスチャンネルが返却するエラーメッセージの説明をします。"
 
 #: ../../source/api.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Status"
 msgstr "ステータス"
-
-#: ../../source/api.rst:1
-msgid "0x00000000"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Success"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation result is success."
 msgstr "バリデーション結果は成功です。"
 
 #: ../../source/api.rst:1
-msgid "0x40000000"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Neutral"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation result is neither success nor failure."
 msgstr "バリデーション結果は成功でも失敗でもありません。"
-
-#: ../../source/api.rst:1
-msgid "0x80000000"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation result is failure."
 msgstr "バリデーション結果は失敗です。"
 
 #: ../../source/api.rst:1
-msgid "0x80430001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Past_Deadline"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the deadline passed."
 msgstr "デッドラインを過ぎているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80430002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Future_Deadline"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the deadline is too far in the future."
 msgstr "期限が遠すぎる未来に指定されているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80430003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Insufficient_Balance"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the account has an insufficient balance."
 msgstr "アカウントの残高が不十分なため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80430004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Too_Many_Transactions"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because there are too many transactions in a block."
 msgstr "ブロックにトランザクションが多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80430005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Nemesis_Account_Signed_After_Nemesis_Block"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -475,60 +279,20 @@ msgid ""
 msgstr "ネメシスブロックの後にエンティティがネメシスアカウントから生成されたため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80430006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Wrong_Network"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the entity has the wrong network specified."
 msgstr "エンティティに間違ったネットワークが指定されているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80430007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Invalid_Address"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because an address is invalid."
 msgstr "アドレスが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80430008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Invalid_Version"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because entity version is invalid."
 msgstr "エンティティのバージョンが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80430009"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Invalid_Transaction_Fee"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because a transaction fee is invalid."
 msgstr "トランザクション手数料が妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x8043000A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Core_Block_Harvester_Ineligible"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -536,48 +300,24 @@ msgid ""
 msgstr "不適格なハーベスタによってブロックがハーベストされたため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x81490001"
-msgstr ""
+msgid "Validation failed because an address is zero."
+msgstr "アドレスがゼロのため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "Failure_Hash_Exists"
-msgstr ""
+msgid "Validation failed because a public key is zero."
+msgstr "公開鍵がゼロのため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the entity hash is already known."
 msgstr "エンティティのハッシュがすでに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80530001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Signature_Not_Verifiable"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the verification of the signature failed."
 msgstr "署名の検証に失敗したため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804C0001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Invalid_Action"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because account link action is invalid."
 msgstr "アカウントリンクアクションが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804C0002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Link_Already_Exists"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -585,956 +325,113 @@ msgid ""
 msgstr "メインアカウントはすでに他のアカウントにリンクしているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804C0003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Link_Does_Not_Exist"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid ""
 "Validation failed because main account is not linked to another account."
 msgstr "メインアカウントが他のアカウントにリンクしていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804C0004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Unlink_Data_Inconsistency"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because unlink data is not consistent with existing "
-"account link."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804C0005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Ineligible"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because link is attempting to convert ineligible account "
-"to remote."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804C0006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Signer_Not_Allowed"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because remote is not allowed to sign a transaction."
 msgstr "リモートにはトランザクションへの署名を許可されていないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804C0007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_AccountLink_Remote_Account_Participant_Not_Allowed"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because remote is not allowed to participate in the "
-"transaction."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80410001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Too_Many_Transactions"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because aggregate has too many transactions."
 msgstr "アグリゲートしているトランザクションが多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80410002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_No_Transactions"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because aggregate does not have any transactions."
 msgstr "アグリゲートにトランザクションが無いため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80410003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Too_Many_Cosignatures"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because aggregate has too many cosignatures."
 msgstr "アグリゲートの連署者が多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80410004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Redundant_Cosignatures"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because redundant cosignatures are present."
 msgstr "重複する連署者が存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80410005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Ineligible_Cosigners"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because at least one cosigner is ineligible."
-msgstr "少なくとも1人の署名者が不適格であるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80410006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Aggregate_Missing_Cosigners"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because at least one required cosigner is missing."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80480001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Mosaic_Id"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because lock does not allow the specified mosaic."
 msgstr "ロックに許可されていないモザイクが指定されたため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80480002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Mosaic_Amount"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because lock does not allow the specified amount."
 msgstr "ロックに許可されていない総量が指定されたため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80480003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Hash_Exists"
-msgstr ""
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because hash is already present in cache."
 msgstr "ハッシュがすでにキャッシュに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80480004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Hash_Does_Not_Exist"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because hash is not present in cache."
 msgstr "ハッシュがキャッシュに存在しない、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80480005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Inactive_Hash"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because hash is inactive."
 msgstr "ハッシュが非アクティブであるため、バリデーションに失敗しました。"
 
-#: ../../source/api.rst:1
-msgid "0x80480006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockHash_Invalid_Duration"
-msgstr ""
-
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because duration is too long."
 msgstr "期間が長すぎるため、バリデーションに失敗しました。"
 
-#: ../../source/api.rst:1
-msgid "0x80520001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Invalid_Hash_Algorithm"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because hash algorithm for lock type secret is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Exists"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Not_Implemented"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because hash is not implemented yet."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Proof_Size_Out_Of_Bounds"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because proof is too small or too large."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Secret_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because secret does not match proof."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Unknown_Composite_Key"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because composite key is unknown."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Inactive_Secret"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because secret is inactive."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Hash_Algorithm_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because hash algorithm does not match."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80520009"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_LockSecret_Invalid_Duration"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80440001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Metadata_Value_Too_Small"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the metadata value is too small."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80440002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Metadata_Value_Too_Large"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the metadata value is too large."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80440003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Metadata_Value_Size_Delta_Too_Large"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the metadata value size delta is larger in "
-"magnitude than the value size."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80440004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Metadata_Value_Size_Delta_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the metadata value size delta does not match "
-"expected value based on the current state."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80440005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Metadata_Value_Change_Irreversible"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because a metadata value change (truncation) is "
-"irreversible."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Duration"
-msgstr ""
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because the duration has an invalid value."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Name"
-msgstr ""
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because the name is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Name_Id_Mismatch"
-msgstr ""
-
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the name and id don't match."
 msgstr "名前とIDがマッチしないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804D0004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Expired"
-msgstr ""
 
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Validation failed because the parent is expired."
 msgstr "親の期限が切れているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804D0005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Owner_Conflict"
-msgstr ""
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid ""
-"Validation failed because the parent owner conflicts with the child owner."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Id_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid ""
-"Validation failed because the id is not the expected id generated from "
-"signer and nonce."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0064"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Parent_Id_Conflict"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the existing parent id does not match the supplied"
-" parent id."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0065"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Property"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because a mosaic property is invalid."
 msgstr "モザイクプロパティが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804D0066"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Flags"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic flags are invalid."
 msgstr "モザイクフラグが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804D0067"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Divisibility"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic divisibility is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0068"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Direction"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the mosaic supply change direction is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0069"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Supply_Change_Amount"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the mosaic supply change amount is invalid."
 msgstr "モザイク供給量が妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804D006A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Invalid_Id"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic id is invalid."
 msgstr "モザイクIDが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804D006B"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Modification_Disallowed"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because mosaic modification is not allowed."
 msgstr "モザイク変更が許可されていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804D006C"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Modification_No_Changes"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because mosaic modification would not result in any "
-"changes."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D006D"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Immutable"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic supply is immutable."
 msgstr "モザイク供給量が不変のため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804D006E"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Negative"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the resulting mosaic supply is negative."
 msgstr "モザイク供給量が負数になるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804D006F"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Supply_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the resulting mosaic supply exceeds the maximum "
-"allowed value."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0070"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Non_Transferable"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the mosaic is not transferable."
 msgstr "モザイクは転送可能ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804D0071"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Max_Mosaics_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the credit of the mosaic would exceed the maximum "
-"of different mosaics an account is allowed to own."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804D0072"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Mosaic_Required_Property_Flag_Unset"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the mosaic has at least one required property flag"
-" unset."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Account_In_Both_Sets"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because account is specified to be both added and removed."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Multiple_Deletes"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because multiple removals are present."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Redundant_Modifications"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because redundant modifications are present."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Unknown_Multisig_Account"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because account is not in multisig cache."
 msgstr "キャッシュ内にアカウントがマルチシグが無いため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80550005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Not_A_Cosigner"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because account to be removed is not present."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Already_A_Cosigner"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because account to be added is already a cosignatory."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Min_Setting_Out_Of_Range"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because new minimum settings are out of range."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Min_Setting_Larger_Than_Num_Cosignatories"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because min settings are larger than number of "
-"cosignatories."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80550009"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Unsupported_Modification_Type"
-msgstr ""
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because the modification type is unsupported."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8055000A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Cosigned_Accounts"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the cosignatory already cosigns the maximum number"
-" of accounts."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8055000B"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Cosigners"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the multisig account already has the maximum "
-"number of cosignatories."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8055000C"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Loop"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a multisig loop is created."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8055000D"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Modify_Max_Multisig_Depth"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the max multisig depth is exceeded."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8055000E"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Multisig_Operation_Not_Permitted_By_Account"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because an operation is not permitted by a multisig "
-"account."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Duration"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Name"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Name_Id_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Expired"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Owner_Conflict"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Id_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0064"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Invalid_Namespace_Type"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the namespace type is invalid."
-msgstr "ネームスペースタイプが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804E0065"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Root_Name_Reserved"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the root namespace has a reserved name."
 msgstr "ルートネームスペースは既に予約済みのため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E0066"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Too_Deep"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the resulting namespace would exceed the maximum "
-"allowed namespace depth."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0067"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Parent_Unknown"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the namespace parent is unknown."
 msgstr "親ネームスペースが不明のため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804E0068"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Already_Exists"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because the namespace already exists."
 msgstr "ネームスペースがすでに存在するため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E0069"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Already_Active"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the namespace is already active."
 msgstr "ネームスペースがすでにアクティブなため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804E006A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Eternal_After_Nemesis_Block"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1543,247 +440,42 @@ msgid ""
 msgstr "ネメシスブロックの後に無期限のネームスペースを受け取ったため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E006B"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Max_Children_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid ""
 "Validation failed because the maximum number of children for a root "
 "namespace was exceeded."
 msgstr "ルートネームスペースに対する子の最大数を超えているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E006C"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Invalid_Action"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because alias action is invalid."
 msgstr "エイリアスアクションが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804E006D"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Unknown"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because namespace does not exist."
 msgstr "ネームスペースは存在しないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E006E"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Already_Exists"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because namespace is already linked to an alias."
 msgstr "ネームスペースはすでにエイリアスにリンクされているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x804E006F"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Does_Not_Exist"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because namespace is not linked to an alias."
 msgstr "ネームスペースはエイリアスにリンクされていないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x804E0070"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Unlink_Type_Inconsistency"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because unlink type is not consistent with existing alias."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0071"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Unlink_Data_Inconsistency"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because unlink data is not consistent with existing alias."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x804E0072"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Namespace_Alias_Invalid_Address"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because aliased address is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80500001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Invalid_Restriction_Type"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the account restriction type is invalid."
 msgstr "モザイク制限タイプが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80500002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Type_Invalid"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a modification type is invalid."
-msgstr "変更タイプが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80500003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Address_Invalid"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a modification address is invalid."
 msgstr "変更アドレが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80500004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Operation_Type_Incompatible"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the operation type is incompatible. *Note*: This "
-"indicates that the existing restrictions have a different operation type "
-"than that specified in the notification."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80500005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modify_Unsupported_Modification_Type"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80500006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Redundant"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because a modification is redundant."
 msgstr "変更が冗長になっているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x80500007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Not_Allowed"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a value is not in the container."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80500008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Modification_Count_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the transaction has too many modifications."
 msgstr "トランザクションが多すぎる変更を持っているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80500009"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Values_Count_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the resulting account restriction has too many "
-"values."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8050000A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Value_Invalid"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the account restriction value is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8050000B"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Address_Interaction_Not_Allowed"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the addresses involved in the transaction are not "
-"allowed to interact."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x8050000C"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Mosaic_Transfer_Not_Allowed"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -1792,343 +484,8 @@ msgid ""
 msgstr "受信者によってモザイクの転送が禁止されているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "0x8050000D"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionAccount_Transaction_Type_Not_Allowed"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the transaction type is not allowed to be "
-"initiated by the signer."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Invalid_Restriction_Type"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic restriction type is invalid."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Previous_Does_Not_Match"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because specified previous value does not match current "
-"value."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because specified previous value is nonzero."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Max_Restrictions_Exceeded"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the maximum number of restrictions would be "
-"exeeded."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Cannot_Delete_Nonexistent_Restriction"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because nonexistent restriction cannot be deleted."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Global_Restriction_Does_Not_Exist"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because required global restriction does not exist."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Global_Restriction_Invalid"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because mosaic has invalid global restriction."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80510008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_RestrictionMosaic_Account_Unauthorized"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because account is unauthorized to move mosaic."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80540001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Transfer_Message_Too_Large"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the message is too large."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80540002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Transfer_Out_Of_Order_Mosaics"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because mosaics are out of order."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FF0001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Unlinked"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because a block was received that did not link with the "
-"existing chain."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FF0002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Not_Hit"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a block was received that is not a hit."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FF0003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Inconsistent_State_Hash"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because a block was received that has an inconsistent "
-"state hash."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FF0004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Block_Inconsistent_Receipts_Hash"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because a block was received that has an inconsistent "
-"receipts hash."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FF0005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Chain_Unconfirmed_Cache_Too_Full"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the unconfirmed cache is too full."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Empty_Input"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the consumer input is empty."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Block_Transactions_Hash_Mismatch"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the block transactions hash does not match the "
-"calculated value."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x41FE0003"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Neutral_Consumer_Hash_In_Recency_Cache"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because an entity hash is present in the recency cache."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0004"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Many_Blocks"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the chain part has too many blocks."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0005"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Improper_Link"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the chain is internally improperly linked."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0006"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Duplicate_Transactions"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the chain part contains duplicate transactions."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0007"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Unlinked"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the chain part does not link to the current chain."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0008"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Mismatched_Difficulties"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the remote chain difficulties do not match the "
-"calculated difficulties."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE0009"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Score_Not_Better"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the remote chain score is not better."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80FE000A"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Far_Behind"
-msgstr ""
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the remote chain is too far behind."
 msgstr "リモートチェーンのタイムスタンプが遅れすぎているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "0x80FE000B"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Consumer_Remote_Chain_Too_Far_In_Future"
-msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -2136,57 +493,17 @@ msgid ""
 "future."
 msgstr "リモートチェーンのタイムスタンプが先に進みすぎているため、バリデーションに失敗しました。"
 
-#: ../../source/api.rst:1
-msgid "0x80450001"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Extension_Partial_Transaction_Cache_Prune"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the partial transaction was pruned from the "
-"temporal cache."
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "0x80450002"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid "Failure_Extension_Partial_Transaction_Dependency_Removed"
-msgstr ""
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the partial transaction was pruned from the "
-"temporal cache due to its dependency being removed."
-msgstr ""
-
-#: ../../source/api.rst:310
-msgid ""
-":download:`OpenAPI specification 2 <resources/collections/swagger2.yaml>` "
-":download:`OpenAPI specification 3 <resources/collections/openapi3.yaml>`"
-msgstr ""
-":download:`OpenAPI 2 仕様 <resources/collections/swagger2.yaml>` "
-":download:`OpenAPI 3 仕様 <resources/collections/openapi3.yaml>`"
-
-#: ../../source/api.rst:317
+#: ../../source/api.rst:287
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/api.rst:318
+#: ../../source/api.rst:288
 msgid ""
 "We recommend using one of the following tools to interact with the available"
 " endpoints."
 msgstr "有効なエンドポイントと疎通するために以下のツールを推奨します:"
 
-#: ../../source/api.rst:321
-msgid "NEM2-SDK"
-msgstr ""
-
-#: ../../source/api.rst:323
+#: ../../source/api.rst:293
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
 "tool to create NEM2 components, such as additional tools, libraries or "
@@ -2195,30 +512,22 @@ msgstr ""
 "**NEM2 ソフトウェア開発キット** とは NEM2 "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
-#: ../../source/api.rst:325
+#: ../../source/api.rst:295
 msgid ":doc:`Reference <../sdk>`"
 msgstr ":doc:`リファレンス <../sdk>`"
 
-#: ../../source/api.rst:326
+#: ../../source/api.rst:296
 msgid ":doc:`Guides <../concepts/account>`"
 msgstr ":doc:`ガイド <../concepts/account>`"
 
-#: ../../source/api.rst:329
-msgid "Insomnia"
-msgstr ""
-
-#: ../../source/api.rst:331
+#: ../../source/api.rst:301
 msgid "An open source HTTP client, available for Mac, Windows and Linux."
 msgstr "Mac, Windows, Linux 向けのオープンソースの HTTP クライアント。"
 
-#: ../../source/api.rst:333
+#: ../../source/api.rst:303
 msgid "Download |insomnia-app| for your operative system."
 msgstr "あなたのOS用の |insomnia-app| をダウンロードしてください。"
 
-#: ../../source/api.rst:335
-msgid ""
-"Import the :download:`Insomnia spec<resources/collections/insomnia.json>` "
-"for NEM."
-msgstr ""
-"NEM 用の :download:`Insomnia 仕様 <resources/collections/insomnia.json>` "
-"をインポートしてください。"
+#: ../../source/api.rst:305
+msgid "Import the |insomnia-spec| for NEM."
+msgstr "NEM 用 |insomnia-spec| をインポートする"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,31 +26,9 @@ msgstr ""
 msgid "Tags"
 msgstr "タグ"
 
-#: ../../../env/lib/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
-
-#: ../../../env/lib/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:7
-msgid "Author"
-msgstr "投稿者"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../env/lib/site-packages/ablog/templates/authors.html:2
-msgid "Authors"
-msgstr "投稿者"
-
-#: ../../source/_templates/include/navbar-right.html:5
-msgid "Edit"
-msgstr "編集"
-
-#: ../../source/_templates/include/navbar-right.html:14
-msgid "Translate"
-msgstr "翻訳する"
+#: ../../../env/lib/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
 
 #: ../../source/_templates/include/footer.html:7
 msgid "Learn"
@@ -61,18 +39,18 @@ msgid "Getting Started"
 msgstr "入門"
 
 #: ../../source/_templates/include/footer.html:13
-#: ../../source/_templates/index.html:251
+#: ../../source/_templates/index.html:256
 msgid "Built-in Features"
 msgstr "ビルドイン機能"
 
 #: ../../source/_templates/include/footer.html:16
-#: ../../source/_templates/index.html:252
+#: ../../source/_templates/index.html:257
 msgid "Protocol"
 msgstr "プロトコル"
 
 #: ../../source/_templates/include/footer.html:19
-#: ../../source/_templates/index.html:253
 #: ../../source/_templates/catalog.html:3
+#: ../../source/_templates/index.html:258
 msgid "Guides"
 msgstr "ガイド"
 
@@ -85,63 +63,35 @@ msgstr "リファレンス"
 msgid "Contribute"
 msgstr "貢献する"
 
-#: ../../source/_templates/include/footer.html:33
-#: ../../source/_templates/index.html:44
-#: ../../source/_templates/index.html:254
-msgid "REST API"
-msgstr ""
-
 #: ../../source/_templates/include/footer.html:34
-#: ../../source/_templates/index.html:255
+#: ../../source/_templates/index.html:260
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/_templates/include/footer.html:35
-#: ../../source/_templates/index.html:256
-msgid "SDKs"
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:36
-#: ../../source/_templates/index.html:257
-msgid "Client"
-msgstr "クライアント"
-
 #: ../../source/_templates/include/footer.html:37
-#: ../../source/_templates/index.html:258
+#: ../../source/_templates/index.html:263
 msgid "Extensions"
 msgstr "拡張"
 
-#: ../../source/_templates/include/footer.html:43
+#: ../../source/_templates/include/footer.html:42
 msgid "Community"
 msgstr "コミュニティ"
 
-#: ../../source/_templates/include/footer.html:47
-msgid "Join #general discussion"
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:53
-msgid "Ask development questions"
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:59
-msgid "Follow the updates"
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:65
-msgid "Explore our Github"
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:76
-msgid "&copy; <a href=\"%(path)s\">Copyright</a> %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:78
-msgid "&copy; Copyright %(copyright)s."
-msgstr ""
-
-#: ../../source/_templates/include/footer.html:82
+#: ../../source/_templates/include/footer.html:81
 msgid "Last updated on %(last_updated)s."
 msgstr "最終更新 %(last_updated)s"
+
+#: ../../source/_templates/endpoints.html:2
+msgid "Endpoints"
+msgstr "エンドポイント"
+
+#: ../../../env/lib/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
+
+#: ../../../env/lib/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
 
 #: ../../source/_templates/layout.html:80
 msgid "Did you find what you were looking for?"
@@ -151,9 +101,30 @@ msgstr "お探しのものは見つかりましたか？"
 msgid "Give us your feedback."
 msgstr "フィードバックをください。"
 
-#: ../../../env/lib/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:2
+msgid "Update"
+msgstr "更新"
+
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:7
+#: ../../source/_templates/post-meta.html:5
+msgid "Author"
+msgstr "投稿者"
+
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:16
+msgid "Location"
 msgstr "場所"
+
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:25
+msgid "Language"
+msgstr "言語"
+
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:34
+msgid "Category"
+msgstr "カテゴリ"
+
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:44
+msgid "Tag"
+msgstr "タグ"
 
 #: ../../../env/lib/site-packages/ablog/templates/categories.html:2
 msgid "Categories"
@@ -201,10 +172,10 @@ msgstr "トランザクションをアカウントから取得する"
 
 #: ../../source/_templates/index.html:90
 #: ../../source/_templates/index.html:119
-#: ../../source/_templates/index.html:148
-#: ../../source/_templates/index.html:177
-#: ../../source/_templates/index.html:206
-#: ../../source/_templates/index.html:232
+#: ../../source/_templates/index.html:153
+#: ../../source/_templates/index.html:182
+#: ../../source/_templates/index.html:211
+#: ../../source/_templates/index.html:237
 msgid "View More"
 msgstr "もっと見る"
 
@@ -233,54 +204,54 @@ msgid "Creating a mosaic"
 msgstr "モザイクの作成"
 
 #: ../../source/_templates/index.html:136
-msgid "Getting the mosaic information"
-msgstr "モザイクの情報を取得する"
-
-#: ../../source/_templates/index.html:141
 msgid "Registering a namespace"
 msgstr "ネームスペースの取得"
 
-#: ../../source/_templates/index.html:155
+#: ../../source/_templates/index.html:141
+msgid "Linking a namespace to a mosaic"
+msgstr "ネームスペースをモザイクへリンクする"
+
+#: ../../source/_templates/index.html:160
 msgid "Transactions"
 msgstr "トランザクション"
 
-#: ../../source/_templates/index.html:160
+#: ../../source/_templates/index.html:165
 msgid "Sending a transfer transaction"
 msgstr "転送トランザクションの送信"
 
-#: ../../source/_templates/index.html:165
+#: ../../source/_templates/index.html:170
 msgid "Monitoring a transaction status"
 msgstr "トランザクションの監視"
 
-#: ../../source/_templates/index.html:170
+#: ../../source/_templates/index.html:175
 msgid "Grouping transactions"
 msgstr "トランザクションのグループ"
 
-#: ../../source/_templates/index.html:184
+#: ../../source/_templates/index.html:189
 msgid "Advanced Transactions"
 msgstr "トランザクションの応用"
 
-#: ../../source/_templates/index.html:189
+#: ../../source/_templates/index.html:194
 msgid "Creating an escrow contract"
 msgstr "エスクローコントラクトの作成"
 
-#: ../../source/_templates/index.html:194
+#: ../../source/_templates/index.html:199
 msgid "Cosigning transactions"
 msgstr "連署トランザクション"
 
-#: ../../source/_templates/index.html:199
-msgid "Atomic Cross-Chain Swap"
+#: ../../source/_templates/index.html:204
+msgid "Atomic cross-chain swap"
 msgstr "アトミッククロスチェーンスワップ"
 
-#: ../../source/_templates/index.html:213
+#: ../../source/_templates/index.html:218
 msgid "Deploy"
 msgstr "デプロイ"
 
-#: ../../source/_templates/index.html:218
+#: ../../source/_templates/index.html:223
 msgid "Running Catapult locally"
 msgstr "ローカルで Catapult サービスを稼働"
 
-#: ../../source/_templates/index.html:222
+#: ../../source/_templates/index.html:227
 msgid ""
 "Deploying a test net node <span\n"
 "                                        class=\"label label-default\">Coming soon</span>"
@@ -288,7 +259,7 @@ msgstr ""
 "テストネットノードのデプロイ <span\n"
 "                                        class=\"label label-default\">近日公開予定</span>"
 
-#: ../../source/_templates/index.html:226
+#: ../../source/_templates/index.html:231
 msgid ""
 "Configuring your network <span\n"
 "                                        class=\"label label-default\">Coming soon</span>"
@@ -296,19 +267,49 @@ msgstr ""
 "ネットワークの設定 <span\n"
 "                                        class=\"label label-default\">近日公開予定"
 
-#: ../../source/_templates/index.html:244
+#: ../../source/_templates/index.html:249
 msgid "Technical Documentation"
 msgstr "テクニカルドキュメント"
 
-#: ../../source/_templates/index.html:245
+#: ../../source/_templates/index.html:250
 msgid ""
 "Architecture your solution connecting the features that make up the\n"
 "                    Smart Asset System."
 msgstr "スマートアセットシステムを構成する機能を接続してソリューションを構築します"
 
-#: ../../source/_templates/index.html:250
+#: ../../source/_templates/index.html:255
 msgid "What is NEM?"
 msgstr "NEM とは？"
+
+#: ../../source/_templates/include/navbar-right.html:5
+msgid "Edit"
+msgstr "編集"
+
+#: ../../source/_templates/include/navbar-right.html:14
+msgid "Translate"
+msgstr "翻訳する"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../env/lib/site-packages/ablog/templates/authors.html:2
+msgid "Authors"
+msgstr "投稿者"
+
+#: ../../../env/lib/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:19
+msgid "Read more ..."
+msgstr "もっと読む"
+
+#: ../../source/_templates/globaltoc.html:10
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: ../../../env/lib/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
+#: ../../source/_templates/collection.html:4
+msgid "guides"
+msgstr "ガイド"
 
 #: ../../../env/lib/site-packages/ablog/templates/postnavy.html:7
 msgid "Previous"
@@ -317,44 +318,3 @@ msgstr "前へ"
 #: ../../../env/lib/site-packages/ablog/templates/postnavy.html:17
 msgid "Next"
 msgstr "次へ"
-
-#: ../../../env/lib/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:2
-msgid "Update"
-msgstr "更新"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:16
-msgid "Location"
-msgstr "場所"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:25
-msgid "Language"
-msgstr "言語"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:34
-msgid "Category"
-msgstr "カテゴリ"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:44
-msgid "Tag"
-msgstr "タグ"
-
-#: ../../source/_templates/endpoints.html:2
-msgid "Endpoints"
-msgstr "エンドポイント"
-
-#: ../../source/_templates/collection.html:4
-msgid "guides"
-msgstr "ガイド"
-
-#: ../../source/_templates/collection.html:19
-#: ../../../env/lib/site-packages/ablog/templates/collection.html:48
-msgid "Read more ..."
-msgstr "もっと読む"
-
-#: ../../source/_templates/globaltoc.html:10
-msgid "Navigation"
-msgstr "ナビゲーション"

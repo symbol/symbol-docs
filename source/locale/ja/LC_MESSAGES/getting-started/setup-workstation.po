@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -63,69 +63,62 @@ msgstr ""
 "以下のコマンドを実行する前に、 `docker`_ と `docker-compose`_ がインストールされていることを確認してください:"
 
 #: ../../source/getting-started/setup-workstation.rst:30
-msgid ""
-"Is catapult service bootstrap not working? Check |catapult-service-"
-"bootstrap-known-issues|."
-msgstr ""
-"catapult service bootstrap が動作しませんか？ |catapult-service-bootstrap-known-"
-"issues| を確認してみてください。"
-
-#: ../../source/getting-started/setup-workstation.rst:32
 msgid "Check if you can get the first block information:"
 msgstr "最初のブロックの情報が取得できるかどうかを確認します:"
 
-#: ../../source/getting-started/setup-workstation.rst:42
+#: ../../source/getting-started/setup-workstation.rst:40
 msgid "Getting a test account"
 msgstr "テストアカウントの取得"
 
-#: ../../source/getting-started/setup-workstation.rst:44
+#: ../../source/getting-started/setup-workstation.rst:42
 msgid ""
 "An account is a key pair (private and public key) associated to a mutable "
 "state stored in the NEM blockchain. In other words, you have a deposit box "
 "on the blockchain, which only you can modify with your key pair. As the name"
-" suggests, the private key has to be kept secret at all times. Anyone with "
-"access to the private key, ultimately has control over the account."
+" suggests, the **private key** has to be kept secret at all times. Anyone "
+"with access to the private key, ultimately has control over the account."
 msgstr ""
 "アカウントとは、NEM "
-"ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーペアでのみ変更をすることができます。秘密鍵はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人は誰でも、アカウントを完全にコントロールできてしまいます。"
+"ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーペアでのみ変更をすることができます。**秘密鍵**"
+" はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人は誰でも、アカウントを完全にコントロールできてしまいます。"
 
-#: ../../source/getting-started/setup-workstation.rst:46
+#: ../../source/getting-started/setup-workstation.rst:44
 msgid ""
 "The **public key** is cryptographically derived from the private key. It "
 "would take millions of years to do the reverse process and therefore, the "
 "public key is safe to be shared."
 msgstr "**公開鍵** は暗号理論によって秘密鍵から算出されます。秘密鍵を公開鍵から逆算するには100万年程度はかかるため、共有しても安全です。"
 
-#: ../../source/getting-started/setup-workstation.rst:48
+#: ../../source/getting-started/setup-workstation.rst:46
 msgid ""
-"Finally, the account address is generated with the public key, following the"
-" NEM blockchain protocol. Share this address instead of the public key, as "
-"it contains more information, such as a validity check or which network it "
-"uses (public, testnet or private)."
+"Finally, the account **address** is generated with the public key, following"
+" the NEM blockchain protocol. Share this address instead of the public key, "
+"as it contains more information, such as a validity check or which network "
+"it uses (public, testnet or private)."
 msgstr ""
-"最後に、アカウントのアドレスは、NEM "
+"最後に、アカウントの **アドレス** は、NEM "
 "ブロックチェーンプロトコルに従って、公開鍵から生成されます。このアドレスには正当性チェックや使用されているネットワーク(パブリック、テストネットまたはプライベート)などのより多くの情報が含まれているので、公開鍵の代わりにアドレスを共有してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:50
+#: ../../source/getting-started/setup-workstation.rst:48
 msgid ""
-":doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most "
+"The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most "
 "commonly used commands from your terminal i.e. using it to interact with the"
 " blockchain, setting up an account, sending funds, etc."
 msgstr ""
 ":doc:`NEM2-CLI <../cli>` "
 "はブロックチェーンとの疎通、アカウントのセットアップや資産の送信など、特によく使うコマンドをターミナルから実行するのに便利です。"
 
-#: ../../source/getting-started/setup-workstation.rst:52
+#: ../../source/getting-started/setup-workstation.rst:50
 msgid "Install NEM2-CLI using ``npm``."
 msgstr "``npm`` を使って NEM2-CLI をインストールします。"
 
-#: ../../source/getting-started/setup-workstation.rst:58
+#: ../../source/getting-started/setup-workstation.rst:56
 msgid ""
 "Open a terminal, and go to the directory where you have download Catapult "
 "Bootstrap Service."
 msgstr "ターミナルを開き、 Catapult Bootstrap Service をダウンロードしたディレクトリへ移動してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:65
+#: ../../source/getting-started/setup-workstation.rst:63
 msgid ""
 "Under the section ``nemesis_addresses``, you will find the key pairs which "
 "contain ``cat.currency``. Every action on the blockchain costs cat.currency "
@@ -136,69 +129,59 @@ msgstr ""
 "を持つキーペアを見つけることができます。ブロックチェーンに対するすべてのアクションは、ネットワークを検証して保護する人々にインセンティブを与えるために "
 "``cat.currency`` 単位がかかります。"
 
-#: ../../source/getting-started/setup-workstation.rst:67
+#: ../../source/getting-started/setup-workstation.rst:65
 msgid "Load the first account as a profile in NEM2-CLI."
 msgstr "NEM2-CLI に最初のアカウントを読み込みます。"
 
-#: ../../source/getting-started/setup-workstation.rst:78
+#: ../../source/getting-started/setup-workstation.rst:76
 msgid ""
 "You should see the following lines in your terminal, containing the account "
 "credentials:"
 msgstr "アカウントの認証情報を含む、以下の行がターミナルに表示されるはずです:"
 
-#: ../../source/getting-started/setup-workstation.rst:92
+#: ../../source/getting-started/setup-workstation.rst:96
 msgid "Setting up the development environment"
 msgstr "開発環境のセットアップ"
 
-#: ../../source/getting-started/setup-workstation.rst:94
+#: ../../source/getting-started/setup-workstation.rst:98
 msgid ""
 "It is time to choose a programming language. Pick the one you feel most "
 "comfortable with, or follow your project requirements."
 msgstr "それではプログラミング言語を選択しましょう。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:96
+#: ../../source/getting-started/setup-workstation.rst:100
 msgid ""
 "Create a folder for your new project and run the instructions for the "
 "selected language."
 msgstr "新しいプロジェクトのフォルダを作り、選択した言語のインストラクションを実行しましょう。"
 
-#: ../../source/getting-started/setup-workstation.rst:100
-msgid "TypeScript"
-msgstr ""
-
-#: ../../source/getting-started/setup-workstation.rst:102
-#: ../../source/getting-started/setup-workstation.rst:131
+#: ../../source/getting-started/setup-workstation.rst:106
+#: ../../source/getting-started/setup-workstation.rst:135
 msgid ""
 "Create a ``package.json`` file. The minimum required Node.js version is "
 "8.9.X."
 msgstr "``package.json`` を作成します。バージョン 8.9.X 以上の Node.js が必要です。"
 
-#: ../../source/getting-started/setup-workstation.rst:108
-#: ../../source/getting-started/setup-workstation.rst:137
+#: ../../source/getting-started/setup-workstation.rst:112
+#: ../../source/getting-started/setup-workstation.rst:141
 msgid "Install nem2-sdk and rxjs library."
 msgstr "nem2-sdk と rxjs ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:114
+#: ../../source/getting-started/setup-workstation.rst:118
 msgid ""
-"nem2-sdk is built with TypeScript language. It is recommended to use "
-"**TypeScript instead of JavaScript** when building applications for NEM "
-"blockchain."
+"We recommend to use **TypeScript instead of JavaScript** when building "
+"applications for NEM blockchain."
 msgstr ""
-"nem2-sdk は TypeScript で実装されています。NEM ブロックチェーンのアプリケーションの構築には **JavaScript "
-"の代わりに TypeScript** を使うことを推奨します。"
+"NEM ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
 
-#: ../../source/getting-started/setup-workstation.rst:116
+#: ../../source/getting-started/setup-workstation.rst:120
 msgid "Make sure you have at least version 2.5.X installed."
 msgstr "バージョン 2.5.X 以上がインストールされていることを確認してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:123
+#: ../../source/getting-started/setup-workstation.rst:127
 msgid "Use `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:129
-msgid "JavaScript"
-msgstr ""
-
-#: ../../source/getting-started/setup-workstation.rst:184
+#: ../../source/getting-started/setup-workstation.rst:188
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>` 。"

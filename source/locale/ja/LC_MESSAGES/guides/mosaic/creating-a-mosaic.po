@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,8 +26,8 @@ msgid "Creating a mosaic"
 msgstr "モザイクの作成"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:12
-msgid "Follow this guide to create a :doc:`mosaic<../../concepts/mosaic>`."
-msgstr "このガイドに従って :doc:`モザイク<../../concepts/mosaic>` を作成します。"
+msgid "Tokenize an asset using mosaics."
+msgstr "モザイクを使用した資産のトークン化"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:16
 msgid "Background"
@@ -35,42 +35,63 @@ msgstr "背景"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:18
 msgid ""
-"Mosaics can be used to represent any asset in the blockchain such as "
-"objects, tickets, coupons, stock share representation, and even your "
-"cryptocurrency."
+"A private company, ComfyClothingCompany, decides that it wants to go public."
+" Instead of a traditional IPO, the company decides to do an STO to issue "
+"tokens through the NEM platform."
 msgstr ""
-"モザイクは物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなる資産をブロックチェーン上に表現するために使用されます。"
+"非上場会社である ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は NEM "
+"プラットフォームを通じてトークンを発行するために STO を行うことにしました。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:22
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:20
+msgid ""
+"In this guide, we are going to help this company to **create the tokens for "
+"their STO** using :doc:`mosaics <../../concepts/mosaic>` built-in feature "
+"and the NEM2-SDK."
+msgstr ""
+"このガイドでは :doc:`mosaics <../../concepts/mosaic>` 組み込み機能と NEM2-SDK を使用して、この会社が "
+"**STOのトークンを作成する** のを支援します。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:24
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:26
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:25
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:27
 msgid ""
 "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
 msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:29
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:31
 msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:31
-msgid "Define two transactions to create a mosaic:"
-msgstr "モザイクを作成するには2つのトランザクションを定義します:"
-
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:33
 msgid ""
-"A :ref:`mosaic definition transaction <mosaic-definition-transaction>` to "
-"create the mosaic, with the following properties:"
+"Before starting this guide, make sure you have an :doc:`account loaded with "
+"cat.currency  <../../getting-started/setup-workstation>`."
 msgstr ""
-"このモザイクを作成するために :ref:`モザイク定義トランザクション <mosaic-definition-transaction>` "
-"と以下のプロパティ:"
+"ガイドを始める前に :doc:`cat.currency を保有したアカウント <../../getting-started/setup-"
+"workstation>` が準備できていることを確認してください。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:35
+msgid ""
+"Then, the company must create a mosaic to represent shares to their company."
+" To do so, you will have to create a new file and define two transactions:"
+msgstr "次に、会社は自分の会社に株式を表現するためにモザイクを作成する必要があります。新しいファイルを作り、２つのトランザクションを定義します:"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:37
+msgid ""
+"A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set "
+"the **mosaic properties**. In this example, we are going to create a mosaic "
+"configured as:"
+msgstr ""
+"**mosaic properties** を設定するための :ref:`MosaicDefinitionTransaction <mosaic-"
+"definition-transaction>`。この例では次のように設定したモザイクを作成します。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid "Property"
@@ -85,98 +106,72 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Divisibility"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "0"
-msgstr ""
+msgid ""
+"Although brokerages and investment firms can fractionalize shares, the "
+"traditional minimum number of shares an investor can purchase from the open "
+"market is 1."
+msgstr "証券会社や投資会社は株式を分割することができますが、投資家が公開市場から購入できる伝統的な最小株式数は 1 です。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-"The mosaic won't be divisible. Determines up to what decimal place the "
-"mosaic can be divided."
-msgstr "このモザイクは不可分です。モザイクを分割できる小数点以下の桁数を決定します。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Duration"
+"Shares of the company should exist as long as the company is in business. "
+"The ComfyClothingCompany sets this property to ``0``, creating a non-"
+"expiring mosaic."
 msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "1000"
-msgstr ""
+"会社の株式は会社が事業を営んでいる限り存在するはずです。ComfyClothingCompany はこのプロパティを ``0`` "
+"のままにして、無期限のモザイクを作成します。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-"The mosaic will be created for the next 1000 blocks. If you want to create a"
-" non-expiring mosaic, do not set this property."
-msgstr "モザイクは以降1000ブロック先まで作成されます。期限が切れないモザイクを作成したい場合はこのプロパティを設定しないでください。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Supply mutable"
+"ComfyClothingCompany sets the initial supply of the mosaic to a typical "
+"startup amount of ``10,000,000`` authorized shares. As the company grows, it"
+" could choose to increase the number of shares, so the supply mutable is set"
+" to ``true``."
 msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "True"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "The mosaic supply can change at a later point."
-msgstr "モザイク供給量は後に変更可能です。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
-msgid "Transferable"
-msgstr ""
+"ComfyClothingCompany はモザイクの初期供給量を、一般的なスタートアップにおける授権株式の量である ``10,000,000`` "
+"に設定します。会社が成長するにつれて、株式数を増やすことを選択できるので供給可変性は ``true`` に設定されます。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-"The mosaic can be transferred between arbitrary accounts. Otherwise, the "
-"mosaic can be only transferred back to the mosaic creator."
-msgstr "このモザイクは任意のアカウント間で転送できます。そうでない場合はモザイクをモザイク作成者へ送り返すことしかできません。"
+"Once the initial shares are distributed, the shares will be on the market to"
+" be traded in public. Thus, the transferability property needs to be set to "
+"``true``."
+msgstr "初期株式が分配されるとその株式は上場して公開されます。したがって譲渡性は ``true`` に設定する必要があります。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:48
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:62
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:80
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts`"
-msgstr ""
+"Since STOs are regulated, the mosaic owner should be able to restrict which "
+"accounts can transact with the mosaic."
+msgstr "STO には規制があるため、モザイクの所有者はモザイクを取引できるアカウントを制限できる必要があります。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:53
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:67
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:85
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:61
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/mosaic/CreatingAMosaic.js`"
-msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:58
-msgid ""
-"A :ref:`mosaic supply change transaction <mosaic-supply-change-"
-"transaction>`, to set the supply. We are going to create 1.000.000 mosaic "
+"A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, "
+"to set the **initial supply**. We are going to create **1,000,000** mosaic "
 "units."
 msgstr ""
-"供給量を設定するために :ref:`モザイク供給量変更トランザクション <mosaic-supply-change-transaction>` "
-"を用います。1,000,000 モザイク単位を作成していきます。"
+"**初期供給量** を設定するために :ref:`MosaicSupplyChangeTransaction <mosaic-supply-"
+"change-transaction>` を用います。**1.000.000** モザイク単位を作成していきます。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:72
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:75
 msgid ""
-"NEM mainly works with absolute amounts. To get an absolute amount, multiply "
-"the amount of assets you want to create by 10\\ :sup:`divisibility`.  For "
-"example, if the mosaic has divisibility 2, to create 10 units (relative) you"
-" should define 1000 (absolute) instead."
+"NEM works with **absolute amounts**. To get an absolute amount, multiply the"
+" amount of assets you want to create by 10\\ :sup:`divisibility`.  For "
+"example, if the mosaic has **divisibility** 2, to create 10 units (relative)"
+" you should define 1000 (absolute) instead."
 msgstr ""
-"NEM は主に絶対量を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
-"を乗じてください。例えば、モザイクが可分性 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
+"NEM は **絶対量** を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
+"を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:74
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:77
 msgid ""
-"Both transactions can be announced together using an :ref:`aggregate "
-"transaction <aggregate-transaction>`."
+"Announce both transactions together using an :ref:`AggregateTransaction "
+"<aggregate-transaction>`."
 msgstr ""
-"両方のトランザクションは、 :ref:`アグリゲートトランザクション <aggregate-transaction>` "
-"を使うことで一緒にアナウンスできます。"
+"両方のトランザクションは :ref:`AggregateTransaction <aggregate-transaction>` "
+"を使って一緒にアナウンスします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:76
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:79
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
@@ -185,22 +180,13 @@ msgstr ""
 "自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
 "``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:90
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:97
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/mosaic/CreatingAMosaic.sh`"
+"Once the transaction gets confirmed, you can try to :doc:`transfer "
+"<../transfer/sending-a-transfer-transaction>` one unit of the created mosaic"
+" to another account, :doc:`modify the mosaic properties <modifying-mosaic-"
+"supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`."
 msgstr ""
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:96
-msgid "What's next?"
-msgstr "次は？"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:98
-msgid ""
-":doc:`Transfer <../transaction/sending-a-transfer-transaction>` one mosaic "
-"created to another account, :doc:`modify the mosaic properties <modifying-"
-"mosaic-supply>` or :doc:`link a namespace to the mosaic "
-"<creating-a-mosaic>`."
-msgstr ""
-"他のアカウントへ作ったモザイクを :doc:`転送 <../transaction/sending-a-transfer-transaction>` "
-"してみる、 :doc:`モザイクプロパティの変更 <modifying-mosaic-supply>` または "
-":doc:`ネームスペースをモザイクへリンク <creating-a-mosaic>` してみましょう。"
+"トランザクションが承認されたら、他のアカウントへ作ったモザイクの 1 単位を :doc:`転送 <../transfer/sending-a"
+"-transfer-transaction>` してみたり、 :doc:`モザイクプロパティの変更 <modifying-mosaic-supply>`"
+" または :doc:`ネームスペースをモザイクへリンク <creating-a-mosaic>` してみましょう。"

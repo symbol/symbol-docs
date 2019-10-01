@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -68,7 +68,7 @@ msgstr "インストール"
 msgid ""
 "**Catapult server** can be used to configure three different types of "
 ":doc:`nodes <concepts/node>`:"
-msgstr ""
+msgstr "**Catapult server** は異なる3種類の :doc:`ノード <concepts/node>` に設定することができます:"
 
 #: ../../source/server.rst:19
 msgid ""
@@ -100,6 +100,8 @@ msgid ""
 "|instructions|, but we recommend deploying your own network for development "
 "or learning purposes with |catapult-service-bootstrap|."
 msgstr ""
+"ビルド |instructions| に従って新しいカタパルトサーバーイメージを作成できますが |catapult-service-bootstrap|"
+" で開発目的または学習目的で独自のネットワークを展開することを推奨します。"
 
 #: ../../source/server.rst:28
 msgid "Troubleshooting"
@@ -187,10 +189,6 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/server.rst:1
-msgid "/extensions"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid ""
 "Modules that add features to the bare catapult-server. They range from "
 "extensions that are critical like consensus and networking to optional "
@@ -200,16 +198,8 @@ msgstr ""
 "メッセージングのようなオプションの拡張やその他便利な API まで多岐にわたります。"
 
 #: ../../source/server.rst:1
-msgid "/external"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid "Implementations of the hashing algorithms used."
 msgstr "使用しているハッシュアルゴリズムの実装。"
-
-#: ../../source/server.rst:1
-msgid "/plugins"
-msgstr ""
 
 #: ../../source/server.rst:1
 msgid ""
@@ -218,56 +208,28 @@ msgid ""
 msgstr "トランザクション経由でチェーンの状態を変更するための新しい方法を紹介するモジュール。"
 
 #: ../../source/server.rst:1
-msgid "/resources"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid "Node and network configurable properties."
 msgstr "ノードとネットワークの設定可能プロパティ"
-
-#: ../../source/server.rst:1
-msgid "/scripts"
-msgstr ""
 
 #: ../../source/server.rst:1
 msgid "Utility scripts for developers."
 msgstr "開発者向けユーティリティスクリプト"
 
 #: ../../source/server.rst:1
-msgid "/sdk"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid "Reusable code used by tests and tools."
 msgstr "テストとツールによる再利用可能なコード"
-
-#: ../../source/server.rst:1
-msgid "/seed"
-msgstr ""
 
 #: ../../source/server.rst:1
 msgid "Nemesis blocks used in tests."
 msgstr "テスト用ネメシスブロック"
 
 #: ../../source/server.rst:1
-msgid "/src"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid "Catapult's core engine."
 msgstr "Catapult のコアエンジン"
 
 #: ../../source/server.rst:1
-msgid "/tests"
-msgstr ""
-
-#: ../../source/server.rst:1
 msgid "Collection of tests."
 msgstr "テストの集合"
-
-#: ../../source/server.rst:1
-msgid "/tools"
-msgstr ""
 
 #: ../../source/server.rst:1
 msgid "Tools to deploy and monitor networks and nodes."
@@ -275,7 +237,7 @@ msgstr "ネットワークとノードをデプロイとモニタリングする
 
 #: ../../source/server.rst:83
 msgid "Tools"
-msgstr ""
+msgstr "ツール"
 
 #: ../../source/server.rst:85
 msgid ""
@@ -289,10 +251,6 @@ msgstr ""
 #: ../../source/server.rst:87
 msgid "You can find them inside of ``catapult-server/build/bin``."
 msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
-
-#: ../../source/server.rst:90
-msgid "catapult.tools.address"
-msgstr ""
 
 #: ../../source/server.rst:92
 msgid "Generates keypairs and addresses."
@@ -314,10 +272,6 @@ msgstr "コマンド"
 msgid "If you want the save the output, add an output stream at the end:"
 msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
 
-#: ../../source/server.rst:125
-msgid "catapult.tools.nemgen"
-msgstr ""
-
 #: ../../source/server.rst:127
 msgid ""
 "Creates a nemesis block out of a `mijin-test.properties  "
@@ -329,19 +283,11 @@ msgstr ""
 "server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
 "nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
 
-#: ../../source/server.rst:154
-msgid "catapult.tools.benchmark"
-msgstr ""
-
 #: ../../source/server.rst:156
 msgid ""
 "Executes CPU-based performance tests of catapult functions, such as hashing "
 "or encryption."
 msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
-
-#: ../../source/server.rst:181
-msgid "catapult.tools.network"
-msgstr ""
 
 #: ../../source/server.rst:183
 msgid ""
@@ -353,19 +299,11 @@ msgstr ""
 "api.json <peers-api.json>` "
 "内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
 
-#: ../../source/server.rst:202
-msgid "catapult.tools.statusgen"
-msgstr ""
-
 #: ../../source/server.rst:204
 msgid ""
 "Generates the list of status errors that the server might return after "
 "receiving a transaction."
 msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
-
-#: ../../source/server.rst:221
-msgid "catapult.tools.health"
-msgstr ""
 
 #: ../../source/server.rst:223
 msgid ""
@@ -380,10 +318,6 @@ msgstr ""
 #: ../../source/server.rst:242
 msgid "Guides"
 msgstr "ガイド"
-
-#: ../../source/server.rst:244
-msgid "|running-catapult-locally|"
-msgstr ""
 
 #: ../../source/server.rst:246
 msgid "Deploy a Catapult full node for learning and development purposes."

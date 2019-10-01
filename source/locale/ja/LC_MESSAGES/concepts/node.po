@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,13 +27,13 @@ msgstr "ノード"
 
 #: ../../source/concepts/node.rst:5
 msgid ""
-"The NEM blockchain platform is built from a network of nodes. These nodes "
-"provide a powerful, stable, and secure platform where Smart Assets "
+"The NEM blockchain platform is built from a **network of nodes**. These "
+"nodes provide a powerful, stable, and secure platform where Smart Assets "
 "transactions are conducted, searched, and immutably logged on the blockchain"
 " ledger."
 msgstr ""
-"NEM "
-"ブロックチェーンプラットフォームはノードのネットワークによって構築されています。これらのノードはスマートアセットのトランザクションを実行、検索し、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。"
+"NEM ブロックチェーンプラットフォームは **ノードのネットワーク** "
+"によって構築されています。これらのノードはスマートアセットのトランザクションを実行、検索し、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。"
 
 #: ../../source/concepts/node.rst:11
 msgid "Catapult’s Performance Advantage: A Four-Layered Architecture"
@@ -41,9 +41,9 @@ msgstr "Catapult のパフォーマンス優位性: 4層アーキテクチャ"
 
 #: ../../source/concepts/node.rst:13
 msgid ""
-"The four-layered architecture allows developers to update any of these tiers"
-" without disrupting the others, which improves security."
-msgstr "4層アーキテクチャにより、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。"
+"The **four-layered architecture** allows developers to update any of these "
+"tiers without disrupting the others, which improves security."
+msgstr "**4層アーキテクチャ** により、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。"
 
 #: ../../source/concepts/node.rst:17
 msgid "Peer node"
@@ -86,10 +86,6 @@ msgstr "各ブロックのバイナリはフラットなファイルとしてデ
 #: ../../source/concepts/node.rst:32
 msgid "The updated chain state in memory or RocksDB (configurable)."
 msgstr "更新されたチェーンの状態はメモリまたは RocksDB にあります。(設定可能)"
-
-#: ../../source/concepts/node.rst:35
-msgid "RocksDB"
-msgstr ""
 
 #: ../../source/concepts/node.rst:37
 msgid ""
@@ -199,10 +195,6 @@ msgstr ""
 "API ノードは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
 "の連署名を集める役割も果たし、それが完成したときにだけ処理されます。"
 
-#: ../../source/concepts/node.rst:75
-msgid "MongoDB"
-msgstr ""
-
 #: ../../source/concepts/node.rst:77
 msgid ""
 "|mongodb| stores blocks, transactions, and chain states for high query "
@@ -224,10 +216,6 @@ msgstr "新しい未承認トランザクションの処理を完了します。
 #: ../../source/concepts/node.rst:84
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB は外部からアクセスされるべきではありません。"
-
-#: ../../source/concepts/node.rst:87
-msgid "ZMQ"
-msgstr ""
 
 #: ../../source/concepts/node.rst:89
 msgid ""
@@ -275,10 +263,6 @@ msgstr ""
 #: ../../source/concepts/node.rst:133
 msgid "Guides"
 msgstr "ガイド"
-
-#: ../../source/concepts/node.rst:135
-msgid "|running-catapult-locally|"
-msgstr ""
 
 #: ../../source/concepts/node.rst:137
 msgid "Deploy a Catapult full node for learning and development purposes."

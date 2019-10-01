@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -73,11 +73,11 @@ msgstr "永続性"
 #: ../../source/concepts/metadata.rst:22
 msgid ""
 "Metadata entries are stored in the blockchain—like the message of a regular "
-":doc:`transfer transaction <transfer-transaction>`—but also as a **key-value"
-" state**."
+":doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value "
+"state**."
 msgstr ""
-"メタデータエントリはブロックチェーンに格納されます — :doc:`転送トランザクション <transfer-transaction>` "
-"の通常メッセージのように — が、 **key-value state** です。"
+"メタデータエントリはブロックチェーンに格納されます — :doc:`TransferTransaction <transfer-"
+"transaction>` の通常メッセージのように — が、 **key-value state** です。"
 
 #: ../../source/concepts/metadata.rst:24
 msgid ""
@@ -97,10 +97,12 @@ msgstr "パーミッション"
 msgid ""
 "The account, namespace or mosaic owner must **opt-in** to all metadata "
 "requests received by giving explicit permission. In practice, this means "
-"that all metadata transactions must be wrapped in an aggregate transaction."
+"that all MetadataTransactions must be wrapped in an "
+":doc:`AggregateTransaction <aggregate-transaction>`."
 msgstr ""
 "アカウント、名前空間、またはモザイクの所有者は明示的なアクセス許可を与えることによって受信したすべてのメタデータ要求に **オプトイン** "
-"する必要があります。これはすべてのメタデータトランザクションをアグリゲートトランザクションにラップする必要があることを意味します。"
+"する必要があります。これはすべての MetadataTransactions を :doc:`AggregateTransaction "
+"<aggregate-transaction>` にラップする必要があることを意味します。"
 
 #: ../../source/concepts/metadata.rst:32
 msgid ""
@@ -125,10 +127,10 @@ msgid ""
 "Bob works as a digital notary that stamp accounts on the NEM blockchain. "
 "When a customer comes to Bob to notarize a document, he checks the "
 "authentication of the customer’s documents then **tags the account with a "
-"metadata transaction**."
+"MetadataTransaction**."
 msgstr ""
 "Bob はスタンプが NEM ブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
-"の元へ訪れると、彼は顧客のドキュメントの認証をチェックし **アカウントにメタデータトランザクションをタグ付け** をします。"
+"の元へ訪れると、彼は顧客のドキュメントの認証をチェックし **アカウントに MetadataTransaction をタグ付け** をします。"
 
 #: ../../source/concepts/metadata.rst:49
 msgid ""
@@ -185,7 +187,7 @@ msgstr "一方で権限を持たない Derek が会社のアプリスイート�
 
 #: ../../source/concepts/metadata.rst:70
 msgid "Schemas"
-msgstr ""
+msgstr "スキーマ"
 
 #: ../../source/concepts/metadata.rst:72
 msgid ""
@@ -195,78 +197,15 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/metadata.rst:77
-msgid "AccountMetadataTransaction"
-msgstr ""
-
 #: ../../source/concepts/metadata.rst:79
 msgid ""
-"Announce an account metadata transaction to associate a key-value state to "
-"an account."
-msgstr "アカウントメタデータトランザクションをアナウンスして Key-Value 状態をアカウントに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:81
-#: ../../source/concepts/metadata.rst:108
-#: ../../source/concepts/metadata.rst:134
-msgid "**Version**: 0x01"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:83
-msgid "**Entity type**: 0x4144"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:85
-#: ../../source/concepts/metadata.rst:112
-#: ../../source/concepts/metadata.rst:138
-msgid "**Inlines**:"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:87
-#: ../../source/concepts/metadata.rst:114
-#: ../../source/concepts/metadata.rst:140
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "Property"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "Type"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "targetPublicKey"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid ":schema:`Key <types.cats#L11>`"
-msgstr ""
+"Announce an AccountMetadataTransaction to associate a key-value state to an "
+"account."
+msgstr "AccountMetadataTransaction をアナウンスして Key-Value 状態をアカウントに関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Public key of the target account."
-msgstr "対象アカウントの公開鍵"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "scopedMetadataKey"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "uint64"
-msgstr ""
+msgid "Metadata target public key."
+msgstr "メタデータターゲットの公開鍵"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
@@ -275,42 +214,12 @@ msgstr "メタデータキーのスコープは source, target, type です。"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
-msgid "valueSizeDelta"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "int16"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
 msgid "Change in value size in bytes."
 msgstr "値のサイズをバイト単位で変更する"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "valueSize"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "uint16"
-msgstr ""
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Value size in bytes. The maximum size is ``1024``."
 msgstr "値のバイトサイズ。最大サイズは ``1024`` です。"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "value"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "array(byte, valueSize)"
-msgstr ""
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
@@ -323,30 +232,14 @@ msgstr ""
 "として計算できます。以前の値がない場合は新しい値を直接使用します。"
 
 #: ../../source/concepts/metadata.rst:104
-msgid "MosaicMetadataTransaction"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:106
 msgid ""
-"Announce a mosaic metadata transaction to associate a key-value state to a "
+"Announce a MosaicMetadataTransaction to associate a key-value state to a "
 "mosaic."
-msgstr "モザイクメタデータトランザクションをアナウンスして Key-Value 状態をモザイクに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:110
-msgid "**Entity type**:  0x4244"
-msgstr ""
+msgstr "MosaicMetadataTransaction をアナウンスして Key-Value 状態をモザイクに関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Public key of the target mosaic owner."
-msgstr "対象のモザイク所有者の公開鍵"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-msgid "targetId"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid ":schema:`UnresolvedMosaicId <types.cats#L3>`"
-msgstr ""
+msgid "Target mosaic owner public key."
+msgstr "ターゲットモザイクのオーナーの公開鍵"
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Target mosaic identifier."
@@ -357,26 +250,14 @@ msgid "New value size in bytes. The maximum size is ``1024``."
 msgstr "新しい値のバイトサイズ。最大サイズは ``1024`` です。"
 
 #: ../../source/concepts/metadata.rst:130
-msgid "NamespaceMetadataTransaction"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:132
 msgid ""
-"Announce a namespace metadata transaction to associate a key-value state to "
-"a namespace."
-msgstr "ネームスペースメタデータトランザクションをアナウンスして Key-Value 状態をネームスペースに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:136
-msgid "**Entity type**:  0x4344"
-msgstr ""
+"Announce a NamespaceMetadataTransaction to associate a key-value state to a "
+"namespace."
+msgstr "NamespaceMetadataTransaction をアナウンスして Key-Value 状態をネームスペースに関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Public key of the target namespace owner."
-msgstr "対象のネームスペース所有者の公開鍵"
-
-#: ../../source/concepts/metadata.rst:1
-msgid ":schema:`NamespaceId <namespace/namespace_types.cats#L1>`"
-msgstr ""
+msgid "Target namespace owner public key."
+msgstr "ターゲットネームスペースのオーナーの公開鍵"
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Target namespace identifier."

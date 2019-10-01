@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-03-19 13:58+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,12 +27,8 @@ msgid "Linking a namespace to a mosaic"
 msgstr "ネームスペースをモザイクへリンクする"
 
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:12
-msgid ""
-"Link a :doc:`namespace <../../concepts/namespace>` to a :doc:`mosaic "
-"<../../concepts/mosaic>`."
-msgstr ""
-":doc:`ネームスペース <../../concepts/namespace>` を :doc:`モザイク "
-"<../../concepts/mosaic>` にリンクしましょう。"
+msgid "Link a namespace to a mosaic."
+msgstr "ネームスペースをモザイクへリンクする"
 
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:16
 msgid "Prerequisites"
@@ -57,54 +53,41 @@ msgstr "それではコードを見ていきましょう"
 
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:26
 msgid ""
-"An account can link a registered :doc:`name <../../concepts/namespace>` "
-"(namespace or subnamespace) with a :doc:`mosaic <../../concepts/mosaic>`."
+"To make **mosaics** easier to use and organize them, an account can link a "
+"registered :doc:`name <../../concepts/namespace>` to any :doc:`mosaic "
+"<../../concepts/mosaic>` it has created."
 msgstr ""
-"アカウントは登録済みの :doc:`名前 <../../concepts/namespace>` (ネームスペースまたはサブネームスペース)を "
-":doc:`モザイク <../../concepts/mosaic>` 識別子にリンクすることができます。"
+"**モザイク** の使い勝手を良く、整理しやすくするために、登録済みの :doc:`名前 <../../concepts/namespace>` "
+"を作成済みのいかなる :doc:`モザイク <../../concepts/mosaic>` にリンクできます。"
 
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:28
-msgid "Define the namespaceId and the address you want to link."
-msgstr "リンクしたいアドレスとネームスペースIDを設定します。"
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:32
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:46
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts`"
+"Before starting, you must have registered a :doc:`namespace "
+"<../../concepts/namespace>` first. If you already have registered a "
+"namespace, define the namespace identifier and the mosaic identifier you "
+"want to alias."
 msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:37
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:51
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js`"
-msgstr ""
+"はじめる前に :doc:`ネームスペース <../../concepts/namespace>` "
+"を登録しておく必要があります。すでにネームスペースを登録している場合は、ネームスペース識別子と別名を付けたいモザイク識別子を定義します。"
 
 #: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:42
-msgid "Announce the alias transaction."
-msgstr "エイリアストランザクションのアナウンス"
+msgid ""
+"Then, announce the **AliasTransaction** that links the namespace and the "
+"mosaic."
+msgstr "次に、ネームスペースとモザイクをリンクする **AliasTransaction** をアナウンスします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:56
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:60
 msgid ""
 "If you want to unlink the alias, change alias action type to "
 "``AliasActionType.Unlink``."
 msgstr "エイリアスをアンリンクしたい場合は、タイプを ``AliasActionType.Unlink`` に変えてください。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:62
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:66
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:64
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:68
 msgid ""
 "Now you can send transactions using the namespace linked to the mosaic "
 "instead of defining the complete mosaicId."
 msgstr "これで、モザイクIDの代わりにネームスペースでトランザクションを送信することができるようになりました。"
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:68
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionMosaicAlias.ts`"
-msgstr ""
-
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:73
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionMosaicAlias.js`"
-msgstr ""

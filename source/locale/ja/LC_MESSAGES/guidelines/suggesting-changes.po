@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,13 +28,13 @@ msgstr "ドキュメント変更の提案"
 #: ../../source/guidelines/suggesting-changes.rst:7
 msgid ""
 "The NEM Developer Center is an open source project and we love to receive "
-"contributions from our community — you! There are many ways to contribute, "
+"contributions from our community—you! There are many ways to contribute, "
 "from writing guides, improving the documentation, submitting errors and "
 "requests or writing new pieces of documentation which can be incorporated "
 "into the docs itself."
 msgstr ""
 "NEM デベロッパーセンターはオープンソースプロジェクトであり、私達のコミュニティからの貢献を待っています - "
-"そう、あなた！ガイドを書くこと、ドキュメントを改良すること、エラーや要求を提出すること、あるいはドキュメント自体に組み込むことができる新しいドキュメントを書くこと、多くの方法で貢献することができます。"
+"そう、あなたのことです！ガイドを書くこと、ドキュメントを改良すること、エラーや要求を提出すること、あるいはドキュメント自体に組み込むことができる新しいドキュメントを書くこと、多くの方法で貢献することができます。"
 
 #: ../../source/guidelines/suggesting-changes.rst:13
 msgid "Error reports"
@@ -44,10 +44,10 @@ msgstr "エラーの報告"
 msgid ""
 "If you think you have found an error in the NEM Developer Center, first make"
 " sure that you are testing against the latest version of NEM Developer "
-"Center - your issue may already have been fixed. If not, search our issues "
+"Center—your issue may already have been fixed. If not, search our issues "
 "list on GitHub in case a similar |issue| has already been opened."
 msgstr ""
-"NEM開発センターでエラーを発見したと思われる場合は、まずNEM開発センターの最新バージョンに対してテストしていることを確認してください - "
+"NEM 開発センターでエラーを発見したと思われる場合は、まず NEM 開発センターの最新バージョンに対してテストしていることを確認してください - "
 "あなたの問題は既に修正されている可能性があります。そうでない場合、同様の問題が既に開かれていないか、GitHub の |issue| "
 "リストを検索してください。"
 
@@ -80,19 +80,19 @@ msgstr "挙動を再現する方法:"
 
 #: ../../source/guidelines/suggesting-changes.rst:30
 msgid "Go to '...'"
-msgstr ""
+msgstr "'...' へ移動する"
 
 #: ../../source/guidelines/suggesting-changes.rst:32
 msgid "Click on '....'"
-msgstr ""
+msgstr "'....' をクリックする"
 
 #: ../../source/guidelines/suggesting-changes.rst:34
 msgid "Scroll down to '....'"
-msgstr ""
+msgstr "'....' へスクロールする"
 
 #: ../../source/guidelines/suggesting-changes.rst:36
 msgid "See error"
-msgstr ""
+msgstr "エラーを確認する"
 
 #: ../../source/guidelines/suggesting-changes.rst:38
 msgid "**Expected behavior**"
