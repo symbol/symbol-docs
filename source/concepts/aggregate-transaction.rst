@@ -187,6 +187,6 @@ Upon completion of the aggregate, the locked funds become available in the accou
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic`(`10 cat.currency``).
+    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic (``10 cat.currency``).
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``2`` days.
     hash; :schema:`Hash256 <types.cats#L9>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.

@@ -17,7 +17,7 @@ Background
 
 Another company, **ComfyClothingCompany** wants to conduct an STO. In this case, they want to **delegate the KYC process** to a company specialized in KYC & AML.
 
-If you have followed the previous guide (:doc:`restricting mosaics transfers  <restricting-mosaics-transfers>`),
+If you have followed the previous guide (:doc:`restricting mosaics transfers <restricting-mosaics-transfers>`),
 you know how to restrict accounts from transacting a given mosaic by combining different key-values to match the global :doc:`mosaic restriction <../../concepts/mosaic-restriction>`.
 
 .. figure:: ../../resources/images/examples/delegated-mosaic-restriction-sto.png
@@ -26,7 +26,7 @@ you know how to restrict accounts from transacting a given mosaic by combining d
 
     Use case diagram
 
-In this guide, we will be restricting accounts to trade with ``cc.shares`` ⁠— mosaic created by ComfyClothingCompany — if the KYC provider does not allow them.
+In this guide, we will be restricting accounts to trade with cc.shares—mosaic created by ComfyClothingCompany—if the KYC provider does not allow them.
 
 *************
 Prerequisites
@@ -89,4 +89,4 @@ The KYC provider has to tag the accounts accordingly sending mosaic address rest
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-5. After the restrictions get confirmed, Bob and Carol will be able to buy and send the ``cc.shares`` units to each other. But Alice ⁠— who has not provided valid proof of address ⁠— will not be able to receive shares.
+5. After the restrictions get confirmed, Bob and Carol will be able to buy and send the ``cc.shares`` units to each other. But Alice⁠—who has not provided valid proof of address⁠—will not be able to receive shares.

@@ -33,7 +33,7 @@ Legacy API calls that used to work for NIS1 network nodes are **not compatible**
 
 * Reference: `REST API contract </endpoints.html>`_
 
-There are several **Software Development Kits** that have been - and some that are - under development for Catapult distributed ledgers consumer applications.
+There are several **Software Development Kits** that have been—and some that are—under development for Catapult distributed ledgers consumer applications.
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.
 
 As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most used SDK and leads in |ts-js-sdk-docs|.
@@ -108,7 +108,7 @@ To get the real identifier behind an aliased address or mosaic, the client appli
 Multisignature management
 *************************
 
-With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other - so-called client-side - multisignature implementations.
+With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
 1.  An account must be converted to a :doc:`multisignature account <../../concepts/multisig-account>`.
 

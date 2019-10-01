@@ -50,7 +50,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap both transactions in an :ref:`AggregateTransaction <aggregate-transaction>`, adding Dan's public account as the required signer. As one private key — Dan's account — can sign all the transactions in the aggregate, we can define the transaction as *complete*.
+2. Wrap both transactions in an :ref:`AggregateTransaction <aggregate-transaction>`, adding Dan's public account as the required signer. As one private key—Dan's account—can sign all the transactions in the aggregate, we can define the transaction as *complete*.
 
 .. example-code::
 

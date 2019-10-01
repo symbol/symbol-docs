@@ -99,7 +99,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants — the ticket distributor — it is considered *bonded*.
+2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants—the ticket distributor—it is considered *bonded*.
 
 .. example-code::
 

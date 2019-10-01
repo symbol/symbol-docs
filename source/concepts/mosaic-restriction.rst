@@ -2,7 +2,7 @@
 Mosaic Restriction
 ##################
 
-Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact - send or receive - with the asset.
+Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact—send or receive—with the asset.
 
 This feature has been specifically tailored for **Security Token Offerings (STO)**. In contrast to the unregulated tokens that were introduced through ICOs, security tokens are blockchain based representation of value that is subject to regulation under security laws, and thus need a way to bypass blockchain autonomy.
 
@@ -31,7 +31,7 @@ One mosaic can handle multiple global restrictions. A :ref:`mosaic global restri
 
 Only accounts tagged with the key identifiers and values that meet the conditions will be able to execute transactions involving the mosaic.
 
-Additionally, the mosaic creator can define restrictions that depend directly on global restrictions set on another mosaic - known as **reference mosaic**. The referenced mosaic and the restricted mosaic do not necessarily have to be created by the same account, enabling the delegation of mosaic permissions to a third party.
+Additionally, the mosaic creator can define restrictions that depend directly on global restrictions set on another mosaic—known as **reference mosaic**. The referenced mosaic and the restricted mosaic do not necessarily have to be created by the same account, enabling the delegation of mosaic permissions to a third party.
 
 *******************
 Address restriction
@@ -103,7 +103,7 @@ The KYC provider encounters 3 potential investors:
 * Bob provides a valid passport and proof of address. The KYC provider awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
 * Carol provides a valid passport and proof of address. The KYC provider awards Carol’s account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
 
-Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice - who has not provided a valid proof of address - will not be able to receive shares.
+Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice—who has not provided a valid proof of address—will not be able to receive shares.
 
 
 ******

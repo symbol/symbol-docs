@@ -4,7 +4,7 @@
 Suggesting documentation changes
 ################################
 
-The NEM Developer Center is an open source project and we love to receive contributions from our community — you!
+The NEM Developer Center is an open source project and we love to receive contributions from our community—you!
 There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
 writing new pieces of documentation which can be incorporated into the docs itself.
 
@@ -12,7 +12,7 @@ writing new pieces of documentation which can be incorporated into the docs itse
 Error reports
 *************
 
-If you think you have found an error in the NEM Developer Center, first make sure that you are testing against the latest version of NEM Developer Center - your issue may already have been fixed. If not, search our issues list on GitHub in case a similar
+If you think you have found an error in the NEM Developer Center, first make sure that you are testing against the latest version of NEM Developer Center—your issue may already have been fixed. If not, search our issues list on GitHub in case a similar
 |issue| has already been opened.
 
 It is very helpful if you can prepare a reproduction of the error. It makes it easier to find the problem and to fix it.
