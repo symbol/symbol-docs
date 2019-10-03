@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,12 +26,8 @@ msgid "Reading transactions from an account"
 msgstr "トランザクションをアカウントから読み込む"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:12
-msgid ""
-"Get the list of :doc:`transactions <../../concepts/transaction>` where an "
-":doc:`account <../../concepts/account>` is involved."
-msgstr ""
-":doc:`アカウント <../../concepts/account>` に関連する :doc:`トランザクション "
-"<../../concepts/transaction>` のリストを取得します。"
+msgid "Get the list of transactions where an account is involved."
+msgstr "アカウントが関連するトランザクション一覧の取得"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:16
 msgid "Prerequisites"
@@ -57,21 +53,6 @@ msgstr ""
 "<https://nemtech.github.io/nem2-sdk-typescript-"
 "javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_ "
 "リポジトリを使用してください。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:28
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingConfirmedTransactions.ts`"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:33
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingConfirmedTransactions.js`"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:38
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/GettingConfirmedTransactions.sh`"
-msgstr ""
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:42
 msgid ""

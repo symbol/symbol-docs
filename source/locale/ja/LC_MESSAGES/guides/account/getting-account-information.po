@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,10 +26,8 @@ msgid "Getting the account information"
 msgstr "アカウントの情報を取得する"
 
 #: ../../source/guides/account/getting-account-information.rst:12
-msgid ""
-"Get the public key and balance of an :doc:`account "
-"<../../concepts/account>`."
-msgstr "公開鍵と :doc:`アカウント <../../concepts/account>` の残高を取得します。"
+msgid "Get the public key and balance of an account."
+msgstr "公開鍵とアカウントの残高を取得します。"
 
 #: ../../source/guides/account/getting-account-information.rst:16
 msgid "Prerequisites"
@@ -55,21 +53,6 @@ msgid ""
 "Call ``getAccountInfo`` function, passing your account's address as a "
 "parameter."
 msgstr "アカウントのアドレスをパラメタとして ``getAccountInfo`` 関数に渡して呼び出してください。"
-
-#: ../../source/guides/account/getting-account-information.rst:29
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAccountInformation.ts`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:34
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/GettingAccountInformation.js`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:39
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/GettingAccountInformation.sh`"
-msgstr ""
 
 #: ../../source/guides/account/getting-account-information.rst:43
 msgid ""
@@ -115,18 +98,3 @@ msgid ""
 msgstr ""
 "あなたのアカウントにはいくつのモザイクがありますか？アカウントのアドレスをパラメタとして "
 "``mosaicsAmountViewFromAddress`` 関数に渡して呼び出してください。"
-
-#: ../../source/guides/account/getting-account-information.rst:55
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CheckingBalanceOfAnAccount.ts`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:60
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CheckingBalanceOfAnAccount.js`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:65
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/CheckingBalanceOfAnAccount.sh`"
-msgstr ""

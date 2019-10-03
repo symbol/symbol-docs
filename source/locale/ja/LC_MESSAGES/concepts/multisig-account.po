@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -43,17 +43,19 @@ msgstr "連署者"
 #: ../../source/concepts/multisig-account.rst:17
 msgid ""
 "A NEM :doc:`account <account>` can be :doc:`converted to multisig "
-"<../guides/account/converting-an-account-to-multisig>`. The cosignatories - "
-"other accounts - of the multisig will become the account managers."
+"<../guides/multisig/converting-an-account-to-multisig>`. The "
+"cosignatories—other accounts—of the multisig will become the account "
+"managers."
 msgstr ""
-"NEM :doc:`アカウント <account>` は :doc:`マルチシグに変換する<../guides/account/converting-"
-"an-account-to-multisig>` ことができます。マルチシグの連署者 - 他のアカウント - はこのアカウントのマネージャとなります。"
+"NEM :doc:`アカウント <account>` は :doc:`マルチシグに変換する <../guides/multisig"
+"/converting-an-account-to-multisig>` ことができます。マルチシグの連署者 - 他のアカウント - "
+"はこのアカウントのマネージャとなります。"
 
 #: ../../source/concepts/multisig-account.rst:19
 msgid ""
 "From that moment on, the multisig account cannot announce transactions by "
 "itself. A multisig cosignatory has to propose a transaction involving the "
-"multisig, wrapping it in an :doc:`aggregate transaction <aggregate-"
+"multisig, wrapping it in an :doc:`AggregateTransaction <aggregate-"
 "transaction>`."
 msgstr ""
 "この瞬間からマルチシグアカウントはそれ自信からトランザクションをアナウンスできなくなります。連署者のうち 1 人がマルチシグに関係した "
@@ -136,12 +138,12 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:45
 msgid ""
-":ref:`Multisig modification transactions <modify-multisig-account-"
-"transaction>` must be wrapped in an :doc:`aggregate transaction <aggregate-"
+":ref:`Multisig modification transactions <multisig-account-modification-"
+"transaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-"
 "transaction>`. New cosignatories added to the multisig must opt-in by "
 "cosigning the aggregate."
 msgstr ""
-":ref:`Multisig modification transactions <modify-multisig-account-"
+":ref:`Multisig modification transactions <multisig-account-modification-"
 "transaction>` は :doc:`アグリゲートトランザクション <aggregate-transaction>` "
 "でラップされる必要があります。マルチシグに追加される新しい連署者はアグリゲートに署名することでオプトインしなければなりません。"
 
@@ -285,13 +287,9 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/multisig-account.rst:136
-msgid "ModifyMultisigTransaction"
-msgstr ""
-
 #: ../../source/concepts/multisig-account.rst:138
-msgid "Announce a modify multisig account transaction to:"
-msgstr "マルチシグアカウント変更トランザクションのアナウンス:"
+msgid "Announce a MultisigAccountModificationTransaction to:"
+msgstr "MultisigAccountModificationTransaction のアナウンス:"
 
 #: ../../source/concepts/multisig-account.rst:140
 msgid "Transform an account to multisig account."
@@ -304,10 +302,6 @@ msgstr "マルチシグアカウントの設定可能なプロパティを変更
 #: ../../source/concepts/multisig-account.rst:142
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
-
-#: ../../source/concepts/multisig-account.rst:144
-msgid "**Version**: 0x01"
-msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:146
 msgid "**Entity type**: 0x4155"
@@ -342,24 +336,11 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "minRemovalDelta"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
-msgid "int8"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid ""
 "Number of signatures needed to remove a cosignatory. If we are modifying an "
 "existing multisig account, this indicates the relative change of the minimum"
 " cosignatories."
 msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "minApprovalDelta"
-msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid ""
@@ -369,83 +350,25 @@ msgid ""
 msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "modificationsCount"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
 msgid "Number of modifications."
 msgstr "変更の数"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "modification"
-msgstr ""
+msgid "Attached cosignatory modifications."
+msgstr "変更に添付済みの連署者"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid ""
-"array(:ref:`CosignatoryModification <cosignatory-modification>`, "
-"modificationsCount)"
-msgstr ""
+msgid "Modification Action."
+msgstr "変更アクション"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Array of cosignatory :doc:`accounts <account>` to add or delete."
-msgstr "追加または削除する連署者 :doc:`アカウント <account>` の配列。"
-
-#: ../../source/concepts/multisig-account.rst:164
-msgid "CosignatoryModification"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "modificationType"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid ":ref:`CosignatoryModificationType <cosignatory-modification-type>`"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Cosignatory modification type."
-msgstr "連署者変更タイプ"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "cosignatoryPublicKey"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid ":schema:`Key <types.cats#L11>`"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Public key of the cosignatory."
-msgstr "連署者の公開鍵"
-
-#: ../../source/concepts/multisig-account.rst:176
-msgid "CosignatoryModificationType"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:178
-msgid "Enumeration: uint8"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "0"
-msgstr ""
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Add cosignatory."
-msgstr "連署者を追加"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "1"
-msgstr ""
+msgid "Cosignatory account public key."
+msgstr "連署アカウントの公開鍵"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "Remove cosignatory."
 msgstr "連署者を削除"
+
+#: ../../source/concepts/multisig-account.rst:1
+msgid "Add cosignatory."
+msgstr "連署者を追加"

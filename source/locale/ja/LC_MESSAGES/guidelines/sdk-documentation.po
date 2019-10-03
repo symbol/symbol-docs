@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -31,106 +31,49 @@ msgid ""
 "better than you how a determined SDK works. Consider helping others and "
 "spread the usage of the SDK by providing the following documentation."
 msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:14
-msgid "Readme"
-msgstr ""
+"SDK は他の開発者に採用される必要があります。貢献者として、決定された SDK "
+"がどのように機能するかをあなたより知っている人は誰もいません。次のドキュメントを提供して、他の人を助け、SDK の使用を広めることを検討してください。"
 
 #: ../../source/guidelines/sdk-documentation.rst:16
-msgid ""
-"Check if your repository has a complete README. Consider adapting the "
-":download:`here <../resources/templates/README_SDK.md>` template used by "
-"some SDKs."
-msgstr ""
+msgid "Write a README that contains at least the following sections:"
+msgstr "最低でも次のセクションを含む README を作成してください:"
 
-#: ../../source/guidelines/sdk-documentation.rst:19
-msgid "Required sections:"
-msgstr "必要なセクション:"
-
-#: ../../source/guidelines/sdk-documentation.rst:21
+#: ../../source/guidelines/sdk-documentation.rst:18
 msgid "Requirements"
 msgstr "必須項目"
 
-#: ../../source/guidelines/sdk-documentation.rst:22
+#: ../../source/guidelines/sdk-documentation.rst:19
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guidelines/sdk-documentation.rst:23
+#: ../../source/guidelines/sdk-documentation.rst:20
 msgid "Contributing"
 msgstr "貢献"
 
-#: ../../source/guidelines/sdk-documentation.rst:24
+#: ../../source/guidelines/sdk-documentation.rst:21
 msgid "License"
 msgstr "ライセンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:28
+#: ../../source/guidelines/sdk-documentation.rst:25
 msgid "Comments and reference docs"
 msgstr "コメントとリファレンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:30
-msgid ""
-"Document functions and classes with comments while you write your code. A "
-"reference generator should be able to read this comments and generate HTML "
-"as an output."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:34
-msgid ""
-"Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ "
-"for Javascript, whereas in Java we are using `Javadoc "
-"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_. "
-"Research which is the reference generator most convenient for your language."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:40
+#: ../../source/guidelines/sdk-documentation.rst:36
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/guidelines/sdk-documentation.rst:42
-msgid ""
-"The NEM Developer Center gathers a collection of :doc:`guides "
-"<../concepts/account>`. They show developers how to use NEM built-in "
-"features while following step-by-step use cases."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:46
-msgid ""
-"Each guide comes with at least one snippet. Snippets are executable pieces "
-"of code that solve the proposed use case."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:49
-msgid ""
-"Writing snippets helps you to compare how the SDK code looks like in "
-"contrast with others. Furthermore, you will be testing manually if the SDK "
-"behaves correctly."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:53
+#: ../../source/guidelines/sdk-documentation.rst:44
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`__ and clone `nem2-docs repository "
+"repository>`_ and clone `nem2-docs repository "
 "<https://github.com/nemtech/nem2-docs>`__."
 msgstr ""
 "`<https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`__ をフォークして`nem2-docs リポジトリ "
+"repository>`_ をフォークして`nem2-docs リポジトリ "
 "<https://github.com/nemtech/nem2-docs>`__ をクローンしてください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:61
+#: ../../source/guidelines/sdk-documentation.rst:50
 msgid ""
 "Create a new folder under ``source/resources/examples/`` named as the "
 "programming language of your SDK."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:63
-msgid ""
-"Code each example. Take `typescript snippets "
-"<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__"
-" as a reference."
-msgstr ""
-
-#: ../../source/guidelines/sdk-documentation.rst:67
-msgid ""
-"Push the changes, and `create a pull request <https://services.github.com"
-"/on-demand/intro-to-github/es/crear-pull-request>`__."
-msgstr ""
+msgstr "あなたの言語の SDK 用として ``source/resources/examples/`` の下に新しいフォルダを作ってください。"

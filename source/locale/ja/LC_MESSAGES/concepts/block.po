@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,22 +29,24 @@ msgstr "ブロック"
 #: ../../source/concepts/block.rst:5
 msgid ""
 "The central element of every cryptocurrency is a public ledger called the "
-"blockchain, which links blocks together."
-msgstr "全ての暗号通貨の中心となる要素は、ブロック同士がリンクしたブロックチェーンと呼ばれる公開台帳です。"
+"**blockchain**, which links blocks together."
+msgstr "全ての暗号通貨の中心となる要素は、ブロック同士がリンクした **ブロックチェーン** と呼ばれる公開台帳です。"
 
 #: ../../source/concepts/block.rst:9
 msgid ""
-"Since the blocks in the chain are ordered, the complete transaction history "
-"is held in the blockchain. Subsequent blocks in the blockchain have "
-"increasing heights that differ by one."
+"Since the blocks in the chain are ordered, the complete **transaction "
+"history** is held in the blockchain. Subsequent blocks in the blockchain "
+"have increasing heights that differ by one."
 msgstr ""
-"チェーン内のブロックは順序付けられており、完了したトランザクション履歴はブロックチェーンに保持されます。後に続くブロックチェーン内のブロックは、1づつ高さを増やしていきます。"
+"チェーン内のブロックは順序付けられており、完了した **トランザクション履歴** "
+"はブロックチェーンに保持されます。後に続くブロックチェーン内のブロックは、1づつ高さを増やしていきます。"
 
 #: ../../source/concepts/block.rst:11
 msgid ""
 "Blocks are stored in a database as permanent medium. NEM calls the first "
-"block in the chain the nemesis block."
-msgstr "ブロックはデータベースに永続的なメディアとして保存されます。NEM はチェーン内の最初のブロックであるネメシスブロックを呼び出します。"
+"block in the chain the **nemesis block**."
+msgstr ""
+"ブロックはデータベースに永続的なメディアとして保存されます。NEMはチェーン内の最初のブロックである **ネメシスブロック** を呼び出します。"
 
 #: ../../source/concepts/block.rst:13
 msgid ""
@@ -58,10 +61,10 @@ msgstr "ブロック生成"
 #: ../../source/concepts/block.rst:19
 msgid ""
 "Blocks are created by :doc:`accounts <account>`. The process of creating new"
-" blocks is called :doc:`harvesting <harvesting>`. The harvesting account - "
-"called the harvester - gets the :ref:`fees <fees>` for the transactions in "
-"the block and :doc:`inflation <inflation>`. This gives the harvester an "
-"incentive to add as many transactions to the block as possible."
+" blocks is called :doc:`harvesting <harvesting>`. The **harvesting "
+"account**—called the harvester— gets the :ref:`fees <fees>` for the "
+"transactions in the block and :doc:`inflation <inflation>`. This gives the "
+"harvester an incentive to add as many transactions to the block as possible."
 msgstr ""
 "ブロックは :doc:`アカウント <account>` によって作成されます。新しいブロックの生成プロセスは :doc:`ハーベスティング "
 "<harvesting>` と呼ばれます。ハーベスティングアカウント - ハーベスターと呼ばれます - はブロック内のトランザクションに応じた "
@@ -96,14 +99,6 @@ msgstr "ブロックヘッダのシリアル化"
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
-#: ../../source/concepts/block.rst:48
-msgid ":ref:`VerifiableEntity<verifiable-entity>`"
-msgstr ""
-
-#: ../../source/concepts/block.rst:49
-msgid ":ref:`EntityBody<entity-body>`"
-msgstr ""
-
 #: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 #: ../../source/concepts/block.rst:1
 msgid "Property"
@@ -121,34 +116,14 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/block.rst:1
-msgid "height"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "uint64"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid ""
 "Height of the blockchain. Each block has a unique height. Subsequent blocks "
 "differ in height by 1."
 msgstr "ブロックチェーンの高さ。各ブロックは一意な高さを持っています。後ろに続くブロックとは 1 だけ高さが異なります。"
 
 #: ../../source/concepts/block.rst:1
-msgid "timestamp"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
-msgid ":schema:`Timestamp <types.cats#L5>`"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Number of seconds elapsed since the creation of the nemesis block."
 msgstr "ネメシスブロックが生成されてから経過した秒です。"
-
-#: ../../source/concepts/block.rst:1
-msgid "difficulty"
-msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
@@ -164,33 +139,12 @@ msgstr ""
 " 10\\ :sup:`15` より大きいまたは 10\\ :sup:`13`\\ より小さい場合、新しい難易度はこの境界に固定されます。"
 
 #: ../../source/concepts/block.rst:1
-msgid "feeMultiplier"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
-msgid "uint32"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Fee multiplier applied to transactions contained in block."
 msgstr "手数料乗数はブロックに含まれるトランザクションに適用されます。"
 
 #: ../../source/concepts/block.rst:1
-msgid "previousBlockHash"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid ":schema:`Hash256 <types.cats#L9>`"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Hash of the previous block."
 msgstr "前ブロックのハッシュ"
-
-#: ../../source/concepts/block.rst:1
-msgid "blockTransactionHash"
-msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
@@ -199,20 +153,12 @@ msgid ""
 msgstr "ブロックに含まれたトランザクションは |merkle| としてハッシュ化されます。この木のルートはそれらを要約しています。"
 
 #: ../../source/concepts/block.rst:1
-msgid "blockReceiptsHash"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid ""
 "Collection of :doc:`receipts <receipt>` are hashed into a |merkle| and "
 "linked to a :doc:`block <block>`. The block header stores the root hash."
 msgstr ""
 ":doc:`レシート <receipt>` の集合はハッシュ化されて |merkle| に入り :doc:`ブロック <block>` "
 "にリンクされます。ブロックヘッダはルートハッシュを格納します。"
-
-#: ../../source/concepts/block.rst:1
-msgid "stateHash"
-msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid ""
@@ -224,14 +170,6 @@ msgstr ""
 "の形で保存されています。ツリーのルートは与えられたブロックのブロックチェーンの状態を要約しています。"
 
 #: ../../source/concepts/block.rst:1
-msgid "beneficiary"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid ":schema:`Key <types.cats#L11>`"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Public key of the optional beneficiary designated by harvester."
 msgstr "ハーベスタによって指定されたオプション受益者の公開鍵。"
 
@@ -239,37 +177,17 @@ msgstr "ハーベスタによって指定されたオプション受益者の公
 msgid "**Version**: The higher byte represents the network identifier."
 msgstr "**バージョン**: 高位バイトはネットワーク識別子を示します。"
 
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
-msgid "0x68 (MAIN_NET)"
-msgstr ""
-
 #: ../../source/concepts/block.rst:1
 msgid "Public main network"
 msgstr "パブリックメインネットワーク"
-
-#: ../../source/concepts/block.rst:1
-msgid "0x98 (TEST_NET)"
-msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid "Public test network"
 msgstr "パブリックテストネットワーク"
 
 #: ../../source/concepts/block.rst:1
-msgid "0x60 (MIJIN)"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Private network"
 msgstr "プライベートネットワーク"
-
-#: ../../source/concepts/block.rst:1
-msgid "0x90 (MIJIN_TEST)"
-msgstr ""
 
 #: ../../source/concepts/block.rst:1
 msgid "Private test network"
@@ -280,76 +198,31 @@ msgid "**Type**: The type of the block."
 msgstr "**タイプ**: ブロックタイプ"
 
 #: ../../source/concepts/block.rst:1
-msgid "0x8043"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Nemesis block"
 msgstr "ネメシスブロック"
-
-#: ../../source/concepts/block.rst:1
-msgid "0x8143"
-msgstr ""
-
-#: ../../source/concepts/block.rst:97
-msgid "VerifiableEntity"
-msgstr ""
 
 #: ../../source/concepts/block.rst:99
 msgid "Serialization of an entity that should be signed by an account."
 msgstr "アカウントによって署名されるべきエンティティのシリアル化。"
 
 #: ../../source/concepts/block.rst:1
-msgid "signature"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
-msgid ":schema:`Signature <types.cats#L12>`"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Entity signature generated by the signer."
 msgstr "署名者により生成されたエンティティの署名。"
 
-#: ../../source/concepts/block.rst:110
-msgid "EntityBody"
-msgstr ""
-
 #: ../../source/concepts/block.rst:112
 msgid ""
-"Serialization of an entity. An entity could be a block, a :doc:`transaction "
-"<transaction>` or a :doc:`receipt <receipt>`."
-msgstr ""
-"エンティティのシリアル化。エンティティはブロック、 :doc:`トランザクション <transaction>` または :doc:`レシート "
-"<receipt>` となります。"
-
-#: ../../source/concepts/block.rst:1
-msgid "signer"
-msgstr ""
+"Serialization of an entity. An entity could be a block or a "
+":doc:`transaction <transaction>`."
+msgstr "エンティティのシリアル化。エンティティはブロックまたは :doc:`トランザクション <transaction>` です。"
 
 #: ../../source/concepts/block.rst:1
 msgid "Public key of the signer of the entity."
 msgstr "エンティティの署名者の公開鍵"
 
 #: ../../source/concepts/block.rst:1
-msgid "version"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
-msgid "uint16"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
 msgid "Version of the structure."
 msgstr "構造体のバージョン"
 
 #: ../../source/concepts/block.rst:1
-msgid "type"
-msgstr ""
-
-#: ../../source/concepts/block.rst:1
-msgid ""
-"Entity type. For transaction types, see :ref:`transaction types "
-"<transaction-types>`."
-msgstr ""
-"エンティティタイプ。トランザクションタイプについては :ref:`トランザクションタイプ <transaction-types>` を参照してください。"
+msgid "Entity type."
+msgstr "エンティティタイプ"

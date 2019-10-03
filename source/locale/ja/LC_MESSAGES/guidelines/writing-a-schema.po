@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -63,36 +63,6 @@ msgid ""
 "Think of a struct as a set of properties that we want to store in the same "
 "block of memory."
 msgstr "構造体を同じメモリブロックに格納したい一連のプロパティとして考えます。"
-
-#: ../../source/guidelines/writing-a-schema.rst:27
-msgid ""
-"The transaction body contains the extra properties which differ from a basic"
-" transaction. Each attribute can have one of the types defined in "
-"`types.cats "
-"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_."
-msgstr ""
-
-#: ../../source/guidelines/writing-a-schema.rst:44
-msgid ""
-"Define a second transaction struct in the same file. This will contain "
-"information about the version of the entity and its identifier. The "
-"underlying transaction properties and the particular transaction body are "
-"appended as inlines."
-msgstr ""
-
-#: ../../source/guidelines/writing-a-schema.rst:57
-msgid ""
-"Define an EmbeddedTransaction struct to serialize the inner transactions "
-"within an aggregate. The embedded transaction and the body transaction are "
-"added as inlines."
-msgstr ""
-
-#: ../../source/guidelines/writing-a-schema.rst:67
-msgid ""
-"The catbuffer library allows you to generate the transaction builders from "
-"the schema defined. For example, run the following command to generate C++ "
-"code:"
-msgstr ""
 
 #: ../../source/guidelines/writing-a-schema.rst:73
 msgid ""

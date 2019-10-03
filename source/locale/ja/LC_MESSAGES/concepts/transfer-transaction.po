@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -44,7 +44,7 @@ msgstr "受信者"
 #: ../../source/concepts/transfer-transaction.rst:17
 msgid ""
 "The recipient is the address of the :doc:`account <account>` that receives "
-"the transfer transaction."
+"the TransferTransaction."
 msgstr "受信者は転送トランザクションを受け取る :doc:`アカウント <account>` のアドレスです。"
 
 #: ../../source/concepts/transfer-transaction.rst:19
@@ -83,7 +83,7 @@ msgstr "メッセージ"
 
 #: ../../source/concepts/transfer-transaction.rst:35
 msgid ""
-"A transfer transaction can hold a message up to ``1023`` characters in "
+"A TransferTransaction can hold a message up to ``1023`` characters in "
 "length, making them suitable for timestamping data permanently on the "
 "blockchain."
 msgstr ""
@@ -152,21 +152,13 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/transfer-transaction.rst:69
-msgid "TransferTransaction"
-msgstr ""
-
 #: ../../source/concepts/transfer-transaction.rst:71
 msgid ""
-"Announce a transfer transaction to send :doc:`mosaics <mosaic>` or messages "
+"Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages "
 "between two :doc:`accounts <account>`."
 msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
-
-#: ../../source/concepts/transfer-transaction.rst:73
-msgid "**Version**: 0x01"
-msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:75
 msgid "**Entity type**: 0x4154"
@@ -198,48 +190,16 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "recipient"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid ":schema:`UnresolvedAddress <types.cats#L7>`"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Address of the recipient."
-msgstr "受信者のアドレス"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "messageSize"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "uint16"
-msgstr ""
+msgid "Transaction recipient."
+msgstr "トランザクションレシート"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Size of the attached message."
 msgstr "添付されたメッセージのサイズ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "mosaicsCount"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Number of attached mosaics."
 msgstr "添付されたモザイクの数"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "message"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "array(byte, messageSize)"
-msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid ""
@@ -247,41 +207,17 @@ msgid ""
 msgstr ":ref:`message-type <message-type>` と ``1023`` バイトまでのペイロード"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "mosaics"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount)"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Array of mosaics to send."
-msgstr "送信するモザイクの配列"
-
-#: ../../source/concepts/transfer-transaction.rst:94
-msgid "MessageType"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:96
-msgid "Enumeration: uint8"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "0x00"
-msgstr ""
+msgid "Attached mosaics to send."
+msgstr "送信する添付済みモザイク"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Plain message."
 msgstr "平文メッセージ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "0x01"
-msgstr ""
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Encrypted message."
 msgstr "暗号化メッセージ"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Persistent harvesting delegation."
+msgstr "永続的なハーベスティングのデリゲート"

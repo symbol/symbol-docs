@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -44,13 +44,15 @@ msgstr "名称"
 
 #: ../../source/concepts/namespace.rst:17
 msgid ""
-"A namespace starts with a name that you choose, similar to an internet "
-"domain name. The name must appear as **unique in the network**, and may have"
-" a maximum length of ``64`` characters. Allowed characters are a, b, c, …, "
-"z, 0, 1, 2, …, 9, _ , -."
+"Namespaces function similarly to internet domains. Creating a namespace "
+"starts with choosing a name that you will use to refer to an account or "
+"asset. The name must be **unique in the network**, and may have a maximum "
+"length of ``64`` characters, and the allowed characters are a, b, c, …, z, "
+"0, 1, 2, …, 9, _ , -."
 msgstr ""
-"ネームスペースはインターネットドメイン名と同様に選択した名前で始まります。名前はネットワーク内で **一意** で、``64`` "
-"文字以内の必要があります。利用可能な文字は a, b, c, …, z, 0, 1, 2, …, 9, _ , -  です。"
+"ネームスペースはインターネットドメイン名と同様に機能します。ネームスペースの作成にはアカウントまたはアセットを参照したい名前を選択することから始まります。名前はネットワーク内で"
+" **一意** の ``64`` 文字以内の必要があります。利用可能な文字は a, b, c, …, z, 0, 1, 2, …, 9, _ , -  "
+"です。"
 
 #: ../../source/concepts/namespace.rst:21
 msgid "Subnamespaces"
@@ -59,27 +61,31 @@ msgstr "サブネームスペース"
 #: ../../source/concepts/namespace.rst:23
 msgid ""
 "On the internet, a domain can have a sub-domain. In NEM, namespaces can have"
-" subnamespaces."
-msgstr "インターネット上でドメインはサブドメインを持つように、ネームスペースはサブネームスペースを持ちます。"
+" subnamespaces to **identify and organize assets**."
+msgstr ""
+"インターネット上でドメインはサブドメインを持ちます。NEMにおいて、ネームスペースは **資産を識別したり整理する** "
+"ためにサブネームスペースを持ちます。"
 
 #: ../../source/concepts/namespace.rst:25
+msgid ""
+"Namespaces can have up to ``3`` levels, a namespace and its two levels of "
+"subnamespace domains. A subnamespace subnamespace does not have a duration "
+"by its own; it inherits the duration from its parent namespace."
+msgstr ""
+"ネームスペースはネームスペース自身とその配下に2階層のサブネームスペースドメインの ``3`` "
+"階層までを持つことができます。サブネームスペースは自身の有効期間を持たず、親ネームスペースの有効期間を継承します。"
+
+#: ../../source/concepts/namespace.rst:27
 msgid ""
 "You can :doc:`create multiple subnamespaces "
 "<../guides/namespace/registering-a-subnamespace>` with the same name in "
 "different namespaces. For example, you can create the subnamespaces "
-"``foo.bar`` and ``foo2.bar``."
+"``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + "
+"subnamespace must remain unique."
 msgstr ""
 ":doc:`複数のサブネームスペース <../guides/namespace/registering-a-subnamespace>` "
-"を異なるネームスペースに同じ名前で作ることができます。例えば ``foo.bar`` と ``foo2.bar`` を作ることができます。"
-
-#: ../../source/concepts/namespace.rst:27
-msgid ""
-"Namespaces can have up to ``3`` levels, a namespace and its two levels of "
-"subnamespace domains. A subnamespaces has the same duration as its parent "
-"namespace."
-msgstr ""
-"ネームスペースは、ネームスペースと2階層のサブネームスペースドメインの ``3`` "
-"階層まで持つことができます。サブネームスペースはこの親ネームスペースと同じ有効期間を持ちます。"
+"を異なるネームスペースに同じ名前で作ることができます。例えば ``foo.bar`` と ``foo2.bar`` を作ることができますが、 "
+"rootnamespace と subnamespace の組み合わせは一意を保つ必要があります。"
 
 #: ../../source/concepts/namespace.rst:31
 msgid "Alias"
@@ -87,13 +93,14 @@ msgstr "エイリアス"
 
 #: ../../source/concepts/namespace.rst:33
 msgid ""
-":ref:`Alias transactions <address-alias-transaction>` link namespaces to "
-"accounts and mosaics. An alias or its linked asset can be used "
+":ref:`AliasTransactions <address-alias-transaction>` **link namespaces to "
+"accounts and mosaics**. An alias or its linked asset can be used "
 "interchangeably when sending a transaction. Using the alias makes *long "
 "addresses rememberable* and *mosaics recognizable*."
 msgstr ""
-":ref:`エイリアストランザクション <address-alias-transaction>` "
-"はネームスペースをアカウントまたはモザイクへリンクします。エイリアスまたはそのリンク済みアセットはトランザクションを送信するときに互換的に使用できます。エイリアスを使用すると長いアドレスを覚えやすく、モザイクを認識しやすくします。"
+":ref:`AliasTransactions <address-alias-transaction>` は "
+"**ネームスペースをアカウントまたはモザイクへリンク** "
+"します。エイリアスまたはそのリンク済みアセットはトランザクションを送信するときに互換的に使用できます。エイリアスを使用すると長いアドレスを覚えやすく、モザイクを認識しやすくします。"
 
 #: ../../source/concepts/namespace.rst:35
 msgid ""
@@ -155,10 +162,6 @@ msgstr ""
 "ネームスペース期間は最大で ``365`` 日です。デフォルトではネットワークは ``15`` "
 "秒毎にブロック生成するように設定されています。次の式を使用しておよその日数をブロックに変換できます。"
 
-#: ../../source/concepts/namespace.rst:53
-msgid "duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds"
-msgstr ""
-
 #: ../../source/concepts/namespace.rst:59
 msgid "Namespace life-cycle"
 msgstr "ネームスペースのライフサイクル"
@@ -167,12 +170,12 @@ msgstr "ネームスペースのライフサイクル"
 msgid ""
 "During the **renting period**, the namespace owner can create subnamespaces,"
 " alias accounts and mosaics. The owner can also **extend the rental** by "
-"sending a :ref:`register namespace transaction <register-namespace-"
+"sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-"
 "transaction>` with the desired number of additional blocks."
 msgstr ""
 "ネームスペース所有者は **レンタル期間中** にサブネームスペース、エイリアスアカウント、およびモザイクを作成できます。所有者は "
-":ref:`ネームスペースの取得トランザクション <register-namespace-transaction>` "
-"を希望する追加ブロック数で送信することにより **レンタルを延長する** こともできます。"
+":ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`"
+" を希望する追加ブロック数で送信することにより **レンタルを延長する** こともできます。"
 
 #: ../../source/concepts/namespace.rst:63
 msgid ""
@@ -213,20 +216,6 @@ msgstr "猶予期間"
 msgid "Register a new namespace"
 msgstr "新しいネームスペースの取得"
 
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "✔️"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1
-msgid "❌"
-msgstr ""
-
 #: ../../source/concepts/namespace.rst:1
 msgid "Renew the namespace"
 msgstr "ネームスペースの更新"
@@ -244,104 +233,74 @@ msgid "Send a transaction using an alias"
 msgstr "エイリアスを使ってトランザクションを送信する"
 
 #: ../../source/concepts/namespace.rst:79
-msgid "Cost"
-msgstr "コスト"
+msgid "Rental fee"
+msgstr "レンタル手数料"
 
 #: ../../source/concepts/namespace.rst:81
 msgid ""
-"The cost of creating a namespace is :properties:`configurable per network "
-"<config-network.properties>`. By default, registering a namespace costs ``1 "
-"cat.currency per block`` plus transactions fees. Registering a subnamespace "
-"has a fixed cost of ``100 cat.currency`` plus transaction fees."
+"To create a namespace or to extend its duration, accounts will have to pay a"
+" :ref:`transaction fee <fees>` to support the network in addition to the "
+"rental fee. The fees will be deducted from the account's balance after the "
+"announcement of a valid **NamespaceRegistrationTransaction**."
 msgstr ""
-"ネームスペース作成のコストは :properties:`ネットワークごとに設定可能 <config-network.properties>` "
-"です。デフォルトでは、ネームスペース作成のコストは ``1 ブロックごとに 1 cat.currency`` "
-"とトランザクション手数料です。サブネームスペースの登録は ``100 cat.currency`` の固定コストとトランザクション手数料です。"
+"ネームスペースを作成したり期間を延長するために、アカウントはレンタル手数料に加えて、ネットワークをサポートする :ref:`トランザクション手数料 "
+"<fees>` を支払う必要があります。有効な **NamespaceRegistrationTransaction** "
+"のアナウンスをすると、手数料はアカウントの残高から差し引かれます。"
 
-#: ../../source/concepts/namespace.rst:85
-msgid "Example"
-msgstr "例"
-
-#: ../../source/concepts/namespace.rst:87
+#: ../../source/concepts/namespace.rst:83
 msgid ""
-"A customer buys a ticket for an event. The ticket sales company sends a "
-"ticket to the customer account."
-msgstr "顧客はイベントのチケットを購入します。チケット販売会社は顧客のアカウントへチケットを送信します。"
+"The default namespace rental fees are :properties:`configurable per network "
+"<config-network.properties>`:"
+msgstr ""
+"ネームスペースレンタル手数料のデフォルトは :properties:`ネットワークごとに設定可能 <config-"
+"network.properties>` です:"
+
+#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
+#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/concepts/namespace.rst:1
+msgid "Registering a namespace"
+msgstr "ネームスペースの取得"
+
+#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
+msgid "``1 cat.currency`` per block"
+msgstr "ブロック毎に ``1 cat.currency``"
+
+#: ../../source/concepts/namespace.rst:1
+msgid "Extending a namespace duration"
+msgstr "ネームスペース期間の延長"
+
+#: ../../source/concepts/namespace.rst:1
+msgid "Creating a subnamespace"
+msgstr "サブネームスペースの作成"
 
 #: ../../source/concepts/namespace.rst:93
-msgid "Recognizable mosaics and addresses"
-msgstr "認識しやすいモザイクとアドレス"
-
-#: ../../source/concepts/namespace.rst:96
-msgid "Identifying the sender"
-msgstr "送信者の識別"
-
-#: ../../source/concepts/namespace.rst:98
 msgid ""
-"The ticket seller has registered the namespace ``ticketcompany`` to link it "
-"to its account as an alias. Customers can quickly recognize incoming "
-"transactions from the vendor account."
+"The **network dynamically adjusts the namespace rental fees** over time. To "
+"calculate the **effective rental fee**, the network multiplies the default "
+"value set in the configuration by the median :doc:`network multiplier "
+"<harvesting>` over last :properties:`maxRollbackBlocks <config-"
+"network.properties#L20>`. In case there are zero multipliers, these are "
+"replaced by the :properties:`defaultDynamicFeeMultiplier <config-"
+"network.properties#L20>` before the median calculation."
 msgstr ""
-"チケット販売者はエイリアスとして自分のアカウントにリンクするために、ネームスペース ``ticketcompany`` "
-"を登録しました。顧客は販売アカウントからの受信トランザクションであるとすぐに認識することができます。"
+"時間とともに **ネットワークは動的にネームスペースレンタル手数料を調整します** 。**実効レンタル手数料** "
+"を算出するために、ネットワークは設定で決められたデフォルト値に最後の :properties:`maxRollbackBlocks <config-"
+"network.properties#L20>` の中央値 :doc:`network multiplier <harvesting>` "
+"を乗算します。乗数がゼロの場合は、これらは中央値計算の前に :properties:`defaultDynamicFeeMultiplier "
+"<config-network.properties#L20>` で置き換えられます。"
 
-#: ../../source/concepts/namespace.rst:101
-msgid "Identifying the ticket"
-msgstr "チケットの識別"
-
-#: ../../source/concepts/namespace.rst:103
-msgid ""
-"The same company sells tickets for events organized in different venues. The"
-" company registers a non-transferable :doc:`mosaic <mosaic>` for each "
-"actuation."
-msgstr ""
-"同じ配給販売者が、異なる会場で開催されるイベントのチケットを販売しています。会社は各作動ごとに、譲渡不可能な :doc:`モザイク <mosaic>` "
-"を登録しています。"
-
-#: ../../source/concepts/namespace.rst:105
-msgid ""
-"The ticket seller adds a series of subdomains on top of the root domain of "
-"``ticketcompany``. The root plus subdomains are "
-"``ticketcompany.event<ID>.ticket``."
-msgstr ""
-"チケット販売者はルートドメインである ``ticketcompany`` の上にサブドメインの系列を追加します。ルートドメインとサブドメインを合わせると"
-" ``ticketcompany.event<ID>.ticket`` になります。"
-
-#: ../../source/concepts/namespace.rst:107
-msgid ""
-"The company links one registered mosaic with ``ticketcompany.event1.ticket``"
-" namespace name."
-msgstr "会社は ``ticketcompany.event1.ticket`` として登録されたモザイクをネームスペース名にリンクします。"
-
-#: ../../source/concepts/namespace.rst:110
-msgid "Identifying the buyer"
-msgstr "購入者の識別"
-
-#: ../../source/concepts/namespace.rst:112
-msgid ""
-"Alice, who wants to buy the ticket, has registered the namespace ``alice`` "
-"and assigned it to her account as an alias."
-msgstr "チケットを購入したい Alice は、ネームスペース ``alice`` を登録し、彼女のアカウントへエイリアスとして割り当てます。"
-
-#: ../../source/concepts/namespace.rst:114
-msgid ""
-"The ticket vendor can send 1 ``ticketcompany.event1.ticket`` to ``alice`` "
-"instead of 1  ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-"
-"BNIU3U-N2E6``."
-msgstr ""
-"チケット販売者は 1 ``0dc67fbe1cad29e3`` を ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-"
-"BNIU3U-N2E6`` へ送る代わりに 1 ``ticketcompany.event1.ticket`` を ``alice`` "
-"へ送ることができます。"
-
-#: ../../source/concepts/namespace.rst:118
+#: ../../source/concepts/namespace.rst:97
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/namespace.rst:130
+#: ../../source/concepts/namespace.rst:109
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/namespace.rst:132
+#: ../../source/concepts/namespace.rst:111
 msgid ""
 "Configuration parameters are :properties:`editable <config-"
 "network.properties>`. Public network configuration may differ."
@@ -349,46 +308,31 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/namespace.rst:137
-msgid "RegisterNamespaceTransaction"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:139
+#: ../../source/concepts/namespace.rst:118
 msgid ""
-"Announce a register namespace transaction to register and re-rent a "
+"Announce a NamespaceRegistrationTransaction to register and re-rent a "
 "namespace."
 msgstr "ネームスペース取得トランザクションはネームスペースの取得と再取得に使用します。"
 
-#: ../../source/concepts/namespace.rst:141
-#: ../../source/concepts/namespace.rst:168
-#: ../../source/concepts/namespace.rst:191
-msgid "**Version**: 0x01"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:143
+#: ../../source/concepts/namespace.rst:122
 msgid "**Entity type**: 0x414E"
 msgstr "**エンティティタイプ**: 0x414E"
 
-#: ../../source/concepts/namespace.rst:145
-#: ../../source/concepts/namespace.rst:172
-#: ../../source/concepts/namespace.rst:195
+#: ../../source/concepts/namespace.rst:124
+#: ../../source/concepts/namespace.rst:150
+#: ../../source/concepts/namespace.rst:173
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/namespace.rst:147
-#: ../../source/concepts/namespace.rst:174
-#: ../../source/concepts/namespace.rst:197
+#: ../../source/concepts/namespace.rst:126
+#: ../../source/concepts/namespace.rst:152
+#: ../../source/concepts/namespace.rst:175
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
 msgstr ""
 ":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1
-msgid "Property"
-msgstr "プロパティ"
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
 #: ../../source/concepts/namespace.rst:1
@@ -402,24 +346,8 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/namespace.rst:1
-msgid "namespaceType"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid ":ref:`NamespaceType <namespace-type>`"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "Type of the registered namespace."
-msgstr "登録ネームスペースのタイプ"
-
-#: ../../source/concepts/namespace.rst:1
-msgid "duration"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid ":schema:`BlockDuration <types.cats#L2>`"
-msgstr ""
+msgid "Namespace registration type."
+msgstr "ネームスペース登録タイプ"
 
 #: ../../source/concepts/namespace.rst:1
 msgid ""
@@ -430,77 +358,31 @@ msgstr ""
 "日まで許可されています。ルートネームスペースでは必須項目です。"
 
 #: ../../source/concepts/namespace.rst:1
-msgid "parentId"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid ":schema:`NamespaceId <namespace/namespace_types.cats#L1>`"
-msgstr ""
+msgid "Parent namespace identifier. Required for subnamespaces."
+msgstr "親ネームスペース識別子。サブネームスペースに必須です。"
 
 #: ../../source/concepts/namespace.rst:1
-msgid "Identifier of the parent namespace. Required for subnamespaces."
-msgstr "親ネームスペースの識別子。サブネームスペースでは必須項目です。"
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-#: ../../source/concepts/namespace.rst:1
-msgid "namespaceId"
-msgstr ""
+msgid "Namespace identifier."
+msgstr "ネームスペース識別子"
 
 #: ../../source/concepts/namespace.rst:1
-msgid "Identifier of the namespace."
-msgstr "ネームスペースの識別子"
-
-#: ../../source/concepts/namespace.rst:1
-msgid "namespaceNameSize"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "The size of the namespace name."
-msgstr "ネームスペース名のサイズ"
-
-#: ../../source/concepts/namespace.rst:1
-msgid "name"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "array(bytes, namespaceNameSize)"
-msgstr ""
+msgid "Namespace name size in bytes."
+msgstr "バイト換算のネームスペース名"
 
 #: ../../source/concepts/namespace.rst:1
 msgid ""
-"A namespace name must be unique and may have a maximum length of ``64`` "
+"Namespace name. Must be unique and may have a maximum length of ``64`` "
 "characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -."
 msgstr ""
 "ネームスペース名は一意でなければならず、最大 ``64`` 文字です。利用可能な文字は a, b, c, ..., z, 0, 1, 2, ..., "
 "9, _ , - です。"
 
-#: ../../source/concepts/namespace.rst:164
-msgid "AddressAliasTransaction"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:166
+#: ../../source/concepts/namespace.rst:144
 msgid ""
-"Announce an alias transaction to attach a namespace to an account. A "
+"Announce an AliasTransaction to attach a namespace to an account. A "
 "namespace can be assigned to any account present in the network."
 msgstr ""
 "ネームスペースをアカウントへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースはネットワーク上に存在するいかなるアカウントにも割り当てることができます。"
-
-#: ../../source/concepts/namespace.rst:170
-msgid "**Entity type**: 0x424E"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "aliasAction"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid ":ref:`AliasAction <alias-action>`"
-msgstr ""
 
 #: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
 msgid "Alias action."
@@ -510,78 +392,25 @@ msgstr "エイリアスアクション"
 msgid "Identifier of the namespace that will become an alias."
 msgstr "エイリアスになるネームスペースの識別子"
 
-#: ../../source/concepts/namespace.rst:1
-msgid "address"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid ":schema:`Address <types.cats#L8>`"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "Aliased address."
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:187
-msgid "MosaicAliasTransaction"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:189
+#: ../../source/concepts/namespace.rst:167
 msgid ""
-"Announce an alias transaction to attach a namespace to a mosaic. Setting an "
+"Announce an AliasTransaction to attach a namespace to a mosaic. Setting an "
 "alias to a mosaic is only possible if the account announcing the transaction"
 " has created the namespace and mosaic involved."
 msgstr ""
 "ネームスペースをモザイクへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースとモザイクを作成したアカウントがトランザクションをアナウンスしたときだけ、モザイクへエイリアスを設定することが可能です。"
 
-#: ../../source/concepts/namespace.rst:193
-msgid "**Entity type**: 0x434E"
-msgstr ""
-
 #: ../../source/concepts/namespace.rst:1
-msgid "mosaicId"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid ":schema:`MosaicId <types.cats#L4>`"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1
-msgid "Identifier of the aliased mosaic."
-msgstr "エイリアス付加済みモザイクの識別子"
-
-#: ../../source/concepts/namespace.rst:210
-msgid "NamespaceType"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:212
-#: ../../source/concepts/namespace.rst:226
-msgid "Enumeration: uint8"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "0"
-msgstr ""
+msgid "Aliased mosaic identifier."
+msgstr "エイリアス済みモザイク識別子"
 
 #: ../../source/concepts/namespace.rst:1
 msgid "Root namespace."
 msgstr "ルートネームスペース"
 
-#: ../../source/concepts/namespace.rst:1 ../../source/concepts/namespace.rst:1
-msgid "1"
-msgstr ""
-
 #: ../../source/concepts/namespace.rst:1
 msgid "Child namespace."
 msgstr "子ネームスペース"
-
-#: ../../source/concepts/namespace.rst:224
-msgid "AliasAction"
-msgstr ""
 
 #: ../../source/concepts/namespace.rst:1
 msgid "Link alias."

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,12 +22,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:10
-msgid "Creating and opening an account"
-msgstr "アカウントを作成して開く"
+#: ../../source/guides/account/creating-and-opening-an-account.rst:25
+msgid "Creating an account"
+msgstr "アカウントの作成"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:12
-msgid "Create a new :doc:`account <../../concepts/account>` and open it."
-msgstr "新しい :doc:`アカウント <../../concepts/account>` を作成して、開きます。"
+msgid "Set up a new NEM account."
+msgstr "新しい NEM アカウントのセットアップ"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:16
 msgid "Prerequisites"
@@ -43,28 +44,12 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:24
-msgid ""
-"An account is a key pair (private and public key) associated with a mutable "
-"state stored in the NEM blockchain."
-msgstr "アカウントとは NEM ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。"
+#: ../../source/guides/account/creating-and-opening-an-account.rst:27
+#: ../../source/guides/account/creating-and-opening-an-account.rst:69
+msgid "Run the following code snippet to create an account."
+msgstr "アカウントを作成するために次のコードスニペットを実行してください。"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:28
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAnAccount.ts`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:33
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAnAccount.js`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:38
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/CreatingAnAccount.sh`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:42
+#: ../../source/guides/account/creating-and-opening-an-account.rst:45
 msgid ""
 "The **private key** uniquely identifies a NEM account and holds all of its "
 "power. It is a priority to make sure it is stored safely somewhere "
@@ -73,7 +58,7 @@ msgstr ""
 "**秘密鍵** は NEM アカウントを一意に特定し、全ての権限を保有します。**オフライン** "
 "のどこかで安全な場所にバックアップしていることが優先事項であり、誰にも共有してはいけません。"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:44
+#: ../../source/guides/account/creating-and-opening-an-account.rst:47
 msgid ""
 "The **public key** is cryptographically derived from the private key and "
 "safe to be shared. In spite of that, it is preferable to share the "
@@ -83,70 +68,28 @@ msgstr ""
 "**公開鍵** は秘密鍵から暗号学的に算出され、共有しても安全です。しかし、ネットワークや正当性チェックなどの情報が含まれている **アドレス** "
 "を共有する方がより好ましいです。"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:46
+#: ../../source/guides/account/creating-and-opening-an-account.rst:49
 msgid ""
-"If you already have a private key, it is not necessary to generate a new "
-"account:"
-msgstr "既に秘密鍵を持っている場合は、新しいアカウントを作成する必要はありません:"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:50
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/OpeningAnAccount.ts`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:55
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/OpeningAnAccount.js`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:60
-msgid "**Using a Wallet**"
-msgstr "**ウォレットを使用する**"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:62
-msgid ""
-"If the programming language of the SDK you are using allows client-side "
-"development, you can create a  wallet."
-msgstr "あなたの使用している SDK のプログラミング言語でクライアント側の開発が可能な場合は、ウォレットを開発することができます。"
+"If you already have a private key, you can use it to define a new "
+"``Account`` object."
+msgstr "既に秘密鍵を持っている場合は、それを使用して ``Account`` オブジェクトを定義することができます。"
 
 #: ../../source/guides/account/creating-and-opening-an-account.rst:64
-msgid ""
-"A wallet enables you to store your account to sign transactions, encrypting "
-"your private key with a password."
-msgstr "ウォレットはトランザクションに署名するためのアカウントを保管し、秘密鍵をパスワードで暗号化できます。"
+msgid "Creating a wallet"
+msgstr "ウォレットの作成"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:68
+#: ../../source/guides/account/creating-and-opening-an-account.rst:66
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/CreatingAnAccountWallet.ts`"
+"If the programming language of the SDK you are using allows **client-side** "
+"development, you will be able to create a wallet. A **wallet** enables you "
+"to store your account to sign transactions, **encrypting your private key** "
+"with a password."
 msgstr ""
+"使用している SDK のプログラミング言語で **クライアントサイド** 開発ができる場合はウォレットを作成できます。**ウォレット** "
+"はトランザクションに署名するためのアカウントを保管し **秘密鍵をパスワードで暗号化** できます。"
 
-#: ../../source/guides/account/creating-and-opening-an-account.rst:73
+#: ../../source/guides/account/creating-and-opening-an-account.rst:87
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/CreatingAnAccountWallet.js`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:78
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/CreatingAnAccountWallet.sh`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:82
-msgid ""
-"Do you have a private key? You can create and open a wallet importing your "
+"Do you have a private key? You can create and open a wallet importing a "
 "private key."
-msgstr "秘密鍵をお持ちですか？あなたの秘密鍵をインポートしてウォレットを作成することができます。"
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:86
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/OpeningAnAccountWallet.ts`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:91
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/account/OpeningAnAccountWallet.js`"
-msgstr ""
-
-#: ../../source/guides/account/creating-and-opening-an-account.rst:96
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/account/OpeningAnAccountWallet.sh`"
-msgstr ""
+msgstr "秘密鍵をお持ちですか？秘密鍵をインポートしてウォレットを作成することができます。"

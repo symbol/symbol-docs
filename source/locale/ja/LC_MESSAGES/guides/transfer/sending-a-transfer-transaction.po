@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# David García <dgarcia360@outlook.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.3\n"
+"Project-Id-Version: nem2-docs 0.18.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 21:00+0100\n"
-"PO-Revision-Date: 2019-02-22 09:13+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"PO-Revision-Date: 2019-09-30 13:40+0000\n"
+"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,40 +21,38 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:10
-msgid "Sending a transfer transaction"
-msgstr "転送トランザクションの送信"
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:10
+msgid "Sending mosaics and messages between two accounts"
+msgstr "モザイクとメッセージを２つのアカウント間で送信"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:12
-msgid ""
-"Transfer :doc:`mosaics <../../concepts/mosaic>` and messages between two "
-"accounts."
-msgstr ":doc:`モザイク <../../concepts/mosaic>` とメッセージを2つのアカウント間で転送します。"
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:12
+msgid "Transfer mosaics and messages between two accounts."
+msgstr "モザイクとメッセージを２つのアカウント間で送信"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:16
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:16
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:18
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:18
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:19
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:19
 msgid ""
 "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
 msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:23
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:23
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:29
-msgid "Sending a transfer Transaction"
-msgstr "転送トランザクションの送信"
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:29
+msgid "Sending a TransferTransaction"
+msgstr "TransferTransaction の送信"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:31
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:31
 msgid ""
 "Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3"
 "-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``."
@@ -62,11 +60,11 @@ msgstr ""
 "Alice は Bob のアドレスである ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54`` に "
 "``10 cat.currency`` を送ろうとしています。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:34
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:34
 msgid "Monitoring the network"
 msgstr "トランザクションの監視"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:36
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:36
 msgid ""
 "Once an account announces a transaction, the server will always return an OK"
 " response. Receiving an OK response does not mean the transaction is valid. "
@@ -75,54 +73,39 @@ msgstr ""
 "アカウントがトランザクションをアナウンスすると、サーバは常に OKを返します。OK "
 "のレスポンスを受信することは、トランザクションが正当であることを意味するわけではありません。トランザクションをアナウンスする前に監視を始めておくのがよいでしょう。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:38
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:38
 msgid ""
 "To understand the transaction lifecycle, we recommend you to open three new "
 "terminals. The first terminal :doc:`monitors announced "
-"transactions<../transaction/monitoring-a-transaction-status>` validation "
-"errors."
+"transactions<../monitor/monitoring-a-transaction-status>` validation errors."
 msgstr ""
 "トランザクションのライフサイクルを理解するために、ターミナルを3つ開くことをおすすめします。最初のターミナルには バリデーションエラーのある "
-":doc:`アナウンスされたトランザクションの監視 <../transaction/monitoring-a-transaction-status>` "
-"。"
+":doc:`アナウンスされたトランザクションの監視 <../monitor/monitoring-a-transaction-status>` 。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:44
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:44
 msgid ""
 "Monitoring ``unconfirmed`` shows you which transactions have reached the "
 "network, but are not included in a block yet."
 msgstr "``未承認`` の監視はトランザクションがネットワークに到着したことを確認できますが、まだブロックには含まれてません。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:50
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:50
 msgid ""
 "Once a transaction is included, you will see it under the ``confirmed`` "
 "terminal."
 msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:58
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:58
 msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:60
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:60
 msgid ""
-"Create the transfer transaction, including Bob address as the recipient and "
-"``10 cat.currency``."
-msgstr "Bob のアドレスが受信者の ``10 cat.currency`` とした転送トランザクションを作成してください。"
-
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:64
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:98
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:112
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts`"
+"Define the **TransferTransaction**, including Bob address as the recipient "
+"and attaching ``10 cat.currency``."
 msgstr ""
+"Bob のアドレスが受信者で ``10 cat.currency`` を添付した **TransferTransaction** を定義してください。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:69
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:103
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:117
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransaction.js`"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:74
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:74
 msgid ""
 "As you may have noticed, transfer transactions require an array of mosaics "
 "as a parameter, allowing to send transfer transactions with multiple mosaics"
@@ -130,27 +113,17 @@ msgid ""
 msgstr ""
 "すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とするので、一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:76
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:76
 msgid ""
 "If you own more than one mosaic, you can send them together in the same "
 "transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信できます:"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:80
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:90
 msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransactionWithMultipleMosaics.ts`"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:85
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/javascript/transaction/SendingATransferTransactionWithMultipleMosaics.js`"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:90
-msgid ""
-"NEM mainly works with absolute amounts. To get an absolute amount, multiply "
-"the amount of assets you want to send by 10\\ :sup:`divisibility`.  For "
-"example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-"
+"NEM works with absolute amounts. To get an absolute amount, multiply the "
+"amount of assets you want to send by 10\\ :sup:`divisibility`.  For example,"
+" if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-"
 "information>` 2, to send 10 units (relative) you should define 1000 "
 "(absolute) instead."
 msgstr ""
@@ -158,11 +131,11 @@ msgstr ""
 "を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-mosaic-information>` 2 "
 "である場合、10 単位 (相対) 送信するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:92
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:92
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:94
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:94
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
@@ -171,18 +144,13 @@ msgstr ""
 "自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
 "``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:108
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:108
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:122
-msgid ""
-":viewsource:`https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/bash/transaction/SendingATransferTransaction.sh`"
-msgstr ""
-
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:126
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:126
 msgid ""
 "Open the terminal where you are monitoring account transactions ``status``. "
 "It should be empty. If there is an error, you can check :ref:`the error code"
@@ -192,7 +160,7 @@ msgstr ""
 "を監視するターミナルを開いてください。何も表示されていないことを確認してください。ターミナルにはエラーが表示された場合は :ref:`エラーコード "
 "<status-errors>` で意味を確認できます。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:128
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:128
 msgid ""
 "A new transaction should have appeared in the terminal where you are "
 "monitoring ``unconfirmed``. At this point, the transaction has reached the "
@@ -201,7 +169,7 @@ msgstr ""
 "``未承認`` "
 "を監視しているターミナルに新しいトランザクションが現れたはずです。この時点でトランザクションはネットワークに到達しましたが、ブロックに取り込まれるかどうかは不明です。"
 
-#: ../../source/guides/transaction/sending-a-transfer-transaction.rst:130
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:130
 msgid ""
 "If it is included in a block, the transaction gets processed, and the amount"
 " stated in the transaction gets transferred from the sender's account to the"
