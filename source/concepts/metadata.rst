@@ -65,6 +65,19 @@ Each time Carol attempts to access the company apps suite, the company app valid
 
 On the other hand, if Derek, who has no permissions, attempts to access the company apps suite, the company app will reject his request.
 
+
+******
+Guides
+******
+
+.. postlist::
+    :category: Metadata
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
+
 *******
 Schemas
 *******
