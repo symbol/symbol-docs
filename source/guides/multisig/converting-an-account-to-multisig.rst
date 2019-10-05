@@ -33,7 +33,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 - Create :doc:`two accounts <../account/creating-and-opening-an-account>`
 
 **********************

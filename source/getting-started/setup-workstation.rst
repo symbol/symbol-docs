@@ -1,5 +1,4 @@
 .. post:: 16 Aug, 2018
-    :category: Network
     :excerpt: 1
     :nocomments:
 
@@ -9,71 +8,40 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
-.. note:: ⚠️ NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it **should not power any production Catapult instances**.
+We'll be using the **test network**, which allows you to experiment with the offered Catapult's transaction set without having to worry about losing valuable assets by mistake, as the currency used in this network does not have a real value.
 
-.. _setup-catapult-service-bootstrap:
+.. note:: To run your own **private test network**, follow :doc:`this other guide <../guides/network/creating-a-private-test-net>`.
 
-**********************************
-Running Catapult Service Bootstrap
-**********************************
+.. _setup-creating-a-test-account:
 
-You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
+*******************
+Creating an account
+*******************
 
-1. Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
+An account is basically a **deposit box** where we can hold our mosaics (tokens) and interact with them.
 
-.. code-block:: bash
-
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.7.0.1-beta
-    cd catapult-service-bootstrap
-    ./cmds/start-all -d
-
-2. Check if you can get the first block information:
-
-.. code-block:: bash
-
-    curl localhost:3000/block/1
-
-.. _setup-getting-a-test-account:
-
-**********************
-Getting a test account
-**********************
-
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the **private key** has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
-
-The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
-
-Finally, the account **address** is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
-
-The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
-
-1. Install NEM2-CLI using ``npm``.
+1. Install :doc:`NEM2-CLI <../cli>`—a **command-line tool**—to create an :doc:`account <../concepts/account>`.
 
 .. code-block:: bash
 
     npm install --global nem2-cli@0.13.1
 
-2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+You will need to have installed |node-lts|.
+
+2. Create and save a new account as a **profile**.
 
 .. code-block:: bash
 
-    cd  build/generated-addresses/
-    cat addresses.yaml
-
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
-
-4. Load the first account as a profile in NEM2-CLI.
-
-.. code-block:: bash
-
-    nem2-cli profile create
+    nem2-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Introduce your private key: 41************************************************************FF
+    Introduce your private key: 123*******************************************45
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
-You should see the following lines in your terminal, containing the account credentials:
+.. note:: If the test network node goes it is not working, you can use another node url from this list. You can also **run your own testnet node** following :doc:`this guide <../guides/network/running-a-test-net-node>`.
+
+3. You should see the account credentials in your terminal.
 
 .. code-block:: bash
 
@@ -84,20 +52,49 @@ You should see the following lines in your terminal, containing the account cred
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 654...321                                                        │
+    │ Public Key  │ 654***321                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123...456                                                        │
+    │ Private Key │ 123***456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
+
+As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
+
+.. _setup-getting-test-currency:
+
+*********************
+Getting test currency
+*********************
+
+Now that you have created an account, request ``cat.currency`` units to the **testnet faucet**. You will need to have currency to interact with the blockchain because every action costs a fee in order to provide an incentive for those who validate and secure the network.
+
+1. Copy the account's address you got in the previous step and paste it in the faucet.
+
+2. Then, click the button “CLAIM!”.
+
+3. After the transaction gets confirmed, check if you have received cat.currency using the command-line tool.
+
+.. code-block:: bash
+
+    nem2-cli account info  --profile testnet
+
+    Balance Information
+    ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+    │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+    ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+    │ 0DC67FBE1CAD29E3 │ 299,966,666.6   │ 299966666600000 │ Never             │
+    └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
+
+.. note:: The faucet has a limited amount of cat.currency and has to be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account <NNNN>.
 
 .. _setup-development-environment:
 
-**************************************
-Setting up the development environment
-**************************************
+******************
+Creating a project
+******************
 
-It is time to choose a programming language. Pick the one you feel most comfortable with, or follow your project requirements.
+Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-Create a folder for your new project and run the instructions for the selected language.
+**Create a folder for your new project**. Then, run the instructions for the selected language. If none of the language fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
 
 .. tabs::
 
@@ -187,11 +184,6 @@ Create a folder for your new project and run the instructions for the selected l
 
 Continue: :doc:`Writing your first application <first-application>`.
 
-
-.. _docker: https://docs.docker.com/install/
-
-.. _docker-compose: https://docs.docker.com/compose/install/
-
 .. _mijin: https://mijin.io/en/product/#mijin2
 
 .. _ts-node: https://www.npmjs.com/package/ts-node
@@ -200,10 +192,11 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-.. |catapult-service-bootstrap| raw:: html
-
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
 
 .. |different-ways-to-install-a-nuget-package| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/ways-to-install-a-package" target="_blank">different ways to install a NuGet Package</a>
+
+.. |node-lts| raw:: html
+
+   <a href="https://nodejs.org/en/" target="_blank">Node LTS</a>

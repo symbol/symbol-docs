@@ -30,7 +30,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code

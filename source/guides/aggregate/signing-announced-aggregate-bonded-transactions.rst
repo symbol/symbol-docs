@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code

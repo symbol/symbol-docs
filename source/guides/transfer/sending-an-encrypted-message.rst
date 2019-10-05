@@ -17,7 +17,7 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
 **********
 Background

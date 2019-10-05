@@ -34,8 +34,8 @@ Prerequisites
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../multisig/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
-- A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
-- A cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
+- A multisig :ref:`account with cat.currency <setup-creating-a-test-account>`
+- A cosignatory :ref:`account with cat.currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code

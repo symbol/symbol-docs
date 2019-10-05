@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Have registered one :doc:`namespace <../../concepts/namespace>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code

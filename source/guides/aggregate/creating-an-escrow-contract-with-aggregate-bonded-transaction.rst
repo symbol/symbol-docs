@@ -74,7 +74,7 @@ Alice and a ticket distributor want to swap the following mosaics.
         Alice, 100, cat.currency, Native currency mosaic
         Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
-Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
+Before continuing, :ref:`create the two accounts <setup-creating-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
 
 Creating the escrow contract
 ============================

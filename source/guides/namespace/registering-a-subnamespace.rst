@@ -26,7 +26,7 @@ Prerequisites
 *************
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and at least one namespace
+- Have one :ref:`account with cat.currency <setup-creating-a-test-account>` and at least one namespace
 
 **********************
 Getting into some code
