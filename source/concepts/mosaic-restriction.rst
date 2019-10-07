@@ -105,7 +105,6 @@ The KYC provider encounters 3 potential investors:
 
 Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other. But Alice—who has not provided a valid proof of address—will not be able to receive shares.
 
-
 ******
 Guides
 ******
