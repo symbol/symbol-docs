@@ -22,7 +22,7 @@ Prerequisites
 Background
 **********
 
-Bob works as a digital notary that **stamp accounts** on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the account**.
+Bob works as a digital notary that **stamp accounts** on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
 
 In this tutorial, you are going to implement a program to allow Bob tag accounts issuing :doc:`metadata transactions <../../concepts/metadata>` .
 
@@ -65,7 +65,7 @@ Alice is a recent graduate who wants her educational certificate accredited to h
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. To avoid spamming the account with invalid metadata keys, Alice will have to **opt-in** if she wants the metadata entry assigned to its account. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded-transaction>` and sign the transaction using Bob's account.
+4. To avoid spamming the account with invalid metadata keys, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata entry assigned to its account. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded-transaction>` and sign the transaction using Bob's account.
 
 .. example-code::
 
@@ -85,7 +85,7 @@ Alice is a recent graduate who wants her educational certificate accredited to h
 
 .. note:: Bob will receive the locked funds back if Alice cosigns the aggregate during the next ``480`` blocks.
 
-5. Announce the **HashLockTransaction**. Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the **AccountMetadataTransaction**.
+6. Announce the **HashLockTransaction**. Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the **AccountMetadataTransaction**.
 
 .. example-code::
 
@@ -94,10 +94,10 @@ Alice is a recent graduate who wants her educational certificate accredited to h
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
-6. Once the transaction gets confirmed, cosign the hash obtained in the fourth step using Alice's profile.
+7. Once the transaction gets confirmed, cosign the hash obtained in the fourth step using Alice's profile.
 
 .. code-block:: bash
 
     nem2-cli transaction cosign --hash <transaction-hash> --profile alice
 
-5. If everything goes well, now Alice has assigned the metadata value ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
+8. If everything goes well, now Alice has assigned the metadata value ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
