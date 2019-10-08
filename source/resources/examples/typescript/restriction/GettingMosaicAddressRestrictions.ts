@@ -16,25 +16,26 @@
  *
  */
 
-import {AccountRestrictionType, Address, RestrictionHttp} from "nem2-sdk";
+import {Address, MosaicId, RestrictionHttp} from "nem2-sdk";
 
 /* start block 01 */
-const rawAddress = process.env.COMPANY_ADDRESS as string;
+const rawAddress = process.env.ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
+
+const mosaicIdHex = process.env.MOSAIC_ID as string;
+const mosaicId = new MosaicId(mosaicIdHex);
 
 const restrictionHttp = new RestrictionHttp('http://localhost:3000');
 
-restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictionsInfo) => {
-        const accountRestrictions = accountRestrictionsInfo.accountRestrictions.restrictions;
-        if (accountRestrictions.length > 0) {
-            accountRestrictions
-                .filter((accountRestriction) => accountRestriction.values.length > 0)
-                .map((accountRestriction) => {
-                    console.log('\n', AccountRestrictionType[accountRestriction.restrictionType], accountRestriction.values.toString());
-                });
+restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
+    .subscribe((mosaicRestrictionInfo) => {
+        const mosaicAddressRestrictions = mosaicRestrictionInfo.restrictions;
+        if (mosaicAddressRestrictions.size > 0) {
+            mosaicAddressRestrictions.forEach((value: string, key: string) => {
+                console.log('\n', key, value);
+            });
         } else {
-            console.log('The address does not have account restriction assigned.');
+            console.log('\n The address does not have mosaic address restrictions assigned.');
         }
     }, (err) => console.log(err));
 /* end block 01 */

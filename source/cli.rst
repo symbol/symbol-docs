@@ -87,9 +87,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli profile create -p 206CE7E4B16B48430FD2C216E4BB105564B21E21DEE196267B4B33C54F1023FC -n MIJIN_TEST -u http://localhost:3000
+.. viewsource:: resources/examples/bash/account/OpeningAnAccountWallet.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **List**
 
@@ -97,9 +97,9 @@ Displays the list of stored profiles.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli profile list
+.. viewsource:: resources/examples/bash/account/ListingProfiles.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 .. note:: By default, NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
 
@@ -123,9 +123,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account generate --network MIJIN_TEST
+.. viewsource:: resources/examples/bash/account/CreatingAnAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get account info**
 
@@ -136,13 +136,13 @@ Options
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address> - Account address
+    -a, --address <address> - Account address.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account info --address SDAUTVFWMVXVWWKTTEFTLGUO6HP6MR4GLEK6POJ4
+.. viewsource:: resources/examples/bash/account/GettingAccountInformation.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get confirmed transactions**
 
@@ -161,11 +161,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account transactions --public-key C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
-
-    nem2-cli account transactions --public-key C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3 --num-transactions 40 --id 5A69C893FD331300012A001C
+.. viewsource:: resources/examples/bash/account/GettingConfirmedTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get incoming transactions**
 
@@ -182,9 +180,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account incoming --public-key C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+.. viewsource:: resources/examples/bash/account/GettingIncomingTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get outgoing transactions**
 
@@ -201,9 +199,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account outgoing --public-key C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+.. viewsource:: resources/examples/bash/account/GettingOutgoingTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get unconfirmed transactions**
 
@@ -220,9 +218,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account unconfirmedtransactions --publickey C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+.. viewsource:: resources/examples/bash/account/GettingUnconfirmedTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Get aggregate bonded transactions**
 
@@ -239,12 +237,29 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli account aggregatebonded --public-key C811AC654B77522D5283640CDA7A222AED49B08FF74445F3CD1FD27CD4FB75E3
+.. viewsource:: resources/examples/bash/account/GettingAggregateBondedTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Block
 =====
+
+**Header**
+
+Returns the block header by height.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -h, --height <height>      - Block height.
+
+Command
+
+.. viewsource:: resources/examples/bash/blockchain/GettingBlockHeader.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Transactions**
 
@@ -254,13 +269,17 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -h, --height <height>      - Block height.
+    -s, --page-size <pageSize> - (Optional) Page size between 10 and 100. Default: 10
+    -i, --id <id>              - (Optional) Id after which we want objects to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. Default: DESC
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli block transactions
+.. viewsource:: resources/examples/bash/blockchain/GettingBlockTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Receipts**
 
@@ -270,13 +289,14 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -h, --height <height>      - Block height.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli block receipts
+.. viewsource:: resources/examples/bash/blockchain/GettingBlockReceipts.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Chain
 =====
@@ -293,9 +313,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli chain height
+.. viewsource:: resources/examples/bash/blockchain/GettingBlockchainHeight.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Chain score**
 
@@ -305,13 +325,13 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli chain score
+.. viewsource:: resources/examples/bash/blockchain/GettingChainScore.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Diagnostic
 ==========
@@ -324,13 +344,13 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli diagnostic serverinfo
+.. viewsource:: resources/examples/bash/monitor/GettingServerInfo.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Storage**
 
@@ -340,13 +360,68 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
 Command
 
+.. viewsource:: resources/examples/bash/monitor/GettingServerStorage.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Metadata
+========
+
+**Account**
+
+Returns :doc:`metadata <concepts/metadata>` entries from an account.
+
+Options
+
 .. code-block:: bash
 
-    nem2-cli diagnostic storage
+    --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address> - Account address.
+
+Command
+
+.. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Mosaic**
+
+Returns :doc:`metadata <concepts/metadata>` entries from a mosaic.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
+
+Command
+
+.. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+
+**Namespace**
+
+Returns :doc:`metadata <concepts/metadata>` entries from a namespace.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
+    -n, --namespace-name <namespaceName> - Namespace name.
+
+Command
+
+.. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesNamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Monitor
 =======
@@ -366,9 +441,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli monitor block
+.. viewsource:: resources/examples/bash/monitor/MonitoringNewBlocks.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Confirmed transactions**
 
@@ -383,9 +458,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli monitor confirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+.. viewsource:: resources/examples/bash/monitor/MonitoringTransactionConfirmed.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Unconfirmed transactions**
 
@@ -400,9 +475,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli monitor unconfirmed --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+.. viewsource:: resources/examples/bash/monitor/MonitoringTransactionUnconfirmed.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Aggregate bonded transactions**
 
@@ -417,9 +492,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli monitor aggregatebonded --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+.. viewsource:: resources/examples/bash/monitor/MonitoringTransactionAggregateBonded.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Transaction status**
 
@@ -434,9 +509,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli monitor status --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+.. viewsource:: resources/examples/bash/monitor/MonitoringTransactionStatusError.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Mosaic
 ======
@@ -449,14 +524,14 @@ Options
 
 .. code-block:: bash
 
-    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
+    --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
     -m, --mosaic-id <mosaicId>     - Mosaic id in hexadecimal format.
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli mosaic info --u 7cdf3b117a3c40cc
+.. viewsource:: resources/examples/bash/mosaic/GettingMosaicInformation.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Namespace
 =========
@@ -475,9 +550,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli namespace info --hex 85BBEA6CC462B244
+.. viewsource:: resources/examples/bash/namespace/GettingNamespaceInformation.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Owned**
 
@@ -494,9 +569,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli namespace owned --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K
+.. viewsource:: resources/examples/bash/namespace/GettingNamespacesOwned.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Alias**
 
@@ -511,9 +586,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli namespace alias --name cat.currency
+.. viewsource:: resources/examples/bash/namespace/GettingAliasResolution.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Transaction
 ===========
@@ -535,9 +610,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction accountlink --public-key 07A87708BF791A69EB715E466935705E7C98141FBA9EB132644C74FBA467B197 --action 1
+.. viewsource:: resources/examples/bash/harvesting/DelegatingAccountImportanceToProxyAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Cosign AggregateBondedTransaction**
 
@@ -551,9 +626,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction cosign --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+.. viewsource:: resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Transaction info**
 
@@ -568,9 +643,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction info --hash AF92D0A1DC40F786DF455A54F3754E6ACBCEC1B590646404B5ACC85403A92690
+.. viewsource:: resources/examples/bash/monitor/GettingTransactionInfo.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Transfer mosaics and messages**
 
@@ -590,9 +665,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics @cat.currency::10000000
+.. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Register root namespace**
 
@@ -602,7 +677,7 @@ Options
 
 .. code-block:: bash
 
-   --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
+   --profile <profile>             - (Optional) Select between your profiles, by providing a profile name.
     -f, --max-fee <maxFee>         - Maximum fee you want to pay to announce this transaction.
     -n, --name <name>              - Namespace name.
     -r, --rootnamespace            - Root namespace.
@@ -610,9 +685,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction namespace --rootnamespace --duration 100000 --name new-namespace
+.. viewsource:: resources/examples/bash/namespace/RegisteringANamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Register subnamespace**
 
@@ -630,10 +705,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction namespace --subnamespace --parent-name new-namespace --name new-subnamespace
-
+.. viewsource:: resources/examples/bash/namespace/RegisteringASubnamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Create a mosaic**
 
@@ -655,9 +729,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction mosaic --amount 1000000 --transferable --supplymutable --divisibility 0 --duration  100000
+.. viewsource:: resources/examples/bash/mosaic/CreatingAMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Modify a mosaic supply**
 
@@ -675,9 +749,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction mosaicsupplychange --action 1 --mosaic-id 7cdf3b117a3c40cc --delta 100000
+.. viewsource:: resources/examples/bash/mosaic/ModifyingMosaicSupply.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Link a namespace to a mosaic**
 
@@ -695,9 +769,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction mosaicalias --action 0 --mosaic 7cdf3b117a3c40cc --namespace foo
+.. viewsource:: resources/examples/bash/namespace/LinkNamespaceMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Link a namespace to an address**
 
@@ -715,9 +789,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction addressalias --action 0 --address SCEKUG-H2IJBF-7JZRNK-ECMW52-E66SZ6-ODLB4W-NI7K --namespace foo
+.. viewsource:: resources/examples/bash/namespace/LinkNamespaceAddress.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 **Status**
 
@@ -732,9 +806,9 @@ Options
 
 Command
 
-.. code-block:: bash
-
-    nem2-cli transaction status -h 285A4B9A8ED41BD3DEF389667CA512F1038FBCA2D7A9E4188AF1D5292ACE79A4
+.. viewsource:: resources/examples/bash/monitor/GettingTransactionStatus.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Restriction
 ===========
@@ -752,6 +826,44 @@ Options
 
 Command
 
+.. viewsource:: resources/examples/bash/restriction/GettingAccountRestrictions.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Get mosaic global restrictions**
+
+Returns the :ref:`global restrictions <mosaic-global-restriction-transaction>` assigned to a mosaic.
+
+Options
+
 .. code-block:: bash
 
-    nem2-cli restriction account --address SDAUTVFWMVXVWWKTTEFTLGUO6HP6MR4GLEK6POJ4
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
+
+Command
+
+.. viewsource:: resources/examples/bash/restriction/GettingMosaicGlobalRestrictions.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Get mosaic address restrictions**
+
+Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transaction>` assigned to an address.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
+    -a, --address <address>    - Account address.
+
+Command
+
+.. viewsource:: resources/examples/bash/restriction/GettingMosaicAddressRestrictions.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+
+
