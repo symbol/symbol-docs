@@ -56,7 +56,7 @@ Alice is a recent graduate who wants her educational certificate accredited to h
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. Alice degree brings the identifier ``123456`` for her certificate. Help Bob to **assign this value to the key** defined in the previous step. To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
+3. Alice's degree brings the identifier ``123456`` for her certificate. Help Bob to **assign this value to the key** defined in the previous step. To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
 
 .. example-code::
 
