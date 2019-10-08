@@ -72,7 +72,7 @@ Installation
 
 .. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
 
-You should see docker doing its job downloading the container images for the first time, then synchronizing with other nodes. If everything goes well, it should start the catapult-server right up and you should see the live logs start scrolling by in the foreground like so:
+You should see the docker doing its job downloading the container images for the first time, then synchronizing with other nodes. If everything goes well, it should start the catapult-server and you should see the live logs start scrolling by in the foreground like so:
 
 [bash output here]
 
@@ -91,8 +91,8 @@ Commands
     ./cmds/clean-data; Delete all of the blockchain and cache data, keeping the configuration and generated keys.
     ./cmds/clean-all; Clean the data and additionally will remove the generated keys and the configuration generated from these keys.
     ./cmds/run-api-recovery; Run the API recovery service.
-    ./cmds/setup-network; This will create the nemesis block and generate all the config files if they do not already exist on disk.
-    ./cmds/start-all; Creates config and nemesis if it doesn't exist and starts up all services.
+    ./cmds/setup-network; Create the nemesis block and generate all the config files if they do not already exist on disk.
+    ./cmds/start-all; Create config and nemesis if it doesn't exist and starts up all services.
     ./cmds/start-api-db; Start the MongoDB instance and configure schema/indexes if needed.
     ./cmds/start-api-node; Start the API node.
     ./cmds/start-catapult-api; Start the API node and REST gateway services.
@@ -156,7 +156,7 @@ The :doc:`NEM2-CLI <../../cli>` conveniently allows you to perform the most comm
     │ Private Key │ 123...456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-Now that you have your node running an account with some cat.currency, we recommend you to surf the NEM Development Center. In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>`, as long as :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running an account with some cat.currency, we recommend you to surf the NEM Development Center. In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

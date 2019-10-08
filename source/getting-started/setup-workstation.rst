@@ -8,7 +8,7 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
-We'll be using the **test network**, which allows you to experiment with the offered Catapult's transaction set without having to worry about losing valuable assets by mistake, as the currency used in this network does not have a real value.
+We’ll be using the test network, which simulates the Catapult network.  Using  the test network allows you to experiment with Catapult’s transaction set without the loss of valuable assets.
 
 .. note:: To run your own **private test network**, follow :doc:`this other guide <../guides/network/creating-a-private-test-net>`.
 
@@ -39,7 +39,7 @@ You will need to have installed |node-lts|.
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
-.. note:: If the test network node goes it is not working, you can use another node url from this list. You can also **run your own testnet node** following :doc:`this guide <../guides/network/running-a-test-net-node>`.
+.. note:: If the test network node is not working, you can use another node url from this list. You can also **run your own testnet node** following :doc:`this guide <../guides/network/running-a-test-net-node>`.
 
 3. You should see the account credentials in your terminal.
 

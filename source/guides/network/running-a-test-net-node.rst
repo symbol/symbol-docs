@@ -11,9 +11,9 @@ Running a test net node
 
 This guide will walk you through the process of **setting up your own node** to join Catapult’s public **test network**.
 
-The test network mirrors the same **technology** and **features** of the future main public network. For example, it allows you to experiment with the offered Catapult’s transaction set without having to worry about losing valuable assets by mistake, as the currency used in this network does not have any real value.
+The test network mirrors the same **technology** and **features** of the future main public network. As the currency in this network does not have any real value, it allows you to experiment with the offered Catapult’s transaction set without losing valuable assets by mistake.
 
-.. note:: The network **might be offline or replaced without previous notice** because it is used extensively for testing purposes. If you want to work in your own private test network, we recommend you to install your environment locally for learning and development purposes.
+.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. If you want to work in your own private test network, we recommend you to install your environment locally for learning and development purposes.
 
 *********************
 Hardware requirements
@@ -76,7 +76,7 @@ Or
 
 .. note:: To run the docker container in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
 
-You should see docker doing its job downloading the container images for the first time, then synchronizing with other nodes. If everything goes well, it should start the catapult-server right up and you should see the live logs start scrolling by in the foreground like so:
+You should see the docker doing its job downloading the container images for the first time, then synchronizing with other nodes. If everything goes well, it should start the catapult-server and you should see the live logs start scrolling by in the foreground like so:
 
 [bash output here]
 
@@ -88,14 +88,14 @@ To stop the docker process, press ``Ctrl+C``.
 Interacting with the test network
 *********************************
 
-To interact with your node, first, :ref:`create an account <setup-creating-a-test-account>` and :ref:`acquire test cat.currency <_setup-getting-test-currency>`.
+To interact with your node, you first need to :ref:`create an account <setup-creating-a-test-account>` and :ref:`acquire test cat.currency <_setup-getting-test-currency>`.
 
-In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>`, as long as :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 Development tools
 =================
 
-Interact with the test net either developing your own components with the :doc:`SDK <../../sdk>`, or using interactive apps to perform the most common actions.
+Interact with the test net by either developing your own components with the :doc:`SDK <../../sdk>`, or using interactive apps to perform the most common actions.
 
 * |catapult-test-net-wallet|
 * :doc:`Command-Line Interface <../../cli>`
