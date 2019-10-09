@@ -1,6 +1,6 @@
 :orphan:
 
-.. post:: 01 Oct, 2019
+.. post:: 29 Sep, 2019
     :category: Metadata, Account
     :excerpt: 1
     :nocomments:
@@ -65,7 +65,7 @@ Alice is a recent graduate who wants her educational certificate accredited to h
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. To avoid spamming the account with invalid metadata keys, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata entry assigned to its account. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded-transaction>` and sign the transaction using Bob's account.
+4. To avoid spamming the account with invalid metadata keys, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata entry assigned to its account. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
 
 .. example-code::
 
@@ -100,4 +100,4 @@ Alice is a recent graduate who wants her educational certificate accredited to h
 
     nem2-cli transaction cosign --hash <transaction-hash> --profile alice
 
-8. If everything goes well, now Alice has assigned the metadata value ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
+8. If everything goes well, now Alice :doc:`has assigned the metadata value <getting-metadata-entries-attached-to-an-account>` ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
