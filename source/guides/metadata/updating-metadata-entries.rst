@@ -17,7 +17,7 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
+- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
 
 **********
 Background
@@ -35,15 +35,15 @@ Getting into some code
 
 Bob—the notary from the :doc:`assigning metadata entries to an account guide<assigning-metadata-entries-to-an-account>`— is requested to remove Alice's account ``CERT`` metadata entry because the certificate has expired.
 
-1. Define a new **AccountMetadataTransaction** referencing Alice's public account and the key ``CERT``. Bob decides to add an empty string to indicate that the certificate has expired.
+1. Help Bob to define a new **AccountMetadataTransaction** setting Alice's account as the metadata target. To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``. However, we need to take an extra step that we didn't have to when adding the metadata entry for the first time.
 
-:ref:`Blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. For this reason, we need to pass the **previous metadata entry value** in case the state needs to be reverted.
+By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. In case that the state needs to be reverted, you should indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
 
-A) One option is to retrieve the previous metadata value, apply a **xor filter** with the newest value, and add the resulting string to the AccountMetadataTransaction's ``value`` property.
+A) Retrieve the previous metadata value and calculate the difference of size with the newest value. Then, return the AccountMetadataTransaction object.
 
 [code]
 
-B) You can achieve the same result with less effort using the ``MetadataService``. Behind the scenes, the **NEM2-SDK** handles the complexity to update metadata entries.
+B)  You can achieve the same result with less effort using the ``MetadataService``. Behind the scenes, the **NEM2-SDK** handles the complexity of updating metadata entries.
 
 [code]
 
@@ -61,7 +61,7 @@ B) You can achieve the same result with less effort using the ``MetadataService`
 
 [code]
 
-5. Once the transaction gets confirmed, cosign the hash obtained in the third  step using Alice's profile.
+5. Once the transaction gets confirmed, cosign the hash obtained in the third step using Alice's profile.
 
 .. code-block:: bash
 
