@@ -33,7 +33,15 @@ Getting into some code
 
 1. Create a new namespace ``cc`` with the **ComfyClothingCompany's account**.
 
-[code]
+.. code-block:: bash
+
+    nem2-cli transaction namespace
+
+    Introduce namespace name: cc
+    Do you want to create a root namespace? [y/n]: y
+    Introduce the namespace rental duration: 1000
+    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Transaction announced correctly
 
 2. Define the following :ref:`namespace metadata transactions <namespace-metadata-transaction>`.
 
@@ -46,14 +54,31 @@ Getting into some code
     ADDRESS; ComfyClothingCompany HQ
     PHONE; 000-0000
 
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToANamespace.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 3. All metadata is attached only with the consent of the namespace owner through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToANamespace.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 .. note:: If a different account owned the namespace, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Hence, the namespace owner should accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 4. Sign and announce the **AggregateTransaction** to the network.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToANamespace.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 5. When the transaction gets confirmed, try to :doc:`fetch the namespace's metadata entries <getting-metadata-entries-attached-to-a-namespace>`.

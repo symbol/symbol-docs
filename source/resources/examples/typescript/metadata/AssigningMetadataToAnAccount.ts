@@ -18,11 +18,12 @@
 
 import {
     Account,
-    AccountMetadataTransaction, AggregateTransaction,
+    AccountMetadataTransaction,
+    AggregateTransaction,
     Deadline,
     HashLockTransaction,
+    KeyGenerator,
     Listener,
-    NamespaceMosaicIdGenerator,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -32,14 +33,14 @@ import {
 import {filter, mergeMap} from "rxjs/operators";
 
 /* start block 01 */
-const key = new UInt64(NamespaceMosaicIdGenerator.namespaceId('CERT'.toLowerCase()));
+const key = KeyGenerator.generateUInt64Key('CERT');
 /* end block 01 */
 
 /* start block 02 */
 const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
-const value = '123456';
 
+const value = '123456';
 const accountMetadataTransaction = AccountMetadataTransaction.create(
     Deadline.create(),
     alicePublicAccount.publicKey,

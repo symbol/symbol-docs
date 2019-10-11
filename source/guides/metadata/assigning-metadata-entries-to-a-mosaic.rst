@@ -37,35 +37,94 @@ Before distributing the shares between the investors, ComfyClothingCompany wants
 
 1. Create a mosaic to represent the shares. The mosaic we are creating will have the properties ``supplyMutable``, ``transferable``, ``restrictable``, ``non-expiring``, and we will be able to operate with up to 2 decimal places.
 
-[code]
+.. code-block:: bash
 
+    nem2-cli transaction mosaic
+
+    Do you want an non-expiring mosaic? [y/n]: y
+    Introduce mosaic divisibility: 2
+    Do you want mosaic to have supply mutable? [y/n]: y
+    Do you want mosaic to be transferable? [y/n]: y
+    Do you want mosaic to be restrictable? [y/n]: y
+    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce amount of tokens: 100
+    Your mosaic id is:  2C08D5EDB652AA79
+    Transaction announced correctly
 
 2. To make the mosaic easily identifiable in the network, create the namespace ``cc`` and the subnamespace ``cc.shares``.
 
-[code]
+.. code-block:: bash
+
+    nem2-cli transaction namespace
+
+    Introduce namespace name: cc
+    Do you want to create a root namespace? [y/n]: y
+    Introduce the namespace rental duration: 1000
+    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Transaction announced correctly
+
+.. code-block:: bash
+
+    nem2-cli transaction namespace
+
+    Introduce namespace name: shares
+    Do you want to create a root namespace? [y/n]: n
+    Introduce the parent namespace name: cc
+    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Transaction announced correctly
 
 3. Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created in the first step.
-[code]
+
+.. code-block:: bash
+
+    nem2-cli transaction mosaicalias
+
+    Introduce namespace name: cc.shares
+    Introduce alias action (1: Link, 0: Unlink): 1
+    Introduce mosaic in hexadecimal format: 2C08D5EDB652AA79
+    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Transaction announced correctly
+
 
 4. Now that you have created ``cc.shares``, define two ``MosaicMetatadaTransaction`` to add the **ISIN** and **legal name** to the mosaic:
 
 A) Key: ``ISIN``, Value: ``US00000000``.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 5. All metadata is attached only with the consent of the mosaic owner through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 .. note:: In this example, the account signing the transaction is the mosaic owner. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`. Hence, the mosaic owner should opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 6. Sign and announce the **AggregateTransaction** to the network.
 
- [code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
+        :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 7. When the transaction gets confirmed, :doc:`fetch the mosaic metadata entries <getting-metadata-entries-attached-to-a-mosaic>`.
 
