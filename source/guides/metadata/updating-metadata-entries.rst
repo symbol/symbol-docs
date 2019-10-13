@@ -33,33 +33,62 @@ In this example, we are going to **update a metadata entry** attached to an acco
 Getting into some code
 **********************
 
-Bob—the notary from the :doc:`assigning metadata entries to an account guide<assigning-metadata-entries-to-an-account>`— is requested to remove Alice's account ``CERT`` metadata entry because the certificate has expired.
+Bob—the notary from the :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`— is requested to remove Alice's account ``CERT`` metadata entry because the certificate has expired.
 
-1. Help Bob to define a new **AccountMetadataTransaction** setting Alice's account as the metadata target. To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``. However, we need to take an extra step that we didn't have to when adding the metadata entry for the first time.
+.. figure:: ../../resources/images/examples/metadata-update.png
+    :align: center
+    :width: 400px
+
+1. Define a new **AccountMetadataTransaction** setting Alice's account as the metadata target. To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``. However, you need to pass an extra parameter that was not necessary when assigning a metadata entry for the first time.
 
 By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. In case that the state needs to be reverted, you should indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
 
 A) Retrieve the previous metadata value and calculate the difference of size with the newest value. Then, return the AccountMetadataTransaction object.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesRetrievePreviousValue.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 B)  You can achieve the same result with less effort using the ``MetadataService``. Behind the scenes, the **NEM2-SDK** handles the complexity of updating metadata entries.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. To avoid spamming the account with invalid metadata, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata to be updated. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 3. Before sending an aggregate transaction to the network, Bob has to lock  ``10 cat.currency``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
 .. note:: Bob will receive the locked funds back if Alice cosigns the aggregate during the next ``480`` blocks.
 
 4. Announce the **HashLockTransaction**. Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the AccountMetadataTransaction.
 
-[code]
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts
+        :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
 
 5. Once the transaction gets confirmed, cosign the hash obtained in the third step using Alice's profile.
 

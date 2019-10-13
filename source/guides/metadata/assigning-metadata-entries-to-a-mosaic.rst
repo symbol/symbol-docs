@@ -35,6 +35,10 @@ The company ComfyClothingCompany has applied for an |ISIN-code| to conduct an ST
 
 Before distributing the shares between the investors, ComfyClothingCompany wants to attach its ISIN code and legal name to the shares definition.
 
+.. figure:: ../../resources/images/examples/metadata-mosaic.png
+    :align: center
+    :width: 400px
+
 1. Create a mosaic to represent the shares. The mosaic we are creating will have the properties ``supplyMutable``, ``transferable``, ``restrictable``, ``non-expiring``, and we will be able to operate with up to 2 decimal places.
 
 .. code-block:: bash

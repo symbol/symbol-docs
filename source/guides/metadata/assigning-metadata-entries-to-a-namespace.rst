@@ -27,6 +27,10 @@ Background
 
 In this guide, you are going to implement a program to add contact details to a namespace.
 
+.. figure:: ../../resources/images/examples/metadata-namespace.png
+    :align: center
+    :width: 400px
+
 **********************
 Getting into some code
 **********************
