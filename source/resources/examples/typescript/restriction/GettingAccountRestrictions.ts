@@ -25,8 +25,7 @@ const address = Address.createFromRawAddress(rawAddress);
 const restrictionHttp = new RestrictionHttp('http://localhost:3000');
 
 restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictionsInfo) => {
-        const accountRestrictions = accountRestrictionsInfo.accountRestrictions.restrictions;
+    .subscribe((accountRestrictions) => {
         if (accountRestrictions.length > 0) {
             accountRestrictions
                 .filter((accountRestriction) => accountRestriction.values.length > 0)

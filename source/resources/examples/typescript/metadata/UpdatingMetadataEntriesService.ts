@@ -19,16 +19,22 @@
 import {
     Account,
     AggregateTransaction,
-    Deadline, HashLockTransaction,
+    Deadline,
+    HashLockTransaction,
     KeyGenerator,
+    Listener,
     MetadataHttp,
     MetadataTransactionService,
-    MetadataType, NetworkCurrencyMosaic,
+    MetadataType,
+    NetworkCurrencyMosaic,
     NetworkType,
-    PublicAccount, SignedTransaction, TransactionHttp, UInt64
+    PublicAccount,
+    SignedTransaction,
+    TransactionHttp,
+    UInt64
 } from 'nem2-sdk';
-import {mergeMap} from "rxjs/operators";
-import {of} from "rxjs";
+import {filter, mergeMap} from "rxjs/operators";
+import {merge, of} from "rxjs";
 
 /* start block 01 */
 const nodeUrl = 'http://localhost:3000';
@@ -53,37 +59,73 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
     bobAccount.publicAccount);
 /* end block 01 */
 
+/* start block 02 */
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-
-interface SignedAggregateHashLock {
-    readonly aggregate: SignedTransaction;
-    readonly hashLock: SignedTransaction;
-}
-
-accountMetadataTransaction
+const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
-        mergeMap( transaction => {
+        mergeMap(transaction => {
             const aggregateTransaction = AggregateTransaction.createComplete(
                 Deadline.create(),
                 [transaction.toAggregate(bobAccount.publicAccount)],
                 NetworkType.MIJIN_TEST,
                 []);
             const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
-            console.log(signedTransaction.hash);
             return of(signedTransaction);
-        }),
-        mergeMap( signedAggregateTransaction => {
-            const hashLockTransaction = HashLockTransaction.create(
-                Deadline.create(),
-                NetworkCurrencyMosaic.createRelative(10),
-                UInt64.fromUint(480),
-                signedAggregateTransaction,
-                NetworkType.MIJIN_TEST);
-            const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
-            const signedAggregateHashLock : SignedAggregateHashLock = { aggregate: signedAggregateTransaction, hashLock: signedTransaction }
-            return of(signedAggregateHashLock);
-            }
-        )
-    );
+        }));
+/* end block 02 */
 
+/* start block 03 */
+interface SignedAggregateHashLock {
+    readonly aggregate: SignedTransaction;
+    readonly hashLock: SignedTransaction;
+}
 
+const signedAggregateHashLock = signedAggregateTransaction.pipe(
+    mergeMap(signedAggregateTransaction => {
+        const hashLockTransaction = HashLockTransaction.create(
+            Deadline.create(),
+            NetworkCurrencyMosaic.createRelative(10),
+            UInt64.fromUint(480),
+            signedAggregateTransaction,
+            NetworkType.MIJIN_TEST);
+        const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+        const signedAggregateHashLock: SignedAggregateHashLock = {
+            aggregate: signedAggregateTransaction,
+            hashLock: signedTransaction
+        };
+        console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
+        console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
+        return of(signedAggregateHashLock);
+    }));
+/* end block 03 */
+
+/* start block 04 */
+const listener = new Listener(nodeUrl);
+const transactionHttp = new TransactionHttp(nodeUrl);
+
+const announceAggregateTransaction = (signedHashLockTransaction: SignedTransaction, signedAggregateTransaction: SignedTransaction) => {
+    return listener
+        .confirmed(bobAccount.address)
+        .pipe(
+            filter((transaction) => transaction.transactionInfo !== undefined
+                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
+            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedAggregateTransaction))
+        );
+};
+
+listener.open().then(() => {
+
+    signedAggregateHashLock.pipe(
+        mergeMap(signedAggregateHashLock => merge(
+            transactionHttp.announce(signedAggregateHashLock.hashLock),
+            announceAggregateTransaction(signedAggregateHashLock.hashLock,
+                signedAggregateHashLock.aggregate))))
+        .subscribe(x => {
+            listener.terminate();
+            console.log('Aggregate transaction confirmed:', x)
+        }, err => {
+            listener.terminate();
+            console.log(err)
+        });
+});
+/* end block 04 */
