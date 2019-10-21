@@ -74,7 +74,7 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
 
-.. note:: Only Namespace that is created during the Nemesis block can have perpeptual duration. 
+.. note:: Only namespaces created during the nemesis :doc:`block <block>` can have perpetual duration. 
 
 **********
 Rental fee
@@ -93,8 +93,6 @@ The default namespace rental fees are :properties:`configurable per network <con
     Creating a subnamespace; ``100 cat.currency``
 
 The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
-
-.. note:: Please ensure there is enough balance in the account for payment of rental and transaction fee in order for the transactions to be accepted into a block. 
 
 ******
 Guides
