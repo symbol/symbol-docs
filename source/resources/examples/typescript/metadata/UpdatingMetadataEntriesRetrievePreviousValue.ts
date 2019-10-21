@@ -19,6 +19,7 @@
 import {
     Account,
     AccountMetadataTransaction,
+    Convert,
     Deadline,
     KeyGenerator,
     MetadataHttp,
@@ -39,16 +40,17 @@ const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
 const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
+const newValueBytes = Convert.utf8ToUint8(newValue);
 
 const accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
     .pipe( mergeMap(metadata => {
-        const previousValue = metadata.metadataEntry.value;
+        const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);
         return of(AccountMetadataTransaction.create(
             Deadline.create(),
             alicePublicAccount.publicKey,
             key,
-            newValue.length - previousValue.length,
-            newValue,
+            newValueBytes.length - currentValueBytes.length,
+            Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),
             NetworkType.MIJIN_TEST,
         ))
     }));
