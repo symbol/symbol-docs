@@ -74,7 +74,7 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: If a different account owned the namespace, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Hence, the namespace owner should accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: If a namespace was owned by a different account, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace owner needs to accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 4. Sign and announce the **AggregateTransaction** to the network.
 

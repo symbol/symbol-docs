@@ -119,7 +119,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-.. note:: In this example, the account signing the transaction is the mosaic owner. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`. Hence, the mosaic owner should opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic owner would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 6. Sign and announce the **AggregateTransaction** to the network.
 

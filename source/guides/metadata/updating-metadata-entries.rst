@@ -25,7 +25,7 @@ Background
 
 :doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain. Once a transaction is included in a block—and the block receives enough confirmations— it is not possible to modify the record without invalidating the whole chain.
 
-What we can do to update a metadata entry is to announce a second metadata transaction. This action will generate a new record while keeping the history immutable. However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? Catapult makes this possible by keeping a copy of the **newest value** assigned to a metadata entry as a **state**.
+What we can do to update a metadata entry is to announce a second metadata transaction. This action will record a new transaction while keeping the history immutable. However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? Catapult makes this possible by keeping a copy of the **newest value** assigned to a metadata entry as a **state**.
 
 In this example, we are going to **update a metadata entry** attached to an account. However, you could follow a similar approach to update namespace and mosaic metadata entries.
 
@@ -41,7 +41,7 @@ Bob—the notary from the :doc:`assigning metadata entries to an account guide <
 
 1. Define a new **AccountMetadataTransaction** setting Alice's account as the metadata target. To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``. However, you need to pass an extra parameter that was not necessary when assigning a metadata entry for the first time.
 
-By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. In case that the state needs to be reverted, you should indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
+By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. In case that the state needs to be reverted, you need to indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
 
 A) Retrieve the previous metadata value and calculate the difference of size with the newest value. Then, return the AccountMetadataTransaction object.
 
