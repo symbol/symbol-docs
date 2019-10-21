@@ -22,7 +22,7 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to **identify and organize assets**.
 
-Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
+Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
 You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
 
@@ -38,8 +38,8 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 
 **Restrictions:**
 
-- An account can only associate a name with one account or mosaic, but those can have many aliases linked.
-- An account can assign a name to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
+- An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic. 
+- An account can assign a namespace to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
 - An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
 
 ********
@@ -73,6 +73,8 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Create subnamespaces;   ❌; ✔️; ❌
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
+
+.. note:: Only namespaces created during the :doc:`nemesis block <block>` can have perpetual duration. 
 
 **********
 Rental fee
