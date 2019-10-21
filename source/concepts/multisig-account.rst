@@ -40,7 +40,7 @@ Constraints
 
 * An account can be cosigner of up to ``5`` multisig accounts.
 
-* Multisig accounts can have as a cosigner another multisig, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
+* Multisig account can be a cosigner for another multisig account, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
 * :ref:`Multisig modification transactions <multisig-account-modification-transaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
 
