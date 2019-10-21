@@ -38,8 +38,8 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 
 **Restrictions:**
 
-- An account can only associate a name with one account or mosaic, but those can have many aliases linked.
-- An account can assign a name to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
+- An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic. 
+- An account can assign a namespace to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
 - An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
 
 ********
