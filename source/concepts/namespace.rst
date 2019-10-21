@@ -74,6 +74,8 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
 
+.. note:: Only Namespace that is created during the Nemesis block can have perpeptual duration. 
+
 **********
 Rental fee
 **********
