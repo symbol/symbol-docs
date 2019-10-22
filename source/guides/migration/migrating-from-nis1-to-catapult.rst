@@ -110,7 +110,7 @@ Multisignature management
 
 With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
-1.  An account must be converted to a :doc:`multisignature account <../../concepts/multisig-account>`.
+1.  An account must opt-in as cosignatory to a :doc:`multisignature account <../../concepts/multisig-account>`.
 
 Different to NIS1, the account modification entries now hold fields for ``minimum approval`` and ``minimum removal``:
 
