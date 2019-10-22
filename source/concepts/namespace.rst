@@ -38,7 +38,7 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 
 **Restrictions:**
 
-- An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic. 
+- An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic.
 - An account can assign a namespace to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
 - An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
 
@@ -74,13 +74,13 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
     Link an alias to an address or mosaic;   ❌; ✔️; ❌
     Send a transaction using an alias;   ❌; ✔️; ❌
 
-.. note:: Only namespaces created during the :doc:`nemesis block <block>` can have perpetual duration. 
+.. note:: Only namespaces created during the :doc:`nemesis block <block>` can have perpetual duration.
 
 **********
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts will have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+To create a namespace or to extend its duration, accounts have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
 
 The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
 
@@ -88,9 +88,9 @@ The default namespace rental fees are :properties:`configurable per network <con
     :header: "Property", "Value"
     :delim: ;
 
-    Registering a namespace; ``1 cat.currency`` per block
-    Extending a namespace duration; ``1 cat.currency`` per block
-    Creating a subnamespace; ``100 cat.currency``
+    Registering a namespace; ``0.000001 cat.currency`` per block
+    Extending a namespace duration; ``0.000001 cat.currency`` per block
+    Creating a subnamespace; ``0.0001 cat.currency``
 
 The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
