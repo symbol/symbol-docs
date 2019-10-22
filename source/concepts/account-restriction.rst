@@ -19,7 +19,7 @@ The account owners—plural in case of multisig accounts—can edit the account 
 Address restriction
 *******************
 
-An account can decide to **only receive** transactions from a list of allowed **addresses**. Alternatively, the account can define a list of blocked addresses.
+An account can decide to **only receive** transactions from a list of allowed **addresses** (White-listed addresses). Alternatively, the account can define a list of blocked addresses (black-listed addresses).
 
 Restricting **incoming transactions** is useful when the account will be only receiving transactions from known addresses, or when the account wants to block transactions coming from unknown senders.
 
