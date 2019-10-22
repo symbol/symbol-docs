@@ -52,7 +52,6 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 
 /* start block 03 */
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

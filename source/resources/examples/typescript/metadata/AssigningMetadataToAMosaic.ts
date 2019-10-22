@@ -58,11 +58,12 @@ const nameMetadataTransaction = MosaicMetadataTransaction.create(
 /* end block 02 */
 
 /* start block 03 */
-const aggregateTransaction = AggregateTransaction.createBonded(
+const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
         nameMetadataTransaction.toAggregate(companyAccount.publicAccount)],
-    NetworkType.MIJIN_TEST);
+    NetworkType.MIJIN_TEST,
+    []);
 
 /* end block 03 */
 

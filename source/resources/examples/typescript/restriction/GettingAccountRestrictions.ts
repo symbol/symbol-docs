@@ -23,7 +23,6 @@ const rawAddress = process.env.COMPANY_ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
 
 const restrictionHttp = new RestrictionHttp('http://localhost:3000');
-
 restrictionHttp.getAccountRestrictions(address)
     .subscribe((accountRestrictions) => {
         if (accountRestrictions.length > 0) {

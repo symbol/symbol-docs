@@ -49,7 +49,6 @@ const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

@@ -24,7 +24,6 @@ const mosaicId = new MosaicId(mosaicIdHex);
 const keyHex = process.env.KEY as string;
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getMosaicMetadataByKey(mosaicId, keyHex)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

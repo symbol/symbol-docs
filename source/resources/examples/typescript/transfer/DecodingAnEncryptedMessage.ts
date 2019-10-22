@@ -29,7 +29,6 @@ const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, Net
 const transactionHttp = new TransactionHttp('http://localhost:3000');
 
 const transactionHash = process.env.TRANSACTION_HASH as string;
-
 transactionHttp
     .getTransaction(transactionHash)
     .pipe(

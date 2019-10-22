@@ -26,7 +26,6 @@ const mosaicIdHex = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHex);
 
 const restrictionHttp = new RestrictionHttp('http://localhost:3000');
-
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
     .subscribe((mosaicAddressRestrictions) => {
         if (mosaicAddressRestrictions.restrictions.size > 0) {

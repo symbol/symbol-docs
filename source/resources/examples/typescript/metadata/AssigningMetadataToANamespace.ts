@@ -79,7 +79,7 @@ const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
 /* end block 01 */
 
 /* start block 02 */
-const aggregateTransaction = AggregateTransaction.createBonded(
+const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
         nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
@@ -87,7 +87,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(
         addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
         phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
     ],
-    NetworkType.MIJIN_TEST);
+    NetworkType.MIJIN_TEST,
+    []);
 /* end block 02 */
 
 /* start block 03 */

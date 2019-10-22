@@ -103,29 +103,27 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
 const listener = new Listener(nodeUrl);
 const transactionHttp = new TransactionHttp(nodeUrl);
 
+const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => transactionHttp.announce(signedHashLockTransaction);
 const announceAggregateTransaction = (signedHashLockTransaction: SignedTransaction, signedAggregateTransaction: SignedTransaction) => {
     return listener
         .confirmed(bobAccount.address)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
                 && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedAggregateTransaction))
+            mergeMap(ignored => {
+                listener.terminate();
+                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
+            })
         );
 };
 
 listener.open().then(() => {
-
     signedAggregateHashLock.pipe(
         mergeMap(signedAggregateHashLock => merge(
-            transactionHttp.announce(signedAggregateHashLock.hashLock),
+            announceHashLockTransaction(signedAggregateHashLock.hashLock),
             announceAggregateTransaction(signedAggregateHashLock.hashLock,
                 signedAggregateHashLock.aggregate))))
-        .subscribe(x => {
-            listener.terminate();
-            console.log('Aggregate transaction confirmed:', x)
-        }, err => {
-            listener.terminate();
-            console.log(err)
-        });
+        .subscribe(x => console.log('Transaction confirmed:', x),
+                err => console.log(err));
 });
 /* end block 04 */

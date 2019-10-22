@@ -30,9 +30,6 @@ import {mergeMap} from "rxjs/operators";
 import {of} from "rxjs";
 
 /* start block 01 */
-const nodeUrl = 'http://localhost:3000';
-const metadata = new MetadataHttp(nodeUrl);
-
 const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
 
@@ -42,6 +39,8 @@ const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
+const nodeUrl = 'http://localhost:3000';
+const metadata = new MetadataHttp(nodeUrl);
 const accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
     .pipe( mergeMap(metadata => {
         const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);

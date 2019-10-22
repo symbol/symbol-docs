@@ -29,8 +29,6 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
@@ -58,6 +56,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

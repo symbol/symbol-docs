@@ -25,7 +25,6 @@ const senderPublicKey = process.env.SENDER_PUBLIC_KEY as string;
 const keyHex = process.env.KEY as string;
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getAccountMetadataByKeyAndSender(address, keyHex, senderPublicKey)
     .subscribe((metadata) => {
             const metadataEntry = metadata.metadataEntry;

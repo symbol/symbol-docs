@@ -24,7 +24,6 @@ const namespaceId = new NamespaceId(namespaceName);
 const keyHex = process.env.KEY as string;
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getNamespaceMetadataByKey(namespaceId, keyHex)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

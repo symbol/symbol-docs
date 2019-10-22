@@ -38,7 +38,7 @@ const transferTransaction = TransferTransaction.create(
     recipientAddress,
     /* start block 01 */
     [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1000)),
-            NetworkCurrencyMosaic.createRelative(10)],
+        NetworkCurrencyMosaic.createRelative(10)],
     /* end block 01 */
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
@@ -52,7 +52,6 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 
 // 03 - Announcing the transaction
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

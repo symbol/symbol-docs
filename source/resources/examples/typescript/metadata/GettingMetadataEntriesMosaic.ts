@@ -23,7 +23,6 @@ const mosaicIdHex = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHex);
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getMosaicMetadata(mosaicId)
     .subscribe((metadata) => {
         if (metadata.length > 0) {
