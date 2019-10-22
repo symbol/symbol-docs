@@ -66,9 +66,9 @@ Additionally, there is only one version of TransferTransaction in Catapult. Mosa
 Transaction fees
 ****************
 
-The fee that needs to be paid for a transaction now depends on the transaction size and node owners can specify a positive (or zero) fee multiplier. The **effective fee** paid for a transaction can be calculated reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
+The fee that needs to be paid for a transaction now depends on the transaction size and fee multiplier, where node owners can specify a positive (or zero) value. The **effective fee** to be paid for a transaction can be calculated by reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
 
-Transactions fees are specified with the ``maxFee``  field. This field represents the maximum fee allowed to be paid for this transaction to confirm.
+``maxFee`` represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
 
 * Protocol: :ref:`Transaction fees <fees>`
 
