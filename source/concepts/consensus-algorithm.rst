@@ -22,7 +22,7 @@ The algorithm considers the following factors to improve the ecosystem’s healt
 
 All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
 
-The account needs to hold a minimum amount of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance greater than zero.
+The account needs to hold a minimum amount of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance score greater than zero.
 
 ******
 Scores
@@ -32,7 +32,7 @@ The network calculates the following sub scores for all high-value accounts for 
 
 * **Stake Score (S`)**: Percentage of the effective balance of all high value accounts at time P.
 * **Transaction Score (T`)**: Percentage of total transaction fees among all high-value accounts in period P-1 to P.
-* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in P-1 to P.
+* **Node Score (N`)**: Percentage of total beneficial received among all accounts blocks in P-1 to P. Only applicable to accounts running nodes. 
 
 *********
 Constants
