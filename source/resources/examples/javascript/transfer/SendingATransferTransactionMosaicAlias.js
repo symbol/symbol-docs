@@ -36,19 +36,18 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [new Mosaic(new NamespaceId('foo'),
-            UInt64.fromUint(10000000))],
+        UInt64.fromUint(10000000))],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 /* end block 01 */
 
 const privateKey = process.env.PRIVATE_KEY;
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

@@ -28,13 +28,11 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const privateKey = process.env.PRIVATE_KEY as string;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const mosaicIdHex = process.env.MOSAIC_ID_HEX as string;
+const mosaicId = new MosaicId(mosaicIdHex);
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
@@ -46,6 +44,7 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x=> console.log(x), err => console.error(err));

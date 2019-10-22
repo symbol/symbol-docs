@@ -22,11 +22,10 @@ const MosaicHttp = nem2Sdk.MosaicHttp;
 const MosaicId = nem2Sdk.MosaicId;
 
 /* start block 01 */
+const mosaicIdHex = process.env.MOSAIC_ID_HEX;
+const mosaicId = new MosaicId(mosaicIdHex);
+
 const mosaicHttp = new MosaicHttp('http://localhost:3000');
-
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA;
-const mosaicId = new MosaicId(mosaicIdHexa);
-
 mosaicHttp
     .getMosaic(mosaicId)
     .subscribe(mosaicInfo => console.log(mosaicInfo), err => console.error(err));

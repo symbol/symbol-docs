@@ -18,18 +18,16 @@
 
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
-    Deadline = nem2Sdk.Deadline,
-    NetworkType = nem2Sdk.NetworkType,
-    TransferTransaction = nem2Sdk.TransferTransaction,
-    AggregateTransaction = nem2Sdk.AggregateTransaction,
-    TransactionHttp = nem2Sdk.TransactionHttp,
-    PlainMessage = nem2Sdk.PlainMessage,
     Address = nem2Sdk.Address,
-    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
+    Deadline = nem2Sdk.Deadline,
+    PlainMessage = nem2Sdk.PlainMessage,
+    TransferTransaction = nem2Sdk.TransferTransaction,
+    TransactionHttp = nem2Sdk.TransactionHttp,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
+    NetworkType = nem2Sdk.NetworkType;
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
@@ -49,7 +47,7 @@ const bobTransferTransaction = TransferTransaction.create(Deadline.create(), bob
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [aliceTransferTransaction.toAggregate(account.publicAccount),
-            bobTransferTransaction.toAggregate(account.publicAccount)],
+        bobTransferTransaction.toAggregate(account.publicAccount)],
     NetworkType.MIJIN_TEST,
     []
 );
@@ -59,6 +57,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

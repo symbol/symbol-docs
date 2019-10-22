@@ -23,7 +23,6 @@ const rawAddress = process.env.ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getAccountMetadata(address)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

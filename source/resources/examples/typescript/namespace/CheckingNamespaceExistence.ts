@@ -17,11 +17,11 @@
  */
 
 import {NamespaceHttp, NamespaceId} from "nem2-sdk";
-/* start block 01 */
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 
+/* start block 01 */
 const namespace = new NamespaceId('foo');
 
+const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getNamespace(namespace)
     .subscribe(namespace => console.log(namespace), err => console.error(err));

@@ -20,18 +20,17 @@ import {AccountHttp, Address, MosaicId, TransactionType, TransferTransaction} fr
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 /* start block 01 */
-const accountHttp = new AccountHttp('http://localhost:3000');
-
 const rawAddress = process.env.ADDRESS as string;
 const originAddress = Address.createFromRawAddress(rawAddress);
 
 const recipientRawAddress = process.env.ADDRESS as string;
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
+const mosaicIdHex = process.env.MOSAIC_ID_HEX as string;
 const divisibility = 6;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const mosaicId = new MosaicId(mosaicIdHex);
 
+const accountHttp = new AccountHttp('http://localhost:3000');
 accountHttp
     .outgoingTransactions(originAddress)
     .pipe(

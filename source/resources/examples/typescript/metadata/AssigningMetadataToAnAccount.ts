@@ -18,54 +18,52 @@
 
 import {
     Account,
+    AccountMetadataTransaction,
     Address,
     AggregateTransaction,
-    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
+    KeyGenerator,
     Listener,
-    MultisigAccountModificationTransaction,
-    MultisigCosignatoryModification,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
     SignedTransaction,
     TransactionHttp,
     UInt64
-} from "nem2-sdk";
-import {filter, mergeMap} from 'rxjs/operators';
+} from 'nem2-sdk';
+import {filter, mergeMap} from "rxjs/operators";
 import {merge} from "rxjs";
 
 /* start block 01 */
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-
-const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
-const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY as string;
-const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
-
-const multisigCosignatoryModification = new MultisigCosignatoryModification(CosignatoryModificationAction.Add, newCosignatoryAccount);
+const key = KeyGenerator.generateUInt64Key('CERT');
 /* end block 01 */
 
 /* start block 02 */
-const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
+const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+
+const value = '123456';
+const accountMetadataTransaction = AccountMetadataTransaction.create(
     Deadline.create(),
-    0,
-    0,
-    [multisigCosignatoryModification],
-    NetworkType.MIJIN_TEST);
+    alicePublicAccount.publicKey,
+    key,
+    value.length,
+    value,
+    NetworkType.MIJIN_TEST,
+);
 /* end block 02 */
 
 /* start block 03 */
+const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
+const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
+
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
-    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
+    [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
     NetworkType.MIJIN_TEST);
-
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
@@ -76,9 +74,10 @@ const hashLockTransaction = HashLockTransaction.create(
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
+const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+/* end block 04 */
 
-const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
-
+/* start block 05 */
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -105,8 +104,8 @@ const announceAggregateTransaction = (listener: Listener,
 
 listener.open().then(() => {
     merge(announceHashLockTransaction(signedHashLockTransaction),
-        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, cosignatoryAccount.address))
+        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, bobAccount.address))
         .subscribe(x => console.log('Transaction confirmed:', x),
             err=> console.log(err));
 });
-/* end block 04 */
+/* end block 05 */
