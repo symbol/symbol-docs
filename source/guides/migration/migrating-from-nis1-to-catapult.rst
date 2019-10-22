@@ -60,7 +60,7 @@ The first notable change about transactions is that the status response is recei
 * Protocol: |catapult-schemas|
 * Guide: :doc:`Monitoring a transaction status <../monitor/monitoring-a-transaction-status>`
 
-Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
+Additionally, there is only one version of TransferTransaction in Catapult. Mosaics will always be pushed in mosaic array. For NIS1 transfer transactions has 2 versions, which for version 1, XEM is pushed without using the mosaic array.
 
 ****************
 Transaction fees
