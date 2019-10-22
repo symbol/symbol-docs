@@ -87,9 +87,9 @@ Lastly, **levies are not available on Catapult**, those must be reproduced with 
 * Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
 * Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
 
-Namespaces can still refer to mosaics byways of :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
+Namespaces can still refer to mosaics though :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
 
-Also, root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
+Also, root namespaces have a ``duration`` field that is **expressed in block count** which means yearly renewal is not mandatory anymore.
 
 * Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-to-a-mosaic>`
 * Guide: :doc:`Linking a namespace to an address <../namespace/link-a-namespace-to-an-address>`
@@ -99,7 +99,7 @@ In order to facilitate the transfer of mosaics, a mosaic owner should register a
 * Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
 * Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
 
-When a transaction includes an alias, a so-called **resolution** reflects the resolved value of that alias in the block.
+When a transaction includes an alias, a **resolution** reflects the resolved value of that alias in the block.
 To get the real identifier behind an aliased address or mosaic, the client application needs to fetch the related :doc:`resolution receipt <../../concepts/receipt>` linked to the block where the transaction gets included.
 
 * Guide: :doc:`Getting the asset identifier behind a namespace with receipts <../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts>`
