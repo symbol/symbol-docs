@@ -9,7 +9,7 @@ Migrating from NIS1 to Catapult
 
 With Catapult, most of the previously available NIS1 features have evolved. This document will help you **upgrade your application** previous NIS1 features, to the newly available Catapult technology.
 
-.. note:: This guide is a live document. The information could change as Catapult development advances.
+.. note:: This guide is a living document. The information could change as Catapult development advances.
 
 ************
 Test network
@@ -37,7 +37,7 @@ There are several **Software Development Kits** that have been—and some that a
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.
 
 As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most used SDK and leads in |ts-js-sdk-docs|.
-The architecture of the TS SDK is inspired in |nem-library| from NIS1.
+The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 
 *******************
 Accounts management
