@@ -23,15 +23,19 @@
                             </div>
                         </a>
                     </li>
-                    <li><a href="{{ pathto('getting-started/setup-workstation')}}?code=javascript">
-                        <div class="card font-icon">
-                            <i class="devicon-javascript-plain colored"></i>
-                        </div>
-                    </a></li>
                     <li>
-                        <div class="card font-icon" data-toggle="tooltip" data-placement="top" title="Coming soon!">
-                            <i class="devicon-java-plain"></i>
-                        </div>
+                        <a href="{{ pathto('getting-started/setup-workstation')}}?code=javascript">
+                            <div class="card font-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('getting-started/setup-workstation')}}?code=java">
+                            <div class="card font-icon">
+                                <i class="devicon-java-plain colored"></i>
+                            </div>
+                        </a>
                     </li>
                     <li>
                         <div class="card font-icon" data-toggle="tooltip" data-placement="top" title="Coming soon!">
@@ -200,7 +204,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ pathto('guides/aggregate/atomic-cross-chain-swap-between-NEM-public-and-private-chain')}}">
+                                <a href="{{ pathto('guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain')}}">
                                     {% trans %}Atomic cross-chain swap{% endtrans %}
                                 </a>
                             </li>
@@ -220,11 +224,11 @@
                         <ul>
                             <li>
                                 <a href="{{ pathto('getting-started/setup-workstation')}}">
-                                    {% trans %}Running Catapult locally{% endtrans %}
+                                    {% trans %}Creating a private testnet{% endtrans %}
                                 </a>
                             </li>
                             <li>
-                                <span>{% trans %}Deploying a test net node <span
+                                <span>{% trans %}Running a test net node <span
                                         class="label label-default">Coming soon</span>{% endtrans %}</span>
                             </li>
                             <li>
@@ -252,11 +256,12 @@
             </div>
             <div class="top-gap">
                 <ul>
-                    <li><a href="{{ pathto('getting-started/what-is-nem')}}">{% trans %}What is NEM?{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('getting-started/what-is-nem')}}">{% trans %}What is NEM?{% endtrans %}</a>
+                    </li>
                     <li><a href="{{ pathto('concepts/account')}}">{% trans %}Built-in Features{% endtrans %}</a></li>
                     <li><a href="{{ pathto('concepts/cryptography')}}">{% trans %}Protocol{% endtrans %}</a></li>
                     <li><a href="{{ pathto('guides/category')}}">{% trans %}Guides{% endtrans %}</a></li>
-                    <li><a href="{{ pathto('api')}}">{% trans %}REST API{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('api')}}">{% trans %}REST Gateway{% endtrans %}</a></li>
                     <li><a href="{{ pathto('server')}}">{% trans %}Server{% endtrans %}</a></li>
                     <li><a href="{{ pathto('sdk')}}">{% trans %}SDKs{% endtrans %}</a></li>
                     <li><a href="{{ pathto('cli')}}">{% trans %}CLI{% endtrans %}</a></li>

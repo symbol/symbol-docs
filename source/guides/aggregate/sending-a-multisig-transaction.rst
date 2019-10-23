@@ -136,22 +136,12 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateBonded.js
-        :language: javascript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */
-
 3. When an AggregateTransaction is bonded, Bob needs to **lock at least 10 cat.currency** to prevent spamming the network. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateBonded.ts
         :language: typescript
-        :start-after:  /* start block 02 */
-        :end-before: /* end block 02 */
-
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateBonded.js
-        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
