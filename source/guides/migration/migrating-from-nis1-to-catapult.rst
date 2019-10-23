@@ -60,7 +60,7 @@ The first notable change about transactions is that the status response is recei
 * Protocol: |catapult-schemas|
 * Guide: :doc:`Monitoring a transaction status <../monitor/monitoring-a-transaction-status>`
 
-Additionally, there is only one version of TransferTransaction in Catapult. Mosaics will always be pushed in mosaic array. For NIS1 transfer transactions has 2 versions, which for version 1, XEM is pushed without using the mosaic array.
+Additionally, there is only one version of :doc:`TransferTransaction <../../concepts/transfer-transaction>` in Catapult. The native currency is now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the transaction.
 
 ****************
 Transaction fees
@@ -68,7 +68,7 @@ Transaction fees
 
 The fee that needs to be paid for a transaction now depends on the transaction size and fee multiplier, where node owners can specify a positive (or zero) value. The **effective fee** to be paid for a transaction can be calculated by reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
 
-``maxFee`` represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
+The ``maxFee`` field represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
 
 * Protocol: :ref:`Transaction fees <fees>`
 
@@ -87,9 +87,9 @@ Lastly, **levies are not available on Catapult**, those must be reproduced with 
 * Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
 * Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
 
-Namespaces can still refer to mosaics though :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
+Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
 
-Also, root namespaces have a ``duration`` field that is **expressed in block count** which means yearly renewal is not mandatory anymore.
+Also, root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
 
 * Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-to-a-mosaic>`
 * Guide: :doc:`Linking a namespace to an address <../namespace/link-a-namespace-to-an-address>`
@@ -110,7 +110,7 @@ Multisignature management
 
 With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
-1.  An account must opt-in as cosignatory to a :doc:`multisignature account <../../concepts/multisig-account>`.
+1. Creating a :doc:`multisignature account <../../concepts/multisig-account>`.
 
 Different to NIS1, the account modification entries now hold fields for ``minimum approval`` and ``minimum removal``:
 
