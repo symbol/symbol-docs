@@ -38,9 +38,11 @@ An eligible account can harvest new blocks by running a node. To harvest locally
 
 Besides, each node can set a **beneficiary public key** to share a percentage of the harvesting rewards (:ref:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio configurable for each network. When the node does not define a beneficiary, all the rewards go to the block signer.
 
-.. mermaid:: ../resources/diagrams/beneficiary.mmd
-    :caption: Rewards division when the network's sharing ratio equals 10%
+.. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center
+    :width: 250px
+
+    Rewards division when the network's sharing ratio equals 10%
 
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
@@ -54,10 +56,11 @@ An eligible account may also delegate its importance score to a :ref:`remote nod
 
 Delegated harvesting enables an account to use a **proxy private key** that can be shared with a node securely. In other words, you can use the importance score of your account to create new blocks without running a node.
 
-.. mermaid:: ../resources/diagrams/delegated-harvesting-activation.mmd
-    :caption: Delegated harvesting activation diagram
-    :alt: Delegated harvesting activation diagram
+.. figure:: ../resources/images/diagrams/delegated-harvesting.png
     :align: center
+    :width: 600px
+
+    Activating delegated harvesting
 
 To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
 
@@ -86,6 +89,18 @@ Remote harvesters may not receive the entire reward if the following conditions 
     **Cost** ; The node maintenance (electricity, cost VPN).; AccountLinkTransaction + TransferTransaction announcement fees.
     **Security**; The node stores the private key.;  A proxy private key is shared with a node.
     **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - node's beneficiary share.
+
+******
+Guides
+******
+
+.. postlist::
+    :category: Harvesting
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:
 
 *******
 Schemas
