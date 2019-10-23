@@ -9,7 +9,7 @@ Migrating from NIS1 to Catapult
 
 With Catapult, most of the previously available NIS1 features have evolved. This document will help you **upgrade your application** previous NIS1 features, to the newly available Catapult technology.
 
-.. note:: This guide is a live document. The information could change as Catapult development advances.
+.. note:: This guide is a living document. The information could change as Catapult development advances.
 
 ************
 Test network
@@ -37,7 +37,7 @@ There are several **Software Development Kits** that have been—and some that a
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.
 
 As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most used SDK and leads in |ts-js-sdk-docs|.
-The architecture of the TS SDK is inspired in |nem-library| from NIS1.
+The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 
 *******************
 Accounts management
@@ -60,15 +60,15 @@ The first notable change about transactions is that the status response is recei
 * Protocol: |catapult-schemas|
 * Guide: :doc:`Monitoring a transaction status <../monitor/monitoring-a-transaction-status>`
 
-Additionally, there is only one TransferTransaction version remaining in which mosaics are always pushed in the mosaics array, when available. This is different from NIS1 transfer transactions which, in their first version, attached XEM without using the mosaics array.
+Additionally, there is only one version of :doc:`TransferTransaction <../../concepts/transfer-transaction>` in Catapult. The native currency is now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the transaction.
 
 ****************
 Transaction fees
 ****************
 
-The fee that needs to be paid for a transaction now depends on the transaction size and node owners can specify a positive (or zero) fee multiplier. The **effective fee** paid for a transaction can be calculated reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
+The fee that needs to be paid for a transaction now depends on the transaction size and fee multiplier, where node owners can specify a positive (or zero) value. The **effective fee** to be paid for a transaction can be calculated by reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
 
-Transactions fees are specified with the ``maxFee``  field. This field represents the maximum fee allowed to be paid for this transaction to confirm.
+The ``maxFee`` field represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
 
 * Protocol: :ref:`Transaction fees <fees>`
 
@@ -87,7 +87,7 @@ Lastly, **levies are not available on Catapult**, those must be reproduced with 
 * Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
 * Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
 
-Namespaces can still refer to mosaics byways of :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
+Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-alias-transaction>`. A namespace owner can attach either of an account or a mosaic id to one of its' namespaces. The namespace information endpoint will return the linked object in the alias field.
 
 Also, root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
 
@@ -99,7 +99,7 @@ In order to facilitate the transfer of mosaics, a mosaic owner should register a
 * Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
 * Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
 
-When a transaction includes an alias, a so-called **resolution** reflects the resolved value of that alias in the block.
+When a transaction includes an alias, a **resolution** reflects the resolved value of that alias in the block.
 To get the real identifier behind an aliased address or mosaic, the client application needs to fetch the related :doc:`resolution receipt <../../concepts/receipt>` linked to the block where the transaction gets included.
 
 * Guide: :doc:`Getting the asset identifier behind a namespace with receipts <../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts>`
@@ -110,7 +110,7 @@ Multisignature management
 
 With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
-1.  An account must be converted to a :doc:`multisignature account <../../concepts/multisig-account>`.
+1. Creating a :doc:`multisignature account <../../concepts/multisig-account>`.
 
 Different to NIS1, the account modification entries now hold fields for ``minimum approval`` and ``minimum removal``:
 
