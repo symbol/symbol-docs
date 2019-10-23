@@ -1,8 +1,8 @@
-########
-REST API
-########
+############
+REST Gateway
+############
 
-The **REST server** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+The **REST gateway** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
 
 ************
 Installation

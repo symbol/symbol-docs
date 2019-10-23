@@ -52,6 +52,8 @@ function clickPreferredCodeTab() {
             $("[data-tab=tab-0-0]").click();
         } else if (code === 'javascript') {
             $("[data-tab=tab-0-1]").click();
+        } else if (code === 'java') {
+            $("[data-tab=tab-0-2]").click();
         }
         $(".highlight-" + code).click();
     }
