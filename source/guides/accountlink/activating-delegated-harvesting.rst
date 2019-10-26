@@ -17,7 +17,7 @@ Background
 
 :ref:`Delegated harvesting  <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
 
-Follow this guide to **delegate securely your account importance** without compromising the account's funds.
+Follow this guide to **delegate your account importance** without compromising the account's funds.
 
 *************
 Prerequisites
@@ -31,7 +31,7 @@ Prerequisites
 Getting into some code
 **********************
 
-Before you can activate delegated harvesting, make sure your main account has at least ``500 cat.harvest`` units. Then, you will have to **delegate your main account importance** to a **proxy public key** (remote account) before being able to **request the node to be added as a delegated harvester**.
+Before you can activate delegated harvesting, make sure your main account has at least ``500 cat.harvest`` units. Then, you will have to **delegate your main account importance** to a **proxy public key** (remote account) before **requesting a node to add you as a delegated harvester**.
 
 .. mermaid:: ../../resources/diagrams/delegated-harvesting-activation.mmd
     :caption: Delegated harvesting activation diagram
@@ -47,7 +47,7 @@ Before you can activate delegated harvesting, make sure your main account has at
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an :ref:`AccountLinkTransaction <account-link-transaction>` to delegate the main account importance to the remote account using its public key.
+2. Create an :ref:`AccountLinkTransaction <account-link-transaction>` to delegate the main account's importance to the remote account using its public key.
 
 .. example-code::
 
@@ -56,9 +56,9 @@ Before you can activate delegated harvesting, make sure your main account has at
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-The next step is to **share the remote account private key with the node** you wish delegating harvesting.
+The next step is to **share the remote account private key with the node** you wish to connect for delegated harvesting.
 
-3. Create a :ref:`PersistentDelegationRequestTransaction <transfer-transaction>`. Add the **node's public key** as the transaction **recipient** and the **remote account private key** creating an **special encrypted message** as follows:
+3. Create a :ref:`PersistentDelegationRequestTransaction <transfer-transaction>`. Add the **node's public key** as the transaction **recipient** and share the **remote account private key** by creating a **special encrypted message** as follows:
 
 .. example-code::
 
@@ -67,9 +67,9 @@ The next step is to **share the remote account private key with the node** you w
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-.. note:: Get the node's public key quering ``http://<node-url>:3000/node/info``.
+.. note:: Get the node's public key by querying ``http://<node-url>:3000/node/info``.
 
-The **proxy private key** is securely shared **encrypted**, being only readable by the node owner. Moreover, the remote account does not own any mosaics, so the node owner can't disrupt the security of the main account.
+The **special encrypted message** ensures that the **proxy private key** is securely shared, only readable by the node owner. Moreover, the remote account does not possess any mosaics. The valuable assets remain safely in the main account where the node owner cannot disrupt security.
 
 4. Announce both transactions together with an :ref:`AggregateCompleteTransaction <aggregate-complete>`, signing it with your **main account**.
 
@@ -83,7 +83,7 @@ The **proxy private key** is securely shared **encrypted**, being only readable 
 The node receives an encrypted message using :ref:`WebSockets <websockets>`. Once the node decrypts the private key of the potential delegated harvester, the node owner may **add the remote account as a delegated harvester** if the following requirements are met:
 
 - The node permits delegated harvesting.
-- The node has enough harvesting slots available.
-- The remote account shared is eligible.
+- The node has harvesting slots available.
+- The remote account has not sent or received transactions.
 
 .. note:: Announcing a valid **PersistentDelegationRequestTransaction** does not guarantee being added as a delegated harvester. Currently, the only way to verify that an account has successfully activated delegated harvesting is to become the signer of a new block.
