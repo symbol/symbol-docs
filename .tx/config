@@ -314,6 +314,12 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--harvesting--activating-delegated-harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting.po
+source_file = build/gettext/guides/harvesting/activating-delegated-harvesting.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--blockchain--listening-new-blocks]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
 source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
@@ -359,8 +365,6 @@ type = PO
 [nem2docs.guides--metadata--updating-metadata-entries]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
 source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
-source_lang = en
-type = PO
 
 [nem2docs.guides--migration--migrating-from-nis1-to-catapult]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
