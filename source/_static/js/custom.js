@@ -71,10 +71,30 @@ function addTargetBlankAttributeToExternalLinks() {
     $('a.external').attr("target", "_blank");
 }
 
+function highlightOnScrollSidebar(){
+    const sections = $('.content .section');
+    $(window).scroll(function(){
+        const currentScroll = $(this).scrollTop();
+        let currentSection;
+        sections.each(function(){
+            let divPosition = $(this).offset().top;
+            if(divPosition - 260 < currentScroll){
+                currentSection = $(this);
+            }
+            if (currentSection){
+                const id = currentSection.attr('id');
+                $('.bs-sidenav.secondary a').removeClass('current');
+                $('.bs-sidenav.secondary a[href="#'+id+'"]').addClass('current');
+            }
+        });
+    });
+}
+
 $(document).ready(function () {
     addBlockCaptionInsideCodeExample();
     initLanguageSelector();
     setPreferredCodeTab();
     clickPreferredCodeTab();
     addTargetBlankAttributeToExternalLinks();
+    highlightOnScrollSidebar();
 });
