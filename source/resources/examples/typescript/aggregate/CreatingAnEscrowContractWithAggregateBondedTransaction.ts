@@ -109,7 +109,7 @@ const announceAggregateTransaction = (listener: Listener,
 listener.open().then(() => {
     merge(announceHashLockTransaction(signedHashLockTransaction),
         announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, aliceAccount.address))
-        .subscribe(x => console.log('Transaction confirmed:', x),
+        .subscribe(x => console.log('Transaction confirmed:', x.message),
             err=> console.log(err));
 });
 /* end block 03 */

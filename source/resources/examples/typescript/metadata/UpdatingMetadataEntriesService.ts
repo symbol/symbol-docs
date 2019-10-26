@@ -123,7 +123,7 @@ listener.open().then(() => {
             announceHashLockTransaction(signedAggregateHashLock.hashLock),
             announceAggregateTransaction(signedAggregateHashLock.hashLock,
                 signedAggregateHashLock.aggregate))))
-        .subscribe(x => console.log('Transaction confirmed:', x),
+        .subscribe(x => console.log('Transaction confirmed:', x.message),
                 err => console.log(err));
 });
 /* end block 04 */
