@@ -75,7 +75,7 @@ listener.open().then(() => {
         .subscribe(error => {
                 console.log("❌:" + error.status);
                 newBlockSubscription.unsubscribe();
-                listener.close();
+                            listener.terminate();
             },
             error => console.error(error));
 /* end block 05 */
@@ -106,7 +106,7 @@ listener.open().then(() => {
         .subscribe(ignored => {
             console.log("✅: Transaction confirmed");
             newBlockSubscription.unsubscribe();
-            listener.close();
+                        listener.terminate();
         }, error => console.error(error));
 /* end block 07 */
 

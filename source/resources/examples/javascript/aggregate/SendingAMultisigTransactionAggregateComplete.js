@@ -18,24 +18,21 @@
 
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
+    Address = nem2Sdk.Address,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
     Deadline = nem2Sdk.Deadline,
     NetworkType = nem2Sdk.NetworkType,
-    TransferTransaction = nem2Sdk.TransferTransaction,
-    TransactionHttp = nem2Sdk.TransactionHttp,
     PlainMessage = nem2Sdk.PlainMessage,
-    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
-    AggregateTransaction = nem2Sdk.AggregateTransaction,
-    Address = nem2Sdk.Address,
-    PublicAccount = nem2Sdk.PublicAccount;
-
+    PublicAccount = nem2Sdk.PublicAccount,
+    TransactionHttp = nem2Sdk.TransactionHttp,
+    TransferTransaction = nem2Sdk.TransferTransaction,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic;
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp( 'http://localhost:3000');
-
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
+const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
 const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
@@ -59,9 +56,10 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 /* end block 03 */
 
 /* start block 04 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp( 'http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

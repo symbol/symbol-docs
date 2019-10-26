@@ -54,7 +54,6 @@ const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
-
     listener
         .aggregateBondedAdded(account.address)
         .pipe(
@@ -62,7 +61,7 @@ listener.open().then(() => {
             filter((_) => !_.signedByAccount(account.publicAccount)),
             filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount)),
             map(transaction => cosignAggregateBondedTransaction(transaction, account)),
-            mergeMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+            mergeMap(signedCosignatureTransaction => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction))
         )
         .subscribe(announcedTransaction => console.log(announcedTransaction),
             err => console.error(err));

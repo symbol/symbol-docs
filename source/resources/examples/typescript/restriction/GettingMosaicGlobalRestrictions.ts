@@ -23,13 +23,11 @@ const mosaicIdHex = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHex);
 
 const restrictionHttp = new RestrictionHttp('http://localhost:3000');
-
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
-    .subscribe((mosaicRestrictionInfo) => {
-        const mosaicGlobalRestrictions = mosaicRestrictionInfo.restrictions;
-        if (mosaicGlobalRestrictions.size > 0) {
+    .subscribe((mosaicGlobalRestrictions) => {
+        if (mosaicGlobalRestrictions.restrictions.size > 0) {
             console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
-            mosaicGlobalRestrictions.forEach((value: MosaicGlobalRestrictionItem, key: string) => {
+            mosaicGlobalRestrictions.restrictions.forEach((value: MosaicGlobalRestrictionItem, key: string) => {
                 console.log('\n' + key + '\t', value.referenceMosaicId.toHex() + '\t', MosaicRestrictionType[value.restrictionType] + '\t', value.restrictionValue)
             });
         } else {

@@ -56,8 +56,7 @@ const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST)
 const networkGenerationHash = process.env.GENERATION_HASH as string;
 
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
-
-console.log("TransactionHash: ", signedTransaction.hash);
+console.log(signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */
@@ -85,16 +84,16 @@ listener.open().then(() => {
             // Iterate over each resolution statement. Find the resolution for the aliased MosaicId.
             map((receipts) => receipts.mosaicResolutionStatements),
             mergeMap((resolutionStatements) => resolutionStatements),
-            filter((resolutionStatement) => resolutionStatement.unresolved instanceof MosaicId &&
-                resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex())
+            filter((resolutionStatement) => resolutionStatement.unresolved instanceof NamespaceId
+                && resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex())
         )
         .subscribe((resolutionStatement:ResolutionStatement) => {
             resolutionStatement.resolutionEntries.map((entry:ResolutionEntry) => {
-                const entryResolved = <MosaicAlias> entry.resolved;
-                console.log("Resolved MosaicId: ", entryResolved.mosaicId.toHex());
+                console.log("Resolved MosaicId: ", entry.resolved);
                 console.log("PrimaryId: ", entry.source.primaryId);
                 console.log("SecondaryId: ", entry.source.secondaryId);
             });
+            listener.terminate();
         }, err => console.log(err));
 });
 /* end block 04 */

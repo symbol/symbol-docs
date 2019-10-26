@@ -21,17 +21,17 @@ import {
     Address,
     AggregateTransaction,
     Deadline,
+    KeyGenerator,
     MosaicAddressRestrictionTransaction,
     MosaicId,
-    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHexa = process.env.MOSAIC_ID as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const mosaicIdHex = process.env.MOSAIC_ID as string;
+const mosaicId = new MosaicId(mosaicIdHex);
 
 const aliceRawAddress = 'SDDOLW-ESKH33-YYW5XF-42F3ZJ-ZL6JIA-DP4TFT-H6RH';
 const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
@@ -39,12 +39,12 @@ const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
 const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
 
-const key = 'KYC'.toLowerCase();
+const key = KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
+        key, // restrictionKey
         aliceAddress, // address
         UInt64.fromUint(1), // newRestrictionValue
         NetworkType.MIJIN_TEST);
@@ -53,7 +53,7 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
+        key, // restictionKey
         bobAddress, // address
         UInt64.fromUint(0), // newRestrictionValue
         NetworkType.MIJIN_TEST);

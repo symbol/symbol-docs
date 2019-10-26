@@ -18,20 +18,23 @@
 
 import {
     Account,
+    Address,
     AggregateTransaction,
+    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
     Listener,
     MultisigAccountModificationTransaction,
     MultisigCosignatoryModification,
-    CosignatoryModificationAction,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
+    SignedTransaction,
     TransactionHttp,
     UInt64
 } from "nem2-sdk";
 import {filter, mergeMap} from "rxjs/operators";
+import {merge} from "rxjs";
 
 /* start block 01 */
 const multisig2PrivateKey = process.env.MULTISIG_2_PRIVATE_KEY as string;
@@ -135,27 +138,37 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 
 const nodeUrl = 'http://localhost:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
-listener.open().then(() => {
+const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
+    return transactionHttp.announce(signedHashLockTransaction);
+};
 
-    transactionHttp
-        .announce(hashLockTransactionSigned)
-        .subscribe(x => console.log(x), err => console.error(err));
-
-    listener
-        .confirmed(multisigAccount1.address)
+const announceAggregateTransaction = (listener: Listener,
+                                      signedHashLockTransaction: SignedTransaction,
+                                      signedAggregateTransaction: SignedTransaction,
+                                      senderAddress: Address) => {
+    return listener
+        .confirmed(senderAddress)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
-            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
-        )
-        .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
-            err => console.error(err));
+                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
+            mergeMap(ignored => {
+                listener.terminate();
+                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
+            })
+        );
+};
+
+listener.open().then(() => {
+    merge(announceHashLockTransaction(signedHashLockTransaction),
+        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, multisigAccount1.address))
+        .subscribe(x => console.log('Transaction confirmed:', x),
+            err=> console.log(err));
 });
 /* end block 04 */
 

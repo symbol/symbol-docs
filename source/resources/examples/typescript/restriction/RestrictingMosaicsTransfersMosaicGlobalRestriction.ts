@@ -19,19 +19,19 @@
 import {
     Account,
     Deadline,
+    KeyGenerator,
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicRestrictionType,
-    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHexa = process.env.MOSAIC_ID as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
-const key = 'KYC'.toLowerCase();
+const mosaicIdHex = process.env.MOSAIC_ID as string;
+const mosaicId = new MosaicId(mosaicIdHex);
+const key = KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 /* end block 01 */
 
 /* start block 02 */
@@ -39,7 +39,7 @@ const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restrictionKey
+        key, // restrictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue

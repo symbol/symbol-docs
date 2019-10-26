@@ -24,7 +24,6 @@ const address = Address.createFromRawAddress(rawAddress);
 const keyHex = process.env.KEY as string;
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getAccountMetadataByKey(address, keyHex)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

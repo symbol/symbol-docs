@@ -68,7 +68,6 @@ On the other hand, if Derek, who has no permissions, attempts to access the comp
 ******
 Guides
 ******
-
 .. postlist::
     :category: Metadata
     :date: %A, %B %d, %Y
