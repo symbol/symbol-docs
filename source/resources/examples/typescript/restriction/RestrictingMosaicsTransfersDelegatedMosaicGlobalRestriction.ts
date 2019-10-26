@@ -20,13 +20,13 @@ import {
     Account,
     AggregateTransaction,
     Deadline,
+    KeyGenerator,
     MosaicDefinitionTransaction,
     MosaicFlags,
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicNonce,
     MosaicRestrictionType,
-    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
     UInt64
@@ -47,12 +47,12 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     NetworkType.MIJIN_TEST);
 console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 
-const key = 'IsVerified'.toLowerCase();
+const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         mosaicDefinitionTransaction.mosaicId, // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
+        key, // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue

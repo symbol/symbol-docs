@@ -21,10 +21,9 @@ const nem2Sdk = require("nem2-sdk");
 const BlockHttp = nem2Sdk.BlockHttp;
 
 /* start block 01 */
-const blockHttp = new BlockHttp('http://localhost:3000');
-
 const height = 1;
 
+const blockHttp = new BlockHttp('http://localhost:3000');
 blockHttp
     .getBlockByHeight(height)
     .subscribe(block => console.log(block), err => console.error(err));

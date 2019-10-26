@@ -18,20 +18,19 @@
 
 const nem2Sdk = require("nem2-sdk");
 const Account = nem2Sdk.Account,
+    AggregateTransaction = nem2Sdk.AggregateTransaction,
     Deadline = nem2Sdk.Deadline,
-    NetworkType = nem2Sdk.NetworkType,
     MosaicDefinitionTransaction = nem2Sdk.MosaicDefinitionTransaction,
-    MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
     MosaicFlags = nem2Sdk.MosaicFlags,
-    MosaicSupplyChangeAction = nem2Sdk.MosaicSupplyChangeAction,
     MosaicId = nem2Sdk.MosaicId,
     MosaicNonce = nem2Sdk.MosaicNonce,
+    MosaicSupplyChangeTransaction = nem2Sdk.MosaicSupplyChangeTransaction,
+    MosaicSupplyChangeAction = nem2Sdk.MosaicSupplyChangeAction,
+    NetworkType = nem2Sdk.NetworkType,
     TransactionHttp = nem2Sdk.TransactionHttp,
-    AggregateTransaction = nem2Sdk.AggregateTransaction,
     UInt64 = nem2Sdk.UInt64;
 
 /* start block 01 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 const privateKey = process.env.PRIVATE_KEY;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
@@ -68,6 +67,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 
+const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x=> console.log(x),err => console.error(err));

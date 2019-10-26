@@ -29,8 +29,8 @@ const Account = nem2Sdk.Account,
 /* start block 01 */
 const namespaceName = process.env.NAMESPACE_NAME;
 const namespaceId = new NamespaceId(namespaceName);
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const mosaicIdHex = process.env.MOSAIC_ID_HEX;
+const mosaicId = new MosaicId(mosaicIdHex);
 /* end block 01 */
 
 /* start block 02 */

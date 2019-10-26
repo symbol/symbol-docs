@@ -26,13 +26,13 @@ const AccountHttp = nem2Sdk.AccountHttp,
     mergeMap = operators.mergeMap;
 
 /* start block 01 */
+const rawAddress = process.env.ADDRESS;
+const address = Address.createFromRawAddress(rawAddress);
+
 const url = 'http://localhost:3000';
 const accountHttp = new AccountHttp(url);
 const mosaicHttp = new MosaicHttp(url);
 const mosaicService = new MosaicService(accountHttp, mosaicHttp);
-
-const rawAddress = process.env.ADDRESS;
-const address = Address.createFromRawAddress(rawAddress);
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)

@@ -30,8 +30,8 @@ import {
 /* start block 01 */
 const namespaceName = process.env.NAMESPACE_NAME as string;
 const namespaceId = new NamespaceId(namespaceName);
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+const mosaicIdHex = process.env.MOSAIC_ID_HEX as string;
+const mosaicId = new MosaicId(mosaicIdHex);
 /* end block 01 */
 
 /* start block 02 */

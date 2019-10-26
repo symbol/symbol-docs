@@ -210,6 +210,8 @@ Continuing the previous example, the transaction gets processed and the amount s
 
 The transaction has **zero confirmations** at this point. When another block is added to the blockchain, the transaction has one confirmation. The next block added to the chain will give it two confirmations and so on.
 
+.. _rollbacks:
+
 *********
 Rollbacks
 *********

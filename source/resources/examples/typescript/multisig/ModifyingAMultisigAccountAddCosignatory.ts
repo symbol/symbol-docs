@@ -18,6 +18,7 @@
 
 import {
     Account,
+    Address,
     AggregateTransaction,
     CosignatoryModificationAction,
     Deadline,
@@ -28,16 +29,14 @@ import {
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
+    SignedTransaction,
     TransactionHttp,
     UInt64
 } from "nem2-sdk";
 import {filter, mergeMap} from 'rxjs/operators';
+import {merge} from "rxjs";
 
 /* start block 01 */
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
-
 const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
 const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
@@ -78,22 +77,36 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
-listener.open().then(() => {
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
-    transactionHttp
-        .announce(hashLockTransactionSigned)
-        .subscribe(x => console.log(x), err => console.error(err));
+const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
+    return transactionHttp.announce(signedHashLockTransaction);
+};
 
-    listener
-        .confirmed(cosignatoryAccount.address)
+const announceAggregateTransaction = (listener: Listener,
+                                      signedHashLockTransaction: SignedTransaction,
+                                      signedAggregateTransaction: SignedTransaction,
+                                      senderAddress: Address) => {
+    return listener
+        .confirmed(senderAddress)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
-            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
-        )
-        .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
-            err => console.error(err));
+                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
+            mergeMap(ignored => {
+                listener.terminate();
+                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
+            })
+        );
+};
+
+listener.open().then(() => {
+    merge(announceHashLockTransaction(signedHashLockTransaction),
+        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, cosignatoryAccount.address))
+        .subscribe(x => console.log('Transaction confirmed:', x),
+            err=> console.log(err));
 });
 /* end block 04 */

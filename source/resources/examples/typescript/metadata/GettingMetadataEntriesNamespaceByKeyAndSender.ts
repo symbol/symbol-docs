@@ -25,7 +25,6 @@ const keyHex = process.env.KEY as string;
 const senderPublicKey = process.env.SENDER_PUBLIC_KEY as string;
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getNamespaceMetadataByKeyAndSender(namespaceId, keyHex, senderPublicKey)
     .subscribe((metadata) => {
             const metadataEntry = metadata.metadataEntry;

@@ -23,7 +23,6 @@ const namespaceName = process.env.NAMESPACE_NAME as string;
 const namespaceId = new NamespaceId(namespaceName);
 
 const metadataHttp = new MetadataHttp('http://localhost:3000');
-
 metadataHttp.getNamespaceMetadata(namespaceId)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

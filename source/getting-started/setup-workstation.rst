@@ -9,29 +9,49 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
-.. note:: ⚠️ NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it **should not power any production Catapult instances**.
-
 .. _setup-catapult-service-bootstrap:
 
 **********************************
 Running Catapult Service Bootstrap
 **********************************
 
-You are going to run a private chain for learning purposes using |catapult-service-bootstrap|. This service runs Catapult server instances and Catapult REST nodes locally.
+To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
 
-1. Make sure you have `docker`_ and `docker-compose`_ installed before running the following commands:
+.. note:: NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it should not power any production Catapult instances.
+
+Environment requirements
+========================
+
+* **OS**: Linux or Mac
+* `docker`_ 19.03 installed
+* `docker-compose`_ 1.22 installed
+
+Installation
+============
+
+1. Use this link to **download the latest release** of the package, or clone the repository directly using Git.
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.7.0.1-beta
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
+
+2. Open the ``catapult-service-bootstrap`` folder.
+
+.. code-block:: bash
+
     cd catapult-service-bootstrap
-    ./cmds/start-all -d
 
-2. Check if you can get the first block information:
+3. Run the network.
 
 .. code-block:: bash
 
-    curl localhost:3000/block/1
+    ./cmds/start-all
+
+.. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+
+Verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+
+To stop the process, press ``Ctrl+C``.
 
 .. _setup-getting-a-test-account:
 
@@ -39,65 +59,69 @@ You are going to run a private chain for learning purposes using |catapult-servi
 Getting a test account
 **********************
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the **private key** has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
-The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store it using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
-Finally, the account **address** is generated with the public key, following the NEM blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
-
-The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
-
-1. Install NEM2-CLI using ``npm``.
+1. Install :doc:`NEM2-CLI <../cli>`.
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.1
+    npm install --global nem2-cli
 
-2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
 .. code-block:: bash
 
     cd  build/generated-addresses/
+
+3. Display the content of the ``address.yaml`` file.
+
+.. code-block:: bash
+
     cat addresses.yaml
 
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
+3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-4. Load the first account as a profile in NEM2-CLI.
+4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
     nem2-cli profile create
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Introduce your private key: 41************************************************************FF
+    Introduce your private key: 123***456
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
-You should see the following lines in your terminal, containing the account credentials:
+.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
+
+You should see the account credentials in your terminal.
 
 .. code-block:: bash
 
     Profile stored correctly
-
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 654...321                                                        │
+    │ Public Key  │ 654***321                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123...456                                                        │
+    │ Private Key │ 123***456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
+
+As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
 .. _setup-development-environment:
 
-**************************************
-Setting up the development environment
-**************************************
+******************
+Creating a project
+******************
 
-It is time to choose a programming language. Pick the one you feel most comfortable with, or follow your project requirements.
+Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-Create a folder for your new project and run the instructions for the selected language.
+**Create a folder for your new project**. Then, run the instructions for the selected language. If none of the language fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
 
 .. tabs::
 
@@ -113,7 +137,7 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.13.3 rxjs
+            npm install nem2-sdk rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -142,8 +166,8 @@ Create a folder for your new project and run the instructions for the selected l
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.13.3 rxjs
-..
+            npm install nem2-sdk rxjs
+
     .. tab:: Java
 
         1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
@@ -160,16 +184,17 @@ Create a folder for your new project and run the instructions for the selected l
                 mavenCentral()
             }
 
-        3. Add nem2-sdk and reactive library as a dependency.
+        3. Add nem2-sdk as a dependency.
 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:sdk:0.9.1"
-                compile "io.reactivex.rxjava2:rxjava:2.1.7"
+                compile "compile 'io.nem:sdk-vertx-client:0.14.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
+
+..
     .. tab:: C#
 
         1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
@@ -186,7 +211,6 @@ Create a folder for your new project and run the instructions for the selected l
         Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
 
 Continue: :doc:`Writing your first application <first-application>`.
-
 
 .. _docker: https://docs.docker.com/install/
 
