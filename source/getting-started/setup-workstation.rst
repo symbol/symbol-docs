@@ -33,7 +33,7 @@ Installation
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.8.0.3
 
 2. Open the ``catapult-service-bootstrap`` folder.
 
@@ -67,7 +67,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
 .. code-block:: bash
 
-    npm install --global nem2-cli
+    npm install --global nem2-cli@0.13.4
 
 2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
@@ -137,7 +137,7 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install nem2-sdk@0.14.3 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -166,7 +166,7 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install nem2-sdk@0.14.3 rxjs
 
     .. tab:: Java
 
@@ -189,7 +189,7 @@ Now that you have your account filled with cat.currency units, it is the time to
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.14.0"
+                compile "compile 'io.nem:sdk-vertx-client:0.14.1"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
