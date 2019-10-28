@@ -50,8 +50,10 @@ const privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH as string
 /* start block 02 */
 const random = crypto.randomBytes(10);
 const proof = random.toString('hex');
+console.log('Proof:', proof);
 const hash = sha3_256.create();
 const secret = hash.update(random).hex().toUpperCase();
+console.log('Secret:', secret);
 /* end block 02 */
 
 /* start block 03 */

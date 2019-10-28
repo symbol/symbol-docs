@@ -108,7 +108,7 @@ Account
 
 **Generate new account**
 
-Generates a new :doc:`account <../concepts/account>`. This command generates a private key, public key and address.
+Generates a new :doc:`account <concepts/account>`. This command generates a private key, public key and address.
 
 Generated accounts can be stored as named profiles by adding a node url.
 
@@ -129,7 +129,7 @@ Command
 
 **Get account info**
 
-Returns the account information, such as the public key, importance and :doc:`mosaics <../concepts/mosaic>` balance.
+Returns the account information, such as the public key, importance and :doc:`mosaics <concepts/mosaic>` balance.
 
 Options
 
@@ -431,7 +431,7 @@ The NEM2 command line interface has a set of monitoring commands to track events
 
 **Block**
 
-Monitors new confirmed :doc:`blocks <../concepts/block>` harvested in the blockchain.
+Monitors new confirmed :doc:`blocks <concepts/block>` harvested in the blockchain.
 
 Options
 
@@ -447,7 +447,7 @@ Command
 
 **Confirmed transactions**
 
-Monitors new confirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
+Monitors new confirmed :doc:`transactions <concepts/transaction>` signed or received by an :doc:`account <concepts/account>`.
 
 Options
 
@@ -464,7 +464,7 @@ Command
 
 **Unconfirmed transactions**
 
-Monitors new unconfirmed :doc:`transactions <../concepts/transaction>` signed or received by an :doc:`account <../concepts/account>`.
+Monitors new unconfirmed :doc:`transactions <concepts/transaction>` signed or received by an :doc:`account <concepts/account>`.
 
 Options
 
@@ -481,7 +481,7 @@ Command
 
 **Aggregate bonded transactions**
 
-Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <../concepts/account>`.
+Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <concepts/account>`.
 
 Options
 
@@ -498,7 +498,7 @@ Command
 
 **Transaction status**
 
-Monitors :doc:`account <../concepts/account>` validation errors.
+Monitors :doc:`account <concepts/account>` validation errors.
 
 Options
 
@@ -518,7 +518,7 @@ Mosaic
 
 **Info**
 
-Gets information from a :doc:`mosaic <../concepts/mosaic>`.
+Gets information from a :doc:`mosaic <concepts/mosaic>`.
 
 Options
 
@@ -538,7 +538,7 @@ Namespace
 
 **Info**
 
-Gets information from a :doc:`namespace <../concepts/namespace>`.
+Gets information from a :doc:`namespace <concepts/namespace>`.
 
 Options
 
@@ -556,7 +556,7 @@ Command
 
 **Owned**
 
-Gets all the :doc:`namespaces <../concepts/namespace>` owned by an account.
+Gets all the :doc:`namespaces <concepts/namespace>` owned by an account.
 
 Options
 
@@ -595,7 +595,41 @@ Transaction
 
 Transactions are signed with the profiles configured with ``nem2-cli profile create``.
 
-**Delegate account importance**
+**Transaction info**
+
+Returns transaction information given a hash.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
+    -h, --hash <hash>   - Transaction hash.
+
+Command
+
+.. viewsource:: resources/examples/bash/monitor/GettingTransactionInfo.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Transaction Status**
+
+Gets the confirmation status of a transaction.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
+    -h, --hash <hash>   - Transaction hash.
+
+Command
+
+.. viewsource:: resources/examples/bash/monitor/GettingTransactionStatus.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AccountLinkTransaction**
 
 Delegates the account importance to a :ref:`proxy account <account-link-transaction>`.
 
@@ -614,7 +648,7 @@ Command
     :language: bash
     :start-after: #!/bin/sh
 
-**Cosign AggregateBondedTransaction**
+**CosignatureTransaction**
 
 Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
 
@@ -630,88 +664,9 @@ Command
     :language: bash
     :start-after: #!/bin/sh
 
-**Transaction info**
+**MosaicDefinitionTransaction**
 
-Returns transaction information given a hash.
-
-Options
-
-.. code-block:: bash
-
-    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
-    -h, --hash <hash>   - Transaction hash.
-
-Command
-
-.. viewsource:: resources/examples/bash/monitor/GettingTransactionInfo.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**Transfer mosaics and messages**
-
-Announces a :ref:`TransferTransaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <../concepts/mosaic>`.
-
-You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 @cat.currency is 1000000 (divisibility 6).
-
-Options
-
-.. code-block:: bash
-
-    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
-    -r, --recipient <recipient> - Recipient address or @alias.
-    -m, --message <message>     - Transaction message.
-    -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
-
-Command
-
-.. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**Register root namespace**
-
-Registers a root :doc:`namespace <../concepts/namespace>`.
-
-Options
-
-.. code-block:: bash
-
-   --profile <profile>             - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>         - Maximum fee you want to pay to announce this transaction.
-    -n, --name <name>              - Namespace name.
-    -r, --rootnamespace            - Root namespace.
-    -d, --duration <duration>      - Duration (use it with --rootnamespace).
-
-Command
-
-.. viewsource:: resources/examples/bash/namespace/RegisteringANamespace.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**Register subnamespace**
-
-Registers a :doc:`subnamespace <../concepts/namespace>`.
-
-Options
-
-.. code-block:: bash
-
-    --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>         - Maximum fee you want to pay to announce this transaction.
-    -n, --name <name>              - Namespace name.
-    -s, --subnamespace             - Sub namespace.
-    -p, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
-
-Command
-
-.. viewsource:: resources/examples/bash/namespace/RegisteringASubnamespace.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**Create a mosaic**
-
-Creates a new :doc:`mosaic <../concepts/mosaic>`.
+Creates a new :doc:`mosaic <concepts/mosaic>`.
 
 Options
 
@@ -733,9 +688,9 @@ Command
     :language: bash
     :start-after: #!/bin/sh
 
-**Modify a mosaic supply**
+**MosaicSupplyChangeTransaction**
 
-Changes a mosaic :doc:`mosaic <../concepts/mosaic>`.
+Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
 
 Options
 
@@ -753,29 +708,39 @@ Command
     :language: bash
     :start-after: #!/bin/sh
 
-**Link a namespace to a mosaic**
+**NamespaceRegistrationTransaction**
 
-Links a namespace to a :doc:`mosaic <../concepts/mosaic>`.
+Registers a :doc:`namespace <concepts/namespace>`.
 
 Options
 
 .. code-block:: bash
 
-    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
-    -a, --action <action>       - Alias action (1: Link, 0: Unlink).
-    -m, --mosaic-id <mosaicId>  - Mosaic id in in hexadecimal format.
-    -n, --namespace <namespace> - Namespace name.
+    --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>         - Maximum fee you want to pay to announce this transaction.
+    -n, --name <name>              - Namespace name.
+    -r, --rootnamespace            - Root namespace.
+    -s, --subnamespace             - Sub namespace.
+    -d, --duration <duration>      - Duration (use it with --rootnamespace).
+    -p, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
 
 Command
 
-.. viewsource:: resources/examples/bash/namespace/LinkNamespaceMosaic.sh
+Register a root namespace:
+
+.. viewsource:: resources/examples/bash/namespace/RegisteringANamespace.sh
     :language: bash
     :start-after: #!/bin/sh
 
-**Link a namespace to an address**
+Register a subnamespace:
 
-Links a namespace to an :doc:`address <../concepts/account>`.
+.. viewsource:: resources/examples/bash/namespace/RegisteringASubnamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AddressAliasTransaction**
+
+Links a namespace to an :doc:`address <concepts/account>`.
 
 Options
 
@@ -793,20 +758,180 @@ Command
     :language: bash
     :start-after: #!/bin/sh
 
-**Status**
+**MosaicAliasTransaction**
 
-Gets the confirmation status of a transaction.
+Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
 
 Options
 
 .. code-block:: bash
 
-    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
-    -h, --hash <hash>   - Transaction hash.
+    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
+    -a, --action <action>       - Alias action (1: Link, 0: Unlink).
+    -m, --mosaic-id <mosaicId>  - Mosaic id in in hexadecimal format.
+    -n, --namespace <namespace> - Namespace name.
 
 Command
 
-.. viewsource:: resources/examples/bash/monitor/GettingTransactionStatus.sh
+.. viewsource:: resources/examples/bash/namespace/LinkNamespaceMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**MultisigModificationAccountTransaction**
+
+Create or modify a :doc:`multisig account <concepts/multisig-account>`.
+
+.. note:: The command only supports to add or remove one account as a cosignatory at a time.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                                          - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                                       - Maximum fee you want to pay to announce the transaction.
+    -F, --max-fee-hash-lock <maxFeeHashLock>                     - Maximum fee you want to pay to announce the hash lock transaction.
+    -D, --duration <duration>                                    - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                                        - Amounts of mosaics to lock. [10]
+    -R, --min-removal-delta <minRemovalDelta>                    - (Optional) Number of signatures needed to remove a cosignatory.  [0]
+    -A, --min-approval-delta <minApprovalDelta>                  - (Optional) Number of signatures needed to approve a transaction. [0]
+    -a, --action <action>                                        - Modification Action (1: Add, 0: Remove).
+    -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory account public key.
+    -m, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
+
+Command
+
+.. viewsource:: resources/examples/bash/multisig/ModifyingAMultisigAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**SecretLockTransaction**
+
+Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                     - Maximum fee you want to pay to announce this transaction.
+    -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier.
+    -a, --amount <amount>                      - Amount of mosaic units to lock.
+    -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
+    -s, --secret <secret>                      - Proof hashed in hexadecimal format.
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
+
+Command
+
+.. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretLockTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**SecretProofTransaction**
+
+Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                     - Maximum fee you want to pay to announce this transaction.
+    -s, --secret <secret>                      - Proof hashed in hexadecimal.
+    -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
+
+Command
+
+.. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretProofTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AccountAddressRestrictionTransaction**
+
+:doc:`Allow or block <concepts/account-restriction>` incoming and outgoing transactions for a given a set of addresses.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
+    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
+    -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
+    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
+    -v, --value <value>                                - Address to allow / block.
+
+Command
+
+.. viewsource:: resources/examples/bash/restriction/AnnouncingAccountAddressRestrictionTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AccountMosaicRestrictionTransaction**
+
+:doc:`Allow or block <concepts/account-restriction>` incoming transactions containing a given set of mosaics.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
+    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
+    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
+    -v, --value <value>                                - Mosaic to allow / block.
+
+Command
+
+.. viewsource:: resources/examples/bash/restriction/AnnouncingAccountMosaicRestrictionTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AccountOperationRestrictionTransaction**
+
+:doc:`Allow or block <concepts/account-restriction>` outgoing transactions by transaction type.
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
+    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
+    -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
+    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
+    -v, --value <value>                                - Transaction type formatted as hex.
+
+Command
+
+.. viewsource:: resources/examples/bash/restriction/AnnouncingAccountOperationRestrictionTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**TransferTransaction**
+
+Announces a :ref:`TransferTransaction <transfer-transaction>` to an account exchanging value and/or data. For this transaction provide recipient, message and :doc:`mosaics <concepts/mosaic>`.
+
+You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 @cat.currency is 1000000 (divisibility 6).
+
+Options
+
+.. code-block:: bash
+
+    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
+    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
+    -r, --recipient <recipient> - Recipient address or @alias.
+    -m, --message <message>     - Transaction message.
+    -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
+    -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
+    -p, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
+
+Command
+
+.. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
     :language: bash
     :start-after: #!/bin/sh
 
