@@ -76,7 +76,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.18.6'
+version = u'0.18.7'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
