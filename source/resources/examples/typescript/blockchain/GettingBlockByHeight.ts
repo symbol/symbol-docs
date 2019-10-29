@@ -19,10 +19,9 @@
 import {BlockHttp} from "nem2-sdk";
 
 /* start block 01 */
-const blockHttp = new BlockHttp('http://localhost:3000');
-
 const height = 1;
 
+const blockHttp = new BlockHttp('http://localhost:3000');
 blockHttp
     .getBlockByHeight(height)
     .subscribe(block => console.log(block), err => console.error(err));

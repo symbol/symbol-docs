@@ -314,6 +314,54 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--accountlink--activating-delegated-harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/activating-delegated-harvesting.po
+source_file = build/gettext/guides/accountlink/activating-delegated-harvesting.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--assigning-metadata-entries-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--assigning-metadata-entries-to-a-namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-namespace.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--assigning-metadata-entries-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-a-namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-namespace.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-an-account.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--updating-metadata-entries]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
+source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--migration--migrating-from-nis1-to-catapult]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
 source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot

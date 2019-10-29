@@ -23,15 +23,19 @@
                             </div>
                         </a>
                     </li>
-                    <li><a href="{{ pathto('getting-started/setup-workstation')}}?code=javascript">
-                        <div class="card font-icon">
-                            <i class="devicon-javascript-plain colored"></i>
-                        </div>
-                    </a></li>
                     <li>
-                        <div class="card font-icon" data-toggle="tooltip" data-placement="top" title="Coming soon!">
-                            <i class="devicon-java-plain"></i>
-                        </div>
+                        <a href="{{ pathto('getting-started/setup-workstation')}}?code=javascript">
+                            <div class="card font-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('getting-started/setup-workstation')}}?code=java">
+                            <div class="card font-icon">
+                                <i class="devicon-java-plain colored"></i>
+                            </div>
+                        </a>
                     </li>
                     <li>
                         <div class="card font-icon" data-toggle="tooltip" data-placement="top" title="Coming soon!">
@@ -253,7 +257,8 @@
             </div>
             <div class="top-gap">
                 <ul>
-                    <li><a href="{{ pathto('getting-started/what-is-nem')}}">{% trans %}What is NEM?{% endtrans %}</a></li>
+                    <li><a href="{{ pathto('getting-started/what-is-nem')}}">{% trans %}What is NEM?{% endtrans %}</a>
+                    </li>
                     <li><a href="{{ pathto('concepts/account')}}">{% trans %}Built-in Features{% endtrans %}</a></li>
                     <li><a href="{{ pathto('concepts/cryptography')}}">{% trans %}Protocol{% endtrans %}</a></li>
                     <li><a href="{{ pathto('guides/category')}}">{% trans %}Guides{% endtrans %}</a></li>

@@ -21,10 +21,9 @@ const NamespaceHttp = nem2Sdk.NamespaceHttp,
     NamespaceId = nem2Sdk.NamespaceId;
 
 /* start block 01 */
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
-
 const namespace = new NamespaceId('foo');
 
+const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getNamespace(namespace)
     .subscribe(namespace => console.log(namespace), err => console.error(err));

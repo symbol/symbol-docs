@@ -18,29 +18,27 @@
 
 const nem2Sdk = require("nem2-sdk");
 const operators = require('rxjs/operators');
+const rxjs = require('rxjs');
 
 const Account = nem2Sdk.Account,
-    Deadline = nem2Sdk.Deadline,
-    NetworkType = nem2Sdk.NetworkType,
-    TransferTransaction = nem2Sdk.TransferTransaction,
-    TransactionHttp = nem2Sdk.TransactionHttp,
-    PlainMessage = nem2Sdk.PlainMessage,
-    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
     AggregateTransaction = nem2Sdk.AggregateTransaction,
+    Deadline = nem2Sdk.Deadline,
     HashLockTransaction = nem2Sdk.HashLockTransaction,
-    UInt64 = nem2Sdk.UInt64,
     Listener = nem2Sdk.Listener,
     Mosaic = nem2Sdk.Mosaic,
     MosaicId = nem2Sdk.MosaicId,
+    NetworkCurrencyMosaic = nem2Sdk.NetworkCurrencyMosaic,
+    NetworkType = nem2Sdk.NetworkType,
+    PlainMessage = nem2Sdk.PlainMessage,
     PublicAccount = nem2Sdk.PublicAccount,
+    TransactionHttp = nem2Sdk.TransactionHttp,
+    TransferTransaction = nem2Sdk.TransferTransaction,
+    UInt64 = nem2Sdk.UInt64,
     filter = operators.filter,
-    mergeMap = operators.mergeMap;
+    mergeMap = operators.mergeMap,
+    merge = rxjs.merge;
 
 /* start block 01 */
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
-
 const alicePrivateKey = process.env.ALICE_PRIVATE_KEY;
 const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
 
@@ -81,22 +79,36 @@ const hashLockTransaction = HashLockTransaction.create(
     signedTransaction,
     NetworkType.MIJIN_TEST);
 
-const hashLockTransactionSigned = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
-listener.open().then(() => {
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+const listener = new Listener(nodeUrl);
 
-    transactionHttp
-        .announce(hashLockTransactionSigned)
-        .subscribe(x => console.log(x), err => console.error(err));
+const announceHashLockTransaction = (signedHashLockTransaction) => {
+    return transactionHttp.announce(signedHashLockTransaction);
+};
 
-    listener
-        .confirmed(aliceAccount.address)
+const announceAggregateTransaction = (listener,
+                                      signedHashLockTransaction,
+                                      signedAggregateTransaction,
+                                      senderAddress) => {
+    return listener
+        .confirmed(senderAddress)
         .pipe(
             filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === hashLockTransactionSigned.hash),
-            mergeMap(ignored => transactionHttp.announceAggregateBonded(signedTransaction))
-        )
-        .subscribe(announcedAggregateBonded => console.log(announcedAggregateBonded),
-            err => console.error(err));
+                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
+            mergeMap(ignored => {
+                listener.terminate();
+                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
+            })
+        );
+};
+
+listener.open().then(() => {
+    merge(announceHashLockTransaction(signedHashLockTransaction),
+        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, aliceAccount.address))
+        .subscribe(x => console.log('Transaction confirmed:', x.message),
+            err=> console.log(err));
 });
 /* end block 03 */

@@ -1,6 +1,6 @@
 :orphan:
 
-.. post:: 29 Sep, 2019
+.. post:: 29 Oct, 2019
     :category: Account Restriction
     :excerpt: 1
     :nocomments:
@@ -10,12 +10,6 @@ Getting the account restrictions attached to an address
 #######################################################
 
 Get the list of account's restrictions.
-
-*************
-Prerequisites
-*************
-
-- Finish :doc:`preventing spam attacks with account restrictions <preventing-spam-attacks-with-account-restrictions>`
 
 **********************
 Getting into some code

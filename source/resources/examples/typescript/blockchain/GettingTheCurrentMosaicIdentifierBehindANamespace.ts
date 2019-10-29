@@ -19,11 +19,9 @@
 import {NamespaceHttp, NamespaceId,} from 'nem2-sdk';
 
 /* start block 01 */
-const nodeUrl = 'http://localhost:3000';
-const namespaceHttp = new NamespaceHttp(nodeUrl);
-
 const namespace = new NamespaceId('cat.currency');
 
+const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getLinkedMosaicId(namespace)
     .subscribe(mosaicId => console.log(mosaicId.toHex()),

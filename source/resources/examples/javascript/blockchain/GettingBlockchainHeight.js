@@ -22,7 +22,6 @@ const ChainHttp = nem2Sdk.ChainHttp;
 
 /* start block 01 */
 const chainHttp = new ChainHttp('http://localhost:3000');
-
 chainHttp
     .getBlockchainHeight()
     .subscribe(height => console.log(height.compact()), err => console.error(err));

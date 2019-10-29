@@ -133,7 +133,7 @@ Guides
 ******
 
 .. postlist::
-    :category: Network
+    :category: Network, Node
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

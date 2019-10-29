@@ -22,10 +22,10 @@ const AccountHttp = nem2Sdk.AccountHttp,
     Address = nem2Sdk.Address;
 
 /* start block 01 */
-const accountHttp = new AccountHttp('http://localhost:3000');
-
 const rawAddress = process.env.ADDRESS;
 const address = Address.createFromRawAddress(rawAddress);
+
+const accountHttp = new AccountHttp('http://localhost:3000');
 accountHttp
     .getMultisigAccountInfo(address)
     .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));

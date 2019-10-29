@@ -236,6 +236,10 @@ Options
 
    ./catapult.tools.health -r <resources_path>
 
+.. |catapult-server| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
+
 .. |catapult-service-bootstrap| raw:: html
 
    <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>

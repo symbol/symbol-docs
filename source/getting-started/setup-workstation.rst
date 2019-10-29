@@ -8,25 +8,21 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
-We’ll be using the test network, which simulates the Catapult network.  Using  the test network allows you to experiment with Catapult’s transaction set without the loss of valuable assets.
+We’ll be using the test network, which simulates the Catapult network. Using  the test network allows you to experiment with Catapult’s transaction set without the loss of valuable assets.
 
 .. note:: To run your own **private test network**, follow :doc:`this other guide <../guides/network/creating-a-private-test-net>`.
 
 .. _setup-creating-a-test-account:
 
-*******************
-Creating an account
-*******************
+An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
-An account is basically a **deposit box** where we can hold our mosaics (tokens) and interact with them.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store it using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
-1. Install :doc:`NEM2-CLI <../cli>`—a **command-line tool**—to create an :doc:`account <../concepts/account>`.
+1. Install :doc:`NEM2-CLI <../cli>`.
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.1
-
-You will need to have installed |node-lts|.
+    npm install --global nem2-cli@0.13.4
 
 2. Create and save a new account as a **profile**.
 
@@ -46,7 +42,6 @@ You will need to have installed |node-lts|.
 .. code-block:: bash
 
     Profile stored correctly
-
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
@@ -56,6 +51,8 @@ You will need to have installed |node-lts|.
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Private Key │ 123***456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
+
+.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
 
 As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
@@ -110,7 +107,7 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.13.3 rxjs
+            npm install nem2-sdk@0.14.3 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -139,8 +136,8 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.13.3 rxjs
-..
+            npm install nem2-sdk@0.14.3 rxjs
+
     .. tab:: Java
 
         1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
@@ -157,16 +154,17 @@ Now that you have your account filled with cat.currency units, it is the time to
                 mavenCentral()
             }
 
-        3. Add nem2-sdk and reactive library as a dependency.
+        3. Add nem2-sdk as a dependency.
 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:sdk:0.9.1"
-                compile "io.reactivex.rxjava2:rxjava:2.1.7"
+                compile "compile 'io.nem:sdk-vertx-client:0.14.1"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
+
+..
     .. tab:: C#
 
         1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
@@ -184,19 +182,12 @@ Now that you have your account filled with cat.currency units, it is the time to
 
 Continue: :doc:`Writing your first application <first-application>`.
 
-.. _mijin: https://mijin.io/en/product/#mijin2
-
 .. _ts-node: https://www.npmjs.com/package/ts-node
 
 .. _gradle: https://gradle.org/install/
 
 .. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-
 .. |different-ways-to-install-a-nuget-package| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/ways-to-install-a-package" target="_blank">different ways to install a NuGet Package</a>
-
-.. |node-lts| raw:: html
-
-   <a href="https://nodejs.org/en/" target="_blank">Node LTS</a>
