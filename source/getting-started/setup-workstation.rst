@@ -8,15 +8,15 @@ Setting up your workstation
 
 This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
 
-We’ll be using the test network, which simulates the Catapult network. Using  the test network allows you to experiment with Catapult’s transaction set without the loss of valuable assets.
+We will be using the test network, which uses the same technology and features of the future main public network. As the currency in the test network does not have any real value, it allows you to experiment with the offered Catapult's transaction set without the loss of valuable assets.
 
 .. note:: To run your own **private test network**, follow :doc:`this other guide <../guides/network/creating-a-private-test-net>`.
 
 .. _setup-creating-a-test-account:
 
-An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
+An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store it using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
+We are going to create a new account with NEM2-CLI, a command-line tool to perform the most commonly used actions i.e. interacting with the blockchain, setting up an account, sending funds, etc.
 
 1. Install :doc:`NEM2-CLI <../cli>`.
 
@@ -24,7 +24,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     npm install --global nem2-cli@0.13.4
 
-2. Create and save a new account as a **profile**.
+2. Generate a new account and save it as a **profile**.
 
 .. code-block:: bash
 
@@ -52,7 +52,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
     │ Private Key │ 123***456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
 As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
@@ -62,13 +62,15 @@ As the name suggests, the **private key has to be kept secret at all times**. An
 Getting test currency
 *********************
 
-Now that you have created an account, request ``cat.currency`` units to the **testnet faucet**. You will need to have currency to interact with the blockchain because every action costs a fee in order to provide an incentive for those who validate and secure the network.
+When announcing a transaction, accounts have to pay an :ref:`associated cost <fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
+
+Now that you have created your first account account, try to request ``cat.currency`` units to the **testnet faucet**.
 
 1. Copy the account's address you got in the previous step and paste it in the faucet.
 
-2. Then, click the button “CLAIM!”.
+2. Click the button “CLAIM!”.
 
-3. After the transaction gets confirmed, check if you have received cat.currency using the command-line tool.
+3. After the transaction gets confirmed, check if you have received ``cat.currency`` using the command-line tool.
 
 .. code-block:: bash
 
@@ -81,7 +83,7 @@ Now that you have created an account, request ``cat.currency`` units to the **te
     │ 0DC67FBE1CAD29E3 │ 299,966,666.6   │ 299966666600000 │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of cat.currency and has to be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account <NNNN>.
+.. note:: The faucet has a limited amount of ``cat.currency`` and has to be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account ``SBSXJR-XCHIFQ-IA4RK2-DKOYXL-43IXPQ-WSC5FE-S3XB``.
 
 .. _setup-development-environment:
 
@@ -91,7 +93,7 @@ Creating a project
 
 Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-**Create a folder for your new project**. Then, run the instructions for the selected language. If none of the language fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language. If none of the language fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
 
 .. tabs::
 

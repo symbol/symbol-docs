@@ -15,8 +15,6 @@ Update any existent metadata entry.
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 - Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
 
 **********

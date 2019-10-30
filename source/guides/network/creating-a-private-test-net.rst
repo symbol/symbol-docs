@@ -20,7 +20,8 @@ Catapult Service Bootstrap deploys a private network with the following high-lev
 .. figure:: ../../resources/images/diagrams/four-layer-architecture.png
     :width: 500px
     :align: center
-    :caption: Bootstrap network architecture
+
+    Bootstrap network architecture
 
 * **peer-node (1 and 2)**: Peer nodes verify transactions once the API pushes them into the P2P network. They run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
@@ -72,11 +73,7 @@ Installation
 
 .. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
 
-You should see the docker doing its job downloading the container images for the first time, then synchronizing with other nodes. If everything goes well, it should start the catapult-server and you should see the live logs start scrolling by in the foreground like so:
-
-[bash output here]
-
-You can also verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+4. Verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
 To stop the process, press ``Ctrl+C``.
 
@@ -110,53 +107,61 @@ Commands
 Getting test cat.currency
 *************************
 
-The :doc:`NEM2-CLI <../../cli>` conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
+An :doc:`account <../../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. When announcing a transaction, accounts have to pay an :ref:`associated cost <fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
-1. Install NEM2-CLI using ``npm``.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
+
+1. Install :doc:`NEM2-CLI <../../cli>`.
 
 .. code-block:: bash
 
-    npm install --global nem2-cli
+    npm install --global nem2-cli@0.13.4
 
-2. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
 .. code-block:: bash
 
     cd  build/generated-addresses/
+
+3. Display the content of the ``address.yaml`` file.
+
+.. code-block:: bash
+
     cat addresses.yaml
 
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Every action on the blockchain costs cat.currency units, in order to provide an incentive for those who validate and secure the network.
+3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-4. Load the first account as a profile in NEM2-CLI.
+4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
     nem2-cli profile create
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Introduce your private key: 41************************************************************FF
+    Introduce your private key: 123***456
     Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
-.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
-3. You should see the account credentials in your terminal.
+You should see the account credentials in your terminal.
 
 .. code-block:: bash
 
     Profile stored correctly
-
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 654...321                                                        │
+    │ Public Key  │ 654***321                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123...456                                                        │
+    │ Private Key │ 123***456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-Now that you have your node running an account with some cat.currency, we recommend you to surf the NEM Development Center. In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
+
+Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about :doc:`Catapult's features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 
