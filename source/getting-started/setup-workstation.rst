@@ -61,7 +61,7 @@ Getting a test account
 
 An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
-After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store it using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
 1. Install :doc:`NEM2-CLI <../cli>`.
 
