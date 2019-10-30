@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-03 07:55+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transaction.rst:3
-#: ../../source/concepts/transaction.rst:244
+#: ../../source/concepts/transaction.rst:246
 msgid "Transaction"
 msgstr "トランザクション"
 
@@ -422,11 +422,11 @@ msgstr ""
 "この時点でトランザクションの **承認数はゼロ** "
 "です。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:215
+#: ../../source/concepts/transaction.rst:217
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/transaction.rst:217
+#: ../../source/concepts/transaction.rst:219
 msgid ""
 "Blockchains are designed in a way that under certain circumstances recent "
 "blocks need to be rolled back. These are essential to resolve forks of the "
@@ -434,7 +434,7 @@ msgid ""
 msgstr ""
 "ブロックチェーンは特定の状況下において、最近のブロックをロールバックする必要があるように設計されています。これらはブロックチェーンのフォークを解決するために不可欠なものです。"
 
-#: ../../source/concepts/transaction.rst:219
+#: ../../source/concepts/transaction.rst:221
 msgid ""
 "The :properties:`rewrite limit <config-network.properties>` is the maximum "
 "number of blocks that can be rolled back. Hence, forks can only be resolved "
@@ -443,26 +443,26 @@ msgstr ""
 ":properties:`書き換え制限 <config-network.properties>` "
 "とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
-#: ../../source/concepts/transaction.rst:221
+#: ../../source/concepts/transaction.rst:223
 msgid ""
 "NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than "
 "40 confirmations, it cannot be reversed."
 msgstr "NEMの書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
-#: ../../source/concepts/transaction.rst:227
+#: ../../source/concepts/transaction.rst:229
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transaction.rst:239
+#: ../../source/concepts/transaction.rst:241
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/transaction.rst:246
+#: ../../source/concepts/transaction.rst:248
 msgid "Serialization of a transaction."
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:248
-#: ../../source/concepts/transaction.rst:268
+#: ../../source/concepts/transaction.rst:250
+#: ../../source/concepts/transaction.rst:270
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -484,13 +484,13 @@ msgstr ""
 "ネメシスブロックが作成されてから経過した秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/concepts/transaction.rst:266
+#: ../../source/concepts/transaction.rst:268
 msgid ""
 "Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
 "transaction."
 msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:278
+#: ../../source/concepts/transaction.rst:280
 msgid "Serialization of an entity that has a prefixed size."
 msgstr "サイズをプレフィックスしたエンティティのシリアル化"
 

@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-03 07:55+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -85,12 +85,15 @@ msgstr ""
 
 #: ../../source/concepts/multisig-account.rst:29
 msgid ""
-"NEM's current implementation of multisig is *\"M-of-N\"*. This means that M "
-"can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, "
-"9-of-10 and so on."
+"NEM's current implementation of multisig is *\"M-of-N\"*, where M is the "
+"number of cosignatories requeired to announce a transaction and N is the "
+"total amount of cosignatories for that particular multig account. This means"
+" that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, "
+"4-of-9, 9-of-10 and so on."
 msgstr ""
-"NEM における現在のマルチシグ実装は *\"M-of-N\"* です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4,"
-" 2-of-2, 4-of-9, 9-of-10 などです。"
+"NEM における現在のマルチシグ実装は *\"M-of-N\"* で、マルチシグアカウントの M はアナウンスに必要な連署者数、N "
+"は合計連署者数です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4, 2-of-2, 4-of-9, 9-of-10 "
+"などです。"
 
 #: ../../source/concepts/multisig-account.rst:31
 msgid ""
@@ -108,11 +111,11 @@ msgid ""
 "Multisig accounts are a powerful tool, but please use this tool with "
 "caution.  If the cosignatories keys get lost and minimum approval is not "
 "reached, it would result in the permanent loss of access to the funds held "
-"by the multisig account. Choose wisely ``minimum removal`` parameter to "
+"by the multisig account. Choose ``minimum removal`` parameter wisely to "
 "avoid this situation."
 msgstr ""
-"マルチシグアカウントは強力なツールですが、このツールの使用には慎重になってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントの保有する資産へのアクセスが永久に不可能になります。この状況を回避するには"
-" ``最小限の除去`` パラメータをよく考えて設定してください。"
+"マルチシグアカウントは強力なツールですが、このツールの使用は慎重に行ってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントが保有する資産へのアクセスが永久に不可能になります。この状況を回避するには"
+" ``最小限の削除数`` パラメータを適切に設定してください。"
 
 #: ../../source/concepts/multisig-account.rst:37
 msgid "Constraints"
@@ -128,12 +131,12 @@ msgstr "アカウントは ``5`` マルチシグアカウントまでの連署�
 
 #: ../../source/concepts/multisig-account.rst:43
 msgid ""
-"Multisig accounts can have as a cosigner another multisig, up to ``3`` "
-"levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature "
-"transactions."
+"Multisig account can be a cosigner for another multisig account, up to ``3``"
+" levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature"
+" transactions."
 msgstr ""
 "マルチシグアカウントは ``3`` "
-"階層まで、他のマルチシグアカウントを連署者にすることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに \"AND/OR\" "
+"階層まで、他のマルチシグアカウントの連署者になることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに AND/OR "
 "ロジックを追加します。"
 
 #: ../../source/concepts/multisig-account.rst:45
