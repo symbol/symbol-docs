@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 04 Oct, 2019
-    :category: Network
+    :category: Network, Node
     :excerpt: 1
     :nocomments:
 
