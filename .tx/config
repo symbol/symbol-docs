@@ -452,6 +452,24 @@ source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--network--configuring-network-properties]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
+source_file = build/gettext/guides/network/configuring-network-properties.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--network--configuring-node-properties]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
+source_file = build/gettext/guides/network/configuring-node-properties.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--network--creating-a-private-test-net]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/creating-a-private-test-net.po
+source_file = build/gettext/guides/network/creating-a-private-test-net.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
 source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot

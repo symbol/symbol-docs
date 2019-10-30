@@ -148,12 +148,12 @@ This section describes the error messages that can be returned via status channe
     0x8043000A; Failure_Core_Block_Harvester_Ineligible; Validation failed because a block was harvested by an ineligible harvester.
     0x8043000B; Failure_Core_Zero_Address; Validation failed because an address is zero.
     0x8043000C; Failure_Core_Zero_Public_Key; Validation failed because a public key is zero.
-    0x81490001; Failure_Hash_Exists; Validation failed because the entity hash is already known.
+    0x81490001; Failure_Hash_Already_Exists; Validation failed because the entity hash is already known.
     0x80530001; Failure_Signature_Not_Verifiable; Validation failed because the verification of the signature failed.
     0x804C0001; Failure_AccountLink_Invalid_Action; Validation failed because account link action is invalid.
     0x804C0002; Failure_AccountLink_Link_Already_Exists; Validation failed because main account is already linked to another account.
     0x804C0003; Failure_AccountLink_Unknown_Link; Validation failed because main account is not linked to another account.
-    0x804C0004; Failure_AccountLink_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing account link.
+    0x804C0004; Failure_AccountLink_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing account link.
     0x804C0005; Failure_AccountLink_Remote_Account_Ineligible; Validation failed because link is attempting to convert ineligible account to remote.
     0x804C0006; Failure_AccountLink_Remote_Account_Signer_Prohibited; Validation failed because remote is not allowed to sign a transaction.
     0x804C0007; Failure_AccountLink_Remote_Account_Participant_Prohibited; Validation failed because remote is not allowed to participate in the transaction.
@@ -205,7 +205,7 @@ This section describes the error messages that can be returned via status channe
     0x804D0072; Failure_Mosaic_Required_Property_Flag_Unset; Validation failed because the mosaic has at least one required property flag unset.
     0x80550001; Failure_Multisig_Account_In_Both_Sets; Validation failed because account is specified to be both added and removed.
     0x80550002; Failure_Multisig_Multiple_Deletes; Validation failed because multiple removals are present.
-    0x80550003; Failure_Multisig_Redundant_Modifications; Validation failed because redundant modifications are present.
+    0x80550003; Failure_Multisig_Redundant_Modification; Validation failed because a modification is redundant.
     0x80550004; Failure_Multisig_Unknown_Multisig_Account; Validation failed because account is not in multisig cache.
     0x80550005; Failure_Multisig_Not_A_Cosignatory; Validation failed because account to be removed is not present.
     0x80550006; Failure_Multisig_Already_A_Cosignatory; Validation failed because account to be added is already a cosignatory.
@@ -226,7 +226,7 @@ This section describes the error messages that can be returned via status channe
     0x804E0064; Failure_Namespace_Invalid_Registration_Type; Validation failed because the namespace registration type is invalid.
     0x804E0065; Failure_Namespace_Root_Name_Reserved; Validation failed because the root namespace has a reserved name.
     0x804E0066; Failure_Namespace_Too_Deep; Validation failed because the resulting namespace would exceed the maximum allowed namespace depth.
-    0x804E0067; Failure_Namespace_Parent_Unknown; Validation failed because the namespace parent is unknown.
+    0x804E0067; Failure_Namespace_Unknown_Parent; Validation failed because the namespace parent is unknown.
     0x804E0068; Failure_Namespace_Already_Exists; Validation failed because the namespace already exists.
     0x804E0069; Failure_Namespace_Already_Active; Validation failed because the namespace is already active.
     0x804E006A; Failure_Namespace_Eternal_After_Nemesis_Block; Validation failed because an eternal namespace was received after the nemesis block.
@@ -235,14 +235,14 @@ This section describes the error messages that can be returned via status channe
     0x804E006D; Failure_Namespace_Unknown; Validation failed because namespace does not exist.
     0x804E006E; Failure_Namespace_Alias_Already_Exists; Validation failed because namespace is already linked to an alias.
     0x804E006F; Failure_Namespace_Unknown_Alias; Validation failed because namespace is not linked to an alias.
-    0x804E0070; Failure_Namespace_Alias_Unlink_Type_Inconsistency; Validation failed because unlink type is not consistent with existing alias.
-    0x804E0071; Failure_Namespace_Alias_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing alias.
+    0x804E0070; Failure_Namespace_Alias_Inconsistent_Unlink_Type; Validation failed because unlink type is not consistent with existing alias.
+    0x804E0071; Failure_Namespace_Alias_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing alias.
     0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
     0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type; Validation failed because the account restriction type is invalid.
     0x80500002; Failure_RestrictionAccount_Invalid_Modification_Action; Validation failed because a modification action is invalid.
     0x80500003; Failure_RestrictionAccount_Invalid_Modification_Address; Validation failed because a modification address is invalid.
     0x80500004; Failure_RestrictionAccount_Modification_Operation_Type_Incompatible; Validation failed because the operation type is incompatible. *Note*: This indicates that the existing restrictions have a different operation type than that specified in the notification.
-    0x80500005; Failure_RestrictionAccount_Modification_Redundant; Validation failed because a modification is redundant.
+    0x80500005; Failure_RestrictionAccount_Redundant_Modification; Validation failed because a modification is redundant.
     0x80500006; Failure_RestrictionAccount_Invalid_Modification; Validation failed because a value is not in the container.
     0x80500007; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
     0x80500008; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
@@ -272,13 +272,14 @@ This section describes the error messages that can be returned via status channe
     0x80FE0005; Failure_Consumer_Remote_Chain_Improper_Link; Validation failed because the chain is internally improperly linked.
     0x80FE0006; Failure_Consumer_Remote_Chain_Duplicate_Transactions; Validation failed because the chain part contains duplicate transactions.
     0x80FE0007; Failure_Consumer_Remote_Chain_Unlinked; Validation failed because the chain part does not link to the current chain.
-    0x80FE0008; Failure_Consumer_Remote_Chain_Mismatched_Difficulties; Validation failed because the remote chain difficulties do not match the calculated difficulties.
+    0x80FE0008; Failure_Consumer_Remote_Chain_Difficulties_Mismatch; Validation failed because the remote chain difficulties do not match the calculated difficulties.
     0x80FE0009; Failure_Consumer_Remote_Chain_Score_Not_Better; Validation failed because the remote chain score is not better.
     0x80FE000A; Failure_Consumer_Remote_Chain_Too_Far_Behind; Validation failed because the remote chain is too far behind.
     0x80FE000B; Failure_Consumer_Remote_Chain_Too_Far_In_Future; Validation failed because the remote chain timestamp is too far in the future.
     0x80FE000C; Failure_Consumer_Batch_Signature_Not_Verifiable; Validation failed because the verification of the signature failed during a batch operation.
     0x80450001; Failure_Extension_Partial_Transaction_Cache_Prune; Validation failed because the partial transaction was pruned from the temporal cache.
     0x80450002; Failure_Extension_Partial_Transaction_Dependency_Removed; Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
+    0x80450003; Failure_Extension_Read_Rate_Limit_Exceeded; Validation failed because socket read rate limit was exceeded.
 
 .. _tools:
 
