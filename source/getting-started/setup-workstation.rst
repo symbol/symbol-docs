@@ -14,6 +14,10 @@ We will be using the test network, which uses the same technology and features o
 
 .. _setup-creating-a-test-account:
 
+*******************
+Creating an account
+*******************
+
 An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
 We are going to create a new account with NEM2-CLI, a command-line tool to perform the most commonly used actions i.e. interacting with the blockchain, setting up an account, sending funds, etc.
