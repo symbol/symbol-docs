@@ -272,6 +272,12 @@ Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 * :ref:`SizePrefixedEntity<size-prefixed-entity>`
 * :ref:`EntityBody<entity-body>`
 
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    embeddedTransactionHeader_Reserved1; uint32; Reserved padding to align end of EmbeddedTransactionHeader on 8-byte boundary.
+
 .. _size-prefixed-entity:
 
 SizePrefixedEntity

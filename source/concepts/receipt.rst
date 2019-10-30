@@ -95,7 +95,7 @@ Conditional state changes in the background enable complex transactions.
     :delim: ;
 
     version; uint16; Receipt version.
-    type; ReceiptType; Receipt type.
+    type; :ref:`ReceiptType <receipt-type>`; Receipt type.
 
 .. _balance-transfer-receipt:
 
@@ -115,10 +115,10 @@ The invisible state change triggered a mosaic transfer.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    senderPublicKey; :schema:`Key <types.cats#L11>`; Public key of the sender.
-    recipientAddress; :schema:`Address <types.cats#L8>`; Address of the recipient.
     mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to send.
+    senderPublicKey; :schema:`Key <types.cats#L11>`; Public key of the sender.
+    recipientAddress; :schema:`Address <types.cats#L8>`; Address of the recipient.
 
 .. _balance-change-receipt:
 
@@ -138,9 +138,9 @@ The invisible state change changed an account balance.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L11>`; Public key of the target account.
     mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to increase or decrease.
+    targetPublicKey; :schema:`Key <types.cats#L11>`; Public key of the target account.
 
 .. _artifact-expiry-receipt:
 
@@ -252,3 +252,16 @@ The transaction that triggered the receipt.
 .. |merkle| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">merkle tree</a>
+
+.. _receipt-type:
+
+ReceiptType
+===========
+
+Enumeration: uint16
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x0000; Reserved.

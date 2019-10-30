@@ -121,7 +121,7 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
 
 **Version**: 0x01
 
-**Entity type**: 0x414E
+**EntityType**: 0x414E
 
 **Inlines**:
 
@@ -131,10 +131,10 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
     parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
     id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     nameSize; uint8; Namespace name size in bytes.
     name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
@@ -147,7 +147,7 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
 
 **Version**: 0x01
 
-**Entity type**: 0x424E
+**EntityType**: 0x424E
 
 **Inlines**:
 
@@ -157,9 +157,9 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
     address; :schema:`Address <types.cats#L8>`; Aliased address.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _mosaic-alias-transaction:
 
@@ -170,7 +170,7 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
 
 **Version**: 0x01
 
-**Entity type**: 0x434E
+**EntityType**: 0x434E
 
 **Inlines**:
 
@@ -180,9 +180,9 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
     mosaicId; :schema:`MosaicId <types.cats#L4>`; Aliased mosaic identifier.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _namespace-registration-type:
 

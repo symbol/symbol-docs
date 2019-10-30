@@ -128,7 +128,7 @@ Furthermore, for the duration that the account is used as a delegated account, i
 
 **Version**: 0x01
 
-**Entity type**: 0x414C
+**EntityType**: 0x414C
 
 **Inlines**:
 

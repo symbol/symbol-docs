@@ -87,7 +87,7 @@ If the transaction duration is reached without being proved, the locked amount g
 
 **Version**: 0x01
 
-**Entity type**: 0x4152
+**EntityType**: 0x4152
 
 **Inlines**:
 
@@ -97,10 +97,10 @@ If the transaction duration is reached without being proved, the locked amount g
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
-    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
     recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
 
 .. _secret-proof-transaction:
@@ -114,7 +114,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
 **Version**: 0x01
 
-**Entity type**: 0x4252
+**EntityType**: 0x4252
 
 **Inlines**:
 
@@ -124,10 +124,10 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
     secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
-    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
     proofSize; uint16; Proof size in bytes.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
     proof; array(byte, proofSize); Original random set of bytes.
 
 .. _lock-hash-algorithm:

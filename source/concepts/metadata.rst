@@ -91,7 +91,7 @@ Announce an AccountMetadataTransaction to associate a key-value state to an acco
 
 **Version**: 0x01
 
-**Entity type**: 0x4144
+**EntityType**: 0x4144
 
 **Inlines**:
 
@@ -116,7 +116,7 @@ Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
 
 **Version**: 0x01
 
-**Entity type**:  0x4244
+**EntityType**:  0x4244
 
 **Inlines**:
 
@@ -142,7 +142,7 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
 
 **Version**: 0x01
 
-**Entity type**:  0x4344
+**EntityType**:  0x4344
 
 **Inlines**:
 

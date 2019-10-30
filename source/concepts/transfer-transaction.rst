@@ -72,7 +72,7 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
 
 **Version**: 0x01
 
-**Entity type**: 0x4154
+**EntityType**: 0x4154
 
 **Inlines**:
 
@@ -83,10 +83,11 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
     :delim: ;
 
     recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Transaction recipient.
-    messageSize; uint16; Size of the attached message.
     mosaicsCount; uint8; Number of attached mosaics.
-    message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.
+    messageSize; uint16; Size of the attached message.
+    transferTransactionBody_Reserved1; uint32; Reserved padding to align mosaics on 8-byte boundary.
     mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Attached mosaics to send.
+    message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.
 
 .. _message-type:
 
