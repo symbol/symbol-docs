@@ -65,7 +65,9 @@ Installation
 
     cd catapult-service-bootstrap
 
-3. Run the network.
+3. (Optional) Customize the network's :doc:`configurable parameters <configuring-network-properties>` before launching it.
+
+4. Run the network.
 
 .. code-block:: bash
 
@@ -73,7 +75,7 @@ Installation
 
 .. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
 
-4. Verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+5. Verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
 To stop the process, press ``Ctrl+C``.
 
@@ -129,9 +131,9 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cat addresses.yaml
 
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
+4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
+5. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
