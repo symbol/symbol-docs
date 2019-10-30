@@ -13,13 +13,13 @@ Customize the node configurable parameters.
 
 The node properties can be edited after launching a network with the package |catapult-service-bootstrap|.
 
-1. Under the directory ``/build/catapult-config`` you will find the generated properties files for the ``peer`` and ``api`` nodes that compose the network.
+1. Under the directory ``build/catapult-config`` you will find the generated properties files for the ``peer`` and ``api`` nodes that compose the network.
 
-2. If, for example, you want to edit the node properties assigned to the ``peer-node-0``, stop first the service with the command ``./cmds/stop-catapult-peers``.
+2. If, for example, you want to edit the node properties assigned to the ``peer-node-0``, stop first all the services with the command ``./cmds/stop-all``.
 
-3. Then, edit the properties files with your preferred text editor.
+3. Then, edit the properties files under ``peer-node-0/userconfig/resources`` with your preferred text editor.
 
-4. Once finished, restart the peer node by running the command ``./cmds/start-catapult-peers``.
+4. Once finished, apply the changes by running the command ``./cmds/start-all -d``.
 
 **********
 Properties
