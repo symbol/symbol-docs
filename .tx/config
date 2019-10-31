@@ -333,7 +333,7 @@ source_lang = en
 type = PO
 
 [nem2docs.guides--metadata--assigning-metadata-entries-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
 source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
 source_lang = en
 type = PO
