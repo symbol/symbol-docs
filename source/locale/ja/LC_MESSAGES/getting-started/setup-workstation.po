@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-03 07:55+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,159 +29,237 @@ msgstr "ワークステーションのセットアップ"
 msgid ""
 "This first guide will walk you through a step-by-step installation of the "
 "required tools to start developing on NEM."
-msgstr "最初のガイドでは、NEM で開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
+msgstr "最初のガイドでは NEM 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
-#: ../../source/getting-started/setup-workstation.rst:12
-msgid ""
-"⚠️ NEM's next core engine, code-named **Catapult**, is `under development "
-"<https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap "
-"setup is for learning and development purposes, and it **should not power "
-"any production Catapult instances**."
-msgstr ""
-"⚠️ 次世代 NEMのコアエンジン コードネーム **Catapult** は `開発中です <https://github.com/nemtech"
-"/catapult-server/milestones>`_ 。このブートストラップの設定は学習と開発を目的としており **本番の Catapult "
-"インスタンスを動かすべきものではありません** 。"
-
-#: ../../source/getting-started/setup-workstation.rst:18
+#: ../../source/getting-started/setup-workstation.rst:16
 msgid "Running Catapult Service Bootstrap"
 msgstr "Catapult サービスのブートストラップの実行"
 
+#: ../../source/getting-started/setup-workstation.rst:18
+msgid ""
+"To run the network, we are going to use the package |catapult-service-"
+"bootstrap|. This software suite contains the necessary setup scripts to help"
+" developers to quickly build their own network."
+msgstr ""
+"ネットワークを立ち上げるために |catapult-service-bootstrap| "
+"を使用します。このソフトウェアスイートは開発者が素早く自分のネットワークを構築するための手助けになるセットアップスクリプトが含まれています。"
+
 #: ../../source/getting-started/setup-workstation.rst:20
 msgid ""
-"You are going to run a private chain for learning purposes using |catapult-"
-"service-bootstrap|. This service runs Catapult server instances and Catapult"
-" REST nodes locally."
+"NEM's next core engine, code-named **Catapult**, is `under development "
+"<https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap "
+"setup is for learning and development purposes, and it should not power any "
+"production Catapult instances."
 msgstr ""
-"|catapult-service-bootstrap| を使用して学習用のプライベートチェーンを可動させていきます。このサービスは、Catapult "
-"サーバーインスタンスと Catapult RESTノードをローカルで実行します。"
+"次世代 NEMのコアエンジン コードネーム **Catapult** は `開発中です <https://github.com/nemtech"
+"/catapult-server/milestones>`_ 。このブートストラップの設定は学習と開発を目的としており、本番の Catapult "
+"インスタンスを動かすものではありません 。"
 
-#: ../../source/getting-started/setup-workstation.rst:22
-msgid ""
-"Make sure you have `docker`_ and `docker-compose`_ installed before running "
-"the following commands:"
-msgstr ""
-"以下のコマンドを実行する前に、 `docker`_ と `docker-compose`_ がインストールされていることを確認してください:"
+#: ../../source/getting-started/setup-workstation.rst:23
+msgid "Environment requirements"
+msgstr "必須環境"
+
+#: ../../source/getting-started/setup-workstation.rst:25
+msgid "**OS**: Linux or Mac"
+msgstr "**OS**: Linux または Mac"
+
+#: ../../source/getting-started/setup-workstation.rst:26
+msgid "`docker`_ 19.03 installed"
+msgstr "`docker`_ 19.03 がインストール済み"
+
+#: ../../source/getting-started/setup-workstation.rst:27
+msgid "`docker-compose`_ 1.22 installed"
+msgstr "`docker-compose`_ 1.22 がインストール済み"
 
 #: ../../source/getting-started/setup-workstation.rst:30
-msgid "Check if you can get the first block information:"
-msgstr "最初のブロックの情報が取得できるかどうかを確認します:"
+msgid "Installation"
+msgstr "インストール"
 
-#: ../../source/getting-started/setup-workstation.rst:40
+#: ../../source/getting-started/setup-workstation.rst:32
+msgid ""
+"Use this link to **download the latest release** of the package, or clone "
+"the repository directly using Git."
+msgstr "パッケージの **最新版のダウンロードリンク** またはリポジトリから Git を使用して直接クローンしてください。"
+
+#: ../../source/getting-started/setup-workstation.rst:38
+msgid "Open the ``catapult-service-bootstrap`` folder."
+msgstr "``catapult-service-bootstrap`` フォルダを開きます。"
+
+#: ../../source/getting-started/setup-workstation.rst:44
+msgid "Run the network."
+msgstr "ネットワークの立ち上げ"
+
+#: ../../source/getting-started/setup-workstation.rst:50
+msgid ""
+"To run the docker containers in the background of your terminal, you can run"
+" the service in detached mode using the option ``--detach`` or ``-d``."
+msgstr ""
+"ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
+"オプション使用してサービスをデタッチモードで実行します。"
+
+#: ../../source/getting-started/setup-workstation.rst:52
+msgid ""
+"Verify that the node is running by opening a new browser tab with the "
+"following URL: ``localhost:3000/chain/height``."
+msgstr ""
+"次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
+
+#: ../../source/getting-started/setup-workstation.rst:54
+msgid "To stop the process, press ``Ctrl+C``."
+msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
+
+#: ../../source/getting-started/setup-workstation.rst:60
 msgid "Getting a test account"
 msgstr "テストアカウントの取得"
 
-#: ../../source/getting-started/setup-workstation.rst:42
+#: ../../source/getting-started/setup-workstation.rst:62
 msgid ""
-"An account is a key pair (private and public key) associated to a mutable "
-"state stored in the NEM blockchain. In other words, you have a deposit box "
-"on the blockchain, which only you can modify with your key pair. As the name"
-" suggests, the **private key** has to be kept secret at all times. Anyone "
-"with access to the private key, ultimately has control over the account."
+"An :doc:`account <../concepts/account>` is a **deposit box** where you can "
+"hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them "
+"announcing transactions. The :doc:`transaction announcement "
+"<../concepts/transaction>` has an associated cost to provide an incentive to"
+" those who secure the network and run the infrastructure. This cost is paid "
+"in ``cat.currency`` mosaics, the default network token."
 msgstr ""
-"アカウントとは、NEM "
-"ブロックチェーン内に保存される変更可能な状態に関連付くキーペア(秘密鍵と公開鍵)です。言い換えると、ブロックチェーン上に金庫があり、あなたのキーペアでのみ変更をすることができます。**秘密鍵**"
-" はその名の通り、常に秘密にしておかなければなりません。秘密鍵にアクセスできる人は誰でも、アカウントを完全にコントロールできてしまいます。"
+":doc:`アカウント <../concepts/account>` はあなたが :doc:`モザイク <../concepts/mosaic>` "
+"(トークン) を保有することのできる **預け入れ箱** であり、トランザクションをアナウンスすることでこれらと疎通できます。 "
+":doc:`トランザクションのアナウンス <../concepts/transaction>` "
+"はネットワークを保護してインフラストラクチャを維持する人々へインセンティブを提供するための関連するコストが存在します。このコストはデフォルトのネットワークトークンである"
+" ``cat.currency`` モザイクで支払われます。"
 
-#: ../../source/getting-started/setup-workstation.rst:44
+#: ../../source/getting-started/setup-workstation.rst:64
 msgid ""
-"The **public key** is cryptographically derived from the private key. It "
-"would take millions of years to do the reverse process and therefore, the "
-"public key is safe to be shared."
-msgstr "**公開鍵** は暗号理論によって秘密鍵から算出されます。秘密鍵を公開鍵から逆算するには100万年程度はかかるため、共有しても安全です。"
-
-#: ../../source/getting-started/setup-workstation.rst:46
-msgid ""
-"Finally, the account **address** is generated with the public key, following"
-" the NEM blockchain protocol. Share this address instead of the public key, "
-"as it contains more information, such as a validity check or which network "
-"it uses (public, testnet or private)."
+"After running the ``catapult-service-bootstrap`` tool for the first time, "
+"the available currency supply is distributed between a generated set of "
+"accounts. To keep one of these accounts quickly retrievable, we are going to"
+" store one of them using a command-line tool to conveniently perform the "
+"most commonly used actions i.e. interact with the blockchain, setting up an "
+"account, sending funds, etc."
 msgstr ""
-"最後に、アカウントの **アドレス** は、NEM "
-"ブロックチェーンプロトコルに従って、公開鍵から生成されます。このアドレスには正当性チェックや使用されているネットワーク(パブリック、テストネットまたはプライベート)などのより多くの情報が含まれているので、公開鍵の代わりにアドレスを共有してください。"
+"初回の ``catapult-service-bootstrap`` "
+"ツールの起動後、利用可能な通貨の供給は、生成されたアカウントに分配されます。これらのアカウントの 1 "
+"つをすばやく取得するには、ブロックチェーンとの対話、アカウントの設定、資金の送信など、最も一般的なアクションを便利に実行するコマンドラインツールを使用して保存します。"
 
-#: ../../source/getting-started/setup-workstation.rst:48
+#: ../../source/getting-started/setup-workstation.rst:66
+msgid "Install :doc:`NEM2-CLI <../cli>`."
+msgstr ":doc:`NEM2-CLI <../cli>` をインストールします。"
+
+#: ../../source/getting-started/setup-workstation.rst:72
 msgid ""
-"The :doc:`NEM2-CLI <../cli>` conveniently allows you to perform the most "
-"commonly used commands from your terminal i.e. using it to interact with the"
-" blockchain, setting up an account, sending funds, etc."
-msgstr ""
-":doc:`NEM2-CLI <../cli>` "
-"はブロックチェーンとの疎通、アカウントのセットアップや資産の送信など、特によく使うコマンドをターミナルから実行するのに便利です。"
+"Open a new terminal window. Then, go to the directory where the bootstrap "
+"tool has generated the addresses."
+msgstr "新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
 
-#: ../../source/getting-started/setup-workstation.rst:50
-msgid "Install NEM2-CLI using ``npm``."
-msgstr "``npm`` を使って NEM2-CLI をインストールします。"
+#: ../../source/getting-started/setup-workstation.rst:78
+msgid "Display the content of the ``address.yaml`` file."
+msgstr "``address.yaml`` ファイルの内容を表示します。"
 
-#: ../../source/getting-started/setup-workstation.rst:56
-msgid ""
-"Open a terminal, and go to the directory where you have download Catapult "
-"Bootstrap Service."
-msgstr "ターミナルを開き、 Catapult Bootstrap Service をダウンロードしたディレクトリへ移動してください。"
-
-#: ../../source/getting-started/setup-workstation.rst:63
+#: ../../source/getting-started/setup-workstation.rst:84
 msgid ""
 "Under the section ``nemesis_addresses``, you will find the key pairs which "
-"contain ``cat.currency``. Every action on the blockchain costs cat.currency "
-"units, in order to provide an incentive for those who validate and secure "
-"the network."
+"contain ``cat.currency``. Copy the private key of the first account."
 msgstr ""
-"``nemesis_addresses``  のセクション下にて、``cat.currency`` "
-"を持つキーペアを見つけることができます。ブロックチェーンに対するすべてのアクションは、ネットワークを検証して保護する人々にインセンティブを与えるために "
-"``cat.currency`` 単位がかかります。"
+"``nemesis_addresses`` のセクションから ``cat.currency`` "
+"を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
 
-#: ../../source/getting-started/setup-workstation.rst:65
-msgid "Load the first account as a profile in NEM2-CLI."
-msgstr "NEM2-CLI に最初のアカウントを読み込みます。"
-
-#: ../../source/getting-started/setup-workstation.rst:76
+#: ../../source/getting-started/setup-workstation.rst:86
 msgid ""
-"You should see the following lines in your terminal, containing the account "
-"credentials:"
-msgstr "アカウントの認証情報を含む、以下の行がターミナルに表示されるはずです:"
+"Type the command ``nem2-cli profile create`` using the key obtained in the "
+"previous step."
+msgstr "前のステップで取得したキーを使用して、コマンド ``nem2-cli profile create`` を実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:96
-msgid "Setting up the development environment"
-msgstr "開発環境のセットアップ"
-
-#: ../../source/getting-started/setup-workstation.rst:98
+#: ../../source/getting-started/setup-workstation.rst:97
 msgid ""
-"It is time to choose a programming language. Pick the one you feel most "
+"Use nem2-cli only for testing and development purposes, as the private keys "
+"stored are not encrypted."
+msgstr "nem2-cli は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
+
+#: ../../source/getting-started/setup-workstation.rst:99
+msgid "You should see the account credentials in your terminal."
+msgstr "アカウントの資格情報がターミナルで確認できます。"
+
+#: ../../source/getting-started/setup-workstation.rst:114
+msgid ""
+"As the name suggests, the **private key has to be kept secret at all "
+"times**. Anyone with access to the private key ultimately has control over "
+"the account. On the other hand, you can share securely the public and "
+"address of your account with other participants of the network to receive "
+"transactions from them."
+msgstr ""
+"その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
+"。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
+
+#: ../../source/getting-started/setup-workstation.rst:120
+msgid "Creating a project"
+msgstr "プロジェクトの作成"
+
+#: ../../source/getting-started/setup-workstation.rst:122
+msgid ""
+"Now that you have your account filled with cat.currency units, it is the "
+"time to choose a **programming language**. Pick the one you feel most "
 "comfortable with, or follow your project requirements."
-msgstr "それではプログラミング言語を選択しましょう。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
+msgstr ""
+"アカウントに cat.currency 単位が入力されたので **プログラミング言語** "
+"を選択しましょう。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:100
+#: ../../source/getting-started/setup-workstation.rst:124
 msgid ""
-"Create a folder for your new project and run the instructions for the "
-"selected language."
-msgstr "新しいプロジェクトのフォルダを作り、選択した言語のインストラクションを実行しましょう。"
+"Then, **create a folder for your new project** and run the instructions for "
+"the selected language. If none of the languages fits your project, you can "
+"always query the blockchain directly using the `REST gateway "
+"</endpoints.html>`_."
+msgstr ""
+"次に、 **新しいプロジェクト用のフォルダを作成します** "
+"。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  `REST ゲートウェイ "
+"</endpoints.html>`_ を使用して直接ブロックチェーンに問い合わせできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:106
-#: ../../source/getting-started/setup-workstation.rst:135
+#: ../../source/getting-started/setup-workstation.rst:130
+#: ../../source/getting-started/setup-workstation.rst:159
 msgid ""
 "Create a ``package.json`` file. The minimum required Node.js version is "
 "8.9.X."
 msgstr "``package.json`` を作成します。バージョン 8.9.X 以上の Node.js が必要です。"
 
-#: ../../source/getting-started/setup-workstation.rst:112
-#: ../../source/getting-started/setup-workstation.rst:141
+#: ../../source/getting-started/setup-workstation.rst:136
+#: ../../source/getting-started/setup-workstation.rst:165
 msgid "Install nem2-sdk and rxjs library."
 msgstr "nem2-sdk と rxjs ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:118
+#: ../../source/getting-started/setup-workstation.rst:142
 msgid ""
 "We recommend to use **TypeScript instead of JavaScript** when building "
 "applications for NEM blockchain."
 msgstr ""
 "NEM ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
 
-#: ../../source/getting-started/setup-workstation.rst:120
+#: ../../source/getting-started/setup-workstation.rst:144
 msgid "Make sure you have at least version 2.5.X installed."
 msgstr "バージョン 2.5.X 以上がインストールされていることを確認してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:127
+#: ../../source/getting-started/setup-workstation.rst:151
 msgid "Use `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:188
+#: ../../source/getting-started/setup-workstation.rst:173
+msgid ""
+"Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use "
+"your favourite IDE or create a project from the command line."
+msgstr ""
+"新しく Java `gradle`_ プロジェクトを開いてください。`JDK`_ は最低でも JDK 8 "
+"が必要です。お気に入りのIDEを使用するか、コマンドラインからプロジェクトを作成してください。"
+
+#: ../../source/getting-started/setup-workstation.rst:179
+msgid "Edit ``build.gradle`` to use Maven central repository."
+msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
+
+#: ../../source/getting-started/setup-workstation.rst:187
+msgid "Add nem2-sdk as a dependency."
+msgstr "nem2-sdk を依存として追加します。"
+
+#: ../../source/getting-started/setup-workstation.rst:195
+msgid "Execute ``gradle build`` and ``gradle run`` to run your program."
+msgstr "プログラムを開始するために ``gradle build`` と ``gradle run`` を実行します。"
+
+#: ../../source/getting-started/setup-workstation.rst:213
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>` 。"

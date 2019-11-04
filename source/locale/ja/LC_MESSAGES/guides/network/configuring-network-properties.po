@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.18.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-03 07:55+0000\n"
+"PO-Revision-Date: 2019-10-30 16:39+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/configuring-network-properties.rst:10
+msgid "Configuring network properties"
+msgstr "ネットワークプロパティの設定"
+
+#: ../../source/guides/network/configuring-network-properties.rst:12
+msgid "Customize the network configurable parameters."
+msgstr "ネットワーク設定パラメータの変更"
+
+#: ../../source/guides/network/configuring-network-properties.rst:14
+msgid ""
+"The directory ``ruby/catapult-templates/peer_node/resources`` of the "
+"|catapult-service-bootstrap| repository comes with a set of files to "
+"configure the network."
+msgstr ""
+"|catapult-service-bootstrap| リポジトリの ``ruby​/catapult-"
+"templates/peer_node/resources`` ディレクトリにはネットワークを構成するための一連ファイルが付属しています。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:16
+msgid ""
+"The ``.properties`` files provided can be edited with any text editor before"
+" launching a network for the first time."
+msgstr "生成される ``.properties`` ファイルはネットワーク初回起動の前に任意のテキストエディタで編集できます。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:20
+msgid "Properties"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:22
+msgid "Find below the list of configurable properties."
+msgstr "設定可能なプロパティのリストは次の通りです。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Network identifier."
+msgstr "ネットワーク識別子"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Node equality strategy."
+msgstr "ノード等価ストラテジ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Nemesis public key."
+msgstr "ネメシス公開鍵"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Nemesis generation hash."
+msgstr "ネメシスジェネレーションハッシュ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum namespace name size."
+msgstr "最大ネームスペース名長"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of children for a root namespace."
+msgstr "最大子ネームスペース数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum namespace depth."
+msgstr "最大ネームスペース深度"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Minimum namespace duration."
+msgstr "最小ネームスペース期間"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum namespace duration."
+msgstr "最大ネームスペース期間"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid ""
+"Grace period during which time only the previous owner can renew an expired "
+"namespace."
+msgstr "期限切れネームスペースの更新猶予期間"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Reserved root namespaces that cannot be claimed."
+msgstr "予約済みルートネームスペース"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Public key of the namespace rental fee sink account."
+msgstr "ネームスペースレンタル手数料のシンクアカウント公開鍵"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Root namespace rental fee per block."
+msgstr "ルートネームスペースレンタル手数料"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Child namespace rental fee."
+msgstr "子ネームスペースレンタル手数料"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of account restriction values."
+msgstr "最大制限アカウント数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of mosaic restriction values."
+msgstr "最大モザイク制限数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum transaction message size."
+msgstr "最大メッセージサイズ"
