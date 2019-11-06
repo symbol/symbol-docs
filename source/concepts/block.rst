@@ -55,7 +55,7 @@ Serialization of the block header.
     :widths: 30 30 40
 
     height; :schema:`Height <types.cats#L5>`; Height of the blockchain. Each block has a unique height. Subsequent blocks differ in height by 1.
-    timestamp; :schema:`Timestamp <types.cats#L5>`; Number of seconds elapsed since the creation of the nemesis block.
+    timestamp; :schema:`Timestamp <types.cats#L5>`; Number of milliseconds elapsed since the creation of the nemesis block.
     difficulty; :schema:`Difficulty <types.cats#L4>`; Average difficulty divided by the average block creation time for the last ``60`` blocks. If the new difficulty is more than 5% greater or smaller than the difficulty of the last block, then the change is capped to 5%. Additionally, difficulties are kept within certain bounds. The new difficulty is clamped to the boundaries if it is greater than 10\ :sup:`15` or smaller than 10\ :sup:`13`\ .
     previousBlockHash; :schema:`Hash256 <types.cats#L12>`; Hash of the previous block.
     transactionsHash; :schema:`Hash256 <types.cats#L12>`; Transactions included in a block are hashed forming a |merkle|. The root of the tree summarizes them.
