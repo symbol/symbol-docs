@@ -158,7 +158,7 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
     :delim: ;
 
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    address; :schema:`Address <types.cats#L8>`; Aliased address.
+    address; :schema:`Address <types.cats#L11>`; Aliased address.
     aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _mosaic-alias-transaction:
@@ -181,7 +181,7 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
     :delim: ;
 
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Aliased mosaic identifier.
+    mosaicId; :schema:`MosaicId <types.cats#L7>`; Aliased mosaic identifier.
     aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _namespace-registration-type:

@@ -249,9 +249,9 @@ Serialization of a transaction.
 
 **Inlines**:
 
-* :ref:`SizePrefixedEntity<size-prefixed-entity>`
-* :ref:`VerifiableEntity<verifiable-entity>`
-* :ref:`EntityBody<entity-body>`
+* :ref:`SizePrefixedEntity <size-prefixed-entity>`
+* :ref:`VerifiableEntity <verifiable-entity>`
+* :ref:`EntityBody <entity-body>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -259,6 +259,23 @@ Serialization of a transaction.
 
     max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
     deadline; :schema:`Timestamp <types.cats#L5>`;  Number of seconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+
+.. _embedded-transaction-header:
+
+EmbeddedTransactionHeader
+=========================
+
+binary layout for an embedded transaction header.
+
+**Inlines**:
+
+* :ref:`SizePrefixedEntity <size-prefixed-entity>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    embeddedTransactionHeader_Reserved1; uint32; Reserved padding to align end of EmbeddedTransactionHeader on 8-byte boundary.
 
 .. _embedded-transaction:
 
@@ -269,24 +286,5 @@ Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 
 **Inlines**:
 
-* :ref:`SizePrefixedEntity<size-prefixed-entity>`
-* :ref:`EntityBody<entity-body>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    embeddedTransactionHeader_Reserved1; uint32; Reserved padding to align end of EmbeddedTransactionHeader on 8-byte boundary.
-
-.. _size-prefixed-entity:
-
-SizePrefixedEntity
-==================
-
-Serialization of an entity that has a prefixed size.
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    size; unit32; Size of the transaction.
+* :ref:`EmbeddedTransactionHeader <embedded-transaction-header>`
+* :ref:`EntityBody <entity-body>`

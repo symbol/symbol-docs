@@ -138,7 +138,7 @@ Furthermore, for the duration that the account is used as a delegated account, i
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    remotePublicKey; :schema:`Key <types.cats#L11>`; Remote account public key.
+    remotePublicKey; :schema:`Key <types.cats#L14>`; Remote account public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _link-action:

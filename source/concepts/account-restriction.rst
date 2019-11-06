@@ -118,8 +118,8 @@ Configure restrictions to prevent receiving or sending transactions from/to unde
     restrictionAdditionsCount; uint8; number of account restriction additions.
     restrictionDeletionsCount; uint8; Number of account restriction deletions.
     accountRestrictionTransactionBody_Reserved1 ; uint32; Reserved padding to align restrictionAdditions on 8-byte boundary.
-    restrictionAdditions; array(:schema:`UnresolvedAddress <types.cats#L7>`, restrictionAdditionsCount); Account restriction additions.
-    restrictionDeletions; array(:schema:`UnresolvedAddress <types.cats#L7>`, restrictionDeletionsCount); Account restriction deletions.
+    restrictionAdditions; array(:schema:`UnresolvedAddress <types.cats#L10>`, restrictionAdditionsCount); Account restriction additions.
+    restrictionDeletions; array(:schema:`UnresolvedAddress <types.cats#L10>`, restrictionDeletionsCount); Account restriction deletions.
 
 .. _account-mosaic-restriction-transaction:
 
@@ -144,8 +144,8 @@ Configure restrictions to prevent receiving transactions containing a specific m
     restrictionAdditionsCount; uint8; number of account restriction additions.
     restrictionDeletionsCount; uint8; Number of account restriction deletions.
     accountRestrictionTransactionBody_Reserved1 ; uint32; Reserved padding to align restrictionAdditions on 8-byte boundary.
-    restrictionAdditions; array(:schema:`UnresolvedMosaicId <types.cats#L3>`, restrictionAdditionsCount); Account restriction additions.
-    restrictionDeletions; array(:schema:`UnresolvedMosaicId <types.cats#L3>`, restrictionDeletionsCount); Account restriction deletions.
+    restrictionAdditions; array(:schema:`UnresolvedMosaicId <types.cats#L6>`, restrictionAdditionsCount); Account restriction additions.
+    restrictionDeletions; array(:schema:`UnresolvedMosaicId <types.cats#L6>`, restrictionDeletionsCount); Account restriction deletions.
 
 .. _account-operation-restriction-transaction:
 

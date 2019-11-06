@@ -15,9 +15,10 @@ Transaction statement
 A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked with a transaction in a particular block. Statements can include receipts with the following basic types:
 
 * **Balance Transfer**: The invisible state change triggered a mosaic transfer.
-* **Balance Change**: The invisible state change changed an account balance.
-* **Artifact Expiry**: An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
-* **Inflation Receipt**: Native currency mosaics were created due to :doc:`inflation <inflation>`.
+* **Balance Change**: The invisible state change altered an account balance.
+* **Mosaic Expiry**: A mosaic expired.
+* **Namespace Expiry**: A namespace expired.
+* **Inflation**: Native currency mosaics were created due to :doc:`inflation <inflation>`.
 
 ********************
 Resolution statement
@@ -48,11 +49,11 @@ Catapult records invisible state changes for the following entities.
     0xF143; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
     0xF243; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaicId.
     **Mosaic**;;;
-    0x414D; Mosaic_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The identifier of the mosaic expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` lifetime elapses.
+    0x414D; Mosaic_Expired; :ref:`MosaicExpiry <mosaic-expiry-receipt>`; The identifier of the mosaic expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` lifetime elapses.
     0x124D; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
     **Namespace**;;;
-    0x414E; Namespace_Expired; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The identifier of the namespace expiring in this block. It is recorded when the :doc:`namespace <namespace>` lifetime elapses.
-    0x424E; Namespace_Deleted; :ref:`ArtifactExpiry <artifact-expiry-receipt>`; The identifier of the namespace deleted in this block. It is recorded when the :doc:`namespace <namespace>` grace period elapses.
+    0x414E; Namespace_Expired; :ref:`NamespaceExpiry <namespace-expiry-receipt>`; The identifier of the namespace expiring in this block. It is recorded when the :doc:`namespace <namespace>` lifetime elapses.
+    0x424E; Namespace_Deleted; :ref:`NamespaceExpiry <namespace-expiry-receipt>`; The identifier of the namespace deleted in this block. It is recorded when the :doc:`namespace <namespace>` grace period elapses.
     0x134E; Namespace_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
     **HashLock**;;;
     0x3148; LockHash_Created; :ref:`BalanceDebit <balance-change-receipt>`; The lockhash  sender, mosaicId and amount locked. It is recorded when a valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced.
@@ -115,10 +116,9 @@ The invisible state change triggered a mosaic transfer.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
-    amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to send.
-    senderPublicKey; :schema:`Key <types.cats#L11>`; Public key of the sender.
-    recipientAddress; :schema:`Address <types.cats#L8>`; Address of the recipient.
+    mosaic; :ref:`Mosaic <mosaic>`; Mosaic transferred.
+    senderPublicKey; :schema:`Key <types.cats#L14>`; Public key of the sender.
+    recipientAddress; :schema:`Address <types.cats#L11>`; Address of the recipient.
 
 .. _balance-change-receipt:
 
@@ -138,16 +138,15 @@ The invisible state change changed an account balance.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
-    amount; :schema:`Amount <types.cats#L1>`; Amount of mosaics to increase or decrease.
-    targetPublicKey; :schema:`Key <types.cats#L11>`; Public key of the target account.
+    mosaic; :ref:`Mosaic <mosaic>`; Mosaic increased or decreased.
+    targetPublicKey; :schema:`Key <types.cats#L14>`; Public key of the target account.
 
-.. _artifact-expiry-receipt:
+.. _mosaic-expiry-receipt:
 
-ArtifactExpiryReceipt
-=====================
+MosaicExpiryReceipt
+===================
 
-An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
+An :doc:`mosaic <mosaic>` expired.
 
 * **version**: 0x1
 * **basicType**: 0x4
@@ -160,7 +159,29 @@ An artifact (e.g. :doc:`namespace <namespace>`, :doc:`mosaic <mosaic>`) expired.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    artifactId; :schema:`MosaicId <types.cats#L4>` or :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the artifact.
+    artifactId; :schema:`MosaicId <types.cats#L7>`; Mosaic identifier.
+
+
+.. _namespace-expiry-receipt:
+
+NamespaceExpiryReceipt
+======================
+
+A :doc:`namespace <namespace>` expired.
+
+* **version**: 0x1
+* **basicType**: 0x4
+
+**Inlines**:
+
+* :ref:`Receipt <receipt>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    artifactId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+
 
 .. _inflation-receipt:
 
@@ -178,7 +199,7 @@ InflationReceipt
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic that has been created.
+    mosaicId; :schema:`MosaicId <types.cats#L7>`; Identifier of the mosaic that has been created.
     amount; :schema:`Amount <types.cats#L1>`; Number of mosaics created.
 
 .. _transaction-statement:
@@ -220,7 +241,7 @@ A resolution statement keeps the relation between a namespace alias used in a tr
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    unresolved; :schema:`UnresolvedAddress <types.cats#L7>` or :schema:`UnresolvedMosaicId <types.cats#L3>`; Unresolved address or unresolved mosaic identifier.
+    unresolved; :schema:`UnresolvedAddress <types.cats#L10>` or :schema:`UnresolvedMosaicId <types.cats#L6>`; Unresolved address or unresolved mosaic identifier.
     resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); Array of resolution entries linked to the unresolved namespace identifier. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
 
 .. _resolution-entry:
@@ -232,7 +253,7 @@ ResolutionEntry
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    resolvedValue; :schema:`Address <types.cats#L8>` or :schema:`MosaicId <types.cats#L4>`; Resolved address or resolved mosaic identifier.
+    resolvedValue; :schema:`Address <types.cats#L11>` or :schema:`MosaicId <types.cats#L7>`; Resolved address or resolved mosaic identifier.
     source; :ref:`ReceiptSource <receipt-source>`;  Information about the transaction that triggered the receipt.
 
 .. _receipt-source:
