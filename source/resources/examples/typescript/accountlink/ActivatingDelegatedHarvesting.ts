@@ -31,12 +31,11 @@ const nodePublicKey = process.env.NODE_PUBLIC_KEY as string;
 const nodePublicAccount = PublicAccount.createFromPublicKey(nodePublicKey, NetworkType.MIJIN_TEST);
 
 const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction
-    .create(
+    .createPersistentDelegationRequestTransaction(
         Deadline.create(),
-        nodePublicAccount.address,
-        [],
-        PersistentHarvestingDelegationMessage
-            .create(remoteAccount.privateKey, account.privateKey, nodePublicKey, NetworkType.MIJIN_TEST),
+        remoteAccount.privateKey,
+        nodePublicAccount.publicKey,
+        account.privateKey,
         NetworkType.MIJIN_TEST);
 /* end block 03 */
 
