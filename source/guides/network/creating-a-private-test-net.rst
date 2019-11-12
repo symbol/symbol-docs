@@ -125,7 +125,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cd  build/generated-addresses/
 
-3. Display the content of the ``address.yaml`` file.
+3. Display the content of the ``addresses.yaml`` file.
 
 .. code-block:: bash
 
