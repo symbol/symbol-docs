@@ -137,7 +137,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.3 rxjs
+            npm install nem2-sdk@0.14.4 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -166,7 +166,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.3 rxjs
+            npm install nem2-sdk@0.14.4 rxjs
 
     .. tab:: Java
 
@@ -189,7 +189,7 @@ Then, **create a folder for your new project** and run the instructions for the 
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.14.1"
+                compile "compile 'io.nem:sdk-vertx-client:0.14.2"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.

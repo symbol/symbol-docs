@@ -79,6 +79,12 @@ source_file = build/gettext/concepts/cryptography.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--fees]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
+source_file = build/gettext/concepts/fees.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--harvesting]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
 source_file = build/gettext/concepts/harvesting.pot
@@ -525,4 +531,3 @@ file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic
 source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
 source_lang = en
 type = PO
-

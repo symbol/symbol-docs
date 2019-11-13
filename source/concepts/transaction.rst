@@ -4,8 +4,6 @@ Transaction
 
 A transaction generally represents a unit of work within a database system. In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
 
-Transactions accepted by the network are stored permanently on :doc:`blocks <block>`.
-
 *****************
 Transaction types
 *****************
@@ -97,31 +95,6 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
     262C46CEABB858096980000000000
     */
 
-.. _fees:
-
-Fees
-====
-
-Transactions have an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network and run the infrastructure.
-
-The fee associated with a transaction primarily depends on the transaction’s size. The effective fee is the product of the size of the transaction, and a fee multiplier set by the harvester. The node owner can configure the latter value to all positive values, including zero.
-
-.. math::
-
-    effectiveFee = transaction::size * block::feeMultiplier
-
-A sender of a transaction must specify during the transaction definition a ``max_fee``, meaning the maximum fee the account allows to spend for this transaction.
-
-If the ``effective_fee`` is smaller or equal to the ``max_fee``, the harvester can opt to include the transaction in the block. The ``fee_multiplier`` is stored in the :ref:`block header <block-header>`, permitting to resolve which was the effective fee paid for every transaction included.
-
-The harvesting nodes can decide their transaction inclusion strategy:
-
-* **Prefer-oldest**: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.
-* **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
-* **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
-
-By default, the fee is paid in ``cat.currency``, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
-
 .. _transaction-signature:
 
 *********************
@@ -139,7 +112,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6. Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+6. Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ by applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 
@@ -204,7 +177,7 @@ After announcing the transaction, the REST API will always return an OK response
 
 The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
 
-The second validation is done before the transaction is added in a harvested block. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
+The second validation is done before the transaction is added in a :doc:`harvested block <block>`. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
 
 Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account. Additionally, the transaction fee is deducted from the signer's account.
 
