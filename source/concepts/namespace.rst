@@ -30,7 +30,7 @@ You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-s
 Alias
 *****
 
-:ref:`AliasTransactions <address-alias-transaction>` **link namespaces to accounts and mosaics**. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
+:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
 The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
@@ -94,7 +94,7 @@ The default namespace rental fees are :properties:`configurable per network <con
     Extending a namespace duration; ``0.000001 cat.currency`` per block
     Creating a subnamespace; ``0.0001 cat.currency``
 
- To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 ******
 Guides
