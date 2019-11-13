@@ -70,7 +70,7 @@ The fee that needs to be paid for a transaction now depends on the transaction s
 
 The ``maxFee`` field represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
 
-* Protocol: :ref:`Transaction fees <fees>`
+* Protocol: :doc:`Transaction fees <../../concepts/fees>`
 
 ********************
 Mosaics & namespaces
@@ -171,5 +171,3 @@ You can also ask integration related questions on |stack-overflow|, or reach our
 .. |under-development| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server/milestones/" target="_blank">under development</a>
-
-

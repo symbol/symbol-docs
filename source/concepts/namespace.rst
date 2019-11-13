@@ -46,7 +46,7 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 Duration
 ********
 
-At the time of the namespace **registration**, you must set the number of confirmed blocks you would like to rent the namespace for.
+At the time of the namespace registration, you must set the number of confirmed blocks you would like to rent the namespace for.
 
 The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
 
@@ -76,15 +76,17 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
 
 .. note:: Only namespaces created during the :doc:`nemesis block <block>` can have perpetual duration.
 
+.. _namespace-rental-fee:
+
 **********
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>` . Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
 
-The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
+The default namespace rental fees are :properties:`configurable per network <config-network.properties>`, but the **network dynamically adjusts the namespace rental fees** over time.
 
-.. csv-table::
+.. csv-table:: Default values
     :header: "Property", "Value"
     :delim: ;
 
@@ -92,7 +94,7 @@ The default namespace rental fees are :properties:`configurable per network <con
     Extending a namespace duration; ``0.000001 cat.currency`` per block
     Creating a subnamespace; ``0.0001 cat.currency``
 
-The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
+ To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 ******
 Guides
