@@ -265,7 +265,7 @@ Serialization of a transaction.
 EmbeddedTransactionHeader
 =========================
 
-binary layout for an embedded transaction header.
+Binary layout for an embedded transaction header.
 
 **Inlines**:
 
