@@ -82,7 +82,7 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>` . Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`. Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
 
 The default namespace rental fees are :properties:`configurable per network <config-network.properties>`, but the **network dynamically adjusts the namespace rental fees** over time.
 
