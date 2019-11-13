@@ -6,30 +6,9 @@ Writing a guide
 
 Thank you for considering writing a new guide!
 
-***************
-Before starting
-***************
+Before starting, we recommend you to open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_ to find some ideas pending to be written.
 
-1. Open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending to be written. They have the label "great new issue".
-
-2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea.
-
-3. Classify your guide under one of the following categories:
-
-* Account
-* Account Filter
-* Aggregate Transaction
-* Block
-* Cross-Chain Swaps
-* Harvesting
-* Mosaic
-* Namespace
-* Node
-* Receipt
-* Transfer Transaction
-* Tools
-
-.. note:: You can suggest new categories creating a `GitHub issue <https://github.com/nemtech/nem2-docs>`_.
+To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts. If there is no issue yet, create a new one introducing the content you want to publish.
 
 *****************
 Writing the guide
@@ -39,9 +18,9 @@ Writing the guide
 
 .. code-block:: bash
 
-    git clone <url>
+    git clone https://github.com/nemtech/nem2-docs.git
 
-2. Make sure you have Python 2.7 or 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed.
+2. Make sure you have Python 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed.
 
 .. code-block:: bash
 
@@ -75,13 +54,13 @@ Writing the guide
     Title
     #####
 
-    Objective after finishing the guide.
+    The objective to achieve after finishing the guide.
 
     **********
     Background
     **********
 
-    Explain necessary concepts before starting to code.
+    Explain the necessary concepts before starting to code.
 
     *************
     Prerequisites
@@ -103,9 +82,9 @@ Writing the guide
 
     Is there any extra exercise that readers could try on their own?
 
-5. Write and code your guide! Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
+5. Write and code your guide. Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
 
-6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``. You can render fragments of code from a file inside your rst file.
+6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``. You can render fragments of code from a file inside your ``.rst`` file.
 
 ::
 
@@ -118,6 +97,8 @@ Writing the guide
 
 7. Test and preview your changes.
 
+  .. example-code::
+
     make livehtml
 
-8. Push your changes and do a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the documentation writing style.
+8. Push your changes and create a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.
