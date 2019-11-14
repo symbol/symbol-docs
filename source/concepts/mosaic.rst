@@ -103,7 +103,7 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
 
 **Version**: 0x01
 
-**Entity type**: 0x414D
+**EntityType**: 0x414D
 
 **Inlines**:
 
@@ -113,11 +113,11 @@ Announce a MosaicDefinitionTransaction to create a new mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    id; :schema:`MosaicId <types.cats#L7>`; Identifier of the mosaic.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic duration expressed in blocks. Duration is allowed to lie up to ``3650`` days (10 years). If set to 0, the mosaic is non-expiring.
     nonce; uint32; Random nonce used to generate the mosaic id.
-    id; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic.
     flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
     divisibility; uint8; Mosaic divisibility. Maximum divisibility is ``6``.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Mosaic duration expressed in blocks. Duration is allowed to lie up to ``3650`` days (10 years). If set to 0, the mosaic is non-expiring.
 
 .. _mosaic-supply-change-transaction:
 
@@ -128,7 +128,7 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
 
 **Version**: 0x01
 
-**Entity type**: 0x424D
+**EntityType**: 0x424D
 
 **Inlines**:
 
@@ -138,9 +138,9 @@ Announce a supply change transaction to increase or decrease a mosaic's supply.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Affected mosaic identifier.
-    direction; :ref:`MosaicSupplyChangeAction<mosaic-supply-change-action>`; Supply change direction.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Affected mosaic identifier.
     delta; :schema:`Amount <types.cats#L1>`; Amount of supply to increase or decrease.
+    action; :ref:`MosaicSupplyChangeAction<mosaic-supply-change-action>`; Supply change action.
 
 .. _mosaic:
 
@@ -151,7 +151,7 @@ Mosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Mosaic identifier.
+    mosaicId; :schema:`MosaicId <types.cats#L7>`; Mosaic identifier.
     amount; :schema:`Amount <types.cats#L1>`; Mosaic amount.
 
 .. _unresolved-mosaic:
@@ -163,7 +163,7 @@ UnresolvedMosaic
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Mosaic identifier. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of the real  mosaic identifier.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Mosaic identifier. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of the real  mosaic identifier.
     amount; :schema:`Amount <types.cats#L1>`; Mosaic amount.
 
 .. _mosaic-flags:

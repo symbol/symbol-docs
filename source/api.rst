@@ -238,7 +238,7 @@ This section describes the error messages that can be returned via status channe
     0x804E0070; Failure_Namespace_Alias_Inconsistent_Unlink_Type; Validation failed because unlink type is not consistent with existing alias.
     0x804E0071; Failure_Namespace_Alias_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing alias.
     0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
-    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type; Validation failed because the account restriction type is invalid.
+    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type;
     0x80500002; Failure_RestrictionAccount_Invalid_Modification_Action; Validation failed because a modification action is invalid.
     0x80500003; Failure_RestrictionAccount_Invalid_Modification_Address; Validation failed because a modification address is invalid.
     0x80500004; Failure_RestrictionAccount_Modification_Operation_Type_Incompatible; Validation failed because the operation type is incompatible. *Note*: This indicates that the existing restrictions have a different operation type than that specified in the notification.

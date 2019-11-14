@@ -143,7 +143,7 @@ c) Add or delete cosignatories from a multisig account.
 
 **Version**: 0x01
 
-**Entity type**: 0x4155
+**EntityType**: 0x4155
 
 **Inlines**:
 
@@ -155,31 +155,8 @@ c) Add or delete cosignatories from a multisig account.
 
     minRemovalDelta; int8; Number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; Number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    modificationsCount; uint8; Number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); Attached cosignatory modifications.
-
-.. _cosignatory-modification:
-
-CosignatoryModification
-=======================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    modificationAction; :ref:`CosignatoryModificationAction <cosignatory-modification-action>`; Modification Action.
-    cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Cosignatory account public key.
-
-.. _cosignatory-modification-action:
-
-CosignatoryModificationAction
-=============================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Remove cosignatory.
-    0x01; Add cosignatory.
+    publicKeyAdditionsCount; uint8; Number of cosignatory public key additions.
+    publicKeyDeletionsCount ; uint8; Number of cosignatory public key deletions.
+    multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align publicKeyAdditions on 8-byte boundary.
+    publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyAdditionsCount); Cosignatory public key additions.
+    publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyDeletionsCount); Cosignatory public key deletions.
