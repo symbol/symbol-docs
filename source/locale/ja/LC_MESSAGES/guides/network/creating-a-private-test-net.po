@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.8\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-03 07:55+0000\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -264,22 +264,23 @@ msgstr "peer0 と peer1 サービスの停止"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:110
 msgid "Getting test cat.currency"
-msgstr "テスト甩 cat.currency の取得"
+msgstr "テスト cat.currency の取得"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:112
 msgid ""
 "An :doc:`account <../../concepts/account>` is a **deposit box** where you "
 "can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with "
 "them announcing transactions. When announcing a transaction, accounts have "
-"to pay an :ref:`associated cost <fees>` to provide an incentive to those who"
-" validate and secure the network and run the infrastructure. This cost is "
-"paid in ``cat.currency`` mosaics, the default network token."
+"to pay an :doc:`associated cost <../../concepts/fees>` to provide an "
+"incentive to those who validate and secure the network and run the "
+"infrastructure. This cost is paid in ``cat.currency`` mosaics, the default "
+"network token."
 msgstr ""
 ":doc:`アカウント <../../concepts/account>` はあなたが :doc:`モザイク "
 "<../../concepts/mosaic>` (トークン) を保有することのできる **預け入れ箱** "
 "であり、トランザクションをアナウンスすることでこれらと疎通できます。トランザクションをアナウンスすると、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための"
-" :ref:`関連するコスト <fees>` が存在します。このコストはデフォルトのネットワークトークンである ``cat.currency`` "
-"モザイクで支払われます。"
+" :doc:`関連するコスト <../../concepts/fees>` が存在します。このコストはデフォルトのネットワークトークンである "
+"``cat.currency`` モザイクで支払われます。"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:114
 msgid ""
@@ -305,8 +306,8 @@ msgid ""
 msgstr "新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:128
-msgid "Display the content of the ``address.yaml`` file."
-msgstr "``address.yaml`` ファイルの内容を表示します。"
+msgid "Display the content of the ``addresses.yaml`` file."
+msgstr "``addresses.yaml`` ファイルの内容を表示します。"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:134
 msgid ""

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.8\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-03 07:55+0000\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transaction.rst:3
-#: ../../source/concepts/transaction.rst:246
+#: ../../source/concepts/transaction.rst:219
 msgid "Transaction"
 msgstr "トランザクション"
 
@@ -35,17 +35,11 @@ msgstr ""
 "一般的にトランザクションとはデータベースシステム内での作業単位を表します。ブロックチェーンにおいては、 :doc:`アカウント <account>` "
 "によって署名されたアクションが、それ自身の状態を変えるときを指します。"
 
-#: ../../source/concepts/transaction.rst:7
-msgid ""
-"Transactions accepted by the network are stored permanently on :doc:`blocks "
-"<block>`."
-msgstr "トランザクションはネットワークに受理され、 :doc:`ブロック <block>` に恒久的に保存されます。"
-
-#: ../../source/concepts/transaction.rst:11
+#: ../../source/concepts/transaction.rst:9
 msgid "Transaction types"
 msgstr "トランザクションタイプ"
 
-#: ../../source/concepts/transaction.rst:15
+#: ../../source/concepts/transaction.rst:13
 msgid ""
 "There are different types of transactions. For example, you can transfer "
 ":doc:`mosaics <mosaic>` between accounts, transfer or configure the "
@@ -168,14 +162,18 @@ msgid "Set a global restriction to a mosaic."
 msgstr "モザイクにグローバル制限の設定"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "Set a mosaic restriction to a specific address."
+msgstr "特定のアドレスにモザイク制限を設定"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
 msgstr "モザイクとメッセージを２つのアカウント間で送信します。"
 
-#: ../../source/concepts/transaction.rst:60
+#: ../../source/concepts/transaction.rst:58
 msgid "Defining a transaction"
 msgstr "トランザクションの定義"
 
-#: ../../source/concepts/transaction.rst:62
+#: ../../source/concepts/transaction.rst:60
 msgid ""
 "Transactions are defined in a `serialized "
 "<https://github.com/nemtech/catbuffer>`_ form. Each transaction extends from"
@@ -189,7 +187,7 @@ msgstr ""
 "を継承し、型の特定のプロパティが組み合わされます。追加プロパティの説明は :ref:`\"スキーマ\" セクション <transfer-"
 "transaction>` の下、それぞれの組み込み機能の説明の最後にあります。"
 
-#: ../../source/concepts/transaction.rst:64
+#: ../../source/concepts/transaction.rst:62
 msgid ""
 "We recommend `using the NEM2-SDK to define "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
@@ -199,88 +197,11 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
 " ことを推奨しています。"
 
-#: ../../source/concepts/transaction.rst:103
-msgid "Fees"
-msgstr "手数料"
-
-#: ../../source/concepts/transaction.rst:105
-msgid ""
-"Transactions have an associated cost. This cost is necessary to provide an "
-"incentive for the :doc:`harvesters <harvesting>` who secure the network and "
-"run the infrastructure."
-msgstr ""
-"トランザクションには関連コストがあります。コストはネットワークを安全に保ち、インフラを運用している :doc:`ハーベスタ <harvesting>` "
-"へのインセンティブの提供として必須です。"
-
-#: ../../source/concepts/transaction.rst:107
-msgid ""
-"The fee associated with a transaction primarily depends on the transaction’s"
-" size. The effective fee is the product of the size of the transaction, and "
-"a fee multiplier set by the harvester. The node owner can configure the "
-"latter value to all positive values, including zero."
-msgstr ""
-"トランザクションに関連する手数料は、主としてトランザクションのサイズにより異なります。実効手数料は、トランザクションのサイズと、ハーベスタによって設定された手数料の乗数の積です。ノードの所有者はこの後者の値を、ゼロを含む正の値に設定できます。"
-
-#: ../../source/concepts/transaction.rst:113
-msgid ""
-"A sender of a transaction must specify during the transaction definition a "
-"``max_fee``, meaning the maximum fee the account allows to spend for this "
-"transaction."
-msgstr ""
-"トランザクションの送信者は、トランザクションの定義中に ``max_fee`` "
-"を指定しなければならず、これはアカウントがこのトランザクションに費やすことのできる最大手数料を意味します。"
-
-#: ../../source/concepts/transaction.rst:115
-msgid ""
-"If the ``effective_fee`` is smaller or equal to the ``max_fee``, the "
-"harvester can opt to include the transaction in the block. The "
-"``fee_multiplier`` is stored in the :ref:`block header <block-header>`, "
-"permitting to resolve which was the effective fee paid for every transaction"
-" included."
-msgstr ""
-"``effective_fee`` が ``max_fee`` 以下の場合、ハーベスタはトランザクションをブロックに含めることを選択できます。 "
-"``fee_multiplier`` は :ref:`ブロックヘッダ <block-header>` "
-"に格納され、含まれているすべてのトランザクションに対して支払われた実効手数料がどれであるかを解決することができます。"
-
-#: ../../source/concepts/transaction.rst:117
-msgid "The harvesting nodes can decide their transaction inclusion strategy:"
-msgstr "ハーベスティングノードはトランザクション包含ストラテジーを決定することができます。"
-
-#: ../../source/concepts/transaction.rst:119
-msgid ""
-"**Prefer-oldest**: Preferred for networks with high transaction throughput "
-"requirements. Include first the oldest transactions."
-msgstr ""
-"**Prefer-oldest**：高いトランザクションスループットが要求されるネットワークに適しています。最も古いトランザクションを最初に含めます。"
-
-#: ../../source/concepts/transaction.rst:120
-msgid ""
-"**Minimize-fees**: Philanthropic nodes. Include first transactions that "
-"other nodes do not want to include."
-msgstr "**Minimize-fees**: 慈善事業なノード。他のノードが含めたくない最初のトランザクションを含めます。"
-
-#: ../../source/concepts/transaction.rst:121
-msgid ""
-"**Maximize-fees**: Most common in public networks. Include first "
-"transactions with higher fees."
-msgstr "**Maximize-fees**: パブリックネットワークで最も一般的です。より高い手数料の最初のトランザクションを含みます。"
-
-#: ../../source/concepts/transaction.rst:123
-msgid ""
-"By default, the fee is paid in ``cat.currency``, the underlying currency of "
-"the NEM network. Private chains can edit the configuration of the network to"
-" eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits "
-"their needs."
-msgstr ""
-"デフォルトでは、手数料はNEMネットワークの基軸通貨である ``cat.currency`` "
-"で支払われます。プライベートチェーンでは、手数料を無くすためにネットワークの設定を編集したり、ニーズに合った別の :doc:`モザイク定義 "
-"<mosaic>` を使用したりできます。"
-
-#: ../../source/concepts/transaction.rst:129
+#: ../../source/concepts/transaction.rst:102
 msgid "Signing a transaction"
 msgstr "トランザクションへの署名"
 
-#: ../../source/concepts/transaction.rst:131
+#: ../../source/concepts/transaction.rst:104
 msgid ""
 "Accounts must sign transactions before announcing them to the network. "
 "`Signing a transaction "
@@ -291,7 +212,7 @@ msgstr ""
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
 " することは、定義されたとおりにネットワークの状態を変更することにアカウントが同意したと示されます。"
 
-#: ../../source/concepts/transaction.rst:133
+#: ../../source/concepts/transaction.rst:106
 msgid ""
 "For example, a TransferTransaction describes who is the recipient and the "
 "quantity of mosaics to transfer. In this case, signing the transaction means"
@@ -300,7 +221,7 @@ msgstr ""
 "例えば、TransferTransaction "
 "には受信者が誰であるかと、転送するモザイクの量が記述されます。この場合、トランザクションに署名することは、それらのモザイクをあるアカウントの残高から他方のアカウントに移動することに同意することを意味します。"
 
-#: ../../source/concepts/transaction.rst:135
+#: ../../source/concepts/transaction.rst:108
 msgid ""
 "An account has to follow the next steps to `sign a transaction "
 "<https://github.com/nemtech/nem2-library-"
@@ -311,13 +232,13 @@ msgstr ""
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
 " をするために次のステップに従う必要があります:"
 
-#: ../../source/concepts/transaction.rst:137
+#: ../../source/concepts/transaction.rst:110
 msgid ""
 "Get the ``signing bytes``, which are all the bytes of the transaction except"
 " the size, signature and signer."
 msgstr "サイズ、署名、および署名者以外のトランザクションのすべてのバイトである ``署名バイト`` を取得します。"
 
-#: ../../source/concepts/transaction.rst:138
+#: ../../source/concepts/transaction.rst:111
 msgid ""
 "Get the nemesis block generation hash. You can query "
 "``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value."
@@ -325,41 +246,41 @@ msgstr ""
 "ネメシスブロックのジェネレーションハッシュを取得してください。``http://localhost:3000/block/1`` にアクセスして "
 "``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/concepts/transaction.rst:139
+#: ../../source/concepts/transaction.rst:112
 msgid "Prepend the nemesis block generation hash to the signing bytes."
 msgstr "署名バイトにネメシスブロックのジェネレーションハッシュを接頭します。"
 
-#: ../../source/concepts/transaction.rst:140
+#: ../../source/concepts/transaction.rst:113
 msgid ""
 "Sign the resulting string with the signer's private key. This will give you "
 "the transaction ``signature``."
 msgstr "署名者の秘密鍵で結果文字列に署名します。これはトランザクションに ``署名`` を与えます。"
 
-#: ../../source/concepts/transaction.rst:141
+#: ../../source/concepts/transaction.rst:114
 msgid ""
 "Append the signer's signature and public key to the transaction to obtain "
 "the ``payload``."
 msgstr "署名者の署名と公開鍵をトランザクションに追加して ``ペイロード`` を取得します。"
 
-#: ../../source/concepts/transaction.rst:142
+#: ../../source/concepts/transaction.rst:115
 msgid ""
 "Calculate the `hash of the transaction <https://github.com/nemtech/nem2"
 "-library-"
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
-" applying the network hashing algorithm to the first 32 bytes of signature, "
-"the signer public key, nemesis block generation hash, and the remaining "
-"transaction payload."
+" by applying the network hashing algorithm to the first 32 bytes of "
+"signature, the signer public key, nemesis block generation hash, and the "
+"remaining transaction payload."
 msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードにハッシュアルゴリズムを適用して "
 "`トランザクションのハッシュ <https://github.com/nemtech/nem2-library-"
 "js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
 " を計算します。"
 
-#: ../../source/concepts/transaction.rst:177
+#: ../../source/concepts/transaction.rst:150
 msgid "Announcing a transaction"
 msgstr "トランザクションのアナウンス"
 
-#: ../../source/concepts/transaction.rst:179
+#: ../../source/concepts/transaction.rst:152
 msgid ""
 "Signed transactions are ready to be announced to the network. You can either"
 " use the SDK ``TransactionHttp`` service or append the payload to the "
@@ -371,18 +292,18 @@ msgstr ""
 "<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
 "のリクエストに追加することができます。"
 
-#: ../../source/concepts/transaction.rst:197
+#: ../../source/concepts/transaction.rst:170
 msgid ""
 "After announcing the transaction, the REST API will always return an OK "
 "response immediately. At this point, it is still unknown whether the "
 "transaction is valid."
 msgstr "トランザクションのアナウンスをすると、REST API は常にOKをすぐに返します。この時点ではトランザクションが正当かどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:203
+#: ../../source/concepts/transaction.rst:176
 msgid "Transaction cycle"
 msgstr "トランザクションサイクル"
 
-#: ../../source/concepts/transaction.rst:205
+#: ../../source/concepts/transaction.rst:178
 msgid ""
 "The first stage of validation happens in the API nodes. If the transaction "
 "presents some error, the WebSocket throws a notification through the status "
@@ -395,16 +316,17 @@ msgstr ""
 "はステータスチャンネルへ通知を投げます。良いケースの場合、トランザクションは P2P ネットワークへ **未承認** "
 "ステータスとして到達します。未承認状態のトランザクションを信頼してはいけません。2つ目のバリデーションを通過しないといけないので、これがブロックに取り込まれるかどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:207
+#: ../../source/concepts/transaction.rst:180
 msgid ""
-"The second validation is done before the transaction is added in a harvested"
-" block. If valid, the harvester stores the transaction in a block, and it "
-"reaches the **confirmed** status."
+"The second validation is done before the transaction is added in a "
+":doc:`harvested block <block>`. If valid, the harvester stores the "
+"transaction in a block, and it reaches the **confirmed** status."
 msgstr ""
-"トランザクションがハーベストされたブロックに追加される前に、2つ目のバリデーションは完了します。妥当な場合、ハーベスターはブロックにトランザクションを保存し、それは"
-" **承認済み** のステータスとなります。"
+"トランザクションが :doc:`ハーベストされたブロック <block>` "
+"に追加される前に、2つ目のバリデーションは完了します。妥当な場合、ハーベスターはブロックにトランザクションを保存し、それは **承認済み** "
+"のステータスとなります。"
 
-#: ../../source/concepts/transaction.rst:209
+#: ../../source/concepts/transaction.rst:182
 msgid ""
 "Continuing the previous example, the transaction gets processed and the "
 "amount stated gets transferred from the signer's account to the recipient's "
@@ -413,7 +335,7 @@ msgid ""
 msgstr ""
 "前述した事例の続きとして、そのトランザクションが処理され、設定された総量が署名者のアカウントから受信者のアカウントへ振り込まれた状態になります。さらに、トランザクション手数料は署名者のアカウントから差し引かれます。"
 
-#: ../../source/concepts/transaction.rst:211
+#: ../../source/concepts/transaction.rst:184
 msgid ""
 "The transaction has **zero confirmations** at this point. When another block"
 " is added to the blockchain, the transaction has one confirmation. The next "
@@ -422,11 +344,11 @@ msgstr ""
 "この時点でトランザクションの **承認数はゼロ** "
 "です。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:217
+#: ../../source/concepts/transaction.rst:190
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/transaction.rst:219
+#: ../../source/concepts/transaction.rst:192
 msgid ""
 "Blockchains are designed in a way that under certain circumstances recent "
 "blocks need to be rolled back. These are essential to resolve forks of the "
@@ -434,7 +356,7 @@ msgid ""
 msgstr ""
 "ブロックチェーンは特定の状況下において、最近のブロックをロールバックする必要があるように設計されています。これらはブロックチェーンのフォークを解決するために不可欠なものです。"
 
-#: ../../source/concepts/transaction.rst:221
+#: ../../source/concepts/transaction.rst:194
 msgid ""
 "The :properties:`rewrite limit <config-network.properties>` is the maximum "
 "number of blocks that can be rolled back. Hence, forks can only be resolved "
@@ -443,26 +365,26 @@ msgstr ""
 ":properties:`書き換え制限 <config-network.properties>` "
 "とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
-#: ../../source/concepts/transaction.rst:223
+#: ../../source/concepts/transaction.rst:196
 msgid ""
 "NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than "
 "40 confirmations, it cannot be reversed."
 msgstr "NEMの書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
-#: ../../source/concepts/transaction.rst:229
+#: ../../source/concepts/transaction.rst:202
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transaction.rst:241
+#: ../../source/concepts/transaction.rst:214
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/transaction.rst:248
+#: ../../source/concepts/transaction.rst:221
 msgid "Serialization of a transaction."
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:250
-#: ../../source/concepts/transaction.rst:270
+#: ../../source/concepts/transaction.rst:223
+#: ../../source/concepts/transaction.rst:243
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -484,13 +406,13 @@ msgstr ""
 "ネメシスブロックが作成されてから経過した秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/concepts/transaction.rst:268
+#: ../../source/concepts/transaction.rst:241
 msgid ""
 "Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
 "transaction."
 msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:280
+#: ../../source/concepts/transaction.rst:253
 msgid "Serialization of an entity that has a prefixed size."
 msgstr "サイズをプレフィックスしたエンティティのシリアル化"
 
