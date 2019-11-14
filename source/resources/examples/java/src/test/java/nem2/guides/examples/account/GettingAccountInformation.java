@@ -18,27 +18,34 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.AccountHttp;
+import io.nem.sdk.api.AccountRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.AccountInfo;
 import io.nem.sdk.model.account.Address;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingAccountInformation {
 
     @Test
-    void gettingAccountInformation() throws ExecutionException, InterruptedException, MalformedURLException {
+    void gettingAccountInformation()
+        throws ExecutionException, InterruptedException {
         /* start block 01 */
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        // Replace with address
-        final String address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
+            final AccountRepository accountRepository = repositoryFactory
+                .createAccountRepository();
 
-        final AccountInfo accountInfo = accountHttp.getAccountInfo(Address.createFromRawAddress(address)).toFuture().get();
+            // Replace with address
+            final String address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
 
-        System.out.println(accountInfo);
+            final AccountInfo accountInfo = accountRepository
+                .getAccountInfo(Address.createFromRawAddress(address)).toFuture().get();
+
+            System.out.println(accountInfo);
+        }
         /* end block 01 */
     }
 }

@@ -18,35 +18,47 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.AccountHttp;
-import io.nem.sdk.infrastructure.QueryParams;
+import io.nem.sdk.api.AccountRepository;
+import io.nem.sdk.api.QueryParams;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.Transaction;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingConfirmedTransactions {
 
     @Test
-    void gettingConfirmedTransactions() throws ExecutionException, InterruptedException, MalformedURLException {
+    void gettingConfirmedTransactions()
+        throws ExecutionException, InterruptedException {
         /* start block 01 */
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        // Replace with public key
-        final String publicKey = "";
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType()
+                .toFuture().get();
 
-        final PublicAccount publicAccount = PublicAccount.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
+            final AccountRepository accountRepository = repositoryFactory
+                .createAccountRepository();
 
-        // Page size between 10 and 100, otherwise 10
-        int pageSize = 20;
+            // Replace with public key
+            final String publicKey = "";
 
-        final List<Transaction> transactions = accountHttp.transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
+            final PublicAccount publicAccount = PublicAccount
+                .createFromPublicKey(publicKey, networkType);
 
-        System.out.print(transactions);
-        /* end block 01 */
+            // Page size between 10 and 100, otherwise 10
+            int pageSize = 20;
+
+            final List<Transaction> transactions = accountRepository
+                .transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
+
+            System.out.print(transactions);
+            /* end block 01 */
+        }
     }
 }

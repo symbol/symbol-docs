@@ -18,45 +18,58 @@
 
 package nem2.guides.examples.namespace;
 
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.Deadline;
-import io.nem.sdk.model.transaction.RegisterNamespaceTransaction;
+import io.nem.sdk.model.transaction.NamespaceRegistrationTransaction;
+import io.nem.sdk.model.transaction.NamespaceRegistrationTransactionFactory;
 import io.nem.sdk.model.transaction.SignedTransaction;
-import io.nem.sdk.model.transaction.TransactionAnnounceResponse;
-import org.junit.jupiter.api.Test;
-
 import java.math.BigInteger;
-import java.net.MalformedURLException;
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class RegisteringANamespace {
 
     @Test
-    void registeringANamespace() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 01 */
-        // Replace with private key
-        final String privateKey = "";
+    void registeringANamespace()
+        throws ExecutionException, InterruptedException {
 
-        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        // Replace with namespace name
-        final String namespaceName = "foo";
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType()
+                .toFuture().get();
 
-        final RegisterNamespaceTransaction registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
-                Deadline.create(2, ChronoUnit.HOURS),
-                namespaceName,
-                BigInteger.valueOf(1000),
-                NetworkType.MIJIN_TEST
-        );
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
 
-        final SignedTransaction signedTransaction = account.sign(registerNamespaceTransaction);
+            // Replace with private key
+            final String privateKey = "";
 
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+            final Account account = Account
+                .createFromPrivateKey(privateKey, networkType);
 
-        transactionHttp.announce(signedTransaction).toFuture().get();
-        /* end block 01 */
+            // Replace with namespace name
+            final String namespaceName = "foo";
+
+            final NamespaceRegistrationTransaction registerNamespaceTransaction = NamespaceRegistrationTransactionFactory
+                .createRootNamespace(
+                    networkType,
+                    namespaceName,
+                    BigInteger.valueOf(1000)
+                ).build();
+
+            final SignedTransaction signedTransaction = account
+                .sign(registerNamespaceTransaction, generationHash);
+
+            transactionRepository.announce(signedTransaction).toFuture().get();
+
+        }
     }
 }

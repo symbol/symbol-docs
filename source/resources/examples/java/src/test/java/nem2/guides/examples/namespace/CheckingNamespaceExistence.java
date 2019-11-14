@@ -18,26 +18,35 @@
 
 package nem2.guides.examples.namespace;
 
-import io.nem.sdk.infrastructure.NamespaceHttp;
+import io.nem.sdk.api.NamespaceRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.namespace.NamespaceId;
 import io.nem.sdk.model.namespace.NamespaceInfo;
-import org.junit.jupiter.api.Test;
-
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class CheckingNamespaceExistence {
 
     @Test
-    void checkingNamespaceExistence() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 01 */
-        final NamespaceId namespaceId = new NamespaceId("foo");
+    void checkingNamespaceExistence()
+        throws ExecutionException, InterruptedException, MalformedURLException {
 
-        final NamespaceHttp namespaceHttp = new NamespaceHttp("http://localhost:3000");
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
+            /* start block 01 */
+            final NamespaceId namespaceId = new NamespaceId("foo");
 
-        final NamespaceInfo namespaceInfo = namespaceHttp.getNamespace(namespaceId).toFuture().get();
+            final NamespaceRepository namespaceRepository = repositoryFactory
+                .createNamespaceRepository();
 
-        System.out.println(namespaceInfo);
+            final NamespaceInfo namespaceInfo = namespaceRepository.getNamespace(namespaceId)
+                .toFuture()
+                .get();
+
+            System.out.println(namespaceInfo);
+        }
         /* end block 01 */
     }
 }

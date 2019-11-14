@@ -1,33 +1,38 @@
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.AccountHttp;
+import io.nem.sdk.api.MultisigRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Address;
 import io.nem.sdk.model.account.MultisigAccountInfo;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 public class GettingMultisigAccountInformation {
 
 
     @Test
-    void gettingMultisigAccountInformation() throws ExecutionException, InterruptedException, MalformedURLException {
+    void gettingMultisigAccountInformation()
+        throws ExecutionException, InterruptedException {
 
         /* start block 01 */
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        // Replace with address
-        final String addressRaw = "SB2RPH-EMTFMB-KELX2Y-Q3MZTD-RV7DQG-UZEADV-CYKC";
+            final MultisigRepository multisigRepository = repositoryFactory
+                .createMultisigRepository();
 
-        final Address address = Address.createFromRawAddress(addressRaw);
+            // Replace with address
+            final String addressRaw = "SB2RPH-EMTFMB-KELX2Y-Q3MZTD-RV7DQG-UZEADV-CYKC";
 
-        final MultisigAccountInfo multisigAccountInfo = accountHttp.getMultisigAccountInfo(address).toFuture().get();
+            final Address address = Address.createFromRawAddress(addressRaw);
 
-        System.out.println(multisigAccountInfo);
-        /* end block 01 */
+            final MultisigAccountInfo multisigAccountInfo = multisigRepository
+                .getMultisigAccountInfo(address).toFuture().get();
+
+            System.out.println(multisigAccountInfo);
+            /* end block 01 */
+        }
 
     }
 }

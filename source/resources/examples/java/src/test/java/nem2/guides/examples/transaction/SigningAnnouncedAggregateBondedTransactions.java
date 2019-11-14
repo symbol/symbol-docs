@@ -18,43 +18,60 @@
 
 package nem2.guides.examples.transaction;
 
-import io.nem.sdk.infrastructure.AccountHttp;
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.api.AccountRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.CosignatureSignedTransaction;
 import io.nem.sdk.model.transaction.CosignatureTransaction;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
+import java.math.BigInteger;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class SigningAnnouncedAggregateBondedTransactions {
 
     @Test
-    void SigningAnnouncedAggregateBondedTransactions() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 02 */
-        // Replace with a private key
-        final String privateKey = "";
+    void SigningAnnouncedAggregateBondedTransactions()
+        throws ExecutionException, InterruptedException {
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType().toFuture().get();
 
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
 
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+            /* start block 02 */
+            // Replace with a private key
+            final String privateKey = "";
 
-        accountHttp.aggregateBondedTransactions(account.getPublicAccount())
-                .flatMapIterable(tx -> tx) // Transform transaction array to single transactions to process them
+            final Account account = Account.createFromPrivateKey(privateKey, networkType);
+
+            AccountRepository accountRepository = repositoryFactory.createAccountRepository();
+            accountRepository.aggregateBondedTransactions(account.getPublicAccount())
+                .flatMapIterable(
+                    tx -> tx) // Transform transaction array to single transactions to process them
                 .filter(tx -> !tx.signedByAccount(account.getPublicAccount()))
                 .map(tx -> {
-                  final CosignatureTransaction cosignatureTransaction = CosignatureTransaction.create(tx);
+                    final CosignatureTransaction cosignatureTransaction = CosignatureTransaction
+                        .create(tx);
 
-                  final CosignatureSignedTransaction cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
+                    final CosignatureSignedTransaction cosignatureSignedTransaction = account
+                        .signCosignatureTransaction(cosignatureTransaction);
 
-                  return transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).toFuture().get();
+                    return transactionRepository
+                        .announceAggregateBondedCosignature(cosignatureSignedTransaction).toFuture()
+                        .get();
                 })
                 .toFuture()
                 .get();
-        /* end block 02 */
+            /* end block 02 */
+        }
     }
 }

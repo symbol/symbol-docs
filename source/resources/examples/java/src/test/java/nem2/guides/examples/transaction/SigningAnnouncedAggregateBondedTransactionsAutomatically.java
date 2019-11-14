@@ -18,48 +18,63 @@
 
 package nem2.guides.examples.transaction;
 
-import io.nem.sdk.infrastructure.AccountHttp;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
 import io.nem.sdk.infrastructure.Listener;
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.AggregateTransaction;
 import io.nem.sdk.model.transaction.CosignatureSignedTransaction;
 import io.nem.sdk.model.transaction.CosignatureTransaction;
-import io.nem.sdk.model.transaction.Transaction;
-import org.junit.jupiter.api.Test;
-
+import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class SigningAnnouncedAggregateBondedTransactionsAutomatically {
 
     @Test
-    void signingAnnouncedAggregateBondedTransactionsAutomatically() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 02 */
-        // Replace with a private key
-        final String privateKey = "";
+    void signingAnnouncedAggregateBondedTransactionsAutomatically()
+        throws ExecutionException, InterruptedException, MalformedURLException {
 
-        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000"); final Listener listener = repositoryFactory
+            .createListener()) {
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType().toFuture().get();
 
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
+            /* start block 02 */
+            // Replace with a private key
+            final String privateKey = "";
 
-        final Listener listener = new Listener("http://localhost:3000");
+            final Account account = Account.createFromPrivateKey(privateKey, networkType);
 
-        listener.open().get();
+            listener.open().get();
 
-        final AggregateTransaction transaction = listener.aggregateBondedAdded(account.getAddress()).take(1).toFuture().get();
+            final AggregateTransaction transaction = listener
+                .aggregateBondedAdded(account.getAddress()).take(1).toFuture().get();
 
-        if (!transaction.signedByAccount(account.getPublicAccount())) {
-            // Filter aggregates that need my signature
-            final CosignatureTransaction cosignatureTransaction = CosignatureTransaction.create(transaction);
+            if (!transaction.signedByAccount(account.getPublicAccount())) {
+                // Filter aggregates that need my signature
+                final CosignatureTransaction cosignatureTransaction = CosignatureTransaction
+                    .create(transaction);
 
-            final CosignatureSignedTransaction cosignatureSignedTransaction = account.signCosignatureTransaction(cosignatureTransaction);
+                final CosignatureSignedTransaction cosignatureSignedTransaction = account
+                    .signCosignatureTransaction(cosignatureTransaction);
 
-            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction).toFuture().get();
+                transactionRepository
+                    .announceAggregateBondedCosignature(cosignatureSignedTransaction)
+                    .toFuture().get();
+            }
+            /* end block 02 */
+
         }
-        /* end block 02 */
     }
 }

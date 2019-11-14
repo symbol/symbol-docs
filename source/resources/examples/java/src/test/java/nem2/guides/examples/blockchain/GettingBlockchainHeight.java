@@ -18,24 +18,27 @@
 
 package nem2.guides.examples.blockchain;
 
-import io.nem.sdk.infrastructure.BlockchainHttp;
-import io.nem.sdk.model.blockchain.BlockInfo;
-import org.junit.jupiter.api.Test;
-
+import io.nem.sdk.api.ChainRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingBlockchainHeight {
 
     @Test
-    void gettingLastBlockchainBlock() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 01 */
-        final BlockchainHttp blockchainHttp = new BlockchainHttp("http://localhost:3000");
+    void gettingLastBlockchainBlock()
+        throws ExecutionException, InterruptedException {
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
+            final ChainRepository chainRepository = repositoryFactory.createChainRepository();
 
-        final BigInteger blockchainHeight = blockchainHttp.getBlockchainHeight().toFuture().get();
+            final BigInteger blockchainHeight = chainRepository .getBlockchainHeight().toFuture()
+                .get();
 
-        System.out.print(blockchainHeight);
+            System.out.print(blockchainHeight);
+        }
         /* end block 01 */
     }
 }

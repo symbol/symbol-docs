@@ -18,51 +18,71 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.Deadline;
-import io.nem.sdk.model.transaction.ModifyMultisigAccountTransaction;
+import io.nem.sdk.model.transaction.AggregateTransactionFactory;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
 import io.nem.sdk.model.transaction.SignedTransaction;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
+import java.math.BigInteger;
 import java.util.Collections;
 import java.util.concurrent.ExecutionException;
-
-import static java.time.temporal.ChronoUnit.HOURS;
+import org.junit.jupiter.api.Test;
 
 class ModifyingAMultisigAccountIncreaseMinApproval {
 
     @Test
-    void modifyingAMultisigAccountIncreaseMinApproval() throws ExecutionException, InterruptedException, MalformedURLException {
-        // Replace with the multisig public key
-        final String cosignatoryPrivateKey = "";
-        final String multisigAccountPublicKey = "";
+    void modifyingAMultisigAccountIncreaseMinApproval()
+        throws ExecutionException, InterruptedException {
 
-        final Account cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-        final PublicAccount multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        final ModifyMultisigAccountTransaction modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
-                Deadline.create(2, HOURS),
-                1,
-                0,
-                Collections.emptyList(),
-                NetworkType.MIJIN_TEST
-        );
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        final AggregateTransaction aggregateTransaction = AggregateTransaction.createComplete(
-                Deadline.create(2, HOURS),
-                Collections.singletonList(modifyMultisigAccountTransaction.toAggregate(multisigAccount)),
-                NetworkType.MIJIN_TEST
-        );
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType()
+                .toFuture().get();
 
-        final SignedTransaction signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
 
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+            // Replace with the multisig public key
+            final String cosignatoryPrivateKey = "";
+            final String multisigAccountPublicKey = "";
 
-        transactionHttp.announce(signedTransaction).toFuture().get();
+            final Account cosignatoryAccount = Account
+                .createFromPrivateKey(cosignatoryPrivateKey, networkType);
+            final PublicAccount multisigAccount = PublicAccount
+                .createFromPublicKey(multisigAccountPublicKey, networkType);
+
+            final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
+                .create(networkType,
+                    (byte) 1,
+                    (byte) 0,
+                    Collections.emptyList(),
+                    Collections.emptyList()
+                ).build();
+
+            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
+                .createComplete(
+                    networkType,
+                    Collections
+                        .singletonList(
+                            modifyMultisigAccountTransaction.toAggregate(multisigAccount))
+                ).build();
+
+            final SignedTransaction signedTransaction = cosignatoryAccount
+                .sign(aggregateTransaction, generationHash);
+
+            transactionRepository.announce(signedTransaction).toFuture().get();
+        }
     }
 }

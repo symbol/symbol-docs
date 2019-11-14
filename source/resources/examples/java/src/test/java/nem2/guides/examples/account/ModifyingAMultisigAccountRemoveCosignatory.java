@@ -18,57 +18,74 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.*;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
+import io.nem.sdk.model.transaction.AggregateTransaction;
+import io.nem.sdk.model.transaction.AggregateTransactionFactory;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
+import io.nem.sdk.model.transaction.SignedTransaction;
+import java.math.BigInteger;
 import java.util.Collections;
 import java.util.concurrent.ExecutionException;
-
-import static java.time.temporal.ChronoUnit.HOURS;
+import org.junit.jupiter.api.Test;
 
 class ModifyingAMultisigAccountRemoveCosignatory {
 
     @Test
-    void modifyingAMultisigAccountRemoveCosignatory() throws ExecutionException, InterruptedException, MalformedURLException {
+    void modifyingAMultisigAccountRemoveCosignatory()
+        throws ExecutionException, InterruptedException {
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        // Replace with the multisig public key
-        final String multisigAccountPublicKey = "";
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        // Replace with the cosignatory private key
-        final String cosignatoryPrivateKey = "";
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType()
+                .toFuture().get();
 
-        final Account cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-        final PublicAccount multisigPublicAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
+            // Replace with the multisig public key
+            final String multisigAccountPublicKey = "";
 
-        final MultisigCosignatoryModification multisigCosignatoryModification = new MultisigCosignatoryModification(
-            MultisigCosignatoryModificationType.REMOVE,
-                PublicAccount.createFromPublicKey("", NetworkType.MIJIN_TEST)
-        );
+            // Replace with the cosignatory private key
+            final String cosignatoryPrivateKey = "";
 
-        final ModifyMultisigAccountTransaction modifyMultisigAccountTransaction = ModifyMultisigAccountTransaction.create(
-            Deadline.create(2, HOURS),
-            0,
-            0,
-            Collections.singletonList(multisigCosignatoryModification),
-            NetworkType.MIJIN_TEST
-        );
+            final Account cosignatoryAccount = Account
+                .createFromPrivateKey(cosignatoryPrivateKey, networkType);
 
-        final AggregateTransaction aggregateTransaction = AggregateTransaction.createComplete(
-            Deadline.create(2, HOURS),
-            Collections.singletonList(modifyMultisigAccountTransaction.toAggregate(multisigPublicAccount)),
-            NetworkType.MIJIN_TEST
-        );
+            final PublicAccount multisigPublicAccount = PublicAccount
+                .createFromPublicKey(multisigAccountPublicKey, networkType);
 
-        final SignedTransaction signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
+            final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
+                .create(
+                    networkType,
+                    (byte) 0,
+                    (byte) 0,
+                    Collections.emptyList(),
+                    Collections.singletonList(PublicAccount.createFromPublicKey("", networkType))
+                ).build();
 
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
+                .createComplete(
+                    networkType,
+                    Collections.singletonList(
+                        modifyMultisigAccountTransaction.toAggregate(multisigPublicAccount))
 
-        transactionHttp.announce(signedTransaction).toFuture().get();
+                ).build();
+
+            final SignedTransaction signedTransaction = cosignatoryAccount
+                .sign(aggregateTransaction, generationHash);
+
+            transactionRepository.announce(signedTransaction).toFuture().get();
+        }
     }
 }
 

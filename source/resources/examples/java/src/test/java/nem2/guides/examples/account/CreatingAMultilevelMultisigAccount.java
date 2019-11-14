@@ -18,134 +18,139 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.TransactionHttp;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.*;
-import org.junit.jupiter.api.Test;
-
-import java.net.MalformedURLException;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
+import io.nem.sdk.model.transaction.SignedTransaction;
+import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.concurrent.ExecutionException;
-
-import static java.time.temporal.ChronoUnit.HOURS;
+import org.junit.jupiter.api.Test;
 
 class CreatingAMultilevelMultisigAccount {
 
     @Test
-    void creatingAMultilevelMultisigAccount() throws ExecutionException, InterruptedException, MalformedURLException {
-        final TransactionHttp transactionHttp = new TransactionHttp("http://localhost:3000");
+    void creatingAMultilevelMultisigAccount()
+        throws ExecutionException, InterruptedException {
 
-        // Create multisig #2 (1-of-2)
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://localhost:3000")) {
 
-        // Replace with the private key of the account that you want to convert into multisig
-        final String multisig2PrivateKey = "";
+            final String generationHash = repositoryFactory.createBlockRepository()
+                .getBlockByHeight(
+                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-        // Replace with cosignatories public keys
-        final String cosignatory5PublicKey = "";
-        final String cosignatory6PublicKey = "";
+            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+                .getNetworkType()
+                .toFuture().get();
 
-        final Account multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, NetworkType.MIJIN_TEST);
+            final TransactionRepository transactionRepository = repositoryFactory
+                .createTransactionRepository();
 
-        final PublicAccount cosignatory5PublicAccount = PublicAccount.createFromPublicKey(cosignatory5PublicKey, NetworkType.MIJIN_TEST);
-        final PublicAccount cosignatory6PublicAccount = PublicAccount.createFromPublicKey(cosignatory6PublicKey, NetworkType.MIJIN_TEST);
+            // Create multisig #2 (1-of-2)
 
-        final ModifyMultisigAccountTransaction convertMultisigAccount2Transaction = ModifyMultisigAccountTransaction.create(
-                Deadline.create(2, HOURS),
-                1,
-                1,
-                Arrays.asList(
-                    new MultisigCosignatoryModification(
-                        MultisigCosignatoryModificationType.ADD,
-                        cosignatory5PublicAccount
+            // Replace with the private key of the account that you want to convert into multisig
+            final String multisig2PrivateKey = "";
+
+            // Replace with cosignatories public keys
+            final String cosignatory5PublicKey = "";
+            final String cosignatory6PublicKey = "";
+
+            final Account multisigAccount2 = Account
+                .createFromPrivateKey(multisig2PrivateKey, networkType);
+
+            final PublicAccount cosignatory5PublicAccount = PublicAccount
+                .createFromPublicKey(cosignatory5PublicKey, networkType);
+            final PublicAccount cosignatory6PublicAccount = PublicAccount
+                .createFromPublicKey(cosignatory6PublicKey, networkType);
+
+            final MultisigAccountModificationTransaction convertMultisigAccount2Transaction = MultisigAccountModificationTransactionFactory
+                .create(
+                    networkType,
+                    (byte) 1,
+                    (byte) 1,
+                    Arrays.asList(cosignatory5PublicAccount, cosignatory6PublicAccount
+                    ), Collections.emptyList()
+                ).build();
+
+            final SignedTransaction signedTransaction2 = multisigAccount2
+                .sign(convertMultisigAccount2Transaction, generationHash);
+
+            transactionRepository.announce(signedTransaction2).toFuture().get();
+
+            // Create multisig #3 (2-of-3)
+
+            // Replace with the private key of the account that you want to convert into multisig
+            final String multisig3PrivateKey = "";
+
+            // Replace with cosignatories public keys
+            final String cosignatory7PublicKey = "";
+            final String cosignatory8PublicKey = "";
+            final String cosignatory4PublicKey = "";
+
+            final Account multisigAccount3 = Account
+                .createFromPrivateKey(multisig3PrivateKey, networkType);
+
+            final PublicAccount cosignatory7PublicAccount = PublicAccount
+                .createFromPublicKey(cosignatory7PublicKey, networkType);
+            final PublicAccount cosignatory8PublicAccount = PublicAccount
+                .createFromPublicKey(cosignatory8PublicKey, networkType);
+            final PublicAccount cosignatory4PublicAccount = PublicAccount
+                .createFromPublicKey(cosignatory4PublicKey, networkType);
+
+            final MultisigAccountModificationTransaction convertMultisigAccount3Transaction = MultisigAccountModificationTransactionFactory
+                .create(
+                    networkType,
+                    (byte) 2,
+                    (byte) 1,
+                    Arrays.asList(
+                        cosignatory7PublicAccount,
+                        cosignatory8PublicAccount,
+                        cosignatory4PublicAccount
                     ),
-                    new MultisigCosignatoryModification(
-                        MultisigCosignatoryModificationType.ADD,
-                        cosignatory6PublicAccount
-                    )
-                ),
-                NetworkType.MIJIN_TEST
-        );
+                    Collections.emptyList()
+                ).build();
 
+            final SignedTransaction signedTransaction3 = multisigAccount3
+                .sign(convertMultisigAccount3Transaction, generationHash);
 
-        final SignedTransaction signedTransaction2 = multisigAccount2.sign(convertMultisigAccount2Transaction);
+            transactionRepository.announce(signedTransaction3).toFuture().get();
 
-        transactionHttp.announce(signedTransaction2).toFuture().get();
+            // Create multisig #1 (3-of-3)
 
-        // Create multisig #3 (2-of-3)
+            // Replace with the private key of the account that you want to convert into multisig
+            final String multisig1PrivateKey = "";
 
-        // Replace with the private key of the account that you want to convert into multisig
-        final String multisig3PrivateKey = "";
+            final Account multisigAccount1 = Account
+                .createFromPrivateKey(multisig1PrivateKey, networkType);
 
-        // Replace with cosignatories public keys
-        final String cosignatory7PublicKey = "";
-        final String cosignatory8PublicKey = "";
-        final String cosignatory4PublicKey = "";
+            final MultisigAccountModificationTransaction convertMultisigAccount1Transaction = MultisigAccountModificationTransactionFactory
+                .create(networkType,
+                    (byte) 3,
+                    (byte) 1,
+                    Arrays.asList(
 
-        final Account multisigAccount3 = Account.createFromPrivateKey(multisig3PrivateKey, NetworkType.MIJIN_TEST);
+                        multisigAccount2.getPublicAccount()
+                        ,
+                        multisigAccount3.getPublicAccount()
+                        ,
+                        cosignatory4PublicAccount
 
-        final PublicAccount cosignatory7PublicAccount = PublicAccount.createFromPublicKey(cosignatory7PublicKey, NetworkType.MIJIN_TEST);
-        final PublicAccount cosignatory8PublicAccount = PublicAccount.createFromPublicKey(cosignatory8PublicKey, NetworkType.MIJIN_TEST);
-        final PublicAccount cosignatory4PublicAccount = PublicAccount.createFromPublicKey(cosignatory4PublicKey, NetworkType.MIJIN_TEST);
+                    ),
+                    Collections.emptyList()
+                ).build();
 
-        final ModifyMultisigAccountTransaction convertMultisigAccount3Transaction = ModifyMultisigAccountTransaction.create(
-                Deadline.create(2, HOURS),
-                2,
-                1,
-                Arrays.asList(
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                cosignatory7PublicAccount
-                                ),
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                cosignatory8PublicAccount
-                                ),
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                cosignatory4PublicAccount
-                                )
-                ),
-                NetworkType.MIJIN_TEST
-        );
+            final SignedTransaction signedTransaction1 = multisigAccount1
+                .sign(convertMultisigAccount1Transaction, generationHash);
 
-        final SignedTransaction signedTransaction3 = multisigAccount3.sign(convertMultisigAccount3Transaction);
-
-        transactionHttp.announce(signedTransaction3).toFuture().get();
-
-
-        // Create multisig #1 (3-of-3)
-
-        // Replace with the private key of the account that you want to convert into multisig
-        final String multisig1PrivateKey = "";
-
-        final Account multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, NetworkType.MIJIN_TEST);
-
-        final ModifyMultisigAccountTransaction convertMultisigAccount1Transaction = ModifyMultisigAccountTransaction.create(
-                Deadline.create(2, HOURS),
-                3,
-                1,
-                Arrays.asList(
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                multisigAccount2.getPublicAccount()
-                        ),
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                multisigAccount3.getPublicAccount()
-                        ),
-                        new MultisigCosignatoryModification(
-                                MultisigCosignatoryModificationType.ADD,
-                                cosignatory4PublicAccount
-                        )
-                ),
-                NetworkType.MIJIN_TEST
-        );
-
-        final SignedTransaction signedTransaction1 = multisigAccount1.sign(convertMultisigAccount1Transaction);
-
-        transactionHttp.announce(signedTransaction1).toFuture().get();
+            transactionRepository.announce(signedTransaction1).toFuture().get();
+        }
 
     }
 }

@@ -2,9 +2,6 @@ buildscript {
     repositories {
         mavenCentral()
     }
-    dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
-    }
 }
 
 plugins {
@@ -12,38 +9,29 @@ plugins {
 }
 
 apply plugin: 'java'
-apply plugin: 'org.junit.platform.gradle.plugin'
-
-group 'nem2.guides'
-version '1.0-SNAPSHOT'
+group 'io.nem'
+version '0.14.2-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
 }
 
 ext {
-    vertxVersion = "3.5.0"
-    rxjavaVersion = "2.1.7"
-    junitVersion = "5.0.2"
+    junitVersion = "5.4.0"
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    // Reactive
-    compile "io.vertx:vertx-core:${vertxVersion}"
-    compile "io.vertx:vertx-web-client:${vertxVersion}"
-    compile "io.vertx:vertx-rx-java2:${vertxVersion}"
-    compile "io.reactivex.rxjava2:rxjava:${rxjavaVersion}"
-    compile "io.nem:sdk:0.8.10"
+    compile "io.nem:sdk-vertx-client:${project.version}"
 
     // Tests
     testCompile 'org.slf4j:slf4j-simple:1.7.25'
     testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testCompile "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
-    testCompile 'org.apiguardian:apiguardian-api:1.0.0'
-    testCompile 'org.junit.platform:junit-platform-console-standalone:1.1.0-M1'
 }
