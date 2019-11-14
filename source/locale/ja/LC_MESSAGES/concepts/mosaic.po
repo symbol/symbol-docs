@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.8\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-03 07:55+0000\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:144
+#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:148
 msgid "Mosaic"
 msgstr "モザイク"
 
@@ -45,12 +45,14 @@ msgstr ""
 
 #: ../../source/concepts/mosaic.rst:9
 msgid ""
-"Each mosaic has a unique identifier represented as a **64-bit unsigned "
-"integer** and a set of configurable properties and flags that can be defined"
-" during the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`."
+"Each mosaic has a **unique identifier** represented as a 64-bit unsigned "
+"integer and a set of :ref:`configurable properties <mosaic-properties>` and "
+"flags that can be defined during the :doc:`mosaic creation "
+"<../guides/mosaic/creating-a-mosaic>`."
 msgstr ""
-"各モザイクは **64-bit 符号なし整数** の一意な識別子と :doc:`モザイクを作成 "
-"<../guides/mosaic/creating-a-mosaic>` する際に定義できる、設定可能なプロパティとフラグの集合を持ちます。"
+"各モザイクは 64-bit 符号なし整数の一意な識別子と :doc:`モザイクを作成 "
+"<../guides/mosaic/creating-a-mosaic>` する際に定義できる :ref:`設定可能なプロパティ <mosaic-"
+"properties>` とフラグの集合を持ちます。"
 
 #: ../../source/concepts/mosaic.rst:15
 msgid "Properties"
@@ -88,8 +90,8 @@ msgstr "例えば、モザイクが **可分性** 2 である場合、10 単位 
 
 #: ../../source/concepts/mosaic.rst:34
 msgid ""
-"Specifies the number of confirmed blocks the mosaic is rented for. Duration "
-"is allowed to lie up to ``3650`` days (10 years). You can also create **non-"
+"Specifies the number of confirmed blocks the mosaic is rented for, and it is"
+" allowed to lie up to ``3650`` days (10 years). You can also create **non-"
 "expiring mosaics** setting this property to ``0``."
 msgstr ""
 "モザイクのレンタル期間の承認済みブロック数を指定します。期間は ``3650`` 日 "
@@ -125,49 +127,52 @@ msgid ""
 "<mosaic-restriction>`."
 msgstr "true の場合、モザイク所有者は :doc:`制限 <mosaic-restriction>` を設定できます。"
 
-#: ../../source/concepts/mosaic.rst:69
+#: ../../source/concepts/mosaic.rst:71
 msgid "Rental fee"
 msgstr "レンタル手数料"
 
-#: ../../source/concepts/mosaic.rst:71
-msgid ""
-"To create a mosaic, accounts have to pay a :ref:`transaction fee <fees>` to "
-"support the network in addition to the rental fee. The fees will be deducted"
-" from the account's balance after the announcement of a valid "
-"**MosaicDefinitionTransaction**."
-msgstr ""
-"モザイクを作成するために、アカウントはレンタル手数料に加えて、ネットワークをサポートする :ref:`トランザクション手数料 <fees>` "
-"を支払います。有効な **MosaicDefinitionTransaction** のアナウンスをすると、手数料はアカウントの残高から差し引かれます。"
-
 #: ../../source/concepts/mosaic.rst:73
 msgid ""
-"By default, registering a mosaic has an associated :properties:`configurable"
-" cost <config-network.properties>` of ``0.0005 cat.currency``. The **network"
-" dynamically adjusts the mosaic rental fees** over time. To calculate the "
-"**effective rental fee**, the network multiplies the default value set in "
-"the configuration by the median :doc:`network multiplier <harvesting>` over "
-"last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In "
-"case there are zero multipliers, these are replaced by the "
-":properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` "
-"before the median calculation."
+"To create a mosaic, accounts have to pay a rental fee in addition to the "
+":doc:`transaction fee <fees>`. The fees will be deducted from the account's "
+"balance after the announcement of a valid **MosaicDefinitionTransaction**."
 msgstr ""
-"デフォルトでは、モザイク登録は関連する :properties:`設定可能なコスト <config-network.properties>` により "
-"``0.0005 cat.currency`` になります。時間とともに **ネットワークは動的にモザイクレンタル手数料を調整します** 。 "
-"**実効レンタル手数料** を算出するために、ネットワークは設定で決められたデフォルト値に最後の "
-":properties:`maxRollbackBlocks <config-network.properties#L20>` の中央値 "
-":doc:`network multiplier <harvesting>` を乗算します。乗数がゼロの場合は、これらは中央値計算の前に "
+"モザイクを作成するために、アカウントはレンタル手数料に加えて :doc:`トランザクション手数料 <fees>` を支払います。有効な "
+"**MosaicDefinitionTransaction** のアナウンスをすると、手数料はアカウントの残高から差し引かれます。"
+
+#: ../../source/concepts/mosaic.rst:75
+msgid ""
+"By default, registering a mosaic has an :properties:`associated cost "
+"<config-network.properties>` of ``0.0005 cat.currency``, but **the network "
+"dynamically adjusts the mosaic rental fee** over time."
+msgstr ""
+"デフォルトでは、モザイクの作成には ``0.0005 cat.currency`` の :properties:`関連コスト <config-"
+"network.properties>` があります。しかし **ネットワークはモザイクレンタル手数料を動的に調整** していきます。"
+
+#: ../../source/concepts/mosaic.rst:77
+msgid ""
+"To calculate the effective rental fee, the network multiplies the default "
+"value set in the configuration by the :doc:`median network multiplier "
+"<harvesting>` over last :properties:`maxRollbackBlocks <config-"
+"network.properties#L20>`. In case there are zero multipliers, these are "
+"replaced by the :properties:`defaultDynamicFeeMultiplier <config-"
+"network.properties#L20>` before the median calculation."
+msgstr ""
+"実効レンタル手数料を算出するために、ネットワークは設定で決められたデフォルト値に最後の :properties:`maxRollbackBlocks "
+"<config-network.properties#L20>` の :doc:`median network multiplier "
+"<harvesting>` を乗算します。乗数がゼロの場合、これらは中央値計算の前に "
 ":properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` "
 "で置き換えられます。"
 
-#: ../../source/concepts/mosaic.rst:77
+#: ../../source/concepts/mosaic.rst:81
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic.rst:89
+#: ../../source/concepts/mosaic.rst:93
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/mosaic.rst:91
+#: ../../source/concepts/mosaic.rst:95
 msgid ""
 "Configuration parameters are :properties:`editable <config-"
 "network.properties>`. Public network configuration may differ."
@@ -175,19 +180,19 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/mosaic.rst:98
+#: ../../source/concepts/mosaic.rst:102
 msgid "Announce a MosaicDefinitionTransaction to create a new mosaic."
 msgstr "新しいモザイクを作るために MosaicDefinitionTransaction をアナウンスします。"
 
-#: ../../source/concepts/mosaic.rst:102
+#: ../../source/concepts/mosaic.rst:106
 msgid "**Entity type**: 0x414D"
 msgstr "**エンティティタイプ**: 0x414D"
 
-#: ../../source/concepts/mosaic.rst:104 ../../source/concepts/mosaic.rst:129
+#: ../../source/concepts/mosaic.rst:108 ../../source/concepts/mosaic.rst:133
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/mosaic.rst:106 ../../source/concepts/mosaic.rst:131
+#: ../../source/concepts/mosaic.rst:110 ../../source/concepts/mosaic.rst:135
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -234,13 +239,13 @@ msgid ""
 msgstr ""
 "ブロック数で表現されたモザイク期間、期間は ``3650`` 日(10年)まで許可されています。0 に設定した場合、期限の無いモザイクになります。"
 
-#: ../../source/concepts/mosaic.rst:123
+#: ../../source/concepts/mosaic.rst:127
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
 msgstr "モザイクの供給量を増加または減少させるために供給量変更トランザクションをアナウンスする。"
 
-#: ../../source/concepts/mosaic.rst:127
+#: ../../source/concepts/mosaic.rst:131
 msgid "**Entity type**: 0x424D"
 msgstr "**エンティティタイプ**: 0x424D"
 

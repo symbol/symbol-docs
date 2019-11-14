@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.18.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"PO-Revision-Date: 2019-11-13 15:09+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/fees.rst:3
+msgid "Fees"
+msgstr "手数料"
+
+#: ../../source/concepts/fees.rst:5
+msgid ""
+"Announcing :doc:`transactions <transaction>` have an associated cost. This "
+"cost is necessary to provide an incentive for the :doc:`harvesters "
+"<harvesting>` who secure the network and run the infrastructure."
+msgstr ""
+":doc:`トランザクション <transaction>` "
+"のアナウンスには関連コストがあります。コストはネットワークを安全に保ち、インフラを運用している :doc:`ハーベスタ <harvesting>` "
+"へのインセンティブの提供として必須です。"
+
+#: ../../source/concepts/fees.rst:9
+msgid "Network currency"
+msgstr "ネットワーク通貨"
+
+#: ../../source/concepts/fees.rst:11
+msgid ""
+"By default, fees are paid in ``cat.currency``, the underlying currency of "
+"the NEM network. Private chains can edit the configuration of the network to"
+" eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits "
+"their needs."
+msgstr ""
+"デフォルトでは、手数料はNEMネットワークの基軸通貨である ``cat.currency`` "
+"で支払われます。プライベートチェーンでは、手数料を無くすためにネットワークの設定を編集したり、ニーズに合った別の :doc:`モザイク定義 "
+"<mosaic>` を使用したりできます。"
+
+#: ../../source/concepts/fees.rst:15
+msgid "Transaction fee"
+msgstr "トランザクション手数料"
+
+#: ../../source/concepts/fees.rst:17
+msgid ""
+"The fee associated with a transaction primarily depends on the transaction's"
+" size. The effective fee is the product of the size of the transaction, and "
+"a fee multiplier set by the harvester. The node owner can configure the "
+"latter value to all positive values, including zero."
+msgstr ""
+"トランザクションに関連する手数料は、主としてトランザクションのサイズにより異なります。実効手数料は、トランザクションのサイズと、ハーベスタによって設定された手数料の乗数の積です。ノードの所有者はこの後者の値を、ゼロを含む正の値に設定できます。"
+
+#: ../../source/concepts/fees.rst:23
+msgid ""
+"The sender of a transaction must specify during the transaction definition a"
+" ``max_fee``, meaning the maximum fee the account allows to spend for this "
+"transaction."
+msgstr ""
+"トランザクションの送信者は、トランザクションの定義中に ``max_fee`` "
+"を指定しなければならず、これはアカウントがこのトランザクションに費やすことのできる最大手数料を意味します。"
+
+#: ../../source/concepts/fees.rst:25
+msgid ""
+"If the ``effective_fee`` is smaller or equal to the ``max_fee``, the "
+"harvester can opt to include the transaction in the block. The "
+"``fee_multiplier`` is stored in the :ref:`block header <block-header>`, "
+"permitting to determine which was the effective fee paid for every "
+"transaction included in the block."
+msgstr ""
+"``effective_fee`` が ``max_fee`` 以下の場合、ハーベスタはトランザクションをブロックに含めることを選択できます。 "
+"``fee_multiplier`` は :ref:`ブロックヘッダ <block-header>` "
+"に格納され、ブロックに含まれるすべてのトランザクションに対して支払われた実効手数料がどれであるかを決定することができます。"
+
+#: ../../source/concepts/fees.rst:27
+msgid "The harvesting nodes can decide their transaction inclusion strategy:"
+msgstr "ハーベスティングノードはトランザクション包含ストラテジーを決定することができます。"
+
+#: ../../source/concepts/fees.rst:29
+msgid ""
+"**Prefer-oldest**: Preferred for networks with high transaction throughput "
+"requirements. Include first the oldest transactions."
+msgstr ""
+"**Prefer-oldest**：高いトランザクションスループットが要求されるネットワークに適しています。最も古いトランザクションを最初に含めます。"
+
+#: ../../source/concepts/fees.rst:30
+msgid ""
+"**Minimize-fees**: Philanthropic nodes. Include first the transactions that "
+"other nodes do not want to include."
+msgstr "**Minimize-fees**: 慈善事業なノード。他のノードが含めたくない最初のトランザクションを含めます。"
+
+#: ../../source/concepts/fees.rst:31
+msgid ""
+"**Maximize-fees**: Most common in public networks. Include first "
+"transactions with higher fees."
+msgstr "**Maximize-fees**: パブリックネットワークで最も一般的です。より高い手数料の最初のトランザクションを含みます。"
+
+#: ../../source/concepts/fees.rst:35
+msgid "Rental fee"
+msgstr "レンタル手数料"
+
+#: ../../source/concepts/fees.rst:37
+msgid ""
+"Accounts willing to register a :doc:`namespace <namespace>` or a "
+":doc:`mosaic <mosaic>` have to pay a rental fee in addition to the "
+"transaction fee. The effective rental fee is adjusted dynamically based on "
+"the :doc:`median network multiplier <harvesting>` over last "
+":properties:`maxRollbackBlocks <config-network.properties#L20>`."
+msgstr ""
+":doc:`ネームスペース <namespace>` または :doc:`モザイク <mosaic>` "
+"を登録しようとするアカウントはトランザクション手数料に加えてレンタル手数料の支払いが必要です。実効レンタル手数料は最終の "
+":properties:`maxRollbackBlocks <config-network.properties#L20>` に対する "
+":doc:`median network multiplier <harvesting>` に基づいて調整されます。"
+
+#: ../../source/concepts/fees.rst:39
+msgid ""
+"For more information, see how the network calculates the effective rental "
+"fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-"
+"rental-fee>`."
+msgstr ""
+"より詳しくは :ref:`モザイク <mosaic-rental-fee>` と :ref:`ネームスペース <namespace-rental-"
+"fee>` のレンタル実効手数料の計算方法を参照してください。"
