@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,12 +22,16 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../source/api.rst:3
+msgid "REST Gateway"
+msgstr "REST ゲートウェイ"
+
 #: ../../source/api.rst:5
 msgid ""
-"The **REST server** combines HTTP and WebSockets to perform read and write "
+"The **REST gateway** combines HTTP and WebSockets to perform read and write "
 "actions in the NEM blockchain."
 msgstr ""
-"**REST サーバ** は HTTP と WebSockets を NEM ブロックチェーン上で読み書きアクションが実行できるように併合します。"
+"**REST ゲートウェイ** は HTTP と WebSockets を NEM ブロックチェーン上で読み書きアクションが実行できるように構成します。"
 
 #: ../../source/api.rst:9
 msgid "Installation"
@@ -67,13 +71,63 @@ msgstr "|catapult-server| は :doc:`API ノード <server>` として設定さ�
 msgid "Edit ``rest/resources/rest.json`` configuration:"
 msgstr "``rest/resources/rest.json`` 設定を編集します:"
 
+#: ../../source/api.rst:1
+msgid "Parameter"
+msgstr "パラメータ"
+
 #: ../../source/api.rst:1 ../../source/api.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/api.rst:1
+msgid "Example"
+msgstr "例"
+
+#: ../../source/api.rst:1
+msgid "REST client private key."
+msgstr "REST クライアントの秘密鍵"
+
+#: ../../source/api.rst:1
+msgid "MongoDB :properties:`connection URL <config-database.properties#L3>`"
+msgstr "MongoDB :properties:`接続URL <config-database.properties#L3>`"
+
+#: ../../source/api.rst:1
+msgid "API node connection host."
+msgstr "API ノード接続ホスト"
+
+#: ../../source/api.rst:1
+msgid ""
+"API node :properties:`connection port <config-database.properties#L3>`."
+msgstr "API ノード :properties:`接続ポート <config-database.properties#L3>`"
+
+#: ../../source/api.rst:1
+msgid "API node :properties:`public key <config-user.properties#L4>`."
+msgstr "API ノード :properties:`公開鍵 <config-user.properties#L4>`"
+
+#: ../../source/api.rst:1
 msgid "ZeroMQ connection host."
 msgstr "ZeroMQ 接続ホスト"
+
+#: ../../source/api.rst:1
+msgid "ZeroMQ :properties:`connection port <config-messaging.properties#L3>`."
+msgstr "ZeroMQ :properties:`接続ポート <config-messaging.properties#L3>`"
+
+#: ../../source/api.rst:36
+msgid ""
+"Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you "
+"are running catapult-server on a VPS, you can bind the ports to your local "
+"development environment creating an **SSH tunnel**: ``ssh -L "
+"27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 "
+"<USER>@<VPS_IP>``"
+msgstr ""
+"Catapult REST は API ノード、ZeroMQ そして MongoDB ポートに到達できなければなりません。 catapult-"
+"server を VPS サービス上で稼働させている場合は **SSH トンネル** を作成して、ポートをローカル開発環境と結びつけられます: "
+"``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902"
+" -p 2357 <USER>@<VPS_IP>``"
+
+#: ../../source/api.rst:38
+msgid "Install the project's dependencies:"
+msgstr "プロジェクトの依存関係をインストール"
 
 #: ../../source/api.rst:44
 msgid "Run catapult-rest:"
@@ -125,6 +179,13 @@ msgid ""
 msgstr ""
 "WebSockets はブロックチェーン上でトランザクションやイベントが発生した通知を受け取ることを可能にします。この通知は API "
 "の返却を待つことなくリアルタイムで行われます。"
+
+#: ../../source/api.rst:79
+msgid ""
+"The interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with"
+" **Listeners**."
+msgstr ""
+":doc:`NEM2-SDK <../sdk>` で API WebSocket と疎通するには **Listeners** を使用します。"
 
 #: ../../source/api.rst:82
 msgid "Channels"
@@ -413,6 +474,10 @@ msgstr "モザイク供給量が負数になるため、バリデーションに
 msgid "Validation failed because the mosaic is not transferable."
 msgstr "モザイクは転送可能ではないため、バリデーションに失敗しました。"
 
+#: ../../source/api.rst:1 ../../source/api.rst:1
+msgid "Validation failed because a modification is redundant."
+msgstr "変更が冗長になっているため、バリデーションに失敗しました。"
+
 #: ../../source/api.rst:1
 msgid "Validation failed because account is not in multisig cache."
 msgstr "キャッシュ内にアカウントがマルチシグが無いため、バリデーションに失敗しました。"
@@ -470,10 +535,6 @@ msgid "Validation failed because a modification address is invalid."
 msgstr "変更アドレが妥当ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because a modification is redundant."
-msgstr "変更が冗長になっているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
 msgid "Validation failed because the transaction has too many modifications."
 msgstr "トランザクションが多すぎる変更を持っているため、バリデーションに失敗しました。"
 
@@ -493,17 +554,17 @@ msgid ""
 "future."
 msgstr "リモートチェーンのタイムスタンプが先に進みすぎているため、バリデーションに失敗しました。"
 
-#: ../../source/api.rst:287
+#: ../../source/api.rst:288
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/api.rst:288
+#: ../../source/api.rst:289
 msgid ""
 "We recommend using one of the following tools to interact with the available"
 " endpoints."
 msgstr "有効なエンドポイントと疎通するために以下のツールを推奨します:"
 
-#: ../../source/api.rst:293
+#: ../../source/api.rst:294
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
 "tool to create NEM2 components, such as additional tools, libraries or "
@@ -512,22 +573,22 @@ msgstr ""
 "**NEM2 ソフトウェア開発キット** とは NEM2 "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
-#: ../../source/api.rst:295
+#: ../../source/api.rst:296
 msgid ":doc:`Reference <../sdk>`"
 msgstr ":doc:`リファレンス <../sdk>`"
 
-#: ../../source/api.rst:296
+#: ../../source/api.rst:297
 msgid ":doc:`Guides <../concepts/account>`"
 msgstr ":doc:`ガイド <../concepts/account>`"
 
-#: ../../source/api.rst:301
+#: ../../source/api.rst:302
 msgid "An open source HTTP client, available for Mac, Windows and Linux."
 msgstr "Mac, Windows, Linux 向けのオープンソースの HTTP クライアント。"
 
-#: ../../source/api.rst:303
+#: ../../source/api.rst:304
 msgid "Download |insomnia-app| for your operative system."
 msgstr "あなたのOS用の |insomnia-app| をダウンロードしてください。"
 
-#: ../../source/api.rst:305
+#: ../../source/api.rst:306
 msgid "Import the |insomnia-spec| for NEM."
 msgstr "NEM 用 |insomnia-spec| をインポートする"

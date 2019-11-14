@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -76,8 +76,8 @@ msgid ""
 ":doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value "
 "state**."
 msgstr ""
-"メタデータエントリはブロックチェーンに格納されます — :doc:`TransferTransaction <transfer-"
-"transaction>` の通常メッセージのように — が、 **key-value state** です。"
+"メタデータエントリはブロックチェーンへ — :doc:`TransferTransaction <transfer-transaction>` "
+"の通常メッセージのように — 格納されますが、 **key-value state** としてです。"
 
 #: ../../source/concepts/metadata.rst:24
 msgid ""
@@ -140,9 +140,10 @@ msgid ""
 "Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s "
 "account with metadata that signifies her degree."
 msgstr ""
-"最近 Alice は卒業したので、彼女の学歴確認を繰り返し提供するという面倒を避けるために、彼女の教育証明書が彼女の NEM "
-"アカウントに認定されることを望んでいます。それで彼女は Bob の元に訪れ、学位証明を彼に提供します。Alice が Bob に手数料を支払うと Bob"
-" は真正性を検証し Alice のアカウントに学歴を表すメタデータをスタンプします。"
+"最近 Alice は学校を卒業し、彼女の教育証明を彼女の NEM "
+"アカウントに認定することで、学位証明を繰り返して提供しなければならない面倒事を避けたいと思っています。そのため彼女は Bob "
+"を訪れ、学位を彼に提供します。Alice が Bob に手数料を支払うと Bob は真正性を検証し Alice "
+"のアカウントに学位を表すメタデータをスタンプします。"
 
 #: ../../source/concepts/metadata.rst:52
 msgid "Access management"
@@ -186,10 +187,14 @@ msgid ""
 msgstr "一方で権限を持たない Derek が会社のアプリスイートにアクセスしようとすると会社のアプリは彼のリクエストを拒否します。"
 
 #: ../../source/concepts/metadata.rst:70
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/concepts/metadata.rst:81
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/metadata.rst:72
+#: ../../source/concepts/metadata.rst:83
 msgid ""
 "Configuration parameters are :properties:`editable <config-"
 "network.properties>`. Public network configuration may differ."
@@ -197,7 +202,7 @@ msgstr ""
 "設定パラメータは :properties:`編集可能 <config-network.properties>` "
 "です。公開ネットワークでは異なる可能性があります。"
 
-#: ../../source/concepts/metadata.rst:79
+#: ../../source/concepts/metadata.rst:90
 msgid ""
 "Announce an AccountMetadataTransaction to associate a key-value state to an "
 "account."
@@ -210,7 +215,7 @@ msgstr "メタデータターゲットの公開鍵"
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
 msgid "Metadata key scoped to source, target and type."
-msgstr "メタデータキーのスコープは source, target, type です。"
+msgstr "メタデータキーの source, target, type に対するスコープ。"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
@@ -229,9 +234,9 @@ msgid ""
 "directly the new value."
 msgstr ""
 "前の値と新しい値の差分。値は ``xor(previous-value, new-value)`` "
-"として計算できます。以前の値がない場合は新しい値を直接使用します。"
+"として計算できます。前の値がない場合は新しい値を直接使用します。"
 
-#: ../../source/concepts/metadata.rst:104
+#: ../../source/concepts/metadata.rst:115
 msgid ""
 "Announce a MosaicMetadataTransaction to associate a key-value state to a "
 "mosaic."
@@ -249,7 +254,7 @@ msgstr "対象のモザイク識別子"
 msgid "New value size in bytes. The maximum size is ``1024``."
 msgstr "新しい値のバイトサイズ。最大サイズは ``1024`` です。"
 
-#: ../../source/concepts/metadata.rst:130
+#: ../../source/concepts/metadata.rst:141
 msgid ""
 "Announce a NamespaceMetadataTransaction to associate a key-value state to a "
 "namespace."

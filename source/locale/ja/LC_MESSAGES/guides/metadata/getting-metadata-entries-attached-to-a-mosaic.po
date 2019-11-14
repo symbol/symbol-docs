@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.18.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"PO-Revision-Date: 2019-10-28 13:05+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:10
+msgid "Getting metadata entries attached to a mosaic"
+msgstr "モザイクにアタッチされたメタデータエントリを取得する"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:12
+msgid "Get the list of metadata entries attached to an mosaic."
+msgstr "モザイクにアタッチされたメタデータエントリの一覧を取得する"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:16
+msgid "Getting into some code"
+msgstr "それではコードを見ていきましょう"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:19
+msgid "Get all metadata entries"
+msgstr "すべてのメタデータエントリの取得"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:33
+msgid "Filter metadata entries by key"
+msgstr "メタデータエントリをキーでフィルタする"
+
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.rst:43
+msgid "Filter metadata entries by key and sender"
+msgstr "メタデータエントリをキーと送信者でフィルタする"

@@ -4,15 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -62,13 +61,13 @@ msgstr "ブロック生成"
 msgid ""
 "Blocks are created by :doc:`accounts <account>`. The process of creating new"
 " blocks is called :doc:`harvesting <harvesting>`. The **harvesting "
-"account**—called the harvester— gets the :ref:`fees <fees>` for the "
+"account**—called the harvester— gets the :doc:`fees <fees>` for the "
 "transactions in the block and :doc:`inflation <inflation>`. This gives the "
 "harvester an incentive to add as many transactions to the block as possible."
 msgstr ""
 "ブロックは :doc:`アカウント <account>` によって作成されます。新しいブロックの生成プロセスは :doc:`ハーベスティング "
 "<harvesting>` と呼ばれます。ハーベスティングアカウント - ハーベスターと呼ばれます - はブロック内のトランザクションに応じた "
-":ref:`手数料 <fees>` と :doc:`インフレーション <inflation>` "
+":doc:`手数料 <fees>` と :doc:`インフレーション <inflation>` "
 "を受け取ります。これによりハーベスターにはできるだけ多くのトランザクションをブロックに追加するインセンティブが与えられます。"
 
 #: ../../source/concepts/block.rst:23

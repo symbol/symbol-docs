@@ -1,5 +1,5 @@
 .. post:: 16 Aug, 2018
-    :category: Network
+    :category: SDK
     :excerpt: 1
     :nocomments:
 
@@ -61,7 +61,7 @@ Getting a test account
 
 An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
-After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store it using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
 1. Install :doc:`NEM2-CLI <../cli>`.
 
@@ -75,7 +75,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cd  build/generated-addresses/
 
-3. Display the content of the ``address.yaml`` file.
+3. Display the content of the ``addresses.yaml`` file.
 
 .. code-block:: bash
 
@@ -121,7 +121,7 @@ Creating a project
 
 Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-**Create a folder for your new project**. Then, run the instructions for the selected language. If none of the language fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
 
 .. tabs::
 
@@ -137,7 +137,7 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.3 rxjs
+            npm install nem2-sdk@0.14.4 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -166,7 +166,7 @@ Now that you have your account filled with cat.currency units, it is the time to
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.3 rxjs
+            npm install nem2-sdk@0.14.4 rxjs
 
     .. tab:: Java
 
@@ -189,7 +189,7 @@ Now that you have your account filled with cat.currency units, it is the time to
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.14.1"
+                compile "compile 'io.nem:sdk-vertx-client:0.14.2"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.

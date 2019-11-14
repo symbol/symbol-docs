@@ -141,7 +141,7 @@ We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mo
 
 .. code-block:: bash
 
-   nem2-cli transaction mosaic --amount 1000000 --supplymutable --divisibility 0 --duration 1000
+   nem2-cli transaction mosaic --amount 1000000 --supply-mutable --divisibility 0 --duration 1000
 
 2. Copy the mosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
 
