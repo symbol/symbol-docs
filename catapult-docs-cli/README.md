@@ -6,6 +6,11 @@ Exports documentation available in ``catapult-server`` and ``catapult-rest`` cod
 
 The generated outputs are used in the [NEM Developer Center](http://nemtech.github.io).
 
+## Requirements
+
+- Python 3.4+
+- pip
+
 ## Installation
 
 1. Clone the repository.
