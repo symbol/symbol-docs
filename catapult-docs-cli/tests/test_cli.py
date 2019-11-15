@@ -9,20 +9,20 @@ def runner():
     return CliRunner()
 
 
-def test_cli_config(runner):
-    result = runner.invoke(main, ['properties', '--config', 'tests/example/.catdocs', '--server', 'tests/example/'])
+def test_cli_properties(runner):
+    result = runner.invoke(main, ['properties', '--config', 'tests/example/.catdocs'])
     assert result.exit_code == 0
     assert not result.exception
 
 
 def test_cli_status_errors(runner):
-    result = runner.invoke(main, ['status-errors', '--config', 'tests/example/.catdocs', '--server', 'tests/example/', '--rest', 'tests/example/'])
+    result = runner.invoke(main, ['status-errors', '--config', 'tests/example/.catdocs'])
     assert result.exit_code == 0
     assert not result.exception
 
 
 def test_cli_with_invalid_option(runner):
-    result = runner.invoke(main, ['invalid-option', '--config', 'tests/example/.catdocs', '--server', 'tests/example/'])
+    result = runner.invoke(main, ['invalid-option', '--config', 'tests/example/.catdocs'])
     assert result.exit_code == 1
     assert result.exception
 

@@ -1,13 +1,31 @@
 # catapult-docs-cli
 
-Exports some documentation from catapult code into reStructuredText tables.
+[![Build Status](https://travis-ci.org/nemtech/catapult-docs-cli.svg?branch=master)](https://travis-ci.org/nemtech/catapult-docs-cli)
 
-The generated tables are used in the [NEM Developer Center](http://nemtech.github.io).
+Exports documentation available in ``catapult-server`` and ``catapult-rest`` code into reStructuredText tables. 
+
+The generated outputs are used in the [NEM Developer Center](http://nemtech.github.io).
 
 ## Installation
 
+1. Clone the repository.
+
+```
+git clone https://github.com/nemtech/catapult-docs-cli.git
+cd catapult-docs-clli
+```
+
+2. Install the command-line tool.
+
 ```
 pip install .
+```
+
+3. Clone ``catapult-server`` and ``catapult-rest``.
+
+```
+git clone https://github.com/nemtech/catapult-server.git
+git clone https://github.com/nemtech/catapult-rest.git
 ```
 
 ## Usage 
@@ -26,23 +44,21 @@ catapult-docs-cli COMMAND [OPTIONS]
 | Option                | Description                                         |
 |-----------------------|-----------------------------------------------------|
 | -c, --config TEXT     | The .catdocs file path.                             |
-| -s, --server TEXT     | The catapult-server folder path.                    |
-| -s, --rest TEXT       | The catapult-rest folder path.                      |
 | --help                | Show this message and exit.                         |
 
-## Examples
+## Usage
     
 ### Generate catapult-server properties docs
 
 ```
-catapult-docs-cli properties --config .catdocs --server catapult-server/
+catapult-docs-cli properties --config .catdocs
 ```
 
 
 ### Generate catapult-rest status-errors docs
 
 ```
-catapult-docs-cli status-errors --config .catdocs --server catapult-server/ --rest catapult-rest/
+catapult-docs-cli status-errors --config .catdocs
 ```
     
 ### Export generated docs to a file
@@ -60,3 +76,5 @@ diff properties_bison.rst properties_cow.rst
 ## License
 
 [MIT License](LICENSE.md)
+
+Copyright (c) 2019 NEM.

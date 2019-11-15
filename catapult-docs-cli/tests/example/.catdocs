@@ -1,5 +1,7 @@
 {
-   "config":[
+   "serverPath": "tests/example/",
+   "restPath": "tests/example/",
+   "properties":[
       {
          "title":"test",
          "text":"",

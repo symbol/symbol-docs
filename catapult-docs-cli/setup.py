@@ -7,10 +7,10 @@ dependencies = ['click']
 
 setup(
     name='catapultdocscli',
-    version='0.1.0',
+    version='0.2.0',
     url='https://github.com/nemtech/catapult-docs-cli',
     license='MIT',
-    author='dgarcia360',
+    author='David Garcia (@dgarcia360)',
     author_email='david@nem.foundation',
     description='Exports some documentation from catapult code into reStructuredText tables.',
     long_description=__doc__,

@@ -1,5 +1,7 @@
 {
-	"config": [{
+    "serverPath": "./catapult-server/",
+    "restPath": "./catapult-rest/",
+	"properties": [{
 			"title": "config-database.properties",
 			"text": "",
 			"source": "resources/config-database.properties",
