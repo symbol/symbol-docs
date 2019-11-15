@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.transaction;
+package nem2.guides.examples.aggregate;
 
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.api.TransactionRepository;
@@ -32,10 +32,10 @@ import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class SigningAnnouncedAggregateBondedTransactionsAutomatically {
+class CosigningAggregateBondedTransactionsAutomatically {
 
     @Test
-    void signingAnnouncedAggregateBondedTransactionsAutomatically()
+    void cosigningAggregateBondedTransactionsAutomatically()
         throws ExecutionException, InterruptedException, MalformedURLException {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(

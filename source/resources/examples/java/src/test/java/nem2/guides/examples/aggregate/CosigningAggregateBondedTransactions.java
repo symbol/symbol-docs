@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.transaction;
+package nem2.guides.examples.aggregate;
 
 import io.nem.sdk.api.AccountRepository;
 import io.nem.sdk.api.RepositoryFactory;
@@ -30,10 +30,10 @@ import java.math.BigInteger;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class SigningAnnouncedAggregateBondedTransactions {
+class CosigningAggregateBondedTransactions {
 
     @Test
-    void SigningAnnouncedAggregateBondedTransactions()
+    void cosigningAnnouncedAggregateBondedTransactions()
         throws ExecutionException, InterruptedException {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {

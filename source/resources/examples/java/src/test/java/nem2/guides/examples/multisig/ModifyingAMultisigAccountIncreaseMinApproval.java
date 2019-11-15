@@ -16,38 +16,32 @@
  *
  */
 
-package nem2.guides.examples.account;
+package nem2.guides.examples.multisig;
 
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.Listener;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.mosaic.NetworkCurrencyMosaic;
 import io.nem.sdk.model.transaction.AggregateTransaction;
 import io.nem.sdk.model.transaction.AggregateTransactionFactory;
-import io.nem.sdk.model.transaction.HashLockTransaction;
-import io.nem.sdk.model.transaction.HashLockTransactionFactory;
 import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
 import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
 import io.nem.sdk.model.transaction.SignedTransaction;
-import io.nem.sdk.model.transaction.Transaction;
 import java.math.BigInteger;
 import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class ModifyingAMultisigAccountAddCosignatory {
+class ModifyingAMultisigAccountIncreaseMinApproval {
 
     @Test
-    void modifyingAMultisigAccountAddCosignatory()
+    void modifyingAMultisigAccountIncreaseMinApproval()
         throws ExecutionException, InterruptedException {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000");
-            final Listener listener = repositoryFactory.createListener()) {
+            "http://localhost:3000")) {
 
             final String generationHash = repositoryFactory.createBlockRepository()
                 .getBlockByHeight(
@@ -63,54 +57,32 @@ class ModifyingAMultisigAccountAddCosignatory {
             // Replace with the multisig public key
             final String cosignatoryPrivateKey = "";
             final String multisigAccountPublicKey = "";
-            final String newCosignatoryPublicKey = "";
 
             final Account cosignatoryAccount = Account
                 .createFromPrivateKey(cosignatoryPrivateKey, networkType);
-            final PublicAccount newCosignatoryAccount = PublicAccount
-                .createFromPublicKey(newCosignatoryPublicKey, networkType);
             final PublicAccount multisigAccount = PublicAccount
                 .createFromPublicKey(multisigAccountPublicKey, networkType);
 
             final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
                 .create(networkType,
+                    (byte) 1,
                     (byte) 0,
-                    (byte) 0,
-                    Collections.singletonList(newCosignatoryAccount),
+                    Collections.emptyList(),
                     Collections.emptyList()
                 ).build();
 
             final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
-                .createBonded(
+                .createComplete(
                     networkType,
                     Collections
-                        .singletonList(modifyMultisigAccountTransaction
-                            .toAggregate(multisigAccount))
+                        .singletonList(
+                            modifyMultisigAccountTransaction.toAggregate(multisigAccount))
                 ).build();
 
             final SignedTransaction signedTransaction = cosignatoryAccount
                 .sign(aggregateTransaction, generationHash);
 
-            final HashLockTransaction lockFundsTransaction = HashLockTransactionFactory.create(
-                networkType,
-                NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
-                BigInteger.valueOf(480),
-                signedTransaction
-            ).build();
-
-            final SignedTransaction lockFundsTransactionSigned = cosignatoryAccount
-                .sign(lockFundsTransaction, generationHash);
-
-            transactionRepository.announce(lockFundsTransactionSigned).toFuture().get();
-
-            // announce signed transaction
-
-            listener.open().get();
-
-            final Transaction transaction = listener.confirmed(cosignatoryAccount.getAddress())
-                .toFuture().get();
-
-            transactionRepository.announceAggregateBonded(signedTransaction).toFuture().get();
+            transactionRepository.announce(signedTransaction).toFuture().get();
         }
     }
 }

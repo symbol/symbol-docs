@@ -1,4 +1,4 @@
-package nem2.guides.examples.account;
+package nem2.guides.examples.multisig;
 
 import io.nem.sdk.api.MultisigRepository;
 import io.nem.sdk.api.RepositoryFactory;
