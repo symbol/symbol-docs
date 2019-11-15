@@ -37,12 +37,14 @@ import {filter, mergeMap} from "rxjs/operators";
 import {merge} from "rxjs";
 
 /* start block 01 */
-const privateKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
+// Replace with the private key of the account to convert into multisig
+const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-const cosignatory1PublicKey = process.env.COSIGNATORY_1_PUBLIC_KEY as string;
+// Replace with cosignatories public keys
+const cosignatory1PublicKey = '1A6B1797FD323FEC48F71CDFE3D181B53D001FC2B56928DBA06C9319722B0FF8';
 const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, NetworkType.MIJIN_TEST);
-const cosignatory2PublicKey = process.env.COSIGNATORY_2_PUBLIC_KEY as string;
+const cosignatory2PublicKey = '350E1AFCD10443C0F317E66B16E1093D868493782897922C6248D4D729B1D1A1';
 const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -71,7 +73,8 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 /* end block 03 */
 
 /* start block 04 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// Replace with your networkGenerationHash - http://localhost:300/block/1
+const networkGenerationHash = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 04 */

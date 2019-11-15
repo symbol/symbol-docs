@@ -24,9 +24,10 @@ import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
+import io.nem.sdk.model.mosaic.NetworkCurrencyMosaic;
+import io.nem.sdk.model.transaction.*;
+
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
@@ -38,36 +39,29 @@ class ConvertingAnAccountToMultisig {
     @Test
     void convertingAnAccountToMultisig()
         throws ExecutionException, InterruptedException {
-
+        /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {
-
-            final String generationHash = repositoryFactory.createBlockRepository()
-                .getBlockByHeight(
-                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
             final NetworkType networkType = repositoryFactory.createNetworkRepository()
                 .getNetworkType()
                 .toFuture().get();
 
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-
-            // Replace with the private key of the account that you want to convert into multisig
-            final String privateKey = "";
-
-            // Replace with cosignatories public keys
-            final String cosignatory1PublicKey = "";
-            final String cosignatory2PublicKey = "";
-
+            // Replace with the private key of the account to convert into multisig
+            final String privateKey = "'0000000000000000000000000000000000000000000000000000000000000000'";
             final Account account = Account.createFromPrivateKey(privateKey, networkType);
 
+            // Replace with cosignatories public keys
+            final String cosignatory1PublicKey = "1A6B1797FD323FEC48F71CDFE3D181B53D001FC2B56928DBA06C9319722B0FF8";
             final PublicAccount cosignatory1PublicAccount = PublicAccount
                 .createFromPublicKey(cosignatory1PublicKey, networkType);
+            final String cosignatory2PublicKey = "350E1AFCD10443C0F317E66B16E1093D868493782897922C6248D4D729B1D1A1";
             final PublicAccount cosignatory2PublicAccount = PublicAccount
                 .createFromPublicKey(cosignatory2PublicKey, networkType);
+            /* end block 01 */
 
-            final MultisigAccountModificationTransaction convertIntoMultisigTransaction = MultisigAccountModificationTransactionFactory
+            /* start block 02 */
+            final MultisigAccountModificationTransaction multisigAccountModificationTransaction = MultisigAccountModificationTransactionFactory
                 .create(
                     networkType,
                     (byte) 1,
@@ -77,10 +71,45 @@ class ConvertingAnAccountToMultisig {
                         cosignatory2PublicAccount
                     ), Collections.emptyList()
                 ).build();
+            /* end block 02 */
 
+            /* start block 03 */
+            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
+                    .createBonded(
+                            networkType,
+                            Collections
+                            .singletonList(multisigAccountModificationTransaction
+                                    .toAggregate(account.getPublicAccount()))
+                    )
+                    .build();
+            /* end block 03 */
+
+            /* start block 04 */
+            final String networkGenerationHash = repositoryFactory.createBlockRepository()
+                    .getBlockByHeight(
+                            BigInteger.ONE).toFuture().get().getGenerationHash();
             final SignedTransaction signedTransaction = account
-                .sign(convertIntoMultisigTransaction, generationHash);
-            transactionRepository.announce(signedTransaction).toFuture().get();
+                .sign(multisigAccountModificationTransaction, networkGenerationHash);
+            /* end block 04 */
+
+            /* start block 05 */
+            final HashLockTransaction hashLockTransaction = HashLockTransactionFactory.create(
+                    networkType,
+                    NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
+                    BigInteger.valueOf(480),
+                    signedTransaction)
+                    .build();
+
+            final SignedTransaction signedHashLockTransaction = account
+                    .sign(hashLockTransaction, networkGenerationHash);
+
+            // Todo: Announce hashLock
+
+            // Todo: Wait until confirmed
+
+            // Todo: Announce aggregate
+
+            /* end block 05 */
         }
     }
 }

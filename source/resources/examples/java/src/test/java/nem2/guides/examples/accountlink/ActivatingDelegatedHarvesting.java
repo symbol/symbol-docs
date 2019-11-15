@@ -25,7 +25,7 @@ import java.util.concurrent.ExecutionException;
 class ActivatingDelegatedHarvesting {
 
     @Test
-    void openingAnAccountWallet()
+    void activatingDelegatedHarvesting()
         throws ExecutionException, InterruptedException {
 
         // Todo: Implement
