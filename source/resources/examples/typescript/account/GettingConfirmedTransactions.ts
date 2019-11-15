@@ -21,7 +21,8 @@ import {AccountHttp, Address, QueryParams} from "nem2-sdk";
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
 
-const rawAddress = process.env.ADDRESS as string;
+// Replace with an address
+const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
 const address = Address.createFromRawAddress(rawAddress);
 
 const pageSize = 10; // Page size between 10 and 100, otherwise 10

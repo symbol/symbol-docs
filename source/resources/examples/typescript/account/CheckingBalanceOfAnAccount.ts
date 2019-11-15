@@ -20,7 +20,8 @@ import {AccountHttp, Address, MosaicHttp, MosaicService} from 'nem2-sdk';
 import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// Replace with an address
+const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
 const address = Address.createFromRawAddress(rawAddress);
 
 const url = 'http://localhost:3000';

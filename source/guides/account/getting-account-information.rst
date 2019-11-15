@@ -36,6 +36,12 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingAccountInformation.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+
     .. viewsource:: ../../resources/examples/bash/account/GettingAccountInformation.sh
         :language: bash
         :start-after: #!/bin/sh
@@ -59,6 +65,11 @@ The balance is the amount of the different :doc:`mosaics <../../concepts/mosaic>
 
     .. viewsource:: ../../resources/examples/javascript/account/CheckingBalanceOfAnAccount.js
         :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CheckingBalanceOfAnAccount.java
+        :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

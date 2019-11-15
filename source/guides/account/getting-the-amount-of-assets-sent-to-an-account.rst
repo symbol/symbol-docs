@@ -36,5 +36,5 @@ If you want to check another :doc:`mosaic <../../concepts/mosaic>` different tha
 
 .. code-block:: typescript
 
-    const mosaicId = new MosaicId([3562970624, 976072438]);
+    const mosaicId = new MosaicId('85BBEA6CC462B244');
     const divisibility = 6;

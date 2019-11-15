@@ -18,28 +18,35 @@
 
 package nem2.guides.examples.account;
 
+import io.nem.sdk.api.AccountRepository;
 import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
+import io.nem.sdk.model.account.AccountInfo;
+import io.nem.sdk.model.account.Address;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 
 class CheckingBalanceOfAnAccount {
 
     @Test
     void checkingBalanceOfAnAccount()
-        throws ExecutionException, InterruptedException {
+            throws ExecutionException, InterruptedException {
 
-        // Todo: Implement
+        /* start block 01 */
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://localhost:3000")) {
+            final AccountRepository accountRepository = repositoryFactory
+                    .createAccountRepository();
+
+            // Replace with an address
+            final String rawAddress = "SBOCN3Q3O6DPNJQHYUJTIPYDG4ZUU4J53ZE5LRMQ";
+            final Address address = Address.createFromRawAddress(rawAddress);
+            final AccountInfo accountInfo = accountRepository
+                    .getAccountInfo(address).toFuture().get();
+
+            System.out.print(accountInfo);
+        }
+        /* end block 01 */
     }
 }

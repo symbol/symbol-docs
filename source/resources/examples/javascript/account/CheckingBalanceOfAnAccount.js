@@ -26,7 +26,8 @@ const AccountHttp = nem2Sdk.AccountHttp,
     mergeMap = operators.mergeMap;
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS;
+// Replace with an address
+const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
 const address = Address.createFromRawAddress(rawAddress);
 
 const url = 'http://localhost:3000';
@@ -38,7 +39,6 @@ mosaicService
     .mosaicsAmountViewFromAddress(address)
     .pipe(
         mergeMap((_) => _)
-    )
-    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
-        err => console.error(err));
+    ).subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+    err => console.error(err));
 /* end block 01 */

@@ -35,6 +35,11 @@ Use the `accountHttp <https://nemtech.github.io/nem2-sdk-typescript-javascript/c
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
     .. viewsource:: ../../resources/examples/bash/account/GettingConfirmedTransactions.sh
         :language: bash
         :start-after: #!/bin/sh

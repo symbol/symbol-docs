@@ -26,7 +26,8 @@ const accountHttp = new AccountHttp(nodeUrl);
 const pageSize = 100;
 const allTransactions = true;
 
-const rawAddress = process.env.ADDRESS as string;
+// Replace with an address
+const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
 const address = Address.createFromRawAddress(rawAddress);
 
 accountHttp

@@ -33,7 +33,7 @@ import java.util.concurrent.ExecutionException;
 class GettingTheAmountOfAssetsSentToAnAccount {
 
     @Test
-    void gettingTheAmountofAssetsSentToAnAccount()
+    void gettingTheAmountOfAssetsSentToAnAccount()
         throws ExecutionException, InterruptedException {
     }
 }

@@ -38,15 +38,15 @@ class GettingConfirmedTransactions {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {
 
+            final AccountRepository accountRepository = repositoryFactory
+                    .createAccountRepository();
+
             final NetworkType networkType = repositoryFactory.createNetworkRepository()
                 .getNetworkType()
                 .toFuture().get();
 
-            final AccountRepository accountRepository = repositoryFactory
-                .createAccountRepository();
-
-            // Replace with public key
-            final String publicKey = "";
+            // Replace with a public key
+            final String publicKey = "1A6B1797FD323FEC48F71CDFE3D181B53D001FC2B56928DBA06C9319722B0FF8";
 
             final PublicAccount publicAccount = PublicAccount
                 .createFromPublicKey(publicKey, networkType);

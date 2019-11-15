@@ -19,7 +19,8 @@
 import {AccountHttp, Address} from "nem2-sdk";
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// Replace with an address
+const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
 const address = Address.createFromRawAddress(rawAddress);
 
 const accountHttp = new AccountHttp('http://localhost:3000');

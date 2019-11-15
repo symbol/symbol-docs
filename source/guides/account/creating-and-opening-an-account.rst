@@ -21,10 +21,10 @@ Prerequisites
 Getting into some code
 **********************
 
-Creating an account
-===================
+New account
+===========
 
-Run the following code snippet to create an account.
+Run the following code snippet to create an :doc:`account <../../concepts/account>`.
 
 .. example-code::
 
@@ -38,15 +38,19 @@ Run the following code snippet to create an account.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
     .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccount.sh
         :language: bash
         :start-after: #!/bin/sh
 
-The **private key** uniquely identifies a NEM account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
+Account from private key
+========================
 
-The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
-
-If you already have a private key, you can use it to define a new ``Account`` object.
+If you already have a private key, you can load it in an ``Account`` object.
 
 .. example-code::
 
@@ -60,13 +64,15 @@ If you already have a private key, you can use it to define a new ``Account`` ob
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Creating a wallet
-=================
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/OpeningAnAccount.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
-If the programming language of the SDK you are using allows **client-side** development, you will be able to create a wallet.
-A **wallet** enables you to store your account to sign transactions, **encrypting your private key** with a password.
+New wallet
+==========
 
-Run the following code snippet to create an account.
+A **wallet** enables you to store your account to sign transactions, **encrypting your private key** with a password. Run the following code snippet to create a new wallet.
 
 .. example-code::
 
@@ -84,7 +90,10 @@ Run the following code snippet to create an account.
         :language: bash
         :start-after: #!/bin/sh
 
-Do you have a private key? You can create and open a wallet importing a private key.
+Wallet from private key
+=======================
+
+Do you have a private key? You can open a wallet importing it.
 
 .. example-code::
 

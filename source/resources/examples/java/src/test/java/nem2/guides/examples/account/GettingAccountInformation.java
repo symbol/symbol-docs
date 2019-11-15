@@ -31,20 +31,20 @@ class GettingAccountInformation {
     @Test
     void gettingAccountInformation()
         throws ExecutionException, InterruptedException {
+
         /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
-
+                "http://localhost:3000")) {
             final AccountRepository accountRepository = repositoryFactory
-                .createAccountRepository();
+                    .createAccountRepository();
 
-            // Replace with address
-            final String address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
-
+            // Replace with an address
+            final String rawAddress = "SBOCN3Q3O6DPNJQHYUJTIPYDG4ZUU4J53ZE5LRMQ";
+            final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
-                .getAccountInfo(Address.createFromRawAddress(address)).toFuture().get();
+                    .getAccountInfo(address).toFuture().get();
 
-            System.out.println(accountInfo);
+            System.out.print(accountInfo);
         }
         /* end block 01 */
     }
