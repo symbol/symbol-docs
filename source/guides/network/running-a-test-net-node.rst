@@ -74,11 +74,9 @@ Or
 
     sudo docker-compose up --build --detach
 
-.. note:: To stop all the running services, execute ``sudo docker-compose down`` under the same directory you did the up command.
-
 4. If you have installed the ``api-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-To stop the docker process, press ``Ctrl+C``.
+.. note:: To stop all the running services, execute ``sudo docker-compose down`` under the same directory you did the up command.
 
 *********************************
 Interacting with the test network
