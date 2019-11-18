@@ -81,9 +81,9 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cat addresses.yaml
 
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
+4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
+5. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
