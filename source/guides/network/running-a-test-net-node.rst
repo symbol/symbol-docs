@@ -76,7 +76,7 @@ Or
 
 4. If you have installed the ``api-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: To stop all the running services, execute ``sudo docker-compose down`` under the same directory you did the up command.
+.. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
 *********************************
 Interacting with the test network
