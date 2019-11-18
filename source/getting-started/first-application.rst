@@ -60,17 +60,17 @@ The account you have loaded in NEM2-CLI represents the **ticket vendor**.
 
 .. code-block:: bash
 
-    nem2-cli account info
+    nem2-cli account info --profile testnet
 
     Account Information
     ┌───────────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property          │ Value                                                            │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address           │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
+    │ Address           │ TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7                   │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address Height    │ 1                                                                │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key        │ 654***321                                                         │
+    │ Public Key        │ 23B...D4A                                                        │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
     │ Public Key Height │ 3442                                                             │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
@@ -92,7 +92,19 @@ The account you have loaded in NEM2-CLI represents the **ticket vendor**.
 
 .. code-block:: bash
 
-   nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile customer
+    nem2-cli account generate --network TEST_NET --save --url http://api-01.us-west-2.nemtech.network:3000 --profile customer
+
+    New Account
+
+    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
+    │ Property    │ Value                                                            │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Address     │ TBTWXI-LAK6IP-445P3B-DKYKNM-SHDRQW-2CDAA7-EM2J                   │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Public Key  │ 123...456                                                        │
+    ├─────────────┼──────────────────────────────────────────────────────────────────┤
+    │ Private Key │ BF2...030                                                        │
+    └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 Monitoring the blockchain
 =========================
@@ -165,7 +177,7 @@ Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction 
     Recipient; SC7A4H...2VBU; The recipient account address. In this case, the customer's address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
-    Network; MIJIN_TEST; The local network identifier.
+    Network; TEST_NET; The network type.
 
 .. example-code::
 
@@ -213,7 +225,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
     .. code-block:: bash
 
-        nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
+        nem2-cli transaction transfer --recipient TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check if the customer has received the ticket.
 

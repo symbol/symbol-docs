@@ -31,14 +31,14 @@ import {
 
 /* start block 01 */
 const mosaicId = process.env.MOSAIC_ID as string;
-const address = process.env.ADDRESS as string;
+const address = 'TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7';
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     Address.createFromRawAddress(address),
     [new Mosaic(new MosaicId(mosaicId), UInt64.fromUint(1))],
     PlainMessage.create('enjoy your ticket!'),
-    NetworkType.MIJIN_TEST
+    NetworkType.TEST_NET
 );
 /* end block 01 */
 
@@ -46,12 +46,12 @@ const transferTransaction = TransferTransaction.create(
 const privateKey = process.env.PRIVATE_KEY as string;
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+const account = Account.createFromPrivateKey(privateKey,NetworkType.TEST_NET);
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 
 /* start block 03 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const transactionHttp = new TransactionHttp('http://api-01.us-west-2.nemtech.network:3000/');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

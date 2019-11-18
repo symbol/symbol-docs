@@ -9,11 +9,11 @@
 Running a test net node
 #######################
 
-This guide will walk you through the process of **setting up your own node** to join Catapult’s public **test network**.
+This guide will walk you through the process of **setting up your node** to join Catapult’s public **test network**.
 
 The test network mirrors the same **technology** and **features** of the future main public network. As the currency in this network does not have any real value, it allows you to experiment with the offered Catapult’s transaction set without the loss of valuable assets.
 
-.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. If you want to work in your own private test network, we recommend you to install :doc:`a local environment for learning and development purposes <creating-a-private-test-net>`.
+.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private test network, install :doc:`a local environment for learning and development purposes <creating-a-private-test-net>`.
 
 *********************
 Hardware requirements
@@ -40,7 +40,7 @@ Environment requirements
 Installation
 ************
 
-A catapult node can be composed of a different set of components depending on your needs. Catapult testnet nodes are currently distributed in two forms:
+A catapult node can be composed of a different set of components depending on your needs. Catapult test net nodes are currently distributed in two forms:
 
 * **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
 
@@ -84,38 +84,43 @@ To stop the docker process, press ``Ctrl+C``.
 Interacting with the test network
 *********************************
 
-To interact with your node, you first need to :ref:`create an account <setup-creating-a-test-account>` and :ref:`acquire test cat.currency <setup-getting-test-currency>`.
+To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test cat.currency <setup-getting-test-currency>`.
+
+Explorer
+========
+
+* |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
+
+Clients
+=======
+
+* |desktop-wallet|: Cross-platform client for Catapult. Available for Mac, Linux, and Windows.
+* :doc:`Command-Line Interface <../../cli>`: Execute the most commonly used actions from your terminal.
+
+Faucet
+======
+
+* |faucet|: Receive cat.currency units to test Catapult's services.
+
+SDKs
+====
+
+* :doc:`Software Development Kits<../../sdk>`: Integrate your app with NEM blockchain.
 
 In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
-
-Development tools
-=================
-
-Interact with the test net by either developing your own components with the :doc:`SDK <../../sdk>`, or using interactive apps to perform the most common actions.
-
-* |catapult-test-net-wallet|
-* :doc:`Command-Line Interface <../../cli>`
-
-Explorers
-=========
-
-Search for transactions, accounts, assets, and blocks in the test network.
-
-* |block-explorer|
-* |network-explorer|
 
 .. _docker: https://docs.docker.com/install/
 
 .. _docker-compose: https://docs.docker.com/compose/install/
 
-.. |catapult-test-net-wallet| raw:: html
+.. |desktop-wallet| raw:: html
 
-   <a href="#" target="_blank">Catapult Testnet Wallet</a>
+   <a href="https://github.com/nemfoundation/nem2-desktop-wallet/releases" target="_blank">Desktop Wallet</a>
 
-.. |block-explorer| raw:: html
+.. |blockchain-explorer| raw:: html
 
-   <a href="#" target="_blank">Block Explorer</a>
+   <a href="http://explorer.nemtech.network/" target="_blank">Blockchain Explorer</a>
 
-.. |network-explorer| raw:: html
+.. |faucet| raw:: html
 
-   <a href="#" target="_blank">Network Explorer</a>
+   <a href="http://faucet.nemtech.network/" target="_blank">Faucet</a>
