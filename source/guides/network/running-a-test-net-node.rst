@@ -72,9 +72,9 @@ Or
 
 .. code-block:: bash
 
-    docker-compose up
+    sudo docker-compose up --build --detach
 
-.. note:: To run the docker container in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+.. note:: To stop all the running services, execute ``sudo docker-compose down`` under the same directory you did the up command.
 
 4. If you have installed the ``api-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
