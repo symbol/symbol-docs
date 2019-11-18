@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.18.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"PO-Revision-Date: 2019-10-30 16:39+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/configuring-node-properties.rst:10
+msgid "Configuring node properties"
+msgstr "ノードのプロパティ設定"
+
+#: ../../source/guides/network/configuring-node-properties.rst:12
+msgid "Customize the node configurable parameters."
+msgstr "ノード設定パラメータの変更"
+
+#: ../../source/guides/network/configuring-node-properties.rst:14
+msgid ""
+"The node properties can be edited after launching a network with the package"
+" |catapult-service-bootstrap|."
+msgstr ""
+"ノードのプロパティはパッケージ |catapult-service-bootstrap| を使用して、ネットワークを起動した後に編集できます。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:16
+msgid ""
+"Under the directory ``build/catapult-config`` you will find the generated "
+"properties files for the ``peer`` and ``api`` nodes that compose the "
+"network."
+msgstr ""
+"``build/catapult-config`` ディレクトリにネットワークを構成する ``peer`` および ``api`` "
+"ノード用に生成されたプロパティファイルが格納されています。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:18
+msgid ""
+"If, for example, you want to edit the node properties assigned to the "
+"``peer-node-0``, stop first all the services with the command ``./cmds/stop-"
+"all``."
+msgstr ""
+"たとえば、 ``peer-node-0`` に割り当てられたノードのプロパティを編集する場合は、最初にコマンド ``./cmds/stop-all`` "
+"ですべてのサービスを停止します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:20
+msgid ""
+"Then, edit the properties files under ``peer-node-0/userconfig/resources`` "
+"with your preferred text editor."
+msgstr "次に、 ``peer-node-0/userconfig/resources`` 以下のプロパティファイルをテキストエディタで編集します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:22
+msgid ""
+"Once finished, apply the changes by running the command ``./cmds/start-all "
+"-d``."
+msgstr "編集が済んだら、コマンド ``./cmds/start-all -d`` を実行して変更を適用します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:26
+msgid "Properties"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:28
+msgid "Find below the list of configurable properties."
+msgstr "設定可能なプロパティのリストは次の通りです。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Boot private key."
+msgstr "ブート秘密鍵"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Set to true if potential delegated harvesters should be automatically "
+"detected."
+msgstr "true の場合、デリゲートハーベスターを自動的に検出します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Data directory."
+msgstr "データディレクトリ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Plugins directory."
+msgstr "プラグインディレクトリ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Server port."
+msgstr "サーバポート"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Server api port."
+msgstr "サーバ API ポート"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if the server should reuse ports already in use."
+msgstr "true の場合、サーバは使用中のポートを再利用します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if cache data should be saved in a database."
+msgstr "true の場合、キャッシュデータのデータベース保存が有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if transaction spam throttling should be enabled."
+msgstr "true の場合、スパムスロットルが有効になります。"

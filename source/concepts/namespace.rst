@@ -30,7 +30,7 @@ You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-s
 Alias
 *****
 
-:ref:`AliasTransactions <address-alias-transaction>` **link namespaces to accounts and mosaics**. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
+:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
 The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
@@ -46,7 +46,7 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 Duration
 ********
 
-At the time of the namespace **registration**, you must set the number of confirmed blocks you would like to rent the namespace for.
+At the time of the namespace registration, you must set the number of confirmed blocks you would like to rent the namespace for.
 
 The maximum namespace duration is ``365`` days. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
 
@@ -76,15 +76,17 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
 
 .. note:: Only namespaces created during the :doc:`nemesis block <block>` can have perpetual duration.
 
+.. _namespace-rental-fee:
+
 **********
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts have to pay a :ref:`transaction fee <fees>` to support the network in addition to the rental fee. The fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`. Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
 
-The default namespace rental fees are :properties:`configurable per network <config-network.properties>`:
+The default namespace rental fees are :properties:`configurable per network <config-network.properties>`, but the **network dynamically adjusts the namespace rental fees** over time.
 
-.. csv-table::
+.. csv-table:: Default values
     :header: "Property", "Value"
     :delim: ;
 
@@ -92,7 +94,7 @@ The default namespace rental fees are :properties:`configurable per network <con
     Extending a namespace duration; ``0.000001 cat.currency`` per block
     Creating a subnamespace; ``0.0001 cat.currency``
 
-The **network dynamically adjusts the namespace rental fees** over time. To calculate the **effective rental fee**, the network multiplies the default value set in the configuration by the median :doc:`network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`. In case there are zero multipliers, these are replaced by the :properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` before the median calculation.
 
 ******
 Guides
@@ -121,7 +123,7 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
 
 **Version**: 0x01
 
-**Entity type**: 0x414E
+**EntityType**: 0x414E
 
 **Inlines**:
 
@@ -131,10 +133,10 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Duration is allowed to lie up to ``365`` days. Required for root namespaces.
     parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
     id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
+    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     nameSize; uint8; Namespace name size in bytes.
     name; array(bytes, namespaceNameSize); Namespace name. Must be unique and may have a maximum length of ``64`` characters. Allowed characters are a, b, c, ..., z, 0, 1, 2, ..., 9, _ , -.
 
@@ -147,7 +149,7 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
 
 **Version**: 0x01
 
-**Entity type**: 0x424E
+**EntityType**: 0x424E
 
 **Inlines**:
 
@@ -157,9 +159,9 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    address; :schema:`Address <types.cats#L8>`; Aliased address.
+    address; :schema:`Address <types.cats#L11>`; Aliased address.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _mosaic-alias-transaction:
 
@@ -170,7 +172,7 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
 
 **Version**: 0x01
 
-**Entity type**: 0x434E
+**EntityType**: 0x434E
 
 **Inlines**:
 
@@ -180,9 +182,9 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    mosaicId; :schema:`MosaicId <types.cats#L4>`; Aliased mosaic identifier.
+    mosaicId; :schema:`MosaicId <types.cats#L7>`; Aliased mosaic identifier.
+    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _namespace-registration-type:
 

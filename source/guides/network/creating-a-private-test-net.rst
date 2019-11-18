@@ -109,7 +109,7 @@ Commands
 Getting test cat.currency
 *************************
 
-An :doc:`account <../../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. When announcing a transaction, accounts have to pay an :ref:`associated cost <fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
+An :doc:`account <../../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. When announcing a transaction, accounts have to pay an :doc:`associated cost <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
 
 After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
@@ -125,7 +125,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cd  build/generated-addresses/
 
-3. Display the content of the ``address.yaml`` file.
+3. Display the content of the ``addresses.yaml`` file.
 
 .. code-block:: bash
 

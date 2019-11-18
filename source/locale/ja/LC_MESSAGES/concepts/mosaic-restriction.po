@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -329,15 +329,15 @@ msgstr ""
 "現在 Bob と Carol はお互いに ``comfyclothing.shares`` "
 "ユニットを購入して送ることができるでしょう。しかし有効な住所証明を提示していない Alice は株式を受け取ることができません。"
 
-#: ../../source/concepts/mosaic-restriction.rst:111
+#: ../../source/concepts/mosaic-restriction.rst:110
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic-restriction.rst:123
+#: ../../source/concepts/mosaic-restriction.rst:122
 msgid "Schemas"
 msgstr "スキーマ"
 
-#: ../../source/concepts/mosaic-restriction.rst:130
+#: ../../source/concepts/mosaic-restriction.rst:129
 msgid ""
 "Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a"
 " mosaic."
@@ -380,7 +380,7 @@ msgstr "新しい制限値"
 msgid "New restriction type."
 msgstr "新しい制限タイプ"
 
-#: ../../source/concepts/mosaic-restriction.rst:157
+#: ../../source/concepts/mosaic-restriction.rst:156
 msgid ""
 "Announce a MosaicAddressRestrictionTransaction transaction to set a "
 "restriction rule to an address."

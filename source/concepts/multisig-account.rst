@@ -26,7 +26,7 @@ Minimum approval and removal
 
 It is not always necessary to force all cosignatories to cosign transactions associated with the multisig account. NEM allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
 
-NEM's current implementation of multisig is *"M-of-N"*, where M is the number of cosignatories requeired to announce a transaction and N is the total amount of cosignatories for that particular multig account. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+NEM's current implementation of multisig is *"M-of-N"*, where M is the number of cosignatories requeired to announce a transaction and N is the total amount of cosignatories for that particular multisig account. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
 
 Similarly, cosignatories can :ref:`invite other accounts to take part in the multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  :ref:`propose to remove others <guide-modify-a-multisig-account-removing-a-cosignatory>` when the defined conditions are fulfilled.
 
@@ -143,7 +143,7 @@ c) Add or delete cosignatories from a multisig account.
 
 **Version**: 0x01
 
-**Entity type**: 0x4155
+**EntityType**: 0x4155
 
 **Inlines**:
 
@@ -155,31 +155,8 @@ c) Add or delete cosignatories from a multisig account.
 
     minRemovalDelta; int8; Number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; Number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    modificationsCount; uint8; Number of modifications.
-    modification; array(:ref:`CosignatoryModification <cosignatory-modification>`, modificationsCount); Attached cosignatory modifications.
-
-.. _cosignatory-modification:
-
-CosignatoryModification
-=======================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    modificationAction; :ref:`CosignatoryModificationAction <cosignatory-modification-action>`; Modification Action.
-    cosignatoryPublicKey; :schema:`Key <types.cats#L11>`; Cosignatory account public key.
-
-.. _cosignatory-modification-action:
-
-CosignatoryModificationAction
-=============================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Remove cosignatory.
-    0x01; Add cosignatory.
+    publicKeyAdditionsCount; uint8; Number of cosignatory public key additions.
+    publicKeyDeletionsCount ; uint8; Number of cosignatory public key deletions.
+    multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align publicKeyAdditions on 8-byte boundary.
+    publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyAdditionsCount); Cosignatory public key additions.
+    publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyDeletionsCount); Cosignatory public key deletions.

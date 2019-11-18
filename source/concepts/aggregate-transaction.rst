@@ -114,7 +114,7 @@ Announce an AggregateTransaction to combine multiple transactions together.
 
 **Version**: 0x01
 
-**Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
+**EntityType**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
 
 **Inlines**:
 
@@ -124,7 +124,9 @@ Announce an AggregateTransaction to combine multiple transactions together.
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    transactionsHash; :schema:`Hash256 <types.cats#L12>`; Aggregate hash of the aggregate transaction.
     payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
+    aggregateTransactionHeader_Reserved1; uint32; Reserved padding to align end of AggregateTransactionHeader on 8-byte boundary.
     transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions.  An AggregateTransaction can contain up to ``1000`` inner transactions involving up to ``15`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
     cosignatures; array(:ref:`Cosignature <cosignature>`, __FILL__); Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
 
@@ -143,7 +145,7 @@ Cosignature transactions are used to sign :ref:`announced AggregateBondedTransac
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentHash; :schema:`Hash256 <types.cats#L9>`;  AggregateBondedTransaction hash to cosign.
+    parentHash; :schema:`Hash256 <types.cats#L12>`;  AggregateBondedTransaction hash to cosign.
 
 .. _cosignature:
 
@@ -156,8 +158,8 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signerPublicKey; :schema:`Key <types.cats#L11>`; Cosigner public key.
-    signature; :schema:`Signature <types.cats#L12>`; Transaction signature.
+    signerPublicKey; :schema:`Key <types.cats#L14>`; Cosigner public key.
+    signature; :schema:`Signature <types.cats#L15>`; Transaction signature.
 
 
 .. _hash-lock-transaction:
@@ -177,7 +179,7 @@ Upon completion of the aggregate, the locked funds become available in the accou
 
 **Version**: 0x01
 
-**Entity type**: 0x4148
+**EntityType**: 0x4148
 
 **Inlines**:
 
@@ -189,4 +191,4 @@ Upon completion of the aggregate, the locked funds become available in the accou
 
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic (``10 cat.currency``).
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``2`` days.
-    hash; :schema:`Hash256 <types.cats#L9>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.
+    hash; :schema:`Hash256 <types.cats#L12>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.

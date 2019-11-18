@@ -33,6 +33,7 @@
     concepts/cryptography
     concepts/block
     concepts/transaction
+    concepts/fees
     concepts/consensus-algorithm
     concepts/harvesting
     concepts/inflation

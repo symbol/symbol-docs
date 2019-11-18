@@ -130,7 +130,7 @@ Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mos
 
 **Version**: 0x01
 
-**Entity type**: 0x4151
+**EntityType**: 0x4151
 
 **Inlines**:
 
@@ -140,12 +140,12 @@ Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mos
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
-    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
+    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
     restrictionKey; uint64; Restriction key relative to the reference mosaic identifier.
     previousRestrictionValue; uint64; Previous restriction value.
-    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
     newRestrictionValue; uint64; New restriction value.
+    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
     newRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; New restriction type.
 
 .. _mosaic-address-restriction-transaction:
@@ -157,7 +157,7 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
 
 **Version**: 0x01
 
-**Entity type**: 0x4251
+**EntityType**: 0x4251
 
 **Inlines**:
 
@@ -167,11 +167,11 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
     restrictionKey; uint64; Restriction key.
-    targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address being restricted.
     previousRestrictionValue; uint64; Previous restriction value. Set ``previousRestrictionValue`` to ``FFFFFFFFFFFFFFFF`` if the target address does not have a previous restriction value for this mosaic identifier and restriction key.
     newRestrictionValue; uint64; New restriction value.
+    targetAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Address being restricted.
 
 .. _mosaic-restriction-type:
 

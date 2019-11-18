@@ -79,6 +79,12 @@ source_file = build/gettext/concepts/cryptography.pot
 source_lang = en
 type = PO
 
+[nem2docs.concepts--fees]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
+source_file = build/gettext/concepts/fees.pot
+source_lang = en
+type = PO
+
 [nem2docs.concepts--harvesting]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
 source_file = build/gettext/concepts/harvesting.pot
@@ -333,7 +339,7 @@ source_lang = en
 type = PO
 
 [nem2docs.guides--metadata--assigning-metadata-entries-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
 source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
 source_lang = en
 type = PO
@@ -511,5 +517,17 @@ type = PO
 [nem2docs.guides--transfer--sending-an-encrypted-message]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-an-encrypted-message.po
 source_file = build/gettext/guides/transfer/sending-an-encrypted-message.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.po
+source_file = build/gettext/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
+source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
 source_lang = en
 type = PO

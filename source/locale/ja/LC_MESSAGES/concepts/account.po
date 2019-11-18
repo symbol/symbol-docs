@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,11 +28,11 @@ msgstr "アカウント"
 
 #: ../../source/concepts/account.rst:5
 msgid ""
-"An account is a **key pair** (private and public key) associated with a "
-"mutable state stored on the NEM blockchain. In other words, you have a "
-"**deposit box**, which only you can modify with your private key."
+"An account is a :ref:`key pair <keypair>` (private and public key) "
+"associated with a mutable state stored on the blockchain. In other words, "
+"you have a **deposit box**, which only you can modify with your private key."
 msgstr ""
-"アカウントとは NEM ブロックチェーン上に保存される、変更可能な状態に関連付く **キーペア**  "
+"アカウントとは NEM ブロックチェーン上に保存される、変更可能な状態に関連付く :ref:`キーペア <keypair>`  "
 "(秘密鍵と公開鍵)です。言い換えるとブロックチェーン上にある、あなたの秘密鍵でのみ変更をすることができる **金庫** です。"
 
 #: ../../source/concepts/account.rst:7
@@ -65,10 +65,9 @@ msgstr "**秘密鍵**"
 
 #: ../../source/concepts/account.rst:19
 msgid ""
-"A :ref:`private key <keypair>` is a key to an account. Anyone with access to"
-" the private key, ultimately has control over the account."
-msgstr ""
-":ref:`秘密鍵 <keypair>` はアカウントの鍵です。秘密鍵にアクセスできる人なら誰でもアカウントを完全にコントロールできてしまいます。"
+"A private key is a key to an account. Anyone with access to the private key "
+"ultimately has control over the account."
+msgstr "秘密鍵はアカウントの鍵です。秘密鍵にアクセスできる人なら誰でもアカウントを完全にコントロールできてしまいます。"
 
 #: ../../source/concepts/account.rst:21
 msgid ""
@@ -82,13 +81,11 @@ msgstr "**公開鍵**"
 
 #: ../../source/concepts/account.rst:25
 msgid ""
-"The :ref:`public key <keypair>` can be used to verify signatures of the "
-"account. The public key is stored in the blockchain with the first issued "
-"transaction. An account which has not issued any transaction has its public "
-"key field empty."
+"The public key can be used to verify signatures of the account. The public "
+"key is stored in the blockchain with the first issued transaction. An "
+"account which has not issued any transaction has its public key field empty."
 msgstr ""
-":ref:`公開鍵 <keypair>` "
-"はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
+"公開鍵はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
 
 #: ../../source/concepts/account.rst:27
 msgid "**Address**"
@@ -102,12 +99,9 @@ msgstr ""
 "各アカウントは一意な :ref:`アドレス <address>` "
 "を持っています。あなたは通常であれば、短縮するためといくらかの情報を集めるために、この導出されたアドレスを共有するでしょう。"
 
-#: ../../source/concepts/account.rst:31
-msgid "**Mosaics**"
-msgstr "**モザイク**"
-
 #: ../../source/concepts/account.rst:33
-msgid "The amount of different :doc:`mosaics <mosaic>` the account owns."
+msgid ""
+"The amount of different :doc:`mosaics <mosaic>` units the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
 
 #: ../../source/concepts/account.rst:35
@@ -141,7 +135,7 @@ msgstr ""
 #: ../../source/concepts/account.rst:45
 msgid ""
 "One crucial type of rule is :doc:`multisig <multisig-account>` control that "
-"allows ownership of account based assets to be shared in a variety of ways "
+"allows ownership of account-based assets to be shared in a variety of ways "
 "between multiple parties."
 msgstr ""
 "1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる :doc:`マルチシグ <multisig-"

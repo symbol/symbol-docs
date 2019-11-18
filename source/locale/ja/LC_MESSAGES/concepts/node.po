@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.18.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-13 17:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -229,59 +229,37 @@ msgstr ""
 "に代わるもので、パフォーマンスが重要な場合に使用することを目的としています。"
 
 #: ../../source/concepts/node.rst:93
-msgid "REST node"
-msgstr "REST ノード"
+msgid "REST gateway"
+msgstr "REST ゲートウェイ"
 
 #: ../../source/concepts/node.rst:95
 msgid "**Repository:** |catapult-rest|"
 msgstr "**リポジトリ:** |catapult-rest|"
 
 #: ../../source/concepts/node.rst:101
-msgid "REST node communication"
-msgstr "REST ノードコミュニケーション"
+msgid "REST gateway communication"
+msgstr "REST ゲートウェイコミュニケーション"
 
 #: ../../source/concepts/node.rst:103
 msgid ""
-"The REST nodes handle :doc:`JSON API <../api>` client requests. A node reads"
-" from MongoDB, formats the response, and returns it to the client. This "
-"component is also responsible for returning events to the client using "
-":ref:`WebSockets <websockets>`."
+"The REST gateways handle :doc:`JSON API <../api>` client requests. The "
+"gateway reads from MongoDB, formats the response, and returns it to the "
+"client. This component is also responsible for returning events to the "
+"client using :ref:`WebSockets <websockets>`."
 msgstr ""
-"Catapult REST ノードは :doc:`JSON API <../api>` クライアントリクエストを処理します。ノードは MongoDB "
-"から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
+"Catapult REST ゲートウェイは :doc:`JSON API <../api>` クライアントリクエストを処理します。ゲートウェイは "
+"MongoDB から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
 "<websockets>` でクライアントにイベントを返却する役割も果たします。"
 
 #: ../../source/concepts/node.rst:105
 msgid ""
-"Each REST node connects to one API instance to send new transactions "
+"Each REST gateway connects to one API instance to send new transactions "
 "requests triggered from the client-side and receive updates in real-time "
 "using sockets."
 msgstr ""
-"各 REST ノードは1つの API "
+"各 REST ゲートウェイは1つの API "
 "インスタンスに接続して、クライアントサイドからトリガーされた新しいトランザクション要求を送信し、ソケットを使用してリアルタイムで更新を受信します。"
 
 #: ../../source/concepts/node.rst:133
 msgid "Guides"
 msgstr "ガイド"
-
-#: ../../source/concepts/node.rst:137
-msgid "Deploy a Catapult full node for learning and development purposes."
-msgstr "Catapult フルノードを学習と開発目的でデプロイする。"
-
-#: ../../source/concepts/node.rst:143
-msgid ""
-"**Deploying a test net node** (:doc:`upcoming <../guidelines/suggesting-"
-"changes>`)"
-msgstr "**テストネットノードのデプロイ** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"
-
-#: ../../source/concepts/node.rst:145
-msgid ""
-"**Configuring a private network** (:doc:`upcoming <../guidelines/suggesting-"
-"changes>`)"
-msgstr "**プライベートネットワークの設定** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"
-
-#: ../../source/concepts/node.rst:147
-msgid ""
-"**Creating a custom plugin** (:doc:`upcoming <../guidelines/suggesting-"
-"changes>`)"
-msgstr "**カスタムプラグインの作成** (:doc:`乞うご期待 <../guidelines/suggesting-changes>`)"
