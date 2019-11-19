@@ -76,7 +76,7 @@ Profile
 
 Creates a new profile.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -85,7 +85,7 @@ Options
     -u, --url <url>                - NEM2 Node URL. Example: http://localhost:3000
     --profile <profile>            - (Optional) Profile name, if not private key will override the default profile.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/OpeningAnAccountWallet.sh
     :language: bash
@@ -95,7 +95,7 @@ Command
 
 Displays the list of stored profiles.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/ListingProfiles.sh
     :language: bash
@@ -112,7 +112,7 @@ Generates a new :doc:`account <concepts/account>`. This command generates a priv
 
 Generated accounts can be stored as named profiles by adding a node url.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -121,7 +121,7 @@ Options
     --profile <profile>     - (Optional) When saving profile you can add profile name, if not will be stored as default.
     -n, --network <network> - Network Type (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST).
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/CreatingAnAccount.sh
     :language: bash
@@ -131,14 +131,14 @@ Command
 
 Returns the account information, such as the public key, importance and :doc:`mosaics <concepts/mosaic>` balance.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingAccountInformation.sh
     :language: bash
@@ -148,7 +148,7 @@ Command
 
 Gets an array of transactions for which an account is the sender or receiver.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -159,7 +159,7 @@ Options
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingConfirmedTransactions.sh
     :language: bash
@@ -169,7 +169,7 @@ Command
 
 Gets an array of incoming transactions. A transaction is said to be incoming with respect to an account if the account is the recipient of the transaction.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -178,7 +178,7 @@ Options
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingIncomingTransactions.sh
     :language: bash
@@ -188,7 +188,7 @@ Command
 
 Gets an array of outgoing transactions. A transaction is said to be outgoing with respect to an account if the account is the sender of the transaction.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -197,7 +197,7 @@ Options
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingOutgoingTransactions.sh
     :language: bash
@@ -207,7 +207,7 @@ Command
 
 Gets the array of transactions for which an account is the sender or receiver and which have not yet been included in a block.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -216,7 +216,7 @@ Options
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingUnconfirmedTransactions.sh
     :language: bash
@@ -226,7 +226,7 @@ Command
 
 Gets an array of aggregate bonded transactions where the account is the sender or requires to cosign the transaction.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -235,7 +235,7 @@ Options
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/account/GettingAggregateBondedTransactions.sh
     :language: bash
@@ -248,14 +248,14 @@ Block
 
 Returns the block header by height.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -h, --height <height>      - Block height.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingBlockHeader.sh
     :language: bash
@@ -265,7 +265,7 @@ Command
 
 Returns the transactions for a given block height.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -275,7 +275,7 @@ Options
     -i, --id <id>              - (Optional) Id after which we want objects to be returned.
     -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. Default: DESC
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingBlockTransactions.sh
     :language: bash
@@ -285,14 +285,14 @@ Command
 
 Returns the receipts for a given block height.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -h, --height <height>      - Block height.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingBlockReceipts.sh
     :language: bash
@@ -305,13 +305,13 @@ Chain
 
 Returns the current height of the block chain.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingBlockchainHeight.sh
     :language: bash
@@ -321,13 +321,13 @@ Command
 
 Gets the current score of the block chain. The higher the score, the better the chain. During synchronization, nodes try to get the best block chain in the network.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingChainScore.sh
     :language: bash
@@ -340,13 +340,13 @@ Diagnostic
 
 Returns the REST server components versions.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/GettingServerInfo.sh
     :language: bash
@@ -356,13 +356,13 @@ Command
 
 Returns diagnostic information about the node storage.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/GettingServerStorage.sh
     :language: bash
@@ -375,14 +375,14 @@ Metadata
 
 Returns :doc:`metadata <concepts/metadata>` entries from an account.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesAccount.sh
     :language: bash
@@ -392,14 +392,14 @@ Command
 
 Returns :doc:`metadata <concepts/metadata>` entries from a mosaic.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesMosaic.sh
     :language: bash
@@ -410,14 +410,14 @@ Command
 
 Returns :doc:`metadata <concepts/metadata>` entries from a namespace.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
     -n, --namespace-name <namespaceName> - Namespace name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesNamespace.sh
     :language: bash
@@ -433,13 +433,13 @@ The NEM2 command line interface has a set of monitoring commands to track events
 
 Monitors new confirmed :doc:`blocks <concepts/block>` harvested in the blockchain.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/MonitoringNewBlocks.sh
     :language: bash
@@ -449,14 +449,14 @@ Command
 
 Monitors new confirmed :doc:`transactions <concepts/transaction>` signed or received by an :doc:`account <concepts/account>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/MonitoringTransactionConfirmed.sh
     :language: bash
@@ -466,14 +466,14 @@ Command
 
 Monitors new unconfirmed :doc:`transactions <concepts/transaction>` signed or received by an :doc:`account <concepts/account>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/MonitoringTransactionUnconfirmed.sh
     :language: bash
@@ -483,14 +483,14 @@ Command
 
 Monitors new :ref:`aggregate transactions <aggregate-transaction>` with missing signatures added to an :doc:`account <concepts/account>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/MonitoringTransactionAggregateBonded.sh
     :language: bash
@@ -500,14 +500,14 @@ Command
 
 Monitors :doc:`account <concepts/account>` validation errors.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/MonitoringTransactionStatusError.sh
     :language: bash
@@ -520,14 +520,14 @@ Mosaic
 
 Gets information from a :doc:`mosaic <concepts/mosaic>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
     -m, --mosaic-id <mosaicId>     - Mosaic id in hexadecimal format.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/mosaic/GettingMosaicInformation.sh
     :language: bash
@@ -540,7 +540,7 @@ Namespace
 
 Gets information from a :doc:`namespace <concepts/namespace>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -548,7 +548,7 @@ Options
     -n, --name <name>   - Namespace name.
     -h, --hex <hex>     - Namespace id in hexadecimal.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/namespace/GettingNamespaceInformation.sh
     :language: bash
@@ -558,7 +558,7 @@ Command
 
 Gets all the :doc:`namespaces <concepts/namespace>` owned by an account.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -567,7 +567,7 @@ Options
     -h, --hex <hex>         - Namespace id in hexadecimal.
     -a, --address <address> - Address
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/namespace/GettingNamespacesOwned.sh
     :language: bash
@@ -577,14 +577,14 @@ Command
 
 Get mosaicId or address behind an namespace.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
     -n, --name <name>   - Namespace name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/namespace/GettingAliasResolution.sh
     :language: bash
@@ -599,14 +599,14 @@ Transactions are signed with the profiles configured with ``nem2-cli profile cre
 
 Returns transaction information given a hash.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
     -h, --hash <hash>   - Transaction hash.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/GettingTransactionInfo.sh
     :language: bash
@@ -616,14 +616,14 @@ Command
 
 Gets the confirmation status of a transaction.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
     -h, --hash <hash>   - Transaction hash.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/monitor/GettingTransactionStatus.sh
     :language: bash
@@ -633,7 +633,7 @@ Command
 
 Delegates the account importance to a :ref:`proxy account <account-link-transaction>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -642,7 +642,7 @@ Options
     -p, --public-key <publicKey> - Remote account public key.
     -a, --action <action>        - Alias action (1: Link, 0: Unlink).
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/harvesting/DelegatingAccountImportanceToProxyAccount.sh
     :language: bash
@@ -652,13 +652,13 @@ Command
 
 Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     -h, --hash <hash>       - AggregateBondedTransaction hash to be signed.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh
     :language: bash
@@ -668,7 +668,7 @@ Command
 
 Creates a new :doc:`mosaic <concepts/mosaic>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -682,7 +682,7 @@ Options
     -u, --duration <duration>         - Mosaic duration in amount of blocks.
     -n, --non-expiring                - (Optional) Mosaic non-expiring.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/mosaic/CreatingAMosaic.sh
     :language: bash
@@ -692,7 +692,7 @@ Command
 
 Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -702,7 +702,7 @@ Options
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
     -d, --delta <delta>        - Atomic amount of supply change.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/mosaic/ModifyingMosaicSupply.sh
     :language: bash
@@ -712,7 +712,7 @@ Command
 
 Registers a :doc:`namespace <concepts/namespace>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -724,7 +724,7 @@ Options
     -d, --duration <duration>      - Duration (use it with --rootnamespace).
     -p, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
 
-Command
+*Command*
 
 Register a root namespace:
 
@@ -742,7 +742,7 @@ Register a subnamespace:
 
 Links a namespace to an :doc:`address <concepts/account>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -752,7 +752,7 @@ Options
     -a, --address <address>     - Account address.
     -n, --namespace <namespace> - Namespace name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/namespace/LinkNamespaceAddress.sh
     :language: bash
@@ -762,7 +762,7 @@ Command
 
 Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -772,7 +772,7 @@ Options
     -m, --mosaic-id <mosaicId>  - Mosaic id in in hexadecimal format.
     -n, --namespace <namespace> - Namespace name.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/namespace/LinkNamespaceMosaic.sh
     :language: bash
@@ -784,7 +784,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
 
 .. note:: The command only supports to add or remove one account as a cosignatory at a time.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -799,7 +799,7 @@ Options
     -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory account public key.
     -m, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/multisig/ModifyingAMultisigAccount.sh
     :language: bash
@@ -809,7 +809,7 @@ Command
 
 Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -822,7 +822,7 @@ Options
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
     -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretLockTransaction.sh
     :language: bash
@@ -832,7 +832,7 @@ Command
 
 Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -843,7 +843,7 @@ Options
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
     -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretProofTransaction.sh
     :language: bash
@@ -853,7 +853,7 @@ Command
 
 :doc:`Allow or block <concepts/account-restriction>` incoming and outgoing transactions for a given a set of addresses.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -864,7 +864,7 @@ Options
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Address to allow / block.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/AnnouncingAccountAddressRestrictionTransaction.sh
     :language: bash
@@ -874,7 +874,7 @@ Command
 
 :doc:`Allow or block <concepts/account-restriction>` incoming transactions containing a given set of mosaics.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -884,7 +884,7 @@ Options
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Mosaic to allow / block.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/AnnouncingAccountMosaicRestrictionTransaction.sh
     :language: bash
@@ -894,7 +894,7 @@ Command
 
 :doc:`Allow or block <concepts/account-restriction>` outgoing transactions by transaction type.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -905,7 +905,7 @@ Options
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Transaction type formatted as hex.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/AnnouncingAccountOperationRestrictionTransaction.sh
     :language: bash
@@ -917,7 +917,7 @@ Announces a :ref:`TransferTransaction <transfer-transaction>` to an account exch
 
 You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after :: is in ``absolute value`` so 1 @cat.currency is 1000000 (divisibility 6).
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -929,7 +929,7 @@ Options
     -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -p, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
     :language: bash
@@ -942,14 +942,14 @@ Restriction
 
 Returns the account restrictions attached to an address.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
     -a, --address <address> - Account address
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/GettingAccountRestrictions.sh
     :language: bash
@@ -959,14 +959,14 @@ Command
 
 Returns the :ref:`global restrictions <mosaic-global-restriction-transaction>` assigned to a mosaic.
 
-Options
+*Options*
 
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/GettingMosaicGlobalRestrictions.sh
     :language: bash
@@ -976,7 +976,7 @@ Command
 
 Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transaction>` assigned to an address.
 
-Options
+*Options*
 
 .. code-block:: bash
 
@@ -984,7 +984,7 @@ Options
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
     -a, --address <address>    - Account address.
 
-Command
+*Command*
 
 .. viewsource:: resources/examples/bash/restriction/GettingMosaicAddressRestrictions.sh
     :language: bash

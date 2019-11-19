@@ -144,8 +144,7 @@ If you missed the WebSocket response, check the transaction status after by call
 Troubleshooting: Monitoring transactions on the client side
 ************************************************************
 
-The NEM2-SDK for typescript base Listener was designed to work on Node.js backend environments.
-To make the code work in the client side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
+Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.js backend environments. If you want to execute Listeners from the client-side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
 
 .. code-block:: typescript
 

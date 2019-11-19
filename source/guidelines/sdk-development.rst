@@ -164,7 +164,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
-4. As the typescript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list. You can jump this step if the code generator for your language supports them.
+4. As the TypeScript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list. You can jump this step if the code generator for your language supports them.
 
 * Open the generated file ``./nem2-ts-sdk/model/models.ts`` in your favorite editor.
 * Search for line contains ``let enumsMap: {[index: string]: any}``.
