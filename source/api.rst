@@ -59,7 +59,7 @@ The block channel notifies for every subscribed client every time there is a new
 
 *Response format*
 
-* BlockInfoDTO
+* `BlockInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
 **confirmedAdded/{address}**
 
