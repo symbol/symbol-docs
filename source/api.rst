@@ -4,49 +4,7 @@ REST Gateway
 
 The **REST gateway** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
 
-************
-Installation
-************
-
 **Repository**: |catapult-rest|
-
-.. note:: catapult-rest is already included in |catapult-service-bootstrap|. Follow the :doc:`package's installation instructions <getting-started/setup-workstation>` to deploy a network for development or learning purposes.
-
-To install catapult-rest from scratch, you will need:
-
-- NodeJS version 8 or 9
-- |yarn| dependency manager
-- |catapult-server| configured as an :doc:`API node <server>`.
-
-1. Edit ``rest/resources/rest.json`` configuration:
-
-.. csv-table::
-    :header: "Parameter", "Description", "Example"
-    :widths: 20 40 40
-    :delim: ;
-
-    clientPrivateKey; REST client private key.;  000...000
-    db.url;  MongoDB :properties:`connection URL <config-database.properties#L3>`; mongodb://localhost:27017/
-    apiNode.host; API node connection host.; 127.0.0.1
-    apiNode.port; API node :properties:`connection port <config-database.properties#L3>`.; 7900
-    api.publicKey; API node :properties:`public key <config-user.properties#L4>`.; FFFF...FFF
-    websocket.mq.host; ZeroMQ connection host.;  127.0.0.1
-    websocket.mq.port; ZeroMQ :properties:`connection port <config-messaging.properties#L3>`. ; 7902
-
-.. note:: Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you are running catapult-server on a VPS, you can bind the ports to your local development environment creating an **SSH tunnel**: ``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 <USER>@<VPS_IP>``
-
-2. Install the project's dependencies:
-
-.. code-block:: bash
-
-    ./yarn_setup.sh
-
-3. Run catapult-rest:
-
-.. code-block:: bash
-
-    cd rest
-    yarn start resources/rest.json
 
 .. _http-requests:
 
@@ -54,13 +12,14 @@ To install catapult-rest from scratch, you will need:
 Http requests
 *************
 
-Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **POST** requests.
+Catapult REST uses port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is :doc:`running locally  <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
+
+Assuming that Catapult REST is :doc:`running locally <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
 
     http://localhost:3000/<path-to-API-request>
 
-HTTP PUT and POST requests use JSON structures in the request body. Request returns data using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
+Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
 
 Get the complete list of available endpoints by clicking on the button below:
 
@@ -74,52 +33,158 @@ Get the complete list of available endpoints by clicking on the button below:
 WebSockets
 **********
 
-WebSockets make receiving notifications possible when a transaction or event occurs in the blockchain. The notification is received in real time without having to poll the API waiting for a reply.
+To get **live updates** when an event occurs in the blockchain, Catapult REST publishes WebSockets. Client applications can open a WebSocket connection and get a unique identifier. With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates. When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
 
-The interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with **Listeners**.
+WebSocket URIs share the same host and port as the HTTP requests URIs, but use the ``ws://`` protocol:
+
+	ws://localhost:3000/ws
+
+* Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain/listening-new-blocks>`
 
 Channels
 ========
 
 **block**
 
-The block channel notifies for every new block. The message contains the block information.
+The block channel notifies for every subscribed client every time there is a new harvested block. The messages returned contain information about the blocks.
 
-**confirmedAdded/<ADDRESS>**
+*Request body*
 
-The confirmedAdded channel notifies when a transaction related to an address is included in a block. The message contains the transaction.
+.. code-block:: json
 
-**unconfirmedAdded/<ADDRESS>**
+    {
+        "uid": "{uid}",
+        "subscribe": "block"
+    }
 
-The unconfirmedAdded channel notifies when a transaction related to an address is in unconfirmed state and waiting to be included in a block. The message contains the transaction.
+*Response format*
 
-Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from *partial* to *unconfirmed*.
+* BlockInfoDTO
 
-**unconfirmedRemoved/<ADDRESS>**
+**confirmedAdded/{address}**
 
-The unconfirmedRemoved channel notifies when a transaction related to an address was in unconfirmed state but is not anymore. The message contains the transaction hash.
+The confirmedAdded channel notifies when a transaction related to an address is included in a block. The messages returned contain information about the confirmed transactions.
 
-Possible scenarios when this channel notifies are: the transaction now is confirmed or the deadline has been reached and it was not included in a block.
+*Request body*
 
-**partialAdded/<ADDRESS>**
+.. code-block:: json
 
-The partialAdded channel notifies when an AggregateBondedTransaction related to an address is in *partial* state and waiting to have all *required cosigners*. The message contains a transaction.
+    {
+        "uid": "{uid}",
+        "subscribe": "confirmedAdded/{address}"
+    }
 
-The scenario when this channel notifies is when an AggregateBondedTransaction is announced to the network via ``PUT /transaction/partial`` HTTP endpoint.
+*Response format*
 
-**partialRemoved/<ADDRESS>**
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
-The partialRemoved channel notifies when a transaction related to an address was in partial state but is not anymore. The message contains the transaction hash.
+**unconfirmedAdded/{address}**
 
-Possible scenarios when this channel notifies are: the transaction now is in unconfirmed or the deadline has been reached and it was not included in a block.
+The unconfirmedAdded channel notifies when a transaction related to an address gets the unconfirmed state, waiting to be included in a block. The messages returned contain information about unconfirmed transactions.
 
-**cosignature/<ADDRESS>**
+Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from partial to unconfirmed.
 
-The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an AggregateBondedTransaction with partial state. The message contains the cosignature signed transaction.
+*Request body*
 
-**status/<ADDRESS>**
+.. code-block:: json
 
-The status channel notifies when a transaction related to an address rises an error. The message contains the error message and the transaction hash.
+    {
+        "uid": "{uid}",
+        "subscribe": "unconfirmedAdded/{address}"
+    }
+
+*Response format*
+
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+
+**unconfirmedRemoved/{address}**
+
+The unconfirmedRemoved channel notifies when a transaction related to an address had the unconfirmed state, but not anymore. The messages returned contain the transactions hashes.
+
+Possible scenarios when this channel notifies are: the transaction now is confirmed, or the deadline has been reached, and it was not included in a block.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid":"{uid}",
+        "subscribe":"unconfirmedRemoved/{address}"
+    }
+
+*Response format*
+
+* Hash
+
+**partialAdded/{address}**
+
+The partialAdded channel notifies when an AggregateBondedTransaction related to an address reaches the partial state, waiting to have all required cosigners. The messages returned contain information about the transactions.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "partialAdded/{address}"
+    }
+
+*Response format*
+
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+
+**partialRemoved/{address}**
+
+The partialRemoved channel notifies when a transaction related to an address had the partial state, but is not anymore. The messages returned contain the transactions hashes.
+
+Possible scenarios when this channel notifies are: the transaction now is unconfirmed, or the deadline has been reached, and it was not included in a block.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "partialRemoved/{address}"
+    }
+
+*Response format*
+
+* Hash
+
+**cosignature/{address}**
+
+The cosignature channel notifies when a cosignature signed transaction related to an address is added to an AggregateBondedTransaction with the partial state. The messages returned contain the cosignature signed transaction.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "cosignature/{address}"
+    }
+
+*Response format*
+
+* `CosignatureDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
+
+**status/{address}**
+
+The status channel notifies when a transaction related to an address rises an error. The messages returned contain the error messages and the transaction hashes.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "status/{address}"
+    }
+
+*Response format*
+
+* `TransactionStatusDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
 .. _status-errors:
 
@@ -286,6 +351,7 @@ This section describes the error messages that can be returned via status channe
 *****
 Tools
 *****
+
 We recommend using one of the following tools to interact with the available endpoints.
 
 NEM2-SDK
@@ -296,26 +362,26 @@ The **NEM2 Software Development Kit** is the primary software development tool t
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`
 
-Insomnia
+Postman
 ========
 
-An open source HTTP client, available for Mac, Windows and Linux.
+HTTP client, available for Mac, Windows and Linux.
 
-1. Download |insomnia-app| for your operative system.
+1. Download |postman-app| for your current operative system.
 
-2. Import the |insomnia-spec| for NEM.
+2. Import the |postman-spec| for Catapult.
 
 .. |yarn| raw:: html
 
     <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
 
-.. |insomnia-app| raw:: html
+.. |postman-app| raw:: html
 
-    <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+    <a href="https://www.getpostman.com/downloads/" target="_blank">Postman app</a>
 
-.. |insomnia-spec| raw:: html
+.. |postman-spec| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-openapi/blob/master/spec/insomnia.json/" target="_blank">Insomnia spec</a>
+    <a href="https://github.com/nemtech/nem2-openapi/blob/master/_build/postman.json/" target="_blank">Postman spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
