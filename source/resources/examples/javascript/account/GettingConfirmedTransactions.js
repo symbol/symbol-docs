@@ -32,6 +32,6 @@ const publicAccount =  PublicAccount.createFromPublicKey(publicKey, NetworkType.
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
 accountHttp
-    .transactions(publicAccount, new QueryParams(pageSize))
+    .getAccountTransactions(publicAccount, new QueryParams(pageSize))
     .subscribe(transactions => console.log(transactions), err => console.error(err));
 /* end block 01 */

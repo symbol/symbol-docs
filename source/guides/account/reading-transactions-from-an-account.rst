@@ -21,7 +21,7 @@ Prerequisites
 Getting into some code
 **********************
 
-Use the `accountHttp <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_  repository to get the latest confirmed transactions for a given account.
+Use the `AccountHttp <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_  repository to get the latest confirmed transactions for a given account.
 
 .. example-code::
 

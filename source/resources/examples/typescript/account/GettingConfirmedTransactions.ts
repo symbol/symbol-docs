@@ -27,6 +27,6 @@ const address = Address.createFromRawAddress(rawAddress);
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
 accountHttp
-    .transactions(address, new QueryParams(pageSize))
+    .getAccountTransactions(address, new QueryParams(pageSize))
     .subscribe(transactions => console.log(transactions), err => console.error(err));
 /* end block 01 */
