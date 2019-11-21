@@ -6,7 +6,6 @@ import {
     LinkAction,
     NetworkType,
     PersistentDelegationRequestTransaction,
-    PersistentHarvestingDelegationMessage,
     PublicAccount,
     TransactionHttp,
 } from 'nem2-sdk';

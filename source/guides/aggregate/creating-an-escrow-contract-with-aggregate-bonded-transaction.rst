@@ -140,7 +140,7 @@ Is it possible without aggregate transactions?
 - Alice could decide not to pay the distributor after receiving the ticket.
 - The distributor could choose not to send the ticket after receiving the payment.
 
-Using the AggregateTransaction feature we ensure that multiple transactions are executed at the same time when all the participants agree.
+Using the AggregateTransaction feature, we ensure that multiple transactions are executed at the same time when all the participants agree.
 
 ************
 What's next?

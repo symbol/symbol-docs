@@ -231,7 +231,7 @@ Serialization of a transaction.
     :delim: ;
 
     max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
-    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of seconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
 .. _embedded-transaction-header:
 

@@ -33,7 +33,7 @@ Getting into some code
 **********************
 
 1. Choose a **unique name** for your namespace. One common option is to use your company's or own name.
-For this example, we are going to register a namespace named ``foo``.
+In this example, we are going to register a namespace named ``foo``.
 
 2. Check if your namespace name is **available**.
 

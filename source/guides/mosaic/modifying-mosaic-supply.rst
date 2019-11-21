@@ -9,7 +9,7 @@
 Modifying mosaic supply
 #######################
 
-Alter the supply of a mosaic following this guide.
+Alter the supply of a mosaic.
 
 *************
 Prerequisites

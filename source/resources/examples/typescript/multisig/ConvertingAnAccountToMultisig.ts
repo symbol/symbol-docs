@@ -20,12 +20,10 @@ import {
     Account,
     Address,
     AggregateTransaction,
-    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
     Listener,
     MultisigAccountModificationTransaction,
-    MultisigCosignatoryModification,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -51,15 +49,8 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     Deadline.create(),
     1,
     1,
-    [
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory1,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory2,
-        )],
+    [cosignatory1, cosignatory2],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 02 */
 

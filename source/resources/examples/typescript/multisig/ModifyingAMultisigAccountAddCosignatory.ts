@@ -37,16 +37,11 @@ import {filter, mergeMap} from 'rxjs/operators';
 import {merge} from "rxjs";
 
 /* start block 01 */
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-
 const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
 const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY as string;
 const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
-
-const multisigCosignatoryModification = new MultisigCosignatoryModification(CosignatoryModificationAction.Add, newCosignatoryAccount);
 /* end block 01 */
 
 /* start block 02 */
@@ -54,7 +49,8 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     Deadline.create(),
     0,
     0,
-    [multisigCosignatoryModification],
+    [newCosignatoryAccount],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 02 */
 
@@ -63,6 +59,9 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     NetworkType.MIJIN_TEST);
+
+const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
+const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);

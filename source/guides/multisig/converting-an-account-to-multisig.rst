@@ -16,9 +16,9 @@ Create a 1-of-2 multisig account.
 Background
 **********
 
-Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate accounts. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accounts <../../concepts/multisig-accounts>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
@@ -40,7 +40,7 @@ Prerequisites
 Getting into some code
 **********************
 
-1. First, define the accounts that will be cosginatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
+1. First, define the accounts that will be cosignatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
 
 .. example-code::
 
@@ -69,7 +69,7 @@ Getting into some code
 
 4. Sign the **AggregateTransaction** using the private key of the multisig account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -101,7 +101,7 @@ Getting into some code
 
 .. _guide-get-multisig-account-info:
 
-8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
+8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using the ``getMultisigAccountInfo`` function.
 
 .. example-code::
 

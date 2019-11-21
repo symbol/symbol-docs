@@ -20,12 +20,10 @@ import {
     Account,
     Address,
     AggregateTransaction,
-    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
     Listener,
     MultisigAccountModificationTransaction,
-    MultisigCosignatoryModification,
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
@@ -50,15 +48,8 @@ const convertMultisigAccount2Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     1,
     1,
-    [
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory5,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory6,
-        )],
+    [cosignatory5, cosignatory6],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 01 */
 
@@ -79,19 +70,8 @@ const convertMultisigAccount3Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     2,
     1,
-    [
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory7,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory8,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory4,
-        )],
+    [cosignatory7,cosignatory8,cosignatory4],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 02 */
 
@@ -103,19 +83,8 @@ const convertMultisigAccount1Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     3,
     1,
-    [
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            multisigAccount2.publicAccount,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            multisigAccount3.publicAccount,
-        ),
-        new MultisigCosignatoryModification(
-            CosignatoryModificationAction.Add,
-            cosignatory4,
-        )],
+    [multisigAccount2.publicAccount, multisigAccount3.publicAccount, cosignatory4],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 03 */
 

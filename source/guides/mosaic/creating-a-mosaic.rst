@@ -72,7 +72,7 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: NEM works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
