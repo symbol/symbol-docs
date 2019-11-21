@@ -33,7 +33,7 @@ Installation
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.8.0.3
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.9.0.1
 
 2. Open the ``catapult-service-bootstrap`` folder.
 
@@ -137,7 +137,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
 
@@ -166,7 +166,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
     .. tab:: Java
 

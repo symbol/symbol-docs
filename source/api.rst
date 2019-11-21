@@ -25,7 +25,7 @@ Get the complete list of available endpoints by clicking on the button below:
 
 .. raw:: html
 
-    <a href="/endpoints.html"><button class="btn btn-default">REST API Endpoints</button></a>
+    <a href="https://nemtech.github.io/nem2-openapi" rel="nofollow"><button class="btn btn-default">REST API Endpoints</button></a>
 
 .. _websockets:
 
@@ -381,7 +381,7 @@ HTTP client, available for Mac, Windows and Linux.
 
 .. |postman-spec| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-openapi/blob/master/_build/postman.json/" target="_blank">Postman spec</a>
+    <a href="https://github.com/nemtech/nem2-openapi/releases" target="_blank">Postman spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
