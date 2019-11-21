@@ -1,6 +1,6 @@
 # NEM Developer Center
 
-The official nem2 documentation.
+Open source documentation of NEM Catapult.
 
 ## What is NEM?
 
