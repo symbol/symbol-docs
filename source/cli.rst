@@ -432,7 +432,7 @@ The NEM2 command line interface has a set of monitoring commands to track events
 
 **Block**
 
-Monitors new confirmed :doc:`blocks <concepts/block>` harvested in the blockchain.
+Monitors new confirmed :doc:`blocks <concepts/block>` harvested on the blockchain.
 
 *Options*
 

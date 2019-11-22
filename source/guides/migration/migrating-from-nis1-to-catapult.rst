@@ -108,7 +108,7 @@ To get the real identifier behind an aliased address or mosaic, the client appli
 Multisignature management
 *************************
 
-With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
+With multisignature accounts managed on-chain, Catapult's multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
 1. Creating a :doc:`multisignature account <../../concepts/multisig-account>`.
 

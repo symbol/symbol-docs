@@ -107,7 +107,7 @@ NEM2-SDK uses ReactiveX Library intensely.
 Before starting
 ***************
 
-1. Review the technical documentation to become familiar with the :doc:`NEM built-in features<../concepts/account>`.
+1. Review the technical documentation to become familiar with the :doc:`Catapult built-in features<../concepts/account>`.
 2. Setup the `catapult in local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
 3. :doc:`Check the API reference <../api>` and play with the API endpoints.
 4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli>` .
@@ -290,7 +290,7 @@ The SDKs need to be adopted by other developers. As a contributor, no one knows 
 Publishing the SDK as official
 ******************************
 
-To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among NEM developers.
+To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among Catapult developers.
 
 ********************
 Recommended Licenses

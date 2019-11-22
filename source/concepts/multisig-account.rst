@@ -14,7 +14,7 @@ Multisig :doc:`accounts <account>` require additional signatures to initiate act
 Cosignatories
 *************
 
-A NEM :doc:`account <account>` can be :doc:`converted to multisig <../guides/multisig/converting-an-account-to-multisig>`. The cosignatories—other accounts—of the multisig will become the account managers.
+A Catapult :doc:`account <account>` can be :doc:`converted to multisig <../guides/multisig/converting-an-account-to-multisig>`. The cosignatories—other accounts—of the multisig will become the account managers.
 
 From that moment on, the multisig account cannot announce transactions by itself. A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
@@ -24,9 +24,9 @@ To record the transaction in the block, the other cosignatories will have to agr
 Minimum approval and removal
 ****************************
 
-It is not always necessary to force all cosignatories to cosign transactions associated with the multisig account. NEM allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
+It is not always necessary to force all cosignatories to cosign transactions associated with the multisig account. Catapult allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
 
-NEM's current implementation of multisig is *"M-of-N"*, where M is the number of cosignatories requeired to announce a transaction and N is the total amount of cosignatories for that particular multisig account. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+Catapult's current implementation of multisig is *"M-of-N"*, where M is the number of cosignatories requeired to announce a transaction and N is the total amount of cosignatories for that particular multisig account. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
 
 Similarly, cosignatories can :ref:`invite other accounts to take part in the multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  :ref:`propose to remove others <guide-modify-a-multisig-account-removing-a-cosignatory>` when the defined conditions are fulfilled.
 
@@ -55,7 +55,7 @@ Shared accounts
 
 Several families are members of the local philatelist society and use a shared account to buy stamps.
 
-To ensure that all agree on which old stamps they should buy and on the right price, they use a multisig account. This way, all members of the society need to approve the transaction before it is included in the blockchain.
+To ensure that all agree on which old stamps they should buy and on the right price, they use a multisig account. This way, all members of the society need to approve the transaction before it is included on the blockchain.
 
 Multi-factor authorization
 ==========================
@@ -160,3 +160,5 @@ c) Add or delete cosignatories from a multisig account.
     multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align publicKeyAdditions on 8-byte boundary.
     publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyAdditionsCount); Cosignatory public key additions.
     publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyDeletionsCount); Cosignatory public key deletions.
+
+Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`.

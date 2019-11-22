@@ -50,7 +50,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): product
 
     New Account
@@ -72,7 +72,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): company
 
     New Account

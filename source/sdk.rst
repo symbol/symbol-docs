@@ -6,7 +6,7 @@ The **NEM2 Software Development Kit** is the primary software development tool t
 
 It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
-Learn how to use NEM's SDK following the :ref:`guided implementation examples <blog-categories>`.
+Learn how to use Catapult's SDK following the :ref:`guided implementation examples <blog-categories>`.
 
 *******************
 Supported languages
@@ -17,6 +17,7 @@ Supported languages
     :delim: ;
 
     TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|
+    Java SDK; |java-repo|; |java-reference|
 
 ************
 Ongoing work
@@ -33,7 +34,6 @@ Read the |protocol-compatibility-report| to know more about the status of each p
     Dart SDK ; |dart-repo| ;
     C# SDK ; |csharp-repo| ;
     Go SDK ; |go-repo| ;
-    Java SDK; |java-repo|;
     Swift SDK ; |swift-repo| ;
     C++ ;  ;
     PHP SDK ;  ;
@@ -57,6 +57,10 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 .. |csharp-repo| raw:: html
 
     <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">Repository</a>
+
+.. |java-reference| raw:: html
+
+    <a href="https://nemtech.github.io/nem2-sdk-java/javadoc/0.14.2/" target="_blank">Documentation</a>
 
 .. |swift-repo| raw:: html
 

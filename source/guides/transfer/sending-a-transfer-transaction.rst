@@ -87,7 +87,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: NEM works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: Catapult works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
 2. Sign the transaction with Alice's account.
 

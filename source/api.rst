@@ -2,9 +2,7 @@
 REST Gateway
 ############
 
-The **REST gateway** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
-
-**Repository**: |catapult-rest|
+The **REST gateway** combines HTTP and WebSockets to perform read and write actions on the blockchain.
 
 .. _http-requests:
 
@@ -12,7 +10,7 @@ The **REST gateway** combines HTTP and WebSockets to perform read and write acti
 Http requests
 *************
 
-Catapult REST uses port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
+|catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
 
 Assuming that Catapult REST is :doc:`running locally <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
@@ -33,7 +31,7 @@ Get the complete list of available endpoints by clicking on the button below:
 WebSockets
 **********
 
-To get **live updates** when an event occurs in the blockchain, Catapult REST publishes WebSockets. Client applications can open a WebSocket connection and get a unique identifier. With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates. When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
+To get **live updates** when an event occurs on the blockchain, Catapult REST publishes WebSockets. Client applications can open a WebSocket connection and get a unique identifier. With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates. When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
 
 WebSocket URIs share the same host and port as the HTTP requests URIs, but use the ``ws://`` protocol:
 
@@ -393,4 +391,4 @@ HTTP client, available for Mac, Windows and Linux.
 
 .. |catapult-rest| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-rest" target="_blank">catapult-rest</a>
+   <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult REST</a>

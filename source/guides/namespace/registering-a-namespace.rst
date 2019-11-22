@@ -15,7 +15,7 @@ Create a unique place for your assets.
 Background
 **********
 
-:doc:`Namespaces <../../concepts/namespace>` allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
+:doc:`Namespaces <../../concepts/namespace>` allow you to create an on-chain **unique place** for your business and your assets on the blockchain.
 
 A namespace starts with a name you choose, similar to an internet domain name. If one :doc:`account <../../concepts/account>` creates a namespace, this will appear as unique in the network.
 

@@ -41,7 +41,7 @@ Getting into some code
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save it? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 .. code-block:: bash
@@ -50,7 +50,7 @@ Getting into some code
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save it? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 

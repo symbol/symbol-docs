@@ -13,13 +13,13 @@ Atomic cross-chain swap between NEM public and private chain
 
 This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
 
-When talking about tokens in NEM, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`SecretLock <secret-lock-transaction>` / :ref:`SecretProof <secret-proof-transaction>` mechanism.
+When talking about tokens in Catapult, we are actually referring to :doc:`mosaics <../../concepts/mosaic>`. Catapult enables atomic swaps through :ref:`SecretLock <secret-lock-transaction>` / :ref:`SecretProof <secret-proof-transaction>` mechanism.
 
 **********
 Background
 **********
 
-Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in NEM public chain, whereas bob token is only present in a private chain using Catapult technology.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in Catapult's public chain, whereas bob token is only present in a private chain using Catapult technology.
 
 One non-atomic solution could be:
 
@@ -43,7 +43,7 @@ Getting into some code
 
 Trading tokens directly from one blockchain to the other is not possible, due to the technological differences between them.
 
-In case of NEM public and private chain, the same mosaic name could have a different definition and distribution, or even not exist. Between Bitcoin and NEM, the difference is even more evident, as each blockchain uses an entirely different technology.
+In case of Catapult public and private chain, the same mosaic name could have a different definition and distribution, or even not exist. Between Bitcoin and NEM, the difference is even more evident, as each blockchain uses an entirely different technology.
 
 Instead of transferring tokens between different chains, the trade will be performed inside each chain. The secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 

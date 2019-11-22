@@ -193,7 +193,7 @@ Blockchains are designed in a way that under certain circumstances recent blocks
 
 The :properties:`rewrite limit <config-network.properties>` is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
+Catapult has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
 
 .. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
@@ -261,3 +261,5 @@ Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 
 * :ref:`EmbeddedTransactionHeader <embedded-transaction-header>`
 * :ref:`EntityBody <entity-body>`
+
+Continue: :doc:`Fees <fees>`.
