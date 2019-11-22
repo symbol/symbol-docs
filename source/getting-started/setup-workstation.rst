@@ -67,7 +67,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.4
+    npm install --global nem2-cli@0.14.0
 
 2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
