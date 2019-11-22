@@ -926,8 +926,9 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
     -r, --recipient <recipient> - Recipient address or @alias.
     -m, --message <message>     - Transaction message.
     -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
-    -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
+    -e, --encrypted             - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -p, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
+    -d, --persistent-harvesting-delegation - (Optional) Start persistent harvesting delegation.
 
 *Command*
 
