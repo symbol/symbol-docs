@@ -96,7 +96,7 @@ Change the default profile.
 
 .. code-block:: bash
 
-    --profile <profile>            - (Optional) Profile name, if not private key will override the default profile.
+    --profile <profile>     - (Optional) Profile name, if not private key will override the default profile.
 
 *Command*
 
@@ -994,5 +994,3 @@ Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transa
 .. |nem2-cli| raw:: html
 
    <a href="https://github.com/nemtech/nem2-cli" target="_blank">NEM2-CLI</a>
-
-
