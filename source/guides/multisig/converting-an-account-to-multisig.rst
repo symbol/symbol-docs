@@ -18,7 +18,7 @@ Background
 
 Alice and Bob have separate accounts. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accounts <../../concepts/multisig-accounts>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accounts <../../concepts/multisig-account>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
