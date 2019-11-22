@@ -43,7 +43,7 @@ const accountHttp = new AccountHttp(nodeUrl);
 const transactionHttp = new TransactionHttp(nodeUrl);
 
 accountHttp
-    .aggregateBondedTransactions(account.address)
+    .getAccountPartialTransactions(account.address)
     .pipe(
         mergeMap((_) => _),
         filter((_) => !_.signedByAccount(account.publicAccount)),
