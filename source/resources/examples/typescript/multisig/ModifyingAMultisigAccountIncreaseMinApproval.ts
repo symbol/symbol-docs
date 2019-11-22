@@ -40,6 +40,7 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     1,
     0,
     [],
+    [],
     NetworkType.MIJIN_TEST);
 /* end block 02 */
 

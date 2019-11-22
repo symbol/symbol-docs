@@ -2,11 +2,7 @@
 CLI
 ####
 
-The NEM2 Command Line Interface is a unified tool to interact with the NEM blockchain.
-
-This tool will enable you to perform the most common used actions to interact with the blockchain.
-
-**NEM2-CLI** is an open source tool built on top of the :doc:`NEM2-SDK<sdk>` Typescript. Use it in your favorite terminal program.
+|NEM2-CLI| is an open-source command-line interface to interact with the blockchain.
 
 ************
 Installation
@@ -14,17 +10,9 @@ Installation
 
 NEM2-CLI is distributed using the node package manager ``npm``.
 
-To install:
-
 .. code-block:: bash
 
     sudo npm install --global nem2-cli
-
-To update:
-
-.. code-block:: bash
-
-    sudo npm update --global nem2-cli
 
 *************
 Configuration
@@ -32,9 +20,7 @@ Configuration
 
 To start using NEM2-CLI, configure a profile.
 
-A profile holds an account and a node url for a specific network. Profiles are used to set a base url and have an account to sign transactions.
-
-Configure default profile.
+A profile holds an account and a node URL for a specific network. Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
@@ -52,14 +38,13 @@ By default, NEM2-CLI will always use the default profile. To use a named profile
 
     nem2-cli account info --profile mijin_test_net_profile
 
-..
-    If you are going to use named profile for multiple commands, you can use the NEM2_PROFILE environment variable at the command line.
+If you are going to use named profile for multiple commands, you can change the default profile with the following command.
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        export NEM2_PROFILE=mijin_test_net_profile
+    nem2-cli profile setdefault --profile new_profile
 
-If you do not have a private key to create a profile you can generate a new account, add a node url and save it as default or named profile.
+If you do not have a private key to create a profile, you can generate a new account, add a node URL and save it as default or named profile.
 
 .. code-block:: bash
 
@@ -102,6 +87,22 @@ Displays the list of stored profiles.
     :start-after: #!/bin/sh
 
 .. note:: By default, NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
+
+**Set default**
+
+Change the default profile.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>     - (Optional) Profile name, if not private key will override the default profile.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/account/SettingDefaultProfile.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 Account
 =======
@@ -431,7 +432,7 @@ The NEM2 command line interface has a set of monitoring commands to track events
 
 **Block**
 
-Monitors new confirmed :doc:`blocks <concepts/block>` harvested in the blockchain.
+Monitors new confirmed :doc:`blocks <concepts/block>` harvested on the blockchain.
 
 *Options*
 
@@ -638,7 +639,7 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
 .. code-block:: bash
 
     --profile <profile>          - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>       - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>       - Maximum fee (absolute amount).
     -p, --public-key <publicKey> - Remote account public key.
     -a, --action <action>        - Alias action (1: Link, 0: Unlink).
 
@@ -673,7 +674,7 @@ Creates a new :doc:`mosaic <concepts/mosaic>`.
 .. code-block:: bash
 
     --profile <profile>               - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>            - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>            - Maximum fee (absolute amount).
     -a, --amount <amount>             - Initial supply of mosaics.
     -t, --transferable                - (Optional)  Mosaic transferable.
     -s, --supply-mutable              - (Optional)  Mosaic supply mutable.
@@ -697,7 +698,7 @@ Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>     - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
     -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
     -d, --delta <delta>        - Atomic amount of supply change.
@@ -717,7 +718,7 @@ Registers a :doc:`namespace <concepts/namespace>`.
 .. code-block:: bash
 
     --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>         - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>         - Maximum fee (absolute amount).
     -n, --name <name>              - Namespace name.
     -r, --rootnamespace            - Root namespace.
     -s, --subnamespace             - Sub namespace.
@@ -747,7 +748,7 @@ Links a namespace to an :doc:`address <concepts/account>`.
 .. code-block:: bash
 
     --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
     -a, --action <action>       - Alias action (1: Link, 0: Unlink).
     -a, --address <address>     - Account address.
     -n, --namespace <namespace> - Namespace name.
@@ -767,7 +768,7 @@ Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
 .. code-block:: bash
 
     --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
     -a, --action <action>       - Alias action (1: Link, 0: Unlink).
     -m, --mosaic-id <mosaicId>  - Mosaic id in in hexadecimal format.
     -n, --namespace <namespace> - Namespace name.
@@ -814,7 +815,7 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                     - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
     -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
     -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
@@ -837,7 +838,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                     - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
     -s, --secret <secret>                      - Proof hashed in hexadecimal.
     -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
@@ -858,8 +859,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
-    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
+    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
+    -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
     -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Address to allow / block.
@@ -879,8 +880,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
-    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
+    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
+    -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Mosaic to allow / block.
 
@@ -899,9 +900,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee you want to pay to announce this transaction.
-    -t, --restriction-type <restrictionType>           - Restriction type (allow, block).
-    -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
+    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
+    -t, --restriction-flag <restrictionFlag>           - Restriction flag (allow, block).
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
     -v, --value <value>                                - Transaction type formatted as hex.
 
@@ -922,12 +922,13 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
 .. code-block:: bash
 
     --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee you want to pay to announce this transaction.
+    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
     -r, --recipient <recipient> - Recipient address or @alias.
     -m, --message <message>     - Transaction message.
     -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
-    -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
+    -e, --encrypted             - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -p, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
+    -d, --persistent-harvesting-delegation - (Optional) Start persistent harvesting delegation.
 
 *Command*
 
@@ -990,5 +991,6 @@ Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transa
     :language: bash
     :start-after: #!/bin/sh
 
+.. |nem2-cli| raw:: html
 
-
+   <a href="https://github.com/nemtech/nem2-cli" target="_blank">NEM2-CLI</a>

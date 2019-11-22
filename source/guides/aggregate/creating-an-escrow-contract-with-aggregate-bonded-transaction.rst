@@ -28,16 +28,16 @@ For this example, imagine that the two parties agree on a virtual service, imply
 4. The buyer approves goods or service.
 5. The escrow releases payment to the seller.
 
-How to create an escrow contract with NEM
-=========================================
+How to create an escrow contract with Catapult
+==============================================
 
-Normalizing the previous description into NEM related concepts:
+Normalizing the previous description into Catapult related concepts:
 
 * **contractual arrangement**: A new type of transaction called :ref:`AggregateTransaction <aggregate-transaction>`.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
-* **primary transacting parties**: NEM accounts will represent the participants.
+* **primary transacting parties**: Catapult accounts will represent the participants.
 
 * **conditions agreed to by the transacting parties**: When every participant signs the AggregateTransaction.
 
@@ -140,7 +140,7 @@ Is it possible without aggregate transactions?
 - Alice could decide not to pay the distributor after receiving the ticket.
 - The distributor could choose not to send the ticket after receiving the payment.
 
-Using the AggregateTransaction feature we ensure that multiple transactions are executed at the same time when all the participants agree.
+Using the AggregateTransaction feature, we ensure that multiple transactions are executed at the same time when all the participants agree.
 
 ************
 What's next?

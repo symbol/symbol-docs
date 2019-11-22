@@ -16,14 +16,14 @@
  *
  */
 
-import {AccountHttp, Address} from "nem2-sdk";
+import {Address, MultisigHttp} from "nem2-sdk";
 
 /* start block 01 */
 const rawAddress = process.env.ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
 
-const accountHttp = new AccountHttp('http://localhost:3000');
-accountHttp
+const multisigHttp = new MultisigHttp('http://localhost:3000');
+multisigHttp
     .getMultisigAccountInfo(address)
-    .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));
+    .subscribe(multisigInfo => console.log(multisigInfo), err => console.error(err));
 /* end block 01 */

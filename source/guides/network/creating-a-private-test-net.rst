@@ -27,7 +27,7 @@ Catapult Service Bootstrap deploys a private network with the following high-lev
 
 * **api-node**: The API node stores data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
 
-* **rest-gateway**: Combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
+* **rest-gateway**: Combines HTTP and WebSockets to perform read and write actions on the blockchain.
 
 *********************
 Hardware requirements
@@ -141,7 +141,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Introduce your private key: 123***456
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.

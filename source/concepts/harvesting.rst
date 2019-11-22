@@ -154,3 +154,5 @@ Enumeration: uint8
 
     0x00; Unlink account.
     0x01; Link account.
+
+Continue: :doc:`Inflation <inflation>`.

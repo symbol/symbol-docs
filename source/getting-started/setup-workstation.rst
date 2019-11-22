@@ -7,7 +7,7 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on Catapult.
 
 .. _setup-catapult-service-bootstrap:
 
@@ -15,9 +15,9 @@ This first guide will walk you through a step-by-step installation of the requir
 Running Catapult Service Bootstrap
 **********************************
 
-To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
+To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to quickly build your own test network.
 
-.. note:: NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it should not power any production Catapult instances.
+.. note:: Catapult's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it should not power any production Catapult instances.
 
 Environment requirements
 ========================
@@ -33,7 +33,7 @@ Installation
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.8.0.3
+    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.9.0.1
 
 2. Open the ``catapult-service-bootstrap`` folder.
 
@@ -67,7 +67,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.4
+    npm install --global nem2-cli@0.14.0
 
 2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
@@ -91,10 +91,10 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Introduce your private key: 123***456
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile):
 
-.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
 You should see the account credentials in your terminal.
 
@@ -121,7 +121,7 @@ Creating a project
 
 Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
 .. tabs::
 
@@ -137,9 +137,9 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
-        3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. We recommend to use **TypeScript instead of JavaScript** when building applications for Catapult.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -166,7 +166,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
     .. tab:: Java
 

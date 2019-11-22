@@ -26,7 +26,7 @@ You can find the |implementation| under the ``crypto`` module of :doc:`catapult-
 Address
 *******
 
-Public keys can be shared in a shorter form as **addresses**. A NEM address is a **base-32 encoded triplet** consisting of:
+Public keys can be shared in a shorter form as **addresses**. A Catapult address is a **base-32 encoded triplet** consisting of:
 
 * The network byte.
 * The 160-bit hash of the account's public key.
@@ -77,3 +77,5 @@ As you can see, it is possible to create an address without interacting with the
 .. |implementation| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/KeyGenerator.cpp#L31" target="_blank">implementation</a>
+
+Continue: :doc:`Block <block>`.

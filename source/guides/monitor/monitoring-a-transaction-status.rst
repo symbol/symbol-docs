@@ -9,7 +9,7 @@
 Monitoring a transaction status
 ###############################
 
-Make sure a transaction gets included in the blockchain after being announced.
+Make sure a transaction gets included on the blockchain after being announced.
 
 **********
 Background
@@ -35,7 +35,7 @@ Catapult enables an **asynchronous transaction announcement**. After an applicat
 
 At this time, the server does not ensure that the transaction is valid. For example, you might not have the number of asset units you want to need to send and still, get a positive response from the server. For this reason, the "OK" response does not guarantee getting the transaction included in a block. To make sure the transaction is added in a block, you must track the :doc:`transaction status <../../concepts/transaction>` using **Listeners**.
 
-`Listeners <websockets>`_ enable receiving notifications possible when a change in the blockchain occurs. The notification is received in real-time without having to poll the API waiting for a reply.
+`Listeners <websockets>`_ enable receiving notifications possible when a change on the blockchain occurs. The notification is received in real-time without having to poll the API waiting for a reply.
 
 Let's see how transaction monitorization works transferring a **TransferTransaction**.
 
@@ -134,7 +134,7 @@ Let's see how transaction monitorization works transferring a **TransferTransact
         :language: bash
         :start-after: #!/bin/sh
 
-If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
+If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/nem2-openapi/#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
 
 .. note:: If you are developing a small application, and monitoring asynchronous transactions adds too much overhead to your project, consider :doc:`turning asynchronous transactions announcement into synchronous <turning-the-asynchronous-transaction-announcement-into-synchronous>`.
 

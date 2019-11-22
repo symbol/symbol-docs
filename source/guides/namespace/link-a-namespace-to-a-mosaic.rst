@@ -65,7 +65,7 @@ If you want to unlink the alias, change alias action type to ``AliasActionType.U
 What's next?
 ************
 
-Now you can send transactions using the namespace linked to the mosaic instead of defining the complete mosaicId.
+Now you can send transactions using the namespace linked to the mosaic instead of defining the complete MosaicId.
 
 .. example-code::
 

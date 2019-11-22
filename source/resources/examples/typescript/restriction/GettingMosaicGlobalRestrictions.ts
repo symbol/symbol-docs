@@ -16,13 +16,13 @@
  *
  */
 
-import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionHttp} from "nem2-sdk";
+import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionMosaicHttp} from "nem2-sdk";
 
 /* start block 01 */
 const mosaicIdHex = process.env.MOSAIC_ID as string;
 const mosaicId = new MosaicId(mosaicIdHex);
 
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
+const restrictionHttp = new RestrictionMosaicHttp('http://localhost:3000');
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
     .subscribe((mosaicGlobalRestrictions) => {
         if (mosaicGlobalRestrictions.restrictions.size > 0) {

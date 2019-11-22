@@ -1,10 +1,10 @@
 # NEM Developer Center
 
-Open source documentation of NEM Catapult.
+This documentation introduces NEM's next core engine (NEM2), code-named **Catapult**.
 
 ## What is NEM?
 
-NEM is a developer-friendly blockchain platform for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features. 
+[NEM](https://nem.io) is a developer-friendly blockchain platform for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features. 
 
 Developers are able to integrate blockchain technology into their projects or create powerful dApps using NEM’s REST API. This allows creating a variety of architectural solutions with lightweight code in any language.
 
@@ -21,11 +21,11 @@ Catapult introduce new exclusive features:
 *   [Multi-level Multisig Accounts](https://nemtech.github.io/concepts/multisig-account.html#manufacturing-and-supply-chains)
 *   [Account Restrictions](https://nemtech.github.io/concepts/account-restriction.html)
 
-Catapult will be a momentous step for NEM to be the widely utilized enterprise product it was envisioned to be. After nearly three years of development, the long-awaited update is expected to officially launch [by the end of 2019](https://blog.nem.io/nem-foundation-catapult-roadmap-and-vision/).
+Catapult will be a momentous step for NEM to be the widely utilized enterprise product it was envisioned to be. After nearly three years of development, the long-awaited update is expected to officially launch [in 2020](https://forum.nem.io/t/migration-committee-community-update-4/23847/3).
 
 ## Getting Started
 
-If you are interested in building on top of NEM, check out the [NEM Developer Center](https://nemtech.github.io/). There you will find the technical documentation necessary to get started - including setting up your development environment, step-by-step guides, and API reference.
+If you are interested in building on top of Catapult, check out the [NEM Developer Center](https://nemtech.github.io/). There you will find the technical documentation necessary to get started - including setting up your development environment, step-by-step guides, and API reference.
 
 *   [Setting up your workstation](https://nemtech.github.io/getting-started/setup-workstation.html)
 *   [Self-paced guides](https://nemtech.github.io/#featured-guides)

@@ -22,7 +22,7 @@ Prerequisites
 Background
 **********
 
-Bob works as a digital notary that **stamp accounts** on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
+Bob works as a digital notary that **stamp accounts** on Catapult's public blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
 
 In this tutorial, you are going to implement a program to allow Bob tag accounts issuing :doc:`metadata transactions <../../concepts/metadata>` .
 
@@ -30,7 +30,7 @@ In this tutorial, you are going to implement a program to allow Bob tag accounts
 Getting into some code
 **********************
 
-Alice is a recent graduate who wants her educational certificate accredited to her NEM :doc:`account <../../concepts/account>` to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays a fee, Bob verifies the authenticity and stamps Alice's account with metadata that signifies her degree.
+Alice is a recent graduate who wants her educational certificate accredited to her Catapult :doc:`account <../../concepts/account>` to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays a fee, Bob verifies the authenticity and stamps Alice's account with metadata that signifies her degree.
 
 .. figure:: ../../resources/images/examples/metadata-certificate.png
     :align: center
@@ -44,7 +44,7 @@ Alice is a recent graduate who wants her educational certificate accredited to h
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save it? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 2. Bob has to pick a **key** to store Alice's certificate. Imagine that ``CERT`` is a common key to store university degrees. Define this key as a new variable.

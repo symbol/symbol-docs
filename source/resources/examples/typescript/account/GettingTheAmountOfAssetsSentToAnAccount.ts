@@ -32,7 +32,7 @@ const mosaicId = new MosaicId(mosaicIdHex);
 
 const accountHttp = new AccountHttp('http://localhost:3000');
 accountHttp
-    .outgoingTransactions(originAddress)
+    .getAccountOutgoingTransactions(originAddress)
     .pipe(
         mergeMap((_) => _), // Transform transaction array to single transactions to process them
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions

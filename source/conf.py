@@ -187,7 +187,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'endpoints': 'endpoints.html', '404': '404.html'}
+html_additional_pages = {'index': 'index.html', '404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -321,5 +321,5 @@ def viewsource_resolve_link(file_path, language=None):
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/nemtech/catbuffer/tree/master/schemas/%s', 'file '),
+extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/master/schemas/%s', 'file '),
             'properties': ('https://github.com/nemtech/catapult-server/blob/master/resources/%s', 'file ')}

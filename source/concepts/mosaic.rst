@@ -2,7 +2,7 @@
 Mosaic
 ######
 
-Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
+Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** that can represent a set of multiple identical things that do not change.
 
 A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
@@ -24,7 +24,7 @@ Initial supply
 
 Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+Catapult works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1000 (absolute) instead.
 
@@ -195,3 +195,5 @@ Enumeration: uint8
 
     0x00; Decrease.
     0x01; Increase.
+
+Continue: :doc:`Namespaces <namespace>`.

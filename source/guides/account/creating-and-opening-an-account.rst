@@ -9,7 +9,7 @@
 Creating an account
 ###################
 
-Set up a new NEM account.
+Set up a new Catapult account.
 
 *************
 Prerequisites
@@ -42,7 +42,7 @@ Run the following code snippet to create an account.
         :language: bash
         :start-after: #!/bin/sh
 
-The **private key** uniquely identifies a NEM account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
+The **private key** uniquely identifies a Catapult account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
 
 The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
 

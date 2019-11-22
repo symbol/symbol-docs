@@ -149,7 +149,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 Announcing a transaction
 ************************
 
-Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_.
+Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 
@@ -193,7 +193,7 @@ Blockchains are designed in a way that under certain circumstances recent blocks
 
 The :properties:`rewrite limit <config-network.properties>` is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
+Catapult has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
 
 .. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
@@ -231,7 +231,7 @@ Serialization of a transaction.
     :delim: ;
 
     max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
-    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of seconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
 .. _embedded-transaction-header:
 
@@ -261,3 +261,5 @@ Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 
 * :ref:`EmbeddedTransactionHeader <embedded-transaction-header>`
 * :ref:`EntityBody <entity-body>`
+
+Continue: :doc:`Fees <fees>`.

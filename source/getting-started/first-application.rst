@@ -2,7 +2,7 @@
 Writing your first application
 ##############################
 
-This guide will take you through the NEM development cycle. You will send your first transaction to the blockchain after combining some NEM :doc:`built-in features <../concepts/account>`.
+This guide will take you through the NEM development cycle. You will send your first transaction to the blockchain after combining some Catapult :doc:`built-in features <../concepts/account>`.
 
 **********
 Background
@@ -27,8 +27,8 @@ a) Identify each ticket customer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-Why should we use NEM?
-======================
+Why should we use Catapult?
+===========================
 
 Blockchain technology makes sense in cases where:
 
@@ -36,7 +36,7 @@ Blockchain technology makes sense in cases where:
 * These participants need to trust each other.
 * There is a need to keep track of an immutable set of events.
 
-NEM is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+Catapult is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
@@ -52,7 +52,7 @@ First, identify the actors involved in the problem we want to solve:
 * The ticket vendor.
 * The customer.
 
-We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box in the blockchain, which can be modified with an appropriate private key.
+We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
 The account you have loaded in NEM2-CLI represents the **ticket vendor**.
 
@@ -124,7 +124,7 @@ Open three new terminals:
 Creating the ticket
 ===================
 
-We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mosaics** can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+We are representing the ticket as a Catapult :doc:`mosaic <../concepts/mosaic>`. **Mosaics** can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
 1. Create a new mosaic to represent the ticket configured as follows with the ticket vendor account.
 
@@ -152,7 +152,7 @@ We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. **Mo
 Sending the ticket
 ==================
 
-Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in NEM.
+Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`, one of the most commonly used actions in Catapult.
 
 1. Prepare the **TransferTransaction** with the following values.
 
@@ -161,7 +161,7 @@ Let's send one ticket unit to a customer announcing a :ref:`TransferTransaction 
     :delim: ;
     :widths: 20 30 50
 
-    Deadline; Default (2 hours) ; The maximum amount of time to include the transaction in the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
+    Deadline; Default (2 hours) ; The maximum amount of time to include the transaction on the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
     Recipient; SC7A4H...2VBU; The recipient account address. In this case, the customer's address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
@@ -225,10 +225,10 @@ Although the transaction is defined, it has not been announced to the network ye
 Did you solve the use case?
 ***************************
 
-* ✅ Identify each ticket customer: Creating NEM accounts for each customer.
+* ✅ Identify each ticket customer: Creating Catapult accounts for each customer.
 
 * ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
 * ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
-Continue learning about more :doc:`NEM built-in features <../concepts/account>`.
+Continue learning about more :doc:`Catapult built-in features <../concepts/account>`.
