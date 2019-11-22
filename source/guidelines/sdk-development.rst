@@ -151,7 +151,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
     cd nem2-openapi && mkdir sdks && cd sdks
     cp ../spec/openapi3.yaml .
 
-- `Open API definition <https://github.com/nemtech/nem2-openapi/blob/master/spec/openapi3.yaml>`_
+- `Open API definition <https://github.com/nemtech/nem2-openapi/releases>`_
 
 2. Copy the ``templates folder`` from ``{nem2-sdk-typescript-javascript}/infrastructure/`` into a new folder.
 
@@ -160,7 +160,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 .. code-block:: bash
 
     brew install openapi-generator
-    openapi-generator generate -i ./openapi3.yaml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
+    openapi-generator generate -i ./openapi3.yml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
@@ -254,7 +254,7 @@ Example of a Repository and HTTP implementation:
 Models
 ======
 
-The `models <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/sdk/model>`_ are by default immutable and aim to hide the complexity, like type conversion or relationship between objects.
+The `models <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-core/src/main/java/io/nem/sdk/model>`_ are by default immutable and aim to hide the complexity, like type conversion or relationship between objects.
 
 You will find in the different implementations different invariants to ensure the object is well constructed and a nicer API is published.
 
@@ -278,7 +278,7 @@ KeyPair and Cryptographic functions
 
 Implementing cryptographic functions is required to sign transactions.
 
-Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/src/main/java/io/nem/core/crypto>`_
+Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-core/src/main/java/io/nem/core/crypto>`_
 
 ********************
 Documenting your SDK

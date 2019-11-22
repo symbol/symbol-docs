@@ -134,7 +134,7 @@ Let's see how transaction monitorization works transferring a **TransferTransact
         :language: bash
         :start-after: #!/bin/sh
 
-If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
+If you missed the WebSocket response, check the transaction status after by calling the `transaction status <https://nemtech.github.io/nem2-openapi/#operation/getTransactionStatus>`_ endpoint. The status of failed transactions is not persistent, meaning that eventually is pruned.
 
 .. note:: If you are developing a small application, and monitoring asynchronous transactions adds too much overhead to your project, consider :doc:`turning asynchronous transactions announcement into synchronous <turning-the-asynchronous-transaction-announcement-into-synchronous>`.
 

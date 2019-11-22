@@ -121,7 +121,7 @@ Creating a project
 
 Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
 .. tabs::
 

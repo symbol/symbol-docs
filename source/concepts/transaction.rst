@@ -149,7 +149,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 Announcing a transaction
 ************************
 
-Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_.
+Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 

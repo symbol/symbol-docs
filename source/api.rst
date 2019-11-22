@@ -12,7 +12,6 @@ Http requests
 
 |catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-
 Assuming that Catapult REST is :doc:`running locally <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
 
     http://localhost:3000/<path-to-API-request>
@@ -211,6 +210,7 @@ This section describes the error messages that can be returned via status channe
     0x8043000A; Failure_Core_Block_Harvester_Ineligible; Validation failed because a block was harvested by an ineligible harvester.
     0x8043000B; Failure_Core_Zero_Address; Validation failed because an address is zero.
     0x8043000C; Failure_Core_Zero_Public_Key; Validation failed because a public key is zero.
+    0x8043000D; Failure_Core_Nonzero_Internal_Padding; Validation failed because internal padding is nonzero.
     0x81490001; Failure_Hash_Already_Exists; Validation failed because the entity hash is already known.
     0x80530001; Failure_Signature_Not_Verifiable; Validation failed because the verification of the signature failed.
     0x804C0001; Failure_AccountLink_Invalid_Action; Validation failed because account link action is invalid.
@@ -226,6 +226,7 @@ This section describes the error messages that can be returned via status channe
     0x80410004; Failure_Aggregate_Redundant_Cosignatures; Validation failed because redundant cosignatures are present.
     0x80410005; Failure_Aggregate_Ineligible_Cosignatories; Validation failed because at least one cosignatory is ineligible.
     0x80410006; Failure_Aggregate_Missing_Cosignatures; Validation failed because at least one required cosignature is missing.
+    0x80410007; Failure_Aggregate_Transactions_Hash_Mismatch; Validation failed because the aggregate transactions hash does not match the calculated value.
     0x80480001; Failure_LockHash_Invalid_Mosaic_Id; Validation failed because lock does not allow the specified mosaic.
     0x80480002; Failure_LockHash_Invalid_Mosaic_Amount; Validation failed because lock does not allow the specified amount.
     0x80480003; Failure_LockHash_Hash_Already_Exists; Validation failed because hash is already present in cache.
@@ -301,18 +302,19 @@ This section describes the error messages that can be returned via status channe
     0x804E0070; Failure_Namespace_Alias_Inconsistent_Unlink_Type; Validation failed because unlink type is not consistent with existing alias.
     0x804E0071; Failure_Namespace_Alias_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing alias.
     0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
-    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type;
+    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Flags; Validation failed because the account restriction flags are invalid.
     0x80500002; Failure_RestrictionAccount_Invalid_Modification_Action; Validation failed because a modification action is invalid.
     0x80500003; Failure_RestrictionAccount_Invalid_Modification_Address; Validation failed because a modification address is invalid.
     0x80500004; Failure_RestrictionAccount_Modification_Operation_Type_Incompatible; Validation failed because the operation type is incompatible. *Note*: This indicates that the existing restrictions have a different operation type than that specified in the notification.
     0x80500005; Failure_RestrictionAccount_Redundant_Modification; Validation failed because a modification is redundant.
     0x80500006; Failure_RestrictionAccount_Invalid_Modification; Validation failed because a value is not in the container.
     0x80500007; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
-    0x80500008; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
-    0x80500009; Failure_RestrictionAccount_Invalid_Value; Validation failed because the account restriction value is invalid.
-    0x8050000A; Failure_RestrictionAccount_Address_Interaction_Prohibited; Validation failed because the addresses involved in the transaction are not allowed to interact.
-    0x8050000B; Failure_RestrictionAccount_Mosaic_Transfer_Prohibited; Validation failed because the mosaic transfer is prohibited by the recipient.
-    0x8050000C; Failure_RestrictionAccount_Operation_Type_Prohibited; Validation failed because the operation type is not allowed to be initiated by the signer.
+    0x80500008; Failure_RestrictionAccount_No_Modifications; Validation failed because the transaction has no modifications.
+    0x80500009; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
+    0x8050000A; Failure_RestrictionAccount_Invalid_Value; Validation failed because the account restriction value is invalid.
+    0x8050000B; Failure_RestrictionAccount_Address_Interaction_Prohibited; Validation failed because the addresses involved in the transaction are not allowed to interact.
+    0x8050000C; Failure_RestrictionAccount_Mosaic_Transfer_Prohibited; Validation failed because the mosaic transfer is prohibited by the recipient.
+    0x8050000D; Failure_RestrictionAccount_Operation_Type_Prohibited; Validation failed because the operation type is not allowed to be initiated by the signer.
     0x80510001; Failure_RestrictionMosaic_Invalid_Restriction_Type; Validation failed because the mosaic restriction type is invalid.
     0x80510002; Failure_RestrictionMosaic_Previous_Value_Mismatch; Validation failed because specified previous value does not match current value.
     0x80510003; Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero; Validation failed because specified previous value is nonzero.
