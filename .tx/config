@@ -248,9 +248,15 @@ source_file = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-
 source_lang = en
 type = PO
 
-[nem2docs.guides--account--creating-and-opening-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-and-opening-an-account.po
-source_file = build/gettext/guides/account/creating-and-opening-an-account.pot
+[nem2docs.guides--account--creating-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
+source_file = build/gettext/guides/account/creating-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--creating-a-wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-a-wallet.po
+source_file = build/gettext/guides/account/creating-a-wallet.pot
 source_lang = en
 type = PO
 
