@@ -19,7 +19,7 @@ Block creation
 Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The **harvesting account**—called the harvester— gets the :doc:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
 
 ************
-Block Header
+Block header
 ************
 
 Serialization of the block header.
