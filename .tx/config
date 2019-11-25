@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[nem2docs.contents]
-file_filter = source/locale/<lang>/LC_MESSAGES/contents.po
-source_file = build/gettext/contents.pot
+[nem2docs.index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = build/gettext/index.pot
 source_lang = en
 type = PO
 
@@ -184,18 +184,6 @@ type = PO
 [nem2docs.getting-started--setup-workstation]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
 source_file = build/gettext/getting-started/setup-workstation.pot
-source_lang = en
-type = PO
-
-[nem2docs.getting-started--training]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/training.po
-source_file = build/gettext/getting-started/training.pot
-source_lang = en
-type = PO
-
-[nem2docs.getting-started--what-is-nem]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-nem.po
-source_file = build/gettext/getting-started/what-is-nem.pot
 source_lang = en
 type = PO
 

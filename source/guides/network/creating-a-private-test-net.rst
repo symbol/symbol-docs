@@ -163,7 +163,7 @@ You should see the account credentials in your terminal.
 
 As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about :doc:`Catapult's features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 
