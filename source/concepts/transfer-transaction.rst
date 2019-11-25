@@ -57,9 +57,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+*******************
+Transaction schemas
+*******************
 
 .. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 

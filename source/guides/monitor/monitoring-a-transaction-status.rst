@@ -15,9 +15,11 @@ Make sure a transaction gets included on the blockchain after being announced.
 Background
 **********
 
-After calling an API method that changes a database state, the application usually receives a response informing if the change has been applied or failed due to some constraints.
+Catapult enables an **asynchronous transaction announcement**. After an application publishes a transaction, the API node will always accept it if it is well-formed.
 
-When working with blockchain technology, it is interesting to **fire the transaction**, let the node process it, and **receive a notification** if it succeeded or failed. Differently, from a traditional database, the average confirmation time of modification is higher, passing from milliseconds to seconds, or even minutes in the worst cases.
+At this time, the server does not ensure that the transaction is valid. For example, you might not have the number of asset units you want to need to send and still, get a positive response from the server. For this reason, the "OK" response does not guarantee getting the transaction included in a block. To make sure the transaction is added in a block, you must track the :doc:`transaction status <../../concepts/transaction>` using **Listeners**.
+
+`Listeners <websockets>`_ enable receiving notifications possible when a change on the blockchain occurs. The notification is received in real-time without having to poll the API waiting for a reply.
 
 In this guide, you are going to learn how to verify that your transaction has been **recorded permanently** before executing any other critical action.
 
@@ -27,17 +29,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-**********************
-Getting into some code
-**********************
-
-Catapult enables an **asynchronous transaction announcement**. After an application publishes a transaction, the API node will always accept it if it is well-formed.
-
-At this time, the server does not ensure that the transaction is valid. For example, you might not have the number of asset units you want to need to send and still, get a positive response from the server. For this reason, the "OK" response does not guarantee getting the transaction included in a block. To make sure the transaction is added in a block, you must track the :doc:`transaction status <../../concepts/transaction>` using **Listeners**.
-
-`Listeners <websockets>`_ enable receiving notifications possible when a change on the blockchain occurs. The notification is received in real-time without having to poll the API waiting for a reply.
-
-Let's see how transaction monitorization works transferring a **TransferTransaction**.
+*************************
+Method #01: Using the SDK
+*************************
 
 1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 

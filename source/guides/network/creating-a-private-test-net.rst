@@ -109,7 +109,7 @@ Commands
 Getting test cat.currency
 *************************
 
-An :doc:`account <../../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. To announce a transaction, the sender should pay a :doc:`fee <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
+An :doc:`account <../../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. To announce a transaction, the sender should pay a :doc:`fee <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in **cat.currency mosaics**, the default network token.
 
 After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
@@ -163,7 +163,7 @@ You should see the account credentials in your terminal.
 
 As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about :doc:`Catapult's features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

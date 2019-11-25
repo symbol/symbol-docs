@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 01 Oct, 2019
-    :category: Metadata, Mosaic
+    :category: Metadata
     :excerpt: 1
     :nocomments:
 
@@ -11,6 +11,18 @@ Assigning metadata to a mosaic
 
 Add custom data to a mosaic.
 
+**********
+Background
+**********
+
+Metadata is a Catapult feature that can be used to attach information about :doc:`mosaics <../../concepts/mosaic>`. For example, small pieces of data such as legal name, ticker, or ISIN, can be assigned as on-chain :doc:`metadata<../../concepts/metadata>`, while sizable documents, like the prospectus or investor agreement, can be kept off-chain.
+
+In this tutorial, you are going to implement a program to add relevant data to a mosaic. Imagine that the company ComfyClothingCompany has applied for an |ISIN-code| to conduct an STO. After receiving the code ``US0000000000``, the company decided to represent the company shares creating a mosaic named ``cc.shares``. Before distributing the shares between the investors, ComfyClothingCompany wants to attach its ISIN code and legal name to the shares definition.
+
+.. figure:: ../../resources/images/examples/metadata-mosaic.png
+    :align: center
+    :width: 400px
+
 *************
 Prerequisites
 *************
@@ -19,25 +31,10 @@ Prerequisites
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
-**********
-Background
-**********
 
-Metadata can be used to attach information about :doc:`mosaics <../../concepts/mosaic>`. For example, small pieces of data such as legal name, ticker, or ISIN, can be assigned as on-chain :doc:`metadata<../../concepts/metadata>`, while sizable documents, like the prospectus or investor agreement, can be kept off-chain.
-
-In this tutorial, you are going to implement a program to add relevant data to a mosaic.
-
-**********************
-Getting into some code
-**********************
-
-The company ComfyClothingCompany has applied for an |ISIN-code| to conduct an STO. After receiving the code ``US0000000000``, the company decided to represent the company shares creating a mosaic named ``cc.shares``.
-
-Before distributing the shares between the investors, ComfyClothingCompany wants to attach its ISIN code and legal name to the shares definition.
-
-.. figure:: ../../resources/images/examples/metadata-mosaic.png
-    :align: center
-    :width: 400px
+*******************
+Creating the shares
+*******************
 
 1. Create a mosaic to represent the shares. The mosaic we are creating will have the properties ``supplyMutable``, ``transferable``, ``restrictable``, ``non-expiring``, and we will be able to operate with up to 2 decimal places.
 
@@ -89,8 +86,11 @@ Before distributing the shares between the investors, ComfyClothingCompany wants
     Introduce the maximum fee you want to spend to announce the transaction: 0
     Transaction announced correctly
 
+*************************
+Method #01: Using the SDK
+*************************
 
-4. Now that you have created ``cc.shares``, define two ``MosaicMetatadaTransaction`` to add the **ISIN** and **legal name** to the mosaic:
+1. Now that you have created ``cc.shares``, define two ``MosaicMetatadaTransaction`` to add the **ISIN** and **legal name** to the mosaic:
 
 A) Key: ``ISIN``, Value: ``US00000000``.
 
@@ -110,7 +110,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-5. All metadata is attached only with the consent of the mosaic owner through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the mosaic owner through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 
@@ -121,7 +121,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
 
 .. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic owner would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
-6. Sign and announce the **AggregateTransaction** to the network.
+3. Sign and announce the **AggregateTransaction** to the network.
 
 .. example-code::
 
@@ -130,7 +130,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-7. When the transaction gets confirmed, :doc:`fetch the mosaic metadata entries <getting-metadata-entries-attached-to-a-mosaic>`.
+4. When the transaction gets confirmed, :doc:`fetch the mosaic metadata entries <getting-metadata-entries-attached-to-a-mosaic>`.
 
 .. |ISIN-code| raw:: html
 

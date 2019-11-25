@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 14 Aug, 2018
-    :category: Aggregate Transaction, Multisig Account
+    :category: Aggregate Transaction
     :excerpt: 1
     :nocomments:
 
@@ -9,7 +9,7 @@
 Cosigning aggregate bonded transactions
 #######################################
 
-This guide will show you how to cosign aggregate bonded transactions that require your account's cosignature.
+How to cosign aggregate bonded transactions.
 
 *************
 Prerequisites
@@ -18,11 +18,9 @@ Prerequisites
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
 - Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
-You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`, but all required cosigners have not signed it yet.
+*************************
+Method #01: Using the SDK
+*************************
 
 1. Create a function to cosign any **AggregateBondedTransaction**.
 
@@ -58,6 +56,10 @@ You have announced an :ref:`AggregateBondedTransaction <aggregate-transaction>`,
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh
-        :language: bash
-        :lines:  3
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh
+    :language: bash
+    :start-after: #!/bin/sh

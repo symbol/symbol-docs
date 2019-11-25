@@ -21,18 +21,18 @@ Background
     :align: center
     :width: 750px
 
-    Three-level multisig account example
+    3-level multisig account example
 
 *************
 Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 
-**********************
-Getting into some code
-**********************
+******************************************
+Example #1: Multisig account with 3 levels
+******************************************
 
 1. Define the **multisig account #2**.
 

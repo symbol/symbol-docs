@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[nem2docs.contents]
-file_filter = source/locale/<lang>/LC_MESSAGES/contents.po
-source_file = build/gettext/contents.pot
+[nem2docs.index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = build/gettext/index.pot
 source_lang = en
 type = PO
 
@@ -187,18 +187,6 @@ source_file = build/gettext/getting-started/setup-workstation.pot
 source_lang = en
 type = PO
 
-[nem2docs.getting-started--training]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/training.po
-source_file = build/gettext/getting-started/training.pot
-source_lang = en
-type = PO
-
-[nem2docs.getting-started--what-is-nem]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-nem.po
-source_file = build/gettext/getting-started/what-is-nem.pot
-source_lang = en
-type = PO
-
 [nem2docs.guidelines--generating-transaction-builders]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
 source_file = build/gettext/guidelines/generating-transaction-builders.pot
@@ -260,9 +248,15 @@ source_file = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-
 source_lang = en
 type = PO
 
-[nem2docs.guides--account--creating-and-opening-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-and-opening-an-account.po
-source_file = build/gettext/guides/account/creating-and-opening-an-account.pot
+[nem2docs.guides--account--creating-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
+source_file = build/gettext/guides/account/creating-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--creating-a-wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-a-wallet.po
+source_file = build/gettext/guides/account/creating-a-wallet.pot
 source_lang = en
 type = PO
 

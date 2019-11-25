@@ -45,7 +45,7 @@ Accounts management
 
 Management of :doc:`account <../../concepts/account>` with Catapult has not changed much compared to the previous NIS1 public network accounts. A few notable changes have happened as to public verifiability of accounts and field names returned in the REST endpoints.
 
-* Guide: :doc:`Creating and opening an account  <../account/creating-and-opening-an-account>`
+* Guide: :doc:`Creating and opening an account  <../account/creating-an-account>`
 * Guide: :doc:`Getting the account information <../account/getting-account-information>`
 
 *******************

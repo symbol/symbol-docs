@@ -76,9 +76,10 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+***************
+Receipt schemas
+***************
+
 
 .. _receipt:
 

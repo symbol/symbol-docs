@@ -117,10 +117,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
+*******************
+Transaction schemas
+*******************
 .. _mosaic-global-restriction-transaction:
 
 MosaicGlobalRestrictionTransaction

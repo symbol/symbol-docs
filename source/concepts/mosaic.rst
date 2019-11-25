@@ -14,6 +14,8 @@ Each mosaic has a **unique identifier** represented as a 64-bit unsigned integer
 Properties
 **********
 
+Find below the complete list of configurable properties.
+
 Divisibility
 ============
 
@@ -32,10 +34,6 @@ Duration
 ========
 
 Specifies the number of confirmed blocks the mosaic is rented for, and it is allowed to lie up to ``3650`` days (10 years). You can also create **non-expiring mosaics** setting this property to ``0``.
-
-*****
-Flags
-*****
 
 Supply mutable
 ==============
@@ -88,11 +86,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _mosaic-definition-transaction:
 

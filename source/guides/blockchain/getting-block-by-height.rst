@@ -17,11 +17,11 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-What happened in the genesis block? Run the following code to get the first created block header.
+What happened in the genesis block? Run the following code to get the first block header recorded on the blockchain.
 
 .. example-code::
 
@@ -49,6 +49,18 @@ The following snippet returns the height of the latest block.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/blockchain/GettingBlockchainHeight.sh
-        :language: bash
-        :start-after: #!/bin/sh
+*************************
+Method #02: Using the CLI
+*************************
+
+Get the block header:
+
+.. viewsource:: ../../resources/examples/bash/blockchain/GettingBlockHeader.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Get the height of the blockchain:
+
+.. viewsource:: ../../resources/examples/bash/blockchain/GettingBlockchainHeight.sh
+    :language: bash
+    :start-after: #!/bin/sh

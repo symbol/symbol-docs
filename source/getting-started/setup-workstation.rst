@@ -11,9 +11,9 @@ This first guide will walk you through a step-by-step installation of the requir
 
 .. _setup-catapult-service-bootstrap:
 
-**********************************
-Running Catapult Service Bootstrap
-**********************************
+******************************
+Running a private test network
+******************************
 
 To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to quickly build your own test network.
 
@@ -81,7 +81,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cat addresses.yaml
 
-4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
+4. Under the section ``nemesis_addresses``, you will find the key pairs which contain **cat.currency**. Copy the private key of the first account.
 
 5. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
