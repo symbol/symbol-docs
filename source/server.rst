@@ -24,37 +24,6 @@ Installation
 
 You can create a new catapult-server image following the building |instructions|, but we recommend deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
 
-Troubleshooting
-===============
-
-This section highlights common errors or difficulties one may encounter whilst setting a Catapult node.
-
-**Mosaic outflows**
-
-This error usually looks like:
-
-.. code-block:: console
-
-    14:19:34.719477 0x000000010dfbf5c0: <error> (local::HostUtils.h@43) Throwing exception: harvesting outflows (0) do not add up to power ten multiple of expected importance (15000000)
-
-.. code-block:: console
-
-    14:19:34.719477 0x000000010dfbf5c0: <error> (local::HostUtils.h@43) Throwing exception: harvesting outflows (15000000) do not add up to power ten multiple of expected importance (17000000)
-
-**What does it mean?**
-
-This error can happen in the event of the following situations:
-
-a) The supply of the ``cat.harvest`` mosaic the nemesis block does not match the supply inside of the :properties:`config-network.properties <config-network.properties>` file.
-
-b) The mosaicId inside of the :properties:`config-network.properties <config-network.properties>` does not match the one generated inside of the nemesis block.
-
-**How to fix it?**
-
-For the first scenario, change the ``totalChainImportance`` in your resources :properties:`config-network.properties <config-network.properties>` to match the supply set in the nemesis block.
-
-For the second scenario, you will have to find the correct mosaic identifier that the nemgen tool creates. You can run :ref:`nemgen <catapult-server-tools>`, and output the result to to a txt file. Then, search for the ``cat.<harvest | currency>`` identifier.
-
 ********************
 Package organization
 ********************

@@ -153,7 +153,6 @@ body > .container {
 }
 
 /* Content */
-
 .content {
     line-height: 1.6;
     padding-bottom: 50px;
@@ -423,12 +422,11 @@ body > .container {
 }
 
 /* Figure */
-.figure {
-    padding-top: 10px;
-
+div.figure {
+    margin-top: 20px;
 }
 
-.figure .caption {
+div.figure .caption {
     margin-top: 10px;
     margin-bottom: 10px;
 

@@ -11,14 +11,6 @@ Updating metadata entries
 
 Update any existent metadata entry.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
-- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
-
 **********
 Background
 **********
@@ -29,9 +21,17 @@ What we can do to update a metadata entry is to announce a second metadata trans
 
 In this example, we are going to **update a metadata entry** attached to an account. However, you could follow a similar approach to update namespace and mosaic metadata entries.
 
-**********************
-Getting into some code
-**********************
+*************
+Prerequisites
+*************
+
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
+
+*************************
+Method #01: Using the SDK
+*************************
 
 Bob—the notary from the :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`— is requested to remove Alice's account ``CERT`` metadata entry because the certificate has expired.
 

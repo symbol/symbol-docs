@@ -11,13 +11,6 @@ Sending mosaics and messages between two accounts
 
 Transfer mosaics and messages between two accounts.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
-
 **********
 Background
 **********
@@ -28,10 +21,18 @@ Background
 
     Sending a TransferTransaction
 
-Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 cat.currency to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
 
+*************
+Prerequisites
+*************
+
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+
+**********************
 Monitoring the network
-======================
+**********************
 
 Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
 
@@ -53,9 +54,9 @@ Once a transaction is included, you will see it under the ``confirmed`` terminal
 
     nem2-cli monitor confirmed
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
 1. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 cat.currency``.
 
@@ -91,7 +92,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 2. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -119,12 +120,17 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
 4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :ref:`the error code meaning here <status-errors>`.
 
 A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
 
 If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.
+
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+

@@ -4,12 +4,6 @@ Multisig Account
 
 Multisig :doc:`accounts <account>` require additional signatures to initiate actions/transfers.
 
-.. figure:: ../resources/images/examples/multisig-2-of-3.png
-    :align: center
-    :width: 350px
-
-    2-of-3 multisignature account
-
 *************
 Cosignatories
 *************
@@ -24,7 +18,13 @@ To record the transaction in the block, the other cosignatories will have to agr
 Minimum approval and removal
 ****************************
 
-It is not always necessary to force all cosignatories to cosign transactions associated with the multisig account. Catapult allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
+It is not always necessary to require all cosignatories to cosign transactions associated with the multisig account. Catapult allows to set up the minimum number of cosignatory agreements. These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
+
+.. figure:: ../resources/images/examples/multisig-2-of-3.png
+    :align: center
+    :width: 350px
+
+    2-of-3 multisignature account
 
 Catapult's current implementation of multisig is *"M-of-N"*, where M is the number of cosignatories requeired to announce a transaction and N is the total amount of cosignatories for that particular multisig account. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
 
@@ -124,11 +124,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _multisig-account-modification-transaction:
 

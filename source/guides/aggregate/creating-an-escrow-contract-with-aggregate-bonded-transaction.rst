@@ -28,6 +28,12 @@ For this example, imagine that the two parties agree on a virtual service, imply
 4. The buyer approves goods or service.
 5. The escrow releases payment to the seller.
 
+.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
+    :align: center
+    :width: 450px
+
+    Multi-Asset Escrowed Transactions
+
 How to create an escrow contract with Catapult
 ==============================================
 
@@ -49,22 +55,13 @@ Normalizing the previous description into Catapult related concepts:
 Prerequisites
 *************
 
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`sending multiple transactions together guide <sending-multiple-transactions-together-with-aggregate-complete-transaction>`
 
-**********************
-Getting into some code
-**********************
-
-.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
-    :align: center
-    :width: 450px
-
-    Multi-Asset Escrowed Transactions
-
+********************************************
 Setting up the required accounts and mosaics
-============================================
+********************************************
 
 Alice and a ticket distributor want to swap the following mosaics.
 
@@ -76,8 +73,9 @@ Alice and a ticket distributor want to swap the following mosaics.
 
 Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
 
+****************************
 Creating the escrow contract
-============================
+****************************
 
 1. Open a new file, and define two transfer transactions:
 

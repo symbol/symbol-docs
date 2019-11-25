@@ -18,21 +18,19 @@ NEM2-CLI is distributed using the node package manager ``npm``.
 Configuration
 *************
 
-To start using NEM2-CLI, configure a profile.
-
-A profile holds an account and a node URL for a specific network. Profiles are used to set a base URL and have an account to sign transactions.
+To start using NEM2-CLI, configure a profile. Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
     nem2-cli profile create --private-key your_private_key --network MIJIN_TEST --url http://localhost:3000
 
-NEM2-CLI supports named profiles. You can configure additional profiles by using the --profile option.
+NEM2-CLI supports named profiles. You can configure additional profiles by using the ``--profile`` option.
 
 .. code-block:: bash
 
     nem2-cli profile create --private-key your_private_key --network MIJIN_TEST --url http://localhost:3000 --profile mijin_test_net_profile
 
-By default, NEM2-CLI will always use the default profile. To use a named profile, add the --profile option to the command.
+By default, NEM2-CLI will always use the default profile. To use a named profile, add the ``--profile`` option to the command.
 
 .. code-block:: bash
 

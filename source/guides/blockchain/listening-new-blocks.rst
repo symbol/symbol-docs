@@ -17,9 +17,9 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 
-****************
-Using WebSockets
-****************
+****************************
+Method #01: Using WebSockets
+****************************
 
 1. First, we need to create a bidirectional link between our client application and the REST Gateway. To do so, open a new :ref:`WebSocket connection <websockets>` connection .
 
@@ -66,9 +66,9 @@ Once the connection is open, you will get a unique string identifier named ``uid
 
 From that moment, every ``15`` seconds more or less, you will receive a new notification with the content of the new harvested blocks.
 
-******************
-Using the NEM2-SDK
-******************
+*************************
+Method #02: Using the SDK
+*************************
 
 The NEM2-SDK simplifies the process of handling WebSocket connections.
 
@@ -86,13 +86,18 @@ In the SDK, WebSockets are named **Listeners**. As we have done with WebSockets,
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
 Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.js backend environments. If you want to execute Listeners from the client-side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
 
 .. code-block:: typescript
 
   const listener = new Listener('ws://localhost:3000', WebSocket);
   listener.open().then(() => ...
+
+*************************
+Method #03: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
+    :language: bash
+    :start-after: #!/bin/sh
+

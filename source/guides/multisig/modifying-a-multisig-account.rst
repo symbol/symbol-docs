@@ -18,16 +18,13 @@ Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
-
-**********************
-Getting into some code
-**********************
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-Editing minApproval
-===================
+*******************************
+Example #1: Editing minApproval
+*******************************
 
 Alice and Bob are cosignatories of a 1-of-2 multisig account. This means that at least one of their account's signatures is required to authorize multisig transactions. In other words, we can say that the ``minApproval`` parameter of the multisig is currently set to 1.
 
@@ -76,8 +73,9 @@ Once confirmed, the ``minApproval`` value of the multisig will be set to 2, havi
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
-Adding a new cosignatory
-========================
+************************************
+Example #2: Adding a new cosignatory
+************************************
 
 Alice and Bob want to **add Carol**, a third participant, as a co-signatory of the multisig account. However, they only want to require **2-of-3** cosignatures in order to get transactions accepted.
 
@@ -137,10 +135,11 @@ Alice and Bob want to **add Carol**, a third participant, as a co-signatory of t
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 
-Removing a cosignatory
-======================
+**********************************
+Example #3: Removing a cosignatory
+**********************************
 
-Once you have added Carol, let's try to **delete a cosignatory** from the multisig. The following code shows how to **remove a cosignatory** from the 2-of-3 multisig account with ``minRemoval`` set to 1.
+The following code shows how to **remove a cosignatory** from the 2-of-3 multisig account with ``minRemoval`` set to 1.
 
 .. example-code::
 

@@ -11,9 +11,9 @@ Getting the account restrictions attached to an address
 
 Get the list of account's restrictions.
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
 .. example-code::
 
@@ -22,6 +22,10 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/restriction/GettingAccountRestrictions.sh
-        :language: bash
-        :start-after: #!/bin/sh
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/restriction/GettingAccountRestrictions.sh
+    :language: bash
+    :start-after: #!/bin/sh

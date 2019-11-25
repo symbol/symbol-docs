@@ -48,7 +48,7 @@ Featured Guides
 
 Learn how to use the software development kits and tools with the following step-by-step implementation examples.
 
-* :doc:`How to create a wallet <guides/account/creating-and-opening-an-account>`
+* :doc:`How to create a wallet <guides/account/creating-an-account>`
 * :doc:`How to send a transaction <guides/transfer/sending-a-transfer-transaction>`
 * :doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`
 * :doc:`How to register a namespace <guides/namespace/registering-a-namespace>`
@@ -67,7 +67,7 @@ Catapult is an |open-source| project. Discover how our |community| is organized,
 *   Follow the development updates on |twitter|
 *   Explore our |github| repositories
 
-Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
+Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`.
 
 .. |nem| raw:: html
 
@@ -108,8 +108,18 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 
     getting-started/setup-workstation
     getting-started/first-application
-    guides/network/creating-a-private-test-net
     guides/migration/migrating-from-nis1-to-catapult
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: How-To Guides
+
+    guides/account/creating-a-wallet
+    guides/transfer/sending-a-transfer-transaction
+    guides/mosaic/creating-a-mosaic
+    guides/network/creating-a-private-test-net
+    More guides <https://nemtech.github.io/guides/category.html>
 
 .. toctree::
     :maxdepth: 2

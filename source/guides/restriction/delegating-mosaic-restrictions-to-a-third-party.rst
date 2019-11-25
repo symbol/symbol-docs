@@ -35,11 +35,11 @@ Prerequisites
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-and-opening-an-account>` account. We will refer to this mosaic from now on as ``cc.shares``.
+1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account. We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash
 

@@ -36,9 +36,9 @@ Prerequisites
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
 Before starting solving the use case, you will need to set up two accounts with :doc:`NEM2-CLI <../../cli>`.
 

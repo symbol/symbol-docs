@@ -4,12 +4,6 @@ Namespace
 
 Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the blockchain.
 
-.. figure:: ../resources/images/examples/namespace-setup.png
-    :align: center
-    :width: 450px
-
-    Organizing assets with namespaces
-
 ****
 Name
 ****
@@ -25,6 +19,12 @@ On the internet, a domain can have a sub-domain. In Catapult, namespaces can hav
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
 You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
+
+.. figure:: ../resources/images/examples/namespace-setup.png
+    :align: center
+    :width: 450px
+
+    Organizing assets with namespaces
 
 *****
 Alias
@@ -108,11 +108,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _namespace-registration-transaction:
 
