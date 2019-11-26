@@ -361,6 +361,15 @@ body > .container {
     margin-bottom: 20px;
 }
 
+#sidebar .dropdown-menu{
+    width: 100%;
+    min-width: 0;
+}
+
+#sidebar .dropdown-menu>li>a{
+    white-space: normal;
+}
+
 #sidebar .dropdown a {
     padding-left: 10px;
 }
@@ -368,6 +377,7 @@ body > .container {
 #sidebar .dropdown a:hover{
     background-color: transparent;
 }
+
 
 #sidebar .caption {
     padding: 10px 30px 5px 0;

@@ -5,7 +5,7 @@ NEM Developer Center
 This documentation introduces NEM's next core engine (NEM2), code-named **Catapult**.
 
 *****************************
-NEM is Your Blockchain Engine
+NEM is your Blockchain Engine
 *****************************
 
 |nem| is a **developer-friendly blockchain platform** for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features.
@@ -15,7 +15,7 @@ Developers are able to integrate blockchain technology into their projects or cr
 NEM provides access to both **public and private blockchains**, providing options to best suit your company's needs. The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone. The private blockchain, on the other hand, offers higher speed and privacy.
 
 ****************************************
-Catapult: Preview NEM’s next core engine
+Catapult: Preview NEM’s Next Core Engine
 ****************************************
 
 |Catapult| is NEM's next core engine. It is written in C++ and follows a :doc:`4-layered architecture <concepts/node>`, aiming to make NEM more scalable. It builds upon the achievements of its previous iteration, adding the newest innovations in blockchain technology.
