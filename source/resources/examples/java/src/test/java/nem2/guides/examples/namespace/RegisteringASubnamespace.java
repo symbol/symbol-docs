@@ -27,8 +27,6 @@ import io.nem.sdk.model.namespace.NamespaceId;
 import io.nem.sdk.model.transaction.NamespaceRegistrationTransaction;
 import io.nem.sdk.model.transaction.NamespaceRegistrationTransactionFactory;
 import io.nem.sdk.model.transaction.SignedTransaction;
-import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +38,9 @@ class RegisteringASubnamespace {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {
-            final String generationHash = repositoryFactory.createBlockRepository()
-                .getBlockByHeight(
-                    BigInteger.ONE).toFuture().get().getGenerationHash();
+            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
 
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+            final NetworkType networkType = repositoryFactory
                 .getNetworkType().toFuture().get();
 
             final TransactionRepository transactionRepository = repositoryFactory

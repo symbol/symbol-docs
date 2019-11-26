@@ -19,15 +19,18 @@
 package nem2.guides.examples.multisig;
 
 import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.mosaic.NetworkCurrencyMosaic;
-import io.nem.sdk.model.transaction.*;
-
-import java.math.BigDecimal;
+import io.nem.sdk.model.transaction.AggregateTransaction;
+import io.nem.sdk.model.transaction.AggregateTransactionFactory;
+import io.nem.sdk.model.transaction.HashLockTransaction;
+import io.nem.sdk.model.transaction.HashLockTransactionFactory;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
+import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
+import io.nem.sdk.model.transaction.SignedTransaction;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
@@ -43,9 +46,8 @@ class ConvertingAnAccountToMultisig {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {
 
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
-                .getNetworkType()
-                .toFuture().get();
+            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 
             // Replace with the private key of the account to convert into multisig
             final String privateKey = "'0000000000000000000000000000000000000000000000000000000000000000'";
@@ -75,33 +77,31 @@ class ConvertingAnAccountToMultisig {
 
             /* start block 03 */
             final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
-                    .createBonded(
-                            networkType,
-                            Collections
-                            .singletonList(multisigAccountModificationTransaction
-                                    .toAggregate(account.getPublicAccount()))
-                    )
-                    .build();
+                .createBonded(
+                    networkType,
+                    Collections
+                        .singletonList(multisigAccountModificationTransaction
+                            .toAggregate(account.getPublicAccount()))
+                )
+                .build();
             /* end block 03 */
 
             /* start block 04 */
-            final String networkGenerationHash = repositoryFactory.createBlockRepository()
-                    .getBlockByHeight(
-                            BigInteger.ONE).toFuture().get().getGenerationHash();
+
             final SignedTransaction signedTransaction = account
-                .sign(multisigAccountModificationTransaction, networkGenerationHash);
+                .sign(multisigAccountModificationTransaction, generationHash);
             /* end block 04 */
 
             /* start block 05 */
             final HashLockTransaction hashLockTransaction = HashLockTransactionFactory.create(
-                    networkType,
-                    NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
-                    BigInteger.valueOf(480),
-                    signedTransaction)
-                    .build();
+                networkType,
+                NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
+                BigInteger.valueOf(480),
+                signedTransaction)
+                .build();
 
             final SignedTransaction signedHashLockTransaction = account
-                    .sign(hashLockTransaction, networkGenerationHash);
+                .sign(hashLockTransaction, generationHash);
 
             // Todo: Announce hashLock
 

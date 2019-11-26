@@ -18,13 +18,8 @@
 
 package nem2.guides.examples.blockchain;
 
-import io.nem.sdk.api.ChainRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import org.junit.jupiter.api.Test;
-
-import java.math.BigInteger;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingTheCurrentMosaicIdentifierBehindANamespace {
 

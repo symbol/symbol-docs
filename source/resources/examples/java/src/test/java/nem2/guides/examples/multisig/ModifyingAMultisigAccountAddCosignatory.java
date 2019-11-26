@@ -18,9 +18,9 @@
 
 package nem2.guides.examples.multisig;
 
+import io.nem.sdk.api.Listener;
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.Listener;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.account.PublicAccount;
@@ -49,13 +49,8 @@ class ModifyingAMultisigAccountAddCosignatory {
             "http://localhost:3000");
             final Listener listener = repositoryFactory.createListener()) {
 
-            final String generationHash = repositoryFactory.createBlockRepository()
-                .getBlockByHeight(
-                    BigInteger.ONE).toFuture().get().getGenerationHash();
-
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
-                .getNetworkType()
-                .toFuture().get();
+            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 
             final TransactionRepository transactionRepository = repositoryFactory
                 .createTransactionRepository();

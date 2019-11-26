@@ -18,20 +18,9 @@
 
 package nem2.guides.examples.aggregate;
 
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.Listener;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.CosignatureSignedTransaction;
-import io.nem.sdk.model.transaction.CosignatureTransaction;
-import org.junit.jupiter.api.Test;
-
-import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class CosigningAggregateBondedTransactionsAutomaticallyWithConstraints {
 

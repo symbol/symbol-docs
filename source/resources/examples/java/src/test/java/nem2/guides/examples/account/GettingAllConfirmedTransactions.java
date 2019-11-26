@@ -18,24 +18,15 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.api.AccountRepository;
-import io.nem.sdk.api.QueryParams;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.Transaction;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingAllConfirmedTransactions {
 
     @Test
     void gettingAllConfirmedTransactions()
         throws ExecutionException, InterruptedException {
-            //Todo: Implement
-        }
+        //Todo: Implement
+    }
 
 }

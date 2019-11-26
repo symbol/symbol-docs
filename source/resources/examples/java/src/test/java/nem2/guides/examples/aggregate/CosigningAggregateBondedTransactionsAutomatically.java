@@ -18,17 +18,15 @@
 
 package nem2.guides.examples.aggregate;
 
+import io.nem.sdk.api.Listener;
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.Listener;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.AggregateTransaction;
 import io.nem.sdk.model.transaction.CosignatureSignedTransaction;
 import io.nem.sdk.model.transaction.CosignatureTransaction;
-import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
@@ -36,16 +34,13 @@ class CosigningAggregateBondedTransactionsAutomatically {
 
     @Test
     void cosigningAggregateBondedTransactionsAutomatically()
-        throws ExecutionException, InterruptedException, MalformedURLException {
+        throws ExecutionException, InterruptedException {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000"); final Listener listener = repositoryFactory
             .createListener()) {
-            final String generationHash = repositoryFactory.createBlockRepository()
-                .getBlockByHeight(
-                    BigInteger.ONE).toFuture().get().getGenerationHash();
 
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+            final NetworkType networkType = repositoryFactory
                 .getNetworkType().toFuture().get();
 
             final TransactionRepository transactionRepository = repositoryFactory

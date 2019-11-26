@@ -34,15 +34,15 @@ class GettingAccountInformation {
 
         /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://localhost:3000")) {
+            "http://localhost:3000")) {
             final AccountRepository accountRepository = repositoryFactory
-                    .createAccountRepository();
+                .createAccountRepository();
 
             // Replace with an address
             final String rawAddress = "SBOCN3Q3O6DPNJQHYUJTIPYDG4ZUU4J53ZE5LRMQ";
             final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
-                    .getAccountInfo(address).toFuture().get();
+                .getAccountInfo(address).toFuture().get();
 
             System.out.print(accountInfo);
         }

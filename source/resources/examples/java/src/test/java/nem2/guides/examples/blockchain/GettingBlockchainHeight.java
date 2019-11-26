@@ -34,7 +34,7 @@ class GettingBlockchainHeight {
             "http://localhost:3000")) {
             final ChainRepository chainRepository = repositoryFactory.createChainRepository();
 
-            final BigInteger blockchainHeight = chainRepository .getBlockchainHeight().toFuture()
+            final BigInteger blockchainHeight = chainRepository.getBlockchainHeight().toFuture()
                 .get();
 
             System.out.print(blockchainHeight);

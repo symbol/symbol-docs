@@ -23,27 +23,26 @@ import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.AccountInfo;
 import io.nem.sdk.model.account.Address;
-import org.junit.jupiter.api.Test;
-
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class CheckingBalanceOfAnAccount {
 
     @Test
     void checkingBalanceOfAnAccount()
-            throws ExecutionException, InterruptedException {
+        throws ExecutionException, InterruptedException {
 
         /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://localhost:3000")) {
+            "http://localhost:3000")) {
             final AccountRepository accountRepository = repositoryFactory
-                    .createAccountRepository();
+                .createAccountRepository();
 
             // Replace with an address
             final String rawAddress = "SBOCN3Q3O6DPNJQHYUJTIPYDG4ZUU4J53ZE5LRMQ";
             final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
-                    .getAccountInfo(address).toFuture().get();
+                .getAccountInfo(address).toFuture().get();
 
             System.out.print(accountInfo);
         }

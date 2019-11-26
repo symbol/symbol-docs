@@ -23,7 +23,6 @@ import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.blockchain.BlockInfo;
 import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 

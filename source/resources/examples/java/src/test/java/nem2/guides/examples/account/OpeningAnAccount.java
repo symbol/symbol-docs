@@ -22,8 +22,6 @@ import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.ExecutionException;
-
 class OpeningAnAccount {
 
     @Test
@@ -34,7 +32,8 @@ class OpeningAnAccount {
         final String privateKey = "0000000000000000000000000000000000000000000000000000000000000000";
         final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-        System.out.printf("Your account address is: %s and its private key: %s", account.getAddress().plain(), account.getPrivateKey());
+        System.out.printf("Your account address is: %s and its private key: %s",
+            account.getAddress().plain(), account.getPrivateKey());
         /* end block 01 */
     }
 }

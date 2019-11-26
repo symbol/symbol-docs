@@ -39,9 +39,9 @@ class GettingConfirmedTransactions {
             "http://localhost:3000")) {
 
             final AccountRepository accountRepository = repositoryFactory
-                    .createAccountRepository();
+                .createAccountRepository();
 
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
+            final NetworkType networkType = repositoryFactory
                 .getNetworkType()
                 .toFuture().get();
 

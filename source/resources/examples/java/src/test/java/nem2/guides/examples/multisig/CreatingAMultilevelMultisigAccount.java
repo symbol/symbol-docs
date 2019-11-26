@@ -27,7 +27,6 @@ import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
 import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
 import io.nem.sdk.model.transaction.SignedTransaction;
-import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.concurrent.ExecutionException;
@@ -42,13 +41,8 @@ class CreatingAMultilevelMultisigAccount {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
             "http://localhost:3000")) {
 
-            final String generationHash = repositoryFactory.createBlockRepository()
-                .getBlockByHeight(
-                    BigInteger.ONE).toFuture().get().getGenerationHash();
-
-            final NetworkType networkType = repositoryFactory.createNetworkRepository()
-                .getNetworkType()
-                .toFuture().get();
+            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 
             final TransactionRepository transactionRepository = repositoryFactory
                 .createTransactionRepository();

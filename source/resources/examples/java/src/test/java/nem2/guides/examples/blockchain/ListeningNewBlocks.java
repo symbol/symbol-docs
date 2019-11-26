@@ -18,8 +18,8 @@
 
 package nem2.guides.examples.blockchain;
 
+import io.nem.sdk.api.Listener;
 import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.Listener;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.blockchain.BlockInfo;
 import java.net.MalformedURLException;
