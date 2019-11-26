@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,10 +29,10 @@ msgstr "アグリゲートトランザクション"
 #: ../../source/concepts/aggregate-transaction.rst:7
 msgid ""
 "Aggregate transactions merge multiple transactions into one, allowing "
-"**trustless swaps**, and other advanced logic. NEM does this by generating a"
-" one-time disposable smart contract."
+"**trustless swaps**, and other advanced logic. Catapult does this by "
+"generating a one-time disposable smart contract."
 msgstr ""
-"アグリゲートトランザクションは複数のトランザクションを一つにまとめ、 **トラストレスな交換** や高度なロジックを可能にします。NEM "
+"アグリゲートトランザクションは複数のトランザクションを一つにまとめ、 **トラストレスな交換** や高度なロジックを可能にします。Catapult "
 "は一度きりの破棄可能なスマートコントラクトを生成することでこれを実現しています。"
 
 #: ../../source/concepts/aggregate-transaction.rst:13
@@ -174,12 +174,12 @@ msgstr ""
 #: ../../source/concepts/aggregate-transaction.rst:82
 msgid ""
 "By creating an AggregateBondedTransaction, Alice can convert EUR to "
-"cat.currency to pay the fee. Now, Alice and Bob can use NEM blockchain "
-"without ever having to buy or hold cat.currency."
+"cat.currency to pay the fee. Now, Alice and Bob can use Catapult's public "
+"blockchain without ever having to buy or hold cat.currency units."
 msgstr ""
 "AggregateBondedTransaction を作ることで、彼女は EUR を手数料のための cat.currency "
-"に替えることができます。これで Alice と Bob は cat.currency "
-"を購入したり保有することなく、ブロックチェーンを使うことができます。"
+"に替えることができます。これで Alice と Bob は cat.currency を購入したり保有することなく、Catapult "
+"のパブリックブロックチェーンを使うことができます。"
 
 #: ../../source/concepts/aggregate-transaction.rst:84
 msgid ""
@@ -194,36 +194,20 @@ msgid "Guides"
 msgstr "ガイド"
 
 #: ../../source/concepts/aggregate-transaction.rst:106
-msgid "Schemas"
-msgstr "スキーマ"
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/aggregate-transaction.rst:108
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/aggregate-transaction.rst:113
+#: ../../source/concepts/aggregate-transaction.rst:111
 msgid ""
 "Announce an AggregateTransaction to combine multiple transactions together."
 msgstr "複数の転送トランザクションを集約するために AggregateTransaction をアナウンスします。"
 
-#: ../../source/concepts/aggregate-transaction.rst:115
+#: ../../source/concepts/aggregate-transaction.rst:113
 #: ../../source/concepts/aggregate-transaction.rst:178
 msgid "**Version**: 0x01"
 msgstr "**バージョン**: 0x01"
 
 #: ../../source/concepts/aggregate-transaction.rst:117
-msgid ""
-"**Entity type**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 "
-"(:ref:`bonded<aggregate-bonded>`)"
-msgstr ""
-"**エンティティタイプ**: 0x4141 (:ref:`コンプリート<aggregate-complete>`), 0x4241 (:ref:`ボンド"
-"<aggregate-bonded>`)"
-
-#: ../../source/concepts/aggregate-transaction.rst:119
 #: ../../source/concepts/aggregate-transaction.rst:138
 #: ../../source/concepts/aggregate-transaction.rst:182
 msgid "**Inlines**:"
@@ -251,10 +235,20 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
+msgid "Aggregate hash of the aggregate transaction."
+msgstr "アグリゲートトランザクションのハッシュの集約"
+
+#: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
 "Transaction payload size in bytes. In other words, the total number of bytes"
 " occupied by all inner transactions."
 msgstr "バイト単位のトランザクションのペイロードサイズ。つまりインナートランザクションすべてによって占有されている合計バイト数。"
+
+#: ../../source/concepts/aggregate-transaction.rst:1
+msgid ""
+"Reserved padding to align end of AggregateTransactionHeader on 8-byte "
+"boundary."
+msgstr "AggregateTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
@@ -349,10 +343,6 @@ msgstr ""
 "に署名したアカウントへ返還されます。すべての連署者によって署名されずに AggregateBondedTransaction "
 "が期限に到達した場合、ロックされた資産はブロックのハーベスタによってロックの有効期限が切れるブロック高でハーベストされて報酬となります。"
 
-#: ../../source/concepts/aggregate-transaction.rst:180
-msgid "**Entity type**: 0x4148"
-msgstr "**エンティティタイプ**: 0x4148"
-
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid ""
 "Number of blocks for which a lock should be valid. Duration is allowed to "
@@ -364,3 +354,7 @@ msgid ""
 "AggregateBondedTransaction hash that has to be confirmed before unlocking "
 "the mosaics."
 msgstr "モザイクをアンロックする前に、AggregateBondedTransaction ハッシュが承認されていなければなりません。"
+
+#: ../../source/concepts/aggregate-transaction.rst:194
+msgid "Continue: :doc:`Account Restrictions <account-restriction>`."
+msgstr "次へ: :doc:`アカウント制限 <account-restriction>`"

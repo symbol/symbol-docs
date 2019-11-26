@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,12 +27,15 @@ msgstr "はじめてのアプリケーションを作成"
 
 #: ../../source/getting-started/first-application.rst:5
 msgid ""
-"This guide will take you through the NEM development cycle. You will send "
-"your first transaction to the blockchain after combining some NEM :doc"
-":`built-in features <../concepts/account>`."
+"This guide will take you through the NEM development cycle. First, we will "
+"architect our solution combining some built-in features available in "
+"Catapult, such as :doc:`Mosaics <../concepts/mosaic>` and :doc:`Accounts "
+"<../concepts/account>`. Then, you will record your first transaction on the "
+"blockchain."
 msgstr ""
-"このガイドでは NEM 開発サイクルを紹介します。NEM :doc:`ビルドイン機能 <../concepts/account>` "
-"を組み合わせたあと、あなたは初めてのトランザクションをブロックチェーンへ送ることになります。"
+"このガイドでは NEM 開発サイクルについて説明します。Catapult で利用可能な組み込み機能である :doc:`モザイク "
+"<../concepts/mosaic>` や :doc:`アカウント <../concepts/account>` "
+"を組み合わせてソリューションを設計します。次に、ブロックチェーンに最初のトランザクションを記録します。"
 
 #: ../../source/getting-started/first-application.rst:9
 msgid "Background"
@@ -43,7 +46,7 @@ msgid ""
 "The secondary ticket market, also known as the resale market, is the "
 "exchange of tickets that happens between individuals after they have "
 "purchased a ticket from an initial vendor. The initial vendor could be the "
-"event website, an online ticket vending platform, a shop or a stall at the "
+"event website, an online ticket vending platform, a shop, or a stall at the "
 "entrance of the event."
 msgstr ""
 "チケット二次市場は、再販市場としても知られており、最初の販売者からチケットを購入した後に個人間で行われるチケット交換です。最初の販売者は、イベントウェブサイト、オンラインチケット販売プラットフォーム、イベントの入口にあるショップまたは売店であったりします。"
@@ -57,110 +60,106 @@ msgid ""
 msgstr ""
 "最初の販売者ではない人からチケットを購入しても、必ずしもそのチケットの料金をさらに支払うという意味ではありません。これは最初の販売者が、問題の解決のために何もできない、偽造もしくは複製されたチケットを購入してしまう、被害者となる機会です。"
 
-#: ../../source/getting-started/first-application.rst:16
+#: ../../source/getting-started/first-application.rst:17
 msgid "What do we want to solve?"
 msgstr "私達は何を解決したいのでしょう？"
 
-#: ../../source/getting-started/first-application.rst:22
+#: ../../source/getting-started/first-application.rst:23
 msgid "Authorization model"
 msgstr "認証モデル"
 
-#: ../../source/getting-started/first-application.rst:24
+#: ../../source/getting-started/first-application.rst:25
 msgid "The ticket vendor wants to set up a system to:"
 msgstr "チケット販売者はシステムのセットアップを望んでいます:"
 
-#: ../../source/getting-started/first-application.rst:26
-msgid "Identify each ticket customer."
-msgstr "各チケット購入者を識別する。"
-
 #: ../../source/getting-started/first-application.rst:27
+msgid "Identify each ticket and customer."
+msgstr "各チケットと購入者を識別する。"
+
+#: ../../source/getting-started/first-application.rst:28
 msgid "Avoid ticket reselling."
 msgstr "チケットの転売防止。"
 
-#: ../../source/getting-started/first-application.rst:28
+#: ../../source/getting-started/first-application.rst:29
 msgid "Avoid non-authentic tickets and duplicate ones."
 msgstr "未認証のチケットとその複製の防止。"
 
-#: ../../source/getting-started/first-application.rst:31
-msgid "Why should we use NEM?"
-msgstr "何故NEMを使うのでしょう？"
-
 #: ../../source/getting-started/first-application.rst:33
+msgid "Why should we use Catapult?"
+msgstr "何故 Catapult を使うのでしょう？"
+
+#: ../../source/getting-started/first-application.rst:35
 msgid "Blockchain technology makes sense in cases where:"
 msgstr "ブロックチェーンテクノロジーはこのようなケースに適用できます:"
 
-#: ../../source/getting-started/first-application.rst:35
+#: ../../source/getting-started/first-application.rst:37
 msgid "There are different participants involved."
 msgstr "様々な参加者が関係します。"
 
-#: ../../source/getting-started/first-application.rst:36
+#: ../../source/getting-started/first-application.rst:38
 msgid "These participants need to trust each other."
 msgstr "参加者はお互いに信頼する必要があります。"
 
-#: ../../source/getting-started/first-application.rst:37
+#: ../../source/getting-started/first-application.rst:39
 msgid "There is a need to keep track of an immutable set of events."
 msgstr "不変のイベントの集合を追跡し続ける必要があります。"
 
-#: ../../source/getting-started/first-application.rst:39
+#: ../../source/getting-started/first-application.rst:41
 msgid ""
-"NEM is a **flexible blockchain** technology. Instead of uploading all the "
-"application logic into the blockchain, you can use its tested features "
+"Catapult is a **flexible blockchain** technology. Instead of uploading all "
+"the application logic into the blockchain, you can use its tested features "
 "through **API calls** for transfer and storage of value, authorization, "
 "traceability, and identification."
 msgstr ""
-"NEM は **フレキシブルなブロックチェーン** テクノロジーです。すべてのアプリケーションロジックをブロックチェーンにアップロードする代わりに、 "
-"**API 呼び出し** によってテスト済みの機能を使用して、価値、認可、トレーサビリティ、そして認証の移転と格納を行うことができます。"
+"Catapult は **フレキシブルなブロックチェーン** "
+"テクノロジーです。すべてのアプリケーションロジックをブロックチェーンにアップロードする代わりに、 **API呼び出し** "
+"によってテスト済みの機能を使用して、価値、認可、トレーサビリティ、そして認証の移転と格納を行うことができます。"
 
-#: ../../source/getting-started/first-application.rst:41
+#: ../../source/getting-started/first-application.rst:43
 msgid ""
 "The rest of the code remains **off-chain**. This reduces the inherent "
 "immutability risk, as you could change the process when necessary."
 msgstr "残りのコードは **オフチェーン** のままです。これにより必要に応じてプロセスを変更できるため、固有の不変性リスクが軽減されます。"
 
-#: ../../source/getting-started/first-application.rst:45
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/getting-started/first-application.rst:48
+#: ../../source/getting-started/first-application.rst:47
 msgid "Creating an account for each participant"
 msgstr "各参加者のアカウントを作成"
 
-#: ../../source/getting-started/first-application.rst:50
+#: ../../source/getting-started/first-application.rst:49
 msgid "First, identify the actors involved in the problem we want to solve:"
 msgstr "まず、私達が解決したい問題の渦中にいるアクタを認識します:"
 
-#: ../../source/getting-started/first-application.rst:52
+#: ../../source/getting-started/first-application.rst:51
 msgid "The ticket vendor."
 msgstr "チケット販売者"
 
-#: ../../source/getting-started/first-application.rst:53
+#: ../../source/getting-started/first-application.rst:52
 msgid "The customer."
 msgstr "購入者"
 
-#: ../../source/getting-started/first-application.rst:55
+#: ../../source/getting-started/first-application.rst:54
 msgid ""
 "We have decided to represent the ticket vendor and customer as separate "
 ":doc:`accounts <../concepts/account>`. Each account is unique and identified"
-" by an address. An account has access to a deposit box in the blockchain, "
+" by an address. An account has access to a deposit box on the blockchain, "
 "which can be modified with an appropriate private key."
 msgstr ""
 "チケット販売者と購入者を分けた :doc:`アカウント <../concepts/account>` "
 "として表現することにしました。各アカウントは一意であり、アドレスによって識別されます。アカウントは、適切な秘密鍵によって変更することができる、ブロックチェーン上の金庫にアクセスします。"
 
-#: ../../source/getting-started/first-application.rst:57
+#: ../../source/getting-started/first-application.rst:56
 msgid ""
 "The account you have loaded in NEM2-CLI represents the **ticket vendor**."
 msgstr "NEM2-CLIで読み込んだアカウントは **チケット販売者** を表現します。"
 
-#: ../../source/getting-started/first-application.rst:59
+#: ../../source/getting-started/first-application.rst:58
 msgid ""
-"Have you loaded an account with test ``cat.currency``? After running the "
+"Have you loaded an account with test cat.currency? After running the "
 "following command, you should see on your screen a line similar to:"
 msgstr ""
-"テストの ``cat.currency`` "
-"をアカウントへ読み込みましたか？以下のコマンドを実行した後、このような行がスクリーンに表示されているはずです:"
+"テストの cat.currency をアカウントへ読み込みましたか？以下のコマンドを実行した後、このような行がスクリーンに表示されているはずです:"
 
-#: ../../source/getting-started/first-application.rst:89
+#: ../../source/getting-started/first-application.rst:88
 msgid ""
 "This account owns ``1,000,000 cat.currency`` units. If your row after "
 "mosaics is empty, follow :doc:`the previous guide instructions <setup-"
@@ -169,7 +168,7 @@ msgstr ""
 "アカウントは ``1,000,000 cat.currency`` 単位を保有しています。もし mosaics "
 "の次の行が空の場合は、テスト用の通過を手に入れるために :doc:`前のガイド <setup-workstation>` に従ってください。"
 
-#: ../../source/getting-started/first-application.rst:91
+#: ../../source/getting-started/first-application.rst:90
 msgid "Create a second account to identify the **customer**."
 msgstr "**販売者** を識別するための2つ目のアカウントを作成します。"
 
@@ -220,26 +219,27 @@ msgid ""
 "terminal."
 msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
 
-#: ../../source/getting-started/first-application.rst:125
+#: ../../source/getting-started/first-application.rst:126
 msgid "Creating the ticket"
 msgstr "チケットの作成"
 
-#: ../../source/getting-started/first-application.rst:127
+#: ../../source/getting-started/first-application.rst:128
 msgid ""
-"We are representing the ticket as a NEM :doc:`mosaic <../concepts/mosaic>`. "
-"**Mosaics** can be used to represent any asset in the blockchain, such as "
-"objects, tickets, coupons, stock share representation, and even your "
-"cryptocurrency. They have configurable properties, which are defined at the "
-"moment of their creation. For example, we opt to set **transferable property"
-" to false**. This means that the customer can only send back the ticket to "
-"the creator of the mosaic, avoiding the ticket reselling."
+"We are representing the ticket with Catapult :doc:`Mosaics "
+"<../concepts/mosaic>`. This feature can be used to represent any asset on "
+"the blockchain, such as objects, tickets, coupons, stock share "
+"representation, and even your cryptocurrency. They have configurable "
+"properties, which are defined at the moment of their creation. For example, "
+"we opt to set **transferable property to false**. This means that the "
+"customer can only send back the ticket to the creator of the mosaic, "
+"avoiding the ticket reselling."
 msgstr ""
-"チケットを NEM :doc:`モザイク <../concepts/mosaic>` として表現しています。**モザイク** "
-"はブロックチェーン上で、モノ、チケット、クーポン、株式そして暗号通貨のような、あらゆる資産を表現します。それらは作成時に定義される変更可能なプロパティを持ちます。例えば"
+"チケットを Catapult :doc:`モザイク <../concepts/mosaic>` "
+"として表現しています。この機能はブロックチェーン上で、モノ、チケット、クーポン、株式そして暗号通貨のような、あらゆる資産を表現します。それらは作成時に定義される変更可能なプロパティを持ちます。例えば"
 " **転送可能プロパティを false** "
 "に設定します。これは、チケットの転売を防止するために、購入者がモザイクの作成者だけに送り返すことしかできないことを意味します。"
 
-#: ../../source/getting-started/first-application.rst:129
+#: ../../source/getting-started/first-application.rst:130
 msgid ""
 "Create a new mosaic to represent the ticket configured as follows with the "
 "ticket vendor account."
@@ -281,26 +281,25 @@ msgstr "モザイク供給量は後に変更可能です。"
 msgid "The mosaic can be only transferred back to the mosaic creator."
 msgstr "モザイクはモザイク作成者だけに送り返すことしかできません。"
 
-#: ../../source/getting-started/first-application.rst:146
+#: ../../source/getting-started/first-application.rst:147
 msgid ""
-"Copy the mosaicId returned in the ``monitor confirmed`` tab after the "
+"Copy the MosaicId returned in the ``monitor confirmed`` tab after the "
 "transaction gets confirmed."
-msgstr "トランザクションが承認された後に、 ``monitor confirmed`` タブに返された mosaicId をコピーします。"
+msgstr "トランザクションが承認された後に ``monitor confirmed`` タブに返された MosaicId をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:153
+#: ../../source/getting-started/first-application.rst:155
 msgid "Sending the ticket"
 msgstr "チケットの送信"
 
-#: ../../source/getting-started/first-application.rst:155
-msgid ""
-"Let's send one ticket unit to a customer announcing a "
-":ref:`TransferTransaction <transfer-transaction>`, one of the most commonly "
-"used actions in NEM."
-msgstr ""
-"NEM の中で最も一般的なアクションの 1 つである :ref:`TransferTransaction <transfer-transaction>`"
-" をアナウンスして、購入者アカウントにチケット1単位を送信してみましょう。"
-
 #: ../../source/getting-started/first-application.rst:157
+msgid ""
+"Now that we have defined the mosaic, we are going to send one ticket unit to"
+" a customer announcing a :ref:`TransferTransaction <transfer-transaction>`."
+msgstr ""
+"モザイクを定義したので、1 つのチケット単位を  :ref:`TransferTransaction <transfer-transaction>` "
+"をアナウンスして顧客に送信します。"
+
+#: ../../source/getting-started/first-application.rst:159
 msgid "Prepare the **TransferTransaction** with the following values."
 msgstr "次の値で **TransferTransaction** を用意します。"
 
@@ -310,7 +309,7 @@ msgstr "デフォルト (2 時間)"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid ""
-"The maximum amount of time to include the transaction in the blockchain. A "
+"The maximum amount of time to include the transaction on the blockchain. A "
 "transaction will be dropped if it stays unconfirmed after the stipulated "
 "time. The parameter is defined in hours and must in a range of 1 to 23 "
 "hours."
@@ -333,57 +332,57 @@ msgstr "添付されたメッセージ"
 msgid "The local network identifier."
 msgstr "ローカルネットワーク識別子"
 
-#: ../../source/getting-started/first-application.rst:182
+#: ../../source/getting-started/first-application.rst:184
 msgid ""
 "Although the transaction is defined, it has not been announced to the "
 "network yet."
 msgstr "トランザクションは定義されましたが、まだネットワークへはアナウンスされていません。"
 
-#: ../../source/getting-started/first-application.rst:184
+#: ../../source/getting-started/first-application.rst:186
 msgid ""
 "Sign the transaction with the **ticket vendor account**, so that the network"
 " can verify the authenticity of the transaction."
 msgstr "ネットワークがトランザクションの信頼性を検証できるように **チケット販売者のアカウント** でトランザクションに署名をします。"
 
-#: ../../source/getting-started/first-application.rst:186
+#: ../../source/getting-started/first-application.rst:188
 msgid ""
-"To make the transaction only valid for your network, include the first block"
-" generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
+"Include the first block generation hash to make the transaction only valid "
+"for your network. Open ``http://localhost:3000/block/1`` in a new tab and "
 "copy the ``meta.generationHash`` value."
 msgstr ""
-"自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
+"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいタブで "
 "``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:200
+#: ../../source/getting-started/first-application.rst:202
 msgid "Once signed, you can announce the transaction to the network."
 msgstr "署名が終わったらトランザクションをネットワークへアナウンスすることができます。"
 
-#: ../../source/getting-started/first-application.rst:218
+#: ../../source/getting-started/first-application.rst:220
 msgid ""
 "When the transaction is confirmed, check if the customer has received the "
 "ticket."
 msgstr "トランザクションが承認されたら、購入者がチケットを受信したことを確認します。"
 
-#: ../../source/getting-started/first-application.rst:226
+#: ../../source/getting-started/first-application.rst:228
 msgid "Did you solve the use case?"
 msgstr "このユースケースは解決できたでしょうか？"
 
-#: ../../source/getting-started/first-application.rst:228
-msgid ""
-"✅ Identify each ticket customer: Creating NEM accounts for each customer."
-msgstr "✅ 各チケット購入者の識別: 各購入者のNEMアカウントの作成"
-
 #: ../../source/getting-started/first-application.rst:230
+msgid ""
+"✅ Identify each customer: Creating Catapult accounts for each customer."
+msgstr "✅ 各購入者の識別: 各購入者の Catapult アカウントの作成"
+
+#: ../../source/getting-started/first-application.rst:232
 msgid "✅ Avoid ticket reselling: Creating a non-transferable mosaic."
 msgstr "✅ チケットの転売防止: 転送不可能なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:232
+#: ../../source/getting-started/first-application.rst:234
 msgid ""
 "✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic."
 msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:234
+#: ../../source/getting-started/first-application.rst:236
 msgid ""
-"Continue learning about more :doc:`NEM built-in features "
+"Continue learning about more :doc:`Catapult built-in features "
 "<../concepts/account>`."
-msgstr ":doc:`NEM ビルドイン機能 <../concepts/account>` の学習を続ける。"
+msgstr ":doc:`Catapult ビルドイン機能 <../concepts/account>` の学習を続ける。"

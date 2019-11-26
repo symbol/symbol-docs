@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -74,6 +74,33 @@ msgstr ""
 "トランザクション本体には基本的なトランザクションとは異なる追加のプロパティが含まれています。各属性は `types.cats "
 "<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_ "
 "で定義されているタイプの 1 つを持つことができます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:44
+msgid ""
+"Define a second transaction struct in the same file. This will contain "
+"information about the version of the entity and its identifier. The "
+"underlying transaction properties and the particular transaction body are "
+"appended as inlines."
+msgstr ""
+"同じファイルに2番目のトランザクション構造体を定義します。これにはエンティティのバージョンとその識別子に関する情報が含まれます。基盤となるトランザクションプロパティと特定のトランザクションボディはインラインとして追加されます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:57
+msgid ""
+"Define an EmbeddedTransaction struct to serialize the inner transactions "
+"within an aggregate. The embedded transaction and the body transaction are "
+"added as inlines."
+msgstr ""
+"EmbeddedTransaction "
+"構造体を定義して、アグリゲート内のインナートランザクションをシリアル化します。埋め込みトランザクションと本体トランザクションはインラインとして追加されます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:67
+msgid ""
+"The catbuffer library allows you to generate the transaction builders from "
+"the schema we have defined. For example, run the following command to "
+"generate C++ code:"
+msgstr ""
+"catbuffer ライブラリを使用すると、定義したスキーマからトランザクションビルダーを生成できます。たとえば、次のコマンドを実行してC "
+"++コードを生成します:"
 
 #: ../../source/guidelines/writing-a-schema.rst:73
 msgid ""

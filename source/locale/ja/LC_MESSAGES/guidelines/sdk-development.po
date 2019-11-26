@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -228,12 +228,6 @@ msgstr ""
 msgid "Before starting"
 msgstr "始める前に"
 
-#: ../../source/guidelines/sdk-development.rst:110
-msgid ""
-"Review the technical documentation to become familiar with the :doc:`NEM "
-"built-in features<../concepts/account>`."
-msgstr ":doc:`NEM ビルドイン機能<../concepts/account>` に詳しくなるためにはテクニカルドキュメントを見てください。"
-
 #: ../../source/guidelines/sdk-development.rst:111
 msgid ""
 "Setup the `catapult in local environment via docker <https://github.com"
@@ -313,14 +307,6 @@ msgstr "API ラッパー"
 msgid "Download the latest Open API definition."
 msgstr "最新の Open API 定義をダウンロード。"
 
-#: ../../source/guidelines/sdk-development.rst:154
-msgid ""
-"`Open API definition "
-"<https://github.com/nemtech/nem2-openapi/blob/master/spec/openapi3.yaml>`_"
-msgstr ""
-"`Open API 定義 "
-"<https://github.com/nemtech/nem2-openapi/blob/master/spec/openapi3.yaml>`_"
-
 #: ../../source/guidelines/sdk-development.rst:158
 msgid "Download the OpenAPI generator and generate the DTOs."
 msgstr "OpenAPI ジェネレータをダウンロードして、DTO を生成してください。"
@@ -373,14 +359,6 @@ msgstr "このセクションは未完了です。"
 #: ../../source/guidelines/sdk-development.rst:279
 msgid "Implementing cryptographic functions is required to sign transactions."
 msgstr "トランザクションに署名するには暗号化の機能を実装する必要があります。"
-
-#: ../../source/guidelines/sdk-development.rst:281
-msgid ""
-"Example: `core/crypto <https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/core/crypto>`_"
-msgstr ""
-"例: `core/crypto <https://github.com/nemtech/nem2-sdk-"
-"java/tree/master/src/main/java/io/nem/core/crypto>`_"
 
 #: ../../source/guidelines/sdk-development.rst:285
 msgid "Documenting your SDK"

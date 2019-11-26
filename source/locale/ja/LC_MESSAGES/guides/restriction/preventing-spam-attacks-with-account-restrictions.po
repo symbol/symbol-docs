@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -89,10 +89,6 @@ msgstr ""
 msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
 msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:41
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:43
 msgid ""
 "Before starting solving the use case, you will need to set up two accounts "
@@ -147,23 +143,6 @@ msgid ""
 "the company's account. You might take the following steps to do so:"
 msgstr ""
 "前の例に戻り、会社アカウントからの受信トランザクションのみを受け入れるように製品アカウントを構成するとします。これを行うには次の手順を実行します。"
-
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:102
-msgid ""
-"Define the **AccountRestrictionModification**. Add to the company’s address "
-"``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list."
-msgstr ""
-"**AccountRestrictionModification** を定義します。会社アドレス ``SBI774-YMFDZI-"
-"FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` を許可リストに追加します。"
-
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:111
-msgid ""
-"Create an **AccountRestrictionTransaction**, with restrictionType "
-"``AllowAddress``.  Add to the array the modification created in the previous"
-" step."
-msgstr ""
-"制限タイプ ``AllowAddress`` の **AccountRestrictionTransaction** "
-"を作成してください。前の手順で作成した変更を配列に追加します。"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:120
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:164

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -106,11 +106,11 @@ msgstr "暗号化メッセージは送信者と受信者だけが平文を読む
 
 #: ../../source/concepts/transfer-transaction.rst:44
 msgid ""
-"NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode "
+"Catapult uses Bouncy Castle's AES block cipher implementation in `CBC mode "
 "<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to "
 "encrypt and decrypt messages."
 msgstr ""
-"NEM は `CBC モード "
+"Catapult は `CBC モード "
 "<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ の  "
 "Bouncy Castle's AES ブロック暗号化実装を使ってメッセージの暗号化と復号を行います。"
 
@@ -140,10 +140,6 @@ msgstr ""
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transfer-transaction.rst:62
-msgid "Schemas"
-msgstr "スキーマ"
-
 #: ../../source/concepts/transfer-transaction.rst:64
 msgid ""
 "Configuration parameters are :properties:`editable <config-"
@@ -159,10 +155,6 @@ msgid ""
 msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
-
-#: ../../source/concepts/transfer-transaction.rst:75
-msgid "**Entity type**: 0x4154"
-msgstr "**エンティティタイプ**: 0x4154"
 
 #: ../../source/concepts/transfer-transaction.rst:77
 msgid "**Inlines**:"
@@ -194,21 +186,25 @@ msgid "Transaction recipient."
 msgstr "トランザクションレシート"
 
 #: ../../source/concepts/transfer-transaction.rst:1
+msgid "Number of attached mosaics."
+msgstr "添付されたモザイクの数"
+
+#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Size of the attached message."
 msgstr "添付されたメッセージのサイズ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "Number of attached mosaics."
-msgstr "添付されたモザイクの数"
+msgid "Reserved padding to align mosaics on 8-byte boundary."
+msgstr "モザイクの終わりを 8 バイト境界に揃えた予約パディング"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Attached mosaics to send."
+msgstr "送信する添付済みモザイク"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid ""
 ":ref:`Message type <message-type>` and a payload of up to ``1023`` bytes."
 msgstr ":ref:`message-type <message-type>` と ``1023`` バイトまでのペイロード"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Attached mosaics to send."
-msgstr "送信する添付済みモザイク"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Plain message."
@@ -221,3 +217,7 @@ msgstr "暗号化メッセージ"
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Persistent harvesting delegation."
 msgstr "永続的なハーベスティングのデリゲート"
+
+#: ../../source/concepts/transfer-transaction.rst:107
+msgid "Continue: :doc:`Aggregate Transaction <aggregate-transaction>`."
+msgstr "次へ: :doc:`アグリゲートトランザクション <aggregate-transaction>`"
