@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,7 +28,7 @@ msgstr "トランザクションの監視"
 
 #: ../../source/guides/monitor/monitoring-a-transaction-status.rst:12
 msgid ""
-"Make sure a transaction gets included in the blockchain after being "
+"Make sure a transaction gets included on the blockchain after being "
 "announced."
 msgstr "アナウンスした後にトランザクションがブロックチェーンに含まれることを理解してください。"
 
@@ -38,48 +38,6 @@ msgstr "背景"
 
 #: ../../source/guides/monitor/monitoring-a-transaction-status.rst:18
 msgid ""
-"After calling an API method that changes a database state, the application "
-"usually receives a response informing if the change has been applied or "
-"failed due to some constraints."
-msgstr ""
-"データベースの状態を変更する API "
-"メソッドを呼び出すと、アプリケーションは通常、変更が適用されたか、何らかの制約が原因で失敗した場合に通知するレスポンスを受け取ります。"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:20
-msgid ""
-"When working with blockchain technology, it is interesting to **fire the "
-"transaction**, let the node process it, and **receive a notification** if it"
-" succeeded or failed. Differently, from a traditional database, the average "
-"confirmation time of modification is higher, passing from milliseconds to "
-"seconds, or even minutes in the worst cases."
-msgstr ""
-"ブロックチェーンテクノロジーを利用するときは **トランザクションを発信** し、ノードに処理させ、成功または失敗した場合に **通知を受け取る** "
-"ことに関心があるでしょう。従来のデータベースとは異なり、変更の平均的な承認時間は長く、ミリ秒から秒、最悪の場合は分になります。"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:22
-msgid ""
-"In this guide, you are going to learn how to verify that your transaction "
-"has been **recorded permanently** before executing any other critical "
-"action."
-msgstr ""
-"このガイドでは、その他の致命的なアクションを実行する前に、トランザクションが **恒久的に記録されている** ことを確認する方法について学習します。"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:26
-msgid "Prerequisites"
-msgstr "前提条件"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:28
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:32
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:34
-msgid ""
 "Catapult enables an **asynchronous transaction announcement**. After an "
 "application publishes a transaction, the API node will always accept it if "
 "it is well-formed."
@@ -87,7 +45,7 @@ msgstr ""
 "Catapult は **非同期のトランザクションアナウンス** が可能です。アプリケーションがトランザクションを公開すると、それが適格であれば API"
 " ノードは常に受理します。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:36
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:20
 msgid ""
 "At this time, the server does not ensure that the transaction is valid. For "
 "example, you might not have the number of asset units you want to need to "
@@ -101,22 +59,38 @@ msgstr ""
 "**リスナー** を使用して :doc:`トランザクションステータス <../../concepts/transaction>` "
 "を追跡する必要があります。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:38
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:22
 msgid ""
 "`Listeners <websockets>`_ enable receiving notifications possible when a "
-"change in the blockchain occurs. The notification is received in real-time "
+"change on the blockchain occurs. The notification is received in real-time "
 "without having to poll the API waiting for a reply."
 msgstr ""
 "`リスナー <websockets>` は変更がブロックチェーン内で発生したときに通知を受信することを可能にします。通知は API "
 "の返答をポーリンクするのではなくリアルタイムに行われます。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:40
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:24
 msgid ""
-"Let's see how transaction monitorization works transferring a "
-"**TransferTransaction**."
-msgstr "**TransferTransaction** を転送するトランザクションの監視の仕組みを見てみましょう。"
+"In this guide, you are going to learn how to verify that your transaction "
+"has been **recorded permanently** before executing any other critical "
+"action."
+msgstr ""
+"このガイドでは、その他の致命的なアクションを実行する前に、トランザクションが **恒久的に記録されている** ことを確認する方法について学習します。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:42
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:28
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:30
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:34
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:36
 msgid ""
 "Define the transaction you want to announce. In this case, we are going to "
 "send the message ``Test`` to ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-"
@@ -125,11 +99,11 @@ msgstr ""
 "アナウンスしたいトランザクションを定義して下さい。この場合、メッセージとして ``Test`` を ``SD5DT3-CH4BLA-BL5HIM-"
 "EKP2TA-PUKF4N-Y3L5HR-IR54`` へ送ろうとしています。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:51
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:45
 msgid "Sign the transaction with your account."
 msgstr "あなたのアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:53
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:47
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
@@ -138,7 +112,7 @@ msgstr ""
 "自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
 "``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:63
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:57
 msgid ""
 "Open a new :ref:`Listener <websockets>`. The listener communicates with the "
 "API WebSocket, which forward you asynchronously the status of the "
@@ -147,7 +121,7 @@ msgstr ""
 "新しい :ref:`リスナー <websockets>` を開いてください。このリスナーは API WebSocket "
 "と疎通し、トランザクションの状態を非同期にあなたへ転送します。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:72
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:66
 msgid ""
 "Monitor if the WebSocket **connection is alive**. :doc:`Blocks "
 "<../../concepts/block>` are generated every ``15`` seconds in average, so a "
@@ -158,7 +132,7 @@ msgstr ""
 "<../../concepts/block>` は 平均 ``15`` "
 "秒毎で生成されるので、30秒間ほどレスポンスがない場合、タイムアウトが発生します。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:85
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:79
 msgid ""
 "Monitor if there is some **validation error** with the transaction issued. "
 "When you receive a message from status WebSocket channel, it always means "
@@ -170,7 +144,7 @@ msgstr ""
 "チャンネルからメッセージを受け取る場合、それはトランザクションが要件を満たさなかったことを意味します。エラーを適切にハンドリングするためには "
 ":ref:`エラーステータスリスト <status-errors>` を参照してください。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:98
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:92
 msgid ""
 "Monitor as well if the transaction **reaches the network**. When you receive"
 " a message from **unconfirmed WebSocket channel**, the transaction is valid "
@@ -181,7 +155,7 @@ msgstr ""
 "トランザクションが **ネットワークに到達した** かどうかも監視します。 **未承認 WebSocket チャンネル** "
 "からメッセージを受け取る場合、トランザクションは妥当であり、ブロックに取りこまれるのを待っている状態です。2回目のバリデーションが最終的に確認される前に行われるため、これはトランザクションが含まれるのが確定したことを意味するものではありません。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:111
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:105
 msgid ""
 "Monitor when the transaction gets **included in a block**. When included, "
 "transaction can still be :doc:`rolled-back <../../concepts/transaction>` "
@@ -194,23 +168,23 @@ msgstr ""
 "<https://gist.github.com/aleixmorgadas/3d856d318e60f901be09dbd23467b374>`_ "
 "であると、決めることができます。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:124
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:118
 msgid "Finally, announce the transaction to the network."
 msgstr "最後に、トランザクションをネットワークへアナウンスします。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:137
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:131
 msgid ""
 "If you missed the WebSocket response, check the transaction status after by "
 "calling the `transaction status "
-"<https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ "
+"<https://nemtech.github.io/nem2-openapi/#operation/getTransactionStatus>`_ "
 "endpoint. The status of failed transactions is not persistent, meaning that "
 "eventually is pruned."
 msgstr ""
 "WebSocket のレスポンスを失った場合、 `トランザクションステータス "
-"<https://nemtech.github.io/endpoints.html#operation/getTransactionStatus>`_ "
+"<https://nemtech.github.io/nem2-openapi/#operation/getTransactionStatus>`_ "
 "エンドポイントを呼び出すことで、トランザクションの状態を確認できます。失敗したトランザクションの状態は永続的ではなく、最終的には除去されます。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:139
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:133
 msgid ""
 "If you are developing a small application, and monitoring asynchronous "
 "transactions adds too much overhead to your project, consider :doc:`turning "
@@ -221,17 +195,17 @@ msgstr ""
 " <turning-the-asynchronous-transaction-announcement-into-synchronous>` "
 "ことを検討してください。"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:145
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:139
 msgid "Troubleshooting: Monitoring transactions on the client side"
 msgstr "トラブルシューティング: クライアントサイドでのトランザクションの監視"
 
-#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:147
+#: ../../source/guides/monitor/monitoring-a-transaction-status.rst:141
 msgid ""
-"The NEM2-SDK for typescript base Listener was designed to work on Node.js "
-"backend environments. To make the code work in the client side (e.g., "
-"Angular, React, Vue.), pass the browser implementation of the WebSocket to "
-"the Listener."
+"Note that the NEM2-SDK for TypeScript base Listener is designed to work on "
+"Node.js backend environments. If you want to execute Listeners from the "
+"client-side (e.g., Angular, React, Vue.), pass the browser implementation of"
+" the WebSocket to the Listener."
 msgstr ""
 "Typescript ベースのリスナー用 NEM2-SDK は Node.js "
-"バックエンド環境で動作するように設計されています。このコードをクライアントサイド(例: Angular, React, "
-"Vue)で動作させるためには、WebSocket のブラウザ実装をリスナーに渡します。"
+"バックエンド環境で動作するように設計されています。リスナーをクライアントサイド (例: Angular, React, Vue) "
+"で実行するには、WebSocket のブラウザ実装をリスナーに渡します。"

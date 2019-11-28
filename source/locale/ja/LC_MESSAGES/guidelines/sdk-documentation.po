@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -63,6 +63,15 @@ msgstr "ライセンス"
 #: ../../source/guidelines/sdk-documentation.rst:21
 msgid "Comments and reference docs"
 msgstr "コメントとリファレンス"
+
+#: ../../source/guidelines/sdk-documentation.rst:23
+msgid ""
+"Document functions and classes with comments while you write your code. A "
+"reference generator should be able to read these comments and generate HTML "
+"as an output."
+msgstr ""
+"コードを記述している間に、関数とクラスをコメント付きでドキュメント化します。リファレンスジェネレーターはこれらのコメントを読み取り、HTML "
+"として出力を生成できる必要があります。"
 
 #: ../../source/guidelines/sdk-documentation.rst:31
 msgid "Guides"

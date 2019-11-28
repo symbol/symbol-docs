@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -32,26 +32,22 @@ msgid ""
 " actions/transfers."
 msgstr "マルチシグ :doc:`アカウント <account>` はアクション/転送を実行するために追加の署名を必要とします。"
 
-#: ../../source/concepts/multisig-account.rst:11
-msgid "2-of-3 multisignature account"
-msgstr "2-of-3 マルチシグアカウント"
-
-#: ../../source/concepts/multisig-account.rst:15
+#: ../../source/concepts/multisig-account.rst:9
 msgid "Cosignatories"
 msgstr "連署者"
 
-#: ../../source/concepts/multisig-account.rst:17
+#: ../../source/concepts/multisig-account.rst:11
 msgid ""
-"A NEM :doc:`account <account>` can be :doc:`converted to multisig "
+"A Catapult :doc:`account <account>` can be :doc:`converted to multisig "
 "<../guides/multisig/converting-an-account-to-multisig>`. The "
 "cosignatories—other accounts—of the multisig will become the account "
 "managers."
 msgstr ""
-"NEM :doc:`アカウント <account>` は :doc:`マルチシグに変換する <../guides/multisig"
+"Catapult :doc:`アカウント <account>` は :doc:`マルチシグに変換する <../guides/multisig"
 "/converting-an-account-to-multisig>` ことができます。マルチシグの連署者 - 他のアカウント - "
 "はこのアカウントのマネージャとなります。"
 
-#: ../../source/concepts/multisig-account.rst:19
+#: ../../source/concepts/multisig-account.rst:13
 msgid ""
 "From that moment on, the multisig account cannot announce transactions by "
 "itself. A multisig cosignatory has to propose a transaction involving the "
@@ -61,37 +57,41 @@ msgstr ""
 "この瞬間からマルチシグアカウントはそれ自信からトランザクションをアナウンスできなくなります。連署者のうち 1 人がマルチシグに関係した "
 ":doc:`アグリゲートトランザクション <aggregate-transaction>` でラップしたトランザクションを提案する必要があります。"
 
-#: ../../source/concepts/multisig-account.rst:21
+#: ../../source/concepts/multisig-account.rst:15
 msgid ""
 "To record the transaction in the block, the other cosignatories will have to"
 " agree."
 msgstr "このトランザクションをブロックに記録するには、他の連署者の同意が必要です。"
 
-#: ../../source/concepts/multisig-account.rst:25
+#: ../../source/concepts/multisig-account.rst:19
 msgid "Minimum approval and removal"
 msgstr "最小承認数と削除数"
 
-#: ../../source/concepts/multisig-account.rst:27
+#: ../../source/concepts/multisig-account.rst:21
 msgid ""
-"It is not always necessary to force all cosignatories to cosign transactions"
-" associated with the multisig account. NEM allows to set up the minimum "
-"number of cosignatory agreements. These properties can be :ref:`edited "
-"<guide-modify-a-multisig-account-min-approval>` afterward to suit almost all"
-" needs."
+"It is not always necessary to require all cosignatories to cosign "
+"transactions associated with the multisig account. Catapult allows to set up"
+" the minimum number of cosignatory agreements. These properties can be "
+":ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to "
+"suit almost all needs."
 msgstr ""
-"常にすべての連署者にマルチシグに関係するトランザクションへの連署をさせる必要はありません。NEM "
+"常にすべての連署者にマルチシグに関係するトランザクションへの連署をさせる必要はありません。Catapult "
 "は連署者の同意の最小数の設定が可能です。大抵のニーズに合わせてこれらのプロパティを :ref:`編集 <guide-modify-a-multisig-"
 "account-min-approval>` することができます。"
 
+#: ../../source/concepts/multisig-account.rst:27
+msgid "2-of-3 multisignature account"
+msgstr "2-of-3 マルチシグアカウント"
+
 #: ../../source/concepts/multisig-account.rst:29
 msgid ""
-"NEM's current implementation of multisig is *\"M-of-N\"*, where M is the "
-"number of cosignatories requeired to announce a transaction and N is the "
-"total amount of cosignatories for that particular multisig account. This "
+"Catapult's current implementation of multisig is *\"M-of-N\"*, where M is "
+"the number of cosignatories requeired to announce a transaction and N is the"
+" total amount of cosignatories for that particular multisig account. This "
 "means that M can be any number equal to or less than N, i.e., 1-of-4, "
 "2-of-2, 4-of-9, 9-of-10 and so on."
 msgstr ""
-"NEM における現在のマルチシグ実装は *\"M-of-N\"* で、マルチシグアカウントの M はアナウンスに必要な連署者数、N "
+"Catapult における現在のマルチシグ実装は *\"M-of-N\"* で、マルチシグアカウントの M はアナウンスに必要な連署者数、N "
 "は合計連署者数です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4, 2-of-2, 4-of-9, 9-of-10 "
 "などです。"
 
@@ -136,7 +136,7 @@ msgid ""
 " transactions."
 msgstr ""
 "マルチシグアカウントは ``3`` "
-"階層まで、他のマルチシグアカウントの連署者になることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに AND/OR "
+"階層まで、他のマルチシグアカウントの連署者になることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに “AND/OR“ "
 "ロジックを追加します。"
 
 #: ../../source/concepts/multisig-account.rst:45
@@ -174,7 +174,7 @@ msgstr "いくつかの家族は地元の切手収集家共同体のメンバー
 msgid ""
 "To ensure that all agree on which old stamps they should buy and on the "
 "right price, they use a multisig account. This way, all members of the "
-"society need to approve the transaction before it is included in the "
+"society need to approve the transaction before it is included on the "
 "blockchain."
 msgstr ""
 "購入するべき古い切手と適切な価格のすべてに合意するために、彼らはマルチシグアカウントを使用します。この方法では、正当なトランザクションとしてブロックチェーンに取り込まれる前に、共同体の全員がトランザクションに同意することが必要です。"
@@ -279,42 +279,30 @@ msgid "Guides"
 msgstr "ガイド"
 
 #: ../../source/concepts/multisig-account.rst:129
-msgid "Schemas"
-msgstr "スキーマ"
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/multisig-account.rst:131
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/multisig-account.rst:138
+#: ../../source/concepts/multisig-account.rst:136
 msgid "Announce a MultisigAccountModificationTransaction to:"
 msgstr "MultisigAccountModificationTransaction のアナウンス:"
 
-#: ../../source/concepts/multisig-account.rst:140
+#: ../../source/concepts/multisig-account.rst:138
 msgid "Transform an account to multisig account."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/concepts/multisig-account.rst:141
+#: ../../source/concepts/multisig-account.rst:139
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更"
 
-#: ../../source/concepts/multisig-account.rst:142
+#: ../../source/concepts/multisig-account.rst:140
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
 #: ../../source/concepts/multisig-account.rst:146
-msgid "**Entity type**: 0x4155"
-msgstr "**エンティティタイプ**: 0x4155"
-
-#: ../../source/concepts/multisig-account.rst:148
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/multisig-account.rst:150
+#: ../../source/concepts/multisig-account.rst:148
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -323,17 +311,13 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../source/concepts/multisig-account.rst:1
-#: ../../source/concepts/multisig-account.rst:1
 #: ../../source/concepts/multisig-account.rst:1
 msgid "Description"
 msgstr "説明"
@@ -353,25 +337,25 @@ msgid ""
 msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Number of modifications."
-msgstr "変更の数"
+msgid "Number of cosignatory public key additions."
+msgstr "連署者公開鍵追加数"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Attached cosignatory modifications."
-msgstr "変更に添付済みの連署者"
+msgid "Number of cosignatory public key deletions."
+msgstr "連署者公開鍵削除数"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Modification Action."
-msgstr "変更アクション"
+msgid "Reserved padding to align publicKeyAdditions on 8-byte boundary."
+msgstr "publicKeyAdditions を 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Cosignatory account public key."
-msgstr "連署アカウントの公開鍵"
+msgid "Cosignatory public key additions."
+msgstr "連署者公開鍵追加"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid "Remove cosignatory."
-msgstr "連署者を削除"
+msgid "Cosignatory public key deletions."
+msgstr "連署者公開鍵削除"
 
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Add cosignatory."
-msgstr "連署者を追加"
+#: ../../source/concepts/multisig-account.rst:162
+msgid "Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`."
+msgstr "次へ: :doc:`クロスチェーンスワップ <cross-chain-swaps>`"

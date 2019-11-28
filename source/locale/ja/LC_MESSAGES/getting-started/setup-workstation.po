@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -28,32 +28,32 @@ msgstr "ワークステーションのセットアップ"
 #: ../../source/getting-started/setup-workstation.rst:10
 msgid ""
 "This first guide will walk you through a step-by-step installation of the "
-"required tools to start developing on NEM."
-msgstr "最初のガイドでは NEM 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
+"required tools to start developing on Catapult."
+msgstr "最初のガイドでは Catapult 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
 #: ../../source/getting-started/setup-workstation.rst:16
-msgid "Running Catapult Service Bootstrap"
-msgstr "Catapult サービスのブートストラップの実行"
+msgid "Running a private test network"
+msgstr "プライベートテストネットワークの立ち上げ"
 
 #: ../../source/getting-started/setup-workstation.rst:18
 msgid ""
 "To run the network, we are going to use the package |catapult-service-"
-"bootstrap|. This software suite contains the necessary setup scripts to help"
-" developers to quickly build their own network."
+"bootstrap|. This software suite contains the necessary setup scripts to "
+"quickly build your own test network."
 msgstr ""
 "ネットワークを立ち上げるために |catapult-service-bootstrap| "
-"を使用します。このソフトウェアスイートは開発者が素早く自分のネットワークを構築するための手助けになるセットアップスクリプトが含まれています。"
+"を使用します。このソフトウェアスイートはあなたのテストネットワークを素早く構築するための、ネットワークを構築するセットアップスクリプトが含まれています。"
 
 #: ../../source/getting-started/setup-workstation.rst:20
 msgid ""
-"NEM's next core engine, code-named **Catapult**, is `under development "
+"Catapult's next core engine, code-named **Catapult**, is `under development "
 "<https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap "
 "setup is for learning and development purposes, and it should not power any "
 "production Catapult instances."
 msgstr ""
-"次世代 NEMのコアエンジン コードネーム **Catapult** は `開発中です <https://github.com/nemtech"
-"/catapult-server/milestones>`_ 。このブートストラップの設定は学習と開発を目的としており、本番の Catapult "
-"インスタンスを動かすものではありません 。"
+"次世代 Catapult のコアエンジン コードネーム **Catapult** は `開発中です "
+"<https://github.com/nemtech/catapult-server/milestones>`_ "
+"。このブートストラップの設定は学習と開発を目的としており、本番の Catapult インスタンスを動かすものではありません 。"
 
 #: ../../source/getting-started/setup-workstation.rst:23
 msgid "Environment requirements"
@@ -114,18 +114,13 @@ msgstr "テストアカウントの取得"
 
 #: ../../source/getting-started/setup-workstation.rst:62
 msgid ""
-"An :doc:`account <../concepts/account>` is a **deposit box** where you can "
-"hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them "
-"announcing transactions. The :doc:`transaction announcement "
-"<../concepts/transaction>` has an associated cost to provide an incentive to"
-" those who secure the network and run the infrastructure. This cost is paid "
-"in ``cat.currency`` mosaics, the default network token."
+"An :doc:`account <../concepts/account>` is a deposit box where you can hold "
+":doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by "
+":doc:`announcing transactions <../concepts/transaction>`."
 msgstr ""
 ":doc:`アカウント <../concepts/account>` はあなたが :doc:`モザイク <../concepts/mosaic>` "
-"(トークン) を保有することのできる **預け入れ箱** であり、トランザクションをアナウンスすることでこれらと疎通できます。 "
-":doc:`トランザクションのアナウンス <../concepts/transaction>` "
-"はネットワークを保護してインフラストラクチャを維持する人々へインセンティブを提供するための関連するコストが存在します。このコストはデフォルトのネットワークトークンである"
-" ``cat.currency`` モザイクで支払われます。"
+"(トークン) を保有することのできる、預け入れ箱であり、 :doc:`トランザクションをアナウンス <../concepts/transaction>`"
+" することでこれらと疎通できます。 "
 
 #: ../../source/getting-started/setup-workstation.rst:64
 msgid ""
@@ -157,9 +152,9 @@ msgstr "``addresses.yaml`` ファイルの内容を表示します。"
 #: ../../source/getting-started/setup-workstation.rst:84
 msgid ""
 "Under the section ``nemesis_addresses``, you will find the key pairs which "
-"contain ``cat.currency``. Copy the private key of the first account."
+"contain **cat.currency**. Copy the private key of the first account."
 msgstr ""
-"``nemesis_addresses`` のセクションから ``cat.currency`` "
+"``nemesis_addresses`` のセクションから **cat.currency** "
 "を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
 
 #: ../../source/getting-started/setup-workstation.rst:86
@@ -170,9 +165,9 @@ msgstr "前のステップで取得したキーを使用して、コマンド ``
 
 #: ../../source/getting-started/setup-workstation.rst:97
 msgid ""
-"Use nem2-cli only for testing and development purposes, as the private keys "
+"Use NEM2-CLI only for testing and development purposes, as the private keys "
 "stored are not encrypted."
-msgstr "nem2-cli は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
+msgstr "NEM2-CLI は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:99
 msgid "You should see the account credentials in your terminal."
@@ -206,12 +201,11 @@ msgstr ""
 msgid ""
 "Then, **create a folder for your new project** and run the instructions for "
 "the selected language. If none of the languages fits your project, you can "
-"always query the blockchain directly using the `REST gateway "
-"</endpoints.html>`_."
+"always query the blockchain directly using the :doc:`REST gateway <../api>`."
 msgstr ""
 "次に、 **新しいプロジェクト用のフォルダを作成します** "
-"。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  `REST ゲートウェイ "
-"</endpoints.html>`_ を使用して直接ブロックチェーンに問い合わせできます。"
+"。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  :doc:`REST ゲートウェイ "
+"<../api>` を使用して直接ブロックチェーンに問い合わせできます。"
 
 #: ../../source/getting-started/setup-workstation.rst:130
 #: ../../source/getting-started/setup-workstation.rst:159
@@ -228,9 +222,9 @@ msgstr "nem2-sdk と rxjs ライブラリのインストール。"
 #: ../../source/getting-started/setup-workstation.rst:142
 msgid ""
 "We recommend to use **TypeScript instead of JavaScript** when building "
-"applications for NEM blockchain."
+"applications for Catapult."
 msgstr ""
-"NEM ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
+"Catapult ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
 
 #: ../../source/getting-started/setup-workstation.rst:144
 msgid "Make sure you have at least version 2.5.X installed."
@@ -262,4 +256,4 @@ msgstr "プログラムを開始するために ``gradle build`` と ``gradle ru
 
 #: ../../source/getting-started/setup-workstation.rst:213
 msgid "Continue: :doc:`Writing your first application <first-application>`."
-msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>` 。"
+msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>`"

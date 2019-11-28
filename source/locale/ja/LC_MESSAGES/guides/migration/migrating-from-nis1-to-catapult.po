@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-07-18 15:59+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -91,8 +91,9 @@ msgid "Reference: :doc:`Catapult REST <../../api>`"
 msgstr "リファレンス: :doc:`Catapult REST <../../api>`"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:34
-msgid "Reference: `REST API contract </endpoints.html>`_"
-msgstr "リファレンス: `REST API contract </endpoints.html>`_"
+msgid ""
+"Reference: `REST API contract <https://nemtech.github.io/nem2-openapi/>`_"
+msgstr "リファレンス: `REST API 接続 <https://nemtech.github.io/nem2-openapi/>`_"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:36
 msgid ""
@@ -132,9 +133,9 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:48
 msgid ""
-"Guide: :doc:`Creating and opening an account  <../account/creating-and-"
-"opening-an-account>`"
-msgstr "ガイド: :doc:`アカウントの作成と開設 <../account/creating-and-opening-an-account>`"
+"Guide: :doc:`Creating and opening an account  <../account/creating-an-"
+"account>`"
+msgstr "ガイド: :doc:`アカウントの作成と開設 <../account/creating-an-account>`"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:49
 msgid ""
@@ -350,12 +351,12 @@ msgstr "マルチシグネチャの管理"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:111
 msgid ""
-"With multisignature accounts managed on-chain, the NEM multisignature "
+"With multisignature accounts managed on-chain, Catapult's multisignature "
 "implementation is different from many other—so-called client-"
 "side—multisignature implementations."
 msgstr ""
-"チェーン上で管理されたマルチシグネチャアカウントである NEM "
-"マルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
+"チェーン上で管理されたマルチシグネチャアカウントである Catapult "
+"のマルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:113
 msgid ""
