@@ -4,7 +4,7 @@ Aggregate Transaction
 
 .. _aggregate-transaction:
 
-Aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract.
+Aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. Catapult does this by generating a one-time disposable smart contract.
 
 .. figure:: ../resources/images/examples/aggregate-escrow-1.png
     :align: center
@@ -79,7 +79,7 @@ Paying for others fees
 
 Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But Alice doesn't own cat.currency to pay the transaction fee.
 
-By creating an AggregateBondedTransaction, Alice can convert EUR to cat.currency to pay the fee. Now, Alice and Bob can use NEM blockchain without ever having to buy or hold cat.currency.
+By creating an AggregateBondedTransaction, Alice can convert EUR to cat.currency to pay the fee. Now, Alice and Bob can use Catapult's public blockchain without ever having to buy or hold cat.currency units.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -101,11 +101,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 AggregateTransaction
 ====================
@@ -192,3 +190,5 @@ Upon completion of the aggregate, the locked funds become available in the accou
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic (``10 cat.currency``).
     duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``2`` days.
     hash; :schema:`Hash256 <types.cats#L12>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.
+
+Continue: :doc:`Account Restrictions <account-restriction>`.

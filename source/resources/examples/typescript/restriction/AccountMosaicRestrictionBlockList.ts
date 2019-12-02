@@ -23,24 +23,22 @@ import {
     Deadline,
     MosaicId,
     NetworkType,
-    AccountRestrictionModificationAction,
-    AccountRestrictionType,
+    AccountRestrictionFlags,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
 const companyShareMosaicIdHex = process.env.COMPANY_SHARE_MOSAIC_ID as string;
 const companyShareMosaicId = new MosaicId(companyShareMosaicIdHex);
-
-const mosaicRestriction = AccountRestrictionModification.createForMosaic(AccountRestrictionModificationAction.Add, companyShareMosaicId);
 /* end block 01 */
 
 /* start block 02 */
 const transaction = AccountRestrictionTransaction
     .createMosaicRestrictionModificationTransaction(
         Deadline.create(),
-        AccountRestrictionType.BlockMosaic,
-        [mosaicRestriction],
+        AccountRestrictionFlags.BlockMosaic,
+        [companyShareMosaicId],
+        [],
         NetworkType.MIJIN_TEST);
 /* end block 02 */
 

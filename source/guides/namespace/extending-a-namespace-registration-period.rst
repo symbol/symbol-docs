@@ -26,9 +26,9 @@ Prerequisites
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
 - Have one :ref:`account with cat.currency <setup-creating-a-test-account>` and at least one namespace
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
 1. Get your namespace information, and inspect the value of the property ``endHeight``.
 
@@ -72,10 +72,6 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
 .. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is :properties:`configurable per network <config-network.properties>`.
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
@@ -95,3 +91,11 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     owner:          SAKT3C-...-X4ND
     startHeight:    52000
     endHeight:      54000
+
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh

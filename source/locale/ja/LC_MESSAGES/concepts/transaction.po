@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -53,9 +53,17 @@ msgstr ""
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
@@ -285,11 +293,11 @@ msgid ""
 "Signed transactions are ready to be announced to the network. You can either"
 " use the SDK ``TransactionHttp`` service or append the payload to the "
 "request of the `transaction endpoint "
-"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_."
+"<https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_."
 msgstr ""
 "署名されたトランザクションはネットワークにアナウンスする準備ができています。SDK ``TransactionHttp`` "
-"サービスを使用するか、ペイロードを `transaction endpoint "
-"<https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_ "
+"サービスを使用するか、ペイロードを `トランザクションエンドポイント "
+"<https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_ "
 "のリクエストに追加することができます。"
 
 #: ../../source/concepts/transaction.rst:170
@@ -367,17 +375,14 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:196
 msgid ""
-"NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than "
-"40 confirmations, it cannot be reversed."
-msgstr "NEMの書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
+"Catapult has a rewrite limit of ``40`` blocks. Once a transaction has more "
+"than 40 confirmations, it cannot be reversed."
+msgstr ""
+"Catapult の書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
 
 #: ../../source/concepts/transaction.rst:202
 msgid "Guides"
 msgstr "ガイド"
-
-#: ../../source/concepts/transaction.rst:214
-msgid "Schemas"
-msgstr "スキーマ"
 
 #: ../../source/concepts/transaction.rst:221
 msgid "Serialization of a transaction."
@@ -385,9 +390,13 @@ msgstr "トランザクションのシリアル化"
 
 #: ../../source/concepts/transaction.rst:223
 #: ../../source/concepts/transaction.rst:243
+#: ../../source/concepts/transaction.rst:260
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
+#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 msgid "Property"
@@ -399,23 +408,92 @@ msgstr "トランザクションに最大の手数料を支払うことが許可
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
-"Number of seconds elapsed since the creation of the nemesis block. If a "
-"transaction does not get included in a block before the deadline is reached,"
-" it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead."
+"Number of milliseconds elapsed since the creation of the nemesis block. If a"
+" transaction does not get included in a block before the deadline is "
+"reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours"
+" ahead."
 msgstr ""
-"ネメシスブロックが作成されてから経過した秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
+"ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/concepts/transaction.rst:241
+#: ../../source/concepts/transaction.rst:1
+msgid ""
+"Reserved padding to align end of EmbeddedTransactionHeader on 8-byte "
+"boundary."
+msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
+
+#: ../../source/concepts/transaction.rst:258
 msgid ""
 "Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
 "transaction."
 msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:253
+#: ../../source/concepts/transaction.rst:274
 msgid "Serialization of an entity that has a prefixed size."
 msgstr "サイズをプレフィックスしたエンティティのシリアル化"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Size of the transaction."
 msgstr "トランザクションのサイズ"
+
+#: ../../source/concepts/transaction.rst:287
+msgid "Serialization of an entity that should be signed by an account."
+msgstr "アカウントによって署名されるべきエンティティのシリアル化。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "reserved padding to align Signature on 8-byte boundary."
+msgstr "Signature を 8 バイト境界に揃えた予約パディング"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Entity signature generated by the signer."
+msgstr "署名者により生成されたエンティティの署名。"
+
+#: ../../source/concepts/transaction.rst:301
+msgid ""
+"Serialization of an entity. An entity could be a block or a "
+":doc:`transaction <transaction>`."
+msgstr "エンティティのシリアル化。エンティティはブロックまたは :doc:`トランザクション <transaction>` です。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Public key of the signer of the entity."
+msgstr "エンティティの署名者の公開鍵"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Reserved padding to align end of EntityBody on 8-byte boundary."
+msgstr "EntityBody の終わりを 8 バイト境界に揃えた予約パディング"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Version of the structure."
+msgstr "構造体のバージョン"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Entity network."
+msgstr "エンティティネットワーク"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Entity type."
+msgstr "エンティティタイプ"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "(MAIN_NET) Public network."
+msgstr "(MAIN_NET) パブリックネットワーク"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "(TEST_NET) Public test network."
+msgstr "(TEST_NET) パブリックテストネットワーク"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "(MIJIN) Private network."
+msgstr "(MIJIN) プライベートネットワーク"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "(MIJIN_TEST) Private test network."
+msgstr "(MIJIN_TEST) プライベートテストネットワーク"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "Reserved."
+msgstr "予約済み"
+
+#: ../../source/concepts/transaction.rst:342
+msgid "Continue: :doc:`Fees <fees>`."
+msgstr "次へ: :doc:`手数料 <fees>`"

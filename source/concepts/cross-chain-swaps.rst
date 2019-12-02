@@ -18,9 +18,9 @@ In other words, to reduce counterparty risk, the receiver of a payment needs to 
 Protocol
 ********
 
-Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in NEM public chain, whereas bob token is only present in a private chain using Catapult technology.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in Catapult's public chain, whereas bob token is only present in a private chain using Catapult technology.
 
-.. note:: NEM's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
+.. note:: Catapult's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
 
 .. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
     :caption: Atomic cross-chain swap sequence diagram
@@ -70,11 +70,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _secret-lock-transaction:
 
@@ -147,3 +145,5 @@ Enumeration: uint8
     1 (Op_Keccak_256); Proof is hashed using Keccak (ETH compatibility).
     2 (Op_Hash_160); Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
     3 (Op_Hash_256); Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).
+
+Continue: :doc:`Cryptography <cryptography>`.

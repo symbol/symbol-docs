@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 13 Sep, 2019
-    :category: Mosaic, Mosaic Restriction
+    :category: Mosaic
     :excerpt: 1
     :nocomments:
 
@@ -25,16 +25,13 @@ Prerequisites
 
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
-**********************
-Getting into some code
-**********************
-
+******************************
 Creating a restrictable mosaic
-==============================
+******************************
 
 Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
 
-1. Start creating a new restrictable mosaic with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-and-opening-an-account>`.
+1. Start creating a new restrictable mosaic with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
 
 .. code-block:: bash
 
@@ -51,6 +48,10 @@ Before starting to work with Mosaic Restrictions, we need to have created a rest
     Your mosaic id is: 634a8ac3fc2b65b3
 
 2. Then, copy and save the mosaic identifier. We will need it later to define restrictions.
+
+*************************
+Method #01: Using the SDK
+*************************
 
 Setting a Mosaic Global Restriction
 ===================================

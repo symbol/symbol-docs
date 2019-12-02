@@ -76,9 +76,10 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+***************
+Receipt schemas
+***************
+
 
 .. _receipt:
 
@@ -286,3 +287,5 @@ Enumeration: uint16
     :delim: ;
 
     0x0000; Reserved.
+
+Continue: :doc:`Node <node>`.

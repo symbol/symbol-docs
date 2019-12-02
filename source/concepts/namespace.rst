@@ -2,13 +2,7 @@
 Namespace
 #########
 
-Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the NEM blockchain.
-
-.. figure:: ../resources/images/examples/namespace-setup.png
-    :align: center
-    :width: 450px
-
-    Organizing assets with namespaces
+Namespaces allow you to :doc:`create an on-chain unique place <../guides/namespace/registering-a-namespace>` for your business and your assets on the blockchain.
 
 ****
 Name
@@ -20,7 +14,13 @@ Namespaces function similarly to internet domains. Creating a namespace starts w
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces to **identify and organize assets**.
+On the internet, a domain can have a sub-domain. In Catapult, namespaces can have subnamespaces to **identify and organize assets**.
+
+.. figure:: ../resources/images/examples/namespace-setup.png
+    :align: center
+    :width: 450px
+
+    Organizing assets with namespaces
 
 Namespaces can have up to ``3`` levels, a namespace and its two levels of subnamespace domains. A subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
@@ -108,11 +108,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _namespace-registration-transaction:
 
@@ -213,3 +211,5 @@ Enumeration: uint8
 
     0x00; Link alias.
     0x01; Unlink alias.
+
+Continue: :doc:`Metadata <metadata>`.

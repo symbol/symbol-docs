@@ -31,7 +31,7 @@ Legacy API calls that used to work for NIS1 network nodes are **not compatible**
 
 * Reference: :doc:`Catapult REST <../../api>`
 
-* Reference: `REST API contract </endpoints.html>`_
+* Reference: `REST API contract <https://nemtech.github.io/nem2-openapi/>`_
 
 There are several **Software Development Kits** that have been—and some that are—under development for Catapult distributed ledgers consumer applications.
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.
@@ -45,7 +45,7 @@ Accounts management
 
 Management of :doc:`account <../../concepts/account>` with Catapult has not changed much compared to the previous NIS1 public network accounts. A few notable changes have happened as to public verifiability of accounts and field names returned in the REST endpoints.
 
-* Guide: :doc:`Creating and opening an account  <../account/creating-and-opening-an-account>`
+* Guide: :doc:`Creating and opening an account  <../account/creating-an-account>`
 * Guide: :doc:`Getting the account information <../account/getting-account-information>`
 
 *******************
@@ -108,7 +108,7 @@ To get the real identifier behind an aliased address or mosaic, the client appli
 Multisignature management
 *************************
 
-With multisignature accounts managed on-chain, the NEM multisignature implementation is different from many other—so-called client-side—multisignature implementations.
+With multisignature accounts managed on-chain, Catapult's multisignature implementation is different from many other—so-called client-side—multisignature implementations.
 
 1. Creating a :doc:`multisignature account <../../concepts/multisig-account>`.
 

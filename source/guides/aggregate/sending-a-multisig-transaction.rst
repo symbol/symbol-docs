@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 20 Aug, 2018
-    :category: Aggregate Transaction, Multisig Account
+    :category: Multisig Account
     :excerpt: 1
     :nocomments:
 
@@ -23,7 +23,7 @@ Background
 
 Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in Catapult as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 In this guide, you will send a transaction from a multisig account.
 
@@ -33,16 +33,13 @@ Prerequisites
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../multisig/converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 - A multisig :ref:`account with cat.currency <setup-creating-a-test-account>`
 - A cosignatory :ref:`account with cat.currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
-1-of-2 signatures required
-==========================
+**************************************
+Example #1: 1-of-2 signatures required
+**************************************
 
 Bob has finished filling the basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
 
@@ -110,8 +107,9 @@ An AggregateTransaction is **complete** if before announcing it to the network, 
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-2-of-2 signatures required
-==========================
+**************************************
+Example #2: 2-of-2 signatures required
+**************************************
 
 What would have happened if the account was a **2-of-2 multisig** instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
 

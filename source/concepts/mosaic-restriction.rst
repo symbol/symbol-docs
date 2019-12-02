@@ -117,10 +117,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
+*******************
+Transaction schemas
+*******************
 .. _mosaic-global-restriction-transaction:
 
 MosaicGlobalRestrictionTransaction
@@ -191,3 +190,5 @@ Enumeration: uint8
     4 (LTE); Allow if allow if less than or equal.
     5 (GT); Allow if greater than.
     6 (GTE); Allow if greater than or equal.
+
+Continue: :doc:`Multisig Accounts <multisig-account>`.

@@ -6,7 +6,7 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on Catapult.
 
 We will be using the **test network**, which uses the same technology and features of the future main public network. You can use the testnet to experiment with the offered Catapult's transaction set in a live network without the loss of valuable assets.
 
@@ -18,14 +18,11 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-We are going to create a new account with :doc:`NEM2-CLI <../cli>`, a command-line tool utilized to execute the most commonly used actions, i.e., interacting with the blockchain, setting up an account, sending funds, etc.
-
 1. Install NEM2-CLI.
 
 .. code-block:: bash
 
     npm install --global nem2-cli@0.13.4
-
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
 2. Generate a new account and save it as a **profile**.
@@ -56,8 +53,6 @@ We are going to create a new account with :doc:`NEM2-CLI <../cli>`, a command-li
     │ Private Key │ 123...456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. ith other participants of the network to receive transactions from them.
-
 .. _setup-getting-test-currency:
 
 *********************
@@ -81,7 +76,7 @@ After the transaction gets confirmed, check if the account has received ``cat.cu
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 0DC67FBE1CAD29E3 │ 299,966,666.6   │ 299966666600000 │ Never             │
+    │ 0DC67FBE1CAD29E3 │ 866.0           │ 866000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 .. note:: The faucet has a limited amount of ``cat.currency`` and must be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account ``TAQ4FD-H2UHU5-TZ2VIW-Z6VWSN-MFWR7C-353F73-EUMY``.
@@ -94,7 +89,7 @@ Creating a project
 
 Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
-Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
 .. tabs::
 
@@ -110,9 +105,9 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
-        3. We recommend using the **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. We recommend to use **TypeScript instead of JavaScript** when building applications for Catapult.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -139,7 +134,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk@0.15.0 rxjs
 
     .. tab:: Java
 

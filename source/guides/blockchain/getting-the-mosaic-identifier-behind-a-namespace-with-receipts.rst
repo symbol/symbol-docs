@@ -5,7 +5,7 @@ Getting the asset identifier behind a namespace with receipts
 #############################################################
 
 .. post:: 11 Jul, 2019
-    :category: Receipt, Mosaic
+    :category: Receipt
     :excerpt: 1
     :nocomments:
 
@@ -17,7 +17,7 @@ Background
 
 In Catapult, accounts can link their registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`. This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
 
-Imagine a ticket vendor sending tickets to their customers on the NEM blockchain. The company needs to send ``1 0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. With aliases, it can define the same transaction as sending ``1 ticketsales.event1.ticket`` to ``@alice`` instead.
+Imagine a ticket vendor sending tickets to their customers on the Catapult public blockchain. The company needs to send ``1 0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. With aliases, it can define the same transaction as sending ``1 ticketsales.event1.ticket`` to ``@alice`` instead.
 
 .. figure:: ../../resources/images/examples/namespace-tickets.png
     :align: center
@@ -36,7 +36,7 @@ To ensure the transactions are being sent to the correct place with the correct 
 
 However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
 
-* Transactions using aliased mosaics or accounts are stored in the blockchain using the namespace identifier, not the real address or mosaic id behind it.
+* Transactions using aliased mosaics or accounts are stored on the blockchain using the namespace identifier, not the real address or mosaic id behind it.
 * Links are editable. The namespace owner can link its namespace to another asset.
 * Namespaces expire. The namespace link could be deleted.
 

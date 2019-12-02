@@ -89,11 +89,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _account-address-restriction-transaction:
 
@@ -189,3 +187,5 @@ Enumeration: uint16
     0x0004; Restriction type is a transaction type.
     0x4000; Restriction is interpreted as outgoing.
     0x8000; Restriction is interpreted as blocking operation.
+
+Continue: :doc:`Mosaic Restrictions <mosaic-restriction>`.

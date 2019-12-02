@@ -23,6 +23,6 @@ const height = 1;
 
 const blockHttp = new BlockHttp('http://localhost:3000');
 blockHttp
-    .getBlockByHeight(height)
+    .getBlockByHeight(height.toString())
     .subscribe(block => console.log(block), err => console.error(err));
 /* end block 01 */

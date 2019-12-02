@@ -41,7 +41,7 @@ Encrypted message
 
 Encrypted messages are only accessible by the sender and the recipient.
 
-NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
+Catapult uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
 
 The client-side handles the encryption and decryption of the message. You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/nem2-library-js/blob/master/src/crypto/crypto.js#L255>`_ and `decode <https://github.com/nemtech/nem2-library-js/blob/master/src/crypto/crypto.js#L287>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
 
@@ -57,9 +57,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+*******************
+Transaction schemas
+*******************
 
 .. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
 
@@ -103,3 +103,5 @@ Enumeration: uint8
     0x00; Plain message.
     0x01; Encrypted message.
     0xFE; Persistent harvesting delegation.
+
+Continue: :doc:`Aggregate Transaction <aggregate-transaction>`.

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 11 Oct, 2019
-    :category: Account, Harvesting
+    :category: Harvesting
     :excerpt: 1
     :nocomments:
 
@@ -17,7 +17,12 @@ Background
 
 :ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
 
-Follow this guide to **delegate your account importance** without compromising the account's funds.
+Follow this guide to **delegate your account importance** without compromising the account's funds. Before you can activate delegated harvesting, make sure your main account has at least ``500 cat.harvest`` units. Then, you will have to **delegate your main account importance** to a **proxy public key** (remote account) before **requesting a node to add you as a delegated harvester**.
+
+.. mermaid:: ../../resources/diagrams/delegated-harvesting-activation.mmd
+    :caption: Delegated harvesting activation diagram
+    :alt: Delegated harvesting activation diagram
+    :align: center
 
 *************
 Prerequisites
@@ -27,16 +32,9 @@ Prerequisites
 - Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 - Have one account with more than ``500`` cat.harvest.
 
-**********************
-Getting into some code
-**********************
-
-Before you can activate delegated harvesting, make sure your main account has at least ``500 cat.harvest`` units. Then, you will have to **delegate your main account importance** to a **proxy public key** (remote account) before **requesting a node to add you as a delegated harvester**.
-
-.. mermaid:: ../../resources/diagrams/delegated-harvesting-activation.mmd
-    :caption: Delegated harvesting activation diagram
-    :alt: Delegated harvesting activation diagram
-    :align: center
+*************************
+Method #01: Using the SDK
+*************************
 
 1. Define your **main account** and the **remote account** using their private keys. The proxy private key (remote account) must belong to a **brand new** account that did not send or received any transaction previously.
 

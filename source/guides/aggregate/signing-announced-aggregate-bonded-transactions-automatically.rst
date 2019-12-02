@@ -9,7 +9,7 @@
 Cosigning aggregate bonded transactions automatically
 #####################################################
 
-Sign automatically transactions pending to be cosigned.
+Create a bot to cosign automatically transactions that require your account's signature.
 
 *************
 Prerequisites
@@ -18,11 +18,9 @@ Prerequisites
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
 - Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
-This guide will show you how to **create a bot to cosign transactions that require your account's signature** automatically.
+******************
+Developing the bot
+******************
 
 1. Create a function to cosign any **AggregateBondedTransaction**.
 

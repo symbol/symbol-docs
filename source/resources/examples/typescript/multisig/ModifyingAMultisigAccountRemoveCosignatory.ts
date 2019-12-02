@@ -38,13 +38,12 @@ const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemov
 const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
 
-const multisigCosignatoryModification = new MultisigCosignatoryModification(CosignatoryModificationAction.Remove,cosignatoryToRemove);
-
 const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     0,
     0,
-    [multisigCosignatoryModification],
+    [],
+    [cosignatoryToRemove],
     NetworkType.MIJIN_TEST);
 
 const aggregateTransaction = AggregateTransaction.createComplete(

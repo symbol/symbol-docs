@@ -18,28 +18,26 @@
 
 import {
     Account,
-    AccountRestrictionModification,
+    AccountRestrictionFlags,
     AccountRestrictionTransaction,
     Address,
     Deadline,
     NetworkType,
-    AccountRestrictionModificationAction,
-    AccountRestrictionType,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
 const companyRawAddress = process.env.COMPANY_ADDRESS as string;
 const companyAddress = Address.createFromRawAddress(companyRawAddress);
-const addressRestriction = AccountRestrictionModification.createForAddress(AccountRestrictionModificationAction.Remove, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
         Deadline.create(),
-        AccountRestrictionType.AllowIncomingAddress,
-        [addressRestriction],
+        AccountRestrictionFlags.AllowIncomingAddress,
+        [],
+        [companyAddress],
         NetworkType.MIJIN_TEST);
 /* end block 02 */
 

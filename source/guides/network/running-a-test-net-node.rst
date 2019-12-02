@@ -107,7 +107,7 @@ SDKs
 
 * :doc:`Software Development Kits<../../sdk>`: Integrate your app with NEM blockchain.
 
-In this portal, you can find everything you need to know about :doc:`Catapult’s features <../../getting-started/what-is-nem>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

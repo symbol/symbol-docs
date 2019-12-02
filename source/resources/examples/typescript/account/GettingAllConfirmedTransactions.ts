@@ -30,10 +30,10 @@ const rawAddress = process.env.ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
 
 accountHttp
-    .transactions(address, new QueryParams(pageSize, undefined))
+    .getAccountTransactions(address, new QueryParams(pageSize, undefined))
     .pipe(
         expand( (transactions) => transactions.length >= pageSize && allTransactions
-            ? accountHttp.transactions(address, new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
+            ? accountHttp.getAccountTransactions(address, new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
             : EMPTY),
         concatMap(transactions => transactions),
         toArray()

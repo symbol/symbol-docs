@@ -36,9 +36,9 @@ Prerequisites
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
 Before starting solving the use case, you will need to set up two accounts with :doc:`NEM2-CLI <../../cli>`.
 
@@ -50,7 +50,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): product
 
     New Account
@@ -72,7 +72,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): company
 
     New Account
@@ -99,7 +99,7 @@ By default, when there is no restriction set, all the accounts in the network ca
 
 Returning to our previous example, let us imagine that you want to configure the product account to only accept receiving transactions  that come from the company's account. You might take the following steps to do so:
 
-1. Define the **AccountRestrictionModification**. Add to the company’s address ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list.
+1. Define the company’s address ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` in a new variable.
 
 .. example-code::
 
@@ -108,7 +108,7 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an **AccountRestrictionTransaction**, with restrictionType ``AllowAddress``.  Add to the array the modification created in the previous step.
+2. Create an **AccountRestrictionTransaction**, with restrictionType ``AllowAddress``.  Add to the company’s address from the previous step to the allowed list.
 
 .. example-code::
 

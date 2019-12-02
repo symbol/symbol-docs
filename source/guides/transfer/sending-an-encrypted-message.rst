@@ -29,11 +29,11 @@ Alice knows that sending a TransferTransaction with a **plain message** through 
 
 Thus, Alice sends an **encrypted message** that is only readable by herself and those with access to the academic certificate.
 
-**********************
-Getting into some code
-**********************
+***********************
+Setting up the use case
+***********************
 
-1. Create an account for Alice, and another for the certificate  using ``nem2-cli``.
+Create an account for Alice, and another for the certificate  using ``nem2-cli``.
 
 .. code-block:: bash
 
@@ -41,7 +41,7 @@ Getting into some code
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save it? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 .. code-block:: bash
@@ -50,11 +50,15 @@ Getting into some code
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Do you want to save it? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 
-2. Create an **encrypted message** for the certificate, signing it with Alice's account.
+*************************
+Method #01: Using the SDK
+*************************
+
+1. Create an **encrypted message** for the certificate, signing it with Alice's account.
 
 .. example-code::
 
@@ -64,7 +68,7 @@ Getting into some code
         :end-before: /* end block 01 */
 
 
-3. Attach the encrypted message to a **TransferTransaction**, setting the certificate address as the recipient.
+2. Attach the encrypted message to a **TransferTransaction**, setting the certificate address as the recipient.
 
 .. example-code::
 
@@ -73,7 +77,7 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. Sign the transaction with Alice's account.
+3. Sign the transaction with Alice's account.
 
 .. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
@@ -84,7 +88,7 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-5. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
+4. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
@@ -93,7 +97,7 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-6. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
+5. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
 

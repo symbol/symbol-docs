@@ -1,6 +1,6 @@
-###################
-Consensus Algorithm
-###################
+#########
+Consensus
+#########
 
 Catapult uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
 
@@ -65,3 +65,5 @@ The combination of Transaction Score and Node Score has a multiplier effect when
 .. |pos| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>
+
+Continue: :doc:`Harvesting <harvesting>`.

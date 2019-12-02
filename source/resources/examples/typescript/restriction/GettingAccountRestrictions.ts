@@ -16,20 +16,20 @@
  *
  */
 
-import {AccountRestrictionType, Address, RestrictionHttp} from "nem2-sdk";
+import {AccountRestrictionFlags, Address, RestrictionAccountHttp} from "nem2-sdk";
 
 /* start block 01 */
 const rawAddress = process.env.COMPANY_ADDRESS as string;
 const address = Address.createFromRawAddress(rawAddress);
 
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
+const restrictionHttp = new RestrictionAccountHttp('http://localhost:3000');
 restrictionHttp.getAccountRestrictions(address)
     .subscribe((accountRestrictions) => {
         if (accountRestrictions.length > 0) {
             accountRestrictions
                 .filter((accountRestriction) => accountRestriction.values.length > 0)
                 .map((accountRestriction) => {
-                    console.log('\n', AccountRestrictionType[accountRestriction.restrictionType], accountRestriction.values.toString());
+                    console.log('\n', AccountRestrictionFlags[accountRestriction.restrictionFlags], accountRestriction.values.toString());
                 });
         } else {
             console.log('The address does not have account restriction assigned.');

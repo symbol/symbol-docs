@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -69,21 +69,22 @@ msgstr "プロトコル"
 msgid ""
 "Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The "
 "problem is that they are not in the same blockchain: alice token is defined "
-"in NEM public chain, whereas bob token is only present in a private chain "
-"using Catapult technology."
+"in Catapult's public chain, whereas bob token is only present in a private "
+"chain using Catapult technology."
 msgstr ""
 "Alice と Bob は **10 alice:tokens を 10 bob:tokens** "
-"に交換したいと思っています。課題は彼らが同じブロックチェーン上に存在していないことです: alice:token は NEM "
+"に交換したいと思っています。課題は彼らが同じブロックチェーン上に存在していないことです: alice:token は Catapult "
 "のパブリックチェーン上に、一方で bob:token は Catapult テクノロジーによるプライベートネットワーク上に定義されています。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:23
 msgid ""
-"NEM's private and future public chain share the SDK. You could implement "
-"atomic cross-chain swap between blockchains that use different technologies "
-"if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`."
+"Catapult's private and future public chain share the SDK. You could "
+"implement atomic cross-chain swap between blockchains that use different "
+"technologies if they permit the :ref:`secret lock/proof mechanism <lock-"
+"hash-algorithm>`."
 msgstr ""
-"NEM のプライベートと将来のパブリックチェーンは SDK を共有しています。 :ref:`シークレットロック/プルーフメカニズム <lock-"
-"hash-algorithm>` が許可されているなら、別のテクノロジーによるブロックチェーン間でもアトミックスワップを実装できるでしょう。"
+"Catapult のプライベートと将来のパブリックチェーンは SDK を共有しています。 :ref:`シークレットロック/プルーフメカニズム "
+"<lock-hash-algorithm>` が許可されているなら、別のテクノロジーによるブロックチェーン間でもアトミックスワップを実装できるでしょう。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:29
 msgid ""
@@ -201,19 +202,7 @@ msgstr ""
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/cross-chain-swaps.rst:75
-msgid "Schemas"
-msgstr "スキーマ"
-
-#: ../../source/concepts/cross-chain-swaps.rst:77
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:84
+#: ../../source/concepts/cross-chain-swaps.rst:82
 msgid ""
 "Use a SecretLockTransaction to transfer mosaics between two accounts. The "
 "specified mosaics remain locked until a valid :ref:`SecretProofTransaction "
@@ -223,29 +212,25 @@ msgstr ""
 ":ref:`SecretProofTransaction <secret-proof-transaction>` "
 "がそれらをアンロックするまで、ロックされたままになります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:86
+#: ../../source/concepts/cross-chain-swaps.rst:84
 msgid ""
 "If the transaction duration is reached without being proved, the locked "
 "amount goes back to the initiator of the SecretLockTransaction."
 msgstr ""
 "トランザクションが証明されずに期間に到達した場合、ロックされた総量はSecretLockTransactionを開始したアカウントへ戻ります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:88
-#: ../../source/concepts/cross-chain-swaps.rst:115
+#: ../../source/concepts/cross-chain-swaps.rst:86
+#: ../../source/concepts/cross-chain-swaps.rst:113
 msgid "**Version**: 0x01"
 msgstr "**バージョン**: 0x01"
 
 #: ../../source/concepts/cross-chain-swaps.rst:90
-msgid "**Entity type**: 0x4152"
-msgstr "**エンティティタイプ**: 0x4152"
-
-#: ../../source/concepts/cross-chain-swaps.rst:92
-#: ../../source/concepts/cross-chain-swaps.rst:119
+#: ../../source/concepts/cross-chain-swaps.rst:117
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/cross-chain-swaps.rst:94
-#: ../../source/concepts/cross-chain-swaps.rst:121
+#: ../../source/concepts/cross-chain-swaps.rst:92
+#: ../../source/concepts/cross-chain-swaps.rst:119
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -270,6 +255,11 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
+#: ../../source/concepts/cross-chain-swaps.rst:1
+msgid "Proof hashed."
+msgstr "ハッシュ化された証明"
+
+#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Locked mosaic."
 msgstr "ロックされたモザイク"
 
@@ -287,15 +277,10 @@ msgstr "proof に使用されているハッシュアルゴリズム"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Proof hashed."
-msgstr "ハッシュ化された証明"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Address that receives the funds once unlocked."
 msgstr "ロック解除後、ファンドを受け取るアドレス"
 
-#: ../../source/concepts/cross-chain-swaps.rst:111
+#: ../../source/concepts/cross-chain-swaps.rst:109
 msgid ""
 "Use a SecretProofTransaction to unlock :ref:`SecretLockTransactions <secret-"
 "lock-transaction>`."
@@ -303,7 +288,7 @@ msgstr ""
 "SecretProofTransactionは :ref:`SecretLockTransactions <secret-lock-"
 "transaction>` のアンロックに使用します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:113
+#: ../../source/concepts/cross-chain-swaps.rst:111
 msgid ""
 "The transaction must prove that it knows the *proof* that unlocks the "
 "mosaics."
@@ -317,7 +302,7 @@ msgstr "バイト換算のプルーフサイズ"
 msgid "Original random set of bytes."
 msgstr "元のランダムなバイト列"
 
-#: ../../source/concepts/cross-chain-swaps.rst:138
+#: ../../source/concepts/cross-chain-swaps.rst:136
 msgid "The list of supported hashing algorithms."
 msgstr "サポートされているハッシュアルゴリズムのリスト"
 
@@ -339,3 +324,7 @@ msgstr ""
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256)."
 msgstr "SHA-256 によって2回のハッシュ化されたproof (bitcoin's OP_HASH256)"
+
+#: ../../source/concepts/cross-chain-swaps.rst:149
+msgid "Continue: :doc:`Cryptography <cryptography>`."
+msgstr "次へ: :doc:`暗号手法 <cryptography>`"

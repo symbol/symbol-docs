@@ -4,15 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,276 +25,29 @@ msgstr ""
 msgid "REST Gateway"
 msgstr "REST ゲートウェイ"
 
-#: ../../source/api.rst:5
-msgid ""
-"The **REST gateway** combines HTTP and WebSockets to perform read and write "
-"actions in the NEM blockchain."
-msgstr ""
-"**REST ゲートウェイ** は HTTP と WebSockets を NEM ブロックチェーン上で読み書きアクションが実行できるように構成します。"
-
-#: ../../source/api.rst:9
-msgid "Installation"
-msgstr "インストール"
-
 #: ../../source/api.rst:11
-msgid "**Repository**: |catapult-rest|"
-msgstr "**リポジトリ**: |catapult-rest|"
-
-#: ../../source/api.rst:13
-msgid ""
-"catapult-rest is already included in |catapult-service-bootstrap|. Follow "
-"the :doc:`package's installation instructions <getting-started/setup-"
-"workstation>` to deploy a network for development or learning purposes."
-msgstr ""
-"catapult-rest はすでに |catapult-service-bootstrap| に含まれています。開発または学習を目的に "
-":doc:`パッケージのインストール手順 <getting-started/setup-workstation>` "
-"に従って、ネットワークをデプロイしてください。"
-
-#: ../../source/api.rst:15
-msgid "To install catapult-rest from scratch, you will need:"
-msgstr "catapult-rest をスクラッチからインストールするには、次が必要です:"
-
-#: ../../source/api.rst:17
-msgid "NodeJS version 8 or 9"
-msgstr "NodeJS バージョン 8 または 9"
-
-#: ../../source/api.rst:18
-msgid "|yarn| dependency manager"
-msgstr "|yarn| 依存関係マネージャ"
-
-#: ../../source/api.rst:19
-msgid "|catapult-server| configured as an :doc:`API node <server>`."
-msgstr "|catapult-server| は :doc:`API ノード <server>` として設定されています。"
-
-#: ../../source/api.rst:21
-msgid "Edit ``rest/resources/rest.json`` configuration:"
-msgstr "``rest/resources/rest.json`` 設定を編集します:"
-
-#: ../../source/api.rst:1
-msgid "Parameter"
-msgstr "パラメータ"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Description"
-msgstr "説明"
-
-#: ../../source/api.rst:1
-msgid "Example"
-msgstr "例"
-
-#: ../../source/api.rst:1
-msgid "REST client private key."
-msgstr "REST クライアントの秘密鍵"
-
-#: ../../source/api.rst:1
-msgid "MongoDB :properties:`connection URL <config-database.properties#L3>`"
-msgstr "MongoDB :properties:`接続URL <config-database.properties#L3>`"
-
-#: ../../source/api.rst:1
-msgid "API node connection host."
-msgstr "API ノード接続ホスト"
-
-#: ../../source/api.rst:1
-msgid ""
-"API node :properties:`connection port <config-database.properties#L3>`."
-msgstr "API ノード :properties:`接続ポート <config-database.properties#L3>`"
-
-#: ../../source/api.rst:1
-msgid "API node :properties:`public key <config-user.properties#L4>`."
-msgstr "API ノード :properties:`公開鍵 <config-user.properties#L4>`"
-
-#: ../../source/api.rst:1
-msgid "ZeroMQ connection host."
-msgstr "ZeroMQ 接続ホスト"
-
-#: ../../source/api.rst:1
-msgid "ZeroMQ :properties:`connection port <config-messaging.properties#L3>`."
-msgstr "ZeroMQ :properties:`接続ポート <config-messaging.properties#L3>`"
-
-#: ../../source/api.rst:36
-msgid ""
-"Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you "
-"are running catapult-server on a VPS, you can bind the ports to your local "
-"development environment creating an **SSH tunnel**: ``ssh -L "
-"27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 "
-"<USER>@<VPS_IP>``"
-msgstr ""
-"Catapult REST は API ノード、ZeroMQ そして MongoDB ポートに到達できなければなりません。 catapult-"
-"server を VPS サービス上で稼働させている場合は **SSH トンネル** を作成して、ポートをローカル開発環境と結びつけられます: "
-"``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902"
-" -p 2357 <USER>@<VPS_IP>``"
-
-#: ../../source/api.rst:38
-msgid "Install the project's dependencies:"
-msgstr "プロジェクトの依存関係をインストール"
-
-#: ../../source/api.rst:44
-msgid "Run catapult-rest:"
-msgstr "catapult-rest の起動:"
-
-#: ../../source/api.rst:55
 msgid "Http requests"
 msgstr "HTTP リクエスト"
 
-#: ../../source/api.rst:57
-msgid ""
-"Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and "
-"**POST** requests."
-msgstr ""
-"Catapult REST はポート ``3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
-"リクエストを受け付けます。"
-
-#: ../../source/api.rst:59
-msgid ""
-"Assuming that Catapult REST is :doc:`running locally  <getting-started"
-"/setup-workstation>`, HTTP GET requests can be executed from a browser and "
-"have the form:"
-msgstr ""
-"Catapult REST が :doc:`ローカルで動いている <getting-started/setup-workstation>` "
-"と仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
-
-#: ../../source/api.rst:63
-msgid ""
-"HTTP PUT and POST requests use JSON structures in the request body. Request "
-"returns data using JSON structures. This kind of request cannot usually be "
-"executed from within the browser unless you use a :ref:`plugin <tools>` "
-"which enables you to do it."
-msgstr ""
-"HTTP PUT と POST "
-"リクエストはボディ部にJSON形式を使用します。リクエストはデータをJSON形式で返します。この種のリクエストはそれが可能な :ref:`プラグイン "
-"<tools>` を利用しないことにはブラウザから実行することができません。"
-
-#: ../../source/api.rst:65
+#: ../../source/api.rst:21
 msgid ""
 "Get the complete list of available endpoints by clicking on the button "
 "below:"
 msgstr "利用可能なエンドポイントの完全なリストを入手するには下のボタンをクリックしてください:"
 
-#: ../../source/api.rst:77
-msgid ""
-"WebSockets make receiving notifications possible when a transaction or event"
-" occurs in the blockchain. The notification is received in real time without"
-" having to poll the API waiting for a reply."
-msgstr ""
-"WebSockets はブロックチェーン上でトランザクションやイベントが発生した通知を受け取ることを可能にします。この通知は API "
-"の返却を待つことなくリアルタイムで行われます。"
-
-#: ../../source/api.rst:79
-msgid ""
-"The interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with"
-" **Listeners**."
-msgstr ""
-":doc:`NEM2-SDK <../sdk>` で API WebSocket と疎通するには **Listeners** を使用します。"
-
-#: ../../source/api.rst:82
+#: ../../source/api.rst:42
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:84
+#: ../../source/api.rst:44
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:86
-msgid ""
-"The block channel notifies for every new block. The message contains the "
-"block information."
-msgstr "ブロックチャンネルは新しいブロックごとに通知します。メッセージにはブロックの情報が含まれます。"
-
-#: ../../source/api.rst:90
-msgid ""
-"The confirmedAdded channel notifies when a transaction related to an address"
-" is included in a block. The message contains the transaction."
-msgstr ""
-"承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。メッセージにはトランザクションが含まれます。"
-
-#: ../../source/api.rst:94
-msgid ""
-"The unconfirmedAdded channel notifies when a transaction related to an "
-"address is in unconfirmed state and waiting to be included in a block. The "
-"message contains the transaction."
-msgstr ""
-"未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。メッセージにはトランザクションが含まれます。"
-
-#: ../../source/api.rst:96
-msgid ""
-"Possible scenarios when this channel notifies are: the transaction is "
-"announced to the network via ``PUT /transaction`` HTTP endpoint or an "
-"AggregateBondedTransaction has all required cosigners and change its state "
-"from *partial* to *unconfirmed*."
-msgstr ""
-"トランザクションが ``PUT /transaction`` HTTP "
-"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、 *partial* から *未承認* "
-"へ変わるとき、このチャンネルからの通知が届く可能性があります。"
-
-#: ../../source/api.rst:100
-msgid ""
-"The unconfirmedRemoved channel notifies when a transaction related to an "
-"address was in unconfirmed state but is not anymore. The message contains "
-"the transaction hash."
-msgstr ""
-"未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
-
-#: ../../source/api.rst:102
-msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is "
-"confirmed or the deadline has been reached and it was not included in a "
-"block."
-msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
-
-#: ../../source/api.rst:106
-msgid ""
-"The partialAdded channel notifies when an AggregateBondedTransaction related"
-" to an address is in *partial* state and waiting to have all *required "
-"cosigners*. The message contains a transaction."
-msgstr ""
-"パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが *partial* な状態にあり、すべての *必要な連署者* "
-"を待機しているときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
-
-#: ../../source/api.rst:108
-msgid ""
-"The scenario when this channel notifies is when an "
-"AggregateBondedTransaction is announced to the network via ``PUT "
-"/transaction/partial`` HTTP endpoint."
-msgstr ""
-"このチャンネルが通知するシナリオとしては、アグリゲートボンドトランザクションが ``PUT /transaction/partial`` "
-"経由でネットワークへアナウンスされたときです。"
-
-#: ../../source/api.rst:112
-msgid ""
-"The partialRemoved channel notifies when a transaction related to an address"
-" was in partial state but is not anymore. The message contains the "
-"transaction hash."
-msgstr ""
-"パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。メッセージにはトランザクションハッシュが含まれます。"
-
-#: ../../source/api.rst:114
-msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is in"
-" unconfirmed or the deadline has been reached and it was not included in a "
-"block."
-msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに取り込まれなくなったときです。"
-
-#: ../../source/api.rst:118
-msgid ""
-"The cosignature channel notifies when a *cosignature signed transaction* "
-"related to an address is added to an AggregateBondedTransaction with partial"
-" state. The message contains the cosignature signed transaction."
-msgstr ""
-"連署チャネルはアドレスに関連する *連署署名トランザクション* "
-"が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。メッセージには連署したトランザクションが含まれます。"
-
-#: ../../source/api.rst:122
-msgid ""
-"The status channel notifies when a transaction related to an address rises "
-"an error. The message contains the error message and the transaction hash."
-msgstr ""
-"ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。メッセージにはエラーとトランザクションハッシュが含まれます。"
-
-#: ../../source/api.rst:127
+#: ../../source/api.rst:189
 msgid "Status errors"
 msgstr "ステータスエラー"
 
-#: ../../source/api.rst:129
+#: ../../source/api.rst:191
 msgid ""
 "This section describes the error messages that can be returned via status "
 "channel after announcing a transaction."
@@ -304,6 +56,10 @@ msgstr "このセクションでは、トランザクションをアナウンス
 #: ../../source/api.rst:1
 msgid "Status"
 msgstr "ステータス"
+
+#: ../../source/api.rst:1
+msgid "Description"
+msgstr "説明"
 
 #: ../../source/api.rst:1
 msgid "Validation result is success."
@@ -527,10 +283,6 @@ msgid "Validation failed because namespace is not linked to an alias."
 msgstr "ネームスペースはエイリアスにリンクされていないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
-msgid "Validation failed because the account restriction type is invalid."
-msgstr "モザイク制限タイプが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
 msgid "Validation failed because a modification address is invalid."
 msgstr "変更アドレが妥当ではないため、バリデーションに失敗しました。"
 
@@ -545,6 +297,18 @@ msgid ""
 msgstr "受信者によってモザイクの転送が禁止されているため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
+msgid "Validation failed because the unconfirmed cache is too full."
+msgstr "未承認キャッシュが多すぎるため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:1
+msgid "Validation failed because the consumer input is empty."
+msgstr "消費者の入力が空のため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:1
+msgid "Validation failed because the chain part has too many blocks."
+msgstr "チェーンの一部が多すぎるブロックを持っているため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:1
 msgid "Validation failed because the remote chain is too far behind."
 msgstr "リモートチェーンのタイムスタンプが遅れすぎているため、バリデーションに失敗しました。"
 
@@ -554,17 +318,27 @@ msgid ""
 "future."
 msgstr "リモートチェーンのタイムスタンプが先に進みすぎているため、バリデーションに失敗しました。"
 
-#: ../../source/api.rst:288
+#: ../../source/api.rst:1
+msgid ""
+"Validation failed because the verification of the signature failed during a "
+"batch operation."
+msgstr "バッチ操作中に署名の検証に失敗したため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:1
+msgid "Validation failed because socket read rate limit was exceeded."
+msgstr "ソケットの読み込みレート制限を超えたため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:353
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/api.rst:289
+#: ../../source/api.rst:355
 msgid ""
 "We recommend using one of the following tools to interact with the available"
 " endpoints."
 msgstr "有効なエンドポイントと疎通するために以下のツールを推奨します:"
 
-#: ../../source/api.rst:294
+#: ../../source/api.rst:360
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
 "tool to create NEM2 components, such as additional tools, libraries or "
@@ -573,22 +347,10 @@ msgstr ""
 "**NEM2 ソフトウェア開発キット** とは NEM2 "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
-#: ../../source/api.rst:296
+#: ../../source/api.rst:362
 msgid ":doc:`Reference <../sdk>`"
 msgstr ":doc:`リファレンス <../sdk>`"
 
-#: ../../source/api.rst:297
+#: ../../source/api.rst:363
 msgid ":doc:`Guides <../concepts/account>`"
 msgstr ":doc:`ガイド <../concepts/account>`"
-
-#: ../../source/api.rst:302
-msgid "An open source HTTP client, available for Mac, Windows and Linux."
-msgstr "Mac, Windows, Linux 向けのオープンソースの HTTP クライアント。"
-
-#: ../../source/api.rst:304
-msgid "Download |insomnia-app| for your operative system."
-msgstr "あなたのOS用の |insomnia-app| をダウンロードしてください。"
-
-#: ../../source/api.rst:306
-msgid "Import the |insomnia-spec| for NEM."
-msgstr "NEM 用 |insomnia-spec| をインポートする"

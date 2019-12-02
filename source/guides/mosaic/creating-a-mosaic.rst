@@ -15,9 +15,9 @@ Tokenize an asset using mosaics.
 Background
 **********
 
-A private company, ComfyClothingCompany, decides that it wants to go public. Instead of a traditional IPO, the company decides to do an STO to issue tokens through the NEM platform.
+A private company, ComfyClothingCompany, decides that it wants to go public. Instead of a traditional IPO, the company decides to do an STO to issue tokens through the Catapult platform.
 
-In this guide, we are going to help this company to **create the tokens for their STO** using :doc:`mosaics <../../concepts/mosaic>` built-in feature and the NEM2-SDK.
+In this guide, we are going to help this company to **create the tokens for their STO**.
 
 *************
 Prerequisites
@@ -26,13 +26,13 @@ Prerequisites
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-1. Before starting this guide, make sure you have an :doc:`account loaded with cat.currency  <../../getting-started/setup-workstation>`.
+.. note:: Before starting this guide, make sure you have an :doc:`account loaded with cat.currency <../../getting-started/setup-workstation>`.
 
-2. Then, the company must create a mosaic to represent shares to their company. To do so, you will have to create a new file and define two transactions:
+1. Open a new file and define two transactions:
 
 a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
@@ -72,11 +72,11 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: NEM works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: Catapult works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -90,8 +90,12 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
 Once the transaction gets confirmed, you can try to :doc:`transfer <../transfer/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
+
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh

@@ -6,7 +6,7 @@ An account is a :ref:`key pair <keypair>` (private and public key) associated wi
 
 Think of an account as **container for assets**. It can be used to hold XEM or other mosaics, whether they are tokens or specialized assets.
 
-Moreover, NEM accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
+Moreover, Catapult accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
 
 **********
 Properties
@@ -22,7 +22,7 @@ A private key is a key to an account. Anyone with access to the private key ulti
 
 **Public key**
 
-The public key can be used to verify signatures of the account. The public key is stored in the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
+The public key can be used to verify signatures of the account. The public key is stored on the blockchain with the first issued transaction. An account which has not issued any transaction has its public key field empty.
 
 **Address**
 
@@ -40,7 +40,7 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 Multisig Account
 ****************
 
-Accounts become truly smart when configured with special rules – directly on the NEM blockchain – that define how they relate and control each other, as well as how their contents can be updated and transferred.
+Accounts become truly smart when configured with special rules—directly on the blockchain—that define how they relate and control each other, as well as how their contents can be updated and transferred.
 
 One crucial type of rule is :doc:`multisig <multisig-account>` control that allows ownership of account-based assets to be shared in a variety of ways between multiple parties.
 
@@ -61,3 +61,6 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
+
+Continue: :doc:`Mosaics <mosaic>`.
+

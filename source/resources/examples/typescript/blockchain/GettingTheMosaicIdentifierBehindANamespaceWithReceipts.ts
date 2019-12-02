@@ -19,15 +19,13 @@
 import {
     Account,
     Address,
-    BlockHttp,
     Deadline,
     Listener,
     Mosaic,
-    MosaicAlias,
-    MosaicId,
     NamespaceId,
     NetworkType,
     PlainMessage,
+    ReceiptHttp,
     ResolutionEntry,
     ResolutionStatement,
     TransactionHttp,
@@ -61,7 +59,7 @@ console.log(signedTransaction.hash);
 
 /* start block 03 */
 const nodeUrl = 'http://localhost:3000';
-const blockHttp = new BlockHttp(nodeUrl);
+const receiptHttp = new ReceiptHttp(nodeUrl);
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
@@ -80,7 +78,7 @@ listener.open().then(() => {
             filter((transaction) => transaction.transactionInfo !== undefined
                 && transaction.transactionInfo.hash === signedTransaction.hash),
             // Get the list of receipts triggered for that block
-            mergeMap((transaction) => blockHttp.getBlockReceipts(transaction.transactionInfo!.height.compact())),
+            mergeMap((transaction) => receiptHttp.getBlockReceipts(transaction.transactionInfo!.height.toString())),
             // Iterate over each resolution statement. Find the resolution for the aliased MosaicId.
             map((receipts) => receipts.mosaicResolutionStatements),
             mergeMap((resolutionStatements) => resolutionStatements),

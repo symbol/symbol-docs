@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -360,10 +360,6 @@ msgstr "いかなるトランザクションの開始。"
 msgid "involvement with any type of transactions."
 msgstr "あらゆる種類のトランザクションへの関与。"
 
-#: ../../source/concepts/harvesting.rst:131
-msgid "**Entity type**: 0x414C"
-msgstr "**エンティティタイプ**: 0x414C"
-
 #: ../../source/concepts/harvesting.rst:133
 msgid "**Inlines**:"
 msgstr "**インライン**"
@@ -390,10 +386,6 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/harvesting.rst:1
-msgid ":schema:`Key <types.cats#L11>`"
-msgstr ":schema:`キー <types.cats#L11>`"
-
-#: ../../source/concepts/harvesting.rst:1
 msgid "Remote account public key."
 msgstr "リモートアカウントの公開鍵"
 
@@ -408,3 +400,7 @@ msgstr "アカウントの関連付けをやめる"
 #: ../../source/concepts/harvesting.rst:1
 msgid "Link account."
 msgstr "アカウントを関連付ける"
+
+#: ../../source/concepts/harvesting.rst:158
+msgid "Continue: :doc:`Inflation <inflation>`."
+msgstr "次へ: :doc:`インフレーション <inflation>`"

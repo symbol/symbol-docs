@@ -15,7 +15,7 @@ Turn asynchronous transaction announcement into synchronous with |nem2-camel|.
 Background
 **********
 
-Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send 10 cat.currency to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 
@@ -39,12 +39,9 @@ Prerequisites
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
+*********************************
 Running Catapult Service in local
-=================================
+*********************************
 
 For development and learning purposes, you can run the :doc:`Catapult Server and Catapult REST <../../concepts/node>` using the |catapult-service-bootstrap|.
 
@@ -62,8 +59,9 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
     curl localhost:3000/block/1
 
+*******************************
 Getting Alice and Bob addresses
-===============================
+*******************************
 
 Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing cat.currency.
 
@@ -78,8 +76,9 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 
 3. Take the second key pair as Bob's account, and copy the address.
 
+*********************
 Installing nem2-camel
-=====================
+*********************
 
 nem2-camel acts like a proxy between the application and the REST API.
 
@@ -93,8 +92,9 @@ nem2-camel acts like a proxy between the application and the REST API.
 
 2. After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
 
-Sending the TransferTransaction
-================================
+*********************************
+Sending a synchronous transaction
+*********************************
 
 1. Alice creates a :doc:`TransferTransaction <../../concepts/transfer-transaction>`, sending ``10 cat.currency`` to Bob.
 

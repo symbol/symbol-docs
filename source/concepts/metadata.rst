@@ -19,7 +19,7 @@ The client application is responsible for encrypting the message or keeping it v
 Persistence
 ***********
 
-Metadata entries are stored in the blockchain—like the message of a regular :doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value state**.
+Metadata entries are stored on the blockchain—like the message of a regular :doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value state**.
 
 This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history off-chain to obtain the latest transaction message value.
 
@@ -44,9 +44,9 @@ Adding a certificate to an account
 
     Metadata used to attach relevant information to an asset
 
-Bob works as a digital notary that stamp accounts on the NEM blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
+Bob works as a digital notary that stamp accounts on Catapult's public blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
 
-Alice a recent graduate and wants her educational certificate accredited to her NEM account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
+Alice a recent graduate and wants her educational certificate accredited to her Catapult account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
 
 Access management
 =================
@@ -57,7 +57,7 @@ Access management
 
     Validating metadata to restrict performing an off-chain action
 
-The HR department of the SneakersCompany uses the NEM blockchain for **access management** of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
+The HR department of the SneakersCompany uses the Catapult for **access management** of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
 
 When a new employee, Carol, is hired, the HR department creates a new work account for her. For security reasons, HR sets the metadata of the account to ``{company, ACCESS, 9-18}``.
 
@@ -76,11 +76,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _account-metadata-transaction:
 
@@ -158,3 +156,5 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
+
+Continue: :doc:`Transfer Transaction <transfer-transaction>`.

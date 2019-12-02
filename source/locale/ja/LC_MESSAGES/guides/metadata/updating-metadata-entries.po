@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-10-28 13:07+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -30,32 +30,10 @@ msgid "Update any existent metadata entry."
 msgstr "存在するメタデータエントリの更新"
 
 #: ../../source/guides/metadata/updating-metadata-entries.rst:16
-msgid "Prerequisites"
-msgstr "前提条件"
-
-#: ../../source/guides/metadata/updating-metadata-entries.rst:18
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/metadata/updating-metadata-entries.rst:19
-msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
-
-#: ../../source/guides/metadata/updating-metadata-entries.rst:20
-msgid ""
-"Finish :doc:`assigning metadata entries to an account guide <assigning-"
-"metadata-entries-to-an-account>`"
-msgstr ""
-":doc:`アカウントへのメタデータの割当ガイド <assigning-metadata-entries-to-an-account>` を完了している"
-
-#: ../../source/guides/metadata/updating-metadata-entries.rst:24
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:26
+#: ../../source/guides/metadata/updating-metadata-entries.rst:18
 msgid ""
 ":doc:`Metadata <../../concepts/metadata>`  transactions are stored on the "
 "blockchain. Once a transaction is included in a block—and the block receives"
@@ -66,7 +44,7 @@ msgstr ""
 "トランザクションはブロックチェーンに記録されます。トランザクションがブロックに取り込まれ —十分な承認を得ると— "
 "チェーン全体が無効にならない限りは記録を変更することはできません"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:28
+#: ../../source/guides/metadata/updating-metadata-entries.rst:20
 msgid ""
 "What we can do to update a metadata entry is to announce a second metadata "
 "transaction. This action will record a new transaction while keeping the "
@@ -78,7 +56,7 @@ msgstr ""
 "メタデータエントリを更新するには、次のメタデータトランザクションをアナウンスします。このアクションは変遷を不変のまま保ちながら新しいトランザクションを記録します。しかし、どうやってチェーン全体に問い合わせることなく、アセットに割り当てられた最新のメタデータ値を取得すればよいのでしょうか？Catapult"
 " はメタデータエントリに割り当てられた **最新の値** のコピーを **状態** として保持することで、これを可能にしています。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:30
+#: ../../source/guides/metadata/updating-metadata-entries.rst:22
 msgid ""
 "In this example, we are going to **update a metadata entry** attached to an "
 "account. However, you could follow a similar approach to update namespace "
@@ -87,9 +65,31 @@ msgstr ""
 "この例では、アカウントに添付された **メタデータエントリの更新** "
 "をします。なお、同じアプローチでネームスペースとモザイクのメタデータエントリを更新することができます。"
 
+#: ../../source/guides/metadata/updating-metadata-entries.rst:26
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/metadata/updating-metadata-entries.rst:28
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/metadata/updating-metadata-entries.rst:29
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+
+#: ../../source/guides/metadata/updating-metadata-entries.rst:30
+msgid ""
+"Finish :doc:`assigning metadata entries to an account guide <assigning-"
+"metadata-entries-to-an-account>`"
+msgstr ""
+":doc:`アカウントへのメタデータの割当ガイド <assigning-metadata-entries-to-an-account>` を完了している"
+
 #: ../../source/guides/metadata/updating-metadata-entries.rst:34
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/metadata/updating-metadata-entries.rst:36
 msgid ""

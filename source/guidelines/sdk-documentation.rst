@@ -42,6 +42,6 @@ Writing snippets helps you to compare how the SDK code looks like in contrast wi
 
 2. Create a new folder under ``source/resources/examples/`` named as the programming language of your SDK.
 
-3. Adapt every `typescript snippet <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__ using the new SDK.
+3. Adapt every `TypeScript snippet <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript>`__ using the new SDK.
 
 4. Push the changes and `create a pull request <https://services.github.com/on-demand/intro-to-github/es/crear-pull-request>`__.
