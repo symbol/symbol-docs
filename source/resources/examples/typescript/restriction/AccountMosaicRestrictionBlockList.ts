@@ -18,37 +18,46 @@
 
 import {
     Account,
-    AccountRestrictionModification,
+    AccountRestrictionFlags,
     AccountRestrictionTransaction,
     Deadline,
     MosaicId,
     NetworkType,
-    AccountRestrictionFlags,
     TransactionHttp
 } from "nem2-sdk";
 
 /* start block 01 */
-const companyShareMosaicIdHex = process.env.COMPANY_SHARE_MOSAIC_ID as string;
+// replace with mosaicId
+const companyShareMosaicIdHex = '7cdf3b117a3c40cc';
 const companyShareMosaicId = new MosaicId(companyShareMosaicIdHex);
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const transaction = AccountRestrictionTransaction
     .createMosaicRestrictionModificationTransaction(
         Deadline.create(),
         AccountRestrictionFlags.BlockMosaic,
         [companyShareMosaicId],
         [],
-        NetworkType.MIJIN_TEST);
+        networkType);
 /* end block 02 */
 
 /* start block 03 */
-const productPrivateKey = process.env.PRIVATE_KEY as string;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST);
-const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
+// replace with product private key
+const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const productAccount = Account.createFromPrivateKey(productPrivateKey, networkType);
+const signedTransaction = productAccount.sign(transaction,networkGenerationHash);
+
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+
+const transactionHttp = new TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli restriction account --address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4
+nem2-cli restriction account --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU

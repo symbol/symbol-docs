@@ -19,19 +19,26 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const companyShareMosaicIdHex = process.env.COMPANY_SHARE_MOSAIC_ID;
+// replace with mosaicId
+const companyShareMosaicIdHex = '7cdf3b117a3c40cc';
 const companyShareMosaicId = new nem2_sdk_1.MosaicId(companyShareMosaicIdHex);
 /* end block 01 */
 /* start block 02 */
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const transaction = nem2_sdk_1.AccountRestrictionTransaction
-    .createMosaicRestrictionModificationTransaction(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AccountRestrictionFlags.BlockMosaic, [companyShareMosaicId], [], nem2_sdk_1.NetworkType.MIJIN_TEST);
+    .createMosaicRestrictionModificationTransaction(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AccountRestrictionFlags.BlockMosaic, [companyShareMosaicId], [], networkType);
 /* end block 02 */
 /* start block 03 */
-const productPrivateKey = process.env.PRIVATE_KEY;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-const productAccount = nem2_sdk_1.Account.createFromPrivateKey(productPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+// replace with product private key
+const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const productAccount = nem2_sdk_1.Account.createFromPrivateKey(productPrivateKey, networkType);
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

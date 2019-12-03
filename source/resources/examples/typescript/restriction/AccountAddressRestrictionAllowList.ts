@@ -27,7 +27,8 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-const companyRawAddress = process.env.COMPANY_ADDRESS as string;
+// replace with company address
+const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const companyAddress = Address.createFromRawAddress(companyRawAddress);
 /* end block 01 */
 
@@ -42,12 +43,18 @@ const transaction = AccountRestrictionTransaction
 /* end block 02 */
 
 /* start block 03 */
-const productPrivateKey = process.env.PRIVATE_KEY as string;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with product private key
+const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+
 const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST);
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+
+const transactionHttp = new TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

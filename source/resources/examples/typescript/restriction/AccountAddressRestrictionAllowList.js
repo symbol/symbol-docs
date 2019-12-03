@@ -19,7 +19,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const companyRawAddress = process.env.COMPANY_ADDRESS;
+// replace with company address
+const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const companyAddress = nem2_sdk_1.Address.createFromRawAddress(companyRawAddress);
 /* end block 01 */
 /* start block 02 */
@@ -27,11 +28,15 @@ const transaction = nem2_sdk_1.AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AccountRestrictionFlags.AllowIncomingAddress, [companyAddress], [], nem2_sdk_1.NetworkType.MIJIN_TEST);
 /* end block 02 */
 /* start block 03 */
-const productPrivateKey = process.env.PRIVATE_KEY;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+// replace with product private key
+const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const productAccount = nem2_sdk_1.Account.createFromPrivateKey(productPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));
