@@ -127,7 +127,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
 
 The distributor has not signed the AggregateBondedTransaction yet, so the exchange has not been completed.
 
-4. Copy the **AggregateTransaction hash** from (2), and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` following the next guide.
+4. Copy the **AggregateTransaction hash** from (2), and check how to cosign the AggregateTransaction by :doc:`following the next guide <signing-announced-aggregate-bonded-transactions>`.
 
 **********************************************
 Is it possible without aggregate transactions?

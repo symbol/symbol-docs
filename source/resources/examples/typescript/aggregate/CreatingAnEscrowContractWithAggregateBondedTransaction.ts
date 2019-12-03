@@ -40,34 +40,40 @@ import {filter, mergeMap} from "rxjs/operators";
 import {merge} from "rxjs";
 
 /* start block 01 */
-const alicePrivateKey = process.env.ALICE_PRIVATE_KEY as string;
-const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
-
-const ticketDistributorPublicKey = process.env.TICKET_DISTRIBUTOR_PUBLIC_KEY as string;
-const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketDistributorPublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with alice private key
+const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, networkType);
+// replace with ticket distributor public key
+const ticketDistributorPublicKey = '20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A';
+const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketDistributorPublicKey, networkType);
+// replace with ticket mosaic id
+const ticketMosaicId = new MosaicId('7cdf3b117a3c40cc');
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
     [NetworkCurrencyMosaic.createRelative(100)],
     PlainMessage.create('send 100 cat.currency to distributor'),
-    NetworkType.MIJIN_TEST);
+    networkType);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [new Mosaic(new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1))],
-    PlainMessage.create('send 1 museum ticket to alice'),
-    NetworkType.MIJIN_TEST);
+    [new Mosaic(ticketMosaicId, UInt64.fromUint(1))],
+    PlainMessage.create('send 1 museum ticket to customer'),
+    networkType);
 /* end block 01 */
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
     [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
-    NetworkType.MIJIN_TEST);
+    networkType);
 
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log("Aggregate Transaction Hash: " + signedTransaction.hash);
 /* end block 02 */
@@ -78,11 +84,12 @@ const hashLockTransaction = HashLockTransaction.create(
     NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType);
 
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 

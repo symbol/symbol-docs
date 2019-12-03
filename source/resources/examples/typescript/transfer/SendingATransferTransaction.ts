@@ -55,8 +55,8 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 /* start block 03 */
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
-
 const transactionHttp = new TransactionHttp(nodeUrl);
+
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

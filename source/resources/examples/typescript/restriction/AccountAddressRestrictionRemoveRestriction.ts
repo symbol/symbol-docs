@@ -32,13 +32,16 @@ const companyAddress = Address.createFromRawAddress(companyRawAddress);
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
         Deadline.create(),
         AccountRestrictionFlags.AllowIncomingAddress,
         [],
         [companyAddress],
-        NetworkType.MIJIN_TEST);
+        networkType);
 /* end block 02 */
 
 /* start block 03 */
@@ -47,13 +50,13 @@ const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 
-const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST);
+const productAccount = Account.createFromPrivateKey(productPrivateKey, networkType);
 const signedTransaction = productAccount.sign(transaction,networkGenerationHash);
 
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
-
 const transactionHttp = new TransactionHttp(nodeUrl);
+
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

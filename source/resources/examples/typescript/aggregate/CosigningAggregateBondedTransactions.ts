@@ -35,10 +35,13 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const nodeUrl = 'http://localhost:3000';
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+//replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const accountHttp = new AccountHttp(nodeUrl);
 const transactionHttp = new TransactionHttp(nodeUrl);
 

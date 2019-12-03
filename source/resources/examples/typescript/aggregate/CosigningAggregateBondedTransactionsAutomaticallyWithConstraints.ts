@@ -23,12 +23,12 @@ import {
     CosignatureSignedTransaction,
     CosignatureTransaction,
     Listener,
+    NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
     Transaction,
     TransactionHttp,
-    TransferTransaction,
-    NetworkCurrencyMosaic
+    TransferTransaction
 } from "nem2-sdk";
 import {filter, map, mergeMap} from "rxjs/operators";
 
@@ -46,10 +46,13 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const nodeUrl = 'http://localhost:3000';
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+//replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 

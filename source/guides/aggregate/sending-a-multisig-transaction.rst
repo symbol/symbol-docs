@@ -119,11 +119,11 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
 
     Sending an AggregateBondedTransaction
 
-1. Open a new terminal to :doc:`monitor <../monitor/monitoring-a-transaction-status>` the **AggregateBondedTransaction**.
+1. Open a new terminal to :doc:`monitor <../monitor/monitoring-a-transaction-status>` the **AggregateBondedTransaction** using the multisig's address.
 
 .. code-block:: bash
 
-    nem2-cli monitor aggregatebonded --address <your-address-here>
+    nem2-cli monitor aggregatebonded --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU
 
 2. Modify the previous code, defining the transaction as  **bonded**.
 
@@ -153,8 +153,7 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-
-4. :doc:`Cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
+4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added. Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from (2).
 
 .. code-block:: bash
 
