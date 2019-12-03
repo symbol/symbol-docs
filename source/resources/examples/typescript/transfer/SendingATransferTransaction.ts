@@ -20,11 +20,11 @@ import {
     Account,
     Address,
     Deadline,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     TransactionHttp,
     TransferTransaction,
-    NetworkCurrencyMosaic,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -34,7 +34,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('Welcome To NEM'),
+    PlainMessage.create('This is a test message'),
     NetworkType.MIJIN_TEST);
 /* end block 01 */
 

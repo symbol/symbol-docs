@@ -30,7 +30,7 @@ What happened in the genesis block? Run the following code to get the first bloc
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/blockchain/GettingBlockByHeight.js
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingBlockByHeight.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -44,7 +44,7 @@ The following snippet returns the height of the latest block.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/blockchain/GettingBlockchainHeight.js
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingBlockchainHeight.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

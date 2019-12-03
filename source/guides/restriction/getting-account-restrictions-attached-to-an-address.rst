@@ -22,6 +22,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/GettingAccountRestrictions.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 *************************
 Method #02: Using the CLI
 *************************

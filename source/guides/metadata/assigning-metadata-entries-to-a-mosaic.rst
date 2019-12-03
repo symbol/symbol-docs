@@ -101,12 +101,22 @@ A) Key: ``ISIN``, Value: ``US00000000``.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -119,6 +129,11 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 .. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic owner would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 3. Sign and announce the **AggregateTransaction** to the network.
@@ -127,6 +142,11 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
 
     .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 

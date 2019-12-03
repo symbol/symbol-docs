@@ -108,6 +108,11 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create an **AccountRestrictionTransaction**, with restrictionType ``AllowAddress``.  Add to the company’s address from the previous step to the allowed list.
 
 .. example-code::
@@ -117,12 +122,22 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Sign and announce the transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -152,6 +167,11 @@ Thus, you could narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create an **AccountRestrictionTransaction**, with restrictionType ``BlockMosaic``.  Add to the array the modification created in the previous step.
 
 .. example-code::
@@ -161,12 +181,22 @@ Thus, you could narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Sign and announce the transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -186,6 +216,11 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create an **AccountRestrictionTransaction**, setting the type ``AllowAddress``. Add as well the modification created.
 
 .. example-code::
@@ -195,12 +230,22 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Sign and announce the transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

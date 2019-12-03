@@ -34,6 +34,11 @@ To ensure the transactions are being sent to the correct place with the correct 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
 
 * Transactions using aliased mosaics or accounts are stored on the blockchain using the namespace identifier, not the real address or mosaic id behind it.
@@ -64,12 +69,22 @@ In this example, we are going to announce a **TransferTransaction** using ``cat.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Attach the mosaic to a **TransferTransaction**.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -82,12 +97,22 @@ In this example, we are going to announce a **TransferTransaction** using ``cat.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Then, retrieve the receipts attached to the block where the receipt was confirmed. The **RxJs filters** will look for the namespace resolution inside the ``mosaicResolutionStatements`` collection.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 

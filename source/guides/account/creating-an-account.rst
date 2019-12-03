@@ -30,7 +30,7 @@ Open a new file and run the following code snippet to create an account.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/account/CreatingAnAccount.js
+    .. viewsource:: ../../resources/examples/typescript/account/CreatingAnAccount.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -48,7 +48,7 @@ If you already have a private key, you can use it to define a new ``Account`` ob
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/account/OpeningAnAccount.js
+    .. viewsource:: ../../resources/examples/typescript/account/OpeningAnAccount.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

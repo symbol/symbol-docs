@@ -67,6 +67,10 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Attach the encrypted message to a **TransferTransaction**, setting the certificate address as the recipient.
 
@@ -74,6 +78,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -88,6 +97,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
@@ -97,12 +111,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
 5. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/transfer/DecodingAnEncryptedMessage.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/transfer/DecodingAnEncryptedMessage.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

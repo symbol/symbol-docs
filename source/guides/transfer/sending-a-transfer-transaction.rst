@@ -67,7 +67,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -83,7 +83,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionWithMultipleMosaics.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -101,7 +101,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -115,7 +115,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

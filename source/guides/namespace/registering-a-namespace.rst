@@ -33,7 +33,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/CheckingNamespaceExistence.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/CheckingNamespaceExistence.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -51,7 +51,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringANamespace.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringANamespace.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

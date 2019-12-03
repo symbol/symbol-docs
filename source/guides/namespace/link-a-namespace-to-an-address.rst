@@ -33,7 +33,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -47,7 +47,7 @@ Then, announce the **AliasTransaction** that links the namespace and the address
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -77,7 +77,7 @@ Now you can send transactions to the namespace linked to the account instead of 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionAddressAlias.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionAddressAlias.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

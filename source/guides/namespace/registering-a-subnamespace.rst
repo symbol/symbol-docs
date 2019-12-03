@@ -33,7 +33,7 @@ This code example creates a subnamespace called ``bar`` under the namespace ``fo
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringASubnamespace.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringASubnamespace.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

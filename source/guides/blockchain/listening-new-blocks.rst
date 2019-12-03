@@ -81,7 +81,7 @@ In the SDK, WebSockets are named **Listeners**. As we have done with WebSockets,
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/blockchain/ListeningNewBlocks.js
+    .. viewsource:: ../../resources/examples/typescript/blockchain/ListeningNewBlocks.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

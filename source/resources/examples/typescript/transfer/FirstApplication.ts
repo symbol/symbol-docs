@@ -37,7 +37,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     Address.createFromRawAddress(address),
     [new Mosaic(new MosaicId(mosaicId), UInt64.fromUint(1))],
-    PlainMessage.create('enjoy your ticket!'),
+    PlainMessage.create('enjoy your ticket'),
     NetworkType.MIJIN_TEST
 );
 /* end block 01 */

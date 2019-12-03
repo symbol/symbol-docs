@@ -176,7 +176,7 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -194,7 +194,7 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -208,7 +208,7 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

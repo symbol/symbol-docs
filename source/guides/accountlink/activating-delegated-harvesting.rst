@@ -45,12 +45,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+   .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create an :ref:`AccountLinkTransaction <account-link-transaction>` to delegate the main account's importance to the remote account using its public key.
 
 .. example-code::
 
    .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+   .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -65,6 +75,11 @@ The next step is to **share the remote account private key with the node** you w
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+   .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 .. note:: Get the node's public key by querying ``http://<node-url>:3000/node/info``.
 
 The **special encrypted message** ensures that the **proxy private key** is securely shared, only readable by the node owner. Moreover, the remote account does not possess any mosaics. The valuable assets remain safely in the main account where the node owner cannot disrupt security.
@@ -75,6 +90,11 @@ The **special encrypted message** ensures that the **proxy private key** is secu
 
    .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+   .. viewsource:: ../../resources/examples/typescript/accountlink/ActivatingDelegatedHarvesting.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 

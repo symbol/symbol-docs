@@ -105,12 +105,22 @@ Sending a synchronous transaction
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Once signed, Alice :doc:`announces the transaction <../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until the transaction reaches the network, returning back the Transaction object.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 

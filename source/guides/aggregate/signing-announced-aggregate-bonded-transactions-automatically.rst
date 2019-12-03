@@ -31,7 +31,7 @@ Developing the bot
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -55,7 +55,7 @@ Developing the bot
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -79,3 +79,9 @@ Here you have a possible implementation:
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+

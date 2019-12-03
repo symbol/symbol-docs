@@ -53,7 +53,7 @@ a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set t
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -67,7 +67,7 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -85,7 +85,7 @@ b. A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/mosaic/CreatingAMosaic.js
+    .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

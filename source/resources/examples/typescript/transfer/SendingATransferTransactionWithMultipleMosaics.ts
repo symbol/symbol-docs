@@ -41,7 +41,7 @@ const transferTransaction = TransferTransaction.create(
     [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1000)),
         NetworkCurrencyMosaic.createRelative(10)],
     /* end block 01 */
-    PlainMessage.create('Welcome To NEM'),
+    PlainMessage.create('This is a test message'),
     NetworkType.MIJIN_TEST);
 
 // 02 - Signing the transaction

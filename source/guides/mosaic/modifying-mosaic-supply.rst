@@ -33,7 +33,7 @@ To increase the initial supply to ``2.000.000``, define a :ref:`MosaicSupplyChan
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/mosaic/ModifyingMosaicSupply.js
+    .. viewsource:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

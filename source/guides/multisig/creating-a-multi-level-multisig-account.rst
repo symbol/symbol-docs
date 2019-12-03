@@ -43,12 +43,22 @@ Example #1: Multisig account with 3 levels
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Define the **multisig account #3**.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -61,12 +71,22 @@ Example #1: Multisig account with 3 levels
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 cat.currency** to announce the transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 

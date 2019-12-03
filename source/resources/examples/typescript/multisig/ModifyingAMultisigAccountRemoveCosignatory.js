@@ -1,0 +1,36 @@
+"use strict";
+/*
+ *
+ * Copyright 2018-present NEM
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const nem2_sdk_1 = require("nem2-sdk");
+/* start block 01 */
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
+const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAccountPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const cosignatoryToRemovePublicKey = process.env.COSIGNATORY_TO_REMOVE_PUBLIC_KEY;
+const cosignatoryToRemove = nem2_sdk_1.PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY;
+const cosignatoryAccount = nem2_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const multisigAccountModificationTransaction = nem2_sdk_1.MultisigAccountModificationTransaction.create(nem2_sdk_1.Deadline.create(), 0, 0, [], [cosignatoryToRemove], nem2_sdk_1.NetworkType.MIJIN_TEST);
+const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST, []);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+transactionHttp
+    .announce(signedTransaction)
+    .subscribe(x => console.log(x), err => console.error(err));
+/* end block 01 */

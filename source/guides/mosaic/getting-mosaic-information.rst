@@ -28,7 +28,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/mosaic/GettingMosaicInformation.js
+    .. viewsource:: ../../resources/examples/typescript/mosaic/GettingMosaicInformation.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
