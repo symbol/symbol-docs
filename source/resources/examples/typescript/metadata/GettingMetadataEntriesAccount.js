@@ -19,9 +19,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const rawAddress = process.env.ADDRESS;
+// Replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+// Replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 metadataHttp.getAccountMetadata(address)
     .subscribe((metadata) => {
     if (metadata.length > 0) {

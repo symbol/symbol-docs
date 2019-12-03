@@ -19,9 +19,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME;
-const namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
-const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+// replace with namespace name
+const namespaceId = new nem2_sdk_1.NamespaceId('cat');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 metadataHttp.getNamespaceMetadata(namespaceId)
     .subscribe((metadata) => {
     if (metadata.length > 0) {

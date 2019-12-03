@@ -19,10 +19,12 @@
 import {Metadata, MetadataHttp, NamespaceId} from "nem2-sdk";
 
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME as string;
-const namespaceId = new NamespaceId(namespaceName);
+// replace with namespace name
+const namespaceId = new NamespaceId('cat');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const metadataHttp = new MetadataHttp(nodeUrl);
 
-const metadataHttp = new MetadataHttp('http://localhost:3000');
 metadataHttp.getNamespaceMetadata(namespaceId)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

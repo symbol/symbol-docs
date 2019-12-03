@@ -55,7 +55,7 @@ Creating the shares
     Do you want mosaic to have supply mutable? [y/n]: y
     Do you want mosaic to be transferable? [y/n]: y
     Do you want mosaic to be restrictable? [y/n]: y
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Introduce amount of tokens: 100
     Your mosaic id is:  2C08D5EDB652AA79
     Transaction announced correctly
@@ -69,7 +69,7 @@ Creating the shares
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 .. code-block:: bash
@@ -79,7 +79,7 @@ Creating the shares
     Introduce namespace name: shares
     Do you want to create a root namespace? [y/n]: n
     Introduce the parent namespace name: cc
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 3. Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created in the first step.
@@ -91,7 +91,7 @@ Creating the shares
     Introduce namespace name: cc.shares
     Introduce alias action (1: Link, 0: Unlink): 1
     Introduce mosaic in hexadecimal format: 2C08D5EDB652AA79
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 *************************

@@ -29,19 +29,24 @@ import {
 
 
 /* start block 01 */
-const rawRecipientAddress = process.env.RECIPIENT_ADDRESS as string;
+// replace with recipient address
+const rawRecipientAddress = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
 const recipientAddress =  Address.createFromRawAddress(rawRecipientAddress);
+// replace with network type
+const networkType = NetworkType.MIJIN_TEST;
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
    recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
     EmptyMessage,
-    NetworkType.MIJIN_TEST);
+    networkType);
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with sender private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 
@@ -52,7 +57,7 @@ transactionHttp
     .announceSync(signedTransaction)
     .subscribe(x => {
         console.log(x);
-        // TODO: send email to Bob
+        // TODO: send email to recipient
     },
     err => {
         console.error(err);

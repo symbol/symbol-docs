@@ -27,7 +27,7 @@ Method #01: Using WebSockets
 
     import * as WebSocket from 'ws';
 
-    const host = 'localhost:3000';
+    const host = 'api-01.us-east-1.nemtech.network:3000';
     const ws = new WebSocket('ws://' + host + '/ws');
 
     ws.on('open', () => {
@@ -90,7 +90,7 @@ Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.
 
 .. code-block:: typescript
 
-  const listener = new Listener('ws://localhost:3000', WebSocket);
+  const listener = new Listener('ws://api-01.us-east-1.nemtech.network:3000', WebSocket);
   listener.open().then(() => ...
 
 *************************

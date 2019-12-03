@@ -28,9 +28,12 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const companyPrivateKey = process.env.COMPANY_PRIVATE_KEY as string;
-const companyAccount = Account.createFromPrivateKey(companyPrivateKey, NetworkType.MIJIN_TEST);
-
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with company private key
+const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = Account.createFromPrivateKey(companyPrivateKey, networkType);
+// replace with namespace id
 const namespaceId = new NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
@@ -44,7 +47,7 @@ const nameMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     name.length,
     name,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -54,7 +57,7 @@ const emailMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     email.length,
     email,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -64,7 +67,7 @@ const addressMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     address.length,
     address,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -74,7 +77,7 @@ const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     phone.length,
     phone,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 /* end block 01 */
 
@@ -87,17 +90,19 @@ const aggregateTransaction = AggregateTransaction.createComplete(
         addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
         phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
     ],
-    NetworkType.MIJIN_TEST,
+    networkType,
     []);
 /* end block 02 */
 
 /* start block 03 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
-const nodeUrl = 'http://localhost:3000';
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
+
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

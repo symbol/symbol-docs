@@ -52,7 +52,7 @@ Creating the namespace
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 *************************

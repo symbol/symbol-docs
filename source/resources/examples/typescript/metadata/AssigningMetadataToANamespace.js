@@ -19,17 +19,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const companyPrivateKey = process.env.COMPANY_PRIVATE_KEY;
-const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with company private key
+const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
+// replace with namespace id
 const namespaceId = new nem2_sdk_1.NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
 const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
-const nameMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const emailMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const addressMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const phoneMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const nameMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
+const emailMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
+const addressMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
+const phoneMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
 /* end block 01 */
 /* start block 02 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [
@@ -37,13 +41,14 @@ const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2
     emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
     addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
     phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
-], nem2_sdk_1.NetworkType.MIJIN_TEST, []);
+], networkType, []);
 /* end block 02 */
 /* start block 03 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-const nodeUrl = 'http://localhost:3000';
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)

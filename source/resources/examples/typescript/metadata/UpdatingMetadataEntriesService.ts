@@ -18,7 +18,7 @@
 
 import {
     Account,
-    AggregateTransaction,
+    AggregateTransaction, Convert,
     Deadline,
     HashLockTransaction,
     KeyGenerator,
@@ -37,21 +37,26 @@ import {filter, mergeMap} from "rxjs/operators";
 import {merge, of} from "rxjs";
 
 /* start block 01 */
-const nodeUrl = 'http://localhost:3000';
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with bob private key
+const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
+// replace with alice public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 
-const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
-const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
-
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+// replace with key and new value
 const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 
 const accountMetadataTransaction = metadataService.createMetadataTransaction(
     Deadline.create(),
-    NetworkType.MIJIN_TEST,
+    networkType,
     MetadataType.Account,
     alicePublicAccount,
     key,
@@ -60,14 +65,15 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
 /* end block 01 */
 
 /* start block 02 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
         mergeMap(transaction => {
             const aggregateTransaction = AggregateTransaction.createComplete(
                 Deadline.create(),
                 [transaction.toAggregate(bobAccount.publicAccount)],
-                NetworkType.MIJIN_TEST,
+                networkType,
                 []);
             const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
             return of(signedTransaction);
@@ -87,7 +93,7 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
             NetworkCurrencyMosaic.createRelative(10),
             UInt64.fromUint(480),
             signedAggregateTransaction,
-            NetworkType.MIJIN_TEST);
+            networkType);
         const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
         const signedAggregateHashLock: SignedAggregateHashLock = {
             aggregate: signedAggregateTransaction,

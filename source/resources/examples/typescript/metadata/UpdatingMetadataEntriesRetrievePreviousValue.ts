@@ -30,18 +30,24 @@ import {mergeMap} from "rxjs/operators";
 import {of} from "rxjs";
 
 /* start block 01 */
-const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
-const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with bob private key
+const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
+// replace with alice public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const metadataHttp = new MetadataHttp(nodeUrl);
 
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+// replace with key and new value
 const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
-const nodeUrl = 'http://localhost:3000';
-const metadata = new MetadataHttp(nodeUrl);
-const accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
+const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
     .pipe( mergeMap(metadata => {
         const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);
         return of(AccountMetadataTransaction.create(
@@ -50,7 +56,7 @@ const accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(ali
             key,
             newValueBytes.length - currentValueBytes.length,
             Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),
-            NetworkType.MIJIN_TEST,
+            networkType,
         ))
     }));
 /* end block 01 */

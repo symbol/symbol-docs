@@ -21,28 +21,36 @@ const nem2_sdk_1 = require("nem2-sdk");
 const operators_1 = require("rxjs/operators");
 const rxjs_1 = require("rxjs");
 /* start block 01 */
+// replace with key
 const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 /* end block 01 */
 /* start block 02 */
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY;
-const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with value
 const value = '123456';
-const accountMetadataTransaction = nem2_sdk_1.AccountMetadataTransaction.create(nem2_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, value.length, value, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const accountMetadataTransaction = nem2_sdk_1.AccountMetadataTransaction.create(nem2_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, value.length, value, networkType);
 /* end block 02 */
 /* start block 03 */
-const bobPrivateKey = process.env.BOB_PRIVATE_KEY;
-const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+// replace with bob private key
+const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
+const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)], networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType);
 const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
 /* end block 04 */
 /* start block 05 */
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 const listener = new nem2_sdk_1.Listener(nodeUrl);
 const announceHashLockTransaction = (signedHashLockTransaction) => {

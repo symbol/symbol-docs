@@ -36,33 +36,42 @@ import {filter, mergeMap} from "rxjs/operators";
 import {merge} from "rxjs";
 
 /* start block 01 */
+// replace with key
 const key = KeyGenerator.generateUInt64Key('CERT');
 /* end block 01 */
 
 /* start block 02 */
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
+// replace with public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with value
 const value = '123456';
+
 const accountMetadataTransaction = AccountMetadataTransaction.create(
     Deadline.create(),
     alicePublicAccount.publicKey,
     key,
     value.length,
     value,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 /* end block 02 */
 
 /* start block 03 */
-const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
-const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
+// replace with bob private key
+const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
-    NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+    networkType);
+
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
@@ -73,12 +82,13 @@ const hashLockTransaction = HashLockTransaction.create(
     NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType);
 const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
 /* end block 04 */
 
 /* start block 05 */
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 

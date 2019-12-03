@@ -19,25 +19,31 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const companyPrivateKey = process.env.COMPANY_PRIVATE_KEY;
-const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with company private key
+const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
+// replace with mosaic id
 const mosaicId = new nem2_sdk_1.NamespaceId('cc.shares');
 const isin = 'US00000000';
-const isinMetadataTransaction = nem2_sdk_1.MosaicMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('ISIN'), mosaicId, isin.length, isin, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const isinMetadataTransaction = nem2_sdk_1.MosaicMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('ISIN'), mosaicId, isin.length, isin, networkType);
 /* end block 01 */
 /* start block 02 */
 const name = 'ComfyClothingCompany';
-const nameMetadataTransaction = nem2_sdk_1.MosaicMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('NAME'), mosaicId, name.length, name, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const nameMetadataTransaction = nem2_sdk_1.MosaicMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('NAME'), mosaicId, name.length, name, networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    nameMetadataTransaction.toAggregate(companyAccount.publicAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST, []);
+    nameMetadataTransaction.toAggregate(companyAccount.publicAccount)], networkType, []);
 /* end block 03 */
 /* start block 04 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)

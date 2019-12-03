@@ -19,10 +19,13 @@
 import {Metadata, MetadataHttp, MosaicId} from "nem2-sdk";
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaicId
+const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const metadataHttp = new MetadataHttp(nodeUrl);
 
-const metadataHttp = new MetadataHttp('http://localhost:3000');
 metadataHttp.getMosaicMetadata(mosaicId)
     .subscribe((metadata) => {
         if (metadata.length > 0) {

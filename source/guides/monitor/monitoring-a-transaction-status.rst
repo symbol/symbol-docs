@@ -33,7 +33,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7``.
+1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
 .. example-code::
 
