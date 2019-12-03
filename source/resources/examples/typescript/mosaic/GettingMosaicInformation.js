@@ -17,12 +17,12 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var mosaicIdHex = process.env.MOSAIC_ID_HEX;
-var mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-var mosaicHttp = new nem2_sdk_1.MosaicHttp('http://localhost:3000');
+const mosaicIdHex = process.env.MOSAIC_ID_HEX;
+const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const mosaicHttp = new nem2_sdk_1.MosaicHttp('http://localhost:3000');
 mosaicHttp
     .getMosaic(mosaicId)
-    .subscribe(function (mosaicInfo) { return console.log(mosaicInfo); }, function (err) { return console.error(err); });
+    .subscribe(mosaicInfo => console.log(mosaicInfo), err => console.error(err));
 /* end block 01 */

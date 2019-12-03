@@ -92,7 +92,6 @@ obj/
 .DS_Store
 
 source/resources/examples/typescript/node_modules
-source/resources/examples/javascript/node_modules
 
 # sphinx-intl
 source/locale/**/*.mo

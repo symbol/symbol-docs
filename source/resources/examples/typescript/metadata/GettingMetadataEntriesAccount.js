@@ -17,17 +17,17 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var rawAddress = process.env.ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-var metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+const rawAddress = process.env.ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
 metadataHttp.getAccountMetadata(address)
-    .subscribe(function (metadata) {
+    .subscribe((metadata) => {
     if (metadata.length > 0) {
         metadata
-            .map(function (entry) {
-            var metadataEntry = entry.metadataEntry;
+            .map((entry) => {
+            const metadataEntry = entry.metadataEntry;
             console.log('\n \n' + 'Key:\t', metadataEntry.scopedMetadataKey);
             console.log('\n' + '---');
             console.log('\n' + 'Value:\t', metadataEntry.value);
@@ -38,5 +38,5 @@ metadataHttp.getAccountMetadata(address)
     else {
         console.log('\n The address does not have metadata entries assigned.');
     }
-}, function (err) { return console.log(err); });
+}, (err) => console.log(err));
 /* end block 01 */

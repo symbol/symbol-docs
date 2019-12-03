@@ -67,12 +67,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Alice's degree brings the identifier ``123456`` for her certificate. Help Bob to **assign this value to the key** defined in the previous step. To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -85,12 +95,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Before sending an aggregate transaction to the network, Bob has to lock  ``10 cat.currency``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -102,6 +122,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.ts
         :language: typescript
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
+
+    .. viewsource:: ../../resources/examples/typescript/metadata/AssigningMetadataToAnAccount.js
+        :language: javascript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 

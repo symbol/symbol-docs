@@ -17,26 +17,26 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
 /* start block 01 */
-var rawAddress = process.env.ADDRESS;
-var originAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-var recipientRawAddress = process.env.ADDRESS;
-var recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
-var mosaicIdHex = process.env.MOSAIC_ID_HEX;
-var divisibility = 6;
-var mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-var accountHttp = new nem2_sdk_1.AccountHttp('http://localhost:3000');
+const rawAddress = process.env.ADDRESS;
+const originAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const recipientRawAddress = process.env.ADDRESS;
+const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
+const mosaicIdHex = process.env.MOSAIC_ID_HEX;
+const divisibility = 6;
+const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const accountHttp = new nem2_sdk_1.AccountHttp('http://localhost:3000');
 accountHttp
     .getAccountOutgoingTransactions(originAddress)
-    .pipe(operators_1.mergeMap(function (_) { return _; }), // Transform transaction array to single transactions to process them
-operators_1.filter(function (_) { return _.type === nem2_sdk_1.TransactionType.TRANSFER; }), // Filter transfer transactions
-operators_1.map(function (_) { return _; }), // Map transaction as transfer transaction
-operators_1.filter(function (_) { return _.recipientAddress instanceof nem2_sdk_1.Address && _.recipientAddress.equals(recipientAddress); }), // Filter transactions from to account
-operators_1.filter(function (_) { return _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId); }), // Filter mosaicId transactions
-operators_1.map(function (_) { return _.mosaics[0].amount.compact() / Math.pow(10, divisibility); }), // Map relative amount
+    .pipe(operators_1.mergeMap((_) => _), // Transform transaction array to single transactions to process them
+operators_1.filter((_) => _.type === nem2_sdk_1.TransactionType.TRANSFER), // Filter transfer transactions
+operators_1.map((_) => _), // Map transaction as transfer transaction
+operators_1.filter((_) => _.recipientAddress instanceof nem2_sdk_1.Address && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
+operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
+operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
 operators_1.toArray(), // Add all mosaics amounts into one array
-operators_1.map(function (_) { return _.reduce(function (a, b) { return a + b; }, 0); }))
-    .subscribe(function (total) { return console.log('Total ' + mosaicId.toHex() + ' sent to account', recipientAddress.pretty(), 'is:', total); }, function (err) { return console.error(err); });
+operators_1.map((_) => _.reduce((a, b) => a + b, 0)))
+    .subscribe(total => console.log('Total ' + mosaicId.toHex() + ' sent to account', recipientAddress.pretty(), 'is:', total), err => console.error(err));
 /* end block 01 */

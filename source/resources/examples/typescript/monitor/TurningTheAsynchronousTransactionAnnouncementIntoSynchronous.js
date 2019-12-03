@@ -17,24 +17,24 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var rawRecipientAddress = process.env.RECIPIENT_ADDRESS;
-var recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
-var transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], nem2_sdk_1.EmptyMessage, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var privateKey = process.env.PRIVATE_KEY;
-var account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const rawRecipientAddress = process.env.RECIPIENT_ADDRESS;
+const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], nem2_sdk_1.EmptyMessage, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const privateKey = process.env.PRIVATE_KEY;
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 /* start block 02 */
-var transactionHttp = new nem2_sdk_1.TransactionHttp('http://0.0.0.0:9000');
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://0.0.0.0:9000');
 transactionHttp
     .announceSync(signedTransaction)
-    .subscribe(function (x) {
+    .subscribe(x => {
     console.log(x);
     // TODO: send email to Bob
-}, function (err) {
+}, err => {
     console.error(err);
 });
 /* end block 02 */

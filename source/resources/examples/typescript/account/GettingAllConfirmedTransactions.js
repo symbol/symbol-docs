@@ -17,20 +17,20 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
-var rxjs_1 = require("rxjs");
-var nodeUrl = 'http://localhost:3000';
-var accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
-var pageSize = 100;
-var allTransactions = true;
-var rawAddress = process.env.ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
+const rxjs_1 = require("rxjs");
+const nodeUrl = 'http://localhost:3000';
+const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
+const pageSize = 100;
+const allTransactions = true;
+const rawAddress = process.env.ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 accountHttp
     .getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize, undefined))
-    .pipe(operators_1.expand(function (transactions) { return transactions.length >= pageSize && allTransactions
+    .pipe(operators_1.expand((transactions) => transactions.length >= pageSize && allTransactions
     ? accountHttp.getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
-    : rxjs_1.EMPTY; }), operators_1.concatMap(function (transactions) { return transactions; }), operators_1.toArray())
-    .subscribe(function (transactions) {
+    : rxjs_1.EMPTY), operators_1.concatMap(transactions => transactions), operators_1.toArray())
+    .subscribe(transactions => {
     console.log(transactions);
-}, function (err) { return console.log(err); });
+}, err => console.log(err));

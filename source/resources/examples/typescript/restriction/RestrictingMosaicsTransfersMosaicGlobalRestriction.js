@@ -17,14 +17,14 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var mosaicIdHex = process.env.MOSAIC_ID;
-var mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-var key = nem2_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
+const mosaicIdHex = process.env.MOSAIC_ID;
+const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 /* end block 01 */
 /* start block 02 */
-var transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
+const transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), mosaicId, // mosaicId
 key, // restrictionKey
 nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
@@ -34,13 +34,13 @@ nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
 nem2_sdk_1.NetworkType.MIJIN_TEST);
 /* end block 02 */
 /* start block 03 */
-var privateKey = process.env.PRIVATE_KEY;
-var account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = account.sign(transaction, networkGenerationHash);
+const privateKey = process.env.PRIVATE_KEY;
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-var transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 03 */

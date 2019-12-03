@@ -17,32 +17,32 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
 // replace with network type
-var networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with alice private key
-var alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-var aliceAccount = nem2_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
+const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const aliceAccount = nem2_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
 // replace with certificate public key
-var certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-var certificatePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
-var encryptedMessage = aliceAccount
+const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const certificatePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
+const encryptedMessage = aliceAccount
     .encryptMessage('This message is secret', certificatePublicAccount, networkType);
 /* end block 01 */
 /* start block 02 */
-var transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType);
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-var networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
-var signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-var nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
-var transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 04 */

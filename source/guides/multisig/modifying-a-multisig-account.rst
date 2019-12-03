@@ -47,12 +47,22 @@ One of the accounts, for example Alice's, will announce a :ref:`MultisigAccountM
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Define a **MultisigAccountModificationTransaction** to increase the ``minAprovalDelta`` in one unit.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -64,6 +74,11 @@ An AggregateTransaction is *complete* if, before announcing it to the network, a
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -94,12 +109,22 @@ Alice and Bob want to **add Carol**, a third participant, as a co-signatory of t
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create a **MultisigAccountModificationTransaction**, adding Carol as a cosignatory. The multisig account will become a **2-of-3**, since we are adding a new cosignatory but not increasing the ``minApprovalDelta``.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -112,12 +137,22 @@ Alice and Bob want to **add Carol**, a third participant, as a co-signatory of t
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Before sending an **AggregateBondedTransaction**, Alice or Bob need to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountAddCosignatory.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -145,6 +180,11 @@ The following code shows how to **remove a cosignatory** from the 2-of-3 multisi
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountRemoveCosignatory.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ModifyingAMultisigAccountRemoveCosignatory.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

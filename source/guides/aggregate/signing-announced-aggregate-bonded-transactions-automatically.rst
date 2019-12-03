@@ -79,3 +79,9 @@ Here you have a possible implementation:
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+

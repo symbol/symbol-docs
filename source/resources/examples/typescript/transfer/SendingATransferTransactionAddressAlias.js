@@ -17,11 +17,11 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
 // Replace with network type
-var networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // Replace with aliased address
-var recipientAddress = new nem2_sdk_1.NamespaceId('foo');
+const recipientAddress = new nem2_sdk_1.NamespaceId('foo');
 nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], nem2_sdk_1.EmptyMessage, networkType);
 /* end block 01 */

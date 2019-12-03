@@ -17,17 +17,17 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
 /* start block 01 */
-var rawAddress = process.env.ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-var url = 'http://localhost:3000';
-var accountHttp = new nem2_sdk_1.AccountHttp(url);
-var mosaicHttp = new nem2_sdk_1.MosaicHttp(url);
-var mosaicService = new nem2_sdk_1.MosaicService(accountHttp, mosaicHttp);
+const rawAddress = process.env.ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const url = 'http://localhost:3000';
+const accountHttp = new nem2_sdk_1.AccountHttp(url);
+const mosaicHttp = new nem2_sdk_1.MosaicHttp(url);
+const mosaicService = new nem2_sdk_1.MosaicService(accountHttp, mosaicHttp);
 mosaicService
     .mosaicsAmountViewFromAddress(address)
-    .pipe(operators_1.mergeMap(function (_) { return _; }))
-    .subscribe(function (mosaic) { return console.log('You have', mosaic.relativeAmount(), mosaic.fullName()); }, function (err) { return console.error(err); });
+    .pipe(operators_1.mergeMap((_) => _))
+    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()), err => console.error(err));
 /* end block 01 */

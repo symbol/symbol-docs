@@ -17,46 +17,46 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
-var rxjs_1 = require("rxjs");
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
+const rxjs_1 = require("rxjs");
 /* start block 01 */
-var multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
-var multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAccountPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY;
-var newCosignatoryAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(newCosignatoryPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY;
+const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAccountPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY;
+const newCosignatoryAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(newCosignatoryPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
 /* end block 01 */
 /* start block 02 */
-var multisigAccountModificationTransaction = nem2_sdk_1.MultisigAccountModificationTransaction.create(nem2_sdk_1.Deadline.create(), 0, 0, [newCosignatoryAccount], [], nem2_sdk_1.NetworkType.MIJIN_TEST);
+const multisigAccountModificationTransaction = nem2_sdk_1.MultisigAccountModificationTransaction.create(nem2_sdk_1.Deadline.create(), 0, 0, [newCosignatoryAccount], [], nem2_sdk_1.NetworkType.MIJIN_TEST);
 /* end block 02 */
 /* start block 03 */
-var aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST);
-var cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY;
-var cosignatoryAccount = nem2_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST);
+const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY;
+const cosignatoryAccount = nem2_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-var hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
-var nodeUrl = 'http://localhost:3000';
-var transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
-var listener = new nem2_sdk_1.Listener(nodeUrl);
-var announceHashLockTransaction = function (signedHashLockTransaction) {
+const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
+const nodeUrl = 'http://localhost:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
+const listener = new nem2_sdk_1.Listener(nodeUrl);
+const announceHashLockTransaction = (signedHashLockTransaction) => {
     return transactionHttp.announce(signedHashLockTransaction);
 };
-var announceAggregateTransaction = function (listener, signedHashLockTransaction, signedAggregateTransaction, senderAddress) {
+const announceAggregateTransaction = (listener, signedHashLockTransaction, signedAggregateTransaction, senderAddress) => {
     return listener
         .confirmed(senderAddress)
-        .pipe(operators_1.filter(function (transaction) { return transaction.transactionInfo !== undefined
-        && transaction.transactionInfo.hash === signedHashLockTransaction.hash; }), operators_1.mergeMap(function (ignored) {
+        .pipe(operators_1.filter((transaction) => transaction.transactionInfo !== undefined
+        && transaction.transactionInfo.hash === signedHashLockTransaction.hash), operators_1.mergeMap(ignored => {
         listener.terminate();
         return transactionHttp.announceAggregateBonded(signedAggregateTransaction);
     }));
 };
-listener.open().then(function () {
+listener.open().then(() => {
     rxjs_1.merge(announceHashLockTransaction(signedHashLockTransaction), announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, cosignatoryAccount.address))
-        .subscribe(function (x) { return console.log('Transaction confirmed:', x.message); }, function (err) { return console.log(err); });
+        .subscribe(x => console.log('Transaction confirmed:', x.message), err => console.log(err));
 });
 /* end block 04 */

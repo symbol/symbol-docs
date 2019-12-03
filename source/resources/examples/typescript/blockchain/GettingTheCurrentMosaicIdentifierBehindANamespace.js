@@ -17,11 +17,11 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var namespace = new nem2_sdk_1.NamespaceId('cat.currency');
-var namespaceHttp = new nem2_sdk_1.NamespaceHttp('http://localhost:3000');
+const namespace = new nem2_sdk_1.NamespaceId('cat.currency');
+const namespaceHttp = new nem2_sdk_1.NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getLinkedMosaicId(namespace)
-    .subscribe(function (mosaicId) { return console.log(mosaicId.toHex()); }, function (err) { return console.log(err); });
+    .subscribe(mosaicId => console.log(mosaicId.toHex()), err => console.log(err));
 /* end block 01 */

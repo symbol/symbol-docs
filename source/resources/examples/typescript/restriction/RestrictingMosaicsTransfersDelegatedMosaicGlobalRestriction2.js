@@ -17,14 +17,14 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var sharesIdHex = process.env.SHARES_ID;
-var sharesId = new nem2_sdk_1.MosaicId(sharesIdHex);
-var kycIdHex = process.env.KYC_ID;
-var kycId = new nem2_sdk_1.MosaicId(kycIdHex);
-var key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
-var transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
+const sharesIdHex = process.env.SHARES_ID;
+const sharesId = new nem2_sdk_1.MosaicId(sharesIdHex);
+const kycIdHex = process.env.KYC_ID;
+const kycId = new nem2_sdk_1.MosaicId(kycIdHex);
+const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
+const transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), sharesId, // mosaicId
 key, // restictionKey
 nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
@@ -32,13 +32,13 @@ nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
 nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
 nem2_sdk_1.NetworkType.MIJIN_TEST, kycId);
-var comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY;
-var comfyClothingCompnayAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = comfyClothingCompnayAccount.sign(transaction, networkGenerationHash);
+const comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY;
+const comfyClothingCompnayAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = comfyClothingCompnayAccount.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-var transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 01 */

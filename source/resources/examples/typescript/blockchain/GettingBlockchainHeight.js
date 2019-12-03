@@ -17,10 +17,10 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var chainHttp = new nem2_sdk_1.ChainHttp('http://localhost:3000');
+const chainHttp = new nem2_sdk_1.ChainHttp('http://localhost:3000');
 chainHttp
     .getBlockchainHeight()
-    .subscribe(function (height) { return console.log(height.compact()); }, function (err) { return console.error(err); });
+    .subscribe(height => console.log(height.compact()), err => console.error(err));
 /* end block 01 */

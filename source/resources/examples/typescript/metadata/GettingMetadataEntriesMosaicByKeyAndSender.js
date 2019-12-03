@@ -17,21 +17,21 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var mosaicIdHex = process.env.MOSAIC_ID;
-var mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-var senderPublicKey = process.env.SENDER_PUBLIC_KEY;
-var keyHex = process.env.KEY;
-var metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+const mosaicIdHex = process.env.MOSAIC_ID;
+const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const senderPublicKey = process.env.SENDER_PUBLIC_KEY;
+const keyHex = process.env.KEY;
+const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
 metadataHttp.getMosaicMetadataByKeyAndSender(mosaicId, keyHex, senderPublicKey)
-    .subscribe(function (metadata) {
-    var metadataEntry = metadata.metadataEntry;
+    .subscribe((metadata) => {
+    const metadataEntry = metadata.metadataEntry;
     console.log('\n \n' + 'Key:\t', metadataEntry.scopedMetadataKey);
     console.log('\n' + '---');
     console.log('\n' + 'Value:\t', metadataEntry.value);
     console.log('\n' + 'Sender Public Key:\t', metadataEntry.senderPublicKey);
     console.log('\n' + 'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
     console.log('\n' + 'TargetId:\t', metadataEntry.targetId);
-}, function (err) { return console.log(err); });
+}, (err) => console.log(err));
 /* end block 01 */

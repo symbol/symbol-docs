@@ -58,6 +58,11 @@ A) Retrieve the previous metadata value and calculate the difference of size wit
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/metadata/UpdatingMetadataEntriesRetrievePreviousValue.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 B)  You can achieve the same result with less effort using the ``MetadataService``. Behind the scenes, the **NEM2-SDK** handles the complexity of updating metadata entries.
 
 .. example-code::

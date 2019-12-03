@@ -17,12 +17,12 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var rawAddress = process.env.ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-var multisigHttp = new nem2_sdk_1.MultisigHttp('http://localhost:3000');
+const rawAddress = process.env.ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const multisigHttp = new nem2_sdk_1.MultisigHttp('http://localhost:3000');
 multisigHttp
     .getMultisigAccountInfo(address)
-    .subscribe(function (multisigInfo) { return console.log(multisigInfo); }, function (err) { return console.error(err); });
+    .subscribe(multisigInfo => console.log(multisigInfo), err => console.error(err));
 /* end block 01 */

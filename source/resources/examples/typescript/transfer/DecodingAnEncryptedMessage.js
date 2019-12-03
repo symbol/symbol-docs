@@ -17,27 +17,27 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
 /* start block 01 */
 // replace with network type
-var networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with certificate private key
-var certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-var certificateAccount = nem2_sdk_1.Account.createFromPrivateKey(certificatePrivateKey, networkType);
+const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const certificateAccount = nem2_sdk_1.Account.createFromPrivateKey(certificatePrivateKey, networkType);
 // replace with alice public key
-var alicePublicKey = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
-var alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with nodeUrl
-var nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000/';
-var transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000/';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 // replace with transaction hash
-var transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
+const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 transactionHttp
     .getTransaction(transactionHash)
-    .pipe(operators_1.map(function (x) { return x; }))
-    .subscribe(function (transaction) {
+    .pipe(operators_1.map(x => x))
+    .subscribe(transaction => {
     console.log("Raw message: ", transaction.message.payload);
     console.log("Message: ", certificateAccount.decryptMessage(transaction.message, alicePublicAccount, networkType).payload);
-}, (function (err) { return console.log(err); }));
+}, (err => console.log(err)));
 /* end block 01 */

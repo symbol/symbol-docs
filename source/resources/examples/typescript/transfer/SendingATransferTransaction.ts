@@ -20,11 +20,11 @@ import {
     Account,
     Address,
     Deadline,
+    NetworkCurrencyMosaic,
     NetworkType,
     PlainMessage,
     TransactionHttp,
     TransferTransaction,
-    NetworkCurrencyMosaic,
 } from 'nem2-sdk';
 
 /* start block 01 */

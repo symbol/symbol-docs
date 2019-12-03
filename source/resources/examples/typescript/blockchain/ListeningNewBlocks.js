@@ -17,12 +17,12 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var listener = new nem2_sdk_1.Listener('http://localhost:3000');
-listener.open().then(function () {
+const listener = new nem2_sdk_1.Listener('http://localhost:3000');
+listener.open().then(() => {
     listener
         .newBlock()
-        .subscribe(function (block) { return console.log(block); }, function (err) { return console.error(err); });
+        .subscribe(block => console.log(block), err => console.error(err));
 });
 /* end block 01 */

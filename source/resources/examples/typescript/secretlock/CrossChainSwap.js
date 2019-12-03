@@ -16,66 +16,59 @@
  * limitations under the License.
  *
  */
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var js_sha3_1 = require("js-sha3");
-var crypto = __importStar(require("crypto"));
+const nem2_sdk_1 = require("nem2-sdk");
+const js_sha3_1 = require("js-sha3");
+const crypto = require("crypto");
 /* start block 01 */
-var alicePublicChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MAIN_NET);
-var alicePrivateChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MIJIN);
-var bobPublicChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MAIN_NET);
-var bobPrivateChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MIJIN);
-var privateChainTransactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
-var publicChainTransactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
-var publicChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const alicePublicChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MAIN_NET);
+const alicePrivateChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MIJIN);
+const bobPublicChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MAIN_NET);
+const bobPrivateChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MIJIN);
+const privateChainTransactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const publicChainTransactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const publicChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
 /* end block 01 */
 /* start block 02 */
-var random = crypto.randomBytes(10);
-var proof = random.toString('hex');
+const random = crypto.randomBytes(10);
+const proof = random.toString('hex');
 console.log('Proof:', proof);
-var hash = js_sha3_1.sha3_256.create();
-var secret = hash.update(random).hex().toUpperCase();
+const hash = js_sha3_1.sha3_256.create();
+const secret = hash.update(random).hex().toUpperCase();
 console.log('Secret:', secret);
 /* end block 02 */
 /* start block 03 */
-var tx1 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([520597229, 83226871]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
+const tx1 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([520597229, 83226871]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
 nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, nem2_sdk_1.NetworkType.MIJIN);
 /* end block 03 */
 /* start block 04 */
-var tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
+const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx1Signed)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 04 */
 /* start block 05 */
-var tx2 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([2061634929, 1373884888]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
+const tx2 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([2061634929, 1373884888]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
 nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, nem2_sdk_1.NetworkType.MAIN_NET);
 /* end block 05 */
 /* start block 06 */
-var tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
+const tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx2Signed)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 06 */
 /* start block 07 */
-var tx3 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, proof, nem2_sdk_1.NetworkType.MAIN_NET);
-var tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
+const tx3 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, proof, nem2_sdk_1.NetworkType.MAIN_NET);
+const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx3Signed)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 07 */
 /* start block 08 */
-var tx4 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, proof, nem2_sdk_1.NetworkType.MIJIN);
-var tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
+const tx4 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, proof, nem2_sdk_1.NetworkType.MIJIN);
+const tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx4Signed)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 08 */

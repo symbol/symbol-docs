@@ -17,22 +17,22 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var rawAddress = process.env.COMPANY_ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-var restrictionHttp = new nem2_sdk_1.RestrictionAccountHttp('http://localhost:3000');
+const rawAddress = process.env.COMPANY_ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const restrictionHttp = new nem2_sdk_1.RestrictionAccountHttp('http://localhost:3000');
 restrictionHttp.getAccountRestrictions(address)
-    .subscribe(function (accountRestrictions) {
+    .subscribe((accountRestrictions) => {
     if (accountRestrictions.length > 0) {
         accountRestrictions
-            .filter(function (accountRestriction) { return accountRestriction.values.length > 0; })
-            .map(function (accountRestriction) {
+            .filter((accountRestriction) => accountRestriction.values.length > 0)
+            .map((accountRestriction) => {
             console.log('\n', nem2_sdk_1.AccountRestrictionFlags[accountRestriction.restrictionFlags], accountRestriction.values.toString());
         });
     }
     else {
         console.log('The address does not have account restriction assigned.');
     }
-}, function (err) { return console.log(err); });
+}, (err) => console.log(err));
 /* end block 01 */

@@ -49,6 +49,11 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>`  to convert the shared account into a multisig account. As you want to create a 1-of-2 multisig account, set the minimum signatures required to ``1``.
 
 .. example-code::
@@ -58,12 +63,22 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**. This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -78,12 +93,22 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
 5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts
         :language: typescript
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 

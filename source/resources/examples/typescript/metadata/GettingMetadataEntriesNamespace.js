@@ -17,17 +17,17 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var namespaceName = process.env.NAMESPACE_NAME;
-var namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
-var metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+const namespaceName = process.env.NAMESPACE_NAME;
+const namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
+const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
 metadataHttp.getNamespaceMetadata(namespaceId)
-    .subscribe(function (metadata) {
+    .subscribe((metadata) => {
     if (metadata.length > 0) {
         metadata
-            .map(function (entry) {
-            var metadataEntry = entry.metadataEntry;
+            .map((entry) => {
+            const metadataEntry = entry.metadataEntry;
             console.log('\n \n' + 'Key:\t', metadataEntry.scopedMetadataKey);
             console.log('\n' + '---');
             console.log('\n' + 'Value:\t', metadataEntry.value);
@@ -39,5 +39,5 @@ metadataHttp.getNamespaceMetadata(namespaceId)
     else {
         console.log('\n The namespace does not have metadata entries assigned.');
     }
-}, function (err) { return console.log(err); });
+}, (err) => console.log(err));
 /* end block 01 */

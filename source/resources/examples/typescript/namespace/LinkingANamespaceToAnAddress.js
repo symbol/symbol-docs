@@ -17,21 +17,21 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var namespaceName = process.env.NAMESPACE_NAME;
-var namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
-var rawAddress = process.env.ADDRESS;
-var address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const namespaceName = process.env.NAMESPACE_NAME;
+const namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
+const rawAddress = process.env.ADDRESS;
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 /* start block 02 */
-var addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var privateKey = process.env.PRIVATE_KEY;
-var account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = account.sign(addressAliasTransaction, networkGenerationHash);
-var transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const privateKey = process.env.PRIVATE_KEY;
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(addressAliasTransaction, networkGenerationHash);
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 02 */

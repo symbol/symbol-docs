@@ -17,13 +17,13 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 // replace with recipient address
-var rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
-var recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
-var networkType = nem2_sdk_1.NetworkType.TEST_NET;
-var ignored = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, 
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const ignored = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, 
 /* start block 01 */
 [new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc'), nem2_sdk_1.UInt64.fromUint(1000)),
     nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], 

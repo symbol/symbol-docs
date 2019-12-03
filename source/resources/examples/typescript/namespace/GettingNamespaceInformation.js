@@ -17,11 +17,11 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var namespaceId = new nem2_sdk_1.NamespaceId('foo');
-var namespaceHttp = new nem2_sdk_1.NamespaceHttp('http://localhost:3000');
+const namespaceId = new nem2_sdk_1.NamespaceId('foo');
+const namespaceHttp = new nem2_sdk_1.NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getNamespace(namespaceId)
-    .subscribe(function (namespaceInfo) { return console.log(namespaceInfo); }, function (err) { return console.error(err); });
+    .subscribe(namespaceInfo => console.log(namespaceInfo), err => console.error(err));
 /* end block 01 */

@@ -17,21 +17,21 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var mosaicIdHex = process.env.MOSAIC_ID;
-var mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-var restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp('http://localhost:3000');
+const mosaicIdHex = process.env.MOSAIC_ID;
+const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp('http://localhost:3000');
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
-    .subscribe(function (mosaicGlobalRestrictions) {
+    .subscribe((mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {
         console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
-        mosaicGlobalRestrictions.restrictions.forEach(function (value, key) {
+        mosaicGlobalRestrictions.restrictions.forEach((value, key) => {
             console.log('\n' + key + '\t', value.referenceMosaicId.toHex() + '\t', nem2_sdk_1.MosaicRestrictionType[value.restrictionType] + '\t', value.restrictionValue);
         });
     }
     else {
         console.log('\n The mosaic does not have mosaic global restrictions assigned.');
     }
-}, function (err) { return console.log(err); });
+}, (err) => console.log(err));
 /* end block 01 */

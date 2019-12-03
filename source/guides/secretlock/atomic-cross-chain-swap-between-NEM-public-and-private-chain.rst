@@ -56,12 +56,22 @@ For that reason, each actor involved should have at least one account in each bl
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+   .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 1. Alice picks a random number, called ``proof``. Then, applies a **SHA3-256** algorithm to it, obtaining the ``secret``.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -81,6 +91,11 @@ For that reason, each actor involved should have at least one account in each bl
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If after a determined period of time no one proved it, the locked funds will be returned to Alice.
 
 3. Alice signs and announces **TX1** to the **private chain**.
@@ -89,6 +104,11 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -110,6 +130,11 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
+
 .. note::  The amount of time in which funds can be unlocked should be a smaller time frame than TX1's. Alice knows the secret, so Bob must be sure he will have some time left after Alice releases the secret.
 
 6. Once signed, Bob announces **TX2** to the **public chain**.
@@ -118,6 +143,11 @@ Once announced, this transaction will remain locked until someone discovers the 
 
     .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.ts
         :language: typescript
+        :start-after:  /* start block 06 */
+        :end-before: /* end block 06 */
+
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
         :start-after:  /* start block 06 */
         :end-before: /* end block 06 */
 
@@ -130,12 +160,22 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 07 */
         :end-before: /* end block 07 */
 
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
+        :start-after:  /* start block 07 */
+        :end-before: /* end block 07 */
+
 8. The proof is revealed in the public chain. Bob picks the proof and announces the **SecretProofTransaction TX4** to the **private chain**.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.ts
         :language: typescript
+        :start-after:  /* start block 08 */
+        :end-before: /* end block 08 */
+
+    .. viewsource:: ../../resources/examples/typescript/secretlock/CrossChainSwap.js
+        :language: javascript
         :start-after:  /* start block 08 */
         :end-before: /* end block 08 */
 

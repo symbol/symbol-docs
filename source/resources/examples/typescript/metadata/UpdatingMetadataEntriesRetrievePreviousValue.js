@@ -17,22 +17,22 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
-var operators_1 = require("rxjs/operators");
-var rxjs_1 = require("rxjs");
+const nem2_sdk_1 = require("nem2-sdk");
+const operators_1 = require("rxjs/operators");
+const rxjs_1 = require("rxjs");
 /* start block 01 */
-var bobPrivateKey = process.env.BOB_PRIVATE_KEY;
-var bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var alicePublicKey = process.env.ALICE_PUBLIC_KEY;
-var alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');
-var newValue = '000000';
-var newValueBytes = nem2_sdk_1.Convert.utf8ToUint8(newValue);
-var nodeUrl = 'http://localhost:3000';
-var metadata = new nem2_sdk_1.MetadataHttp(nodeUrl);
-var accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
-    .pipe(operators_1.mergeMap(function (metadata) {
-    var currentValueBytes = nem2_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
+const bobPrivateKey = process.env.BOB_PRIVATE_KEY;
+const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const alicePublicKey = process.env.ALICE_PUBLIC_KEY;
+const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');
+const newValue = '000000';
+const newValueBytes = nem2_sdk_1.Convert.utf8ToUint8(newValue);
+const nodeUrl = 'http://localhost:3000';
+const metadata = new nem2_sdk_1.MetadataHttp(nodeUrl);
+const accountMetadataTransaction = metadata.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
+    .pipe(operators_1.mergeMap(metadata => {
+    const currentValueBytes = nem2_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
     return rxjs_1.of(nem2_sdk_1.AccountMetadataTransaction.create(nem2_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, newValueBytes.length - currentValueBytes.length, nem2_sdk_1.Convert.decodeHex(nem2_sdk_1.Convert.xor(currentValueBytes, newValueBytes)), nem2_sdk_1.NetworkType.MIJIN_TEST));
 }));
 /* end block 01 */

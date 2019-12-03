@@ -17,16 +17,16 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var nem2_sdk_1 = require("nem2-sdk");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-var namespaceName = "foo";
-var namespaceRegistrationTransaction = nem2_sdk_1.NamespaceRegistrationTransaction.createRootNamespace(nem2_sdk_1.Deadline.create(), namespaceName, nem2_sdk_1.UInt64.fromUint(1000), nem2_sdk_1.NetworkType.MIJIN_TEST);
-var privateKey = process.env.PRIVATE_KEY;
-var account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-var networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-var signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
-var transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+const namespaceName = "foo";
+const namespaceRegistrationTransaction = nem2_sdk_1.NamespaceRegistrationTransaction.createRootNamespace(nem2_sdk_1.Deadline.create(), namespaceName, nem2_sdk_1.UInt64.fromUint(1000), nem2_sdk_1.NetworkType.MIJIN_TEST);
+const privateKey = process.env.PRIVATE_KEY;
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
+const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(function (x) { return console.log(x); }, function (err) { return console.error(err); });
+    .subscribe(x => console.log(x), err => console.error(err));
 /* end block 01 */

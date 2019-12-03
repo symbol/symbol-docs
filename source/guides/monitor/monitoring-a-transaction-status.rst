@@ -62,8 +62,11 @@ Method #01: Using the SDK
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 
 3. Open a new :ref:`Listener <websockets>`. The listener communicates with the API WebSocket, which forward you asynchronously the status of the transaction.
 
