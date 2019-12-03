@@ -28,7 +28,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/GettingNamespaceInformation.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

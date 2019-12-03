@@ -39,18 +39,18 @@ Create an account for Alice, and another for the certificate  using ``nem2-cli``
 
     nem2-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 .. code-block:: bash
 
     nem2-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 
@@ -67,6 +67,10 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 2. Attach the encrypted message to a **TransferTransaction**, setting the certificate address as the recipient.
 
@@ -77,14 +81,24 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
@@ -97,12 +111,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionEncryptedMessage.js
+        :language: javascript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
 5. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/transfer/DecodingAnEncryptedMessage.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/transfer/DecodingAnEncryptedMessage.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

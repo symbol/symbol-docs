@@ -82,7 +82,6 @@ gradle-app.setting
 
 buffers/out
 crypto/out
-source/resources/examples/typescript/**/*.js
 
 .vscode/
 build/

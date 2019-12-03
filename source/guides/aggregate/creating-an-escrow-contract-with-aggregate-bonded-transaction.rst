@@ -92,7 +92,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -106,7 +106,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -120,7 +120,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

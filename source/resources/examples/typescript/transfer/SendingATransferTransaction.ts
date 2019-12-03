@@ -28,26 +28,35 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+// replace with recipient address
+const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientAddress = Address.createFromRawAddress(rawAddress);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('Welcome To NEM'),
-    NetworkType.MIJIN_TEST);
+    PlainMessage.create('This is a test message'),
+    networkType);
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with sender private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 
+const account = Account.createFromPrivateKey(privateKey,networkType);
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 
 /* start block 03 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+// replace with nodeUrl
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+
+const transactionHttp = new TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

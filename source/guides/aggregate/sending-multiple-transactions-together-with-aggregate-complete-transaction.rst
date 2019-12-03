@@ -43,7 +43,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -57,7 +57,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -71,7 +71,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

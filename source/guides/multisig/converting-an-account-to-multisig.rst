@@ -69,7 +69,7 @@ Example #01: 1-of-2 multisig
 
 4. Sign the **AggregateTransaction** using the private key of the multisig account.
 
-.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -110,7 +110,7 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/multisig/GettingMultisigAccountCosignatories.js
+    .. viewsource:: ../../resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

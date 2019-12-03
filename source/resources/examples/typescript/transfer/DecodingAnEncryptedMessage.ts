@@ -20,15 +20,21 @@ import {Account, NetworkType, PublicAccount, TransactionHttp, TransferTransactio
 import {map} from "rxjs/operators";
 
 /* start block 01 */
-const certificatePrivateAccount = process.env.CERTIFICATE_PRIVATE_KEY as string;
-const certificateAccount = Account.createFromPrivateKey(certificatePrivateAccount, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+// replace with certificate private key
+const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const certificateAccount = Account.createFromPrivateKey(certificatePrivateKey, networkType);
+// replace with alice public key
+const alicePublicKey = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with nodeUrl
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000/';
+const transactionHttp = new TransactionHttp(nodeUrl);
+// replace with transaction hash
+const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-const transactionHash = process.env.TRANSACTION_HASH as string;
 transactionHttp
     .getTransaction(transactionHash)
     .pipe(
@@ -39,7 +45,6 @@ transactionHttp
         console.log("Message: ", certificateAccount.decryptMessage(
             transaction.message,
             alicePublicAccount,
-            NetworkType.MIJIN_TEST).payload);
+            networkType).payload);
     }, (err => console.log(err)));
 /* end block 01 */
-

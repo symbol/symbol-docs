@@ -57,7 +57,7 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
 .. code-block:: bash
 
-    curl localhost:3000/block/1
+    curl nodeUrl + '/block/1'
 
 *******************************
 Getting Alice and Bob addresses

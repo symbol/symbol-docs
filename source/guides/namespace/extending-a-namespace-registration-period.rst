@@ -67,7 +67,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringANamespace.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringANamespace.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

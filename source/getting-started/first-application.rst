@@ -53,9 +53,7 @@ First, identify the actors involved in the problem we want to solve:
 
 We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
-The account you have loaded in NEM2-CLI represents the **ticket vendor**.
-
-1. Have you loaded an account with test cat.currency? After running the following command, you should see on your screen a line similar to:
+1. Have you :ref:`loaded an account with test cat.currency <setup-creating-a-test-account>`? The account you have loaded in NEM2-CLI represents the **ticket vendor**. After running the following command, you should see on your screen a line similar to:
 
 .. code-block:: bash
 
@@ -65,11 +63,11 @@ The account you have loaded in NEM2-CLI represents the **ticket vendor**.
     ┌───────────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property          │ Value                                                            │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address           │ TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7                   │
+    │ Address           │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address Height    │ 1                                                                │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key        │ 23B...D4A                                                        │
+    │ Public Key        │ 203...C0A                                                        │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
     │ Public Key Height │ 3442                                                             │
     ├───────────────────┼──────────────────────────────────────────────────────────────────┤
@@ -82,27 +80,27 @@ The account you have loaded in NEM2-CLI represents the **ticket vendor**.
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 0DC67FBE1CAD29E3 │ 1,000,000       │ 1000000000000   │ Never             │
+    │ 46BE9BC0626F9B1A │ 1,000.0         │ 1000000000      │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-2. This account owns ``1,000,000 cat.currency`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
+This account owns ``1,000 cat.currency`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
 
-3. Create a second account to identify the **customer**.
+2. Create a second account to identify the **customer**.
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET --save --url http://api-01.us-west-2.nemtech.network:3000 --profile customer
+    nem2-cli account generate --network TEST_NET --save --url http://api-01.us-east-1.nemtech.network:3000 --profile customer
 
     New Account
 
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TBTWXI-LAK6IP-445P3B-DKYKNM-SHDRQW-2CDAA7-EM2J                   │
+    │ Address     │ TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 123...456                                                        │
+    │ Public Key  │ E59...82F                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ BF2...030                                                        │
+    │ Private Key │ 111...111                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 *************************
@@ -146,15 +144,15 @@ We are representing the ticket with Catapult :doc:`Mosaics <../concepts/mosaic>`
     :delim: ;
     :widths: 20 30 50
 
-    Divisibility; 0 ; The mosaic won't be divisible, no one should be able to send “0.5 tickets”.
+    Divisibility; 0 ; The mosaic units must not be divisible, no one should be able to send "0.5 tickets".
     Duration; 1000; The mosaic will be registered for 1000 blocks.
-    Amount; 1000000; The number of tickets you are going to create
+    Amount; 99; The number of tickets you are going to create.
     Supply mutable; True; The mosaic supply can change at a later point.
     Transferable; False; The mosaic can be only transferred back to the mosaic creator.
 
 .. code-block:: bash
 
-   nem2-cli transaction mosaic --amount 1000000 --supply-mutable --divisibility 0 --duration 1000
+   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000
 
 2. Copy the MosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
 
@@ -176,7 +174,7 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
     :widths: 20 30 50
 
     Deadline; Default (2 hours) ; The maximum amount of time to include the transaction on the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
-    Recipient; SC7A4H...2VBU; The recipient account address. In this case, the customer's address.
+    Recipient; TBULEA...IPS4; The recipient account address. In this case, the customer's address.
     Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
     Network; TEST_NET; The network type.
@@ -188,7 +186,7 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -197,7 +195,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
 2. Sign the transaction with the **ticket vendor account**, so that the network can verify the authenticity of the transaction.
 
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -206,7 +204,7 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -220,14 +218,14 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../resources/examples/javascript/transfer/FirstApplication.js
+    .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
     .. code-block:: bash
 
-        nem2-cli transaction transfer --recipient TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
+        nem2-cli transaction transfer --recipient TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket
 
 4. When the transaction is confirmed, check if the customer has received the ticket.
 

@@ -28,7 +28,7 @@ Background
 
     Sending a TransferTransaction
 
-Alice wants to send 10 cat.currency to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 cat.currency to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
 *************
 Prerequisites
@@ -74,7 +74,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -90,7 +90,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionWithMultipleMosaics.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -99,7 +99,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 2. Sign the transaction with Alice's account.
 
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -108,7 +108,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -122,7 +122,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

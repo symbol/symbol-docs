@@ -79,7 +79,7 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
         Deadline.create(),
         recipientAddress,
         [NetworkCurrencyMosaic.createRelative(10)],
-        PlainMessage.create('Welcome To NEM'),
+        PlainMessage.create('This is a test message'),
         NetworkType.MIJIN_TEST);
 
     console.log(transferTransaction.serialize());
@@ -108,7 +108,7 @@ For example, a TransferTransaction describes who is the recipient and the quanti
 An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2. Get the nemesis block generation hash. You can query ``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value.
+2. Get the nemesis block generation hash. You can query ``nodeUrl + '/block/1'`` and copy ``meta.generationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.

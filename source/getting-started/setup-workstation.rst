@@ -23,6 +23,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 .. code-block:: bash
 
     npm install --global nem2-cli@0.13.4
+
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
 2. Generate a new account and save it as a **profile**.
@@ -32,9 +33,10 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
     nem2-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
-    Introduce your private key: 123*******************************************45
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-01.us-west-2.nemtech.network:3000
-    Insert profile name (blank means default and it could overwrite the previous profile):
+    Do you want to save the account? [y/n]: y
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
+    Insert the profile name: testnet
+    Do you want to set the account as the default profile? [y/n]: y
 
 .. note:: If the test network node is not working, you can use another node url from |network-list|. You can also **run your own testnet node** following :doc:`this guide <../guides/network/running-a-test-net-node>`.
 
@@ -46,11 +48,11 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7                   │
+    │ Address     │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 23B...D4A                                                        │
+    │ Public Key  │ 203...C0A                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123...456                                                        │
+    │ Private Key │ AAA...AAA                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 .. _setup-getting-test-currency:
@@ -76,7 +78,7 @@ After the transaction gets confirmed, check if the account has received ``cat.cu
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 0DC67FBE1CAD29E3 │ 866.0           │ 866000000       │ Never             │
+    │ 46BE9BC0626F9B1A │ 1000.0          │ 1000000000      | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 .. note:: The faucet has a limited amount of ``cat.currency`` and must be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account ``TAQ4FD-H2UHU5-TZ2VIW-Z6VWSN-MFWR7C-353F73-EUMY``.

@@ -54,7 +54,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateComplete.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -72,7 +72,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateComplete.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -88,7 +88,7 @@ An AggregateTransaction is **complete** if before announcing it to the network, 
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateComplete.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
@@ -102,7 +102,7 @@ An AggregateTransaction is **complete** if before announcing it to the network, 
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/SendingAMultisigTransactionAggregateComplete.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */

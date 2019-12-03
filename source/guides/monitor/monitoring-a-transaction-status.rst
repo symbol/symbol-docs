@@ -33,7 +33,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+1. Define the transaction you want to announce. In this case, we are going to send the message ``Test`` to ``TDU53Y-LCYY3Z-CCH2UO-GWQZ3T-6MF23J-6KYPZQ-3EO7``.
 
 .. example-code::
 
@@ -42,9 +42,14 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Sign the transaction with your account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -52,6 +57,12 @@ Method #01: Using the SDK
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 
 
 3. Open a new :ref:`Listener <websockets>`. The listener communicates with the API WebSocket, which forward you asynchronously the status of the transaction.
@@ -63,12 +74,22 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Monitor if the WebSocket **connection is alive**. :doc:`Blocks <../../concepts/block>` are generated every ``15`` seconds in average, so a timeout can be raised if there is no response after 30 seconds approximately.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -85,6 +106,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
+
     .. viewsource:: ../../resources/examples/bash/monitor/MonitoringTransactionStatusError.sh
         :language: bash
         :start-after: #!/bin/sh
@@ -95,6 +121,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.ts
         :language: typescript
+        :start-after:  /* start block 06 */
+        :end-before: /* end block 06 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
         :start-after:  /* start block 06 */
         :end-before: /* end block 06 */
 
@@ -111,6 +142,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 07 */
         :end-before: /* end block 07 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
+        :start-after:  /* start block 07 */
+        :end-before: /* end block 07 */
+
     .. viewsource:: ../../resources/examples/bash/monitor/MonitoringTransactionConfirmed.sh
         :language: bash
         :start-after: #!/bin/sh
@@ -121,6 +157,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.ts
         :language: typescript
+        :start-after:  /* start block 08 */
+        :end-before: /* end block 08 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/MonitoringTransactionStatus.js
+        :language: javascript
         :start-after:  /* start block 08 */
         :end-before: /* end block 08 */
 

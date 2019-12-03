@@ -29,26 +29,35 @@ import {
 import {filter, first, map, mergeMap, skip, timeout} from "rxjs/operators";
 
 /* start block 01 */
-const recipientAddress = Address.createFromRawAddress("SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54");
+// replace with recipient address
+const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientAddress = Address.createFromRawAddress(rawAddress);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [],
     PlainMessage.create('Test'),
-    NetworkType.MIJIN_TEST);
+    networkType);
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const signer = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const signedTransaction = signer.sign(transferTransaction, networkGenerationHash);
+// replace with sender private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+
+const account = Account.createFromPrivateKey(privateKey,networkType);
+const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 
 /* start block 03 */
-const url = 'http://localhost:3000';
-const listener = new Listener(url);
-const transactionHttp = new TransactionHttp(url);
+// replace with nodeUrl
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const listener = new Listener(nodeUrl);
+const transactionHttp = new TransactionHttp(nodeUrl);
 
 const amountOfConfirmationsToSkip = 5;
 
@@ -58,7 +67,7 @@ listener.open().then(() => {
 /* start block 04 */
     const newBlockSubscription = listener
         .newBlock()
-        .pipe(timeout(30000)) // time in milliseconds when to timeout.
+        .pipe(timeout(30000)) // time in milliseconds to timeout.
         .subscribe(block => {
                 console.log("New block created:" + block.height.compact());
             },
@@ -70,7 +79,7 @@ listener.open().then(() => {
 
 /* start block 05 */
     listener
-        .status(signer.address)
+        .status(account.address)
         .pipe(filter(error => error.hash === signedTransaction.hash))
         .subscribe(error => {
                 console.log("❌:" + error.status);
@@ -82,7 +91,7 @@ listener.open().then(() => {
 
 /* start block 06 */
     listener
-        .unconfirmedAdded(signer.address)
+        .unconfirmedAdded(account.address)
         .pipe(filter(transaction => (transaction.transactionInfo !== undefined
             && transaction.transactionInfo.hash === signedTransaction.hash)))
         .subscribe(ignored => console.log("⏳: Transaction status changed to unconfirmed"),
@@ -91,7 +100,7 @@ listener.open().then(() => {
 
 /* start block 07 */
     listener
-        .confirmed(signer.address)
+        .confirmed(account.address)
         .pipe(
             filter(transaction =>(transaction.transactionInfo !== undefined
                 && transaction.transactionInfo.hash === signedTransaction.hash)),
