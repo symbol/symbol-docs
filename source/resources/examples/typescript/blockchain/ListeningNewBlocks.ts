@@ -19,7 +19,9 @@
 import {Listener} from "nem2-sdk";
 
 /* start block 01 */
-const listener = new Listener('http://localhost:3000');
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const listener = new Listener(nodeUrl);
+
 listener.open().then(() => {
     listener
         .newBlock()

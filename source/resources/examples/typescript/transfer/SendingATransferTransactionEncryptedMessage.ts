@@ -46,7 +46,6 @@ const transferTransaction = TransferTransaction.create(
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
-
 const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */

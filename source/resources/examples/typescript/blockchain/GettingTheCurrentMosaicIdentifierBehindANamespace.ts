@@ -19,9 +19,13 @@
 import {NamespaceHttp, NamespaceId,} from 'nem2-sdk';
 
 /* start block 01 */
+// replace with namespace name
 const namespace = new NamespaceId('cat.currency');
 
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const namespaceHttp = new NamespaceHttp(nodeUrl);
+
 namespaceHttp
     .getLinkedMosaicId(namespace)
     .subscribe(mosaicId => console.log(mosaicId.toHex()),

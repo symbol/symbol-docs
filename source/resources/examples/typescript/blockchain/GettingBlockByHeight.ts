@@ -19,9 +19,11 @@
 import {BlockHttp} from "nem2-sdk";
 
 /* start block 01 */
-const height = 1;
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const blockHttp = new BlockHttp(nodeUrl);
 
-const blockHttp = new BlockHttp('http://localhost:3000');
+const height = 1;
 blockHttp
     .getBlockByHeight(height.toString())
     .subscribe(block => console.log(block), err => console.error(err));

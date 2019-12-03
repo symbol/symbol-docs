@@ -31,9 +31,13 @@ const cosignAggregateBondedTransaction = (transaction, account) => {
     const cosignatureTransaction = nem2_sdk_1.CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
-const privateKey = process.env.PRIVATE_KEY;
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const nodeUrl = 'http://localhost:3000';
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+//replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 const listener = new nem2_sdk_1.Listener(nodeUrl);
 listener.open().then(() => {

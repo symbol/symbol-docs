@@ -23,15 +23,20 @@ const operators_1 = require("rxjs/operators");
 const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('cat.currency'), nem2_sdk_1.UInt64.fromUint(1000000));
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), nem2_sdk_1.NetworkType.MIJIN_TEST);
-const privateKey = process.env.PRIVATE_KEY;
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.GENERATION_HASH;
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), networkType);
+// replace with sender private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const receiptHttp = new nem2_sdk_1.ReceiptHttp(nodeUrl);
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 const listener = new nem2_sdk_1.Listener(nodeUrl);

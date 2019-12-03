@@ -49,10 +49,8 @@ const transaction = AccountRestrictionTransaction
 const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
-
 const productAccount = Account.createFromPrivateKey(productPrivateKey, networkType);
 const signedTransaction = productAccount.sign(transaction,networkGenerationHash);
-
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
