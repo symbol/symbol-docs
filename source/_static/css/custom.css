@@ -188,7 +188,8 @@ body > .container {
 
 .content .headerlink::before{
     content: "";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     font-size: 20px;
 }
 
@@ -504,7 +505,7 @@ div.figure .caption {
 }
 
 .example-selector > li {
-    color: #3D4852;
+    color: #3D4852 !important;
     background-color: transparent !important;
     float: none !important;
     display: inline-block !important;
