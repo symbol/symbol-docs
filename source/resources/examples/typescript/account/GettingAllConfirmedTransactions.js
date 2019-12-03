@@ -20,12 +20,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 const operators_1 = require("rxjs/operators");
 const rxjs_1 = require("rxjs");
-const nodeUrl = 'http://localhost:3000';
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
 const pageSize = 100;
 const allTransactions = true;
-const rawAddress = process.env.ADDRESS;
-const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 accountHttp
     .getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize, undefined))
     .pipe(operators_1.expand((transactions) => transactions.length >= pageSize && allTransactions

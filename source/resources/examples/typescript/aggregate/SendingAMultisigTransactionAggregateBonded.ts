@@ -41,7 +41,7 @@ const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, N
 const multisigAccountPublicKey = process.env.MULTISIG_PUBLIC_KEY as string;
 const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
 
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientAddress = Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4');
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),

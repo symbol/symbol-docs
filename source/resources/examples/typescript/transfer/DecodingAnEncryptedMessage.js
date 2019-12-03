@@ -28,7 +28,7 @@ const certificateAccount = nem2_sdk_1.Account.createFromPrivateKey(certificatePr
 // replace with alice public key
 const alicePublicKey = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
-// replace with nodeUrl
+// replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000/';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 // replace with transaction hash

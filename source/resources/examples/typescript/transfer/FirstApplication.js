@@ -38,7 +38,7 @@ const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType)
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 /* start block 03 */
-// replace with nodeUrl
+// replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp

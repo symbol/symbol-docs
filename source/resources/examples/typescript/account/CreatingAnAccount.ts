@@ -19,7 +19,6 @@
 import {Account, NetworkType} from "nem2-sdk";
 
 /* start block 01 */
-const account = Account.generateNewAccount(NetworkType.MIJIN_TEST);
-
+const account = Account.generateNewAccount(NetworkType.TEST_NET);
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

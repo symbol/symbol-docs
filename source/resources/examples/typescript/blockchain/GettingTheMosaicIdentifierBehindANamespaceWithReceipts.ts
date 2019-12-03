@@ -44,7 +44,7 @@ const aliasedMosaic = new Mosaic(
 /* start block 02 */
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54'),
+    Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'),
     [aliasedMosaic],
     PlainMessage.create('Test aliased mosaic'),
     NetworkType.MIJIN_TEST);

@@ -20,19 +20,23 @@ import {AccountHttp, Address, MosaicId, TransactionType, TransferTransaction} fr
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
-const originAddress = Address.createFromRawAddress(rawAddress);
-
-const recipientRawAddress = process.env.ADDRESS as string;
+// replace with sender address
+const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const senderAddress = Address.createFromRawAddress(senderRawAddress);
+// replace with recipient address
+const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-
-const mosaicIdHex = process.env.MOSAIC_ID_HEX as string;
+// replace with mosaic id
+const mosaicIdHex = '46BE9BC0626F9B1A';
+// replace with mosaic divisibility
 const divisibility = 6;
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 
-const accountHttp = new AccountHttp('http://localhost:3000');
+const accountHttp = new AccountHttp(nodeUrl);
 accountHttp
-    .getAccountOutgoingTransactions(originAddress)
+    .getAccountOutgoingTransactions(senderAddress)
     .pipe(
         mergeMap((_) => _), // Transform transaction array to single transactions to process them
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions

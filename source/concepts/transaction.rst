@@ -73,7 +73,7 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
     } from "nem2-sdk";
 
     const recipientAddress = Address
-        .createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+        .createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4');
 
     const transferTransaction = TransferTransaction.create(
         Deadline.create(),

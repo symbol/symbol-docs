@@ -19,8 +19,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
+// replace with password
 const password = new nem2_sdk_1.Password('password');
-const wallet = nem2_sdk_1.SimpleWallet.create('wallet-name', password, nem2_sdk_1.NetworkType.MIJIN_TEST);
+const wallet = nem2_sdk_1.SimpleWallet.create('wallet-name', password, nem2_sdk_1.NetworkType.TEST_NET);
 const account = wallet.open(password);
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

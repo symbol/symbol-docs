@@ -24,7 +24,7 @@ const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY;
 const cosignatoryAccount = nem2_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
 const multisigAccountPublicKey = process.env.MULTISIG_PUBLIC_KEY;
 const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAccountPublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const recipientAddress = nem2_sdk_1.Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+const recipientAddress = nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4');
 const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], nem2_sdk_1.PlainMessage.create('sending 10 cat.currency'), nem2_sdk_1.NetworkType.MIJIN_TEST);
 /* start block 01 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [transferTransaction.toAggregate(multisigAccount)], nem2_sdk_1.NetworkType.MIJIN_TEST);

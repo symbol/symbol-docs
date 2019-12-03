@@ -20,14 +20,15 @@ import {AccountHttp, Address, QueryParams} from "nem2-sdk";
 import {concatMap, expand, toArray} from "rxjs/operators";
 import {EMPTY} from 'rxjs'
 
-const nodeUrl = 'http://localhost:3000';
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const address = Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const accountHttp = new AccountHttp(nodeUrl);
 
 const pageSize = 100;
 const allTransactions = true;
-
-const rawAddress = process.env.ADDRESS as string;
-const address = Address.createFromRawAddress(rawAddress);
 
 accountHttp
     .getAccountTransactions(address, new QueryParams(pageSize, undefined))

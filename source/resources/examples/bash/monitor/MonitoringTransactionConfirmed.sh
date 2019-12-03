@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli monitor confirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+nem2-cli monitor confirmed --address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4

@@ -23,7 +23,7 @@ const operators_1 = require("rxjs/operators");
 const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('cat.currency'), nem2_sdk_1.UInt64.fromUint(1000000));
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), nem2_sdk_1.NetworkType.MIJIN_TEST);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), nem2_sdk_1.NetworkType.MIJIN_TEST);
 const privateKey = process.env.PRIVATE_KEY;
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.GENERATION_HASH;

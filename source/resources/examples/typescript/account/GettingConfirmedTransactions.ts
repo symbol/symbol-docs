@@ -19,10 +19,12 @@
 import {AccountHttp, Address, QueryParams} from "nem2-sdk";
 
 /* start block 01 */
-const accountHttp = new AccountHttp('http://localhost:3000');
-
-const rawAddress = process.env.ADDRESS as string;
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const accountHttp = new AccountHttp(nodeUrl);
 
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 

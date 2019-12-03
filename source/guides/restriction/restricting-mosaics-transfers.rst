@@ -153,6 +153,6 @@ You should be able to send ``ccf.shares`` to Alice without any problems. Additio
 
 .. code-block:: bash
 
-     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 634a8ac3fc2b65b3::1
+     nem2-cli transaction transfer --recipient TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 634a8ac3fc2b65b3::1
 
 However, when you send the same mosaic to Bob's account, you should get the error ``Failure_RestrictionMosaic_Account_Unauthorized`` through the :ref:`status error channel <status-errors>` as he is not allowed to transact with ``ccf.shares``.
