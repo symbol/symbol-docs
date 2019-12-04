@@ -19,10 +19,13 @@
 import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionMosaicHttp} from "nem2-sdk";
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const restrictionHttp = new RestrictionMosaicHttp(nodeUrl);
 
-const restrictionHttp = new RestrictionMosaicHttp('http://localhost:3000');
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
     .subscribe((mosaicGlobalRestrictions) => {
         if (mosaicGlobalRestrictions.restrictions.size > 0) {

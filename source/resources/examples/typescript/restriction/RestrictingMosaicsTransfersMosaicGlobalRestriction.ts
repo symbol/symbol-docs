@@ -29,12 +29,16 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
 const key = KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
@@ -44,17 +48,20 @@ const transaction = MosaicGlobalRestrictionTransaction
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue
         MosaicRestrictionType.EQ, // newRestrictionType
-        NetworkType.MIJIN_TEST);
+        networkType);
 /* end block 02 */
 
 /* start block 03 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with company private key
+const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(transaction, networkGenerationHash);
-console.log(signedTransaction.hash);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

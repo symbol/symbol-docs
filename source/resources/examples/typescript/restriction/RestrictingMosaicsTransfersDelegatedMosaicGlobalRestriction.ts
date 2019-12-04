@@ -33,9 +33,12 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY as string;
-const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, NetworkType.MIJIN_TEST);
+const networkType = NetworkType.TEST_NET;
+// replace with kyc provider private key
+const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 
+// Define KYC Mosaic Id
 const mosaicNonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
@@ -44,9 +47,10 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     MosaicFlags.create(true, true, true),
     0,
     UInt64.fromUint(0),
-    NetworkType.MIJIN_TEST);
+    networkType);
 console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 
+// Define Mosaic global restriction Is_Verified = 1
 const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
     .create(
@@ -57,22 +61,24 @@ const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue
         MosaicRestrictionType.EQ, // newRestrictionType
-        NetworkType.MIJIN_TEST);
-
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+        networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
         mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
         mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)],
-    NetworkType.MIJIN_TEST,
+    networkType,
     []
 );
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

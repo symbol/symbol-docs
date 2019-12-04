@@ -19,10 +19,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const sharesIdHex = process.env.SHARES_ID;
+// replace with cc.shares mosaic id
+const sharesIdHex = '7cdf3b117a3c40cc';
 const sharesId = new nem2_sdk_1.MosaicId(sharesIdHex);
-const kycIdHex = process.env.KYC_ID;
+// replace with kyc mosaic id
+const kycIdHex = '183D0802BCDB97AF';
 const kycId = new nem2_sdk_1.MosaicId(kycIdHex);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 const transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), sharesId, // mosaicId
@@ -31,13 +35,16 @@ nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
 nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-nem2_sdk_1.NetworkType.MIJIN_TEST, kycId);
-const comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY;
-const comfyClothingCompnayAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-const signedTransaction = comfyClothingCompnayAccount.sign(transaction, networkGenerationHash);
+networkType, kycId);
+const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const comfyClothingCompanyAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const signedTransaction = comfyClothingCompanyAccount.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

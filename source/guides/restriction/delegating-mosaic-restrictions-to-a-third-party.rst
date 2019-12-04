@@ -45,6 +45,8 @@ Method #01: Using the SDK
 
     nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany
 
+    Your mosaic id is: 7cdf3b117a3c40cc
+
 2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, IsVerified, EQ, 1}`` to the mosaic.
 
 .. example-code::

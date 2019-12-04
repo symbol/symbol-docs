@@ -19,44 +19,54 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID;
+// replace with kyc mosaic id
+const mosaicIdHex = '183D0802BCDB97AF';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const aliceRawAddress = 'SDDOLW-ESKH33-YYW5XF-42F3ZJ-ZL6JIA-DP4TFT-H6RH';
+// replace with alice address
+const aliceRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const aliceAddress = nem2_sdk_1.Address.createFromRawAddress(aliceRawAddress);
-const bobRawAddress = 'SDI4YV-LEDOHE-NVRPRX-7P3Q3P-RXNJQW-S2YPGA-SA2Q';
+// replace with bob address
+const bobRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const bobAddress = nem2_sdk_1.Address.createFromRawAddress(bobRawAddress);
-const carolRawAddress = 'SC5ZKF-GHOMJQ-RN2HEM-GYL5QU-YF7IOQ-E3IHC2-ZICE';
+// replace with carol address
+const carolRawAddress = 'TCF7MK-FL6QYF-UHWVRZ-6UUCLN-YBDWLQ-ZZC37A-2O6R';
 const carolAddress = nem2_sdk_1.Address.createFromRawAddress(carolRawAddress);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 const aliceMosaicAddressRestrictionTransaction = nem2_sdk_1.MosaicAddressRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), mosaicId, // mosaicId
 key, // restrictionKey
 aliceAddress, // address
 nem2_sdk_1.UInt64.fromUint(1), // newRestrictionValue
-nem2_sdk_1.NetworkType.MIJIN_TEST);
+networkType);
 const bobMosaicAddressRestrictionTransaction = nem2_sdk_1.MosaicAddressRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), mosaicId, // mosaicId
-key, // restictionKey
+key, // restrictionKey
 bobAddress, // address
 nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
-nem2_sdk_1.NetworkType.MIJIN_TEST);
+networkType);
 const carolMosaicAddressRestrictionTransaction = nem2_sdk_1.MosaicAddressRestrictionTransaction
     .create(nem2_sdk_1.Deadline.create(), mosaicId, // mosaicId
-key, // restictionKey
+key, // restrictionKey
 carolAddress, // address
 nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
-nem2_sdk_1.NetworkType.MIJIN_TEST);
-const kycProviderPrivateKey = process.env.KYC_PROVIDER_PRIVATE_KEY;
-const kycProviderAccount = nem2_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+networkType);
+// replace with kyc provider private key
+const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+const kycProviderAccount = nem2_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [
     aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
     bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
     carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)
-], nem2_sdk_1.NetworkType.MIJIN_TEST, []);
+], networkType, []);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

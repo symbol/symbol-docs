@@ -31,7 +31,7 @@ Creating a restrictable mosaic
 
 Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
 
-1. Start creating a new restrictable mosaic with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
+1. Start creating the new restrictable mosaic ``ccf.shares`` with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
 
 .. code-block:: bash
 

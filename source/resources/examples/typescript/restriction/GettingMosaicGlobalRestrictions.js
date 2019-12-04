@@ -19,9 +19,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp(nodeUrl);
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
     .subscribe((mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {

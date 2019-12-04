@@ -62,7 +62,7 @@ Contributing to Catapult
 Catapult is an |open-source| project. Discover how our |community| is organized, and get started participating:
 
 *   Ask in |stack-overflow| development-related questions
-*   Reach our community joining the official |slack|.
+*   Reach our community joining the official |slack|
 *   Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to propose changes
 *   Follow the development updates on |twitter|
 *   Explore our |github| repositories
