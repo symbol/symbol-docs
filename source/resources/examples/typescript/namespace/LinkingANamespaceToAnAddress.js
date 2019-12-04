@@ -19,18 +19,25 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME;
-const namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
-const rawAddress = process.env.ADDRESS;
+// replace with namespace name
+const namespaceId = new nem2_sdk_1.NamespaceId('foo');
+// replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 /* start block 02 */
-const addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const privateKey = process.env.PRIVATE_KEY;
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, networkType);
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(addressAliasTransaction, networkGenerationHash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

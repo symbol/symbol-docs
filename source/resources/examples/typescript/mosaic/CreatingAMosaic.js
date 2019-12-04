@@ -19,22 +19,36 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const privateKey = process.env.PRIVATE_KEY;
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+// replace with duration (in blocks)
+const duration = nem2_sdk_1.UInt64.fromUint(0);
+// replace with custom mosaic flags
+const isSupplyMutable = true;
+const isTransferable = true;
+const isRestrictable = true;
+// replace with custom divisibility
+const divisibility = 0;
 const nonce = nem2_sdk_1.MosaicNonce.createRandom();
-const mosaicDefinitionTransaction = nem2_sdk_1.MosaicDefinitionTransaction.create(nem2_sdk_1.Deadline.create(), nonce, nem2_sdk_1.MosaicId.createFromNonce(nonce, account.publicAccount), nem2_sdk_1.MosaicFlags.create(true, true, true), 0, nem2_sdk_1.UInt64.fromUint(0), nem2_sdk_1.NetworkType.MIJIN_TEST);
+const mosaicDefinitionTransaction = nem2_sdk_1.MosaicDefinitionTransaction.create(nem2_sdk_1.Deadline.create(), nonce, nem2_sdk_1.MosaicId.createFromNonce(nonce, account.publicAccount), nem2_sdk_1.MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable), divisibility, duration, networkType);
 /* end block 01 */
 /* start block 02 */
-const mosaicSupplyChangeTransaction = nem2_sdk_1.MosaicSupplyChangeTransaction.create(nem2_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, nem2_sdk_1.MosaicSupplyChangeAction.Increase, nem2_sdk_1.UInt64.fromUint(1000000), nem2_sdk_1.NetworkType.MIJIN_TEST);
+const mosaicSupplyChangeTransaction = nem2_sdk_1.MosaicSupplyChangeTransaction.create(nem2_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, nem2_sdk_1.MosaicSupplyChangeAction.Increase, nem2_sdk_1.UInt64.fromUint(1000000), networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [
     mosaicDefinitionTransaction.toAggregate(account.publicAccount),
     mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)
-], nem2_sdk_1.NetworkType.MIJIN_TEST, []);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+], networkType, []);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

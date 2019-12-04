@@ -24,7 +24,7 @@ const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with company private key
 const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
-// replace with namespace id
+// replace with namespace name
 const namespaceId = new nem2_sdk_1.NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';

@@ -19,7 +19,7 @@
 import {Metadata, MetadataHttp, MosaicId} from "nem2-sdk";
 
 /* start block 01 */
-// replace with mosaicId
+// replace with mosaic id
 const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint

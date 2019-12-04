@@ -30,7 +30,7 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-// replace with mosaicId
+// replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with customer address

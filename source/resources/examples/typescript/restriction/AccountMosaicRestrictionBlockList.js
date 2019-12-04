@@ -19,7 +19,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-// replace with mosaicId
+// replace with mosaic id
 const companyShareMosaicIdHex = '7cdf3b117a3c40cc';
 const companyShareMosaicId = new nem2_sdk_1.MosaicId(companyShareMosaicIdHex);
 /* end block 01 */

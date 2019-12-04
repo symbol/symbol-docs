@@ -27,7 +27,7 @@ import {
 } from "nem2-sdk";
 
 /* start block 01 */
-// replace with mosaicId
+// replace with mosaic id
 const companyShareMosaicIdHex = '7cdf3b117a3c40cc';
 const companyShareMosaicId = new MosaicId(companyShareMosaicIdHex);
 /* end block 01 */

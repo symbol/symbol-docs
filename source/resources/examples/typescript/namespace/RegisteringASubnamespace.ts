@@ -19,21 +19,30 @@
 import {Account, Deadline, NamespaceRegistrationTransaction, NetworkType, TransactionHttp} from "nem2-sdk";
 
 /* start block 01 */
+// replace with root namespace name
 const rootNamespaceName = 'foo';
+// replace with root subnamespace name
 const subnamespaceName = 'bar';
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 
 const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.createSubNamespace(
     Deadline.create(),
     subnamespaceName,
     rootNamespaceName,
-    NetworkType.MIJIN_TEST);
+    networkType);
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
     .subscribe(x => console.log(x), err => console.error(err));

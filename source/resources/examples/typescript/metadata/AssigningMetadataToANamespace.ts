@@ -33,7 +33,7 @@ const networkType = NetworkType.TEST_NET;
 // replace with company private key
 const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const companyAccount = Account.createFromPrivateKey(companyPrivateKey, networkType);
-// replace with namespace id
+// replace with namespace name
 const namespaceId = new NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';

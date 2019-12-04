@@ -42,7 +42,7 @@ Method #01: Using the SDK
     hexadecimal:    82a9d1ac587ec054
     uint:           [ 1484701780, 2192167340 ]
     type:           Root namespace
-    owner:          SAKT3C-...-X4ND
+    owner:          TBULEA...IPS4
     startHeight:    52000
     endHeight:      53000
 
@@ -88,7 +88,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     hexadecimal:    82a9d1ac587ec054
     uint:           [ 1484701780, 2192167340 ]
     type:           Root namespace
-    owner:          SAKT3C-...-X4ND
+    owner:          TBULEA...IPS4
     startHeight:    52000
     endHeight:      54000
 

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 13 Sep, 2019
-    :category: Mosaic
+    :category: Mosaic Restriction
     :excerpt: 1
     :nocomments:
 

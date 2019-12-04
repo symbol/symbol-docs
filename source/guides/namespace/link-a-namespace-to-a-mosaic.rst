@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 04 March, 2019
-    :category: Namespace, Mosaic
+    :category: Namespace
     :excerpt: 1
     :nocomments:
 
