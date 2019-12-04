@@ -49,9 +49,9 @@ Creating the account
 
     nem2-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 *************************

@@ -24,7 +24,7 @@ const password = new Password('password');
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 
-const wallet = SimpleWallet.createFromPrivateKey('wallet-name', password, privateKey, NetworkType.MIJIN_TEST);
+const wallet = SimpleWallet.createFromPrivateKey('wallet-name', password, privateKey, NetworkType.TEST_NET);
 const account = wallet.open(password);
 console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

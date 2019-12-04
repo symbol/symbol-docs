@@ -120,7 +120,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 
     const privateKey = process.env.PRIVATE_KEY as string;
     const generationHash = process.env.GENERATION_HASH as string;
-    const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+    const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
     const signedTransaction = account.sign(transferTransaction, generationHash);
 
