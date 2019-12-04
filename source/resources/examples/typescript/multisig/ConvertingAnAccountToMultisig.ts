@@ -35,13 +35,17 @@ import {filter, mergeMap} from "rxjs/operators";
 import {merge} from "rxjs";
 
 /* start block 01 */
-const privateKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const cosignatory1PublicKey = process.env.COSIGNATORY_1_PUBLIC_KEY as string;
-const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, NetworkType.MIJIN_TEST);
-const cosignatory2PublicKey = process.env.COSIGNATORY_2_PUBLIC_KEY as string;
-const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+//replace with candidate multisig private key
+const privateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with cosignatory 1 public key
+const cosignatory1PublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, networkType);
+// replace with cosignatory 2 public key
+const cosignatory2PublicKey = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
+const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -51,18 +55,19 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     1,
     [cosignatory1, cosignatory2],
     [],
-    NetworkType.MIJIN_TEST);
+    networkType);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
-    NetworkType.MIJIN_TEST);
+    networkType);
 /* end block 03 */
 
 /* start block 04 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 04 */
@@ -73,11 +78,12 @@ const hashLockTransaction = HashLockTransaction.create(
     NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType);
 
 const signedHashLockTransaction = account.sign(hashLockTransaction, networkGenerationHash);
 
-const nodeUrl = 'http://localhost:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
