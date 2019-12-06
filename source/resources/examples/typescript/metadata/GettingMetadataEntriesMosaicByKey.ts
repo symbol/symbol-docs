@@ -30,11 +30,11 @@ metadataHttp.getMosaicMetadataByKey(mosaicId, keyHex)
             metadata
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
-                    console.log('\n \n' +'Key:\t', metadataEntry.scopedMetadataKey);
+                    console.log('\n \n' +'Scoped Metadata Key:\t', metadataEntry.scopedMetadataKey);
                     console.log('\n' +'---' );
                     console.log('\n' +'Value:\t', metadataEntry.value);
                     console.log('\n' +'Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n' +'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n' +'Target Public Key:\t', metadataEntry.targetPublicKey);
                     console.log('\n' +'TargetId:\t', metadataEntry.targetId);
                 });
         } else {
