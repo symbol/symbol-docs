@@ -28,11 +28,11 @@ const metadataHttp = new MetadataHttp('http://localhost:3000');
 metadataHttp.getMosaicMetadataByKeyAndSender(mosaicId, keyHex, senderPublicKey)
     .subscribe((metadata) => {
             const metadataEntry = metadata.metadataEntry;
-            console.log('\n \n' +'Key:\t', metadataEntry.scopedMetadataKey);
+            console.log('\n \n' +'Scoped Metadata Key:\t', metadataEntry.scopedMetadataKey);
             console.log('\n' +'---' );
             console.log('\n' +'Value:\t', metadataEntry.value);
             console.log('\n' +'Sender Public Key:\t', metadataEntry.senderPublicKey);
-            console.log('\n' +'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+            console.log('\n' +'Target Public Key:\t', metadataEntry.targetPublicKey);
             console.log('\n' +'TargetId:\t', metadataEntry.targetId);
     }, (err) => console.log(err));
 /* end block 01 */
