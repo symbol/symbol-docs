@@ -19,7 +19,6 @@
 import {
     Account,
     AccountMetadataTransaction,
-    Address,
     AggregateTransaction,
     Deadline,
     HashLockTransaction,
@@ -28,12 +27,9 @@ import {
     NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
-    SignedTransaction,
-    TransactionHttp,
+    TransactionService,
     UInt64
 } from 'nem2-sdk';
-import {filter, mergeMap} from "rxjs/operators";
-import {merge} from "rxjs";
 
 /* start block 01 */
 // replace with key
@@ -89,33 +85,9 @@ const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGe
 /* start block 05 */
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
-
-const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
-    return transactionHttp.announce(signedHashLockTransaction);
-};
-
-const announceAggregateTransaction = (listener: Listener,
-                                      signedHashLockTransaction: SignedTransaction,
-                                      signedAggregateTransaction: SignedTransaction,
-                                      senderAddress: Address) => {
-    return listener
-        .confirmed(senderAddress)
-        .pipe(
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => {
-                listener.terminate();
-                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
-            })
-        );
-};
+const transactionService = new TransactionService(nodeUrl);
 
 listener.open().then(() => {
-    merge(announceHashLockTransaction(signedHashLockTransaction),
-        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, bobAccount.address))
-        .subscribe(x => console.log('Transaction confirmed:', x.message),
-            err=> console.log(err));
-});
-/* end block 05 */
+    transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
+});/* end block 05 */

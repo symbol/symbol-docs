@@ -18,7 +18,7 @@
 
 import {
     Account,
-    AggregateTransaction, Convert,
+    AggregateTransaction,
     Deadline,
     HashLockTransaction,
     KeyGenerator,
@@ -30,11 +30,11 @@ import {
     NetworkType,
     PublicAccount,
     SignedTransaction,
-    TransactionHttp,
+    TransactionService,
     UInt64
 } from 'nem2-sdk';
-import {filter, mergeMap} from "rxjs/operators";
-import {merge, of} from "rxjs";
+import {mergeMap} from "rxjs/operators";
+import {of} from "rxjs";
 
 /* start block 01 */
 // replace with network type
@@ -107,29 +107,17 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
 
 /* start block 04 */
 const listener = new Listener(nodeUrl);
-const transactionHttp = new TransactionHttp(nodeUrl);
-
-const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => transactionHttp.announce(signedHashLockTransaction);
-const announceAggregateTransaction = (signedHashLockTransaction: SignedTransaction, signedAggregateTransaction: SignedTransaction) => {
-    return listener
-        .confirmed(bobAccount.address)
-        .pipe(
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => {
-                listener.terminate();
-                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
-            })
-        );
-};
+const transactionService = new TransactionService(nodeUrl);
 
 listener.open().then(() => {
     signedAggregateHashLock.pipe(
-        mergeMap(signedAggregateHashLock => merge(
-            announceHashLockTransaction(signedAggregateHashLock.hashLock),
-            announceAggregateTransaction(signedAggregateHashLock.hashLock,
-                signedAggregateHashLock.aggregate))))
-        .subscribe(x => console.log('Transaction confirmed:', x.message),
+        mergeMap(signedAggregateHashLock =>
+            transactionService.announceHashLockAggregateBonded(
+                signedAggregateHashLock.hashLock,
+                signedAggregateHashLock.aggregate,
+                listener)
+        )
+    ).subscribe(x => console.log('Transaction confirmed'),
                 err => console.log(err));
 });
 /* end block 04 */
