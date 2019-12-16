@@ -58,7 +58,6 @@ The first notable change about transactions is that the status response is recei
 
 * Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`
 * Protocol: |catapult-schemas|
-* Guide: :doc:`Monitoring a transaction status <../monitor/monitoring-a-transaction-status>`
 
 Additionally, there is only one version of :doc:`TransferTransaction <../../concepts/transfer-transaction>` in Catapult. The native currency is now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the transaction.
 

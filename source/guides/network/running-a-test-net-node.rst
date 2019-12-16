@@ -13,7 +13,7 @@ This guide will walk you through the process of **setting up your node** to join
 
 The test network mirrors the same **technology** and **features** of the future main public network. As the currency in this network does not have any real value, it allows you to experiment with the offered Catapult’s transaction set without the loss of valuable assets.
 
-.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private test network, install :doc:`a local environment for learning and development purposes <creating-a-private-test-net>`.
+.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
 *********************
 Hardware requirements
@@ -24,6 +24,7 @@ Catapult nodes have been tested on computers with the following **minimum requir
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
 * **HD**: 20GB or more
+* **OS**: Linux or Mac
 
 .. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
@@ -31,16 +32,16 @@ Catapult nodes have been tested on computers with the following **minimum requir
 Environment requirements
 ************************
 
-* **OS**: Linux or Mac
-* Internet connectivity
-* `docker`_ 19.03 installed
-* `docker-compose`_ 1.22 installed
+The setup scripts are automated using docker. To run a test net node, you will need to have installed the following docker tools:
+
+* `docker`_
+* `docker-compose`_
 
 ************
 Installation
 ************
 
-A catapult node can be composed of a different set of components depending on your needs. Catapult test net nodes are currently distributed in two forms:
+A node can be composed of a different set of components depending on your needs. Catapult test net nodes are currently distributed in two forms:
 
 * **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
 
@@ -56,7 +57,7 @@ The package  ``catapult-testnet-bootstrap`` contains both assemblies ready to be
 
 2. Choose the **assembly distribution** you want to install.
 
-In short, if you want to be able to interact with your node, you need to run the API assembly.  On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the Peer assembly.
+In short, if you want to be able to interact with your node, you need to run the API assembly. On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the peer assembly.
 
 .. code-block:: bash
 
@@ -74,9 +75,11 @@ Or
 
     sudo docker-compose up --build --detach
 
-.. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
+You should see docker downloading the container images for the first time, then it should run the setup and finally startup the service.
 
-If you have installed the ``api-harvest-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+
+.. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
 4. After running the node for the first time, you can :doc:`change a set of properties <configuring-node-properties>` such as the node's public key or the :doc:`harvesting configuration <../../concepts/harvesting>`.
 

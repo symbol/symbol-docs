@@ -118,6 +118,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     guides/account/creating-a-wallet
     guides/transfer/sending-a-transfer-transaction
     guides/mosaic/creating-a-mosaic
+    guides/network/running-a-test-net-node
     guides/network/creating-a-private-test-net
     More guides <https://nemtech.github.io/guides/category.html>
 
