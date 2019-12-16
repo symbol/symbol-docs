@@ -52,15 +52,15 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code
 **********************
 
-In this example, we are going to announce a **TransferTransaction** using ``cat.currency`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
+In this example, we are going to announce a **TransferTransaction** using ``nem.xem`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
 
-1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. cat.currency) instead of the mosaic identifier.
+1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. nem.xem) instead of the mosaic identifier.
 
 .. example-code::
 
@@ -116,7 +116,7 @@ In this example, we are going to announce a **TransferTransaction** using ``cat.
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-The previous snippet outputs the resolved mosaic identifier for the namespace ``cat.currency`` and the transaction you have just sent.
+The previous snippet outputs the resolved mosaic identifier for the namespace ``nem.xem`` and the transaction you have just sent.
 
 .. code-block:: bash
 

@@ -8,7 +8,16 @@ Announcing :doc:`transactions <transaction>` have an associated cost. This cost 
 Network currency
 ****************
 
-By default, fees are paid in ``cat.currency``, the underlying currency of the Catapult network. Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
+By default, fees are paid in the underlying currency of the Catapult network.
+
+.. csv-table:: Default network currency per network type
+    :header: "Network type", "Mosaic name"
+    :delim: ;
+
+    MIJIN_TEST; cat.currency
+    TEST_NET; nem.xem
+
+Private chains can edit the configuration of the network to eliminate fees, or use another :doc:`mosaic <mosaic>` that better suits their needs.
 
 ***************
 Transaction fee
@@ -34,7 +43,7 @@ The harvesting nodes can decide their transaction inclusion strategy:
 Rental fee
 **********
 
-Accounts willing to register a :doc:`namespace <namespace>` or a :doc:`mosaic <mosaic>` have to pay a rental fee in addition to the transaction fee. The effective rental fee is adjusted dynamically based on the :doc:`median network multiplier <harvesting>` over last :properties:`maxRollbackBlocks <config-network.properties#L20>`.
+Accounts willing to register a :doc:`namespace <namespace>` or a :doc:`mosaic <mosaic>` have to pay a rental fee in addition to the transaction fee. The effective rental fee is adjusted dynamically based on the :doc:`median network multiplier <harvesting>` over last :ref:`maxRollbackBlocks <config-network-properties>`.
 
 For more information, see how the network calculates the effective rental fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-rental-fee>`.
 

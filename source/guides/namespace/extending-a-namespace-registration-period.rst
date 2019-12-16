@@ -24,7 +24,7 @@ Prerequisites
 *************
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>` and at least one namespace
+- Have one :ref:`account with network currency <setup-creating-a-test-account>` and at least one namespace
 
 *************************
 Method #01: Using the SDK
@@ -72,7 +72,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is :properties:`configurable per network <config-network.properties>`.
+.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``.
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 

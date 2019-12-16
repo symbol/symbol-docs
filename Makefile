@@ -21,7 +21,6 @@ linkcheck:
 alldocs:
 	sphinx-build -b html source build/html/
 	sphinx-build -b html source build/html/ja -D language='ja'
-	sphinx-build -b html source build/html/zh_CN -D language='zh_CN'
 
 .PHONY: help Makefile
 

@@ -24,13 +24,13 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 *************************
 Method #01: Using the SDK
 *************************
 
-.. note:: Before starting this guide, make sure you have an :doc:`account loaded with cat.currency <../../getting-started/setup-workstation>`.
+.. note:: Before starting this guide, make sure you have an :doc:`account loaded with nem.xem <../../getting-started/setup-workstation>`.
 
 1. Open a new file and define two transactions:
 
@@ -44,7 +44,7 @@ a. A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set t
     Duration; 0; Shares of the company should exist as long as the company is in business. The ComfyClothingCompany sets this property to ``0``, creating a non-expiring mosaic.
     Supply mutable; True; ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of ``10,000,000`` authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
     Transferable; True; Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to ``true``.
-    Restrictable; True; Since STOs are regulated, the mosaic owner should be able to restrict which accounts can transact with the mosaic.
+    Restrictable; True; Since STOs are regulated, the mosaic creator should be able to restrict which accounts can transact with the mosaic.
 
 .. example-code::
 

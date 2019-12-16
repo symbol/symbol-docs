@@ -68,10 +68,10 @@ Alice and a ticket distributor want to swap the following mosaics.
 .. csv-table::
         :header: "Owner", "Amount", "MosaicId", "Description"
 
-        Alice, 100, cat.currency, Native currency mosaic
+        Alice, 100, nem.xem, Native currency mosaic
         Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
 
-Before continuing, :ref:`create the two accounts <setup-creating-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
+Before continuing, :ref:`create the two accounts <setup-creating-a-test-account>` loaded with ``nem-xem``. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
 
 ****************************
 Creating the escrow contract
@@ -79,7 +79,7 @@ Creating the escrow contract
 
 1. Open a new file, and define two transfer transactions:
 
-a. A TransferTransaction from Alice to the ticket distributor sending ``100 cat.currency``.
+a. A TransferTransaction from Alice to the ticket distributor sending ``100 nem.xem``.
 
 b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
 
@@ -111,7 +111,7 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. When an **AggregateTransaction is bonded**, Alice will need to **lock 10 cat.currency** to prevent spamming the network. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
+3. When an **AggregateTransaction is bonded**, Alice will need to **lock 10 nem.xem** to prevent spamming the network. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 

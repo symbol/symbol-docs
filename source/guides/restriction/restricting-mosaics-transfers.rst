@@ -94,7 +94,7 @@ The SDK will also request the previous mosaic restriction value and type for thi
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. After defining the global restriction, sign the transaction with the mosaic owner's account—CharlieChocolateFactory—and announce it to the network.
+3. After defining the global restriction, sign the transaction with the mosaic creator's account—CharlieChocolateFactory—and announce it to the network.
 
 .. example-code::
 

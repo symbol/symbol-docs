@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 **********
@@ -36,7 +36,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 
@@ -128,7 +128,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. All metadata is attached only with the consent of the mosaic owner through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the mosaic creator through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 
@@ -142,7 +142,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-.. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic owner would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic creator would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 3. Sign and announce the **AggregateTransaction** to the network.
 

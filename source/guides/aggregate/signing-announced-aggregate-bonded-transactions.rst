@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 *************************
 Method #01: Using the SDK

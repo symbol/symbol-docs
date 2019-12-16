@@ -76,7 +76,7 @@ Example #1: Multisig account with 3 levels
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 cat.currency** to announce the transaction.
+4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 nem.xem** to announce the transaction.
 
 .. example-code::
 

@@ -33,7 +33,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
 
 *********************************
 Running Catapult Service in local

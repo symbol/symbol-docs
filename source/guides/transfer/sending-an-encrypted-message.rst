@@ -17,7 +17,7 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********
 Background
@@ -41,7 +41,7 @@ Create an account for Alice, and another for the certificate  using ``nem2-cli``
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 .. code-block:: bash
@@ -50,7 +50,7 @@ Create an account for Alice, and another for the certificate  using ``nem2-cli``
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 

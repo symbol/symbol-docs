@@ -22,13 +22,13 @@ To start using NEM2-CLI, configure a profile. Profiles are used to set a base UR
 
 .. code-block:: bash
 
-    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-01.us-east-1.nemtech.network:3000
+    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000
 
 NEM2-CLI supports named profiles. You can configure additional profiles by using the ``--profile`` option.
 
 .. code-block:: bash
 
-    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-01.us-east-1.nemtech.network:3000 --profile test_net_profile
+    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile test_net_profile
 
 By default, NEM2-CLI will always use the default profile. To use a named profile, add the ``--profile`` option to the command.
 
@@ -46,7 +46,7 @@ If you do not have a private key to create a profile, you can generate a new acc
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET -s --url http://api-01.us-east-1.nemtech.network:3000 --profile test_net_profile
+    nem2-cli account generate --network TEST_NET -s --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile test_net_profile
 
 ********
 Commands

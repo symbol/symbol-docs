@@ -36,9 +36,11 @@ Similarly, cosignatories can :ref:`invite other accounts to take part in the mul
 Constraints
 ***********
 
-* Multisig accounts can have up to ``10`` cosignatories.
+The public network defines the following constraints for multisig accounts, being the values presented :ref:`configurable per network <config-network-properties>`.
 
-* An account can be cosigner of up to ``5`` multisig accounts.
+* Multisig accounts can have up to ``25`` cosignatories.
+
+* An account can be cosigner of up to ``25`` multisig accounts.
 
 * Multisig account can be a cosigner for another multisig account, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 

@@ -12,7 +12,7 @@ The most common uses of metadata are:
 Metadata is uniquely **identified** by the tuple ``{ signer, target-id, metadata-key }``.
 Including a signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
 
-The **value** linked to an identifier is a string up to ``1024`` characters.
+The **value** linked to an identifier is a string up to ``1024`` characters,  being this parameter :ref:`editable per network <config-network-properties>`.
 The client application is responsible for encrypting the message or keeping it visible for every blockchain participant.
 
 ***********
@@ -27,7 +27,7 @@ This feature reduces the reading time of client applications; metadata allows in
 Permissions
 ***********
 
-The account, namespace or mosaic owner must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
+The account, namespace or mosaic creator must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
 The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
 
@@ -102,7 +102,7 @@ Announce an AccountMetadataTransaction to associate a key-value state to an acco
     targetPublicKey; :schema:`Key <types.cats#L14>` ; Metadata target public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     valueSizeDelta; int16; Change in value size in bytes.
-    valueSize; uint16; Value size in bytes. The maximum size is ``1024``.
+    valueSize; uint16; Value size in bytes.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
 
 .. _mosaic-metadata-transaction:
@@ -124,11 +124,11 @@ Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L14>` ; Target mosaic owner public key.
+    targetPublicKey; :schema:`Key <types.cats#L14>` ; Target mosaic creator public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetMosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
-    valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
+    valueSize; uint16; New value size in bytes.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
 
 .. _namespace-metadata-transaction:
@@ -154,7 +154,7 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetNamespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.
-    valueSize; uint16; New value size in bytes. The maximum size is ``1024``.
+    valueSize; uint16; New value size in bytes.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.
 
 Continue: :doc:`Transfer Transaction <transfer-transaction>`.

@@ -46,13 +46,13 @@ A catapult node can be composed of a different set of components depending on yo
 
 * **API assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions.  The API node installation comes with a REST gateway to perform read and write actions.
 
-The package  ``name-of-package`` contains both assemblies ready to be installed.
+The package  ``catapult-testnet-bootstrap`` contains both assemblies ready to be installed.
 
-1. Use this link to **download the latest release** of the package, or clone the repository directly using Git.
+1. Download the |latest-release|, or clone the repository directly using Git.
 
 .. code-block:: bash
 
-    git clone <name-of-package>
+    git clone https://github.com/nemfoundation/catapult-testnet-bootstrap.git
 
 2. Choose the **assembly distribution** you want to install.
 
@@ -60,7 +60,7 @@ In short, if you want to be able to interact with your node, you need to run the
 
 .. code-block:: bash
 
-    cd api-assembly
+    cd api-harvest-assembly
 
 Or
 
@@ -84,7 +84,7 @@ If you have installed the ``api-assembly`` distribution, verify that the node is
 Interacting with the test network
 *********************************
 
-To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test cat.currency <setup-getting-test-currency>`.
+To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test nem.xem <setup-getting-test-currency>`.
 
 Explorer
 ========
@@ -100,7 +100,7 @@ Clients
 Faucet
 ======
 
-* |faucet|: Receive cat.currency units to test Catapult's services.
+* |faucet|: Receive nem.xem units to test Catapult's services.
 
 SDKs
 ====
@@ -123,4 +123,9 @@ In this portal, you can find everything you need to know about Catapult's featur
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet.nemtech.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-01.nemtech.network/" target="_blank">Faucet</a>
+
+.. |latest-release| raw:: html
+
+   <a href="https://github.com/nemfoundation/catapult-testnet-bootstrap/releases/" target="_blank">Faucet</a>
+

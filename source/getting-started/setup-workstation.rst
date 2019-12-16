@@ -22,7 +22,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.4
+    npm install --global nem2-cli@0.15.1
 
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
@@ -34,7 +34,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -61,14 +61,14 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 Getting test currency
 *********************
 
-To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
+To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``nem.xem`` mosaics, the default network currency of the public network.
 
-Now that you have created your first account, try to request ``cat.currency`` units from the **testnet faucet**. Navigate |faucet|, indicate the amount of cat.currency you want to receive and the address, and click "CLAIM!".
+Now that you have created your first account, try to request ``nem.xem`` units from the **testnet faucet**. |faucet|, indicate the amount of nem.xem you want to receive and the address, and click "CLAIM!".
 
 .. figure:: ../resources/images/screenshots/faucet.png
     :align: center
 
-After the transaction gets confirmed, check if the account has received ``cat.currency`` using the command-line tool.
+After the transaction gets confirmed, check if the account has received ``nem.xem`` using the command-line tool.
 
 .. code-block:: bash
 
@@ -78,10 +78,10 @@ After the transaction gets confirmed, check if the account has received ``cat.cu
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 46BE9BC0626F9B1A │ 1000.0          │ 1000000000      | Never             │
+    │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of ``cat.currency`` and must be replenished before it dries. If you don’t need your test cat.currency units anymore, please send them back to the account ``TAQ4FD-H2UHU5-TZ2VIW-Z6VWSN-MFWR7C-353F73-EUMY``.
+.. note:: The faucet has a limited amount of ``nem.xem`` and must be replenished before it dries. If you don’t need your test nem.xem units anymore, please send them back to the account ``TAQ4FD-H2UHU5-TZ2VIW-Z6VWSN-MFWR7C-353F73-EUMY``.
 
 .. _setup-development-environment:
 
@@ -89,7 +89,7 @@ After the transaction gets confirmed, check if the account has received ``cat.cu
 Creating a project
 ******************
 
-Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
+Now that you have your account filled with ``nem.xem`` units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
 
 Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
@@ -107,7 +107,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.15.0 rxjs
+            npm install nem2-sdk@0.16.0 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for Catapult.
 
@@ -136,7 +136,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.15.0 rxjs
+            npm install nem2-sdk@0.16.0 rxjs
 
     .. tab:: Java
 
@@ -159,7 +159,7 @@ Then, **create a folder for your new project** and run the instructions for the 
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.14.2"
+                compile "compile 'io.nem:sdk-vertx-client:0.16.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
@@ -182,4 +182,4 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet.nemtech.network/" target="_blank">here</a>
+   <a href="http://faucet-01.nemtech.network" target="_blank">Navigate here</a>

@@ -14,7 +14,7 @@ Eligibility criteria
 
 The :ref:`importance score <importance-calculation>` determines the probability of an account to harvest the next block in case the account has harvesting turned on and all other accounts are harvesting too.
 
-An account needs to hold a :properties:`minimum amount <config-network.properties>` of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance greater than zero. Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
+Catapult's public network defines that an account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance greater than zero. Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
 .. _harvesting-mosaic:
 
@@ -22,11 +22,11 @@ An account needs to hold a :properties:`minimum amount <config-network.propertie
 Harvesting mosaic
 *****************
 
-Catapult software allows the :properties:`definition <config-network.properties>` of any :doc:`mosaic <mosaic>` for harvesting purposes to fit the business needs. The catapult test network names this mosaic ``cat.harvest``.
+Catapult software supports :ref:`defining any mosaic <config-network-properties>` for harvesting purposes to fit the business needs.
 
 For example, consortium networks can distribute harvesting mosaics between the companies that are running the infrastructure, while other participants need to pay fees in the form of :doc:`currency mosaic <fees>` to consume services.
 
-By contrast, public networks might decide to use the same mosaic for paying transaction fees and running the network.
+By contrast, public networks might decide to use the same mosaic for paying transaction fees and running the network. For example, Catapult's public network uses ``nem.xem`` as the harvesting mosaic.
 
 .. _local-harvesting:
 
@@ -34,9 +34,9 @@ By contrast, public networks might decide to use the same mosaic for paying tran
 Local harvesting
 ****************
 
-An eligible account can harvest new blocks by running a node. To harvest locally, provide the private key in :properties:`config-harvesting.properties <config-harvesting.properties>` file.
+An eligible account can harvest new blocks by running a node. To harvest locally, provide a private key in :properties:`config-harvesting.properties <config-harvesting.properties>` file.
 
-Besides, each node can set a **beneficiary public key** to share a percentage of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio configurable for each network. When the node does not define a beneficiary, all the rewards go to the block signer.
+Besides, each node can set a **beneficiary public key** to share a 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio :ref:`configurable per network <config-network-properties>`. When the node does not define a beneficiary, all the rewards go to the block signer.
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center

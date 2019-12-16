@@ -17,10 +17,10 @@ Packages
 
 The instructions to configure the node vary depending on the package used to deploy the network.
 
-Catapult Public Testnet
-=======================
+Catapult Testnet Bootstrap
+==========================
 
-After running a node for the first time, the file ``config-input.yaml`` will be generated with the default values. Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-assembly/api-node``.
+After running a node for the first time, the file ``config-input.yaml`` will be generated with the default values. Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
 
 1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 

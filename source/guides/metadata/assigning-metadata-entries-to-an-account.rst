@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********
 Background
@@ -37,7 +37,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 ********************
 Creating the account
@@ -51,7 +51,7 @@ Creating the account
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 *************************
@@ -100,7 +100,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Before sending an aggregate transaction to the network, Bob has to lock  ``10 cat.currency``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
+4. Before sending an aggregate transaction to the network, Bob has to lock  ``10 nem.xem``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account.
 
 .. example-code::
 

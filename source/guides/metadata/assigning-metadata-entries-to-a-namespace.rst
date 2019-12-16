@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
 
 **********
@@ -36,7 +36,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
 
 **********************

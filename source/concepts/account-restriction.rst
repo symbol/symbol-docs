@@ -6,6 +6,8 @@ Account Restriction
 
 The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
 
+The public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
+
 .. csv-table:: Restriction types
     :widths: 40 30 30
     :header: "Restriction", "Incoming Transactions", "Outgoing Transactions"

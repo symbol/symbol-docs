@@ -33,7 +33,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Create :doc:`two accounts <../account/creating-an-account>`
 
 ****************************
@@ -98,7 +98,7 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
+5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 nem.xem**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 

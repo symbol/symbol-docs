@@ -94,7 +94,7 @@ Also, root namespaces have a ``duration`` field that is **expressed in a count o
 * Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-to-a-mosaic>`
 * Guide: :doc:`Linking a namespace to an address <../namespace/link-a-namespace-to-an-address>`
 
-In order to facilitate the transfer of mosaics, a mosaic owner should register a namespace and alias the mosaic with that namespace. End-users can **send transactions using the alias** to refer to the mosaic.
+In order to facilitate the transfer of mosaics, a mosaic creator should register a namespace and alias the mosaic with that namespace. End-users can **send transactions using the alias** to refer to the mosaic.
 
 * Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
 * Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`

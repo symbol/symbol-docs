@@ -53,55 +53,55 @@ First, identify the actors involved in the problem we want to solve:
 
 We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
-1. Have you :ref:`loaded an account with test cat.currency <setup-creating-a-test-account>`? The account you have loaded in NEM2-CLI represents the **ticket vendor**. After running the following command, you should see on your screen a line similar to:
+1. Have you :ref:`loaded an account with test nem.xem <setup-creating-a-test-account>`? The account you have loaded in NEM2-CLI represents the **ticket vendor**. After running the following command, you should see on your screen a line similar to:
 
 .. code-block:: bash
 
     nem2-cli account info --profile testnet
 
     Account Information
-    ┌───────────────────┬──────────────────────────────────────────────────────────────────┐
-    │ Property          │ Value                                                            │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address           │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address Height    │ 1                                                                │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key        │ 203...C0A                                                        │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key Height │ 3442                                                             │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Importance        │ 0                                                                │
-    ├───────────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Importance Height │ 0                                                                │
-    └───────────────────┴──────────────────────────────────────────────────────────────────┘
+    ┌───────────────────┬────────────────────────────────────────────────┐
+    │ Property          │ Value                                          │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Address           │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Address Height    │ 1                                              │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Public Key        │ 203...C0A                                      │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Public Key Height │ 3442                                           │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Importance        │ 0                                              │
+    ├───────────────────┼────────────────────────────────────────────────┤
+    │ Importance Height │ 0                                              │
+    └───────────────────┴────────────────────────────────────────────────┘
 
     Balance Information
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 46BE9BC0626F9B1A │ 1,000.0         │ 1000000000      │ Never             │
+    │ 75AF035421401EF0 │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-This account owns ``1,000 cat.currency`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
+This account owns ``750 nem.xem`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
 
 2. Create a second account to identify the **customer**.
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET --save --url http://api-01.us-east-1.nemtech.network:3000 --profile customer
+    nem2-cli account generate --network TEST_NET --save --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile customer
 
     New Account
 
-    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
-    │ Property    │ Value                                                            │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4                   │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ E59...82F                                                        │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 111...111                                                        │
-    └─────────────┴──────────────────────────────────────────────────────────────────┘
+    ┌─────────────┬────────────────────────────────────────────────┐
+    │ Property    │ Value                                          │
+    ├─────────────┼────────────────────────────────────────────────┤
+    │ Address     │ TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 │
+    ├─────────────┼────────────────────────────────────────────────┤
+    │ Public Key  │ E59...82F                                      │
+    ├─────────────┼────────────────────────────────────────────────┤
+    │ Private Key │ 111...111                                      │
+    └─────────────┴────────────────────────────────────────────────┘
 
 *************************
 Monitoring the blockchain
@@ -109,23 +109,23 @@ Monitoring the blockchain
 
 Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response does not mean the transaction is valid, which means it is still not included in a block. A good practice is to **monitor transactions** before being announced.
+Receiving an OK response does not mean the transaction is valid, or included included in a block. A good practice is to **monitor transactions** before being announced.
 
 Open three new terminals:
 
-1. The first terminal :doc:`monitors announced transactions <../guides/monitor/monitoring-a-transaction-status>` validation errors.
+1.  Monitor transaction validation errors.
 
 .. code-block:: bash
 
    nem2-cli monitor status
 
-2. Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
+2. Monitor ``unconfirmed`` transactions to know which transactions have reached the network but are not included in a block yet.
 
 .. code-block:: bash
 
    nem2-cli monitor unconfirmed
 
-3. Once a transaction is included, you will see it under the ``confirmed`` terminal.
+3. Monitor ``confirmed`` transactions to see which announced transactions are included in a block.
 
 .. code-block:: bash
 

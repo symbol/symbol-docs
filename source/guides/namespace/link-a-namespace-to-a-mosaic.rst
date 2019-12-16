@@ -17,7 +17,7 @@ Prerequisites
 
 - Have registered one :doc:`namespace <../../concepts/namespace>`
 - Have registered one :doc:`mosaic <../../concepts/mosaic>`
-- Have one :ref:`account with cat.currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 *************************
 Method #01: Using the SDK
