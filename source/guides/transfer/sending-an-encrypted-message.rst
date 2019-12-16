@@ -25,7 +25,7 @@ Background
 
 Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
-Alice knows that sending a TransferTransaction with a **plain message** through the public network will make the content of the message publicly available.
+Alice knows that sending a TransferTransaction with a **plain message** to the public network will make the content of the message publicly available.
 
 Thus, Alice sends an **encrypted message** that is only readable by herself and those with access to the academic certificate.
 

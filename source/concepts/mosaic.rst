@@ -33,7 +33,7 @@ For example, if the mosaic has **divisibility** 2, to create or send 10 units (r
 Duration
 ========
 
-Specifies the number of confirmed blocks the mosaic is rented for, and it is allowed to lie in the public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`. **Non-expiring mosaics** can be created by setting this property to ``0``.
+Specifies the number of confirmed blocks the mosaic is rented for. It is allowed to lie in Catapult's public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`. **Non-expiring mosaics** can be created by setting this property to ``0``.
 
 You can use the following formula to convert approximately days to blocks:
 
@@ -76,7 +76,7 @@ Rental fee
 
 To create a mosaic, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
-By default, registering a mosaic in the public network has an :ref:`initial cost <config-network-properties>` of ``0.0005 nem.xem``. However, **the network dynamically adjusts the mosaic rental fee** over time.
+By default, registering a mosaic in Catapult's public network has an :ref:`initial cost <config-network-properties>` of ``0.0005 nem.xem``. However, **the network dynamically adjusts the mosaic rental fee** over time.
 
 To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxRollBackBlocks <config-network-properties>`. In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 

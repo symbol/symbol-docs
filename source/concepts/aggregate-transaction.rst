@@ -14,7 +14,7 @@ Aggregate transactions merge multiple transactions into one, allowing **trustles
 
 When all involved :doc:`accounts <../concepts/account>` have cosigned the AggregateTransaction, all the inner transactions are executed at the same time.
 
-The :ref:`public network <config-network-properties>` supports aggregate transaction containing up to ``1,000`` inner transactions involving up to ``25`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
+Catapult's :ref:`public network <config-network-properties>` supports aggregate transaction containing up to ``1,000`` inner transactions involving up to ``25`` different cosignatories. Other aggregate transactions are not allowed as inner transactions.
 
 .. _aggregate-complete:
 

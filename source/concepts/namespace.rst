@@ -34,7 +34,7 @@ The public network defines a minimum namespace duration of ``30`` days and a max
 
 During the **renting period**, the namespace owner can create subnamespaces, alias accounts and mosaics. The owner can also **extend the rental** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
-The network can define a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration. The public network has set the :ref:`grace period <config-network-properties>` to ``30`` days.
+The network can define a **grace period** that enables the namespace owner to renew the namespace past the expiration date before it becomes publicly available for registration. Catapult's public network has set the :ref:`grace period <config-network-properties>` to ``30`` days.
 
 When the grace period ends, the namespace is **deleted**. At this point, the namespace becomes **available** for its registration again.
 
