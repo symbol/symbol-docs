@@ -40,7 +40,6 @@ metadataHttp.getMosaicMetadata(mosaicId)
                     console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
                     console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
                     console.log('\n TargetId:\t', metadataEntry.targetId);
-
                 });
         }
     }, (err) => console.log(err));
