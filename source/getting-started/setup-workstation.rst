@@ -68,6 +68,8 @@ Now that you have created your first account, try to request ``nem.xem`` units f
 .. figure:: ../resources/images/screenshots/faucet.png
     :align: center
 
+.. note:: If the default faucet is empty, try this other |faucet-2|.
+
 After the transaction gets confirmed, check if the account has received ``nem.xem`` using the command-line tool.
 
 .. code-block:: bash
@@ -183,3 +185,7 @@ Continue: :doc:`Writing your first application <first-application>`.
 .. |faucet| raw:: html
 
    <a href="http://faucet-01.nemtech.network" target="_blank">Navigate here</a>
+
+.. |faucet-2| raw:: html
+
+   <a href="http://faucet-02.nemtech.network/" target="_blank">alternative faucet</a>

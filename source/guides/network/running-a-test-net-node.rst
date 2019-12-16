@@ -118,7 +118,7 @@ Faucet
 
 * |faucet-1|: Receive nem.xem units to test Catapult's services.
 
-.. note:: If the default faucet is not working, try this other |faucet-2|.
+.. note:: If the default faucet is empty, try this other |faucet-2|.
 
 SDKs
 ====
