@@ -108,7 +108,7 @@ Faucet
 SDKs
 ====
 
-* :doc:`Software Development Kits<../../sdk>`: Integrate your app with NEM blockchain.
+* :doc:`Software Development Kits <../../sdk>`: Integrate your app with Catapult.
 
 In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
