@@ -39,6 +39,8 @@ Catapult Service Bootstrap
 
 4. Save the changes and apply them with the command ``./cmds/start-all -d``.
 
+.. _node-properties:
+
 **********
 Properties
 **********

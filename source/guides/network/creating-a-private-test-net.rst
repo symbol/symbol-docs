@@ -38,6 +38,7 @@ catapult-service-bootstrap has been tested on computers with the following **min
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
 * **HD**: 20GB or more
+* **OS**: Linux or Mac
 
 .. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
@@ -45,9 +46,10 @@ catapult-service-bootstrap has been tested on computers with the following **min
 Environment requirements
 ************************
 
-* **OS**: Linux or Mac
-* `docker`_ 19.03 installed
-* `docker-compose`_ 1.22 installed
+The setup scripts are automated using docker. To run a test net node, you will need to have installed the following docker tools:
+
+* `docker`_
+* `docker-compose`_
 
 ************
 Installation

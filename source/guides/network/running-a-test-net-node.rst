@@ -81,7 +81,19 @@ If you have installed the ``api-harvest-assembly`` distribution, you can verify 
 
 .. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
-4. After running the node for the first time, you can :doc:`change a set of properties <configuring-node-properties>` such as the node's public key or the :doc:`harvesting configuration <../../concepts/harvesting>`.
+*************************
+Configure node properties
+*************************
+
+After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the node's public key or the :doc:`harvesting <../../concepts/harvesting>` configuration.
+
+A file ``config-input.yaml`` will be generated with the default values. Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
+
+1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
+
+2. Edit the properties file ``config-input.yaml`` with a text editor.
+
+3. Save the changes and apply them with the command ``sudo docker-compose up --build --detach``.
 
 *********************************
 Interacting with the test network
@@ -103,7 +115,10 @@ Clients
 Faucet
 ======
 
-* |faucet|: Receive nem.xem units to test Catapult's services.
+
+* |faucet-1|: Receive nem.xem units to test Catapult's services.
+
+.. note:: If the default faucet is not working, try this other |faucet-2|.
 
 SDKs
 ====
@@ -124,9 +139,13 @@ In this portal, you can find everything you need to know about Catapult's featur
 
    <a href="http://explorer.nemtech.network/" target="_blank">Blockchain Explorer</a>
 
-.. |faucet| raw:: html
+.. |faucet-1| raw:: html
 
    <a href="http://faucet-01.nemtech.network/" target="_blank">Faucet</a>
+
+.. |faucet-2| raw:: html
+
+   <a href="http://faucet-02.nemtech.network/" target="_blank">alternative faucet</a>
 
 .. |latest-release| raw:: html
 
