@@ -127,5 +127,5 @@ In this portal, you can find everything you need to know about Catapult's featur
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/catapult-testnet-bootstrap/releases/" target="_blank">Faucet</a>
+   <a href="https://github.com/nemfoundation/catapult-testnet-bootstrap/releases/" target="_blank">the latest release of the package</a>
 
