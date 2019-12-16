@@ -76,7 +76,7 @@ Or
 
 .. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
-If you have installed the ``api-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+If you have installed the ``api-harvest-assembly`` distribution, verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
 4. After running the node for the first time, you can :doc:`change a set of properties <configuring-node-properties>` such as the node's public key or the :doc:`harvesting configuration <../../concepts/harvesting>`.
 
