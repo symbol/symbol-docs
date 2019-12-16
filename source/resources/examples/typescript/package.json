@@ -6,15 +6,16 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "js-sha3": "^0.7.0",
-    "nem2-sdk": "^0.15.1",
+    "nem2-sdk": "^0.16.0",
     "rxjs": "^6.5.2",
+    "tslint": "^5.20.1",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
     "@types/node": "^10.12.27"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint --project ."
   },
   "author": "",
   "license": ""

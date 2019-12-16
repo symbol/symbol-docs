@@ -18,7 +18,7 @@
 
 import {
     Account,
-    Address, BlockHttp,
+    Address,
     Deadline,
     Listener,
     Mosaic,
@@ -32,12 +32,12 @@ import {
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {filter, map, mergeMap} from "rxjs/operators";
+import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const aliasedMosaic = new Mosaic(
-    new NamespaceId('cat.currency'),
-    UInt64.fromUint(1000000)
+    new NamespaceId('nem.xem'),
+    UInt64.fromUint(1000000),
 );
 /* end block 01 */
 
@@ -55,14 +55,14 @@ const transferTransaction = TransferTransaction.create(
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const receiptHttp = new ReceiptHttp(nodeUrl);
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
@@ -71,7 +71,7 @@ listener.open().then(() => {
 
     transactionHttp
         .announce(signedTransaction)
-        .subscribe(x => console.log(x), err => console.error(err));
+        .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */
 
 /* start block 04 */
@@ -87,15 +87,15 @@ listener.open().then(() => {
             map((receipts) => receipts.mosaicResolutionStatements),
             mergeMap((resolutionStatements) => resolutionStatements),
             filter((resolutionStatement) => resolutionStatement.unresolved instanceof NamespaceId
-                && resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex())
+                && resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex()),
         )
-        .subscribe((resolutionStatement:ResolutionStatement) => {
-            resolutionStatement.resolutionEntries.map((entry:ResolutionEntry) => {
-                console.log("Resolved MosaicId: ", entry.resolved);
-                console.log("PrimaryId: ", entry.source.primaryId);
-                console.log("SecondaryId: ", entry.source.secondaryId);
+        .subscribe((resolutionStatement: ResolutionStatement) => {
+            resolutionStatement.resolutionEntries.map((entry: ResolutionEntry) => {
+                console.log('Resolved MosaicId: ', entry.resolved);
+                console.log('PrimaryId: ', entry.source.primaryId);
+                console.log('SecondaryId: ', entry.source.secondaryId);
             });
             listener.terminate();
-        }, err => console.log(err));
+        }, (err) => console.log(err));
 });
 /* end block 04 */

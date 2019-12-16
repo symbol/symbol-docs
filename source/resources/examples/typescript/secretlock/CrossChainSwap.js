@@ -17,9 +17,9 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
-const js_sha3_1 = require("js-sha3");
 const crypto = require("crypto");
+const js_sha3_1 = require("js-sha3");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
 const alicePublicChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MAIN_NET);
 const alicePrivateChainAccount = nem2_sdk_1.Account.createFromPrivateKey('', nem2_sdk_1.NetworkType.MIJIN);
@@ -46,29 +46,29 @@ nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, nem2_sd
 const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx1Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */
 /* start block 05 */
 const tx2 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([2061634929, 1373884888]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
-nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, nem2_sdk_1.NetworkType.MAIN_NET);
+nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, nem2_sdk_1.NetworkType.MAIN_NET).setMaxFee(2);
 /* end block 05 */
 /* start block 06 */
 const tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx2Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 06 */
 /* start block 07 */
-const tx3 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, proof, nem2_sdk_1.NetworkType.MAIN_NET);
+const tx3 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, proof, nem2_sdk_1.NetworkType.MAIN_NET).setMaxFee(2);
 const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx3Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 07 */
 /* start block 08 */
 const tx4 = nem2_sdk_1.SecretProofTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, proof, nem2_sdk_1.NetworkType.MIJIN);
 const tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx4Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 08 */

@@ -16,17 +16,17 @@
  *
  */
 
-import {AccountHttp, Address} from "nem2-sdk";
+import {AccountHttp, Address} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with recipient address
 const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const accountHttp = new AccountHttp(nodeUrl);
 
 accountHttp
     .getAccountInfo(address)
-    .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));
+    .subscribe((accountInfo) => console.log(accountInfo), (err) => console.error(err));
 /* end block 01 */

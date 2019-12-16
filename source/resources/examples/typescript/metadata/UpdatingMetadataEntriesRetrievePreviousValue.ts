@@ -16,18 +16,9 @@
  *
  */
 
-import {
-    Account,
-    AccountMetadataTransaction,
-    Convert,
-    Deadline,
-    KeyGenerator,
-    MetadataHttp,
-    NetworkType,
-    PublicAccount
-} from 'nem2-sdk';
-import {mergeMap} from "rxjs/operators";
-import {of} from "rxjs";
+import {Account, AccountMetadataTransaction, Convert, Deadline, KeyGenerator, MetadataHttp, NetworkType, PublicAccount} from 'nem2-sdk';
+import {of} from 'rxjs';
+import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with network type
@@ -39,7 +30,7 @@ const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 
 // replace with key and new value
@@ -48,7 +39,7 @@ const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
 const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
-    .pipe( mergeMap(metadata => {
+    .pipe( mergeMap((metadata) => {
         const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);
         return of(AccountMetadataTransaction.create(
             Deadline.create(),
@@ -57,6 +48,6 @@ const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender
             newValueBytes.length - currentValueBytes.length,
             Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),
             networkType,
-        ))
+        ));
     }));
 /* end block 01 */

@@ -23,14 +23,16 @@ const nem2_sdk_1 = require("nem2-sdk");
 const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp(nodeUrl);
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
     .subscribe((mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {
         console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
         mosaicGlobalRestrictions.restrictions.forEach((value, key) => {
-            console.log('\n' + key + '\t', value.referenceMosaicId.toHex() + '\t', nem2_sdk_1.MosaicRestrictionType[value.restrictionType] + '\t', value.restrictionValue);
+            console.log('\n' + key + '\t', value.referenceMosaicId.toHex() +
+                '\t', nem2_sdk_1.MosaicRestrictionType[value.restrictionType] +
+                '\t', value.restrictionValue);
         });
     }
     else {

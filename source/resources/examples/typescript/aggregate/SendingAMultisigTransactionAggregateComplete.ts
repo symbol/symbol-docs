@@ -21,13 +21,15 @@ import {
     Address,
     AggregateTransaction,
     Deadline,
+    Mosaic,
+    MosaicId,
     NetworkType,
     PlainMessage,
     PublicAccount,
     TransactionHttp,
     TransferTransaction,
-    NetworkCurrencyMosaic
-} from "nem2-sdk";
+    UInt64,
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace network type
@@ -41,33 +43,38 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 // replace with recipient address
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
 /* end block 01 */
 
 /* start block 02 */
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('sending 10 cat.currency'),
+    [new Mosaic (networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+    PlainMessage.create('sending 10 nem.xem'),
     networkType);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [transferTransaction.toAggregate(multisigAccount),],
+    [transferTransaction.toAggregate(multisigAccount)],
     networkType,
-    []);
+    []).setMaxFee(2);
 /* end block 03 */
 
 /* start block 04 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp( nodeUrl);
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */

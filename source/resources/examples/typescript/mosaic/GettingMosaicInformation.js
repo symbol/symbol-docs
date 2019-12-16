@@ -23,9 +23,9 @@ const nem2_sdk_1 = require("nem2-sdk");
 const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const mosaicHttp = new nem2_sdk_1.MosaicHttp(nodeUrl);
 mosaicHttp
     .getMosaic(mosaicId)
-    .subscribe(mosaicInfo => console.log(mosaicInfo), err => console.error(err));
+    .subscribe((mosaicInfo) => console.log(mosaicInfo), (err) => console.error(err));
 /* end block 01 */

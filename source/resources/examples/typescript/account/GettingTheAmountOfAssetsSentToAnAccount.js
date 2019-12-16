@@ -32,17 +32,18 @@ const mosaicIdHex = '46BE9BC0626F9B1A';
 const divisibility = 6;
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
 accountHttp
     .getAccountOutgoingTransactions(senderAddress)
     .pipe(operators_1.mergeMap((_) => _), // Transform transaction array to single transactions to process them
 operators_1.filter((_) => _.type === nem2_sdk_1.TransactionType.TRANSFER), // Filter transfer transactions
 operators_1.map((_) => _), // Map transaction as transfer transaction
-operators_1.filter((_) => _.recipientAddress instanceof nem2_sdk_1.Address && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
+operators_1.filter((_) => _.recipientAddress instanceof nem2_sdk_1.Address
+    && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
 operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
 operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
 operators_1.toArray(), // Add all mosaics amounts into one array
 operators_1.map((_) => _.reduce((a, b) => a + b, 0)))
-    .subscribe(total => console.log('Total ' + mosaicId.toHex() + ' sent to account', recipientAddress.pretty(), 'is:', total), err => console.error(err));
+    .subscribe((total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total), (err) => console.error(err));
 /* end block 01 */

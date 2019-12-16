@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, NetworkType} from "nem2-sdk";
+import {Account, NetworkType} from 'nem2-sdk';
 
 /* start block 01 */
 const account = Account.generateNewAccount(NetworkType.TEST_NET);

@@ -31,18 +31,18 @@ const encryptedMessage = aliceAccount
     .encryptMessage('This message is secret', certificatePublicAccount, networkType);
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType).setMaxFee(2);
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */

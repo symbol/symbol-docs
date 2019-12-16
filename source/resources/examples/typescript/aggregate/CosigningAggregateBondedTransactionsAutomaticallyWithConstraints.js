@@ -23,9 +23,10 @@ const operators_1 = require("rxjs/operators");
 const validTransaction = (transaction, publicAccount) => {
     return transaction instanceof nem2_sdk_1.TransferTransaction &&
         transaction.signer.equals(publicAccount) &&
-        transaction.mosaics.length == 1 &&
-        transaction.mosaics[0].id.equals(nem2_sdk_1.NetworkCurrencyMosaic.NAMESPACE_ID) &&
-        transaction.mosaics[0].amount.compact() < nem2_sdk_1.NetworkCurrencyMosaic.createRelative(100).amount.compact();
+        transaction.mosaics.length === 1 &&
+        (transaction.mosaics[0].id.equals(new nem2_sdk_1.MosaicId('75AF035421401EF0') ||
+            transaction.mosaics[0].id.equals(new nem2_sdk_1.NamespaceId('nem.xem')))) &&
+        transaction.mosaics[0].amount.compare(nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
 const cosignAggregateBondedTransaction = (transaction, account) => {
     const cosignatureTransaction = nem2_sdk_1.CosignatureTransaction.create(transaction);
@@ -36,14 +37,15 @@ const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
-//replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 const listener = new nem2_sdk_1.Listener(nodeUrl);
 listener.open().then(() => {
     listener
         .aggregateBondedAdded(account.address)
-        .pipe(operators_1.filter((_) => _.innerTransactions.length == 2), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount) || validTransaction(_.innerTransactions[1], account.publicAccount)), operators_1.map(transaction => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap(signedCosignatureTransaction => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)))
-        .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
+        .pipe(operators_1.filter((_) => _.innerTransactions.length === 2), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount)
+        || validTransaction(_.innerTransactions[1], account.publicAccount)), operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((signedCosignatureTransaction) => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)))
+        .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
 });
 /* end block 01 */

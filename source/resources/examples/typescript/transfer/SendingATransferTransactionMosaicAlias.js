@@ -23,5 +23,5 @@ const nem2_sdk_1 = require("nem2-sdk");
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with aliased mosaicId
 const mosaicId = new nem2_sdk_1.NamespaceId('foo');
-nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Account.generateNewAccount(networkType).address, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(10000000))], nem2_sdk_1.EmptyMessage, networkType);
+nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Account.generateNewAccount(networkType).address, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(10000000))], nem2_sdk_1.EmptyMessage, networkType).setMaxFee(2);
 /* end block 01 */

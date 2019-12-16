@@ -16,18 +16,18 @@
  *
  */
 
-import {NamespaceHttp, NamespaceId,} from 'nem2-sdk';
+import {NamespaceHttp, NamespaceId} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
-const namespace = new NamespaceId('cat.currency');
+const namespace = new NamespaceId('ne.xem');
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const namespaceHttp = new NamespaceHttp(nodeUrl);
 
 namespaceHttp
     .getLinkedMosaicId(namespace)
-    .subscribe(mosaicId => console.log(mosaicId.toHex()),
-            err => console.log(err));
+    .subscribe((mosaicId) => console.log(mosaicId.toHex()),
+            (err) => console.log(err));
 /* end block 01 */

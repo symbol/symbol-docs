@@ -16,17 +16,7 @@
  *
  */
 
-import {
-    Address,
-    Deadline,
-    Mosaic,
-    MosaicId,
-    NetworkCurrencyMosaic,
-    NetworkType,
-    PlainMessage,
-    TransferTransaction,
-    UInt64,
-} from 'nem2-sdk';
+import {Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64} from 'nem2-sdk';
 
 // replace with recipient address
 const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
@@ -38,8 +28,8 @@ const ignored = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     /* start block 01 */
-    [new Mosaic( new MosaicId('7cdf3b117a3c40cc'), UInt64.fromUint(1000)),
-        NetworkCurrencyMosaic.createRelative(10)],
+    [new Mosaic( new MosaicId('7CDF3B117A3C40CC'), UInt64.fromUint(1000)),
+        new Mosaic ( new MosaicId('75AF035421401EF0'), UInt64.fromUint(10 * Math.pow(10, 6)))],
     /* end block 01 */
     PlainMessage.create('This is a test message'),
-    networkType);
+    networkType).setMaxFee(2);

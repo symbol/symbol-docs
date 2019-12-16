@@ -16,7 +16,7 @@
  *
  */
 
-import {Deadline, EmptyMessage, NamespaceId, NetworkCurrencyMosaic, NetworkType, TransferTransaction,} from 'nem2-sdk';
+import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction} from 'nem2-sdk';
 
 /* start block 01 */
 // Replace with network type
@@ -27,7 +27,7 @@ const recipientAddress = new NamespaceId('foo');
 TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [NetworkCurrencyMosaic.createRelative(10)],
+    [],
     EmptyMessage,
-    networkType);
+    networkType).setMaxFee(2);
 /* end block 01 */

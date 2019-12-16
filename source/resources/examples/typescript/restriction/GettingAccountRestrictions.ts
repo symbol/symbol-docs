@@ -16,14 +16,14 @@
  *
  */
 
-import {AccountRestrictionFlags, Address, RestrictionAccountHttp} from "nem2-sdk";
+import {AccountRestrictionFlags, Address, RestrictionAccountHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with address
 const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const restrictionHttp = new RestrictionAccountHttp(nodeUrl);
 
 restrictionHttp.getAccountRestrictions(address)

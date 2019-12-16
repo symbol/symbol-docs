@@ -24,7 +24,7 @@ import {mergeMap} from 'rxjs/operators';
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const accountHttp = new AccountHttp(nodeUrl);
 const mosaicHttp = new MosaicHttp(nodeUrl);
 const mosaicService = new MosaicService(accountHttp, mosaicHttp);
@@ -32,8 +32,8 @@ const mosaicService = new MosaicService(accountHttp, mosaicHttp);
 mosaicService
     .mosaicsAmountViewFromAddress(address)
     .pipe(
-        mergeMap((_) => _)
+        mergeMap((_) => _),
     )
-    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
-        err => console.error(err));
+    .subscribe((mosaic) => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+        (err) => console.error(err));
 /* end block 01 */

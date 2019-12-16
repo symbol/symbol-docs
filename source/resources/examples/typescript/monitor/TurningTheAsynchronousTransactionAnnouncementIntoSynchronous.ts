@@ -21,12 +21,12 @@ import {
     Address,
     Deadline,
     EmptyMessage,
-    NetworkCurrencyMosaic,
+    Mosaic,
+    MosaicId,
     NetworkType,
     TransactionHttp,
-    TransferTransaction
+    TransferTransaction, UInt64,
 } from 'nem2-sdk';
-
 
 /* start block 01 */
 // replace with recipient address
@@ -34,11 +34,16 @@ const rawRecipientAddress = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0A
 const recipientAddress =  Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
 const networkType = NetworkType.MIJIN_TEST;
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
    recipientAddress,
-    [NetworkCurrencyMosaic.createRelative(10)],
+    [new Mosaic(networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
     EmptyMessage,
     networkType);
 
@@ -46,7 +51,7 @@ const transferTransaction = TransferTransaction.create(
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 
@@ -55,12 +60,8 @@ const transactionHttp = new TransactionHttp('http://0.0.0.0:9000');
 
 transactionHttp
     .announceSync(signedTransaction)
-    .subscribe(x => {
+    .subscribe((x) => {
         console.log(x);
         // TODO: send email to recipient
-    },
-    err => {
-        console.error(err);
-    }
-);
+    }, (err) => console.error(err));
 /* end block 02 */

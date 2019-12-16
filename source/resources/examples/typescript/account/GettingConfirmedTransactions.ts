@@ -16,19 +16,19 @@
  *
  */
 
-import {AccountHttp, Address, QueryParams} from "nem2-sdk";
+import {AccountHttp, Address, QueryParams} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with account address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const accountHttp = new AccountHttp(nodeUrl);
 
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 
 accountHttp
     .getAccountTransactions(address, new QueryParams(pageSize))
-    .subscribe(transactions => console.log(transactions), err => console.error(err));
+    .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
 /* end block 01 */

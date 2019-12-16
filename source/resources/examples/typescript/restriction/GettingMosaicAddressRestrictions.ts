@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, MosaicId, RestrictionMosaicHttp} from "nem2-sdk";
+import {Address, MosaicId, RestrictionMosaicHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with address
@@ -26,7 +26,7 @@ const address = Address.createFromRawAddress(rawAddress);
 const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const restrictionHttp = new RestrictionMosaicHttp(nodeUrl);
 
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)

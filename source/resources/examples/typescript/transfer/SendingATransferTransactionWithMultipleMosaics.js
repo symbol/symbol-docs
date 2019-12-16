@@ -25,7 +25,7 @@ const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const ignored = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, 
 /* start block 01 */
-[new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc'), nem2_sdk_1.UInt64.fromUint(1000)),
-    nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], 
+[new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('7CDF3B117A3C40CC'), nem2_sdk_1.UInt64.fromUint(1000)),
+    new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('75AF035421401EF0'), nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6)))], 
 /* end block 01 */
-nem2_sdk_1.PlainMessage.create('This is a test message'), networkType);
+nem2_sdk_1.PlainMessage.create('This is a test message'), networkType).setMaxFee(2);

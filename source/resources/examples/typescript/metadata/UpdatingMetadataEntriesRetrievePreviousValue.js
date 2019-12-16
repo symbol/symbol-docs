@@ -18,8 +18,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const operators_1 = require("rxjs/operators");
 const rxjs_1 = require("rxjs");
+const operators_1 = require("rxjs/operators");
 /* start block 01 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
@@ -30,14 +30,14 @@ const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networ
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 // replace with key and new value
 const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = nem2_sdk_1.Convert.utf8ToUint8(newValue);
 const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
-    .pipe(operators_1.mergeMap(metadata => {
+    .pipe(operators_1.mergeMap((metadata) => {
     const currentValueBytes = nem2_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
     return rxjs_1.of(nem2_sdk_1.AccountMetadataTransaction.create(nem2_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, newValueBytes.length - currentValueBytes.length, nem2_sdk_1.Convert.decodeHex(nem2_sdk_1.Convert.xor(currentValueBytes, newValueBytes)), networkType));
 }));

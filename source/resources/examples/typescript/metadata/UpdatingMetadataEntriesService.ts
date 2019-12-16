@@ -26,15 +26,16 @@ import {
     MetadataHttp,
     MetadataTransactionService,
     MetadataType,
-    NetworkCurrencyMosaic,
+    Mosaic,
+    MosaicId,
     NetworkType,
     PublicAccount,
     SignedTransaction,
     TransactionService,
-    UInt64
+    UInt64,
 } from 'nem2-sdk';
-import {mergeMap} from "rxjs/operators";
-import {of} from "rxjs";
+import {of} from 'rxjs';
+import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with network type
@@ -46,7 +47,7 @@ const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 
@@ -66,15 +67,15 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
 
 /* start block 02 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
-        mergeMap(transaction => {
+        mergeMap((transaction) => {
             const aggregateTransaction = AggregateTransaction.createComplete(
                 Deadline.create(),
                 [transaction.toAggregate(bobAccount.publicAccount)],
                 networkType,
-                []);
+                []).setMaxFee(2);
             const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
             return of(signedTransaction);
         }));
@@ -86,18 +87,24 @@ interface SignedAggregateHashLock {
     readonly hashLock: SignedTransaction;
 }
 
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
+
 const signedAggregateHashLock = signedAggregateTransaction.pipe(
-    mergeMap(signedAggregateTransaction => {
+    mergeMap((signedAggregateTransaction) => {
         const hashLockTransaction = HashLockTransaction.create(
             Deadline.create(),
-            NetworkCurrencyMosaic.createRelative(10),
+            new Mosaic(networkCurrencyMosaicId,
+                UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
             UInt64.fromUint(480),
             signedAggregateTransaction,
-            networkType);
+            networkType).setMaxFee(2);
         const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
         const signedAggregateHashLock: SignedAggregateHashLock = {
             aggregate: signedAggregateTransaction,
-            hashLock: signedTransaction
+            hashLock: signedTransaction,
         };
         console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
         console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
@@ -111,13 +118,13 @@ const transactionService = new TransactionService(nodeUrl);
 
 listener.open().then(() => {
     signedAggregateHashLock.pipe(
-        mergeMap(signedAggregateHashLock =>
+        mergeMap((signedAggregateHashLock) =>
             transactionService.announceHashLockAggregateBonded(
                 signedAggregateHashLock.hashLock,
                 signedAggregateHashLock.aggregate,
-                listener)
-        )
-    ).subscribe(x => console.log('Transaction confirmed'),
-                err => console.log(err));
+                listener),
+        ),
+    ).subscribe((ignored) => console.log('Transaction confirmed'),
+                (err) => console.log(err));
 });
 /* end block 04 */

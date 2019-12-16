@@ -22,13 +22,14 @@ import {
     Deadline,
     HashLockTransaction,
     Listener,
+    Mosaic,
+    MosaicId,
     MultisigAccountModificationTransaction,
-    NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
     TransactionService,
-    UInt64
-} from "nem2-sdk";
+    UInt64,
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with network type
@@ -70,7 +71,7 @@ const convertMultisigAccount3Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     2,
     1,
-    [cosignatory7,cosignatory8,cosignatory4],
+    [cosignatory7, cosignatory8, cosignatory4],
     [],
     networkType);
 /* end block 02 */
@@ -95,24 +96,30 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     [convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
         convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
         convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)],
-    networkType);
+    networkType).setMaxFee(2);
 
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
+
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    networkType);
+    networkType).setMaxFee(2);
 
 const signedHashLockTransaction = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const listener = new Listener(nodeUrl);
 const transactionService = new TransactionService(nodeUrl);
 
@@ -120,4 +127,3 @@ listener.open().then(() => {
     transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
 });
 /* end block 04 */
-

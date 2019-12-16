@@ -16,13 +16,13 @@
  *
  */
 
-import {Metadata, MetadataHttp, NamespaceId} from "nem2-sdk";
+import {Metadata, MetadataHttp, NamespaceId} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new NamespaceId('cat');
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 
 metadataHttp.getNamespaceMetadata(namespaceId)
@@ -31,12 +31,12 @@ metadataHttp.getNamespaceMetadata(namespaceId)
             metadata
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
-                    console.log('\n \n' +'Key:\t', metadataEntry.scopedMetadataKey);
-                    console.log('\n' +'---' );
-                    console.log('\n' +'Value:\t', metadataEntry.value);
-                    console.log('\n' +'Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n' +'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
-                    console.log('\n' +'TargetId:\t', metadataEntry.targetId);
+                    console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
+                    console.log('\n ---' );
+                    console.log('\n Value:\t', metadataEntry.value);
+                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
+                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n TargetId:\t', metadataEntry.targetId);
                 });
         } else {
             console.log('\n The namespace does not have metadata entries assigned.');

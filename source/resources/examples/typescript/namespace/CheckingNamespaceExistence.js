@@ -22,9 +22,9 @@ const nem2_sdk_1 = require("nem2-sdk");
 // replace with namespace name
 const namespace = new nem2_sdk_1.NamespaceId('foo');
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const namespaceHttp = new nem2_sdk_1.NamespaceHttp(nodeUrl);
 namespaceHttp
     .getNamespace(namespace)
-    .subscribe(namespace => console.log(namespace), err => console.error(err));
+    .subscribe((namespace) => console.log(namespace), (err) => console.error(err));
 /* end block 01 */

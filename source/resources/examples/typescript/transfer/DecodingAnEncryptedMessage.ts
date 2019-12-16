@@ -17,7 +17,7 @@
  */
 
 import {Account, NetworkType, PublicAccount, TransactionHttp, TransferTransaction} from 'nem2-sdk';
-import {map} from "rxjs/operators";
+import {map} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with network type
@@ -27,10 +27,10 @@ const networkType = NetworkType.TEST_NET;
 const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const certificateAccount = Account.createFromPrivateKey(certificatePrivateKey, networkType);
 // replace with alice public key
-const alicePublicKey = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000/';
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000/';
 const transactionHttp = new TransactionHttp(nodeUrl);
 // replace with transaction hash
 const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
@@ -38,13 +38,13 @@ const transactionHash = '0000000000000000000000000000000000000000000000000000000
 transactionHttp
     .getTransaction(transactionHash)
     .pipe(
-        map( x => x as TransferTransaction )
+        map( (x) => x as TransferTransaction ),
     )
-    .subscribe(transaction => {
-        console.log("Raw message: ", transaction.message.payload);
-        console.log("Message: ", certificateAccount.decryptMessage(
+    .subscribe((transaction) => {
+        console.log('Raw message: ', transaction.message.payload);
+        console.log('Message: ', certificateAccount.decryptMessage(
             transaction.message,
             alicePublicAccount,
             networkType).payload);
-    }, (err => console.log(err)));
+    }, ((err) => console.log(err)));
 /* end block 01 */

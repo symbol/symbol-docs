@@ -18,12 +18,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const operators_1 = require("rxjs/operators");
-const rxjs_1 = require("rxjs");
 /* start block 01 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-//replace with candidate multisig private key
+// replace with candidate multisig private key
 const privateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with cosignatory 1 public key
@@ -37,35 +35,26 @@ const cosignatory2 = nem2_sdk_1.PublicAccount.createFromPublicKey(cosignatory2Pu
 const multisigAccountModificationTransaction = nem2_sdk_1.MultisigAccountModificationTransaction.create(nem2_sdk_1.Deadline.create(), 1, 1, [cosignatory1, cosignatory2], [], networkType);
 /* end block 02 */
 /* start block 03 */
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(account.publicAccount)], networkType);
+const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(account.publicAccount)], networkType).setMaxFee(2);
 /* end block 03 */
 /* start block 04 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C';
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 04 */
 /* start block 05 */
-const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType);
+// replace with nem.xem id
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
+const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType).setMaxFee(2);
 const signedHashLockTransaction = account.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
-const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const listener = new nem2_sdk_1.Listener(nodeUrl);
-const announceHashLockTransaction = (signedHashLockTransaction) => {
-    return transactionHttp.announce(signedHashLockTransaction);
-};
-const announceAggregateTransaction = (listener, signedHashLockTransaction, signedAggregateTransaction, senderAddress) => {
-    return listener
-        .confirmed(senderAddress)
-        .pipe(operators_1.filter((transaction) => transaction.transactionInfo !== undefined
-        && transaction.transactionInfo.hash === signedHashLockTransaction.hash), operators_1.mergeMap(ignored => {
-        listener.terminate();
-        return transactionHttp.announceAggregateBonded(signedAggregateTransaction);
-    }));
-};
+const transactionService = new nem2_sdk_1.TransactionService(nodeUrl);
 listener.open().then(() => {
-    rxjs_1.merge(announceHashLockTransaction(signedHashLockTransaction), announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, account.address))
-        .subscribe(x => console.log('Transaction confirmed:', x.message), err => console.log(err));
+    transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
 });
 /* end block 05 */

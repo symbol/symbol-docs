@@ -31,12 +31,12 @@ const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
-//replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.nemtech.network:3000';
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
 const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
 accountHttp
     .getAccountPartialTransactions(account.address)
-    .pipe(operators_1.mergeMap((_) => _), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.map(transaction => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)))
-    .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
+    .pipe(operators_1.mergeMap((_) => _), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)))
+    .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
 /* end block 02 */
