@@ -464,6 +464,12 @@ source_file = build/gettext/guides/network/creating-a-private-test-net.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--network--running-a-test-net-node]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-test-net-node.po
+source_file = build/gettext/guides/network/running-a-test-net-node.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
 source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
