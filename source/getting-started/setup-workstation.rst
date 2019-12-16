@@ -81,7 +81,7 @@ After the transaction gets confirmed, check if the account has received ``nem.xe
     │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of ``nem.xem`` and must be replenished before it dries. If you don’t need your test nem.xem units anymore, please send them back to the account ``TAQ4FD-H2UHU5-TZ2VIW-Z6VWSN-MFWR7C-353F73-EUMY``.
+.. note:: The faucet has a limited amount of ``nem.xem`` and must be replenished before it dries. If you don’t need your test nem.xem units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
 
 .. _setup-development-environment:
 

@@ -795,7 +795,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
     -R, --min-removal-delta <minRemovalDelta>                    - (Optional) Number of signatures needed to remove a cosignatory.  [0]
     -A, --min-approval-delta <minApprovalDelta>                  - (Optional) Number of signatures needed to approve a transaction. [0]
     -a, --action <action>                                        - Modification Action (1: Add, 0: Remove).
-    -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory account public key.
+    -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory accounts public keys (separated by a comma).
     -m, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
 
 *Command*
@@ -814,12 +814,12 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
 
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
-    -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier.
+    -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier or @alias.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
     -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
     -s, --secret <secret>                      - Proof hashed in hexadecimal format.
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
-    -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
+    -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
 
 *Command*
 
@@ -840,7 +840,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -s, --secret <secret>                      - Proof hashed in hexadecimal.
     -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
-    -r, --recipient-address <recipientAddress> - Address that receives the funds once unlocked.
+    -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
 
 *Command*
 
@@ -861,7 +861,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
     -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
-    -v, --value <value>                                - Address to allow / block.
+    -v, --value <value>                                - Address or @alias to allow/block.
 
 *Command*
 
@@ -871,7 +871,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 
 **AccountMosaicRestrictionTransaction**
 
-:doc:`Allow or block <concepts/account-restriction>` incoming transactions containing a given set of mosaics.
+:doc:`Allow or block Ann<concepts/account-restriction>` incoming transactions containing a given set of mosaics.
 
 *Options*
 
@@ -881,7 +881,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
     -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
     -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
-    -v, --value <value>                                - Mosaic to allow / block.
+    -v, --value <value>                                - Mosaic or @alias to allow / block.
 
 *Command*
 
@@ -921,7 +921,7 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
 
     --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
     -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
-    -r, --recipient <recipient> - Recipient address or @alias.
+    -r, --recipient-address <recipient> - Recipient address or @alias.
     -m, --message <message>     - Transaction message.
     -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
     -e, --encrypted             - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
