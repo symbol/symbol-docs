@@ -38,7 +38,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
-.. note:: If the test network node is not working, you can use another node url from |network-list|. You can also **run your own testnet node** following :doc:`this guide <../guides/network/running-a-test-net-node>`.
+.. note:: If the test network node is not working, you can use another node url from |network-list|. You can also **run your testnet node** by following :doc:`this guide <../guides/network/running-a-test-net-node>`.
 
 3. You should see the account credentials in your terminal.
 
