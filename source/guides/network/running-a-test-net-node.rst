@@ -63,7 +63,7 @@ In short, if you want to be able to interact with your node, you need to run the
 
     cd api-harvest-assembly
 
-Or
+or...
 
 .. code-block:: bash
 
