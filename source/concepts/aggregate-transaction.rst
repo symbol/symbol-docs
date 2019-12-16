@@ -38,7 +38,7 @@ An AggregateTransaction is **bonded** when it requires signatures from other par
 
 .. note:: Before announcing an **AggregateBondedTransaction**, an account must announce and get confirmed a :ref:`HashLockTransaction<hash-lock-transaction>` locking ``10 nem.xem``.
 
-Once an aggregate bonded is announced, it reaches partial state and notifies its status through WebSockets or HTTP API calls, where it can live up to ``2 days`` in the :ref:`public network <config-network-properties>`.
+Once an aggregate bonded is announced, it reaches partial state—where it can live up to ``2 days``—and notifies its status through WebSockets or HTTP API calls.
 
 Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature>`, the network checks if all the required cosigners have signed. When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
 
