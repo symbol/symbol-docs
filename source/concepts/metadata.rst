@@ -150,7 +150,7 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats#L14>` ; Target namespace owner public key.
+    targetPublicKey; :schema:`Key <types.cats#L14>` ; Target namespace creator public key.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetNamespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.

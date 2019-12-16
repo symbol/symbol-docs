@@ -82,7 +82,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. All metadata is attached only with the consent of the namespace owner through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the namespace creator through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 
@@ -96,7 +96,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: If a namespace was owned by a different account, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace owner needs to accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: If a namespace was owned by a different account, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace creator needs to accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 3. Sign and announce the **AggregateTransaction** to the network.
 

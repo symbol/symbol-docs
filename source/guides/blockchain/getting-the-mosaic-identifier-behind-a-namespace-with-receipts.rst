@@ -42,7 +42,7 @@ To ensure the transactions are being sent to the correct place with the correct 
 However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
 
 * Transactions using aliased mosaics or accounts are stored on the blockchain using the namespace identifier, not the real address or mosaic id behind it.
-* Links are editable. The namespace owner can link its namespace to another asset.
+* Links are editable. The namespace creator can link its namespace to another asset.
 * Namespaces expire. The namespace link could be deleted.
 
 At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`. For each block, Catapult nodes store receipts that contain every **invisible state change** that cannot be retrieved directly from the transaction or block header.
@@ -124,7 +124,7 @@ The previous snippet outputs the resolved mosaic identifier for the namespace ``
     PrimaryId:  1
     SecondaryId:  0
 
-It is technically possible to get more than one ``resolutionEntry`` for the same namespaceId. This situation is common when a namespace owner changes the link to another mosaic, leading to two different resolutions in the same block.
+It is technically possible to get more than one ``resolutionEntry`` for the same namespaceId. This situation is common when a namespace creator changes the link to another mosaic, leading to two different resolutions in the same block.
 
 The receipt source ``primaryId`` references the transaction where the alias first appears within the block. The ``secondaryId`` is a non 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
 

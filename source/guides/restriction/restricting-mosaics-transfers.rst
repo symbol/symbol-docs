@@ -133,7 +133,7 @@ Alice, a potential investor, passes the KYC process. Once Alice has been verifie
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's owner account.
+2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's creator account.
 
 .. example-code::
 
