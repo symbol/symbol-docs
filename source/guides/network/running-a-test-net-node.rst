@@ -81,9 +81,9 @@ If you have installed the ``api-harvest-assembly`` distribution, you can verify 
 
 .. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
-*************************
-Configure node properties
-*************************
+***************************
+Configuring node properties
+***************************
 
 After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the node's public key or the :doc:`harvesting <../../concepts/harvesting>` configuration.
 
