@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # David García <dgarcia360@outlook.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-03-18 18:19+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,8 +42,9 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:19
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:20
 msgid ""
@@ -52,7 +53,11 @@ msgid ""
 msgstr ""
 "他のアカウントへ :doc:`モザイクを送信 <../transfer/sending-a-transfer-transaction>` していること"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:33
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:24
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:39
 msgid ""
 "If you want to check another :doc:`mosaic <../../concepts/mosaic>` different"
 " than the native currency, change ``mosaicId`` and ``divisibility`` for the "

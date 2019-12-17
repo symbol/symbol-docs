@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -59,12 +59,14 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:15
 msgid ""
-"The **value** linked to an identifier is a string up to ``1024`` characters."
-" The client application is responsible for encrypting the message or keeping"
-" it visible for every blockchain participant."
+"The **value** linked to an identifier is a string up to ``1024`` characters,"
+"  being this parameter :ref:`editable per network <config-network-"
+"properties>`. The client application is responsible for encrypting the "
+"message or keeping it visible for every blockchain participant."
 msgstr ""
-"識別子にリンクされた **value** は ``1024`` "
-"文字までの文字列です。クライアントアプリケーションはメッセージを暗号化するか、またはすべてのブロックチェーン参加者が見える必要があります。"
+"識別子にリンクされた **value** は ``1024`` 文字までの文字列です。このパラメータは :ref:`ネットワークごとに設定可能 "
+"<config-network-properties>` "
+"です。クライアントアプリケーションはメッセージを暗号化するか、またはすべてのブロックチェーン参加者が見える必要があります。"
 
 #: ../../source/concepts/metadata.rst:20
 msgid "Persistence"
@@ -95,12 +97,12 @@ msgstr "パーミッション"
 
 #: ../../source/concepts/metadata.rst:30
 msgid ""
-"The account, namespace or mosaic owner must **opt-in** to all metadata "
+"The account, namespace or mosaic creator must **opt-in** to all metadata "
 "requests received by giving explicit permission. In practice, this means "
 "that all MetadataTransactions must be wrapped in an "
 ":doc:`AggregateTransaction <aggregate-transaction>`."
 msgstr ""
-"アカウント、名前空間、またはモザイクの所有者は明示的なアクセス許可を与えることによって受信したすべてのメタデータ要求に **オプトイン** "
+"アカウント、名前空間、またはモザイクの作成者は明示的なアクセス許可を与えることによって受信したすべてのメタデータ要求に **オプトイン** "
 "する必要があります。これはすべての MetadataTransactions を :doc:`AggregateTransaction "
 "<aggregate-transaction>` にラップする必要があることを意味します。"
 
@@ -191,6 +193,10 @@ msgstr "一方で権限を持たない Derek が会社のアプリスイート�
 msgid "Guides"
 msgstr "ガイド"
 
+#: ../../source/concepts/metadata.rst:81
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
+
 #: ../../source/concepts/metadata.rst:88
 msgid ""
 "Announce an AccountMetadataTransaction to associate a key-value state to an "
@@ -212,8 +218,8 @@ msgid "Change in value size in bytes."
 msgstr "値のサイズをバイト単位で変更する"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Value size in bytes. The maximum size is ``1024``."
-msgstr "値のバイトサイズ。最大サイズは ``1024`` です。"
+msgid "Value size in bytes."
+msgstr "バイト換算の値のサイズ"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
@@ -232,16 +238,16 @@ msgid ""
 msgstr "MosaicMetadataTransaction をアナウンスして Key-Value 状態をモザイクに関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Target mosaic owner public key."
-msgstr "ターゲットモザイクのオーナーの公開鍵"
+msgid "Target mosaic creator public key."
+msgstr "ターゲットモザイク作成者の公開鍵"
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Target mosaic identifier."
 msgstr "対象のモザイク識別子"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-msgid "New value size in bytes. The maximum size is ``1024``."
-msgstr "新しい値のバイトサイズ。最大サイズは ``1024`` です。"
+msgid "New value size in bytes."
+msgstr "バイト換算の新しい値のサイズ"
 
 #: ../../source/concepts/metadata.rst:139
 msgid ""
@@ -250,8 +256,8 @@ msgid ""
 msgstr "NamespaceMetadataTransaction をアナウンスして Key-Value 状態をネームスペースに関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Target namespace owner public key."
-msgstr "ターゲットネームスペースのオーナーの公開鍵"
+msgid "Target namespace creator public key."
+msgstr "ターゲットネームスペース作成者の公開鍵"
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Target namespace identifier."

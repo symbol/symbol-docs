@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -25,15 +25,78 @@ msgstr ""
 msgid "REST Gateway"
 msgstr "REST ゲートウェイ"
 
+#: ../../source/api.rst:5
+msgid ""
+"The **REST gateway** combines HTTP and WebSockets to perform read and write "
+"actions on the blockchain."
+msgstr ""
+"**REST ゲートウェイ** は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように構成します。"
+
 #: ../../source/api.rst:11
 msgid "Http requests"
 msgstr "HTTP リクエスト"
+
+#: ../../source/api.rst:13
+msgid ""
+"|catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, "
+"**PUT** and **POST** requests."
+msgstr ""
+"|catapult-rest| はポート ``3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
+"リクエストを受け付けます。"
+
+#: ../../source/api.rst:15
+msgid ""
+"Assuming that Catapult REST is :doc:`running locally <getting-started/setup-"
+"workstation>`, HTTP GET requests can be executed from a browser and have the"
+" form:"
+msgstr ""
+"Catapult REST が :doc:`ローカルで動いている <getting-started/setup-workstation>` "
+"と仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
+
+#: ../../source/api.rst:19
+msgid ""
+"Conversely, HTTP PUT and POST requests have the same structure but use JSON "
+"structures in the request body. This kind of request cannot usually be "
+"executed from within the browser unless you use a :ref:`plugin <tools>` "
+"which enables you to do it."
+msgstr ""
+"HTTP PUT と POST リクエストは同じ構造ですが、リクエストボディに JSON 形式を使用します。この種のリクエストはそれが可能な "
+":ref:`プラグイン <tools>` を利用しないことにはブラウザから実行することができません。"
 
 #: ../../source/api.rst:21
 msgid ""
 "Get the complete list of available endpoints by clicking on the button "
 "below:"
-msgstr "利用可能なエンドポイントの完全なリストを入手するには下のボタンをクリックしてください:"
+msgstr "利用可能なエンドポイントの完全なリストを見るには下のボタンをクリックしてください:"
+
+#: ../../source/api.rst:33
+msgid ""
+"To get **live updates** when an event occurs on the blockchain, Catapult "
+"REST publishes WebSockets. Client applications can open a WebSocket "
+"connection and get a unique identifier. With this identifier, applications "
+"qualify to subscribe to the available channels instead of constantly polling"
+" the API for updates. When an event occurs in a channel, the REST Gateway "
+"sends a notification to every subscribed client in real-time."
+msgstr ""
+"ブロックチェーン上でのイベントの発生による **リアルタイムな更新** を得るために、 Catapult REST は WebSocket "
+"を公開しています。クライアントアプリケーションは WebSocket "
+"接続を開くと一意な識別子を得られます。この識別子によって、アプリケーションは更新のために API "
+"を絶えずポーリングするのではなく、使用可能なチャンネルを購読する資格を得ます。チャンネルでイベントが発生すると REST "
+"ゲートウェイは購読しているすべてのクライアントにリアルタイムで通知を送信します。"
+
+#: ../../source/api.rst:35
+msgid ""
+"WebSocket URIs share the same host and port as the HTTP requests URIs, but "
+"use the ``ws://`` protocol:"
+msgstr ""
+"WebSocket URI は HTTP リクエスト URI と同じホストとポートを共有しますが ``ws://`` プロトコルを使用します:"
+
+#: ../../source/api.rst:39
+msgid ""
+"Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain"
+"/listening-new-blocks>`"
+msgstr ""
+"ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
 #: ../../source/api.rst:42
 msgid "Channels"
@@ -42,6 +105,110 @@ msgstr "チャンネル"
 #: ../../source/api.rst:44
 msgid "**block**"
 msgstr "**ブロック**"
+
+#: ../../source/api.rst:46
+msgid ""
+"The block channel notifies for every subscribed client every time there is a"
+" new harvested block. The messages returned contain information about the "
+"blocks."
+msgstr ""
+"ブロックチャンネルは、新しくハーベストされたブロックがあるたびに、購読しているすべてのクライアントに通知します。返されるメッセージにはブロックに関する情報が含まれています"
+
+#: ../../source/api.rst:48 ../../source/api.rst:65 ../../source/api.rst:84
+#: ../../source/api.rst:103 ../../source/api.rst:120 ../../source/api.rst:139
+#: ../../source/api.rst:156 ../../source/api.rst:173
+msgid "*Request body*"
+msgstr "*リクエストボディ*"
+
+#: ../../source/api.rst:57 ../../source/api.rst:74 ../../source/api.rst:93
+#: ../../source/api.rst:112 ../../source/api.rst:129 ../../source/api.rst:148
+#: ../../source/api.rst:165 ../../source/api.rst:182
+msgid "*Response format*"
+msgstr "*レスポンスフォーマット*"
+
+#: ../../source/api.rst:63
+msgid ""
+"The confirmedAdded channel notifies when a transaction related to an address"
+" is included in a block. The messages returned contain information about the"
+" confirmed transactions."
+msgstr ""
+"承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。返されるメッセージには、承認済みのトランザクションに関する情報が含まれています。"
+
+#: ../../source/api.rst:80
+msgid ""
+"The unconfirmedAdded channel notifies when a transaction related to an "
+"address gets the unconfirmed state, waiting to be included in a block. The "
+"messages returned contain information about unconfirmed transactions."
+msgstr ""
+"未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。返されるメッセージには、未承認のトランザクションに関する情報が含まれています。"
+
+#: ../../source/api.rst:82
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction is "
+"announced to the network via ``PUT /transaction`` HTTP endpoint or an "
+"AggregateBondedTransaction has all required cosigners and change its state "
+"from partial to unconfirmed."
+msgstr ""
+"トランザクションが ``PUT /transaction`` HTTP "
+"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、partial "
+"から未承認へ変わるとき、このチャンネルからの通知が届く可能性があります。"
+
+#: ../../source/api.rst:99
+msgid ""
+"The unconfirmedRemoved channel notifies when a transaction related to an "
+"address had the unconfirmed state, but not anymore. The messages returned "
+"contain the transactions hashes."
+msgstr ""
+"未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
+
+#: ../../source/api.rst:101
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction now is "
+"confirmed, or the deadline has been reached, and it was not included in a "
+"block."
+msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
+
+#: ../../source/api.rst:118
+msgid ""
+"The partialAdded channel notifies when an AggregateBondedTransaction related"
+" to an address reaches the partial state, waiting to have all required "
+"cosigners. The messages returned contain information about the transactions."
+msgstr ""
+"パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが partial "
+"な状態にあり、すべての必要な連署者を待機しているときに通知を行います。返されるメッセージには、トランザクションに関する情報が含まれています。"
+
+#: ../../source/api.rst:135
+msgid ""
+"The partialRemoved channel notifies when a transaction related to an address"
+" had the partial state, but is not anymore. The messages returned contain "
+"the transactions hashes."
+msgstr ""
+"パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
+
+#: ../../source/api.rst:137
+msgid ""
+"Possible scenarios when this channel notifies are: the transaction now is "
+"unconfirmed, or the deadline has been reached, and it was not included in a "
+"block."
+msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに含まれなくなったときです。"
+
+#: ../../source/api.rst:154
+msgid ""
+"The cosignature channel notifies when a cosignature signed transaction "
+"related to an address is added to an AggregateBondedTransaction with the "
+"partial state. The messages returned contain the cosignature signed "
+"transaction."
+msgstr ""
+"連署チャネルはアドレスに関連する *連署署名トランザクション* "
+"が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。返されるメッセージには、署名済み署名付きトランザクションが含まれています。"
+
+#: ../../source/api.rst:171
+msgid ""
+"The status channel notifies when a transaction related to an address rises "
+"an error. The messages returned contain the error messages and the "
+"transaction hashes."
+msgstr ""
+"ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。返されるメッセージには、エラーメッセージとトランザクションハッシュが含まれます。"
 
 #: ../../source/api.rst:189
 msgid "Status errors"
@@ -101,15 +268,15 @@ msgstr "エンティティに間違ったネットワークが指定されてい
 
 #: ../../source/api.rst:1
 msgid "Validation failed because an address is invalid."
-msgstr "アドレスが妥当ではないため、バリデーションに失敗しました。"
+msgstr "アドレスが有効ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because entity version is invalid."
-msgstr "エンティティのバージョンが妥当ではないため、バリデーションに失敗しました。"
+msgstr "エンティティのバージョンが有効ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid "Validation failed because a transaction fee is invalid."
-msgstr "トランザクション手数料が妥当ではないため、バリデーションに失敗しました。"
+msgstr "トランザクション手数料が有効ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -125,6 +292,10 @@ msgid "Validation failed because a public key is zero."
 msgstr "公開鍵がゼロのため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
+msgid "Validation failed because internal padding is nonzero."
+msgstr "内部パディングがゼロのため、バリデーションに失敗しました。"
+
+#: ../../source/api.rst:1
 msgid "Validation failed because the entity hash is already known."
 msgstr "エンティティのハッシュがすでに存在するため、バリデーションに失敗しました。"
 
@@ -134,7 +305,7 @@ msgstr "署名の検証に失敗したため、バリデーションに失敗し
 
 #: ../../source/api.rst:1
 msgid "Validation failed because account link action is invalid."
-msgstr "アカウントリンクアクションが妥当ではないため、バリデーションに失敗しました。"
+msgstr "アカウントリンクアクションが有効ではないため、バリデーションに失敗しました。"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -354,3 +525,15 @@ msgstr ":doc:`リファレンス <../sdk>`"
 #: ../../source/api.rst:363
 msgid ":doc:`Guides <../concepts/account>`"
 msgstr ":doc:`ガイド <../concepts/account>`"
+
+#: ../../source/api.rst:368
+msgid "HTTP client, available for Mac, Windows and Linux."
+msgstr "Mac, Windows, Linux 向けの HTTP クライアント。"
+
+#: ../../source/api.rst:370
+msgid "Download |postman-app| for your current operative system."
+msgstr "あなたの OS に合わせた |postman-app| をダウンロードしてください。"
+
+#: ../../source/api.rst:372
+msgid "Import the |postman-spec| for Catapult."
+msgstr "Catapult 用 |postman-spec| をインポートする"

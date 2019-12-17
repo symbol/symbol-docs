@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-06-20 22:03+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,12 +35,12 @@ msgstr "背景"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:18
 msgid ""
-"Namespaces are registered for a certain amount of blocks. The owner can "
+"Namespaces are registered for a certain amount of blocks. The creator can "
 "**extend the registration period** by sending a "
 ":ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`"
 " with the desired number of additional blocks."
 msgstr ""
-"ネームスペースは一定量のブロックに対して登録されます。所有者は :ref:`NamespaceRegistrationTransaction "
+"ネームスペースは一定量のブロックに対して登録されます。作成者は :ref:`NamespaceRegistrationTransaction "
 "<namespace-registration-transaction>` を延長したい追加ブロック数で送信することにより **登録期間を延長する** "
 "ことができます。"
 
@@ -64,10 +64,10 @@ msgstr ":doc:`ネームスペースの取得ガイド <registering-a-namespace>`
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:27
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and"
-" at least one namespace"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>` and at least one namespace"
 msgstr ""
-":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
+":ref:`nem.xem <setup-creating-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:31
 msgid "Method #01: Using the SDK"
@@ -109,13 +109,10 @@ msgstr "ネームスペース期間を ``1000`` ブロック延長します。"
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:75
 msgid ""
 "Use the following formula to convert approximately days to blocks ``duration"
-" ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The "
-"blockGenerationTargetTime is :properties:`configurable per network <config-"
-"network.properties>`."
+" ≈ numberOfDays * 86400 / blockGenerationTargetTime``."
 msgstr ""
 "この公式 ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime`` "
-"を使っておよその日数をブロックに変換します。blockGenerationTargetTime は :properties:`ネットワークごとに設定可能"
-" <config-network.properties>` です。"
+"を使っておよその日数をブロックに変換します。"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:77
 msgid ""

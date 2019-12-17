@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -149,34 +149,33 @@ msgstr ""
 
 #: ../../source/getting-started/first-application.rst:56
 msgid ""
-"The account you have loaded in NEM2-CLI represents the **ticket vendor**."
-msgstr "NEM2-CLIで読み込んだアカウントは **チケット販売者** を表現します。"
-
-#: ../../source/getting-started/first-application.rst:58
-msgid ""
-"Have you loaded an account with test cat.currency? After running the "
-"following command, you should see on your screen a line similar to:"
+"Have you :ref:`loaded an account with test nem.xem <setup-creating-a-test-"
+"account>`? The account you have loaded in NEM2-CLI represents the **ticket "
+"vendor**. After running the following command, you should see on your screen"
+" a line similar to:"
 msgstr ""
-"テストの cat.currency をアカウントへ読み込みましたか？以下のコマンドを実行した後、このような行がスクリーンに表示されているはずです:"
+":ref:`テストの nem.xem をアカウントへ読み込み <setup-creating-a-test-account>` "
+"ましたか？このアカウントは NEM2-CLI に **チケット販売者** "
+"として読み込まれています。以下のコマンドを実行した後、このような行がスクリーンに表示されているはずです:"
+
+#: ../../source/getting-started/first-application.rst:86
+msgid ""
+"This account owns ``750 nem.xem`` units. If your row after mosaics is empty,"
+" follow :doc:`the previous guide instructions <setup-workstation>` to get "
+"test currency."
+msgstr ""
+"アカウントは ``750 nem.xem`` 単位を保有しています。もし mosaics の次の行が空の場合は、テスト用の通過を手に入れるために "
+":doc:`前のガイド <setup-workstation>` に従ってください。"
 
 #: ../../source/getting-started/first-application.rst:88
-msgid ""
-"This account owns ``1,000,000 cat.currency`` units. If your row after "
-"mosaics is empty, follow :doc:`the previous guide instructions <setup-"
-"workstation>` to get test currency."
-msgstr ""
-"アカウントは ``1,000,000 cat.currency`` 単位を保有しています。もし mosaics "
-"の次の行が空の場合は、テスト用の通過を手に入れるために :doc:`前のガイド <setup-workstation>` に従ってください。"
-
-#: ../../source/getting-started/first-application.rst:90
 msgid "Create a second account to identify the **customer**."
 msgstr "**販売者** を識別するための2つ目のアカウントを作成します。"
 
-#: ../../source/getting-started/first-application.rst:98
+#: ../../source/getting-started/first-application.rst:108
 msgid "Monitoring the blockchain"
 msgstr "ブロックチェーンの監視"
 
-#: ../../source/getting-started/first-application.rst:100
+#: ../../source/getting-started/first-application.rst:110
 msgid ""
 "Accounts change the blockchain state through transactions. Once an account "
 "announces a transaction, if properly formed, the server will return an OK "
@@ -185,45 +184,40 @@ msgstr ""
 "アカウントはトランザクションを通じてブロックチェーンの状態を変更します。アカウントが正しく構成されているトランザクションをアナウンスすると、サーバーは "
 "OK のレスポンスを返します。"
 
-#: ../../source/getting-started/first-application.rst:102
+#: ../../source/getting-started/first-application.rst:112
 msgid ""
-"Receiving an OK response does not mean the transaction is valid, which means"
-" it is still not included in a block. A good practice is to **monitor "
-"transactions** before being announced."
+"Receiving an OK response does not mean the transaction is valid, or included"
+" included in a block. A good practice is to **monitor transactions** before "
+"being announced."
 msgstr ""
-"OK "
-"のレスポンスを受信することは、トランザクションが正当であることを意味するわけではなく、まだブロックには含まれていないことを意味します。アナウンスする前に"
-" **トランザクションの監視** を始めておくのがよいでしょう。"
+"OK のレスポンスを受信することは、トランザクションが正当であること、ブロックには含まれたことを意味しません。アナウンスする前に "
+"**トランザクションの監視** を始めておくのがよいでしょう。"
 
-#: ../../source/getting-started/first-application.rst:104
+#: ../../source/getting-started/first-application.rst:114
 msgid "Open three new terminals:"
 msgstr "新しく3つのターミナルを開いてください:"
 
-#: ../../source/getting-started/first-application.rst:106
-msgid ""
-"The first terminal :doc:`monitors announced transactions "
-"<../guides/monitor/monitoring-a-transaction-status>` validation errors."
-msgstr ""
-"最初のターミナルはバリデーションエラーのある :doc:`アナウンスされたトランザクションの監視 "
-"<../guides/monitor/monitoring-a-transaction-status>`  をします。"
+#: ../../source/getting-started/first-application.rst:116
+msgid "Monitor transaction validation errors."
+msgstr "トランザクションのバリデーションエラーの監視"
 
-#: ../../source/getting-started/first-application.rst:112
+#: ../../source/getting-started/first-application.rst:122
 msgid ""
-"Monitoring ``unconfirmed`` shows you which transactions have reached the "
-"network, but are not included in a block yet."
+"Monitor ``unconfirmed`` transactions to know which transactions have reached"
+" the network but are not included in a block yet."
 msgstr "``未承認`` の監視はトランザクションがネットワークに到着したことを確認できますが、まだブロックには含まれてません。"
 
-#: ../../source/getting-started/first-application.rst:118
+#: ../../source/getting-started/first-application.rst:128
 msgid ""
-"Once a transaction is included, you will see it under the ``confirmed`` "
-"terminal."
-msgstr "トランザクションが含まれると ``confirmed`` の下に表示されるでしょう:。"
+"Monitor ``confirmed`` transactions to see which announced transactions are "
+"included in a block."
+msgstr "``承認済`` の監視はトランザクションがブロックに含まれたことを確認できます。"
 
-#: ../../source/getting-started/first-application.rst:126
+#: ../../source/getting-started/first-application.rst:136
 msgid "Creating the ticket"
 msgstr "チケットの作成"
 
-#: ../../source/getting-started/first-application.rst:128
+#: ../../source/getting-started/first-application.rst:138
 msgid ""
 "We are representing the ticket with Catapult :doc:`Mosaics "
 "<../concepts/mosaic>`. This feature can be used to represent any asset on "
@@ -239,7 +233,7 @@ msgstr ""
 " **転送可能プロパティを false** "
 "に設定します。これは、チケットの転売を防止するために、購入者がモザイクの作成者だけに送り返すことしかできないことを意味します。"
 
-#: ../../source/getting-started/first-application.rst:130
+#: ../../source/getting-started/first-application.rst:140
 msgid ""
 "Create a new mosaic to represent the ticket configured as follows with the "
 "ticket vendor account."
@@ -262,15 +256,16 @@ msgstr "説明"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid ""
-"The mosaic won't be divisible, no one should be able to send “0.5 tickets”."
-msgstr "“0.5 tickets” が送信できないように、モザイクは可分しないようにします。"
+"The mosaic units must not be divisible, no one should be able to send \"0.5 "
+"tickets\"."
+msgstr "“0.5 tickets” が送信できないように、モザイクは可分できないようにします。"
 
 #: ../../source/getting-started/first-application.rst:1
 msgid "The mosaic will be registered for 1000 blocks."
 msgstr "モザイクは 1000 ブロック登録されます。"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "The number of tickets you are going to create"
+msgid "The number of tickets you are going to create."
 msgstr "作成するチケットの量"
 
 #: ../../source/getting-started/first-application.rst:1
@@ -281,17 +276,17 @@ msgstr "モザイク供給量は後に変更可能です。"
 msgid "The mosaic can be only transferred back to the mosaic creator."
 msgstr "モザイクはモザイク作成者だけに送り返すことしかできません。"
 
-#: ../../source/getting-started/first-application.rst:147
+#: ../../source/getting-started/first-application.rst:157
 msgid ""
 "Copy the MosaicId returned in the ``monitor confirmed`` tab after the "
 "transaction gets confirmed."
 msgstr "トランザクションが承認された後に ``monitor confirmed`` タブに返された MosaicId をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:155
+#: ../../source/getting-started/first-application.rst:165
 msgid "Sending the ticket"
 msgstr "チケットの送信"
 
-#: ../../source/getting-started/first-application.rst:157
+#: ../../source/getting-started/first-application.rst:167
 msgid ""
 "Now that we have defined the mosaic, we are going to send one ticket unit to"
 " a customer announcing a :ref:`TransferTransaction <transfer-transaction>`."
@@ -299,7 +294,7 @@ msgstr ""
 "モザイクを定義したので、1 つのチケット単位を  :ref:`TransferTransaction <transfer-transaction>` "
 "をアナウンスして顧客に送信します。"
 
-#: ../../source/getting-started/first-application.rst:159
+#: ../../source/getting-started/first-application.rst:169
 msgid "Prepare the **TransferTransaction** with the following values."
 msgstr "次の値で **TransferTransaction** を用意します。"
 
@@ -329,59 +324,59 @@ msgid "The attached message."
 msgstr "添付されたメッセージ"
 
 #: ../../source/getting-started/first-application.rst:1
-msgid "The local network identifier."
-msgstr "ローカルネットワーク識別子"
+msgid "The network type."
+msgstr "ネットワークタイプ"
 
-#: ../../source/getting-started/first-application.rst:184
+#: ../../source/getting-started/first-application.rst:194
 msgid ""
 "Although the transaction is defined, it has not been announced to the "
 "network yet."
 msgstr "トランザクションは定義されましたが、まだネットワークへはアナウンスされていません。"
 
-#: ../../source/getting-started/first-application.rst:186
+#: ../../source/getting-started/first-application.rst:196
 msgid ""
 "Sign the transaction with the **ticket vendor account**, so that the network"
 " can verify the authenticity of the transaction."
 msgstr "ネットワークがトランザクションの信頼性を検証できるように **チケット販売者のアカウント** でトランザクションに署名をします。"
 
-#: ../../source/getting-started/first-application.rst:188
+#: ../../source/getting-started/first-application.rst:198
 msgid ""
 "Include the first block generation hash to make the transaction only valid "
-"for your network. Open ``http://localhost:3000/block/1`` in a new tab and "
+"for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
 "copy the ``meta.generationHash`` value."
 msgstr ""
-"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいタブで "
-"``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
+"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
+"'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:202
+#: ../../source/getting-started/first-application.rst:212
 msgid "Once signed, you can announce the transaction to the network."
 msgstr "署名が終わったらトランザクションをネットワークへアナウンスすることができます。"
 
-#: ../../source/getting-started/first-application.rst:220
+#: ../../source/getting-started/first-application.rst:230
 msgid ""
 "When the transaction is confirmed, check if the customer has received the "
 "ticket."
 msgstr "トランザクションが承認されたら、購入者がチケットを受信したことを確認します。"
 
-#: ../../source/getting-started/first-application.rst:228
+#: ../../source/getting-started/first-application.rst:238
 msgid "Did you solve the use case?"
 msgstr "このユースケースは解決できたでしょうか？"
 
-#: ../../source/getting-started/first-application.rst:230
+#: ../../source/getting-started/first-application.rst:240
 msgid ""
 "✅ Identify each customer: Creating Catapult accounts for each customer."
 msgstr "✅ 各購入者の識別: 各購入者の Catapult アカウントの作成"
 
-#: ../../source/getting-started/first-application.rst:232
+#: ../../source/getting-started/first-application.rst:242
 msgid "✅ Avoid ticket reselling: Creating a non-transferable mosaic."
 msgstr "✅ チケットの転売防止: 転送不可能なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:234
+#: ../../source/getting-started/first-application.rst:244
 msgid ""
 "✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic."
 msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:236
+#: ../../source/getting-started/first-application.rst:246
 msgid ""
 "Continue learning about more :doc:`Catapult built-in features "
 "<../concepts/account>`."

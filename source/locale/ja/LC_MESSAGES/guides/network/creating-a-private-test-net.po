@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -109,44 +109,44 @@ msgstr "**Memory**: 4GB 以上"
 msgid "**HD**: 20GB or more"
 msgstr "**HD**: 20GB 以上"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:42
+#: ../../source/guides/network/creating-a-private-test-net.rst:41
+msgid "**OS**: Linux or Mac"
+msgstr "**OS**: Linux または Mac"
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:43
 msgid ""
 "Although you might be able to run the software in less powerful instances, "
 "you might encounter some issues while installing or running the node."
 msgstr ""
 "それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:46
+#: ../../source/guides/network/creating-a-private-test-net.rst:47
 msgid "Environment requirements"
 msgstr "必須環境"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:48
-msgid "**OS**: Linux or Mac"
-msgstr "**OS**: Linux または Mac"
-
 #: ../../source/guides/network/creating-a-private-test-net.rst:49
-msgid "`docker`_ 19.03 installed"
-msgstr "`docker`_ 19.03 がインストール済み"
+msgid ""
+"The setup scripts are automated using docker. To run a test net node, you "
+"will need to have installed the following docker tools:"
+msgstr ""
+"セットアップスクリプトは Docker を使用して自動化されます。テストネットノードを立ち上げるには、次の Docker "
+"ツールをインストールする必要があります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:50
-msgid "`docker-compose`_ 1.22 installed"
-msgstr "`docker-compose`_ 1.22 がインストール済み"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:54
+#: ../../source/guides/network/creating-a-private-test-net.rst:56
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:56
+#: ../../source/guides/network/creating-a-private-test-net.rst:58
 msgid ""
 "Use this link to **download the latest release** of the package, or clone "
 "the repository directly using Git."
 msgstr "パッケージの **最新版のダウンロードリンク** またはリポジトリから Git を使用して直接クローンしてください。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:62
+#: ../../source/guides/network/creating-a-private-test-net.rst:64
 msgid "Open the ``catapult-service-bootstrap`` folder."
 msgstr "``catapult-service-bootstrap`` フォルダを開きます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:68
+#: ../../source/guides/network/creating-a-private-test-net.rst:70
 msgid ""
 "(Optional) Customize the network's :doc:`configurable parameters "
 "<configuring-network-properties>` before launching it."
@@ -154,11 +154,11 @@ msgstr ""
 "(オプション) 起動の前に、ネットワークの :doc:`設定可能なパラメータ <configuring-network-properties>` "
 "をカスタマイズします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:70
+#: ../../source/guides/network/creating-a-private-test-net.rst:72
 msgid "Run the network."
 msgstr "ネットワークの立ち上げ"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:76
+#: ../../source/guides/network/creating-a-private-test-net.rst:78
 msgid ""
 "To run the docker containers in the background of your terminal, you can run"
 " the service in detached mode using the option ``--detach`` or ``-d``."
@@ -166,18 +166,18 @@ msgstr ""
 "ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
 "オプション使用してサービスをデタッチモードで実行します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:78
+#: ../../source/guides/network/creating-a-private-test-net.rst:80
 msgid ""
 "Verify that the node is running by opening a new browser tab with the "
 "following URL: ``localhost:3000/chain/height``."
 msgstr ""
 "次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:80
+#: ../../source/guides/network/creating-a-private-test-net.rst:82
 msgid "To stop the process, press ``Ctrl+C``."
 msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:84
+#: ../../source/guides/network/creating-a-private-test-net.rst:86
 msgid "Commands"
 msgstr "コマンド"
 
@@ -261,11 +261,11 @@ msgstr "API ブローカサービスのみ停止"
 msgid "Stop peer0 and peer1 services."
 msgstr "peer0 と peer1 サービスの停止"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:110
+#: ../../source/guides/network/creating-a-private-test-net.rst:112
 msgid "Getting test cat.currency"
 msgstr "テスト cat.currency の取得"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:112
+#: ../../source/guides/network/creating-a-private-test-net.rst:114
 msgid ""
 "An :doc:`account <../../concepts/account>` is a deposit box where you can "
 "hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them "
@@ -280,7 +280,7 @@ msgstr ""
 " :doc:`手数料 <../../concepts/fees>` を支払う必要があります。このコストはデフォルトのネットワークトークンである "
 "**cat.currency** モザイクで支払われます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:114
+#: ../../source/guides/network/creating-a-private-test-net.rst:116
 msgid ""
 "After running the ``catapult-service-bootstrap`` tool for the first time, "
 "the available currency supply is distributed between a generated set of "
@@ -293,21 +293,21 @@ msgstr ""
 "ツールの起動後、利用可能な通貨の供給は、生成されたアカウントに分配されます。これらのアカウントの 1 "
 "つをすばやく取得するには、ブロックチェーンとの対話、アカウントの設定、資金の送信など、最も一般的なアクションを便利に実行するコマンドラインツールを使用して保存します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:116
+#: ../../source/guides/network/creating-a-private-test-net.rst:118
 msgid "Install :doc:`NEM2-CLI <../../cli>`."
 msgstr ":doc:`NEM2-CLI <../../cli>` をインストールします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:122
+#: ../../source/guides/network/creating-a-private-test-net.rst:124
 msgid ""
 "Open a new terminal window. Then, go to the directory where the bootstrap "
 "tool has generated the addresses."
 msgstr "新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:128
+#: ../../source/guides/network/creating-a-private-test-net.rst:130
 msgid "Display the content of the ``addresses.yaml`` file."
 msgstr "``addresses.yaml`` ファイルの内容を表示します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:134
+#: ../../source/guides/network/creating-a-private-test-net.rst:136
 msgid ""
 "Under the section ``nemesis_addresses``, you will find the key pairs which "
 "contain ``cat.currency``. Copy the private key of the first account."
@@ -315,23 +315,23 @@ msgstr ""
 "``nemesis_addresses`` のセクションから ``cat.currency`` "
 "を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:136
+#: ../../source/guides/network/creating-a-private-test-net.rst:138
 msgid ""
 "Type the command ``nem2-cli profile create`` using the key obtained in the "
 "previous step."
 msgstr "前のステップで取得したキーを使用して、コマンド ``nem2-cli profile create`` を実行します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:147
+#: ../../source/guides/network/creating-a-private-test-net.rst:149
 msgid ""
 "Use NEM2-CLI only for testing and development purposes, as the private keys "
 "stored are not encrypted."
 msgstr "NEM2-CLI は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:149
+#: ../../source/guides/network/creating-a-private-test-net.rst:151
 msgid "You should see the account credentials in your terminal."
 msgstr "アカウントの資格情報がターミナルで確認できます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:164
+#: ../../source/guides/network/creating-a-private-test-net.rst:166
 msgid ""
 "As the name suggests, the **private key has to be kept secret at all "
 "times**. Anyone with access to the private key ultimately has control over "
@@ -342,7 +342,7 @@ msgstr ""
 "その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
 "。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:166
+#: ../../source/guides/network/creating-a-private-test-net.rst:168
 msgid ""
 "Now that you have your node running an account with some cat.currency, we "
 "recommend you to surf the **NEM Development Center**. In this portal, you "

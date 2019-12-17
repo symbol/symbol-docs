@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 15:22+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,9 +21,57 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../env/lib/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
+#: ../../../env/lib/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:19
+msgid "Read more ..."
+msgstr "もっと読む"
+
+#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
+
+#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
+
+#: ../../../env/lib/site-packages/ablog/templates/categories.html:2
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: ../../source/_templates/globaltoc.html:10
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: ../../../env/lib/site-packages/ablog/templates/authors.html:2
+#: ../../source/_templates/post-meta.html:5
+msgid "Authors"
+msgstr "投稿者"
+
+#: ../../source/_templates/layout.html:75
+msgid "Did you find what you were looking for?"
+msgstr "お探しのものは見つかりましたか？"
+
+#: ../../source/_templates/layout.html:76
+msgid "Give us your feedback."
+msgstr "フィードバックをください。"
+
+#: ../../../env/lib/site-packages/ablog/templates/tagcloud.html:2
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:43
+msgid "Tags"
+msgstr "タグ"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:7
+msgid "Author"
+msgstr "投稿者"
+
+#: ../../../env/lib/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
+
+#: ../../../env/lib/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
 
 #: ../../source/_templates/include/footer.html:5
 msgid "Learn"
@@ -75,46 +123,6 @@ msgstr "コミュニティ"
 msgid "Last updated on %(last_updated)s."
 msgstr "最終更新 %(last_updated)s"
 
-#: ../../source/_templates/layout.html:75
-msgid "Did you find what you were looking for?"
-msgstr "お探しのものは見つかりましたか？"
-
-#: ../../source/_templates/layout.html:76
-msgid "Give us your feedback."
-msgstr "フィードバックをください。"
-
-#: ../../source/_templates/globaltoc.html:10
-msgid "Navigation"
-msgstr "ナビゲーション"
-
-#: ../../../env/lib/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
-
-#: ../../../env/lib/site-packages/ablog/templates/tagcloud.html:2
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:43
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../../env/lib/site-packages/ablog/templates/categories.html:2
-msgid "Categories"
-msgstr "カテゴリ"
-
-#: ../../../env/lib/site-packages/ablog/templates/collection.html:48
-#: ../../source/_templates/collection.html:19
-msgid "Read more ..."
-msgstr "もっと読む"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:7
-msgid "Author"
-msgstr "投稿者"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../env/lib/site-packages/ablog/templates/authors.html:2
-msgid "Authors"
-msgstr "投稿者"
-
 #: ../../source/_templates/include/navbar-right.html:5
 msgid "Edit"
 msgstr "編集"
@@ -123,21 +131,13 @@ msgstr "編集"
 msgid "Translate"
 msgstr "翻訳する"
 
-#: ../../../env/lib/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
+#: ../../../env/lib/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
 
-#: ../../../env/lib/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
-
-#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
-
-#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
+#: ../../source/_templates/collection.html:4
+msgid "guides"
+msgstr "ガイド"
 
 #: ../../../env/lib/site-packages/ablog/templates/postcard2.html:2
 msgid "Update"
@@ -159,6 +159,6 @@ msgstr "カテゴリ"
 msgid "Tag"
 msgstr "タグ"
 
-#: ../../source/_templates/collection.html:4
-msgid "guides"
-msgstr "ガイド"
+#: ../../../env/lib/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"

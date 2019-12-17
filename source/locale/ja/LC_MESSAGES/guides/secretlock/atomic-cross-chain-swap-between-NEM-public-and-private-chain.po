@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -125,7 +125,7 @@ msgid ""
 "each blockchain."
 msgstr "そのため、関係する各当事者は、各ブロックチェーンに少なくとも1つのアカウントを持つ必要があります。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:59
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:64
 msgid ""
 "Alice picks a random number, called ``proof``. Then, applies a **SHA3-256** "
 "algorithm to it, obtaining the ``secret``."
@@ -133,33 +133,33 @@ msgstr ""
 "Alice は ``proof`` と呼ばれるランダムな数字を選び出します。**SHA3-256** アルゴリズムをそれに適用して ``secret``"
 " を得ます。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:68
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:78
 msgid "Alice creates a **SecretLockTransaction TX1**, including:"
 msgstr "Alice はこれらを含めた **SecretLockTransaction TX1** を作成します:"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:71
-msgid "Recipient: Bob's address (Private Chain)"
-msgstr "受信者: Bob のアドレス (プライベートチェーン )"
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:81
+msgid "Recipient: Bob's address in private chain"
+msgstr "受信者: プライベートチェーンの Bob のアドレス"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:72
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:101
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:82
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:121
 msgid "Algorithm: SHA3-256"
 msgstr "アルゴリズム: SHA3-256"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:73
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:102
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:83
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:122
 msgid "Secret:  SHA3-256(proof)"
 msgstr "シークレット:  SHA3-256(proof)"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:74
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:84
 msgid "Duration: 96h"
 msgstr "期間: 96h"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:75
-msgid "Network: Private Chain"
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:85
+msgid "Network: private chain"
 msgstr "ネットワーク: プライベートチェーン"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:84
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:99
 msgid ""
 "Once announced, this transaction will remain locked until someone discovers "
 "the proof that matches the secret. If after a determined period of time no "
@@ -168,33 +168,33 @@ msgstr ""
 "一度アナウンスされると、誰かがシークレットにマッチする証明を発見するまで、このトランザクションはロックされたままです。一定の期間が経過してもそれが証明されなければ、ロックされた資金は"
 " Alice に返還されます。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:86
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:101
 msgid "Alice signs and announces **TX1** to the **private chain**."
 msgstr "Alice は **TX1** に署名して **プライベートチェーン** へアナウンスします。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:95
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:115
 msgid ""
 "Alice can tell Bob the secret. Also, he could retrieve it directly from the "
 "chain."
 msgstr "Alice は Bob にシークレットを伝えることができます。彼もまた、直接チェーンからそれを取得することもできます。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:97
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:117
 msgid "Bob creates a **SecretLockTransaction TX2**, which contains:"
 msgstr "Bob はこれらを含めた **SecretLockTransaction TX2** を作成します:"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:100
-msgid "Recipient: Alice's address (Public Chain)"
-msgstr "受信者: Alice のアドレス (パブリックチェーン )"
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:120
+msgid "Recipient: Alice's address in public chain"
+msgstr "受信者: パブリックチェーンの Alice のアドレス"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:103
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:123
 msgid "Duration: 84h"
 msgstr "期間: 84h"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:104
-msgid "Network: Public Chain"
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:124
+msgid "Network: public chain"
 msgstr "ネットワーク: パブリックチェーン"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:113
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:138
 msgid ""
 "The amount of time in which funds can be unlocked should be a smaller time "
 "frame than TX1's. Alice knows the secret, so Bob must be sure he will have "
@@ -203,11 +203,11 @@ msgstr ""
 "資産をアンロックできる時間は、TX1 のタイムフレームよりも短くする必要があります。Alice はシークレットを知っていて、Bob "
 "はそれを確信しているので、Alice がシークレットを公開したあとに、彼にはいくらかの時間があるでしょう。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:115
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:140
 msgid "Once signed, Bob announces **TX2** to the **public chain**."
 msgstr "署名を済ませたら Bob は **TX2** を **パブリックチェーン** へアナウンスします。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:124
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:154
 msgid ""
 "Alice can announce the **SecretProofTransaction TX3** to the public network."
 " This transaction defines the encrypting algorithm used, the original proof "
@@ -217,7 +217,7 @@ msgstr ""
 "をアナウンスできます。このトランザクションは使用している暗号化アルゴリズム、オリジナルの証明とシークレットを定義します。これは TX2 "
 "トランザクションをアンロックします。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:133
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:168
 msgid ""
 "The proof is revealed in the public chain. Bob picks the proof and announces"
 " the **SecretProofTransaction TX4** to the **private chain**."
@@ -225,25 +225,25 @@ msgstr ""
 "proof はパブリックチェーン上で明らかになります。Bob はこの proof を手に入れ **SecretProofTransaction "
 "TX4** を **プライベートチェーン** にアナウンスします。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:142
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:182
 msgid "Bob receives TX1 funds, and the atomic cross-chain swap concludes."
 msgstr "Bob は TX1 の資産を受信し、アトミッククロスチェーン交換は完結します。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:146
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:186
 msgid "Is it really atomic?"
 msgstr "これは本当にアトミックですか？"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:148
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:188
 msgid "Consider the following scenarios:"
 msgstr "以下のシナリオを考慮してください:"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:150
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:190
 msgid ""
 "✅ Bob does not want to announce TX2: Alice will receive her funds back after"
 " 94 hours."
 msgstr "✅ Bob は TX2 をアナウンスしたくありません: Alice は 94 時間後に彼の資産の返還を受信します。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:152
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:192
 msgid ""
 "✅ Alice does not want to swap tokens by signing TX3: Bob will receive his "
 "refund after 84h. Alice will unlock her funds as well after 94 hours."
@@ -251,7 +251,7 @@ msgstr ""
 "✅ Alice は TX3 に署名することでトークンを交換したくありません: Bob は 84 時間後に彼の資産の返還を受取ります。Alice は同様に"
 " 94 時間後に彼女の資産をアンロックします。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:154
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:194
 msgid ""
 "⚠️ Alice signs and announces TX3, receiving Bob's funds: Bob will have time "
 "to sign TX4, as TX1 validity is longer than TX2."
@@ -259,7 +259,7 @@ msgstr ""
 "⚠️ Alice は TX3 に署名しアナウンスし Bob の資産を受取ります: Bob は TX1 の正当性が TX2 よりも長いため TX4 "
 "に署名する時間があります。"
 
-#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:156
+#: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:196
 msgid ""
 "The process is atomic, but should be completed with lots of time before the "
 "deadlines."

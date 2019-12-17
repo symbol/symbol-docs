@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 15:22+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -86,14 +86,15 @@ msgstr ":doc:`アカウントの作成 <../account/creating-an-account>` 方法�
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:37
 msgid ""
-"A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するマルチシグアカウント"
+"A multisig :ref:`account with loaded with network currency <setup-creating-a"
+"-test-account>`"
+msgstr ":ref:`ネットワーク通貨を保有する <setup-creating-a-test-account>`  マルチシグアカウント"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:38
 msgid ""
-"A cosignatory :ref:`account with cat.currency <setup-getting-a-test-"
+"A cosignatory :ref:`account with network currency <setup-creating-a-test-"
 "account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有する連署者アカウント"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>` 連署者"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:42
 msgid "Example #1: 1-of-2 signatures required"
@@ -102,11 +103,9 @@ msgstr "例 #1: 1-of-2 署名が要求されます"
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:44
 msgid ""
 "Bob has finished filling the basket, and he is ready to pay. The cashier's "
-"screen indicates that the cost of the purchase adds up to ``10 "
-"cat.currency``."
+"screen indicates that the cost of the purchase adds up to ``10 nem.xem``."
 msgstr ""
-"Bob はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が ``10 cat.currency`` "
-"と表示されています。"
+"Bob はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が ``10 nem.xem`` と表示されています。"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:46
 msgid ""
@@ -130,12 +129,8 @@ msgid "Recipient: Grocery's address"
 msgstr "受信者: 食料雑貨店のアドレス"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:65
-msgid "Message: sending 10 cat.currency"
-msgstr "メッセージ: sending 10 cat.currency"
-
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:66
-msgid "Mosaics: [``10 cat.currency``]"
-msgstr "モザイク: [``10 cat.currency``]"
+msgid "Message: sending 10 nem.xem"
+msgstr "メッセージ: 10 nem.xem 送信"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:80
 msgid ""
@@ -178,37 +173,32 @@ msgstr ""
 msgid "Sending an AggregateBondedTransaction"
 msgstr "AggregateBondedTransaction の送信"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:122
-msgid ""
-"Open a new terminal to :doc:`monitor <../monitor/monitoring-a-transaction-"
-"status>` the **AggregateBondedTransaction**."
-msgstr ""
-"アグリゲートボンドトランザクションを :doc:`監視する<../monitor/monitoring-a-transaction-status>` "
-"ために新しくターミナルを開いてください。"
-
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:128
 msgid "Modify the previous code, defining the transaction as  **bonded**."
 msgstr "前のコードを変更して、トランザクションを **ボンデッド** として定義します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:137
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:142
 msgid ""
 "When an AggregateTransaction is bonded, Bob needs to **lock at least 10 "
-"cat.currency** to prevent spamming the network. Once all cosigners sign the "
+"nem.xem** to prevent spamming the network. Once all cosigners sign the "
 "transaction, the amount of cat.currency locked becomes available again in "
 "Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has "
 "been confirmed, :doc:`announce the AggregateBondedTransaction "
 "<../../concepts/aggregate-transaction>`."
 msgstr ""
-"AggregateTransaction がボンデッドの場合、Bob はスパムを起こさないための **最低 10 cat.currency** "
-"をロックする必要かあります。すべての連署者がトランザクションへ署名すると、cat.currency の総量は Bob "
+"AggregateTransaction がボンデッドの場合、Bob はスパム防止のための **最小 10 nem.xem をロック** "
+"する必要かあります。すべての連署者がトランザクションへ署名すると、cat.currency の総量は Bob "
 "のアカウント上で再度有効になります。:ref:`HashLockTransactionhash <hash-lock-transaction>` "
 "が承認された後に、 :doc:`AggregateBondedTransaction をアナウンス <../../concepts/aggregate-"
 "transaction>` します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:146
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:156
 msgid ""
-":doc:`Cosign the AggregateTransaction <../../cli>` with Alice's account. Use"
-" the transaction hash output from the first step."
+"Once the transaction reaches the network, you will see it on the terminal "
+"where you are monitoring the aggregate bonded transactions added. Then, "
+":doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use"
+" the transaction hash output from (2)."
 msgstr ""
-"Alice のアカウントで :doc:`AggregateTransaction に署名します <../../cli>` "
-"。最初のステップで出力されたトランザクションハッシュを使用してください。"
+"トランザクションがネットワークに到達すると、ターミナルにアグリゲートボンデッドトランザクションが追加されるのが確認できるでしょう。次に、 "
+":doc:`AggregateTransaction に署名 <../../cli>` を Alice のアカウントで行います。(2) "
+"で出力されたトランザクションハッシュを使用してください。"
