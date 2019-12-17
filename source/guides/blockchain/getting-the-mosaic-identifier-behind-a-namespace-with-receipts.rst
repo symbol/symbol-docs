@@ -42,7 +42,7 @@ To ensure the transactions are being sent to the correct place with the correct 
 However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
 
 * Transactions using aliased mosaics or accounts are stored on the blockchain using the namespace identifier, not the real address or mosaic id behind it.
-* Links are editable. The namespace owner can link its namespace to another asset.
+* Links are editable. The namespace creator can link its namespace to another asset.
 * Namespaces expire. The namespace link could be deleted.
 
 At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`. For each block, Catapult nodes store receipts that contain every **invisible state change** that cannot be retrieved directly from the transaction or block header.
@@ -52,15 +52,15 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********************
 Getting into some code
 **********************
 
-In this example, we are going to announce a **TransferTransaction** using ``cat.currency`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
+In this example, we are going to announce a **TransferTransaction** using ``nem.xem`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
 
-1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. cat.currency) instead of the mosaic identifier.
+1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. nem.xem) instead of the mosaic identifier.
 
 .. example-code::
 
@@ -116,7 +116,7 @@ In this example, we are going to announce a **TransferTransaction** using ``cat.
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-The previous snippet outputs the resolved mosaic identifier for the namespace ``cat.currency`` and the transaction you have just sent.
+The previous snippet outputs the resolved mosaic identifier for the namespace ``nem.xem`` and the transaction you have just sent.
 
 .. code-block:: bash
 
@@ -124,7 +124,7 @@ The previous snippet outputs the resolved mosaic identifier for the namespace ``
     PrimaryId:  1
     SecondaryId:  0
 
-It is technically possible to get more than one ``resolutionEntry`` for the same namespaceId. This situation is common when a namespace owner changes the link to another mosaic, leading to two different resolutions in the same block.
+It is technically possible to get more than one ``resolutionEntry`` for the same namespaceId. This situation is common when a namespace creator changes the link to another mosaic, leading to two different resolutions in the same block.
 
 The receipt source ``primaryId`` references the transaction where the alias first appears within the block. The ``secondaryId`` is a non 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
 

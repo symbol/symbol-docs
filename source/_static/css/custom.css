@@ -541,6 +541,11 @@ div.figure .caption {
     }
 }
 
+/* Math */
+.math{
+    margin: 20px 0px;
+}
+
 /* Mermaid */
 .mermaid svg {
     max-width: 100% !important;

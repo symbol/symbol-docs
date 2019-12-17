@@ -142,7 +142,7 @@ Alice and Bob want to **add Carol**, a third participant, as a co-signatory of t
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Before sending an **AggregateBondedTransaction**, Alice or Bob need to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
+4. Before sending an **AggregateBondedTransaction**, Alice or Bob need to **lock at least 10 nem.xem**. This transaction is required to prevent spamming the network. After the HashLockTransaction has been confirmed, announce the AggregateTransaction.
 
 .. example-code::
 
@@ -162,7 +162,7 @@ Alice and Bob want to **add Carol**, a third participant, as a co-signatory of t
 
     nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
 
-6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with Alice's or Bob's account. The amount of cat.currency locked becomes available again on Alice's account, and Carol is added to the multisig.
+6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with Alice's or Bob's account. The amount of nem.xem locked becomes available again on Alice's account, and Carol is added to the multisig.
 
 .. code-block:: bash
 

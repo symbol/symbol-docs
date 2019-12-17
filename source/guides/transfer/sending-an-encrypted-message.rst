@@ -17,7 +17,7 @@ Prerequisites
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
 - Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********
 Background
@@ -25,7 +25,7 @@ Background
 
 Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
-Alice knows that sending a TransferTransaction with a **plain message** through the public network will make the content of the message publicly available.
+Alice knows that sending a TransferTransaction with a **plain message** to the public network will make the content of the message publicly available.
 
 Thus, Alice sends an **encrypted message** that is only readable by herself and those with access to the academic certificate.
 
@@ -39,18 +39,18 @@ Create an account for Alice, and another for the certificate  using ``nem2-cli``
 
     nem2-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): alice
 
 .. code-block:: bash
 
     nem2-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name (blank means default and it could overwrite the previous profile): certificate
 
 
@@ -88,7 +88,7 @@ Method #01: Using the SDK
 
 3. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 

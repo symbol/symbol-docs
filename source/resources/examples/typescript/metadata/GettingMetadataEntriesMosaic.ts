@@ -16,29 +16,31 @@
  *
  */
 
-import {Metadata, MetadataHttp, MosaicId} from "nem2-sdk";
+import {Metadata, MetadataHttp, MosaicId} from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const metadataHttp = new MetadataHttp(nodeUrl);
 
-const metadataHttp = new MetadataHttp('http://localhost:3000');
 metadataHttp.getMosaicMetadata(mosaicId)
     .subscribe((metadata) => {
-        if (metadata.length > 0) {
+        if (metadata.length <= 0) {
+            console.log('\n The mosaic does not have metadata entries assigned.');
+        } else {
             metadata
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
-                    console.log('\n \n' +'Scoped Metadata Key:\t', metadataEntry.scopedMetadataKey);
-                    console.log('\n' +'---' );
-                    console.log('\n' +'Value:\t', metadataEntry.value);
-                    console.log('\n' +'Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n' +'Target Public Key:\t', metadataEntry.targetPublicKey);
-                    console.log('\n' +'TargetId:\t', metadataEntry.targetId);
-
+                    console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
+                    console.log('\n ---');
+                    console.log('\n Value:\t', metadataEntry.value);
+                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
+                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n TargetId:\t', metadataEntry.targetId);
                 });
-        } else {
-            console.log('\n The mosaic does not have metadata entries assigned.');
         }
     }, (err) => console.log(err));
 /* end block 01 */

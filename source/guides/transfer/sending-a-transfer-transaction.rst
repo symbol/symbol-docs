@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 10 Aug, 2018
-    :category: Transfer Transaction
+    :category: Transaction
     :excerpt: 1
     :nocomments:
 
@@ -10,6 +10,13 @@ Sending mosaics and messages between two accounts
 #################################################
 
 Transfer mosaics and messages between two accounts.
+
+*************
+Prerequisites
+*************
+
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********
 Background
@@ -21,44 +28,44 @@ Background
 
     Sending a TransferTransaction
 
-Alice wants to send 10 cat.currency to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 nem.xem to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
 *************
 Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********************
 Monitoring the network
 **********************
 
-Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
+To understand the transaction lifecycle, we recommend you to open three new terminal instances.
 
-To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../monitor/monitoring-a-transaction-status>` validation errors.
-
-.. code-block:: bash
-
-    nem2-cli monitor status
-
-Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
+1.  Monitor transaction validation errors.
 
 .. code-block:: bash
 
-    nem2-cli monitor unconfirmed
+   nem2-cli monitor status
 
-Once a transaction is included, you will see it under the ``confirmed`` terminal.
+2. Monitor ``unconfirmed`` transactions to know which transactions have reached the network but are not included in a block yet.
 
 .. code-block:: bash
 
-    nem2-cli monitor confirmed
+   nem2-cli monitor unconfirmed
+
+3. Monitor ``confirmed`` transactions to see which announced transactions are included in a block.
+
+.. code-block:: bash
+
+   nem2-cli monitor confirmed
 
 *************************
 Method #01: Using the SDK
 *************************
 
-1. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 cat.currency``.
+1. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 nem.xem``.
 
 .. example-code::
 
@@ -92,7 +99,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 2. Sign the transaction with Alice's account.
 
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 

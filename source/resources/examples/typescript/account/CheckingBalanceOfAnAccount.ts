@@ -20,19 +20,20 @@ import {AccountHttp, Address, MosaicHttp, MosaicService} from 'nem2-sdk';
 import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
-
-const url = 'http://localhost:3000';
-const accountHttp = new AccountHttp(url);
-const mosaicHttp = new MosaicHttp(url);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const accountHttp = new AccountHttp(nodeUrl);
+const mosaicHttp = new MosaicHttp(nodeUrl);
 const mosaicService = new MosaicService(accountHttp, mosaicHttp);
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)
     .pipe(
-        mergeMap((_) => _)
+        mergeMap((_) => _),
     )
-    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
-        err => console.error(err));
+    .subscribe((mosaic) => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+        (err) => console.error(err));
 /* end block 01 */

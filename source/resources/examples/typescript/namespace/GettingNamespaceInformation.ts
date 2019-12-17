@@ -19,10 +19,13 @@
 import {NamespaceHttp, NamespaceId} from 'nem2-sdk';
 
 /* start block 01 */
+// replace with namespace name
 const namespaceId = new NamespaceId('foo');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const namespaceHttp = new NamespaceHttp(nodeUrl);
 
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
 namespaceHttp
     .getNamespace(namespaceId)
-    .subscribe(namespaceInfo => console.log(namespaceInfo), err => console.error(err));
+    .subscribe((namespaceInfo) => console.log(namespaceInfo), (err) => console.error(err));
 /* end block 01 */

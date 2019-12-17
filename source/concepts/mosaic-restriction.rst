@@ -18,7 +18,7 @@ Global restriction
 
 The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to transact a given mosaic.
 
-One mosaic can handle multiple global restrictions. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
+One mosaic can handle up to ``20`` global restrictions, being this parameter :ref:`configurable per network <config-network-properties>`. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"

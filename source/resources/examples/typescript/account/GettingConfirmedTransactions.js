@@ -19,11 +19,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const accountHttp = new nem2_sdk_1.AccountHttp('http://localhost:3000');
-const rawAddress = process.env.ADDRESS;
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
 const pageSize = 10; // Page size between 10 and 100, otherwise 10
 accountHttp
     .getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize))
-    .subscribe(transactions => console.log(transactions), err => console.error(err));
+    .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
 /* end block 01 */

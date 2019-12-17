@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 ******************
 Developing the bot
@@ -69,7 +69,7 @@ Extend the previous function to cosign transactions if they follow some constrai
 * The aggregate has **two inner transactions**.
 * The inner transactions must be **transfer transactions.**
 * The transaction sending funds must have **yourself as the signer**.
-* The transaction sending funds should have **only one mosaic**, being this **less than 100 cat.currency**.
+* The transaction sending funds should have **only one mosaic**, being this **less than 100 nem.xem**.
 
 Here you have a possible implementation:
 

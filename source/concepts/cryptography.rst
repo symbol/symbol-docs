@@ -62,7 +62,7 @@ The following steps are performed to `convert a public key <https://github.com/n
 4. concatenate (3) and the checksum of (3).
 5. (Optional) base-32 of (4).
 
-.. note:: The public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NIS1.
+.. note:: Catapult's public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NIS1.
 
 As you can see, it is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.
 

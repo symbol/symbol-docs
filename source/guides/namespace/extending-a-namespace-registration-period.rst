@@ -15,7 +15,7 @@ Extend a namespace registration period.
 Background
 **********
 
-Namespaces are registered for a certain amount of blocks. The owner can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
+Namespaces are registered for a certain amount of blocks. The creator can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
 In this guide, we are going to show how to extend the rental period of a namespace. The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
 
@@ -24,7 +24,7 @@ Prerequisites
 *************
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and at least one namespace
+- Have one :ref:`account with network currency <setup-creating-a-test-account>` and at least one namespace
 
 *************************
 Method #01: Using the SDK
@@ -42,7 +42,7 @@ Method #01: Using the SDK
     hexadecimal:    82a9d1ac587ec054
     uint:           [ 1484701780, 2192167340 ]
     type:           Root namespace
-    owner:          SAKT3C-...-X4ND
+    owner:          TBULEA...IPS4
     startHeight:    52000
     endHeight:      53000
 
@@ -72,7 +72,7 @@ As you can see, the namespace is going to expire in ``500`` blocks (53000-52500)
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The blockGenerationTargetTime is :properties:`configurable per network <config-network.properties>`.
+.. note:: Use the following formula to convert approximately days to blocks ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime``.
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 
@@ -88,7 +88,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     hexadecimal:    82a9d1ac587ec054
     uint:           [ 1484701780, 2192167340 ]
     type:           Root namespace
-    owner:          SAKT3C-...-X4ND
+    owner:          TBULEA...IPS4
     startHeight:    52000
     endHeight:      54000
 

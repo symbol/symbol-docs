@@ -81,7 +81,7 @@ SecretLockTransaction
 
 Use a SecretLockTransaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
 
-If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
+The maximum number of blocks the lock can lie up to is ``30 days``, being this parameter :ref:`configurable per network <config-network-properties>`. If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
 
 **Version**: 0x01
 
@@ -97,7 +97,7 @@ If the transaction duration is reached without being proved, the locked amount g
 
     secret; :schema:`Hash256 <types.cats#L12>`; Proof hashed.
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
     recipientAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Address that receives the funds once unlocked.
 

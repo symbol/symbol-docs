@@ -19,6 +19,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const account = nem2_sdk_1.Account.generateNewAccount(nem2_sdk_1.NetworkType.MIJIN_TEST);
+const account = nem2_sdk_1.Account.generateNewAccount(nem2_sdk_1.NetworkType.TEST_NET);
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

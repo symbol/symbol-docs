@@ -11,6 +11,12 @@ Updating metadata entries
 
 Update any existent metadata entry.
 
+*************
+Prerequisites
+*************
+
+- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
+
 **********
 Background
 **********
@@ -26,7 +32,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
 
 *************************
@@ -75,7 +81,7 @@ B)  You can achieve the same result with less effort using the ``MetadataService
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Before sending an aggregate transaction to the network, Bob has to lock  ``10 cat.currency``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
+3. Before sending an aggregate transaction to the network, Bob has to lock  ``10 nem.xem``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
 
 .. example-code::
 

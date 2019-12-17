@@ -28,13 +28,13 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 *************************
 Method #01: Using the SDK
 *************************
 
-1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send 10 cat.currency to different recipients.
+1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send ``10 nem.xem`` to different recipients.
 
 .. example-code::
 

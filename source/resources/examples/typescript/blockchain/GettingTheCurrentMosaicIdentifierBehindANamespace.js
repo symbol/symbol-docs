@@ -19,9 +19,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const namespace = new nem2_sdk_1.NamespaceId('cat.currency');
-const namespaceHttp = new nem2_sdk_1.NamespaceHttp('http://localhost:3000');
+// replace with namespace name
+const namespace = new nem2_sdk_1.NamespaceId('ne.xem');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const namespaceHttp = new nem2_sdk_1.NamespaceHttp(nodeUrl);
 namespaceHttp
     .getLinkedMosaicId(namespace)
-    .subscribe(mosaicId => console.log(mosaicId.toHex()), err => console.log(err));
+    .subscribe((mosaicId) => console.log(mosaicId.toHex()), (err) => console.log(err));
 /* end block 01 */

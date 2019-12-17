@@ -22,8 +22,6 @@ The algorithm considers the following factors to improve the ecosystem’s healt
 
 All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
 
-The account needs to hold a minimum amount of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance greater than zero.
-
 ******
 Scores
 ******
@@ -38,7 +36,7 @@ The network calculates the following sub scores for all high-value accounts for 
 Constants
 *********
 
-Each network can define their own consensus algorithm :properties:`constants <config-network.properties>`.
+Each network can define custom consensus algorithm :ref:`constants <config-network-properties>`.
 
 .. csv-table::
     :header: "Constant", "Value", "Description"

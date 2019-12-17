@@ -15,7 +15,7 @@ Share your account's importance securely with a node.
 Background
 **********
 
-:ref:`Delegated harvesting  <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
+:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
 
 Follow this guide to **delegate your account importance** without compromising the account's funds. Before you can activate delegated harvesting, make sure your main account has at least ``500 cat.harvest`` units. Then, you will have to **delegate your main account importance** to a **proxy public key** (remote account) before **requesting a node to add you as a delegated harvester**.
 
@@ -29,7 +29,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
 - Have one account with more than ``500`` cat.harvest.
 
 *************************

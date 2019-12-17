@@ -11,6 +11,14 @@ Assigning metadata to a namespace
 
 Add custom data to a namespace.
 
+*************
+Prerequisites
+*************
+
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
+
 **********
 Background
 **********
@@ -28,7 +36,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
 
 **********************
@@ -44,7 +52,7 @@ Creating the namespace
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 *************************
@@ -74,7 +82,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. All metadata is attached only with the consent of the namespace owner through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the namespace creator through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 
@@ -88,7 +96,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: If a namespace was owned by a different account, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace owner needs to accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: If a namespace was owned by a different account, you would need to set the :ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace creator needs to accept the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 3. Sign and announce the **AggregateTransaction** to the network.
 

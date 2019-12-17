@@ -19,21 +19,23 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME;
-const namespaceId = new nem2_sdk_1.NamespaceId(namespaceName);
-const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+// replace with namespace name
+const namespaceId = new nem2_sdk_1.NamespaceId('cat');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 metadataHttp.getNamespaceMetadata(namespaceId)
     .subscribe((metadata) => {
     if (metadata.length > 0) {
         metadata
             .map((entry) => {
             const metadataEntry = entry.metadataEntry;
-            console.log('\n \n' + 'Key:\t', metadataEntry.scopedMetadataKey);
-            console.log('\n' + '---');
-            console.log('\n' + 'Value:\t', metadataEntry.value);
-            console.log('\n' + 'Sender Public Key:\t', metadataEntry.senderPublicKey);
-            console.log('\n' + 'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
-            console.log('\n' + 'TargetId:\t', metadataEntry.targetId);
+            console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
+            console.log('\n ---');
+            console.log('\n Value:\t', metadataEntry.value);
+            console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
+            console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+            console.log('\n TargetId:\t', metadataEntry.targetId);
         });
     }
     else {

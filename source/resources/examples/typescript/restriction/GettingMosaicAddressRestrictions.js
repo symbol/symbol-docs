@@ -19,11 +19,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const rawAddress = process.env.ADDRESS;
+// replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-const mosaicIdHex = process.env.MOSAIC_ID;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const restrictionHttp = new nem2_sdk_1.RestrictionMosaicHttp(nodeUrl);
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
     .subscribe((mosaicAddressRestrictions) => {
     if (mosaicAddressRestrictions.restrictions.size > 0) {

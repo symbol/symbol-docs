@@ -62,7 +62,7 @@ Contributing to Catapult
 Catapult is an |open-source| project. Discover how our |community| is organized, and get started participating:
 
 *   Ask in |stack-overflow| development-related questions
-*   Reach our community joining the official |slack|.
+*   Reach our community joining the official |slack|
 *   Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to propose changes
 *   Follow the development updates on |twitter|
 *   Explore our |github| repositories
@@ -118,6 +118,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     guides/account/creating-a-wallet
     guides/transfer/sending-a-transfer-transaction
     guides/mosaic/creating-a-mosaic
+    guides/network/running-a-test-net-node
     guides/network/creating-a-private-test-net
     More guides <https://nemtech.github.io/guides/category.html>
 

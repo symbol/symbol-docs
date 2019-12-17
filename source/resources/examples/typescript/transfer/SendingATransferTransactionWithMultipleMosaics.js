@@ -18,22 +18,14 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-// 01 - Create Transfer Transaction
-const recipientRawAddress = process.env.RECIPIENT_RAW_ADDRESS;
-const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, 
+// replace with recipient address
+const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const ignored = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, 
 /* start block 01 */
-[new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc'), nem2_sdk_1.UInt64.fromUint(1000)),
-    nem2_sdk_1.NetworkCurrencyMosaic.createRelative(10)], 
+[new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('7CDF3B117A3C40CC'), nem2_sdk_1.UInt64.fromUint(1000)),
+    new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('75AF035421401EF0'), nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6)))], 
 /* end block 01 */
-nem2_sdk_1.PlainMessage.create('This is a test message'), nem2_sdk_1.NetworkType.MIJIN_TEST);
-// 02 - Signing the transaction
-const privateKey = process.env.PRIVATE_KEY;
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
-// 03 - Announcing the transaction
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+nem2_sdk_1.PlainMessage.create('This is a test message'), networkType).setMaxFee(2);

@@ -19,25 +19,28 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID;
+// replace with mosaic id
+const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const metadataHttp = new nem2_sdk_1.MetadataHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 metadataHttp.getMosaicMetadata(mosaicId)
     .subscribe((metadata) => {
-    if (metadata.length > 0) {
+    if (metadata.length <= 0) {
+        console.log('\n The mosaic does not have metadata entries assigned.');
+    }
+    else {
         metadata
             .map((entry) => {
             const metadataEntry = entry.metadataEntry;
-            console.log('\n \n' + 'Key:\t', metadataEntry.scopedMetadataKey);
-            console.log('\n' + '---');
-            console.log('\n' + 'Value:\t', metadataEntry.value);
-            console.log('\n' + 'Sender Public Key:\t', metadataEntry.senderPublicKey);
-            console.log('\n' + 'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
-            console.log('\n' + 'TargetId:\t', metadataEntry.targetId);
+            console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
+            console.log('\n ---');
+            console.log('\n Value:\t', metadataEntry.value);
+            console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
+            console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+            console.log('\n TargetId:\t', metadataEntry.targetId);
         });
-    }
-    else {
-        console.log('\n The mosaic does not have metadata entries assigned.');
     }
 }, (err) => console.log(err));
 /* end block 01 */

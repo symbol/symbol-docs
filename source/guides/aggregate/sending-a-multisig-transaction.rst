@@ -34,14 +34,14 @@ Prerequisites
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 - Finish :doc:`converting an account to multisig guide <../multisig/converting-an-account-to-multisig>`
 - Know how to :doc:`create accounts <../account/creating-an-account>`
-- A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`
-- A cosignatory :ref:`account with cat.currency <setup-getting-a-test-account>`
+- A multisig :ref:`account with loaded with network currency <setup-creating-a-test-account>`
+- A cosignatory :ref:`account with network currency <setup-creating-a-test-account>`
 
 **************************************
 Example #1: 1-of-2 signatures required
 **************************************
 
-Bob has finished filling the basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 cat.currency``.
+Bob has finished filling the basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 nem.xem``.
 
 Let's develop the piece of code present in Bob's mobile wallet that enables him to send multisig transactions.
 
@@ -62,8 +62,8 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
 2. Define the following :ref:`TransferTransaction <transfer-transaction>`:
 
 * Recipient: Grocery's address
-* Message: sending 10 cat.currency
-* Mosaics: [``10 cat.currency``]
+* Message: sending 10 nem.xem
+* Mosaics: [``10 nem.xem``]
 
 .. example-code::
 
@@ -119,11 +119,11 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
 
     Sending an AggregateBondedTransaction
 
-1. Open a new terminal to :doc:`monitor <../monitor/monitoring-a-transaction-status>` the **AggregateBondedTransaction**.
+1. Open a new terminal to monitor <../monitor/monitoring-a-transaction-status> the **AggregateBondedTransaction** status by passing the multisig's address.
 
 .. code-block:: bash
 
-    nem2-cli monitor aggregatebonded --address <your-address-here>
+    nem2-cli monitor aggregatebonded --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU
 
 2. Modify the previous code, defining the transaction as  **bonded**.
 
@@ -139,7 +139,7 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. When an AggregateTransaction is bonded, Bob needs to **lock at least 10 cat.currency** to prevent spamming the network. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
+3. When an AggregateTransaction is bonded, Bob needs to **lock at least 10 nem.xem** to prevent spamming the network. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 
@@ -153,8 +153,7 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-
-4. :doc:`Cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from the first step.
+4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added. Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from (2).
 
 .. code-block:: bash
 

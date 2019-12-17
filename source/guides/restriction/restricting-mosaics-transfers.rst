@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 13 Sep, 2019
-    :category: Mosaic
+    :category: Mosaic Restriction
     :excerpt: 1
     :nocomments:
 
@@ -31,7 +31,7 @@ Creating a restrictable mosaic
 
 Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
 
-1. Start creating a new restrictable mosaic with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
+1. Start creating the new restrictable mosaic ``ccf.shares`` with NEM2-CLI using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
 
 .. code-block:: bash
 
@@ -94,7 +94,7 @@ The SDK will also request the previous mosaic restriction value and type for thi
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. After defining the global restriction, sign the transaction with the mosaic owner's account—CharlieChocolateFactory—and announce it to the network.
+3. After defining the global restriction, sign the transaction with the mosaic creator's account—CharlieChocolateFactory—and announce it to the network.
 
 .. example-code::
 
@@ -133,7 +133,7 @@ Alice, a potential investor, passes the KYC process. Once Alice has been verifie
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's owner account.
+2. Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an :doc:`aggregate transaction <../../concepts/aggregate-transaction>`. Remember that you will have to announce the transactions from the mosaic's creator account.
 
 .. example-code::
 
@@ -153,6 +153,6 @@ You should be able to send ``ccf.shares`` to Alice without any problems. Additio
 
 .. code-block:: bash
 
-     nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics 634a8ac3fc2b65b3::1
+     nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 634a8ac3fc2b65b3::1
 
 However, when you send the same mosaic to Bob's account, you should get the error ``Failure_RestrictionMosaic_Account_Unauthorized`` through the :ref:`status error channel <status-errors>` as he is not allowed to transact with ``ccf.shares``.

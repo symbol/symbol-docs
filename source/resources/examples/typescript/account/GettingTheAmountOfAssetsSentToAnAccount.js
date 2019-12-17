@@ -20,23 +20,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
-const rawAddress = process.env.ADDRESS;
-const originAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
-const recipientRawAddress = process.env.ADDRESS;
+// replace with sender address
+const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const senderAddress = nem2_sdk_1.Address.createFromRawAddress(senderRawAddress);
+// replace with recipient address
+const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
-const mosaicIdHex = process.env.MOSAIC_ID_HEX;
+// replace with mosaic id
+const mosaicIdHex = '46BE9BC0626F9B1A';
+// replace with mosaic divisibility
 const divisibility = 6;
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const accountHttp = new nem2_sdk_1.AccountHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const accountHttp = new nem2_sdk_1.AccountHttp(nodeUrl);
 accountHttp
-    .getAccountOutgoingTransactions(originAddress)
+    .getAccountOutgoingTransactions(senderAddress)
     .pipe(operators_1.mergeMap((_) => _), // Transform transaction array to single transactions to process them
 operators_1.filter((_) => _.type === nem2_sdk_1.TransactionType.TRANSFER), // Filter transfer transactions
 operators_1.map((_) => _), // Map transaction as transfer transaction
-operators_1.filter((_) => _.recipientAddress instanceof nem2_sdk_1.Address && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
+operators_1.filter((_) => _.recipientAddress instanceof nem2_sdk_1.Address
+    && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
 operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
 operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
 operators_1.toArray(), // Add all mosaics amounts into one array
 operators_1.map((_) => _.reduce((a, b) => a + b, 0)))
-    .subscribe(total => console.log('Total ' + mosaicId.toHex() + ' sent to account', recipientAddress.pretty(), 'is:', total), err => console.error(err));
+    .subscribe((total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total), (err) => console.error(err));
 /* end block 01 */

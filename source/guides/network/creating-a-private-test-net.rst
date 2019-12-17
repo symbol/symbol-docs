@@ -38,6 +38,7 @@ catapult-service-bootstrap has been tested on computers with the following **min
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
 * **HD**: 20GB or more
+* **OS**: Linux or Mac
 
 .. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
@@ -45,9 +46,10 @@ catapult-service-bootstrap has been tested on computers with the following **min
 Environment requirements
 ************************
 
-* **OS**: Linux or Mac
-* `docker`_ 19.03 installed
-* `docker-compose`_ 1.22 installed
+The setup scripts are automated using docker. To run a test net node, you will need to have installed the following docker tools:
+
+* `docker`_
+* `docker-compose`_
 
 ************
 Installation
@@ -131,9 +133,9 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cat addresses.yaml
 
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
+4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
+5. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
@@ -156,9 +158,9 @@ You should see the account credentials in your terminal.
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 654***321                                                        │
+    │ Public Key  │ 654...321                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123***456                                                        │
+    │ Private Key │ 123...456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
 As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.

@@ -21,27 +21,47 @@ import {
     Address,
     AggregateTransaction,
     Deadline,
-    NetworkCurrencyMosaic,
+    Mosaic,
+    MosaicId,
     NetworkType,
     PlainMessage,
     TransactionHttp,
-    TransferTransaction
+    TransferTransaction,
+    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const aliceAddress =  process.env.ALICE_ADDRESS as string;
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with sender private key
+const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with address
+const aliceAddress =  'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const aliceAccount = Address.createFromRawAddress(aliceAddress);
-
-const bobAddress = process.env.BOB_ADDRESS as string;
+// replace with address
+const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const bobAccount = Address.createFromRawAddress(bobAddress);
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
 
-const amount = NetworkCurrencyMosaic.createRelative(10);
+const mosaic = new Mosaic (networkCurrencyMosaicId,
+    UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
 
-const aliceTransferTransaction = TransferTransaction.create(Deadline.create(), aliceAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
-const bobTransferTransaction = TransferTransaction.create(Deadline.create(), bobAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
+const aliceTransferTransaction = TransferTransaction.create(
+    Deadline.create(),
+    aliceAccount,
+    [mosaic],
+    PlainMessage.create('payout'),
+    networkType);
+const bobTransferTransaction = TransferTransaction.create(
+    Deadline.create(),
+    bobAccount,
+    [mosaic],
+    PlainMessage.create('payout'),
+    networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -49,17 +69,20 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [aliceTransferTransaction.toAggregate(account.publicAccount),
         bobTransferTransaction.toAggregate(account.publicAccount)],
-    NetworkType.MIJIN_TEST,
-    []
-);
+    networkType,
+    [],
+).setMaxFee(2);
 /* end block 02 */
 
 /* start block 03 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

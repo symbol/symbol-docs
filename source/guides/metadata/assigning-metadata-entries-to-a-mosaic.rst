@@ -11,6 +11,14 @@ Assigning metadata to a mosaic
 
 Add custom data to a mosaic.
 
+*************
+Prerequisites
+*************
+
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
+- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
+
 **********
 Background
 **********
@@ -28,7 +36,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 
@@ -47,7 +55,7 @@ Creating the shares
     Do you want mosaic to have supply mutable? [y/n]: y
     Do you want mosaic to be transferable? [y/n]: y
     Do you want mosaic to be restrictable? [y/n]: y
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Introduce amount of tokens: 100
     Your mosaic id is:  2C08D5EDB652AA79
     Transaction announced correctly
@@ -61,7 +69,7 @@ Creating the shares
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 .. code-block:: bash
@@ -71,7 +79,7 @@ Creating the shares
     Introduce namespace name: shares
     Do you want to create a root namespace? [y/n]: n
     Introduce the parent namespace name: cc
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 3. Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created in the first step.
@@ -83,7 +91,7 @@ Creating the shares
     Introduce namespace name: cc.shares
     Introduce alias action (1: Link, 0: Unlink): 1
     Introduce mosaic in hexadecimal format: 2C08D5EDB652AA79
-    Introduce the maximum fee you want to spend to announce the transaction: 0
+    Introduce max_fee (absolute amount): 0
     Transaction announced correctly
 
 *************************
@@ -120,7 +128,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. All metadata is attached only with the consent of the mosaic owner through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the mosaic creator through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 
@@ -134,7 +142,7 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-.. note:: In this example, the account signing the transaction is the owner of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic owner would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
+.. note:: In this example, the account signing the transaction is the creator of the mosaic. For that reason, the aggregate can be defined as complete. If a different account owned the mosaic, you would set the :ref:`aggregate as bonded <aggregate-bonded>`, and the mosaic creator would opt-in the metadata request by :doc:`cosigning the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`.
 
 3. Sign and announce the **AggregateTransaction** to the network.
 

@@ -21,22 +21,23 @@ import {
     AggregateTransaction,
     Deadline,
     MultisigAccountModificationTransaction,
-    MultisigCosignatoryModification,
-    CosignatoryModificationAction,
     NetworkType,
     PublicAccount,
-    TransactionHttp
-} from "nem2-sdk";
+    TransactionHttp,
+} from 'nem2-sdk';
 
 /* start block 01 */
-const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
-const cosignatoryToRemovePublicKey = process.env.COSIGNATORY_TO_REMOVE_PUBLIC_KEY as string;
-const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, NetworkType.MIJIN_TEST);
-
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
-const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with multisig public key
+const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+// replace with cosignatory public key
+const cosignatoryToRemovePublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
+const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, networkType);
+// replace with cosignatory private key
+const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
 
 const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
@@ -44,19 +45,22 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     0,
     [],
     [cosignatoryToRemove],
-    NetworkType.MIJIN_TEST);
+    networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-    NetworkType.MIJIN_TEST,
-    []);
+    networkType,
+    []).setMaxFee(2);
 
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 01 */

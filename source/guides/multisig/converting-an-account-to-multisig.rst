@@ -33,7 +33,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Create :doc:`two accounts <../account/creating-an-account>`
 
 ****************************
@@ -84,7 +84,7 @@ Example #01: 1-of-2 multisig
 
 4. Sign the **AggregateTransaction** using the private key of the multisig account.
 
-.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -98,7 +98,7 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
+5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 nem.xem**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 

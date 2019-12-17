@@ -18,30 +18,28 @@
 
 import {
     Account,
-    Address,
     AggregateTransaction,
-    CosignatoryModificationAction,
     Deadline,
     HashLockTransaction,
     Listener,
+    Mosaic,
+    MosaicId,
     MultisigAccountModificationTransaction,
-    MultisigCosignatoryModification,
-    NetworkCurrencyMosaic,
     NetworkType,
     PublicAccount,
-    SignedTransaction,
-    TransactionHttp,
-    UInt64
-} from "nem2-sdk";
-import {filter, mergeMap} from 'rxjs/operators';
-import {merge} from "rxjs";
+    TransactionService,
+    UInt64,
+} from 'nem2-sdk';
 
 /* start block 01 */
-const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
-const newCosignatoryPublicKey = process.env.NEW_COSIGNATORY_PUBLIC_KEY as string;
-const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with multisig public key
+const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+// replace with new cosignatory public key
+const newCosignatoryPublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
+const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -51,61 +49,46 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     0,
     [newCosignatoryAccount],
     [],
-    NetworkType.MIJIN_TEST);
+    networkType);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-    NetworkType.MIJIN_TEST);
+    networkType).setMaxFee(2);
 
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with cosignatory private key
+const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
 /* start block 04 */
+// replace with nem.xem id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
+
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType).setMaxFee(2);
 
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const listener = new Listener(nodeUrl);
-
-const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
-    return transactionHttp.announce(signedHashLockTransaction);
-};
-
-const announceAggregateTransaction = (listener: Listener,
-                                      signedHashLockTransaction: SignedTransaction,
-                                      signedAggregateTransaction: SignedTransaction,
-                                      senderAddress: Address) => {
-    return listener
-        .confirmed(senderAddress)
-        .pipe(
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => {
-                listener.terminate();
-                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
-            })
-        );
-};
+const transactionService = new TransactionService(nodeUrl);
 
 listener.open().then(() => {
-    merge(announceHashLockTransaction(signedHashLockTransaction),
-        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, cosignatoryAccount.address))
-        .subscribe(x => console.log('Transaction confirmed:', x.message),
-            err=> console.log(err));
+    transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
 });
 /* end block 04 */

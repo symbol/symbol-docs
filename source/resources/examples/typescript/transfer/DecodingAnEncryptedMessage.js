@@ -20,17 +20,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
-const certificatePrivateAccount = process.env.CERTIFICATE_PRIVATE_KEY;
-const certificateAccount = nem2_sdk_1.Account.createFromPrivateKey(certificatePrivateAccount, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY;
-const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, nem2_sdk_1.NetworkType.MIJIN_TEST);
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://localhost:3000');
-const transactionHash = process.env.TRANSACTION_HASH;
+// replace with network type
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+// replace with certificate private key
+const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const certificateAccount = nem2_sdk_1.Account.createFromPrivateKey(certificatePrivateKey, networkType);
+// replace with alice public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000/';
+const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
+// replace with transaction hash
+const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 transactionHttp
     .getTransaction(transactionHash)
-    .pipe(operators_1.map(x => x))
-    .subscribe(transaction => {
-    console.log("Raw message: ", transaction.message.payload);
-    console.log("Message: ", certificateAccount.decryptMessage(transaction.message, alicePublicAccount, nem2_sdk_1.NetworkType.MIJIN_TEST).payload);
-}, (err => console.log(err)));
+    .pipe(operators_1.map((x) => x))
+    .subscribe((transaction) => {
+    console.log('Raw message: ', transaction.message.payload);
+    console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount, networkType).payload);
+}, ((err) => console.log(err)));
 /* end block 01 */

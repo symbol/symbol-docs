@@ -30,29 +30,39 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicId = process.env.MOSAIC_ID as string;
-const address = process.env.ADDRESS as string;
+// replace with mosaic id
+const mosaicIdHex = '7cdf3b117a3c40cc';
+const mosaicId = new MosaicId(mosaicIdHex);
+// replace with customer address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const recipientAddress = Address.createFromRawAddress(rawAddress);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress(address),
-    [new Mosaic(new MosaicId(mosaicId), UInt64.fromUint(1))],
+    recipientAddress,
+    [new Mosaic(mosaicId, UInt64.fromUint(1))],
     PlainMessage.create('enjoy your ticket'),
-    NetworkType.MIJIN_TEST
-);
+    networkType,
+).setMaxFee(2);
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-
-const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+// replace with ticket vendor private key
+const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 02 */
 
 /* start block 03 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
+
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

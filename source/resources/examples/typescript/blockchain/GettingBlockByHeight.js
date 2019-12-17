@@ -19,9 +19,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const blockHttp = new nem2_sdk_1.BlockHttp(nodeUrl);
 const height = 1;
-const blockHttp = new nem2_sdk_1.BlockHttp('http://localhost:3000');
 blockHttp
     .getBlockByHeight(height.toString())
-    .subscribe(block => console.log(block), err => console.error(err));
+    .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */
