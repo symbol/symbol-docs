@@ -56,7 +56,7 @@ Once the connection is open, you will get a unique string identifier named ``uid
     ws.on('message', (msg) => {
         const response = JSON.parse(msg);
         if ('uid' in response) {
-          const body = '{"uid":' + response.uid +', "subscribe":"block"}';
+          const body = '{"uid":"' + response.uid +'", "subscribe":"block"}';
           console.log('uid:', response);
           ws.send(body);
         } else {
