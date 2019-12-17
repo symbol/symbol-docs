@@ -36,7 +36,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with with network currency <setup-creating-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 
 
