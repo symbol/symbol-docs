@@ -16,16 +16,15 @@
  *
  */
 
-import {Listener} from "nem2-sdk";
+import {Listener} from 'nem2-sdk';
 
 /* start block 01 */
-const listener = new Listener('http://localhost:3000');
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
-
     listener
         .newBlock()
-        .subscribe(block => console.log(block), err => console.error(err));
-
+        .subscribe((block) => console.log(block), (err) => console.error(err));
 });
 /* end block 01 */

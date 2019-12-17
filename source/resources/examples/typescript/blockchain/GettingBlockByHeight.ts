@@ -16,14 +16,15 @@
  *
  */
 
-import {BlockHttp} from "nem2-sdk";
+import {BlockHttp} from 'nem2-sdk';
 
 /* start block 01 */
-const blockHttp = new BlockHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const blockHttp = new BlockHttp(nodeUrl);
 
 const height = 1;
-
 blockHttp
-    .getBlockByHeight(height)
-    .subscribe(block => console.log(block), err => console.error(err));
+    .getBlockByHeight(height.toString())
+    .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */

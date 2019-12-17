@@ -30,26 +30,14 @@ import {
 } from 'nem2-sdk';
 
 /* start block 01 */
-const recipientRawAddress = process.env.RECIPIENT_RAW_ADDRESS as string;
-const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-
-const transferTransaction = TransferTransaction.create(
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with aliased mosaicId
+const mosaicId = new NamespaceId('foo');
+TransferTransaction.create(
     Deadline.create(),
-    recipientAddress,
-    [new Mosaic(new NamespaceId('foo'),
-            UInt64.fromUint(10000000))],
+    Account.generateNewAccount(networkType).address,
+    [new Mosaic(mosaicId, UInt64.fromUint(10000000))],
     EmptyMessage,
-    NetworkType.MIJIN_TEST);
+    networkType).setMaxFee(2);
 /* end block 01 */
-
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
-
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));

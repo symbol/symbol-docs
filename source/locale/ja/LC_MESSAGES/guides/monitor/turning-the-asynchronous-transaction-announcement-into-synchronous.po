@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -38,10 +38,10 @@ msgstr "背景"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:18
 msgid ""
-"Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to "
-"know if the transaction has reached the network before sending Bob an email."
+"Alice is developing an app to send 10 cat.currency to Bob. She wants to know"
+" if the transaction has reached the network before sending Bob an email."
 msgstr ""
-"Alice は Bob に ``10 cat.currency`` を送るアプリケーションを開発しています。彼女は Bob "
+"Alice は Bob に 10 cat.currency を送るアプリケーションを開発しています。彼女は Bob "
 "にメールを送る前に、トランザクションがネットワークに到着したかどうかを知ろうとしています。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:20
@@ -115,14 +115,10 @@ msgid ""
 msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントを1つ"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:44
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:47
 msgid "Running Catapult Service in local"
 msgstr "Catapultサービスをローカルに立ち上げます"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:49
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:46
 msgid ""
 "For development and learning purposes, you can run the :doc:`Catapult Server"
 " and Catapult REST <../../concepts/node>` using the |catapult-service-"
@@ -131,23 +127,23 @@ msgstr ""
 "開発と学習の目的のために |catapult-service-bootstrap| を使用して、 :doc:`Catapult サーバ と "
 "Catapult REST <../../concepts/node>` を実行できます。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:51
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:48
 msgid ""
 "Make sure you have |docker| and |docker-compose| installed before running "
 "the following instructions:"
 msgstr "以下のインストラクションを実行する前に |docker| と |docker-compose| をインストールしてください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:59
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:56
 msgid ""
 "If everything goes well, after the image has been downloaded and the service"
 " is running, check if you can get the first block information:"
 msgstr "すべてがうまく行けば、イメージがダウンロードされてサービスが動き始めるので、最初のブロック情報を取得して動作確認をしてください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:66
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:64
 msgid "Getting Alice and Bob addresses"
 msgstr "Alice と Bob のアドレスの入手"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:68
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:66
 msgid ""
 "Once the Catapult Service is running, it will generate a set of "
 ":doc:`accounts <../../concepts/account>` containing cat.currency."
@@ -155,43 +151,43 @@ msgstr ""
 "Catapult サービスが動き出せば、cat.currency を保有した :doc:`アカウント <../../concepts/account>`"
 " が生成されます。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:70
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:68
 msgid ""
 "Find the key pairs which contain cat.currency under the section "
 "``nemesis_addresses``."
 msgstr "``nemesis_addresses`` のセクションから cat.currency を含むキーペアを見つけてください。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:77
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:75
 msgid "Take the first key pair as Alice's account, and copy the private key."
 msgstr "最初のキーペアを Alice のアカウントにすることにして秘密鍵をコピーします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:79
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:77
 msgid "Take the second key pair as Bob's account, and copy the address."
 msgstr "二つ目のキーペアを Bob のアカウントにすることにしてアドレスをコピーします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:82
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:81
 msgid "Installing nem2-camel"
 msgstr "nem2-camel のインストール"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:84
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:83
 msgid "nem2-camel acts like a proxy between the application and the REST API."
 msgstr "nem2-camel はアプリケーションと REST API の間のプロキシとして動作します。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:86
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:85
 msgid "nem2-camel requires at least Java version 8."
 msgstr "nem2-camel は Java バージョン8 以降を必要とします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:88
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:87
 msgid "Download the latest |nem2-camel-jar| package release, and run:"
 msgstr "最新リリースの |nem2-camel-jar| パッケージをダウンロードして、実行してください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:94
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:93
 msgid "After the service is up, use ``0.0.0.0:9000`` as the new proxy url."
 msgstr "サービスが起動したら ``0.0.0.0:9000`` を新しいプロキシURLとして使用してください。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:97
-msgid "Sending the TransferTransaction"
-msgstr "TransferTransaction の送信"
+msgid "Sending a synchronous transaction"
+msgstr "同期的トランザクションの送信"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:99
 msgid ""

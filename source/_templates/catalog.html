@@ -4,9 +4,7 @@
 {% for collection in catalog %}
 {% if collection %}
 <div class="section">
-    <h2>
-        {{ collection }}
-    </h2>
+    <h2>{{ collection }}</h2>
     <ul class="postlist-style-circle postlist">
         {% for post in collection|sort(attribute='date') %}
         <li>

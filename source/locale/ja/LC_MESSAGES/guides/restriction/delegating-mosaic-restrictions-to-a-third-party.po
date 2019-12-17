@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -80,19 +80,17 @@ msgid ""
 msgstr ":doc:`モザイク転送の制限 <restricting-mosaics-transfers>` を終了していること"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:40
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:42
 msgid ""
 "Start by registering a new ``restrictable`` mosaic with the "
-":doc:`ComfyClothingCompany account <../account/creating-and-opening-an-"
-"account>` account. We will refer to this mosaic from now on as "
-"``cc.shares``."
+":doc:`ComfyClothingCompany account <../account/creating-an-account>` "
+"account. We will refer to this mosaic from now on as ``cc.shares``."
 msgstr ""
-":doc:`ComfyClothingCompany アカウント <../account/creating-and-opening-an-"
-"account>` に新しい ``制限可能`` なモザイクを登録することから始めます。今後、このモザイクを ``cc.shares`` "
-"と呼び、このモザイクを参照します。"
+":doc:`ComfyClothingCompany アカウント <../account/creating-an-account>` に新しい "
+"``制限可能`` なモザイクを登録することから始めます。今後、このモザイクを ``cc.shares`` と呼び、このモザイクを参照します。"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:48
 msgid ""
@@ -105,6 +103,22 @@ msgstr ""
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:57
 msgid "The KYC provider defines the following permission tiers:"
 msgstr "KYC プロバイダは次の権限層を定義します。"
+
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:1
+msgid "Key"
+msgstr "キー"
+
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:1
+msgid "Operator"
+msgstr "操作者"
+
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:1
+msgid "Value"
+msgstr "値"
+
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:1
+msgid "Description"
+msgstr "説明"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:1
 msgid "The client has issued a valid passport."

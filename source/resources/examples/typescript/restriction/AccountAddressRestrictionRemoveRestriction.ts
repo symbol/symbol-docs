@@ -18,39 +18,44 @@
 
 import {
     Account,
-    AccountRestrictionModification,
+    AccountRestrictionFlags,
     AccountRestrictionTransaction,
     Address,
     Deadline,
     NetworkType,
-    AccountRestrictionModificationAction,
-    AccountRestrictionType,
-    TransactionHttp
-} from "nem2-sdk";
+    TransactionHttp,
+} from 'nem2-sdk';
 
 /* start block 01 */
-const companyRawAddress = process.env.COMPANY_ADDRESS as string;
+const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const companyAddress = Address.createFromRawAddress(companyRawAddress);
-const addressRestriction = AccountRestrictionModification.createForAddress(AccountRestrictionModificationAction.Remove, companyAddress);
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
         Deadline.create(),
-        AccountRestrictionType.AllowIncomingAddress,
-        [addressRestriction],
-        NetworkType.MIJIN_TEST);
+        AccountRestrictionFlags.AllowIncomingAddress,
+        [],
+        [companyAddress],
+        networkType).setMaxFee(2);
 /* end block 02 */
 
 /* start block 03 */
-const productPrivateKey = process.env.PRIVATE_KEY as string;
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const productAccount = Account.createFromPrivateKey(productPrivateKey, NetworkType.MIJIN_TEST);
-const signedTransaction = productAccount.sign(transaction,networkGenerationHash);
+// replace with product private key
+const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const productAccount = Account.createFromPrivateKey(productPrivateKey, networkType);
+const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

@@ -18,9 +18,9 @@ In other words, to reduce counterparty risk, the receiver of a payment needs to 
 Protocol
 ********
 
-Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in NEM public chain, whereas bob token is only present in a private chain using Catapult technology.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in Catapult's public chain, whereas bob token is only present in a private chain using Catapult technology.
 
-.. note:: NEM's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
+.. note:: Catapult's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
 
 .. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
     :caption: Atomic cross-chain swap sequence diagram
@@ -70,11 +70,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _secret-lock-transaction:
 
@@ -83,11 +81,11 @@ SecretLockTransaction
 
 Use a SecretLockTransaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
 
-If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
+The maximum number of blocks the lock can lie up to is ``30 days``, being this parameter :ref:`configurable per network <config-network-properties>`. If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
 
 **Version**: 0x01
 
-**Entity type**: 0x4152
+**EntityType**: 0x4152
 
 **Inlines**:
 
@@ -97,11 +95,11 @@ If the transaction duration is reached without being proved, the locked amount g
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    secret; :schema:`Hash256 <types.cats#L12>`; Proof hashed.
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. Duration is allowed to lie up to ``30`` days. If reached, the mosaics will be returned to the initiator.
+    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
-    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
-    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Address that receives the funds once unlocked.
 
 .. _secret-proof-transaction:
 
@@ -114,7 +112,7 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
 
 **Version**: 0x01
 
-**Entity type**: 0x4252
+**EntityType**: 0x4252
 
 **Inlines**:
 
@@ -124,10 +122,10 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
-    secret; :schema:`Hash256 <types.cats#L9>`; Proof hashed.
-    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address that receives the funds once unlocked.
+    secret; :schema:`Hash256 <types.cats#L12>`; Proof hashed.
     proofSize; uint16; Proof size in bytes.
+    hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Address that receives the funds once unlocked.
     proof; array(byte, proofSize); Original random set of bytes.
 
 .. _lock-hash-algorithm:
@@ -147,3 +145,5 @@ Enumeration: uint8
     1 (Op_Keccak_256); Proof is hashed using Keccak (ETH compatibility).
     2 (Op_Hash_160); Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
     3 (Op_Hash_256); Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).
+
+Continue: :doc:`Cryptography <cryptography>`.

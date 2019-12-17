@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,62 +26,80 @@ msgstr ""
 msgid "Cryptography"
 msgstr "暗号理論"
 
-#: ../../source/concepts/cryptography.rst:9
+#: ../../source/concepts/cryptography.rst:5
+msgid ""
+"Catapult uses **elliptic curve cryptography** to verify the data integrity "
+"and to authenticate the signer's identity."
+msgstr "Catapult はデータの整合性を検証し、署名者の身元を認証するために **楕円曲線暗号** を使用します。"
+
+#: ../../source/concepts/cryptography.rst:11
 msgid "Key pair"
 msgstr "キーペア"
 
-#: ../../source/concepts/cryptography.rst:11
-msgid "The key pair pair consists of a private key and a public key:"
-msgstr "鍵ペアは秘密鍵と公開鍵で構成されます:"
-
 #: ../../source/concepts/cryptography.rst:13
 msgid ""
-"**Private key**: A random 256-bit integer used to sign :ref:`entities "
-"<verifiable-entity>`."
-msgstr ""
-"**秘密鍵**: :ref:`エンティティ <verifiable-entity>` に署名するために使用するランダムな 256-bit 整数"
+"Elliptic curve cryptography is an approach to **public key cryptography**. "
+"The cryptographic system uses **pairs of keys**:"
+msgstr "楕円曲線暗号は **公開鍵暗号** のアプローチです。暗号化システムは **キーペア** を使用します:"
 
 #: ../../source/concepts/cryptography.rst:15
 msgid ""
-"**Public key**: The public identifier of the key pair. Proves that the "
-"entity was signed with the paired private key."
-msgstr "**公開鍵**: キーペアの公開識別子。対となる秘密鍵で署名されたエンティティを証明します。"
+"**Private key**: A random 256-bit integer used to sign :ref:`entities "
+"<verifiable-entity>` known by the owner."
+msgstr ""
+"**秘密鍵**: :ref:`エンティティ <verifiable-entity>` に署名するために使用する、所有者が知っているランダムな "
+"256-bit 整数"
 
 #: ../../source/concepts/cryptography.rst:17
 msgid ""
-"The public key is cryptographically derived from the private key. Catapult "
-"uses the |edwards| with the digital signature algorithm called |Ed25519|."
-msgstr ""
-"公開鍵は暗号理論によって秘密鍵から導出されます。Catapult は |edwards| を |Ed25519| "
-"と呼ばれるデジタル署名アルゴリズムと共に使用します。"
+"**Public key**: The public identifier of the key pair, which can be "
+"disseminated widely. It is used to prove that the entity was signed with the"
+" paired private key."
+msgstr "**公開鍵**: 広く普及させることのできるキーペアの公開識別子です。対となる秘密鍵でエンティティが署名されていることを証明します。"
 
 #: ../../source/concepts/cryptography.rst:19
 msgid ""
-"You can find the |implementation| under the ``crypto`` module of catapult-"
-"server."
-msgstr "catapult-server の ``crypto`` モジュール下に |implementation| があります。"
+"The public key is cryptographically derived from the private key. In "
+"particular, Catapult uses the |edwards| with the digital signature algorithm"
+" named |Ed25519|."
+msgstr ""
+"公開鍵は暗号理論によって秘密鍵から導出されます。特に Catapult は |edwards| を |Ed25519| "
+"というデジタル署名アルゴリズムと共に使用します。"
 
-#: ../../source/concepts/cryptography.rst:25
+#: ../../source/concepts/cryptography.rst:21
+msgid ""
+"You can find the |implementation| under the ``crypto`` module of :doc"
+":`catapult-server <../server>`."
+msgstr ""
+":doc:`catapult-server <../server>` の ``crypto`` モジュール下に |implementation| "
+"があります。"
+
+#: ../../source/concepts/cryptography.rst:27
 msgid "Address"
 msgstr "アドレス"
 
-#: ../../source/concepts/cryptography.rst:27
-msgid "A NEM address is a **base-32 encoded triplet** consisting of:"
-msgstr "NEM アドレスは次のものからなる **base-32 でエンコードされたトリプレット** です:"
-
 #: ../../source/concepts/cryptography.rst:29
+msgid ""
+"Public keys can be shared in a shorter form as **addresses**. A Catapult "
+"address is a **base-32 encoded triplet** consisting of:"
+msgstr ""
+"公開鍵は **アドレス** の短い形式で共有できます。Catapult アドレスは次のものからなる **base-32 "
+"でエンコードされたトリプレット** です:"
+
+#: ../../source/concepts/cryptography.rst:31
 msgid "The network byte."
 msgstr "ネットワークバイト"
 
-#: ../../source/concepts/cryptography.rst:30
+#: ../../source/concepts/cryptography.rst:32
 msgid "The 160-bit hash of the account's public key."
 msgstr "アカウントの公開鍵の 160-bit ハッシュ"
 
-#: ../../source/concepts/cryptography.rst:31
-msgid "The 4 byte checksum, to allow quick recognition of mistyped addresses."
+#: ../../source/concepts/cryptography.rst:33
+msgid ""
+"The 4 byte checksum, to allow the quick recognition of mistyped addresses."
 msgstr "アドレスのミスタイプを素早く確認するための 4 byte チェックサム"
 
-#: ../../source/concepts/cryptography.rst:33
+#: ../../source/concepts/cryptography.rst:35
 msgid ""
 "The following steps are performed to `convert a public key "
 "<https://github.com/nemtech/catapult-"
@@ -90,26 +108,40 @@ msgstr ""
 "次のステップでは `公開鍵をアドレスに変換 <https://github.com/nemtech/catapult-"
 "server/blob/master/src/catapult/model/Address.cpp#L50>`_ します:"
 
-#: ../../source/concepts/cryptography.rst:57
+#: ../../source/concepts/cryptography.rst:59
 msgid "SHA3-256 of the public key."
 msgstr "公開鍵の SHA3-256"
 
-#: ../../source/concepts/cryptography.rst:58
+#: ../../source/concepts/cryptography.rst:60
 msgid "ripemd160 hash of (1)."
 msgstr "ripemd160 で (1) のハッシュを生成。"
 
-#: ../../source/concepts/cryptography.rst:59
+#: ../../source/concepts/cryptography.rst:61
 msgid "add the network identifier byte in front of (2)."
 msgstr "ネットワーク識別バイトを (2) の前に追加する。"
 
-#: ../../source/concepts/cryptography.rst:60
+#: ../../source/concepts/cryptography.rst:62
 msgid "concatenate (3) and the checksum of (3)."
 msgstr "上記 (3) と (3) のチェックサムを結合する。"
 
-#: ../../source/concepts/cryptography.rst:62
+#: ../../source/concepts/cryptography.rst:63
+msgid "(Optional) base-32 of (4)."
+msgstr "(オプション) base-32 of (4)."
+
+#: ../../source/concepts/cryptography.rst:65
 msgid ""
-"As you can see, you can create an address without interacting with the "
-"blockchain. The blockchain only tracks addresses involved in at least one "
-"transaction."
+"The public network uses **KECCAK** instead of SHA3-256 to have compatible "
+"keys with NIS1."
+msgstr "パブリックネットワークは NIS1 と互換性のあるキーを持つために SHA3-256 ではなく **KECCAK** を使用します。"
+
+#: ../../source/concepts/cryptography.rst:67
+msgid ""
+"As you can see, it is possible to create an address without interacting with"
+" the blockchain. In fact, the blockchain only tracks addresses and public "
+"keys when they first appear in one transaction."
 msgstr ""
-"上記の説明通り、ブロックチェーンとの疎通無しにアドレスを作ることができます。ブロックチェーンは最低でも1つのトランザクションが関係するアドレスだけを追跡します。"
+"上記の説明通り、ブロックチェーンと疎通せずともアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
+
+#: ../../source/concepts/cryptography.rst:81
+msgid "Continue: :doc:`Block <block>`."
+msgstr "次へ: :doc:`ブロック <block>`"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-06-20 22:03+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -70,8 +70,8 @@ msgstr ""
 ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:31
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:33
 msgid ""
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Extend the namespace duration for ``1000`` more blocks."
 msgstr "ネームスペース期間を ``1000`` ブロック延長します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:79
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:75
 msgid ""
 "Use the following formula to convert approximately days to blocks ``duration"
 " ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The "
@@ -117,12 +117,16 @@ msgstr ""
 "を使っておよその日数をブロックに変換します。blockGenerationTargetTime は :properties:`ネットワークごとに設定可能"
 " <config-network.properties>` です。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:81
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:77
 msgid ""
 "Once the **RegisterNamespaceTransaction** gets confirmed, double-check that "
 "the namespace duration has been extended."
 msgstr "**RegisterNamespaceTransaction** が承認されたら、ネームスペースの期限が延長されたことも確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:83
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:79
 msgid "Validate that ``endHeight`` has increased by ``1000`` block units."
 msgstr "``endHeight`` が ブロック単位で ``1000`` 増加していることを確認してください。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:97
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

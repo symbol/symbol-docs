@@ -35,15 +35,17 @@ Prerequisites
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-and-opening-an-account>` account. We will refer to this mosaic from now on as ``cc.shares``.
+1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account. We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash
 
     nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany
+
+    Your mosaic id is: 7cdf3b117a3c40cc
 
 2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, IsVerified, EQ, 1}`` to the mosaic.
 
@@ -51,6 +53,11 @@ Getting into some code
 
     .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -74,6 +81,11 @@ ComfyClothingCompany decides that only accounts with the restriction ``{cc.share
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction2.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 4. The KYC provider has encounters three potential investors:
 
 * Alice provides a valid passport but no proof of address. The KYC provider awards Alice's account with the mosaic restriction ``{kyc, IsVerified, 1}``.
@@ -86,6 +98,11 @@ The KYC provider has to tag the accounts accordingly sending mosaic address rest
 
     .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicAddressRestriction.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicAddressRestriction.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -30,68 +30,37 @@ msgid "Create a unique place for your assets."
 msgstr "あなたのアセット用に一意な場所を作成する。"
 
 #: ../../source/guides/namespace/registering-a-namespace.rst:16
-msgid "Background"
-msgstr "背景"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:18
-msgid ""
-":doc:`Namespaces <../../concepts/namespace>` allow you to create an on-chain"
-" **unique place** for your business and your assets on the NEM blockchain."
-msgstr ""
-":doc:`ネームスペース <../../concepts/namespace>` によって NEM "
-"ブロックチェーン上に、あなたのビジネスと資産のための **一意な場所** をチェーン上に作ることができます。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:20
-msgid ""
-"A namespace starts with a name you choose, similar to an internet domain "
-"name. If one :doc:`account <../../concepts/account>` creates a namespace, "
-"this will appear as unique in the network."
-msgstr ""
-"ネームスペースはインターネットドメイン名と同様に、あなたが選択した名前で始まります。ある :doc:`アカウント "
-"<../../concepts/account>` がネームスペースを作成すると、それはネットワーク内で一意に表現されるようになります。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:22
-msgid ""
-"An account can use the registered namespaces to alias :doc:`addresses "
-"<../../concepts/account>` or :doc:`mosaics <../../concepts/mosaic>` "
-"identifiers."
-msgstr ""
-"アカウントが登録したネームスペースは :doc:`アドレス <../../concepts/account>` または :doc:`モザイク "
-"<../../concepts/mosaic>` 識別子としてエイリアスとして使用することができます。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:26
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:28
+#: ../../source/guides/namespace/registering-a-namespace.rst:18
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:29
+#: ../../source/guides/namespace/registering-a-namespace.rst:19
 msgid ""
 "Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
 msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:33
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+#: ../../source/guides/namespace/registering-a-namespace.rst:23
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:35
+#: ../../source/guides/namespace/registering-a-namespace.rst:25
 msgid ""
-"1. Choose a **unique name** for your namespace. One common option is to use "
-"your company's or own name. For this example, we are going to register a "
-"namespace named ``foo``."
-msgstr ""
-"1. ネームスペースのために **一意な名前** を選択してください。一般的にはあなたの会社または自分の名前を使用します。この例では、 ``foo`` "
-"と呼ばれるネームスペースを取得します。"
+"Choose a **unique name** for your namespace. One common option is to use "
+"your company's or own name."
+msgstr "ネームスペースのために **一意な名前** を選択してください。一般的にはあなたの会社または自分の名前を使用します。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:38
-msgid "Check if your namespace name is **available**."
-msgstr "ネームスペースが **有効** かどうかを確認"
+#: ../../source/guides/namespace/registering-a-namespace.rst:27
+msgid ""
+"In this example, we are going to register a namespace named ``foo``. Check "
+"if your namespace name is **available**."
+msgstr "この例では、 ``foo`` と呼ばれるネームスペースを取得します。あなたのネームスペースが **有効** かどうかを確認してください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:56
+#: ../../source/guides/namespace/registering-a-namespace.rst:45
 msgid ""
 "Is the namespace available? Try to register it before someone else does it! "
 "Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-"
@@ -101,13 +70,7 @@ msgstr ""
 ":ref:`NamespaceRegistrationTransaction1 <namespace-registration-"
 "transaction>` をアナウンスしてください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:58
-msgid ""
-"A new block completes every ``15`` seconds on average. Also, the maximum "
-"duration you can register a namespace for is ``a year``."
-msgstr "平均 ``15`` 秒ごとに新しいブロックは完了します。ネームスペースを登録できる最大期間は ``1 年`` です。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:76
+#: ../../source/guides/namespace/registering-a-namespace.rst:59
 msgid ""
 "To keep the ownership of your namespace, you will have to :doc:`extend its "
 "duration before it expires <extending-a-namespace-registration-period>`."
@@ -115,11 +78,15 @@ msgstr ""
 "あなたのネームスペース所有権を維持するためには :doc:`期限が切れる前にネームスペース期間の延長 <extending-a-namespace-"
 "registration-period>` を行ってください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:80
+#: ../../source/guides/namespace/registering-a-namespace.rst:63
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:71
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:82
+#: ../../source/guides/namespace/registering-a-namespace.rst:73
 msgid ""
 "When the transaction is confirmed, :doc:`register a subnamespace "
 "<registering-a-subnamespace>` following the next guide."

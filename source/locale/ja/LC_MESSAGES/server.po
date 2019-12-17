@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -103,80 +103,11 @@ msgstr ""
 "ビルド |instructions| に従って新しいカタパルトサーバーイメージを作成できますが |catapult-service-bootstrap|"
 " で開発目的または学習目的で独自のネットワークを展開することを推奨します。"
 
-#: ../../source/server.rst:28
-msgid "Troubleshooting"
-msgstr "トラブルシューティング"
-
-#: ../../source/server.rst:30
-msgid ""
-"This section highlights common errors or difficulties one may encounter "
-"whilst setting a Catapult node."
-msgstr "このセクションでは catapult ノードを設定する際によくあるエラーや問題について説明します。"
-
-#: ../../source/server.rst:32
-msgid "**Mosaic outflows**"
-msgstr "**モザイクの源泉**"
-
-#: ../../source/server.rst:34
-msgid "This error usually looks like:"
-msgstr "このエラーは通常次のようになります:"
-
-#: ../../source/server.rst:44
-msgid "**What does it mean?**"
-msgstr "**何を意味するのか？**"
-
-#: ../../source/server.rst:46
-msgid "This error can happen in the event of the following situations:"
-msgstr "このエラーは以下の状況で発生する可能性があります:"
-
-#: ../../source/server.rst:48
-msgid ""
-"The supply of the ``cat.harvest`` mosaic the nemesis block does not match "
-"the supply inside of the :properties:`config-network.properties <config-"
-"network.properties>` file."
-msgstr ""
-"nemesis ブロックの ``cat.harvest`` モザイクの供給は :properties:`config-"
-"network.properties <config-network.properties>` ファイル内の供給とは一致しません。"
-
-#: ../../source/server.rst:50
-msgid ""
-"The mosaicId inside of the :properties:`config-network.properties <config-"
-"network.properties>` does not match the one generated inside of the nemesis "
-"block."
-msgstr ""
-":properties:`config-network.properties <config-network.properties>` 内の "
-"mosaicId は nemesis ブロック内で生成されたものとは一致しません。"
-
-#: ../../source/server.rst:52
-msgid "**How to fix it?**"
-msgstr "**どのように修正するのか？**"
-
-#: ../../source/server.rst:54
-msgid ""
-"For the first scenario, change the ``totalChainImportance`` in your "
-"resources :properties:`config-network.properties <config-"
-"network.properties>` to match the supply set in the nemesis block."
-msgstr ""
-"最初のシナリオでは、あなたのリソース :properties:`config-network.properties <config-"
-"network.properties>`  ``totalChainImportance`` を nemesis "
-"ブロックで設定された供給に合わせて変更してください。"
-
-#: ../../source/server.rst:56
-msgid ""
-"For the second scenario, you will have to find the correct mosaic identifier"
-" that the nemgen tool creates. You can run :ref:`nemgen <catapult-server-"
-"tools>`, and output the result to to a txt file. Then, search for the "
-"``cat.<harvest | currency>`` identifier."
-msgstr ""
-"2番目のシナリオでは nemgen ツールによって作成された正しいモザイク識別子を見つける必要があります。 :ref:`nemgen "
-"<catapult-server-tools>` を実行し、結果を txt ファイルに出力することができます。それから ``cat.<harvest |"
-" currency>`` 識別子を探します。"
-
-#: ../../source/server.rst:60
+#: ../../source/server.rst:29
 msgid "Package organization"
 msgstr "パッケージ構成"
 
-#: ../../source/server.rst:62
+#: ../../source/server.rst:31
 msgid "**Repository**: |catapult-server|"
 msgstr "**リポジトリ:** |catapult-server|"
 
@@ -235,11 +166,11 @@ msgstr "テストの集合"
 msgid "Tools to deploy and monitor networks and nodes."
 msgstr "ネットワークとノードをデプロイとモニタリングするツール"
 
-#: ../../source/server.rst:83
+#: ../../source/server.rst:52
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/server.rst:85
+#: ../../source/server.rst:54
 msgid ""
 "Catapult server comes with tools to check the health of the network, "
 "generate nemesis blocks, create keypairs, recover the server in the event of"
@@ -248,31 +179,31 @@ msgstr ""
 "Catapult サーバーにはネットワークの健全性チェック、nemesis "
 "ブロックの生成、キーペアの作成、突然の終了時のサーバ復旧などを行うツールが付属しています。"
 
-#: ../../source/server.rst:87
+#: ../../source/server.rst:56
 msgid "You can find them inside of ``catapult-server/build/bin``."
 msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
 
-#: ../../source/server.rst:92
+#: ../../source/server.rst:61
 msgid "Generates keypairs and addresses."
 msgstr "キーペアとアドレスの生成。"
 
-#: ../../source/server.rst:94 ../../source/server.rst:129
-#: ../../source/server.rst:158 ../../source/server.rst:185
-#: ../../source/server.rst:206 ../../source/server.rst:225
+#: ../../source/server.rst:63 ../../source/server.rst:98
+#: ../../source/server.rst:127 ../../source/server.rst:154
+#: ../../source/server.rst:175 ../../source/server.rst:194
 msgid "Options"
 msgstr "オプション"
 
-#: ../../source/server.rst:112 ../../source/server.rst:147
-#: ../../source/server.rst:174 ../../source/server.rst:195
-#: ../../source/server.rst:214
+#: ../../source/server.rst:81 ../../source/server.rst:116
+#: ../../source/server.rst:143 ../../source/server.rst:164
+#: ../../source/server.rst:183
 msgid "Command"
 msgstr "コマンド"
 
-#: ../../source/server.rst:118
+#: ../../source/server.rst:87
 msgid "If you want the save the output, add an output stream at the end:"
 msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
 
-#: ../../source/server.rst:127
+#: ../../source/server.rst:96
 msgid ""
 "Creates a nemesis block out of a `mijin-test.properties  "
 "<https://github.com/nemtech/catapult-"
@@ -283,13 +214,13 @@ msgstr ""
 "server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
 "nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
 
-#: ../../source/server.rst:156
+#: ../../source/server.rst:125
 msgid ""
 "Executes CPU-based performance tests of catapult functions, such as hashing "
 "or encryption."
 msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
 
-#: ../../source/server.rst:183
+#: ../../source/server.rst:152
 msgid ""
 "Outputs node info, partner node connectivity info, and a partner node table "
 "for known peers within :properties:`peers-p2p.json <peers-p2p.json>` and "
@@ -299,13 +230,13 @@ msgstr ""
 "api.json <peers-api.json>` "
 "内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
 
-#: ../../source/server.rst:204
+#: ../../source/server.rst:173
 msgid ""
 "Generates the list of status errors that the server might return after "
 "receiving a transaction."
 msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
 
-#: ../../source/server.rst:223
+#: ../../source/server.rst:192
 msgid ""
 "Checks the health and displays statistics (like the unconfirmed transaction "
 "cache) for the nodes found inside of :properties:`peers-p2p.json <peers-"
@@ -314,29 +245,3 @@ msgstr ""
 ":properties:`peers-p2p.json <peers-p2p.json>` および :properties:`peers-"
 "api.json <peers-api.json>` "
 "内のノードについて、健全性をチェックし、統計情報(未確認のトランザクションキャッシュなど)を表示します。"
-
-#: ../../source/server.rst:242
-msgid "Guides"
-msgstr "ガイド"
-
-#: ../../source/server.rst:246
-msgid "Deploy a Catapult full node for learning and development purposes."
-msgstr "Catapult フルノードを学習と開発目的でデプロイする。"
-
-#: ../../source/server.rst:252
-msgid ""
-"**Deploying a test net node** (:doc:`upcoming <guidelines/suggesting-"
-"changes>`)"
-msgstr "**テストネットノードのデプロイ** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"
-
-#: ../../source/server.rst:254
-msgid ""
-"**Configuring a private network** (:doc:`upcoming <guidelines/suggesting-"
-"changes>`)"
-msgstr "**プライベートネットワークの設定** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"
-
-#: ../../source/server.rst:256
-msgid ""
-"**Creating a custom plugin** (:doc:`upcoming <guidelines/suggesting-"
-"changes>`)"
-msgstr "**カスタムプラグインの作成** (:doc:`乞うご期待 <guidelines/suggesting-changes>`)"

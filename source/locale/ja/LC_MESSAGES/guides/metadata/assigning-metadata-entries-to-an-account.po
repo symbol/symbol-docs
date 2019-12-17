@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.19.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"PO-Revision-Date: 2019-10-28 13:02+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:10
+msgid "Assigning metadata to an account"
+msgstr "アカウントにメタデータを割り当てる"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:12
+msgid "Add custom data to an account."
+msgstr "アカウントにカスタムデータを追加"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:16
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:18
+msgid ""
+"Bob works as a digital notary that **stamp accounts** on Catapult's public "
+"blockchain. When a customer comes to Bob to notarize a document, he checks "
+"the authentication of the customer's documents then **tags the customer's "
+"account** with the digitized document as metadata."
+msgstr ""
+"Bob は Catapult パブリックブロックチェーン上の **公証アカウント** "
+"を扱うデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
+"の元へ訪れると、彼は顧客のドキュメントの認証をチェックし、デジタル化ドキュメントをメタデータとして **顧客アカウントにタグ付け** します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:20
+msgid ""
+"Alice is a recent graduate who wants her educational certificate accredited "
+"to her Catapult account to avoid the hassle of repeatedly providing "
+"verification of her degree. So she goes to Bob and provides him with proof "
+"of her degree. Once Alice pays a fee, Bob verifies the authenticity and "
+"stamps Alice's account with metadata that signifies her degree."
+msgstr ""
+"Alice は最近学校を卒業し、彼女の教育証明を彼女の Catapult "
+"アカウントに認定することで、学位証明を繰り返して提供しなければならない面倒事を避けたいと思っています。そのため彼女は Bob "
+"を訪れ、学位を彼に提供します。Alice が手数料を支払うと Bob は真正性を検証し Alice のアカウントに学位を表すメタデータをスタンプします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:22
+msgid ""
+"In this tutorial, you are going to implement a program to allow Bob tag "
+"accounts issuing :doc:`metadata transactions <../../concepts/metadata>`."
+msgstr ""
+"このチュートリアルでは、 Bob のタグアカウントに  :doc:`メタデータトランザクション <../../concepts/metadata>` "
+"の発行を許可する実装を行います。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:30
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:32
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:33
+msgid ""
+"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
+msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:37
+msgid "Creating the account"
+msgstr "アカウントの作成"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:39
+msgid "Create an account for Alice, using the :doc:`NEM2-CLI <../../cli>`."
+msgstr " :doc:`NEM2-CLI <../../cli>` を使って Alice のアカウントを作成します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:52
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:54
+msgid ""
+"Bob has to pick a **key** to store Alice's certificate. Imagine that "
+"``CERT`` is a common key to store university degrees. Define this key as a "
+"new variable."
+msgstr ""
+"Bob は Alice の証明を保存するために **キー** を入手する必要があります。``CERT`` "
+"が大学の学位を保存するための共通キーであるとイメージしてください。このキーを新しい変数として定義します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:63
+msgid ""
+"Alice's degree brings the identifier ``123456`` for her certificate. Help "
+"Bob to **assign this value to the key** defined in the previous step. To "
+"achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-"
+"transaction>` linking Alice account, the key (CERT), and the associated "
+"value (123456)."
+msgstr ""
+"Alice の学位は証明書の識別子 ``123456`` を持っています。前の手順で定義した **この値を割り当てるキー** は Bob "
+"を助けます。これを実現するには Alice のアカウント、キー (CERT) および関連する値 (123456) をリンクする "
+":ref:`AccountMetadataTransaction <account-metadata-transaction>` を定義します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:72
+msgid ""
+"To avoid spamming the account with invalid metadata keys, all metadata is "
+"attached only with the consent of the account owner through Aggregate "
+"Transactions. Thus, Alice will have to **opt-in** if she wants the metadata "
+"entry assigned to its account. Wrap the **AccountMetadataTransaction** "
+"inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the "
+"transaction using Bob's account."
+msgstr ""
+"アカウントが無効なメタデータキーのスパム送信をしないように、すべてのメタデータはアグリゲートトランザクションを通じて、アカウントの所有者の同意を得たときだけアタッチされます。したがって"
+" Alice がメタデータエントリをそのアカウントに割り当てる場合は **オプトイン** "
+"する必要があります。**AccountMetadataTransaction** を :ref:`AggregateBondedTransaction "
+"<aggregate-bonded>` でラップし、 Bob のアカウントを使用してトランザクションに署名します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:81
+msgid ""
+"Before sending an aggregate transaction to the network, Bob has to lock  "
+"``10 cat.currency``. Define a new :ref:`HashLockTransaction <hash-lock-"
+"transaction>` and sign it with Bob's account, locking the amount of "
+"cat.currency required to announce the aggregate transaction."
+msgstr ""
+"アグリゲートトランザクションをネットワークに送信する前に、Bobは ``10 cat.currency`` をロックする必要があります。新しい "
+":ref:`HashLockTransaction <hash-lock-transaction>` を定義して、Bob "
+"のアカウントで署名し、集約トランザクションのアナウンスに必要な cat.currency の量をロックします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:90
+msgid ""
+"Bob will receive the locked funds back if Alice cosigns the aggregate during"
+" the next ``480`` blocks."
+msgstr "Alice が次の ``480`` ブロック中にアグリゲートに署名すると、 Bob はロックされた資産を取り戻します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:92
+msgid ""
+"Announce the **HashLockTransaction**. Monitor the network until the "
+"transaction gets confirmed, and then announce the **AggregateTransaction** "
+"containing the **AccountMetadataTransaction**."
+msgstr ""
+"**HashLockTransaction** をアナウンスします。トランザクションが承認されるまでネットワークを監視し、次に "
+"**AccountMetadataTransaction** を含む **AggregateTransaction** をアナウンスします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:101
+msgid ""
+"Once the transaction gets confirmed, cosign the hash obtained in the fourth "
+"step using Alice's profile."
+msgstr "トランザクションが承認されたら、Alice のプロファイルを使用して、4番目のステップで取得したハッシュに署名します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:107
+msgid ""
+"If everything goes well, now Alice :doc:`has assigned the metadata value "
+"<getting-metadata-entries-attached-to-an-account>` ``{bobPublicKey, CERT, "
+"123456}``, which can be read as \"Alice account has the certificate number "
+"123456 and it was verified by Bob\"."
+msgstr ""
+"すべてがうまくいくと、Alice には :doc:`メタデータ値 <getting-metadata-entries-attached-to-an-"
+"account>` ``{bobPublicKey, CERT, 123456}`` が割り当てられます。これは \"Alice アカウントは証明書番号"
+" 123456 を持っており、Bob によって検証されています\" と読むことができます。"

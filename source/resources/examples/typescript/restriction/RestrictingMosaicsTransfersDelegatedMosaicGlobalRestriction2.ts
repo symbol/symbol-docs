@@ -19,46 +19,51 @@
 import {
     Account,
     Deadline,
+    KeyGenerator,
     MosaicGlobalRestrictionTransaction,
     MosaicId,
     MosaicRestrictionType,
-    NamespaceMosaicIdGenerator,
     NetworkType,
     TransactionHttp,
-    UInt64
+    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
-const sharesIdHexa = process.env.SHARES_ID as string;
-const sharesId = new MosaicId(sharesIdHexa);
+// replace with cc.shares mosaic id
+const sharesIdHex = '7cdf3b117a3c40cc';
+const sharesId = new MosaicId(sharesIdHex);
+// replace with kyc mosaic id
+const kycIdHex = '183D0802BCDB97AF';
+const kycId = new MosaicId(kycIdHex);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
-const kycIdHexa = process.env.KYC_ID as string;
-const kycId = new MosaicId(kycIdHexa);
-
-const key = 'IsVerified'.toLowerCase();
+const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
         Deadline.create(),
         sharesId,  // mosaicId
-        new UInt64(NamespaceMosaicIdGenerator.namespaceId(key)), // restictionKey
+        key, // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(2), // newRestrictionValue
         MosaicRestrictionType.EQ,  // newRestrictionType
-        NetworkType.MIJIN_TEST,
+        networkType,
         kycId, // referenceMosaicId
-    );
+    ).setMaxFee(2);
 
-const comfyClothingCompanyPrivateKey = process.env.COMFY_CLOTHING_COMPANY_PRIVATE_KEY as string;
-const comfyClothingCompnayAccount = Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, NetworkType.MIJIN_TEST);
-
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const signedTransaction = comfyClothingCompnayAccount.sign(transaction, networkGenerationHash);
+const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const comfyClothingCompanyAccount = Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const signedTransaction = comfyClothingCompanyAccount.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 01 */

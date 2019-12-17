@@ -16,22 +16,23 @@
  *
  */
 
-import {Address, MosaicId, RestrictionHttp} from "nem2-sdk";
+import {Address, MosaicId, RestrictionMosaicHttp} from 'nem2-sdk';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
-
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
-
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const restrictionHttp = new RestrictionMosaicHttp(nodeUrl);
 
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
-    .subscribe((mosaicRestrictionInfo) => {
-        const mosaicAddressRestrictions = mosaicRestrictionInfo.restrictions;
-        if (mosaicAddressRestrictions.size > 0) {
-            mosaicAddressRestrictions.forEach((value: string, key: string) => {
+    .subscribe((mosaicAddressRestrictions) => {
+        if (mosaicAddressRestrictions.restrictions.size > 0) {
+            mosaicAddressRestrictions.restrictions.forEach((value: string, key: string) => {
                 console.log('\n', key, value);
             });
         } else {

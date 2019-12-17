@@ -16,9 +16,9 @@ Create a 1-of-2 multisig account.
 Background
 **********
 
-Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate accounts. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accounts <../../concepts/multisig-account>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
@@ -33,19 +33,24 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
-- Create :doc:`two accounts <../account/creating-and-opening-an-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Create :doc:`two accounts <../account/creating-an-account>`
 
-**********************
-Getting into some code
-**********************
+****************************
+Example #01: 1-of-2 multisig
+****************************
 
-1. First, define the accounts that will be cosginatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
+1. First, define the accounts that will be cosignatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -58,6 +63,11 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**. This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
@@ -67,9 +77,14 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Sign the **AggregateTransaction** using the private key of the multisig account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -78,12 +93,22 @@ Getting into some code
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 cat.currency**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 nem.xem**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts
         :language: typescript
+        :start-after:  /* start block 05 */
+        :end-before: /* end block 05 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js
+        :language: javascript
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
@@ -101,7 +126,7 @@ Getting into some code
 
 .. _guide-get-multisig-account-info:
 
-8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using ``getMultisigAccountInfo`` function.
+8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using the ``getMultisigAccountInfo`` function.
 
 .. example-code::
 
@@ -110,7 +135,7 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/multisig/GettingMultisigAccountCosignatories.js
+    .. viewsource:: ../../resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

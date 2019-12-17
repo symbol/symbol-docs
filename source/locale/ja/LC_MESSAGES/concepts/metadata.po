@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -72,12 +72,12 @@ msgstr "永続性"
 
 #: ../../source/concepts/metadata.rst:22
 msgid ""
-"Metadata entries are stored in the blockchain—like the message of a regular "
+"Metadata entries are stored on the blockchain—like the message of a regular "
 ":doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value "
 "state**."
 msgstr ""
-"メタデータエントリはブロックチェーンに格納されます — :doc:`TransferTransaction <transfer-"
-"transaction>` の通常メッセージのように — が、 **key-value state** です。"
+"メタデータエントリはブロックチェーンへ — :doc:`TransferTransaction <transfer-transaction>` "
+"の通常メッセージのように — 格納されますが、 **key-value state** としてです。"
 
 #: ../../source/concepts/metadata.rst:24
 msgid ""
@@ -124,25 +124,27 @@ msgstr "メタデータはアセットに関連情報を添付するのに使用
 
 #: ../../source/concepts/metadata.rst:47
 msgid ""
-"Bob works as a digital notary that stamp accounts on the NEM blockchain. "
-"When a customer comes to Bob to notarize a document, he checks the "
-"authentication of the customer’s documents then **tags the account with a "
-"MetadataTransaction**."
+"Bob works as a digital notary that stamp accounts on Catapult's public "
+"blockchain. When a customer comes to Bob to notarize a document, he checks "
+"the authentication of the customer’s documents then **tags the account with "
+"a MetadataTransaction**."
 msgstr ""
-"Bob はスタンプが NEM ブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
+"Bob はスタンプが Catapult "
+"パブリックブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
 "の元へ訪れると、彼は顧客のドキュメントの認証をチェックし **アカウントに MetadataTransaction をタグ付け** をします。"
 
 #: ../../source/concepts/metadata.rst:49
 msgid ""
 "Alice a recent graduate and wants her educational certificate accredited to "
-"her NEM account to avoid the hassle of repeatedly providing verification of "
-"her degree. So she goes to Bob and provides him with proof of her degree. "
-"Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s "
-"account with metadata that signifies her degree."
+"her Catapult account to avoid the hassle of repeatedly providing "
+"verification of her degree. So she goes to Bob and provides him with proof "
+"of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and "
+"stamps Alice’s account with metadata that signifies her degree."
 msgstr ""
-"最近 Alice は卒業したので、彼女の学歴確認を繰り返し提供するという面倒を避けるために、彼女の教育証明書が彼女の NEM "
-"アカウントに認定されることを望んでいます。それで彼女は Bob の元に訪れ、学位証明を彼に提供します。Alice が Bob に手数料を支払うと Bob"
-" は真正性を検証し Alice のアカウントに学歴を表すメタデータをスタンプします。"
+"最近 Alice は学校を卒業し、彼女の教育証明を彼女の Catapult "
+"アカウントに認定することで、学位証明を繰り返して提供しなければならない面倒事を避けたいと思っています。そのため彼女は Bob "
+"を訪れ、学位を彼に提供します。Alice が Bob に手数料を支払うと Bob は真正性を検証し Alice "
+"のアカウントに学位を表すメタデータをスタンプします。"
 
 #: ../../source/concepts/metadata.rst:52
 msgid "Access management"
@@ -154,12 +156,12 @@ msgstr "オフチェーンアクションの実行を制限するためのメタ
 
 #: ../../source/concepts/metadata.rst:60
 msgid ""
-"The HR department of the SneakersCompany uses the NEM blockchain for "
-"**access management** of sensitive work resources. Each account is tagged "
-"with the metadata that regulates its access to the company apps suite."
+"The HR department of the SneakersCompany uses the Catapult for **access "
+"management** of sensitive work resources. Each account is tagged with the "
+"metadata that regulates its access to the company apps suite."
 msgstr ""
-"SneakersCompany の人事部門は機密作業リソースの **アクセス管理** に NEM "
-"ブロックチェーンを使用しています。各アカウントには会社のアプリスイートへのアクセスを規制するメタデータがタグ付けされています。"
+"SneakersCompany の人事部門は機密作業リソースの **アクセス管理** に Catapult "
+"を使用しています。各アカウントには会社のアプリスイートへのアクセスを規制するメタデータがタグ付けされています。"
 
 #: ../../source/concepts/metadata.rst:62
 msgid ""
@@ -186,18 +188,10 @@ msgid ""
 msgstr "一方で権限を持たない Derek が会社のアプリスイートにアクセスしようとすると会社のアプリは彼のリクエストを拒否します。"
 
 #: ../../source/concepts/metadata.rst:70
-msgid "Schemas"
-msgstr "スキーマ"
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/metadata.rst:72
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/metadata.rst:79
+#: ../../source/concepts/metadata.rst:88
 msgid ""
 "Announce an AccountMetadataTransaction to associate a key-value state to an "
 "account."
@@ -210,7 +204,7 @@ msgstr "メタデータターゲットの公開鍵"
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
 msgid "Metadata key scoped to source, target and type."
-msgstr "メタデータキーのスコープは source, target, type です。"
+msgstr "メタデータキーの source, target, type に対するスコープ。"
 
 #: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
 #: ../../source/concepts/metadata.rst:1
@@ -229,9 +223,9 @@ msgid ""
 "directly the new value."
 msgstr ""
 "前の値と新しい値の差分。値は ``xor(previous-value, new-value)`` "
-"として計算できます。以前の値がない場合は新しい値を直接使用します。"
+"として計算できます。前の値がない場合は新しい値を直接使用します。"
 
-#: ../../source/concepts/metadata.rst:104
+#: ../../source/concepts/metadata.rst:113
 msgid ""
 "Announce a MosaicMetadataTransaction to associate a key-value state to a "
 "mosaic."
@@ -249,7 +243,7 @@ msgstr "対象のモザイク識別子"
 msgid "New value size in bytes. The maximum size is ``1024``."
 msgstr "新しい値のバイトサイズ。最大サイズは ``1024`` です。"
 
-#: ../../source/concepts/metadata.rst:130
+#: ../../source/concepts/metadata.rst:139
 msgid ""
 "Announce a NamespaceMetadataTransaction to associate a key-value state to a "
 "namespace."
@@ -262,3 +256,7 @@ msgstr "ターゲットネームスペースのオーナーの公開鍵"
 #: ../../source/concepts/metadata.rst:1
 msgid "Target namespace identifier."
 msgstr "対象のネームスペース識別子"
+
+#: ../../source/concepts/metadata.rst:160
+msgid "Continue: :doc:`Transfer Transaction <transfer-transaction>`."
+msgstr "次へ: :doc:`転送トランザクション <transfer-transaction>`"

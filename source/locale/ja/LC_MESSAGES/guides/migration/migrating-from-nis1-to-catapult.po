@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-07-18 15:59+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -37,9 +37,9 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:12
 msgid ""
-"This guide is a live document. The information could change as Catapult "
+"This guide is a living document. The information could change as Catapult "
 "development advances."
-msgstr "このガイドは更新されていきます。情報は Catapult 開発が進むにつれて変更されます。"
+msgstr "このガイドは更新されています。情報は Catapult 開発が進むにつれて変更されます。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:16
 msgid "Test network"
@@ -91,8 +91,9 @@ msgid "Reference: :doc:`Catapult REST <../../api>`"
 msgstr "リファレンス: :doc:`Catapult REST <../../api>`"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:34
-msgid "Reference: `REST API contract </endpoints.html>`_"
-msgstr "リファレンス: `REST API contract </endpoints.html>`_"
+msgid ""
+"Reference: `REST API contract <https://nemtech.github.io/nem2-openapi/>`_"
+msgstr "リファレンス: `REST API 接続 <https://nemtech.github.io/nem2-openapi/>`_"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:36
 msgid ""
@@ -110,9 +111,9 @@ msgstr ""
 msgid ""
 "As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most "
 "used SDK and leads in |ts-js-sdk-docs|. The architecture of the TS SDK is "
-"inspired in |nem-library| from NIS1."
+"inspired by |nem-library| from NIS1."
 msgstr ""
-"まずはじめに |ts-js-sdk| を見てみることを推奨します。最も使用されている SDK であり |ts-js-sdk-docs| "
+"はじめに |ts-js-sdk| を見てみることを推奨します。最も使用されている SDK であり |ts-js-sdk-docs| "
 "の先頭にあります。TS SDK のアーキテクチャは NIS1 向け |nem-library| にインスパイアされています。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:44
@@ -132,9 +133,9 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:48
 msgid ""
-"Guide: :doc:`Creating and opening an account  <../account/creating-and-"
-"opening-an-account>`"
-msgstr "ガイド: :doc:`アカウントの作成と開設 <../account/creating-and-opening-an-account>`"
+"Guide: :doc:`Creating and opening an account  <../account/creating-an-"
+"account>`"
+msgstr "ガイド: :doc:`アカウントの作成と開設 <../account/creating-an-account>`"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:49
 msgid ""
@@ -187,13 +188,14 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:63
 msgid ""
-"Additionally, there is only one TransferTransaction version remaining in "
-"which mosaics are always pushed in the mosaics array, when available. This "
-"is different from NIS1 transfer transactions which, in their first version, "
-"attached XEM without using the mosaics array."
+"Additionally, there is only one version of :doc:`TransferTransaction "
+"<../../concepts/transfer-transaction>` in Catapult. The native currency is "
+"now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics"
+" array of the transaction."
 msgstr ""
-"加えて、利用可能な場合にモザイク配列へモザイクをプッシュする TransferTransaction のバージョンが 1 "
-"つだけ残されました。これはモザイク配列を使用せずに XEM を添付する NIS1 の転送トランザクションとは異なります。"
+"それに加えて、Catapult では :doc:`TransferTransaction <../../concepts/transfer-"
+"transaction>` は１つのバージョンだけになります。基軸通貨は通常の :doc:`モザイク <../../concepts/mosaic>` "
+"としてトランザクションのモザイク配列に追加されるようになりました。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:67
 msgid "Transaction fees"
@@ -202,27 +204,25 @@ msgstr "トランザクション手数料"
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:69
 msgid ""
 "The fee that needs to be paid for a transaction now depends on the "
-"transaction size and node owners can specify a positive (or zero) fee "
-"multiplier. The **effective fee** paid for a transaction can be calculated "
-"reading the **fee multiplier** from the block in which the transaction got "
-"confirmed and multiplying it by the **size of the transaction**."
+"transaction size and fee multiplier, where node owners can specify a "
+"positive (or zero) value. The **effective fee** to be paid for a transaction"
+" can be calculated by reading the **fee multiplier** from the block in which"
+" the transaction got confirmed and multiplying it by the **size of the "
+"transaction**."
 msgstr ""
-"トランザクションに対して支払う必要のある手数料はトランザクションサイズに依存し、ノードの所有者は正の(またはゼロ)手数料乗数を指定できます。トランザクションに対して支払われる"
-" **実効手数料** は、トランザクションが確認されたブロックから **手数料乗数** を読み取り **トランザクションのサイズ** "
+"トランザクションに対して支払う手数料は、トランザクションサイズとノードの所有者が指定した正(またはゼロ)の手数料乗数によります。トランザクションに対して支払われる"
+" **実効手数料** は、トランザクションが承認されたブロックから **手数料乗数** を読み取り **トランザクションのサイズ** "
 "で乗算して計算されます。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:71
 msgid ""
-"Transactions fees are specified with the ``maxFee``  field. This field "
-"represents the maximum fee allowed to be paid for this transaction to "
-"confirm."
-msgstr ""
-"トランザクション手数料は ``maxFee`` "
-"フィールドで指定されるようになりました。これはトランザクションが承認されるために許可する最大支払い手数料を表現しています。"
+"The ``maxFee`` field represents the maximum fee allowed by the sender to be "
+"paid for this transaction to be confirmed in a block."
+msgstr "``maxFee`` フィールドは送信者によって支払われる、トランザクションが承認されるために許可する最大支払い手数料を表現しています。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:73
-msgid "Protocol: :ref:`Transaction fees <fees>`"
-msgstr "プロトコル: :ref:`トランザクション手数料 <fees>`"
+msgid "Protocol: :doc:`Transaction fees <../../concepts/fees>`"
+msgstr "プロトコル: :doc:`トランザクション手数料 <../../concepts/fees>`"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:77
 msgid "Mosaics & namespaces"
@@ -270,10 +270,10 @@ msgstr "ガイド: :doc:`サブネームスペースの作成 <../namespace/regi
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:90
 msgid ""
-"Namespaces can still refer to mosaics byways of :ref:`AliasTransactions "
-"<mosaic-alias-transaction>`. A namespace owner can attach either of an "
-"account or a mosaic id to one of its' namespaces. The namespace information "
-"endpoint will return the linked object in the alias field."
+"Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-"
+"alias-transaction>`. A namespace owner can attach either of an account or a "
+"mosaic id to one of its' namespaces. The namespace information endpoint will"
+" return the linked object in the alias field."
 msgstr ""
 "ネームスペースは依然として :ref:`AliasTransactions <mosaic-alias-transaction>` "
 "によってモザイクを参照することができます。ネームスペースの所有者はアカウントまたはモザイク ID "
@@ -326,13 +326,13 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:102
 msgid ""
-"When a transaction includes an alias, a so-called **resolution** reflects "
-"the resolved value of that alias in the block. To get the real identifier "
-"behind an aliased address or mosaic, the client application needs to fetch "
-"the related :doc:`resolution receipt <../../concepts/receipt>` linked to the"
-" block where the transaction gets included."
+"When a transaction includes an alias, a **resolution** reflects the resolved"
+" value of that alias in the block. To get the real identifier behind an "
+"aliased address or mosaic, the client application needs to fetch the related"
+" :doc:`resolution receipt <../../concepts/receipt>` linked to the block "
+"where the transaction gets included."
 msgstr ""
-"トランザクションがエイリアスを含む場合、いわゆる **resolution** "
+"トランザクションがエイリアスを含む場合、 **resolution** "
 "はブロック内のそのエイリアスの解決された値を反映します。エイリアスアドレスやモザイクの背後にある実際の識別子を取得するには、クライアントアプリケーションはトランザクションが含まれるブロックにリンクされている関連の"
 " :doc:`解決レシート <../../concepts/receipt>` を取得する必要があります。"
 
@@ -351,19 +351,17 @@ msgstr "マルチシグネチャの管理"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:111
 msgid ""
-"With multisignature accounts managed on-chain, the NEM multisignature "
+"With multisignature accounts managed on-chain, Catapult's multisignature "
 "implementation is different from many other—so-called client-"
 "side—multisignature implementations."
 msgstr ""
-"チェーン上で管理されたマルチシグネチャアカウントである NEM "
-"マルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
+"チェーン上で管理されたマルチシグネチャアカウントである Catapult "
+"のマルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:113
 msgid ""
-"An account must be converted to a :doc:`multisignature account "
-"<../../concepts/multisig-account>`."
-msgstr ""
-"アカウントは :doc:`マルチシグアカウント <../../concepts/multisig-account>` に変換されている必要があります。"
+"Creating a :doc:`multisignature account <../../concepts/multisig-account>`."
+msgstr ":doc:`マルチシグアカウント <../../concepts/multisig-account>` の作成"
 
 #: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:115
 msgid ""

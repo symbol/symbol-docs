@@ -16,21 +16,24 @@
  *
  */
 
-import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionHttp} from "nem2-sdk";
+import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionMosaicHttp} from 'nem2-sdk';
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
-
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const restrictionHttp = new RestrictionMosaicHttp(nodeUrl);
 
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
-    .subscribe((mosaicRestrictionInfo) => {
-        const mosaicGlobalRestrictions = mosaicRestrictionInfo.restrictions;
-        if (mosaicGlobalRestrictions.size > 0) {
+    .subscribe((mosaicGlobalRestrictions) => {
+        if (mosaicGlobalRestrictions.restrictions.size > 0) {
             console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
-            mosaicGlobalRestrictions.forEach((value: MosaicGlobalRestrictionItem, key: string) => {
-                console.log('\n' + key + '\t', value.referenceMosaicId.toHex() + '\t', MosaicRestrictionType[value.restrictionType] + '\t', value.restrictionValue)
+            mosaicGlobalRestrictions.restrictions.forEach((value: MosaicGlobalRestrictionItem, key: string) => {
+                console.log('\n' + key + '\t', value.referenceMosaicId.toHex() +
+                    '\t', MosaicRestrictionType[value.restrictionType] +
+                    '\t', value.restrictionValue);
             });
         } else {
             console.log('\n The mosaic does not have mosaic global restrictions assigned.');

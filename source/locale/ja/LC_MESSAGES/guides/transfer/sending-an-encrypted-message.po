@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.19.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-11-26 07:39+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -79,8 +79,8 @@ msgid ""
 msgstr "そのため、Alice は自分自身と学術証明書へのアクセス権を持つものだけが読めるように **暗号化メッセージ** を送ります。"
 
 #: ../../source/guides/transfer/sending-an-encrypted-message.rst:34
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Setting up the use case"
+msgstr "ユースケースのセットアップ"
 
 #: ../../source/guides/transfer/sending-an-encrypted-message.rst:36
 msgid ""
@@ -88,23 +88,27 @@ msgid ""
 "``nem2-cli``."
 msgstr "Alice と証明書用のアカウントを ``nem2-cli`` を使用して作成します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:57
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:59
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:61
 msgid ""
 "Create an **encrypted message** for the certificate, signing it with Alice's"
 " account."
 msgstr "証明書用の **暗号化メッセージ** を作成して Alice のアカウントで署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:67
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:71
 msgid ""
 "Attach the encrypted message to a **TransferTransaction**, setting the "
 "certificate address as the recipient."
 msgstr "**TransferTransaction** に暗号化メッセージを添付して、受信者には証明書アドレスを設定します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:76
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:80
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:78
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:82
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
@@ -113,13 +117,13 @@ msgstr ""
 "自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
 "``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:87
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:91
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:96
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:100
 msgid ""
 "After the transaction gets confirmed, fetch it using the transaction hash "
 "output from (3). You can now **decrypt the message** using either the "
@@ -129,7 +133,7 @@ msgstr ""
 "で出力されたトランザクションハッシュを使用してトランザクションを取得します。証明書アカウントまたはアドレスアカウントを使用して **メッセージを復号**"
 " できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:105
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:109
 msgid ""
 "If you managed to read the message, try to decrypt it using another "
 "unrelated account to ensure that only the defined participants can read the "

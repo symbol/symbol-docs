@@ -18,7 +18,7 @@ Global restriction
 
 The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to transact a given mosaic.
 
-One mosaic can handle multiple global restrictions. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
+One mosaic can handle up to ``20`` global restrictions, being this parameter :ref:`configurable per network <config-network-properties>`. A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -117,10 +117,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
+*******************
+Transaction schemas
+*******************
 .. _mosaic-global-restriction-transaction:
 
 MosaicGlobalRestrictionTransaction
@@ -130,7 +129,7 @@ Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mos
 
 **Version**: 0x01
 
-**Entity type**: 0x4151
+**EntityType**: 0x4151
 
 **Inlines**:
 
@@ -140,12 +139,12 @@ Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mos
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
-    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
+    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
     restrictionKey; uint64; Restriction key relative to the reference mosaic identifier.
     previousRestrictionValue; uint64; Previous restriction value.
-    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
     newRestrictionValue; uint64; New restriction value.
+    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
     newRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; New restriction type.
 
 .. _mosaic-address-restriction-transaction:
@@ -157,7 +156,7 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
 
 **Version**: 0x01
 
-**Entity type**: 0x4251
+**EntityType**: 0x4251
 
 **Inlines**:
 
@@ -167,11 +166,11 @@ Announce a MosaicAddressRestrictionTransaction transaction to set a restriction 
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L3>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
+    mosaicId; :schema:`UnresolvedMosaicId <types.cats#L6>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
     restrictionKey; uint64; Restriction key.
-    targetAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Address being restricted.
     previousRestrictionValue; uint64; Previous restriction value. Set ``previousRestrictionValue`` to ``FFFFFFFFFFFFFFFF`` if the target address does not have a previous restriction value for this mosaic identifier and restriction key.
     newRestrictionValue; uint64; New restriction value.
+    targetAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Address being restricted.
 
 .. _mosaic-restriction-type:
 
@@ -191,3 +190,5 @@ Enumeration: uint8
     4 (LTE); Allow if allow if less than or equal.
     5 (GT); Allow if greater than.
     6 (GTE); Allow if greater than or equal.
+
+Continue: :doc:`Multisig Accounts <multisig-account>`.

@@ -16,13 +16,16 @@
  *
  */
 
-import {NamespaceHttp, NamespaceId} from "nem2-sdk";
-/* start block 01 */
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
+import {NamespaceHttp, NamespaceId} from 'nem2-sdk';
 
+/* start block 01 */
+// replace with namespace name
 const namespace = new NamespaceId('foo');
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const namespaceHttp = new NamespaceHttp(nodeUrl);
 
 namespaceHttp
     .getNamespace(namespace)
-    .subscribe(namespace => console.log(namespace), err => console.error(err));
+    .subscribe((namespace) => console.log(namespace), (err) => console.error(err));
 /* end block 01 */

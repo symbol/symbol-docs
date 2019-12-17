@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 04 March, 2019
-    :category: Namespace, Mosaic
+    :category: Namespace
     :excerpt: 1
     :nocomments:
 
@@ -17,15 +17,15 @@ Prerequisites
 
 - Have registered one :doc:`namespace <../../concepts/namespace>`
 - Have registered one :doc:`mosaic <../../concepts/mosaic>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-To make **mosaics** easier to use and organize them, an account can link a registered :doc:`name <../../concepts/namespace>` to any :doc:`mosaic <../../concepts/mosaic>` it has created.
+1. Define the namespace identifier and the mosaic identifier you want to alias.
 
-Before starting, you must have registered a :doc:`namespace <../../concepts/namespace>` first. If you already have registered a namespace, define the namespace identifier and the mosaic identifier you want to alias.
+.. note:: The account signing the transaction must own the namespace and mosaic being aliased.
 
 .. example-code::
 
@@ -34,12 +34,12 @@ Before starting, you must have registered a :doc:`namespace <../../concepts/name
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Then, announce the **AliasTransaction** that links the namespace and the mosaic.
+2. Then, announce the **AliasTransaction** that links the namespace and the mosaic.
 
 .. example-code::
 
@@ -48,16 +48,20 @@ Then, announce the **AliasTransaction** that links the namespace and the mosaic.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAMosaic.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceMosaic.sh
-        :language: bash
-        :start-after: #!/bin/sh
+.. note:: If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
-If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 .. _sending-a-transfer-transaction-with-an-aliased-mosaic:
 
@@ -65,7 +69,7 @@ If you want to unlink the alias, change alias action type to ``AliasActionType.U
 What's next?
 ************
 
-Now you can send transactions using the namespace linked to the mosaic instead of defining the complete mosaicId.
+Now you can send transactions using the namespace linked to the mosaic instead of defining the complete MosaicId.
 
 .. example-code::
 
@@ -74,7 +78,7 @@ Now you can send transactions using the namespace linked to the mosaic instead o
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionMosaicAlias.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionMosaicAlias.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

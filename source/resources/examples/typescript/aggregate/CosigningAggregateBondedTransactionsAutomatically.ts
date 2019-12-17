@@ -23,10 +23,10 @@ import {
     CosignatureTransaction,
     Listener,
     NetworkType,
-    TransactionHttp
-} from "nem2-sdk";
+    TransactionHttp,
+} from 'nem2-sdk';
 
-import {filter, map, mergeMap} from "rxjs/operators";
+import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
@@ -36,22 +36,27 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
 /* end block 01 */
 
 /* start block 02 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-const nodeUrl = 'http://localhost:3000';
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
 const transactionHttp = new TransactionHttp(nodeUrl);
 const listener = new Listener(nodeUrl);
 
 listener.open().then(() => {
-
     listener
         .aggregateBondedAdded(account.address)
         .pipe(
             filter((_) => !_.signedByAccount(account.publicAccount)),
-            map(transaction => cosignAggregateBondedTransaction(transaction, account)),
-            mergeMap(cosignatureSignedTransaction => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction))
+            map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+            mergeMap((signedCosignatureTransaction) => {
+                listener.terminate();
+                return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
+            }),
         )
-        .subscribe(announcedTransaction => console.log(announcedTransaction), err => console.error(err));
+        .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
 });
 /* end block 02 */

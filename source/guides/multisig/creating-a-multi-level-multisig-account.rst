@@ -21,18 +21,18 @@ Background
     :align: center
     :width: 750px
 
-    Three-level multisig account example
+    3-level multisig account example
 
 *************
 Prerequisites
 *************
 
 - Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 
-**********************
-Getting into some code
-**********************
+******************************************
+Example #1: Multisig account with 3 levels
+******************************************
 
 1. Define the **multisig account #2**.
 
@@ -40,6 +40,11 @@ Getting into some code
 
     .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -52,6 +57,11 @@ Getting into some code
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Define the **multisig account #1**.
 
 .. example-code::
@@ -61,12 +71,22 @@ Getting into some code
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 cat.currency** to announce the transaction.
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 nem.xem** to announce the transaction.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.ts
         :language: typescript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js
+        :language: javascript
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 

@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[nem2docs.contents]
-file_filter = source/locale/<lang>/LC_MESSAGES/contents.po
-source_file = build/gettext/contents.pot
+[nem2docs.index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = build/gettext/index.pot
 source_lang = en
 type = PO
 
@@ -76,6 +76,12 @@ type = PO
 [nem2docs.concepts--cryptography]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cryptography.po
 source_file = build/gettext/concepts/cryptography.pot
+source_lang = en
+type = PO
+
+[nem2docs.concepts--fees]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
+source_file = build/gettext/concepts/fees.pot
 source_lang = en
 type = PO
 
@@ -181,18 +187,6 @@ source_file = build/gettext/getting-started/setup-workstation.pot
 source_lang = en
 type = PO
 
-[nem2docs.getting-started--training]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/training.po
-source_file = build/gettext/getting-started/training.pot
-source_lang = en
-type = PO
-
-[nem2docs.getting-started--what-is-nem]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-nem.po
-source_file = build/gettext/getting-started/what-is-nem.pot
-source_lang = en
-type = PO
-
 [nem2docs.guidelines--generating-transaction-builders]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
 source_file = build/gettext/guidelines/generating-transaction-builders.pot
@@ -254,9 +248,15 @@ source_file = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-
 source_lang = en
 type = PO
 
-[nem2docs.guides--account--creating-and-opening-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-and-opening-an-account.po
-source_file = build/gettext/guides/account/creating-and-opening-an-account.pot
+[nem2docs.guides--account--creating-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
+source_file = build/gettext/guides/account/creating-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--account--creating-a-wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-a-wallet.po
+source_file = build/gettext/guides/account/creating-a-wallet.pot
 source_lang = en
 type = PO
 
@@ -314,15 +314,57 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--migration--migrating-from-nis1-to-catapult]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
-source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot
+[nem2docs.guides--accountlink--activating-delegated-harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/activating-delegated-harvesting.po
+source_file = build/gettext/guides/accountlink/activating-delegated-harvesting.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--monitor--monitoring-a-transaction-status]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/monitoring-a-transaction-status.po
-source_file = build/gettext/guides/monitor/monitoring-a-transaction-status.pot
+[nem2docs.guides--metadata--assigning-metadata-entries-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--assigning-metadata-entries-to-a-namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-namespace.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--assigning-metadata-entries-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
+source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-a-namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-namespace.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-namespace.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--getting-metadata-entries-attached-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-an-account.po
+source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-an-account.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--metadata--updating-metadata-entries]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
+source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--migration--migrating-from-nis1-to-catapult]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
+source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot
 source_lang = en
 type = PO
 
@@ -404,6 +446,30 @@ source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
 source_lang = en
 type = PO
 
+[nem2docs.guides--network--configuring-network-properties]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
+source_file = build/gettext/guides/network/configuring-network-properties.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--network--configuring-node-properties]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
+source_file = build/gettext/guides/network/configuring-node-properties.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--network--creating-a-private-test-net]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/creating-a-private-test-net.po
+source_file = build/gettext/guides/network/creating-a-private-test-net.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--network--running-a-test-net-node]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-test-net-node.po
+source_file = build/gettext/guides/network/running-a-test-net-node.pot
+source_lang = en
+type = PO
+
 [nem2docs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
 source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
@@ -445,5 +511,17 @@ type = PO
 [nem2docs.guides--transfer--sending-an-encrypted-message]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-an-encrypted-message.po
 source_file = build/gettext/guides/transfer/sending-an-encrypted-message.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.po
+source_file = build/gettext/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.pot
+source_lang = en
+type = PO
+
+[nem2docs.guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
+source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
 source_lang = en
 type = PO
