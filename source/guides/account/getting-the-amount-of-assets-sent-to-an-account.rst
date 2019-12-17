@@ -40,5 +40,5 @@ If you want to check another :doc:`mosaic <../../concepts/mosaic>` different tha
 
 .. code-block:: typescript
 
-    const mosaicId = new MosaicId([3562970624, 976072438]);
-    const divisibility = 6;
+    const mosaicId = new MosaicId('10293DE77C684F71');
+    const divisibility = 2;
