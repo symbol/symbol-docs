@@ -119,7 +119,7 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
 
     Sending an AggregateBondedTransaction
 
-1. Open a new terminal to monitor <../monitor/monitoring-a-transaction-status> the **AggregateBondedTransaction** status by passing the multisig's address.
+1. Open a new terminal to monitor the **AggregateBondedTransaction** status by passing the multisig's address.
 
 .. code-block:: bash
 
