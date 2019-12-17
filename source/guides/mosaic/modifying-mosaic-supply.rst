@@ -24,7 +24,7 @@ Method #01: Using the SDK
 
 If you have followed the previous guide, right now you should own a ``supply mutable`` :doc:`mosaic <../../concepts/mosaic>` with 1,000,000 units.
 
-To increase the initial supply to ``2.000.000``, define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` replacing your target mosaic identifier in the next code snippet.
+To increase the initial supply to 2,000,000, define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` replacing your target mosaic identifier in the next code snippet.
 
 .. example-code::
 

@@ -77,12 +77,12 @@ For that reason, each actor involved should have at least one account in each bl
 
 2. Alice creates a **SecretLockTransaction TX1**, including:
 
-* Mosaic: ``10 [520597229,83226871]`` alice token
-* Recipient: Bob's address (Private Chain)
+* Mosaic: ``10 00D3378709746FC4`` (alice token)
+* Recipient: Bob's address in private chain
 * Algorithm: SHA3-256
 * Secret:  SHA3-256(proof)
 * Duration: 96h
-* Network: Private Chain
+* Network: private chain
 
 .. example-code::
 
@@ -116,12 +116,12 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 5. Bob creates a **SecretLockTransaction TX2**, which contains:
 
-* Mosaic: ``10 [2061634929,1373884888]`` bob token
-* Recipient: Alice's address (Public Chain)
+* Mosaic: ``10 10293DE77C684F71`` (bob token)
+* Recipient: Alice's address in public chain
 * Algorithm: SHA3-256
 * Secret:  SHA3-256(proof)
 * Duration: 84h
-* Network: Public Chain
+* Network: public chain
 
 .. example-code::
 

@@ -58,7 +58,7 @@ console.log('Secret:', secret);
 /* start block 03 */
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([520597229, 83226871]), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId('00D3378709746FC4'), UInt64.fromUint(10)),
     UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
@@ -76,7 +76,7 @@ privateChainTransactionHttp
 /* start block 05 */
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([2061634929, 1373884888]), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId('10293DE77C684F71'), UInt64.fromUint(10)),
     UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,

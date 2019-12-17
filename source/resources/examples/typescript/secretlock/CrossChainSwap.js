@@ -39,7 +39,7 @@ const secret = hash.update(random).hex().toUpperCase();
 console.log('Secret:', secret);
 /* end block 02 */
 /* start block 03 */
-const tx1 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([520597229, 83226871]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
+const tx1 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('00D3378709746FC4'), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
 nem2_sdk_1.HashType.Op_Sha3_256, secret, bobPrivateChainAccount.address, nem2_sdk_1.NetworkType.MIJIN);
 /* end block 03 */
 /* start block 04 */
@@ -49,7 +49,7 @@ privateChainTransactionHttp
     .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */
 /* start block 05 */
-const tx2 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId([2061634929, 1373884888]), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
+const tx2 = nem2_sdk_1.SecretLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(new nem2_sdk_1.MosaicId('10293DE77C684F71'), nem2_sdk_1.UInt64.fromUint(10)), nem2_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
 nem2_sdk_1.HashType.Op_Sha3_256, secret, alicePublicChainAccount.address, nem2_sdk_1.NetworkType.MAIN_NET).setMaxFee(2);
 /* end block 05 */
 /* start block 06 */

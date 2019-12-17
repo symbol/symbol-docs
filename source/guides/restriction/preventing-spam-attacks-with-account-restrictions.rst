@@ -127,7 +127,7 @@ Returning to our previous example, let us imagine that you want to configure the
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Sign and announce the transaction.
+3. Sign and announce the transaction with the product's account.
 
 .. example-code::
 
@@ -184,7 +184,7 @@ Thus, you could narrow the type of transactions that the product can receive fro
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Sign and announce the transaction.
+3. Sign and announce the transaction with the product's account.
 
 .. example-code::
 
@@ -233,7 +233,7 @@ After the company sells the product to the final client, they want to remove the
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Sign and announce the transaction.
+3. Sign and announce the transaction with the product's account.
 
 .. example-code::
 
