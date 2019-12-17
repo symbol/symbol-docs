@@ -11,7 +11,7 @@ Running a test net node
 
 This guide will walk you through the process of **setting up your node** to join Catapult’s public **test network**.
 
-The test network mirrors the same **technology** and **features** of the future main public network and allows you to experiment with the offered Catapult's transaction set without the loss of valuable assets.
+The test network mirrors the same **technology** and **features** of the future main public network. You can use the testnet to experiment with the offered Catapult's transaction set in a live network without the loss of valuable assets.
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
