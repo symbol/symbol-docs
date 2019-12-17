@@ -202,7 +202,7 @@ Guides
 ******
 
 .. postlist::
-    :category: Transaction
+    :category: Monitoring
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle
