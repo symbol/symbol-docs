@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -228,6 +228,13 @@ msgstr ""
 msgid "Before starting"
 msgstr "始める前に"
 
+#: ../../source/guidelines/sdk-development.rst:110
+msgid ""
+"Review the technical documentation to become familiar with the "
+":doc:`Catapult built-in features<../concepts/account>`."
+msgstr ""
+":doc:`Catapult ビルドイン機能<../concepts/account>` に詳しくなるためにはテクニカルドキュメントを見てください。"
+
 #: ../../source/guidelines/sdk-development.rst:111
 msgid ""
 "Setup the `catapult in local environment via docker <https://github.com"
@@ -323,6 +330,12 @@ msgstr "リポジトリと HTTP 実装の例:"
 msgid "Models"
 msgstr "モデル"
 
+#: ../../source/guidelines/sdk-development.rst:264
+msgid ""
+"API conversions: Sometimes, the data returned by API is compressed. You "
+"might need to convert those types for the user."
+msgstr "API 変換: API によって返されるデータは圧縮される場合があります。ユーザーのこれらのタイプを変換する必要がある場合があります。"
+
 #: ../../source/guidelines/sdk-development.rst:265
 msgid ""
 "`Namespace <https://github.com/nemtech/nem2-sdk-typescript-"
@@ -359,6 +372,14 @@ msgstr "このセクションは未完了です。"
 #: ../../source/guidelines/sdk-development.rst:279
 msgid "Implementing cryptographic functions is required to sign transactions."
 msgstr "トランザクションに署名するには暗号化の機能を実装する必要があります。"
+
+#: ../../source/guidelines/sdk-development.rst:281
+msgid ""
+"Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master"
+"/sdk-core/src/main/java/io/nem/core/crypto>`_"
+msgstr ""
+"例: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-"
+"core/src/main/java/io/nem/core/crypto>`_"
 
 #: ../../source/guidelines/sdk-development.rst:285
 msgid "Documenting your SDK"

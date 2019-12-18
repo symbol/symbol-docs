@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -232,13 +232,12 @@ msgstr ""
 #: ../../source/concepts/transaction.rst:108
 msgid ""
 "An account has to follow the next steps to `sign a transaction "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" :"
+"<https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:"
 msgstr ""
-"アカウントは `トランザクションへ署名 <https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_"
-" をするために次のステップに従う必要があります:"
+"アカウントは `トランザクションへ署名 <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_ "
+"をするために次のステップに従う必要があります:"
 
 #: ../../source/concepts/transaction.rst:110
 msgid ""
@@ -248,10 +247,10 @@ msgstr "サイズ、署名、および署名者以外のトランザクション
 
 #: ../../source/concepts/transaction.rst:111
 msgid ""
-"Get the nemesis block generation hash. You can query "
-"``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value."
+"Get the nemesis block generation hash. You can query ``nodeUrl + "
+"'/block/1'`` and copy ``meta.generationHash`` value."
 msgstr ""
-"ネメシスブロックのジェネレーションハッシュを取得してください。``http://localhost:3000/block/1`` にアクセスして "
+"ネメシスブロックのジェネレーションハッシュを取得してください。``nodeUrl + '/block/1'`` にアクセスして "
 "``meta.generationHash`` の値をコピーします。"
 
 #: ../../source/concepts/transaction.rst:112
@@ -272,17 +271,16 @@ msgstr "署名者の署名と公開鍵をトランザクションに追加して
 
 #: ../../source/concepts/transaction.rst:115
 msgid ""
-"Calculate the `hash of the transaction <https://github.com/nemtech/nem2"
-"-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
-" by applying the network hashing algorithm to the first 32 bytes of "
-"signature, the signer public key, nemesis block generation hash, and the "
-"remaining transaction payload."
+"Calculate the `hash of the transaction <https://github.com/nemtech/nem2-sdk-"
+"typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ by "
+"applying the network hashing algorithm to the first 32 bytes of signature, "
+"the signer public key, nemesis block generation hash, and the remaining "
+"transaction payload."
 msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードにハッシュアルゴリズムを適用して "
-"`トランザクションのハッシュ <https://github.com/nemtech/nem2-library-"
-"js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_"
-" を計算します。"
+"`トランザクションのハッシュ <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ を計算します。"
 
 #: ../../source/concepts/transaction.rst:150
 msgid "Announcing a transaction"
@@ -366,23 +364,28 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:194
 msgid ""
-"The :properties:`rewrite limit <config-network.properties>` is the maximum "
-"number of blocks that can be rolled back. Hence, forks can only be resolved "
-"up to a certain depth too."
-msgstr ""
-":properties:`書き換え制限 <config-network.properties>` "
-"とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
+"The rewrite limit is the maximum number of blocks that can be rolled back. "
+"Hence, forks can only be resolved up to a certain depth too."
+msgstr "書き換え制限とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
 #: ../../source/concepts/transaction.rst:196
 msgid ""
-"Catapult has a rewrite limit of ``40`` blocks. Once a transaction has more "
-"than 40 confirmations, it cannot be reversed."
+"Catapult's public network has a rewrite limit of ``398`` blocks, being this "
+"limit :ref:`configurable per network <config-network-properties>`. Once a "
+"transaction has more than ``maxRollBackConfirmations`` value, it cannot be "
+"reversed."
 msgstr ""
-"Catapult の書き換え限界は ``40`` ブロックです。トランザクションが 40 ブロック以上の承認を得ると、それを元に戻すことはできません。"
+"Catapult パブリックネットワークでは書き換え限界を ``398`` ブロックとしています。この限界は :ref:`ネットワークごとに設定可能 "
+"<config-network-properties>` です。トランザクションが ``maxRollBackConfirmations`` "
+"値以上の承認を得ると、元に戻すことはできません。"
 
 #: ../../source/concepts/transaction.rst:202
 msgid "Guides"
 msgstr "ガイド"
+
+#: ../../source/concepts/transaction.rst:214
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
 
 #: ../../source/concepts/transaction.rst:221
 msgid "Serialization of a transaction."
@@ -415,6 +418,10 @@ msgid ""
 msgstr ""
 "ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
+
+#: ../../source/concepts/transaction.rst:241
+msgid "Binary layout for an embedded transaction header."
+msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""

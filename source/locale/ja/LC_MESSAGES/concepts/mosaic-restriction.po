@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -81,11 +81,13 @@ msgstr "モザイクのグローバル制限はアカウントが特定のモザ
 
 #: ../../source/concepts/mosaic-restriction.rst:21
 msgid ""
-"One mosaic can handle multiple global restrictions. A :ref:`mosaic global "
-"restriction <mosaic-global-restriction-transaction>` is composed of:"
+"One mosaic can handle up to ``20`` global restrictions, being this parameter"
+" :ref:`configurable per network <config-network-properties>`. A :ref:`mosaic"
+" global restriction <mosaic-global-restriction-transaction>` is composed of:"
 msgstr ""
-"1 つのモザイクで複数のグローバル制限を処理できます。:ref:`モザイクグローバル制限 <mosaic-global-restriction-"
-"transaction>` は次のもので構成されています。"
+"一つのモザイクは ``20`` までのグローバル制限を扱うことができます。このパラメータは :ref:`ネットワークごとに設定可能 <config-"
+"network-properties>` です。 :ref:`モザイクグローバル制限 <mosaic-global-restriction-"
+"transaction>` は次で構成されます:"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1

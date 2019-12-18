@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,8 +46,9 @@ msgstr ""
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:19
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:23
 msgid "Developing the bot"
@@ -131,8 +132,8 @@ msgstr "この資産を送信するトランザクションは **あなたが署
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:72
 msgid ""
 "The transaction sending funds should have **only one mosaic**, being this "
-"**less than 100 cat.currency**."
-msgstr "資産を送信するトランザクションは **100 cat.currency** 未満の **1つのモザイク** だけを持つようにしてください。"
+"**less than 100 nem.xem**."
+msgstr "資産を送信するトランザクションは **100 nem.xem** 未満の **1つのモザイク** だけを持つようにしてください。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:74
 msgid "Here you have a possible implementation:"

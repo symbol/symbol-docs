@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -146,6 +146,10 @@ msgstr ""
 "NEM2-CLI "
 "は、デフォルトではノードの接続にデフォルトプロファイルを常に使用し、アドレス、公開鍵、秘密鍵による署名トランザクションなどにデフォルトオプションをセットします。名前付きプロファイルを使う場合は、いずれのコマンドにも"
 " --profile オプションを付けてください。"
+
+#: ../../source/cli.rst:89
+msgid "**Set default**"
+msgstr "**デフォルトに設定**"
 
 #: ../../source/cli.rst:91
 msgid "Change the default profile."
@@ -466,16 +470,15 @@ msgid ""
 ":doc:`Allow or block <concepts/account-restriction>` incoming and outgoing "
 "transactions for a given a set of addresses."
 msgstr ""
-"与えられたアドレスを含む受信と送信トランザクションの :doc:`Allow or block 許可またはブロック <concepts/account-"
+"与えられたアドレスを含む受信と送信トランザクションを :doc:`Allow or block 許可またはブロック <concepts/account-"
 "restriction>` します。"
 
 #: ../../source/cli.rst:874
 msgid ""
-":doc:`Allow or block <concepts/account-restriction>` incoming transactions "
-"containing a given set of mosaics."
+":doc:`Allow or block Ann<concepts/account-restriction>` incoming "
+"transactions containing a given set of mosaics."
 msgstr ""
-"与えられたモザイクを含む受信トランザクションの :doc:`Allow or block 許可またはブロック <concepts/account-"
-"restriction>` します。"
+"与えられたモザイクを含む受信トランザクションを :doc:`許可またはブロック <concepts/account-restriction>` します。"
 
 #: ../../source/cli.rst:894
 msgid ""

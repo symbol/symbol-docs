@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -100,7 +100,7 @@ msgid ""
 "account, using its private key."
 msgstr "まず Alice のアカウントを署名者として定義し、その秘密鍵を使用してマルチシグアカウントを定義します。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:50
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:55
 msgid ""
 "Define a **MultisigAccountModificationTransaction** to increase the "
 "``minAprovalDelta`` in one unit."
@@ -108,7 +108,7 @@ msgstr ""
 "``minApprovalDelta`` を 1 単位増加させる **MultisigAccountModificationTransaction** "
 "を定義します。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:59
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:69
 msgid ""
 "Wrap the **MultisigAccountModificationTransaction** in an "
 "**AggregateTransaction**, attaching the multisig public key as the signer."
@@ -116,7 +116,7 @@ msgstr ""
 "**MultisigAccountModificationTransaction** を **AggregateTransaction** "
 "で内包し、マルチシグの公開鍵を署名者として添付します。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:61
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:71
 msgid ""
 "An AggregateTransaction is *complete* if, before announcing it to the "
 "network, all required cosignatories have signed it. If valid, it will be "
@@ -127,13 +127,13 @@ msgstr ""
 "になります。正当であれば、ブロックへ取り込まれます。必要な署名は 1 つだけ (1-of-2) なので Alice "
 "がトランザクションに署名してネットワークへアナウンスできます。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:70
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:85
 msgid ""
 "Once confirmed, the ``minApproval`` value of the multisig will be set to 2, "
 "having our **2-of-2** multisig."
 msgstr "承認されると、マルチシグの ``最小承認数`` は 2 となり **2-of-2** マルチシグになります。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:72
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:87
 msgid ""
 "If you want to decrease the ``minApproval`` parameter, set "
 "``minApprovalDelta`` with a negative value. For example, to reduce the "
@@ -142,11 +142,11 @@ msgstr ""
 "``minApproval`` パラメタを減少させる場合は ``minApprovalDelta`` を負の値に設定してください。たとえば、 1 "
 "つのユニットで必要な署名者の数を減らすには ``-1`` を設定する必要があります。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:78
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:93
 msgid "Example #2: Adding a new cosignatory"
 msgstr "例 #2: 新しい連署者を追加します"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:80
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:95
 msgid ""
 "Alice and Bob want to **add Carol**, a third participant, as a co-signatory "
 "of the multisig account. However, they only want to require **2-of-3** "
@@ -155,17 +155,17 @@ msgstr ""
 "Alice と Bob はマルチシグアカウントの連署者として **Carol を追加** したいと思います。しかし **2-of-3** "
 "連署名が必要なのはトランザクションを受け入れるためだけです。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:86
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:101
 msgid "2-of-3 multisig account example"
 msgstr "2-of-3 マルチシグアカウントの例"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:88
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:103
 msgid ""
 "Define the multisig account public key in a new variable. Do the same with "
 "Carol's public key."
 msgstr "新しい変数でマルチシグアカウント公開鍵を定義します。Carol の公開鍵でも同じことを行います。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:97
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:117
 msgid ""
 "Create a **MultisigAccountModificationTransaction**, adding Carol as a "
 "cosignatory. The multisig account will become a **2-of-3**, since we are "
@@ -175,7 +175,7 @@ msgstr ""
 "を連署者として追加します。新しい連署者を追加したので、マルチシグアカウントは 2-of-3 となりますが、 ``minApprovalDelta`` "
 "は増加していません。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:106
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:131
 msgid ""
 "Wrap the **MultisigAccountModificationTransaction** in an "
 ":ref:`AggregateBondedTransaction <aggregate-transaction>` and sign it with "
@@ -185,18 +185,18 @@ msgstr ""
 ":ref:`AggregateBondedTransaction <aggregate-transaction>` へラップして、 Alice と "
 "Bob のアカウントで署名します。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:115
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:145
 msgid ""
 "Before sending an **AggregateBondedTransaction**, Alice or Bob need to "
-"**lock at least 10 cat.currency**. This transaction is required to prevent "
+"**lock at least 10 nem.xem**. This transaction is required to prevent "
 "spamming the network. After the HashLockTransaction has been confirmed, "
 "announce the AggregateTransaction."
 msgstr ""
 "**AggregateBondedTransaction** を送信する前に、Alice または Bob は **ロックのために最低 ``10`` "
-"cat.currency** を必要とします。このトランザクションはスパムを防止する目的で要求されます。 **HashLockTransaction**"
-" が承認されると AggregateTransaction をアナウンスできます。"
+"nem.xem** を必要とします。このトランザクションはスパムを防止する目的で要求されます。 **HashLockTransaction** "
+"が承認されると AggregateTransaction をアナウンスできます。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:124
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:159
 msgid ""
 ":doc:`Cosign the AggregateTransaction hash<../aggregate/signing-announced-"
 "aggregate-bonded-transactions>`  with Carols's account. She has to opt-in "
@@ -206,29 +206,29 @@ msgstr ""
 "announced-aggregate-bonded-transactions>` "
 "します。まず、彼女はマルチシグ連署者になるためにオプトインの必要があります。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:130
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:165
 msgid ""
 ":doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-"
 "aggregate-bonded-transactions>` with Alice's or Bob's account. The amount of"
-" cat.currency locked becomes available again on Alice's account, and Carol "
-"is added to the multisig."
+" nem.xem locked becomes available again on Alice's account, and Carol is "
+"added to the multisig."
 msgstr ""
 "Alice または Bob のアカウントで :doc:`AggregateTransaction に署名 <../aggregate/signing-"
-"announced-aggregate-bonded-transactions>` します。ロックされた cat.currency はまた Alice "
+"announced-aggregate-bonded-transactions>` します。ロックされた nem.xem はまた Alice "
 "のアカウントで有効になり、キャロルがマルチシグへ追加されます。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:140
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:175
 msgid "Example #3: Removing a cosignatory"
 msgstr "例 #3: 連署者の削除"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:142
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:177
 msgid ""
 "The following code shows how to **remove a cosignatory** from the 2-of-3 "
 "multisig account with ``minRemoval`` set to 1."
 msgstr ""
 "次のコードは ``minRemoval`` を 1 に設定して 2-of-3 マルチシグアカウントから **署名者を削除する** 方法を示しています。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:151
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:191
 msgid ""
 "The **minRemoval parameter** indicates the number of required signatures to "
 "delete an account from the multisig. You can increase or decrease it the "
@@ -239,7 +239,7 @@ msgstr ""
 "パラメタの変更 <guide-modify-a-multisig-account-min-approval>` "
 "と同じ方法で増加または減少させることができます。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:153
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:193
 msgid ""
 "This time, the multisig modification transaction is wrapped in an "
 "**AggregateCompleteTransaction**, as only one account is required to delete "
@@ -248,11 +248,11 @@ msgstr ""
 "マルチシグ変更トランザクションは **AggregateCompleteTransaction** によって内包され、他者をマルチシグから削除するのに "
 "1 アカウントを要求します。"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:157
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:197
 msgid "What’s next?"
 msgstr "次は？"
 
-#: ../../source/guides/multisig/modifying-a-multisig-account.rst:159
+#: ../../source/guides/multisig/modifying-a-multisig-account.rst:199
 msgid ""
 "Learn more about :doc:`multi-level multisig accounts <creating-a-multi-"
 "level-multisig-account>`."

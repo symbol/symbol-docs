@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -60,8 +60,9 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:27
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:31
 msgid "Method #01: Using the SDK"
@@ -70,9 +71,9 @@ msgstr "方法 #01: SDK を使用する"
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:33
 msgid ""
 "Before starting this guide, make sure you have an :doc:`account loaded with "
-"cat.currency <../../getting-started/setup-workstation>`."
+"nem.xem <../../getting-started/setup-workstation>`."
 msgstr ""
-"ガイドを始める前に :doc:`cat.currency を保有したアカウント <../../getting-started/setup-"
+"ガイドを始める前に :doc:`nem.xem を保有したアカウント <../../getting-started/setup-"
 "workstation>` が準備できていることを確認してください。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:35
@@ -135,9 +136,9 @@ msgstr "初期株式が分配されるとその株式は上場して公開され
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-"Since STOs are regulated, the mosaic owner should be able to restrict which "
-"accounts can transact with the mosaic."
-msgstr "STO には規制があるため、モザイクの所有者はモザイクを取引できるアカウントを制限できる必要があります。"
+"Since STOs are regulated, the mosaic creator should be able to restrict "
+"which accounts can transact with the mosaic."
+msgstr "STO には規制があるため、モザイク作成者はモザイクを取引できるアカウントを制限できる必要があります。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:61
 msgid ""
@@ -169,11 +170,11 @@ msgstr ""
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:79
 msgid ""
 "Include the first block generation hash to make the transaction only valid "
-"for your network. Open ``http://localhost:3000/block/1`` in a new tab and "
+"for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
 "copy the ``meta.generationHash`` value."
 msgstr ""
-"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいタブで "
-"``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
+"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
+"'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:93
 msgid ""

@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -183,12 +183,12 @@ msgstr "ミュージアムチケットの表現"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:74
 msgid ""
-"Before continuing, :ref:`create the two accounts <setup-getting-a-test-"
-"account>` loaded with cat.currency. You should also :doc:`create a mosaic "
+"Before continuing, :ref:`create the two accounts <setup-creating-a-test-"
+"account>` loaded with ``nem-xem``. You should also :doc:`create a mosaic "
 "<../mosaic/creating-a-mosaic>` with the ticket distributor's account. This "
 "new mosaic will represent the ticket."
 msgstr ""
-"継続する前に cat.currency を保有した :ref:`アカウントを２つ作成 <setup-getting-a-test-account>` "
+"継続する前に ``nem-xem`` を保有した :ref:`アカウントを２つ作成 <setup-creating-a-test-account>` "
 "します。チケット販売者アカウントで :doc:`モザイクを作成 <../mosaic/creating-a-mosaic>` "
 "します。この新しいモザイクはチケットを表現します。"
 
@@ -203,8 +203,8 @@ msgstr "新しくファイルを開いて、２つの転送トランザクショ
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:82
 msgid ""
 "A TransferTransaction from Alice to the ticket distributor sending ``100 "
-"cat.currency``."
-msgstr "Alice からチケット販売者へ ``100 cat.currency`` を送信します"
+"nem.xem``."
+msgstr "Alice からチケット販売者へ ``100 nem.xem`` を送信します"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:84
 msgid ""
@@ -240,13 +240,13 @@ msgstr ""
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:114
 msgid ""
 "When an **AggregateTransaction is bonded**, Alice will need to **lock 10 "
-"cat.currency** to prevent spamming the network. Once the ticket distributor "
-"signs the AggregateTransaction, the amount of locked cat.currency becomes "
+"nem.xem** to prevent spamming the network. Once the ticket distributor signs"
+" the AggregateTransaction, the amount of locked cat.currency becomes "
 "available again on Alice's account, and the exchange will get through."
 msgstr ""
-"**AggregateTransaction がボンデッド** であるとき、Alice はネットワークスパムを防止するための **10 "
-"cat.currency でロックする** 必要があります。チケット販売者が AggregateTransaction に署名すると、ロックされた "
-"cat.currency の総量が Alice のアカウントで再び利用可能になり、交換が完了します。"
+"**AggregateTransaction がボンデッド** であるとき、Alice はネットワークスパムを防止するための **10 nem.xem "
+"をロックする** 必要があります。チケット販売者が AggregateTransaction に署名すると、ロックされた cat.currency "
+"の総量が Alice のアカウントで再び利用可能になり、交換が完了します。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:128
 msgid ""
@@ -256,13 +256,12 @@ msgstr "販売者はまだ AggregateBondedTransaction に署名していない�
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:130
 msgid ""
-"Copy the **AggregateTransaction hash** from (2), and check how to "
-":doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-"
-"transactions>` following the next guide."
+"Copy the **AggregateTransaction hash** from (2), and check how to cosign the"
+" AggregateTransaction by :doc:`following the next guide <signing-announced-"
+"aggregate-bonded-transactions>`."
 msgstr ""
-"**AggregateTransaction のハッシュ** を (2) からコピーして、次のガイドで "
-":doc:`AggregateTransaction に署名をする <signing-announced-aggregate-bonded-"
-"transactions>` 方法を確認してください。"
+"**AggregateTransaction のハッシュ** を (2) からコピーして :doc:`次のガイド <signing-announced-"
+"aggregate-bonded-transactions>` で AggregateTransaction に署名をする方法を確認してください。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:134
 msgid "Is it possible without aggregate transactions?"

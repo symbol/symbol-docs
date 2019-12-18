@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -202,6 +202,10 @@ msgstr ""
 msgid "Guides"
 msgstr "ガイド"
 
+#: ../../source/concepts/cross-chain-swaps.rst:75
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
+
 #: ../../source/concepts/cross-chain-swaps.rst:82
 msgid ""
 "Use a SecretLockTransaction to transfer mosaics between two accounts. The "
@@ -214,10 +218,14 @@ msgstr ""
 
 #: ../../source/concepts/cross-chain-swaps.rst:84
 msgid ""
+"The maximum number of blocks the lock can lie up to is ``30 days``, being "
+"this parameter :ref:`configurable per network <config-network-properties>`. "
 "If the transaction duration is reached without being proved, the locked "
 "amount goes back to the initiator of the SecretLockTransaction."
 msgstr ""
-"トランザクションが証明されずに期間に到達した場合、ロックされた総量はSecretLockTransactionを開始したアカウントへ戻ります。"
+"ロックできるブロックの最大数は ``30日間`` です。このパラメータは :ref:`ネットワークごとに設定可能 <config-network-"
+"properties>` "
+"です。トランザクションが証明されずに期間に到達した場合、ロックされた総量はSecretLockTransactionを開始したアカウントへ戻ります。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:86
 #: ../../source/concepts/cross-chain-swaps.rst:113
@@ -265,10 +273,9 @@ msgstr "ロックされたモザイク"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid ""
-"Number of blocks for which a lock should be valid. Duration is allowed to "
-"lie up to ``30`` days. If reached, the mosaics will be returned to the "
-"initiator."
-msgstr "ロックを有効にするブロックの数。期間は ``30`` 日までが許可されています。到達した場合はモザイクが開始者へ返還されます。"
+"Number of blocks for which a lock should be valid. If reached, the mosaics "
+"will be returned to the initiator."
+msgstr "ロックを有効にするブロックの数。期間は ``30`` 日までが許可されています。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1

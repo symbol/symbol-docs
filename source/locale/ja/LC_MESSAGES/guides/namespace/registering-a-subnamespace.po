@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.19.2\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 07:39+0000\n"
+"POT-Creation-Date: 2019-12-17 10:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -39,10 +39,10 @@ msgstr ":doc:`ネームスペースの取得ガイド <registering-a-namespace>`
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:19
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and"
-" at least one namespace"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>` and at least one namespace"
 msgstr ""
-":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
+":ref:`nem.xem <setup-creating-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
 
 #: ../../source/guides/namespace/registering-a-subnamespace.rst:23
 msgid "Method #01: Using the SDK"
