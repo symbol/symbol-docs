@@ -45,7 +45,7 @@ const transferTransaction = TransferTransaction.create(
     [new Mosaic(mosaicId, UInt64.fromUint(1))],
     PlainMessage.create('enjoy your ticket'),
     networkType,
-).setMaxFee(2);
+    UInt64.fromUint(2000000));
 /* end block 01 */
 
 /* start block 02 */

@@ -64,7 +64,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [transferTransaction.toAggregate(multisigAccount)],
     networkType,
-    []).setMaxFee(2);
+    [],
+    UInt64.fromUint(2000000));
 /* end block 03 */
 
 /* start block 04 */

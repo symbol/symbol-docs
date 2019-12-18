@@ -43,7 +43,7 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(nem
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(operators_1.mergeMap((transaction) => {
-    const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [transaction.toAggregate(bobAccount.publicAccount)], networkType, []).setMaxFee(2);
+    const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [transaction.toAggregate(bobAccount.publicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
     const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
     return rxjs_1.of(signedTransaction);
 }));
@@ -52,7 +52,7 @@ const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.mergeMap((signedAggregateTransaction) => {
-    const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedAggregateTransaction, networkType).setMaxFee(2);
+    const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedAggregateTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
     const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
     const signedAggregateHashLock = {
         aggregate: signedAggregateTransaction,

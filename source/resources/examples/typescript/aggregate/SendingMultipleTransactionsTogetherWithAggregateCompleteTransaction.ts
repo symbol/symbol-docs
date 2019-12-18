@@ -71,7 +71,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
         bobTransferTransaction.toAggregate(account.publicAccount)],
     networkType,
     [],
-).setMaxFee(2);
+    UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */

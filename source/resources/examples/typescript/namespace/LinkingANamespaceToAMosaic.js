@@ -27,7 +27,7 @@ const mosaicId = new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc');
 /* start block 02 */
 // replace with networkType
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const mosaicAliasTransaction = nem2_sdk_1.AliasTransaction.createForMosaic(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, mosaicId, networkType).setMaxFee(2);
+const mosaicAliasTransaction = nem2_sdk_1.AliasTransaction.createForMosaic(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, mosaicId, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);

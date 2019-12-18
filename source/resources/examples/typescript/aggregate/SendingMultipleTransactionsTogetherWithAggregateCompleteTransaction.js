@@ -40,7 +40,7 @@ const bobTransferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.
 /* end block 01 */
 /* start block 02 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [aliceTransferTransaction.toAggregate(account.publicAccount),
-    bobTransferTransaction.toAggregate(account.publicAccount)], networkType, []).setMaxFee(2);
+    bobTransferTransaction.toAggregate(account.publicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')

@@ -28,7 +28,7 @@ const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 /* start block 02 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, networkType).setMaxFee(2);
+const addressAliasTransaction = nem2_sdk_1.AliasTransaction.createForAddress(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AliasAction.Link, namespaceId, address, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);

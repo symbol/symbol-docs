@@ -24,7 +24,7 @@ import {
     NamespaceId,
     NamespaceMetadataTransaction,
     NetworkType,
-    TransactionHttp,
+    TransactionHttp, UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -91,7 +91,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
         phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
     ],
     networkType,
-    []).setMaxFee(2);
+    [],
+    UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */

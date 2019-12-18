@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, Deadline, NetworkType, PublicAccount, TransactionHttp, TransferTransaction} from 'nem2-sdk';
+import {Account, Deadline, NetworkType, PublicAccount, TransactionHttp, TransferTransaction, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with network type
@@ -40,7 +40,8 @@ const transferTransaction = TransferTransaction.create(
     certificatePublicAccount.address,
     [],
     encryptedMessage,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */

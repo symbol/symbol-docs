@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, AliasAction, AliasTransaction, Deadline, MosaicId, NamespaceId, NetworkType, TransactionHttp} from 'nem2-sdk';
+import {Account, AliasAction, AliasTransaction, Deadline, MosaicId, NamespaceId, NetworkType, TransactionHttp, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -34,7 +34,8 @@ const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     AliasAction.Link,
     namespaceId,
     mosaicId,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';

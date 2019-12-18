@@ -30,7 +30,8 @@ const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.create
     Deadline.create(),
     namespaceName,
     duration,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';

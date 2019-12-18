@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, Address, AliasAction, AliasTransaction, Deadline, NamespaceId, NetworkType, TransactionHttp} from 'nem2-sdk';
+import {Account, Address, AliasAction, AliasTransaction, Deadline, NamespaceId, NetworkType, TransactionHttp, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -35,7 +35,8 @@ const addressAliasTransaction = AliasTransaction.createForAddress(
     AliasAction.Link,
     namespaceId,
     address,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';

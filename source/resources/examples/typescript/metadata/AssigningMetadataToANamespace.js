@@ -41,7 +41,7 @@ const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2
     emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
     addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
     phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
-], networkType, []).setMaxFee(2);
+], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')

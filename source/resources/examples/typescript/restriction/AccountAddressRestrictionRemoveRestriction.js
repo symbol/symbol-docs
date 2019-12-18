@@ -26,7 +26,7 @@ const companyAddress = nem2_sdk_1.Address.createFromRawAddress(companyRawAddress
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const transaction = nem2_sdk_1.AccountRestrictionTransaction
-    .createAddressRestrictionModificationTransaction(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AccountRestrictionFlags.AllowIncomingAddress, [], [companyAddress], networkType).setMaxFee(2);
+    .createAddressRestrictionModificationTransaction(nem2_sdk_1.Deadline.create(), nem2_sdk_1.AccountRestrictionFlags.AllowIncomingAddress, [], [companyAddress], networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with product private key

@@ -56,7 +56,9 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-    networkType).setMaxFee(2);
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
 
 // replace with cosignatory private key
 const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
@@ -79,7 +81,8 @@ const hashLockTransaction = HashLockTransaction.create(
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 

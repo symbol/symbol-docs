@@ -35,7 +35,8 @@ nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
 nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-networkType, kycId).setMaxFee(2);
+networkType, kycId, // referenceMosaicId
+nem2_sdk_1.UInt64.fromUint(2000000));
 const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const comfyClothingCompanyAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')

@@ -32,7 +32,7 @@ const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAcc
 const multisigAccountModificationTransaction = nem2_sdk_1.MultisigAccountModificationTransaction.create(nem2_sdk_1.Deadline.create(), 1, 0, [], [], networkType);
 /* end block 02 */
 /* start block 03 */
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], networkType, []).setMaxFee(2);
+const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);

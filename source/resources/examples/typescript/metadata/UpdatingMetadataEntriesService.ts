@@ -75,7 +75,8 @@ const signedAggregateTransaction = accountMetadataTransaction
                 Deadline.create(),
                 [transaction.toAggregate(bobAccount.publicAccount)],
                 networkType,
-                []).setMaxFee(2);
+                [],
+                UInt64.fromUint(2000000));
             const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
             return of(signedTransaction);
         }));
@@ -100,7 +101,8 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
                 UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
             UInt64.fromUint(480),
             signedAggregateTransaction,
-            networkType).setMaxFee(2);
+            networkType,
+            UInt64.fromUint(2000000));
         const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
         const signedAggregateHashLock: SignedAggregateHashLock = {
             aggregate: signedAggregateTransaction,

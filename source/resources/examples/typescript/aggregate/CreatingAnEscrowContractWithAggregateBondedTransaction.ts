@@ -71,7 +71,9 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
 const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
     [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
-    networkType).setMaxFee(2);
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
 
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
@@ -86,7 +88,8 @@ const hashLockTransaction = HashLockTransaction.create(
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 

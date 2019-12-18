@@ -23,5 +23,5 @@ const nem2_sdk_1 = require("nem2-sdk");
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // Replace with aliased address
 const recipientAddress = new nem2_sdk_1.NamespaceId('foo');
-nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [], nem2_sdk_1.EmptyMessage, networkType).setMaxFee(2);
+nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [], nem2_sdk_1.EmptyMessage, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 01 */

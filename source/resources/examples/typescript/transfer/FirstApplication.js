@@ -27,7 +27,7 @@ const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(1))], nem2_sdk_1.PlainMessage.create('enjoy your ticket'), networkType).setMaxFee(2);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(1))], nem2_sdk_1.PlainMessage.create('enjoy your ticket'), networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 01 */
 /* start block 02 */
 // replace with ticket vendor private key

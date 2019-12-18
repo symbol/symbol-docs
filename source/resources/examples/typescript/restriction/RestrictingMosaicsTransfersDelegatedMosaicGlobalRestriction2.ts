@@ -51,7 +51,7 @@ const transaction = MosaicGlobalRestrictionTransaction
         MosaicRestrictionType.EQ,  // newRestrictionType
         networkType,
         kycId, // referenceMosaicId
-    ).setMaxFee(2);
+        UInt64.fromUint(2000000));
 
 const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const comfyClothingCompanyAccount = Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);

@@ -16,7 +16,16 @@
  *
  */
 
-import {Account, AccountRestrictionFlags, AccountRestrictionTransaction, Address, Deadline, NetworkType, TransactionHttp} from 'nem2-sdk';
+import {
+    Account,
+    AccountRestrictionFlags,
+    AccountRestrictionTransaction,
+    Address,
+    Deadline,
+    NetworkType,
+    TransactionHttp,
+    UInt64,
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with company address
@@ -34,7 +43,8 @@ const transaction = AccountRestrictionTransaction
         AccountRestrictionFlags.AllowIncomingAddress,
         [companyAddress],
         [],
-        networkType).setMaxFee(2);
+        networkType,
+        UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */

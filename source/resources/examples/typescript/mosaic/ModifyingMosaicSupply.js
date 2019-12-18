@@ -27,7 +27,7 @@ const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType)
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const mosaicSupplyChangeTransaction = nem2_sdk_1.MosaicSupplyChangeTransaction.create(nem2_sdk_1.Deadline.create(), mosaicId, nem2_sdk_1.MosaicSupplyChangeAction.Increase, nem2_sdk_1.UInt64.fromUint(2000000), networkType).setMaxFee(2);
+const mosaicSupplyChangeTransaction = nem2_sdk_1.MosaicSupplyChangeTransaction.create(nem2_sdk_1.Deadline.create(), mosaicId, nem2_sdk_1.MosaicSupplyChangeAction.Increase, nem2_sdk_1.UInt64.fromUint(2000000), networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);

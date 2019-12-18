@@ -46,7 +46,8 @@ const transferTransaction = TransferTransaction.create(
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
     PlainMessage.create('This is a test message'),
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 01 */
 
 /* start block 02 */

@@ -40,14 +40,14 @@ const ticketDistributorToAliceTx = nem2_sdk_1.TransferTransaction.create(nem2_sd
 /* end block 01 */
 /* start block 02 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
-    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType).setMaxFee(2);
+    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
-const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType).setMaxFee(2);
+const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';

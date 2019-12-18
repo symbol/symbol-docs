@@ -48,7 +48,9 @@ const transaction = MosaicGlobalRestrictionTransaction
         MosaicRestrictionType.NONE, // previousRestrictionType
         UInt64.fromUint(1), // newRestrictionValue
         MosaicRestrictionType.EQ, // newRestrictionType
-        networkType).setMaxFee(2);
+        networkType,
+        undefined,
+        UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */

@@ -81,7 +81,8 @@ const tx2 = SecretLockTransaction.create(
     HashType.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
-    NetworkType.MAIN_NET).setMaxFee(2);
+    NetworkType.MAIN_NET,
+    UInt64.fromUint(2000000));
 /* end block 05 */
 
 /* start block 06 */
@@ -98,7 +99,8 @@ const tx3 = SecretProofTransaction.create(
     secret,
     alicePublicChainAccount.address,
     proof,
-    NetworkType.MAIN_NET).setMaxFee(2);
+    NetworkType.MAIN_NET,
+    UInt64.fromUint(2000000));
 
 const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
 publicChainTransactionHttp

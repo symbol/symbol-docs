@@ -25,7 +25,7 @@ const rootNamespaceName = 'foo';
 const subnamespaceName = 'bar';
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const namespaceRegistrationTransaction = nem2_sdk_1.NamespaceRegistrationTransaction.createSubNamespace(nem2_sdk_1.Deadline.create(), subnamespaceName, rootNamespaceName, networkType).setMaxFee(2);
+const namespaceRegistrationTransaction = nem2_sdk_1.NamespaceRegistrationTransaction.createSubNamespace(nem2_sdk_1.Deadline.create(), subnamespaceName, rootNamespaceName, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);

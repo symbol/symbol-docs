@@ -24,7 +24,7 @@ import {
     MosaicMetadataTransaction,
     NamespaceId,
     NetworkType,
-    TransactionHttp,
+    TransactionHttp, UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -67,7 +67,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
         nameMetadataTransaction.toAggregate(companyAccount.publicAccount)],
     networkType,
-    []).setMaxFee(2);
+    [],
+    UInt64.fromUint(2000000));
 
 /* end block 03 */
 

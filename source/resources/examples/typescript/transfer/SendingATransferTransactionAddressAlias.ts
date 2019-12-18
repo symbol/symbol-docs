@@ -16,7 +16,7 @@
  *
  */
 
-import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction} from 'nem2-sdk';
+import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
 // Replace with network type
@@ -29,5 +29,6 @@ TransferTransaction.create(
     recipientAddress,
     [],
     EmptyMessage,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 01 */

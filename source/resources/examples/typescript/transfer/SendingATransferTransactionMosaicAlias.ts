@@ -39,5 +39,6 @@ TransferTransaction.create(
     Account.generateNewAccount(networkType).address,
     [new Mosaic(mosaicId, UInt64.fromUint(10000000))],
     EmptyMessage,
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 01 */

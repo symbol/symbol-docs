@@ -34,7 +34,7 @@ nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
 nem2_sdk_1.UInt64.fromUint(1), // newRestrictionValue
 nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-networkType).setMaxFee(2);
+networkType, undefined, nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with company private key

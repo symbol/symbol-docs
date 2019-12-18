@@ -32,4 +32,5 @@ const ignored = TransferTransaction.create(
         new Mosaic ( new MosaicId('75AF035421401EF0'), UInt64.fromUint(10 * Math.pow(10, 6)))],
     /* end block 01 */
     PlainMessage.create('This is a test message'),
-    networkType).setMaxFee(2);
+    networkType,
+    UInt64.fromUint(2000000));

@@ -23,7 +23,7 @@ import {
     MultisigAccountModificationTransaction,
     NetworkType,
     PublicAccount,
-    TransactionHttp,
+    TransactionHttp, UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -52,7 +52,8 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     networkType,
-    []).setMaxFee(2);
+    [],
+    UInt64.fromUint(2000000));
 
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';

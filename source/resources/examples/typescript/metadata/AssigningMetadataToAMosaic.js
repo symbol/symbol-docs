@@ -35,7 +35,7 @@ const nameMetadataTransaction = nem2_sdk_1.MosaicMetadataTransaction.create(nem2
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    nameMetadataTransaction.toAggregate(companyAccount.publicAccount)], networkType, []).setMaxFee(2);
+    nameMetadataTransaction.toAggregate(companyAccount.publicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 /* end block 03 */
 /* start block 04 */
 // replace with meta.generationHash (nodeUrl + '/block/1')

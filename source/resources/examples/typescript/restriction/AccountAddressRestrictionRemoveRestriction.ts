@@ -24,6 +24,7 @@ import {
     Deadline,
     NetworkType,
     TransactionHttp,
+    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -41,7 +42,8 @@ const transaction = AccountRestrictionTransaction
         AccountRestrictionFlags.AllowIncomingAddress,
         [],
         [companyAddress],
-        networkType).setMaxFee(2);
+        networkType,
+        UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */
