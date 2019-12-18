@@ -109,7 +109,7 @@ Monitoring the blockchain
 
 Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response does not mean the transaction is valid, or included included in a block. A good practice is to **monitor transactions** before being announced.
+Receiving an OK response does not mean the transaction is valid, or included in a block. A good practice is to **monitor transactions** before being announced.
 
 Open three new terminals:
 
