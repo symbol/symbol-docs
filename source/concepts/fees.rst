@@ -43,7 +43,7 @@ The harvesting nodes can decide their transaction inclusion strategy:
 Rental fee
 **********
 
-Accounts willing to register a :doc:`namespace <namespace>` or a :doc:`mosaic <mosaic>` have to pay a rental fee in addition to the transaction fee. The effective rental fee is adjusted dynamically based on the :doc:`median network multiplier <harvesting>` over last :ref:`maxRollbackBlocks <config-network-properties>`.
+Accounts willing to register a :doc:`namespace <namespace>` or a :doc:`mosaic <mosaic>` have to pay a rental fee in addition to the transaction fee. The effective rental fee is adjusted dynamically based on the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
 
 For more information, see how the network calculates the effective rental fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-rental-fee>`.
 

@@ -78,7 +78,7 @@ To create a mosaic, accounts have to pay a rental fee in addition to the :doc:`t
 
 By default, registering a mosaic in Catapult's public network has an :ref:`initial cost <config-network-properties>` of ``0.0005 nem.xem``. However, **the network dynamically adjusts the mosaic rental fee** over time.
 
-To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxRollBackBlocks <config-network-properties>`. In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`. In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 
 ******
 Guides
