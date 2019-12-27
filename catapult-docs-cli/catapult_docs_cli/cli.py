@@ -6,6 +6,14 @@ from catapult_docs_cli.commands import PropertiesCommand, StatusErrorsCommand
 
 
 def load_config(config):
+    """Reads the configuration from a file.
+
+    Args:
+        config (str): Relative path to the config (.catdocs) file.
+
+    Returns:
+        obj: The config parsed as a JSON object.
+    """
     try:
         with open(config, encoding='utf-8') as file:
             return json.load(file)

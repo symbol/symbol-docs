@@ -3,8 +3,13 @@ from .base import Command, Table, Title, Paragraph, Parser
 
 
 class PropertiesCommand(Command):
+    """Command to parse config files from catapult-server (/resources/*.properties) into RST text.
+
+    The command searches in the code the description for each property.
+    """
 
     def execute(self):
+        """Contains all the logic to execute a command."""
         for c in self.config['properties']:
             print(Title(c['title']).to_string())
             if c['text']:
@@ -14,11 +19,24 @@ class PropertiesCommand(Command):
 
 
 class PropertiesTable(Table):
+    """Class to format a set of properties into RST.
+
+    Each row contains:
+        - The property name.
+        - The property type.
+        - The property description.
+        - The property default value.
+    """
 
     def __init__(self, rows):
         super().__init__(['Property', 'Type', 'Description', 'Default'], rows)
 
     def _format_rows(self):
+        """Formats the table rows as a str.
+
+        Returns:
+            str: The rows formatted as a str.
+        """
         result = ''
         for row in self.rows:
             key = row['key']
@@ -30,11 +48,28 @@ class PropertiesTable(Table):
 
 
 class PropertiesParser(Parser):
+    """Class to parse Catapult properties from catapult-server code
+
+    Parsers looks for the properties list in one main file (.properties),
+    and looks for the descriptions in a set of files (*Configuration.h).
+
+    Args:
+        source_file (str): Relative path of the source file with the properties list (.properties).
+        description_files (:obj:`list` of str): Relative paths of the files with the descriptions (*Configuration.h).
+        server_path (str): Absolute path where catapult-server is located.
+    """
 
     def __init__(self, source_file, description_files, server_path):
         super().__init__(server_path + source_file, list(map(lambda file: server_path + file, description_files)))
 
     def _parse_source_file(self):
+        """Parses the source file.
+
+        Picks the name and default value of each property.
+
+        Returns:
+            rows (:obj:`list` of str): The properties formatted as rows.
+        """
         try:
             with open(self.source_file, encoding='utf-8') as file:
                 lines = file.readlines()
@@ -61,6 +96,13 @@ class PropertiesParser(Parser):
             print('Operation failed: %s does not exist' % self.source_file)
 
     def _parse_description_files(self):
+        """Parses the source file.
+
+        Picks the name and description of each property.
+
+        Returns:
+            rows (:obj:`list` of str): The properties formatted as rows.
+        """
         rows = []
         for path in self.description_files:
             try:
@@ -75,12 +117,12 @@ class PropertiesParser(Parser):
                         if ("///" in buffer1) and (";" in line) and ("(" not in line):
                             line_split = line.split(' ')
                             # get key
-                            key = line_split[len(line_split)-1].replace(';', '').replace(' ', '')
+                            key = line_split[len(line_split) - 1].replace(';', '').replace(' ', '')
                             key = key[0].lower() + key[1:]
                             while any(key in x for x in rows):
                                 key += "!"
                             # get type
-                            classification = ' '.join(line_split[:len(line_split)-1]).lstrip()
+                            classification = ' '.join(line_split[:len(line_split) - 1]).lstrip()
                             # get description
                             description = ''
                             if "///" in buffer2:
@@ -95,4 +137,9 @@ class PropertiesParser(Parser):
         return rows
 
     def parse(self):
+        """Merges source and description parsers.
+
+        Returns:
+            rows (:obj:`list` of str): The properties formatted as rows.
+        """
         return clean_dicts(merge_dicts(self._parse_source_file(), self._parse_description_files()))

@@ -3,8 +3,13 @@ from .base import Command, Table, Title, Paragraph, Parser
 
 
 class StatusErrorsCommand(Command):
+    """Command to parse status errors from catapult-rest (catapult-sdk/src/model/status.js) into RST text.
+
+    The command searches in catapult-server code the description for each status error.
+    """
 
     def execute(self):
+        """Contains all the logic to execute a command."""
         for c in self.config['status-errors']:
             print(Title(c['title']).to_string())
             if c['text']:
@@ -15,11 +20,23 @@ class StatusErrorsCommand(Command):
 
 
 class StatusErrorsTable(Table):
+    """Class to format a set of status errors into RST.
+
+    Each row contains:
+        - The status error ID in hexadecimal.
+        - The status error friendly name.
+        - The status error description.
+    """
 
     def __init__(self, rows):
         super().__init__(['Id', 'Status', 'Description'], rows)
 
     def _format_rows(self):
+        """Formats the table rows as a str.
+
+        Returns:
+            str: The rows formatted as a str.
+        """
         result = ''
         for row in self.rows:
             key = row['key']
@@ -30,11 +47,29 @@ class StatusErrorsTable(Table):
 
 
 class StatusErrorsParser(Parser):
+    """Class to parse Catapult status-errors from catapult-rest code.
+
+    Parsers looks for the status errors list in one main catapult-rest file (catapult-sdk/src/model/status.js),
+    and looks for the descriptions in a set of catapult-server files (*validators/Results.h).
+
+    Args:
+        source_file (str): Relative path of the source file with the status errors list (status.js).
+        description_files (:obj:`list` of str): Relative paths of the files with the descriptions (*validators/Results.h).
+        server_path (str): Absolute path where catapult-server is located.
+        rest_path (str): Absolute path where catapult-rest is located.
+    """
 
     def __init__(self, source_file, description_files, server_path, rest_path):
         super().__init__(rest_path + source_file, list(map(lambda file: server_path + file, description_files)))
 
     def _parse_source_file(self):
+        """Parses the source file.
+
+        Picks the id and name of each status error.
+
+        Returns:
+            rows (:obj:`list` of str): The status errors formatted as rows.
+        """
         try:
             with open(self.source_file, encoding='utf-8') as file:
                 lines = file.readlines()
@@ -52,6 +87,13 @@ class StatusErrorsParser(Parser):
             print('Operation failed: %s does not exist' % self.source_file)
 
     def _parse_description_files(self):
+        """Parses the description files.
+
+        Picks the name and description of each status error.
+
+        Returns:
+            rows (:obj:`list` of str): The status errors formatted as rows.
+        """
         rows = []
         for path in self.description_files:
             try:
@@ -83,4 +125,9 @@ class StatusErrorsParser(Parser):
         return rows
 
     def parse(self):
+        """Merges source and description parsers.
+
+        Returns:
+            rows (:obj:`list` of str): The status errors formatted as rows.
+        """
         return clean_dicts(merge_dicts(self._parse_source_file(), self._parse_description_files()))
