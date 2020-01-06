@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-17 15:22+0000\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -172,6 +172,13 @@ msgstr ""
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:120
 msgid "Sending an AggregateBondedTransaction"
 msgstr "AggregateBondedTransaction の送信"
+
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:122
+msgid ""
+"Open a new terminal to monitor the **AggregateBondedTransaction** status by "
+"passing the multisig's address."
+msgstr ""
+"マルチシグのアドレスを渡して **アグリゲートボンデッドトランザクション** のステータスを監視するための、新しいターミナルを開いてください。"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:128
 msgid "Modify the previous code, defining the transaction as  **bonded**."
