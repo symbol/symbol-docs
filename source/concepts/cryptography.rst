@@ -12,7 +12,7 @@ Key pair
 
 Elliptic curve cryptography is an approach to **public key cryptography**. The cryptographic system uses **pairs of keys**:
 
-* **Private key**: A random 256-bit integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
+* **Private key**: A random 256-bit integer written as sixty-four hexadecimal digits used to sign :ref:`entities <verifiable-entity>` known by the owner.
 
 * **Public key**: The public identifier of the key pair, which can be disseminated widely. It is used to prove that the entity was signed with the paired private key.
 
