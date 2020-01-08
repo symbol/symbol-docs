@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli namespace alias --name nem.xem
+nem2-cli namespace alias --namespace-name nem.xem

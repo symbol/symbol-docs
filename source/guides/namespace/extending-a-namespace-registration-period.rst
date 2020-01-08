@@ -80,7 +80,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
 
 .. code-block:: bash
 
-    nem2-cli namespace info --name foo
+    nem2-cli namespace info --namespace-name foo
 
     Namespace: foo
     --------------

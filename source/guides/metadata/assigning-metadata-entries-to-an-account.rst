@@ -52,7 +52,7 @@ Creating the account
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
-    Insert profile name (blank means default and it could overwrite the previous profile): alice
+    Insert profile name: alice
 
 *************************
 Method #01: Using the SDK

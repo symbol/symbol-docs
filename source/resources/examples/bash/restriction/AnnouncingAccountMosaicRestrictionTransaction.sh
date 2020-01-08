@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli transaction accountmosaicrestriction --restriction-type allow --modification-action 1 --value 4F2F242FA35763F6
+nem2-cli transaction accountmosaicrestriction --restriction-type 0 --action 1 --mosaic-id 4F2F242FA35763F6

@@ -12,7 +12,7 @@ NEM2-CLI is distributed using the node package manager ``npm``.
 
 .. code-block:: bash
 
-    sudo npm install --global nem2-cli
+    npm install --global nem2-cli
 
 *************
 Configuration
@@ -22,13 +22,7 @@ To start using NEM2-CLI, configure a profile. Profiles are used to set a base UR
 
 .. code-block:: bash
 
-    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000
-
-NEM2-CLI supports named profiles. You can configure additional profiles by using the ``--profile`` option.
-
-.. code-block:: bash
-
-    nem2-cli profile create --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile test_net_profile
+    nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --password your_password --profile test_net_profile
 
 By default, NEM2-CLI will always use the default profile. To use a named profile, add the ``--profile`` option to the command.
 
@@ -46,7 +40,7 @@ If you do not have a private key to create a profile, you can generate a new acc
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET -s --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile test_net_profile
+    nem2-cli account generate --network TEST_NET -s --url http://api-harvest-20.us-west-1.nemtech.network:3000 --pasword your_password --profile test_net_profile
 
 ********
 Commands
@@ -63,10 +57,34 @@ Creates a new profile.
 
 .. code-block:: bash
 
-    -p, --private-key <privateKey> - Account private key.
-    -n, --network <network>        - Network Type. Example: MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST.
-    -u, --url <url>                - NEM2 Node URL. Example: http://localhost:3000
-    --profile <profile>            - (Optional) Profile name, if not private key will override the default profile.
+    -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
+    --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
+    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -p, --password <password>              - (Optional) When saving profile, provide the password.
+    -d, --default                          - (Optional) Set the profile as default.
+    -g, --generation-hash <generationHash> - (Optional) Generation hash of the network. Necessary to create the profile offline.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/account/CreatingAnAccountWallet.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Import**
+
+Creates a new profile from an existent private key.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
+    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
+    -p, --password <password>              - (Optional) When saving profile, provide the password.
+    -d, --default                          - (Optional) Set the profile as default.
+    -g, --generation-hash <generationHash> - (Optional) Generation hash of the network. Necessary to create the profile offline.
+    -P, --private-key <privateKey>         - Account private key.
 
 *Command*
 
@@ -115,10 +133,13 @@ Generated accounts can be stored as named profiles by adding a node url.
 
 .. code-block:: bash
 
-    -s, --save              - (Optional) Saves the profile
-    -u, --url <url>         - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
-    --profile <profile>     - (Optional) When saving profile you can add profile name, if not will be stored as default.
-    -n, --network <network> - Network Type (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST).
+    --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
+    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
+    -p, --password <password>              - (Optional) When saving profile, provide the password.
+    -d, --default                          - (Optional) Set the profile as default.
+    -g, --generation-hash <generationHash> - (Optional) Generation hash of the network. Necessary to create the profile offline.
+    -s, --save                             - (Optional) Saves the profile.
 
 *Command*
 
@@ -151,10 +172,8 @@ Gets an array of transactions for which an account is the sender or receiver.
 
 .. code-block:: bash
 
-  Fetch transactions from account
-
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -p, --public-key <publicKey>             - Account public key.
+    -a, --address <address>                  - Account address.
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
@@ -173,7 +192,7 @@ Gets an array of incoming transactions. A transaction is said to be incoming wit
 .. code-block:: bash
 
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -p, --public-key <publicKey>             - Account public key.
+    -a, --address <address>                  - Account address.
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
@@ -192,7 +211,7 @@ Gets an array of outgoing transactions. A transaction is said to be outgoing wit
 .. code-block:: bash
 
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -p, --public-key <publicKey>             - Account public key.
+    -a, --address <address>                  - Account address.
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
@@ -211,7 +230,7 @@ Gets the array of transactions for which an account is the sender or receiver an
 .. code-block:: bash
 
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -p, --public-key <publicKey>             - Account public key.
+    -a, --address <address>                  - Account address.
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
@@ -230,7 +249,7 @@ Gets an array of aggregate bonded transactions where the account is the sender o
 .. code-block:: bash
 
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -p, --public-key <publicKey>             - Account public key.
+    -a, --address <address>                  - Account address.
     -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
     -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
 
@@ -337,7 +356,7 @@ Diagnostic
 
 **Server info**
 
-Returns the REST server components versions.
+Gets the REST server components versions.
 
 *Options*
 
@@ -353,7 +372,7 @@ Returns the REST server components versions.
 
 **Storage**
 
-Returns diagnostic information about the node storage.
+Gets diagnostic information about the node storage.
 
 *Options*
 
@@ -403,7 +422,6 @@ Returns :doc:`metadata <concepts/metadata>` entries from a mosaic.
 .. viewsource:: resources/examples/bash/metadata/GettingMetadataEntriesMosaic.sh
     :language: bash
     :start-after: #!/bin/sh
-
 
 **Namespace**
 
@@ -543,9 +561,9 @@ Gets information from a :doc:`namespace <concepts/namespace>`.
 
 .. code-block:: bash
 
-    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
-    -n, --name <name>   - Namespace name.
-    -h, --hex <hex>     - Namespace id in hexadecimal.
+    --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
+    -n, --namespace-name <namespaceName> - Namespace name. Example: cat.currency
+    -h, --namespace-id <namespaceId>     - Namespace id in hexadecimal.
 
 *Command*
 
@@ -561,10 +579,8 @@ Gets all the :doc:`namespaces <concepts/namespace>` owned by an account.
 
 .. code-block:: bash
 
-    --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
-    -n, --name <name>       - Namespace name.
-    -h, --hex <hex>         - Namespace id in hexadecimal.
-    -a, --address <address> - Address
+    --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>              - Account address.
 
 *Command*
 
@@ -581,7 +597,7 @@ Get mosaicId or address behind an namespace.
 .. code-block:: bash
 
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
-    -n, --name <name>   - Namespace name.
+    -n, --namespace-name <namespaceName> - Namespace name.
 
 *Command*
 
@@ -592,7 +608,7 @@ Get mosaicId or address behind an namespace.
 Transaction
 ===========
 
-Transactions are signed with the profiles configured with ``nem2-cli profile create``.
+Transactions are signed with the profiles created with ``nem2-cli profile create``, ``nem2-cli profile import``, or ``nem2-cli account generate -s``.
 
 **Transaction info**
 
@@ -637,8 +653,9 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
 .. code-block:: bash
 
     --profile <profile>          - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>    - Profile password.
     -f, --max-fee <maxFee>       - Maximum fee (absolute amount).
-    -p, --public-key <publicKey> - Remote account public key.
+    -u, --public-key <publicKey> - Remote account public key.
     -a, --action <action>        - Alias action (1: Link, 0: Unlink).
 
 *Command*
@@ -655,7 +672,9 @@ Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-transaction
 
 .. code-block:: bash
 
-    -h, --hash <hash>       - AggregateBondedTransaction hash to be signed.
+    --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>    - Profile password.
+    -h, --hash <hash>   - Aggregate bonded transaction hash to be signed.
 
 *Command*
 
@@ -672,10 +691,11 @@ Creates a new :doc:`mosaic <concepts/mosaic>`.
 .. code-block:: bash
 
     --profile <profile>               - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>         - Profile password.
     -f, --max-fee <maxFee>            - Maximum fee (absolute amount).
     -a, --amount <amount>             - Initial supply of mosaics.
-    -t, --transferable                - (Optional)  Mosaic transferable.
-    -s, --supply-mutable              - (Optional)  Mosaic supply mutable.
+    -t, --transferable                - (Optional) Mosaic transferable.
+    -s, --supply-mutable              - (Optional) Mosaic supply mutable.
     -r, --restrictable                - (Optional) Mosaic restrictable.
     -d, --divisibility <divisibility> - Mosaic divisibility, from 0 to 6.
     -u, --duration <duration>         - Mosaic duration in amount of blocks.
@@ -696,10 +716,11 @@ Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
 .. code-block:: bash
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>  - Profile password.
     -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
     -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
-    -d, --delta <delta>        - Atomic amount of supply change.
+    -d, --amount <amount>      - Atomic amount of supply change.
 
 *Command*
 
@@ -716,12 +737,13 @@ Registers a :doc:`namespace <concepts/namespace>`.
 .. code-block:: bash
 
     --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>      - Profile password.
     -f, --max-fee <maxFee>         - Maximum fee (absolute amount).
     -n, --name <name>              - Namespace name.
     -r, --rootnamespace            - Root namespace.
     -s, --subnamespace             - Sub namespace.
     -d, --duration <duration>      - Duration (use it with --rootnamespace).
-    -p, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
+    -a, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
 
 *Command*
 
@@ -745,11 +767,12 @@ Links a namespace to an :doc:`address <concepts/account>`.
 
 .. code-block:: bash
 
-    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
-    -a, --action <action>       - Alias action (1: Link, 0: Unlink).
-    -a, --address <address>     - Account address.
-    -n, --namespace <namespace> - Namespace name.
+    --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>            - Profile password.
+    -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
+    -a, --action <action>                - Alias action (1: Link, 0: Unlink).
+    -a, --address <address>              - Account address.
+    -n, --namespace-name <namespaceName> - Namespace name.
 
 *Command*
 
@@ -765,11 +788,12 @@ Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
 
 .. code-block:: bash
 
-    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
-    -a, --action <action>       - Alias action (1: Link, 0: Unlink).
-    -m, --mosaic-id <mosaicId>  - Mosaic id in in hexadecimal format.
-    -n, --namespace <namespace> - Namespace name.
+    --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>            - Profile password.
+    -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
+    -a, --action <action>                - Alias action (1: Link, 0: Unlink).
+    -m, --mosaic-id <mosaicId>           - Mosaic id in hexadecimal format.
+    -n, --namespace-name <namespaceName> - Namespace name.
 
 *Command*
 
@@ -788,6 +812,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
 .. code-block:: bash
 
     --profile <profile>                                          - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                                    - Profile password.
     -f, --max-fee <maxFee>                                       - Maximum fee you want to pay to announce the transaction.
     -F, --max-fee-hash-lock <maxFeeHashLock>                     - Maximum fee you want to pay to announce the hash lock transaction.
     -D, --duration <duration>                                    - Hash lock duration expressed in blocks. [480]
@@ -796,7 +821,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
     -A, --min-approval-delta <minApprovalDelta>                  - (Optional) Number of signatures needed to approve a transaction. [0]
     -a, --action <action>                                        - Modification Action (1: Add, 0: Remove).
     -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory accounts public keys (separated by a comma).
-    -m, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
+    -u, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
 
 *Command*
 
@@ -813,6 +838,7 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                  - Profile password.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
     -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier or @alias.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
@@ -836,6 +862,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 .. code-block:: bash
 
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                  - Profile password.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
     -s, --secret <secret>                      - Proof hashed in hexadecimal.
     -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
@@ -856,12 +883,12 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 
 .. code-block:: bash
 
-    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
-    -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
-    -d, --restriction-direction <restrictionDirection> - Restriction direction (incoming, outgoing).
-    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
-    -v, --value <value>                                - Address or @alias to allow/block.
+    --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                  - Profile password.
+    -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    -f, --flags <flags>                        - Restriction flags.(0: AllowOutgoingAddress, 1: BlockOutgoingAddress, 2: AllowIncomingAddress, 3: BlockIncomingAddress)
+    -a, --action <action>                      - Modification action. (1: Add, 0: Remove).
+    -v, --recipient-address <recipientAddress> - Address or @alias to allow/block.
 
 *Command*
 
@@ -877,11 +904,12 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 
 .. code-block:: bash
 
-    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
-    -t, --restriction-type <restrictionFlag>           - Restriction flag (allow, block).
-    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
-    -v, --value <value>                                - Mosaic or @alias to allow / block.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>  - Profile password.
+    -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
+    -f, --flags <flags>        - Restriction flags.(0: AllowMosaic, 1: BlockMosaic)
+    -a, --action <action>      - Modification action. (1: Add, 0: Remove).
+    -v, --mosaic-id <mosaicId> - Mosaic or @alias to allow / block.
 
 *Command*
 
@@ -897,11 +925,12 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
 
 .. code-block:: bash
 
-    --profile <profile>                                - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>                             - Maximum fee (absolute amount).
-    -t, --restriction-flag <restrictionFlag>           - Restriction flag (allow, block).
-    -a, --modification-action <modificationAction>     - Modification action. (1: Add, 0: Remove).
-    -v, --value <value>                                - Transaction type formatted as hex.
+    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                - Profile password.
+    -f, --max-fee <maxFee>                   - Maximum fee (absolute amount).
+    -f, --flags <flags>                      - Restriction flag. (0: AllowOutgoingTransactionType, 1: BlockOutgoingTransactionType)
+    -a, --action <action>                    - Modification action. (1: Add, 0: Remove).
+    -v, --transaction-type <transactionType> - Transaction type formatted as hex.
 
 *Command*
 
@@ -919,14 +948,15 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
 
 .. code-block:: bash
 
-    --profile <profile>         - (Optional) Select between your profiles, by providing a profile name.
-    -f, --max-fee <maxFee>      - Maximum fee (absolute amount).
-    -r, --recipient-address <recipient> - Recipient address or @alias.
-    -m, --message <message>     - Transaction message.
-    -c, --mosaics <mosaics>     - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
-    -e, --encrypted             - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
-    -p, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
-    -d, --persistent-harvesting-delegation - (Optional) Start persistent harvesting delegation.
+    --profile <profile>                             - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                       - Profile password.
+    -f, --max-fee <maxFee>                          - Maximum fee (absolute amount).
+    -r, --recipient-address <recipientAddress>      - Recipient address or @alias.
+    -m, --message <message>                         - Transaction message.
+    -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
+    -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
+    -u, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
+    -d, --persistent-harvesting-delegation          - (Optional) Start persistent harvesting delegation.
 
 *Command*
 

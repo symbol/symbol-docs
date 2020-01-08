@@ -22,7 +22,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.15.1
+    npm install --global nem2-cli@0.16.1
 
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 

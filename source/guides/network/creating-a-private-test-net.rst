@@ -119,7 +119,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.13.4
+    npm install --global nem2-cli
 
 2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
 
@@ -135,16 +135,16 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
 4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
 
-5. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
+5. Type the command ``nem2-cli profile import`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
-    nem2-cli profile create
+    nem2-cli profile import
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
     Introduce your private key: 123***456
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
-    Insert profile name (blank means default and it could overwrite the previous profile):
+    Insert profile name: base-profile
 
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
