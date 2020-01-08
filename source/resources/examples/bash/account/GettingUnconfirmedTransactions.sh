@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli account unconfirmed --public-key E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F
+nem2-cli account unconfirmed --address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4
