@@ -10,9 +10,11 @@ A cross-chain swap enables **trading tokens** across **different blockchains**, 
 
     Atomic cross-chain swap between public and private network
 
-In order to create a trustless environment for an exchange, a specific transaction type is required that is commonly referred to as **Hashed TimeLock Contract** (HTLC). Two additional components characterize this transaction type: *hashlocks* and *timelocks*. A thorough explanation can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
+Catapult follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets. 
 
-In other words, to reduce counterparty risk, the receiver of a payment needs to present a proof for the transaction to execute. Failing to do so, the payment will be released back to the sender, even if the counterparty has claimed his/her payment.  
+HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk. Every participant in the exchange of assets needs to present proof (hashlock) to complete the exchange. Failing to do so, the units locked are released back to each original owner after the lock expires (timelock).
+
+A thorough explanation of the protocol can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
 
 ********
 Protocol
