@@ -30,7 +30,7 @@ The network calculates the following sub scores for all high-value accounts for 
 
 * **Stake Score (S`)**: Percentage of the effective balance of all high value accounts at time P.
 * **Transaction Score (T`)**: Percentage of total transaction fees among all high-value accounts in period P-1 to P.
-* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in P-1 to P.
+* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in period P-1 to P.
 
 *********
 Constants
