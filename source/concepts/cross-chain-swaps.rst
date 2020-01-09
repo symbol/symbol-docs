@@ -12,7 +12,7 @@ A cross-chain swap enables **trading tokens** across **different blockchains**, 
 
 Catapult follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets. 
 
-HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk. Every participant in the exchange of assets needs to present proof (hashlock) to complete the exchange. Failing to do so, the units locked are released back to each original owner after the lock expires (timelock).
+HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk. Every participant in the exchange of assets needs to present proof (hashlock) to complete it. Failing to do so, the locked assets are released back to each original owner after the timelock expires.
 
 A thorough explanation of the protocol can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
 
