@@ -14,7 +14,7 @@ Eligibility criteria
 
 The :ref:`importance score <importance-calculation>` determines the probability of an account to harvest the next block in case the account has harvesting turned on and all other accounts are harvesting too.
 
-Catapult's public network defines that an account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance greater than zero. Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
+Catapult's public network defines that an account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero. Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
 .. _harvesting-mosaic:
 
