@@ -96,6 +96,12 @@ Creates a new profile from an existent private key.
 
 Displays the list of stored profiles.
 
+*Options*
+
+.. code-block:: bash
+
+     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
+
 *Command*
 
 .. viewsource:: resources/examples/bash/account/ListingProfiles.sh
@@ -313,6 +319,109 @@ Returns the receipts for a given block height.
 *Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingBlockReceipts.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Convert
+=======
+
+Utilities to convert  between data types.
+
+**Namespace name to id**
+
+Namespace name -> NamespaceId coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -v, --namespace-name <namespaceName> - Namespace name.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertNamespaceNameToId.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Numeric string to UInt64**
+
+Numeric string -> UInt64 coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -a, --amount <amount> - Numeric string. Example: 12345678
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertNumericStringToUInt64.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Payload to transaction**
+
+Payload -> Transaction coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -p, --payload <payload> - Transaction payload.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertPayloadToTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Private key to public key**
+
+Private key -> Public key coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -p, --private-key <privateKey> - Private Key.
+    -n, --network <network>        - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertPrivateKeyToPublicKey.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Public key to address**
+
+Public key -> Address coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -p, --public-key <publicKey>   - Public Key.
+    -n, --network <network>        - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertPublicKeyToAddress.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**String to key**
+
+String -> UInt64 coder.
+
+*Options*
+
+.. code-block:: bash
+
+    -v, --value <value> - String value.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertStringToKey.sh
     :language: bash
     :start-after: #!/bin/sh
 
