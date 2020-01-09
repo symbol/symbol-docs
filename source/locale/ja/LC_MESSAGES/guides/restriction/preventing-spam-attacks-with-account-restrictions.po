@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -90,8 +90,8 @@ msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
 msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:41
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:43
 msgid ""
@@ -109,7 +109,7 @@ msgstr "会社用に別のアカウントを作成します。"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:89
 msgid ""
-"Next, you will configure the product's account to only accept receiving "
+"Next, you will configure the product's account only to accept receiving "
 "transfer transactions that contain a specific mosaic."
 msgstr "次に特定のモザイクを含む受信転送トランザクションのみを受け入れるように製品アカウントを構成します。"
 
@@ -129,8 +129,8 @@ msgstr ""
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:96
 msgid ""
 "Allow and block restrictions are mutually exclusive per restriction type. In"
-" other words, an account can only be configured  to have either an allowed "
-"or blocked list per type of restriction."
+" other words, an account can only be configured to have either an allowed or"
+" blocked list per type of restriction."
 msgstr ""
 "許可とブロック制限は制限タイプごとに相互に排他的です。つまり、アカウントは制限の種類ごとに許可リストまたはブロックリストのいずれかを持つようにしか構成できません。"
 
@@ -143,84 +143,77 @@ msgstr "デフォルトでは、制限セットがない場合、ネットワー
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:100
 msgid ""
 "Returning to our previous example, let us imagine that you want to configure"
-" the product account to only accept receiving transactions  that come from "
+" the product account only to accept receiving transactions that come from "
 "the company's account. You might take the following steps to do so:"
 msgstr ""
 "前の例に戻り、会社アカウントからの受信トランザクションのみを受け入れるように製品アカウントを構成するとします。これを行うには次の手順を実行します。"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:102
 msgid ""
-"Define the **AccountRestrictionModification**. Add to the company’s address "
-"``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` to the allowed list."
+"Define the company’s address ``TCVQ2R-XKJQKH-4RJZWG-"
+"DARWJ6-V4J4W7-F4DGH6-ZFAB`` in a new variable."
 msgstr ""
-"**AccountRestrictionModification** を定義します。会社アドレス ``SBI774-YMFDZI-"
-"FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` を許可リストに追加します。"
+"会社アドレス ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` を新しい変数に定義します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:111
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:116
 msgid ""
 "Create an **AccountRestrictionTransaction**, with restrictionType "
-"``AllowAddress``.  Add to the array the modification created in the previous"
-" step."
+"``AllowAddress``.  Add to the company’s address from the previous step to "
+"the allowed list."
 msgstr ""
 "制限タイプ ``AllowAddress`` の **AccountRestrictionTransaction** "
-"を作成してください。前の手順で作成した変更を配列に追加します。"
+"を作成してください。前ステップの会社の住所を許可リストに追加します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:120
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:164
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:198
-msgid "Sign and announce the transaction."
-msgstr "署名してアナウンスします。"
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:130
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:187
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:236
+msgid "Sign and announce the transaction with the product's account."
+msgstr "製品のアカウントでトランザクションへ署名してアナウンスをします。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:129
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:144
 msgid ""
 "Now, if you send a :doc:`TransferTransaction <../transfer/sending-a"
-"-transfer-transaction>` from another account, you will get an error as only "
-"``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` is allowed to send the "
-"transactions to the product."
+"-transfer-transaction>` from another account, you will get an error since "
+"only ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` is allowed to send "
+"transactions to the product's account."
 msgstr ""
-"今や :doc:`TransferTransaction <../transfer/sending-a-transfer-transaction>` "
-"を送ると ``SBI774-YMFDZI-FPEPC5-4EKRC2-5DKDZJ-H2QVRW-4HBP`` "
-"だけが製品へのトランザクション送信が許可されているためエラーが発生します。"
+"今や他のアカウントから :doc:`TransferTransaction <../transfer/sending-a-transfer-"
+"transaction>` を送ると ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` "
+"だけが製品アカウントへのトランザクション送信が許可されているためエラーが発生します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:131
-msgid ""
-"On the other hand, if you send a transaction from your company account, you "
-"will receive a confirmation message as you would normally."
-msgstr "一方であなたの会社アカウントからトランザクションを送った場合は、通常通りに承認メッセージを受け取るでしょう。"
-
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:134
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:147
 msgid "Blocking transactions by mosaic id"
 msgstr "MosaicID によるトランザクションのブロック"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:136
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:149
 msgid ""
 "Imagine that the account that represents the company owns the following "
 "mosaics:"
 msgstr "会社を表すアカウントが次のモザイクを所有しているとします:"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:138
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:151
 msgid "``company.share``: represents shares of the company."
 msgstr "``company.share``: 会社の株式を表現"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:139
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:152
 msgid ""
 "``company.quality.seal``: represents that the product has passed a quality "
 "test."
 msgstr "``company.quality.seal``: 製品の品質テストの合格を表現"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:140
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:153
 msgid ""
 "``company.safety.seal``: represents that the product has passed a safety "
 "test."
 msgstr "``company.safety.seal``: 製品の安全テストの合格を表現"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:142
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:155
 msgid ""
 "In this case, it might be useful if the product could only receive seals and"
 " not company shares."
 msgstr "この場合、製品はシールを受け取ることができるだけで、会社の株は受け取ることができないようにすることに役立ちます。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:144
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:157
 msgid ""
 "Thus, you could narrow the type of transactions that the product can receive"
 " from the company's account through the use of negation. Instead of "
@@ -231,14 +224,14 @@ msgstr ""
 "したがって、否定を使用することで、製品が会社のアカウントから受け取ることができるトランザクションの種類を絞り込むことができます。シールを明確に許可する代わりに"
 " ``company.share`` が含まれる受信トランザクションをブロックするように製品を設定できます。このようにします:"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:146
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:159
 msgid ""
 "Define the **AccountRestrictionModification**. Add the mosaic id you want to"
 " block to the blocked list."
 msgstr ""
 "**AccountRestrictionModification** を定義します。``ブロックリスト`` に追加したいモザイクIDを追加してください。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:155
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:173
 msgid ""
 "Create an **AccountRestrictionTransaction**, with restrictionType "
 "``BlockMosaic``.  Add to the array the modification created in the previous "
@@ -247,7 +240,7 @@ msgstr ""
 "制限タイプ ``BlockMosaic`` の **AccountRestrictionTransaction** "
 "を作成してください。前の手順で作成した変更を配列に追加します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:173
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:201
 msgid ""
 "If the process was successful, the product account can now only receive "
 "transactions from the company's account that does not include any "
@@ -256,11 +249,11 @@ msgstr ""
 "プロセスが成功すると、製品アカウントは ``company.share`` "
 "モザイクが含まれない会社アカウントからのトランザクションだけを受け取ることができます。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:176
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:204
 msgid "Removing a restriction"
 msgstr "制限の除去"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:178
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:206
 msgid ""
 "After the company sells the product to the final client, they want to remove"
 " the condition that only allowed the company's account to send transactions "
@@ -269,13 +262,13 @@ msgid ""
 msgstr ""
 "会社が最終顧客に商品を販売した後は、彼らは会社アカウントが商品にトランザクションを送信することのみを許可していたという条件を取り除きたいのです。アカウント制限は設定するのと同じくらい簡単に削除できます。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:180
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:208
 msgid ""
 "Define the **AccountRestrictionModification**. Remove from the allowed list "
 "the company's address."
 msgstr "**AccountRestrictionModification** を定義します。``許可リスト`` から会社アドレスを削除します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:189
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:222
 msgid ""
 "Create an **AccountRestrictionTransaction**, setting the type "
 "``AllowAddress``. Add as well the modification created."
@@ -283,8 +276,8 @@ msgstr ""
 "``AllowAddress`` タイプ を設定して **AccountRestrictionTransaction** "
 "を作成します。作成した変更も追加します。"
 
-#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:207
+#: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:250
 msgid ""
 "After the transaction gets confirmed, you should be able to send "
-"transactions from any account to the product account once again."
+"transactions from any account to the product's account again."
 msgstr "トランザクションが承認された後に、あなたは再び任意のアカウントから製品アカウントにトランザクションを送ることができるはずです。"

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nem2-cli transaction secretproof --secret BFD12D3F14460FA9B7CE0B209FCAF37FFFAED56E2925E595ACD569B6D29FA2CF --proof 519548b5cfb82fc2899f --hash-algorithm Op_Sha3_256 --recipient-address SATXKQ-QSWIMT-3S32BA-IEMZXD-P4HHUA-LDEYPL-EAZY

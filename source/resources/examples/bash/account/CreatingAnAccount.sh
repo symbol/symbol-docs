@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli account generate --network MIJIN_TEST
+nem2-cli account generate --network TEST_NET

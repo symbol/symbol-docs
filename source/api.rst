@@ -1,52 +1,8 @@
-########
-REST API
-########
+############
+REST Gateway
+############
 
-The **REST server** combines HTTP and WebSockets to perform read and write actions in the NEM blockchain.
-
-************
-Installation
-************
-
-**Repository**: |catapult-rest|
-
-.. note:: catapult-rest is already included in |catapult-service-bootstrap|. Follow the :doc:`package's installation instructions <getting-started/setup-workstation>` to deploy a network for development or learning purposes.
-
-To install catapult-rest from scratch, you will need:
-
-- NodeJS version 8 or 9
-- |yarn| dependency manager
-- |catapult-server| configured as an :doc:`API node <server>`.
-
-1. Edit ``rest/resources/rest.json`` configuration:
-
-.. csv-table::
-    :header: "Parameter", "Description", "Example"
-    :widths: 20 40 40
-    :delim: ;
-
-    clientPrivateKey; REST client private key.;  000...000
-    db.url;  MongoDB :properties:`connection URL <config-database.properties#L3>`; mongodb://localhost:27017/
-    apiNode.host; API node connection host.; 127.0.0.1
-    apiNode.port; API node :properties:`connection port <config-database.properties#L3>`.; 7900
-    api.publicKey; API node :properties:`public key <config-user.properties#L4>`.; FFFF...FFF
-    websocket.mq.host; ZeroMQ connection host.;  127.0.0.1
-    websocket.mq.port; ZeroMQ :properties:`connection port <config-messaging.properties#L3>`. ; 7902
-
-.. note:: Catapult REST has to reach the API node, ZeroMQ and MongoDB ports. If you are running catapult-server on a VPS, you can bind the ports to your local development environment creating an **SSH tunnel**: ``ssh -L 27017:localhost:27017 -L 7900:localhost:7900 -L 7902:localhost:7902 -p 2357 <USER>@<VPS_IP>``
-
-2. Install the project's dependencies:
-
-.. code-block:: bash
-
-    ./yarn_setup.sh
-
-3. Run catapult-rest:
-
-.. code-block:: bash
-
-    cd rest
-    yarn start resources/rest.json
+The **REST gateway** combines HTTP and WebSockets to perform read and write actions on the blockchain.
 
 .. _http-requests:
 
@@ -54,19 +10,19 @@ To install catapult-rest from scratch, you will need:
 Http requests
 *************
 
-Catapult REST uses port ``3000``. It accepts both HTTP **GET**, **PUT** and **POST** requests.
+|catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is :doc:`running locally  <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
+Assuming that Catapult REST is :doc:`running locally <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
 
     http://localhost:3000/<path-to-API-request>
 
-HTTP PUT and POST requests use JSON structures in the request body. Request returns data using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
+Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
 
 Get the complete list of available endpoints by clicking on the button below:
 
 .. raw:: html
 
-    <a href="/endpoints.html"><button class="btn btn-default">REST API Endpoints</button></a>
+    <a href="https://nemtech.github.io/nem2-openapi" rel="nofollow"><button class="btn btn-default">REST API Endpoints</button></a>
 
 .. _websockets:
 
@@ -74,52 +30,158 @@ Get the complete list of available endpoints by clicking on the button below:
 WebSockets
 **********
 
-WebSockets make receiving notifications possible when a transaction or event occurs in the blockchain. The notification is received in real time without having to poll the API waiting for a reply.
+To get **live updates** when an event occurs on the blockchain, Catapult REST publishes WebSockets. Client applications can open a WebSocket connection and get a unique identifier. With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates. When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
 
-The interaction with API WebSockets in :doc:`NEM2-SDK <../sdk>` is done with **Listeners**.
+WebSocket URIs share the same host and port as the HTTP requests URIs, but use the ``ws://`` protocol:
+
+	ws://localhost:3000/ws
+
+* Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain/listening-new-blocks>`
 
 Channels
 ========
 
 **block**
 
-The block channel notifies for every new block. The message contains the block information.
+The block channel notifies for every subscribed client every time there is a new harvested block. The messages returned contain information about the blocks.
 
-**confirmedAdded/<ADDRESS>**
+*Request body*
 
-The confirmedAdded channel notifies when a transaction related to an address is included in a block. The message contains the transaction.
+.. code-block:: json
 
-**unconfirmedAdded/<ADDRESS>**
+    {
+        "uid": "{uid}",
+        "subscribe": "block"
+    }
 
-The unconfirmedAdded channel notifies when a transaction related to an address is in unconfirmed state and waiting to be included in a block. The message contains the transaction.
+*Response format*
 
-Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from *partial* to *unconfirmed*.
+* `BlockInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
-**unconfirmedRemoved/<ADDRESS>**
+**confirmedAdded/{address}**
 
-The unconfirmedRemoved channel notifies when a transaction related to an address was in unconfirmed state but is not anymore. The message contains the transaction hash.
+The confirmedAdded channel notifies when a transaction related to an address is included in a block. The messages returned contain information about the confirmed transactions.
 
-Possible scenarios when this channel notifies are: the transaction now is confirmed or the deadline has been reached and it was not included in a block.
+*Request body*
 
-**partialAdded/<ADDRESS>**
+.. code-block:: json
 
-The partialAdded channel notifies when an AggregateBondedTransaction related to an address is in *partial* state and waiting to have all *required cosigners*. The message contains a transaction.
+    {
+        "uid": "{uid}",
+        "subscribe": "confirmedAdded/{address}"
+    }
 
-The scenario when this channel notifies is when an AggregateBondedTransaction is announced to the network via ``PUT /transaction/partial`` HTTP endpoint.
+*Response format*
 
-**partialRemoved/<ADDRESS>**
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
-The partialRemoved channel notifies when a transaction related to an address was in partial state but is not anymore. The message contains the transaction hash.
+**unconfirmedAdded/{address}**
 
-Possible scenarios when this channel notifies are: the transaction now is in unconfirmed or the deadline has been reached and it was not included in a block.
+The unconfirmedAdded channel notifies when a transaction related to an address gets the unconfirmed state, waiting to be included in a block. The messages returned contain information about unconfirmed transactions.
 
-**cosignature/<ADDRESS>**
+Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from partial to unconfirmed.
 
-The cosignature channel notifies when a *cosignature signed transaction* related to an address is added to an AggregateBondedTransaction with partial state. The message contains the cosignature signed transaction.
+*Request body*
 
-**status/<ADDRESS>**
+.. code-block:: json
 
-The status channel notifies when a transaction related to an address rises an error. The message contains the error message and the transaction hash.
+    {
+        "uid": "{uid}",
+        "subscribe": "unconfirmedAdded/{address}"
+    }
+
+*Response format*
+
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+
+**unconfirmedRemoved/{address}**
+
+The unconfirmedRemoved channel notifies when a transaction related to an address had the unconfirmed state, but not anymore. The messages returned contain the transactions hashes.
+
+Possible scenarios when this channel notifies are: the transaction now is confirmed, or the deadline has been reached, and it was not included in a block.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid":"{uid}",
+        "subscribe":"unconfirmedRemoved/{address}"
+    }
+
+*Response format*
+
+* Hash
+
+**partialAdded/{address}**
+
+The partialAdded channel notifies when an AggregateBondedTransaction related to an address reaches the partial state, waiting to have all required cosigners. The messages returned contain information about the transactions.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "partialAdded/{address}"
+    }
+
+*Response format*
+
+* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+
+**partialRemoved/{address}**
+
+The partialRemoved channel notifies when a transaction related to an address had the partial state, but is not anymore. The messages returned contain the transactions hashes.
+
+Possible scenarios when this channel notifies are: the transaction now is unconfirmed, or the deadline has been reached, and it was not included in a block.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "partialRemoved/{address}"
+    }
+
+*Response format*
+
+* Hash
+
+**cosignature/{address}**
+
+The cosignature channel notifies when a cosignature signed transaction related to an address is added to an AggregateBondedTransaction with the partial state. The messages returned contain the cosignature signed transaction.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "cosignature/{address}"
+    }
+
+*Response format*
+
+* `CosignatureDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
+
+**status/{address}**
+
+The status channel notifies when a transaction related to an address rises an error. The messages returned contain the error messages and the transaction hashes.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "status/{address}"
+    }
+
+*Response format*
+
+* `TransactionStatusDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
 .. _status-errors:
 
@@ -148,12 +210,13 @@ This section describes the error messages that can be returned via status channe
     0x8043000A; Failure_Core_Block_Harvester_Ineligible; Validation failed because a block was harvested by an ineligible harvester.
     0x8043000B; Failure_Core_Zero_Address; Validation failed because an address is zero.
     0x8043000C; Failure_Core_Zero_Public_Key; Validation failed because a public key is zero.
-    0x81490001; Failure_Hash_Exists; Validation failed because the entity hash is already known.
+    0x8043000D; Failure_Core_Nonzero_Internal_Padding; Validation failed because internal padding is nonzero.
+    0x81490001; Failure_Hash_Already_Exists; Validation failed because the entity hash is already known.
     0x80530001; Failure_Signature_Not_Verifiable; Validation failed because the verification of the signature failed.
     0x804C0001; Failure_AccountLink_Invalid_Action; Validation failed because account link action is invalid.
     0x804C0002; Failure_AccountLink_Link_Already_Exists; Validation failed because main account is already linked to another account.
     0x804C0003; Failure_AccountLink_Unknown_Link; Validation failed because main account is not linked to another account.
-    0x804C0004; Failure_AccountLink_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing account link.
+    0x804C0004; Failure_AccountLink_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing account link.
     0x804C0005; Failure_AccountLink_Remote_Account_Ineligible; Validation failed because link is attempting to convert ineligible account to remote.
     0x804C0006; Failure_AccountLink_Remote_Account_Signer_Prohibited; Validation failed because remote is not allowed to sign a transaction.
     0x804C0007; Failure_AccountLink_Remote_Account_Participant_Prohibited; Validation failed because remote is not allowed to participate in the transaction.
@@ -163,6 +226,7 @@ This section describes the error messages that can be returned via status channe
     0x80410004; Failure_Aggregate_Redundant_Cosignatures; Validation failed because redundant cosignatures are present.
     0x80410005; Failure_Aggregate_Ineligible_Cosignatories; Validation failed because at least one cosignatory is ineligible.
     0x80410006; Failure_Aggregate_Missing_Cosignatures; Validation failed because at least one required cosignature is missing.
+    0x80410007; Failure_Aggregate_Transactions_Hash_Mismatch; Validation failed because the aggregate transactions hash does not match the calculated value.
     0x80480001; Failure_LockHash_Invalid_Mosaic_Id; Validation failed because lock does not allow the specified mosaic.
     0x80480002; Failure_LockHash_Invalid_Mosaic_Amount; Validation failed because lock does not allow the specified amount.
     0x80480003; Failure_LockHash_Hash_Already_Exists; Validation failed because hash is already present in cache.
@@ -205,7 +269,7 @@ This section describes the error messages that can be returned via status channe
     0x804D0072; Failure_Mosaic_Required_Property_Flag_Unset; Validation failed because the mosaic has at least one required property flag unset.
     0x80550001; Failure_Multisig_Account_In_Both_Sets; Validation failed because account is specified to be both added and removed.
     0x80550002; Failure_Multisig_Multiple_Deletes; Validation failed because multiple removals are present.
-    0x80550003; Failure_Multisig_Redundant_Modifications; Validation failed because redundant modifications are present.
+    0x80550003; Failure_Multisig_Redundant_Modification; Validation failed because a modification is redundant.
     0x80550004; Failure_Multisig_Unknown_Multisig_Account; Validation failed because account is not in multisig cache.
     0x80550005; Failure_Multisig_Not_A_Cosignatory; Validation failed because account to be removed is not present.
     0x80550006; Failure_Multisig_Already_A_Cosignatory; Validation failed because account to be added is already a cosignatory.
@@ -226,7 +290,7 @@ This section describes the error messages that can be returned via status channe
     0x804E0064; Failure_Namespace_Invalid_Registration_Type; Validation failed because the namespace registration type is invalid.
     0x804E0065; Failure_Namespace_Root_Name_Reserved; Validation failed because the root namespace has a reserved name.
     0x804E0066; Failure_Namespace_Too_Deep; Validation failed because the resulting namespace would exceed the maximum allowed namespace depth.
-    0x804E0067; Failure_Namespace_Parent_Unknown; Validation failed because the namespace parent is unknown.
+    0x804E0067; Failure_Namespace_Unknown_Parent; Validation failed because the namespace parent is unknown.
     0x804E0068; Failure_Namespace_Already_Exists; Validation failed because the namespace already exists.
     0x804E0069; Failure_Namespace_Already_Active; Validation failed because the namespace is already active.
     0x804E006A; Failure_Namespace_Eternal_After_Nemesis_Block; Validation failed because an eternal namespace was received after the nemesis block.
@@ -235,21 +299,22 @@ This section describes the error messages that can be returned via status channe
     0x804E006D; Failure_Namespace_Unknown; Validation failed because namespace does not exist.
     0x804E006E; Failure_Namespace_Alias_Already_Exists; Validation failed because namespace is already linked to an alias.
     0x804E006F; Failure_Namespace_Unknown_Alias; Validation failed because namespace is not linked to an alias.
-    0x804E0070; Failure_Namespace_Alias_Unlink_Type_Inconsistency; Validation failed because unlink type is not consistent with existing alias.
-    0x804E0071; Failure_Namespace_Alias_Unlink_Data_Inconsistency; Validation failed because unlink data is not consistent with existing alias.
+    0x804E0070; Failure_Namespace_Alias_Inconsistent_Unlink_Type; Validation failed because unlink type is not consistent with existing alias.
+    0x804E0071; Failure_Namespace_Alias_Inconsistent_Unlink_Data; Validation failed because unlink data is not consistent with existing alias.
     0x804E0072; Failure_Namespace_Alias_Invalid_Address; Validation failed because aliased address is invalid.
-    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Type; Validation failed because the account restriction type is invalid.
+    0x80500001; Failure_RestrictionAccount_Invalid_Restriction_Flags; Validation failed because the account restriction flags are invalid.
     0x80500002; Failure_RestrictionAccount_Invalid_Modification_Action; Validation failed because a modification action is invalid.
     0x80500003; Failure_RestrictionAccount_Invalid_Modification_Address; Validation failed because a modification address is invalid.
     0x80500004; Failure_RestrictionAccount_Modification_Operation_Type_Incompatible; Validation failed because the operation type is incompatible. *Note*: This indicates that the existing restrictions have a different operation type than that specified in the notification.
-    0x80500005; Failure_RestrictionAccount_Modification_Redundant; Validation failed because a modification is redundant.
+    0x80500005; Failure_RestrictionAccount_Redundant_Modification; Validation failed because a modification is redundant.
     0x80500006; Failure_RestrictionAccount_Invalid_Modification; Validation failed because a value is not in the container.
     0x80500007; Failure_RestrictionAccount_Modification_Count_Exceeded; Validation failed because the transaction has too many modifications.
-    0x80500008; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
-    0x80500009; Failure_RestrictionAccount_Invalid_Value; Validation failed because the account restriction value is invalid.
-    0x8050000A; Failure_RestrictionAccount_Address_Interaction_Prohibited; Validation failed because the addresses involved in the transaction are not allowed to interact.
-    0x8050000B; Failure_RestrictionAccount_Mosaic_Transfer_Prohibited; Validation failed because the mosaic transfer is prohibited by the recipient.
-    0x8050000C; Failure_RestrictionAccount_Operation_Type_Prohibited; Validation failed because the operation type is not allowed to be initiated by the signer.
+    0x80500008; Failure_RestrictionAccount_No_Modifications; Validation failed because the transaction has no modifications.
+    0x80500009; Failure_RestrictionAccount_Values_Count_Exceeded; Validation failed because the resulting account restriction has too many values.
+    0x8050000A; Failure_RestrictionAccount_Invalid_Value; Validation failed because the account restriction value is invalid.
+    0x8050000B; Failure_RestrictionAccount_Address_Interaction_Prohibited; Validation failed because the addresses involved in the transaction are not allowed to interact.
+    0x8050000C; Failure_RestrictionAccount_Mosaic_Transfer_Prohibited; Validation failed because the mosaic transfer is prohibited by the recipient.
+    0x8050000D; Failure_RestrictionAccount_Operation_Type_Prohibited; Validation failed because the operation type is not allowed to be initiated by the signer.
     0x80510001; Failure_RestrictionMosaic_Invalid_Restriction_Type; Validation failed because the mosaic restriction type is invalid.
     0x80510002; Failure_RestrictionMosaic_Previous_Value_Mismatch; Validation failed because specified previous value does not match current value.
     0x80510003; Failure_RestrictionMosaic_Previous_Value_Must_Be_Zero; Validation failed because specified previous value is nonzero.
@@ -272,19 +337,21 @@ This section describes the error messages that can be returned via status channe
     0x80FE0005; Failure_Consumer_Remote_Chain_Improper_Link; Validation failed because the chain is internally improperly linked.
     0x80FE0006; Failure_Consumer_Remote_Chain_Duplicate_Transactions; Validation failed because the chain part contains duplicate transactions.
     0x80FE0007; Failure_Consumer_Remote_Chain_Unlinked; Validation failed because the chain part does not link to the current chain.
-    0x80FE0008; Failure_Consumer_Remote_Chain_Mismatched_Difficulties; Validation failed because the remote chain difficulties do not match the calculated difficulties.
+    0x80FE0008; Failure_Consumer_Remote_Chain_Difficulties_Mismatch; Validation failed because the remote chain difficulties do not match the calculated difficulties.
     0x80FE0009; Failure_Consumer_Remote_Chain_Score_Not_Better; Validation failed because the remote chain score is not better.
     0x80FE000A; Failure_Consumer_Remote_Chain_Too_Far_Behind; Validation failed because the remote chain is too far behind.
     0x80FE000B; Failure_Consumer_Remote_Chain_Too_Far_In_Future; Validation failed because the remote chain timestamp is too far in the future.
     0x80FE000C; Failure_Consumer_Batch_Signature_Not_Verifiable; Validation failed because the verification of the signature failed during a batch operation.
     0x80450001; Failure_Extension_Partial_Transaction_Cache_Prune; Validation failed because the partial transaction was pruned from the temporal cache.
     0x80450002; Failure_Extension_Partial_Transaction_Dependency_Removed; Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
+    0x80450003; Failure_Extension_Read_Rate_Limit_Exceeded; Validation failed because socket read rate limit was exceeded.
 
 .. _tools:
 
 *****
 Tools
 *****
+
 We recommend using one of the following tools to interact with the available endpoints.
 
 NEM2-SDK
@@ -295,26 +362,26 @@ The **NEM2 Software Development Kit** is the primary software development tool t
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`
 
-Insomnia
+Postman
 ========
 
-An open source HTTP client, available for Mac, Windows and Linux.
+HTTP client, available for Mac, Windows and Linux.
 
-1. Download |insomnia-app| for your operative system.
+1. Download |postman-app| for your current operative system.
 
-2. Import the |insomnia-spec| for NEM.
+2. Import the |postman-spec| for Catapult.
 
 .. |yarn| raw:: html
 
     <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
 
-.. |insomnia-app| raw:: html
+.. |postman-app| raw:: html
 
-    <a href="https://insomnia.rest/" target="_blank">Insomnia app</a>
+    <a href="https://www.getpostman.com/downloads/" target="_blank">Postman app</a>
 
-.. |insomnia-spec| raw:: html
+.. |postman-spec| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-openapi/blob/master/spec/insomnia.json/" target="_blank">Insomnia spec</a>
+    <a href="https://github.com/nemtech/nem2-openapi/releases" target="_blank">Postman spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
@@ -326,4 +393,4 @@ An open source HTTP client, available for Mac, Windows and Linux.
 
 .. |catapult-rest| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-rest" target="_blank">catapult-rest</a>
+   <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult REST</a>

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli account aggregatebonded --public-key 7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246
+nem2-cli account aggregatebonded --address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4

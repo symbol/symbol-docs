@@ -16,36 +16,19 @@
  *
  */
 
-import {
-    Account,
-    Deadline,
-    EmptyMessage,
-    NamespaceId,
-    NetworkCurrencyMosaic,
-    NetworkType,
-    TransactionHttp,
-    TransferTransaction,
-} from 'nem2-sdk';
+import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
+// Replace with network type
+const networkType = NetworkType.TEST_NET;
+// Replace with aliased address
 const recipientAddress = new NamespaceId('foo');
 
-const transferTransaction = TransferTransaction.create(
+TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [NetworkCurrencyMosaic.createRelative(10)],
+    [],
     EmptyMessage,
-    NetworkType.MIJIN_TEST);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 01 */
-
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
-
-const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));

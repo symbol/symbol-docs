@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"PO-Revision-Date: 2019-12-17 09:31+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:10
+msgid "Running a test net node"
+msgstr "テストネットノードの立ち上げ"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:12
+msgid ""
+"This guide will walk you through the process of **setting up your node** to "
+"join Catapult’s public **test network**."
+msgstr ""
+"このガイドでは、 Catapult のパブリック **test network** へ参加するための **あなたのノードのセットアップ** "
+"の方法を説明します。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:14
+msgid ""
+"The test network mirrors the same **technology** and **features** of the "
+"future main public network. You can use the testnet to experiment with the "
+"offered Catapult's transaction set in a live network without the loss of "
+"valuable assets."
+msgstr ""
+"テストネットワークは将来のパブリックメインネットワークと同じ **テクノロジー** と **機能** "
+"を反映しています。テストネットを実験的に使用することで、貴重な資産を失うことなく、カタパルトが提供するトランザクションセットを試すことができます。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:16
+msgid ""
+"The network **might be offline or replaced without notice** because it is "
+"used extensively for testing purposes. To work in a private environment "
+"network, install :doc:`a local network for learning and development purposes"
+" <creating-a-private-test-net>`."
+msgstr ""
+"このネットワークはテスト目的で広く使用されているため **予告なく変更される** 場合があります。プライベート環境のネットワークで作業するには "
+":doc:`学習および開発用のローカルネットワーク <creating-a-private-test-net>` をインストールしてください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:20
+msgid "Hardware requirements"
+msgstr "ハードウェア要求"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:22
+msgid ""
+"Catapult nodes have been tested on computers with the following **minimum "
+"requirements**."
+msgstr "Catapult は次の **最低必要環境** でテストされています。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:24
+msgid "**CPU**: 2 cores or more"
+msgstr "**CPU**: 2コア以上"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:25
+msgid "**Memory**: 4GB or more"
+msgstr "**メモリ**: 4GB 以上"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:26
+msgid "**HD**: 20GB or more"
+msgstr "**HD**: 20GB 以上"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:27
+msgid "**OS**: Linux or Mac"
+msgstr "**OS**: Linux または Mac"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:29
+msgid ""
+"Although you might be able to run the software in less powerful instances, "
+"you might encounter some issues while installing or running the node."
+msgstr ""
+"それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:33
+msgid "Environment requirements"
+msgstr "必須環境"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:35
+msgid ""
+"The setup scripts are automated using docker. To run a test net node, you "
+"will need to have installed the following docker tools:"
+msgstr ""
+"セットアップスクリプトは Docker を使用して自動化されます。テストネットノードを立ち上げるには、次の Docker "
+"ツールをインストールする必要があります。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:42
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:44
+msgid ""
+"A node can be composed of a different set of components depending on your "
+"needs. Catapult test net nodes are currently distributed in two forms:"
+msgstr ""
+"ノードは必要に応じて、異なるコンポーネントのセットで構成できます。Catapult テストネットノードは現在 2 つの形式で配布されています。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:46
+msgid ""
+"**Peer assembly**: The peer assembly verifies or discards the transactions, "
+"runs the consensus algorithm, creates new blocks, and propagates the changes"
+" through the network."
+msgstr ""
+"**Peer アセンブリ**: Peer "
+"アセンブリはトランザクションを検証または破棄し、コンセンサスアルゴリズムを実行して新しいブロックを作成し、そしてネットワークを通して変更を伝播します。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:48
+msgid ""
+"**API harvest assembly**: The API node does the same as the peer nodes, plus"
+" stores data in the readable form once transactions are validated. "
+"Furthermore, the API assembly is capable of processing partial aggregate "
+"bonded transactions.  The API node installation comes with a REST gateway to"
+" perform read and write actions."
+msgstr ""
+"**API ハーベストアセンブリ**: API "
+"ノードはピアノードと同じ動作に加え、検証されたトランザクションの読み込み可能なデータを保有する役割を担います。さらに、API "
+"アセンブリはパーシャルアグリゲートボンデッドトランザクションを処理します。API ノードのインストールには、読み取りおよび書き込みアクションを実行する "
+"REST ゲートウェイが付属しています。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:50
+msgid ""
+"The package  ``catapult-testnet-bootstrap`` contains both assemblies ready "
+"to be installed."
+msgstr "``catapult-testnet-bootstrap`` パッケージはすぐにインストールできる両方のアセンブリを含んでいます。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:52
+msgid ""
+"Download the |latest-release|, or clone the repository directly using Git."
+msgstr "|latest-release| をダウンロードまたは Git を使用してリポジトリから直接クローンしてください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:58
+msgid "Choose the **assembly distribution** you want to install."
+msgstr "インストールしたい **アセンブリディストリビューション** を選択します。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:60
+msgid ""
+"In short, if you want to be able to interact with your node, you need to run"
+" the API assembly. On the other hand, if you want a node dedicated "
+"exclusively confirm transactions, deploy the peer assembly."
+msgstr ""
+"つまり、ノードと疎通するには、API "
+"アセンブリを実行する必要があります。一方で、トランザクションを確認する専用ノードが必要な場合はピアアセンブリを展開します。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:66
+msgid "or..."
+msgstr "または…"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:72
+msgid "Run the node with **docker-compose**."
+msgstr "**docker-compose** を実行してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:78
+msgid ""
+"You should see docker downloading the container images for the first time, "
+"then it should run the setup and finally startup the service."
+msgstr "初回はコンテナイメージのダウンロードが表示され、セットアップが実行されると最終的にサービスが開始されます。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:80
+msgid ""
+"If you have installed the ``api-harvest-assembly`` distribution, you can "
+"verify as well that the node is running by opening a new browser tab with "
+"the following URL: ``localhost:3000/chain/height``."
+msgstr ""
+"``api-harvest-assembly`` ディストリビューションをインストールした場合は、次の URL "
+"で新しいブラウザタブを開いてノードが実行されていることを確認できます: ``localhost:3000/chain/height``"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:82
+msgid ""
+"To stop all the running services, run ``sudo docker-compose down`` under the"
+" same directory you executed the ``up`` command."
+msgstr ""
+"サービスを停止するには ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
+"を実行してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:86
+msgid "Configuring node properties"
+msgstr "ノードのプロパティ設定"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:88
+msgid ""
+"After running the node for the first time, you can :ref:`change a set of "
+"properties <node-properties>` such as the node's public key or the "
+":doc:`harvesting <../../concepts/harvesting>` configuration."
+msgstr ""
+"初回にノードを実行した後は、ノードの公開鍵や :doc:`ハーベスティング <../../concepts/harvesting>` 設定の "
+":ref:`プロパティを変更 <node-properties>` できます。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:90
+msgid ""
+"A file ``config-input.yaml`` will be generated with the default values. "
+"Depending on the assembly chosen, this file will be located under the "
+"``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``."
+msgstr ""
+"``config-input.yaml`` ファイルはデフォルト値で生成されます。選択したアセンブリによって、このファイルは ``peer-"
+"assembly/peer-node/`` または ``api-harvest-assembly/api-node`` の下に配置されます。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:92
+msgid ""
+"If the node service is running, run ``sudo docker-compose down`` under the "
+"same directory you executed the ``up`` command."
+msgstr ""
+"ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
+"を実行してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:94
+msgid "Edit the properties file ``config-input.yaml`` with a text editor."
+msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:96
+msgid ""
+"Save the changes and apply them with the command ``sudo docker-compose up "
+"--build --detach``."
+msgstr "変更を保存して ``sudo docker-compose up --build --detach`` コマンドで適用してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:100
+msgid "Interacting with the test network"
+msgstr "テストネットワークと疎通する"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:102
+msgid ""
+"To interact with your node, :ref:`create first an account <setup-creating-a"
+"-test-account>` and :ref:`acquire test nem.xem <setup-getting-test-"
+"currency>`."
+msgstr ""
+"ノードと疎通するために、 :ref:`最初のアカウントを作成 <setup-creating-a-test-account>` して :ref:`テスト"
+" nem.xem を取得 <setup-getting-test-currency>`  してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:105
+msgid "Explorer"
+msgstr "エクスプローラ"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:107
+msgid ""
+"|blockchain-explorer|: Search for transactions, accounts, assets, and blocks"
+" in the test network."
+msgstr "|blockchain-explorer|: テストネットワーク内のトランザクション、アカウント、アセット、ブロックの検索"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:110
+msgid "Clients"
+msgstr "クライアント"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:112
+msgid ""
+"|desktop-wallet|: Cross-platform client for Catapult. Available for Mac, "
+"Linux, and Windows."
+msgstr "|desktop-wallet|: Catapult 用の Mac, Linux, Windows 用クロスプラットフォームクライアント"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:113
+msgid ""
+":doc:`Command-Line Interface <../../cli>`: Execute the most commonly used "
+"actions from your terminal."
+msgstr ":doc:`コマンドラインインターフェイス <../../cli>`: よく使用されるアクションをターミナルで実行します"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:116
+msgid "Faucet"
+msgstr "フォーセット"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:119
+msgid "|faucet-1|: Receive nem.xem units to test Catapult's services."
+msgstr "|faucet-1|: テスト Catapult サービスへ nem.xem を受信します"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:121
+msgid "If the default faucet is empty, try this other |faucet-2|."
+msgstr "デフォルトフォーセットが枯渇している場合は |faucet-2| を試してください。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:126
+msgid ""
+":doc:`Software Development Kits <../../sdk>`: Integrate your app with "
+"Catapult."
+msgstr ":doc:`ソフトウェア開発キット <../../sdk>`: あなたのアプリケーションを Catapult に統合"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:128
+msgid ""
+"In this portal, you can find everything you need to know about Catapult's "
+"features and :ref:`self-paced guides <blog-categories>` on how to use the "
+"**software development kits**."
+msgstr ""
+"このポータルでは Catapult の機能及び **ソフトウェア開発キット** の使い方において :ref:`自己ペースガイド <blog-"
+"categories>` のあなたが知るべきすべての情報が掲載されています。"

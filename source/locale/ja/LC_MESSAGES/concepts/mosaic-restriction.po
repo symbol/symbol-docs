@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -81,11 +81,13 @@ msgstr "モザイクのグローバル制限はアカウントが特定のモザ
 
 #: ../../source/concepts/mosaic-restriction.rst:21
 msgid ""
-"One mosaic can handle multiple global restrictions. A :ref:`mosaic global "
-"restriction <mosaic-global-restriction-transaction>` is composed of:"
+"One mosaic can handle up to ``20`` global restrictions, being this parameter"
+" :ref:`configurable per network <config-network-properties>`. A :ref:`mosaic"
+" global restriction <mosaic-global-restriction-transaction>` is composed of:"
 msgstr ""
-"1 つのモザイクで複数のグローバル制限を処理できます。:ref:`モザイクグローバル制限 <mosaic-global-restriction-"
-"transaction>` は次のもので構成されています。"
+"一つのモザイクは ``20`` までのグローバル制限を扱うことができます。このパラメータは :ref:`ネットワークごとに設定可能 <config-"
+"network-properties>` です。 :ref:`モザイクグローバル制限 <mosaic-global-restriction-"
+"transaction>` は次で構成されます:"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
@@ -329,15 +331,11 @@ msgstr ""
 "現在 Bob と Carol はお互いに ``comfyclothing.shares`` "
 "ユニットを購入して送ることができるでしょう。しかし有効な住所証明を提示していない Alice は株式を受け取ることができません。"
 
-#: ../../source/concepts/mosaic-restriction.rst:111
+#: ../../source/concepts/mosaic-restriction.rst:110
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic-restriction.rst:123
-msgid "Schemas"
-msgstr "スキーマ"
-
-#: ../../source/concepts/mosaic-restriction.rst:130
+#: ../../source/concepts/mosaic-restriction.rst:128
 msgid ""
 "Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a"
 " mosaic."
@@ -368,19 +366,19 @@ msgid "Previous restriction value."
 msgstr "以前の制限値"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Previous restriction type."
-msgstr "以前の制限タイプ"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "New restriction value."
 msgstr "新しい制限値"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
+msgid "Previous restriction type."
+msgstr "以前の制限タイプ"
+
+#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "New restriction type."
 msgstr "新しい制限タイプ"
 
-#: ../../source/concepts/mosaic-restriction.rst:157
+#: ../../source/concepts/mosaic-restriction.rst:155
 msgid ""
 "Announce a MosaicAddressRestrictionTransaction transaction to set a "
 "restriction rule to an address."
@@ -393,10 +391,6 @@ msgid ""
 msgstr "制限が適用されるモザイクの識別子。モザイク作成者はトランザクションの署名者である必要があります。"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Address being restricted."
-msgstr "制限されているアドレス"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid ""
 "Previous restriction value. Set ``previousRestrictionValue`` to "
 "``FFFFFFFFFFFFFFFF`` if the target address does not have a previous "
@@ -404,6 +398,10 @@ msgid ""
 msgstr ""
 "以前の制限値。ターゲットアドレスにこのモザイク識別子と制限キーの以前の制限値がない場合は ``previousRestrictionValue`` に "
 "``FFFFFFFFFFFFFFFF`` を設定します。"
+
+#: ../../source/concepts/mosaic-restriction.rst:1
+msgid "Address being restricted."
+msgstr "制限されているアドレス"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Uninitialized value indicating no restriction."
@@ -432,3 +430,7 @@ msgstr "超える場合に許可"
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Allow if greater than or equal."
 msgstr "以上の場合に許可"
+
+#: ../../source/concepts/mosaic-restriction.rst:194
+msgid "Continue: :doc:`Multisig Accounts <multisig-account>`."
+msgstr "次へ: :doc:`マルチシグアカウント <multisig-account>`"

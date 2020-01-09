@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli namespace info --name foo
+nem2-cli namespace info --namespace-name foo

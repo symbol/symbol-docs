@@ -5,15 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,11 +49,11 @@ msgstr ""
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:26
 msgid ""
-"This shared account appears in NEM as **1-of-2 multisig**. Multisig accounts"
-" permit Alice and Bob sharing funds in a separate account, requiring only "
-"the signature from one of them to transact."
+"This shared account appears in Catapult as **1-of-2 multisig**. Multisig "
+"accounts permit Alice and Bob sharing funds in a separate account, requiring"
+" only the signature from one of them to transact."
 msgstr ""
-"この共有アカウントは NEM では **1-of-2 マルチシグ** として表されます。マルチシグアカウントは Alice と Bob "
+"この共有アカウントは Catapult では **1-of-2 マルチシグ** として表されます。マルチシグアカウントは Alice と Bob "
 "が別々のアカウントで資産を共有することを可能にし、それらのうちの一方からの署名をトランザクションに必要とします。"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:28
@@ -80,70 +81,58 @@ msgstr ""
 "を終了している"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:36
-msgid ""
-"Know how to :doc:`create accounts <../account/creating-and-opening-an-"
-"account>`"
-msgstr ""
-":doc:`アカウントの作成 <../account/creating-and-opening-an-account>` 方法を理解している"
+msgid "Know how to :doc:`create accounts <../account/creating-an-account>`"
+msgstr ":doc:`アカウントの作成 <../account/creating-an-account>` 方法を理解している"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:37
 msgid ""
-"A multisig :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するマルチシグアカウント"
+"A multisig :ref:`account with loaded with network currency <setup-creating-a"
+"-test-account>`"
+msgstr ":ref:`ネットワーク通貨を保有する <setup-creating-a-test-account>`  マルチシグアカウント"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:38
 msgid ""
-"A cosignatory :ref:`account with cat.currency <setup-getting-a-test-"
+"A cosignatory :ref:`account with network currency <setup-creating-a-test-"
 "account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有する連署者アカウント"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>` 連署者"
 
 #: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:42
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Example #1: 1-of-2 signatures required"
+msgstr "例 #1: 1-of-2 署名が要求されます"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:45
-msgid "1-of-2 signatures required"
-msgstr "1-of-2 署名が要求されます"
-
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:47
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:44
 msgid ""
 "Bob has finished filling the basket, and he is ready to pay. The cashier's "
-"screen indicates that the cost of the purchase adds up to ``10 "
-"cat.currency``."
+"screen indicates that the cost of the purchase adds up to ``10 nem.xem``."
 msgstr ""
-"Bob はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が ``10 cat.currency`` "
-"と表示されています。"
+"Bob はバスケットをいっぱいにして、支払いをする準備が整いました。レジ係の画面には、購入費用が ``10 nem.xem`` と表示されています。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:49
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:46
 msgid ""
 "Let's develop the piece of code present in Bob's mobile wallet that enables "
 "him to send multisig transactions."
 msgstr "Bob のモバイルウォレットにあるマルチシグトランザクションを送信できるようにするコードを開発しましょう。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:51
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:48
 msgid ""
 "Define the private key of Bob's account and the public key of the multisig "
 "account shared with Alice."
 msgstr "Bob のアカウントの秘密鍵と Alice と共有するマルチシグアカウントの公開鍵を定義します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:65
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:62
 msgid ""
 "Define the following :ref:`TransferTransaction <transfer-transaction>`:"
 msgstr "以下の :ref:`TransferTransaction <transfer-transaction>` を定義する:"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:67
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:64
 msgid "Recipient: Grocery's address"
 msgstr "受信者: 食料雑貨店のアドレス"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:68
-msgid "Message: sending 10 cat.currency"
-msgstr "メッセージ: sending 10 cat.currency"
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:65
+msgid "Message: sending 10 nem.xem"
+msgstr "メッセージ: 10 nem.xem 送信"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:69
-msgid "Mosaics: [``10 cat.currency``]"
-msgstr "モザイク: [``10 cat.currency``]"
-
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:83
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:80
 msgid ""
 "Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-"
 "transaction>`, attaching the multisig public key as the signer."
@@ -151,7 +140,7 @@ msgstr ""
 "TransferTransaction を :ref:`AggregateTransaction <aggregate-transaction>` "
 "でラップしてマルチシグの公開鍵を署名者として添付します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:85
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:82
 msgid ""
 "An AggregateTransaction is **complete** if before announcing it to the "
 "network, all the required cosigners have signed it. In this case the "
@@ -161,15 +150,15 @@ msgstr ""
 "ネットワークへアナウンスされる前に、要求されるすべての連署者の署名が揃うと、AggregateTransaction は **コンプリート** "
 "となります。このケースではマルチシグが1つの署名(1-of-2)を必要とするので、コンプリートとしてのアグリゲートを定義できます。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:99
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:96
 msgid "Sign and announce the transaction using Bob's account."
 msgstr "Bob のアカウントでトランザクションへ署名してアナウンスをします。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:114
-msgid "2-of-2 signatures required"
-msgstr "2-of-2 署名が要求されます"
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:112
+msgid "Example #2: 2-of-2 signatures required"
+msgstr "例 #2: 2-of-2 署名が要求されます"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:116
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:114
 msgid ""
 "What would have happened if the account was a **2-of-2 multisig** instead of"
 " a 1-of-2? As all required cosigners did not sign the transaction, it should"
@@ -180,41 +169,43 @@ msgstr ""
 "であった場合どうなるでしょう？すべての署名者はトランザクションへ署名していないので :ref:`アグリゲートボンド <aggregate-"
 "transaction>` としてアナウンスし、後に Alice のアカウントで署名します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:122
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:120
 msgid "Sending an AggregateBondedTransaction"
 msgstr "AggregateBondedTransaction の送信"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:124
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:122
 msgid ""
-"Open a new terminal to :doc:`monitor <../monitor/monitoring-a-transaction-"
-"status>` the **AggregateBondedTransaction**."
+"Open a new terminal to monitor the **AggregateBondedTransaction** status by "
+"passing the multisig's address."
 msgstr ""
-"アグリゲートボンドトランザクションを :doc:`監視する<../monitor/monitoring-a-transaction-status>` "
-"ために新しくターミナルを開いてください。"
+"マルチシグのアドレスを渡して **アグリゲートボンデッドトランザクション** のステータスを監視するための、新しいターミナルを開いてください。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:130
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:128
 msgid "Modify the previous code, defining the transaction as  **bonded**."
 msgstr "前のコードを変更して、トランザクションを **ボンデッド** として定義します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:144
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:142
 msgid ""
 "When an AggregateTransaction is bonded, Bob needs to **lock at least 10 "
-"cat.currency** to prevent spamming the network. Once all cosigners sign the "
+"nem.xem** to prevent spamming the network. Once all cosigners sign the "
 "transaction, the amount of cat.currency locked becomes available again in "
 "Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has "
 "been confirmed, :doc:`announce the AggregateBondedTransaction "
 "<../../concepts/aggregate-transaction>`."
 msgstr ""
-"AggregateTransaction がボンデッドの場合、Bob はスパムを起こさないための **最低 10 cat.currency** "
-"をロックする必要かあります。すべての連署者がトランザクションへ署名すると、cat.currency の総量は Bob "
+"AggregateTransaction がボンデッドの場合、Bob はスパム防止のための **最小 10 nem.xem をロック** "
+"する必要かあります。すべての連署者がトランザクションへ署名すると、cat.currency の総量は Bob "
 "のアカウント上で再度有効になります。:ref:`HashLockTransactionhash <hash-lock-transaction>` "
 "が承認された後に、 :doc:`AggregateBondedTransaction をアナウンス <../../concepts/aggregate-"
 "transaction>` します。"
 
-#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:158
+#: ../../source/guides/aggregate/sending-a-multisig-transaction.rst:156
 msgid ""
-":doc:`Cosign the AggregateTransaction <../../cli>` with Alice's account. Use"
-" the transaction hash output from the first step."
+"Once the transaction reaches the network, you will see it on the terminal "
+"where you are monitoring the aggregate bonded transactions added. Then, "
+":doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use"
+" the transaction hash output from (2)."
 msgstr ""
-"Alice のアカウントで :doc:`AggregateTransaction に署名します <../../cli>` "
-"。最初のステップで出力されたトランザクションハッシュを使用してください。"
+"トランザクションがネットワークに到達すると、ターミナルにアグリゲートボンデッドトランザクションが追加されるのが確認できるでしょう。次に、 "
+":doc:`AggregateTransaction に署名 <../../cli>` を Alice のアカウントで行います。(2) "
+"で出力されたトランザクションハッシュを使用してください。"

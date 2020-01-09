@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,57 +38,44 @@ msgstr "背景"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:18
 msgid ""
-"Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to "
-"know if the transaction has reached the network before sending Bob an email."
+"Alice is developing an app to send 10 cat.currency to Bob. She wants to know"
+" if the transaction has reached the network before sending Bob an email."
 msgstr ""
-"Alice は Bob に ``10 cat.currency`` を送るアプリケーションを開発しています。彼女は Bob "
+"Alice は Bob に 10 cat.currency を送るアプリケーションを開発しています。彼女は Bob "
 "にメールを送る前に、トランザクションがネットワークに到着したかどうかを知ろうとしています。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:20
 msgid ""
 "When announcing a transaction in NIS1, you had to wait to get the response "
-"from the node. Catapult works differently. When a transaction is announced, "
-"the REST API server will always return an OK."
+"from the node. Catapult works differently: when a transaction is announced, "
+"the REST API server will always return an OK. As a result, the developer "
+"does not have to wait until the server returns a response, being able to "
+"make more responsive apps.  However, it is the developer's responsibility to"
+" check the status of the transaction and ensure it is confirmed."
 msgstr ""
-"NIS1 において、トランザクションをアナウンスしたら、ノードからのレスポンスを待つ必要がありました。Catapult "
-"では異なる動作をします。トランザクションがアナウンスされると、REST API サーバーは常に OK を返します。"
+"NIS1 ではトランザクションがアナウンスされると、ノードからのレスポンスを待たなければいけませんでした。 Catapult "
+"では異なる動作をします。トランザクションがアナウンスされると、REST API は常に OK "
+"レスポンスを返します。これにより開発者はサーバがレスポンスを返却するのを待つ必要がなく、よりレスポンシブなアプリケーションの開発を可能になりました。しかし、トランザクションの状態や承認されたことを確認するのは開発者の責務になります。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:22
 msgid ""
-"As a result, the developer does not have to wait until the server returns a "
-"response, being able to make more responsive apps.  However, it is the "
-"developer's responsibility to check the status of the transaction and ensure"
-" it is confirmed."
+"However, keeping track of transactions status adds unnecessary complexity to"
+" small projects. **nem2-camel** aims to solve this problem by providing a "
+"server that listens to the Catapult REST calls and acts as a proxy. When "
+"nem2-camel detects a transaction announcement, it waits for the confirmation"
+" via :ref:`WebSockets<websockets>` and returns the message to the HTTP call."
 msgstr ""
-"これにより開発者はサーバがレスポンスを返却するのを待つ必要がなく、よりレスポンシブなアプリケーションの開発を可能になりました。しかし、トランザクションの状態や承認されたことを確認するのは開発者の責務になります。"
-
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:24
-msgid ""
-"On the other hand, keeping track of transactions status adds unnecessary "
-"complexity to small projects. It also increases the difficulty when "
-"migrating from NIS1."
-msgstr ""
-"一方で、トランザクションの状態を追跡し続けることは、小さなプロジェクトに複雑さを持ち込むことになります。NIS1 "
-"からのマイグレーションにおいても難易度が上がってしまうでしょう。"
-
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:26
-msgid ""
-"**nem2-camel** aims to solve these problems by providing a server that "
-"listens to the Catapult REST calls and acts as a proxy. When nem2-camel "
-"detects a transaction announcement, it waits for the confirmation via "
-":ref:`WebSockets<websockets>` and returns the message to the HTTP call."
-msgstr ""
-"**nem2-camel** は、Catapult REST "
-"を監視し、プロキシとして動作するサーバの提供によって、これらの問題の解決を目指しています。nem2-camel "
+"しかし、トランザクションステータス追跡の追加は小さなプロジェクトを複雑にしてしまうでしょう。 **nem2-camel** は、Catapult "
+"REST を監視し、プロキシとして動作するサーバの提供によって、これらの問題の解決を目指しています。nem2-camel "
 "がトランザクションのアナウンスを検知すると :ref:`WebSockets <websockets>` を経由して承認を待ち、HTTP "
 "呼び出しへメッセージを返します。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:28
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:24
 msgid ""
 "The function ``TransactionHttp.announceSync()`` allows announcing "
 "transactions synchronously when using nem2-camel as a proxy.  nem2-camel "
-"will respond successfully when the transaction has reached the network and "
-"had no validation errors.  You might still need to :doc:`wait for several "
+"will respond successfully when the transaction reached the network and had "
+"no validation errors. You might still need to :doc:`wait for several "
 "confirmations  <../../concepts/transaction>` before executing additional "
 "actions."
 msgstr ""
@@ -97,11 +84,11 @@ msgstr ""
 "は、トランザクションがネットワークへ到着し、正当性チェックエラーが無い場合に、成功を返します。あなたは、追加のアクションを実行する前に "
 ":doc:`幾分かの承認を待つ <../../concepts/transaction>` 必要があるかもしれません。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:37
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:33
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:39
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:35
 msgid ""
 "Finish :doc:`sending mosaics and messages between two accounts guide "
 "<../transfer/sending-a-transfer-transaction>`"
@@ -109,20 +96,17 @@ msgstr ""
 ":doc:`モザイクとメッセージを２つのアカウント間で送信するガイド <../transfer/sending-a-transfer-"
 "transaction>` を終了している"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:40
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:36
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントを1つ"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:44
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:47
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:40
 msgid "Running Catapult Service in local"
 msgstr "Catapultサービスをローカルに立ち上げます"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:49
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:42
 msgid ""
 "For development and learning purposes, you can run the :doc:`Catapult Server"
 " and Catapult REST <../../concepts/node>` using the |catapult-service-"
@@ -131,69 +115,69 @@ msgstr ""
 "開発と学習の目的のために |catapult-service-bootstrap| を使用して、 :doc:`Catapult サーバ と "
 "Catapult REST <../../concepts/node>` を実行できます。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:51
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:44
 msgid ""
 "Make sure you have |docker| and |docker-compose| installed before running "
 "the following instructions:"
 msgstr "以下のインストラクションを実行する前に |docker| と |docker-compose| をインストールしてください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:59
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:52
 msgid ""
 "If everything goes well, after the image has been downloaded and the service"
 " is running, check if you can get the first block information:"
 msgstr "すべてがうまく行けば、イメージがダウンロードされてサービスが動き始めるので、最初のブロック情報を取得して動作確認をしてください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:66
-msgid "Getting Alice and Bob addresses"
-msgstr "Alice と Bob のアドレスの入手"
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:60
+msgid "Creating Alice and Bob addresses"
+msgstr "Alice と Bob のアドレスの作成"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:68
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:62
 msgid ""
-"Once the Catapult Service is running, it will generate a set of "
+"Once the Catapult Service is running, this will generate a set of "
 ":doc:`accounts <../../concepts/account>` containing cat.currency."
 msgstr ""
 "Catapult サービスが動き出せば、cat.currency を保有した :doc:`アカウント <../../concepts/account>`"
 " が生成されます。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:70
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:64
 msgid ""
 "Find the key pairs which contain cat.currency under the section "
 "``nemesis_addresses``."
 msgstr "``nemesis_addresses`` のセクションから cat.currency を含むキーペアを見つけてください。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:77
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:71
 msgid "Take the first key pair as Alice's account, and copy the private key."
 msgstr "最初のキーペアを Alice のアカウントにすることにして秘密鍵をコピーします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:79
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:73
 msgid "Take the second key pair as Bob's account, and copy the address."
 msgstr "二つ目のキーペアを Bob のアカウントにすることにしてアドレスをコピーします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:82
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:77
 msgid "Installing nem2-camel"
 msgstr "nem2-camel のインストール"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:84
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:79
 msgid "nem2-camel acts like a proxy between the application and the REST API."
 msgstr "nem2-camel はアプリケーションと REST API の間のプロキシとして動作します。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:86
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:81
 msgid "nem2-camel requires at least Java version 8."
 msgstr "nem2-camel は Java バージョン8 以降を必要とします。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:88
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:83
 msgid "Download the latest |nem2-camel-jar| package release, and run:"
 msgstr "最新リリースの |nem2-camel-jar| パッケージをダウンロードして、実行してください:"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:94
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:89
 msgid "After the service is up, use ``0.0.0.0:9000`` as the new proxy url."
 msgstr "サービスが起動したら ``0.0.0.0:9000`` を新しいプロキシURLとして使用してください。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:97
-msgid "Sending the TransferTransaction"
-msgstr "TransferTransaction の送信"
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:93
+msgid "Sending a synchronous transaction"
+msgstr "同期的トランザクションの送信"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:99
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:95
 msgid ""
 "Alice creates a :doc:`TransferTransaction <../../concepts/transfer-"
 "transaction>`, sending ``10 cat.currency`` to Bob."
@@ -201,7 +185,7 @@ msgstr ""
 "Alice は :doc:`TransferTransaction <../../concepts/transfer-transaction>` "
 "を作成し ``10 cat.currency`` を Bob へ送ります。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:108
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:109
 msgid ""
 "Once signed, Alice :doc:`announces the transaction "
 "<../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead "
@@ -212,7 +196,7 @@ msgstr ""
 "``TransactionHttp.announce`` の代わりに ``TransactionHttp.announceSync`` "
 "を使用することで、トランザクションがネットワークへ到着しトランザクションオブジェクトを返却するのを待つことができます。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:117
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:123
 msgid ""
 "The transaction has an ``unconfirmed`` status. You might still need to "
 ":doc:`wait  for several confirmations <../../concepts/transaction>` before "
@@ -221,7 +205,7 @@ msgstr ""
 "トランザクションには ``未確認`` 状態があります。あなたは追加でアクションを実行する前に :doc:`幾分かの承認を待つ "
 "<../../concepts/transaction>` 必要があるかもしれません。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:119
+#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:125
 msgid ""
 "In case the Catapult REST server throws an error, the subscribe method will "
 "invoke the ``error function`` returning a ``TransactionStatus`` object."

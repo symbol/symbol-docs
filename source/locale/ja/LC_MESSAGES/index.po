@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"PO-Revision-Date: 2019-11-25 18:19+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/index.rst:3
+msgid "NEM Developer Center"
+msgstr "NEM 開発者センター"
+
+#: ../../source/index.rst:5
+msgid ""
+"This documentation introduces NEM's next core engine (NEM2), code-named "
+"**Catapult**."
+msgstr "このドキュメントは次世代 NEM のコアエンジン (NEM2) コードネーム **Catapult** を紹介します。"
+
+#: ../../source/index.rst:9
+msgid "NEM is your Blockchain Engine"
+msgstr "NEM はあなたのブロックチェーンエンジンです。"
+
+#: ../../source/index.rst:11
+msgid ""
+"|nem| is a **developer-friendly blockchain platform** for businesses. It "
+"offers flexible and customizable solutions through simple, yet powerful, "
+"built-in features."
+msgstr ""
+"|nem| はビジネス向けの **開発者にやさしいブロックチェーンプラットフォーム** "
+"です。柔軟なカスタマイズによるソリューションをシンプルに、しかしパワフルな組み込み機能を提供します。"
+
+#: ../../source/index.rst:13
+msgid ""
+"Developers are able to integrate blockchain technology into their projects "
+"or create powerful dApps using NEM's :doc:`REST API <api>`. This allows "
+"creating a variety of architectural solutions with lightweight code in any "
+"language."
+msgstr ""
+"開発者は NEM の :doc:`REST API <api>` を使って、ブロックチェーンのテクノロジーを彼らのプロジェクトに統合したり、強力な "
+"dApps を作成することができます。これにより、任意の言語の軽量なコードでさまざまなアーキテクチャソリューションを作成することができます。"
+
+#: ../../source/index.rst:15
+msgid ""
+"NEM provides access to both **public and private blockchains**, providing "
+"options to best suit your company's needs. The public blockchain is a "
+"decentralized, open, and self-sustaining ledger that can be used by anyone. "
+"The private blockchain, on the other hand, offers higher speed and privacy."
+msgstr ""
+"NEM は **パブリックとプライベートブロックチェーン** "
+"の両方を提供し、あなたの会社のニーズに最適な選択肢を提供します。パブリックブロックチェーンは分散型で、公開されており、自立可能な、誰にでも利用される元帳です。一方で、プライベートブロックチェーンは、高い速度とプライバシーを提供します。"
+
+#: ../../source/index.rst:19
+msgid "Catapult: Preview NEM’s Next Core Engine"
+msgstr "Catapult: 次世代 NEM のコアエンジンのプレビュー版"
+
+#: ../../source/index.rst:21
+msgid ""
+"|Catapult| is NEM's next core engine. It is written in C++ and follows a "
+":doc:`4-layered architecture <concepts/node>`, aiming to make NEM more "
+"scalable. It builds upon the achievements of its previous iteration, adding "
+"the newest innovations in blockchain technology."
+msgstr ""
+"|Catapult| は NEM の次世代コアエンジンです。これは C++ で記述され、NEM をよりスケーラブルなものにするために :doc:`4 "
+"層アーキテクチャ <concepts/node>` "
+"となっています。これはブロックチェーンテクノロジーの最新イノベーションを追加し、過去のイテレーションの成果に基づいたものです。"
+
+#: ../../source/index.rst:23
+msgid "Catapult introduce new exclusive features:"
+msgstr "カタパルトには新しい独自の機能が実装されています:"
+
+#: ../../source/index.rst:25
+msgid ":doc:`Aggregate Transactions <concepts/aggregate-transaction>`"
+msgstr ":doc:`アグリゲートトランザクション <concepts/aggregate-transaction>`"
+
+#: ../../source/index.rst:26
+msgid ":doc:`Cross-Chain Swaps <concepts/cross-chain-swaps>`"
+msgstr ":doc:`クロスチェーンスワップ <concepts/cross-chain-swaps>`"
+
+#: ../../source/index.rst:27
+msgid ":doc:`Multi-level Multisig Accounts <concepts/multisig-account>`"
+msgstr ":doc:`マルチレベルマルチシグアカウント <concepts/multisig-account>`"
+
+#: ../../source/index.rst:28
+msgid ":doc:`Account Restriction <concepts/account-restriction>`"
+msgstr ":doc:`アカウント制限 <concepts/account-restriction>`"
+
+#: ../../source/index.rst:29
+msgid ":doc:`Mosaic Restriction <concepts/mosaic-restriction>`"
+msgstr ":doc:`モザイク制限 <concepts/mosaic-restriction>`"
+
+#: ../../source/index.rst:31
+msgid ""
+"Catapult will be a momentous step for NEM to be the widely utilized "
+"enterprise product it was envisioned to be. After three years of "
+"development, the long-awaited update is expected to launch `in 2020 "
+"<https://forum.nem.io/t/migration-committee-community-update-4/23847/3>`_."
+msgstr ""
+"Catapult は NEM が想定している、広く利用されているエンタープライズ製品であるための重要なステップになります。3 "
+"年の開発の後、待望のアップデートが `2020 <https://forum.nem.io/t/migration-committee-"
+"community-update-4/23847/3>`_ 年にリリースされる予定です。"
+
+#: ../../source/index.rst:35
+msgid "Getting Started"
+msgstr "入門"
+
+#: ../../source/index.rst:37
+msgid ""
+"To start developing on Catapult, we recommend you to :doc:`setup your "
+"workstation <getting-started/setup-workstation>`. Then, review the following"
+" documents to know more about Catapult:"
+msgstr ""
+"Catapult の開発には :doc:`ワークステーションのセットアップ <getting-started/setup-workstation>` "
+"を推奨します。次に、以下のドキュメントを参照して Catapult の詳細を確認してください。"
+
+#: ../../source/index.rst:39
+msgid ":doc:`Built-in Features <concepts/account>`"
+msgstr ":doc:`ビルドイン機能 <concepts/account>`"
+
+#: ../../source/index.rst:40
+msgid ":doc:`Protocol <concepts/cryptography>`"
+msgstr ":doc:`プロトコル <concepts/cryptography>`"
+
+#: ../../source/index.rst:41
+msgid ":doc:`API Reference <api>`"
+msgstr ":doc:`API リファレンス <api>`"
+
+#: ../../source/index.rst:42
+msgid ":doc:`Software Development Kits <api>`"
+msgstr ":doc:`ソフトウェア開発キット <api>`"
+
+#: ../../source/index.rst:43
+msgid ":doc:`Command Line Tool <cli>`"
+msgstr ":doc:`コマンドラインツール <cli>`"
+
+#: ../../source/index.rst:47
+msgid "Featured Guides"
+msgstr "注目のガイド"
+
+#: ../../source/index.rst:49
+msgid ""
+"Learn how to use the software development kits and tools with the following "
+"step-by-step implementation examples."
+msgstr "次のステップバイステップの実装例でソフトウェア開発キットとツールの使用方法を学びます。"
+
+#: ../../source/index.rst:51
+msgid ":doc:`How to create a wallet <guides/account/creating-an-account>`"
+msgstr ":doc:`ウォレットの作り方 <guides/account/creating-an-account>`"
+
+#: ../../source/index.rst:52
+msgid ""
+":doc:`How to send a transaction <guides/transfer/sending-a-transfer-"
+"transaction>`"
+msgstr ":doc:`トランザクションを送信する <guides/transfer/sending-a-transfer-transaction>`"
+
+#: ../../source/index.rst:53
+msgid ":doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`"
+msgstr ":doc:`モザイクを作成する <guides/mosaic/creating-a-mosaic>`"
+
+#: ../../source/index.rst:54
+msgid ""
+":doc:`How to register a namespace "
+"<guides/namespace/registering-a-namespace>`"
+msgstr ":doc:`ネームスペースを作成する <guides/namespace/registering-a-namespace>`"
+
+#: ../../source/index.rst:55
+msgid ""
+":doc:`How to run a private test network <guides/network/creating-a-private-"
+"test-net>`"
+msgstr ""
+":doc:`プライベートテストネットワークを立ち上げる <guides/network/creating-a-private-test-net>`"
+
+#: ../../source/index.rst:56
+msgid ":ref:`More guides <blog-categories>`"
+msgstr ":ref:`他のガイド <blog-categories>`"
+
+#: ../../source/index.rst:60
+msgid "Contributing to Catapult"
+msgstr "Catapult へ貢献する"
+
+#: ../../source/index.rst:62
+msgid ""
+"Catapult is an |open-source| project. Discover how our |community| is "
+"organized, and get started participating:"
+msgstr ""
+"Catapult は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
+
+#: ../../source/index.rst:64
+msgid "Ask in |stack-overflow| development-related questions"
+msgstr "開発に関する質問は |stack-overflow| で尋ねてください。"
+
+#: ../../source/index.rst:65
+msgid "Reach our community joining the official |slack|"
+msgstr "私達の公式 |slack| に参加してください。"
+
+#: ../../source/index.rst:66
+msgid ""
+"Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to "
+"propose changes"
+msgstr ""
+"変更を提案するためには :doc:`貢献ガイドライン <guidelines/suggesting-changes>` を確認してください。"
+
+#: ../../source/index.rst:67
+msgid "Follow the development updates on |twitter|"
+msgstr "|twitter| で開発のアップデートを追いかけましょう。"
+
+#: ../../source/index.rst:68
+msgid "Explore our |github| repositories"
+msgstr "|github| リポジトリを探索しましょう。"
+
+#: ../../source/index.rst:70
+msgid ""
+"Continue: :doc:`Setting up your workstation <getting-started/setup-"
+"workstation>`."
+msgstr "次へ: :doc:`ワークステーションのセットアップ <getting-started/setup-workstation>`"

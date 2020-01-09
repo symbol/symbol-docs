@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -36,8 +36,10 @@ msgid "Translators"
 msgstr "翻訳者"
 
 #: ../../source/guidelines/translating-the-documentation.rst:13
-msgid "Follow this guide to start contributing to the docs translation."
-msgstr "ドキュメント翻訳の貢献を始めるためにこのガイドに従ってください。"
+msgid ""
+"Follow this guide to start contributing to the translation of the NEM "
+"Developer Center."
+msgstr "NEM 開発センタードキュメント翻訳の貢献を始めるためにこのガイドに従ってください。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:15
 msgid "Sign up for an account"
@@ -46,8 +48,8 @@ msgstr "アカウントの作成"
 #: ../../source/guidelines/translating-the-documentation.rst:17
 msgid ""
 "Create a new Transifex account `here "
-"<https://www.transifex.com/signup/?join_project=nem2docs>`_ .  We recommend "
-"reading as well Transifex's `Getting Started as a Translator guide "
+"<https://www.transifex.com/signup/?join_project=nem2docs>`_ .  Also, we "
+"recommend reading Transifex's `Getting Started as a Translator guide "
 "<https://docs.transifex.com/getting-started-1/translators>`_."
 msgstr ""
 "新しい Transifex アカウントを `ここ "
@@ -108,7 +110,7 @@ msgstr "開発者"
 
 #: ../../source/guidelines/translating-the-documentation.rst:35
 msgid ""
-"This guide explains how to interact with Transifex service using "
+"This guide explains how to interact with Transifex service using the "
 "``transifex-client`` tool."
 msgstr "このガイドは ``transifex-client`` ツールを使用して Transifex サービスと疎通する方法を解説しています。"
 

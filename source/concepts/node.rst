@@ -88,9 +88,9 @@ ZMQ
 
 |zmq| is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API node to the ZMQ endpoint, where Catapult REST listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
 
-*********
-REST node
-*********
+************
+REST gateway
+************
 
 **Repository:** |catapult-rest|
 
@@ -98,11 +98,11 @@ REST node
     :width: 450px
     :align: center
 
-    REST node communication
+    REST gateway communication
 
-The REST nodes handle :doc:`JSON API <../api>` client requests. A node reads from MongoDB, formats the response, and returns it to the client. This component is also responsible for returning events to the client using :ref:`WebSockets <websockets>`.
+The REST gateways handle :doc:`JSON API <../api>` client requests. The gateway reads from MongoDB, formats the response, and returns it to the client. This component is also responsible for returning events to the client using :ref:`WebSockets <websockets>`.
 
-Each REST node connects to one API instance to send new transactions requests triggered from the client-side and receive updates in real-time using sockets.
+Each REST gateway connects to one API instance to send new transactions requests triggered from the client-side and receive updates in real-time using sockets.
 
 .. |catapult-server| raw:: html
 
@@ -132,16 +132,10 @@ Each REST node connects to one API instance to send new transactions requests tr
 Guides
 ******
 
-* |running-catapult-locally|
-
-Deploy a Catapult full node for learning and development purposes.
-
-.. |running-catapult-locally| raw:: html
-
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank"><b>Running Catapult locally</b></a>
-
-* **Deploying a test net node** (:doc:`upcoming <../guidelines/suggesting-changes>`)
-
-* **Configuring a private network** (:doc:`upcoming <../guidelines/suggesting-changes>`)
-
-* **Creating a custom plugin** (:doc:`upcoming <../guidelines/suggesting-changes>`)
+.. postlist::
+    :category: Network
+    :date: %A, %B %d, %Y
+    :format: {title}
+    :list-style: circle
+    :excerpts:
+    :sort:

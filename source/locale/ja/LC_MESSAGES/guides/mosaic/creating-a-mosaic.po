@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -37,19 +37,16 @@ msgstr "背景"
 msgid ""
 "A private company, ComfyClothingCompany, decides that it wants to go public."
 " Instead of a traditional IPO, the company decides to do an STO to issue "
-"tokens through the NEM platform."
+"tokens through the Catapult platform."
 msgstr ""
-"非上場会社である ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は NEM "
+"非上場会社である ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は Catapult "
 "プラットフォームを通じてトークンを発行するために STO を行うことにしました。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:20
 msgid ""
 "In this guide, we are going to help this company to **create the tokens for "
-"their STO** using :doc:`mosaics <../../concepts/mosaic>` built-in feature "
-"and the NEM2-SDK."
-msgstr ""
-"このガイドでは :doc:`mosaics <../../concepts/mosaic>` 組み込み機能と NEM2-SDK を使用して、この会社が "
-"**STOのトークンを作成する** のを支援します。"
+"their STO**."
+msgstr "このガイドでは、この会社が **STOのトークンを作成する** のを支援します。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:24
 msgid "Prerequisites"
@@ -63,26 +60,25 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:27
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:31
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:33
 msgid ""
 "Before starting this guide, make sure you have an :doc:`account loaded with "
-"cat.currency  <../../getting-started/setup-workstation>`."
+"nem.xem <../../getting-started/setup-workstation>`."
 msgstr ""
-"ガイドを始める前に :doc:`cat.currency を保有したアカウント <../../getting-started/setup-"
+"ガイドを始める前に :doc:`nem.xem を保有したアカウント <../../getting-started/setup-"
 "workstation>` が準備できていることを確認してください。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:35
-msgid ""
-"Then, the company must create a mosaic to represent shares to their company."
-" To do so, you will have to create a new file and define two transactions:"
-msgstr "次に、会社は自分の会社に株式を表現するためにモザイクを作成する必要があります。新しいファイルを作り、２つのトランザクションを定義します:"
+msgid "Open a new file and define two transactions:"
+msgstr "新しくファイルを開いて、２つのトランザクションを定義:"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:37
 msgid ""
@@ -140,9 +136,9 @@ msgstr "初期株式が分配されるとその株式は上場して公開され
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid ""
-"Since STOs are regulated, the mosaic owner should be able to restrict which "
-"accounts can transact with the mosaic."
-msgstr "STO には規制があるため、モザイクの所有者はモザイクを取引できるアカウントを制限できる必要があります。"
+"Since STOs are regulated, the mosaic creator should be able to restrict "
+"which accounts can transact with the mosaic."
+msgstr "STO には規制があるため、モザイク作成者はモザイクを取引できるアカウントを制限できる必要があります。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:61
 msgid ""
@@ -155,12 +151,12 @@ msgstr ""
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:75
 msgid ""
-"NEM works with **absolute amounts**. To get an absolute amount, multiply the"
-" amount of assets you want to create by 10\\ :sup:`divisibility`.  For "
-"example, if the mosaic has **divisibility** 2, to create 10 units (relative)"
-" you should define 1000 (absolute) instead."
+"Catapult works with **absolute amounts**. To get an absolute amount, "
+"multiply the number of assets you want to create by 10\\ "
+":sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to "
+"create 10 units (relative) you should define 1000 (absolute) instead."
 msgstr ""
-"NEM は **絶対量** を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
+"Catapult は **絶対量** を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
 "を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:77
@@ -173,14 +169,14 @@ msgstr ""
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:79
 msgid ""
-"To make the transaction only valid for your network, include the first block"
-" generation hash. Open ``http://localhost:3000/block/1`` in a new tab and "
+"Include the first block generation hash to make the transaction only valid "
+"for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
 "copy the ``meta.generationHash`` value."
 msgstr ""
-"自分のネットワークでのみ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいタブで "
-"``http://localhost:3000/block/1`` を開いて ``meta.generationHash`` の値をコピーします。"
+"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
+"'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:97
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:93
 msgid ""
 "Once the transaction gets confirmed, you can try to :doc:`transfer "
 "<../transfer/sending-a-transfer-transaction>` one unit of the created mosaic"
@@ -190,3 +186,7 @@ msgstr ""
 "トランザクションが承認されたら、他のアカウントへ作ったモザイクの 1 単位を :doc:`転送 <../transfer/sending-a"
 "-transfer-transaction>` してみたり、 :doc:`モザイクプロパティの変更 <modifying-mosaic-supply>`"
 " または :doc:`ネームスペースをモザイクへリンク <creating-a-mosaic>` してみましょう。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:97
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

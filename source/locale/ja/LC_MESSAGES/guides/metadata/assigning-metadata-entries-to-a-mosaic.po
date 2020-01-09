@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"PO-Revision-Date: 2019-10-28 13:02+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:10
+msgid "Assigning metadata to a mosaic"
+msgstr "モザイクにメタデータを割り当てる"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:12
+msgid "Add custom data to a mosaic."
+msgstr "モザイクにカスタムデータを追加"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:16
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:36
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:18
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:38
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:19
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:39
+msgid ""
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:20
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:40
+msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
+msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:24
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:26
+msgid ""
+"Metadata is a Catapult feature that can be used to attach information about "
+":doc:`mosaics <../../concepts/mosaic>`. For example, small pieces of data "
+"such as legal name, ticker, or ISIN, can be assigned as on-chain "
+":doc:`metadata<../../concepts/metadata>`, while sizable documents, like the "
+"prospectus or investor agreement, can be kept off-chain."
+msgstr ""
+"Catapult の機能であるメタデータは :doc:`モザイク <../../concepts/mosaic>` "
+"に関する情報をアタッチするために使用できます。たとえば、正式名称、ティッカー、ISINなどの小さな情報はオンチェーン上の :doc:`メタデータ "
+"<../../concepts/metadata>` に割り当て、一方で目論見書や投資家との契約のような大きな情報はオフチェーンで保管されます。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:28
+msgid ""
+"In this tutorial, you are going to implement a program to add relevant data "
+"to a mosaic. Imagine that the company ComfyClothingCompany has applied for "
+"an |ISIN-code| to conduct an STO. After receiving the code ``US0000000000``,"
+" the company decided to represent the company shares creating a mosaic named"
+" ``cc.shares``. Before distributing the shares between the investors, "
+"ComfyClothingCompany wants to attach its ISIN code and legal name to the "
+"shares definition."
+msgstr ""
+"このチュートリアルでは、関連するデータをモザイクに追加するプログラムを実装します。会社はコード ``US0000000000`` を受け取ると "
+"``cc.shares`` という名前のモザイクを作成して、会社の株式を表現するのだと想像してください。投資家間で株式を分配する前に "
+"ComfyClothingCompany は ISIN コードと正式名称を株式定義に添付したいと考えています。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:45
+msgid "Creating the shares"
+msgstr "株式の作成"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:47
+msgid ""
+"Create a mosaic to represent the shares. The mosaic we are creating will "
+"have the properties ``supplyMutable``, ``transferable``, ``restrictable``, "
+"``non-expiring``, and we will be able to operate with up to 2 decimal "
+"places."
+msgstr ""
+"株式を表現するモザイクを作成します。作成するモザイクはプロパティ ``supplyMutable`` , ``transferable`` "
+"``restrictable`` ``non-expiring`` を持ち、小数点以下 2 桁まで分割できます。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:63
+msgid ""
+"To make the mosaic easily identifiable in the network, create the namespace "
+"``cc`` and the subnamespace ``cc.shares``."
+msgstr ""
+"ネットワークでモザイクを簡単に識別できるようにするには、ネームスペース ``cc`` とサブネームスペース ``cc.shares`` を作成します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:85
+msgid ""
+"Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created "
+"in the first step."
+msgstr "サブネームスペース ``cc.shares`` を最初のステップで作成した ``mosaicId`` にリンクします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:99
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:101
+msgid ""
+"Now that you have created ``cc.shares``, define two "
+"``MosaicMetatadaTransaction`` to add the **ISIN** and **legal name** to the "
+"mosaic:"
+msgstr ""
+"``cc.shares`` を作成したので 2 つの ``MosaicMetatadaTransaction`` を定義して **ISIN** と "
+"**正式名称** をモザイクに追加します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:131
+msgid ""
+"All metadata is attached only with the consent of the mosaic creator through"
+" Aggregate Transactions. Wrap the **metadata transactions** inside an "
+":ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the "
+"aggregate with the company's account."
+msgstr ""
+"すべてのメタデータはアグリゲートトランザクションを通じてモザイク作成者の同意を得てのみアタッチされます。 **メタデータトランザクション** を "
+":ref:`AggregateCompleteTransaction <aggregate-complete>` "
+"でラップして会社のアカウントでアグリゲートに署名します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:145
+msgid ""
+"In this example, the account signing the transaction is the creator of the "
+"mosaic. For that reason, the aggregate can be defined as complete. If a "
+"different account owned the mosaic, you would set the :ref:`aggregate as "
+"bonded <aggregate-bonded>`, and the mosaic creator would opt-in the metadata"
+" request by :doc:`cosigning the transaction <../aggregate/signing-announced-"
+"aggregate-bonded-transactions>`."
+msgstr ""
+"この例では、トランザクションに署名するアカウントがモザイク作成者です。そのため、アグリゲートはコンプリートとして定義できます。別のアカウントがモザイク所有者の場合は"
+" :ref:`アグリゲートボンデッド <aggregate-bonded>` を設定し、モザイク作成者は :doc:`トランザクションに署名 "
+"<../aggregate/signing-announced-aggregate-bonded-transactions>` "
+"することでメタデータの要求にオプトインします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:147
+msgid "Sign and announce the **AggregateTransaction** to the network."
+msgstr "**AggregateTransaction** に署名してアナウンスします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:161
+msgid ""
+"When the transaction gets confirmed, :doc:`fetch the mosaic metadata entries"
+" <getting-metadata-entries-attached-to-a-mosaic>`."
+msgstr ""
+"トランザクションが承認されたら、 :doc:`モザイクのメタデータエントリー一覧の取得 <getting-metadata-entries-"
+"attached-to-a-mosaic>` してください。"

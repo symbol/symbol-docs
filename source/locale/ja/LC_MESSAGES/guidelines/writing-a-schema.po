@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -32,13 +32,13 @@ msgstr "新しいトランザクションタイプを含む、新しい Catapult
 
 #: ../../source/guidelines/writing-a-schema.rst:9
 msgid ""
-"In this guide, we are examining how the `transfer.cats "
+"In this guide, we examine how the `transfer.cats "
 "<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_"
-" schema works. You can adapt the same steps to define a new schema."
+"  was constructed. You can adapt the same steps to define a new schema."
 msgstr ""
 "このガイドでは `transfer.cats "
 "<https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_"
-" スキーマがどのように機能するかを試します。同じ手順を用いて新しいスキーマを定義することもできます。"
+" がどのように構築されるかを検証します。同じ手順を用いて新しいスキーマを定義することもできます。"
 
 #: ../../source/guidelines/writing-a-schema.rst:13
 msgid "Instructions"
@@ -50,8 +50,8 @@ msgstr "catbuffer リポジトリをクローンしてください。"
 
 #: ../../source/guidelines/writing-a-schema.rst:21
 msgid ""
-"Create a new file under ``schemas`` folder. In our case, we have called the "
-"file ``transfer.cats``."
+"Create a new file under the ``schemas`` folder. In our case, we have named "
+"the file ``transfer.cats``."
 msgstr "``schemas`` フォルダの下に新しいファイルを作成します。ここではファイルを ``transfer.cats`` とします。"
 
 #: ../../source/guidelines/writing-a-schema.rst:23
@@ -64,8 +64,46 @@ msgid ""
 "block of memory."
 msgstr "構造体を同じメモリブロックに格納したい一連のプロパティとして考えます。"
 
+#: ../../source/guidelines/writing-a-schema.rst:27
+msgid ""
+"The transaction body contains the extra properties which differ from a basic"
+" transaction. Each attribute can have one of the types defined in "
+"`types.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_."
+msgstr ""
+"トランザクション本体には基本的なトランザクションとは異なる追加のプロパティが含まれています。各属性は `types.cats "
+"<https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_ "
+"で定義されているタイプの 1 つを持つことができます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:44
+msgid ""
+"Define a second transaction struct in the same file. This will contain "
+"information about the version of the entity and its identifier. The "
+"underlying transaction properties and the particular transaction body are "
+"appended as inlines."
+msgstr ""
+"同じファイルに2番目のトランザクション構造体を定義します。これにはエンティティのバージョンとその識別子に関する情報が含まれます。基盤となるトランザクションプロパティと特定のトランザクションボディはインラインとして追加されます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:57
+msgid ""
+"Define an EmbeddedTransaction struct to serialize the inner transactions "
+"within an aggregate. The embedded transaction and the body transaction are "
+"added as inlines."
+msgstr ""
+"EmbeddedTransaction "
+"構造体を定義して、アグリゲート内のインナートランザクションをシリアル化します。埋め込みトランザクションと本体トランザクションはインラインとして追加されます。"
+
+#: ../../source/guidelines/writing-a-schema.rst:67
+msgid ""
+"The catbuffer library allows you to generate the transaction builders from "
+"the schema we have defined. For example, run the following command to "
+"generate C++ code:"
+msgstr ""
+"catbuffer ライブラリを使用すると、定義したスキーマからトランザクションビルダーを生成できます。たとえば、次のコマンドを実行してC "
+"++コードを生成します:"
+
 #: ../../source/guidelines/writing-a-schema.rst:73
 msgid ""
-"The generator creates the transaction builders file under "
+"The generator creates the transaction builders file under the "
 "``_generated/cpp_builder`` folder."
 msgstr "ジェネレータは ``_generated/cpp_builder`` フォルダの下にトランザクションビルダーファイルを作成します。"

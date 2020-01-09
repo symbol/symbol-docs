@@ -64,7 +64,7 @@ templates_path.append(ablog.get_html_templates_path())
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'contents'
+master_doc = 'index'
 
 # General information about the project.
 project = u'nem2-docs'
@@ -76,7 +76,7 @@ author = u'NEM'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.18.6'
+version = u'0.20.1'
 
 # The full version, including alpha/beta/rc tags.
 release = u'Master'
@@ -187,7 +187,7 @@ html_title = 'NEM Developer Center'
 html_static_path = ['_static']
 
 # Additional html pages
-html_additional_pages = {'index': 'index.html', 'endpoints': 'endpoints.html', '404': '404.html'}
+html_additional_pages = {'404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
@@ -200,8 +200,6 @@ def setup(app):
 # to template names.
 html_sidebars = {
   '**': ['globaltoc.html'],
-  'endpoints': [],
-  'index': [],
 }
 
 
@@ -281,7 +279,7 @@ epub_copyright = copyright
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['index.html, search.html, references.html, guides.html']
+epub_exclude_files = ['search.html, references.html, guides.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
@@ -312,6 +310,8 @@ linkcheck_ignore = [r'http://localhost\d+']
 viewsource_title = 'View Code'
 
 def viewsource_resolve_link(file_path, language=None):
+    if language == 'javascript':
+        language = 'typescript'
     base_url = 'https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/%s/' % language
     if language == 'java':
         base_url += 'src/test/java/nem2/guides/examples/'
@@ -321,5 +321,5 @@ def viewsource_resolve_link(file_path, language=None):
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/nemtech/catbuffer/tree/master/schemas/%s', 'file '),
+extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/master/schemas/%s', 'file '),
             'properties': ('https://github.com/nemtech/catapult-server/blob/master/resources/%s', 'file ')}

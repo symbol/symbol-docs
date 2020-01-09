@@ -15,17 +15,13 @@ Turn asynchronous transaction announcement into synchronous with |nem2-camel|.
 Background
 **********
 
-Alice is developing an app to send ``10 cat.currency`` to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send 10 cat.currency to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
 
-When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
+When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently: when a transaction is announced, the REST API server will always return an OK. As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
-As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.  However, it is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
+However, keeping track of transactions status adds unnecessary complexity to small projects. **nem2-camel** aims to solve this problem by providing a server that listens to the Catapult REST calls and acts as a proxy. When nem2-camel detects a transaction announcement, it waits for the confirmation via :ref:`WebSockets<websockets>` and returns the message to the HTTP call.
 
-On the other hand, keeping track of transactions status adds unnecessary complexity to small projects. It also increases the difficulty when migrating from NIS1.
-
-**nem2-camel** aims to solve these problems by providing a server that listens to the Catapult REST calls and acts as a proxy. When nem2-camel detects a transaction announcement, it waits for the confirmation via :ref:`WebSockets<websockets>` and returns the message to the HTTP call.
-
-.. note:: The function ``TransactionHttp.announceSync()`` allows announcing transactions synchronously when using nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction has reached the network and had no validation errors.  You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+.. note:: The function ``TransactionHttp.announceSync()`` allows announcing transactions synchronously when using nem2-camel as a proxy.  nem2-camel will respond successfully when the transaction reached the network and had no validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
 .. figure:: ../../resources/images/diagrams/nem2-camel-proxy.png
     :align: center
@@ -37,14 +33,11 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
+*********************************
 Running Catapult Service in local
-=================================
+*********************************
 
 For development and learning purposes, you can run the :doc:`Catapult Server and Catapult REST <../../concepts/node>` using the |catapult-service-bootstrap|.
 
@@ -60,12 +53,13 @@ For development and learning purposes, you can run the :doc:`Catapult Server and
 
 .. code-block:: bash
 
-    curl localhost:3000/block/1
+    curl nodeUrl + '/block/1'
 
-Getting Alice and Bob addresses
-===============================
+********************************
+Creating Alice and Bob addresses
+********************************
 
-Once the Catapult Service is running, it will generate a set of :doc:`accounts <../../concepts/account>` containing cat.currency.
+Once the Catapult Service is running, this will generate a set of :doc:`accounts <../../concepts/account>` containing cat.currency.
 
 1. Find the key pairs which contain cat.currency under the section ``nemesis_addresses``.
 
@@ -78,8 +72,9 @@ Once the Catapult Service is running, it will generate a set of :doc:`accounts <
 
 3. Take the second key pair as Bob's account, and copy the address.
 
+*********************
 Installing nem2-camel
-=====================
+*********************
 
 nem2-camel acts like a proxy between the application and the REST API.
 
@@ -93,8 +88,9 @@ nem2-camel acts like a proxy between the application and the REST API.
 
 2. After the service is up, use ``0.0.0.0:9000`` as the new proxy url.
 
-Sending the TransferTransaction
-================================
+*********************************
+Sending a synchronous transaction
+*********************************
 
 1. Alice creates a :doc:`TransferTransaction <../../concepts/transfer-transaction>`, sending ``10 cat.currency`` to Bob.
 
@@ -105,12 +101,22 @@ Sending the TransferTransaction
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Once signed, Alice :doc:`announces the transaction <../../concepts/transaction>`. Use ``TransactionHttp.announceSync`` instead of ``TransactionHttp.announce`` to wait until the transaction reaches the network, returning back the Transaction object.
 
 .. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+        :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 

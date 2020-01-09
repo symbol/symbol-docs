@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -41,60 +41,20 @@ msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` �
 
 #: ../../source/guides/account/getting-account-information.rst:19
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
 #: ../../source/guides/account/getting-account-information.rst:23
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/account/getting-account-information.rst:25
 msgid ""
-"Call ``getAccountInfo`` function, passing your account's address as a "
-"parameter."
-msgstr "アカウントのアドレスをパラメタとして ``getAccountInfo`` 関数に渡して呼び出してください。"
+"Open a new file and call ``getAccountInfo`` function, passing your account's"
+" address as a parameter."
+msgstr "新しいファイルを開いて、アカウントのアドレスを引数として ``getAccountInfo`` 関数を呼びます。"
 
-#: ../../source/guides/account/getting-account-information.rst:43
-msgid ""
-"Can you determine the account's public key? The **public key** identifies "
-"your account publicly in the network. Your  **address** is derived from it, "
-"which contains further information such as network and validity check."
-msgstr ""
-"アカウントの公開鍵を確認できますか？**公開鍵** はネットワーク上のあなたのアカウントを特定します。あなたの **アドレス** "
-"は公開鍵から導出され、ネットワークや妥当性チェックなどの情報を含んでいます。"
-
-#: ../../source/guides/account/getting-account-information.rst:45
-msgid ""
-"If you don't have a public key assigned, that means that your account has "
-"not announced or received any transaction yet. The ``addressHeight`` and "
-"``publicKeyHeight`` specify the block where your address and public key "
-"first appeared."
-msgstr ""
-"公開鍵が割り当てられていない場合、それはあなたのアカウントがまだトランザクションをアナウンスまたは受信していないことを意味します。 "
-"``addressHeight`` と ``publicKeyHeight`` はあなたのアドレスと公開鍵が最初に現れたブロックを指します。"
-
-#: ../../source/guides/account/getting-account-information.rst:47
-msgid ""
-"The ``importance`` field represents the numerical relation between the "
-"number of harvesting mosaics the account owns and the total mosaic supply. "
-"The greater the importance, the more chances to :doc:`harvest "
-"<../../concepts/harvesting>` new blocks."
-msgstr ""
-"``important`` "
-"フィールドはアカウントが所有するハーベスティングモザイクの数と総モザイク供給の間の数値的関係を表します。重要性が高ければ高いほど、新しいブロックを "
-":doc:`ハーベスト <../../concepts/harvesting>` する機会が増えます。"
-
-#: ../../source/guides/account/getting-account-information.rst:49
-msgid ""
-"The balance is the amount of the different :doc:`mosaics "
-"<../../concepts/mosaic>` owned by the account."
-msgstr "残高はそのアカウントが所有するいろいろな :doc:`mosaics <../../concepts/mosaic>` の量です。"
-
-#: ../../source/guides/account/getting-account-information.rst:51
-msgid ""
-"How many different mosaics does your account hold? Call "
-"``mosaicsAmountViewFromAddress`` function, passing your account's address as"
-" a parameter."
-msgstr ""
-"あなたのアカウントにはいくつのモザイクがありますか？アカウントのアドレスをパラメタとして "
-"``mosaicsAmountViewFromAddress`` 関数に渡して呼び出してください。"
+#: ../../source/guides/account/getting-account-information.rst:41
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

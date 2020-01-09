@@ -5,15 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-09-30 13:37+0000\n"
-"Last-Translator: David García <dgarcia360@outlook.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,8 +46,8 @@ msgstr ""
 "**3レベルのマルチシグアカウント** を作成します。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:24
-msgid "Three-level multisig account example"
-msgstr "3レベルマルチシグアカウントの例"
+msgid "3-level multisig account example"
+msgstr "3 階層マルチシグアカウントの例"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:28
 msgid "Prerequisites"
@@ -60,39 +61,36 @@ msgstr ""
 ":doc:`マルチシグアカウントへの変換ガイド <converting-an-account-to-multisig>` を終了していること"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:31
-msgid ""
-"Know how to :doc:`create accounts <../account/creating-and-opening-an-"
-"account>`"
-msgstr ""
-":doc:`アカウントの作成 <../account/creating-and-opening-an-account>` 方法を理解している"
+msgid "Know how to :doc:`create accounts <../account/creating-an-account>`"
+msgstr ":doc:`アカウントの作成 <../account/creating-an-account>` 方法を理解している"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:35
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Example #1: Multisig account with 3 levels"
+msgstr "例 #1: 3 階層のマルチシグアカウント"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:37
 msgid "Define the **multisig account #2**."
 msgstr "**マルチシグアカウント #2** の定義"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:46
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:51
 msgid "Define the **multisig account #3**."
 msgstr "**マルチシグアカウント #3** の定義"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:55
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:65
 msgid "Define the **multisig account #1**."
 msgstr "**マルチシグアカウント #1** の定義"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:64
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:79
 msgid ""
 "Announce the transactions together using an :ref:`AggregateBondedTransaction"
 " <aggregate-transaction>`. The **account #1** must has to **lock 10 "
-"cat.currency** to announce the transaction."
+"nem.xem** to announce the transaction."
 msgstr ""
 ":ref:`AggregateBondedTransaction <aggregate-transaction>` "
-"を使用して複数のトランザクションを一緒にアナウンスします。**アカウント #1** がアナウンスするためには **10 cat.currency** "
+"を使用して複数のトランザクションを一緒にアナウンスします。**アカウント #1** がアナウンスするためには **10 nem.xem** "
 "のロックが必要です。"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:73
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:93
 msgid ""
 "The potential cosignatories must opt-in to become cosignatories. "
 ":doc:`Cosign the announced AggregateTransaction <../aggregate/signing-"
@@ -103,11 +101,11 @@ msgstr ""
 ":doc:`AggregateTransaction に署名 <../aggregate/signing-announced-aggregate-"
 "bonded-transactions>` します。"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:81
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:101
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:83
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:103
 msgid ""
 "If the **account #5** initiates an **AggregateBondedTransaction** involving "
 "the **account #1**, which accounts should cosign the transaction?"
@@ -115,6 +113,6 @@ msgstr ""
 "**アカウント #5** が **アカウント #1** を含む **AggregateTransaction** "
 "を開始した場合、どのアカウントが取引に署名しないといけないでしょうか？"
 
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:89
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:109
 msgid "Sending an AggregateBondedTransaction from a MLMA"
 msgstr "MLMA からの AggregateBondedTransaction の送信"

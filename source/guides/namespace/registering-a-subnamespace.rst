@@ -11,26 +11,18 @@ Creating a subnamespace
 
 Create subnamespaces to organize your assets.
 
-**********
-Background
-**********
-
-Once you have a registered root :doc:`namespace <../../concepts/namespace>`, you can create up to ``3`` levels of subnamespaces to **organize your assets**.
-
-Unlike root namespaces, the subnamespaces do not have a **renting duration**. They share the duration with its parent namespace.
-
-It is possible to create multiple subnamespaces with the same name in different namespaces (example: ``foo.bar`` and ``foo2.bar``), but the combination rootnamespace + subnamespace must remain unique.
-
 *************
 Prerequisites
 *************
 
 - Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and at least one namespace
+- Have one :ref:`account with network currency <setup-creating-a-test-account>` and at least one namespace
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
+
+Once you have a registered root :doc:`namespace <../../concepts/namespace>`, you can create up to ``3`` levels of subnamespaces to **organize your assets**.
 
 This code example creates a subnamespace called ``bar`` under the namespace ``foo``.
 
@@ -41,14 +33,18 @@ This code example creates a subnamespace called ``bar`` under the namespace ``fo
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/RegisteringASubnamespace.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/RegisteringASubnamespace.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/namespace/RegisteringASubnamespace.sh
-        :language: bash
-        :start-after: #!/bin/sh
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/namespace/RegisteringASubnamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 ************
 What's next?

@@ -16,14 +16,12 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 - Have :doc:`sent mosaics <../transfer/sending-a-transfer-transaction>` to another account
 
-**********************
-Getting into some code
-**********************
-
-In this code example, we are going to check how many assets of a certain type have we sent to an account.
+*************************
+Method #01: Using the SDK
+*************************
 
 .. example-code::
 
@@ -32,9 +30,15 @@ In this code example, we are going to check how many assets of a certain type ha
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+
 If you want to check another :doc:`mosaic <../../concepts/mosaic>` different than the native currency, change ``mosaicId`` and ``divisibility`` for the target mosaic properties.
 
 .. code-block:: typescript
 
-    const mosaicId = new MosaicId([3562970624, 976072438]);
-    const divisibility = 6;
+    const mosaicId = new MosaicId('10293DE77C684F71');
+    const divisibility = 2;

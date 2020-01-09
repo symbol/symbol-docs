@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"PO-Revision-Date: 2019-10-28 13:02+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:10
+msgid "Assigning metadata to a namespace"
+msgstr "ネームスペースにメタデータを割り当てる"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:12
+msgid "Add custom data to a namespace."
+msgstr "ネームスペースにカスタムデータを追加"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:16
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:36
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:18
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:38
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:19
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:39
+msgid ""
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>`"
+msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:20
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:40
+msgid ""
+"Finish :doc:`registering a namespace guide "
+"<../namespace/registering-a-namespace>`"
+msgstr ":doc:`ネームスペースの取得ガイド <../namespace/registering-a-namespace>` を終了していること"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:24
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:26
+msgid ""
+":doc:`Metadata <../../concepts/metadata>` can be attached to "
+":doc:`namespaces <../../concepts/namespace>` to help users **verify domain "
+"ownership**. The contained data could include information such as "
+"registrant, administrative, or technical contact information."
+msgstr ""
+":doc:`メタデータ <../../concepts/metadata>` はユーザーが **ドメインの所有権** を確認できるように "
+":doc:`ネームスペース <../../concepts/namespace>` "
+"にアタッチできます。含まれるデータには登録者、管理者、または技術的な連絡先情報などの情報が含まれます。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:28
+msgid ""
+"In this guide, you are going to implement a program to add contact details "
+"to a namespace."
+msgstr "このガイドではネームスペースに連絡先の詳細を追加する実装を行います。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:44
+msgid "Creating the namespace"
+msgstr "ネームスペースの作成"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:46
+msgid ""
+"Create a new namespace ``cc`` with the **ComfyClothingCompany's account**."
+msgstr "新しいネームスペース ``cc`` を **ComfyClothingCompany のアカウント** で作成します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:60
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:62
+msgid ""
+"Define the following :ref:`namespace metadata transactions <namespace-"
+"metadata-transaction>`."
+msgstr ""
+"次の :ref:`ネームスペースメタデータトランザクション <namespace-metadata-transaction>` を定義します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:1
+msgid "Key"
+msgstr "キー"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:1
+msgid "Value"
+msgstr "値"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:85
+msgid ""
+"All metadata is attached only with the consent of the namespace creator "
+"through Aggregate Transactions.  Wrap the **metadata transactions** inside "
+"an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the "
+"aggregate with the company's account."
+msgstr ""
+"すべてのメタデータはアグリゲートトランザクションを通じてネームスペース作成者の同意を得てのみアタッチされます。 **メタデータトランザクション** を "
+":ref:`AggregateCompleteTransaction <aggregate-complete>` "
+"でラップして会社のアカウントでアグリゲートに署名します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:99
+msgid ""
+"If a namespace was owned by a different account, you would need to set the "
+":ref:`aggregate as bonded <aggregate-bonded>`. Then, the namespace creator "
+"needs to accept the metadata request by :doc:`cosigning the transaction "
+"<../aggregate/signing-announced-aggregate-bonded-transactions>`."
+msgstr ""
+"ネームスペースが別のアカウントによって所有されている場合は :ref:`アグリゲートボンデッド <aggregate-bonded>` "
+"を設定します。次に、ネームスペース作成者が :doc:`トランザクションへの署名 <../aggregate/signing-announced-"
+"aggregate-bonded-transactions>` をすることでメタデータの要求を受け入れる必要があります。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:101
+msgid "Sign and announce the **AggregateTransaction** to the network."
+msgstr "**AggregateTransaction** に署名してアナウンスします。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:115
+msgid ""
+"When the transaction gets confirmed, try to :doc:`fetch the namespace's "
+"metadata entries <getting-metadata-entries-attached-to-a-namespace>`."
+msgstr ""
+"トランザクションが承認されたら、 :doc:`ネームスペースのメタデータエントリー一覧の取得 <getting-metadata-entries-"
+"attached-to-a-namespace>` を試してください。"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -40,5 +40,69 @@ msgid ""
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
 #: ../../source/guides/blockchain/listening-new-blocks.rst:22
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+msgid "Method #01: Using WebSockets"
+msgstr "方法 #01: WebSocket を使用する"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:24
+msgid ""
+"First, we need to create a bidirectional link between our client application"
+" and the REST Gateway. To do so, open a new :ref:`WebSocket connection "
+"<websockets>` connection ."
+msgstr ""
+"まず、クライアントアプリケーションと REST ゲートウェイの間に双方向リンクを作成する必要があります。そのために新しい :ref:`WebSocket"
+" connection <websockets>` を開きます。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:50
+msgid ""
+"Once the connection is open, you will get a unique string identifier named "
+"``uid``. As we want to get notifications every time there is a new block "
+"harvested; the next step is to subscribe to the block channel. Check "
+":ref:`here <websockets>` the complete list of channels available."
+msgstr ""
+"接続が開くと ``uid`` という名前の一意の文字列識別子が取得されます。 "
+"新しいブロックがハーベストされるたびに通知を受け取るために、次のステップではブロックチャネルを購読します。 :ref:`ここ <websockets>`"
+" で利用可能なチャンネルのリストを確認してください。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:52
+msgid ""
+"Send the uid received during the connection phase, and the channel name "
+"formatted as follows."
+msgstr "接続フェーズ中に受信した uid と、次の形式のチャネル名を送信します。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:67
+msgid ""
+"From that moment, every ``15`` seconds more or less, you will receive a new "
+"notification with the content of the new harvested blocks."
+msgstr "その瞬間から ``15`` 秒ごとに新しくハーベストされたブロックの内容を含む新しい通知を受け取ります。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:71
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:73
+msgid "The NEM2-SDK simplifies the process of handling WebSocket connections."
+msgstr "NEM2-SDK は WebSocket 接続の処理プロセスを簡素化します。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:75
+msgid ""
+"In the SDK, WebSockets are named **Listeners**. As we have done with "
+"WebSockets, we need to open the connection first and subscribe to the "
+"desired channel, but this time without handling uids."
+msgstr ""
+"SDK では、WebSockets は **リスナー** と呼ばれます。WebSocket "
+"で行ったように、最初に接続を開き、目的のチャンネルを購読する必要がありますが、今回は uid を処理しません。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:89
+msgid ""
+"Note that the NEM2-SDK for TypeScript base Listener is designed to work on "
+"Node.js backend environments. If you want to execute Listeners from the "
+"client-side (e.g., Angular, React, Vue.), pass the browser implementation of"
+" the WebSocket to the Listener."
+msgstr ""
+"Typescript ベースのリスナー用 NEM2-SDK は Node.js "
+"バックエンド環境で動作するように設計されています。リスナーをクライアントサイド (例: Angular, React, Vue) "
+"で実行するには、WebSocket のブラウザ実装をリスナーに渡します。"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:98
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"

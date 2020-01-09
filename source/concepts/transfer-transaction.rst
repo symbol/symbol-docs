@@ -8,7 +8,7 @@ Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages betw
     :align: center
     :width: 450px
 
-    Alice sends 10 cat.currency to Bob
+    Alice sends 10 nem.xem to Bob
 
 *********
 Recipient
@@ -32,18 +32,18 @@ You can send a combination of different mosaics in the same transaction.
 Message
 *******
 
-A TransferTransaction can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
+In the :ref:`public network <config-network-properties>`, transfer transactions can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
 
-The messages attached are visible by default to all network participants.
+By default, the messages attached are visible by default to all network participants, although the client does not encrypt the message.
 
 Encrypted message
 =================
 
 Encrypted messages are only accessible by the sender and the recipient.
 
-NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
+Catapult uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
 
-The client-side handles the encryption and decryption of the message. You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/nem2-library-js/blob/master/src/crypto/crypto.js#L255>`_ and `decode <https://github.com/nemtech/nem2-library-js/blob/master/src/crypto/crypto.js#L287>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
+.. note:: You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L248>`_ and `decode <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L316>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
 
 ******
 Guides
@@ -57,11 +57,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _transfer-transaction:
 
@@ -72,7 +70,7 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
 
 **Version**: 0x01
 
-**Entity type**: 0x4154
+**EntityType**: 0x4154
 
 **Inlines**:
 
@@ -82,11 +80,12 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    recipientAddress; :schema:`UnresolvedAddress <types.cats#L7>`; Transaction recipient.
-    messageSize; uint16; Size of the attached message.
+    recipientAddress; :schema:`UnresolvedAddress <types.cats#L10>`; Transaction recipient.
     mosaicsCount; uint8; Number of attached mosaics.
-    message; array(byte, messageSize); :ref:`Message type <message-type>` and a payload of up to ``1023`` bytes.
+    messageSize; uint16; Size of the attached message.
+    transferTransactionBody_Reserved1; uint32; Reserved padding to align mosaics on 8-byte boundary.
     mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Attached mosaics to send.
+    message; array(byte, messageSize); :ref:`Message type <message-type>` and hexadecimal payload.
 
 .. _message-type:
 
@@ -102,3 +101,5 @@ Enumeration: uint8
     0x00; Plain message.
     0x01; Encrypted message.
     0xFE; Persistent harvesting delegation.
+
+Continue: :doc:`Aggregate Transaction <aggregate-transaction>`.

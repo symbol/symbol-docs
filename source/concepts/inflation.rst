@@ -32,3 +32,5 @@ The `network configuration <https://github.com/nemtech/catapult-server/blob/mast
 
     initialCurrencyAtomicUnits = 8'999'999'998'000'000
     maxMosaicAtomicUnits = 9'000'000'000'000'000
+
+Continue: :doc:`Receipt <receipt>`.

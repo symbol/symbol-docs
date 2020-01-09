@@ -16,40 +16,38 @@
  *
  */
 
-import {
-    Account,
-    AliasAction,
-    AliasTransaction,
-    Deadline,
-    MosaicId,
-    NamespaceId,
-    NetworkType,
-    TransactionHttp
-} from "nem2-sdk";
+import {Account, AliasAction, AliasTransaction, Deadline, MosaicId, NamespaceId, NetworkType, TransactionHttp, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME as string;
-const namespaceId = new NamespaceId(namespaceName);
-const mosaicIdHexa = process.env.MOSAIC_ID_HEXA as string;
-const mosaicId = new MosaicId(mosaicIdHexa);
+// replace with namespace name
+const namespaceId = new NamespaceId('foo');
+// replace with mosaic id
+const mosaicId = new MosaicId('7cdf3b117a3c40cc');
 /* end block 01 */
 
 /* start block 02 */
+// replace with networkType
+const networkType = NetworkType.TEST_NET;
+
 const mosaicAliasTransaction = AliasTransaction.createForMosaic(
     Deadline.create(),
     AliasAction.Link,
     namespaceId,
     mosaicId,
-    NetworkType.MIJIN_TEST
-);
+    networkType,
+    UInt64.fromUint(2000000));
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(mosaicAliasTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const transactionHttp = new TransactionHttp(nodeUrl);
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 02 */

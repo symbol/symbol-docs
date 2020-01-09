@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"PO-Revision-Date: 2019-10-30 16:39+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/configuring-node-properties.rst:10
+msgid "Configuring node properties"
+msgstr "ノードのプロパティ設定"
+
+#: ../../source/guides/network/configuring-node-properties.rst:12
+msgid "Customize the node configurable parameters."
+msgstr "ノード設定パラメータの変更"
+
+#: ../../source/guides/network/configuring-node-properties.rst:46
+msgid "Properties"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:48
+msgid "Find below the list of configurable properties."
+msgstr "設定可能なプロパティのリストは次の通りです。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Boot private key."
+msgstr "ブート秘密鍵"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Set to true if potential delegated harvesters should be automatically "
+"detected."
+msgstr "true の場合、デリゲートハーベスターを自動的に検出します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Data directory."
+msgstr "データディレクトリ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Plugins directory."
+msgstr "プラグインディレクトリ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Server port."
+msgstr "サーバポート"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Server api port."
+msgstr "サーバ API ポート"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if the server should reuse ports already in use."
+msgstr "true の場合、サーバは使用中のポートを再利用します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if cache data should be saved in a database."
+msgstr "true の場合、キャッシュデータのデータベース保存が有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if transaction spam throttling should be enabled."
+msgstr "true の場合、スパムスロットルが有効になります。"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/consensus-algorithm.rst:3
-msgid "Consensus Algorithm"
-msgstr "コンセンサスアルゴリズム"
+msgid "Consensus"
+msgstr "コンセンサス"
 
 #: ../../source/concepts/consensus-algorithm.rst:5
 msgid ""
@@ -94,54 +94,45 @@ msgstr ""
 "すべての高価値アカウントはこれら 3 つの要素に基づいて **インポータンススコア** を受け取り、それがブロックを :doc:`ハーベスト "
 "<harvesting>` する確率を決定します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:25
-msgid ""
-"The account needs to hold a minimum amount of :ref:`harvesting mosaics "
-"<harvesting-mosaic>` to have importance greater than zero."
-msgstr ""
-"このアカウントは 0 より大きい重要度を持つために最低限の :ref:`ハーベスティングモザイク <harvesting-mosaic>` "
-"を保有する必要があります。"
-
-#: ../../source/concepts/consensus-algorithm.rst:29
+#: ../../source/concepts/consensus-algorithm.rst:27
 msgid "Scores"
 msgstr "スコア"
 
-#: ../../source/concepts/consensus-algorithm.rst:31
+#: ../../source/concepts/consensus-algorithm.rst:29
 msgid ""
 "The network calculates the following sub scores for all high-value accounts "
 "for each factor:"
 msgstr "ネットワークは各要因をすべての高価値アカウントに対して以下のサブスコアを計算します:"
 
-#: ../../source/concepts/consensus-algorithm.rst:33
+#: ../../source/concepts/consensus-algorithm.rst:31
 msgid ""
 "**Stake Score (S`)**: Percentage of the effective balance of all high value "
 "accounts at time P."
 msgstr "**Stake Score (S`)**: 時間 P におけるすべての高価値アカウントの実効残高の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:34
+#: ../../source/concepts/consensus-algorithm.rst:32
 msgid ""
 "**Transaction Score (T`)**: Percentage of total transaction fees among all "
 "high-value accounts in period P-1 to P."
 msgstr ""
 "**Transaction Score (T`)**: 期間 P-1 から P までのすべての高価値アカウントにおける合計トランザクション手数料の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:35
+#: ../../source/concepts/consensus-algorithm.rst:33
 msgid ""
 "**Node Score (N`)**: Percentage of total beneficiaries among all blocks in "
 "P-1 to P."
 msgstr "**Node Score (N`)**: P-1 から P までの全ブロックにおける受益者合計の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:39
+#: ../../source/concepts/consensus-algorithm.rst:37
 msgid "Constants"
 msgstr "制約"
 
-#: ../../source/concepts/consensus-algorithm.rst:41
+#: ../../source/concepts/consensus-algorithm.rst:39
 msgid ""
-"Each network can define their own consensus algorithm :properties:`constants"
-" <config-network.properties>`."
+"Each network can define custom consensus algorithm :ref:`constants <config-"
+"network-properties>`."
 msgstr ""
-"各ネットワークは独自のコンセンサスアルゴリズム :properties:`定数 <config-network.properties>` "
-"を定義できます。"
+"各ネットワークはカスタムコンセンサスアルゴリズム :ref:`定数 <config-network-properties>` を定義できます。"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Constant"
@@ -171,19 +162,23 @@ msgstr "トランザクションスコア乗数"
 msgid "Node score multiplier."
 msgstr "ノードスコア乗数"
 
-#: ../../source/concepts/consensus-algorithm.rst:55
+#: ../../source/concepts/consensus-algorithm.rst:53
 msgid "Calculation"
 msgstr "算出"
 
-#: ../../source/concepts/consensus-algorithm.rst:57
+#: ../../source/concepts/consensus-algorithm.rst:55
 msgid ""
 "The importance can be calculated for each account in the following manner:"
 msgstr "インポータンスはアカウントごとに次の方法で計算できます:"
 
-#: ../../source/concepts/consensus-algorithm.rst:63
+#: ../../source/concepts/consensus-algorithm.rst:61
 msgid ""
 "The combination of Transaction Score and Node Score has a multiplier effect "
 "when Stake Score is low. Conversely, the multiplier effect is insignificant "
 "when Stake Score is high."
 msgstr ""
 "トランザクションスコアとノードスコアの組み合わせはステークスコアが低い場合に乗数効果があります。逆に、ステークスコアが高い場合に乗数効果は重要ではありません。"
+
+#: ../../source/concepts/consensus-algorithm.rst:67
+msgid "Continue: :doc:`Harvesting <harvesting>`."
+msgstr "次へ: :doc:`ハーベスティング <harvesting>`"

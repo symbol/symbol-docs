@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,90 +29,30 @@ msgstr "ガイドを記述する"
 msgid "Thank you for considering writing a new guide!"
 msgstr "新しいガイドの記述を検討してくれてありがとう！"
 
-#: ../../source/guidelines/writing-a-guide.rst:11
-msgid "Before starting"
-msgstr "始める前に"
-
-#: ../../source/guidelines/writing-a-guide.rst:13
+#: ../../source/guidelines/writing-a-guide.rst:9
 msgid ""
-"Open the `nem2-docs repository issues "
-"<https://github.com/nemtech/nem2-docs/issues>`_, and find some ideas pending"
-" to be written. They have the label \"great new issue\"."
+"Before starting, we recommend you to open the `nem2-docs repository issues "
+"<https://github.com/nemtech/nem2-docs/issues>`_ to find some ideas pending "
+"to be written."
 msgstr ""
-"`nem2-docs リポジトリ issues <https://github.com/nemtech/nem2-docs/issues>`_ "
-"を開き、記述しようとしているアイディアを探してください。それらは \"great new issue\" ラベルを持っています。"
+"始める前に `nem2-docs リポジトリ issues "
+"<https://github.com/nemtech/nem2-docs/issues>`_ "
+"を開き、記述しようとしているアイディアを探すことを推奨します。"
+
+#: ../../source/guidelines/writing-a-guide.rst:11
+msgid ""
+"To collaborate with one of the existing issues, express it in a comment to "
+"avoid duplicated efforts. If there is no issue yet, create a new one "
+"introducing the content you want to publish."
+msgstr ""
+"既存の問題の 1 "
+"つと協力するには、重複した作業を避けるためにコメントで表現してください。まだ問題の登録が無い場合は、公開するコンテンツを紹介する新しい問題を作成します。"
 
 #: ../../source/guidelines/writing-a-guide.rst:15
-msgid ""
-"Opt to contribute to one of them by adding a comment, or create a new issue "
-"with your guide idea."
-msgstr "コメントを追加してその1人に貢献するか、あなたのガイドのアイデアに新しい issue を作成するかを選択します。"
-
-#: ../../source/guidelines/writing-a-guide.rst:17
-msgid "Classify your guide under one of the following categories:"
-msgstr "次のカテゴリのいずれかにガイドを分類してください:"
-
-#: ../../source/guidelines/writing-a-guide.rst:19
-msgid "Account"
-msgstr "アカウント"
-
-#: ../../source/guidelines/writing-a-guide.rst:20
-msgid "Account Filter"
-msgstr "アカウントフィルタ"
-
-#: ../../source/guidelines/writing-a-guide.rst:21
-msgid "Aggregate Transaction"
-msgstr "アグリゲートトランザクション"
-
-#: ../../source/guidelines/writing-a-guide.rst:22
-msgid "Block"
-msgstr "ブロック"
-
-#: ../../source/guidelines/writing-a-guide.rst:23
-msgid "Cross-Chain Swaps"
-msgstr "クロスチェーンスワップ"
-
-#: ../../source/guidelines/writing-a-guide.rst:24
-msgid "Harvesting"
-msgstr "ハーベスティング"
-
-#: ../../source/guidelines/writing-a-guide.rst:25
-msgid "Mosaic"
-msgstr "モザイク"
-
-#: ../../source/guidelines/writing-a-guide.rst:26
-msgid "Namespace"
-msgstr "ネームスペース"
-
-#: ../../source/guidelines/writing-a-guide.rst:27
-msgid "Node"
-msgstr "ノード"
-
-#: ../../source/guidelines/writing-a-guide.rst:28
-msgid "Receipt"
-msgstr "レシート"
-
-#: ../../source/guidelines/writing-a-guide.rst:29
-msgid "Transfer Transaction"
-msgstr "転送トランザクション"
-
-#: ../../source/guidelines/writing-a-guide.rst:30
-msgid "Tools"
-msgstr "ツール"
-
-#: ../../source/guidelines/writing-a-guide.rst:32
-msgid ""
-"You can suggest new categories creating a `GitHub issue "
-"<https://github.com/nemtech/nem2-docs>`_."
-msgstr ""
-"`GitHub issue <https://github.com/nemtech/nem2-docs>`_ "
-"を作成することで新しいカテゴリを提案できます。"
-
-#: ../../source/guidelines/writing-a-guide.rst:36
 msgid "Writing the guide"
 msgstr "ガイドを記述する"
 
-#: ../../source/guidelines/writing-a-guide.rst:38
+#: ../../source/guidelines/writing-a-guide.rst:17
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the "
 "`nem2-docs <https://github.com/nemtech/nem2-docs>`_ repository."
@@ -120,29 +60,29 @@ msgstr ""
 "`フォーク <https://help.github.com/articles/fork-a-repo/>`_ して `nem2-docs "
 "<https://github.com/nemtech/nem2-docs>`_ リポジトリをクローンしてください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:44
+#: ../../source/guidelines/writing-a-guide.rst:23
 msgid ""
-"Make sure you have Python 2.7 or 3.4+ and `pip "
+"Make sure you have Python 3.4+ and `pip "
 "<https://pip.pypa.io/en/stable/installing/>`_ installed."
 msgstr ""
-"Python 2.7 または 3.4+ と `pip <https://pip.pypa.io/en/stable/installing/>`_ "
+"Python 3.4+ と `pip <https://pip.pypa.io/en/stable/installing/>`_ "
 "がインストールされていることを確認してください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:50
+#: ../../source/guidelines/writing-a-guide.rst:29
 msgid "Install requirements using pip:"
 msgstr "pipを使用した要求環境のインストール"
 
-#: ../../source/guidelines/writing-a-guide.rst:56
+#: ../../source/guidelines/writing-a-guide.rst:35
 msgid "Create a new ``rst`` file inside one of the guides folder,"
 msgstr "ガイドのフォルダ内に新しく ``rst`` を作成します。"
 
-#: ../../source/guidelines/writing-a-guide.rst:62
+#: ../../source/guidelines/writing-a-guide.rst:41
 msgid "Use the following template to organize your content."
 msgstr "あなたのコンテンツを整理するためにこのテンプレートに従ってください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:106
+#: ../../source/guidelines/writing-a-guide.rst:85
 msgid ""
-"Write and code your guide! Check the `restructured text cheatsheet "
+"Write and code your guide. Check the `restructured text cheatsheet "
 "<https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_"
 " to style your text."
 msgstr ""
@@ -150,28 +90,29 @@ msgstr ""
 "<https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_"
 " を確認してください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:108
+#: ../../source/guidelines/writing-a-guide.rst:87
 msgid ""
 "Add the `code examples "
 "<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_"
 " under ``source/resources/examples/<language_or_tool>``. You can render "
-"fragments of code from a file inside your rst file."
+"fragments of code from a file inside your ``.rst`` file."
 msgstr ""
 "`コード例 "
 "<https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_"
 " を ``source/resources/examples/<language_or_tool>`` の下に追加してください。rst "
 "ファイルの中からコード断片をレンダリングすることもできます。"
 
-#: ../../source/guidelines/writing-a-guide.rst:119
+#: ../../source/guidelines/writing-a-guide.rst:98
 msgid "Test and preview your changes."
 msgstr "あなたの変更点をテストしプレビューしてください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:123
+#: ../../source/guidelines/writing-a-guide.rst:104
 msgid ""
-"Push your changes and do a `pull-request "
+"Push your changes and create a `pull-request "
 "<https://help.github.com/articles/creating-a-pull-request/>`_. The "
 "repository maintainers will proofread and edit the content to follow the "
-"documentation writing style."
+":doc:`documentation style guide <style-guide>`."
 msgstr ""
-"変更をプッシュして `プルリクエスト <https://help.github.com/articles/creating-a-pull-"
-"request/>`_ をしてください。リポジトリのメンテナがドキュメント記述のスタイルに沿ったコンテンツの構成と編集を行います。"
+"変更をプッシュし、 `プルリクエスト <https://help.github.com/articles/creating-a-pull-"
+"request/>`_ を作成してください。リポジトリのメンテナが :doc:`ドキュメント記述ガイド <style-guide>` "
+"のスタイルに沿ったコンテンツの構成と編集を行います。"

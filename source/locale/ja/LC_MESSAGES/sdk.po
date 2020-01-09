@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.6\n"
+"Project-Id-Version: nem2-docs 0.20.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 10:27+0100\n"
+"POT-Creation-Date: 2019-12-18 21:59+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -38,9 +38,10 @@ msgstr "これを利用することで、開発者は特有な API の抽象化�
 
 #: ../../source/sdk.rst:9
 msgid ""
-"Learn how to use NEM's SDK following the :ref:`guided implementation "
+"Learn how to use Catapult's SDK following the :ref:`guided implementation "
 "examples <blog-categories>`."
-msgstr "NEM SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
+msgstr ""
+"Catapult の SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
 
 #: ../../source/sdk.rst:13
 msgid "Supported languages"
@@ -58,17 +59,17 @@ msgstr "リポジトリ"
 msgid "Reference"
 msgstr "リファレンス"
 
-#: ../../source/sdk.rst:23
+#: ../../source/sdk.rst:24
 msgid "Ongoing work"
 msgstr "開発中"
 
-#: ../../source/sdk.rst:25
+#: ../../source/sdk.rst:26
 msgid ""
 "⚠️ The following SDKs are not compatible with the latest version of "
 "catapult-server."
 msgstr "⚠️ 以下の SDK は最新バージョンの catapult-server と互換性がありません。"
 
-#: ../../source/sdk.rst:27
+#: ../../source/sdk.rst:28
 msgid ""
 "Read the |protocol-compatibility-report| to know more about the status of "
 "each project."
