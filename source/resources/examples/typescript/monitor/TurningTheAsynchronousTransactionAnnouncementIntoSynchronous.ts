@@ -29,6 +29,8 @@ import {
     UInt64,
 } from 'nem2-sdk';
 import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {merge} from 'rxjs';
+import {filter, tap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with recipient address
@@ -67,8 +69,14 @@ const listener = repositoryFactory.createListener();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    transactionService
-        .announce(signedTransaction, listener)
+    merge(transactionService.announce(signedTransaction, listener),
+        listener
+            .status(account.address)
+            .pipe(
+                filter((error) => error.hash === signedTransaction.hash),
+                tap((error) => {
+                    throw new Error(error.code);
+                })))
         .subscribe((transaction) => {
             console.log(transaction);
             // TODO: send email to recipient

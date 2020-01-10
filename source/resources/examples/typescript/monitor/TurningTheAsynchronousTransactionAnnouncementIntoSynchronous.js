@@ -19,6 +19,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
 const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
+const rxjs_1 = require("rxjs");
+const operators_1 = require("rxjs/operators");
 /* start block 01 */
 // replace with recipient address
 const rawRecipientAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
@@ -45,8 +47,11 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    transactionService
-        .announce(signedTransaction, listener)
+    rxjs_1.merge(transactionService.announce(signedTransaction, listener), listener
+        .status(account.address)
+        .pipe(operators_1.filter((error) => error.hash === signedTransaction.hash), operators_1.tap((error) => {
+        throw new Error(error.code);
+    })))
         .subscribe((transaction) => {
         console.log(transaction);
         // TODO: send email to recipient

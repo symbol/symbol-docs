@@ -66,8 +66,6 @@ Alice is developing an app to send 10 cat.currency to Bob and wants to know if t
 
 .. note:: The function ``TransactionService.announce()`` will respond successfully when the transaction reached the network and had no validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
-If the Catapult REST server throws an error, the subscribe method will invoke the ``error function`` returning a ``TransactionStatus`` object.
-
 .. |docker| raw:: html
 
     <a href="https://docs.docker.com/install/" target="_blank">docker</a>
