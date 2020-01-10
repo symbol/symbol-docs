@@ -751,7 +751,7 @@ Transaction
 
 Transactions are signed with the profiles created with ``nem2-cli profile create``, ``nem2-cli profile import``, or ``nem2-cli account generate -s``.
 
-**Transaction info**
+**Transaction Info**
 
 Returns transaction information given a hash.
 
@@ -796,6 +796,8 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
     --profile <profile>          - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>    - Profile password.
     -f, --max-fee <maxFee>       - Maximum fee (absolute amount).
+    --sync                       - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                   - (Optional) Announce the transaction without double confirmation.
     -u, --public-key <publicKey> - Remote account public key.
     -a, --action <action>        - Alias action (1: Link, 0: Unlink).
 
@@ -834,6 +836,8 @@ Creates a new :doc:`mosaic <concepts/mosaic>`.
     --profile <profile>               - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>         - Profile password.
     -f, --max-fee <maxFee>            - Maximum fee (absolute amount).
+    --sync                            - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                        - (Optional) Announce the transaction without double confirmation.
     -a, --amount <amount>             - Initial supply of mosaics.
     -t, --transferable                - (Optional) Mosaic transferable.
     -s, --supply-mutable              - (Optional) Mosaic supply mutable.
@@ -859,6 +863,8 @@ Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>  - Profile password.
     -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
+    --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                 - (Optional) Announce the transaction without double confirmation.
     -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
     -d, --amount <amount>      - Atomic amount of supply change.
@@ -880,6 +886,8 @@ Registers a :doc:`namespace <concepts/namespace>`.
     --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>      - Profile password.
     -f, --max-fee <maxFee>         - Maximum fee (absolute amount).
+    --sync                         - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                     - (Optional) Announce the transaction without double confirmation.
     -n, --name <name>              - Namespace name.
     -r, --rootnamespace            - Root namespace.
     -s, --subnamespace             - Sub namespace.
@@ -911,6 +919,8 @@ Links a namespace to an :doc:`address <concepts/account>`.
     --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>            - Profile password.
     -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
+    --sync                               - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                           - (Optional) Announce the transaction without double confirmation.
     -a, --action <action>                - Alias action (1: Link, 0: Unlink).
     -a, --address <address>              - Account address.
     -n, --namespace-name <namespaceName> - Namespace name.
@@ -932,6 +942,8 @@ Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
     --profile <profile>                  - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>            - Profile password.
     -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
+    --sync                               - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                           - (Optional) Announce the transaction without double confirmation.
     -a, --action <action>                - Alias action (1: Link, 0: Unlink).
     -m, --mosaic-id <mosaicId>           - Mosaic id in hexadecimal format.
     -n, --namespace-name <namespaceName> - Namespace name.
@@ -955,6 +967,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
     --profile <profile>                                          - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                                    - Profile password.
     -f, --max-fee <maxFee>                                       - Maximum fee (absolute amount).
+    --announce                                                   - (Optional) Announce the transaction without double confirmation.
     -F, --max-fee-hash-lock <maxFeeHashLock>                     - Maximum fee (absolute amount) to announce the hash lock transaction.
     -D, --duration <duration>                                    - Hash lock duration expressed in blocks. [480]
     -L, --amount <amount>                                        - Relative amount of network mosaic to lock. [10]
@@ -981,6 +994,8 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                  - Profile password.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                 - (Optional) Announce the transaction without double confirmation.
     -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier or @alias.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
     -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
@@ -1005,6 +1020,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                  - Profile password.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                 - (Optional) Announce the transaction without double confirmation.
     -s, --secret <secret>                      - Proof hashed in hexadecimal.
     -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
     -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
@@ -1027,6 +1044,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                  - Profile password.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                 - (Optional) Announce the transaction without double confirmation.
     -f, --flags <flags>                        - Restriction flags.(0: AllowOutgoingAddress, 1: BlockOutgoingAddress, 2: AllowIncomingAddress, 3: BlockIncomingAddress)
     -a, --action <action>                      - Modification action. (1: Add, 0: Remove).
     -v, --recipient-address <recipientAddress> - Address or @alias to allow/block.
@@ -1048,6 +1067,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>  - Profile password.
     -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
+    --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                 - (Optional) Announce the transaction without double confirmation.
     -f, --flags <flags>        - Restriction flags.(0: AllowMosaic, 1: BlockMosaic)
     -a, --action <action>      - Modification action. (1: Add, 0: Remove).
     -v, --mosaic-id <mosaicId> - Mosaic or @alias to allow / block.
@@ -1069,6 +1090,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                - Profile password.
     -f, --max-fee <maxFee>                   - Maximum fee (absolute amount).
+    --sync                                   - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                               - (Optional) Announce the transaction without double confirmation.
     -f, --flags <flags>                      - Restriction flag. (0: AllowOutgoingTransactionType, 1: BlockOutgoingTransactionType)
     -a, --action <action>                    - Modification action. (1: Add, 0: Remove).
     -v, --transaction-type <transactionType> - Transaction type formatted as hex.
@@ -1092,6 +1115,8 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
     --profile <profile>                             - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                       - Profile password.
     -f, --max-fee <maxFee>                          - Maximum fee (absolute amount).
+    --sync                                          - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                      - (Optional) Announce the transaction without double confirmation.
     -r, --recipient-address <recipientAddress>      - Recipient address or @alias.
     -m, --message <message>                         - Transaction message.
     -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.

@@ -152,13 +152,13 @@ We are representing the ticket with Catapult :doc:`Mosaics <../concepts/mosaic>`
 
 .. code-block:: bash
 
-   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000
+   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync
 
-2. Copy the MosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
+2. After announcing the transaction, copy the MosaicId displayed in the terminal.
 
 .. code-block:: bash
 
-   ...  MosaicId:7cdf3b117a3c40cc ...
+   The new mosaic id is: 7cdf3b117a3c40cc
 
 ******************
 Sending the ticket
@@ -225,7 +225,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
     .. code-block:: bash
 
-        nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000
+        nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
 4. When the transaction is confirmed, check if the customer has received the ticket.
 

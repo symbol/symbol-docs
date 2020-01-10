@@ -48,7 +48,7 @@ Creating the shares
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaic
+    nem2-cli transaction mosaic --sync
 
     Do you want an non-expiring mosaic? [y/n]: y
     Introduce mosaic divisibility: 2
@@ -57,42 +57,42 @@ Creating the shares
     Do you want mosaic to be restrictable? [y/n]: y
     Introduce max_fee (absolute amount): 0
     Introduce amount of tokens: 100
-    Your mosaic id is:  2C08D5EDB652AA79
-    Transaction announced correctly
+    The new mosaic id is:  2C08D5EDB652AA79
+    Transaction confirmed.
 
 2. To make the mosaic easily identifiable in the network, create the namespace ``cc`` and the subnamespace ``cc.shares``.
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace
+    nem2-cli transaction namespace --sync
 
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
     Introduce max_fee (absolute amount): 0
-    Transaction announced correctly
+    Transaction confirmed.
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace
+    nem2-cli transaction namespace --sync
 
     Introduce namespace name: shares
     Do you want to create a root namespace? [y/n]: n
     Introduce the parent namespace name: cc
     Introduce max_fee (absolute amount): 0
-    Transaction announced correctly
+    Transaction confirmed.
 
 3. Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created in the first step.
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaicalias
+    nem2-cli transaction mosaicalias --sync
 
     Introduce namespace name: cc.shares
     Introduce alias action (1: Link, 0: Unlink): 1
     Introduce mosaic in hexadecimal format: 2C08D5EDB652AA79
     Introduce max_fee (absolute amount): 0
-    Transaction announced correctly
+    Transaction confirmed.
 
 *************************
 Method #01: Using the SDK
