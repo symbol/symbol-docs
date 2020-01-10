@@ -15,7 +15,7 @@ Get the resolution for a given alias and transaction using receipts.
 Background
 **********
 
-In Catapult, accounts can link their registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`. This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
+Catapult accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`. This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
 
 Imagine a ticket vendor sending tickets to their customers on the Catapult public blockchain. The company needs to send ``1 0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. With aliases, it can define the same transaction as sending ``1 ticketsales.event1.ticket`` to ``@alice`` instead.
 
@@ -88,7 +88,7 @@ In this example, we are going to announce a **TransferTransaction** using ``nem.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Announce the **TransferTransaction**, and wait until it is confirmed.
+3. Announce the **TransferTransaction**. Once the transaction is confirmed, retrieve the receipts attached to the block and find for the namespace resolution.
 
 .. example-code::
 
@@ -101,32 +101,6 @@ In this example, we are going to announce a **TransferTransaction** using ``nem.
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
-
-4. Then, retrieve the receipts attached to the block where the receipt was confirmed. The **RxJs filters** will look for the namespace resolution inside the ``mosaicResolutionStatements`` collection.
-
-.. example-code::
-
-    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts
-        :language: typescript
-        :start-after:  /* start block 04 */
-        :end-before: /* end block 04 */
-
-    .. viewsource:: ../../resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js
-        :language: javascript
-        :start-after:  /* start block 04 */
-        :end-before: /* end block 04 */
-
-The previous snippet outputs the resolved mosaic identifier for the namespace ``nem.xem`` and the transaction you have just sent.
-
-.. code-block:: bash
-
-    Resolved MosaicId:  0dc67fbe1cad29e3
-    PrimaryId:  1
-    SecondaryId:  0
-
-It is technically possible to get more than one ``resolutionEntry`` for the same namespaceId. This situation is common when a namespace creator changes the link to another mosaic, leading to two different resolutions in the same block.
-
-The receipt source ``primaryId`` references the transaction where the alias first appears within the block. The ``secondaryId`` is a non 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
 
 *************
 What is next?

@@ -16,16 +16,8 @@
  *
  */
 
-import {
-    Account,
-    AccountRestrictionFlags,
-    AccountRestrictionTransaction,
-    Address,
-    Deadline,
-    NetworkType,
-    TransactionHttp,
-    UInt64,
-} from 'nem2-sdk';
+import {Account, AccountRestrictionFlags, AccountRestrictionTransaction, Address, Deadline, NetworkType, UInt64} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
@@ -55,7 +47,8 @@ const productAccount = Account.createFromPrivateKey(productPrivateKey, networkTy
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp
     .announce(signedTransaction)

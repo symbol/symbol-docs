@@ -16,7 +16,8 @@
  *
  */
 
-import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RestrictionMosaicHttp} from 'nem2-sdk';
+import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with mosaic id
@@ -24,7 +25,8 @@ const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const restrictionHttp = new RestrictionMosaicHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 
 restrictionHttp.getMosaicGlobalRestriction(mosaicId)
     .subscribe((mosaicGlobalRestrictions) => {

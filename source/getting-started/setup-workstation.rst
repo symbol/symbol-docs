@@ -22,7 +22,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global nem2-cli@0.16.1
+    npm install --global nem2-cli
 
 .. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
 
@@ -109,7 +109,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.16.0 rxjs
+            npm install nem2-sdk rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for Catapult.
 
@@ -138,7 +138,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.16.0 rxjs
+            npm install nem2-sdk rxjs
 
     .. tab:: Java
 

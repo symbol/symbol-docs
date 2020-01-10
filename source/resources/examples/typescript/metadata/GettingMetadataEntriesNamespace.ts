@@ -16,14 +16,16 @@
  *
  */
 
-import {Metadata, MetadataHttp, NamespaceId} from 'nem2-sdk';
+import {Metadata, NamespaceId} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new NamespaceId('cat');
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const metadataHttp = new MetadataHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const metadataHttp = repositoryFactory.createMetadataRepository();
 
 metadataHttp.getNamespaceMetadata(namespaceId)
     .subscribe((metadata) => {

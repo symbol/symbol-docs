@@ -16,7 +16,8 @@
  *
  */
 
-import {Address, MultisigHttp} from 'nem2-sdk';
+import {Address} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with multisig address
@@ -25,7 +26,8 @@ const address = Address.createFromRawAddress(rawAddress);
 
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const multisigHttp = new MultisigHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const multisigHttp = repositoryFactory.createMultisigRepository();
 
 multisigHttp
     .getMultisigAccountInfo(address)

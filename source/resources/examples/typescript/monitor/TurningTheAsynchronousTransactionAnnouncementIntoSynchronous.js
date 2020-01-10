@@ -18,17 +18,18 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 /* start block 01 */
 // replace with recipient address
-const rawRecipientAddress = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
+const rawRecipientAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.MIJIN_TEST;
+const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with nem.xem id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.EmptyMessage, networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.EmptyMessage, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
@@ -37,11 +38,19 @@ const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247E
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 /* start block 02 */
-const transactionHttp = new nem2_sdk_1.TransactionHttp('http://0.0.0.0:9000');
-transactionHttp
-    .announceSync(signedTransaction)
-    .subscribe((x) => {
-    console.log(x);
-    // TODO: send email to recipient
-}, (err) => console.error(err));
+const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const listener = repositoryFactory.createListener();
+const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
+listener.open().then(() => {
+    transactionService
+        .announce(signedTransaction, listener)
+        .subscribe((transaction) => {
+        console.log(transaction);
+        // TODO: send email to recipient
+        listener.close();
+    }, (err) => console.error(err));
+});
 /* end block 02 */

@@ -16,18 +16,8 @@
  *
  */
 
-import {
-    Account,
-    Address,
-    Deadline,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    TransactionHttp,
-    TransferTransaction,
-    UInt64,
-} from 'nem2-sdk';
+import {Account, Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with mosaic id
@@ -60,7 +50,8 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 /* start block 03 */
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp
     .announce(signedTransaction)

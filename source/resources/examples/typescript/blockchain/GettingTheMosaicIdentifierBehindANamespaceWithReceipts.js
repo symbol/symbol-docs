@@ -18,6 +18,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('nem.xem'), nem2_sdk_1.UInt64.fromUint(1000000));
@@ -25,7 +26,7 @@ const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('nem.xem'
 /* start block 02 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'), [aliasedMosaic], nem2_sdk_1.PlainMessage.create('Test aliased mosaic'), networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
@@ -37,33 +38,18 @@ console.log(signedTransaction.hash);
 /* start block 03 */
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const receiptHttp = new nem2_sdk_1.ReceiptHttp(nodeUrl);
-const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
-const listener = new nem2_sdk_1.Listener(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl);
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const listener = repositoryFactory.createListener();
+const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    transactionHttp
-        .announce(signedTransaction)
-        .subscribe((x) => console.log(x), (err) => console.error(err));
-    /* end block 03 */
-    /* start block 04 */
-    listener
-        .confirmed(account.address)
-        .pipe(
-    // Get the block height where the transaction was included
-    operators_1.filter((transaction) => transaction.transactionInfo !== undefined
-        && transaction.transactionInfo.hash === signedTransaction.hash), 
-    // Get the list of receipts triggered for that block
-    operators_1.mergeMap((transaction) => receiptHttp.getBlockReceipts(transaction.transactionInfo.height.toString())), 
-    // Iterate over each resolution statement. Find the resolution for the aliased MosaicId.
-    operators_1.map((receipts) => receipts.mosaicResolutionStatements), operators_1.mergeMap((resolutionStatements) => resolutionStatements), operators_1.filter((resolutionStatement) => resolutionStatement.unresolved instanceof nem2_sdk_1.NamespaceId
-        && resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex()))
-        .subscribe((resolutionStatement) => {
-        resolutionStatement.resolutionEntries.map((entry) => {
-            console.log('Resolved MosaicId: ', entry.resolved);
-            console.log('PrimaryId: ', entry.source.primaryId);
-            console.log('SecondaryId: ', entry.source.secondaryId);
-        });
-        listener.terminate();
+    transactionService
+        .announce(signedTransaction, listener)
+        .pipe(operators_1.mergeMap((transaction) => transactionService.resolveAliases([transaction.transactionInfo.hash])), operators_1.map((transactions) => transactions[0]))
+        .subscribe((transaction) => {
+        console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
+        listener.close();
     }, (err) => console.log(err));
 });
-/* end block 04 */
+/* end block 03 */

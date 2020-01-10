@@ -22,7 +22,6 @@ import {
     AggregateTransaction,
     Deadline,
     HashLockTransaction,
-    Listener,
     Mosaic,
     MosaicId,
     NetworkType,
@@ -32,6 +31,7 @@ import {
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 // replace network type
 const networkType = NetworkType.TEST_NET;
@@ -83,10 +83,14 @@ const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, n
 
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const listener = new Listener(nodeUrl);
-const transactionService = new TransactionService(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
     transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
+    listener.close();
 });
 /* end block 02 */

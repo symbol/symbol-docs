@@ -18,7 +18,7 @@ A :ref:`transaction statement <transaction-statement>` is a collection of receip
 * **Balance Change**: The invisible state change altered an account balance.
 * **Mosaic Expiry**: A mosaic expired.
 * **Namespace Expiry**: A namespace expired.
-* **Inflation**: Native currency mosaics were created due to :doc:`inflation <inflation>`.
+* **Inflation**: Network currency mosaics were created due to :doc:`inflation <inflation>`.
 
 ********************
 Resolution statement
@@ -30,6 +30,11 @@ When a transaction includes an :doc:`alias <namespace>`, a so called :ref:`resol
 * **Mosaic Resolution**: A mosaic alias was used in the block.
 
 The alias receipts record the first occurrence of an (unresolved, resolved) alias pair used in a block.
+
+It is technically possible to get more than one resolution for the same namespaceId and block.
+This situation is common when a namespace creator changes the alias link to another asset, leading to two different resolutions in the same block.
+
+The receipt source ``primaryId`` references the transaction where the alias first appears within the block. The ``secondaryId`` is not 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
 
 *****************
 Recorded receipts
@@ -79,7 +84,6 @@ Guides
 ***************
 Receipt schemas
 ***************
-
 
 .. _receipt:
 
@@ -189,6 +193,8 @@ A :doc:`namespace <namespace>` expired.
 InflationReceipt
 ================
 
+Network currency mosaics were created due to :doc:`inflation <inflation>`.
+
 * **version**: 0x1
 * **basicType**: 0x5
 
@@ -249,6 +255,8 @@ A resolution statement keeps the relation between a namespace alias used in a tr
 
 ResolutionEntry
 ===============
+
+A single resolution statement can have multiple resolution entries.
 
 .. csv-table::
     :header: "Property", "Type", "Description"

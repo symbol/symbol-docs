@@ -327,15 +327,47 @@ Convert
 
 Utilities to convert  between data types.
 
-**Namespace name to id**
+**Base32 to Hex Address**
 
-Namespace name -> NamespaceId coder.
+Address Base 32 -> Address hex converter.
 
 *Options*
 
 .. code-block:: bash
 
-    -v, --namespace-name <namespaceName> - Namespace name.
+    -a, --address <address> - Address.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertBase32ToHexAddress.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Hex to Base32 Address**
+
+Address hex -> Address Base 32 converter.
+
+*Options*
+
+.. code-block:: bash
+
+    -a, --address <address> - Address.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/converter/ConvertHexToBase32Address.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Namespace name to id**
+
+Namespace name -> NamespaceId converter.
+
+*Options*
+
+.. code-block:: bash
+
+    -n, --namespace-name <namespaceName> - Namespace name.
 
 *Command*
 
@@ -345,7 +377,7 @@ Namespace name -> NamespaceId coder.
 
 **Numeric string to UInt64**
 
-Numeric string -> UInt64 coder.
+Numeric string -> UInt64 converter.
 
 *Options*
 
@@ -361,7 +393,7 @@ Numeric string -> UInt64 coder.
 
 **Payload to transaction**
 
-Payload -> Transaction coder.
+Payload -> Transaction converter.
 
 *Options*
 
@@ -377,7 +409,7 @@ Payload -> Transaction coder.
 
 **Private key to public key**
 
-Private key -> Public key coder.
+Private key -> Public key converter.
 
 *Options*
 
@@ -394,7 +426,7 @@ Private key -> Public key coder.
 
 **Public key to address**
 
-Public key -> Address coder.
+Public key -> Address converter.
 
 *Options*
 
@@ -411,7 +443,7 @@ Public key -> Address coder.
 
 **String to key**
 
-String -> UInt64 coder.
+String -> UInt64 converter.
 
 *Options*
 
@@ -922,10 +954,10 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
 
     --profile <profile>                                          - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>                                    - Profile password.
-    -f, --max-fee <maxFee>                                       - Maximum fee you want to pay to announce the transaction.
-    -F, --max-fee-hash-lock <maxFeeHashLock>                     - Maximum fee you want to pay to announce the hash lock transaction.
+    -f, --max-fee <maxFee>                                       - Maximum fee (absolute amount).
+    -F, --max-fee-hash-lock <maxFeeHashLock>                     - Maximum fee (absolute amount) to announce the hash lock transaction.
     -D, --duration <duration>                                    - Hash lock duration expressed in blocks. [480]
-    -L, --amount <amount>                                        - Amounts of mosaics to lock. [10]
+    -L, --amount <amount>                                        - Relative amount of network mosaic to lock. [10]
     -R, --min-removal-delta <minRemovalDelta>                    - (Optional) Number of signatures needed to remove a cosignatory.  [0]
     -A, --min-approval-delta <minApprovalDelta>                  - (Optional) Number of signatures needed to approve a transaction. [0]
     -a, --action <action>                                        - Modification Action (1: Add, 0: Remove).
