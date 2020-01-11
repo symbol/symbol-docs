@@ -70,7 +70,7 @@ The KYC provider defines the following permission tiers:
     IsVerified; EQ; 1; The client has issued a valid passport.
     IsVerified; EQ; 2; The client has issued a valid proof of address and passport.
 
-ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, we are going to use the field ``referenceId``.
+ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, use the field ``referenceId``.
 
 3. Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and ``IsVerified`` as the key.
 

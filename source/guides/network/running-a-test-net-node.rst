@@ -79,7 +79,7 @@ You should see docker downloading the container images for the first time, then 
 
 If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: To stop all the running services, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
+.. note:: To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
 
 ***************************
 Configuring node properties

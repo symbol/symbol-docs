@@ -671,6 +671,23 @@ Monitors :doc:`account <concepts/account>` validation errors.
     :language: bash
     :start-after: #!/bin/sh
 
+**All**
+
+Monitors new blocks, confirmed, aggregate bonded added, and status errors related to an account.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>     - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address> - Account address.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/monitor/MonitoringAll.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
 Mosaic
 ======
 

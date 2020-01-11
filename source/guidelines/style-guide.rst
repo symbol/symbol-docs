@@ -83,7 +83,7 @@ Tone
     Use American English variant.; Use UK Spelling/grammar: "colo**u**r".
     Be friendly, maintaining a professionalism.; Use too much contractions, slang, colloquialism, buzz words, excessive exclamation marks.
     Use active voice & present tense by default.; Use passive voice.
-    Address the reader as "you" by default. Use "we" as the default pronoun in your article unless you are referring to a personal recommendation.; Use “you” to describe an action the user has to do: We are going to create a mosaic ...
+    Address the reader as "you" by default. Use "we" as the default pronoun in your article unless you are referring to a personal recommendation.; Use “you” to describe an action the user has to do.
     Write documentation for an international audience, with diversity and inclusivity in mind.; Include culturally or politically controversial ideas or examples.
     Be Concise.; Use long sentences or filler words in excess ("simply", "really", "just", "please").
 
