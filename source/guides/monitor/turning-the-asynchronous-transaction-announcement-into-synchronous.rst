@@ -64,7 +64,7 @@ Alice is developing an app to send 10 cat.currency to Bob and wants to know if t
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: The function ``TransactionService.announce()`` will respond successfully when the transaction reached the network and had no validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+.. note:: The function ``TransactionService.announce()`` will respond successfully if the transaction reaches the network and does not have validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
 
 .. |docker| raw:: html
 
