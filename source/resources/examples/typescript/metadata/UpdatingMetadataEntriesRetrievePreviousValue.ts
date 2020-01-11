@@ -16,7 +16,8 @@
  *
  */
 
-import {Account, AccountMetadataTransaction, Convert, Deadline, KeyGenerator, MetadataHttp, NetworkType, PublicAccount} from 'nem2-sdk';
+import {Account, AccountMetadataTransaction, Convert, Deadline, KeyGenerator, NetworkType, PublicAccount} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 
@@ -31,7 +32,8 @@ const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const metadataHttp = new MetadataHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const metadataHttp = repositoryFactory.createMetadataRepository();
 
 // replace with key and new value
 const key = KeyGenerator.generateUInt64Key('CERT');

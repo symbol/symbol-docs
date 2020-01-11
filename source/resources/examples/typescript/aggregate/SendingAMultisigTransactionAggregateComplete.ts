@@ -26,10 +26,10 @@ import {
     NetworkType,
     PlainMessage,
     PublicAccount,
-    TransactionHttp,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace network type
@@ -74,7 +74,8 @@ const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247E
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const transactionHttp = new TransactionHttp( nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)
     .subscribe((x) => console.log(x), (err) => console.error(err));

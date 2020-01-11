@@ -16,15 +16,8 @@
  *
  */
 
-import {
-    Account,
-    AccountHttp,
-    AggregateTransaction,
-    CosignatureSignedTransaction,
-    CosignatureTransaction,
-    NetworkType,
-    TransactionHttp,
-} from 'nem2-sdk';
+import {Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, NetworkType} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
@@ -42,8 +35,9 @@ const privateKey = '000000000000000000000000000000000000000000000000000000000000
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const accountHttp = new AccountHttp(nodeUrl);
-const transactionHttp = new TransactionHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType);
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const accountHttp = repositoryFactory.createAccountRepository();
 
 accountHttp
     .getAccountPartialTransactions(account.address)

@@ -18,6 +18,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
@@ -64,9 +65,15 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.merg
 }));
 /* end block 03 */
 /* start block 04 */
-const listener = new nem2_sdk_1.Listener(nodeUrl);
-const transactionService = new nem2_sdk_1.TransactionService(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    signedAggregateHashLock.pipe(operators_1.mergeMap((signedAggregateHashLock) => transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener))).subscribe((ignored) => console.log('Transaction confirmed'), (err) => console.log(err));
+    signedAggregateHashLock.pipe(operators_1.mergeMap((signedAggregateHashLock) => transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener))).subscribe((ignored) => {
+        console.log('Transaction confirmed');
+        listener.close();
+    }, (err) => console.log(err));
 });
 /* end block 04 */

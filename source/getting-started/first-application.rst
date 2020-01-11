@@ -46,7 +46,7 @@ The rest of the code remains **off-chain**. This reduces the inherent immutabili
 Creating an account for each participant
 ****************************************
 
-First, identify the actors involved in the problem we want to solve:
+First, identify the actors involved in the problem to solve:
 
 * The ticket vendor.
 * The customer.
@@ -111,25 +111,11 @@ Accounts change the blockchain state through transactions. Once an account annou
 
 Receiving an OK response does not mean the transaction is valid, or included in a block. A good practice is to **monitor transactions** before being announced.
 
-Open three new terminals:
-
-1.  Monitor transaction validation errors.
+In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which of them are rejected by the network.
 
 .. code-block:: bash
 
-   nem2-cli monitor status
-
-2. Monitor ``unconfirmed`` transactions to know which transactions have reached the network but are not included in a block yet.
-
-.. code-block:: bash
-
-   nem2-cli monitor unconfirmed
-
-3. Monitor ``confirmed`` transactions to see which announced transactions are included in a block.
-
-.. code-block:: bash
-
-   nem2-cli monitor confirmed
+   nem2-cli monitor all --address TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB
 
 *******************
 Creating the ticket
@@ -152,13 +138,16 @@ We are representing the ticket with Catapult :doc:`Mosaics <../concepts/mosaic>`
 
 .. code-block:: bash
 
-   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000
+   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync
 
-2. Copy the MosaicId returned in the ``monitor confirmed`` tab after the transaction gets confirmed.
+2. After announcing the transaction, copy the MosaicId displayed in the terminal.
 
 .. code-block:: bash
 
-   ...  MosaicId:7cdf3b117a3c40cc ...
+   The new mosaic id is: 7cdf3b117a3c40cc
+
+The transaction should appear as confirmed after ±15 seconds.
+If the terminal raises an error, check :ref:`the error code meaning here <status-errors>`.
 
 ******************
 Sending the ticket
@@ -209,7 +198,7 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Once signed, you can announce the transaction to the network.
+3. Once signed, announce the transaction to the network.
 
 .. example-code::
 
@@ -225,17 +214,17 @@ Although the transaction is defined, it has not been announced to the network ye
 
     .. code-block:: bash
 
-        nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000
+        nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
-4. When the transaction is confirmed, check if the customer has received the ticket.
+4. When the transaction appears as confirmed, check if the customer has received the ticket.
 
 .. code-block:: bash
 
     nem2-cli account info --profile customer
 
-***************************
-Did you solve the use case?
-***************************
+**************************
+Did we solve the use case?
+**************************
 
 * ✅ Identify each customer: Creating Catapult accounts for each customer.
 

@@ -18,6 +18,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 /* start block 01 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
@@ -50,9 +51,13 @@ const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Dea
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const listener = new nem2_sdk_1.Listener(nodeUrl);
-const transactionService = new nem2_sdk_1.TransactionService(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
     transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
+    listener.close();
 });
 /* end block 04 */

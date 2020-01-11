@@ -16,7 +16,8 @@
  *
  */
 
-import {AccountHttp, Address, QueryParams} from 'nem2-sdk';
+import {Address, QueryParams} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {EMPTY} from 'rxjs';
 import {concatMap, expand, toArray} from 'rxjs/operators';
 
@@ -25,7 +26,8 @@ const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const accountHttp = new AccountHttp(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const accountHttp = repositoryFactory.createAccountRepository();
 
 const pageSize = 100;
 const allTransactions = true;

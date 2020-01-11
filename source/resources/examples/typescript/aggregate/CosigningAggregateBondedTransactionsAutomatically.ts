@@ -16,15 +16,8 @@
  *
  */
 
-import {
-    Account,
-    AggregateTransaction,
-    CosignatureSignedTransaction,
-    CosignatureTransaction,
-    Listener,
-    NetworkType,
-    TransactionHttp,
-} from 'nem2-sdk';
+import {Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, NetworkType} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 import {filter, map, mergeMap} from 'rxjs/operators';
 
@@ -43,8 +36,9 @@ const privateKey = '000000000000000000000000000000000000000000000000000000000000
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType);
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const listener = repositoryFactory.createListener();
 
 listener.open().then(() => {
     listener
@@ -53,10 +47,13 @@ listener.open().then(() => {
             filter((_) => !_.signedByAccount(account.publicAccount)),
             map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
             mergeMap((signedCosignatureTransaction) => {
-                listener.terminate();
+                listener.close();
                 return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
             }),
         )
-        .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
+        .subscribe((announcedTransaction) => {
+            console.log(announcedTransaction);
+            listener.close();
+        }, (err) => console.error(err));
 });
 /* end block 02 */

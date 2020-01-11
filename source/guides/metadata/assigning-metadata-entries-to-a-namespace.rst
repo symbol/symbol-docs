@@ -47,13 +47,13 @@ Creating the namespace
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace
+    nem2-cli transaction namespace --sync
 
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
     Introduce the namespace rental duration: 1000
     Introduce max_fee (absolute amount): 0
-    Transaction announced correctly
+    Transaction confirmed.
 
 *************************
 Method #01: Using the SDK

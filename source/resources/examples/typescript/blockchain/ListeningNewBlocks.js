@@ -17,13 +17,17 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 /* start block 01 */
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const listener = new nem2_sdk_1.Listener(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl);
+const listener = repositoryFactory.createListener();
 listener.open().then(() => {
     listener
         .newBlock()
-        .subscribe((block) => console.log(block), (err) => console.error(err));
+        .subscribe((block) => {
+        console.log(block);
+        listener.close();
+    }, (err) => console.error(err));
 });
 /* end block 01 */

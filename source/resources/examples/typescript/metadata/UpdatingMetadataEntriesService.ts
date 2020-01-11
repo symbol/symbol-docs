@@ -22,7 +22,6 @@ import {
     Deadline,
     HashLockTransaction,
     KeyGenerator,
-    Listener,
     MetadataHttp,
     MetadataTransactionService,
     MetadataType,
@@ -34,6 +33,7 @@ import {
     TransactionService,
     UInt64,
 } from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 
@@ -115,8 +115,11 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
 /* end block 03 */
 
 /* start block 04 */
-const listener = new Listener(nodeUrl);
-const transactionService = new TransactionService(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
     signedAggregateHashLock.pipe(
@@ -126,7 +129,10 @@ listener.open().then(() => {
                 signedAggregateHashLock.aggregate,
                 listener),
         ),
-    ).subscribe((ignored) => console.log('Transaction confirmed'),
-                (err) => console.log(err));
+    ).subscribe((ignored) => {
+            console.log('Transaction confirmed');
+            listener.close();
+        },
+        (err) => console.log(err));
 });
 /* end block 04 */

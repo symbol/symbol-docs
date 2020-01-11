@@ -18,6 +18,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
+const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 const validTransaction = (transaction, publicAccount) => {
@@ -39,13 +40,17 @@ const privateKey = '000000000000000000000000000000000000000000000000000000000000
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const transactionHttp = new nem2_sdk_1.TransactionHttp(nodeUrl);
-const listener = new nem2_sdk_1.Listener(nodeUrl);
+const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType);
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const listener = repositoryFactory.createListener();
 listener.open().then(() => {
     listener
         .aggregateBondedAdded(account.address)
         .pipe(operators_1.filter((_) => _.innerTransactions.length === 2), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount)
         || validTransaction(_.innerTransactions[1], account.publicAccount)), operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((signedCosignatureTransaction) => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)))
-        .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
+        .subscribe((announcedTransaction) => {
+        console.log(announcedTransaction);
+        listener.close();
+    }, (err) => console.error(err));
 });
 /* end block 01 */

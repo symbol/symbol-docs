@@ -21,11 +21,11 @@ Prerequisites
 Background
 **********
 
-:doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain. Once a transaction is included in a block—and the block receives enough confirmations— it is not possible to modify the record without invalidating the whole chain.
+:doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain. Once a transaction is included in a block—and the block receives enough confirmations—it is not possible to modify the record without invalidating the whole chain.
 
 What we can do to update a metadata entry is to announce a second metadata transaction. This action will record a new transaction while keeping the history immutable. However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? Catapult makes this possible by keeping a copy of the **newest value** assigned to a metadata entry as a **state**.
 
-In this example, we are going to **update a metadata entry** attached to an account. However, you could follow a similar approach to update namespace and mosaic metadata entries.
+This guide shows you how to **update a metadata entry** attached to an account. However, you could follow a similar approach to update namespace and mosaic metadata entries.
 
 *************
 Prerequisites
