@@ -750,7 +750,7 @@ Gets all the :doc:`namespaces <concepts/namespace>` owned by an account.
 
 **Alias**
 
-Get mosaic id or address behind an namespace.
+Gets the mosaic id or address behind an namespace.
 
 *Options*
 
