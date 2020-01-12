@@ -65,9 +65,9 @@ If you already have a private key, you can use it to define a new ``SimpleWallet
 Method #02: Using the CLI
 *************************
 
-In NEM2-CLI, wallets are named **profiles**.
+In |cli|, wallets are named **profiles**.
 
-.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
 
 Create a new wallet with the following command:
 

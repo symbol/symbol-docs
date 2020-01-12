@@ -6,9 +6,10 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on Catapult.
+This first guide will walk you through a step-by-step installation of the required tools to start developing with |codename|.
 
-We will be using the **test network**, which uses the same technology and features of the future main public network. You can use the testnet to experiment with the offered Catapult's transaction set in a live network without the loss of valuable assets.
+We will be using the **test network**, which uses the same technology and features of the future main public network.
+You can use the testnet to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
 .. _setup-creating-a-test-account:
 
@@ -18,13 +19,13 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-1. Install NEM2-CLI.
+1. Install |cli|.
 
 .. code-block:: bash
 
     npm install --global nem2-cli
 
-.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
 
 2. Generate a new account and save it as a **profile**.
 
@@ -61,16 +62,18 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 Getting test currency
 *********************
 
-To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in ``nem.xem`` mosaics, the default network currency of the public network.
+To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure.
+This cost is paid in |networkcurrency| mosaics, the default network currency of the public network.
 
-Now that you have created your first account, try to request ``nem.xem`` units from the **testnet faucet**. |faucet|, indicate the amount of nem.xem you want to receive and the address, and click "CLAIM!".
+Now that you have created your first account, try to request |networkcurrency| units from the **testnet faucet**.
+|faucet|, indicate the amount of |networkcurrency| you want to receive and the address, and click "CLAIM!".
 
 .. figure:: ../resources/images/screenshots/faucet.png
     :align: center
 
 .. note:: If the default faucet is empty, try this other |faucet-2|.
 
-After the transaction gets confirmed, check if the account has received ``nem.xem`` using the command-line tool.
+After the transaction gets confirmed, check if the account has received |networkcurrency| using the command-line tool.
 
 .. code-block:: bash
 
@@ -83,7 +86,7 @@ After the transaction gets confirmed, check if the account has received ``nem.xe
     │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of ``nem.xem`` and must be replenished before it dries. If you don’t need your test nem.xem units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
 
 .. _setup-development-environment:
 
@@ -91,9 +94,11 @@ After the transaction gets confirmed, check if the account has received ``nem.xe
 Creating a project
 ******************
 
-Now that you have your account filled with ``nem.xem`` units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
+Now that you have your account filled with |networkcurrency| units, it is the time to choose a **programming language**.
+Pick the one you feel most comfortable with, or follow your project requirements.
 
-Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
+Then, **create a folder for your new project** and run the instructions for the selected language.
+If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
 .. tabs::
 
@@ -105,13 +110,13 @@ Then, **create a folder for your new project** and run the instructions for the 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 
             npm install nem2-sdk rxjs
 
-        3. We recommend to use **TypeScript instead of JavaScript** when building applications for Catapult.
+        3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -134,7 +139,7 @@ Then, **create a folder for your new project** and run the instructions for the 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 

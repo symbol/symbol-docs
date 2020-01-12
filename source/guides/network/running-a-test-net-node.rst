@@ -9,9 +9,10 @@
 Running a test net node
 #######################
 
-This guide will walk you through the process of **setting up your node** to join Catapult’s public **test network**.
+This guide will walk you through the process of **setting up your node** to join |codename|’s public **test network**.
 
-The test network mirrors the same **technology** and **features** of the future main public network. You can use the testnet to experiment with the offered Catapult's transaction set in a live network without the loss of valuable assets.
+The test network mirrors the same **technology** and **features** of the future main public network.
+You can use the testnet to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
@@ -19,7 +20,7 @@ The test network mirrors the same **technology** and **features** of the future 
 Hardware requirements
 *********************
 
-Catapult nodes have been tested on computers with the following **minimum requirements**.
+|codename| nodes have been tested on computers with the following **minimum requirements**.
 
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
@@ -32,7 +33,8 @@ Catapult nodes have been tested on computers with the following **minimum requir
 Environment requirements
 ************************
 
-The setup scripts are automated using docker. To run a test net node, you will need to have installed the following docker tools:
+The setup scripts are automated using docker.
+To run a test net node, you will need to have installed the following docker tools:
 
 * `docker`_
 * `docker-compose`_
@@ -41,10 +43,10 @@ The setup scripts are automated using docker. To run a test net node, you will n
 Installation
 ************
 
-A node can be composed of a different set of components depending on your needs. Catapult test net nodes are currently distributed in two forms:
+A node can be composed of a different set of components depending on your needs.
+|codename| test net nodes are currently distributed in two forms:
 
 * **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-
 * **API harvest assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions.  The API node installation comes with a REST gateway to perform read and write actions.
 
 The package  ``catapult-testnet-bootstrap`` contains both assemblies ready to be installed.
@@ -57,7 +59,8 @@ The package  ``catapult-testnet-bootstrap`` contains both assemblies ready to be
 
 2. Choose the **assembly distribution** you want to install.
 
-In short, if you want to be able to interact with your node, you need to run the API assembly. On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the peer assembly.
+In short, if you want to be able to interact with your node, you need to run the API assembly.
+On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the peer assembly.
 
 .. code-block:: bash
 
@@ -87,7 +90,8 @@ Configuring node properties
 
 After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the node's public key or the :doc:`harvesting <../../concepts/harvesting>` configuration.
 
-A file ``config-input.yaml`` will be generated with the default values. Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
+A file ``config-input.yaml`` will be generated with the default values.
+Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
 
 1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
@@ -99,7 +103,7 @@ A file ``config-input.yaml`` will be generated with the default values. Dependin
 Interacting with the test network
 *********************************
 
-To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test nem.xem <setup-getting-test-currency>`.
+To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test <setup-getting-test-currency>` |networkcurrency|.
 
 Explorer
 ========
@@ -109,23 +113,23 @@ Explorer
 Clients
 =======
 
-* |desktop-wallet|: Cross-platform client for Catapult. Available for Mac, Linux, and Windows.
+* |desktop-wallet|: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :doc:`Command-Line Interface <../../cli>`: Execute the most commonly used actions from your terminal.
 
 Faucet
 ======
 
 
-* |faucet-1|: Receive nem.xem units to test Catapult's services.
+* |faucet-1|: Receive |networkcurrency| units to test |codename|'s services.
 
 .. note:: If the default faucet is empty, try this other |faucet-2|.
 
 SDKs
 ====
 
-* :doc:`Software Development Kits <../../sdk>`: Integrate your app with Catapult.
+* :doc:`Software Development Kits <../../sdk>`: Integrate your app with |codename|.
 
-In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+In this portal, you can find everything you need to know about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

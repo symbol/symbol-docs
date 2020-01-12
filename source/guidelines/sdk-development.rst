@@ -4,19 +4,18 @@
 SDK Development
 ###############
 
-One of the key objectives we had when building the first group of  SDKs was to enable developers to change quickly between programming languages without having to adapt to a completely different design. This document intends to guide developers to ship Catapult-based SDKs that share the same design to achieve interoperability.
+One of the key objectives we had when building the first group of  SDKs was to enable developers to change quickly between programming languages without having to adapt to a completely different design.
+This document intends to guide developers to ship |codename|-based SDKs that share the same design to achieve interoperability.
 
 *********
 Rationale
 *********
 
-The NEM2-SDK shares the same design/architecture between programming languages to accomplish the next properties:
+The |sdk| shares the same design/architecture between programming languages to accomplish the next properties:
 
-* **Fast language adaptation**: For example, there is a NEM2-SDK for Java, but you need to work on C++. As both SDKs share the same design, you could re-write the library faster, adapting the syntax to your language. The same principle also applies to code examples, projects, applications...
-
-* **Cohesion/shared knowledge across NEM developers**: Every developer in the NEM ecosystem should be able to change between projects that use NEM. By sharing the same design, we also share the same best practices among projects.
-
-* **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
+* **Fast language adaptation**: For example, there is a |sdk| for Java, but you need to work on C++. As both SDKs share the same design, you could re-write the library faster, adapting the syntax to your language. The same principle also applies to code examples, projects, applications...
+* **Cohesion/shared knowledge across developers**: Every developer should be able to change between projects that use |codename|. By sharing the same design, we also share the same best practices among projects.
+* **Fast SDK updates**: Migrating any improvement from a |sdk| implementation to the rest is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
 
 ************
 Architecture
@@ -43,11 +42,11 @@ Package Organization
 
 **Infrastructure**
 
-The HTTP requests are made following the Repository Pattern, and they return NEM Domain immutable models via the Observable Pattern.
+The HTTP requests are made following the Repository Pattern, and they return |codename| domain immutable models via the Observable Pattern.
 
 **Models**
 
-The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to change the NEM Blockchain state.
+The |codename| domain models are immutable by definition, meaning that the developer cannot change their attributes. Instead, the developers have to create new Transactions and dispatch them to the blockchain via TransactionHTTP.
 
 **Services**
 
@@ -56,23 +55,23 @@ Common operations that require multiple :doc:`REST API <../api>` requests are ha
 Reactive
 ========
 
-NEM2-SDK uses ReactiveX Library intensely.
+|sdk| uses ReactiveX Library intensely.
 
-- **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
-- **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
-- **Async error handling**: Traditional try/catch is weak for error handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle errors.
-- **Concurrency**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
-- **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
-- **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
+* **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
+* **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
+* **Async error handling**: Traditional try/catch is weak for error handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle errors.
+* **Concurrency**: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.
+* **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
+* **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
 
 .. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
 
-- |rxjsinaction|
-- |frp|
-- |learnrxjs|
-- |rp-wiki|
-- |op-wiki|
-- |reactivex|
+* |rxjsinaction|
+* |frp|
+* |learnrxjs|
+* |rp-wiki|
+* |op-wiki|
+* |reactivex|
 
 .. |reactivex| raw:: html
 
@@ -107,11 +106,11 @@ NEM2-SDK uses ReactiveX Library intensely.
 Before starting
 ***************
 
-1. Review the technical documentation to become familiar with the :doc:`Catapult built-in features<../concepts/account>`.
-2. Setup the `catapult in local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
+1. Review the technical documentation to become familiar with the |codename| :doc:`built-in features<../concepts/account>`.
+2. Setup the |codename| `local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
 3. :doc:`Check the API reference <../api>` and play with the API endpoints.
-4. Become familiar with the current :doc:`nem2-sdk via code examples <../concepts/account>` & :doc:`nem2-cli <../cli>` .
-5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask Catapult related questions.
+4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` & :doc:`CLI <../cli>` .
+5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask |codename| related questions.
 6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
@@ -119,7 +118,8 @@ Before starting
 Development
 ***********
 
-You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_. The TypeScript version is the first SDK getting the latest updates.
+You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
+The TypeScript version is the first SDK getting the latest updates.
 
 Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
@@ -133,13 +133,14 @@ Creating the project
 
 A project with good test coverage it's more likely to be used and trusted by the developers!
 
-We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last). If you need inspiration, you can adapt the same `tests we
-did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
+We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
+If you need inspiration, you can adapt the same `tests we did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
 
 API Wrapper
 ===========
 
-The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API generation. It supports multiple languages, and hopefully, yours is on the list.
+The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API generation.
+It supports multiple languages, and hopefully, yours is on the list.
 
 These are the steps we are following to generate the Typescript DTOs (data transfer objects):
 
@@ -164,7 +165,8 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
-4. As the TypeScript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list. You can jump this step if the code generator for your language supports them.
+4. As the TypeScript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list.
+You can jump this step if the code generator for your language supports them.
 
 * Open the generated file ``./nem2-ts-sdk/model/models.ts`` in your favorite editor.
 * Search for line contains ``let enumsMap: {[index: string]: any}``.
@@ -245,11 +247,11 @@ Example:
 
 Example of a Repository and HTTP implementation:
 
--  `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
+* `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
+* `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
 
--  `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
-
-7. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
+7. The **repositories return models instead of DTOs**.
+You will need to code the models before finishing the API wrapper.
 
 Models
 ======
@@ -260,16 +262,17 @@ You will find in the different implementations different invariants to ensure th
 
 Particular decisions to consider:
 
--  ``uint64`` support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
--  API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
--  `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ ID:  At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` ID. A specific endpoint returns the Namespace ``string`` name.
+* UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
+*  API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
+* `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================
 
-The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize Catapult entities.
+The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize |codename| entities.
 
-In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages. For example, the NEM2-SDK uses the generated code to operate with the entities in binary form before announcing them to the network.
+In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.
+For example, the |sdk| uses the generated code to operate with the entities in binary form before announcing them to the network.
 
 KeyPair and Cryptographic functions
 ===================================
@@ -284,28 +287,31 @@ Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-
 Documenting your SDK
 ********************
 
-The SDKs need to be adopted by other developers. As a contributor, no one knows better than you how a determined SDK works. Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
+The SDKs need to be adopted by other developers.
+As a contributor, no one knows better than you how a determined SDK works.
+Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
 
 ******************************
 Publishing the SDK as official
 ******************************
 
-To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason behind the NEM2 Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among Catapult developers.
+To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_.
+The reason behind the |codename| Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among |codename| developers.
 
 ********************
 Recommended Licenses
 ********************
 
--  MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_
--  Apache-2.0: `Apache License, version
+*  MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_
+*  Apache-2.0: `Apache License, version
    2.0 <http://www.apache.org/licenses/LICENSE-2.0>`_
--  BSD-2-Clause: `OSI-approved BSD 2-clause
+*  BSD-2-Clause: `OSI-approved BSD 2-clause
    license <https://opensource.org/licenses/BSD-2-Clause>`_
--  BSD-3-Clause: `OSI-approved BSD 3-clause
+*  BSD-3-Clause: `OSI-approved BSD 3-clause
    license <https://opensource.org/licenses/BSD-3-Clause>`_
--  CC0-1.0: `Creative Commons CC0 1.0
+*  CC0-1.0: `Creative Commons CC0 1.0
    Universal <https://creativecommons.org/publicdomain/zero/1.0/>`_
--  GNU-All-Permissive: `GNU All-Permissive
+*  GNU-All-Permissive: `GNU All-Permissive
    License <http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html>`_
--  LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or
+*  LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or
    newer <http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_

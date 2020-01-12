@@ -21,11 +21,14 @@ Prerequisites
 Background
 **********
 
-:doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain. Once a transaction is included in a block—and the block receives enough confirmations—it is not possible to modify the record without invalidating the whole chain.
+:doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain.
+Once a transaction is included in a block—and the block receives enough confirmations—it is not possible to modify the record without invalidating the whole chain.
 
-What we can do to update a metadata entry is to announce a second metadata transaction. This action will record a new transaction while keeping the history immutable. However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? Catapult makes this possible by keeping a copy of the **newest value** assigned to a metadata entry as a **state**.
+What we can do to update a metadata entry is to announce a second metadata transaction. This action will record a new transaction while keeping the history immutable.
+However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? |codename| makes this possible by keeping a copy of the **newest value** assigned to a metadata entry as a **state**.
 
-This guide shows you how to **update a metadata entry** attached to an account. However, you could follow a similar approach to update namespace and mosaic metadata entries.
+This guide shows you how to **update a metadata entry** attached to an account.
+However, you could follow a similar approach to update namespace and mosaic metadata entries.
 
 *************
 Prerequisites
@@ -45,11 +48,15 @@ Bob—the notary from the :doc:`assigning metadata entries to an account guide <
     :align: center
     :width: 400px
 
-1. Define a new **AccountMetadataTransaction** setting Alice's account as the metadata target. To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``. However, you need to pass an extra parameter that was not necessary when assigning a metadata entry for the first time.
+1. Define a new **AccountMetadataTransaction** setting Alice's account as the metadata target.
+To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``.
+However, you need to pass an extra parameter that was not necessary when assigning a metadata entry for the first time.
 
-By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks. In case that the state needs to be reverted, you need to indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
+By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain pre-established depth to resolve forks.
+In case that the state needs to be reverted, you need to indicate the difference of size between the ``previousValue`` assigned to the metadata entry and the ``newValue`` .
 
-A) Retrieve the previous metadata value and calculate the difference of size with the newest value. Then, return the AccountMetadataTransaction object.
+A) Retrieve the previous metadata value and calculate the difference of size with the newest value.
+Then, return the AccountMetadataTransaction object.
 
 .. example-code::
 
@@ -63,7 +70,8 @@ A) Retrieve the previous metadata value and calculate the difference of size wit
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-B)  You can achieve the same result with less effort using the ``MetadataService``. Behind the scenes, the **NEM2-SDK** handles the complexity of updating metadata entries.
+B)  You can achieve the same result with less effort using the ``MetadataService``.
+Behind the scenes, the |sdk| handles the complexity of updating metadata entries.
 
 .. example-code::
 
@@ -72,7 +80,8 @@ B)  You can achieve the same result with less effort using the ``MetadataService
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. To avoid spamming the account with invalid metadata, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata to be updated. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
+2. To avoid spamming the account with invalid metadata, all metadata is attached only with the consent of the account owner through Aggregate Transactions.
+Thus, Alice will have to **opt-in** if she wants the metadata to be updated. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
 
 .. example-code::
 
@@ -81,7 +90,8 @@ B)  You can achieve the same result with less effort using the ``MetadataService
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Before sending an aggregate transaction to the network, Bob has to lock  ``10 nem.xem``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of cat.currency required to announce the aggregate transaction.
+3. Before sending an aggregate transaction to the network, Bob has to lock 10 |networkcurrency|.
+Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of |networkcurrency| required to announce the aggregate transaction.
 
 .. example-code::
 
@@ -92,7 +102,8 @@ B)  You can achieve the same result with less effort using the ``MetadataService
 
 .. note:: Bob will receive the locked funds back if Alice cosigns the aggregate during the next ``480`` blocks.
 
-4. Announce the **HashLockTransaction**. Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the AccountMetadataTransaction.
+4. Announce the **HashLockTransaction**.
+Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the AccountMetadataTransaction.
 
 .. example-code::
 

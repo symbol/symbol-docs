@@ -16,7 +16,8 @@ Assuming that Catapult REST is :doc:`running locally <getting-started/setup-work
 
     http://localhost:3000/<path-to-API-request>
 
-Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body. This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
+Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
+This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
 
 Get the complete list of available endpoints by clicking on the button below:
 
@@ -30,7 +31,10 @@ Get the complete list of available endpoints by clicking on the button below:
 WebSockets
 **********
 
-To get **live updates** when an event occurs on the blockchain, Catapult REST publishes WebSockets. Client applications can open a WebSocket connection and get a unique identifier. With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates. When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
+To get **live updates** when an event occurs on the blockchain, Catapult REST publishes WebSockets.
+Client applications can open a WebSocket connection and get a unique identifier.
+With this identifier, applications qualify to subscribe to the available channels instead of constantly polling the API for updates.
+When an event occurs in a channel, the REST Gateway sends a notification to every subscribed client in real-time.
 
 WebSocket URIs share the same host and port as the HTTP requests URIs, but use the ``ws://`` protocol:
 
@@ -43,7 +47,8 @@ Channels
 
 **block**
 
-The block channel notifies for every subscribed client every time there is a new harvested block. The messages returned contain information about the blocks.
+The block channel notifies for every subscribed client every time there is a new harvested block.
+The messages returned contain information about the blocks.
 
 *Request body*
 
@@ -60,7 +65,8 @@ The block channel notifies for every subscribed client every time there is a new
 
 **confirmedAdded/{address}**
 
-The confirmedAdded channel notifies when a transaction related to an address is included in a block. The messages returned contain information about the confirmed transactions.
+The confirmedAdded channel notifies when a transaction related to an address is included in a block.
+The messages returned contain information about the confirmed transactions.
 
 *Request body*
 
@@ -77,7 +83,8 @@ The confirmedAdded channel notifies when a transaction related to an address is 
 
 **unconfirmedAdded/{address}**
 
-The unconfirmedAdded channel notifies when a transaction related to an address gets the unconfirmed state, waiting to be included in a block. The messages returned contain information about unconfirmed transactions.
+The unconfirmedAdded channel notifies when a transaction related to an address gets the unconfirmed state, waiting to be included in a block.
+The messages returned contain information about unconfirmed transactions.
 
 Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from partial to unconfirmed.
 
@@ -96,7 +103,8 @@ Possible scenarios when this channel notifies are: the transaction is announced 
 
 **unconfirmedRemoved/{address}**
 
-The unconfirmedRemoved channel notifies when a transaction related to an address had the unconfirmed state, but not anymore. The messages returned contain the transactions hashes.
+The unconfirmedRemoved channel notifies when a transaction related to an address had the unconfirmed state, but not anymore.
+The messages returned contain the transactions hashes.
 
 Possible scenarios when this channel notifies are: the transaction now is confirmed, or the deadline has been reached, and it was not included in a block.
 
@@ -115,7 +123,8 @@ Possible scenarios when this channel notifies are: the transaction now is confir
 
 **partialAdded/{address}**
 
-The partialAdded channel notifies when an AggregateBondedTransaction related to an address reaches the partial state, waiting to have all required cosigners. The messages returned contain information about the transactions.
+The partialAdded channel notifies when an AggregateBondedTransaction related to an address reaches the partial state, waiting to have all required cosigners.
+The messages returned contain information about the transactions.
 
 *Request body*
 
@@ -132,7 +141,8 @@ The partialAdded channel notifies when an AggregateBondedTransaction related to 
 
 **partialRemoved/{address}**
 
-The partialRemoved channel notifies when a transaction related to an address had the partial state, but is not anymore. The messages returned contain the transactions hashes.
+The partialRemoved channel notifies when a transaction related to an address had the partial state, but is not anymore.
+The messages returned contain the transactions hashes.
 
 Possible scenarios when this channel notifies are: the transaction now is unconfirmed, or the deadline has been reached, and it was not included in a block.
 
@@ -151,7 +161,8 @@ Possible scenarios when this channel notifies are: the transaction now is unconf
 
 **cosignature/{address}**
 
-The cosignature channel notifies when a cosignature signed transaction related to an address is added to an AggregateBondedTransaction with the partial state. The messages returned contain the cosignature signed transaction.
+The cosignature channel notifies when a cosignature signed transaction related to an address is added to an AggregateBondedTransaction with the partial state.
+The messages returned contain the cosignature signed transaction.
 
 *Request body*
 
@@ -168,7 +179,8 @@ The cosignature channel notifies when a cosignature signed transaction related t
 
 **status/{address}**
 
-The status channel notifies when a transaction related to an address rises an error. The messages returned contain the error messages and the transaction hashes.
+The status channel notifies when a transaction related to an address rises an error.
+The messages returned contain the error messages and the transaction hashes.
 
 *Request body*
 
@@ -369,7 +381,7 @@ HTTP client, available for Mac, Windows and Linux.
 
 1. Download |postman-app| for your current operative system.
 
-2. Import the |postman-spec| for Catapult.
+2. Import the |postman-spec| for |codename|.
 
 .. |yarn| raw:: html
 

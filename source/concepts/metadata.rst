@@ -2,7 +2,7 @@
 Metadata
 ########
 
-Catapult provides you with an option to associate metadata to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a transaction.
+|codename| provides you with an option to associate metadata to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a transaction.
 
 The most common uses of metadata are:
 
@@ -27,7 +27,8 @@ This feature reduces the reading time of client applications; metadata allows in
 Permissions
 ***********
 
-The account, namespace or mosaic creator must **opt-in** to all metadata requests received by giving explicit permission. In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
+The account, namespace or mosaic creator must **opt-in** to all metadata requests received by giving explicit permission.
+In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
 The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
 
@@ -44,9 +45,12 @@ Adding a certificate to an account
 
     Metadata used to attach relevant information to an asset
 
-Bob works as a digital notary that stamp accounts on Catapult's public blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
+Bob works as a digital notary that stamp accounts on |codename|'s public blockchain.
+When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
 
-Alice a recent graduate and wants her educational certificate accredited to her Catapult account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
+Alice a recent graduate and wants her educational certificate accredited to her |codename| account to avoid the hassle of repeatedly providing verification of her degree.
+So she goes to Bob and provides him with proof of her degree.
+Once Alice pays Bob a fee, Bob verifies the authenticity and stamps Alice’s account with metadata that signifies her degree.
 
 Access management
 =================
@@ -57,9 +61,11 @@ Access management
 
     Validating metadata to restrict performing an off-chain action
 
-The HR department of the SneakersCompany uses the Catapult for **access management** of sensitive work resources. Each account is tagged with the metadata that regulates its access to the company apps suite.
+The HR department of the SneakersCompany uses the |codename| for **access management** of sensitive work resources.
+Each account is tagged with the metadata that regulates its access to the company apps suite.
 
-When a new employee, Carol, is hired, the HR department creates a new work account for her. For security reasons, HR sets the metadata of the account to ``{company, ACCESS, 9-18}``.
+When a new employee, Carol, is hired, the HR department creates a new work account for her.
+For security reasons, HR sets the metadata of the account to ``{company, ACCESS, 9-18}``.
 
 Each time Carol attempts to access the company apps suite, the company app validates that Carol has permission and that the time falls under *9:00-18:00* before granting her admission.
 

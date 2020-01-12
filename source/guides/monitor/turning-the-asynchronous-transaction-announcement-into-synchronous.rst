@@ -16,12 +16,12 @@ Background
 **********
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node.
-Catapult works differently: when a transaction is announced, the REST API server will always return an OK.
+|codename| works differently: when a transaction is announced, the REST API server will always return an OK.
 As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.
 However, now is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
 The negative aspect of announcing transactions asynchronously announcement is that it adds unnecessary complexity to small projects.
-The NEM2-SDK ``TransactionService`` aims to solve this problem by providing a function that waits for the confirmation or rejection of the transaction.
+The |sdk| ``TransactionService`` aims to solve this problem by providing a function that waits for the confirmation or rejection of the transaction.
 
 *************
 Prerequisites
@@ -34,7 +34,7 @@ Prerequisites
 Sending a synchronous transaction
 *********************************
 
-Alice is developing an app to send 10 cat.currency to Bob and wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and wants to know if the transaction has reached the network before sending Bob an email.
 
 1. Create a new ``.ts`` file. Then, define and sign a :doc:`TransferTransaction <../../concepts/transfer-transaction>`.
 

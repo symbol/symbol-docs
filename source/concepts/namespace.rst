@@ -13,14 +13,18 @@ Find below the complete list of configurable properties.
 Name
 ====
 
-Namespaces function similarly to internet domains. Creating a namespace starts with choosing a name that you will use to refer to an account or asset. The name must be **unique in the network**, and may have a maximum length of ``64`` characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
+Namespaces function similarly to internet domains.
+Creating a namespace starts with choosing a name that you will use to refer to an account or asset.
+The name must be **unique in the network**, and may have a maximum length of ``64`` characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
 
 Duration
 ========
 
 At the time of the namespace registration, you must set the number of confirmed blocks you would like to rent the namespace for.
 
-The public network defines a minimum namespace duration of ``30`` days and a maximum of ``365`` days, being these parameters :ref:`editable per network <config-network-properties>`. By default, the network is configured to generate a block every ``15`` seconds. You can use the following formula to convert approximately days to blocks:
+The public network defines a minimum namespace duration of ``30`` days and a maximum of ``365`` days, being these parameters :ref:`editable per network <config-network-properties>`.
+By default, the network is configured to generate a block every ``15`` seconds.
+You can use the following formula to convert approximately days to blocks:
 
 .. math::
 
@@ -32,11 +36,14 @@ The public network defines a minimum namespace duration of ``30`` days and a max
 
     Namespace life-cycle
 
-During the **renting period**, the namespace creator can create subnamespaces, alias accounts and mosaics. The creator can also **extend the rental** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
+During the **renting period**, the namespace creator can create subnamespaces, alias accounts and mosaics.
+The creator can also **extend the rental** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
-The network can define a **grace period** that enables the namespace creator to renew the namespace past the expiration date before it becomes publicly available for registration. Catapult's public network has set the :ref:`grace period <config-network-properties>` to ``30`` days.
+The network can define a **grace period** that enables the namespace creator to renew the namespace past the expiration date before it becomes publicly available for registration.
+|codename|'s public network has set the :ref:`grace period <config-network-properties>` to ``30`` days.
 
-When the grace period ends, the namespace is **deleted**. At this point, the namespace becomes **available** for its registration again.
+When the grace period ends, the namespace is **deleted**.
+At this point, the namespace becomes **available** for its registration again.
 
 .. csv-table:: Permissions by namespace status
     :header: "Action", "Available", "Registration Period", "Grace Period"
@@ -54,7 +61,7 @@ When the grace period ends, the namespace is **deleted**. At this point, the nam
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. In Catapult, namespaces can have subnamespaces to **identify and organize assets**.
+On the internet, a domain can have a sub-domain. |codename| namespaces can have subnamespaces to **identify and organize assets**.
 
 .. figure:: ../resources/images/examples/namespace-setup.png
     :align: center
@@ -62,19 +69,24 @@ On the internet, a domain can have a sub-domain. In Catapult, namespaces can hav
 
     Organizing assets with namespaces
 
-In the :ref:`public network <config-network-properties>`, namespaces can have up to ``3`` levels—a namespace and its two levels of subnamespace domains. Each root namespace can have up to ``256`` subnamespaces.
+In the :ref:`public network <config-network-properties>`, namespaces can have up to ``3`` levels—a namespace and its two levels of subnamespace domains.
+Each root namespace can have up to ``256`` subnamespaces.
 
 A subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 
-You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces. For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
+You can :doc:`create multiple subnamespaces <../guides/namespace/registering-a-subnamespace>` with the same name in different namespaces.
+For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but the combination rootnamespace + subnamespace must remain unique.
 
 *****
 Alias
 *****
 
-:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics. An alias or its linked asset can be used interchangeably when sending a transaction. Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
+:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics.
+An alias or its linked asset can be used interchangeably when sending a transaction.
+Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
-The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic. This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
+The creator of the namespace can :doc:`link the namespace <../guides/namespace/link-a-namespace-to-a-mosaic>` to an account or mosaic.
+This link will be editable, so the creator may unlink a previously set alias and link the namespace to a different asset.
 
 The block :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
@@ -82,7 +94,7 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 
 - An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic.
 - An account can assign a namespace to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.
-- An account can only link the alias to a mosaicId when the account is the creator of the mosaic.
+- An account can only link the alias to a mosaic id when the account is the creator of the mosaic.
 
 .. _namespace-rental-fee:
 
@@ -90,7 +102,8 @@ The block :doc:`receipts <receipt>` store the resolution of the alias for a give
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`. Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
 
 The default namespace rental fees are :ref:`configurable per network <config-network-properties>`, but the **network dynamically adjusts the namespace rental fees** over time.
 
@@ -98,11 +111,12 @@ The default namespace rental fees are :ref:`configurable per network <config-net
     :header: "Property", "Value"
     :delim: ;
 
-    Registering a namespace; ``0.000001 nem.xem`` per block
-    Extending a namespace duration; ``0.000001 nem.xem`` per block
-    Creating a subnamespace; ``0.0001 nem.xem``
+    Registering a namespace; ``0.000001`` |networkcurrency| per block
+    Extending a namespace duration; ``0.000001`` |networkcurrency| per block
+    Creating a subnamespace; ``0.0001`` |networkcurrency|
 
-To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`. In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
+In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 
 ******
 Guides

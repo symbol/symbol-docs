@@ -9,7 +9,7 @@
 Creating an account
 ###################
 
-How to create a new Catapult account.
+How to create a new |codename| account.
 
 *************
 Prerequisites

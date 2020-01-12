@@ -2,7 +2,7 @@
 Consensus
 #########
 
-Catapult uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
+|codename| uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
 
 In a basic Proof of Stake (|pos|) consensus algorithm, the formation of a subsequent block in a blockchain is stochastically assigned to a coin-holding stakeholder of the blockchain weighed by a combination of factors relating to the stakeholders' wealth.
 
@@ -58,7 +58,8 @@ The importance can be calculated for each account in the following manner:
 
     (1 - a) * (S') + a * || p / (S') * (t * (T') + n * (N')) ||
 
-The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low. Conversely, the multiplier effect is insignificant when Stake Score is high.
+The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low.
+Conversely, the multiplier effect is insignificant when Stake Score is high.
 
 .. |pos| raw:: html
 

@@ -23,7 +23,8 @@ Prerequisites
 Background
 **********
 
-:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users **verify domain ownership**. The contained data could include information such as registrant, administrative, or technical contact information.
+:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users **verify domain ownership**.
+The contained data could include information such as registrant, administrative, or technical contact information.
 
 In this guide, you are going to implement a program to add contact details to a namespace.
 
@@ -82,7 +83,8 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. All metadata is attached only with the consent of the namespace creator through Aggregate Transactions.  Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the namespace creator through Aggregate Transactions.
+Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 

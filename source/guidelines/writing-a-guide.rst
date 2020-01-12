@@ -8,7 +8,8 @@ Thank you for considering writing a new guide!
 
 Before starting, we recommend you to open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_ to find some ideas pending to be written.
 
-To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts. If there is no issue yet, create a new one introducing the content you want to publish.
+To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
+If there is no issue yet, create a new one introducing the content you want to publish.
 
 *****************
 Writing the guide
@@ -32,7 +33,7 @@ Writing the guide
 
     pip install -r requirements.txt
 
-3. Create a new ``rst`` file inside one of the guides folder,
+3. Create a new ``rst`` file inside one of the guides folder.
 
 .. code-block:: bash
 
@@ -82,9 +83,11 @@ Writing the guide
 
     Is there any extra exercise that readers could try on their own?
 
-5. Write and code your guide. Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
+5. Write and code your guide.
+Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
 
-6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``. You can render fragments of code from a file inside your ``.rst`` file.
+6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
+You can render fragments of code from a file inside your ``.rst`` file.
 
 ::
 
@@ -101,4 +104,5 @@ Writing the guide
 
     make livehtml
 
-8. Push your changes and create a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_. The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.
+8. Push your changes and create a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_.
+The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.

@@ -15,7 +15,8 @@ Create a multi-level multisig account.
 Background
 **********
 
-:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions. Following this guide you will create the following **3-level multisig account**.
+:doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
+Following this guide you will create the following **3-level multisig account**.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
@@ -76,7 +77,8 @@ Example #1: Multisig account with 3 levels
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`. The **account #1** must has to **lock 10 nem.xem** to announce the transaction.
+4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
+The **account #1** must has to lock ``10`` |networkcurrency| to announce the transaction.
 
 .. example-code::
 
@@ -90,7 +92,8 @@ Example #1: Multisig account with 3 levels
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. The potential cosignatories must opt-in to become cosignatories. :doc:`Cosign the announced AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with the accounts **#5**, **#6**, **#7**, **#8,** and **#4**.
+5. The potential cosignatories must opt-in to become cosignatories.
+:doc:`Cosign the announced AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with the accounts **#5**, **#6**, **#7**, **#8,** and **#4**.
 
 .. code-block:: bash
 

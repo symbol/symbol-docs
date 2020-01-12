@@ -10,9 +10,11 @@ A cross-chain swap enables **trading tokens** across **different blockchains**, 
 
     Atomic cross-chain swap between public and private network
 
-Catapult follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets. 
+|codename| follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets.
 
-HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk. Every participant in the exchange of assets needs to present proof (hashlock) to complete it. Failing to do so, the locked assets are released back to each original owner after the timelock expires.
+HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk.
+Every participant in the exchange of assets needs to present proof (hashlock) to complete it.
+Failing to do so, the locked assets are released back to each original owner after the timelock expires.
 
 A thorough explanation of the protocol can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
 
@@ -20,15 +22,17 @@ A thorough explanation of the protocol can be found on the `Bitcoin Wiki <https:
 Protocol
 ********
 
-Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**. The problem is that they are not in the same blockchain: alice token is defined in Catapult's public chain, whereas bob token is only present in a private chain using Catapult technology.
+Alice and Bob want to exchange **10 alice tokens for 10 bob tokens**.
+The problem is that they are not in the same blockchain: alice token is defined in |codename|'s public chain, whereas bob token is only present in a private chain using |codename| tech.
 
-.. note:: Catapult's private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
+.. note:: |codename|'s private and future public chain share the SDK. You could implement atomic cross-chain swap between blockchains that use different technologies if they permit the :ref:`secret lock/proof mechanism <lock-hash-algorithm>`.
 
 .. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
     :caption: Atomic cross-chain swap sequence diagram
     :align: center
 
-1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
+1. Alice generates a random set of bytes called ``proof``.
+The proof should have a size between ``10`` and ``1000`` bytes.
 
 2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
 
@@ -83,7 +87,8 @@ SecretLockTransaction
 
 Use a SecretLockTransaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
 
-The maximum number of blocks the lock can lie up to is ``30 days``, being this parameter :ref:`configurable per network <config-network-properties>`. If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
+The maximum number of blocks the lock can lie up to is ``30 days``, being this parameter :ref:`configurable per network <config-network-properties>`.
+If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
 
 **Version**: 0x01
 

@@ -4,15 +4,20 @@ Receipt
 
 Conditional state changes in the background enable complex transactions.
 
-For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`AggregateBondedTransaction <aggregate-transaction>` is confirmed. When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded. This might appear as a *hidden change* that increases the :doc:`account <account>` balance. Receipts provide proof for every hidden change.
+For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`AggregateBondedTransaction <aggregate-transaction>` is confirmed.
+When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded.
+This might appear as a *hidden change* that increases the :doc:`account <account>` balance.
+Receipts provide proof for every hidden change.
 
-The collection of receipts are hashed into a |merkle| and linked to a :doc:`block <block>`. The block header stores the root hash, which is different from zero when the block has receipts.
+The collection of receipts are hashed into a |merkle| and linked to a :doc:`block <block>`.
+The block header stores the root hash, which is different from zero when the block has receipts.
 
 *********************
 Transaction statement
 *********************
 
-A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked with a transaction in a particular block. Statements can include receipts with the following basic types:
+A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked with a transaction in a particular block.
+Statements can include receipts with the following basic types:
 
 * **Balance Transfer**: The invisible state change triggered a mosaic transfer.
 * **Balance Change**: The invisible state change altered an account balance.
@@ -31,16 +36,17 @@ When a transaction includes an :doc:`alias <namespace>`, a so called :ref:`resol
 
 The alias receipts record the first occurrence of an (unresolved, resolved) alias pair used in a block.
 
-It is technically possible to get more than one resolution for the same namespaceId and block.
+It is technically possible to get more than one resolution for the same namespace id and block.
 This situation is common when a namespace creator changes the alias link to another asset, leading to two different resolutions in the same block.
 
-The receipt source ``primaryId`` references the transaction where the alias first appears within the block. The ``secondaryId`` is not 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
+The receipt source ``primaryId`` references the transaction where the alias first appears within the block.
+The ``secondaryId`` is not 0 when the transaction is part of an :doc:`AggregateTransaction <../../concepts/aggregate-transaction>`, and it will indicate the index position within the aggregate.
 
 *****************
 Recorded receipts
 *****************
 
-Catapult records invisible state changes for the following entities.
+|codename| records invisible state changes for the following entities.
 
 .. csv-table::
     :header:  "Id", "Receipt", "Basic type", "Description"
@@ -52,22 +58,22 @@ Catapult records invisible state changes for the following entities.
     0x5143; Inflation; :ref:`Inflation <inflation-receipt>`; The amount of native currency mosaics created. The receipt is recorded when the network has inflation configured, and a new block triggers the creation of currency mosaics.
     0xE143; Transaction_Group;  :ref:`Aggregate <transaction-statement>`; A collection of state changes for a given source. It is recorded when a state change receipt is issued.
     0xF143; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
-    0xF243; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaicId.
+    0xF243; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaic id.
     **Mosaic**;;;
     0x414D; Mosaic_Expired; :ref:`MosaicExpiry <mosaic-expiry-receipt>`; The identifier of the mosaic expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` lifetime elapses.
-    0x124D; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
+    0x124D; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaic id and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
     **Namespace**;;;
     0x414E; Namespace_Expired; :ref:`NamespaceExpiry <namespace-expiry-receipt>`; The identifier of the namespace expiring in this block. It is recorded when the :doc:`namespace <namespace>` lifetime elapses.
     0x424E; Namespace_Deleted; :ref:`NamespaceExpiry <namespace-expiry-receipt>`; The identifier of the namespace deleted in this block. It is recorded when the :doc:`namespace <namespace>` grace period elapses.
-    0x134E; Namespace_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaicId and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
+    0x134E; Namespace_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaic id and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
     **HashLock**;;;
-    0x3148; LockHash_Created; :ref:`BalanceDebit <balance-change-receipt>`; The lockhash  sender, mosaicId and amount locked. It is recorded when a valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced.
-    0x2248; LockHash_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The hashlock sender, mosaicId and amount locked that is returned. It is recorded when an AggregateBondedTransaction linked to the hash completes.
-    0x2348; LockHash_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a lock hash expires.
+    0x3148; LockHash_Created; :ref:`BalanceDebit <balance-change-receipt>`; The lockhash sender, mosaic id and amount locked. It is recorded when a valid :ref:`HashLockTransaction <hash-lock-transaction>` is announced.
+    0x2248; LockHash_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The hashlock sender, mosaic id and amount locked that is returned. It is recorded when an AggregateBondedTransaction linked to the hash completes.
+    0x2348; LockHash_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a lock hash expires.
     **SecretLock**;;;
-    0x3152; LockSecret_Created; :ref:`BalanceDebit <balance-change-receipt>`; The secretlock sender, mosaicId and amount locked. It is recorded when a valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced.
-    0x2252; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock recipient, mosaicId and amount locked. It is recorded when a secretlock is proved.
-    0x2352; LockSecret_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaicId and the amount. It is recorded when a secretlock expires.
+    0x3152; LockSecret_Created; :ref:`BalanceDebit <balance-change-receipt>`; The secretlock sender, mosaic id and amount locked. It is recorded when a valid :ref:`SecretLockTransaction <secret-lock-transaction>` is announced.
+    0x2252; LockSecret_Completed; :ref:`BalanceCredit <balance-change-receipt>`; The secretlock recipient, mosaic id and amount locked. It is recorded when a secretlock is proved.
+    0x2352; LockSecret_Expired; :ref:`BalanceCredit <balance-change-receipt>`; The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a secretlock expires.
 
 ******
 Guides
@@ -235,7 +241,7 @@ The collection of receipts related to a transaction.
 ResolutionStatement
 ===================
 
-A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaicId.
+A resolution statement keeps the relation between a namespace alias used in a transaction and the real address or mosaic id.
 
 * **version**: 0x1
 * **type**: Address_Alias_Resolution or Mosaic_Alias_Resolution

@@ -9,13 +9,13 @@
 Creating a private test net
 ###########################
 
-This guide will walk you through the process of **setting up your own private network** using Catapult's technology.
+This guide will walk you through the process of **setting up your own private network** using |codename|'s technology.
 
 To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
 
-.. note:: NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes and it should not power any production Catapult instances.
+.. note:: This bootstrap setup is for learning and development purposes and it should not power any production |codename| instances.
 
-Catapult Service Bootstrap deploys a private network with the following high-level architecture:
+|codename| Service Bootstrap deploys a private network with the following high-level architecture:
 
 .. figure:: ../../resources/images/diagrams/four-layer-architecture.png
     :width: 500px
@@ -24,16 +24,14 @@ Catapult Service Bootstrap deploys a private network with the following high-lev
     Bootstrap network architecture
 
 * **peer-node (1 and 2)**: Peer nodes verify transactions once the API pushes them into the P2P network. They run the consensus algorithm, create new blocks, and propagate the changes through the network.
-
 * **api-node**: The API node stores data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
-
 * **rest-gateway**: Combines HTTP and WebSockets to perform read and write actions on the blockchain.
 
 *********************
 Hardware requirements
 *********************
 
-catapult-service-bootstrap has been tested on computers with the following **minimum requirements**.
+|codename| Service Bootstrap has been tested on computers with the following **minimum requirements**.
 
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
@@ -46,7 +44,8 @@ catapult-service-bootstrap has been tested on computers with the following **min
 Environment requirements
 ************************
 
-The setup scripts are automated using docker. To run a test net node, you will need to have installed the following docker tools:
+The setup scripts are automated using docker.
+To run a test net node, you will need to have installed the following docker tools:
 
 * `docker`_
 * `docker-compose`_
@@ -111,17 +110,21 @@ Commands
 Getting test cat.currency
 *************************
 
-An :doc:`account <../../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions. To announce a transaction, the sender should pay a :doc:`fee <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure. This cost is paid in **cat.currency mosaics**, the default network token.
+An :doc:`account <../../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions.
+To announce a transaction, the sender should pay a :doc:`fee <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure.
+This cost is paid in |privatenetworkcurrency| mosaics, the default network token.
 
-After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
+After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts.
+To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
-1. Install :doc:`NEM2-CLI <../../cli>`.
+1. Install |cli|.
 
 .. code-block:: bash
 
     npm install --global nem2-cli
 
-2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
+2. Open a new terminal window.
+Then, go to the directory where the bootstrap tool has generated the addresses.
 
 .. code-block:: bash
 
@@ -133,7 +136,8 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
 
     cat addresses.yaml
 
-4. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
+4. Under the section ``nemesis_addresses``, you will find the key pairs which contain |privatenetworkcurrency|.
+Copy the private key of the first account.
 
 5. Type the command ``nem2-cli profile import`` using the key obtained in the previous step.
 
@@ -146,7 +150,7 @@ After running the ``catapult-service-bootstrap`` tool for the first time, the av
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name: base-profile
 
-.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
 
 You should see the account credentials in your terminal.
 
@@ -163,9 +167,11 @@ You should see the account credentials in your terminal.
     │ Private Key │ 123...456                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
+As the name suggests, the **private key has to be kept secret at all times**.
+Anyone with access to the private key ultimately has control over the account.
+On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running an account with some cat.currency, we recommend you to surf the **NEM Development Center**. In this portal, you can find everything you need to know about Catapult's features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|. In this portal, you can find everything you need to know about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

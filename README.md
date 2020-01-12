@@ -2,7 +2,7 @@
 
 This documentation introduces NEM's next core engine (NEM2), code-named **Catapult**.
 
-## NEM is Your Blockchain Engine
+## Catapult is Your Blockchain Engine
 
 [NEM](https://nem.io) is a developer-friendly blockchain platform for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features. 
 
@@ -26,7 +26,7 @@ Catapult will be a momentous step for NEM to be the widely utilized enterprise p
 
 ## Getting Started
 
-To start developing on Catapult, we recommend you to [setup your workstation](https://nemtech.github.io/getting-started/setup-workstation.html). Then, review the following documents to know more about Catapult:
+To start developing on Catapult, we recommend you to [setup your workstation](https://nemtech.github.io/getting-started/setup-workstation.html). To know more about Catapult, continue reading the following documents:
 
 * [Built-in features](https://nemtech.github.io/concepts/account.html)
 * [Protocol](https://nemtech.github.io/concepts/cryptography.html)

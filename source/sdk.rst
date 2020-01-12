@@ -2,11 +2,11 @@
 SDK
 ####
 
-The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries, or applications.
+The **NEM2 Software Development Kit** is the primary software development tool to create |codename| components, such as additional tools, libraries, or applications.
 
 It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
-Learn how to use Catapult's SDK following the :ref:`guided implementation examples <blog-categories>`.
+Learn how to use |codename|'s SDK following the :ref:`guided implementation examples <blog-categories>`.
 
 *******************
 Supported languages

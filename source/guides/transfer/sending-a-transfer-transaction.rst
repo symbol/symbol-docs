@@ -28,7 +28,7 @@ Background
 
     Sending a TransferTransaction
 
-Alice wants to send 10 nem.xem to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
+Alice wants to send 10 |networkcurrency| to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
 *************
 Prerequisites
@@ -47,7 +47,7 @@ Method #01: Using the SDK
 
    nem2-cli monitor all --address <alice-address>
 
-2. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 nem.xem``.
+2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
 
 .. example-code::
 
@@ -61,7 +61,8 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-As you may have noticed, transfer transactions require an array of mosaics as a parameter. This permits sending transfer transactions with multiple mosaics at the same time.
+As you may have noticed, transfer transactions require an array of mosaics as a parameter.
+This permits sending transfer transactions with multiple mosaics at the same time.
 
 If you own more than one mosaic, you can send them together in the same transaction:
 
@@ -77,7 +78,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: Catapult works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: |codename| works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Sign the transaction with Alice's account.
 

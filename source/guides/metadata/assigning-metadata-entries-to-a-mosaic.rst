@@ -23,9 +23,13 @@ Prerequisites
 Background
 **********
 
-Metadata is a Catapult feature that can be used to attach information about :doc:`mosaics <../../concepts/mosaic>`. For example, small pieces of data such as legal name, ticker, or ISIN, can be assigned as on-chain :doc:`metadata<../../concepts/metadata>`, while sizable documents, like the prospectus or investor agreement, can be kept off-chain.
+Metadata is a |codename| feature that can be used to attach information about :doc:`mosaics <../../concepts/mosaic>`.
+For example, small pieces of data such as legal name, ticker, or ISIN, can be assigned as on-chain :doc:`metadata<../../concepts/metadata>`, while sizable documents, like the prospectus or investor agreement, can be kept off-chain.
 
-In this tutorial, you are going to implement a program to add relevant data to a mosaic. Imagine that the company ComfyClothingCompany has applied for an |ISIN-code| to conduct an STO. After receiving the code ``US0000000000``, the company decided to represent the company shares creating a mosaic named ``cc.shares``. Before distributing the shares between the investors, ComfyClothingCompany wants to attach its ISIN code and legal name to the shares definition.
+In this tutorial, you are going to implement a program to add relevant data to a mosaic.
+Imagine that the company ComfyClothingCompany has applied for an |ISIN-code| to conduct an STO.
+After receiving the code ``US0000000000``, the company decided to represent the company shares creating a mosaic named ``cc.shares``.
+Before distributing the shares between the investors, ComfyClothingCompany wants to attach its ISIN code and legal name to the shares definition.
 
 .. figure:: ../../resources/images/examples/metadata-mosaic.png
     :align: center
@@ -44,7 +48,8 @@ Prerequisites
 Creating the shares
 *******************
 
-1. Create a mosaic to represent the shares. The mosaic we are creating will have the properties ``supplyMutable``, ``transferable``, ``restrictable``, ``non-expiring``, and we will be able to operate with up to 2 decimal places.
+1. Create a mosaic to represent the shares.
+The mosaic we are creating will have the properties ``supplyMutable``, ``transferable``, ``restrictable``, ``non-expiring``, and we will be able to operate with up to 2 decimal places.
 
 .. code-block:: bash
 
@@ -128,7 +133,8 @@ B) Key: ``NAME``, Value: ``ComfyClothingCompany``.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-2. All metadata is attached only with the consent of the mosaic creator through Aggregate Transactions. Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
+2. All metadata is attached only with the consent of the mosaic creator through Aggregate Transactions.
+Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction <aggregate-complete>` and sign the aggregate with the company's account.
 
 .. example-code::
 

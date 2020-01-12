@@ -2,7 +2,7 @@
 Cryptography
 ############
 
-Catapult uses **elliptic curve cryptography** to verify the data integrity and to authenticate the signer's identity.
+|codename| uses **elliptic curve cryptography** to verify the data integrity and to authenticate the signer's identity.
 
 .. _keypair:
 
@@ -16,7 +16,7 @@ Elliptic curve cryptography is an approach to **public key cryptography**. The c
 
 * **Public key**: The public identifier of the key pair, which can be disseminated widely. It is used to prove that the entity was signed with the paired private key.
 
-The public key is cryptographically derived from the private key. In particular, Catapult uses the |edwards| with the digital signature algorithm named |Ed25519|.
+The public key is cryptographically derived from the private key. In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519|.
 
 You can find the |implementation| under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
@@ -26,7 +26,7 @@ You can find the |implementation| under the ``crypto`` module of :doc:`catapult-
 Address
 *******
 
-Public keys can be shared in a shorter form as **addresses**. A Catapult address is a **base-32 encoded triplet** consisting of:
+Public keys can be shared in a shorter form as **addresses**. A |codename| address is a **base-32 encoded triplet** consisting of:
 
 * The network byte.
 * The 160-bit hash of the account's public key.
@@ -62,7 +62,7 @@ The following steps are performed to `convert a public key <https://github.com/n
 4. concatenate (3) and the checksum of (3).
 5. (Optional) base-32 of (4).
 
-.. note:: Catapult's public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NIS1.
+.. note:: |codename|'s public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NIS1.
 
 As you can see, it is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.
 
