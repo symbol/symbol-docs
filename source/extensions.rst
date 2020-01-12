@@ -19,7 +19,7 @@ Supported extensions
     :header: "Name", "Description"
     :delim: ;
 
-    `catapult service bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running a private test network.
+    `catapult-service-bootstrap <https://github.com/nemtech/catapult-service-bootstrap>`_ ; Starter project to get developers up and running a private test network.
     `nem2-camel <https://github.com/nemtech/nem2-camel>`_ ; A component to turn the asynchronous transaction announcement into synchronous.
 
 ************

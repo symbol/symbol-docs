@@ -110,7 +110,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 
@@ -139,7 +139,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 
