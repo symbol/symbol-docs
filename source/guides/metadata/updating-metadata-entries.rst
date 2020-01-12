@@ -71,7 +71,7 @@ Then, return the AccountMetadataTransaction object.
         :end-before: /* end block 01 */
 
 B)  You can achieve the same result with less effort using the ``MetadataService``.
-Behind the scenes, the **NEM2-SDK** handles the complexity of updating metadata entries.
+Behind the scenes, the |sdk| handles the complexity of updating metadata entries.
 
 .. example-code::
 

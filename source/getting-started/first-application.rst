@@ -62,7 +62,7 @@ Each account is unique and identified by an address.
 An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
 1. Have you :ref:`loaded an account with test <setup-creating-a-test-account>` |networkcurrency|?
-The account you have loaded in NEM2-CLI represents the **ticket vendor**.
+The account you have loaded in |cli| represents the **ticket vendor**.
 After running the following command, you should see on your screen a line similar to:
 
 .. code-block:: bash

@@ -46,7 +46,7 @@ Prerequisites
 Creating the account
 ********************
 
-1. Create an account for Alice, using the :doc:`NEM2-CLI <../../cli>`.
+1. Create an account for Alice, using the :doc:`CLI tool <../../cli>`.
 
 .. code-block:: bash
 

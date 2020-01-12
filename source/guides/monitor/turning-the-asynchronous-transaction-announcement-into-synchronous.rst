@@ -21,7 +21,7 @@ As a result, the developer does not have to wait until the server returns a resp
 However, now is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
 The negative aspect of announcing transactions asynchronously announcement is that it adds unnecessary complexity to small projects.
-The NEM2-SDK ``TransactionService`` aims to solve this problem by providing a function that waits for the confirmation or rejection of the transaction.
+The |sdk| ``TransactionService`` aims to solve this problem by providing a function that waits for the confirmation or rejection of the transaction.
 
 *************
 Prerequisites

@@ -2,13 +2,13 @@
 CLI
 ####
 
-|NEM2-CLI| is an open-source command-line interface to interact with the blockchain.
+|cli| is an |open-source| command-line interface to interact with the blockchain.
 
 ************
 Installation
 ************
 
-NEM2-CLI is distributed using the node package manager ``npm``.
+|cli| is distributed using the node package manager ``npm``.
 
 .. code-block:: bash
 
@@ -18,14 +18,14 @@ NEM2-CLI is distributed using the node package manager ``npm``.
 Configuration
 *************
 
-To start using NEM2-CLI, configure a profile.
+To start using |cli|, configure a profile.
 Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
     nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --password your_password --profile test_net_profile
 
-By default, NEM2-CLI will always use the default profile.
+By default, |cli| will always use the default profile.
 To use a named profile, add the ``--profile`` option to the command.
 
 .. code-block:: bash
@@ -110,7 +110,7 @@ Displays the list of stored profiles.
     :language: bash
     :start-after: #!/bin/sh
 
-.. note:: By default, NEM2-CLI will always use the default profile to connect to a node and set default options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
+.. note:: |cli| uses the default profile to connect to a node and set options such as: address, public key and sign transactions with private key. To use a named profile, add the --profile option to any command.
 
 **Set default**
 
@@ -586,7 +586,7 @@ Returns :doc:`metadata <concepts/metadata>` entries from a namespace.
 Monitor
 =======
 
-The NEM2 command line interface has a set of monitoring commands to track events in the NEM blockchain.
+|codename| command line interface comes with a set of commands to track events in the blockchain.
 
 
 **Block**
@@ -1204,6 +1204,6 @@ Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transa
     :language: bash
     :start-after: #!/bin/sh
 
-.. |nem2-cli| raw:: html
+.. |open-source| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-cli" target="_blank">NEM2-CLI</a>
+   <a href="https://github.com/nemtech/nem2-cli" target="_blank">open-source</a>

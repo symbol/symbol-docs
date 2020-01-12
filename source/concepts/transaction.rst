@@ -63,7 +63,7 @@ Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>
 Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties.
 You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
-We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+We recommend `using the SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
 .. code-block:: typescript
 

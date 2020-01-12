@@ -2,7 +2,7 @@
 Node
 ####
 
-Symbol blockchain platform is built from a **network of nodes**.
+|codename| blockchain platform is built from a **network of nodes**.
 These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
 
 .. figure:: ../resources/images/diagrams/four-layer-architecture.png

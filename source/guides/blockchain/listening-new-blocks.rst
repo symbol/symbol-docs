@@ -73,7 +73,7 @@ From that moment, every ``15`` seconds more or less, you will receive a new noti
 Method #02: Using the SDK
 *************************
 
-The NEM2-SDK simplifies the process of handling WebSocket connections.
+The |sdk| simplifies the process of handling WebSocket connections.
 
 In the SDK, WebSockets are named **Listeners**.
 As we have done with WebSockets, we need to open the connection first and subscribe to the desired channel, but this time without handling uids.
@@ -90,7 +90,7 @@ As we have done with WebSockets, we need to open the connection first and subscr
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.js backend environments.
+Note that the |sdk| for TypeScript base Listener is designed to work on Node.js backend environments.
 If you want to execute Listeners from the client-side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
 
 .. code-block:: typescript

@@ -117,7 +117,7 @@ This cost is paid in |privatenetworkcurrency| mosaics, the default network token
 After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts.
 To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
 
-1. Install :doc:`NEM2-CLI <../../cli>`.
+1. Install |cli|.
 
 .. code-block:: bash
 
@@ -150,7 +150,7 @@ Copy the private key of the first account.
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name: base-profile
 
-.. note:: Use NEM2-CLI only for testing and development purposes, as the private keys stored are not encrypted.
+.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
 
 You should see the account credentials in your terminal.
 

@@ -18,7 +18,7 @@ SDKs and applications use the generated code to interact with REST transaction e
     :width: 450px
     :align: center
 
-    NEM2-SDK serialization module
+    |sdk| serialization module
 
 The library accomplishes the following properties:
 

@@ -33,7 +33,7 @@ Thus, Alice sends an **encrypted message** that is only readable by herself and 
 Setting up the use case
 ***********************
 
-Create an account for Alice, and another for the certificate with the :doc:`NEM2-CLI <../../cli>`.
+Create an account for Alice, and another for the certificate with the :doc:`CLI tool <../../cli>`.
 
 .. code-block:: bash
 

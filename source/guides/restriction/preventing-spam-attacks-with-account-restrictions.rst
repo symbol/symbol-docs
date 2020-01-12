@@ -42,7 +42,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-Before starting solving the use case, you will need to set up two accounts with :doc:`NEM2-CLI <../../cli>`.
+Before starting solving the use case, you will need to set up two accounts with the :doc:`CLI tool<../../cli>`.
 
 1. Create an account to represent the product.
 

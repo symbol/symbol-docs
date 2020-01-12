@@ -11,11 +11,11 @@ This document intends to guide developers to ship |codename|-based SDKs that sha
 Rationale
 *********
 
-The NEM2-SDK shares the same design/architecture between programming languages to accomplish the next properties:
+The |sdk| shares the same design/architecture between programming languages to accomplish the next properties:
 
-* **Fast language adaptation**: For example, there is a NEM2-SDK for Java, but you need to work on C++. As both SDKs share the same design, you could re-write the library faster, adapting the syntax to your language. The same principle also applies to code examples, projects, applications...
+* **Fast language adaptation**: For example, there is a |sdk| for Java, but you need to work on C++. As both SDKs share the same design, you could re-write the library faster, adapting the syntax to your language. The same principle also applies to code examples, projects, applications...
 * **Cohesion/shared knowledge across developers**: Every developer should be able to change between projects that use |codename|. By sharing the same design, we also share the same best practices among projects.
-* **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
+* **Fast SDK updates**: Migrating any improvement from a |sdk| implementation to the rest is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
 
 ************
 Architecture
@@ -55,7 +55,7 @@ Common operations that require multiple :doc:`REST API <../api>` requests are ha
 Reactive
 ========
 
-NEM2-SDK uses ReactiveX Library intensely.
+|sdk| uses ReactiveX Library intensely.
 
 * **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 * **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -109,7 +109,7 @@ Before starting
 1. Review the technical documentation to become familiar with the |codename| :doc:`built-in features<../concepts/account>`.
 2. Setup the |codename| `local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
 3. :doc:`Check the API reference <../api>` and play with the API endpoints.
-4. Become familiar with the current :doc:`NEM2-SDK via code examples <../concepts/account>` & :doc:`NEM2-CLI <../cli>` .
+4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` & :doc:`CLI <../cli>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask |codename| related questions.
 6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
@@ -272,7 +272,7 @@ Transaction Serialization
 The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize |codename| entities.
 
 In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.
-For example, the NEM2-SDK uses the generated code to operate with the entities in binary form before announcing them to the network.
+For example, the |sdk| uses the generated code to operate with the entities in binary form before announcing them to the network.
 
 KeyPair and Cryptographic functions
 ===================================
