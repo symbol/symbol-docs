@@ -2,39 +2,26 @@
 NEM Developer Center
 ####################
 
-This documentation introduces NEM's next core engine (NEM2), code-named **Catapult**.
+**********************************
+Catapult is your Blockchain Engine
+**********************************
 
-*****************************
-NEM is your Blockchain Engine
-*****************************
+|codename| is a **developer-friendly blockchain platform** for businesses.
+It offers flexible and customizable solutions through simple, yet powerful, built-in features.
 
-|nem| is a **developer-friendly blockchain platform** for businesses. It offers flexible and customizable solutions through simple, yet powerful, built-in features.
+Developers are able to integrate blockchain technology into their projects or create powerful dApps using |codename|'s :doc:`REST API <api>`.
+This allows creating a variety of architectural solutions with lightweight code in any language.
 
-Developers are able to integrate blockchain technology into their projects or create powerful dApps using NEM's :doc:`REST API <api>`. This allows creating a variety of architectural solutions with lightweight code in any language.
-
-NEM provides access to both **public and private blockchains**, providing options to best suit your company's needs. The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone. The private blockchain, on the other hand, offers higher speed and privacy.
-
-****************************************
-Catapult: Preview NEM’s Next Core Engine
-****************************************
-
-|Catapult| is NEM's next core engine. It is written in C++ and follows a :doc:`4-layered architecture <concepts/node>`, aiming to make NEM more scalable. It builds upon the achievements of its previous iteration, adding the newest innovations in blockchain technology.
-
-Catapult introduce new exclusive features:
-
-* :doc:`Aggregate Transactions <concepts/aggregate-transaction>`
-* :doc:`Cross-Chain Swaps <concepts/cross-chain-swaps>`
-* :doc:`Multi-level Multisig Accounts <concepts/multisig-account>`
-* :doc:`Account Restriction <concepts/account-restriction>`
-* :doc:`Mosaic Restriction <concepts/mosaic-restriction>`
-
-Catapult will be a momentous step for NEM to be the widely utilized enterprise product it was envisioned to be. After three years of development, the long-awaited update is expected to launch `in 2020 <https://forum.nem.io/t/migration-committee-community-update-4/23847/3>`_.
+|codename| provides access to both **public and private blockchains**, providing options to best suit your company's needs.
+The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone.
+The private blockchain, on the other hand, offers higher speed and privacy.
 
 ***************
 Getting Started
 ***************
 
-To start developing on Catapult, we recommend you to :doc:`setup your workstation <getting-started/setup-workstation>`. Then, review the following documents to know more about Catapult:
+To start developing with |codename|, we recommend you to :doc:`setup your workstation <getting-started/setup-workstation>`.
+To know more about |codename|, continue reading the following documents:
 
 * :doc:`Built-in Features <concepts/account>`
 * :doc:`Protocol <concepts/cryptography>`
@@ -59,7 +46,8 @@ Learn how to use the software development kits and tools with the following step
 Contributing to Catapult
 ************************
 
-Catapult is an |open-source| project. Discover how our |community| is organized, and get started participating:
+|codename| is an |open-source| project.
+Discover how our |community| is organized, and get started participating:
 
 *   Ask in |stack-overflow| development-related questions
 *   Reach our community joining the official |slack|
@@ -72,10 +60,6 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 .. |nem| raw:: html
 
     <a href="https://nem.io/" target="_blank">NEM</a>
-
-.. |catapult| raw:: html
-
-    <a href="https://mijin.io/en/product/#mijin2" target="_blank">Catapult</a>
 
 .. |community| raw:: html
 

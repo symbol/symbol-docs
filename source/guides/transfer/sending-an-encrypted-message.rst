@@ -33,7 +33,7 @@ Thus, Alice sends an **encrypted message** that is only readable by herself and 
 Setting up the use case
 ***********************
 
-Create an account for Alice, and another for the certificate  using ``nem2-cli``.
+Create an account for Alice, and another for the certificate with the :doc:`NEM2-CLI <../../cli>`.
 
 .. code-block:: bash
 
@@ -116,7 +116,8 @@ Method #01: Using the SDK
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. After the transaction gets confirmed, fetch it using the transaction hash output from (3). You can now **decrypt the message** using either the certificate account or address account.
+5. After the transaction gets confirmed, fetch it using the transaction hash output from (3).
+You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
 

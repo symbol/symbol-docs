@@ -21,9 +21,11 @@ Background
 
     Sending an AggregateCompleteTransaction
 
-Alice and Bob have separate :doc:`accounts <../../concepts/account>`. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate :doc:`accounts <../../concepts/account>`.
+They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in Catapult as **1-of-2 multisig**. Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in |codename| as **1-of-2 multisig**.
+Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 In this guide, you will send a transaction from a multisig account.
 
@@ -41,7 +43,8 @@ Prerequisites
 Example #1: 1-of-2 signatures required
 **************************************
 
-Bob has finished filling the basket, and he is ready to pay. The cashier's screen indicates that the cost of the purchase adds up to ``10 nem.xem``.
+Bob has finished filling the basket, and he is ready to pay.
+The cashier's screen indicates that the cost of the purchase adds up to 10 |networkcurrency|.
 
 Let's develop the piece of code present in Bob's mobile wallet that enables him to send multisig transactions.
 
@@ -62,8 +65,8 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
 2. Define the following :ref:`TransferTransaction <transfer-transaction>`:
 
 * Recipient: Grocery's address
-* Message: sending 10 nem.xem
-* Mosaics: [``10 nem.xem``]
+* Message: sending 10 |networkcurrency|
+* Mosaics: [10 |networkcurrency|]
 
 .. example-code::
 
@@ -79,7 +82,8 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
 
 3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer.
 
-An AggregateTransaction is **complete** if before announcing it to the network, all the required cosigners have signed it. In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
+An AggregateTransaction is **complete** if before announcing it to the network, all the required cosigners have signed it.
+In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
 
 .. example-code::
 
@@ -139,7 +143,9 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. When an AggregateTransaction is bonded, Bob needs to **lock at least 10 nem.xem** to prevent spamming the network. Once all cosigners sign the transaction, the amount of cat.currency locked becomes available again in Bob's account. After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
+3. When an AggregateTransaction is bonded, Bob needs to lock at least ``10`` |networkcurrency| to prevent spamming the network.
+Once all cosigners sign the transaction, the amount of |networkcurrency| locked becomes available again in Bob's account.
+After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
 
 .. example-code::
 
@@ -153,7 +159,8 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added. Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from (2).
+4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added.
+Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from (2).
 
 .. code-block:: bash
 

@@ -22,9 +22,12 @@ Prerequisites
 Background
 **********
 
-Bob works as a digital notary that **stamp accounts** on Catapult's public blockchain. When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
+Bob works as a digital notary that **stamp accounts** on |codename|'s public blockchain.
+When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
 
-Alice is a recent graduate who wants her educational certificate accredited to her Catapult account to avoid the hassle of repeatedly providing verification of her degree. So she goes to Bob and provides him with proof of her degree. Once Alice pays a fee, Bob verifies the authenticity and stamps Alice's account with metadata that signifies her degree.
+Alice is a recent graduate who wants her educational certificate accredited to her |codename| account to avoid the hassle of repeatedly providing verification of her degree.
+So she goes to Bob and provides him with proof of her degree.
+Once Alice pays a fee, Bob verifies the authenticity and stamps Alice's account with metadata that signifies her degree.
 
 In this tutorial, you are going to implement a program to allow Bob tag accounts issuing :doc:`metadata transactions <../../concepts/metadata>`.
 
@@ -58,7 +61,9 @@ Creating the account
 Method #01: Using the SDK
 *************************
 
-1. Bob has to pick a **key** to store Alice's certificate. Imagine that ``CERT`` is a common key to store university degrees. Define this key as a new variable.
+1. Bob has to pick a **key** to store Alice's certificate.
+Imagine that ``CERT`` is a common key to store university degrees.
+Define this key as a new variable.
 
 .. example-code::
 
@@ -72,7 +77,9 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Alice's degree brings the identifier ``123456`` for her certificate. Help Bob to **assign this value to the key** defined in the previous step. To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
+2. Alice's degree brings the identifier ``123456`` for her certificate.
+Help Bob to **assign this value to the key** defined in the previous step.
+To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
 
 .. example-code::
 
@@ -86,7 +93,9 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. To avoid spamming the account with invalid metadata keys, all metadata is attached only with the consent of the account owner through Aggregate Transactions. Thus, Alice will have to **opt-in** if she wants the metadata entry assigned to its account. Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
+3. To avoid spamming the account with invalid metadata keys, all metadata is attached only with the consent of the account owner through Aggregate Transactions.
+Thus, Alice will have to **opt-in** if she wants the metadata entry assigned to its account.
+Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransaction <aggregate-bonded>` and sign the transaction using Bob's account.
 
 .. example-code::
 
@@ -100,7 +109,8 @@ Method #01: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Before sending an aggregate transaction to the network, Bob has to lock  ``10 nem.xem``. Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account.
+4. Before sending an aggregate transaction to the network, Bob has to lock ``10`` |networkcurrency|.
+Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account.
 
 .. example-code::
 
@@ -116,7 +126,8 @@ Method #01: Using the SDK
 
 .. note:: Bob will receive the locked funds back if Alice cosigns the aggregate during the next ``480`` blocks.
 
-5. Announce the **HashLockTransaction**. Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the **AccountMetadataTransaction**.
+5. Announce the **HashLockTransaction**.
+Monitor the network until the transaction gets confirmed, and then announce the **AggregateTransaction** containing the **AccountMetadataTransaction**.
 
 .. example-code::
 

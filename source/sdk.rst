@@ -6,7 +6,7 @@ The **NEM2 Software Development Kit** is the primary software development tool t
 
 It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
-Learn how to use Catapult's SDK following the :ref:`guided implementation examples <blog-categories>`.
+Learn how to use |codename|'s SDK following the :ref:`guided implementation examples <blog-categories>`.
 
 *******************
 Supported languages

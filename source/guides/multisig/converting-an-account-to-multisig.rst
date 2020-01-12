@@ -16,9 +16,11 @@ Create a 1-of-2 multisig account.
 Background
 **********
 
-Alice and Bob have separate accounts. They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Alice and Bob have separate accounts.
+They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accounts <../../concepts/multisig-account>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+This shared account appears in |codename| as **1-of-2 multisig**.
+:doc:`Multisig accounts <../../concepts/multisig-account>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
@@ -26,7 +28,8 @@ This shared account appears in NEM as **1-of-2 multisig**. :doc:`Multisig accoun
 
     1-of-2 multisig account example
 
-In this guide, you are going to create a 1-of-2 multisig account. In future guides, you will learn how to increase the minimum number of cosignatures required, as well as invite and remove cosignatories from the multisig account.
+In this guide, you are going to create a 1-of-2 multisig account.
+In future guides, you will learn how to increase the minimum number of cosignatures required, as well as invite and remove cosignatories from the multisig account.
 
 *************
 Prerequisites
@@ -40,7 +43,9 @@ Prerequisites
 Example #01: 1-of-2 multisig
 ****************************
 
-1. First, define the accounts that will be cosignatories of the multisig account. In our case, these are Alice and Bob addresses. Then, open the account that will be converted into multisig using its private key.
+1. First, define the accounts that will be cosignatories of the multisig account.
+In our case, these are Alice and Bob addresses.
+Then, open the account that will be converted into multisig using its private key.
 
 .. example-code::
 
@@ -54,7 +59,8 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>`  to convert the shared account into a multisig account. As you want to create a 1-of-2 multisig account, set the minimum signatures required to ``1``.
+2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to convert the shared account into a multisig account.
+As you want to create a 1-of-2 multisig account, set the minimum signatures required to ``1``.
 
 .. example-code::
 
@@ -68,7 +74,8 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**. This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
+3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**.
+This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
 
@@ -98,7 +105,9 @@ Example #01: 1-of-2 multisig
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to **lock at least 10 nem.xem**. This transaction is required to prevent spamming the network. After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
+5. Before sending an **AggregateBondedTransaction**, the future multisig account needs to lock at least ``10`` |networkcurrency|.
+This transaction is required to prevent spamming the network.
+After the **HashLockTransaction** has been confirmed, announce the AggregateTransaction signed in (4).
 
 .. example-code::
 
@@ -126,7 +135,8 @@ Example #01: 1-of-2 multisig
 
 .. _guide-get-multisig-account-info:
 
-8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories. You can get the list of the multisig accounts where Alice or Bob are cosignatories using the ``getMultisigAccountInfo`` function.
+8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories.
+You can get the list of the multisig accounts where Alice or Bob are cosignatories using the ``getMultisigAccountInfo`` function.
 
 .. example-code::
 

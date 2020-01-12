@@ -30,7 +30,7 @@ generator most convenient for your language.
 Guides
 ******
 
-The NEM Developer Center gathers a collection of :ref:`guides <blog-categories>`. These guides show developers how to use NEM built-in features while following step-by-step use cases. Each guide comes with at least one snippet, which is executable pieces of code that solve the proposed use case.
+The |sitename| gathers a collection of :ref:`guides <blog-categories>`. These guides show developers how to use |codename| built-in features while following step-by-step use cases. Each guide comes with at least one snippet, which is executable pieces of code that solve the proposed use case.
 
 Writing snippets helps you to compare how the SDK code looks like in contrast with others. Furthermore, you will be testing manually if the SDK behaves correctly.
 

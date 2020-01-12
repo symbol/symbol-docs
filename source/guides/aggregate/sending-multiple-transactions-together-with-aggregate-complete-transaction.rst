@@ -15,7 +15,9 @@ Send transactions to different accounts at the same time, using aggregate transa
 Background
 **********
 
-Dan wants to send mosaics to Alice and Bob. He could achieve this sending a couple of **TransferTransactions**. However, to make sure Alice and Bob receive the funds at the same time, he decies to use an :ref:`AggregateTransaction <aggregate-transaction>`.
+Dan wants to send mosaics to Alice and Bob.
+He could achieve this sending a couple of **TransferTransactions**.
+However, to make sure Alice and Bob receive the funds at the same time, he decides to use an :ref:`AggregateTransaction <aggregate-transaction>`.
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
@@ -34,7 +36,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send ``10 nem.xem`` to different recipients.
+1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send 10 |networkcurrency| to different recipients.
 
 .. example-code::
 

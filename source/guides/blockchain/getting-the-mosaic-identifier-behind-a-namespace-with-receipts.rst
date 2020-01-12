@@ -15,9 +15,12 @@ Get the resolution for a given alias and transaction using receipts.
 Background
 **********
 
-Catapult accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`. This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
+|codename| accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`.
+This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
 
-Imagine a ticket vendor sending tickets to their customers on the Catapult public blockchain. The company needs to send ``1 0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. With aliases, it can define the same transaction as sending ``1 ticketsales.event1.ticket`` to ``@alice`` instead.
+Imagine a ticket vendor sending tickets to their customers on |codename|'s public chain.
+The company needs to send 1 ``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``.
+With aliases, the ticket vendor can define the same transaction as sending 1 ``ticketsales.event1.ticket`` to ``@alice`` instead.
 
 .. figure:: ../../resources/images/examples/namespace-tickets.png
     :align: center
@@ -39,13 +42,15 @@ To ensure the transactions are being sent to the correct place with the correct 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-However, the same method **cannot be used to verify transactions of the past**. This is due to the facts that:
+However, the same method **cannot be used to verify transactions of the past**.
+This is due to the facts that:
 
 * Transactions using aliased mosaics or accounts are stored on the blockchain using the namespace identifier, not the real address or mosaic id behind it.
 * Links are editable. The namespace creator can link its namespace to another asset.
 * Namespaces expire. The namespace link could be deleted.
 
-At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`. For each block, Catapult nodes store receipts that contain every **invisible state change** that cannot be retrieved directly from the transaction or block header.
+At this point, you might be wondering: how then can we get the accurate relation between a namespace and its real identifier for a past transaction? The answer lies with :doc:`receipts <../../concepts/receipt>`.
+For each block, |codename| nodes store receipts that contain every **invisible state change** that cannot be retrieved directly from the transaction or block header.
 
 *************
 Prerequisites
@@ -58,9 +63,10 @@ Prerequisites
 Getting into some code
 **********************
 
-In this example, we are going to announce a **TransferTransaction** using ``nem.xem`` instead of the native currency mosaic id. Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
+In this example, we are going to announce a **TransferTransaction** using |networkcurrency| instead of the native currency mosaic id.
+Once the network confirms the transaction, we will get the **block height** where the transaction has been recorded. With this information, we will then get the namespace-mosaic relation by looking into the block receipts’.
 
-1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. nem.xem) instead of the mosaic identifier.
+1. Define the mosaic you want to send. Use a **linked namespace identifier** (e.g. |networkcurrency|) instead of the mosaic identifier.
 
 .. example-code::
 
@@ -88,7 +94,8 @@ In this example, we are going to announce a **TransferTransaction** using ``nem.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Announce the **TransferTransaction**. Once the transaction is confirmed, retrieve the receipts attached to the block and find for the namespace resolution.
+3. Announce the **TransferTransaction**.
+Once the transaction is confirmed, retrieve the receipts attached to the block and find for the namespace resolution.
 
 .. example-code::
 
@@ -106,4 +113,5 @@ In this example, we are going to announce a **TransferTransaction** using ``nem.
 What is next?
 *************
 
-Receipts do not only store resolutions for aliases, but also every invisible state change that is not directly retrievable from transactions or the block header. You can check under the :doc:`receipts documentation <../../concepts/receipt>` the **complete list of changes logged**.
+Receipts do not only store resolutions for aliases, but also every invisible state change that is not directly retrievable from transactions or the block header.
+You can check under the :doc:`receipts documentation <../../concepts/receipt>` the **complete list of changes logged**.

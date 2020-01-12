@@ -4,17 +4,22 @@ Block
 
 The central element of every cryptocurrency is a public ledger called the **blockchain**, which links blocks together.
 
-Since the blocks in the chain are ordered, the complete :doc:`transaction <transaction>` **history** is held on the blockchain. Subsequent blocks have increasing heights that differ by one. Each block can contain up to ``1,000`` transactions (public network), being this value :ref:`configurable per network <config-network-properties>`.
+Since the blocks in the chain are ordered, the complete :doc:`transaction <transaction>` **history** is held on the blockchain.
+Subsequent blocks have increasing heights that differ by one.
+Each block can contain up to ``1,000`` transactions (public network), being this value :ref:`configurable per network <config-network-properties>`.
 
-Blocks are stored in a database as permanent medium. Catapult calls the first block in the chain the **nemesis block**.
+Blocks are stored in a database as permanent medium.
+|codename| calls the first block in the chain the **nemesis block**.
 
-Catapult blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
+|codename| blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
 
 **************
 Block creation
 **************
 
-Blocks are created by :doc:`accounts <account>`. The process of creating new blocks is called :doc:`harvesting <harvesting>`. The **harvesting account**—called the harvester— gets the :doc:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
+Blocks are created by :doc:`accounts <account>`.
+The process of creating new blocks is called :doc:`harvesting <harvesting>`.
+The **harvesting account**—called the harvester— gets the :doc:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
 
 ************
 Block header

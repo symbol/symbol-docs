@@ -17,7 +17,7 @@ Background
 
 Let's say a company, CharlieChocolateFactory, wants to go public by tokenizing their shares and conducting an STO. They create a mosaic ``ccf.shares`` and configure it to be **restrictable**. To comply with regulations, the company wants only the participants that have passed the **KYC/AML** process to buy and transact their stock.
 
-This guide shows you how to use Catapult's :doc:`Mosaic Restriction <../../concepts/mosaic-restriction>` feature to define rules that determine which participants can transact with ``ccf.shares``.
+This guide shows you how to use |codename|'s :doc:`Mosaic Restriction <../../concepts/mosaic-restriction>` feature to define rules that determine which participants can transact with ``ccf.shares``.
 
 *************
 Prerequisites
@@ -78,7 +78,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaicId and keys you have defined in the previous step as arguments.
+2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaic id and keys you have defined in the previous step as arguments.
 
 The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the ```previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
 

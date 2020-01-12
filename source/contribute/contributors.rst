@@ -2,7 +2,7 @@
 Contributors
 ############
 
-The NEM Developer Center is not written from scratch. It is the sum of previous effort and documents written by the community and core developers, adapted for this new release. Thank you!
+The |sitename| is not written from scratch. It is the sum of previous effort and documents written by the community and core developers, adapted for this new release. Thank you!
 
 * |nem-technical-reference|
 * |nem-website|

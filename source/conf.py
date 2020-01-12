@@ -259,7 +259,14 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# -- Options for substitutions --
 
+rst_prolog = """
+.. |codename| replace:: Catapult
+.. |sitename| replace:: NEM Developer Center
+.. |networkcurrency| replace:: ``nem.xem``
+.. |privatenetworkcurrency| replace:: ``cat.currency``
+"""
 
 # -- Options for Epub output ----------------------------------------------
 

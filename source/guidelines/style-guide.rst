@@ -4,12 +4,12 @@
 Style guide
 ###########
 
-As NEM grows as an open source project, more developers will begin to
+As |codename| grows as an open source project, more developers will begin to
 rely on documentation to provide quick and efficient education about the
 platform. It is thus imperative that a high level of cohesion is
-achieved across numerous articles on the NEM Developer Center. The
+achieved across numerous articles on the |sitename|. The
 following style guide will provide a guideline to improve the
-consistency and quality of writing from the NEM technical writing team.
+consistency and quality of writing from the |codename| technical writing team.
 
 ***************
 Getting started
@@ -101,7 +101,7 @@ Sustaining a uniform format is also essential for consistency.
     Writing headers for a table.; This table.
     Writing titles.; Basic formatting (first letter capitalized).
     Writing numbers; 1,000.5. Use the period (full stop) as the decimal separator.
-    Referencing variable values, functions or file names.; Catapult has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
+    Referencing variable values, functions, file names, mosaic ids, addresses or urls.; |codename| has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
     Warning the reader.; Use notes. :doc:`Example <../getting-started/setup-workstation>`
     Providing helpful hyperlinks throughout your article.; transfer transactions are used to send :doc:`mosaics <../concepts/mosaic>` between two :doc:`accounts <../concepts/account>`.
     Explaining a difficult concept with many steps.; Break information and actions into bulleted or numbered lists when possible.
@@ -133,6 +133,7 @@ List of terms that are prone to be written in different ways.
 
     API; Api, Api
     Catapult; catapult, NEM Catapult
+    id; ID
     JavaScript; Javascript, javascript
     MongoDB; mongodb, Mongodb
     NEM; Nem, nem
@@ -142,8 +143,8 @@ List of terms that are prone to be written in different ways.
     SDK; Sdk, Sdk
     SHA-256; SHA256, Sha-256
     Smart Asset System; Smart asset system
-    TransferTransaction, Transfer Transaction, transfer transaction
-    transfer transactions, TransferTransactions
+    Symbol; symbol, NEM Symbol
+    TransferTransaction; Transfer Transaction, transfer transaction
     TypeScript; typescript, Typescript
 
 .. |sphinx| raw:: html

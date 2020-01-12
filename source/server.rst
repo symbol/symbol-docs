@@ -2,13 +2,13 @@
 Server
 ######
 
-As a blockchain platform, NEM relies on a decentralized network of nodes to provide a powerful, stable, and secure platform for Smart Asset transactions.
+As a blockchain platform, |codename| relies on a decentralized network of nodes to provide a powerful, stable, and secure platform for Smart Asset transactions.
 
-These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running for more than 4 years.
+These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
 Through its multi-tier architecture, it is possible to isolate the peer-to-peer network and implement better API integration flows with the proposed REST API layer.
 
-Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
+Also, |codename| offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
 
 ************
 Installation
@@ -17,9 +17,7 @@ Installation
 **Catapult server** can be used to configure three different types of :doc:`nodes <concepts/node>`:
 
 * **Peer node**: The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-
 * **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
-
 * **Dual node**: The dual node combines a peer and API nodes into a single server instance.
 
 You can create a new catapult-server image following the building |instructions|, but we recommend deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
@@ -41,7 +39,7 @@ Package organization
    /scripts; Utility scripts for developers.
    /sdk; Reusable code used by tests and tools.
    /seed; Nemesis blocks used in tests.
-   /src; Catapult's core engine.
+   /src; |codename|'s core engine.
    /tests; Collection of tests.
    /tools; Tools to deploy and monitor networks and nodes.
 

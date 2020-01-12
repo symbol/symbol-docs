@@ -15,9 +15,11 @@ Extend a namespace registration period.
 Background
 **********
 
-Namespaces are registered for a certain amount of blocks. The creator can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
+Namespaces are registered for a certain amount of blocks.
+The creator can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
-This guide shows you how to extend the rental period of a namespace. The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
+This guide shows you how to extend the rental period of a namespace.
+The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
 
 *************
 Prerequisites
@@ -46,7 +48,8 @@ Method #01: Using the SDK
     startHeight:    52000
     endHeight:      53000
 
-The information shows that the namespace ``foo`` will become inactive at height ``5300``. The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
+The information shows that the namespace ``foo`` will become inactive at height ``5300``.
+The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
 
 2. Check the current blockchain height.
 
@@ -56,7 +59,8 @@ The information shows that the namespace ``foo`` will become inactive at height 
 
     52500
 
-As you can see, the namespace is going to expire in ``500`` blocks (53000-52500).  To avoid losing all the subnamespaces and aliases linked to foo, we are going to extend the namespace duration.
+As you can see, the namespace is going to expire in ``500`` blocks (53000-52500).
+To avoid losing all the subnamespaces and aliases linked to foo, we are going to extend the namespace duration.
 
 3. Extend the namespace duration for ``1000`` more blocks.
 

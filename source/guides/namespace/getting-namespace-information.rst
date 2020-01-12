@@ -40,6 +40,3 @@ Method #02: Using the CLI
 .. viewsource:: ../../resources/examples/bash/namespace/GettingNamespaceInformation.sh
     :language: bash
     :start-after: #!/bin/sh
-
-
-

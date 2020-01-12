@@ -6,7 +6,7 @@ Account Restriction
 
 The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
 
-Catapult's public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
+|codename|'s public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
 
 .. csv-table:: Restriction types
     :widths: 40 30 30
@@ -21,7 +21,8 @@ Catapult's public network enables accounts to define up to ``512`` restrictions 
 Address restriction
 *******************
 
-An account can decide to **only receive** transactions from a list of allowed **addresses**. Alternatively, the account can define a list of blocked addresses.
+An account can decide to **only receive** transactions from a list of allowed **addresses**.
+Alternatively, the account can define a list of blocked addresses.
 
 Restricting **incoming transactions** is useful when the account will be only receiving transactions from known addresses, or when the account wants to block transactions coming from unknown senders.
 
@@ -41,7 +42,8 @@ Additionally, an account can decide to apply address restrictions to the **outgo
 Mosaic restriction
 ******************
 
-Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed.
+On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
 Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated to their activity.
 
@@ -49,7 +51,8 @@ Account mosaic restrictions are generally used to **prevent accounts being tagge
 Operation restriction
 *********************
 
-An account can allow/block announcing **outgoing** transactions with a :ref:`determined operation type <transaction-types>`. By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
+An account can allow/block announcing **outgoing** transactions with a :ref:`determined operation type <transaction-types>`.
+By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
 
 ********
 Examples
@@ -77,7 +80,8 @@ Enhancing the account security
 
 Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
 
-As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
+As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account.
+Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
 
 ******
 Guides

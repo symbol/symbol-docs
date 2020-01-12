@@ -2,15 +2,19 @@
 Writing your first application
 ##############################
 
-This guide will take you through the NEM development cycle. First, we will architect our solution combining some built-in features available in Catapult, such as :doc:`Mosaics <../concepts/mosaic>` and :doc:`Accounts <../concepts/account>`. Then, you will record your first transaction on the blockchain.
+This guide will take you through the |codename| development cycle.
+First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`Mosaics <../concepts/mosaic>` and :doc:`Accounts <../concepts/account>`.
+Then, you will record your first transaction on the blockchain.
 
 **********
 Background
 **********
 
-The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor. The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.
+The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor.
+The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.
 
-Buying a ticket from someone that is not the initial vendor does not necessarily only mean to pay more for the ticket. The is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can't do anything to solve the issue.
+Buying a ticket from someone that is not the initial vendor does not necessarily only mean to pay more for the ticket.
+There is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can't do anything to solve the issue.
 
 *************************
 What do we want to solve?
@@ -28,9 +32,9 @@ a) Identify each ticket and customer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-***************************
-Why should we use Catapult?
-***************************
+******************************
+Why Catapult is a good choice?
+******************************
 
 Blockchain technology makes sense in cases where:
 
@@ -38,9 +42,11 @@ Blockchain technology makes sense in cases where:
 * These participants need to trust each other.
 * There is a need to keep track of an immutable set of events.
 
-Catapult is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+|codename| is a **flexible blockchain** technology.
+Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
-The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
+The rest of the code will remain **off-chain**.
+This reduces the inherent immutability risk, as you could change the process when necessary.
 
 ****************************************
 Creating an account for each participant
@@ -51,9 +57,13 @@ First, identify the actors involved in the problem to solve:
 * The ticket vendor.
 * The customer.
 
-We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`. Each account is unique and identified by an address. An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
+We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`.
+Each account is unique and identified by an address.
+An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
-1. Have you :ref:`loaded an account with test nem.xem <setup-creating-a-test-account>`? The account you have loaded in NEM2-CLI represents the **ticket vendor**. After running the following command, you should see on your screen a line similar to:
+1. Have you :ref:`loaded an account with test <setup-creating-a-test-account>` |networkcurrency|?
+The account you have loaded in NEM2-CLI represents the **ticket vendor**.
+After running the following command, you should see on your screen a line similar to:
 
 .. code-block:: bash
 
@@ -83,7 +93,8 @@ We have decided to represent the ticket vendor and customer as separate :doc:`ac
     │ 75AF035421401EF0 │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-This account owns ``750 nem.xem`` units. If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
+This account owns 750 |networkcurrency| units.
+If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
 
 2. Create a second account to identify the **customer**.
 
@@ -107,9 +118,11 @@ This account owns ``750 nem.xem`` units. If your row after mosaics is empty, fol
 Monitoring the blockchain
 *************************
 
-Accounts change the blockchain state through transactions. Once an account announces a transaction, if properly formed, the server will return an OK response.
+Accounts change the blockchain state through transactions.
+Once an account announces a transaction, if properly formed, the server will return an OK response.
 
-Receiving an OK response does not mean the transaction is valid, or included in a block. A good practice is to **monitor transactions** before being announced.
+Receiving an OK response does not mean the transaction is valid, or included in a block.
+A good practice is to **monitor transactions** before being announced.
 
 In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which of them are rejected by the network.
 
@@ -121,7 +134,11 @@ In a new terminal, monitor which transactions involving the ticket vendor's addr
 Creating the ticket
 *******************
 
-We are representing the ticket with Catapult :doc:`Mosaics <../concepts/mosaic>`. This feature can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+We are representing the ticket with |codename| :doc:`Mosaics <../concepts/mosaic>`.
+This feature can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
+They have configurable properties, which are defined at the moment of their creation
+For example, we opt to set **transferable property to false**.
+This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
 1. Create a new mosaic to represent the ticket configured as follows with the ticket vendor account.
 
@@ -130,7 +147,7 @@ We are representing the ticket with Catapult :doc:`Mosaics <../concepts/mosaic>`
     :delim: ;
     :widths: 20 30 50
 
-    Divisibility; 0 ; The mosaic units must not be divisible, no one should be able to send "0.5 tickets".
+    Divisibility; 0 ; The mosaic units must not be divisible. No one should be able to send "0.5 tickets".
     Duration; 1000; The mosaic will be registered for 1000 blocks.
     Amount; 99; The number of tickets you are going to create.
     Supply mutable; True; The mosaic supply can change at a later point.
@@ -155,7 +172,7 @@ Sending the ticket
 
 Now that we have defined the mosaic, we are going to send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`.
 
-1. Prepare the **TransferTransaction** with the following values.
+1. Open a new file, and define a **TransferTransaction** with the following values.
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -164,7 +181,7 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
 
     Deadline; Default (2 hours) ; The maximum amount of time to include the transaction on the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
     Recipient; TBULEA...IPS4; The recipient account address. In this case, the customer's address.
-    Mosaics; [1 7cdf3b117a3c40cc]; The array of mosaics to send.
+    Mosaics; [1 ``7cdf3b117a3c40cc``]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
     Network; TEST_NET; The network type.
 
@@ -226,10 +243,10 @@ Although the transaction is defined, it has not been announced to the network ye
 Did we solve the use case?
 **************************
 
-* ✅ Identify each customer: Creating Catapult accounts for each customer.
+* ✅ Identify each customer: Creating |codename| accounts for each customer.
 
 * ✅ Avoid ticket reselling: Creating a non-transferable mosaic.
 
 * ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
-Continue learning about more :doc:`Catapult built-in features <../concepts/account>`.
+Continue learning about more about |codename| :doc:`built-in features <../concepts/account>`.

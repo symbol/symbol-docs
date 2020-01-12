@@ -103,7 +103,6 @@ config-network.properties
     **plugin:catapult.plugins.transfer**; ; ; ;
     maxMessageSize; uint16_t; Maximum transaction message size.; 1024; 1024
 
-
 config-inflation.properties
 ===========================
 

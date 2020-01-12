@@ -6,7 +6,8 @@ Writing a Schema
 
 Are you writing a new catapult plugin that includes a new transaction type?
 
-In this guide, we examine how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_  was constructed. You can adapt the same steps to define a new schema.
+In this guide, we examine how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_  was constructed.
+You can adapt the same steps to define a new schema.
 
 ************
 Instructions
@@ -18,13 +19,15 @@ Instructions
 
     git clone https://github.com/nemtech/catbuffer.git
 
-2. Create a new file under the ``schemas`` folder. In our case, we have named the file ``transfer.cats``.
+2. Create a new file under the ``schemas`` folder.
+In our case, we have named the file ``transfer.cats``.
 
 3. Define the struct for the transaction body.
 
 Think of a struct as a set of properties that we want to store in the same block of memory.
 
-The transaction body contains the extra properties which differ from a basic transaction. Each attribute can have one of the types defined in `types.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_.
+The transaction body contains the extra properties which differ from a basic transaction.
+Each attribute can have one of the types defined in `types.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_.
 
 .. code-block:: python
 
@@ -41,7 +44,9 @@ The transaction body contains the extra properties which differ from a basic tra
         # attached mosaics
         mosaics = array(UnresolvedMosaic, mosaicsCount, sort_key=mosaicId)
 
-2. Define a second transaction struct in the same file. This will contain information about the version of the entity and its identifier. The underlying transaction properties and the particular transaction body are appended as inlines.
+2. Define a second transaction struct in the same file.
+This will contain information about the version of the entity and its identifier.
+The underlying transaction properties and the particular transaction body are appended as inlines.
 
 .. code-block:: python
 
@@ -54,7 +59,8 @@ The transaction body contains the extra properties which differ from a basic tra
         inline TransferTransactionBody
 
 
-3. Define an EmbeddedTransaction struct to serialize the inner transactions within an aggregate. The embedded transaction and the body transaction are added as inlines.
+3. Define an EmbeddedTransaction struct to serialize the inner transactions within an aggregate.
+The embedded transaction and the body transaction are added as inlines.
 
 .. code-block:: python
 
@@ -64,7 +70,8 @@ The transaction body contains the extra properties which differ from a basic tra
         inline EntityBody
 
 
-4. The catbuffer library allows you to generate the transaction builders from the schema we have defined. For example, run the following command to generate C++ code:
+4. The catbuffer library allows you to generate the transaction builders from the schema we have defined.
+For example, run the following command to generate C++ code:
 
 .. code-block:: bash
 

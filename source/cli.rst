@@ -18,13 +18,15 @@ NEM2-CLI is distributed using the node package manager ``npm``.
 Configuration
 *************
 
-To start using NEM2-CLI, configure a profile. Profiles are used to set a base URL and have an account to sign transactions.
+To start using NEM2-CLI, configure a profile.
+Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
     nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --password your_password --profile test_net_profile
 
-By default, NEM2-CLI will always use the default profile. To use a named profile, add the ``--profile`` option to the command.
+By default, NEM2-CLI will always use the default profile.
+To use a named profile, add the ``--profile`` option to the command.
 
 .. code-block:: bash
 
@@ -748,7 +750,7 @@ Gets all the :doc:`namespaces <concepts/namespace>` owned by an account.
 
 **Alias**
 
-Get mosaicId or address behind an namespace.
+Get mosaic id or address behind an namespace.
 
 *Options*
 

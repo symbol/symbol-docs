@@ -21,7 +21,8 @@ Prerequisites
 Method #01: Using WebSockets
 ****************************
 
-1. First, we need to create a bidirectional link between our client application and the REST Gateway. To do so, open a new :ref:`WebSocket connection <websockets>` connection .
+1. First, we need to create a bidirectional link between our client application and the REST Gateway.
+To do so, open a new :ref:`WebSocket connection <websockets>` connection.
 
 .. code-block:: typescript
 
@@ -47,7 +48,9 @@ Method #01: Using WebSockets
         }
     });
 
-Once the connection is open, you will get a unique string identifier named ``uid``. As we want to get notifications every time there is a new block harvested; the next step is to subscribe to the block channel. Check :ref:`here <websockets>` the complete list of channels available.
+Once the connection is open, you will get a unique string identifier named ``uid``.
+As we want to get notifications every time there is a new block harvested; the next step is to subscribe to the block channel.
+Check :ref:`here <websockets>` the complete list of channels available.
 
 2. Send the uid received during the connection phase, and the channel name formatted as follows.
 
@@ -72,7 +75,8 @@ Method #02: Using the SDK
 
 The NEM2-SDK simplifies the process of handling WebSocket connections.
 
-In the SDK, WebSockets are named **Listeners**. As we have done with WebSockets, we need to open the connection first and subscribe to the desired channel, but this time without handling uids.
+In the SDK, WebSockets are named **Listeners**.
+As we have done with WebSockets, we need to open the connection first and subscribe to the desired channel, but this time without handling uids.
 
 .. example-code::
 
@@ -86,7 +90,8 @@ In the SDK, WebSockets are named **Listeners**. As we have done with WebSockets,
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.js backend environments. If you want to execute Listeners from the client-side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
+Note that the NEM2-SDK for TypeScript base Listener is designed to work on Node.js backend environments.
+If you want to execute Listeners from the client-side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
 
 .. code-block:: typescript
 

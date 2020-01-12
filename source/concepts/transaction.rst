@@ -2,7 +2,8 @@
 Transaction
 ###########
 
-A transaction generally represents a unit of work within a database system. In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
+A transaction generally represents a unit of work within a database system.
+In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
 
 *****************
 Transaction types
@@ -10,7 +11,8 @@ Transaction types
 
 .. _transaction-types:
 
-There are different types of transactions. For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
+There are different types of transactions.
+For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 .. csv-table::
     :header:  "Id",  "Type", "Description"
@@ -57,7 +59,9 @@ There are different types of transactions. For example, you can transfer :doc:`m
 Defining a transaction
 **********************
 
-Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
+Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form.
+Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties.
+You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
 We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
@@ -101,7 +105,8 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
 Signing a transaction
 *********************
 
-Accounts must sign transactions before announcing them to the network. `Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
+Accounts must sign transactions before announcing them to the network.
+`Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
 For example, a TransferTransaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
@@ -149,7 +154,8 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 Announcing a transaction
 ************************
 
-Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
+Signed transactions are ready to be announced to the network.
+You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 
@@ -167,7 +173,8 @@ Signed transactions are ready to be announced to the network. You can either use
 
         curl -X PUT -H "Content-type: application/json" -d '{"payload":"B3000000F77A8DCFCB57B81F9BE5B46738F7132998F55123BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA6249E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D22A599A3D0E3039054410000000000000000265DEE3F1700000090FA39EC47E05600AFA74308A7EA607D145E371B5F4F1447BC0F00010057656C636F6D6520546F204E454D44B262C46CEABB858096980000000000"}' http://localhost:3000/transaction
 
-After announcing the transaction, the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
+After announcing the transaction, the REST API will always return an OK response immediately.
+At this point, it is still unknown whether the transaction is valid.
 
 .. figure:: ../resources/images/diagrams/transaction-cycle.png
     :width: 800px
@@ -175,13 +182,21 @@ After announcing the transaction, the REST API will always return an OK response
 
     Transaction cycle
 
-The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
+The first stage of validation happens in the API nodes.
+If the transaction presents some error, the WebSocket throws a notification through the status channel.
+In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.
+Never rely on a transaction which has an unconfirmed state.
+It is not clear if it will get included in a block, as it should pass a second validation.
 
-The second validation is done before the transaction is added in a :doc:`harvested block <block>`. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
+The second validation is done before the transaction is added in a :doc:`harvested block <block>`.
+If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
 
-Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account. Additionally, the transaction fee is deducted from the signer's account.
+Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
+Additionally, the transaction fee is deducted from the signer's account.
 
-The transaction has **zero confirmations** at this point. When another block is added to the blockchain, the transaction has one confirmation. The next block added to the chain will give it two confirmations and so on.
+The transaction has **zero confirmations** at this point.
+When another block is added to the blockchain, the transaction has one confirmation.
+The next block added to the chain will give it two confirmations and so on.
 
 .. _rollbacks:
 
@@ -189,11 +204,14 @@ The transaction has **zero confirmations** at this point. When another block is 
 Rollbacks
 *********
 
-Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back. These are essential to resolve forks of the blockchain.
+Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back.
+These are essential to resolve forks of the blockchain.
 
-The rewrite limit is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
+The rewrite limit is the maximum number of blocks that can be rolled back.
+Hence, forks can only be resolved up to a certain depth too.
 
-Catapult's public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`. Once a transaction has more than ``maxRollBackConfirmations`` value, it cannot be reversed.
+|codename|'s public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`.
+Once a transaction has more than ``maxRollBackConfirmations`` value, it cannot be reversed.
 
 .. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
@@ -298,7 +316,8 @@ Serialization of an entity that should be signed by an account.
 EntityBody
 ==========
 
-Serialization of an entity. An entity could be a block or a :doc:`transaction <transaction>`.
+Serialization of an entity.
+An entity could be a block or a :doc:`transaction <transaction>`.
 
 .. csv-table::
     :header: "Property", "Type", "Description"

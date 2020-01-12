@@ -4,7 +4,7 @@
 Suggesting documentation changes
 ################################
 
-The NEM Developer Center is an open source project and we love to receive contributions from our community—you!
+The |sitename| is an open source project and we love to receive contributions from our community—you!
 There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
 writing new pieces of documentation which can be incorporated into the docs itself.
 
@@ -12,7 +12,7 @@ writing new pieces of documentation which can be incorporated into the docs itse
 Error reports
 *************
 
-If you think you have found an error in the NEM Developer Center, first make sure that you are testing against the latest version of NEM Developer Center—your issue may already have been fixed. If not, search our issues list on GitHub in case a similar
+If you think you have found an error in the |sitename|, first make sure that you are testing against the latest version of |sitename|—your issue may already have been fixed. If not, search our issues list on GitHub in case a similar
 |issue| has already been opened.
 
 It is very helpful if you can prepare a reproduction of the error. It makes it easier to find the problem and to fix it.
@@ -49,7 +49,9 @@ Open a new |issue| here.
 Requests
 ********
 
-If you find yourself wishing for content that does not exist in the NEM Developer Center, you are probably not alone. Most of the documentation and guides that the NEM Developer Center has today have been added because our users saw the need. Open an |issue| on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
+If you find yourself wishing for content that does not exist in the |sitename|, you are probably not alone.
+Most of the documentation and guides that the |sitename| has today have been added because our users saw the need.
+Open an |issue| on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
 
 If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the project repository.
 
@@ -57,7 +59,7 @@ If the improvement is not related to documentation, but with a specific project,
 Contributing code and documentation changes
 *******************************************
 
-To expand and improve the NEM Developer Center, please find or open an |issue| about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
+To expand and improve the |sitename|, please find or open an |issue| about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
 
 We enjoy working with contributors to get their pull-requests accepted.
 

@@ -2,7 +2,8 @@
 Mosaic
 ######
 
-Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** that can represent a set of multiple identical things that do not change.
+Mosaics are part of what makes the Smart Asset System unique and flexible.
+They are **fixed assets** that can represent a set of multiple identical things that do not change.
 
 A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
@@ -19,21 +20,25 @@ Find below the complete list of configurable properties.
 Divisibility
 ============
 
-Determines the decimal place to which the mosaic can be divided. Divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001. The divisibility must be in the range of 0 and 6.
+Determines the decimal place to which the mosaic can be divided. Divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001.
+The divisibility must be in the range of 0 and 6.
 
 Initial supply
 ==============
 
-Indicates the amount of mosaic in circulation. The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
+Indicates the amount of mosaic in circulation.
+The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-Catapult works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+|codename| works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1,000 (absolute) instead.
 
 Duration
 ========
 
-Specifies the number of confirmed blocks the mosaic is rented for. It is allowed to lie in Catapult's public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`. **Non-expiring mosaics** can be created by setting this property to ``0``.
+Specifies the number of confirmed blocks the mosaic is rented for.
+It is allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`.
+**Non-expiring mosaics** can be created by setting this property to ``0``.
 
 You can use the following formula to convert approximately days to blocks:
 
@@ -44,7 +49,8 @@ You can use the following formula to convert approximately days to blocks:
 Supply mutable
 ==============
 
-If set to true, the mosaic supply can change at a later point. Otherwise, the mosaic supply remains immutable.
+If set to true, the mosaic supply can change at a later point.
+Otherwise, the mosaic supply remains immutable.
 
 Transferable
 ============
@@ -55,7 +61,8 @@ Transferable
 
     Example of a non-transferable mosaic
 
-If set to true, the mosaic can be transferred between arbitrary accounts. Otherwise, the mosaic can only be transferred back to the mosaic creator.
+If set to true, the mosaic can be transferred between arbitrary accounts.
+Otherwise, the mosaic can only be transferred back to the mosaic creator.
 
 Restrictable
 ============
@@ -74,11 +81,14 @@ If set to true, the mosaic creator can configure custom :doc:`restrictions <mosa
 Rental fee
 **********
 
-To create a mosaic, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`. The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+To create a mosaic, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
-By default, registering a mosaic in Catapult's public network has an :ref:`initial cost <config-network-properties>` of ``0.0005 nem.xem``. However, **the network dynamically adjusts the mosaic rental fee** over time.
+By default, registering a mosaic in |codename|'s public network has an :ref:`initial cost <config-network-properties>` of ``0.0005`` |networkcurrency|.
+However, **the network dynamically adjusts the mosaic rental fee** over time.
 
-To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`. In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
+In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 
 ******
 Guides
