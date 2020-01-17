@@ -2,17 +2,18 @@
 NEM Developer Center
 ####################
 
-**********************************
-Catapult is your Blockchain Engine
-**********************************
+************************************
+Catapult is your Blockchain Platform
+************************************
 
 |codename| is a **developer-friendly blockchain platform** for businesses.
-It offers flexible and customizable solutions through simple, yet powerful, built-in features.
+It reduces cost, complexity, and time-to-market so businesses can be more competitive.
+|codename| offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
 
-Developers are able to integrate blockchain technology into their projects or create powerful dApps using |codename|'s :doc:`REST API <api>`.
-This allows creating a variety of architectural solutions with lightweight code in any language.
+Developers are able to easily integrate blockchain technology into their projects or create powerful dApps using |codename|'s :doc:`REST API <api>`.
+This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
 
-|codename| provides access to both **public and private blockchains**, providing options to best suit your company's needs.
+|codename| provides access to both **public and private blockchains**, individually or as a hybrid, providing options to best suit your company's needs.
 The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone.
 The private blockchain, on the other hand, offers higher speed and privacy.
 
