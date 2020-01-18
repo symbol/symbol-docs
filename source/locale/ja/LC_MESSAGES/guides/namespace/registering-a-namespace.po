@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,47 +21,47 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:10
+#: ../../source/guides/namespace/registering-a-namespace.rst:18
 msgid "Registering a namespace"
 msgstr "ネームスペースの取得"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:12
+#: ../../source/guides/namespace/registering-a-namespace.rst:20
 msgid "Create a unique place for your assets."
 msgstr "あなたのアセット用に一意な場所を作成する。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:16
+#: ../../source/guides/namespace/registering-a-namespace.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:18
+#: ../../source/guides/namespace/registering-a-namespace.rst:26
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:19
+#: ../../source/guides/namespace/registering-a-namespace.rst:27
 msgid ""
 "Have one :ref:`account with network currency <setup-creating-a-test-"
 "account>`"
 msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:23
+#: ../../source/guides/namespace/registering-a-namespace.rst:31
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:25
+#: ../../source/guides/namespace/registering-a-namespace.rst:33
 msgid ""
 "Choose a **unique name** for your namespace. One common option is to use "
 "your company's or own name."
 msgstr "ネームスペースのために **一意な名前** を選択してください。一般的にはあなたの会社または自分の名前を使用します。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:27
+#: ../../source/guides/namespace/registering-a-namespace.rst:35
 msgid ""
 "In this example, we are going to register a namespace named ``foo``. Check "
 "if your namespace name is **available**."
 msgstr "この例では、 ``foo`` と呼ばれるネームスペースを取得します。あなたのネームスペースが **有効** かどうかを確認してください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:45
+#: ../../source/guides/namespace/registering-a-namespace.rst:53
 msgid ""
 "Is the namespace available? Try to register it before someone else does it! "
 "Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-"
@@ -71,7 +71,7 @@ msgstr ""
 ":ref:`NamespaceRegistrationTransaction1 <namespace-registration-"
 "transaction>` をアナウンスしてください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:59
+#: ../../source/guides/namespace/registering-a-namespace.rst:67
 msgid ""
 "To keep the ownership of your namespace, you will have to :doc:`extend its "
 "duration before it expires <extending-a-namespace-registration-period>`."
@@ -79,15 +79,15 @@ msgstr ""
 "あなたのネームスペース所有権を維持するためには :doc:`期限が切れる前にネームスペース期間の延長 <extending-a-namespace-"
 "registration-period>` を行ってください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:63
+#: ../../source/guides/namespace/registering-a-namespace.rst:71
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:71
+#: ../../source/guides/namespace/registering-a-namespace.rst:79
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:73
+#: ../../source/guides/namespace/registering-a-namespace.rst:81
 msgid ""
 "When the transaction is confirmed, :doc:`register a subnamespace "
 "<registering-a-subnamespace>` following the next guide."

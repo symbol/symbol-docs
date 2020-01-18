@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,31 +21,32 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/setup-workstation.rst:7
+#: ../../source/getting-started/setup-workstation.rst:15
 msgid "Setting up your workstation"
 msgstr "ワークステーションのセットアップ"
 
-#: ../../source/getting-started/setup-workstation.rst:9
+#: ../../source/getting-started/setup-workstation.rst:17
 msgid ""
 "This first guide will walk you through a step-by-step installation of the "
-"required tools to start developing on Catapult."
-msgstr "最初のガイドでは Catapult 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
+"required tools to start developing with |codename|."
+msgstr "最初のガイドでは |codename| 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
-#: ../../source/getting-started/setup-workstation.rst:11
+#: ../../source/getting-started/setup-workstation.rst:19
 msgid ""
 "We will be using the **test network**, which uses the same technology and "
 "features of the future main public network. You can use the testnet to "
-"experiment with the offered Catapult's transaction set in a live network "
+"experiment with the offered |codename|'s transaction set in a live network "
 "without the loss of valuable assets."
 msgstr ""
 "は将来のパブリックメインネットワークと同じテクノロジーと機能を反映している **テストネットワーク** "
-"を使用します。テストネットを実験的に使用することで、貴重な資産を失うことなく、カタパルトが提供するトランザクションセットを試すことができます。"
+"を使用します。テストネットを実験的に使用することで、貴重な資産を失うことなく |codename| "
+"が提供するトランザクションセットを試すことができます。"
 
-#: ../../source/getting-started/setup-workstation.rst:17
+#: ../../source/getting-started/setup-workstation.rst:26
 msgid "Creating an account"
 msgstr "アカウントの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:19
+#: ../../source/getting-started/setup-workstation.rst:28
 msgid ""
 "An :doc:`account <../concepts/account>` is a deposit box where you can hold "
 ":doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by "
@@ -55,21 +56,21 @@ msgstr ""
 "(トークン) を保有することのできる、預け入れ箱であり、 :doc:`トランザクションをアナウンス <../concepts/transaction>`"
 " することでこれらと疎通できます。 "
 
-#: ../../source/getting-started/setup-workstation.rst:21
-msgid "Install NEM2-CLI."
-msgstr "Install NEM2-CLI をインストール"
+#: ../../source/getting-started/setup-workstation.rst:30
+msgid "Install |cli|."
+msgstr "|cli| のインストール"
 
-#: ../../source/getting-started/setup-workstation.rst:27
+#: ../../source/getting-started/setup-workstation.rst:36
 msgid ""
-"Use NEM2-CLI only for testing and development purposes, as the private keys "
+"Use |cli| only for testing and development purposes, as the private keys "
 "stored are not encrypted."
-msgstr "NEM2-CLI は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
+msgstr "|cli| は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:29
+#: ../../source/getting-started/setup-workstation.rst:38
 msgid "Generate a new account and save it as a **profile**."
 msgstr "新しいアカウントを生成して **profile** として保存します"
 
-#: ../../source/getting-started/setup-workstation.rst:41
+#: ../../source/getting-started/setup-workstation.rst:50
 msgid ""
 "If the test network node is not working, you can use another node url from "
 "|network-list|. You can also **run your testnet node** by following "
@@ -79,68 +80,72 @@ msgstr ""
 "<../guides/network/running-a-test-net-node>` に従って **テストネットノードを実行** "
 "することもできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:43
+#: ../../source/getting-started/setup-workstation.rst:52
 msgid "You should see the account credentials in your terminal."
 msgstr "アカウントの資格情報がターミナルで確認できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:62
+#: ../../source/getting-started/setup-workstation.rst:71
 msgid "Getting test currency"
 msgstr "テスト通貨の取得"
 
-#: ../../source/getting-started/setup-workstation.rst:64
+#: ../../source/getting-started/setup-workstation.rst:73
 msgid ""
 "To announce a transaction, the sender should pay a :doc:`fee "
 "<../concepts/fees>` to provide an incentive to those who validate and secure"
-" the network and run the infrastructure. This cost is paid in ``nem.xem`` "
-"mosaics, the default network currency of the public network."
+" the network and run the infrastructure. This cost is paid in "
+"|networkcurrency| mosaics, the default network currency of the public "
+"network."
 msgstr ""
 "トランザクションをアナウンスするには、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための "
 ":doc:`手数料 <../concepts/fees>` "
-"を支払う必要があります。このコストはデフォルトのパブリックネットワークのネットワーク通貨である ``nem.xem`` モザイクで支払われます。"
+"を支払う必要があります。このコストはデフォルトのパブリックネットワークのネットワーク通貨である |networkcurrency|  "
+"モザイクで支払われます。"
 
-#: ../../source/getting-started/setup-workstation.rst:66
+#: ../../source/getting-started/setup-workstation.rst:76
 msgid ""
-"Now that you have created your first account, try to request ``nem.xem`` "
-"units from the **testnet faucet**. |faucet|, indicate the amount of nem.xem "
-"you want to receive and the address, and click \"CLAIM!\"."
+"Now that you have created your first account, try to request "
+"|networkcurrency| units from the **testnet faucet**. |faucet|, indicate the "
+"amount of |networkcurrency| you want to receive and the address, and click "
+"\"CLAIM!\"."
 msgstr ""
-"最初のアカウントを作成したので、 **テストネットフォーセット** から ``nem.xem`` の取得をリクエストできます。 |faucet| "
-"で受信したい nem.xem の量とアドレスを指定して \"CLAIM!\" をクリックします。"
+"最初のアカウントを作成したので、 **テストネットフォーセット** から|networkcurrency| の取得をリクエストできます。 "
+"|faucet| で受信したい |networkcurrency| の量とアドレスを指定して \"CLAIM!\" をクリックします。"
 
-#: ../../source/getting-started/setup-workstation.rst:71
+#: ../../source/getting-started/setup-workstation.rst:82
 msgid "If the default faucet is empty, try this other |faucet-2|."
 msgstr "デフォルトフォーセットが枯渇している場合は |faucet-2| を試してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:73
+#: ../../source/getting-started/setup-workstation.rst:84
 msgid ""
 "After the transaction gets confirmed, check if the account has received "
-"``nem.xem`` using the command-line tool."
-msgstr "トランザクションが承認されたら、アカウントが ``nem.xem`` を受信していることをコマンドラインツールを使用して確認します。"
-
-#: ../../source/getting-started/setup-workstation.rst:86
-msgid ""
-"The faucet has a limited amount of ``nem.xem`` and must be replenished "
-"before it dries. If you don’t need your test nem.xem units anymore, please "
-"send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-"
-"GNQW``."
+"|networkcurrency| using the command-line tool."
 msgstr ""
-"フォーセットは ``nem.xem`` の量が限られているため、不足する前に補充する必要があります。nem.xem が必要なくなった場合は "
-"``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW`` へ送り返してください。"
+"トランザクションが承認されたら、アカウントが |networkcurrency| を受信していることをコマンドラインツールを使用して確認します。"
 
-#: ../../source/getting-started/setup-workstation.rst:92
+#: ../../source/getting-started/setup-workstation.rst:97
+msgid ""
+"The faucet has a limited amount of |networkcurrency| and must be replenished"
+" before it dries. If you don’t need your test |networkcurrency| units "
+"anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2"
+"-QM6QZT-BGWDJZ-GNQW``."
+msgstr ""
+"フォーセットは |networkcurrency| の量が限られているため、不足する前に補充する必要があります。 |networkcurrency| "
+"が必要なくなった場合は ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW`` へ送り返してください。"
+
+#: ../../source/getting-started/setup-workstation.rst:103
 msgid "Creating a project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:94
+#: ../../source/getting-started/setup-workstation.rst:105
 msgid ""
-"Now that you have your account filled with ``nem.xem`` units, it is the time"
-" to choose a **programming language**. Pick the one you feel most "
+"Now that you have your account filled with |networkcurrency| units, it is "
+"the time to choose a **programming language**. Pick the one you feel most "
 "comfortable with, or follow your project requirements."
 msgstr ""
-"アカウントに ``nem.xem`` 単位が転送されたので **プログラミング言語** "
-"を選択するときです。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
+"アカウントに |networkcurrency| 単位が入力されたので **プログラミング言語** "
+"を選択しましょう。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:96
+#: ../../source/getting-started/setup-workstation.rst:108
 msgid ""
 "Then, **create a folder for your new project** and run the instructions for "
 "the selected language. If none of the languages fits your project, you can "
@@ -150,34 +155,35 @@ msgstr ""
 "。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  :doc:`REST ゲートウェイ "
 "<../api>` を使用して直接ブロックチェーンに問い合わせできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:102
-#: ../../source/getting-started/setup-workstation.rst:131
+#: ../../source/getting-started/setup-workstation.rst:115
+#: ../../source/getting-started/setup-workstation.rst:144
 msgid ""
 "Create a ``package.json`` file. The minimum required Node.js version is "
 "8.9.X."
 msgstr "``package.json`` を作成します。バージョン 8.9.X 以上の Node.js が必要です。"
 
-#: ../../source/getting-started/setup-workstation.rst:108
-#: ../../source/getting-started/setup-workstation.rst:137
-msgid "Install nem2-sdk and rxjs library."
-msgstr "nem2-sdk と rxjs ライブラリのインストール。"
+#: ../../source/getting-started/setup-workstation.rst:121
+#: ../../source/getting-started/setup-workstation.rst:150
+msgid "Install |sdk| and RxJS library."
+msgstr "|sdk| と RxJS ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:114
+#: ../../source/getting-started/setup-workstation.rst:127
 msgid ""
 "We recommend to use **TypeScript instead of JavaScript** when building "
-"applications for Catapult."
+"applications for |codename|."
 msgstr ""
-"Catapult ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
+"|codename| ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** "
+"を使うことを推奨します。"
 
-#: ../../source/getting-started/setup-workstation.rst:116
+#: ../../source/getting-started/setup-workstation.rst:129
 msgid "Make sure you have at least version 2.5.X installed."
 msgstr "バージョン 2.5.X 以上がインストールされていることを確認してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:123
+#: ../../source/getting-started/setup-workstation.rst:136
 msgid "Use `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:145
+#: ../../source/getting-started/setup-workstation.rst:158
 msgid ""
 "Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use "
 "your favourite IDE or create a project from the command line."
@@ -185,18 +191,18 @@ msgstr ""
 "新しく Java `gradle`_ プロジェクトを開いてください。`JDK`_ は最低でも JDK 8 "
 "が必要です。お気に入りのIDEを使用するか、コマンドラインからプロジェクトを作成してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:151
+#: ../../source/getting-started/setup-workstation.rst:164
 msgid "Edit ``build.gradle`` to use Maven central repository."
 msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
 
-#: ../../source/getting-started/setup-workstation.rst:159
+#: ../../source/getting-started/setup-workstation.rst:172
 msgid "Add nem2-sdk as a dependency."
 msgstr "nem2-sdk を依存として追加します。"
 
-#: ../../source/getting-started/setup-workstation.rst:167
+#: ../../source/getting-started/setup-workstation.rst:180
 msgid "Execute ``gradle build`` and ``gradle run`` to run your program."
 msgstr "プログラムを開始するために ``gradle build`` と ``gradle run`` を実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:169
+#: ../../source/getting-started/setup-workstation.rst:182
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>`"

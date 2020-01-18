@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-06-04 17:22+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,24 +21,24 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/inflation.rst:3
+#: ../../source/concepts/inflation.rst:11
 msgid "Inflation"
 msgstr "インフレーション"
 
-#: ../../source/concepts/inflation.rst:5
+#: ../../source/concepts/inflation.rst:13
 msgid ""
-"Catapult engine supports increasing the native currency supply as time "
+"|codename| engine supports increasing the native currency supply as time "
 "passes. The creation of an **inflationary mosaic** empowers consortium and "
 "private networks to apply new token economic models that suit their needs."
 msgstr ""
-"Catapult エンジンは時間の経過に伴うネイティブ通貨の供給の増加をサポートしています。**インフレモザイク** "
+"|codename| エンジンは時間の経過に伴うネイティブ通貨の供給の増加をサポートしています。**インフレモザイク** "
 "の作成はコンソーシアムやプライベートネットワークにニーズに合った新しいトークン経済モデルを適用可能にします。"
 
-#: ../../source/concepts/inflation.rst:9
+#: ../../source/concepts/inflation.rst:18
 msgid "Distribution"
 msgstr "ディストリビューション"
 
-#: ../../source/concepts/inflation.rst:11
+#: ../../source/concepts/inflation.rst:20
 msgid ""
 "Networks with inflation configured can **increase the currency mosaic per "
 "block**. In this case, the block reward includes the mosaics created due to "
@@ -49,18 +49,18 @@ msgstr ""
 "ができます。この場合、ブロック報酬はインフレのために作成されたモザイクを含みます。 :doc:`harvester <harvesting>` "
 "は新しく作成されたモザイクを集め、受取人が設定されたときそれらを共有します。"
 
-#: ../../source/concepts/inflation.rst:13
+#: ../../source/concepts/inflation.rst:23
 msgid ""
 "The block creating currency mosaics record an :doc:`inflation receipt "
 "<receipt>`, listing the amount of mosaics created."
 msgstr ""
 "通貨モザイクを作成するブロックは :doc:`インフレーションレシート <receipt>` を記録し、作成されたモザイクの量をリストします。"
 
-#: ../../source/concepts/inflation.rst:17
+#: ../../source/concepts/inflation.rst:27
 msgid "Configuration"
 msgstr "設定"
 
-#: ../../source/concepts/inflation.rst:19
+#: ../../source/concepts/inflation.rst:29
 msgid ""
 "The :properties:`starting-at-height-1 <config-inflation.properties>` "
 "property defines the amount of currency mosaics created per block. Besides, "
@@ -71,7 +71,7 @@ msgstr ""
 ":properties:`starting-at-height-1 <config-inflation.properties>` "
 "プロパティはブロック毎に生成される通貨モザイクの量を定義します。"
 
-#: ../../source/concepts/inflation.rst:27
+#: ../../source/concepts/inflation.rst:39
 msgid ""
 "The previous configuration example inflates 500 currency mosaics per block "
 "from height 1 until the next ``starting-at-height-entry``. Between the "
@@ -83,7 +83,7 @@ msgstr ""
 "通貨モザイクがブロック毎にインフレしていきます。ブロック高 100 と 1250 の間、通貨モザイク供給量は 1 ブロックあたり 400 "
 "単位で増加します。ブロック高 1250 から、新しいブロックはモザイク作成をトリガしません。"
 
-#: ../../source/concepts/inflation.rst:29
+#: ../../source/concepts/inflation.rst:43
 msgid ""
 "The `network configuration <https://github.com/nemtech/catapult-"
 "server/blob/master/resources/config-network.properties>`_ also describes the"
@@ -94,6 +94,6 @@ msgstr ""
 "/config-network.properties>`_ にはネイティブ通貨モザイクの初期および **最大供給量** "
 "も記述されています。最大供給量はブロック毎に生成されるインフレが考慮されています。"
 
-#: ../../source/concepts/inflation.rst:36
+#: ../../source/concepts/inflation.rst:50
 msgid "Continue: :doc:`Receipt <receipt>`."
 msgstr "次へ: :doc:`レシート <receipt>`"

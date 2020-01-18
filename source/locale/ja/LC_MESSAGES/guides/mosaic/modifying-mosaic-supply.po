@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,31 +21,31 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:10
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:18
 msgid "Modifying mosaic supply"
 msgstr "モザイク供給量の変更"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:12
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:20
 msgid "Alter the supply of a mosaic."
 msgstr "モザイク供給量を変更する"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:16
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:18
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:26
 msgid "Finish :doc:`creating a mosaic guide <creating-a-mosaic>`"
 msgstr ":doc:`モザイクの作成ガイド <creating-a-mosaic>` を終了していること"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:19
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:27
 msgid "Have registered a supply mutable mosaic"
 msgstr "供給量を変えることができるモザイクを作成していること"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:23
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:31
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:25
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:33
 msgid ""
 "If you have followed the previous guide, right now you should own a ``supply"
 " mutable`` :doc:`mosaic <../../concepts/mosaic>` with 1,000,000 units."
@@ -53,7 +53,7 @@ msgstr ""
 "前のガイドに従っていれば、1,000,000 単位の ``supply mutable`` な :doc:`モザイク "
 "<../../concepts/mosaic>` を保有していることでしょう。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:27
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:35
 msgid ""
 "To increase the initial supply to 2,000,000, define a "
 ":ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` "
@@ -63,7 +63,7 @@ msgstr ""
 ":ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` "
 "を定義してください。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:41
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:49
 msgid ""
 "You can decrease a mosaic supply by changing ``MosaicSupplyType.Increase`` "
 "to ``MosaicSupplyType.Decrease``."
@@ -71,6 +71,6 @@ msgstr ""
 "``MosaicSupplyType.Increase`` を ``MosaicSupplyType.Decrease`` "
 "に変更してモザイク供給量を減少させることができます。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:45
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:53
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

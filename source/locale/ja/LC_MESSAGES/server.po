@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,29 +21,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/server.rst:3
+#: ../../source/server.rst:11
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/server.rst:5
+#: ../../source/server.rst:13
 msgid ""
-"As a blockchain platform, NEM relies on a decentralized network of nodes to "
-"provide a powerful, stable, and secure platform for Smart Asset "
+"As a blockchain platform, |codename| relies on a decentralized network of "
+"nodes to provide a powerful, stable, and secure platform for Smart Asset "
 "transactions."
 msgstr ""
-"ブロックチェーンプラットフォームである NEM "
+"ブロックチェーンプラットフォームである |codename| "
 "はスマートアセットトランザクションの強力で、安定した、安全なプラットフォームを提供するために、非中央集権ネットワークのノードに依存しています。"
 
-#: ../../source/server.rst:7
+#: ../../source/server.rst:15
 msgid ""
 "These nodes are deployed using |catapult-server| software, a C++ rewrite of "
-"the previous Java-written NEM distributed ledger that has been running for "
-"more than 4 years."
+"the previous Java-written NEM distributed ledger that has been running since"
+" 2015."
 msgstr ""
-"これらのノードは4年以上稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-server|"
-" ソフトウェアを使用してデプロイされます。"
+"これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-"
+"server| ソフトウェアを使用してデプロイされます。"
 
-#: ../../source/server.rst:9
+#: ../../source/server.rst:17
 msgid ""
 "Through its multi-tier architecture, it is possible to isolate the peer-to-"
 "peer network and implement better API integration flows with the proposed "
@@ -52,25 +52,25 @@ msgstr ""
 "その多層アーキテクチャーを通じて、ピアツーピアネットワークの分離と提案された REST API レイヤーを使用して、より優れた API "
 "統合フローを実装することが可能です。"
 
-#: ../../source/server.rst:11
+#: ../../source/server.rst:19
 msgid ""
-"Also, Catapult offers private networks the ability to add their own "
+"Also, |codename| offers private networks the ability to add their own "
 "transaction types by developing **plugins** for the catapult-server nodes."
 msgstr ""
-"また Catapult ではプライベートネットワーク向けに catapult-server ノード用の **プラグイン** "
+"また |codename| ではプライベートネットワーク向けに catapult-server ノード用の **プラグイン** "
 "を開発することで独自のトランザクションタイプを追加する機能を提供します。"
 
-#: ../../source/server.rst:15
+#: ../../source/server.rst:23
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/server.rst:17
+#: ../../source/server.rst:25
 msgid ""
 "**Catapult server** can be used to configure three different types of "
 ":doc:`nodes <concepts/node>`:"
 msgstr "**Catapult server** は異なる3種類の :doc:`ノード <concepts/node>` に設定することができます:"
 
-#: ../../source/server.rst:19
+#: ../../source/server.rst:27
 msgid ""
 "**Peer node**: The peer node verifies or discards the transactions once the "
 "API pushes them into the P2P network. It runs the consensus algorithm, "
@@ -79,7 +79,7 @@ msgstr ""
 "**Peer ノード**: Peer ノードは API がトランザクションを P2P "
 "ネットワークにプッシュすると、それを検証または破棄します。ノードはコンセンサスアルゴリズムを実行して新しいブロックを作成し、そしてネットワークを通して変更を伝播します。"
 
-#: ../../source/server.rst:21
+#: ../../source/server.rst:28
 msgid ""
 "**API node**: The primary responsibility of the API node is to properly "
 "store data in the MongoDB database once transactions are validated. They "
@@ -88,13 +88,13 @@ msgstr ""
 "**API ノード**: API ノードの主な役割はトランザクションが検証された後に MongoDB "
 "データベースにデータを正しく保存することです。これらはパーシャルなアグリゲートボンドトランザクションを識別して保存もします。"
 
-#: ../../source/server.rst:23
+#: ../../source/server.rst:29
 msgid ""
 "**Dual node**: The dual node combines a peer and API nodes into a single "
 "server instance."
 msgstr "**Dual ノード**: Dual ノードは Peer と API ノードを1つのサーバインスタンスにまとめたものです。"
 
-#: ../../source/server.rst:25
+#: ../../source/server.rst:31
 msgid ""
 "You can create a new catapult-server image following the building "
 "|instructions|, but we recommend deploying your own network for development "
@@ -103,11 +103,11 @@ msgstr ""
 "ビルド |instructions| に従って新しいカタパルトサーバーイメージを作成できますが |catapult-service-bootstrap|"
 " で開発目的または学習目的で独自のネットワークを展開することを推奨します。"
 
-#: ../../source/server.rst:29
+#: ../../source/server.rst:35
 msgid "Package organization"
 msgstr "パッケージ構成"
 
-#: ../../source/server.rst:31
+#: ../../source/server.rst:37
 msgid "**Repository**: |catapult-server|"
 msgstr "**リポジトリ:** |catapult-server|"
 
@@ -155,8 +155,8 @@ msgid "Nemesis blocks used in tests."
 msgstr "テスト用ネメシスブロック"
 
 #: ../../source/server.rst:1
-msgid "Catapult's core engine."
-msgstr "Catapult のコアエンジン"
+msgid "|codename|'s core engine."
+msgstr "|codename| のコアエンジン"
 
 #: ../../source/server.rst:1
 msgid "Collection of tests."
@@ -166,11 +166,11 @@ msgstr "テストの集合"
 msgid "Tools to deploy and monitor networks and nodes."
 msgstr "ネットワークとノードをデプロイとモニタリングするツール"
 
-#: ../../source/server.rst:52
+#: ../../source/server.rst:58
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/server.rst:54
+#: ../../source/server.rst:60
 msgid ""
 "Catapult server comes with tools to check the health of the network, "
 "generate nemesis blocks, create keypairs, recover the server in the event of"
@@ -179,31 +179,31 @@ msgstr ""
 "Catapult サーバーにはネットワークの健全性チェック、nemesis "
 "ブロックの生成、キーペアの作成、突然の終了時のサーバ復旧などを行うツールが付属しています。"
 
-#: ../../source/server.rst:56
+#: ../../source/server.rst:62
 msgid "You can find them inside of ``catapult-server/build/bin``."
 msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
 
-#: ../../source/server.rst:61
+#: ../../source/server.rst:67
 msgid "Generates keypairs and addresses."
 msgstr "キーペアとアドレスの生成。"
 
-#: ../../source/server.rst:63 ../../source/server.rst:98
-#: ../../source/server.rst:127 ../../source/server.rst:154
-#: ../../source/server.rst:175 ../../source/server.rst:194
+#: ../../source/server.rst:69 ../../source/server.rst:104
+#: ../../source/server.rst:133 ../../source/server.rst:160
+#: ../../source/server.rst:181 ../../source/server.rst:200
 msgid "Options"
 msgstr "オプション"
 
-#: ../../source/server.rst:81 ../../source/server.rst:116
-#: ../../source/server.rst:143 ../../source/server.rst:164
-#: ../../source/server.rst:183
+#: ../../source/server.rst:87 ../../source/server.rst:122
+#: ../../source/server.rst:149 ../../source/server.rst:170
+#: ../../source/server.rst:189
 msgid "Command"
 msgstr "コマンド"
 
-#: ../../source/server.rst:87
+#: ../../source/server.rst:93
 msgid "If you want the save the output, add an output stream at the end:"
 msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
 
-#: ../../source/server.rst:96
+#: ../../source/server.rst:102
 msgid ""
 "Creates a nemesis block out of a `mijin-test.properties  "
 "<https://github.com/nemtech/catapult-"
@@ -214,13 +214,13 @@ msgstr ""
 "server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
 "nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
 
-#: ../../source/server.rst:125
+#: ../../source/server.rst:131
 msgid ""
 "Executes CPU-based performance tests of catapult functions, such as hashing "
 "or encryption."
 msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
 
-#: ../../source/server.rst:152
+#: ../../source/server.rst:158
 msgid ""
 "Outputs node info, partner node connectivity info, and a partner node table "
 "for known peers within :properties:`peers-p2p.json <peers-p2p.json>` and "
@@ -230,13 +230,13 @@ msgstr ""
 "api.json <peers-api.json>` "
 "内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
 
-#: ../../source/server.rst:173
+#: ../../source/server.rst:179
 msgid ""
 "Generates the list of status errors that the server might return after "
 "receiving a transaction."
 msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
 
-#: ../../source/server.rst:192
+#: ../../source/server.rst:198
 msgid ""
 "Checks the health and displays statistics (like the unconfirmed transaction "
 "cache) for the nodes found inside of :properties:`peers-p2p.json <peers-"
