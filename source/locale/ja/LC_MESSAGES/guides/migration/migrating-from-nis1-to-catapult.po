@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-07-18 15:59+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,92 +22,88 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:8
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:16
 msgid "Migrating from NIS1 to Catapult"
 msgstr "NIS1 から Catapult へのマイグレーション"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:10
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:18
 msgid ""
-"With Catapult, most of the previously available NIS1 features have evolved. "
-"This document will help you **upgrade your application** previous NIS1 "
-"features, to the newly available Catapult technology."
+"With |codename|, most of the previously available NIS1 features have "
+"evolved. This document will help you **upgrade your application** previous "
+"NIS1 features, to the newly available |codename| technology."
 msgstr ""
-"Catapult では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な "
-"Catapult の技術に **あなたのアプリケーションをアップグレード** する手助けになるでしょう。"
+"|codename| では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な"
+" |codename| の技術に **あなたのアプリケーションをアップグレード** する手助けになるでしょう。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:12
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:21
 msgid ""
-"This guide is a living document. The information could change as Catapult "
+"This guide is a living document. The information could change as |codename| "
 "development advances."
-msgstr "このガイドは更新されています。情報は Catapult 開発が進むにつれて変更されます。"
+msgstr "このガイドは更新されています。情報は |codename| 開発が進むにつれて変更されます。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:16
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:25
 msgid "Test network"
 msgstr "テストネットワーク"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:18
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:27
 msgid ""
 "The package |catapult-service-bootstrap| brings a set of scripts to deploy a"
-" complete Catapult test network for development and learning purposes."
+" complete |codename| test network for development and learning purposes."
 msgstr ""
-"パッケージ |catapult-service-bootstrap| は開発と学習を目的として、完全な Catapult "
+"パッケージ |catapult-service-bootstrap| は開発と学習を目的として、完全な |codename| "
 "テストネットワークを展開するための一連のスクリプトを用意しています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:20
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:29
 msgid ""
-"Guide: :doc:`Running a local network with Catapult Service Bootstrap "
-"<../../getting-started/setup-workstation>`"
-msgstr ""
-"ガイド: :doc:`Catapult Service Bootstrap でローカルネットワークを実行する <../../getting-"
+"Guide: :doc:`Running a local network with Service Bootstrap <../../getting-"
 "started/setup-workstation>`"
-
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:22
-msgid ""
-"⚠️Catapult software and the service bootstrap scripts are still |under-"
-"development|. Do not power any network in production using these packages."
 msgstr ""
-"⚠️Catapult ソフトウェアとサービスブートストラップは |under-development| "
-"です。これらのパッケージをいかなるネットワークでも本番稼働しないでください。"
+"ガイド: :doc:`Service Bootstrap でローカルネットワークを実行する <../../getting-started/setup-"
+"workstation>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:26
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:31
+msgid "⚠️Do not power any network in production using these packages."
+msgstr "⚠️これらのパッケージをいかなる本番のネットワークで使用しないでください。"
+
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:35
 msgid "Legacy API incompatibility"
 msgstr "旧 API の非互換性"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:28
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:37
 msgid ""
 "Legacy API calls that used to work for NIS1 network nodes are **not "
-"compatible** with Catapult. With Catapult, API requests mostly happen with "
-"REST API nodes, usually on port **3000**."
+"compatible** with |codename|. Now, API requests mostly happen with REST API "
+"nodes usually on port **3000**."
 msgstr ""
-"NIS1 ネットワークで動作していた旧 API 呼び出しは Catapult とは **非互換** です。Catapult では REST API "
-"ノードへポート **3000** 番を用いて API リクエストを行います。"
+"NIS1 ネットワークで動作していた旧 API 呼び出しは |codename| とは **非互換** です。REST API ノードのポート "
+"**3000** 番を用いて API リクエストを行います。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:30
-msgid "Protocol: :doc:`Catapult's Architecture <../../concepts/node>`"
-msgstr "プロトコル: :doc:`Catapult アーキテクチャ <../../concepts/node>`"
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:40
+msgid "Protocol: :doc:`Architecture <../../concepts/node>`"
+msgstr "プロトコル: :doc:`アーキテクチャ <../../concepts/node>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:32
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:42
 msgid "Reference: :doc:`Catapult REST <../../api>`"
 msgstr "リファレンス: :doc:`Catapult REST <../../api>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:34
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:44
 msgid ""
 "Reference: `REST API contract <https://nemtech.github.io/nem2-openapi/>`_"
 msgstr "リファレンス: `REST API 接続 <https://nemtech.github.io/nem2-openapi/>`_"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:36
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:46
 msgid ""
 "There are several **Software Development Kits** that have been—and some that"
-" are—under development for Catapult distributed ledgers consumer "
+" are—under development for |codename| distributed ledgers consumer "
 "applications. As of now, the :doc:`planned SDKs <../../sdk>` to be supported"
 " are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and "
 "Swift."
 msgstr ""
-"いくつかの **ソフトウェア開発キット** - 開発中の Catapult 分散型レッジャー用コンシューマアプリケーション - があります。現在 "
+"いくつかの **ソフトウェア開発キット** - 開発中の |codename| 分散型レッジャー用コンシューマアプリケーション - があります。現在 "
 ":doc:`計画中の SDK <../../sdk>` は Typescript / Javascript / NodeJS, Java, C#, "
 "Go, Python, Swift で書かれています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:39
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:49
 msgid ""
 "As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most "
 "used SDK and leads in |ts-js-sdk-docs|. The architecture of the TS SDK is "
@@ -116,84 +112,84 @@ msgstr ""
 "はじめに |ts-js-sdk| を見てみることを推奨します。最も使用されている SDK であり |ts-js-sdk-docs| "
 "の先頭にあります。TS SDK のアーキテクチャは NIS1 向け |nem-library| にインスパイアされています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:44
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:54
 msgid "Accounts management"
 msgstr "アカウントの管理"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:46
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:56
 msgid ""
-"Management of :doc:`account <../../concepts/account>` with Catapult has not "
-"changed much compared to the previous NIS1 public network accounts. A few "
-"notable changes have happened as to public verifiability of accounts and "
-"field names returned in the REST endpoints."
+"Management of :doc:`account <../../concepts/account>` with |codename| has "
+"not changed much compared to the previous NIS1 public network accounts. A "
+"few notable changes have happened as to public verifiability of accounts and"
+" field names returned in the REST endpoints."
 msgstr ""
-"Catapult を使った :doc:`アカウント <../../concepts/account>` の管理は以前の NIS1 "
+"|codename| を使った :doc:`アカウント <../../concepts/account>` の管理は以前の NIS1 "
 "パブリックネットワークアカウントと比べてそれほど変わっていません。アカウントの公的検証可能性と REST "
 "エンドポイントが返却するフィールド名に関して、いくつか注目すべき変更が行われています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:48
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:59
 msgid ""
 "Guide: :doc:`Creating and opening an account  <../account/creating-an-"
 "account>`"
 msgstr "ガイド: :doc:`アカウントの作成と開設 <../account/creating-an-account>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:49
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:60
 msgid ""
 "Guide: :doc:`Getting the account information <../account/getting-account-"
 "information>`"
 msgstr "ガイド: :doc:`アカウント情報の取得 <../account/getting-account-information>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:53
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:64
 msgid "Legacy transactions"
 msgstr "旧トランザクション"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:55
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:66
 msgid ""
-"NIS1 transactions **serialization format is not compatible** with Catapult. "
-"Yet, most of the transaction types have only evolved and none have been "
-"removed. This implies a possible upgrade to Catapult transactions that "
-"involve fewer changes."
+"NIS1 transactions **serialization format is not compatible** with "
+"|codename|. Yet, most of the transaction types have only evolved and none "
+"have been removed. This implies a possible upgrade to |codename| "
+"transactions that involve fewer changes."
 msgstr ""
-"NIS1 と Catapult でのトランザクションの "
+"NIS1 と |codename| でのトランザクションの "
 "**シリアライゼーションフォーマットに互換性がありません**。それでも、ほとんどの種類のトランザクションは進化し​​ただけで削除されたものはありません。より少ない変更で"
-" Catapult トランザクションへのアップグレードが可能であることを意味します。"
+" |codename| トランザクションへのアップグレードが可能であることを意味します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:57
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:69
 msgid ""
 "The first notable change about transactions is that the status response is "
 "received through :ref:`WebSocket channels <websockets>`. In NIS1, the client"
 " received the response of the API call right after announcing a transaction."
-" Catapult receives the response of the call **asynchronously**, eliminating "
-"blocking calls."
+" |codename| receives the response of the call **asynchronously**, "
+"eliminating blocking calls."
 msgstr ""
 "トランザクションについての最初の注目すべき変更は、ステータスレスポンスが :ref:`WebSocket チャンネル <websockets>` "
-"を通して受信されることです。NIS1 ではクライアントはトランザクションをアナウンスした直後に API 呼び出しの応答を受け取りました。Catapult"
-" は呼び出しの応答を非同期に受信し、呼び出しをブロックしません。"
+"を通して受信されることです。NIS1 ではクライアントはトランザクションをアナウンスした直後に API "
+"呼び出しの応答を受け取りました。|codename| は呼び出しの応答を非同期に受信し、呼び出しをブロックしません。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:59
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:73
 msgid "Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`"
 msgstr "プロトコル: :doc:`トランザクションライフサイクル <../../concepts/transaction>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:60
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:74
 msgid "Protocol: |catapult-schemas|"
 msgstr "プロトコル: |catapult-schemas|"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:62
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:76
 msgid ""
-"Additionally, there is only one version of :doc:`TransferTransaction "
-"<../../concepts/transfer-transaction>` in Catapult. The native currency is "
-"now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics"
-" array of the transaction."
+"Additionally, |codename| only has one version of :doc:`TransferTransaction "
+"<../../concepts/transfer-transaction>`. The native currency is now pushed as"
+" a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the"
+" transaction."
 msgstr ""
-"それに加えて、Catapult では :doc:`TransferTransaction <../../concepts/transfer-"
-"transaction>` は１つのバージョンだけになります。基軸通貨は通常の :doc:`モザイク <../../concepts/mosaic>` "
+"それに加え、 |codename| では :doc:`TransferTransaction <../../concepts/transfer-"
+"transaction>` は1つのバージョンだけになります。基軸通貨は通常の :doc:`モザイク <../../concepts/mosaic>` "
 "としてトランザクションのモザイク配列に追加されるようになりました。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:66
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:81
 msgid "Transaction fees"
 msgstr "トランザクション手数料"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:68
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:83
 msgid ""
 "The fee that needs to be paid for a transaction now depends on the "
 "transaction size and fee multiplier, where node owners can specify a "
@@ -206,61 +202,61 @@ msgstr ""
 " **実効手数料** は、トランザクションが承認されたブロックから **手数料乗数** を読み取り **トランザクションのサイズ** "
 "で乗算して計算されます。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:70
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:86
 msgid ""
 "The ``maxFee`` field represents the maximum fee allowed by the sender to be "
 "paid for this transaction to be confirmed in a block."
 msgstr "``maxFee`` フィールドは送信者によって支払われる、トランザクションが承認されるために許可する最大支払い手数料を表現しています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:72
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:88
 msgid "Protocol: :doc:`Transaction fees <../../concepts/fees>`"
 msgstr "プロトコル: :doc:`トランザクション手数料 <../../concepts/fees>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:76
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:92
 msgid "Mosaics & namespaces"
 msgstr "モザイクとネームスペース"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:78
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:94
 msgid ""
 "Notable changes have happened at protocol level with regards to "
 ":doc:`mosaics <../../concepts/mosaic>` management as they are now "
-"**independent** of :doc:`namespaces <../../concepts/namespace>`. In fact, in"
-" NIS1, it happened that namespaces would expire altogether with assets "
-"linked to them."
+"**independent** of :doc:`namespaces <../../concepts/namespace>`."
 msgstr ""
 ":doc:`モザイク <../../concepts/mosaic>` の管理に関してプロトコルレベルで顕著な変更が行われ、いまや "
-":doc:`ネームスペース <../../concepts/namespace>` から **独立** した存在となりました。実際に NIS1 "
-"ではネームスペースにリンクされたアセットも完全に期限切れとなる可能性があります。"
+":doc:`ネームスペース <../../concepts/namespace>` から **独立** した存在となりました。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:81
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:96
 msgid ""
-"With Catapult, mosaics are configured to have their own ``duration`` "
-"instead, as well as being assigned a unique ``nonce`` value."
-msgstr "Catapult ではモザイクは代わりにそれ自身の ``期間`` を持つように設定され、一意な ``nonce`` 値が割り当てられます。"
+"In fact, NIS1 namespaces expire altogether with assets linked to them. "
+"|codename| mosaics are configured to have their own ``duration``, as well as"
+" being assigned a unique ``nonce`` value."
+msgstr ""
+"実際に NIS1 ではネームスペースにリンクされたアセットも完全に期限切れとなる可能性があります。 |codename| "
+"ではモザイクは代わりにそれ自身の ``期間`` を持つように設定され、一意な ``nonce`` 値が割り当てられます。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:83
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:99
 msgid ""
-"Lastly, **levies are not available on Catapult**, those must be reproduced "
-"with aggregate transactions instead."
-msgstr "最後に **Catapult において Levy は有効ではなく** 、アグリゲートトランザクションの代用によって再現する必要があります。"
+"Lastly, levies are not available on |codename|, those must be reproduced "
+"with aggregate transactions."
+msgstr "最後に |codename| において **Levy は使用できず** 、アグリゲートトランザクションによって再現する必要があります。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:85
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:101
 msgid "Guide: :doc:`Creating a mosaic  <../mosaic/creating-a-mosaic>`"
 msgstr "ガイド: :doc:`モザイク作成  <../mosaic/creating-a-mosaic>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:86
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:102
 msgid ""
 "Guide: :doc:`Registering a namespace  "
 "<../namespace/registering-a-namespace>`"
 msgstr "ガイド: :doc:`ネームスペースの登録  <../namespace/registering-a-namespace>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:87
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:103
 msgid ""
 "Guide: :doc:`Creating a subnamespace  "
 "<../namespace/registering-a-subnamespace>`"
 msgstr "ガイド: :doc:`サブネームスペースの作成 <../namespace/registering-a-subnamespace>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:89
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:105
 msgid ""
 "Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-"
 "alias-transaction>`. A namespace owner can attach either of an account or a "
@@ -271,27 +267,27 @@ msgstr ""
 "によってモザイクを参照することができます。ネームスペースの所有者はアカウントまたはモザイク ID "
 "のいずれかをそのネームスペースのいずれかに添付できます。ネームスペース情報のエンドポイントはエイリアスフィールドにリンクされたオブジェクトを返します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:91
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:109
 msgid ""
 "Also, root namespaces have a ``duration`` field that is **expressed in a "
 "count of blocks** which means yearly renewal is not mandatory anymore."
 msgstr "またルートネームスペースには **ブロック数で表される** ``期間`` フィールドを持ち、年間更新が必須ではなくなったことを意味します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:93
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:111
 msgid ""
 "Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-"
 "to-a-mosaic>`"
 msgstr ""
 "ガイド: :doc:`ネームスペースをモザイクへリンクする <../namespace/link-a-namespace-to-a-mosaic>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:94
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:112
 msgid ""
 "Guide: :doc:`Linking a namespace to an address <../namespace/link-a"
 "-namespace-to-an-address>`"
 msgstr ""
 "ガイド: :doc:`ネームスペースをアドレスへリンクする <../namespace/link-a-namespace-to-an-address>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:96
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:114
 msgid ""
 "In order to facilitate the transfer of mosaics, a mosaic creator should "
 "register a namespace and alias the mosaic with that namespace. End-users can"
@@ -300,7 +296,7 @@ msgstr ""
 "モザイクの転送を促進するためにモザイク作成者はネームスペースを登録し、そのネームスペースをモザイクのエイリアスにすることができます。エンドユーザーはモザイクの参照に"
 " **エイリアスを使用してトランザクションを送信** することができます。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:98
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:117
 msgid ""
 "Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a"
 "-transfer-transaction-with-an-aliased-mosaic>`"
@@ -308,7 +304,7 @@ msgstr ""
 "ガイド: :ref:`エイリアス済みモザイクの TransferTransaction の送信 <sending-a-transfer-"
 "transaction-with-an-aliased-mosaic>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:99
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:118
 msgid ""
 "Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a"
 "-transfer-transaction-to-an-aliased-address>`"
@@ -316,7 +312,7 @@ msgstr ""
 "ガイド: :ref:`エイリアス済みアドレスへの TransferTransaction の送信 <sending-a-transfer-"
 "transaction-to-an-aliased-address>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:101
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:120
 msgid ""
 "When a transaction includes an alias, a **resolution** reflects the resolved"
 " value of that alias in the block. To get the real identifier behind an "
@@ -328,7 +324,7 @@ msgstr ""
 "はブロック内のそのエイリアスの解決された値を反映します。エイリアスアドレスやモザイクの背後にある実際の識別子を取得するには、クライアントアプリケーションはトランザクションが含まれるブロックにリンクされている関連の"
 " :doc:`解決レシート <../../concepts/receipt>` を取得する必要があります。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:104
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:123
 msgid ""
 "Guide: :doc:`Getting the asset identifier behind a namespace with receipts "
 "<../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-"
@@ -337,44 +333,44 @@ msgstr ""
 "ガイド: :doc:`レシート付きネームスペースの背後にあるアセットの識別子を取得 <../blockchain/getting-the-mosaic-"
 "identifier-behind-a-namespace-with-receipts>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:108
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:127
 msgid "Multisignature management"
 msgstr "マルチシグネチャの管理"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:110
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:129
 msgid ""
-"With multisignature accounts managed on-chain, Catapult's multisignature "
+"With multisignature accounts managed on-chain, |codename|'s multisignature "
 "implementation is different from many other—so-called client-"
 "side—multisignature implementations."
 msgstr ""
-"チェーン上で管理されたマルチシグネチャアカウントである Catapult "
+"チェーン上で管理されたマルチシグネチャアカウントである |codename| "
 "のマルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:112
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:131
 msgid ""
 "Creating a :doc:`multisignature account <../../concepts/multisig-account>`."
 msgstr ":doc:`マルチシグアカウント <../../concepts/multisig-account>` の作成"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:114
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:133
 msgid ""
 "Different to NIS1, the account modification entries now hold fields for "
 "``minimum approval`` and ``minimum removal``:"
 msgstr "NIS1 と異なり、アカウントの変更エントリに ``最低承認数`` と ``最低削除数`` のフィールドが追加されました。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:116
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:135
 msgid ""
 "**Minimum removal**: Defines how many cosignatories are required to "
 "broadcast transactions removing cosignatories from the multisignature "
 "account."
 msgstr "**最小削除数**: マルチシグアカウントから署名者を削除するトランザクションをブロードキャストするために必要な署名者の数を定義します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:118
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:137
 msgid ""
 "**Minimum approval**: Defines how many cosignatories are required for any "
 "other type of transaction."
 msgstr "**最小承認数**: 他のタイプのトランザクションに必要な署名者の数を定義します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:120
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:139
 msgid ""
 "Additionally, cosignatories that are added to multisignature accounts now "
 "have to confirm the modification by sending a **cosignature** (opt-in "
@@ -389,7 +385,7 @@ msgstr ""
 ":ref:`MultisigAccountModificationTransaction <aggregate-transaction>` "
 "でラップされる必要があります。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:122
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:142
 msgid ""
 "Guide: :doc:`Converting an account to multisignature <../multisig"
 "/converting-an-account-to-multisig>`"
@@ -397,7 +393,7 @@ msgstr ""
 ":doc:`アカウントをマルチシグへ変換ガイド <../multisig/converting-an-account-to-multisig>` "
 "を終了している"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:124
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:144
 msgid ""
 "Multi-Signature transactions work with :doc:`aggregate transactions "
 "<../../concepts/aggregate-transaction>`."
@@ -405,7 +401,7 @@ msgstr ""
 "マルチシグネチャトランザクションは :doc:`アグリゲートトランザクション <../../concepts/aggregate-"
 "transaction>` と組み合わせて動作します。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:126
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:146
 msgid ""
 "The new AggregateTransaction permits to wrap multiple transactions together "
 "involving different participants. If all the participants cosign the "
@@ -415,7 +411,7 @@ msgstr ""
 "新しい AggregateTransaction "
 "は異なる参加者が関わる複数のトランザクションをまとめてラップすることができます。すべての参加者がアグリゲートに共同署名すると、インナートランザクションはアトミックにブロックへ取り込まれます。それ以外の場合にはいずれのトランザクションも承認されません。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:128
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:150
 msgid ""
 "To send a multisig transaction as in NIS1, the initiator of the transaction "
 "has to add it **as an inner transaction of the aggregate**. Then, the "
@@ -425,29 +421,29 @@ msgid ""
 msgstr ""
 "NIS1のようにマルチシグトランザクションを送信するには、トランザクションの開始者はそれをアグリゲートのインナートランザクションとして追加する必要があります。次にマルチシグで定義された最小数の署名者が、共有アカウントからのトランザクションのアナウンスを許可するために、アグリゲートに署名しなければなりません。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:130
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:153
 msgid ""
 "Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a"
 "-multisig-transaction>`"
 msgstr ""
 "ガイド: :doc:`マルチシグトランザクションの送信 <../aggregate/sending-a-multisig-transaction>`"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:134
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:157
 msgid "Need help?"
 msgstr "お困りですか？"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:136
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:159
 msgid ""
-"While migrating from NIS1 to Catapult, you might still have some unanswered "
-"questions. In the :doc:`NEM Developer Center <../../getting-started/setup-"
-"workstation>`, you can find more new features described along with step-by-"
-"step integration guides."
+"While migrating from NIS1 to |codename|, you might still have some "
+"unanswered questions. In this portal, you can find everything you need to "
+"know about |codename|'s features and :ref:`self-paced guides <blog-"
+"categories>` on how to use the **software development kits**."
 msgstr ""
-"NIS1 から Catapult への移行する中で、答えの得られていない疑問があるかもしれません。 :doc:`NEM 開発者センター "
-"<../../getting-started/setup-workstation>` "
-"で、ステップバイステップの統合ガイドと一緒に説明されている、多くの新機能を見つけることができるでしょう。"
+"NIS1 から |codename| へマイグレーションするにあたり、まだ解決していない質問があるかもしれません。このポータルでは |codename|"
+" の機能及び **ソフトウェア開発キット** の使い方において :ref:`自己ペースガイド <blog-categories>` "
+"のあなたが知るべきすべての情報が掲載されています。"
 
-#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:139
+#: ../../source/guides/migration/migrating-from-nis1-to-catapult.rst:162
 msgid ""
 "You can also ask integration related questions on |stack-overflow|, or reach"
 " our community of developers joining the official |slack|."

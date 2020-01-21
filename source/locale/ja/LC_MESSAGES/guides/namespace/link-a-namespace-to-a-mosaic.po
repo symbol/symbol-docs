@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-03-19 13:58+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,68 +22,68 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:10
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:18
 msgid "Linking a namespace to a mosaic"
 msgstr "ネームスペースをモザイクへリンクする"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:12
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:20
 msgid "Link a namespace to a mosaic."
 msgstr "ネームスペースをモザイクへリンクする"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:16
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:18
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:26
 msgid "Have registered one :doc:`namespace <../../concepts/namespace>`"
 msgstr "取得済みの :doc:`ネームスペース <../../concepts/namespace>`"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:19
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:27
 msgid "Have registered one :doc:`mosaic <../../concepts/mosaic>`"
 msgstr "取得済みの :doc:`モザイク <../../concepts/mosaic>`"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:20
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:28
 msgid ""
 "Have one :ref:`account with network currency <setup-creating-a-test-"
 "account>`"
 msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:24
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:32
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:26
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:34
 msgid ""
 "Define the namespace identifier and the mosaic identifier you want to alias."
 msgstr "エイリアスをつけたいモザイク識別子とネームスペース識別子を設定します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:28
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:36
 msgid ""
 "The account signing the transaction must own the namespace and mosaic being "
 "aliased."
 msgstr "トランザクションに署名するアカウントはネームスペースとエイリアスをつけるモザイクを所有している必要があります。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:42
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:50
 msgid ""
 "Then, announce the **AliasTransaction** that links the namespace and the "
 "mosaic."
 msgstr "次に、ネームスペースとモザイクをリンクする **AliasTransaction** をアナウンスします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:56
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:64
 msgid ""
 "If you want to unlink the alias, change alias action type to "
 "``AliasActionType.Unlink``."
 msgstr "エイリアスをアンリンクしたい場合は、タイプを ``AliasActionType.Unlink`` に変えてください。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:60
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:68
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:70
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:78
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:72
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:80
 msgid ""
 "Now you can send transactions using the namespace linked to the mosaic "
 "instead of defining the complete MosaicId."

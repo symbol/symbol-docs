@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,29 +21,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/sdk.rst:5
+#: ../../source/sdk.rst:13
 msgid ""
 "The **NEM2 Software Development Kit** is the primary software development "
-"tool to create NEM2 components, such as additional tools, libraries, or "
-"applications."
+"tool to create |codename| components, such as additional tools, libraries, "
+"or applications."
 msgstr ""
-"**NEM2 ソフトウェア開発キット** とは NEM2 "
+"**NEM2 ソフトウェア開発キット** とは |codename| "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
-#: ../../source/sdk.rst:7
+#: ../../source/sdk.rst:15
 msgid ""
 "It enables developers to focus on their product rather than on the specific "
 "API details due to its higher abstraction."
 msgstr "これを利用することで、開発者は特有な API の抽象化ではなく、彼らの製品に焦点を当てることができます。"
 
-#: ../../source/sdk.rst:9
+#: ../../source/sdk.rst:17
 msgid ""
-"Learn how to use Catapult's SDK following the :ref:`guided implementation "
+"Learn how to use |codename|'s SDK following the :ref:`guided implementation "
 "examples <blog-categories>`."
 msgstr ""
-"Catapult の SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
+"|codename| SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
 
-#: ../../source/sdk.rst:13
+#: ../../source/sdk.rst:21
 msgid "Supported languages"
 msgstr "サポート言語"
 
@@ -59,23 +59,23 @@ msgstr "リポジトリ"
 msgid "Reference"
 msgstr "リファレンス"
 
-#: ../../source/sdk.rst:24
+#: ../../source/sdk.rst:32
 msgid "Ongoing work"
 msgstr "開発中"
 
-#: ../../source/sdk.rst:26
+#: ../../source/sdk.rst:34
 msgid ""
 "⚠️ The following SDKs are not compatible with the latest version of "
 "catapult-server."
 msgstr "⚠️ 以下の SDK は最新バージョンの catapult-server と互換性がありません。"
 
-#: ../../source/sdk.rst:28
+#: ../../source/sdk.rst:36
 msgid ""
 "Read the |protocol-compatibility-report| to know more about the status of "
 "each project."
 msgstr "各プロジェクトの進捗を確認するために |protocol-compatibility-report| を読んでください。"
 
-#: ../../source/sdk.rst:43
+#: ../../source/sdk.rst:51
 msgid ""
 "If you want to create a new SDK, check the :doc:`development guidelines "
 "<guidelines/sdk-development>`."

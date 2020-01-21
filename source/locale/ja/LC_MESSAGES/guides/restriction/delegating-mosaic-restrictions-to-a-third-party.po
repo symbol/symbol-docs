@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:10
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:18
 msgid "Delegating mosaic restrictions to a third party"
 msgstr "モザイクの制限を第三者に委任する"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:12
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:20
 msgid "Allow another account to add restrictions to your mosaics."
 msgstr "別のアカウントがモザイクに制限を追加できるようにします。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:16
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:24
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:18
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:26
 msgid ""
 "Another company, **ComfyClothingCompany** wants to conduct an STO. In this "
 "case, they want to **delegate the KYC process** to a company specialized in "
@@ -42,7 +42,7 @@ msgstr ""
 "別の会社の **ComfyClothingCompany** は STO を実施しようとしています。このケースでは、彼らは KYC ＆ AML "
 "に特化した会社に **KYC プロセスを委任したい** と考えています。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:20
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:29
 msgid ""
 "If you have followed the previous guide (:doc:`restricting mosaics transfers"
 " <restricting-mosaics-transfers>`), you know how to restrict accounts from "
@@ -53,46 +53,46 @@ msgstr ""
 " :doc:`モザイク制限 <../../concepts/mosaic-restriction>` "
 "に一致するように異なるキー値を組み合わせて、アカウントが特定のモザイクのトランザクションを制限する方法がわかるでしょう。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:27
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:35
 msgid "Use case diagram"
 msgstr "ユースケース図"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:29
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:37
 msgid ""
 "In this guide, we will be restricting accounts to trade with "
-"cc.shares—mosaic created by ComfyClothingCompany—if the KYC provider does "
-"not allow them."
+"``cc.shares``—mosaic created by ComfyClothingCompany—if the KYC provider "
+"does not allow them."
 msgstr ""
-"このガイドでは、KYC プロバイダーが許可していない場合において、アカウント間の cc.shares - ComfyClothingCompany  "
-"によって作成されたモザイク - の取引を制限します。"
+"このガイドでは、KYC プロバイダーが許可していない場合において、アカウント間の ``cc.shares`` - "
+"ComfyClothingCompany が作成したモザイク - の取引を制限します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:33
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:41
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:35
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:43
 msgid "Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`"
 msgstr ":doc:`モザイクの作成ガイド <../mosaic/creating-a-mosaic>` を終了している"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:36
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:44
 msgid ""
 "Finish :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`"
 msgstr ":doc:`モザイク転送の制限 <restricting-mosaics-transfers>` を終了していること"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:40
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:48
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:42
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:50
 msgid ""
-"Start by registering a new ``restrictable`` mosaic with the "
+"1. Start by registering a new ``restrictable`` mosaic with the "
 ":doc:`ComfyClothingCompany account <../account/creating-an-account>` "
 "account. We will refer to this mosaic from now on as ``cc.shares``."
 msgstr ""
-":doc:`ComfyClothingCompany アカウント <../account/creating-an-account>` に新しい "
+"1. :doc:`ComfyClothingCompany アカウント <../account/creating-an-account>` に新しい "
 "``制限可能`` なモザイクを登録することから始めます。今後、このモザイクを ``cc.shares`` と呼び、このモザイクを参照します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:50
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:59
 msgid ""
 "The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic "
 "global restriction ``{ kyc, IsVerified, EQ, 1}`` to the mosaic."
@@ -100,7 +100,7 @@ msgstr ""
 "KYC プロバイダは ``kyc`` という新しい名前のモザイクを登録し、そのモザイクにグローバル制限 ``{ kyc, IsVerified, EQ,"
 " 1}`` をモザイクに追加します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:64
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:73
 msgid "The KYC provider defines the following permission tiers:"
 msgstr "KYC プロバイダは次の権限層を定義します。"
 
@@ -128,21 +128,20 @@ msgstr "クライアントが有効なパスポートを発行しました。"
 msgid "The client has issued a valid proof of address and passport."
 msgstr "クライアントは有効な住所証明とパスポートを発行しました。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:73
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:82
 msgid ""
 "ComfyClothingCompany decides that only accounts with the restriction "
 "``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer "
 "shares. For this reason, the company adds the mosaic global restriction ``{ "
 "kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the "
-"restriction from another mosaic, we are going to use the field "
-"``referenceId``."
+"restriction from another mosaic, use the field ``referenceId``."
 msgstr ""
 "ComfyClothingCompany は制限 ``{cc.shares, kyc::IsVerified, EQ = 2}`` "
 "付きのアカウントのみが株式を譲渡できるように決定します。このため、同社はモザイクのグローバル制限 ``{kyc::IsVerified, EQ, "
 "2}`` をモザイクの ``ccf.shares`` に追加します。別のモザイクから制限を実装するにはフィールド ``referenceId`` "
 "を使用します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:75
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:86
 msgid ""
 "Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as "
 "the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and "
@@ -152,11 +151,11 @@ msgstr ""
 "``targetMosaicId`` 、``kyc`` を ``referenceMosaicId`` 、 ``IsVerified`` "
 "をキーとして設定します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:89
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:100
 msgid "The KYC provider has encounters three potential investors:"
 msgstr "KYC プロバイダーは 3 人の潜在的投資家と出会いました。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:91
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:102
 msgid ""
 "Alice provides a valid passport but no proof of address. The KYC provider "
 "awards Alice's account with the mosaic restriction ``{kyc, IsVerified, 1}``."
@@ -164,7 +163,7 @@ msgstr ""
 "Alice は有効なパスポートを提供しますがアドレスの証明は提供しません。KYC プロバイダは Alice のアカウントにモザイク制限の ``{kyc,"
 " IsVerified, 1}`` を授与します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:92
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:103
 msgid ""
 "Bob provides a valid passport and proof of address. The KYC provider awards "
 "Bob's account with the mosaic restriction ``{kyc, IsVerified, 2}``."
@@ -172,7 +171,7 @@ msgstr ""
 "Bob は有効なパスポートと住所証明を提供します。KYC プロバイダは Bob のアカウントにモザイク制限の ``{kyc, IsVerified, "
 "2}`` を授与します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:93
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:104
 msgid ""
 "Carol provides a valid passport and proof of address. The KYC provider "
 "awards Carol's account with the mosaic restriction ``{kyc, IsVerified, 2}``."
@@ -180,17 +179,17 @@ msgstr ""
 "Carol は有効なパスポートと住所証明を提供します。KYC プロバイダは Carol のアカウントにモザイク制限の ``{kyc, "
 "IsVerified, 2}`` を授与します。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:95
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:106
 msgid ""
 "The KYC provider has to tag the accounts accordingly sending mosaic address "
 "restrictions."
 msgstr "KYC プロバイダーはモザイクアドレス制限を送信するアカウントに応じたタグを付ける必要があります。"
 
-#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:109
+#: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:120
 msgid ""
-"After the restrictions get confirmed, Bob and Carol will be able to buy and "
-"send the ``cc.shares`` units to each other. But Alice⁠—who has not provided "
-"valid proof of address⁠—will not be able to receive shares."
+"5. After the restrictions get confirmed, Bob and Carol will be able to buy "
+"and send the ``cc.shares`` units to each other. But Alice⁠—who has not "
+"provided valid proof of address⁠—will not be able to receive shares."
 msgstr ""
-"制限が承認されると Bob と Carol はお互いに ``cc.shares`` "
+"5. 制限が承認されると Bob と Carol はお互いに ``cc.shares`` "
 "単位を購入して、送ることができるようになるでしょう。しかし、有効な住所証明を提示していない Alice は株式を受け取ることができません。"

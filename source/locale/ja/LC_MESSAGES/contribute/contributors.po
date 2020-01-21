@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,20 +21,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/contributors.rst:3
+#: ../../source/contribute/contributors.rst:11
 msgid "Contributors"
 msgstr "貢献者"
 
-#: ../../source/contribute/contributors.rst:5
+#: ../../source/contribute/contributors.rst:13
 msgid ""
-"The NEM Developer Center is not written from scratch. It is the sum of "
-"previous effort and documents written by the community and core developers, "
-"adapted for this new release. Thank you!"
+"The |sitename| is not written from scratch. It is the sum of previous effort"
+" and documents written by the community and core developers, adapted for "
+"this new release. Thank you!"
 msgstr ""
-"NEM "
-"開発者センターは新規に作られたものではありません。新しいリリースに合わせて、コミュニティやコア開発者の努力と、これまでに記述されたドキュメントの賜物です。感謝します！"
+"|sitename| "
+"はスクラッチから書かれていません。新しいリリースに合わせて、コミュニティやコア開発者の努力とこれまでに記述したドキュメントの賜物です。感謝します！"
 
-#: ../../source/contribute/contributors.rst:15
+#: ../../source/contribute/contributors.rst:23
 msgid ""
 "We want to recognize as well the work of the |contributors| who provide "
 "content, open new |issues|, and improve the quality and completeness of this"

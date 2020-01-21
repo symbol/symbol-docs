@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,49 +22,49 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:10
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:18
 msgid "Sending an encrypted message"
 msgstr "暗号化メッセージの送信"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:12
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:20
 msgid ""
 "Send an encrypted message that only can be read by the recipient account."
 msgstr "受信者アカウントでしか読めない暗号化メッセージを送信します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:16
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:18
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:26
 msgid ""
 "Finish the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`"
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:19
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:27
 msgid ""
 "Finish :doc:`sending mosaics and messages between two accounts guide "
 "<sending-a-transfer-transaction>`"
 msgstr ""
 ":doc:`モザイクとメッセージを２つのアカウント間で送信するガイド <sending-a-transfer-transaction>` を終了している"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:20
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:28
 msgid ""
 "Have one :ref:`account with network currency <setup-creating-a-test-"
 "account>`"
 msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:24
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:32
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:26
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:34
 msgid ""
 "Imagine that Alice wants to timestamp a sensitive message to send to an "
 "account representing her academic certificate."
 msgstr "Alice が自分の学業証明書を表すアカウントに機密なメッセージへタイムスタンプを付けて送信しようとしているとイメージしてください。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:28
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:36
 msgid ""
 "Alice knows that sending a TransferTransaction with a **plain message** to "
 "the public network will make the content of the message publicly available."
@@ -72,43 +72,43 @@ msgstr ""
 "Alice はパブリックネットワークへ **平文メッセージ** の付いた TransferTransaction "
 "を送信すると、メッセージの内容を公にすることを理解しています。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:30
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:38
 msgid ""
 "Thus, Alice sends an **encrypted message** that is only readable by herself "
 "and those with access to the academic certificate."
 msgstr "そのため、Alice は自分自身と学術証明書へのアクセス権を持つものだけが読めるように **暗号化メッセージ** を送ります。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:34
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:42
 msgid "Setting up the use case"
 msgstr "ユースケースのセットアップ"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:36
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:44
 msgid ""
-"Create an account for Alice, and another for the certificate  using "
-"``nem2-cli``."
-msgstr "Alice と証明書用のアカウントを ``nem2-cli`` を使用して作成します。"
+"Create an account for Alice, and another for the certificate with the "
+":doc:`CLI tool <../../cli>`."
+msgstr "Alice と証明書用のアカウントを :doc:`CLI tool <../../cli>` を使用して作成します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:59
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:67
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:61
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:69
 msgid ""
 "Create an **encrypted message** for the certificate, signing it with Alice's"
 " account."
 msgstr "証明書用の **暗号化メッセージ** を作成して Alice のアカウントで署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:75
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:83
 msgid ""
 "Attach the encrypted message to a **TransferTransaction**, setting the "
 "certificate address as the recipient."
 msgstr "**TransferTransaction** に暗号化メッセージを添付して、受信者には証明書アドレスを設定します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:89
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:97
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:91
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:99
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
@@ -117,23 +117,23 @@ msgstr ""
 "自分のネットワークでのみ有効なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
 "'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:105
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:113
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:119
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:127
 msgid ""
-"After the transaction gets confirmed, fetch it using the transaction hash "
-"output from (3). You can now **decrypt the message** using either the "
+"5. After the transaction gets confirmed, fetch it using the transaction hash"
+" output from (3). You can now **decrypt the message** using either the "
 "certificate account or address account."
 msgstr ""
-"トランザクションが承認された後に (3) "
+"5. トランザクションが承認された後に (3) "
 "で出力されたトランザクションハッシュを使用してトランザクションを取得します。証明書アカウントまたはアドレスアカウントを使用して **メッセージを復号**"
 " できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:133
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:142
 msgid ""
 "If you managed to read the message, try to decrypt it using another "
 "unrelated account to ensure that only the defined participants can read the "

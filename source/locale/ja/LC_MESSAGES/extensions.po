@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.1\n"
+"Project-Id-Version: nem2-docs 0.20.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-18 21:59+0000\n"
+"POT-Creation-Date: 2020-01-13 16:48+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,38 +21,40 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/extensions.rst:3
+#: ../../source/extensions.rst:11
 msgid "Extensions"
 msgstr "拡張"
 
-#: ../../source/extensions.rst:5
+#: ../../source/extensions.rst:13
 msgid ""
-"Developers could opt to create extensions to add more features into NEM. "
-"However, to become an accepted extension, it should be proposed as a |NIP|."
+"Developers could opt to create extensions to add more features into "
+"|codename|. However, to become an accepted extension, it should be proposed "
+"as a |NIP|."
 msgstr ""
-"開発者は NEM により多くの機能を追加する拡張を作成することもできます。しかし受理された拡張になるには |NIP| として提案する必要があります。"
+"開発者は |codename| により多くの機能を追加する拡張を作成することもできます。しかし受理された拡張になるには |NIP| "
+"として提案する必要があります。"
 
-#: ../../source/extensions.rst:7
+#: ../../source/extensions.rst:16
 msgid ""
 "The reason behind the |NIP| is to ensure that the new library is reviewed, "
-"tested and shared among NEM developers."
-msgstr "|NIP| の背景としては、NEM 開発者間でレビュー、テスト、共有された新しいライブラリを保証するためです。"
+"tested and shared among |codename| developers."
+msgstr "|NIP| の背景としては、|codename| 開発者間でレビュー、テスト、共有された新しいライブラリを保証するためです。"
 
-#: ../../source/extensions.rst:9
+#: ../../source/extensions.rst:18
 msgid "Accepted specification"
 msgstr "受理された仕様"
 
-#: ../../source/extensions.rst:10
+#: ../../source/extensions.rst:19
 msgid "At least one implementation that successfully passes the code review."
 msgstr "コードレビューを正常に通過した実装が少なくとも１つあること。"
 
-#: ../../source/extensions.rst:11
+#: ../../source/extensions.rst:20
 msgid ""
 "Compatible with third-party projects that implement/uses the same NIP "
 "Library."
 msgstr "同じ NIP ライブラリを実装/使用しているサードパーティープロジェクトと互換性があります。"
 
-#: ../../source/extensions.rst:15
+#: ../../source/extensions.rst:24
 msgid "Supported extensions"
 msgstr "サポートされている拡張"
 
@@ -66,9 +68,8 @@ msgstr "説明"
 
 #: ../../source/extensions.rst:1
 msgid ""
-"Starter project to get developers up and running with a running Catapult "
-"Service."
-msgstr "開発者を立ち上げるための Catapult サービスをスタータープロジェクト。"
+"Starter project to get developers up and running a private test network."
+msgstr "Catapult サービスを開発者が立ち上げて、開始するための、プライベートテストネットのスタータープロジェクト。"
 
 #: ../../source/extensions.rst:1
 msgid ""
@@ -76,7 +77,7 @@ msgid ""
 "synchronous."
 msgstr "非同期なトランザクションのアナウンスを同期的に変えるコンポーネント"
 
-#: ../../source/extensions.rst:26
+#: ../../source/extensions.rst:35
 msgid "Ongoing work"
 msgstr "開発中"
 
@@ -87,47 +88,47 @@ msgid ""
 msgstr "譲渡可能、更新可能、ブランド付き、共同所有のブロックチェーン公証"
 
 #: ../../source/extensions.rst:1
-msgid "Faucet application for Catapult."
-msgstr "Catapult 用フォーセットアプリケーション"
+msgid "Faucet application for |codename|."
+msgstr "|codename| 用フォーセットアプリケーション"
 
 #: ../../source/extensions.rst:1
 msgid ""
-"Experimental library to handle hyper deterministic wallets for Catapult."
-msgstr "Catapult 用 HD ウォレットを扱うための実験的ライブラリ。"
+"Experimental library to handle hyper deterministic wallets for |codename|."
+msgstr "|codename| 用 HD ウォレットを扱うための実験的ライブラリ。"
 
 #: ../../source/extensions.rst:1
-msgid "Experimental library to handle non-fungible assets for Catapult."
-msgstr "Catapult 用代替不可能アセットを扱うための実験的ライブラリ。"
+msgid "Experimental library to handle non-fungible assets for |codename|."
+msgstr "|codename| 用代替不可能アセットを扱うための実験的ライブラリ。"
 
 #: ../../source/extensions.rst:1
-msgid "Implementing Shamir's secret sharing on Catapult."
-msgstr "Catapult でシャミア秘密共有を実装する。"
+msgid "Implementing Shamir's secret sharing on |codename|."
+msgstr "|codename| でシャミア秘密共有を実装する。"
 
 #: ../../source/extensions.rst:1
-msgid "Experimental library to generate QR specification for Catapult."
-msgstr "Catapult 用の QR 仕様を生成するための実験的ライブラリ。"
+msgid "Experimental library to generate QR specification for |codename|."
+msgstr "|codename| 用の QR 仕様を生成するための実験的ライブラリ。"
 
 #: ../../source/extensions.rst:1
-msgid "Experimental library to handle uri scheme for Catapult."
-msgstr "Catapult 用の URI スキームを処理するための実験的ライブラリ。"
+msgid "Experimental library to handle uri scheme for |codename|."
+msgstr "|codename| 用の URI スキームを処理するための実験的ライブラリ。"
 
 #: ../../source/extensions.rst:1
-msgid "Experimental browser wallet for Catapult."
-msgstr "Catapult 用の実験的ブラウザウォレット"
+msgid "Experimental browser wallet for |codename|."
+msgstr "|codename| 用の実験的ブラウザウォレット"
 
-#: ../../source/extensions.rst:41
+#: ../../source/extensions.rst:50
 msgid ""
 "Do you need to create a NIP to create an extension? No, you don’t. In fact, "
 "we suggest not submitting a NIP until you build a extension that improves "
-"the NEM blockchain and the different projects that use it. Since the "
-"extension can be changed multiple times, developers should spend more time "
-"experimenting and learning, creating a specification later on."
+"|codename| and the different projects that use it. Since the extension can "
+"be changed multiple times, developers should spend more time experimenting "
+"and learning, creating a specification later on."
 msgstr ""
-"拡張を作成するために NIP を作成する必要がありますか？いいえ。実際には NEM "
+"拡張を作成するために NIP を作成する必要がありますか？いいえ。実際には |codename| "
 "ブロックチェーンとそれを使用するさまざまなプロジェクトを改善する拡張を構築するまでは、NIP "
 "を提出しないことをお勧めします。拡張は何度も変更されるので、開発者は後で仕様を作成し、実験と学習をより多くの時間を費やす必要があります。"
 
-#: ../../source/extensions.rst:43
+#: ../../source/extensions.rst:52
 msgid ""
 "Add a new extension to this page by clicking the *\"Edit on Github\"* button"
 " at the top-right part of the screen."
