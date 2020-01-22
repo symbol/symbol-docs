@@ -31,7 +31,7 @@ Prerequisites
 *************
 
 - Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with more than 10,000 |networkcurrency| <setup-creating-a-test-account>`
+- Have one :ref:`account with more than 10,000 <setup-creating-a-test-account>` |networkcurrency| units
 
 *************************
 Method #01: Using the SDK
