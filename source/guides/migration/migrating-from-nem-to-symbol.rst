@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-###############################
-Migrating from NIS1 to Catapult
-###############################
+############################
+Migrating from NEM to Symbol
+############################
 
 With |codename|, most of the previously available NIS1 features have evolved.
 This document will help you **upgrade your application** previous NIS1 features, to the newly available |codename| technology.

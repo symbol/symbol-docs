@@ -137,7 +137,6 @@ List of terms that are prone to be written in different ways.
     JavaScript; Javascript, javascript
     MongoDB; mongodb, Mongodb
     NEM; Nem, nem
-    NEM Developer Center; NEM developer center
     Node.js; nodejs, node.js
     RxJS; rxjs
     SDK; Sdk, Sdk

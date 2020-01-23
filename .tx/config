@@ -362,9 +362,9 @@ source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
 source_lang = en
 type = PO
 
-[nem2docs.guides--migration--migrating-from-nis1-to-catapult]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nis1-to-catapult.po
-source_file = build/gettext/guides/migration/migrating-from-nis1-to-catapult.pot
+[nem2docs.guides--migration--migrating-from-nem-to-symbol]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nem-to-symbol.po
+source_file = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
 source_lang = en
 type = PO
 

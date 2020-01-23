@@ -1,10 +1,12 @@
-####################
-NEM Developer Center
-####################
+#################
+Symbol Developers
+#################
 
-************************************
-Catapult is your Blockchain Platform
-************************************
+Browse the developer documentation to start integrating blockchain technology into your project.
+
+**********************************
+Symbol is Your Blockchain Platform
+**********************************
 
 |codename| is a **developer-friendly blockchain platform** for businesses.
 It reduces cost, complexity, and time-to-market so businesses can be more competitive.
@@ -43,9 +45,9 @@ Learn how to use the software development kits and tools with the following step
 * :doc:`How to run a private test network <guides/network/creating-a-private-test-net>`
 * :ref:`More guides <blog-categories>`
 
-************************
-Contributing to Catapult
-************************
+**********************
+Contributing to Symbol
+**********************
 
 |codename| is an |open-source| project.
 Discover how our |community| is organized, and get started participating:
@@ -93,7 +95,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 
     getting-started/setup-workstation
     getting-started/first-application
-    guides/migration/migrating-from-nis1-to-catapult
+    guides/migration/migrating-from-nem-to-symbol
 
 .. toctree::
     :maxdepth: 2

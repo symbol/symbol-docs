@@ -39,6 +39,7 @@
 {% if render_sidebar %}
 <div class="col-md-2">
     <div class="bs-sidenav secondary" role="complementary">
+        {% include "include/edit-github.html" %}
         <span class="title">{% trans %}On this page{% endtrans %}</span>
         {{localtoc}}
     </div>
@@ -71,7 +72,7 @@
         <div class="col-md-{{ bs_content_width }} content">
             {% block body %}{% endblock %}
             {% if edit_on_github_url %}
-            <p class="feedback top-gap">
+            <p class="feedback">
                 <b>{% trans %}Did you find what you were looking for?{% endtrans %}</b>
                 <a href="{{feedback_on_github_url}}" target="_blank">{% trans %}Give us your feedback.{% endtrans %}</a>
             </p>
@@ -83,6 +84,5 @@
 {% endblock %}
 
 {% block footer %}
-{% include "include/footer.html" %}
 {% include "include/algolia.html" %}
 {% endblock %}

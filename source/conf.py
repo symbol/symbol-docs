@@ -67,7 +67,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'nem2-docs'
+project = u'symbol-docs'
 copyright = u'2018-2019, NEM'
 author = u'NEM'
 
@@ -97,7 +97,7 @@ gettext_compact = False
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'autumn'
+pygments_style = 'lovelace'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -117,8 +117,6 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #
 
 html_theme_options = {
-    'navbar_title': "developer center",
-
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
 
@@ -176,10 +174,10 @@ html_theme_options = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "_static/logo-nem.svg"
+html_logo = "_static/logo-symbol.svg"
 
 # Docs Title
-html_title = 'NEM Developer Center'
+html_title = 'Symbol Developers'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -191,7 +189,7 @@ html_additional_pages = {'404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
-    app.add_stylesheet("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700")
+    app.add_stylesheet("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap")
     app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_stylesheet("css/custom.css")  # may also be an URL
     app.add_javascript("js/custom.js")
@@ -206,7 +204,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'nem2-docsdoc'
+htmlhelp_basename = 'symbol-docs'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -233,7 +231,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'nem2-docs.tex', u'nem2-docs Documentation',
+    (master_doc, 'symbol-docs.tex', u'Symbol Documentation',
      u'nem', 'manual'),
 ]
 
@@ -243,7 +241,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'nem2-docs', u'nem2-docs Documentation',
+    (master_doc, 'symbol-docs', u'Symbol Documentation',
      [author], 1)
 ]
 
@@ -254,20 +252,20 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'nem2-docs', u'nem2-docs Documentation',
-     author, 'nem2-docs', 'One line description of project.',
+    (master_doc, 'symbol-docs', u'Symbol Documentation',
+     author, 'symbol-docs', 'One line description of project.',
      'Miscellaneous'),
 ]
 
 # -- Options for substitutions --
 
 rst_prolog = """
-.. |codename| replace:: Catapult
-.. |sitename| replace:: NEM Developer Center
-.. |networkcurrency| replace:: ``nem.xem``
+.. |codename| replace:: Symbol
+.. |sitename| replace:: Symbol Developer Documentation
+.. |networkcurrency| replace:: ``symbol.xym``
 .. |privatenetworkcurrency| replace:: ``cat.currency``
-.. |sdk| replace:: NEM2-SDK
-.. |cli| replace:: NEM2-CLI
+.. |sdk| replace:: Symbol SDK
+.. |cli| replace:: Symbol CLI
 """
 
 # -- Options for Epub output ----------------------------------------------
