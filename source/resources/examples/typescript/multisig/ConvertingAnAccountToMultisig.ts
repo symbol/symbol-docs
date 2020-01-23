@@ -72,7 +72,7 @@ console.log(signedTransaction.hash);
 /* end block 04 */
 
 /* start block 05 */
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;

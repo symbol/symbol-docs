@@ -9,10 +9,10 @@
 Running a test net node
 #######################
 
-This guide will walk you through the process of **setting up your node** to join |codename|’s public **test network**.
+This guide will walk you through the process of **setting up your node** to join |codename|’s **public test network**.
 
-The test network mirrors the same **technology** and **features** of the future main public network.
-You can use the testnet to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
+The test network mirrors the same technology and features of the future main public network.
+You can use the test net to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
@@ -27,7 +27,7 @@ Hardware requirements
 * **HD**: 20GB or more
 * **OS**: Linux or Mac
 
-.. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
+Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
 ************************
 Environment requirements
@@ -82,7 +82,7 @@ You should see docker downloading the container images for the first time, then 
 
 If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
+To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
 
 ***************************
 Configuring node properties
@@ -120,9 +120,7 @@ Faucet
 ======
 
 
-* |faucet-1|: Receive |networkcurrency| units to test |codename|'s services.
-
-.. note:: If the default faucet is empty, try this other |faucet-2|.
+* |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
 
 SDKs
 ====
@@ -141,15 +139,15 @@ In this portal, you can find everything you need to know about |codename|'s feat
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer.nemtech.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer-xym.nemtech.network/" target="_blank">Blockchain Explorer</a>
 
 .. |faucet-1| raw:: html
 
-   <a href="http://faucet-01.nemtech.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Faucet</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-02.nemtech.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>
 
 .. |latest-release| raw:: html
 

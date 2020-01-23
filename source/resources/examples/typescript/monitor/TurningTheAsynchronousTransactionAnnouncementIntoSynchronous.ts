@@ -38,7 +38,7 @@ const rawRecipientAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;

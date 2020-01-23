@@ -52,7 +52,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name: product
 
     New Account
@@ -74,7 +74,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save account? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name: company
 
     New Account

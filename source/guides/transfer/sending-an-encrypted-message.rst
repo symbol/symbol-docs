@@ -41,7 +41,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name: alice
 
 .. code-block:: bash
@@ -50,7 +50,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name: certificate
 
 

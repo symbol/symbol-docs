@@ -264,8 +264,8 @@ texinfo_documents = [
 rst_prolog = """
 .. |codename| replace:: Catapult
 .. |sitename| replace:: NEM Developer Center
-.. |networkcurrency| replace:: ``nem.xem``
-.. |privatenetworkcurrency| replace:: ``cat.currency``
+.. |networkcurrency| replace:: ``symbol.xym``
+.. |privatenetworkcurrency| replace:: ``nem.xem``
 .. |sdk| replace:: NEM2-SDK
 .. |cli| replace:: NEM2-CLI
 """

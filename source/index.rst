@@ -2,6 +2,8 @@
 NEM Developer Center
 ####################
 
+Browse the developer documentation to start integrating blockchain technology into your project.
+
 ************************************
 Catapult is your Blockchain Platform
 ************************************
@@ -137,6 +139,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/inflation
     concepts/receipt
     concepts/node
+    Whitepaper <https://nemtech.github.io/catapult-whitepaper/main.pdf>
 
 .. toctree::
     :maxdepth: 2

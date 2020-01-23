@@ -21,7 +21,7 @@ import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/Repository
 
 /* start block 01 */
 // replace with namespace name
-const namespace = new NamespaceId('nem.xem');
+const namespace = new NamespaceId('symbol.xym');
 
 // replace with node endpoint
 const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
