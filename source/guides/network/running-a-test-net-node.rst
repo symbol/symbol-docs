@@ -49,13 +49,13 @@ A node can be composed of a different set of components depending on your needs.
 * **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
 * **API harvest assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions.  The API node installation comes with a REST gateway to perform read and write actions.
 
-The package  ``catapult-testnet-bootstrap`` contains both assemblies ready to be installed.
+The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
 
 1. Download the |latest-release|, or clone the repository directly using Git.
 
 .. code-block:: bash
 
-    git clone https://github.com/nemfoundation/catapult-testnet-bootstrap.git
+    git clone https://github.com/nemfoundation/symbol-testnet-bootstrap.git
 
 2. Choose the **assembly distribution** you want to install.
 
@@ -64,13 +64,13 @@ On the other hand, if you want a node dedicated exclusively confirm transactions
 
 .. code-block:: bash
 
-    cd api-harvest-assembly
+    cd symbol-testnet-bootstrap/api-harvest-assembly
 
 or...
 
 .. code-block:: bash
 
-    cd peer-assembly
+    cd symbol-testnet-bootstrap/peer-assembly
 
 3. Run the node with **docker-compose**.
 
@@ -119,7 +119,6 @@ Clients
 Faucet
 ======
 
-
 * |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
 
 SDKs
@@ -151,5 +150,5 @@ In this portal, you can find everything you need to know about |codename|'s feat
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/catapult-testnet-bootstrap/releases/" target="_blank">the latest release of the package</a>
+   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">the latest release of the package</a>
 
