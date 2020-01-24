@@ -470,19 +470,15 @@ div.figure .caption {
     font-weight: normal;
     background-color: #fff;
 }
-.mermaid .note {
+
+.mermaid .note,
+.mermaid  rect,
+.mermaid .actor{
     stroke: #ff00ff;
     fill: #fff;
 }
-.mermaid .node rect {
-    stroke: #ff00ff;
-    fill: #fff;
-}
-.mermaid .actor {
-    stroke: #ff00ff;
-    fill: #fff;
-}
-.mermaid line {
+.mermaid line,
+.mermaid .messageLine0{
     stroke: #ff00ff;
 }
 .mermaid text.actor tspan {
