@@ -519,11 +519,13 @@ div.figure .caption {
     transition: opacity 0.4s ease;
     opacity: 0;
 }
-
+#search-box .algolia-autocomplete .ds-dropdown-menu{
+    min-width: 100px;
+    width: 200%;
+}
 #search-box .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]{
     border: none;
 }
-
 @media screen and (min-width: 768px) {
     #search-box {
         width: 70%;
