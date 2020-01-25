@@ -43,6 +43,8 @@ To run a test net node, you will need to have installed the following docker too
 Installation
 ************
 
+.. note::  This instructions are for the newer Symbol test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1) you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
+
 A node can be composed of a different set of components depending on your needs.
 |codename| test net nodes are currently distributed in two forms:
 
@@ -81,6 +83,8 @@ or...
 You should see docker downloading the container images for the first time, then it should run the setup and finally startup the service.
 
 If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+
+.. note:: If you decide to run the API assembly, it will expose the port ``3000`` by default.  If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
 
 To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
 
