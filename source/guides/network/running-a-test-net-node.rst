@@ -43,13 +43,15 @@ To run a test net node, you will need to have installed the following docker too
 Installation
 ************
 
-.. note::  This instructions are for the newer Symbol test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1) you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
+.. note:: This instructions are for the newer Symbol test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1) you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
 
 A node can be composed of a different set of components depending on your needs.
 |codename| test net nodes are currently distributed in two forms:
 
 * **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-* **API harvest assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions.  The API node installation comes with a REST gateway to perform read and write actions.
+* **API harvest assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions. The API node installation comes with a REST gateway to perform read and write actions.
+
+.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
 
 The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
 
