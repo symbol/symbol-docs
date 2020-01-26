@@ -39,7 +39,7 @@ To run a test net node, you will need to have installed the following docker too
 * `docker`_
 * `docker-compose`_
 
-.. note:: The release images target more modern x86 architectures. It has been reported that errors are experienced on some older machines provided. If you run into any related issues, please report in the `slack group (#help) <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_.
+.. note:: The release images target modern x86 architectures. It has been reported that errors are experienced on some older machines provided. If you run into any related issues, please report in the `slack group (#help) <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_.
 
 ************
 Installation
@@ -90,11 +90,11 @@ API Harvest Assembly
 
 The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
 
-If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+You can verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
+.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider so you will have to open it in order to access from outside the machine.
 
-.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
+.. note:: API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a Peer only node instead.
 
 ***************************
 Configuring node properties
