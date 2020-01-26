@@ -16,6 +16,25 @@ You can use the test net to experiment with the offered |codename|'s transaction
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
+**********
+Assemblies
+**********
+
+A node can be composed of a different set of components depending on your needs.
+|codename| test net nodes are currently distributed in two forms.
+
+Peer Assembly
+=============
+
+The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
+
+API Harvest Assembly
+====================
+
+The API harvest assembly will set up a dual-purpose API and Peer node, as well as the REST gateway that transactions can be submitted to and data read from.
+
+.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
+
 *********************
 Hardware requirements
 *********************
@@ -39,19 +58,13 @@ To run a test net node, you will need to have installed the following docker too
 * `docker`_
 * `docker-compose`_
 
+.. note:: The release images target more modern x86 architectures. It has been reported that errors are experienced on some older machines provided. If you run into any related issues, please report in the `slack group (#help) <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_.
+
 ************
 Installation
 ************
 
-.. note:: This instructions are for the newer Symbol test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1) you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
-
-A node can be composed of a different set of components depending on your needs.
-|codename| test net nodes are currently distributed in two forms:
-
-* **Peer assembly**: The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-* **API harvest assembly**: The API node does the same as the peer nodes, plus stores data in the readable form once transactions are validated. Furthermore, the API assembly is capable of processing partial aggregate bonded transactions. The API node installation comes with a REST gateway to perform read and write actions.
-
-.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
+.. note:: These instructions are for the newer |codename| test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1), you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
 
 The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
 
@@ -82,11 +95,11 @@ or...
 
     sudo docker-compose up --build --detach
 
-You should see docker downloading the container images for the first time, then it should run the setup and finally startup the service.
+You should see docker downloading the container images for the first time. Then it should run the setup and finally startup the service.
 
 If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: If you decide to run the API assembly, it will expose the port ``3000`` by default.  If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
+.. note:: If you decide to run the API assembly, it will expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
 
 To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
 
@@ -111,28 +124,15 @@ Interacting with the test network
 
 To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test <setup-getting-test-currency>` |networkcurrency|.
 
-Explorer
-========
+Then, read and write data from the network with the following tools:
 
 * |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
-
-Clients
-=======
-
 * |desktop-wallet|: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :doc:`Command-Line Interface <../../cli>`: Execute the most commonly used actions from your terminal.
-
-Faucet
-======
-
 * |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
+* :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
-SDKs
-====
-
-* :doc:`Software Development Kits <../../sdk>`: Integrate your app with |codename|.
-
-In this portal, you can find everything you need to know about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+On this portal, you can find information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 
@@ -157,4 +157,3 @@ In this portal, you can find everything you need to know about |codename|'s feat
 .. |latest-release| raw:: html
 
    <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">the latest release of the package</a>
-
