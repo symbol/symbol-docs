@@ -13,6 +13,8 @@ These nodes provide a powerful, stable, and secure platform where Smart Assets t
 
 The **four-layered architecture** allows developers to update any of these tiers without disrupting the others, which improves security.
 
+.. _peer-node:
+
 *********
 Peer node
 *********
@@ -67,6 +69,8 @@ The probability of selecting a remote node to read data from depends linearly on
 Every four rounds of node selections, the criteria changes to prevent |sybil|.
 Then the node selects a peer with high importance.
 
+.. _api-node:
+
 ********
 API node
 ********
@@ -77,10 +81,10 @@ API node
     :width: 400px
     :align: center
 
-    API node communication
+    Peer + API (Dual) node communication
 
-The catapult-server software allows you to configure peer nodes as API nodes.
 The primary responsibility of an API node is to store the data in a readable form in MongoDB.
+The catapult-server software allows configuring standalone API nodes or with Peer capabilities (Dual).
 
 Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue called ``spool``.
 A broker service consumes the data from the spool and updates MongoDB accordingly.
@@ -106,6 +110,8 @@ ZMQ
 |zmq| is an asynchronous messaging library, which enables real-time subscriptions.
 It transports notifications from the API node to the ZMQ endpoint, where Catapult REST listens.
 It is an alternative to REST WebSockets, aimed to be used when performance is critical.
+
+.. _rest-gateway:
 
 ************
 REST gateway

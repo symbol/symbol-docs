@@ -16,25 +16,6 @@ You can use the test net to experiment with the offered |codename|'s transaction
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
-**********
-Assemblies
-**********
-
-A node can be composed of a different set of components depending on your needs.
-|codename| test net nodes are currently distributed in two forms.
-
-Peer Assembly
-=============
-
-The peer assembly verifies or discards the transactions, runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-
-API Harvest Assembly
-====================
-
-The API harvest assembly will set up a dual-purpose API and Peer node, as well as the REST gateway that transactions can be submitted to and data read from.
-
-.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
-
 *********************
 Hardware requirements
 *********************
@@ -76,8 +57,8 @@ The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be in
 
 2. Choose the **assembly distribution** you want to install.
 
-In short, if you want to be able to interact with your node, you need to run the API assembly.
-On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the peer assembly.
+In short, if you want to be able to interact with your node, you need to run the :ref:`API assembly <api-node>`.
+On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the :ref:`Peer assembly <peer-node>`.
 
 .. code-block:: bash
 
@@ -97,11 +78,23 @@ or...
 
 You should see docker downloading the container images for the first time. Then it should run the setup and finally startup the service.
 
+To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
+
+Peer Assembly
+=============
+
+The Peer assembly will set up a :ref:`Peer <peer-node>` only node.
+
+API Harvest Assembly
+====================
+
+The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
+
 If you have installed the ``api-harvest-assembly`` distribution, you can verify as well that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: If you decide to run the API assembly, it will expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
+.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider.
 
-To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
+.. note:: API nodes take up more memory and storage than peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a peer only node instead.
 
 ***************************
 Configuring node properties
@@ -132,7 +125,7 @@ Then, read and write data from the network with the following tools:
 * |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
 * :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
-On this portal, you can find information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+On this portal you can find information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 
