@@ -150,7 +150,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     server
     sdk
     cli
-    extensions
+    libraries
 
 .. toctree::
     :maxdepth: 2
