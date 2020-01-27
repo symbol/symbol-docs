@@ -25,8 +25,6 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     npm install --global nem2-cli
 
-.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
-
 2. Generate a new account and save it as a **profile**.
 
 .. code-block:: bash

@@ -116,7 +116,7 @@ body > .container {
 }
 @media screen and (min-width: 768px) {
     body > .container {
-        padding: 30px 0px;
+        padding: 30px 0;
     }
 }
 .visible {
@@ -156,7 +156,12 @@ body > .container {
     font-weight: 900;
     font-size: 20px;
 }
-.content h1:hover .headerlink::before, .content h2:hover .headerlink::before, .content h3:hover .headerlink::before, .content h4:hover .headerlink::before, .content h5:hover .headerlink::before, .content h6:hover .headerlink::before {
+.content h1:hover .headerlink::before,
+.content h2:hover .headerlink::before,
+.content h3:hover .headerlink::before,
+.content h4:hover .headerlink::before,
+.content h5:hover .headerlink::before,
+.content h6:hover .headerlink::before {
     visibility: visible;
 }
 .feedback {
@@ -175,13 +180,13 @@ body > .container {
     text-decoration: none;
 }
 .navbar-default .navbar-top {
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 .navbar-default hr {
-    margin: 0px !important;
+    margin: 0 !important;
 }
 .navbar-default .navbar-brand {
-    margin: 10px 0px;
+    margin: 10px 0;
     padding: 5px;
 }
 .navbar-default .navbar-right {
@@ -189,6 +194,20 @@ body > .container {
 }
 .navbar-default .navbar-right .active {
     font-weight: bold;
+}
+.navbar-default::after{
+    content: "";
+    background: url(../images/mesh.jpg);
+    background-position: center left;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 #language .select {
     overflow: hidden;
@@ -307,7 +326,7 @@ body > .container {
 .sidebar-xs .dropdown-menu {
     width: 100%;
     min-width: 0;
-    border: 0px;
+    border: 0;
 }
 .sidebar-xs .dropdown-menu > li > a {
     white-space: normal;
@@ -459,7 +478,7 @@ div.figure .caption {
 }
 /* Math */
 .math {
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 /* Mermaid */
 .mermaid svg {

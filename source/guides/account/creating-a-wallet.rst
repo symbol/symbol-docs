@@ -67,8 +67,6 @@ Method #02: Using the CLI
 
 In |cli|, wallets are named **profiles**.
 
-.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
-
 Create a new wallet with the following command:
 
 .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccountWallet.sh
