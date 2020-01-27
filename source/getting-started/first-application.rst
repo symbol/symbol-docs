@@ -94,13 +94,13 @@ After running the following command, you should see on your screen a line simila
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 This account owns 750 |networkcurrency| units.
-If your row after mosaics is empty, follow :doc:`the previous guide instructions <setup-workstation>` to get test currency.
+If your row after mosaics is empty, follow the :doc:`previous guide <setup-workstation>` to get test currency.
 
 2. Create a second account to identify the **customer**.
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET --save --url http://api-harvest-20.us-west-1.nemtech.network:3000 --profile customer
+    nem2-cli account generate --network TEST_NET --save --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --profile customer
 
     New Account
 
@@ -164,7 +164,7 @@ This means that the customer can only send back the ticket to the creator of the
    The new mosaic id is: 7cdf3b117a3c40cc
 
 The transaction should appear as confirmed after ±15 seconds.
-If the terminal raises an error, check :ref:`the error code meaning here <status-errors>`.
+If the terminal raises an error, check the error code meaning :ref:`here <status-errors>`.
 
 ******************
 Sending the ticket

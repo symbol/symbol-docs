@@ -31,7 +31,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-.. note:: Before starting this guide, make sure you have an :doc:`account loaded with |networkcurrency| <../../getting-started/setup-workstation>`.
+.. note:: Before starting this guide, make sure you have an :doc:`account loaded with <../../getting-started/setup-workstation>` |networkcurrency|.
 
 1. Open a new file and define two transactions:
 

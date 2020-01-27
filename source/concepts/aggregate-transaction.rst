@@ -44,7 +44,7 @@ An AggregateTransaction is **bonded** when it requires signatures from other par
 
 Once an aggregate bonded is announced, it reaches partial state—where it can live up to ``2 days``—and notifies its status through WebSockets or HTTP API calls.
 
-Every time a cosignatory signs the transaction and :ref:`announces an aggregate bonded cosignature <cosignature>`, the network checks if all the required cosigners have signed.
+Every time a cosignatory signs the transaction and announces an aggregate bonded :ref:`cosignature <cosignature>`, the network checks if all the required cosigners have signed.
 When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png

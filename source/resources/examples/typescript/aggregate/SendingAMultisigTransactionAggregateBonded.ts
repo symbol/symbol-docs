@@ -44,7 +44,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 // replace with recipient address
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -54,7 +54,7 @@ const transferTransaction = TransferTransaction.create(
     recipientAddress,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('sending 10 nem.xem'),
+    PlainMessage.create('sending 10 symbol.xym'),
     networkType);
 
 /* start block 01 */

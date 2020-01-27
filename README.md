@@ -6,8 +6,8 @@ This documentation introduces [NEM](https://nem.io)'s next core engine (NEM2), c
 
 Catapult is a developer-friendly blockchain platform for businesses.
 It reduces cost, complexity, and time-to-market so businesses can be more competitive.
-Catapult offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
 
+Catapult offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
 Developers are able to integrate blockchain technology into their projects or create powerful dApps using Catapult’s **REST API**.
 This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
 

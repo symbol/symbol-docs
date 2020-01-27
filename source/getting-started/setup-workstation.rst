@@ -25,8 +25,6 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     npm install --global nem2-cli
 
-.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
-
 2. Generate a new account and save it as a **profile**.
 
 .. code-block:: bash
@@ -35,7 +33,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -55,6 +53,8 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Private Key │ AAA...AAA                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
+
+.. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
 
 .. _setup-getting-test-currency:
 
@@ -185,12 +185,12 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer.nemtech.network/nodes" target="_blank">this list</a>
+   <a href="http://explorer-xym.nemtech.network/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet-01.nemtech.network" target="_blank">Navigate here</a>
+   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Navigate here</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-02.nemtech.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>

@@ -51,7 +51,7 @@ Account mosaic restrictions are generally used to **prevent accounts being tagge
 Operation restriction
 *********************
 
-An account can allow/block announcing **outgoing** transactions with a :ref:`determined operation type <transaction-types>`.
+An account can allow/block announcing **outgoing** transactions with a determined :ref:`operation type <transaction-types>`.
 By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
 
 ********

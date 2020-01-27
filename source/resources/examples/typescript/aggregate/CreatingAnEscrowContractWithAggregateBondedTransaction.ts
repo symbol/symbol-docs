@@ -46,7 +46,7 @@ const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketD
 const ticketMosaicId = new MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -56,7 +56,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     ticketDistributorPublicAccount.address,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('send 100 nem.xem to distributor'),
+    PlainMessage.create('send 100 symbol.xym to distributor'),
     networkType);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(

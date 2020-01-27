@@ -33,7 +33,7 @@ import {map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const aliasedMosaic = new Mosaic(
-    new NamespaceId('nem.xem'),
+    new NamespaceId('symbol.xym'),
     UInt64.fromUint(1000000),
 );
 /* end block 01 */
