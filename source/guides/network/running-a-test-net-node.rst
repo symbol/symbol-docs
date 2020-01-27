@@ -80,12 +80,12 @@ You should see docker downloading the container images for the first time. Then 
 
 To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
 
-Peer Assembly
+Peer assembly
 =============
 
 The Peer assembly will set up a :ref:`Peer <peer-node>` only node.
 
-API Harvest Assembly
+API harvest assembly
 ====================
 
 The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
