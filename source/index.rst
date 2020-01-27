@@ -5,7 +5,7 @@ NEM Developer Center
 Browse the developer documentation to start integrating blockchain technology into your project.
 
 ************************************
-Catapult is your Blockchain Platform
+Catapult is Your Blockchain Platform
 ************************************
 
 |codename| is a **developer-friendly blockchain platform** for businesses.

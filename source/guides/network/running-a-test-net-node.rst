@@ -49,7 +49,7 @@ Installation
 
 The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
 
-1. Download the |latest-release|, or clone the repository directly using Git.
+1. Download the |latest-release| of the package, or clone the repository directly using Git.
 
 .. code-block:: bash
 
@@ -133,7 +133,7 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |desktop-wallet| raw:: html
 
-   <a href="https://github.com/nemfoundation/nem2-desktop-wallet/releases" target="_blank">Desktop Wallet</a>
+   <a href="https://github.com/nemfoundation/symbol-desktop-wallet-beta" target="_blank">Desktop Wallet</a>
 
 .. |blockchain-explorer| raw:: html
 
@@ -149,4 +149,4 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">the latest release of the package</a>
+   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>
