@@ -863,8 +863,6 @@ Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-transaction
 
 .. code-block:: bash
 
-
-
     --profile <profile> - (Optional) Select between your profiles, by providing a profile name.
     -p, --password <password>    - Profile password.
     -h, --hash <hash>   - Aggregate bonded transaction hash to be signed.
