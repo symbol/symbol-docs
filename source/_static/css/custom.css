@@ -197,8 +197,7 @@ body > .container {
 }
 .navbar-default::after{
     content: "";
-    background: url(../images/mesh.jpg);
-    background-position: center left;
+    background: url(../images/mesh.jpg) center left;
     background-size: cover;
     position: absolute;
     opacity: 0.2;
