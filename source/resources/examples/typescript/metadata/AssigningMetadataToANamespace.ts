@@ -24,7 +24,7 @@ import {
     NamespaceId,
     NamespaceMetadataTransaction,
     NetworkType,
-    TransactionHttp, UInt64,
+    UInt64,
 } from 'nem2-sdk';
 import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
