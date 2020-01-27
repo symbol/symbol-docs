@@ -21,7 +21,7 @@ Accounts have the following properties:
 A private key is a key to an account.
 Anyone with access to the private key ultimately has control over the account.
 
-.. note:: The private key must be kept secret.Make sure your private key is backed up safely somewhere offline.
+.. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
 
 **Public key**
 

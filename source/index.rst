@@ -10,8 +10,8 @@ Catapult is your Blockchain Platform
 
 |codename| is a **developer-friendly blockchain platform** for businesses.
 It reduces cost, complexity, and time-to-market so businesses can be more competitive.
-|codename| offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
 
+|codename| offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
 Developers are able to easily integrate blockchain technology into their projects or create powerful dApps using |codename|'s :doc:`REST API <api>`.
 This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
 

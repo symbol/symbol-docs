@@ -150,8 +150,6 @@ Copy the private key of the first account.
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name: base-profile
 
-.. note:: Use |cli| only for testing and development purposes, as the private keys stored are not encrypted.
-
 You should see the account credentials in your terminal.
 
 .. code-block:: bash
