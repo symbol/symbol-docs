@@ -16,9 +16,21 @@ Elliptic curve cryptography is an approach to **public key cryptography**. The c
 
 * **Public key**: The public identifier of the key pair, which can be disseminated widely. It is used to prove that the entity was signed with the paired private key.
 
-The public key is cryptographically derived from the private key. In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519|.
+The public key is cryptographically derived from the private key.
+In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519|.
 
-You can find the |implementation| under the ``crypto`` module of :doc:`catapult-server <../server>`.
+You can find the |implementation-derivation| under the ``crypto`` module of :doc:`catapult-server <../server>`.
+
+*********
+Signature
+*********
+
+With a private key, the algorithm can sign messages producing 64-byte signatures.
+A signature is used to validate that a given key pair signed an entity just having the public key.
+
+.. note:: The private key is hashed before signing an entity to improve randomness. |codename|'s public network uses **KECCAK** instead of SHA3-512 to have compatible signatures with NEM (NIS1).
+
+You can find the implementation to |implementation-signature| and |implementation-verification| under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
 .. _address:
 
@@ -32,7 +44,7 @@ Public keys can be shared in a shorter form as **addresses**. A |codename| addre
 * The 160-bit hash of the account's public key.
 * The 4 byte checksum, to allow the quick recognition of mistyped addresses.
 
-The following steps are performed to `convert a public key <https://github.com/nemtech/catapult-server/blob/master/src/catapult/model/Address.cpp#L50>`_ to an address:
+The following steps are performed to |implementation-public-key-address|:
 
 .. code-block:: cpp
 
@@ -62,7 +74,7 @@ The following steps are performed to `convert a public key <https://github.com/n
 4. concatenate (3) and the checksum of (3).
 5. (Optional) base-32 of (4).
 
-.. note:: |codename|'s public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NIS1.
+.. note:: |codename|'s public network uses **KECCAK** instead of SHA3-256 to have compatible keys with NEM (NIS1).
 
 As you can see, it is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.
 
@@ -74,8 +86,20 @@ As you can see, it is possible to create an address without interacting with the
 
    <a href="https://ed25519.cr.yp.to/" target="_blank">Ed25519</a>
 
-.. |implementation| raw:: html
+.. |implementation-derivation| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/KeyGenerator.cpp#L31" target="_blank">implementation</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/KeyGenerator.cpp#L40-L41" target="_blank">implementation</a>
+
+.. |implementation-signature| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/Signer.cpp#L123-L177" target="_blank">sign entities</a>
+
+.. |implementation-verification| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/Signer.cpp#L187-L227" target="_blank">verify them</a>
+
+.. |implementation-public-key-address| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/model/Address.cpp#L51-L69" target="_blank">convert a public key to an address</a>
 
 Continue: :doc:`Block <block>`.
