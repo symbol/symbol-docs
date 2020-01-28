@@ -73,7 +73,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

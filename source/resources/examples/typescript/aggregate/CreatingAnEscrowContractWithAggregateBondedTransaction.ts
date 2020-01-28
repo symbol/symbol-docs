@@ -95,7 +95,7 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
