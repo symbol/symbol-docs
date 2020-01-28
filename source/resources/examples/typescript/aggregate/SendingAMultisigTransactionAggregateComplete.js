@@ -31,13 +31,13 @@ const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAcc
 // replace with recipient address
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('sending 10 nem.xem'), networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('sending 10 symbol.xym'), networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [transferTransaction.toAggregate(multisigAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
@@ -47,7 +47,7 @@ const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

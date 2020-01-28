@@ -27,7 +27,7 @@ const rawRecipientAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -40,7 +40,7 @@ const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247E
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 /* start block 02 */
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

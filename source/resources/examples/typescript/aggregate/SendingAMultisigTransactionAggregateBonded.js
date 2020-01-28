@@ -30,11 +30,11 @@ const multisigAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(multisigAcc
 // replace with recipient address
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(recipientRawAddress);
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('sending 10 nem.xem'), networkType);
+const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('sending 10 symbol.xym'), networkType);
 /* start block 01 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [transferTransaction.toAggregate(multisigAccount)], networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
@@ -46,7 +46,7 @@ console.log(signedTransaction.hash);
 const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

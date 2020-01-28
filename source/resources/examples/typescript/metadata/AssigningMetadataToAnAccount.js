@@ -44,7 +44,7 @@ const signedTransaction = bobAccount.sign(aggregateTransaction, networkGeneratio
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -53,7 +53,7 @@ const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGe
 /* end block 04 */
 /* start block 05 */
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

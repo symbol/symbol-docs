@@ -53,7 +53,7 @@ console.log(signedTransaction.hash);
 /* end block 03 */
 
 /* start block 04 */
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
