@@ -43,7 +43,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkG
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;

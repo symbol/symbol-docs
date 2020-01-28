@@ -62,7 +62,7 @@ const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_s
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;

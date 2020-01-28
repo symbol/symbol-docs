@@ -21,7 +21,7 @@ const nem2_sdk_1 = require("nem2-sdk");
 const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
-const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('nem.xem'), nem2_sdk_1.UInt64.fromUint(1000000));
+const aliasedMosaic = new nem2_sdk_1.Mosaic(new nem2_sdk_1.NamespaceId('symbol.xym'), nem2_sdk_1.UInt64.fromUint(1000000));
 /* end block 01 */
 /* start block 02 */
 // replace with network type

@@ -48,7 +48,7 @@ const signedAggregateTransaction = accountMetadataTransaction
     const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
     return rxjs_1.of(signedTransaction);
 }));
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
