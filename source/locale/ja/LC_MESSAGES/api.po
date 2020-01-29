@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,12 +46,9 @@ msgstr ""
 
 #: ../../source/api.rst:23
 msgid ""
-"Assuming that Catapult REST is :doc:`running locally <getting-started/setup-"
-"workstation>`, HTTP GET requests can be executed from a browser and have the"
-" form:"
-msgstr ""
-"Catapult REST が :doc:`ローカルで動いている <getting-started/setup-workstation>` "
-"と仮定して、HTTP GET リクエストはブラウザからこのように実行できます:"
+"Assuming that Catapult REST is running locally, HTTP GET requests can be "
+"executed from a browser and have the form:"
+msgstr "Catapult REST がローカルで動いているのであれば、HTTP GET リクエストはブラウザからこのように実行できます:"
 
 #: ../../source/api.rst:27
 msgid ""
@@ -533,3 +530,7 @@ msgstr "Mac, Windows, Linux 向けの HTTP クライアント。"
 #: ../../source/api.rst:390
 msgid "Download |postman-app| for your current operative system."
 msgstr "あなたの OS に合わせた |postman-app| をダウンロードしてください。"
+
+#: ../../source/api.rst:392
+msgid "Import the |postman-spec| for |codename|."
+msgstr "|codename| 用 |postman-spec| をインポートする"

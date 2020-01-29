@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,16 +61,10 @@ msgid "Install |cli|."
 msgstr "|cli| のインストール"
 
 #: ../../source/getting-started/setup-workstation.rst:36
-msgid ""
-"Use |cli| only for testing and development purposes, as the private keys "
-"stored are not encrypted."
-msgstr "|cli| は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
-
-#: ../../source/getting-started/setup-workstation.rst:38
 msgid "Generate a new account and save it as a **profile**."
 msgstr "新しいアカウントを生成して **profile** として保存します"
 
-#: ../../source/getting-started/setup-workstation.rst:50
+#: ../../source/getting-started/setup-workstation.rst:48
 msgid ""
 "If the test network node is not working, you can use another node url from "
 "|network-list|. You can also **run your testnet node** by following "
@@ -80,9 +74,15 @@ msgstr ""
 "<../guides/network/running-a-test-net-node>` に従って **テストネットノードを実行** "
 "することもできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:52
+#: ../../source/getting-started/setup-workstation.rst:50
 msgid "You should see the account credentials in your terminal."
 msgstr "アカウントの資格情報がターミナルで確認できます。"
+
+#: ../../source/getting-started/setup-workstation.rst:65
+msgid ""
+"The private key must be kept secret. Make sure your private key is backed up"
+" safely somewhere offline."
+msgstr "プライベートキーは必ず秘密であることを守ってください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:71
 msgid "Getting test currency"

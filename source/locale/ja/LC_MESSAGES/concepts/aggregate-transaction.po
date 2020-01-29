@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -115,14 +115,14 @@ msgstr ""
 
 #: ../../source/concepts/aggregate-transaction.rst:55
 msgid ""
-"Every time a cosignatory signs the transaction and :ref:`announces an "
-"aggregate bonded cosignature <cosignature>`, the network checks if all the "
+"Every time a cosignatory signs the transaction and announces an aggregate "
+"bonded :ref:`cosignature <cosignature>`, the network checks if all the "
 "required cosigners have signed. When all signatures are acquired, the "
 "transaction changes to unconfirmed state until the network includes it in a "
 "block."
 msgstr ""
-"連署者がトランザクションに署名し :ref:`アグリゲートボンド連署をアナウンスする <cosignature>` "
-"たびに、ネットワークは必要な連署者が署名しているかどうかをチェックします。すべての署名が取得されると、ネットワークがそれをブロックに含めるまで、トランザクションは未承認状態へ遷移します。"
+"連署者がトランザクションに署名して、アグリゲートボンド :ref:`連署 <cosignature>` "
+"をアナウンスするたびに、ネットワークは必要な連署者が署名しているかどうかをチェックします。すべての署名が取得されると、ネットワークがそれをブロックに含めるまで、トランザクションは未承認状態へ遷移します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:62
 msgid "AggregateBondedTransaction cycle"

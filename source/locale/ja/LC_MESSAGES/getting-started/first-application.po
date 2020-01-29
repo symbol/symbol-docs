@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -161,11 +161,11 @@ msgstr ""
 #: ../../source/getting-started/first-application.rst:104
 msgid ""
 "This account owns 750 |networkcurrency| units. If your row after mosaics is "
-"empty, follow :doc:`the previous guide instructions <setup-workstation>` to "
-"get test currency."
+"empty, follow the :doc:`previous guide <setup-workstation>` to get test "
+"currency."
 msgstr ""
 "アカウントは 750 |networkcurrency| 単位を保有しています。もし mosaics "
-"の次の行が空の場合は、テスト用の通過を手に入れるために :doc:`前のガイド <setup-workstation>` に従ってください。"
+"の次の行が空の場合は、テスト用通貨を手に入れるために :doc:`前のガイド <setup-workstation>` に従ってください。"
 
 #: ../../source/getting-started/first-application.rst:107
 msgid "Create a second account to identify the **customer**."
@@ -271,11 +271,11 @@ msgstr "トランザクションをアナウンスしたら、ターミナルに
 #: ../../source/getting-started/first-application.rst:174
 msgid ""
 "The transaction should appear as confirmed after ±15 seconds. If the "
-"terminal raises an error, check :ref:`the error code meaning here <status-"
+"terminal raises an error, check the error code meaning :ref:`here <status-"
 "errors>`."
 msgstr ""
-"トランザクションは15秒前後で承認済みとして現れます。ターミナルにはエラーが表示された場合は :ref:`エラーコード <status-errors>`"
-" で意味を確認できます。"
+"トランザクションは15秒前後で承認済みとして現れます。ターミナルにはエラーが表示された場合はエラーコードの意味を :ref:`ここで <status-"
+"errors>` 確認できます。"
 
 #: ../../source/getting-started/first-application.rst:179
 msgid "Sending the ticket"

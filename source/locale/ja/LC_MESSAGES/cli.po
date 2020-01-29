@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -97,14 +97,17 @@ msgstr "プロファイルの作成。"
 #: ../../source/cli.rst:620 ../../source/cli.rst:637 ../../source/cli.rst:654
 #: ../../source/cli.rst:671 ../../source/cli.rst:688 ../../source/cli.rst:708
 #: ../../source/cli.rst:728 ../../source/cli.rst:746 ../../source/cli.rst:763
-#: ../../source/cli.rst:785 ../../source/cli.rst:802 ../../source/cli.rst:819
-#: ../../source/cli.rst:841 ../../source/cli.rst:859 ../../source/cli.rst:886
-#: ../../source/cli.rst:909 ../../source/cli.rst:942 ../../source/cli.rst:965
-#: ../../source/cli.rst:990 ../../source/cli.rst:1017
-#: ../../source/cli.rst:1043 ../../source/cli.rst:1067
-#: ../../source/cli.rst:1090 ../../source/cli.rst:1113
-#: ../../source/cli.rst:1138 ../../source/cli.rst:1167
-#: ../../source/cli.rst:1184 ../../source/cli.rst:1201
+#: ../../source/cli.rst:788 ../../source/cli.rst:805 ../../source/cli.rst:822
+#: ../../source/cli.rst:844 ../../source/cli.rst:870 ../../source/cli.rst:888
+#: ../../source/cli.rst:915 ../../source/cli.rst:942 ../../source/cli.rst:965
+#: ../../source/cli.rst:988 ../../source/cli.rst:1016
+#: ../../source/cli.rst:1043 ../../source/cli.rst:1068
+#: ../../source/cli.rst:1095 ../../source/cli.rst:1128
+#: ../../source/cli.rst:1155 ../../source/cli.rst:1181
+#: ../../source/cli.rst:1205 ../../source/cli.rst:1228
+#: ../../source/cli.rst:1251 ../../source/cli.rst:1276
+#: ../../source/cli.rst:1305 ../../source/cli.rst:1322
+#: ../../source/cli.rst:1339
 msgid "*Options*"
 msgstr "*オプション*"
 
@@ -121,14 +124,17 @@ msgstr "*オプション*"
 #: ../../source/cli.rst:627 ../../source/cli.rst:644 ../../source/cli.rst:661
 #: ../../source/cli.rst:678 ../../source/cli.rst:695 ../../source/cli.rst:715
 #: ../../source/cli.rst:736 ../../source/cli.rst:753 ../../source/cli.rst:770
-#: ../../source/cli.rst:792 ../../source/cli.rst:809 ../../source/cli.rst:831
-#: ../../source/cli.rst:849 ../../source/cli.rst:876 ../../source/cli.rst:899
-#: ../../source/cli.rst:924 ../../source/cli.rst:955 ../../source/cli.rst:978
-#: ../../source/cli.rst:1007 ../../source/cli.rst:1033
-#: ../../source/cli.rst:1057 ../../source/cli.rst:1080
-#: ../../source/cli.rst:1103 ../../source/cli.rst:1126
-#: ../../source/cli.rst:1154 ../../source/cli.rst:1174
-#: ../../source/cli.rst:1191 ../../source/cli.rst:1209
+#: ../../source/cli.rst:795 ../../source/cli.rst:812 ../../source/cli.rst:834
+#: ../../source/cli.rst:860 ../../source/cli.rst:878 ../../source/cli.rst:905
+#: ../../source/cli.rst:932 ../../source/cli.rst:955 ../../source/cli.rst:978
+#: ../../source/cli.rst:1006 ../../source/cli.rst:1033
+#: ../../source/cli.rst:1056 ../../source/cli.rst:1085
+#: ../../source/cli.rst:1110 ../../source/cli.rst:1145
+#: ../../source/cli.rst:1171 ../../source/cli.rst:1195
+#: ../../source/cli.rst:1218 ../../source/cli.rst:1241
+#: ../../source/cli.rst:1264 ../../source/cli.rst:1292
+#: ../../source/cli.rst:1312 ../../source/cli.rst:1329
+#: ../../source/cli.rst:1347
 msgid "*Command*"
 msgstr "*コマンド*"
 
@@ -261,6 +267,10 @@ msgstr "与えられたブロック高に含まれるトランザクションを
 msgid "Returns the receipts for a given block height."
 msgstr "与えられたブロック高のレシートを返却します。"
 
+#: ../../source/cli.rst:338
+msgid "Utilities to convert  between data types."
+msgstr "データタイプ間を変換するユーティリティ"
+
 #: ../../source/cli.rst:475
 msgid "Returns the current height of the block chain."
 msgstr "現在のブロックチェーン高を返却します。"
@@ -380,45 +390,29 @@ msgstr "アカウントが保有するすべて :doc:`ネームスペース <con
 msgid "Transaction"
 msgstr "トランザクション"
 
-#: ../../source/cli.rst:783
+#: ../../source/cli.rst:786
 msgid "Returns transaction information given a hash."
 msgstr "与えられたハッシュを持つトランザクションの情報を返却します。"
 
-#: ../../source/cli.rst:800
+#: ../../source/cli.rst:803
 msgid "Gets the confirmation status of a transaction."
 msgstr "トランザクションの承認状態を取得する。"
 
-#: ../../source/cli.rst:817
+#: ../../source/cli.rst:820
 msgid ""
 "Delegates the account importance to a :ref:`proxy account <account-link-"
 "transaction>`."
 msgstr "アカウントのインポータンスを :ref:`プロキシアカウント <account-link-transaction>` へ移譲する。"
 
-#: ../../source/cli.rst:839
+#: ../../source/cli.rst:868
 msgid ""
 "Cosigns and announces an :ref:`AggregateBondedTransaction <aggregate-"
 "transaction>`."
 msgstr ":ref:`AggregateBondedTransaction <aggregate-transaction>` への署名とアナウンス。"
 
-#: ../../source/cli.rst:857
+#: ../../source/cli.rst:886
 msgid "Creates a new :doc:`mosaic <concepts/mosaic>`."
 msgstr "新しい :doc:`モザイク <concepts/mosaic>` を作成します。"
-
-#: ../../source/cli.rst:884
-msgid "Changes a mosaic :doc:`mosaic <concepts/mosaic>`."
-msgstr ":doc:`モザイク <concepts/mosaic>` を変更する"
-
-#: ../../source/cli.rst:907
-msgid "Registers a :doc:`namespace <concepts/namespace>`."
-msgstr ":doc:`サブネームスペース <concepts/namespace>` を取得します。"
-
-#: ../../source/cli.rst:926
-msgid "Register a root namespace:"
-msgstr "ルートネームスペースの取得:"
-
-#: ../../source/cli.rst:932
-msgid "Register a subnamespace:"
-msgstr "サブネームスペースの取得:"
 
 #: ../../source/cli.rst:940
 msgid "Links a namespace to an :doc:`address <concepts/account>`."
@@ -428,27 +422,43 @@ msgstr "ネームスペースを :doc:`アドレス <concepts/account>` にリ�
 msgid "Links a namespace to a :doc:`mosaic <concepts/mosaic>`."
 msgstr "ネームスペースを :doc:`モザイク <concepts/mosaic>` にリンクする。"
 
-#: ../../source/cli.rst:986
+#: ../../source/cli.rst:1041
+msgid "Changes a mosaic :doc:`mosaic <concepts/mosaic>`."
+msgstr ":doc:`モザイク <concepts/mosaic>` を変更する"
+
+#: ../../source/cli.rst:1064
 msgid ""
 "Create or modify a :doc:`multisig account <concepts/multisig-account>`."
 msgstr ":doc:`マルチシグアカウント <concepts/multisig-account>` の作成または変更"
 
-#: ../../source/cli.rst:988
+#: ../../source/cli.rst:1066
 msgid ""
 "The command only supports to add or remove one account as a cosignatory at a"
 " time."
 msgstr "このコマンドは一度に 1 つのアカウントを署名者として追加または削除することのみをサポートしています。"
 
-#: ../../source/cli.rst:1015
+#: ../../source/cli.rst:1093
+msgid "Registers a :doc:`namespace <concepts/namespace>`."
+msgstr ":doc:`サブネームスペース <concepts/namespace>` を取得します。"
+
+#: ../../source/cli.rst:1112
+msgid "Register a root namespace:"
+msgstr "ルートネームスペースの取得:"
+
+#: ../../source/cli.rst:1118
+msgid "Register a subnamespace:"
+msgstr "サブネームスペースの取得:"
+
+#: ../../source/cli.rst:1153
 msgid "Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`."
 msgstr ":doc:`SecretLockTransaction <concepts/cross-chain-swaps>` をアナウンスする。"
 
-#: ../../source/cli.rst:1041
+#: ../../source/cli.rst:1179
 msgid ""
 "Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`."
 msgstr ":doc:`SecretProofTransaction <concepts/cross-chain-swaps>` をアナウンスする。"
 
-#: ../../source/cli.rst:1065
+#: ../../source/cli.rst:1203
 msgid ""
 ":doc:`Allow or block <concepts/account-restriction>` incoming and outgoing "
 "transactions for a given a set of addresses."
@@ -456,21 +466,21 @@ msgstr ""
 "与えられたアドレスを含む受信と送信トランザクションを :doc:`Allow or block 許可またはブロック <concepts/account-"
 "restriction>` します。"
 
-#: ../../source/cli.rst:1088
+#: ../../source/cli.rst:1226
 msgid ""
 ":doc:`Allow or block Ann<concepts/account-restriction>` incoming "
 "transactions containing a given set of mosaics."
 msgstr ""
 "与えられたモザイクを含む受信トランザクションを :doc:`許可またはブロック <concepts/account-restriction>` します。"
 
-#: ../../source/cli.rst:1111
+#: ../../source/cli.rst:1249
 msgid ""
 ":doc:`Allow or block <concepts/account-restriction>` outgoing transactions "
 "by transaction type."
 msgstr ""
 "トランザクションタイプによる送信トランザクションの :doc:`許可またはブロック <concepts/account-restriction>`"
 
-#: ../../source/cli.rst:1134
+#: ../../source/cli.rst:1272
 msgid ""
 "Announces a :ref:`TransferTransaction <transfer-transaction>` to an account "
 "exchanging value and/or data. For this transaction provide recipient, "
@@ -479,7 +489,7 @@ msgstr ""
 "値またはデータを交換するアカウントに :ref:`TransferTransaction <transfer-transaction>` "
 "をアナウンスします。このトランザクションでは、受信者、メッセージそして :doc:`モザイク <concepts/mosaic>` を提供します。"
 
-#: ../../source/cli.rst:1136
+#: ../../source/cli.rst:1274
 msgid ""
 "You can send ``multiple mosaics`` splitting them with a comma, e.g: "
 "@cat.currency::10000000,7cdf3b117a3c40cc::10. The ``mosaic amount`` after ::"
@@ -489,23 +499,23 @@ msgstr ""
 "@cat.currency::10000000,7cdf3b117a3c40cc::10。:: の後の ``モザイク総量`` は ``絶対数`` なので"
 " 1 @cat.currency は 1000000 (可分数 6) と表します。"
 
-#: ../../source/cli.rst:1161
+#: ../../source/cli.rst:1299
 msgid "Restriction"
 msgstr "制限"
 
-#: ../../source/cli.rst:1163
+#: ../../source/cli.rst:1301
 msgid "**Get account restrictions**"
 msgstr "**アカウント制限を取得する**"
 
-#: ../../source/cli.rst:1165
+#: ../../source/cli.rst:1303
 msgid "Returns the account restrictions attached to an address."
 msgstr "アドレスにアタッチされたアカウント制限を変更する"
 
-#: ../../source/cli.rst:1180
+#: ../../source/cli.rst:1318
 msgid "**Get mosaic global restrictions**"
 msgstr "**グローバルモザイク制限の取得**"
 
-#: ../../source/cli.rst:1182
+#: ../../source/cli.rst:1320
 msgid ""
 "Returns the :ref:`global restrictions <mosaic-global-restriction-"
 "transaction>` assigned to a mosaic."
@@ -513,11 +523,11 @@ msgstr ""
 "アドレスに割り当てられた :ref:`グローバルモザイク制限 <mosaic-global-restriction-transaction>` "
 "を返します。"
 
-#: ../../source/cli.rst:1197
+#: ../../source/cli.rst:1335
 msgid "**Get mosaic address restrictions**"
 msgstr "**モザイクアドレス制限の取得**"
 
-#: ../../source/cli.rst:1199
+#: ../../source/cli.rst:1337
 msgid ""
 "Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-"
 "transaction>` assigned to an address."
