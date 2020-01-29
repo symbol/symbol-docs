@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -257,8 +257,8 @@ msgid "Stop peer0 and peer1 services."
 msgstr "peer0 と peer1 サービスの停止"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:119
-msgid "Getting test cat.currency"
-msgstr "テスト cat.currency の取得"
+msgid "Getting test currency"
+msgstr "テスト通貨の取得"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:121
 msgid ""
@@ -318,16 +318,10 @@ msgid ""
 msgstr "前のステップで取得したキーを使用して、コマンド ``nem2-cli profile import`` を実行します。"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:161
-msgid ""
-"Use |cli| only for testing and development purposes, as the private keys "
-"stored are not encrypted."
-msgstr "|cli| は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:163
 msgid "You should see the account credentials in your terminal."
 msgstr "アカウントの資格情報がターミナルで確認できます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:178
+#: ../../source/guides/network/creating-a-private-test-net.rst:176
 msgid ""
 "As the name suggests, the **private key has to be kept secret at all "
 "times**. Anyone with access to the private key ultimately has control over "
@@ -338,7 +332,7 @@ msgstr ""
 "その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
 "。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:182
+#: ../../source/guides/network/creating-a-private-test-net.rst:180
 msgid ""
 "Now that you have your node running an account with some "
 "|privatenetworkcurrency|, we recommend you to surf the |sitename|. In this "

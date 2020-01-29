@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -66,77 +66,103 @@ msgstr ""
 "公開鍵は暗号理論によって秘密鍵から導出されます。特に |codename| は |edwards| を |Ed25519| "
 "というデジタル署名アルゴリズムと共に使用します。"
 
-#: ../../source/concepts/cryptography.rst:29
+#: ../../source/concepts/cryptography.rst:30
 msgid ""
-"You can find the |implementation| under the ``crypto`` module of :doc"
-":`catapult-server <../server>`."
+"You can find the |implementation-derivation| under the ``crypto`` module of "
+":doc:`catapult-server <../server>`."
 msgstr ""
-":doc:`catapult-server <../server>` の ``crypto`` モジュール下に |implementation| "
-"があります。"
+":doc:`catapult-server <../server>` の ``crypto`` モジュール下に |implementation-"
+"derivation| があります。"
 
-#: ../../source/concepts/cryptography.rst:35
+#: ../../source/concepts/cryptography.rst:34
+msgid "Signature"
+msgstr "署名"
+
+#: ../../source/concepts/cryptography.rst:36
+msgid ""
+"With a private key, the algorithm can sign messages producing 64-byte "
+"signatures. A signature is used to validate that a given key pair signed an "
+"entity just having the public key."
+msgstr ""
+"秘密鍵を使用して、アルゴリズムは64バイトの署名を生成するメッセージに署名できます。署名は、公開鍵を持つ特定のキーペアがエンティティに署名したことの検証に使用します。"
+
+#: ../../source/concepts/cryptography.rst:39
+msgid ""
+"The private key is hashed before signing an entity to improve randomness. "
+"|codename|'s public network uses **KECCAK-512** instead of SHA3-512 to have "
+"compatible signatures with NEM (NIS1)."
+msgstr ""
+"秘密鍵はランダム性を改善するためにエンティティに署名する前にハッシュされます。 |codename| のパブリックネットワークは NEM (NIS1) "
+"と互換性のある署名をするために SHA3-512 ではなく **KECCAK-512** を使用します。"
+
+#: ../../source/concepts/cryptography.rst:41
+msgid ""
+"You can find the implementation to |implementation-signature| and "
+"|implementation-verification| under the ``crypto`` module of :doc:`catapult-"
+"server <../server>`."
+msgstr ""
+"実装は |implementation-signature| と :doc:`catapult-server <../ server>` の "
+"``crypto`` モジュールの下で |implementation-verification| にあります。"
+
+#: ../../source/concepts/cryptography.rst:47
 msgid "Address"
 msgstr "アドレス"
 
-#: ../../source/concepts/cryptography.rst:37
+#: ../../source/concepts/cryptography.rst:49
 msgid ""
 "Public keys can be shared in a shorter form as **addresses**. A |codename| "
 "address is a **base-32 encoded triplet** consisting of:"
 msgstr ""
-"公開鍵は **アドレス** の短い形式で共有できます。|codename| アドレスは次のものからなる **base-32 "
-"でエンコードされたトリプレット** です:"
+"公開鍵は **アドレス** の短い形式で共有できます。 |codename| アドレスは次のものからなる **base-32 "
+"エンコードされたトリプレット** です:"
 
-#: ../../source/concepts/cryptography.rst:39
+#: ../../source/concepts/cryptography.rst:51
 msgid "The network byte."
 msgstr "ネットワークバイト"
 
-#: ../../source/concepts/cryptography.rst:40
+#: ../../source/concepts/cryptography.rst:52
 msgid "The 160-bit hash of the account's public key."
 msgstr "アカウントの公開鍵の 160-bit ハッシュ"
 
-#: ../../source/concepts/cryptography.rst:41
+#: ../../source/concepts/cryptography.rst:53
 msgid ""
 "The 4 byte checksum, to allow the quick recognition of mistyped addresses."
 msgstr "アドレスのミスタイプを素早く確認するための 4 byte チェックサム"
 
-#: ../../source/concepts/cryptography.rst:43
+#: ../../source/concepts/cryptography.rst:55
 msgid ""
-"The following steps are performed to `convert a public key "
-"<https://github.com/nemtech/catapult-"
-"server/blob/master/src/catapult/model/Address.cpp#L50>`_ to an address:"
-msgstr ""
-"次のステップでは `公開鍵をアドレスに変換 <https://github.com/nemtech/catapult-"
-"server/blob/master/src/catapult/model/Address.cpp#L50>`_ します:"
+"The following steps are performed to |implementation-public-key-address|:"
+msgstr "次の手順を実行します |implementation-public-key-address|:"
 
-#: ../../source/concepts/cryptography.rst:67
+#: ../../source/concepts/cryptography.rst:79
 msgid "SHA3-256 of the public key."
 msgstr "公開鍵の SHA3-256"
 
-#: ../../source/concepts/cryptography.rst:68
+#: ../../source/concepts/cryptography.rst:80
 msgid "ripemd160 hash of (1)."
 msgstr "ripemd160 で (1) のハッシュを生成。"
 
-#: ../../source/concepts/cryptography.rst:69
+#: ../../source/concepts/cryptography.rst:81
 msgid "add the network identifier byte in front of (2)."
 msgstr "ネットワーク識別バイトを (2) の前に追加する。"
 
-#: ../../source/concepts/cryptography.rst:70
+#: ../../source/concepts/cryptography.rst:82
 msgid "concatenate (3) and the checksum of (3)."
 msgstr "上記 (3) と (3) のチェックサムを結合する。"
 
-#: ../../source/concepts/cryptography.rst:71
+#: ../../source/concepts/cryptography.rst:83
 msgid "(Optional) base-32 of (4)."
 msgstr "(オプション) base-32 of (4)."
 
-#: ../../source/concepts/cryptography.rst:73
+#: ../../source/concepts/cryptography.rst:85
 msgid ""
-"|codename|'s public network uses **KECCAK** instead of SHA3-256 to have "
-"compatible keys with NIS1."
+"|codename|'s public network uses **KECCAK-256** instead of SHA3-256 to have "
+"compatible keys with NEM (NIS1)."
 msgstr ""
-"|codename| のパブリックネットワークは NIS1 と互換性のあるキーを持つために SHA3-256 ではなく **KECCAK** "
-"を使用します。"
+"|codename| のパブリックネットワークは NEM (NIS1) と互換性のあるキーを持つために SHA3-256 ではなく "
+"**KECCAK-256** を使用します。"
 
-#: ../../source/concepts/cryptography.rst:75
+#: ../../source/concepts/cryptography.rst:87
 msgid ""
 "As you can see, it is possible to create an address without interacting with"
 " the blockchain. In fact, the blockchain only tracks addresses and public "
@@ -144,6 +170,6 @@ msgid ""
 msgstr ""
 "上記の説明通り、ブロックチェーンと疎通せずともアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
 
-#: ../../source/concepts/cryptography.rst:89
+#: ../../source/concepts/cryptography.rst:113
 msgid "Continue: :doc:`Block <block>`."
 msgstr "次へ: :doc:`ブロック <block>`"

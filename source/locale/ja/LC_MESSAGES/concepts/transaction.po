@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -271,7 +271,7 @@ msgstr "署名者の署名と公開鍵をトランザクションに追加して
 
 #: ../../source/concepts/transaction.rst:128
 msgid ""
-"Calculate the `hash of the transaction <https://github.com/nemtech/nem2-sdk-"
+"Calculate the `transaction hash <https://github.com/nemtech/nem2-sdk-"
 "typescript-"
 "javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ by "
 "applying the network hashing algorithm to the first 32 bytes of signature, "
@@ -279,7 +279,7 @@ msgid ""
 "transaction payload."
 msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードにハッシュアルゴリズムを適用して "
-"`トランザクションのハッシュ <https://github.com/nemtech/nem2-sdk-typescript-"
+"`トランザクションハッシュ <https://github.com/nemtech/nem2-sdk-typescript-"
 "javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ を計算します。"
 
 #: ../../source/concepts/transaction.rst:163
