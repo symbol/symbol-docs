@@ -16,13 +16,16 @@
  *
  */
 
-import {BlockHttp} from "nem2-sdk";
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const height = 1;
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const blockHttp = repositoryFactory.createBlockRepository();
 
-const blockHttp = new BlockHttp('http://localhost:3000');
+const height = 1;
 blockHttp
-    .getBlockByHeight(height)
-    .subscribe(block => console.log(block), err => console.error(err));
+    .getBlockByHeight(height.toString())
+    .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */

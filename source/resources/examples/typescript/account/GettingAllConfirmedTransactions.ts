@@ -16,29 +16,32 @@
  *
  */
 
-import {AccountHttp, Address, QueryParams} from "nem2-sdk";
-import {concatMap, expand, toArray} from "rxjs/operators";
-import {EMPTY} from 'rxjs'
+import {Address, QueryParams} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {EMPTY} from 'rxjs';
+import {concatMap, expand, toArray} from 'rxjs/operators';
 
-const nodeUrl = 'http://localhost:3000';
-const accountHttp = new AccountHttp(nodeUrl);
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const address = Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const accountHttp = repositoryFactory.createAccountRepository();
 
 const pageSize = 100;
 const allTransactions = true;
 
-// Replace with an address
-const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
-const address = Address.createFromRawAddress(rawAddress);
-
 accountHttp
-    .transactions(address, new QueryParams(pageSize, undefined))
+    .getAccountTransactions(address, new QueryParams(pageSize, undefined))
     .pipe(
-        expand( (transactions) => transactions.length >= pageSize && allTransactions
-            ? accountHttp.transactions(address, new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
+        expand( (transactions) => transactions.length === pageSize && allTransactions
+            ? accountHttp.getAccountTransactions(address,
+                new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
             : EMPTY),
-        concatMap(transactions => transactions),
-        toArray()
+        concatMap((transactions) => transactions),
+        toArray(),
     )
-    .subscribe(transactions => {
+    .subscribe((transactions) => {
         console.log(transactions);
-    },err => console.log(err));
+    }, (err) => console.log(err));

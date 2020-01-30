@@ -16,15 +16,19 @@
  *
  */
 
-import {AccountHttp, Address} from "nem2-sdk";
+import {Address} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-// Replace with an address
-const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
+// replace with recipient address
+const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const address = Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const accountHttp = repositoryFactory.createAccountRepository();
 
-const accountHttp = new AccountHttp('http://localhost:3000');
 accountHttp
     .getAccountInfo(address)
-    .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));
+    .subscribe((accountInfo) => console.log(accountInfo), (err) => console.error(err));
 /* end block 01 */

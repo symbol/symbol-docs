@@ -16,24 +16,26 @@
  *
  */
 
-import {AccountHttp, Address, MosaicHttp, MosaicService} from 'nem2-sdk';
+import {Address, MosaicService} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
-// Replace with an address
-const rawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
+// replace with account address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
-
-const url = 'http://localhost:3000';
-const accountHttp = new AccountHttp(url);
-const mosaicHttp = new MosaicHttp(url);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const accountHttp = repositoryFactory.createAccountRepository();
+const mosaicHttp = repositoryFactory.createMosaicRepository();
 const mosaicService = new MosaicService(accountHttp, mosaicHttp);
 
 mosaicService
     .mosaicsAmountViewFromAddress(address)
     .pipe(
-        mergeMap((_) => _)
+        mergeMap((_) => _),
     )
-    .subscribe(mosaic => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
-        err => console.error(err));
+    .subscribe((mosaic) => console.log('You have', mosaic.relativeAmount(), mosaic.fullName()),
+        (err) => console.error(err));
 /* end block 01 */

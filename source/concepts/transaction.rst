@@ -2,7 +2,8 @@
 Transaction
 ###########
 
-A transaction generally represents a unit of work within a database system. In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
+A transaction generally represents a unit of work within a database system.
+In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
 
 *****************
 Transaction types
@@ -10,7 +11,8 @@ Transaction types
 
 .. _transaction-types:
 
-There are different types of transactions. For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
+There are different types of transactions.
+For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 .. csv-table::
     :header:  "Id",  "Type", "Description"
@@ -57,9 +59,11 @@ There are different types of transactions. For example, you can transfer :doc:`m
 Defining a transaction
 **********************
 
-Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form. Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties. You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
+Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form.
+Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties.
+You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
-We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+We recommend `using the SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
 .. code-block:: typescript
 
@@ -79,7 +83,7 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
         Deadline.create(),
         recipientAddress,
         [NetworkCurrencyMosaic.createRelative(10)],
-        PlainMessage.create('Welcome To NEM'),
+        PlainMessage.create('This is a test message'),
         NetworkType.MIJIN_TEST);
 
     console.log(transferTransaction.serialize());
@@ -101,18 +105,19 @@ We recommend `using the NEM2-SDK to define <https://github.com/nemtech/nem2-docs
 Signing a transaction
 *********************
 
-Accounts must sign transactions before announcing them to the network. `Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
+Accounts must sign transactions before announcing them to the network.
+`Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
 For example, a TransferTransaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
-An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64>`_ :
+An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2. Get the nemesis block generation hash. You can query ``http://localhost:3000/block/1`` and copy ``meta.generationHash`` value.
+2. Get the nemesis block generation hash. You can query ``nodeUrl + '/block/1'`` and copy ``meta.generationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6. Calculate the `hash of the transaction <https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76>`_ by applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+6. Calculate the `transaction hash <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ by applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 
@@ -120,7 +125,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 
     const privateKey = process.env.PRIVATE_KEY as string;
     const generationHash = process.env.GENERATION_HASH as string;
-    const account = Account.createFromPrivateKey(privateKey,NetworkType.MIJIN_TEST);
+    const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
     const signedTransaction = account.sign(transferTransaction, generationHash);
 
@@ -149,7 +154,8 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 Announcing a transaction
 ************************
 
-Signed transactions are ready to be announced to the network. You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/endpoints.html#operation/announceTransaction>`_.
+Signed transactions are ready to be announced to the network.
+You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 
@@ -167,7 +173,8 @@ Signed transactions are ready to be announced to the network. You can either use
 
         curl -X PUT -H "Content-type: application/json" -d '{"payload":"B3000000F77A8DCFCB57B81F9BE5B46738F7132998F55123BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA6249E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D22A599A3D0E3039054410000000000000000265DEE3F1700000090FA39EC47E05600AFA74308A7EA607D145E371B5F4F1447BC0F00010057656C636F6D6520546F204E454D44B262C46CEABB858096980000000000"}' http://localhost:3000/transaction
 
-After announcing the transaction, the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
+After announcing the transaction, the REST API will always return an OK response immediately.
+At this point, it is still unknown whether the transaction is valid.
 
 .. figure:: ../resources/images/diagrams/transaction-cycle.png
     :width: 800px
@@ -175,13 +182,21 @@ After announcing the transaction, the REST API will always return an OK response
 
     Transaction cycle
 
-The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.  Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
+The first stage of validation happens in the API nodes.
+If the transaction presents some error, the WebSocket throws a notification through the status channel.
+In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.
+Never rely on a transaction which has an unconfirmed state.
+It is not clear if it will get included in a block, as it should pass a second validation.
 
-The second validation is done before the transaction is added in a :doc:`harvested block <block>`. If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
+The second validation is done before the transaction is added in a :doc:`harvested block <block>`.
+If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
 
-Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account. Additionally, the transaction fee is deducted from the signer's account.
+Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
+Additionally, the transaction fee is deducted from the signer's account.
 
-The transaction has **zero confirmations** at this point. When another block is added to the blockchain, the transaction has one confirmation. The next block added to the chain will give it two confirmations and so on.
+The transaction has **zero confirmations** at this point.
+When another block is added to the blockchain, the transaction has one confirmation.
+The next block added to the chain will give it two confirmations and so on.
 
 .. _rollbacks:
 
@@ -189,11 +204,14 @@ The transaction has **zero confirmations** at this point. When another block is 
 Rollbacks
 *********
 
-Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back. These are essential to resolve forks of the blockchain.
+Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back.
+These are essential to resolve forks of the blockchain.
 
-The :properties:`rewrite limit <config-network.properties>` is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
+The rewrite limit is the maximum number of blocks that can be rolled back.
+Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of ``40`` blocks. Once a transaction has more than 40 confirmations, it cannot be reversed.
+|codename|'s public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`.
+Once a transaction has more than ``maxRollBackConfirmations`` value, it cannot be reversed.
 
 .. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
@@ -209,9 +227,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+*******************
+Transaction schemas
+*******************
 
 .. _transaction:
 
@@ -222,16 +240,33 @@ Serialization of a transaction.
 
 **Inlines**:
 
-* :ref:`SizePrefixedEntity<size-prefixed-entity>`
-* :ref:`VerifiableEntity<verifiable-entity>`
-* :ref:`EntityBody<entity-body>`
+* :ref:`SizePrefixedEntity <size-prefixed-entity>`
+* :ref:`VerifiableEntity <verifiable-entity>`
+* :ref:`EntityBody <entity-body>`
 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
 
     max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
-    deadline; :schema:`Timestamp <types.cats#L5>`;  Number of seconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    deadline; :schema:`Timestamp <types.cats#L8>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+
+.. _embedded-transaction-header:
+
+EmbeddedTransactionHeader
+=========================
+
+Binary layout for an embedded transaction header.
+
+**Inlines**:
+
+* :ref:`SizePrefixedEntity <size-prefixed-entity>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    embeddedTransactionHeader_Reserved1; uint32; Reserved padding to align end of EmbeddedTransactionHeader on 8-byte boundary.
 
 .. _embedded-transaction:
 
@@ -242,8 +277,12 @@ Serialization of an :doc:`aggregate <aggregate-transaction>` inner transaction.
 
 **Inlines**:
 
-* :ref:`SizePrefixedEntity<size-prefixed-entity>`
-* :ref:`EntityBody<entity-body>`
+* :ref:`EmbeddedTransactionHeader <embedded-transaction-header>`
+* :ref:`EntityBody <entity-body>`
+
+**************
+Entity schemas
+**************
 
 .. _size-prefixed-entity:
 
@@ -257,3 +296,66 @@ Serialization of an entity that has a prefixed size.
     :delim: ;
 
     size; unit32; Size of the transaction.
+
+.. _verifiable-entity:
+
+VerifiableEntity
+================
+
+Serialization of an entity that should be signed by an account.
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    verifiableEntityHeader_Reserved1; uint32; reserved padding to align Signature on 8-byte boundary.
+    signature; :schema:`Signature <types.cats#L15>`; Entity signature generated by the signer.
+
+.. _entity-body:
+
+EntityBody
+==========
+
+Serialization of an entity.
+An entity could be a block or a :doc:`transaction <transaction>`.
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    signerPublicKey; :schema:`Key <types.cats#L14>`; Public key of the signer of the entity.
+    entityBody_Reserved1; uint32; Reserved padding to align end of EntityBody on 8-byte boundary.
+    version; uint8; Version of the structure.
+    network; :ref:`Network <network-type>`; Entity network.
+    type; :ref:`EntityType <entity-type>`; Entity type.
+
+.. _network-type:
+
+NetworkType
+===========
+
+Enumeration: uint8
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x68; (MAIN_NET) Public network.
+    0x98; (TEST_NET) Public test network.
+    0x60; (MIJIN) Private network.
+    0x90; (MIJIN_TEST) Private test network.
+
+.. _entity-type:
+
+EntityType
+==========
+
+Enumeration: uint16
+
+.. csv-table::
+    :header: "Id", "Description"
+    :delim: ;
+
+    0x0000; Reserved.
+
+Continue: :doc:`Fees <fees>`.

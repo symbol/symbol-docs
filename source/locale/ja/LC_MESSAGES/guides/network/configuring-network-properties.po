@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-network-properties.rst:10
+#: ../../source/guides/network/configuring-network-properties.rst:18
 msgid "Configuring network properties"
 msgstr "ネットワークプロパティの設定"
 
-#: ../../source/guides/network/configuring-network-properties.rst:12
+#: ../../source/guides/network/configuring-network-properties.rst:20
 msgid "Customize the network configurable parameters."
 msgstr "ネットワーク設定パラメータの変更"
 
-#: ../../source/guides/network/configuring-network-properties.rst:14
+#: ../../source/guides/network/configuring-network-properties.rst:22
 msgid ""
 "The directory ``ruby/catapult-templates/peer_node/resources`` of the "
 "|catapult-service-bootstrap| repository comes with a set of files to "
@@ -38,17 +38,17 @@ msgstr ""
 "|catapult-service-bootstrap| リポジトリの ``ruby​/catapult-"
 "templates/peer_node/resources`` ディレクトリにはネットワークを構成するための一連ファイルが付属しています。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:16
+#: ../../source/guides/network/configuring-network-properties.rst:24
 msgid ""
 "The ``.properties`` files provided can be edited with any text editor before"
 " launching a network for the first time."
 msgstr "生成される ``.properties`` ファイルはネットワーク初回起動の前に任意のテキストエディタで編集できます。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:20
+#: ../../source/guides/network/configuring-network-properties.rst:28
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/guides/network/configuring-network-properties.rst:22
+#: ../../source/guides/network/configuring-network-properties.rst:30
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
@@ -66,11 +66,6 @@ msgstr "タイプ"
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Description"
 msgstr "説明"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Default"
-msgstr "デフォルト"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Network identifier."

@@ -4,12 +4,12 @@
 Style guide
 ###########
 
-As NEM grows as an open source project, more developers will begin to
+As |codename| grows as an open source project, more developers will begin to
 rely on documentation to provide quick and efficient education about the
 platform. It is thus imperative that a high level of cohesion is
-achieved across numerous articles on the NEM Developer Center. The
+achieved across numerous articles on the |sitename|. The
 following style guide will provide a guideline to improve the
-consistency and quality of writing from the NEM technical writing team.
+consistency and quality of writing from the |codename| technical writing team.
 
 ***************
 Getting started
@@ -83,7 +83,7 @@ Tone
     Use American English variant.; Use UK Spelling/grammar: "colo**u**r".
     Be friendly, maintaining a professionalism.; Use too much contractions, slang, colloquialism, buzz words, excessive exclamation marks.
     Use active voice & present tense by default.; Use passive voice.
-    Address the reader as "you" by default. Use "we" as the default pronoun in your article unless you are referring to a personal recommendation.; Use “you” to describe an action the user has to do: We are going to create a mosaic ...
+    Address the reader as "you" by default. Use "we" as the default pronoun in your article unless you are referring to a personal recommendation.; Use “you” to describe an action the user has to do.
     Write documentation for an international audience, with diversity and inclusivity in mind.; Include culturally or politically controversial ideas or examples.
     Be Concise.; Use long sentences or filler words in excess ("simply", "really", "just", "please").
 
@@ -101,7 +101,7 @@ Sustaining a uniform format is also essential for consistency.
     Writing headers for a table.; This table.
     Writing titles.; Basic formatting (first letter capitalized).
     Writing numbers; 1,000.5. Use the period (full stop) as the decimal separator.
-    Referencing variable values, functions or file names.; NEM has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
+    Referencing variable values, functions, file names, mosaic ids, addresses or urls.; |codename| has a rewrite limit of ``360`` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
     Warning the reader.; Use notes. :doc:`Example <../getting-started/setup-workstation>`
     Providing helpful hyperlinks throughout your article.; transfer transactions are used to send :doc:`mosaics <../concepts/mosaic>` between two :doc:`accounts <../concepts/account>`.
     Explaining a difficult concept with many steps.; Break information and actions into bulleted or numbered lists when possible.
@@ -132,19 +132,21 @@ List of terms that are prone to be written in different ways.
     :delim: ;
 
     API; Api, Api
+    Catapult; catapult, NEM Catapult
+    id; ID
     JavaScript; Javascript, javascript
+    MongoDB; mongodb, Mongodb
     NEM; Nem, nem
     NEM Developer Center; NEM developer center
-    Catapult; catapult, NEM Catapult
     Node.js; nodejs, node.js
     RxJS; rxjs
-    SHA-256; SHA256, Sha-256
     SDK; Sdk, Sdk
-    TransferTransaction, Transfer Transaction, transfer transaction
-    transfer transactions, TransferTransactions
-    TypeScript; typescript, Typescript
-    MongoDB; mongodb, Mongodb
+    SHA-256; SHA256, Sha-256
     Smart Asset System; Smart asset system
+    Symbol; symbol, NEM Symbol
+    TransferTransaction; Transfer Transaction, transfer transaction
+    TypeScript; typescript, Typescript
+    Whitepaper; WhitePaper
 
 .. |sphinx| raw:: html
 

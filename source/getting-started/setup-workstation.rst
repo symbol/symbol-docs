@@ -1,5 +1,4 @@
 .. post:: 16 Aug, 2018
-    :category: SDK
     :excerpt: 1
     :nocomments:
 
@@ -7,96 +6,40 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This first guide will walk you through a step-by-step installation of the required tools to start developing with |codename|.
 
-.. _setup-catapult-service-bootstrap:
+We will be using the **test network**, which uses the same technology and features of the future main public network.
+You can use the testnet to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
-**********************************
-Running Catapult Service Bootstrap
-**********************************
+.. _setup-creating-a-test-account:
 
-To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
+*******************
+Creating an account
+*******************
 
-.. note:: NEM's next core engine, code-named **Catapult**, is `under development <https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap setup is for learning and development purposes, and it should not power any production Catapult instances.
+An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-Environment requirements
-========================
-
-* **OS**: Linux or Mac
-* `docker`_ 19.03 installed
-* `docker-compose`_ 1.22 installed
-
-Installation
-============
-
-1. Use this link to **download the latest release** of the package, or clone the repository directly using Git.
+1. Install |cli|.
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch 0.8.0.3
+    npm install --global nem2-cli
 
-2. Open the ``catapult-service-bootstrap`` folder.
-
-.. code-block:: bash
-
-    cd catapult-service-bootstrap
-
-3. Run the network.
+2. Generate a new account and save it as a **profile**.
 
 .. code-block:: bash
 
-    ./cmds/start-all
+    nem2-cli account generate
 
-.. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Do you want to save the account? [y/n]: y
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
+    Insert the profile name: testnet
+    Do you want to set the account as the default profile? [y/n]: y
 
-Verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+.. note:: If the test network node is not working, you can use another node url from |network-list|. You can also **run your testnet node** by following :doc:`this guide <../guides/network/running-a-test-net-node>`.
 
-To stop the process, press ``Ctrl+C``.
-
-.. _setup-getting-a-test-account:
-
-**********************
-Getting a test account
-**********************
-
-An :doc:`account <../concepts/account>` is a **deposit box** where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them announcing transactions. The :doc:`transaction announcement <../concepts/transaction>` has an associated cost to provide an incentive to those who secure the network and run the infrastructure. This cost is paid in ``cat.currency`` mosaics, the default network token.
-
-After running the ``catapult-service-bootstrap`` tool for the first time, the available currency supply is distributed between a generated set of accounts. To keep one of these accounts quickly retrievable, we are going to store one of them using a command-line tool to conveniently perform the most commonly used actions i.e. interact with the blockchain, setting up an account, sending funds, etc.
-
-1. Install :doc:`NEM2-CLI <../cli>`.
-
-.. code-block:: bash
-
-    npm install --global nem2-cli@0.13.4
-
-2. Open a new terminal window. Then, go to the directory where the bootstrap tool has generated the addresses.
-
-.. code-block:: bash
-
-    cd  build/generated-addresses/
-
-3. Display the content of the ``addresses.yaml`` file.
-
-.. code-block:: bash
-
-    cat addresses.yaml
-
-3. Under the section ``nemesis_addresses``, you will find the key pairs which contain ``cat.currency``. Copy the private key of the first account.
-
-4. Type the command ``nem2-cli profile create`` using the key obtained in the previous step.
-
-.. code-block:: bash
-
-    nem2-cli profile create
-
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
-    Introduce your private key: 123***456
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
-    Insert profile name (blank means default and it could overwrite the previous profile):
-
-.. note:: Use nem2-cli only for testing and development purposes, as the private keys stored are not encrypted.
-
-You should see the account credentials in your terminal.
+3. You should see the account credentials in your terminal.
 
 .. code-block:: bash
 
@@ -104,14 +47,46 @@ You should see the account credentials in your terminal.
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6                   │
+    │ Address     │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 654***321                                                        │
+    │ Public Key  │ 203...C0A                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ 123***456                                                        │
+    │ Private Key │ AAA...AAA                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-As the name suggests, the **private key has to be kept secret at all times**. Anyone with access to the private key ultimately has control over the account. On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
+.. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
+
+.. _setup-getting-test-currency:
+
+*********************
+Getting test currency
+*********************
+
+To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure.
+This cost is paid in |networkcurrency| mosaics, the default network currency of the public network.
+
+Now that you have created your first account, try to request |networkcurrency| units from the **testnet faucet**.
+|faucet|, indicate the amount of |networkcurrency| you want to receive and the address, and click "CLAIM!".
+
+.. figure:: ../resources/images/screenshots/faucet.png
+    :align: center
+
+.. note:: If the default faucet is empty, try this other |faucet-2|.
+
+After the transaction gets confirmed, check if the account has received |networkcurrency| using the command-line tool.
+
+.. code-block:: bash
+
+    nem2-cli account info  --profile testnet
+
+    Balance Information
+    ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+    │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+    ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+    │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
+    └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
+
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
 
 .. _setup-development-environment:
 
@@ -119,9 +94,11 @@ As the name suggests, the **private key has to be kept secret at all times**. An
 Creating a project
 ******************
 
-Now that you have your account filled with cat.currency units, it is the time to choose a **programming language**. Pick the one you feel most comfortable with, or follow your project requirements.
+Now that you have your account filled with |networkcurrency| units, it is the time to choose a **programming language**.
+Pick the one you feel most comfortable with, or follow your project requirements.
 
-Then, **create a folder for your new project** and run the instructions for the selected language. If none of the languages fits your project, you can always query the blockchain directly using the `REST gateway </endpoints.html>`_.
+Then, **create a folder for your new project** and run the instructions for the selected language.
+If none of the languages fits your project, you can always query the blockchain directly using the :doc:`REST gateway <../api>`.
 
 .. tabs::
 
@@ -133,13 +110,13 @@ Then, **create a folder for your new project** and run the instructions for the 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk rxjs
 
-        3. We recommend to use **TypeScript instead of JavaScript** when building applications for NEM blockchain.
+        3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
 
         Make sure you have at least version 2.5.X installed.
 
@@ -162,11 +139,11 @@ Then, **create a folder for your new project** and run the instructions for the 
 
             npm init
 
-        2. Install nem2-sdk and rxjs library.
+        2. Install |sdk| and RxJS library.
 
         .. code-block:: bash
 
-            npm install nem2-sdk@0.14.4 rxjs
+            npm install nem2-sdk rxjs
 
     .. tab:: Java
 
@@ -189,34 +166,12 @@ Then, **create a folder for your new project** and run the instructions for the 
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.14.2"
+                compile "compile 'io.nem:sdk-vertx-client:0.16.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
 
-..
-    .. tab:: C#
-
-        1. Create a new project using a C# IDE. If it is Visual Studio, use the Package Manager Console to install the nem2-sdk.
-
-        2. Open the ``Tools > NuGet Package Manager > Package Manager Console`` menu command.
-
-        3. Enter nem2-sdk and reactive library packages names in the terminal.
-
-        .. code-block:: bash
-
-            Install-Package nem2-sdk
-            Install-Package System.Reactive
-
-        Are you using another IDE? In that case check |different-ways-to-install-a-nuget-package|.
-
 Continue: :doc:`Writing your first application <first-application>`.
-
-.. _docker: https://docs.docker.com/install/
-
-.. _docker-compose: https://docs.docker.com/compose/install/
-
-.. _mijin: https://mijin.io/en/product/#mijin2
 
 .. _ts-node: https://www.npmjs.com/package/ts-node
 
@@ -224,10 +179,18 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-.. |catapult-service-bootstrap| raw:: html
-
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
-
 .. |different-ways-to-install-a-nuget-package| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/ways-to-install-a-package" target="_blank">different ways to install a NuGet Package</a>
+
+.. |network-list| raw:: html
+
+   <a href="http://explorer-xym.nemtech.network/nodes" target="_blank">this list</a>
+
+.. |faucet| raw:: html
+
+   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Navigate here</a>
+
+.. |faucet-2| raw:: html
+
+   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>

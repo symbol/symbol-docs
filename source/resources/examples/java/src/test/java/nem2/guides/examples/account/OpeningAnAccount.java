@@ -30,7 +30,7 @@ class OpeningAnAccount {
         /* start block 01 */
         // Replace with a private key
         final String privateKey = "0000000000000000000000000000000000000000000000000000000000000000";
-        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.TEST_NET);
 
         System.out.printf("Your account address is: %s and its private key: %s",
             account.getAddress().plain(), account.getPrivateKey());

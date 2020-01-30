@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 04 March, 2019
-    :category: Namespace, Account
+    :category: Namespace
     :excerpt: 1
     :nocomments:
 
@@ -16,15 +16,15 @@ Prerequisites
 *************
 
 - Have registered one :doc:`namespace <../../concepts/namespace>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-To make **long addresses** easier to use, an account can link a registered :doc:`name <../../concepts/namespace>` to an :doc:`account <../../concepts/account>`.
+1. Define the namespace identifier and the address you want to alias.
 
-Before starting, you must have registered a :doc:`namespace <../../concepts/namespace>` first. If you already have registered a namespace, define the namespace identifier and the address you want to alias.
+.. note:: The account signing the transaction must own the namespace.
 
 .. example-code::
 
@@ -33,7 +33,7 @@ Before starting, you must have registered a :doc:`namespace <../../concepts/name
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -47,16 +47,20 @@ Then, announce the **AliasTransaction** that links the namespace and the address
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/namespace/LinkingANamespaceToAnAddress.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/LinkingANamespaceToAnAddress.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceAddress.sh
-        :language: bash
-        :start-after: #!/bin/sh
+.. note:: If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
-If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceAddress.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
 .. _sending-a-transfer-transaction-to-an-aliased-address:
 
@@ -73,7 +77,7 @@ Now you can send transactions to the namespace linked to the account instead of 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionAddressAlias.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionAddressAlias.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

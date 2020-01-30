@@ -2,13 +2,11 @@
 Server
 ######
 
-As a blockchain platform, NEM relies on a decentralized network of nodes to provide a powerful, stable, and secure platform for Smart Asset transactions.
+|codename|-based networks rely on nodes to provide a trustless, high-performance, and secure blockchain platform.
 
-These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running for more than 4 years.
+These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
-Through its multi-tier architecture, it is possible to isolate the peer-to-peer network and implement better API integration flows with the proposed REST API layer.
-
-Also, Catapult offers private networks the ability to add their own transaction types by developing **plugins** for the catapult-server nodes.
+Learn more about the protocol by reading the |whitepaper| and this :doc:`documentation <concepts/account>`.
 
 ************
 Installation
@@ -17,64 +15,10 @@ Installation
 **Catapult server** can be used to configure three different types of :doc:`nodes <concepts/node>`:
 
 * **Peer node**: The peer node verifies or discards the transactions once the API pushes them into the P2P network. It runs the consensus algorithm, creates new blocks, and propagates the changes through the network.
-
-* **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.
-
+* **API node**: The primary responsibility of the API node is to properly store data in the MongoDB database once transactions are validated.
 * **Dual node**: The dual node combines a peer and API nodes into a single server instance.
 
-You can create a new catapult-server image following the building |instructions|, but we recommend deploying your own network for development or learning purposes with |catapult-service-bootstrap|.
-
-Troubleshooting
-===============
-
-This section highlights common errors or difficulties one may encounter whilst setting a Catapult node.
-
-**Mosaic outflows**
-
-This error usually looks like:
-
-.. code-block:: console
-
-    14:19:34.719477 0x000000010dfbf5c0: <error> (local::HostUtils.h@43) Throwing exception: harvesting outflows (0) do not add up to power ten multiple of expected importance (15000000)
-
-.. code-block:: console
-
-    14:19:34.719477 0x000000010dfbf5c0: <error> (local::HostUtils.h@43) Throwing exception: harvesting outflows (15000000) do not add up to power ten multiple of expected importance (17000000)
-
-**What does it mean?**
-
-This error can happen in the event of the following situations:
-
-a) The supply of the ``cat.harvest`` mosaic the nemesis block does not match the supply inside of the :properties:`config-network.properties <config-network.properties>` file.
-
-b) The mosaicId inside of the :properties:`config-network.properties <config-network.properties>` does not match the one generated inside of the nemesis block.
-
-**How to fix it?**
-
-For the first scenario, change the ``totalChainImportance`` in your resources :properties:`config-network.properties <config-network.properties>` to match the supply set in the nemesis block.
-
-For the second scenario, you will have to find the correct mosaic identifier that the nemgen tool creates. You can run :ref:`nemgen <catapult-server-tools>`, and output the result to to a txt file. Then, search for the ``cat.<harvest | currency>`` identifier.
-
-********************
-Package organization
-********************
-
-**Repository**: |catapult-server|
-
-.. csv-table::
-   :header: "Folder name", "Description"
-   :delim: ;
-
-   /extensions; Modules that add features to the bare catapult-server. They range from extensions that are critical like consensus and networking to optional extensions like ZMQ messaging and other API conveniences.
-   /external; Implementations of the hashing algorithms used.
-   /plugins;  Modules that introduce new and different ways to alter the chain's state via transactions.
-   /resources; Node and network configurable properties.
-   /scripts; Utility scripts for developers.
-   /sdk; Reusable code used by tests and tools.
-   /seed; Nemesis blocks used in tests.
-   /src; Catapult's core engine.
-   /tests; Collection of tests.
-   /tools; Tools to deploy and monitor networks and nodes.
+To compile symbol-server source code, follow the |instructions|. However, if you want to run your a network for development or learning purposes with |catapult-service-bootstrap|.
 
 .. _catapult-server-tools:
 
@@ -247,3 +191,7 @@ Options
 .. |instructions| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server/blob/master/BUILDING.md" target="_blank">instructions for Ubuntu</a>
+
+.. |whitepaper| raw:: html
+
+   <a href="https://nemtech.github.io/catapult-whitepaper/main.pdf" target="_blank">Whitepaper</a>

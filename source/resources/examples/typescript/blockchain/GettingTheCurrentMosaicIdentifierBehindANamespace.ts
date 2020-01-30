@@ -16,14 +16,20 @@
  *
  */
 
-import {NamespaceHttp, NamespaceId,} from 'nem2-sdk';
+import {NamespaceId} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const namespace = new NamespaceId('cat.currency');
+// replace with namespace name
+const namespace = new NamespaceId('symbol.xym');
 
-const namespaceHttp = new NamespaceHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const namespaceHttp = repositoryFactory.createNamespaceRepository();
+
 namespaceHttp
     .getLinkedMosaicId(namespace)
-    .subscribe(mosaicId => console.log(mosaicId.toHex()),
-            err => console.log(err));
+    .subscribe((mosaicId) => console.log(mosaicId!.toHex()),
+            (err) => console.log(err));
 /* end block 01 */

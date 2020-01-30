@@ -9,20 +9,18 @@
 Cosigning aggregate bonded transactions automatically
 #####################################################
 
-Sign automatically transactions pending to be cosigned.
+Create a bot to cosign automatically transactions that require your account's signature.
 
 *************
 Prerequisites
 *************
 
 - Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
-**********************
-Getting into some code
-**********************
-
-This guide will show you how to **create a bot to cosign transactions that require your account's signature** automatically.
+******************
+Developing the bot
+******************
 
 1. Create a function to cosign any **AggregateBondedTransaction**.
 
@@ -33,7 +31,7 @@ This guide will show you how to **create a bot to cosign transactions that requi
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -44,7 +42,7 @@ This guide will show you how to **create a bot to cosign transactions that requi
 
 4. Start listening for new transactions, subscribing to the ``aggregateBondedAdded`` channel using your account's address.
 
-.. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
+.. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead.See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
 5. For each received transaction, check if you have not already signed it. Cosign each pending **AggregateBondedTransaction** using the previously created function.
 
@@ -57,7 +55,7 @@ This guide will show you how to **create a bot to cosign transactions that requi
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -71,7 +69,7 @@ Extend the previous function to cosign transactions if they follow some constrai
 * The aggregate has **two inner transactions**.
 * The inner transactions must be **transfer transactions.**
 * The transaction sending funds must have **yourself as the signer**.
-* The transaction sending funds should have **only one mosaic**, being this **less than 100 cat.currency**.
+* The transaction sending funds should have **only one mosaic**, being this **less than** 100 |networkcurrency|.
 
 Here you have a possible implementation:
 
@@ -81,3 +79,9 @@ Here you have a possible implementation:
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+

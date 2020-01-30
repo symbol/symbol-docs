@@ -16,24 +16,29 @@
  *
  */
 
-import {Address, Metadata, MetadataHttp} from "nem2-sdk";
+import {Address, Metadata, MetadataHttp} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// Replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
+// Replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const metadataHttp = repositoryFactory.createMetadataRepository();
 
-const metadataHttp = new MetadataHttp('http://localhost:3000');
 metadataHttp.getAccountMetadata(address)
     .subscribe((metadata) => {
         if (metadata.length > 0) {
             metadata
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
-                    console.log('\n \n' +'Key:\t', metadataEntry.scopedMetadataKey);
-                    console.log('\n' +'---' );
-                    console.log('\n' +'Value:\t', metadataEntry.value);
-                    console.log('\n' +'Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n' +'Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
+                    console.log('\n ---' );
+                    console.log('\n Value:\t', metadataEntry.value);
+                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
+                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
                 });
         } else {
             console.log('\n The address does not have metadata entries assigned.');

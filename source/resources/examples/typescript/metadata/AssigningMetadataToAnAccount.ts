@@ -19,93 +19,91 @@
 import {
     Account,
     AccountMetadataTransaction,
-    Address,
     AggregateTransaction,
     Deadline,
     HashLockTransaction,
     KeyGenerator,
     Listener,
-    NetworkCurrencyMosaic,
+    Mosaic,
+    MosaicId,
     NetworkType,
     PublicAccount,
-    SignedTransaction,
-    TransactionHttp,
-    UInt64
+    TransactionService,
+    UInt64,
 } from 'nem2-sdk';
-import {filter, mergeMap} from "rxjs/operators";
-import {merge} from "rxjs";
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
+// replace with key
 const key = KeyGenerator.generateUInt64Key('CERT');
 /* end block 01 */
 
 /* start block 02 */
-const alicePublicKey = process.env.ALICE_PUBLIC_KEY as string;
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 
+// replace with public key
+const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+// replace with value
 const value = '123456';
+
 const accountMetadataTransaction = AccountMetadataTransaction.create(
     Deadline.create(),
     alicePublicAccount.publicKey,
     key,
     value.length,
     value,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 /* end block 02 */
 
 /* start block 03 */
-const bobPrivateKey = process.env.BOB_PRIVATE_KEY as string;
-const bobAccount = Account.createFromPrivateKey(bobPrivateKey, NetworkType.MIJIN_TEST);
+// replace with bob private key
+const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
-    NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
+
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
 /* start block 04 */
+// replace with symbol.xym id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
+
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic(networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType,
+    UInt64.fromUint(2000000));
 const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
 /* end block 04 */
 
 /* start block 05 */
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
-
-const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
-    return transactionHttp.announce(signedHashLockTransaction);
-};
-
-const announceAggregateTransaction = (listener: Listener,
-                                      signedHashLockTransaction: SignedTransaction,
-                                      signedAggregateTransaction: SignedTransaction,
-                                      senderAddress: Address) => {
-    return listener
-        .confirmed(senderAddress)
-        .pipe(
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => {
-                listener.terminate();
-                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
-            })
-        );
-};
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    merge(announceHashLockTransaction(signedHashLockTransaction),
-        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, bobAccount.address))
-        .subscribe(x => console.log('Transaction confirmed:', x.message),
-            err=> console.log(err));
+    transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
+    listener.close();
 });
 /* end block 05 */

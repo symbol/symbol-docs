@@ -16,13 +16,19 @@
  *
  */
 
-import {Listener} from "nem2-sdk";
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const listener = new Listener('http://localhost:3000');
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const listener = repositoryFactory.createListener();
+
 listener.open().then(() => {
     listener
         .newBlock()
-        .subscribe(block => console.log(block), err => console.error(err));
+        .subscribe((block) => {
+            console.log(block);
+            listener.close();
+        }, (err) => console.error(err));
 });
 /* end block 01 */

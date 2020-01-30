@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,226 +21,169 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/setup-workstation.rst:8
+#: ../../source/getting-started/setup-workstation.rst:15
 msgid "Setting up your workstation"
 msgstr "ワークステーションのセットアップ"
 
-#: ../../source/getting-started/setup-workstation.rst:10
+#: ../../source/getting-started/setup-workstation.rst:17
 msgid ""
 "This first guide will walk you through a step-by-step installation of the "
-"required tools to start developing on NEM."
-msgstr "最初のガイドでは NEM 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
+"required tools to start developing with |codename|."
+msgstr "最初のガイドでは |codename| 開発を始めるために必要なツールのインストールをステップバイステップに進めていきます。"
 
-#: ../../source/getting-started/setup-workstation.rst:16
-msgid "Running Catapult Service Bootstrap"
-msgstr "Catapult サービスのブートストラップの実行"
-
-#: ../../source/getting-started/setup-workstation.rst:18
+#: ../../source/getting-started/setup-workstation.rst:19
 msgid ""
-"To run the network, we are going to use the package |catapult-service-"
-"bootstrap|. This software suite contains the necessary setup scripts to help"
-" developers to quickly build their own network."
+"We will be using the **test network**, which uses the same technology and "
+"features of the future main public network. You can use the testnet to "
+"experiment with the offered |codename|'s transaction set in a live network "
+"without the loss of valuable assets."
 msgstr ""
-"ネットワークを立ち上げるために |catapult-service-bootstrap| "
-"を使用します。このソフトウェアスイートは開発者が素早く自分のネットワークを構築するための手助けになるセットアップスクリプトが含まれています。"
-
-#: ../../source/getting-started/setup-workstation.rst:20
-msgid ""
-"NEM's next core engine, code-named **Catapult**, is `under development "
-"<https://github.com/nemtech/catapult-server/milestones>`_. This bootstrap "
-"setup is for learning and development purposes, and it should not power any "
-"production Catapult instances."
-msgstr ""
-"次世代 NEMのコアエンジン コードネーム **Catapult** は `開発中です <https://github.com/nemtech"
-"/catapult-server/milestones>`_ 。このブートストラップの設定は学習と開発を目的としており、本番の Catapult "
-"インスタンスを動かすものではありません 。"
-
-#: ../../source/getting-started/setup-workstation.rst:23
-msgid "Environment requirements"
-msgstr "必須環境"
-
-#: ../../source/getting-started/setup-workstation.rst:25
-msgid "**OS**: Linux or Mac"
-msgstr "**OS**: Linux または Mac"
+"は将来のパブリックメインネットワークと同じテクノロジーと機能を反映している **テストネットワーク** "
+"を使用します。テストネットを実験的に使用することで、貴重な資産を失うことなく |codename| "
+"が提供するトランザクションセットを試すことができます。"
 
 #: ../../source/getting-started/setup-workstation.rst:26
-msgid "`docker`_ 19.03 installed"
-msgstr "`docker`_ 19.03 がインストール済み"
+msgid "Creating an account"
+msgstr "アカウントの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:27
-msgid "`docker-compose`_ 1.22 installed"
-msgstr "`docker-compose`_ 1.22 がインストール済み"
-
-#: ../../source/getting-started/setup-workstation.rst:30
-msgid "Installation"
-msgstr "インストール"
-
-#: ../../source/getting-started/setup-workstation.rst:32
+#: ../../source/getting-started/setup-workstation.rst:28
 msgid ""
-"Use this link to **download the latest release** of the package, or clone "
-"the repository directly using Git."
-msgstr "パッケージの **最新版のダウンロードリンク** またはリポジトリから Git を使用して直接クローンしてください。"
-
-#: ../../source/getting-started/setup-workstation.rst:38
-msgid "Open the ``catapult-service-bootstrap`` folder."
-msgstr "``catapult-service-bootstrap`` フォルダを開きます。"
-
-#: ../../source/getting-started/setup-workstation.rst:44
-msgid "Run the network."
-msgstr "ネットワークの立ち上げ"
-
-#: ../../source/getting-started/setup-workstation.rst:50
-msgid ""
-"To run the docker containers in the background of your terminal, you can run"
-" the service in detached mode using the option ``--detach`` or ``-d``."
-msgstr ""
-"ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
-"オプション使用してサービスをデタッチモードで実行します。"
-
-#: ../../source/getting-started/setup-workstation.rst:52
-msgid ""
-"Verify that the node is running by opening a new browser tab with the "
-"following URL: ``localhost:3000/chain/height``."
-msgstr ""
-"次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
-
-#: ../../source/getting-started/setup-workstation.rst:54
-msgid "To stop the process, press ``Ctrl+C``."
-msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
-
-#: ../../source/getting-started/setup-workstation.rst:60
-msgid "Getting a test account"
-msgstr "テストアカウントの取得"
-
-#: ../../source/getting-started/setup-workstation.rst:62
-msgid ""
-"An :doc:`account <../concepts/account>` is a **deposit box** where you can "
-"hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them "
-"announcing transactions. The :doc:`transaction announcement "
-"<../concepts/transaction>` has an associated cost to provide an incentive to"
-" those who secure the network and run the infrastructure. This cost is paid "
-"in ``cat.currency`` mosaics, the default network token."
+"An :doc:`account <../concepts/account>` is a deposit box where you can hold "
+":doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by "
+":doc:`announcing transactions <../concepts/transaction>`."
 msgstr ""
 ":doc:`アカウント <../concepts/account>` はあなたが :doc:`モザイク <../concepts/mosaic>` "
-"(トークン) を保有することのできる **預け入れ箱** であり、トランザクションをアナウンスすることでこれらと疎通できます。 "
-":doc:`トランザクションのアナウンス <../concepts/transaction>` "
-"はネットワークを保護してインフラストラクチャを維持する人々へインセンティブを提供するための関連するコストが存在します。このコストはデフォルトのネットワークトークンである"
-" ``cat.currency`` モザイクで支払われます。"
+"(トークン) を保有することのできる、預け入れ箱であり、 :doc:`トランザクションをアナウンス <../concepts/transaction>`"
+" することでこれらと疎通できます。 "
 
-#: ../../source/getting-started/setup-workstation.rst:64
+#: ../../source/getting-started/setup-workstation.rst:30
+msgid "Install |cli|."
+msgstr "|cli| のインストール"
+
+#: ../../source/getting-started/setup-workstation.rst:36
+msgid "Generate a new account and save it as a **profile**."
+msgstr "新しいアカウントを生成して **profile** として保存します"
+
+#: ../../source/getting-started/setup-workstation.rst:48
 msgid ""
-"After running the ``catapult-service-bootstrap`` tool for the first time, "
-"the available currency supply is distributed between a generated set of "
-"accounts. To keep one of these accounts quickly retrievable, we are going to"
-" store one of them using a command-line tool to conveniently perform the "
-"most commonly used actions i.e. interact with the blockchain, setting up an "
-"account, sending funds, etc."
+"If the test network node is not working, you can use another node url from "
+"|network-list|. You can also **run your testnet node** by following "
+":doc:`this guide <../guides/network/running-a-test-net-node>`."
 msgstr ""
-"初回の ``catapult-service-bootstrap`` "
-"ツールの起動後、利用可能な通貨の供給は、生成されたアカウントに分配されます。これらのアカウントの 1 "
-"つをすばやく取得するには、ブロックチェーンとの対話、アカウントの設定、資金の送信など、最も一般的なアクションを便利に実行するコマンドラインツールを使用して保存します。"
+"テストネットワークノードが動いていない場合は |network-list| から他のノードを使用できます。この :doc:`ガイド  "
+"<../guides/network/running-a-test-net-node>` に従って **テストネットノードを実行** "
+"することもできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:66
-msgid "Install :doc:`NEM2-CLI <../cli>`."
-msgstr ":doc:`NEM2-CLI <../cli>` をインストールします。"
-
-#: ../../source/getting-started/setup-workstation.rst:72
-msgid ""
-"Open a new terminal window. Then, go to the directory where the bootstrap "
-"tool has generated the addresses."
-msgstr "新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
-
-#: ../../source/getting-started/setup-workstation.rst:78
-msgid "Display the content of the ``addresses.yaml`` file."
-msgstr "``addresses.yaml`` ファイルの内容を表示します。"
-
-#: ../../source/getting-started/setup-workstation.rst:84
-msgid ""
-"Under the section ``nemesis_addresses``, you will find the key pairs which "
-"contain ``cat.currency``. Copy the private key of the first account."
-msgstr ""
-"``nemesis_addresses`` のセクションから ``cat.currency`` "
-"を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
-
-#: ../../source/getting-started/setup-workstation.rst:86
-msgid ""
-"Type the command ``nem2-cli profile create`` using the key obtained in the "
-"previous step."
-msgstr "前のステップで取得したキーを使用して、コマンド ``nem2-cli profile create`` を実行します。"
-
-#: ../../source/getting-started/setup-workstation.rst:97
-msgid ""
-"Use nem2-cli only for testing and development purposes, as the private keys "
-"stored are not encrypted."
-msgstr "nem2-cli は秘密鍵を暗号化せずに保存するため、テスト及び開発のために使用してください。"
-
-#: ../../source/getting-started/setup-workstation.rst:99
+#: ../../source/getting-started/setup-workstation.rst:50
 msgid "You should see the account credentials in your terminal."
 msgstr "アカウントの資格情報がターミナルで確認できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:114
+#: ../../source/getting-started/setup-workstation.rst:65
 msgid ""
-"As the name suggests, the **private key has to be kept secret at all "
-"times**. Anyone with access to the private key ultimately has control over "
-"the account. On the other hand, you can share securely the public and "
-"address of your account with other participants of the network to receive "
-"transactions from them."
-msgstr ""
-"その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
-"。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
+"The private key must be kept secret. Make sure your private key is backed up"
+" safely somewhere offline."
+msgstr "プライベートキーは必ず秘密であることを守ってください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:120
+#: ../../source/getting-started/setup-workstation.rst:71
+msgid "Getting test currency"
+msgstr "テスト通貨の取得"
+
+#: ../../source/getting-started/setup-workstation.rst:73
+msgid ""
+"To announce a transaction, the sender should pay a :doc:`fee "
+"<../concepts/fees>` to provide an incentive to those who validate and secure"
+" the network and run the infrastructure. This cost is paid in "
+"|networkcurrency| mosaics, the default network currency of the public "
+"network."
+msgstr ""
+"トランザクションをアナウンスするには、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための "
+":doc:`手数料 <../concepts/fees>` "
+"を支払う必要があります。このコストはデフォルトのパブリックネットワークのネットワーク通貨である |networkcurrency|  "
+"モザイクで支払われます。"
+
+#: ../../source/getting-started/setup-workstation.rst:76
+msgid ""
+"Now that you have created your first account, try to request "
+"|networkcurrency| units from the **testnet faucet**. |faucet|, indicate the "
+"amount of |networkcurrency| you want to receive and the address, and click "
+"\"CLAIM!\"."
+msgstr ""
+"最初のアカウントを作成したので、 **テストネットフォーセット** から|networkcurrency| の取得をリクエストできます。 "
+"|faucet| で受信したい |networkcurrency| の量とアドレスを指定して \"CLAIM!\" をクリックします。"
+
+#: ../../source/getting-started/setup-workstation.rst:82
+msgid "If the default faucet is empty, try this other |faucet-2|."
+msgstr "デフォルトフォーセットが枯渇している場合は |faucet-2| を試してください。"
+
+#: ../../source/getting-started/setup-workstation.rst:84
+msgid ""
+"After the transaction gets confirmed, check if the account has received "
+"|networkcurrency| using the command-line tool."
+msgstr ""
+"トランザクションが承認されたら、アカウントが |networkcurrency| を受信していることをコマンドラインツールを使用して確認します。"
+
+#: ../../source/getting-started/setup-workstation.rst:97
+msgid ""
+"The faucet has a limited amount of |networkcurrency| and must be replenished"
+" before it dries. If you don’t need your test |networkcurrency| units "
+"anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2"
+"-QM6QZT-BGWDJZ-GNQW``."
+msgstr ""
+"フォーセットは |networkcurrency| の量が限られているため、不足する前に補充する必要があります。 |networkcurrency| "
+"が必要なくなった場合は ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW`` へ送り返してください。"
+
+#: ../../source/getting-started/setup-workstation.rst:103
 msgid "Creating a project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:122
+#: ../../source/getting-started/setup-workstation.rst:105
 msgid ""
-"Now that you have your account filled with cat.currency units, it is the "
-"time to choose a **programming language**. Pick the one you feel most "
+"Now that you have your account filled with |networkcurrency| units, it is "
+"the time to choose a **programming language**. Pick the one you feel most "
 "comfortable with, or follow your project requirements."
 msgstr ""
-"アカウントに cat.currency 単位が入力されたので **プログラミング言語** "
+"アカウントに |networkcurrency| 単位が入力されたので **プログラミング言語** "
 "を選択しましょう。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:124
+#: ../../source/getting-started/setup-workstation.rst:108
 msgid ""
 "Then, **create a folder for your new project** and run the instructions for "
 "the selected language. If none of the languages fits your project, you can "
-"always query the blockchain directly using the `REST gateway "
-"</endpoints.html>`_."
+"always query the blockchain directly using the :doc:`REST gateway <../api>`."
 msgstr ""
 "次に、 **新しいプロジェクト用のフォルダを作成します** "
-"。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  `REST ゲートウェイ "
-"</endpoints.html>`_ を使用して直接ブロックチェーンに問い合わせできます。"
+"。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  :doc:`REST ゲートウェイ "
+"<../api>` を使用して直接ブロックチェーンに問い合わせできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:130
-#: ../../source/getting-started/setup-workstation.rst:159
+#: ../../source/getting-started/setup-workstation.rst:115
+#: ../../source/getting-started/setup-workstation.rst:144
 msgid ""
 "Create a ``package.json`` file. The minimum required Node.js version is "
 "8.9.X."
 msgstr "``package.json`` を作成します。バージョン 8.9.X 以上の Node.js が必要です。"
 
-#: ../../source/getting-started/setup-workstation.rst:136
-#: ../../source/getting-started/setup-workstation.rst:165
-msgid "Install nem2-sdk and rxjs library."
-msgstr "nem2-sdk と rxjs ライブラリのインストール。"
+#: ../../source/getting-started/setup-workstation.rst:121
+#: ../../source/getting-started/setup-workstation.rst:150
+msgid "Install |sdk| and RxJS library."
+msgstr "|sdk| と RxJS ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:142
+#: ../../source/getting-started/setup-workstation.rst:127
 msgid ""
 "We recommend to use **TypeScript instead of JavaScript** when building "
-"applications for NEM blockchain."
+"applications for |codename|."
 msgstr ""
-"NEM ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** を使うことを推奨します。"
+"|codename| ブロックチェーンのアプリケーションの構築には **JavaScript の代わりに TypeScript** "
+"を使うことを推奨します。"
 
-#: ../../source/getting-started/setup-workstation.rst:144
+#: ../../source/getting-started/setup-workstation.rst:129
 msgid "Make sure you have at least version 2.5.X installed."
 msgstr "バージョン 2.5.X 以上がインストールされていることを確認してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:151
+#: ../../source/getting-started/setup-workstation.rst:136
 msgid "Use `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:173
+#: ../../source/getting-started/setup-workstation.rst:158
 msgid ""
 "Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use "
 "your favourite IDE or create a project from the command line."
@@ -248,18 +191,18 @@ msgstr ""
 "新しく Java `gradle`_ プロジェクトを開いてください。`JDK`_ は最低でも JDK 8 "
 "が必要です。お気に入りのIDEを使用するか、コマンドラインからプロジェクトを作成してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:179
+#: ../../source/getting-started/setup-workstation.rst:164
 msgid "Edit ``build.gradle`` to use Maven central repository."
 msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
 
-#: ../../source/getting-started/setup-workstation.rst:187
+#: ../../source/getting-started/setup-workstation.rst:172
 msgid "Add nem2-sdk as a dependency."
 msgstr "nem2-sdk を依存として追加します。"
 
-#: ../../source/getting-started/setup-workstation.rst:195
+#: ../../source/getting-started/setup-workstation.rst:180
 msgid "Execute ``gradle build`` and ``gradle run`` to run your program."
 msgstr "プログラムを開始するために ``gradle build`` と ``gradle run`` を実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:213
+#: ../../source/getting-started/setup-workstation.rst:182
 msgid "Continue: :doc:`Writing your first application <first-application>`."
-msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>` 。"
+msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>`"

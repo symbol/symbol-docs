@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-06-20 22:03+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,65 +21,64 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:10
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:18
 msgid "Extending a namespace registration period"
 msgstr "ネームスペース登録期限の延長"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:12
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:20
 msgid "Extend a namespace registration period."
 msgstr "ネームスペース登録期限の延長"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:16
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:24
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:18
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:26
 msgid ""
-"Namespaces are registered for a certain amount of blocks. The owner can "
+"Namespaces are registered for a certain amount of blocks. The creator can "
 "**extend the registration period** by sending a "
 ":ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`"
 " with the desired number of additional blocks."
 msgstr ""
-"ネームスペースは一定量のブロックに対して登録されます。所有者は :ref:`NamespaceRegistrationTransaction "
+"ネームスペースは一定量のブロックに対して登録されます。作成者は :ref:`NamespaceRegistrationTransaction "
 "<namespace-registration-transaction>` を延長したい追加ブロック数で送信することにより **登録期間を延長する** "
 "ことができます。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:20
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:29
 msgid ""
-"In this guide, we are going to show how to extend the rental period of a "
-"namespace. The guide will use the namespace ``foo``, but you should follow "
-"along with another :doc:`namespace you have registered "
-"<registering-a-namespace>`."
+"This guide shows you how to extend the rental period of a namespace. The "
+"guide will use the namespace ``foo``, but you should follow along with "
+"another :doc:`namespace you have registered <registering-a-namespace>`."
 msgstr ""
-"このガイドではネームスペースのレンタル期間の延長の方法を記します。このガイドはネームスペース ``foo`` を使いますが、 "
+"このガイドではネームスペースのレンタル期間の延長の方法を示します。このガイドはネームスペース ``foo`` を使いますが、 "
 ":doc:`あなたが取得したネームスペース <registering-a-namespace>` でも従ってください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:24
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:34
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:26
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:36
 msgid "Finish :doc:`registering a namespace guide <registering-a-namespace>`"
 msgstr ":doc:`ネームスペースの取得ガイド <registering-a-namespace>` を終了している"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:27
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:37
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>` and"
-" at least one namespace"
+"Have one :ref:`account with network currency <setup-creating-a-test-"
+"account>` and at least one namespace"
 msgstr ""
-":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
+":ref:`nem.xem <setup-creating-a-test-account>`  を保有するアカウントと、1つ以上のネームスペース"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:31
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:41
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:33
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:43
 msgid ""
 "Get your namespace information, and inspect the value of the property "
 "``endHeight``."
 msgstr "あなたのネームスペース情報を取得して、``endHeight`` プロパティの値を確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:49
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:59
 msgid ""
 "The information shows that the namespace ``foo`` will become inactive at "
 "height ``5300``. The next step is to figure out the current height of the "
@@ -89,40 +88,41 @@ msgstr ""
 "この情報はネームスペース ``foo`` がブロック高 ``5300`` "
 "で非アクティブになることを示しています。次のステップは現在のチェーン高を把握し、ネームスペースが非アクティブになるまでに残っているブロック数を計算することです。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:51
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:62
 msgid "Check the current blockchain height."
 msgstr "現在のブロック高を確認する。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:59
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:70
 msgid ""
 "As you can see, the namespace is going to expire in ``500`` blocks "
-"(53000-52500).  To avoid losing all the subnamespaces and aliases linked to "
+"(53000-52500). To avoid losing all the subnamespaces and aliases linked to "
 "foo, we are going to extend the namespace duration."
 msgstr ""
 "ご覧のとおり、ネームスペースは ``500`` ブロック(53000-52500)で期限切れになります。foo "
 "にリンクしているすべてのサブネームスペースとエイリアスが失われないようにするためにネームスペースの期間を延長します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:61
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:73
 msgid "Extend the namespace duration for ``1000`` more blocks."
 msgstr "ネームスペース期間を ``1000`` ブロック延長します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:79
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:87
 msgid ""
 "Use the following formula to convert approximately days to blocks ``duration"
-" ≈ numberOfDays * 86400 / blockGenerationTargetTime``. The "
-"blockGenerationTargetTime is :properties:`configurable per network <config-"
-"network.properties>`."
+" ≈ numberOfDays * 86400 / blockGenerationTargetTime``."
 msgstr ""
 "この公式 ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime`` "
-"を使っておよその日数をブロックに変換します。blockGenerationTargetTime は :properties:`ネットワークごとに設定可能"
-" <config-network.properties>` です。"
+"を使っておよその日数をブロックに変換します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:81
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:89
 msgid ""
 "Once the **RegisterNamespaceTransaction** gets confirmed, double-check that "
 "the namespace duration has been extended."
 msgstr "**RegisterNamespaceTransaction** が承認されたら、ネームスペースの期限が延長されたことも確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:83
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:91
 msgid "Validate that ``endHeight`` has increased by ``1000`` block units."
 msgstr "``endHeight`` が ブロック単位で ``1000`` 増加していることを確認してください。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:109
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

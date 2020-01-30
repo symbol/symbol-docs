@@ -1,0 +1,152 @@
+:orphan:
+
+.. post:: 04 Oct, 2019
+    :category: Network, Node
+    :excerpt: 1
+    :nocomments:
+
+#######################
+Running a test net node
+#######################
+
+This guide will walk you through the process of **setting up your node** to join |codename|’s **public test network**.
+
+The test network mirrors the same technology and features of the future main public network.
+You can use the test net to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
+
+.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
+
+*********************
+Hardware requirements
+*********************
+
+|codename| nodes have been tested on computers with the following **minimum requirements**.
+
+* **CPU**: 2 cores or more
+* **Memory**: 4GB or more
+* **HD**: 20GB or more
+* **OS**: Linux or Mac
+
+Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
+
+************************
+Environment requirements
+************************
+
+The setup scripts are automated using docker.
+To run a test net node, you will need to have installed the following docker tools:
+
+* `docker`_
+* `docker-compose`_
+
+.. note:: The release images target modern x86 architectures. It has been reported that errors are experienced on some older machines provided. If you run into any related issues, please report in the `slack group (#help) <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_.
+
+************
+Installation
+************
+
+.. note:: These instructions are for the newer |codename| test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1), you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
+
+The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
+
+1. Download the |latest-release| of the package, or clone the repository directly using Git.
+
+.. code-block:: bash
+
+    git clone https://github.com/nemfoundation/symbol-testnet-bootstrap.git
+
+2. Choose the **assembly distribution** you want to install.
+
+In short, if you want to be able to interact with your node, you need to run the :ref:`API assembly <api-node>`.
+On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the :ref:`Peer assembly <peer-node>`.
+
+.. code-block:: bash
+
+    cd symbol-testnet-bootstrap/api-harvest-assembly
+
+or...
+
+.. code-block:: bash
+
+    cd symbol-testnet-bootstrap/peer-assembly
+
+3. Run the node with **docker-compose**.
+
+.. code-block:: bash
+
+    sudo docker-compose up --build --detach
+
+You should see docker downloading the container images for the first time. Then it should run the setup and finally startup the service.
+
+To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
+
+Peer assembly
+=============
+
+The Peer assembly will set up a :ref:`Peer <peer-node>` only node.
+
+API harvest assembly
+====================
+
+The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
+
+You can verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+
+.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider so you will have to open it in order to access from outside the machine.
+
+.. note:: API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a Peer only node instead.
+
+***************************
+Configuring node properties
+***************************
+
+After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the node's public key or the :doc:`harvesting <../../concepts/harvesting>` configuration.
+
+A file ``config-input.yaml`` will be generated with the default values.
+Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
+
+1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
+
+2. Edit the properties file ``config-input.yaml`` with a text editor.
+
+3. Save the changes and apply them with the command ``sudo docker-compose up --build --detach``.
+
+*********************************
+Interacting with the test network
+*********************************
+
+To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test <setup-getting-test-currency>` |networkcurrency|.
+
+Then, read and write data from the network with the following tools:
+
+* |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
+* |desktop-wallet|: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
+* :doc:`Command-Line Interface <../../cli>`: Execute the most commonly used actions from your terminal.
+* |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
+* :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
+
+On this portal you can find information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+
+.. _docker: https://docs.docker.com/install/
+
+.. _docker-compose: https://docs.docker.com/compose/install/
+
+.. |desktop-wallet| raw:: html
+
+   <a href="https://github.com/nemfoundation/symbol-desktop-wallet-beta" target="_blank">Desktop Wallet</a>
+
+.. |blockchain-explorer| raw:: html
+
+   <a href="http://explorer-xym.nemtech.network/" target="_blank">Blockchain Explorer</a>
+
+.. |faucet-1| raw:: html
+
+   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Faucet</a>
+
+.. |faucet-2| raw:: html
+
+   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>
+
+.. |latest-release| raw:: html
+
+   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>

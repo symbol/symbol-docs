@@ -16,40 +16,41 @@
  *
  */
 
-import {
-    Account,
-    Address,
-    AliasAction,
-    AliasTransaction,
-    Deadline,
-    NamespaceId,
-    NetworkType,
-    TransactionHttp
-} from "nem2-sdk";
+import {Account, Address, AliasAction, AliasTransaction, Deadline, NamespaceId, NetworkType, UInt64} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const namespaceName = process.env.NAMESPACE_NAME as string;
-const namespaceId = new NamespaceId(namespaceName);
-const rawAddress = process.env.ADDRESS as string;
+// replace with namespace name
+const namespaceId = new NamespaceId('foo');
+// replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+
 const addressAliasTransaction = AliasTransaction.createForAddress(
     Deadline.create(),
     AliasAction.Link,
     namespaceId,
     address,
-    NetworkType.MIJIN_TEST
-);
+    networkType,
+    UInt64.fromUint(2000000));
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(addressAliasTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 02 */

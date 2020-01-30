@@ -16,6 +16,8 @@
  *
  */
 
+import * as crypto from 'crypto';
+import {sha3_256} from 'js-sha3';
 import {
     Account,
     Deadline,
@@ -28,9 +30,6 @@ import {
     TransactionHttp,
     UInt64,
 } from 'nem2-sdk';
-import {sha3_256} from 'js-sha3';
-import * as crypto from 'crypto';
-
 
 /* start block 01 */
 const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
@@ -59,7 +58,7 @@ console.log('Secret:', secret);
 /* start block 03 */
 const tx1 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([520597229, 83226871]), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId('00D3378709746FC4'), UInt64.fromUint(10)),
     UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
@@ -71,25 +70,26 @@ const tx1 = SecretLockTransaction.create(
 const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx1Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */
 
 /* start block 05 */
 const tx2 = SecretLockTransaction.create(
     Deadline.create(),
-    new Mosaic(new MosaicId([2061634929, 1373884888]), UInt64.fromUint(10)),
+    new Mosaic(new MosaicId('10293DE77C684F71'), UInt64.fromUint(10)),
     UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
     HashType.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
-    NetworkType.MAIN_NET);
+    NetworkType.MAIN_NET,
+    UInt64.fromUint(2000000));
 /* end block 05 */
 
 /* start block 06 */
 const tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx2Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 06 */
 
 /* start block 07 */
@@ -99,12 +99,13 @@ const tx3 = SecretProofTransaction.create(
     secret,
     alicePublicChainAccount.address,
     proof,
-    NetworkType.MAIN_NET);
+    NetworkType.MAIN_NET,
+    UInt64.fromUint(2000000));
 
 const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
 publicChainTransactionHttp
     .announce(tx3Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 07 */
 
 /* start block 08 */
@@ -119,5 +120,5 @@ const tx4 = SecretProofTransaction.create(
 const tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
 privateChainTransactionHttp
     .announce(tx4Signed)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 08 */

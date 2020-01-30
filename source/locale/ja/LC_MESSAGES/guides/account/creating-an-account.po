@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2019, NEM
+# This file is distributed under the same license as the nem2-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nem2-docs 0.20.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"PO-Revision-Date: 2019-11-25 18:21+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/account/creating-an-account.rst:18
+msgid "Creating an account"
+msgstr "アカウントの作成"
+
+#: ../../source/guides/account/creating-an-account.rst:20
+msgid "How to create a new |codename| account."
+msgstr "|codename| アカウントを作成する"
+
+#: ../../source/guides/account/creating-an-account.rst:24
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/account/creating-an-account.rst:26
+msgid ""
+"Finish the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`"
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+
+#: ../../source/guides/account/creating-an-account.rst:30
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/account/creating-an-account.rst:32
+msgid ""
+"Open a new file and run the following code snippet to create an account."
+msgstr "アカウントを作成するために、新しいファイルを開いて、次のコードスニペットを実行してください。"
+
+#: ../../source/guides/account/creating-an-account.rst:50
+msgid ""
+"If you already have a private key, you can use it to define a new "
+"``Account`` object."
+msgstr "既に秘密鍵を持っている場合は、それを使用して ``Account`` オブジェクトを定義することができます。"
+
+#: ../../source/guides/account/creating-an-account.rst:66
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

@@ -16,38 +16,41 @@
  *
  */
 
-import {AccountHttp, Address, MosaicId, TransactionType, TransferTransaction} from 'nem2-sdk';
+import {Address, MosaicId, TransactionType, TransferTransaction} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 /* start block 01 */
-// Replace with an address
-const originRawAddress = 'SBEOGU-QKLLUM-JYQL2O-ADI3J6-GILYMN-TKAI26-RNFA';
-const originAddress = Address.createFromRawAddress(originRawAddress);
-
-// Replace with an address
-const recipientRawAddress = 'SB3D2Y-3D44GL-3SBPCN-3LF2GY-IV2LYH-CUPQCO-GYT4';
+// replace with sender address
+const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const senderAddress = Address.createFromRawAddress(senderRawAddress);
+// replace with recipient address
+const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-
-//Replace with a mosaicId
-const mosaicIdHex = '85BBEA6CC462B244';
+// replace with mosaic id
+const mosaicIdHex = '46BE9BC0626F9B1A';
+// replace with mosaic divisibility
 const divisibility = 6;
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const accountHttp = repositoryFactory.createAccountRepository();
 
-const accountHttp = new AccountHttp('http://localhost:3000');
 accountHttp
-    .outgoingTransactions(originAddress)
+    .getAccountOutgoingTransactions(senderAddress)
     .pipe(
         mergeMap((_) => _), // Transform transaction array to single transactions to process them
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
-        filter((_) => _.recipientAddress instanceof Address &&_.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
+        filter((_) => _.recipientAddress instanceof Address
+            && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
         filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
         map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
         toArray(), // Add all mosaics amounts into one array
-        map((_) => _.reduce((a, b) => a + b, 0))
+        map((_) => _.reduce((a, b) => a + b, 0)),
     )
     .subscribe(
-        total => console.log('Total '+ mosaicId.toHex() +' sent to account', recipientAddress.pretty(), 'is:', total),
-        err => console.error(err)
-    );
+        (total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total),
+        (err) => console.error(err));
 /* end block 01 */

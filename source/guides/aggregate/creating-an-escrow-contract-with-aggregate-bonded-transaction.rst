@@ -28,16 +28,22 @@ For this example, imagine that the two parties agree on a virtual service, imply
 4. The buyer approves goods or service.
 5. The escrow releases payment to the seller.
 
-How to create an escrow contract with NEM
-=========================================
+.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
+    :align: center
+    :width: 450px
 
-Normalizing the previous description into NEM related concepts:
+    Multi-Asset Escrowed Transactions
+
+How to create an escrow contract with Catapult
+==============================================
+
+Normalizing the previous description into |codename| related concepts:
 
 * **contractual arrangement**: A new type of transaction called :ref:`AggregateTransaction <aggregate-transaction>`.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
-* **primary transacting parties**: NEM accounts will represent the participants.
+* **primary transacting parties**: |codename| accounts will represent the participants.
 
 * **conditions agreed to by the transacting parties**: When every participant signs the AggregateTransaction.
 
@@ -49,43 +55,37 @@ Normalizing the previous description into NEM related concepts:
 Prerequisites
 *************
 
-- Know how to :doc:`create accounts <../account/creating-and-opening-an-account>`
+- Know how to :doc:`create accounts <../account/creating-an-account>`
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`sending multiple transactions together guide <sending-multiple-transactions-together-with-aggregate-complete-transaction>`
 
-**********************
-Getting into some code
-**********************
-
-.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
-    :align: center
-    :width: 450px
-
-    Multi-Asset Escrowed Transactions
-
+********************************************
 Setting up the required accounts and mosaics
-============================================
+********************************************
 
 Alice and a ticket distributor want to swap the following mosaics.
 
 .. csv-table::
         :header: "Owner", "Amount", "MosaicId", "Description"
 
-        Alice, 100, cat.currency, Native currency mosaic
-        Ticket distributor, 1, 7cdf3b117a3c40cc, Represents a museum ticket.
+        Alice, 100, |networkcurrency|, Native currency mosaic
+        Ticket distributor, 1, ``7cdf3b117a3c40cc``, Represents a museum ticket.
 
-Before continuing, :ref:`create the two accounts <setup-getting-a-test-account>` loaded with cat.currency. You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account. This new mosaic will represent the ticket.
+Before continuing, :ref:`create the two accounts <setup-creating-a-test-account>` loaded with |networkcurrency|.
+You should also :doc:`create a mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account.
+This new mosaic will represent the ticket.
 
+****************************
 Creating the escrow contract
-============================
+****************************
 
 1. Open a new file, and define two transfer transactions:
 
-a. A TransferTransaction from Alice to the ticket distributor sending ``100 cat.currency``.
+A) A TransferTransaction from Alice to the ticket distributor sending 100 |networkcurrency|.
 
-b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b117a3c40cc`` (museum ticket).
+B) A TransferTransaction from the ticket distributor to Alice sending 1 ``7cdf3b117a3c40cc`` (museum ticket).
 
-.. note:: The museum ticket does not have the id 7cdf3b117a3c40cc in your network. Replace the mosaic identifier for the one you have created in the previous step.
+.. note:: The museum ticket does not have the id ``7cdf3b117a3c40cc`` in your network. Replace the mosaic identifier for the one you have created in the previous step.
 
 .. example-code::
 
@@ -94,12 +94,15 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account. An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it. If valid, it will be included in a block. In case that signatures are required from other participants—the ticket distributor—it is considered *bonded*.
+2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account.
+An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it.
+If valid, it will be included in a block.
+In case that signatures are required from other participants—the ticket distributor—it is considered *bonded*.
 
 .. example-code::
 
@@ -108,12 +111,13 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. When an **AggregateTransaction is bonded**, Alice will need to **lock 10 cat.currency** to prevent spamming the network. Once the ticket distributor signs the AggregateTransaction, the amount of locked cat.currency becomes available again on Alice's account, and the exchange will get through.
+3. When an **AggregateTransaction is bonded**, Alice will need to lock ``10`` |networkcurrency| to prevent spamming the network.
+Once the ticket distributor signs the AggregateTransaction, the amount of locked |networkcurrency| becomes available again on Alice's account, and the exchange will get through.
 
 .. example-code::
 
@@ -122,14 +126,14 @@ b. A TransferTransaction from the ticket distributor to Alice sending ``1 7cdf3b
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
 The distributor has not signed the AggregateBondedTransaction yet, so the exchange has not been completed.
 
-4. Copy the **AggregateTransaction hash** from (2), and check how to :doc:`cosign the AggregateTransaction <signing-announced-aggregate-bonded-transactions>` following the next guide.
+4. Copy the **AggregateTransaction hash** from (2), and check how to cosign the AggregateTransaction by :doc:`following the next guide <signing-announced-aggregate-bonded-transactions>`.
 
 **********************************************
 Is it possible without aggregate transactions?
@@ -140,7 +144,7 @@ Is it possible without aggregate transactions?
 - Alice could decide not to pay the distributor after receiving the ticket.
 - The distributor could choose not to send the ticket after receiving the payment.
 
-Using the AggregateTransaction feature we ensure that multiple transactions are executed at the same time when all the participants agree.
+Using the AggregateTransaction feature, we ensure that multiple transactions are executed at the same time when all the participants agree.
 
 ************
 What's next?

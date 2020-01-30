@@ -24,13 +24,17 @@ import {
     NamespaceId,
     NamespaceMetadataTransaction,
     NetworkType,
-    TransactionHttp
+    UInt64,
 } from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const companyPrivateKey = process.env.COMPANY_PRIVATE_KEY as string;
-const companyAccount = Account.createFromPrivateKey(companyPrivateKey, NetworkType.MIJIN_TEST);
-
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with company private key
+const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = Account.createFromPrivateKey(companyPrivateKey, networkType);
+// replace with namespace name
 const namespaceId = new NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
@@ -44,7 +48,7 @@ const nameMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     name.length,
     name,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -54,7 +58,7 @@ const emailMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     email.length,
     email,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -64,7 +68,7 @@ const addressMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     address.length,
     address,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
@@ -74,7 +78,7 @@ const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
     namespaceId,
     phone.length,
     phone,
-    NetworkType.MIJIN_TEST,
+    networkType,
 );
 /* end block 01 */
 
@@ -87,18 +91,22 @@ const aggregateTransaction = AggregateTransaction.createComplete(
         addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
         phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
     ],
-    NetworkType.MIJIN_TEST,
-    []);
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
+
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

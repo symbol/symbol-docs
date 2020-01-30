@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-28 13:02+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,37 +21,45 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:10
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:18
 msgid "Activating delegated harvesting"
 msgstr "デリゲートハーベスティングの有効化"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:12
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:20
 msgid "Share your account's importance securely with a node."
 msgstr "あなたのアカウントのインポータンスを安全にノードと共有します"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:16
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:24
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:18
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:26
 msgid ""
-":ref:`Delegated harvesting  <delegated-harvesting>` enables accounts to "
+":ref:`Delegated harvesting <delegated-harvesting>` enables accounts to "
 "receive rewards from creating new blocks without running a node."
 msgstr ""
 ":ref:`デリゲートハーベスティング <delegated-harvesting>` "
 "を使用すると、アカウントはノードを実行せずに新しいブロックを作成して報酬を受け取ることができます。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:20
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:28
 msgid ""
 "Follow this guide to **delegate your account importance** without "
-"compromising the account's funds."
-msgstr "このガイドに従ってアカウントの資産を毀損することなく **あなたのアカウントのインポータンスを移譲** します。"
+"compromising the account's funds. Before you can activate delegated "
+"harvesting, make sure your main account has at least ``10,000`` "
+"|networkcurrency| units. Then, you will have to **delegate your main account"
+" importance** to a **proxy public key** (remote account) before **requesting"
+" a node to add you as a delegated harvester**."
+msgstr ""
+"このガイドに従って、アカウントの資産を毀損することなく **あなたのアカウントのインポータンスを委譲** "
+"してください。デリゲートハーベスティングを有効にする前にメインアカウントが最低でも ``10,000`` |networkcurrency| "
+"を保有していることを確認してください。次に **メインアカウントのインポータンス** を **プロキシ公開鍵** (リモートアカウント) に委任してから"
+" **ノードに委任ハーベスタとして追加するように要求する必要があります** 。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:24
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:39
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:26
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:41
 msgid ""
 "Finish :doc:`sending mosaics and messages between two accounts guide "
 "<../transfer/sending-a-transfer-transaction>`"
@@ -59,40 +67,28 @@ msgstr ""
 ":doc:`モザイクとメッセージを２つのアカウント間で送信するガイド <../transfer/sending-a-transfer-"
 "transaction>` を終了している"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:27
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:42
 msgid ""
-"Have one :ref:`account with cat.currency <setup-getting-a-test-account>`"
-msgstr ":ref:`cat.currency <setup-getting-a-test-account>`  を保有するアカウント"
-
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:28
-msgid "Have one account with more than ``500`` cat.harvest."
-msgstr "``500`` cat.harvest 以上を保有したアカウント"
-
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:32
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
-
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:34
-msgid ""
-"Before you can activate delegated harvesting, make sure your main account "
-"has at least ``500 cat.harvest`` units. Then, you will have to **delegate "
-"your main account importance** to a **proxy public key** (remote account) "
-"before **requesting a node to add you as a delegated harvester**."
+"Have one :ref:`account with more than 10,000 <setup-creating-a-test-"
+"account>` |networkcurrency| units"
 msgstr ""
-"デリゲートハーベスティングを有効にする前にメインアカウントが最低でも ``500 cat.harvest`` を保有していることを確認してください。次に"
-" **メインアカウントのインポータンス** を **プロキシ公開鍵** (リモートアカウント) に委任してから "
-"**ノードに委任ハーベスタとして追加するように要求する必要があります** 。"
+"|networkcurrency| を :ref:`10,000 を持つアカウント <setup-creating-a-test-account>`"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:41
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:46
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:48
 msgid ""
-"Define your **main account** and the **remote account** using their private "
-"keys. The proxy private key (remote account) must belong to a **brand new** "
-"account that did not send or received any transaction previously."
+"1. Define your **main account** and the **remote account** using their "
+"private keys. The proxy private key (remote account) must belong to a "
+"**brand new** account that did not send or received any transaction "
+"previously."
 msgstr ""
-"プライベートキーを使用して **メインアカウント** と **リモートアカウント** を定義します。プロキシ秘密鍵 (リモートアカウント) "
+"1. プライベートキーを使用して **メインアカウント** と **リモートアカウント** を定義します。プロキシ秘密鍵 (リモートアカウント) "
 "はこれまでにトランザクションを送受信していない **真新しい** アカウントである必要があります。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:50
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:63
 msgid ""
 "Create an :ref:`AccountLinkTransaction <account-link-transaction>` to "
 "delegate the main account's importance to the remote account using its "
@@ -101,29 +97,29 @@ msgstr ""
 "メインアカウントのインポータンスをリモートアカウントへ移譲するためにその公開鍵を使って :ref:`AccountLinkTransaction "
 "<account-link-transaction>` を作成します。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:59
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:77
 msgid ""
 "The next step is to **share the remote account private key with the node** "
 "you wish to connect for delegated harvesting."
 msgstr "次のステップは、デリゲートハーベスティングのために接続したいノードと **リモートアカウント秘密鍵をと共有する** ことです。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:61
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:79
 msgid ""
-"Create a :ref:`PersistentDelegationRequestTransaction <transfer-"
+"3. Create a :ref:`PersistentDelegationRequestTransaction <transfer-"
 "transaction>`. Add the **node's public key** as the transaction "
 "**recipient** and share the **remote account private key** by creating a "
 "**special encrypted message** as follows:"
 msgstr ""
-":ref:`PersistentDelegationRequestTransaction <transfer-transaction>` "
+"3. :ref:`PersistentDelegationRequestTransaction <transfer-transaction>` "
 "を作成します。**ノード公開鍵** をトランザクションの **受信者** として追加し、次に従って **特別な暗号化メッセージ** を作成することで "
 "**リモートアカウント秘密鍵** を共有します:"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:70
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:94
 msgid ""
 "Get the node's public key by querying ``http://<node-url>:3000/node/info``."
 msgstr "ノードの公開鍵を ``http://<node-url>:3000/node/info`` に問い合わせて取得します。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:72
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:96
 msgid ""
 "The **special encrypted message** ensures that the **proxy private key** is "
 "securely shared, only readable by the node owner. Moreover, the remote "
@@ -133,7 +129,7 @@ msgstr ""
 "**特別な暗号化メッセージ** により **プロキシ秘密鍵** "
 "が安全に共有され、ノード所有者のみが読み取り可能になります。さらに、リモートアカウントはモザイクを保有していません。価値あるアセットはメインアカウントに安全に残っており、ノード所有者によってそのセキュリティを犯すことはできません。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:74
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:100
 msgid ""
 "Announce both transactions together with an "
 ":ref:`AggregateCompleteTransaction <aggregate-complete>`, signing it with "
@@ -142,7 +138,7 @@ msgstr ""
 "両方のトランザクションは :ref:`AggregateCompleteTransaction <aggregate-complete>` にあなたの "
 "**メインアカウント** で署名して、一緒にアナウンスします。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:83
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:114
 msgid ""
 "The node receives an encrypted message using :ref:`WebSockets <websockets>`."
 " Once the node decrypts the private key of the potential delegated "
@@ -153,19 +149,19 @@ msgstr ""
 "を通じて暗号化メッセージを受信します。ノードがデリゲートハーベスティングをする秘密鍵を復号すると、次の条件を満たす場合、ノードの所有者は "
 "**リモートアカウントをデリゲートハーベスターとして追加** できます。"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:85
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:117
 msgid "The node permits delegated harvesting."
 msgstr "ノードがデリゲートハーベスティングを許可していること"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:86
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:118
 msgid "The node has harvesting slots available."
 msgstr "ノードのハーベスティングスロットが有効であること"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:87
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:119
 msgid "The remote account has not sent or received transactions."
 msgstr "リモートアカウントはトランザクションを送信も受信もしていないこと"
 
-#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:89
+#: ../../source/guides/accountlink/activating-delegated-harvesting.rst:121
 msgid ""
 "Announcing a valid **PersistentDelegationRequestTransaction** does not "
 "guarantee being added as a delegated harvester. Currently, the only way to "

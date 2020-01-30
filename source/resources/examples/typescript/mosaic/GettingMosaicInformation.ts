@@ -16,15 +16,20 @@
  *
  */
 
-import {MosaicHttp, MosaicId} from 'nem2-sdk';
+import {MosaicId} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const mosaicIdHex = process.env.MOSAIC_ID_HEX as string;
+// replace with mosaic id
+const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new MosaicId(mosaicIdHex);
 
-const mosaicHttp = new MosaicHttp('http://localhost:3000');
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const mosaicHttp = repositoryFactory.createMosaicRepository();
+
 mosaicHttp
     .getMosaic(mosaicId)
-    .subscribe(mosaicInfo => console.log(mosaicInfo), err => console.error(err));
+    .subscribe((mosaicInfo) => console.log(mosaicInfo), (err) => console.error(err));
 /* end block 01 */
-

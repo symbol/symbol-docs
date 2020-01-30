@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,56 +21,44 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/server.rst:3
+#: ../../source/server.rst:11
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/server.rst:5
+#: ../../source/server.rst:13
 msgid ""
-"As a blockchain platform, NEM relies on a decentralized network of nodes to "
-"provide a powerful, stable, and secure platform for Smart Asset "
-"transactions."
+"|codename|-based networks rely on nodes to provide a trustless, high-"
+"performance, and secure blockchain platform."
 msgstr ""
-"ブロックチェーンプラットフォームである NEM "
-"はスマートアセットトランザクションの強力で、安定した、安全なプラットフォームを提供するために、非中央集権ネットワークのノードに依存しています。"
-
-#: ../../source/server.rst:7
-msgid ""
-"These nodes are deployed using |catapult-server| software, a C++ rewrite of "
-"the previous Java-written NEM distributed ledger that has been running for "
-"more than 4 years."
-msgstr ""
-"これらのノードは4年以上稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-server|"
-" ソフトウェアを使用してデプロイされます。"
-
-#: ../../source/server.rst:9
-msgid ""
-"Through its multi-tier architecture, it is possible to isolate the peer-to-"
-"peer network and implement better API integration flows with the proposed "
-"REST API layer."
-msgstr ""
-"その多層アーキテクチャーを通じて、ピアツーピアネットワークの分離と提案された REST API レイヤーを使用して、より優れた API "
-"統合フローを実装することが可能です。"
-
-#: ../../source/server.rst:11
-msgid ""
-"Also, Catapult offers private networks the ability to add their own "
-"transaction types by developing **plugins** for the catapult-server nodes."
-msgstr ""
-"また Catapult ではプライベートネットワーク向けに catapult-server ノード用の **プラグイン** "
-"を開発することで独自のトランザクションタイプを追加する機能を提供します。"
+"|codename| ベースのネットワークは、トラストレスな、高性能で安全なブロックチェーンプラットフォームを提供するためにノードに依存しています。"
 
 #: ../../source/server.rst:15
+msgid ""
+"These nodes are deployed using |catapult-server| software, a C++ rewrite of "
+"the previous Java-written NEM distributed ledger that has been running since"
+" 2015."
+msgstr ""
+"これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-"
+"server| ソフトウェアを使用してデプロイされます。"
+
+#: ../../source/server.rst:17
+msgid ""
+"Learn more about the protocol by reading the |whitepaper| and this "
+":doc:`documentation <concepts/account>`."
+msgstr ""
+"プロトコルについてより詳しい情報は |whitepaper| と :doc:`ドキュメント <concepts/account>` を参照してください。"
+
+#: ../../source/server.rst:21
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/server.rst:17
+#: ../../source/server.rst:23
 msgid ""
 "**Catapult server** can be used to configure three different types of "
 ":doc:`nodes <concepts/node>`:"
 msgstr "**Catapult server** は異なる3種類の :doc:`ノード <concepts/node>` に設定することができます:"
 
-#: ../../source/server.rst:19
+#: ../../source/server.rst:25
 msgid ""
 "**Peer node**: The peer node verifies or discards the transactions once the "
 "API pushes them into the P2P network. It runs the consensus algorithm, "
@@ -79,167 +67,33 @@ msgstr ""
 "**Peer ノード**: Peer ノードは API がトランザクションを P2P "
 "ネットワークにプッシュすると、それを検証または破棄します。ノードはコンセンサスアルゴリズムを実行して新しいブロックを作成し、そしてネットワークを通して変更を伝播します。"
 
-#: ../../source/server.rst:21
+#: ../../source/server.rst:26
 msgid ""
 "**API node**: The primary responsibility of the API node is to properly "
-"store data in the MongoDB database once transactions are validated. They "
-"also identify and store partial aggregate bonded transactions."
+"store data in the MongoDB database once transactions are validated."
 msgstr ""
-"**API ノード**: API ノードの主な役割はトランザクションが検証された後に MongoDB "
-"データベースにデータを正しく保存することです。これらはパーシャルなアグリゲートボンドトランザクションを識別して保存もします。"
+"**API ノード**: API ノードの主な役割はトランザクションが検証された後に MongoDB データベースにデータを正しく保存することです。"
 
-#: ../../source/server.rst:23
+#: ../../source/server.rst:27
 msgid ""
 "**Dual node**: The dual node combines a peer and API nodes into a single "
 "server instance."
 msgstr "**Dual ノード**: Dual ノードは Peer と API ノードを1つのサーバインスタンスにまとめたものです。"
 
-#: ../../source/server.rst:25
+#: ../../source/server.rst:29
 msgid ""
-"You can create a new catapult-server image following the building "
-"|instructions|, but we recommend deploying your own network for development "
-"or learning purposes with |catapult-service-bootstrap|."
+"To compile symbol-server source code, follow the |instructions|. However, if"
+" you want to run your a network for development or learning purposes with "
+"|catapult-service-bootstrap|."
 msgstr ""
-"ビルド |instructions| に従って新しいカタパルトサーバーイメージを作成できますが |catapult-service-bootstrap|"
-" で開発目的または学習目的で独自のネットワークを展開することを推奨します。"
+"symbol-server のソースコードをコンパイルするには |instructions| に従ってください。ただし |catapult-"
+"service-bootstrap| を使用して、開発または学習目的でネットワークを実行する場合。"
 
-#: ../../source/server.rst:28
-msgid "Troubleshooting"
-msgstr "トラブルシューティング"
-
-#: ../../source/server.rst:30
-msgid ""
-"This section highlights common errors or difficulties one may encounter "
-"whilst setting a Catapult node."
-msgstr "このセクションでは catapult ノードを設定する際によくあるエラーや問題について説明します。"
-
-#: ../../source/server.rst:32
-msgid "**Mosaic outflows**"
-msgstr "**モザイクの源泉**"
-
-#: ../../source/server.rst:34
-msgid "This error usually looks like:"
-msgstr "このエラーは通常次のようになります:"
-
-#: ../../source/server.rst:44
-msgid "**What does it mean?**"
-msgstr "**何を意味するのか？**"
-
-#: ../../source/server.rst:46
-msgid "This error can happen in the event of the following situations:"
-msgstr "このエラーは以下の状況で発生する可能性があります:"
-
-#: ../../source/server.rst:48
-msgid ""
-"The supply of the ``cat.harvest`` mosaic the nemesis block does not match "
-"the supply inside of the :properties:`config-network.properties <config-"
-"network.properties>` file."
-msgstr ""
-"nemesis ブロックの ``cat.harvest`` モザイクの供給は :properties:`config-"
-"network.properties <config-network.properties>` ファイル内の供給とは一致しません。"
-
-#: ../../source/server.rst:50
-msgid ""
-"The mosaicId inside of the :properties:`config-network.properties <config-"
-"network.properties>` does not match the one generated inside of the nemesis "
-"block."
-msgstr ""
-":properties:`config-network.properties <config-network.properties>` 内の "
-"mosaicId は nemesis ブロック内で生成されたものとは一致しません。"
-
-#: ../../source/server.rst:52
-msgid "**How to fix it?**"
-msgstr "**どのように修正するのか？**"
-
-#: ../../source/server.rst:54
-msgid ""
-"For the first scenario, change the ``totalChainImportance`` in your "
-"resources :properties:`config-network.properties <config-"
-"network.properties>` to match the supply set in the nemesis block."
-msgstr ""
-"最初のシナリオでは、あなたのリソース :properties:`config-network.properties <config-"
-"network.properties>`  ``totalChainImportance`` を nemesis "
-"ブロックで設定された供給に合わせて変更してください。"
-
-#: ../../source/server.rst:56
-msgid ""
-"For the second scenario, you will have to find the correct mosaic identifier"
-" that the nemgen tool creates. You can run :ref:`nemgen <catapult-server-"
-"tools>`, and output the result to to a txt file. Then, search for the "
-"``cat.<harvest | currency>`` identifier."
-msgstr ""
-"2番目のシナリオでは nemgen ツールによって作成された正しいモザイク識別子を見つける必要があります。 :ref:`nemgen "
-"<catapult-server-tools>` を実行し、結果を txt ファイルに出力することができます。それから ``cat.<harvest |"
-" currency>`` 識別子を探します。"
-
-#: ../../source/server.rst:60
-msgid "Package organization"
-msgstr "パッケージ構成"
-
-#: ../../source/server.rst:62
-msgid "**Repository**: |catapult-server|"
-msgstr "**リポジトリ:** |catapult-server|"
-
-#: ../../source/server.rst:1
-msgid "Folder name"
-msgstr "フォルダ名"
-
-#: ../../source/server.rst:1
-msgid "Description"
-msgstr "説明"
-
-#: ../../source/server.rst:1
-msgid ""
-"Modules that add features to the bare catapult-server. They range from "
-"extensions that are critical like consensus and networking to optional "
-"extensions like ZMQ messaging and other API conveniences."
-msgstr ""
-"無垢な catapult-server に機能を追加するモジュール。それらはコンセンサスやネットワーキングのように重要な拡張から ZMQ "
-"メッセージングのようなオプションの拡張やその他便利な API まで多岐にわたります。"
-
-#: ../../source/server.rst:1
-msgid "Implementations of the hashing algorithms used."
-msgstr "使用しているハッシュアルゴリズムの実装。"
-
-#: ../../source/server.rst:1
-msgid ""
-"Modules that introduce new and different ways to alter the chain's state via"
-" transactions."
-msgstr "トランザクション経由でチェーンの状態を変更するための新しい方法を紹介するモジュール。"
-
-#: ../../source/server.rst:1
-msgid "Node and network configurable properties."
-msgstr "ノードとネットワークの設定可能プロパティ"
-
-#: ../../source/server.rst:1
-msgid "Utility scripts for developers."
-msgstr "開発者向けユーティリティスクリプト"
-
-#: ../../source/server.rst:1
-msgid "Reusable code used by tests and tools."
-msgstr "テストとツールによる再利用可能なコード"
-
-#: ../../source/server.rst:1
-msgid "Nemesis blocks used in tests."
-msgstr "テスト用ネメシスブロック"
-
-#: ../../source/server.rst:1
-msgid "Catapult's core engine."
-msgstr "Catapult のコアエンジン"
-
-#: ../../source/server.rst:1
-msgid "Collection of tests."
-msgstr "テストの集合"
-
-#: ../../source/server.rst:1
-msgid "Tools to deploy and monitor networks and nodes."
-msgstr "ネットワークとノードをデプロイとモニタリングするツール"
-
-#: ../../source/server.rst:83
+#: ../../source/server.rst:35
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/server.rst:85
+#: ../../source/server.rst:37
 msgid ""
 "Catapult server comes with tools to check the health of the network, "
 "generate nemesis blocks, create keypairs, recover the server in the event of"
@@ -248,31 +102,31 @@ msgstr ""
 "Catapult サーバーにはネットワークの健全性チェック、nemesis "
 "ブロックの生成、キーペアの作成、突然の終了時のサーバ復旧などを行うツールが付属しています。"
 
-#: ../../source/server.rst:87
+#: ../../source/server.rst:39
 msgid "You can find them inside of ``catapult-server/build/bin``."
 msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
 
-#: ../../source/server.rst:92
+#: ../../source/server.rst:44
 msgid "Generates keypairs and addresses."
 msgstr "キーペアとアドレスの生成。"
 
-#: ../../source/server.rst:94 ../../source/server.rst:129
-#: ../../source/server.rst:158 ../../source/server.rst:185
-#: ../../source/server.rst:206 ../../source/server.rst:225
+#: ../../source/server.rst:46 ../../source/server.rst:81
+#: ../../source/server.rst:110 ../../source/server.rst:137
+#: ../../source/server.rst:158 ../../source/server.rst:177
 msgid "Options"
 msgstr "オプション"
 
-#: ../../source/server.rst:112 ../../source/server.rst:147
-#: ../../source/server.rst:174 ../../source/server.rst:195
-#: ../../source/server.rst:214
+#: ../../source/server.rst:64 ../../source/server.rst:99
+#: ../../source/server.rst:126 ../../source/server.rst:147
+#: ../../source/server.rst:166
 msgid "Command"
 msgstr "コマンド"
 
-#: ../../source/server.rst:118
+#: ../../source/server.rst:70
 msgid "If you want the save the output, add an output stream at the end:"
 msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
 
-#: ../../source/server.rst:127
+#: ../../source/server.rst:79
 msgid ""
 "Creates a nemesis block out of a `mijin-test.properties  "
 "<https://github.com/nemtech/catapult-"
@@ -283,13 +137,13 @@ msgstr ""
 "server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
 "nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
 
-#: ../../source/server.rst:156
+#: ../../source/server.rst:108
 msgid ""
 "Executes CPU-based performance tests of catapult functions, such as hashing "
 "or encryption."
 msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
 
-#: ../../source/server.rst:183
+#: ../../source/server.rst:135
 msgid ""
 "Outputs node info, partner node connectivity info, and a partner node table "
 "for known peers within :properties:`peers-p2p.json <peers-p2p.json>` and "
@@ -299,13 +153,13 @@ msgstr ""
 "api.json <peers-api.json>` "
 "内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
 
-#: ../../source/server.rst:204
+#: ../../source/server.rst:156
 msgid ""
 "Generates the list of status errors that the server might return after "
 "receiving a transaction."
 msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
 
-#: ../../source/server.rst:223
+#: ../../source/server.rst:175
 msgid ""
 "Checks the health and displays statistics (like the unconfirmed transaction "
 "cache) for the nodes found inside of :properties:`peers-p2p.json <peers-"

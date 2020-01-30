@@ -27,23 +27,34 @@ import {
     MosaicSupplyChangeAction,
     MosaicSupplyChangeTransaction,
     NetworkType,
-    TransactionHttp,
-    UInt64
+    UInt64,
 } from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with duration (in blocks)
+const duration = UInt64.fromUint(0);
+// replace with custom mosaic flags
+const isSupplyMutable = true;
+const isTransferable = true;
+const isRestrictable = true;
+// replace with custom divisibility
+const divisibility = 0;
 
 const nonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     nonce,
     MosaicId.createFromNonce(nonce, account.publicAccount),
-    MosaicFlags.create(true, true, true),
-    0,
-    UInt64.fromUint(0),
-    NetworkType.MIJIN_TEST);
+    MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
+    divisibility,
+    duration,
+    networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -52,7 +63,7 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     mosaicDefinitionTransaction.mosaicId,
     MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(1000000),
-    NetworkType.MIJIN_TEST);
+    networkType);
 /* end block 02 */
 
 /* start block 03 */
@@ -60,16 +71,20 @@ const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [
         mosaicDefinitionTransaction.toAggregate(account.publicAccount),
-        mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)
-    ],
-    NetworkType.MIJIN_TEST,
-    []);
+        mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
 
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x=> console.log(x),err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

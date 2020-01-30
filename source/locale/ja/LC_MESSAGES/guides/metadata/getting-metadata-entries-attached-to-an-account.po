@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-28 13:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,26 +21,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:10
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:18
 msgid "Getting metadata entries attached to an account"
 msgstr "アカウントにアタッチされたメタデータエントリを取得する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:12
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:20
 msgid "Get the list of metadata entries attached to an account."
 msgstr "アカウントにアタッチされたメタデータエントリの一覧を取得する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:16
-msgid "Getting into some code"
-msgstr "それではコードを見ていきましょう"
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:24
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:19
-msgid "Get all metadata entries"
-msgstr "すべてのメタデータエントリの取得"
-
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:33
-msgid "Filter metadata entries by key"
-msgstr "メタデータエントリをキーでフィルタする"
-
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:43
-msgid "Filter metadata entries by key and sender"
-msgstr "メタデータエントリをキーと送信者でフィルタする"
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-an-account.rst:40
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

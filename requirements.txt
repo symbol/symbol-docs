@@ -9,7 +9,6 @@ pytz==2016.4
 six==1.10.0
 snowballstemmer==1.2.1
 Sphinx==1.6.5
-sphinx-rtd-theme==0.2.4
 sphinx-autobuild==0.7.1
 sphinxcontrib-examplecode==0.1.0
 sphinx_bootstrap_theme==0.6.5

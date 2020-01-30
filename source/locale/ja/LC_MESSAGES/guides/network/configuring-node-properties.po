@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,56 +21,91 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-node-properties.rst:10
+#: ../../source/guides/network/configuring-node-properties.rst:18
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:12
+#: ../../source/guides/network/configuring-node-properties.rst:20
 msgid "Customize the node configurable parameters."
 msgstr "ノード設定パラメータの変更"
 
-#: ../../source/guides/network/configuring-node-properties.rst:14
-msgid ""
-"The node properties can be edited after launching a network with the package"
-" |catapult-service-bootstrap|."
-msgstr ""
-"ノードのプロパティはパッケージ |catapult-service-bootstrap| を使用して、ネットワークを起動した後に編集できます。"
+#: ../../source/guides/network/configuring-node-properties.rst:24
+msgid "Packages"
+msgstr "パッケージ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:16
+#: ../../source/guides/network/configuring-node-properties.rst:26
 msgid ""
-"Under the directory ``build/catapult-config`` you will find the generated "
-"properties files for the ``peer`` and ``api`` nodes that compose the "
-"network."
+"The instructions to configure the node vary depending on the package used to"
+" deploy the network."
+msgstr "ノードを構成する手順はネットワークの展開に使用するパッケージによって異なります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:29
+msgid "Testnet Bootstrap"
+msgstr "テストネットブートストラップ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:31
+msgid ""
+"After running a node for the first time, the file ``config-input.yaml`` will"
+" be generated with the default values. Depending on the assembly chosen, "
+"this file will be located under the ``peer-assembly/peer-node/`` or ``api-"
+"harvest-assembly/api-node``."
+msgstr ""
+"最初にノードを開始した後に ``config-input.yaml`` ファイルはデフォルト値で生成されます。選択したアセンブリによって、このファイルは"
+" ``peer-assembly/peer-node/`` または ``api-harvest-assembly/api-node`` "
+"の下に配置されます。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:34
+msgid ""
+"If the node service is running, run ``sudo docker-compose down`` under the "
+"same directory you executed the ``up`` command."
+msgstr ""
+"ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
+"を実行してください。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:36
+msgid "Edit the properties file ``config-input.yaml`` with a text editor."
+msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:38
+msgid ""
+"Save the changes and apply them with the command ``sudo docker-compose up "
+"--build --detach``."
+msgstr "変更を保存して ``sudo docker-compose up --build --detach`` コマンドで適用してください。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:41
+msgid "Service Bootstrap"
+msgstr "サービスブートストラップ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:43
+msgid ""
+"Find under the directory ``build/catapult-config`` the generated properties "
+"files for the ``peer`` and ``api`` nodes that compose the network."
 msgstr ""
 "``build/catapult-config`` ディレクトリにネットワークを構成する ``peer`` および ``api`` "
 "ノード用に生成されたプロパティファイルが格納されています。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:18
+#: ../../source/guides/network/configuring-node-properties.rst:45
+msgid "Stop all the services with the command ``./cmds/stop-all``."
+msgstr "すべてのサービスを停止するには ``./cmds/stop-all`` を使用します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:47
 msgid ""
-"If, for example, you want to edit the node properties assigned to the "
-"``peer-node-0``, stop first all the services with the command ``./cmds/stop-"
-"all``."
+"To edit the node properties assigned to the ``peer-node-0``, open the target"
+" file under ``peer-node-0/userconfig/resources`` with a text editor."
 msgstr ""
-"たとえば、 ``peer-node-0`` に割り当てられたノードのプロパティを編集する場合は、最初にコマンド ``./cmds/stop-all`` "
-"ですべてのサービスを停止します。"
+"``peer-node-0`` に割り当てられたノードプロパティを変更するには、 ``peer-"
+"node-0/userconfig/resources`` の対象ファイルをテキストエディタで開きます。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:20
+#: ../../source/guides/network/configuring-node-properties.rst:49
 msgid ""
-"Then, edit the properties files under ``peer-node-0/userconfig/resources`` "
-"with your preferred text editor."
-msgstr "次に、 ``peer-node-0/userconfig/resources`` 以下のプロパティファイルをテキストエディタで編集します。"
+"Save the changes and apply them with the command ``./cmds/start-all -d``."
+msgstr "変更を保存して、 ``./cmds/start-all -d`` コマンドで適用します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:22
-msgid ""
-"Once finished, apply the changes by running the command ``./cmds/start-all "
-"-d``."
-msgstr "編集が済んだら、コマンド ``./cmds/start-all -d`` を実行して変更を適用します。"
-
-#: ../../source/guides/network/configuring-node-properties.rst:26
+#: ../../source/guides/network/configuring-node-properties.rst:55
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:28
+#: ../../source/guides/network/configuring-node-properties.rst:57
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
@@ -129,9 +164,23 @@ msgid "Set to true if the server should reuse ports already in use."
 msgstr "true の場合、サーバは使用中のポートを再利用します。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Set to true if a single thread pool should be used, Set to false if multiple"
+" thread pools should be used."
+msgstr "単一のスレッドプールを使用する場合は true に設定し、複数のスレッドプールを使用する場合は false に設定します。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if cache data should be saved in a database."
 msgstr "true の場合、キャッシュデータのデータベース保存が有効になります。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if transaction spam throttling should be enabled."
 msgstr "true の場合、スパムスロットルが有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Harvester private key."
+msgstr "ハーベスタの秘密鍵"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Set to true if auto harvesting is enabled."
+msgstr "true の場合、自動ハーベスティングが有効になります。"

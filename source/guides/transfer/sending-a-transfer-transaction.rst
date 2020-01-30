@@ -16,7 +16,7 @@ Prerequisites
 *************
 
 - Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with cat.currency <setup-getting-a-test-account>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
 **********
 Background
@@ -28,36 +28,26 @@ Background
 
     Sending a TransferTransaction
 
-Alice wants to send ``10 cat.currency`` to Bob, whose address is ``SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54``.
+Alice wants to send 10 |networkcurrency| to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
-Monitoring the network
-======================
+*************
+Prerequisites
+*************
 
-Once an account announces a transaction, the server will always return an OK response. Receiving an OK response does not mean the transaction is valid. A good practice is to monitor transactions before being announced.
+- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Have one :ref:`account with network currency <setup-creating-a-test-account>`
 
-To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal :doc:`monitors announced transactions<../monitor/monitoring-a-transaction-status>` validation errors.
+*************************
+Method #01: Using the SDK
+*************************
 
-.. code-block:: bash
-
-    nem2-cli monitor status
-
-Monitoring ``unconfirmed`` shows you which transactions have reached the network, but are not included in a block yet.
-
-.. code-block:: bash
-
-    nem2-cli monitor unconfirmed
-
-Once a transaction is included, you will see it under the ``confirmed`` terminal.
+1. In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which of them are rejected by the network.
 
 .. code-block:: bash
 
-    nem2-cli monitor confirmed
+   nem2-cli monitor all --address <alice-address>
 
-**********************
-Getting into some code
-**********************
-
-1. Define the **TransferTransaction**, including Bob address as the recipient and attaching ``10 cat.currency``.
+2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
 
 .. example-code::
 
@@ -66,12 +56,13 @@ Getting into some code
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-As you may have noticed, transfer transactions require an array of mosaics as a parameter, allowing to send transfer transactions with multiple mosaics at the same time.
+As you may have noticed, transfer transactions require an array of mosaics as a parameter.
+This permits sending transfer transactions with multiple mosaics at the same time.
 
 If you own more than one mosaic, you can send them together in the same transaction:
 
@@ -82,16 +73,16 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransactionWithMultipleMosaics.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: NEM works with absolute amounts. To get an absolute amount, multiply the amount of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
+.. note:: |codename| works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
-2. Sign the transaction with Alice's account.
+3. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``http://localhost:3000/block/1`` in a new tab and copy the ``meta.generationHash`` value.
+.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -100,12 +91,12 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
+4. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
 
@@ -114,17 +105,20 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/javascript/transfer/SendingATransferTransaction.js
+    .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
-        :language: bash
-        :start-after: #!/bin/sh
+5. Open the terminal where you are monitoring the transaction's status.
+The transaction should appear as confirmed after ±15 seconds and the amount defined gets transferred from the sender's account to the recipient's account.
+If the terminal raises an error, check the error code meaning :ref:`here <status-errors>`.
 
-4. Open the terminal where you are monitoring account transactions ``status``. It should be empty. If there is an error, you can check :ref:`the error code meaning here <status-errors>`.
+*************************
+Method #02: Using the CLI
+*************************
 
-A new transaction should have appeared in the terminal where you are monitoring ``unconfirmed``. At this point, the transaction has reached the network, but it is not clear if it will get included in a block.
+.. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
-If it is included in a block, the transaction gets processed, and the amount stated in the transaction gets transferred from the sender's account to the recipient's account.

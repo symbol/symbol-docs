@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/transfer-transaction.rst:3
+#: ../../source/concepts/transfer-transaction.rst:11
 msgid "Transfer Transaction"
 msgstr "転送トランザクション"
 
-#: ../../source/concepts/transfer-transaction.rst:5
+#: ../../source/concepts/transfer-transaction.rst:13
 msgid ""
 "Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages "
 "between two :doc:`accounts <account>`."
@@ -33,37 +33,37 @@ msgstr ""
 "転送トランザクションは :doc:`モザイク <mosaic>` とメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するために使われます。 "
 
-#: ../../source/concepts/transfer-transaction.rst:11
-msgid "Alice sends 10 cat.currency to Bob"
-msgstr "Alice は 10 cat.currency を Bob へ送る"
+#: ../../source/concepts/transfer-transaction.rst:19
+msgid "Alice sends 10 |networkcurrency| to Bob"
+msgstr "Alice は 10 |networkcurrency| を Bob へ送る"
 
-#: ../../source/concepts/transfer-transaction.rst:15
+#: ../../source/concepts/transfer-transaction.rst:23
 msgid "Recipient"
 msgstr "受信者"
 
-#: ../../source/concepts/transfer-transaction.rst:17
+#: ../../source/concepts/transfer-transaction.rst:25
 msgid ""
 "The recipient is the address of the :doc:`account <account>` that receives "
 "the TransferTransaction."
 msgstr "受信者は転送トランザクションを受け取る :doc:`アカウント <account>` のアドレスです。"
 
-#: ../../source/concepts/transfer-transaction.rst:19
+#: ../../source/concepts/transfer-transaction.rst:27
 msgid ""
 "It is possible to send mosaics to any valid address, even if the address has"
 " not previously participated in any transaction."
 msgstr "過去にトランザクションに関与したことがなくても、正当なアドレスであればモザイクを送信することができます。 "
 
-#: ../../source/concepts/transfer-transaction.rst:21
+#: ../../source/concepts/transfer-transaction.rst:29
 msgid ""
 "If nobody owns the private key of the recipient's account, the funds are "
 "most likely lost forever."
 msgstr "もし受信するアドレスの秘密鍵を誰も持っていない場合、その資産は永久に使うことができなくなります。"
 
-#: ../../source/concepts/transfer-transaction.rst:25
+#: ../../source/concepts/transfer-transaction.rst:33
 msgid "Mosaics"
 msgstr "モザイク"
 
-#: ../../source/concepts/transfer-transaction.rst:27
+#: ../../source/concepts/transfer-transaction.rst:35
 msgid ""
 "A :doc:`mosaic <mosaic>` could be a token, but it could also be more "
 "specialized assets such as reward points, shares of stock, signatures, "
@@ -72,87 +72,79 @@ msgstr ""
 ":doc:`モザイク <mosaic>` "
 "はトークンといえますが、報酬ポイント、株式、署名、状態フラグ、投票やその他の貨幣などのより特化した資産とみなすこともできます。"
 
-#: ../../source/concepts/transfer-transaction.rst:29
+#: ../../source/concepts/transfer-transaction.rst:37
 msgid ""
 "You can send a combination of different mosaics in the same transaction."
 msgstr "同じトランザクションで異なるモザイクの組み合わせを送信することができます。"
 
-#: ../../source/concepts/transfer-transaction.rst:33
+#: ../../source/concepts/transfer-transaction.rst:41
 msgid "Message"
 msgstr "メッセージ"
 
-#: ../../source/concepts/transfer-transaction.rst:35
+#: ../../source/concepts/transfer-transaction.rst:43
 msgid ""
-"A TransferTransaction can hold a message up to ``1023`` characters in "
-"length, making them suitable for timestamping data permanently on the "
-"blockchain."
+"In the :ref:`public network <config-network-properties>`, transfer "
+"transactions can hold a message up to ``1023`` characters in length, making "
+"them suitable for timestamping data permanently on the blockchain."
 msgstr ""
-"転送トランザクションは ``1023`` "
+":ref:`パブリックネットワーク <config-network-properties>` では、転送トランザクションは ``1023`` "
 "文字までの長さのメッセージを持つことができ、ブロックチェーンにデータを永続的にタイムスタンプするのに適しています。"
 
-#: ../../source/concepts/transfer-transaction.rst:37
+#: ../../source/concepts/transfer-transaction.rst:45
 msgid ""
-"The messages attached are visible by default to all network participants."
-msgstr "デフォルトでは添付されたメッセージはネットワーク参加者の全員が見ることができます。"
+"By default, the messages attached are visible by default to all network "
+"participants, although the client does not encrypt the message."
+msgstr "デフォルトでは、添付メッセージはすべてのネットワーク参加者に表示されますが、クライアントはメッセージを暗号化しません。"
 
-#: ../../source/concepts/transfer-transaction.rst:40
+#: ../../source/concepts/transfer-transaction.rst:48
 msgid "Encrypted message"
 msgstr "暗号化メッセージ"
 
-#: ../../source/concepts/transfer-transaction.rst:42
+#: ../../source/concepts/transfer-transaction.rst:50
 msgid ""
 "Encrypted messages are only accessible by the sender and the recipient."
 msgstr "暗号化メッセージは送信者と受信者だけが平文を読むことができます。"
 
-#: ../../source/concepts/transfer-transaction.rst:44
+#: ../../source/concepts/transfer-transaction.rst:52
 msgid ""
-"NEM uses Bouncy Castle's AES block cipher implementation in `CBC mode "
-"<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to "
+"|codename| uses Bouncy Castle's AES block cipher implementation in `CBC mode"
+" <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to "
 "encrypt and decrypt messages."
 msgstr ""
-"NEM は `CBC モード "
+"|networkcurrency| は `CBC モード "
 "<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ の  "
 "Bouncy Castle's AES ブロック暗号化実装を使ってメッセージの暗号化と復号を行います。"
 
-#: ../../source/concepts/transfer-transaction.rst:46
+#: ../../source/concepts/transfer-transaction.rst:54
 msgid ""
-"The client-side handles the encryption and decryption of the message. You "
-"can find under the ``crypto`` module how to `encode "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/master/src/crypto/crypto.js#L255>`_ and `decode "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/master/src/crypto/crypto.js#L287>`_ encrypted messages, but we "
-"recommend you to use the available `SDK public methods "
+"You can find under the ``crypto`` module how to `encode "
+"<https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/core/crypto/Crypto.ts#L248>`_ and `decode "
+"<https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/core/crypto/Crypto.ts#L316>`_ encrypted messages,"
+" but we recommend you to use the available `SDK public methods "
 "<https://nemtech.github.io/nem2-sdk-typescript-"
 "javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
 "instead."
 msgstr ""
-"クライアント側はメッセージの暗号化と復号を処理します。``crypto`` モジュールの下に暗号化メッセージの `エンコード "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/master/src/crypto/crypto.js#L255>`_ と `デコード "
-"<https://github.com/nemtech/nem2-library-"
-"js/blob/master/src/crypto/crypto.js#L287>`_ の方法を発見することができますが、替わりに `SDK "
-"のパブリックメソッド <https://nemtech.github.io/nem2-sdk-typescript-"
+"``crypto`` モジュールの下に暗号化メッセージの `エンコード <https://github.com/nemtech/nem2-sdk-"
+"typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L248>`_ と `デコード "
+"<https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/core/crypto/Crypto.ts#L316>`_ "
+"の方法を発見することができますが、替わりに `SDK のパブリックメソッド <https://nemtech.github.io/nem2-sdk-"
+"typescript-"
 "javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
 "を使用することを推奨します。"
 
-#: ../../source/concepts/transfer-transaction.rst:50
+#: ../../source/concepts/transfer-transaction.rst:58
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transfer-transaction.rst:62
-msgid "Schemas"
-msgstr "スキーマ"
+#: ../../source/concepts/transfer-transaction.rst:70
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/transfer-transaction.rst:64
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/transfer-transaction.rst:71
+#: ../../source/concepts/transfer-transaction.rst:77
 msgid ""
 "Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages "
 "between two :doc:`accounts <account>`."
@@ -160,15 +152,11 @@ msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
 
-#: ../../source/concepts/transfer-transaction.rst:75
-msgid "**Entity type**: 0x4154"
-msgstr "**エンティティタイプ**: 0x4154"
-
-#: ../../source/concepts/transfer-transaction.rst:77
+#: ../../source/concepts/transfer-transaction.rst:83
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/transfer-transaction.rst:79
+#: ../../source/concepts/transfer-transaction.rst:85
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -194,21 +182,24 @@ msgid "Transaction recipient."
 msgstr "トランザクションレシート"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "Size of the attached message."
-msgstr "添付されたメッセージのサイズ"
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Number of attached mosaics."
 msgstr "添付されたモザイクの数"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid ""
-":ref:`Message type <message-type>` and a payload of up to ``1023`` bytes."
-msgstr ":ref:`message-type <message-type>` と ``1023`` バイトまでのペイロード"
+msgid "Size of the attached message."
+msgstr "添付されたメッセージのサイズ"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid "Reserved padding to align mosaics on 8-byte boundary."
+msgstr "モザイクを 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Attached mosaics to send."
 msgstr "送信する添付済みモザイク"
+
+#: ../../source/concepts/transfer-transaction.rst:1
+msgid ":ref:`Message type <message-type>` and hexadecimal payload."
+msgstr ":ref:`メッセージタイプ <message-type>` と 16 進数のペイロード"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Plain message."
@@ -221,3 +212,7 @@ msgstr "暗号化メッセージ"
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Persistent harvesting delegation."
 msgstr "永続的なハーベスティングのデリゲート"
+
+#: ../../source/concepts/transfer-transaction.rst:113
+msgid "Continue: :doc:`Aggregate Transaction <aggregate-transaction>`."
+msgstr "次へ: :doc:`アグリゲートトランザクション <aggregate-transaction>`"

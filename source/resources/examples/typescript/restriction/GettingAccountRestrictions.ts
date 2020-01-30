@@ -16,20 +16,25 @@
  *
  */
 
-import {AccountRestrictionType, Address, RestrictionHttp} from "nem2-sdk";
+import {AccountRestrictionFlags, Address} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const rawAddress = process.env.COMPANY_ADDRESS as string;
+// replace with address
+const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
 const address = Address.createFromRawAddress(rawAddress);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const restrictionHttp = repositoryFactory.createRestrictionAccountRepository();
 
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
 restrictionHttp.getAccountRestrictions(address)
     .subscribe((accountRestrictions) => {
         if (accountRestrictions.length > 0) {
             accountRestrictions
                 .filter((accountRestriction) => accountRestriction.values.length > 0)
                 .map((accountRestriction) => {
-                    console.log('\n', AccountRestrictionType[accountRestriction.restrictionType], accountRestriction.values.toString());
+                    console.log('\n', AccountRestrictionFlags[accountRestriction.restrictionFlags], accountRestriction.values.toString());
                 });
         } else {
             console.log('The address does not have account restriction assigned.');

@@ -16,19 +16,23 @@
  *
  */
 
-import {Account, Deadline, NetworkType, PublicAccount, TransactionHttp, TransferTransaction,} from 'nem2-sdk';
+import {Account, Deadline, NetworkType, PublicAccount, TransferTransaction, UInt64} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const alicePrivateKey = process.env.ALICE_PRIVATE_KEY as string;
-const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, NetworkType.MIJIN_TEST);
-
-const certificatePublicKey = process.env.CERTIFICATE_PUBLIC_KEY as string;
-const certificatePublicAccount = PublicAccount.createFromPublicKey(certificatePublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with alice private key
+const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, networkType);
+// replace with certificate public key
+const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const certificatePublicAccount = PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
 
 const encryptedMessage = aliceAccount
     .encryptMessage('This message is secret',
         certificatePublicAccount,
-        NetworkType.MIJIN_TEST);
+        networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -37,19 +41,23 @@ const transferTransaction = TransferTransaction.create(
     certificatePublicAccount.address,
     [],
     encryptedMessage,
-    NetworkType.MIJIN_TEST);
+    networkType,
+    UInt64.fromUint(2000000));
 /* end block 02 */
 
 /* start block 03 */
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
 /* start block 04 */
-const transactionHttp = new TransactionHttp('http://localhost:3000');
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
+
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 04 */

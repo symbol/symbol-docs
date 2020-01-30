@@ -19,81 +19,64 @@
 import {
     Account,
     Address,
-    BlockHttp,
     Deadline,
-    Listener,
     Mosaic,
-    MosaicAlias,
-    MosaicId,
     NamespaceId,
     NetworkType,
     PlainMessage,
-    ResolutionEntry,
-    ResolutionStatement,
-    TransactionHttp,
+    TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {filter, map, mergeMap} from "rxjs/operators";
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const aliasedMosaic = new Mosaic(
-    new NamespaceId('cat.currency'),
-    UInt64.fromUint(1000000)
+    new NamespaceId('symbol.xym'),
+    UInt64.fromUint(1000000),
 );
 /* end block 01 */
 
 /* start block 02 */
+// replace with network type
+const networkType = NetworkType.TEST_NET;
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54'),
+    Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'),
     [aliasedMosaic],
     PlainMessage.create('Test aliased mosaic'),
-    NetworkType.MIJIN_TEST);
+    networkType,
+    UInt64.fromUint(2000000));
 
-const privateKey = process.env.PRIVATE_KEY as string;
-const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.GENERATION_HASH as string;
-
+// replace with sender private key
+const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const account = Account.createFromPrivateKey(privateKey, networkType);
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */
-const nodeUrl = 'http://localhost:3000';
-const blockHttp = new BlockHttp(nodeUrl);
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const listener = repositoryFactory.createListener();
+const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-
-    transactionHttp
-        .announce(signedTransaction)
-        .subscribe(x => console.log(x), err => console.error(err));
-/* end block 03 */
-
-/* start block 04 */
-    listener
-        .confirmed(account.address)
+    transactionService
+        .announce(signedTransaction, listener)
         .pipe(
-            // Get the block height where the transaction was included
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedTransaction.hash),
-            // Get the list of receipts triggered for that block
-            mergeMap((transaction) => blockHttp.getBlockReceipts(transaction.transactionInfo!.height.compact())),
-            // Iterate over each resolution statement. Find the resolution for the aliased MosaicId.
-            map((receipts) => receipts.mosaicResolutionStatements),
-            mergeMap((resolutionStatements) => resolutionStatements),
-            filter((resolutionStatement) => resolutionStatement.unresolved instanceof NamespaceId
-                && resolutionStatement.unresolved.toHex() === aliasedMosaic.id.toHex())
-        )
-        .subscribe((resolutionStatement:ResolutionStatement) => {
-            resolutionStatement.resolutionEntries.map((entry:ResolutionEntry) => {
-                console.log("Resolved MosaicId: ", entry.resolved);
-                console.log("PrimaryId: ", entry.source.primaryId);
-                console.log("SecondaryId: ", entry.source.secondaryId);
-            });
-            listener.terminate();
-        }, err => console.log(err));
+            mergeMap((transaction) =>
+                transactionService.resolveAliases([transaction.transactionInfo!.hash!])),
+            map((transactions) => transactions[0] as TransferTransaction))
+        .subscribe((transaction) => {
+            console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
+            listener.close();
+        }, (err) => console.log(err));
 });
-/* end block 04 */
+/* end block 03 */

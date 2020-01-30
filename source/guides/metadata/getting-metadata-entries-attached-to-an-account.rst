@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 06 Oct, 2019
-    :category: Metadata, Account
+    :category: Metadata
     :excerpt: 1
     :nocomments:
 
@@ -11,12 +11,9 @@ Getting metadata entries attached to an account
 
 Get the list of metadata entries attached to an account.
 
-**********************
-Getting into some code
-**********************
-
-Get all metadata entries
-========================
+*************************
+Method #01: Using the SDK
+*************************
 
 .. example-code::
 
@@ -25,26 +22,16 @@ Get all metadata entries
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/metadata/GettingMetadataEntriesAccount.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
-Filter metadata entries by key
-==============================
-
-.. example-code::
-
-    .. viewsource:: ../../resources/examples/typescript/metadata/GettingMetadataEntriesAccountByKey.ts
-        :language: typescript
+    .. viewsource:: ../../resources/examples/typescript/metadata/GettingMetadataEntriesAccount.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-Filter metadata entries by key and sender
-=========================================
+*************************
+Method #02: Using the CLI
+*************************
 
-.. example-code::
+.. viewsource:: ../../resources/examples/bash/metadata/GettingMetadataEntriesAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
 
-    .. viewsource:: ../../resources/examples/typescript/metadata/GettingMetadataEntriesAccountByKeyAndSender.ts
-        :language: typescript
-        :start-after:  /* start block 01 */
-        :end-before: /* end block 01 */

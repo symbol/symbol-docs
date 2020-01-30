@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.18.9\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 17:52+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,20 +21,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:3 ../../source/concepts/mosaic.rst:148
+#: ../../source/concepts/mosaic.rst:11 ../../source/concepts/mosaic.rst:168
 msgid "Mosaic"
 msgstr "モザイク"
 
-#: ../../source/concepts/mosaic.rst:5
+#: ../../source/concepts/mosaic.rst:13
 msgid ""
 "Mosaics are part of what makes the Smart Asset System unique and flexible. "
-"They are **fixed assets** on the NEM blockchain that can represent a set of "
-"multiple identical things that do not change."
+"They are **fixed assets** that can represent a set of multiple identical "
+"things that do not change."
 msgstr ""
-"モザイクは、スマートアセットシステムに一意性と柔軟さをもたらすものの一部です。これらは、変化しない複数の同一物の集合を表すことができる、NEM "
-"ブロックチェーン上に **固定されたアセット** です。"
+"モザイクは、スマートアセットシステムに一意性と柔軟さをもたらすものの一部です。これらは、変化しない複数の同一物の集合を表すことができる "
+"**固定されたアセット** です。"
 
-#: ../../source/concepts/mosaic.rst:7
+#: ../../source/concepts/mosaic.rst:16
 msgid ""
 "A mosaic could be a **token**, but it could also be a collection of more "
 "specialized assets such as reward points, shares of stock, signatures, "
@@ -43,7 +43,7 @@ msgstr ""
 "モザイクは **トークン** といえますが、より特化したアセット: "
 "報酬ポイント、株式、署名、状態フラグ、投票やその他の貨幣などのコレクションとみなすこともできます。"
 
-#: ../../source/concepts/mosaic.rst:9
+#: ../../source/concepts/mosaic.rst:18
 msgid ""
 "Each mosaic has a **unique identifier** represented as a 64-bit unsigned "
 "integer and a set of :ref:`configurable properties <mosaic-properties>` and "
@@ -54,11 +54,15 @@ msgstr ""
 "<../guides/mosaic/creating-a-mosaic>` する際に定義できる :ref:`設定可能なプロパティ <mosaic-"
 "properties>` とフラグの集合を持ちます。"
 
-#: ../../source/concepts/mosaic.rst:15
+#: ../../source/concepts/mosaic.rst:24
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/concepts/mosaic.rst:20
+#: ../../source/concepts/mosaic.rst:26
+msgid "Find below the complete list of configurable properties."
+msgstr "設定可能なプロパティのリストは次の通りです。"
+
+#: ../../source/concepts/mosaic.rst:31
 msgid ""
 "Determines the decimal place to which the mosaic can be divided. "
 "Divisibility of 3 means that the smallest fraction a mosaic can be divided "
@@ -67,71 +71,80 @@ msgstr ""
 "モザイクがどれくらいの小数点以下に分割できるかを決定します。可分性 3 はモザイクが最小で 0.001 に分割できることを意味します。可分性は 0 から"
 " 6 の範囲でなければなりません。"
 
-#: ../../source/concepts/mosaic.rst:25
+#: ../../source/concepts/mosaic.rst:35
+msgid "Initial supply"
+msgstr "初期供給量"
+
+#: ../../source/concepts/mosaic.rst:37
 msgid ""
 "Indicates the amount of mosaic in circulation. The total supply must be in "
 "the range of 0 and ``9,000,000,000,000,000`` atomic units."
 msgstr ""
 "モザイクの供給量の総数です。合計供給量は 0 と ``9,000,000,000,000,000`` の原子単位の範囲でなければなりません。"
 
-#: ../../source/concepts/mosaic.rst:27
+#: ../../source/concepts/mosaic.rst:40
 msgid ""
-"NEM works with **absolute amounts**. To get an absolute amount, multiply the"
-" amount of assets you want to create or send by 10\\ :sup:`divisibility`."
+"|codename| works with **absolute amounts**. To get an absolute amount, "
+"multiply the amount of assets you want to create or send by 10\\ "
+":sup:`divisibility`."
 msgstr ""
-"NEM は **絶対量** を扱います。絶対量を取得するには作成または送信したいアセットの量に 10\\ :sup:`divisibility` "
-"を乗じてください。"
+"|codename| は **絶対量** を扱います。絶対量を取得するには作成または送信したいアセットの量に 10\\ "
+":sup:`divisibility` を乗じてください。"
 
-#: ../../source/concepts/mosaic.rst:29
+#: ../../source/concepts/mosaic.rst:42
 msgid ""
 "For example, if the mosaic has **divisibility** 2, to create or send 10 "
-"units (relative) you should define 1000 (absolute) instead."
-msgstr "例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成または送信するには 1000 (絶対) と定義します。"
+"units (relative) you should define 1,000 (absolute) instead."
+msgstr "例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成または送信するには 1,000 (絶対) と定義します。"
 
-#: ../../source/concepts/mosaic.rst:34
+#: ../../source/concepts/mosaic.rst:47
 msgid ""
-"Specifies the number of confirmed blocks the mosaic is rented for, and it is"
-" allowed to lie up to ``3650`` days (10 years). You can also create **non-"
-"expiring mosaics** setting this property to ``0``."
+"Specifies the number of confirmed blocks the mosaic is rented for. It is "
+"allowed to lie in |codename|'s public network up to ``3650`` days (10 "
+"years), being this parameter :ref:`editable per network <config-network-"
+"properties>`. **Non-expiring mosaics** can be created by setting this "
+"property to ``0``."
 msgstr ""
-"モザイクのレンタル期間の承認済みブロック数を指定します。期間は ``3650`` 日 "
-"(10年)まで許可されています。期限の切れないモザイクを作る場合は、プロパティを ``0`` にしてください。"
+"モザイクのレンタル期間の承認済みブロック数を指定します。|codename| パブリックネットワークにおいて、期間は ``3650`` 日 "
+"(10年)まで許可されています。パラメータは :ref:`ネットワークごとに設定可能 <config-network-properties>` です。 "
+"**期限の切れないモザイク** を作る場合は、プロパティを ``0`` にしてください。"
 
-#: ../../source/concepts/mosaic.rst:38
-msgid "Flags"
-msgstr "フラグ"
+#: ../../source/concepts/mosaic.rst:51
+msgid ""
+"You can use the following formula to convert approximately days to blocks:"
+msgstr "次の式を使用して、およその日数をブロックに変換できます:"
 
-#: ../../source/concepts/mosaic.rst:43
+#: ../../source/concepts/mosaic.rst:60
 msgid ""
 "If set to true, the mosaic supply can change at a later point. Otherwise, "
 "the mosaic supply remains immutable."
 msgstr "true の場合、モザイク供給量は後の時点で変更できるようになります。そうでない場合、変更できません。"
 
-#: ../../source/concepts/mosaic.rst:52
+#: ../../source/concepts/mosaic.rst:70
 msgid "Example of a non-transferable mosaic"
 msgstr "転送不可モザイクの例"
 
-#: ../../source/concepts/mosaic.rst:54
+#: ../../source/concepts/mosaic.rst:72
 msgid ""
 "If set to true, the mosaic can be transferred between arbitrary accounts. "
 "Otherwise, the mosaic can only be transferred back to the mosaic creator."
 msgstr "true の場合、モザイクは任意のアカウント間で転送できます。そうでない場合、モザイクはモザイク作成者へ送り返すことしかできません。"
 
-#: ../../source/concepts/mosaic.rst:63
+#: ../../source/concepts/mosaic.rst:82
 msgid "Example of a mosaic restriction"
 msgstr "モザイク制限の例"
 
-#: ../../source/concepts/mosaic.rst:65
+#: ../../source/concepts/mosaic.rst:84
 msgid ""
-"If set to true, the mosaic owner can configure custom :doc:`restrictions "
+"If set to true, the mosaic creator can configure custom :doc:`restrictions "
 "<mosaic-restriction>`."
-msgstr "true の場合、モザイク所有者は :doc:`制限 <mosaic-restriction>` を設定できます。"
+msgstr "true の場合、モザイク作成者は :doc:`制限 <mosaic-restriction>` を設定できます。"
 
-#: ../../source/concepts/mosaic.rst:71
+#: ../../source/concepts/mosaic.rst:90
 msgid "Rental fee"
 msgstr "レンタル手数料"
 
-#: ../../source/concepts/mosaic.rst:73
+#: ../../source/concepts/mosaic.rst:92
 msgid ""
 "To create a mosaic, accounts have to pay a rental fee in addition to the "
 ":doc:`transaction fee <fees>`. The fees will be deducted from the account's "
@@ -140,59 +153,48 @@ msgstr ""
 "モザイクを作成するために、アカウントはレンタル手数料に加えて :doc:`トランザクション手数料 <fees>` を支払います。有効な "
 "**MosaicDefinitionTransaction** のアナウンスをすると、手数料はアカウントの残高から差し引かれます。"
 
-#: ../../source/concepts/mosaic.rst:75
+#: ../../source/concepts/mosaic.rst:95
 msgid ""
-"By default, registering a mosaic has an :properties:`associated cost "
-"<config-network.properties>` of ``0.0005 cat.currency``, but **the network "
-"dynamically adjusts the mosaic rental fee** over time."
+"By default, registering a mosaic in |codename|'s public network has an "
+":ref:`initial cost <config-network-properties>` of ``0.0005`` "
+"|networkcurrency|. However, **the network dynamically adjusts the mosaic "
+"rental fee** over time."
 msgstr ""
-"デフォルトでは、モザイクの作成には ``0.0005 cat.currency`` の :properties:`関連コスト <config-"
-"network.properties>` があります。しかし **ネットワークはモザイクレンタル手数料を動的に調整** していきます。"
+"デフォルトでは、|codename| パブリックネットワークにおいて、モザイクの作成には ``0.0005`` |networkcurrency| の "
+":ref:`初期コスト <config-network-properties>` があります。しかし "
+"**ネットワークはモザイクレンタル手数料を動的に調整** していきます。"
 
-#: ../../source/concepts/mosaic.rst:77
+#: ../../source/concepts/mosaic.rst:98
 msgid ""
 "To calculate the effective rental fee, the network multiplies the default "
 "value set in the configuration by the :doc:`median network multiplier "
-"<harvesting>` over last :properties:`maxRollbackBlocks <config-"
-"network.properties#L20>`. In case there are zero multipliers, these are "
-"replaced by the :properties:`defaultDynamicFeeMultiplier <config-"
-"network.properties#L20>` before the median calculation."
+"<harvesting>` over last :ref:`maxDifficultyBlocks <config-network-"
+"properties>`. In case there are zero multipliers, these are replaced by the "
+":ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the "
+"median calculation."
 msgstr ""
-"実効レンタル手数料を算出するために、ネットワークは設定で決められたデフォルト値に最後の :properties:`maxRollbackBlocks "
-"<config-network.properties#L20>` の :doc:`median network multiplier "
-"<harvesting>` を乗算します。乗数がゼロの場合、これらは中央値計算の前に "
-":properties:`defaultDynamicFeeMultiplier <config-network.properties#L20>` "
-"で置き換えられます。"
+"実効レンタル手数料を算出するために、ネットワークは設定で決められたデフォルト値に最後の :ref:`maxDifficultyBlocks "
+"<config-network-properties>` の :doc:`median network multiplier <harvesting>`"
+" を乗算します。乗数がゼロの場合は、これらは中央値計算の前に :ref:`defaultDynamicFeeMultiplier <config-"
+"network-properties>` で置き換えられます。"
 
-#: ../../source/concepts/mosaic.rst:81
+#: ../../source/concepts/mosaic.rst:103
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic.rst:93
-msgid "Schemas"
-msgstr "スキーマ"
+#: ../../source/concepts/mosaic.rst:115
+msgid "Transaction schemas"
+msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/mosaic.rst:95
-msgid ""
-"Configuration parameters are :properties:`editable <config-"
-"network.properties>`. Public network configuration may differ."
-msgstr ""
-"設定パラメータは :properties:`編集可能 <config-network.properties>` "
-"です。公開ネットワークでは異なる可能性があります。"
-
-#: ../../source/concepts/mosaic.rst:102
+#: ../../source/concepts/mosaic.rst:122
 msgid "Announce a MosaicDefinitionTransaction to create a new mosaic."
 msgstr "新しいモザイクを作るために MosaicDefinitionTransaction をアナウンスします。"
 
-#: ../../source/concepts/mosaic.rst:106
-msgid "**Entity type**: 0x414D"
-msgstr "**エンティティタイプ**: 0x414D"
-
-#: ../../source/concepts/mosaic.rst:108 ../../source/concepts/mosaic.rst:133
+#: ../../source/concepts/mosaic.rst:128 ../../source/concepts/mosaic.rst:153
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/mosaic.rst:110 ../../source/concepts/mosaic.rst:135
+#: ../../source/concepts/mosaic.rst:130 ../../source/concepts/mosaic.rst:155
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -217,49 +219,44 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Random nonce used to generate the mosaic id."
-msgstr "モザイクIDを生成するために使用されるランダムなノンス値"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "Identifier of the mosaic."
 msgstr "モザイクの識別子"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid ""
+"Mosaic duration expressed in blocks. If set to 0, the mosaic is non-"
+"expiring."
+msgstr "ブロック数で表現されたモザイク期間。0 に設定した場合は無期限のモザイクになります。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Random nonce used to generate the mosaic id."
+msgstr "モザイクIDを生成するために使用されるランダムなノンス値"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Mosaic flags."
 msgstr "モザイクフラグ"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Mosaic divisibility. Maximum divisibility is ``6``."
-msgstr "モザイクの可分性。最大値は ``6`` 。"
+msgid "Mosaic divisibility."
+msgstr "モザイク可分性"
 
-#: ../../source/concepts/mosaic.rst:1
-msgid ""
-"Mosaic duration expressed in blocks. Duration is allowed to lie up to "
-"``3650`` days (10 years). If set to 0, the mosaic is non-expiring."
-msgstr ""
-"ブロック数で表現されたモザイク期間、期間は ``3650`` 日(10年)まで許可されています。0 に設定した場合、期限の無いモザイクになります。"
-
-#: ../../source/concepts/mosaic.rst:127
+#: ../../source/concepts/mosaic.rst:147
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
 msgstr "モザイクの供給量を増加または減少させるために供給量変更トランザクションをアナウンスする。"
-
-#: ../../source/concepts/mosaic.rst:131
-msgid "**Entity type**: 0x424D"
-msgstr "**エンティティタイプ**: 0x424D"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Affected mosaic identifier."
 msgstr "影響を受けるモザイク識別子"
 
 #: ../../source/concepts/mosaic.rst:1
-msgid "Supply change direction."
-msgstr "供給量変更の方向"
-
-#: ../../source/concepts/mosaic.rst:1
 msgid "Amount of supply to increase or decrease."
 msgstr "モザイク供給量の増加または減少の総量。"
+
+#: ../../source/concepts/mosaic.rst:1
+msgid "Supply change action."
+msgstr "供給量変更アクション"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Mosaic identifier."
@@ -272,7 +269,7 @@ msgstr "モザイク量"
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
 "Mosaic identifier. If the most significant bit of byte 0 is set, a "
-"namespaceId (alias) is used instead of the real  mosaic identifier."
+"namespaceId (alias) is used instead of the real mosaic identifier."
 msgstr ""
 "モザイク識別子。バイトの最上位ビットが0の設定されている場合、モザイク識別子の代わりに namespaceId (エイリアス) が使用されます。"
 
@@ -282,20 +279,21 @@ msgstr "フラグ無し"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Mosaic supports supply changes even when mosaic owner owns partial supply."
-msgstr "モザイクの所有者が供給量を部分的に保有している場合でも、モザイクは供給の変更をサポートします。"
+"Mosaic supports supply changes even when the mosaic creator owns partial "
+"supply."
+msgstr "モザイク作成者が供給量を部分的に保有している場合でも、モザイクは供給の変更をサポートします。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Mosaic supports transfers between arbitrary accounts. When not set, mosaic "
-"can only be transferred to and from mosaic owner."
-msgstr "モザイクは任意のアカウント間の振替をサポートします。not を設定した場合はモザイクはモザイクの所有者との間でしか転送できません。"
+"Mosaic supports transfers between arbitrary accounts. When not set, the "
+"mosaic can only be transferred to/from the mosaic creator."
+msgstr "モザイクは任意のアカウント間の振替をサポートします。not を設定した場合はモザイクはモザイク作成者との間でしか転送できません。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid ""
-"Mosaic owner can add rules to restrict which accounts are enabled to send "
+"Mosaic creator can add rules to restrict which accounts are enabled to send "
 "and receive the mosaic."
-msgstr "モザイク所有者はどのアカウントがモザイクを送受信できるのかを制限するルールを追加することができます。"
+msgstr "モザイク作成者はどのアカウントがモザイクを送受信できるのかを制限するルールを追加することができます。"
 
 #: ../../source/concepts/mosaic.rst:1
 msgid "Decrease."
@@ -304,3 +302,7 @@ msgstr "減少"
 #: ../../source/concepts/mosaic.rst:1
 msgid "Increase."
 msgstr "増加"
+
+#: ../../source/concepts/mosaic.rst:219
+msgid "Continue: :doc:`Namespaces <namespace>`."
+msgstr "次へ: :doc:`ネームスペース <namespace>`"

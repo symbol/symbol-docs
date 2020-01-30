@@ -6,6 +6,8 @@ Account Restriction
 
 The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
 
+|codename|'s public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
+
 .. csv-table:: Restriction types
     :widths: 40 30 30
     :header: "Restriction", "Incoming Transactions", "Outgoing Transactions"
@@ -19,7 +21,8 @@ The account owners—plural in case of multisig accounts—can edit the account 
 Address restriction
 *******************
 
-An account can decide to **only receive** transactions from a list of allowed **addresses**. Alternatively, the account can define a list of blocked addresses.
+An account can decide to **only receive** transactions from a list of allowed **addresses**.
+Alternatively, the account can define a list of blocked addresses.
 
 Restricting **incoming transactions** is useful when the account will be only receiving transactions from known addresses, or when the account wants to block transactions coming from unknown senders.
 
@@ -39,7 +42,8 @@ Additionally, an account can decide to apply address restrictions to the **outgo
 Mosaic restriction
 ******************
 
-Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed.
+On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
 Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated to their activity.
 
@@ -47,7 +51,8 @@ Account mosaic restrictions are generally used to **prevent accounts being tagge
 Operation restriction
 *********************
 
-An account can allow/block announcing **outgoing** transactions with a :ref:`determined operation type <transaction-types>`. By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
+An account can allow/block announcing **outgoing** transactions with a determined :ref:`operation type <transaction-types>`.
+By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.
 
 ********
 Examples
@@ -75,7 +80,8 @@ Enhancing the account security
 
 Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
 
-As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account. Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
+As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account.
+Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
 
 ******
 Guides
@@ -89,11 +95,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
-
-.. note:: Configuration parameters are :properties:`editable <config-network.properties>`. Public network configuration may differ.
+*******************
+Transaction schemas
+*******************
 
 .. _account-address-restriction-transaction:
 
@@ -104,7 +108,7 @@ Configure restrictions to prevent receiving or sending transactions from/to unde
 
 **Version**: 0x01
 
-**Entity type**: 0x4150
+**EntityType**: 0x4150
 
 **Inlines**:
 
@@ -114,9 +118,12 @@ Configure restrictions to prevent receiving or sending transactions from/to unde
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    restrictionType; :ref:`AccountRestrictionType <account-restriction-type>` ; Type of the account restriction.
-    modificationsCount; uint8; Number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
-    modifications; array(:ref:`AccountAddressRestrictionModification <account-address-restriction-modification>`, modificationsCount); Array of account address restriction modifications.
+    restrictionType; :ref:`AccountRestrictionFlags <account-restriction-flags>` ; Type of the account restriction.
+    restrictionAdditionsCount; uint8; number of account restriction additions.
+    restrictionDeletionsCount; uint8; Number of account restriction deletions.
+    accountRestrictionTransactionBody_Reserved1 ; uint32; Reserved padding to align restrictionAdditions on 8-byte boundary.
+    restrictionAdditions; array(:schema:`UnresolvedAddress <types.cats#L10>`, restrictionAdditionsCount); Account restriction additions.
+    restrictionDeletions; array(:schema:`UnresolvedAddress <types.cats#L10>`, restrictionDeletionsCount); Account restriction deletions.
 
 .. _account-mosaic-restriction-transaction:
 
@@ -127,7 +134,7 @@ Configure restrictions to prevent receiving transactions containing a specific m
 
 **Version**: 0x01
 
-**Entity type**: 0x4250
+**EntityType**: 0x4250
 
 **Inlines**:
 
@@ -137,9 +144,12 @@ Configure restrictions to prevent receiving transactions containing a specific m
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    restrictionType; :ref:`AccountRestrictionType <account-restriction-type>` ; Type of the account restriction.
-    modificationsCount; uint8; Number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
-    modifications; array(:ref:`AccountMosaicRestrictionModification <account-mosaic-restriction-modification>`, modificationsCount); Array of account mosaic restriction modifications.
+    restrictionType; :ref:`AccountRestrictionFlags <account-restriction-flags>` ; Type of the account restriction.
+    restrictionAdditionsCount; uint8; number of account restriction additions.
+    restrictionDeletionsCount; uint8; Number of account restriction deletions.
+    accountRestrictionTransactionBody_Reserved1 ; uint32; Reserved padding to align restrictionAdditions on 8-byte boundary.
+    restrictionAdditions; array(:schema:`UnresolvedMosaicId <types.cats#L6>`, restrictionAdditionsCount); Account restriction additions.
+    restrictionDeletions; array(:schema:`UnresolvedMosaicId <types.cats#L6>`, restrictionDeletionsCount); Account restriction deletions.
 
 .. _account-operation-restriction-transaction:
 
@@ -150,7 +160,7 @@ Configure restrictions to prevent announcing transactions by :ref:`type <transac
 
 **Version**: 0x01
 
-**Entity type**: 0x4350
+**EntityType**: 0x4350
 
 **Inlines**:
 
@@ -160,96 +170,28 @@ Configure restrictions to prevent announcing transactions by :ref:`type <transac
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    restrictionType; :ref:`AccountRestrictionType <account-restriction-type>`; Type of the account restriction.
-    modificationsCount; uint8; The number of modifications in the transaction. A maximum of ``255`` modifications per transaction is allowed.
-    modifications; array(:ref:`AccountOperationRestrictionModification <account-operation-restriction-modification>`, modificationsCount);  Array of account operation restriction modifications.
-.. _account-address-restriction-modification:
+    restrictionType; :ref:`AccountRestrictionFlags <account-restriction-flags>` ; Type of the account restriction.
+    restrictionAdditionsCount; uint8; number of account restriction additions.
+    restrictionDeletionsCount; uint8; Number of account restriction deletions.
+    accountRestrictionTransactionBody_Reserved1 ; uint32; Reserved padding to align restrictionAdditions on 8-byte boundary.
+    restrictionAdditions; array(:ref:`EntityType <entity-type>`, restrictionAdditionsCount); Account restriction additions.
+    restrictionDeletions; array(:ref:`EntityType <entity-type>`, restrictionDeletionsCount); Account restriction deletions.
 
-AccountAddressRestrictionModification
-=====================================
+.. _account-restriction-flags:
 
-**Inlines**:
+AccountRestrictionFlags
+=======================
 
-* :ref:`AccountRestrictionModification <account-restriction-modification>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    value; :schema:`Address <types.cats#L8>`; Address to allow/block.
-
-.. _account-mosaic-restriction-modification:
-
-AccountMosaicRestrictionModification
-====================================
-
-**Inlines**:
-
-* :ref:`AccountRestrictionModification <account-restriction-modification>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    value; :schema:`MosaicId <types.cats#L4>`; Identifier of the mosaic to allow/block.
-
-.. _account-operation-restriction-modification:
-
-AccountOperationRestrictionModification
-=======================================
-
-**Inlines**:
-
-* :ref:`AccountRestrictionModification <account-restriction-modification>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    value; uint16; :ref:`Operation <transaction-types>` to allow/block.
-
-.. _account-restriction-modification:
-
-AccountRestrictionModification
-==============================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    modificationAction; :ref:`AccountRestrictionModificationAction <account-restriction-modification-action>` ; Modification action.
-
-.. _account-restriction-type:
-
-AccountRestrictionType
-======================
-
-Enumeration: uint8
+Enumeration: uint16
 
 .. csv-table::
     :header: "Id", "Description"
     :delim: ;
 
-    0x01; Allow only incoming transactions from a given address.
-    0x02; Allow only incoming transactions containing a given mosaic identifier.
-    0x05; Account restriction sentinel.
-    0x41; Allow only outgoing transactions to a given address.
-    0x44; Allow only outgoing transactions with a given transaction type.
-    0x81; Block incoming transactions from a given address.
-    0x82; Block incoming transactions containing a given mosaic identifier.
-    0xC1; Block outgoing transactions to a given address.
-    0xC4; Block outgoing transactions with a given transaction type.
+    0x0001; Restriction type is an address.
+    0x0002; Restriction type is a mosaic identifier.
+    0x0004; Restriction type is a transaction type.
+    0x4000; Restriction is interpreted as outgoing.
+    0x8000; Restriction is interpreted as blocking operation.
 
-.. _account-restriction-modification-action:
-
-AccountRestrictionModificationAction
-====================================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Remove account restriction value.
-    0x01; Add account restriction value.
+Continue: :doc:`Mosaic Restrictions <mosaic-restriction>`.

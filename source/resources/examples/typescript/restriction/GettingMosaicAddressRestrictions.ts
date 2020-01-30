@@ -16,16 +16,21 @@
  *
  */
 
-import {Address, MosaicId, RestrictionHttp} from "nem2-sdk";
+import {Address, MosaicId} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const rawAddress = process.env.ADDRESS as string;
+// replace with address
+const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
-
-const mosaicIdHex = process.env.MOSAIC_ID as string;
+// replace with mosaic id
+const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 
-const restrictionHttp = new RestrictionHttp('http://localhost:3000');
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
     .subscribe((mosaicAddressRestrictions) => {
         if (mosaicAddressRestrictions.restrictions.size > 0) {

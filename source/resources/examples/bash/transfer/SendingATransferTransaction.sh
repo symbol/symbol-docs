@@ -1,3 +1,3 @@
  #!/bin/sh
 
- nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics @cat.currency::10000000 --message "Welcome to NEM"
+ nem2-cli transaction transfer --recipient-address TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP --mosaics @symbol.xym::10000000 --message "This is a test message" --sync

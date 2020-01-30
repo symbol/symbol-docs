@@ -23,15 +23,19 @@ import {
     MultisigAccountModificationTransaction,
     NetworkType,
     PublicAccount,
-    TransactionHttp
-} from "nem2-sdk";
+    UInt64,
+} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
-const cosignatoryPrivateKey = process.env.COSIGNATORY_PRIVATE_KEY as string;
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-
-const multisigAccountPublicKey = process.env.MULTISIG_ACCOUNT_PUBLIC_KEY as string;
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
+// replace with network type
+const networkType = NetworkType.TEST_NET;
+// replace with cosignatory private key
+const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+// replace with multisig account private key
+const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
@@ -40,21 +44,27 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     1,
     0,
     [],
-    NetworkType.MIJIN_TEST);
+    [],
+    networkType);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-    NetworkType.MIJIN_TEST,
-    []);
+    networkType,
+    [],
+    UInt64.fromUint(2000000));
 
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const transactionHttp = new TransactionHttp('http://localhost:3000');
 transactionHttp
     .announce(signedTransaction)
-    .subscribe(x => console.log(x), err => console.error(err));
+    .subscribe((x) => console.log(x), (err) => console.error(err));
 /* end block 03 */

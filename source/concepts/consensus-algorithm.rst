@@ -1,8 +1,8 @@
-###################
-Consensus Algorithm
-###################
+#########
+Consensus
+#########
 
-Catapult uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
+|codename| uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
 
 In a basic Proof of Stake (|pos|) consensus algorithm, the formation of a subsequent block in a blockchain is stochastically assigned to a coin-holding stakeholder of the blockchain weighed by a combination of factors relating to the stakeholders' wealth.
 
@@ -22,8 +22,6 @@ The algorithm considers the following factors to improve the ecosystem’s healt
 
 All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
 
-The account needs to hold a minimum amount of :ref:`harvesting mosaics <harvesting-mosaic>` to have importance greater than zero.
-
 ******
 Scores
 ******
@@ -32,13 +30,13 @@ The network calculates the following sub scores for all high-value accounts for 
 
 * **Stake Score (S`)**: Percentage of the effective balance of all high value accounts at time P.
 * **Transaction Score (T`)**: Percentage of total transaction fees among all high-value accounts in period P-1 to P.
-* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in P-1 to P.
+* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in period P-1 to P.
 
 *********
 Constants
 *********
 
-Each network can define their own consensus algorithm :properties:`constants <config-network.properties>`.
+Each network can define custom consensus algorithm :ref:`constants <config-network-properties>`.
 
 .. csv-table::
     :header: "Constant", "Value", "Description"
@@ -60,8 +58,11 @@ The importance can be calculated for each account in the following manner:
 
     (1 - a) * (S') + a * || p / (S') * (t * (T') + n * (N')) ||
 
-The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low. Conversely, the multiplier effect is insignificant when Stake Score is high.
+The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low.
+Conversely, the multiplier effect is insignificant when Stake Score is high.
 
 .. |pos| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>
+
+Continue: :doc:`Harvesting <harvesting>`.

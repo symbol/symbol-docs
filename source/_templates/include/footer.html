@@ -1,13 +1,14 @@
 <footer class="footer">
     <div class="container">
-
         <div class="row">
-
             <div class="col-sm-4">
                 <h4>{{ gettext('Learn') }}</h4>
                 <ul>
                     <li>
                         <a href="{{pathto('getting-started/what-is-nem')}}">{{ gettext('Getting Started') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{pathto('api')}}">{{ gettext('References') }}</a>
                     </li>
                     <li>
                         <a href="{{pathto('concepts/account')}}">{{ gettext('Built-in Features') }}</a>
@@ -19,9 +20,6 @@
                         <a href="{{pathto('guides/category')}}">{{ gettext('Guides') }}</a>
                     </li>
                     <li>
-                        <a href="{{pathto('api')}}">{{ gettext('References') }}</a>
-                    </li>
-                    <li>
                         <a href="{{pathto('contribute/contributing')}}">{{ gettext('Contribute') }}</a>
                     </li>
                 </ul>
@@ -30,11 +28,12 @@
             <div class="col-sm-4">
                 <h4>{{ gettext('References') }}</h4>
                 <ul>
+                    <li><a href="https://nemtech.github.io/catapult-whitepaper/main.pdf">{{ gettext('Whitepaper') }}</a></li>
                     <li><a href="{{pathto('api')}}">{{ gettext('REST Gateway') }}</a></li>
                     <li><a href="{{pathto('server')}}">{{ gettext('Server') }}</a></li>
                     <li><a href="{{pathto('sdk')}}">{{ gettext('SDKs') }}</a></li>
                     <li><a href="{{pathto('cli')}}">{{ gettext('CLI') }}</a></li>
-                    <li><a href="{{pathto('extensions')}}">{{ gettext('Extensions') }}</a></li>
+                    <li><a href="{{pathto('libraries')}}">{{ gettext('Libraries') }}</a></li>
                 </ul>
             </div>
 

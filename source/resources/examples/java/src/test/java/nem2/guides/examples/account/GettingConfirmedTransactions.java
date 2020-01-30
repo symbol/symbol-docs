@@ -54,10 +54,10 @@ class GettingConfirmedTransactions {
             // Page size between 10 and 100, otherwise 10
             int pageSize = 20;
 
-            final List<Transaction> transactions = accountRepository
-                .transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
-
-            System.out.print(transactions);
+//            final List<Transaction> transactions = accountRepository
+//                .transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
+//
+//            System.out.print(transactions);
             /* end block 01 */
         }
     }

@@ -15,10 +15,10 @@ Allow another account to add restrictions to your mosaics.
 Background
 **********
 
-Another company, **ComfyClothingCompany** wants to conduct an STO. In this case, they want to **delegate the KYC process** to a company specialized in KYC & AML.
+Another company, **ComfyClothingCompany** wants to conduct an STO.
+In this case, they want to **delegate the KYC process** to a company specialized in KYC & AML.
 
-If you have followed the previous guide (:doc:`restricting mosaics transfers <restricting-mosaics-transfers>`),
-you know how to restrict accounts from transacting a given mosaic by combining different key-values to match the global :doc:`mosaic restriction <../../concepts/mosaic-restriction>`.
+If you have followed the previous guide (:doc:`restricting mosaics transfers <restricting-mosaics-transfers>`), you know how to restrict accounts from transacting a given mosaic by combining different key-values to match the global :doc:`mosaic restriction <../../concepts/mosaic-restriction>`.
 
 .. figure:: ../../resources/images/examples/delegated-mosaic-restriction-sto.png
     :align: center
@@ -26,7 +26,7 @@ you know how to restrict accounts from transacting a given mosaic by combining d
 
     Use case diagram
 
-In this guide, we will be restricting accounts to trade with cc.shares—mosaic created by ComfyClothingCompany—if the KYC provider does not allow them.
+In this guide, we will be restricting accounts to trade with ``cc.shares``—mosaic created by ComfyClothingCompany—if the KYC provider does not allow them.
 
 *************
 Prerequisites
@@ -35,15 +35,18 @@ Prerequisites
 - Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
 - Finish :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`
 
-**********************
-Getting into some code
-**********************
+*************************
+Method #01: Using the SDK
+*************************
 
-1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-and-opening-an-account>` account. We will refer to this mosaic from now on as ``cc.shares``.
+1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account.
+We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany
+    nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany --sync
+
+    The new mosaic id is: 7cdf3b117a3c40cc
 
 2. The KYC provider registers a new mosaic named ``kyc`` and adds the mosaic global restriction ``{ kyc, IsVerified, EQ, 1}`` to the mosaic.
 
@@ -51,6 +54,11 @@ Getting into some code
 
     .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -63,7 +71,9 @@ The KYC provider defines the following permission tiers:
     IsVerified; EQ; 1; The client has issued a valid passport.
     IsVerified; EQ; 2; The client has issued a valid proof of address and passport.
 
-ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer shares. For this reason, the company adds the mosaic global restriction ``{ kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``. To implement the restriction from another mosaic, we are going to use the field ``referenceId``.
+ComfyClothingCompany decides that only accounts with the restriction ``{cc.shares, kyc::IsVerified, EQ = 2}`` should be enabled to transfer shares.
+For this reason, the company adds the mosaic global restriction ``{ kyc::IsVerified, EQ, 2}`` to the mosaic  ``ccf.shares``.
+To implement the restriction from another mosaic, use the field ``referenceId``.
 
 3. Announce a **MosaicGlobalRestrictionTransaction**, setting ``cc.shares`` as the ``targetMosaicId``, ``kyc`` as the ``referenceMosaicId``, and ``IsVerified`` as the key.
 
@@ -71,6 +81,11 @@ ComfyClothingCompany decides that only accounts with the restriction ``{cc.share
 
     .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction2.ts
         :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicGlobalRestriction2.js
+        :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -89,4 +104,10 @@ The KYC provider has to tag the accounts accordingly sending mosaic address rest
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-5. After the restrictions get confirmed, Bob and Carol will be able to buy and send the ``cc.shares`` units to each other. But Alice⁠—who has not provided valid proof of address⁠—will not be able to receive shares.
+    .. viewsource:: ../../resources/examples/typescript/restriction/RestrictingMosaicsTransfersDelegatedMosaicAddressRestriction.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+5. After the restrictions get confirmed, Bob and Carol will be able to buy and send the ``cc.shares`` units to each other.
+But Alice⁠—who has not provided valid proof of address⁠—will not be able to receive shares.

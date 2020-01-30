@@ -22,41 +22,49 @@ import {
     AggregateTransaction,
     Deadline,
     HashLockTransaction,
-    Listener,
-    NetworkCurrencyMosaic,
+    Mosaic,
+    MosaicId,
     NetworkType,
     PlainMessage,
-    PublicAccount, SignedTransaction,
-    TransactionHttp,
+    PublicAccount,
+    TransactionService,
     TransferTransaction,
-    UInt64
-} from "nem2-sdk";
+    UInt64,
+} from 'nem2-sdk';
+import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
-import {filter, mergeMap} from "rxjs/operators";
-import {merge} from "rxjs";
-
-const cosignatoryPrivateKey = process.env.COSIGNATORY_1_PRIVATE_KEY as string;
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, NetworkType.MIJIN_TEST);
-
-const multisigAccountPublicKey = process.env.MULTISIG_PUBLIC_KEY as string;
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, NetworkType.MIJIN_TEST);
-
-const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+// replace network type
+const networkType = NetworkType.TEST_NET;
+// replace with cosignatory private key
+const cosignatoryPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+// replace with multisig account public key
+const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+// replace with recipient address
+const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
+const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
+// replace with symbol.xym id
+const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+// replace with network currency divisibility
+const networkCurrencyDivisibility = 6;
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('sending 10 cat.currency'),
-    NetworkType.MIJIN_TEST);
+    [new Mosaic (networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+    PlainMessage.create('sending 10 symbol.xym'),
+    networkType);
 
 /* start block 01 */
 const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(),
     [transferTransaction.toAggregate(multisigAccount)],
-    NetworkType.MIJIN_TEST);
+    networkType);
 
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+// replace with meta.generationHash (nodeUrl + '/block/1')
+const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 01 */
@@ -64,41 +72,25 @@ console.log(signedTransaction.hash);
 /* start block 02 */
 const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(),
-    NetworkCurrencyMosaic.createRelative(10),
+    new Mosaic (networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
     signedTransaction,
-    NetworkType.MIJIN_TEST);
+    networkType,
+    UInt64.fromUint(2000000));
 
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
-const nodeUrl = 'http://localhost:3000';
-const transactionHttp = new TransactionHttp(nodeUrl);
-const listener = new Listener(nodeUrl);
-
-const announceHashLockTransaction = (signedHashLockTransaction: SignedTransaction) => {
-    return transactionHttp.announce(signedHashLockTransaction);
-};
-
-const announceAggregateTransaction = (listener: Listener,
-                                      signedHashLockTransaction: SignedTransaction,
-                                      signedAggregateTransaction: SignedTransaction,
-                                      senderAddress: Address) => {
-    return listener
-        .confirmed(senderAddress)
-        .pipe(
-            filter((transaction) => transaction.transactionInfo !== undefined
-                && transaction.transactionInfo.hash === signedHashLockTransaction.hash),
-            mergeMap(ignored => {
-                listener.terminate();
-                return transactionHttp.announceAggregateBonded(signedAggregateTransaction)
-            })
-        );
-};
+// replace with node endpoint
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const listener = repositoryFactory.createListener();
+const receiptHttp = repositoryFactory.createReceiptRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    merge(announceHashLockTransaction(signedHashLockTransaction),
-        announceAggregateTransaction(listener, signedHashLockTransaction, signedTransaction, cosignatoryAccount.address))
-        .subscribe(x => console.log('Transaction confirmed:', x.message),
-            err=> console.log(err));
+    transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener);
+    listener.close();
 });
 /* end block 02 */
