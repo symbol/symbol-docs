@@ -16,9 +16,9 @@ Background
 **********
 
 :ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
-Follow this guide to **delegate your account importance** without compromising the account's funds.
+The following guide will show you how to **delegate your account importance** without compromising the account's funds.
 
-You will **delegate your main account (M) importance** to a **proxy public key (R)**. Then, with the **announcer account (A)** you will request a node to **add your remote account (R)** as a delegated harvester.
+In this process, you will **delegate your main account (M) importance** to a **proxy public key (R)**. Then,you will request a node to **add your remote account (R)** as a delegated harvester with the **announcer account (A)**.
 
 .. mermaid:: ../../resources/diagrams/delegated-harvesting-activation.mmd
     :caption: Delegated harvesting activation diagram
@@ -35,7 +35,7 @@ Before you can activate delegated harvesting, you will need to have three accoun
 
 * A **main account (M)** with at least ``10,000`` |networkcurrency| units.
 * An **announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
-* A brand new **remote account (R)** that did not sent or received any transaction.
+* A brand new **remote account (R)** that did not send or receive any transactions.
 
 - Follow this guide to :ref:`create new accounts <setup-creating-a-test-account>`.
 
@@ -107,7 +107,7 @@ Add the **node's public key** as the transaction **recipient** and share the **R
 
 The **special encrypted message** ensures that **R's proxy private key** is securely shared, only readable by the node owner.
 Moreover, the remote account does not possess any mosaics.
-The valuable assets remain safely in the main account where the node owner cannot disrupt security.
+The valuable assets remain safely in the main account which the node owner remains without access.
 
 5. Sign the special TransferTransaction with **A** and announce it to the network.
 
@@ -123,9 +123,9 @@ The valuable assets remain safely in the main account where the node owner canno
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-.. note:: You could announce the transaction with M, but it is recommended to use a third account to keep confidential the information about transfer of importance power.
+.. note:: You could announce the transaction with M, but it is recommended to use a third account to keep the information about transfer of importance confidential.
 
-The node receives an encrypted message using :ref:`WebSockets <websockets>`.
+If everything is successful, the node will receive an encrypted message using :ref:`WebSockets <websockets>`.
 Once the node decrypts the private key of the potential delegated harvester, the node owner may **add R as a delegated harvester** if the following requirements are met:
 
 - The node permits delegated harvesting.
