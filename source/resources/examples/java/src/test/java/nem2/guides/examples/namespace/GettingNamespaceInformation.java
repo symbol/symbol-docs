@@ -18,6 +18,8 @@
 
 package nem2.guides.examples.namespace;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.nem.sdk.api.NamespaceRepository;
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
@@ -27,16 +29,17 @@ import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class CheckingNamespaceExistence {
+class GettingNamespaceInformation {
 
     @Test
-    void checkingNamespaceExistence()
+    void gettingNamespaceInformation()
         throws ExecutionException, InterruptedException, MalformedURLException {
 
+        /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
-            /* start block 01 */
-            final NamespaceId namespaceId = new NamespaceId("foo");
+            "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            // replace with namespace name
+            final NamespaceId namespaceId = NamespaceId.createFromName("foo");
 
             final NamespaceRepository namespaceRepository = repositoryFactory
                 .createNamespaceRepository();
@@ -44,9 +47,9 @@ class CheckingNamespaceExistence {
             final NamespaceInfo namespaceInfo = namespaceRepository.getNamespace(namespaceId)
                 .toFuture()
                 .get();
-
-            System.out.println(namespaceInfo);
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(namespaceInfo));
         }
-        /* end block 01 */
     }
+    /* end block 01 */
 }

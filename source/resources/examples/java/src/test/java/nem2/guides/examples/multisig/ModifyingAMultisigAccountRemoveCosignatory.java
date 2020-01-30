@@ -18,68 +18,16 @@
 
 package nem2.guides.examples.multisig;
 
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.AggregateTransactionFactory;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
-import java.util.Collections;
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class ModifyingAMultisigAccountRemoveCosignatory {
 
     @Test
     void modifyingAMultisigAccountRemoveCosignatory()
-        throws ExecutionException, InterruptedException {
-        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
-
-            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
-            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
-
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-            // Replace with the multisig public key
-            final String multisigAccountPublicKey = "";
-
-            // Replace with the cosignatory private key
-            final String cosignatoryPrivateKey = "";
-
-            final Account cosignatoryAccount = Account
-                .createFromPrivateKey(cosignatoryPrivateKey, networkType);
-
-            final PublicAccount multisigPublicAccount = PublicAccount
-                .createFromPublicKey(multisigAccountPublicKey, networkType);
-
-            final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
-                .create(
-                    networkType,
-                    (byte) 0,
-                    (byte) 0,
-                    Collections.emptyList(),
-                    Collections.singletonList(PublicAccount.createFromPublicKey("", networkType))
-                ).build();
-
-            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
-                .createComplete(
-                    networkType,
-                    Collections.singletonList(
-                        modifyMultisigAccountTransaction.toAggregate(multisigPublicAccount))
-
-                ).build();
-
-            final SignedTransaction signedTransaction = cosignatoryAccount
-                .sign(aggregateTransaction, generationHash);
-
-            transactionRepository.announce(signedTransaction).toFuture().get();
-        }
+            throws ExecutionException, InterruptedException {
+        //Todo: Implement
     }
 }
 

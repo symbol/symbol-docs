@@ -18,58 +18,15 @@
 
 package nem2.guides.examples.aggregate;
 
-import io.nem.sdk.api.Listener;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.CosignatureSignedTransaction;
-import io.nem.sdk.model.transaction.CosignatureTransaction;
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class CosigningAggregateBondedTransactionsAutomatically {
 
     @Test
     void cosigningAggregateBondedTransactionsAutomatically()
         throws ExecutionException, InterruptedException {
-
-        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000"); final Listener listener = repositoryFactory
-            .createListener()) {
-
-            final NetworkType networkType = repositoryFactory
-                .getNetworkType().toFuture().get();
-
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-            /* start block 02 */
-            // Replace with a private key
-            final String privateKey = "";
-
-            final Account account = Account.createFromPrivateKey(privateKey, networkType);
-
-            listener.open().get();
-
-            final AggregateTransaction transaction = listener
-                .aggregateBondedAdded(account.getAddress()).take(1).toFuture().get();
-
-            if (!transaction.signedByAccount(account.getPublicAccount())) {
-                // Filter aggregates that need my signature
-                final CosignatureTransaction cosignatureTransaction = CosignatureTransaction
-                    .create(transaction);
-
-                final CosignatureSignedTransaction cosignatureSignedTransaction = account
-                    .signCosignatureTransaction(cosignatureTransaction);
-
-                transactionRepository
-                    .announceAggregateBondedCosignature(cosignatureSignedTransaction)
-                    .toFuture().get();
-            }
-            /* end block 02 */
-
-        }
+        //Todo: Implement
     }
 }

@@ -21,7 +21,7 @@ import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/Repository
 
 /* start block 01 */
 // replace with namespace name
-const namespace = new NamespaceId('symbol.xym');
+const namespaceId = new NamespaceId('symbol.xym');
 
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
@@ -29,7 +29,7 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 
 namespaceHttp
-    .getLinkedMosaicId(namespace)
+    .getLinkedMosaicId(namespaceId)
     .subscribe((mosaicId) => console.log(mosaicId!.toHex()),
             (err) => console.log(err));
 /* end block 01 */

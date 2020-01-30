@@ -18,14 +18,40 @@
 
 package nem2.guides.examples.metadata;
 
-import java.util.concurrent.ExecutionException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.MetadataRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.account.Address;
+import io.nem.sdk.model.metadata.Metadata;
+import io.nem.sdk.model.mosaic.MosaicId;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 class GettingMetadataEntriesMosaic {
 
     @Test
     void gettingMetadataEntriesMosaic()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+            throws ExecutionException, InterruptedException {
+        /* start block 01 */
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
+
+            // replace with mosaic id
+            final  String mosaicIdHex = "0DC67FBE1CAD29E3";
+            final MosaicId mosaicId = new MosaicId(mosaicIdHex);
+
+            final List<Metadata> metadata = metadataRepository.getMosaicMetadata(mosaicId, Optional.empty())
+                    .toFuture().get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(metadata));
+        }
+        /* end block 01 */
     }
 }

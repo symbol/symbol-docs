@@ -27,7 +27,6 @@ class CosigningAggregateBondedTransactionsAutomaticallyWithConstraints {
     @Test
     void cosigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints()
         throws ExecutionException, InterruptedException, MalformedURLException {
-
         //Todo: Implement
     }
 }

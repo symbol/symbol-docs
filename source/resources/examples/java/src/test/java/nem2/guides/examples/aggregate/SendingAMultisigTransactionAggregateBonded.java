@@ -16,16 +16,18 @@
  *
  */
 
-package nem2.guides.examples.metadata;
+package nem2.guides.examples.aggregate;
 
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class GettingMetadataEntriesAccountByKey {
+import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
+
+class SendingAMultisigTransactionAggregateBonded {
 
     @Test
-    void gettingMetadataEntriesAccountByKey()
-        throws ExecutionException, InterruptedException {
+    void sendingAMultisigTransactionAggregateBonded()
+        throws ExecutionException, InterruptedException, MalformedURLException {
         //Todo: Implement
     }
 }

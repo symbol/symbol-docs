@@ -28,5 +28,4 @@ class GettingAllConfirmedTransactions {
         throws ExecutionException, InterruptedException {
         //Todo: Implement
     }
-
 }

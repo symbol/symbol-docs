@@ -18,14 +18,31 @@
 
 package nem2.guides.examples.blockchain;
 
-import java.util.concurrent.ExecutionException;
+import io.nem.sdk.api.NamespaceRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.mosaic.MosaicId;
+import io.nem.sdk.model.namespace.NamespaceId;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class GettingTheCurrentMosaicIdentifierBehindANamespace {
 
     @Test
     void gettingTheCurrentMosaicIdentifierBehindANamespace()
         throws ExecutionException, InterruptedException {
-        //Todo: Implement
+
+        /* start block 01 */
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            final NamespaceRepository namespaceRepository = repositoryFactory.createNamespaceRepository();
+            final NamespaceId namespaceId = NamespaceId.createFromName("symbol.xym");
+            final MosaicId mosaicId = namespaceRepository.getLinkedMosaicId(namespaceId)
+                    .toFuture().get();
+            System.out.print(mosaicId.getIdAsHex());
+        }
+        /* end block 01 */
     }
 }

@@ -18,14 +18,39 @@
 
 package nem2.guides.examples.metadata;
 
-import java.util.concurrent.ExecutionException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.MetadataRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.account.Address;
+import io.nem.sdk.model.metadata.Metadata;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 class GettingMetadataEntriesAccount {
 
     @Test
     void gettingMetadataEntriesAccount()
         throws ExecutionException, InterruptedException {
-        //Todo: Implement
+        /* start block 01 */
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
+
+            // replace with address
+            final String rawAddress = "TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4";
+            final Address address = Address.createFromRawAddress(rawAddress);
+
+            final List<Metadata> metadata = metadataRepository.getAccountMetadata(address, Optional.empty())
+                    .toFuture().get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(metadata));
+        }
+        /* end block 01 */
     }
 }

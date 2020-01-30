@@ -44,68 +44,6 @@ class ModifyingAMultisigAccountAddCosignatory {
     @Test
     void modifyingAMultisigAccountAddCosignatory()
         throws ExecutionException, InterruptedException {
-
-        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000");
-            final Listener listener = repositoryFactory.createListener()) {
-
-            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
-            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
-
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-
-            // Replace with the multisig public key
-            final String cosignatoryPrivateKey = "";
-            final String multisigAccountPublicKey = "";
-            final String newCosignatoryPublicKey = "";
-
-            final Account cosignatoryAccount = Account
-                .createFromPrivateKey(cosignatoryPrivateKey, networkType);
-            final PublicAccount newCosignatoryAccount = PublicAccount
-                .createFromPublicKey(newCosignatoryPublicKey, networkType);
-            final PublicAccount multisigAccount = PublicAccount
-                .createFromPublicKey(multisigAccountPublicKey, networkType);
-
-            final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
-                .create(networkType,
-                    (byte) 0,
-                    (byte) 0,
-                    Collections.singletonList(newCosignatoryAccount),
-                    Collections.emptyList()
-                ).build();
-
-            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
-                .createBonded(
-                    networkType,
-                    Collections
-                        .singletonList(modifyMultisigAccountTransaction
-                            .toAggregate(multisigAccount))
-                ).build();
-
-            final SignedTransaction signedTransaction = cosignatoryAccount
-                .sign(aggregateTransaction, generationHash);
-
-            final HashLockTransaction lockFundsTransaction = HashLockTransactionFactory.create(
-                networkType,
-                NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
-                BigInteger.valueOf(480),
-                signedTransaction
-            ).build();
-
-            final SignedTransaction lockFundsTransactionSigned = cosignatoryAccount
-                .sign(lockFundsTransaction, generationHash);
-
-            transactionRepository.announce(lockFundsTransactionSigned).toFuture().get();
-
-            // announce signed transaction
-
-            listener.open().get();
-
-            final Transaction transaction = listener.confirmed(cosignatoryAccount.getAddress())
-                .toFuture().get();
-
-            transactionRepository.announceAggregateBonded(signedTransaction).toFuture().get();
-        }
+        //Todo: Implement
     }
 }

@@ -1,5 +1,7 @@
 package nem2.guides.examples.multisig;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.nem.sdk.api.MultisigRepository;
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
@@ -8,29 +10,30 @@ import io.nem.sdk.model.account.MultisigAccountInfo;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-public class GettingMultisigAccountInformation {
+public class GettingMultisigAccountCosignatories {
 
 
     @Test
-    void gettingMultisigAccountInformation()
+    void gettingMultisigAccountCosignatories()
         throws ExecutionException, InterruptedException {
 
         /* start block 01 */
+        // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
+            "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
 
             final MultisigRepository multisigRepository = repositoryFactory
                 .createMultisigRepository();
 
-            // Replace with address
-            final String addressRaw = "SB2RPH-EMTFMB-KELX2Y-Q3MZTD-RV7DQG-UZEADV-CYKC";
-
-            final Address address = Address.createFromRawAddress(addressRaw);
+            // replace with multisig address
+            final String rawAddress = "TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU";
+            final Address address = Address.createFromRawAddress(rawAddress);
 
             final MultisigAccountInfo multisigAccountInfo = multisigRepository
                 .getMultisigAccountInfo(address).toFuture().get();
 
-            System.out.println(multisigAccountInfo);
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(multisigAccountInfo));
             /* end block 01 */
         }
 

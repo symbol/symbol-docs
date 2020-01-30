@@ -18,14 +18,39 @@
 
 package nem2.guides.examples.restriction;
 
-import java.util.concurrent.ExecutionException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.RestrictionAccountRepository;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.account.AccountRestrictions;
+import io.nem.sdk.model.account.Address;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class GettingAccountRestrictions {
 
     @Test
     void gettingAccountRestrictions()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+            throws ExecutionException, InterruptedException {
+        /* start block 01 */
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            final RestrictionAccountRepository restrictionRepository = repositoryFactory
+                    .createRestrictionAccountRepository();
+
+            // replace with address
+            final String rawAddress = "TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU";
+            final Address address = Address.createFromRawAddress(rawAddress);
+
+            final AccountRestrictions restrictions = restrictionRepository
+                    .getAccountRestrictions(address)
+                    .toFuture().get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(restrictions));
+        }
+        /* end block 01 */
     }
 }

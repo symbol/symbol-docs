@@ -18,13 +18,16 @@
 
 package nem2.guides.examples.blockchain;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.nem.sdk.api.BlockRepository;
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.blockchain.BlockInfo;
+import org.junit.jupiter.api.Test;
+
 import java.math.BigInteger;
 import java.util.concurrent.ExecutionException;
-import org.junit.jupiter.api.Test;
 
 
 class GettingBlockByHeight {
@@ -33,20 +36,18 @@ class GettingBlockByHeight {
     void gettingBlockByHeight()
         throws ExecutionException, InterruptedException {
         /* start block 01 */
-
+        // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
+            "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
             final BlockRepository blockRepository = repositoryFactory.createBlockRepository();
 
             // Replace with block height
             final BigInteger blockHeight = BigInteger.valueOf(1);
-
             final BlockInfo blockInfo = blockRepository.getBlockByHeight(blockHeight).toFuture()
                 .get();
-
-            System.out.print(blockInfo);
-            /* end block 01 */
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(blockInfo));
         }
-
+        /* end block 01 */
     }
 }

@@ -16,16 +16,18 @@
  *
  */
 
-package nem2.guides.examples.monitor;
+package nem2.guides.examples.aggregate;
 
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class MonitoringTransactionStatus {
+import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
+
+class SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction {
 
     @Test
-    void monitoringTransactionStatus()
-        throws ExecutionException, InterruptedException {
+    void sendingMultipleTransactionsTogetherWithAggregateCompleteTransaction()
+        throws ExecutionException, InterruptedException, MalformedURLException {
         //Todo: Implement
     }
 }

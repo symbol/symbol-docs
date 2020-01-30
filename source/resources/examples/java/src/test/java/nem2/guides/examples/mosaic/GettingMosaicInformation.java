@@ -18,14 +18,40 @@
 
 package nem2.guides.examples.mosaic;
 
-import java.util.concurrent.ExecutionException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.MosaicRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.mosaic.MosaicId;
+import io.nem.sdk.model.mosaic.MosaicInfo;
 import org.junit.jupiter.api.Test;
+
+import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
 
 class GettingMosaicInformation {
 
     @Test
     void gettingMosaicInformation()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+            throws ExecutionException, InterruptedException, MalformedURLException {
+
+        /* start block 01 */
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+            // replace with mosaic id
+            final String mosaicIdHex = "71415AC19C818709";
+            final MosaicId mosaicId = new MosaicId(mosaicIdHex);
+
+            final MosaicRepository mosaicRepository = repositoryFactory
+                    .createMosaicRepository();
+
+            final MosaicInfo mosaicInfo = mosaicRepository.getMosaic(mosaicId)
+                    .toFuture()
+                    .get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(mosaicInfo));
+        }
+        /* end block 01 */
     }
 }

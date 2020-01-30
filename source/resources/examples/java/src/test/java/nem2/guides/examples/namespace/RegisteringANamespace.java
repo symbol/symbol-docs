@@ -18,53 +18,15 @@
 
 package nem2.guides.examples.namespace;
 
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.NamespaceRegistrationTransaction;
-import io.nem.sdk.model.transaction.NamespaceRegistrationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
-import java.math.BigInteger;
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class RegisteringANamespace {
 
     @Test
     void registeringANamespace()
-        throws ExecutionException, InterruptedException {
-
-        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
-            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
-            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
-
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-
-            // Replace with private key
-            final String privateKey = "";
-
-            final Account account = Account
-                .createFromPrivateKey(privateKey, networkType);
-
-            // Replace with namespace name
-            final String namespaceName = "foo";
-
-            final NamespaceRegistrationTransaction registerNamespaceTransaction = NamespaceRegistrationTransactionFactory
-                .createRootNamespace(
-                    networkType,
-                    namespaceName,
-                    BigInteger.valueOf(1000)
-                ).build();
-
-            final SignedTransaction signedTransaction = account
-                .sign(registerNamespaceTransaction, generationHash);
-
-            transactionRepository.announce(signedTransaction).toFuture().get();
-
-        }
+            throws ExecutionException, InterruptedException {
+        //Todo: Implement
     }
 }

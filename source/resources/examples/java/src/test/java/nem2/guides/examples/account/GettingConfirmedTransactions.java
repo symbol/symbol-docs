@@ -18,47 +18,55 @@
 
 package nem2.guides.examples.account;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.nem.sdk.api.AccountRepository;
-import io.nem.sdk.api.QueryParams;
 import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.api.TransactionSearchCriteria;
 import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.PublicAccount;
 import io.nem.sdk.model.blockchain.NetworkType;
 import io.nem.sdk.model.transaction.Transaction;
+import org.junit.jupiter.api.Test;
+
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-import org.junit.jupiter.api.Test;
 
 class GettingConfirmedTransactions {
 
     @Test
     void gettingConfirmedTransactions()
         throws ExecutionException, InterruptedException {
+
         /* start block 01 */
+        // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
+            "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
 
             final AccountRepository accountRepository = repositoryFactory
                 .createAccountRepository();
 
+            // Replace with network type
             final NetworkType networkType = repositoryFactory
-                .getNetworkType()
-                .toFuture().get();
+                    .getNetworkType()
+                    .toFuture().get();
 
-            // Replace with a public key
-            final String publicKey = "1A6B1797FD323FEC48F71CDFE3D181B53D001FC2B56928DBA06C9319722B0FF8";
-
+            // Replace with account address
+            final String publicKey = "E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F";
             final PublicAccount publicAccount = PublicAccount
                 .createFromPublicKey(publicKey, networkType);
 
-            // Page size between 10 and 100, otherwise 10
-            int pageSize = 20;
+            // Page size between 10 and 100
+            Integer pageSize = 10;
+            final TransactionSearchCriteria transactionSearchCriteria = new TransactionSearchCriteria();
+            transactionSearchCriteria.pageSize(pageSize);
 
-//            final List<Transaction> transactions = accountRepository
-//                .transactions(publicAccount, new QueryParams(pageSize, null)).toFuture().get();
-//
-//            System.out.print(transactions);
-            /* end block 01 */
+            final List<Transaction> transactions = accountRepository
+                    .transactions(publicAccount, transactionSearchCriteria).toFuture().get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(transactions));
         }
+        /* end block 01 */
     }
 }
+

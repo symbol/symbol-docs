@@ -16,16 +16,18 @@
  *
  */
 
-package nem2.guides.examples.metadata;
+package nem2.guides.examples.aggregate;
 
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class GettingMetadataEntriesMosaicByKeyAndSender {
+import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
+
+class CreatingAnEscrowContractWithAggregateBondedTransaction {
 
     @Test
-    void gettingMetadataEntriesMosaicByKeyAndSender()
-        throws ExecutionException, InterruptedException {
+    void creatingAnEscrowContractWithAggregateBondedTransaction()
+        throws ExecutionException, InterruptedException, MalformedURLException {
         //Todo: Implement
     }
 }

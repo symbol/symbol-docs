@@ -28,7 +28,7 @@ class CreatingAnAccount {
     void creatingAnAccount() {
 
         /* start block 01 */
-        final Account account = Account.generateNewAccount(NetworkType.MIJIN_TEST);
+        final Account account = Account.generateNewAccount(NetworkType.TEST_NET);
 
         System.out.printf("Your new account address is: %s and its private key: %s",
             account.getAddress().plain(), account.getPrivateKey());

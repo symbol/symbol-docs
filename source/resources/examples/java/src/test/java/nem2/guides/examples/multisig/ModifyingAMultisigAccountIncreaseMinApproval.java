@@ -38,46 +38,7 @@ class ModifyingAMultisigAccountIncreaseMinApproval {
 
     @Test
     void modifyingAMultisigAccountIncreaseMinApproval()
-        throws ExecutionException, InterruptedException {
-
-        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://localhost:3000")) {
-
-            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
-            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
-
-            final TransactionRepository transactionRepository = repositoryFactory
-                .createTransactionRepository();
-
-            // Replace with the multisig public key
-            final String cosignatoryPrivateKey = "";
-            final String multisigAccountPublicKey = "";
-
-            final Account cosignatoryAccount = Account
-                .createFromPrivateKey(cosignatoryPrivateKey, networkType);
-            final PublicAccount multisigAccount = PublicAccount
-                .createFromPublicKey(multisigAccountPublicKey, networkType);
-
-            final MultisigAccountModificationTransaction modifyMultisigAccountTransaction = MultisigAccountModificationTransactionFactory
-                .create(networkType,
-                    (byte) 1,
-                    (byte) 0,
-                    Collections.emptyList(),
-                    Collections.emptyList()
-                ).build();
-
-            final AggregateTransaction aggregateTransaction = AggregateTransactionFactory
-                .createComplete(
-                    networkType,
-                    Collections
-                        .singletonList(
-                            modifyMultisigAccountTransaction.toAggregate(multisigAccount))
-                ).build();
-
-            final SignedTransaction signedTransaction = cosignatoryAccount
-                .sign(aggregateTransaction, generationHash);
-
-            transactionRepository.announce(signedTransaction).toFuture().get();
-        }
+            throws ExecutionException, InterruptedException {
+        //Todo: Implement
     }
 }

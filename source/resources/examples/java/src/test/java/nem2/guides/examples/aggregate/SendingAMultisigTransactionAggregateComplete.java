@@ -16,16 +16,18 @@
  *
  */
 
-package nem2.guides.examples.multisig;
+package nem2.guides.examples.aggregate;
 
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 
-class ConvertingAnAccountToMutisig {
+import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
+
+class SendingAMultisigTransactionAggregateComplete {
 
     @Test
-    void convertingAnAccountToMutisig()
-        throws ExecutionException, InterruptedException {
+    void sendingAMultisigTransactionAggregateComplete()
+        throws ExecutionException, InterruptedException, MalformedURLException {
         //Todo: Implement
     }
 }
