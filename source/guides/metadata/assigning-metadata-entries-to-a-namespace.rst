@@ -115,3 +115,11 @@ Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction 
         :end-before: /* end block 03 */
 
 4. When the transaction gets confirmed, try to :doc:`fetch the namespace's metadata entries <getting-metadata-entries-attached-to-a-namespace>`.
+
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/metadata/AssigningMetadataToANamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
