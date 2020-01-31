@@ -17,6 +17,7 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+const nem2_sdk_1 = require("nem2-sdk");
 const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 /* start block 01 */
 // replace with node endpoint
@@ -25,6 +26,6 @@ const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(node
 const blockHttp = repositoryFactory.createBlockRepository();
 const height = 1;
 blockHttp
-    .getBlockByHeight(height.toString())
+    .getBlockByHeight(nem2_sdk_1.UInt64.fromUint(height))
     .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */

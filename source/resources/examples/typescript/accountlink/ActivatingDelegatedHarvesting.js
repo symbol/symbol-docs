@@ -18,7 +18,7 @@ const accountLinkTransaction = nem2_sdk_1.AccountLinkTransaction.create(nem2_sdk
 const nodePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
 const nodePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(nodePublicKey, networkType);
 const persistentDelegationRequestTransaction = nem2_sdk_1.PersistentDelegationRequestTransaction
-    .createPersistentDelegationRequestTransaction(nem2_sdk_1.Deadline.create(), remoteAccount.privateKey, nodePublicAccount.publicKey, account.privateKey, networkType);
+    .createPersistentDelegationRequestTransaction(nem2_sdk_1.Deadline.create(), remoteAccount.privateKey, nodePublicAccount.publicKey, networkType);
 /* end block 03 */
 /* start block 04 */
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [

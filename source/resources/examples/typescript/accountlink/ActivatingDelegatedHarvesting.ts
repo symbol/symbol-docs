@@ -39,7 +39,6 @@ const persistentDelegationRequestTransaction = PersistentDelegationRequestTransa
         Deadline.create(),
         remoteAccount.privateKey,
         nodePublicAccount.publicKey,
-        account.privateKey,
         networkType);
 /* end block 03 */
 
