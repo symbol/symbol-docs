@@ -36,7 +36,7 @@ class GettingTheCurrentMosaicIdentifierBehindANamespace {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-xym-harvest-20.us-west-1.nemtech.network:3000")) {
+                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
             final NamespaceRepository namespaceRepository = repositoryFactory.createNamespaceRepository();
             final NamespaceId namespaceId = NamespaceId.createFromName("symbol.xym");
             final MosaicId mosaicId = namespaceRepository.getLinkedMosaicId(namespaceId)
