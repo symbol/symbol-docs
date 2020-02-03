@@ -45,10 +45,10 @@ const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2
     mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)
 ], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

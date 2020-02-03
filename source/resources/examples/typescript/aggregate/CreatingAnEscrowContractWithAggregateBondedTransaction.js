@@ -43,7 +43,7 @@ const ticketDistributorToAliceTx = nem2_sdk_1.TransferTransaction.create(nem2_sd
 const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
     ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
@@ -51,7 +51,7 @@ console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

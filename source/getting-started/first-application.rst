@@ -100,7 +100,7 @@ If your row after mosaics is empty, follow the :doc:`previous guide <setup-works
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET --save --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --profile customer
+    nem2-cli account generate --network TEST_NET --save --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --profile customer
 
     New Account
 
