@@ -82,3 +82,8 @@ Now you can send transactions using the namespace linked to the mosaic instead o
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransactionMosaicAlias.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
