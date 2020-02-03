@@ -69,7 +69,7 @@ In other words, you can use the importance score of your account to create new b
 
 To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
 
-Then, the account needs to send a **special encrypted message** to the node via a :doc:`TransferTransaction <transfer-transaction>`.
+Then, the account needs to send a `special encrypted message <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node via a :doc:`TransferTransaction <transfer-transaction>`.
 The message must contain the remote's account **proxy private key**  encrypted using AES, so that only the recipient will be able to decipher it.
 
 The node receives an encrypted message using :ref:`WebSockets <websockets>`.
