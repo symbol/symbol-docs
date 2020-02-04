@@ -37,7 +37,7 @@ const validTransaction = (transaction: Transaction, publicAccount: PublicAccount
     return transaction instanceof TransferTransaction &&
         transaction.signer!.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new MosaicId('75AF035421401EF0') ||
+        (transaction.mosaics[0].id.equals(new MosaicId('51A99028058245A8') ||
             transaction.mosaics[0].id.equals(new NamespaceId('symbol.xym')))) &&
         transaction.mosaics[0].amount.compare(UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };

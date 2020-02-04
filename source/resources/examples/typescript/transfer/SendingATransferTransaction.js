@@ -26,7 +26,7 @@ const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('This is a test message'), networkType, nem2_sdk_1.UInt64.fromUint(2000000));

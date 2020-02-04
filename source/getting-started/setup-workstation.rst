@@ -83,7 +83,7 @@ After the transaction gets confirmed, check if the account has received |network
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
+    │ 51A99028058245A8 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 .. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.

@@ -49,7 +49,7 @@ const signedAggregateTransaction = accountMetadataTransaction
     return rxjs_1.of(signedTransaction);
 }));
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.mergeMap((signedAggregateTransaction) => {

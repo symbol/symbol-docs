@@ -63,7 +63,7 @@ const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8
 const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));

@@ -90,7 +90,7 @@ After running the following command, you should see on your screen a line simila
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 75AF035421401EF0 │ 750.0           │ 750000000       │ Never             │
+    │ 51A99028058245A8 │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 This account owns 750 |networkcurrency| units.

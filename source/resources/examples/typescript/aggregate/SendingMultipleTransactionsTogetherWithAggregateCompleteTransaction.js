@@ -32,7 +32,7 @@ const aliceAccount = nem2_sdk_1.Address.createFromRawAddress(aliceAddress);
 const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const bobAccount = nem2_sdk_1.Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const mosaic = new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));

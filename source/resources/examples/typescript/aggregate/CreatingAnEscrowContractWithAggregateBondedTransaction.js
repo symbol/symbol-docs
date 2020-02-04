@@ -33,7 +33,7 @@ const ticketMosaicId = new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const aliceToTicketDistributorTx = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), ticketDistributorPublicAccount.address, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'), networkType);

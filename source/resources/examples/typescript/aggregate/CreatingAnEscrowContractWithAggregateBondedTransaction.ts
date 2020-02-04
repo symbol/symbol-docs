@@ -47,7 +47,7 @@ const ticketMosaicId = new MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
