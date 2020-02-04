@@ -16,8 +16,7 @@
  *
  */
 
-import {AccountRestrictionFlags, Address} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {AccountRestrictionFlags, Address, RepositoryFactoryHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with address

@@ -16,8 +16,16 @@
  *
  */
 
-import {Account, Deadline, MosaicId, MosaicSupplyChangeAction, MosaicSupplyChangeTransaction, NetworkType, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    Deadline,
+    MosaicId,
+    MosaicSupplyChangeAction,
+    MosaicSupplyChangeTransaction,
+    NetworkType,
+    RepositoryFactoryHttp,
+    UInt64
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with network type

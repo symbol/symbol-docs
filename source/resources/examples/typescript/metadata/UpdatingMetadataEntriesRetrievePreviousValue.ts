@@ -16,8 +16,16 @@
  *
  */
 
-import {Account, AccountMetadataTransaction, Convert, Deadline, KeyGenerator, NetworkType, PublicAccount} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    AccountMetadataTransaction,
+    Convert,
+    Deadline,
+    KeyGenerator,
+    NetworkType,
+    PublicAccount,
+    RepositoryFactoryHttp,
+} from 'nem2-sdk';
 import {of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 

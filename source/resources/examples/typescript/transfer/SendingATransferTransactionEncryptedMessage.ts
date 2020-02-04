@@ -16,8 +16,15 @@
  *
  */
 
-import {Account, Deadline, NetworkType, PublicAccount, TransferTransaction, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    Deadline,
+    NetworkType,
+    PublicAccount,
+    RepositoryFactoryHttp,
+    TransferTransaction,
+    UInt64
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with network type
@@ -54,7 +61,7 @@ console.log(signedTransaction.hash);
 
 /* start block 04 */
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp

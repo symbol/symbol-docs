@@ -18,13 +18,11 @@
 
 import {
     Account,
-    Address,
     Deadline,
     EmptyMessage,
     Mosaic,
     NamespaceId,
     NetworkType,
-    TransactionHttp,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
