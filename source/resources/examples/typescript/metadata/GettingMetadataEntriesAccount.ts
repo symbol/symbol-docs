@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, Metadata, MetadataHttp} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, Metadata, RepositoryFactoryHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // Replace with address

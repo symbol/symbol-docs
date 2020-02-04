@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {RepositoryFactoryHttp, UInt64} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with node endpoint
@@ -26,6 +26,6 @@ const blockHttp = repositoryFactory.createBlockRepository();
 
 const height = 1;
 blockHttp
-    .getBlockByHeight(height.toString())
+    .getBlockByHeight(UInt64.fromUint(height))
     .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */

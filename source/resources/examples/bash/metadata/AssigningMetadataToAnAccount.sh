@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli transaction accountmetadata --target-public-key 20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A --key C82CB00B5828F036 --value test
+nem2-cli transaction accountmetadata --target-public-key E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F --key F5CC2D09ED048388 --value 123456

@@ -26,10 +26,10 @@ import {
     MultisigAccountModificationTransaction,
     NetworkType,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransactionService,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with network type
@@ -90,7 +90,7 @@ const signedHashLockTransaction = account.sign(hashLockTransaction, networkGener
 
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

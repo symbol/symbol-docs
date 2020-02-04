@@ -133,3 +133,41 @@ Once the node decrypts the private key of the potential delegated harvester, the
 - The remote account has not sent or received transactions.
 
 .. note:: Announcing a valid **PersistentDelegationRequestTransaction** does not guarantee being added as a delegated harvester. Currently, the only way to verify that an account has successfully activated delegated harvesting is to become the signer of a new block.
+
+*************************
+Method #02: Using the CLI
+*************************
+
+1. Load your **main account (M)**—the one with more than ``10.000`` |networkcurrency|— as a CLI profile.
+
+.. code-block:: bash
+
+    nem2-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --profile main
+
+2. Create a brand new account. This account will be your **remote account (R)**.
+
+.. code-block:: bash
+
+    nem2-cli account generate --network-type TEST_NET
+
+2. Delegate **M's importance** to **R**.
+
+.. viewsource:: ../../resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+3. Load the **announcer account (A)** as a CLI profile. This account should have at least some |networkcurrency| to be able to announce the transaction to the network.
+
+.. code-block:: bash
+
+    nem2-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --profile announcer
+
+4. Send a request to the node you want to be added as a delegated harvester with **A**. Replace ``<recipient-public-key>`` with the node's public key and ``<remote-private-key>`` with **R's private key**.
+
+.. note:: Get the node's public key by querying ``http://<node-url>:3000/node/info``.
+
+.. viewsource:: ../../resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Once the node decrypts the private key of the potential delegated harvester, the node owner may add you as a delegated harvester.

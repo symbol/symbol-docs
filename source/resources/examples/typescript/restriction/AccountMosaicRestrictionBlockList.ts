@@ -16,8 +16,16 @@
  *
  */
 
-import {Account, AccountRestrictionFlags, AccountRestrictionTransaction, Deadline, MosaicId, NetworkType, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    AccountRestrictionFlags,
+    AccountRestrictionTransaction,
+    Deadline,
+    MosaicId,
+    NetworkType,
+    RepositoryFactoryHttp,
+    UInt64
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with mosaic id
@@ -48,7 +56,7 @@ const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247E
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp
