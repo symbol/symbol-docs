@@ -86,7 +86,7 @@ After the transaction gets confirmed, check if the account has received |network
     │ 51A99028058245A8 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TC3QLP-S4L4MM-LA7X6H-JCORXD-R4BPRM-KQNQZE-ITY2``.
 
 .. _setup-development-environment:
 
