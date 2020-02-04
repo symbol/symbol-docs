@@ -16,8 +16,14 @@
  *
  */
 
-import {Account, Deadline, NamespaceRegistrationTransaction, NetworkType, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    Deadline,
+    NamespaceRegistrationTransaction,
+    NetworkType,
+    RepositoryFactoryHttp,
+    UInt64
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -42,7 +48,7 @@ const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp

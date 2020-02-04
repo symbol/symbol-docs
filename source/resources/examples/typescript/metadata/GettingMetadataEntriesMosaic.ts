@@ -16,8 +16,7 @@
  *
  */
 
-import {Metadata, MetadataHttp, MosaicId} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Metadata, MosaicId, RepositoryFactoryHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with mosaic id

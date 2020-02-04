@@ -53,10 +53,12 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
     Insert profile name: certificate
 
-
 *************************
 Method #01: Using the SDK
 *************************
+
+Encrypt the message
+===================
 
 1. Create an **encrypted message** for the certificate, signing it with Alice's account.
 
@@ -116,7 +118,10 @@ Method #01: Using the SDK
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. After the transaction gets confirmed, fetch it using the transaction hash output from (3).
+Decrypt the message
+===================
+
+After the transaction gets confirmed, fetch it using the transaction hash output from (3).
 You can now **decrypt the message** using either the certificate account or address account.
 
 .. example-code::
@@ -132,3 +137,14 @@ You can now **decrypt the message** using either the certificate account or addr
         :end-before: /* end block 01 */
 
 If you managed to read the message, try to decrypt it using another unrelated account to ensure that only the defined participants can read the encrypted content.
+
+*************************
+Method #02: Using the CLI
+*************************
+
+Encrypt the message
+===================
+
+.. viewsource:: ../../resources/examples/bash/transfer/SendingAnEncryptedTransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh

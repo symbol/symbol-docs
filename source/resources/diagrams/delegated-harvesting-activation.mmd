@@ -1,14 +1,15 @@
 sequenceDiagram
-    participant Account
+    participant Main Account
+    participant Announcer Account
     participant Network
     participant Node
-    Account ->>  Network: AccountLinkTransaction(remotePublicKey)
+    Main Account ->>  Network: AccountLinkTransaction(remotePublicKey)
     activate Network
-    Network -->> Account: Confirms transaction
+    Network -->> Main Account: Confirms transaction
     deactivate Network
-    Account ->>  Network: TransferTransaction(nodePublicKey, encryptedRemotePrivateKey)
+    Announcer Account ->>  Network: TransferTransaction(nodePublicKey, encryptedRemotePrivateKey)
     activate Network
-    Network -->> Account: Confirms the transaction
+    Network -->> Announcer Account: Confirms the transaction
     deactivate Network
     Network -->> Node: Sends notification
     opt eligible remote account

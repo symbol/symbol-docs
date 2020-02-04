@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 /* start block 01 */
 // replace with network type
 const networkType = nem2_sdk_1.NetworkType.TEST_NET;
@@ -42,7 +41,7 @@ console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

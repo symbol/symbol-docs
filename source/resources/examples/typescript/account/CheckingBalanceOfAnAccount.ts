@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, MosaicService} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, MosaicService, RepositoryFactoryHttp} from 'nem2-sdk';
 import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */

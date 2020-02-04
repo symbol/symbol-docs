@@ -17,14 +17,14 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
+const nem2_sdk_1 = require("nem2-sdk");
 /* start block 01 */
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryFactory.createBlockRepository();
 const height = 1;
 blockHttp
-    .getBlockByHeight(height.toString())
+    .getBlockByHeight(nem2_sdk_1.UInt64.fromUint(height))
     .subscribe((block) => console.log(block), (err) => console.error(err));
 /* end block 01 */

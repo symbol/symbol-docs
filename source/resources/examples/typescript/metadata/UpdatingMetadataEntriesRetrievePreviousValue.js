@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
@@ -32,7 +31,7 @@ const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41
 const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 // replace with key and new value
 const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');

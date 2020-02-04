@@ -825,7 +825,7 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
 
 *Command*
 
-.. viewsource:: resources/examples/bash/harvesting/DelegatingAccountImportanceToProxyAccount.sh
+.. viewsource:: resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh
     :language: bash
     :start-after: #!/bin/sh
 
@@ -1166,6 +1166,57 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
     :language: bash
     :start-after: #!/bin/sh
 
+**PersistentHarvestDelegationTransaction**
+
+Requests a node to add a :doc:`remote account <concepts/harvesting>` as a delegated harvester.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                             - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                       - Profile password.
+    -f, --max-fee <maxFee>                          - Maximum fee (absolute amount).
+    --sync                                          - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                      - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>        - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                       - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                           - Relative amount of network mosaic to lock. [10]
+    -r, --remote-private-key <remotePrivateKey>     - Private key of the remote account.
+    -u, --recipient-public-key <recipientPublicKey> - Public key of the node to request persistent harvesting delegation.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**SecretLockTransaction**
+
+Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                  - Profile password.
+    -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                 - (Optional) Announce the transaction without double confirmation.
+    -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier or @alias.
+    -a, --amount <amount>                      - Amount of mosaic units to lock.
+    -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
+    -s, --secret <secret>                      - Proof hashed in hexadecimal format.
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretLockTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
 **SecretProofTransaction**
 
 Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
@@ -1279,11 +1330,18 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
     -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
     -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -u, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
-    -d, --persistent-harvesting-delegation          - (Optional) Start persistent harvesting delegation.
 
 *Command*
 
+Regular transfer transaction:
+
 .. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Transfer transaction with encrypted message:
+
+.. viewsource:: resources/examples/bash/transfer/SendingAnEncryptedTransferTransaction.sh
     :language: bash
     :start-after: #!/bin/sh
 

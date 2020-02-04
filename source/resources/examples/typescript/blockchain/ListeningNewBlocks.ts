@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {RepositoryFactoryHttp} from 'nem2-sdk';
 
 /* start block 01 */
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';

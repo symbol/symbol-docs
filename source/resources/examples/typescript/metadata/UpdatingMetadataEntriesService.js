@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
@@ -65,7 +64,7 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.merg
 }));
 /* end block 03 */
 /* start block 04 */
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

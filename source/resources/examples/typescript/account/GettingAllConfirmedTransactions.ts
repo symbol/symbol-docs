@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, QueryParams} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, QueryParams, RepositoryFactoryHttp} from 'nem2-sdk';
 import {EMPTY} from 'rxjs';
 import {concatMap, expand, toArray} from 'rxjs/operators';
 
