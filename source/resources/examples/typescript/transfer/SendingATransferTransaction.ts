@@ -16,8 +16,18 @@
  *
  */
 
-import {Account, Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    Address,
+    Deadline,
+    Mosaic,
+    MosaicId,
+    NetworkType,
+    PlainMessage,
+    RepositoryFactoryHttp,
+    TransferTransaction,
+    UInt64,
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with recipient address

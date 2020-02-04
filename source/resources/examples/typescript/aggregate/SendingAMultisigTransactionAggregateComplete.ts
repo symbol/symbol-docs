@@ -26,10 +26,10 @@ import {
     NetworkType,
     PlainMessage,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace network type

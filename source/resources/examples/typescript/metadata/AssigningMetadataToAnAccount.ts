@@ -23,15 +23,14 @@ import {
     Deadline,
     HashLockTransaction,
     KeyGenerator,
-    Listener,
     Mosaic,
     MosaicId,
     NetworkType,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransactionService,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with key

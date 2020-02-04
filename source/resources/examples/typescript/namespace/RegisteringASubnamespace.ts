@@ -16,8 +16,14 @@
  *
  */
 
-import {Account, Deadline, NamespaceRegistrationTransaction, NetworkType, UInt64} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    Deadline,
+    NamespaceRegistrationTransaction,
+    NetworkType,
+    RepositoryFactoryHttp,
+    UInt64
+} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with root namespace name

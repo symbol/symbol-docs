@@ -16,8 +16,14 @@
  *
  */
 
-import {Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, NetworkType} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {
+    Account,
+    AggregateTransaction,
+    CosignatureSignedTransaction,
+    CosignatureTransaction,
+    NetworkType,
+    RepositoryFactoryHttp,
+} from 'nem2-sdk';
 
 import {filter, map, mergeMap} from 'rxjs/operators';
 

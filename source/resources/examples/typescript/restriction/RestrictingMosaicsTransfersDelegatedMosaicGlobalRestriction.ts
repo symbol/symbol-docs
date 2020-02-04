@@ -27,10 +27,9 @@ import {
     MosaicId,
     MosaicNonce,
     MosaicRestrictionType,
-    NetworkType,
+    NetworkType, RepositoryFactoryHttp,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 const networkType = NetworkType.TEST_NET;

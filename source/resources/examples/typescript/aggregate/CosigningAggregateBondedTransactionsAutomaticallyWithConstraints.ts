@@ -25,11 +25,11 @@ import {
     NamespaceId,
     NetworkType,
     PublicAccount,
+    RepositoryFactoryHttp,
     Transaction,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */

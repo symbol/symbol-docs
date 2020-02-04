@@ -27,11 +27,11 @@ import {
     NetworkType,
     PlainMessage,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 // replace network type
 const networkType = NetworkType.TEST_NET;

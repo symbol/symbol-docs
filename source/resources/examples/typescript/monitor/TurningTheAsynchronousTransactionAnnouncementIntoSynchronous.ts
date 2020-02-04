@@ -24,11 +24,11 @@ import {
     Mosaic,
     MosaicId,
     NetworkType,
+    RepositoryFactoryHttp,
     TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {merge} from 'rxjs';
 import {filter, tap} from 'rxjs/operators';
 
