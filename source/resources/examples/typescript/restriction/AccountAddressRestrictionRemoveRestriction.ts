@@ -55,7 +55,7 @@ const productAccount = Account.createFromPrivateKey(productPrivateKey, networkTy
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp

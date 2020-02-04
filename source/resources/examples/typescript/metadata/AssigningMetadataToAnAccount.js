@@ -53,7 +53,7 @@ const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGe
 /* start block 05 */
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

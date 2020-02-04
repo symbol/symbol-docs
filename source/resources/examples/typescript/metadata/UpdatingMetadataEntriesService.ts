@@ -115,7 +115,7 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
 /* end block 03 */
 
 /* start block 04 */
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

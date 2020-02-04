@@ -32,7 +32,7 @@ const accountLinkTransaction = AccountLinkTransaction.create(
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(accountLinkTransaction, networkGenerationHash);
 transactionHttp

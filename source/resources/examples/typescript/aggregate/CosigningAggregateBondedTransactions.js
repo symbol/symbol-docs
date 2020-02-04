@@ -33,7 +33,7 @@ const privateKey = '000000000000000000000000000000000000000000000000000000000000
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp

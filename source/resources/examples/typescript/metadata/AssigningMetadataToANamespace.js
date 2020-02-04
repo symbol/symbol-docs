@@ -49,7 +49,7 @@ const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247E
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

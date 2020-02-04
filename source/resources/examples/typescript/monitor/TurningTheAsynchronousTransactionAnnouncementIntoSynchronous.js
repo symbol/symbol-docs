@@ -40,7 +40,7 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 /* end block 01 */
 /* start block 02 */
 const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();

@@ -64,7 +64,7 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.merg
 }));
 /* end block 03 */
 /* start block 04 */
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
