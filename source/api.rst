@@ -23,7 +23,7 @@ Get the complete list of available endpoints by clicking on the button below:
 
 .. raw:: html
 
-    <a href="https://nemtech.github.io/nem2-openapi" rel="nofollow"><button class="btn btn-default">REST API Endpoints</button></a>
+    <a class="btn btn-default" href="https://nemtech.github.io/nem2-openapi" rel="nofollow">REST API Endpoints</a>
 
 .. _websockets:
 

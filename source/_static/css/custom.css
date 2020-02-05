@@ -57,7 +57,7 @@ b {
     text-transform: uppercase;
     width: auto;
     border-radius: 4px;
-    border: 1px solid #5200c6;
+    border: 1px solid #5200c6 !important;
     color: #5200c6;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:focus {
