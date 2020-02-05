@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, MosaicService} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, MosaicService, RepositoryFactoryHttp} from 'nem2-sdk';
 import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
@@ -25,7 +24,7 @@ import {mergeMap} from 'rxjs/operators';
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 const mosaicHttp = repositoryFactory.createMosaicRepository();

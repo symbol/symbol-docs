@@ -112,7 +112,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 5. Open the terminal where you are monitoring the transaction's status.
 The transaction should appear as confirmed after ±15 seconds and the amount defined gets transferred from the sender's account to the recipient's account.
-If the terminal raises an error, check :ref:`the error code meaning here <status-errors>`.
+If the terminal raises an error, check the error code meaning :ref:`here <status-errors>`.
 
 *************************
 Method #02: Using the CLI

@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-07-12 10:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -142,11 +142,11 @@ msgstr "操作制限"
 #: ../../source/concepts/account-restriction.rst:62
 msgid ""
 "An account can allow/block announcing **outgoing** transactions with a "
-":ref:`determined operation type <transaction-types>`. By doing so, the "
+"determined :ref:`operation type <transaction-types>`. By doing so, the "
 "account increases its security, preventing the announcement by mistake of "
 "undesired transactions."
 msgstr ""
-"アカウントは送信トランザクションのアナウンスを :ref:`規則操作タイプ <transaction-types>` "
+"アカウントは送信トランザクションのアナウンスを :ref:`操作タイプ <transaction-types>` "
 "によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
 
 #: ../../source/concepts/account-restriction.rst:67

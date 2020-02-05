@@ -139,6 +139,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/inflation
     concepts/receipt
     concepts/node
+    Whitepaper <https://nemtech.github.io/catapult-whitepaper/main.pdf>
 
 .. toctree::
     :maxdepth: 2
@@ -149,7 +150,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     server
     sdk
     cli
-    extensions
+    libraries
 
 .. toctree::
     :maxdepth: 2

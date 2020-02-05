@@ -23,7 +23,7 @@ Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
-    nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-harvest-20.us-west-1.nemtech.network:3000 --password your_password --profile test_net_profile
+    nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --password your_password --profile test_net_profile
 
 By default, |cli| will always use the default profile.
 To use a named profile, add the ``--profile`` option to the command.
@@ -42,7 +42,7 @@ If you do not have a private key to create a profile, you can generate a new acc
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET -s --url http://api-harvest-20.us-west-1.nemtech.network:3000 --pasword your_password --profile test_net_profile
+    nem2-cli account generate --network TEST_NET -s --url http://api-xym-harvest-20.us-west-1.nemtech.network:3000 --pasword your_password --profile test_net_profile
 
 ********
 Commands
@@ -331,7 +331,7 @@ Utilities to convert  between data types.
 
 **Base32 to Hex Address**
 
-Address Base 32 -> Address hex converter.
+Address Base32 -> Address hex converter.
 
 *Options*
 
@@ -347,7 +347,7 @@ Address Base 32 -> Address hex converter.
 
 **Hex to Base32 Address**
 
-Address hex -> Address Base 32 converter.
+Address hex -> Address Base32 converter.
 
 *Options*
 
@@ -770,6 +770,9 @@ Transaction
 
 Transactions are signed with the profiles created with ``nem2-cli profile create``, ``nem2-cli profile import``, or ``nem2-cli account generate -s``.
 
+By default, the developer has to query if a transaction announced to the network has been included in a block or not with the command ``nem2-cli transaction status``.
+To wait until the transaction gets confirmed or rejected, pass the ``--sync`` option to the transaction command.
+
 **Transaction Info**
 
 Returns transaction information given a hash.
@@ -822,7 +825,33 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
 
 *Command*
 
-.. viewsource:: resources/examples/bash/harvesting/DelegatingAccountImportanceToProxyAccount.sh
+.. viewsource:: resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**AccountMetadataTransaction**
+
+Adds :doc:`custom data <concepts/metadata>` to an account (requires internet connection).
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                       - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                 - Profile password.
+    -f, --max-fee <maxFee>                    - Maximum fee (absolute amount).
+    --sync                                    - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>  - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                 - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                     - Relative amount of network mosaic to lock. [10]
+    -t, --target-public-key <targetPublicKey> - Metadata target public key.
+    -k, --key <key>                           - Metadata key (UInt64) in hexadecimal format.
+    -v, --value <value>                       - Metadata value.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/metadata/AssigningMetadataToAnAccount.sh
     :language: bash
     :start-after: #!/bin/sh
 
@@ -871,59 +900,30 @@ Creates a new :doc:`mosaic <concepts/mosaic>`.
     :language: bash
     :start-after: #!/bin/sh
 
-**MosaicSupplyChangeTransaction**
+**MosaicAddressRestriction**
 
-Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
-
-*Options*
-
-.. code-block:: bash
-
-    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
-    -p, --password <password>  - Profile password.
-    -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
-    --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
-    --announce                 - (Optional) Announce the transaction without double confirmation.
-    -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
-    -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
-    -d, --amount <amount>      - Atomic amount of supply change.
-
-*Command*
-
-.. viewsource:: resources/examples/bash/mosaic/ModifyingMosaicSupply.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**NamespaceRegistrationTransaction**
-
-Registers a :doc:`namespace <concepts/namespace>`.
+Sets a :doc:`mosaic restriction <concepts/mosaic-restriction>` to an specific address (requires internet connection).
 
 *Options*
 
 .. code-block:: bash
 
-    --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
-    -p, --password <password>      - Profile password.
-    -f, --max-fee <maxFee>         - Maximum fee (absolute amount).
-    --sync                         - (Optional) Wait until the server confirms or rejects the transaction.
-    --announce                     - (Optional) Announce the transaction without double confirmation.
-    -n, --name <name>              - Namespace name.
-    -r, --rootnamespace            - Root namespace.
-    -s, --subnamespace             - Sub namespace.
-    -d, --duration <duration>      - Duration (use it with --rootnamespace).
-    -a, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
+    --profile <profile>                               - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                         - Profile password.
+    -f, --max-fee <maxFee>                            - Maximum fee (absolute amount).
+    --sync                                            - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                        - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>          - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                         - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                             - Relative amount of network mosaic to lock. [10]
+    -m, --mosaic-id <mosaicId>                        - Mosaic identifier or @alias being restricted
+    -a, --target-address <targetAddress>              - Address or @alias being restricted.
+    -k, --restriction-key <restrictionKey>            - Restriction key.
+    -V, --new-restriction-value <newRestrictionValue> - New restriction value.
 
 *Command*
 
-Register a root namespace:
-
-.. viewsource:: resources/examples/bash/namespace/RegisteringANamespace.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-Register a subnamespace:
-
-.. viewsource:: resources/examples/bash/namespace/RegisteringASubnamespace.sh
+.. viewsource:: resources/examples/bash/restriction/RestrictingMosaicTransfersMosaicAddressRestriction.sh
     :language: bash
     :start-after: #!/bin/sh
 
@@ -973,6 +973,84 @@ Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
     :language: bash
     :start-after: #!/bin/sh
 
+**MosaicGlobalRestriction**
+
+Sets a :doc:`global mosaic restriction <concepts/mosaic-restriction>` to a mosaic (requires internet connection).
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                               - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                         - Profile password.
+    -f, --max-fee <maxFee>                            - Maximum fee (absolute amount).
+    --sync                                            - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                        - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>          - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                         - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                             - Relative amount of network mosaic to lock. [10]
+    -m, --mosaic-id <mosaicId>                        - Mosaic identifier or @alias being restricted.
+    -r, --reference-mosaic-id <referenceMosaicId>     - (Optional) Identifier of the mosaic providing the restriction key. [0000000000000000]
+    -k, --restriction-key <restrictionKey>            - Restriction key relative to the reference mosaic identifier.
+    -V, --new-restriction-value <newRestrictionValue> - New restriction value.
+    -T, --new-restriction-type <newRestrictionType>   - New restriction type.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/restriction/RestrictingMosaicTransfersMosaicGlobalRestriction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**MosaicMetadataTransaction**
+
+Adds :doc:`custom data <concepts/metadata>` to a mosaic (requires internet connection).
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                       - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                 - Profile password.
+    -f, --max-fee <maxFee>                    - Maximum fee (absolute amount).
+    --sync                                    - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>  - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                 - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                     - Relative amount of network mosaic to lock. [10]
+    -m, --mosaic-id <mosaicId>                - Mosaic id be assigned metadata in hexadecimal format.
+    -t, --target-public-key <targetPublicKey> - Mosaic id owner account public key.
+    -k, --key <key>                           - Metadata key (UInt64) in hexadecimal format.
+    -v, --value <value>                       - Value of metadata key.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/metadata/AssigningMetadataToAMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**MosaicSupplyChangeTransaction**
+
+Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>  - Profile password.
+    -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
+    --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                 - (Optional) Announce the transaction without double confirmation.
+    -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
+    -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
+    -d, --amount <amount>      - Atomic amount of supply change.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/mosaic/ModifyingMosaicSupply.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
 **MultisigModificationAccountTransaction**
 
 Create or modify a :doc:`multisig account <concepts/multisig-account>`.
@@ -999,6 +1077,117 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
 *Command*
 
 .. viewsource:: resources/examples/bash/multisig/ModifyingAMultisigAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**NamespaceRegistrationTransaction**
+
+Registers a :doc:`namespace <concepts/namespace>`.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>            - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>      - Profile password.
+    -f, --max-fee <maxFee>         - Maximum fee (absolute amount).
+    --sync                         - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                     - (Optional) Announce the transaction without double confirmation.
+    -n, --name <name>              - Namespace name.
+    -r, --rootnamespace            - Root namespace.
+    -s, --subnamespace             - Sub namespace.
+    -d, --duration <duration>      - Duration (use it with --rootnamespace).
+    -a, --parent-name <parentName> - Parent namespace name (use it with --subnamespace).
+
+*Command*
+
+Register a root namespace:
+
+.. viewsource:: resources/examples/bash/namespace/RegisteringANamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Register a subnamespace:
+
+.. viewsource:: resources/examples/bash/namespace/RegisteringASubnamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**NamespaceMetadataTransaction**
+
+Adds :doc:`custom data <concepts/metadata>` to a namespace (requires internet connection).
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                       - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                 - Profile password.
+    -f, --max-fee <maxFee>                    - Maximum fee (absolute amount).
+    --sync                                    - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>  - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                 - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                     - Relative amount of network mosaic to lock. [10]
+    -n, --namespace-id <namespaceId>          - Mosaic id be assigned metadata in hexadecimal format.
+    -t, --target-public-key <targetPublicKey> - Namespace id owner account public key.
+    -k, --key <key>                           - Key of metadata.
+    -v, --value <value>                       - Metadata key (UInt64) in hexadecimal format.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/metadata/AssigningMetadataToANamespace.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**SecretLockTransaction**
+
+Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                        - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                  - Profile password.
+    -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
+    --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                 - (Optional) Announce the transaction without double confirmation.
+    -m, --mosaic-id <mosaicId>                 - Locked mosaic identifier or @alias.
+    -a, --amount <amount>                      - Amount of mosaic units to lock.
+    -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
+    -s, --secret <secret>                      - Proof hashed in hexadecimal format.
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/secretlock/AnnouncingASecretLockTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**PersistentHarvestDelegationTransaction**
+
+Requests a node to add a :doc:`remote account <concepts/harvesting>` as a delegated harvester.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>                             - (Optional) Select between your profiles, by providing a profile name.
+    -p, --password <password>                       - Profile password.
+    -f, --max-fee <maxFee>                          - Maximum fee (absolute amount).
+    --sync                                          - (Optional) Wait until the server confirms or rejects the transaction.
+    --announce                                      - (Optional) Announce the transaction without double confirmation.
+    -F, --max-fee-hash-lock <maxFeeHashLock>        - Maximum fee (absolute amount) to announce the hash lock transaction.
+    -D, --duration <duration>                       - Hash lock duration expressed in blocks. [480]
+    -L, --amount <amount>                           - Relative amount of network mosaic to lock. [10]
+    -r, --remote-private-key <remotePrivateKey>     - Private key of the remote account.
+    -u, --recipient-public-key <recipientPublicKey> - Public key of the node to request persistent harvesting delegation.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh
     :language: bash
     :start-after: #!/bin/sh
 
@@ -1141,11 +1330,18 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
     -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
     -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -u, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
-    -d, --persistent-harvesting-delegation          - (Optional) Start persistent harvesting delegation.
 
 *Command*
 
+Regular transfer transaction:
+
 .. viewsource:: resources/examples/bash/transfer/SendingATransferTransaction.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Transfer transaction with encrypted message:
+
+.. viewsource:: resources/examples/bash/transfer/SendingAnEncryptedTransferTransaction.sh
     :language: bash
     :start-after: #!/bin/sh
 

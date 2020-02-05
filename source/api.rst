@@ -12,7 +12,7 @@ Http requests
 
 |catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is :doc:`running locally <getting-started/setup-workstation>`, HTTP GET requests can be executed from a browser and have the form:
+Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
 
     http://localhost:3000/<path-to-API-request>
 

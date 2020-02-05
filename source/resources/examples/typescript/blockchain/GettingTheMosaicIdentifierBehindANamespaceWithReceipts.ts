@@ -24,16 +24,16 @@ import {
     NamespaceId,
     NetworkType,
     PlainMessage,
+    RepositoryFactoryHttp,
     TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 import {map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const aliasedMosaic = new Mosaic(
-    new NamespaceId('nem.xem'),
+    new NamespaceId('symbol.xym'),
     UInt64.fromUint(1000000),
 );
 /* end block 01 */
@@ -60,7 +60,7 @@ console.log(signedTransaction.hash);
 
 /* start block 03 */
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

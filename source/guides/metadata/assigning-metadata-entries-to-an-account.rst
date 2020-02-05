@@ -54,7 +54,7 @@ Creating the account
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
     Insert profile name: alice
 
 *************************
@@ -148,3 +148,11 @@ Monitor the network until the transaction gets confirmed, and then announce the 
     nem2-cli transaction cosign --hash <transaction-hash> --profile alice
 
 7. If everything goes well, now Alice :doc:`has assigned the metadata value <getting-metadata-entries-attached-to-an-account>` ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
+
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/metadata/AssigningMetadataToAnAccount.sh
+    :language: bash
+    :start-after: #!/bin/sh

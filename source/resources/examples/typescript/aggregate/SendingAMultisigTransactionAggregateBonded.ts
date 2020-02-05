@@ -27,11 +27,11 @@ import {
     NetworkType,
     PlainMessage,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 // replace network type
 const networkType = NetworkType.TEST_NET;
@@ -44,7 +44,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 // replace with recipient address
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -54,7 +54,7 @@ const transferTransaction = TransferTransaction.create(
     recipientAddress,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('sending 10 nem.xem'),
+    PlainMessage.create('sending 10 symbol.xym'),
     networkType);
 
 /* start block 01 */
@@ -82,8 +82,8 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

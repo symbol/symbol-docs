@@ -174,3 +174,10 @@ Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction 
 
    <a href="https://en.wikipedia.org/wiki/STO" target="_blank">STO</a>
 
+*************************
+Method #02: Using the CLI
+*************************
+
+.. viewsource:: ../../resources/examples/bash/metadata/AssigningMetadataToAMosaic.sh
+    :language: bash
+    :start-after: #!/bin/sh

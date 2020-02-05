@@ -106,9 +106,9 @@ Commands
     ./cmds/stop-catapult-peers; Stop peer0 and peer1 services.
     ./cmds/stop-catapult-api-broker ;  Stop just the API broker service.
 
-*************************
-Getting test cat.currency
-*************************
+*********************
+Getting test currency
+*********************
 
 An :doc:`account <../../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them announcing transactions.
 To announce a transaction, the sender should pay a :doc:`fee <../../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure.
@@ -145,7 +145,7 @@ Copy the private key of the first account.
 
     nem2-cli profile import
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
+    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Introduce your private key: 123***456
     Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name: base-profile

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 16:48+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-10-28 13:02+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -69,8 +69,8 @@ msgstr ""
 
 #: ../../source/guides/accountlink/activating-delegated-harvesting.rst:42
 msgid ""
-"Have one :ref:`account with more than 10,000 |networkcurrency| <setup-"
-"creating-a-test-account>`"
+"Have one :ref:`account with more than 10,000 <setup-creating-a-test-"
+"account>` |networkcurrency| units"
 msgstr ""
 "|networkcurrency| を :ref:`10,000 を持つアカウント <setup-creating-a-test-account>`"
 

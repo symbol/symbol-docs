@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 const validTransaction = (transaction, publicAccount) => {
@@ -26,7 +25,7 @@ const validTransaction = (transaction, publicAccount) => {
         transaction.signer.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
         (transaction.mosaics[0].id.equals(new nem2_sdk_1.MosaicId('75AF035421401EF0') ||
-            transaction.mosaics[0].id.equals(new nem2_sdk_1.NamespaceId('nem.xem')))) &&
+            transaction.mosaics[0].id.equals(new nem2_sdk_1.NamespaceId('symbol.xym')))) &&
         transaction.mosaics[0].amount.compare(nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
 const cosignAggregateBondedTransaction = (transaction, account) => {
@@ -39,8 +38,8 @@ const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType);
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 listener.open().then(() => {

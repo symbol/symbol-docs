@@ -28,7 +28,7 @@ To do so, open a new :ref:`WebSocket connection <websockets>` connection.
 
     import * as WebSocket from 'ws';
 
-    const host = 'api-harvest-20.us-west-1.nemtech.network:3000';
+    const host = 'api-xym-harvest-20.us-west-1.nemtech.network:3000';
     const ws = new WebSocket('ws://' + host + '/ws');
 
     ws.on('open', () => {

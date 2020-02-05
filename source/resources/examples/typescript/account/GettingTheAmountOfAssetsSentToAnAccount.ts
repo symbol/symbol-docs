@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, MosaicId, TransactionType, TransferTransaction} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'nem2-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 /* start block 01 */
@@ -33,7 +32,7 @@ const mosaicIdHex = '46BE9BC0626F9B1A';
 const divisibility = 6;
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 

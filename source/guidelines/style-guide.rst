@@ -145,6 +145,7 @@ List of terms that are prone to be written in different ways.
     Symbol; symbol, NEM Symbol
     TransferTransaction; Transfer Transaction, transfer transaction
     TypeScript; typescript, Typescript
+    Whitepaper; WhitePaper
 
 .. |sphinx| raw:: html
 

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.2\n"
+"Project-Id-Version: nem2-docs 0.20.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 13:36+0000\n"
+"POT-Creation-Date: 2020-01-27 23:33+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -25,33 +25,40 @@ msgstr ""
 msgid "NEM Developer Center"
 msgstr "NEM デベロッパーセンター"
 
-#: ../../source/index.rst:15
-msgid "Catapult is your Blockchain Platform"
-msgstr "Catapult はあなたのブロックチェーンプラットフォームです。"
+#: ../../source/index.rst:13
+msgid ""
+"Browse the developer documentation to start integrating blockchain "
+"technology into your project."
+msgstr "開発者向けドキュメントを参照し、ブロックチェーンテクノロジーをプロジェクトに統合しましょう。"
 
 #: ../../source/index.rst:17
+msgid "Catapult is Your Blockchain Platform"
+msgstr "Catapult はあなたのブロックチェーンプラットフォームです。"
+
+#: ../../source/index.rst:19
 msgid ""
 "|codename| is a **developer-friendly blockchain platform** for businesses. "
 "It reduces cost, complexity, and time-to-market so businesses can be more "
-"competitive. |codename| offers flexible and secure customizable solutions "
-"through simple, yet powerful, built-in features."
+"competitive."
 msgstr ""
 "|codename| はビジネス向けの **開発者フレンドリーなブロックチェーンプラットフォーム** "
-"です。コスト、複雑さ、および市場投入までの時間を短縮し、企業の競争力を高めます。 |codename| "
-"は柔軟で、安全な、カスタム可能のソリューションとして、シンプルで、しかしパワフルな組み込み機能を提供します。"
+"です。コスト、複雑さ、および市場投入までの時間を短縮し、企業の競争力を高めます。"
 
-#: ../../source/index.rst:21
+#: ../../source/index.rst:22
 msgid ""
-"Developers are able to easily integrate blockchain technology into their "
-"projects or create powerful dApps using |codename|'s :doc:`REST API <api>`. "
-"This allows creating a variety of architectural solutions with lightweight "
-"code efficiently, in any programming language."
+"|codename| offers flexible and secure customizable solutions through simple,"
+" yet powerful, built-in features. Developers are able to easily integrate "
+"blockchain technology into their projects or create powerful dApps using "
+"|codename|'s :doc:`REST API <api>`. This allows creating a variety of "
+"architectural solutions with lightweight code efficiently, in any "
+"programming language."
 msgstr ""
-"開発者は |codename| の :doc:`REST API <api>` "
+"|codename| は柔軟で、安全な、カスタム可能のソリューションとして、シンプルで、しかしパワフルな組み込み機能を提供します。開発者は "
+"|codename| の :doc:`REST API <api>` "
 "を使って、ブロックチェーンのテクノロジーを彼らのプロジェクトへの統合を容易にしたり、強力な dApps "
 "を作成することができます。これにより、任意のプログラミング言語の軽量なコードで効率的に、さまざまなアーキテクチャソリューションを作成することができます。"
 
-#: ../../source/index.rst:24
+#: ../../source/index.rst:26
 msgid ""
 "|codename| provides access to both **public and private blockchains**, "
 "individually or as a hybrid, providing options to best suit your company's "
@@ -62,11 +69,11 @@ msgstr ""
 "|codename| は **パブリックとプライベートブロックチェーン** "
 "の両方を提供し、それぞれまたはハイブリッドで、あなたの会社のニーズに最適な選択肢を提供します。パブリックブロックチェーンは分散型で、公開されており、自立可能な、誰にでも利用される元帳です。一方で、プライベートブロックチェーンは、高い速度とプライバシーを提供します。"
 
-#: ../../source/index.rst:30
+#: ../../source/index.rst:32
 msgid "Getting Started"
 msgstr "入門"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:34
 msgid ""
 "To start developing with |codename|, we recommend you to :doc:`setup your "
 "workstation <getting-started/setup-workstation>`. To know more about "
@@ -75,102 +82,102 @@ msgstr ""
 "|codename| での開発を始めるには :doc:`ワークステーションのセットアップ <getting-started/setup-"
 "workstation>` を推奨します。より |codename| を知るためには、次のドキュメントを参照してください:"
 
-#: ../../source/index.rst:35
+#: ../../source/index.rst:37
 msgid ":doc:`Built-in Features <concepts/account>`"
 msgstr ":doc:`ビルドイン機能 <concepts/account>`"
 
-#: ../../source/index.rst:36
+#: ../../source/index.rst:38
 msgid ":doc:`Protocol <concepts/cryptography>`"
 msgstr ":doc:`プロトコル <concepts/cryptography>`"
 
-#: ../../source/index.rst:37
+#: ../../source/index.rst:39
 msgid ":doc:`API Reference <api>`"
 msgstr ":doc:`API リファレンス <api>`"
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:40
 msgid ":doc:`Software Development Kits <api>`"
 msgstr ":doc:`ソフトウェア開発キット <api>`"
 
-#: ../../source/index.rst:39
+#: ../../source/index.rst:41
 msgid ":doc:`Command Line Tool <cli>`"
 msgstr ":doc:`コマンドラインツール <cli>`"
 
-#: ../../source/index.rst:43
+#: ../../source/index.rst:45
 msgid "Featured Guides"
 msgstr "注目のガイド"
 
-#: ../../source/index.rst:45
+#: ../../source/index.rst:47
 msgid ""
 "Learn how to use the software development kits and tools with the following "
 "step-by-step implementation examples."
 msgstr "次のステップバイステップの実装例でソフトウェア開発キットとツールの使用方法を学びます。"
 
-#: ../../source/index.rst:47
+#: ../../source/index.rst:49
 msgid ":doc:`How to create a wallet <guides/account/creating-an-account>`"
 msgstr ":doc:`ウォレットの作り方 <guides/account/creating-an-account>`"
 
-#: ../../source/index.rst:48
+#: ../../source/index.rst:50
 msgid ""
 ":doc:`How to send a transaction <guides/transfer/sending-a-transfer-"
 "transaction>`"
 msgstr ":doc:`トランザクションを送信する <guides/transfer/sending-a-transfer-transaction>`"
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:51
 msgid ":doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`"
 msgstr ":doc:`モザイクを作成する <guides/mosaic/creating-a-mosaic>`"
 
-#: ../../source/index.rst:50
+#: ../../source/index.rst:52
 msgid ""
 ":doc:`How to register a namespace "
 "<guides/namespace/registering-a-namespace>`"
 msgstr ":doc:`ネームスペースを作成する <guides/namespace/registering-a-namespace>`"
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:53
 msgid ""
 ":doc:`How to run a private test network <guides/network/creating-a-private-"
 "test-net>`"
 msgstr ""
 ":doc:`プライベートテストネットワークを立ち上げる <guides/network/creating-a-private-test-net>`"
 
-#: ../../source/index.rst:52
+#: ../../source/index.rst:54
 msgid ":ref:`More guides <blog-categories>`"
 msgstr ":ref:`他のガイド <blog-categories>`"
 
-#: ../../source/index.rst:56
+#: ../../source/index.rst:58
 msgid "Contributing to Catapult"
 msgstr "Catapult へ貢献する"
 
-#: ../../source/index.rst:58
+#: ../../source/index.rst:60
 msgid ""
 "|codename| is an |open-source| project. Discover how our |community| is "
 "organized, and get started participating:"
 msgstr ""
 "|codename| は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
 
-#: ../../source/index.rst:61
+#: ../../source/index.rst:63
 msgid "Ask in |stack-overflow| development-related questions"
 msgstr "開発に関する質問は |stack-overflow| で尋ねてください。"
 
-#: ../../source/index.rst:62
+#: ../../source/index.rst:64
 msgid "Reach our community joining the official |slack|"
 msgstr "私達の公式 |slack| に参加してください。"
 
-#: ../../source/index.rst:63
+#: ../../source/index.rst:65
 msgid ""
 "Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to "
 "propose changes"
 msgstr ""
 "変更を提案するためには :doc:`貢献ガイドライン <guidelines/suggesting-changes>` を確認してください。"
 
-#: ../../source/index.rst:64
+#: ../../source/index.rst:66
 msgid "Follow the development updates on |twitter|"
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/index.rst:65
+#: ../../source/index.rst:67
 msgid "Explore our |github| repositories"
 msgstr "|github| リポジトリを探索しましょう。"
 
-#: ../../source/index.rst:67
+#: ../../source/index.rst:69
 msgid ""
 "Continue: :doc:`Setting up your workstation <getting-started/setup-"
 "workstation>`."

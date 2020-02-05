@@ -21,17 +21,16 @@ import {
     AggregateTransaction,
     Deadline,
     HashLockTransaction,
-    Listener,
     Mosaic,
     MosaicId,
     NetworkType,
     PlainMessage,
     PublicAccount,
+    RepositoryFactoryHttp,
     TransactionService,
     TransferTransaction,
     UInt64,
 } from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
 
 /* start block 01 */
 // replace with network type
@@ -46,7 +45,7 @@ const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketD
 const ticketMosaicId = new MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -56,7 +55,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     ticketDistributorPublicAccount.address,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('send 100 nem.xem to distributor'),
+    PlainMessage.create('send 100 symbol.xym to distributor'),
     networkType);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
@@ -95,8 +94,8 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

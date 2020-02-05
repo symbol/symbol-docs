@@ -16,14 +16,13 @@
  *
  */
 
-import {NamespaceHttp, NamespaceId} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {NamespaceId, RepositoryFactoryHttp} from 'nem2-sdk';
 
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new NamespaceId('foo');
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 

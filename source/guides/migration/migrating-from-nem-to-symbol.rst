@@ -16,11 +16,12 @@ This document will help you **upgrade your application** previous NIS1 features,
 Test network
 ************
 
-The package |catapult-service-bootstrap| brings a set of scripts to deploy a complete |codename| test network for development and learning purposes.
+At the time of writing, the main public network has not been launched.
+Right now, there are two options to start testing Symbol.
 
-* Guide: :doc:`Running a local network with Service Bootstrap <../../getting-started/setup-workstation>`
+* **Public test network** The public test network uses the same technology and features of the future main public network. You can use the testnet to experiment with the offered transaction set in a live network without the loss of valuable assets. To start using the test net, follow :doc:`this guide <../../getting-started/setup-workstation>`.
 
-.. note:: ⚠️Do not power any network in production using these packages.
+* **Private test network**: To run a private test network, use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to build a network for development and learning purposes with just one command.
 
 **************************
 Legacy API incompatibility
@@ -124,9 +125,9 @@ With multisignature accounts managed on-chain, |codename|'s multisignature imple
 
 Different to NIS1, the account modification entries now hold fields for ``minimum approval`` and ``minimum removal``:
 
-**Minimum removal**: Defines how many cosignatories are required to broadcast transactions removing cosignatories from the multisignature account.
+* **Minimum removal**: Defines how many cosignatories are required to broadcast transactions removing cosignatories from the multisignature account.
 
-**Minimum approval**: Defines how many cosignatories are required for any other type of transaction.
+* **Minimum approval**: Defines how many cosignatories are required for any other type of transaction.
 
 Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process).
 In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.

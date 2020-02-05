@@ -19,9 +19,9 @@ source_file = build/gettext/cli.pot
 source_lang = en
 type = PO
 
-[nem2docs.extensions]
-file_filter = source/locale/<lang>/LC_MESSAGES/extensions.po
-source_file = build/gettext/extensions.pot
+[nem2docs.libraries]
+file_filter = source/locale/<lang>/LC_MESSAGES/libraries.po
+source_file = build/gettext/libraries.pot
 source_lang = en
 type = PO
 

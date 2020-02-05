@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const nem2_sdk_1 = require("nem2-sdk");
-const RepositoryFactoryHttp_1 = require("nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
@@ -31,7 +30,7 @@ const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networ
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
 const metadataHttp = new nem2_sdk_1.MetadataHttp(nodeUrl);
 const metadataService = new nem2_sdk_1.MetadataTransactionService(metadataHttp);
 // replace with key and new value
@@ -48,7 +47,7 @@ const signedAggregateTransaction = accountMetadataTransaction
     const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
     return rxjs_1.of(signedTransaction);
 }));
-// replace with nem.xem id
+// replace with symbol.xym id
 const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('75AF035421401EF0');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
@@ -65,7 +64,7 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(operators_1.merg
 }));
 /* end block 03 */
 /* start block 04 */
-const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
