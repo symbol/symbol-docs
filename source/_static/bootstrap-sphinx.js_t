@@ -109,7 +109,7 @@
         var sideBarMargin  = parseInt($sideBar.css("margin-top"), 10);
         var navOuterHeight = $("#navbar").outerHeight(true);
 
-        return (this.top = offsetTop - navOuterHeight);
+        return (this.top = offsetTop);
         },
         bottom: function () {
         return (this.bottom = $(".footer").outerHeight(true));
