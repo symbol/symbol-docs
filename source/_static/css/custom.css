@@ -295,7 +295,6 @@ body > .container {
     text-overflow: ellipsis;
 }
 .bs-sidenav.affix-bottom, .bs-sidenav.affix {
-    top: 20px;
     width: initial;
 }
 .bs-sidenav a:hover, .bs-sidenav a:focus {
