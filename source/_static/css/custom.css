@@ -128,7 +128,10 @@ body > .container {
     padding-bottom: 50px;
 }
 .content a {
-    font-weight: bold;
+    border-bottom: 2px solid #00C8FF;
+}
+.content a:hover{
+    text-decoration: none;
 }
 .content ul {
     list-style: none;
@@ -149,6 +152,7 @@ body > .container {
 }
 .content .headerlink {
     visibility: hidden !important;
+    color: #00c8ff;
 }
 .content .headerlink::before {
     content: "";
