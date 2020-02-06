@@ -129,10 +129,9 @@ listener.open().then(() => {
                 signedAggregateHashLock.aggregate,
                 listener),
         ),
-    ).subscribe((ignored) => {
-            console.log('Transaction confirmed');
-            listener.close();
-        },
-        (err) => console.log(err));
+    ).subscribe(
+        (ignored) => console.log('Transaction confirmed'),
+        (err) => console.log(err),
+        () => listener.close());
 });
 /* end block 04 */
