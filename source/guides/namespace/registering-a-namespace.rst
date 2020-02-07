@@ -28,17 +28,22 @@ Method #01: Using the SDK
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/namespace/CheckingNamespaceExistence.ts
+    .. viewsource:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/typescript/namespace/CheckingNamespaceExistence.js
+    .. viewsource:: ../../resources/examples/typescript/namespace/GettingNamespaceInformation.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/namespace/CheckingNamespaceExistence.sh
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/namespace/GettingNamespaceInformation.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/bash/namespace/GettingNamespaceInformation.sh
         :language: bash
         :start-after: #!/bin/sh
 

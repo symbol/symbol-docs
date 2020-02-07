@@ -18,26 +18,22 @@
 
 package nem2.guides.examples.blockchain;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.Listener;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import org.junit.jupiter.api.Test;
+
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
-
-import io.nem.sdk.infrastructure.Listener;
-import io.nem.sdk.model.blockchain.BlockInfo;
-import org.junit.jupiter.api.Test;
 
 
 class ListeningNewBlocks {
 
     @Test
-    void listeningNewBlocks() throws ExecutionException, InterruptedException, MalformedURLException {
-        /* start block 01 */
-        Listener listener = new Listener("http://localhost:3000");
-
-        listener.open().get();
-
-        BlockInfo blockInfo = listener.newBlock().take(1).toFuture().get();
-
-        System.out.println(blockInfo);
-        /* end block 01 */
+    void listeningNewBlocks()
+        throws ExecutionException, InterruptedException, MalformedURLException {
+        //Todo: Implement
     }
 }

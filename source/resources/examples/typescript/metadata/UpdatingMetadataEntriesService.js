@@ -70,9 +70,6 @@ const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    signedAggregateHashLock.pipe(operators_1.mergeMap((signedAggregateHashLock) => transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener))).subscribe((ignored) => {
-        console.log('Transaction confirmed');
-        listener.close();
-    }, (err) => console.log(err));
+    signedAggregateHashLock.pipe(operators_1.mergeMap((signedAggregateHashLock) => transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener))).subscribe((ignored) => console.log('Transaction confirmed'), (err) => console.log(err), () => listener.close());
 });
 /* end block 04 */

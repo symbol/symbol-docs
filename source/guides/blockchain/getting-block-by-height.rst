@@ -35,6 +35,11 @@ What happened in the genesis block? Run the following code to get the first bloc
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingBlockByHeight.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 The following snippet returns the height of the latest block.
 
 .. example-code::

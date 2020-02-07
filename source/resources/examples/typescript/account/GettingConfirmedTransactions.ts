@@ -27,8 +27,8 @@ const address = Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
-
-const pageSize = 10; // Page size between 10 and 100, otherwise 10
+// Page size between 10 and 100
+const pageSize = 10;
 
 accountHttp
     .getAccountTransactions(address, new QueryParams(pageSize))

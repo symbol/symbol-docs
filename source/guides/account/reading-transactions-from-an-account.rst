@@ -35,6 +35,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/GettingConfirmedTransactions.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 .. note:: By default, the SDK provides up to 10 transactions. The page size can be increased up to 100 transactions.
 
 2. To `get more than 100 transactions <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests.

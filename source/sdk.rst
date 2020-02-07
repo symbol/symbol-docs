@@ -60,7 +60,7 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
 .. |java-reference| raw:: html
 
-    <a href="https://nemtech.github.io/nem2-sdk-java/javadoc/0.14.2/" target="_blank">Documentation</a>
+    <a href="https://nemtech.github.io/nem2-sdk-java/javadoc/0.16.3/" target="_blank">Documentation</a>
 
 .. |swift-repo| raw:: html
 
