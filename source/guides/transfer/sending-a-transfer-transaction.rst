@@ -61,6 +61,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 As you may have noticed, transfer transactions require an array of mosaics as a parameter.
 This permits sending transfer transactions with multiple mosaics at the same time.
 
@@ -75,6 +80,11 @@ If you own more than one mosaic, you can send them together in the same transact
 
     .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js
         :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransactionWithMultipleMosaics.java
+        :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -96,6 +106,11 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 4. Once signed, :doc:`announce the transaction <../../concepts/transaction>` to the network.
 
 .. example-code::
@@ -107,6 +122,11 @@ If you own more than one mosaic, you can send them together in the same transact
 
     .. viewsource:: ../../resources/examples/typescript/transfer/SendingATransferTransaction.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

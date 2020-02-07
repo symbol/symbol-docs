@@ -22,15 +22,16 @@ import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.ExecutionException;
-
 class CreatingAnAccount {
 
     @Test
-    void creatingAnAccount() throws ExecutionException, InterruptedException {
+    void creatingAnAccount() {
+
         /* start block 01 */
-        final String privateKey = ""; // Replace with a private key
-        final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
+        final Account account = Account.generateNewAccount(NetworkType.TEST_NET);
+
+        System.out.printf("Your new account address is: %s and its private key: %s",
+            account.getAddress().plain(), account.getPrivateKey());
         /* end block 01 */
     }
 }

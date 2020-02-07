@@ -197,6 +197,11 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 Although the transaction is defined, it has not been announced to the network yet.
 
 2. Sign the transaction with the **ticket vendor account**, so that the network can verify the authenticity of the transaction.
@@ -215,6 +220,11 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Once signed, announce the transaction to the network.
 
 .. example-code::
@@ -226,6 +236,11 @@ Although the transaction is defined, it has not been announced to the network ye
 
     .. viewsource:: ../resources/examples/typescript/transfer/FirstApplication.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

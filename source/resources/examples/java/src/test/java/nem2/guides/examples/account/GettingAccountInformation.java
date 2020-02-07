@@ -18,27 +18,40 @@
 
 package nem2.guides.examples.account;
 
-import io.nem.sdk.infrastructure.AccountHttp;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.AccountRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.account.AccountInfo;
 import io.nem.sdk.model.account.Address;
-import org.junit.jupiter.api.Test;
 
-import java.net.MalformedURLException;
+import java.io.StringWriter;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingAccountInformation {
 
     @Test
-    void gettingAccountInformation() throws ExecutionException, InterruptedException, MalformedURLException {
+    void gettingAccountInformation()
+        throws ExecutionException, InterruptedException {
+
         /* start block 01 */
-        final AccountHttp accountHttp = new AccountHttp("http://localhost:3000");
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            final AccountRepository accountRepository = repositoryFactory
+                .createAccountRepository();
 
-        // Replace with address
-        final String address = "SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54";
-
-        final AccountInfo accountInfo = accountHttp.getAccountInfo(Address.createFromRawAddress(address)).toFuture().get();
-
-        System.out.println(accountInfo);
+            // Replace with an address
+            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final Address address = Address.createFromRawAddress(rawAddress);
+            final AccountInfo accountInfo = accountRepository
+                .getAccountInfo(address).toFuture().get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(accountInfo));
+        }
         /* end block 01 */
     }
 }
