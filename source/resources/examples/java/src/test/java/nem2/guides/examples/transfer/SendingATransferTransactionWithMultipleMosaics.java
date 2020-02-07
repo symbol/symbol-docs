@@ -44,8 +44,7 @@ class SendingATransferTransactionWithMultipleMosaics {
             // replace with recipient address
             final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
-            // replace with network type
-            final NetworkType networkType = NetworkType.TEST_NET;
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 
             TransferTransactionFactory
                     .create(

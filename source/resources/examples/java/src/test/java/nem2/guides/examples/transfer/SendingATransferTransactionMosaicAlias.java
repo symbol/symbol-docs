@@ -41,8 +41,7 @@ class SendingATransferTransactionMosaicAlias {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
                 "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
             /* start block 01 */
-            // replace with network type
-            final NetworkType networkType = NetworkType.TEST_NET;
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with aliased mosaic
             final String namespaceName = "foo";
             final NamespaceId mosaicId = NamespaceId.createFromName(namespaceName);
@@ -53,7 +52,7 @@ class SendingATransferTransactionMosaicAlias {
                             Account.generateNewAccount(networkType).getAddress(),
                             Collections.singletonList(
                                     new Mosaic(mosaicId, BigInteger.valueOf(10000000))),
-                            PlainMessage.create(""))
+                            PlainMessage.Empty)
                     .maxFee(BigInteger.valueOf(2000000)).build();
             /* end block 01 */
         }

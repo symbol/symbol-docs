@@ -53,8 +53,7 @@ class FirstApplication {
             // replace with customer address
             final String rawAddress = "TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
-            // replace with network type
-            final NetworkType networkType = NetworkType.TEST_NET;
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 
             final Mosaic mosaic = new Mosaic(mosaicId, BigInteger.valueOf(1));
             final TransferTransaction transferTransaction = TransferTransactionFactory
