@@ -45,9 +45,7 @@ class GettingConfirmedTransactions {
 
             final AccountRepository accountRepository = repositoryFactory
                 .createAccountRepository();
-
-            // Replace with network type
-            final NetworkType networkType = NetworkType.TEST_NET;
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // Replace with account address
             final String publicKey = "E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F";
             final PublicAccount publicAccount = PublicAccount
