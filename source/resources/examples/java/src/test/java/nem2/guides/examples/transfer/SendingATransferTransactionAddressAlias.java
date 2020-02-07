@@ -18,14 +18,42 @@
 
 package nem2.guides.examples.transfer;
 
-import java.util.concurrent.ExecutionException;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.account.UnresolvedAddress;
+import io.nem.sdk.model.blockchain.NetworkType;
+import io.nem.sdk.model.message.PlainMessage;
+import io.nem.sdk.model.namespace.NamespaceId;
+import io.nem.sdk.model.transaction.TransferTransactionFactory;
 import org.junit.jupiter.api.Test;
+
+import java.math.BigInteger;
+import java.util.Collections;
+import java.util.concurrent.ExecutionException;
 
 class SendingATransferTransactionAddressAlias {
 
     @Test
     void sendingATransferTransactionAddressAlias()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+            throws ExecutionException, InterruptedException {
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            /* start block 01 */
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
+            // replace with aliased address
+            final String namespaceName = "foo";
+            final UnresolvedAddress recipientAddress = NamespaceId.createFromName(namespaceName);
+
+            TransferTransactionFactory
+                    .create(
+                            networkType,
+                            recipientAddress,
+                            Collections.emptyList(),
+                            PlainMessage.Empty)
+                    .maxFee(BigInteger.valueOf(2000000)).build();
+            /* end block 01 */
+        }
     }
 }
+

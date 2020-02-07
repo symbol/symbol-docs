@@ -18,14 +18,47 @@
 
 package nem2.guides.examples.transfer;
 
-import java.util.concurrent.ExecutionException;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.sdk.model.account.Address;
+import io.nem.sdk.model.account.UnresolvedAddress;
+import io.nem.sdk.model.blockchain.NetworkType;
+import io.nem.sdk.model.message.PlainMessage;
+import io.nem.sdk.model.mosaic.Mosaic;
+import io.nem.sdk.model.mosaic.MosaicId;
+import io.nem.sdk.model.transaction.TransferTransactionFactory;
 import org.junit.jupiter.api.Test;
+
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.concurrent.ExecutionException;
 
 class SendingATransferTransactionWithMultipleMosaics {
 
     @Test
     void sendingATransferTransactionWithMultipleMosaics()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+            throws ExecutionException, InterruptedException {
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            // replace with recipient address
+            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
+
+            TransferTransactionFactory
+                    .create(
+                            networkType,
+                            recipientAddress,
+                            /* start block 01 */
+                            Arrays.asList(new Mosaic(new MosaicId("7CDF3B117A3C40CC"),
+                                            BigInteger.valueOf(1000)),
+                                    new Mosaic(new MosaicId("75AF035421401EF0"),
+                                            BigInteger.valueOf(10000000))),
+                            /* end block 01 */
+                            PlainMessage.create("This is a test message"))
+                    .maxFee(BigInteger.valueOf(2000000)).build();
+        }
     }
 }
+

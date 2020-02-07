@@ -10,9 +10,12 @@ plugins {
 
 apply plugin: 'java'
 group 'io.nem'
-version '0.16.1'
+version '0.16.3'
 
-sourceCompatibility = 1.8
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
     mavenCentral()
