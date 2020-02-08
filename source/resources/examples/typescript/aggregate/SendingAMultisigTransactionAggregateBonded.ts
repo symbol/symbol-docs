@@ -45,7 +45,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
@@ -64,7 +64,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     networkType);
 
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 01 */
@@ -82,7 +82,7 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

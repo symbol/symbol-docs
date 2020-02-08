@@ -46,7 +46,7 @@ const ticketMosaicId = new MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
@@ -76,7 +76,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create()
     UInt64.fromUint(2000000));
 
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
@@ -94,7 +94,7 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
