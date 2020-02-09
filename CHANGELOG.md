@@ -4,8 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 0.20.4 - 09-Feb-2020
 
-## 0.20.2 - 12-Jan-2019
+Code-name: Fushicho 4
+
+## Added
+
+- First batch of code examples for Java SDK
+
+### Changed
+
+- Testnet docs adapted to V3
+- Delegated harvesting guide adds the announcer account
+- Code examples compatible with F4
+-  Signature schemas (cryptography) clarified
+
+### Fixed
+
+- Bug in aggregate announcement (ts code examples)
+
+## 0.20.2 - 12-Jan-2020
 
 Code-name: Fushicho 2 & 3
 
