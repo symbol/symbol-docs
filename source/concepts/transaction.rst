@@ -11,8 +11,9 @@ Transaction types
 
 .. _transaction-types:
 
-There are different types of transactions.
-For example, you can transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
+|codename| supports different transaction types. For example, there are transactions to transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
+
+The following transaction types are included in |codename| based networks by default:
 
 .. csv-table::
     :header:  "Id",  "Type", "Description"
@@ -117,7 +118,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6. Calculate the `transaction hash <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ by applying the network hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+6. Calculate the `transaction hash <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L124>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. code-block:: typescript
 
@@ -212,8 +213,6 @@ Hence, forks can only be resolved up to a certain depth too.
 
 |codename|'s public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`.
 Once a transaction has more than ``maxRollBackConfirmations`` value, it cannot be reversed.
-
-.. From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 ******
 Guides

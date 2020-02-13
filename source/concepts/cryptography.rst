@@ -17,7 +17,7 @@ Elliptic curve cryptography is an approach to **public key cryptography**. The c
 * **Public key**: The public identifier of the key pair, which can be disseminated widely. It is used to prove that the entity was signed with the paired private key.
 
 The public key is cryptographically derived from the private key.
-In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519|.
+In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519| and hashing algorithm **SHA512**.
 
 You can find the |implementation-derivation| under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
@@ -28,7 +28,7 @@ Signature
 With a private key, the algorithm can sign messages producing 64-byte signatures.
 A signature is used to validate that a given key pair signed an entity just having the public key.
 
-.. note:: The private key is hashed before signing an entity to improve randomness. |codename|'s public network uses **KECCAK-512** instead of SHA3-512 to have compatible signatures with NEM (NIS1).
+The private key is hashed with SHA512 before signing an entity to improve randomness.
 
 You can find the implementation to |implementation-signature| and |implementation-verification| under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
@@ -73,8 +73,6 @@ The following steps are performed to |implementation-public-key-address|:
 3. add the network identifier byte in front of (2).
 4. concatenate (3) and the checksum of (3).
 5. (Optional) base-32 of (4).
-
-.. note:: |codename|'s public network uses **KECCAK-256** instead of SHA3-256 to have compatible keys with NEM (NIS1).
 
 As you can see, it is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.
 
