@@ -33,9 +33,7 @@ Method #01: Using the SDK
 
 .. note:: Before starting this guide, make sure you have an :doc:`account loaded with <../../getting-started/setup-workstation>` |networkcurrency|.
 
-1. Open a new file and define two transactions:
-
-A) A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
+1. Open a new file, and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -59,8 +57,7 @@ A) A :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set t
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-B) A :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`, to set the **initial supply**.
-We are going to create **1,000,000** mosaic units.
+2. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` to set the **initial supply**. For instance, we are going to create **1,000,000** mosaic units.
 
 .. example-code::
 

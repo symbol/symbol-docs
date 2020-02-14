@@ -38,7 +38,7 @@ Featured Guides
 
 Learn how to use the software development kits and tools with the following step-by-step implementation examples.
 
-* :doc:`How to create a wallet <guides/account/creating-an-account>`
+* :doc:`How to create an account <guides/account/creating-an-account>`
 * :doc:`How to send a transaction <guides/transfer/sending-a-transfer-transaction>`
 * :doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`
 * :doc:`How to register a namespace <guides/namespace/registering-a-namespace>`
@@ -102,7 +102,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :hidden:
     :caption: How-To Guides
 
-    guides/account/creating-a-wallet
+    guides/account/creating-an-account
     guides/transfer/sending-a-transfer-transaction
     guides/mosaic/creating-a-mosaic
     guides/network/running-a-test-net-node
