@@ -47,7 +47,7 @@ Create a new connection
 
     docker ps | grep mongo
 
-	ea62f033d2a6        mongo     "docker-entrypoint.s…"   9 minutes ago      		  27017/tcp                api-assembly_db_1
+    ea62f033d2a6    mongo    "docker-entrypoint.s…"    9 minutes ago    27017/tcp    api-assembly_db_1
 
 2. Once you have the ID, get the **container's IP** with the command ``docker inspect <ID>``.
 
