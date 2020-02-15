@@ -13,7 +13,7 @@ Learn how to access your API node MongoDB instance.
 Background
 **********
 
-The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to MongoDB. Still, if you are developing new plugins for Symbol, or you are analyzing extensive blockchain data, you might be looking to connect MongoDB directly.
+The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to MongoDB. Still, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might want to consider connecting to MongoDB directly.
 
 By the end of this guide, you will be connected to your API node database instance and doing some basic queries.
 
@@ -41,7 +41,7 @@ In case of doubt, follow the `official installation docs <https://studio3t.com/k
 Create a new connection
 ***********************
 
-1. Open a new terminal in the computer you are running the node. Then, get the **container's identifier** running MongoDB with ``docker ps``.
+1. Open a new terminal on the computer you are running the node. Then, get the **container's identifier** running MongoDB with ``docker ps``.
 
 .. code-block:: bash
 
@@ -59,7 +59,7 @@ Create a new connection
     "IPAddress": "",
             "IPAddress": "172.20.0.7",
 
-3. Launch Robo 3T and click on **"Create"** link to add a new connection.
+3. Launch Robo 3T and click on the **"Create"** link to add a new connection.
 
 .. figure:: ../../resources/images/screenshots/robo3t-open.png
     :align: center
@@ -80,7 +80,7 @@ Create a new connection
 
 6. Otherwise, if you are running the node in a **virtual private server** (VPS), create a tunnel first between your computer and the server.
 
-Go to the **SSH tab**, and add the server's details:
+Go to the **SSH tab** and add the server's details:
 
 .. figure:: ../../resources/images/screenshots/robo3t-tunnel.png
     :align: center
@@ -113,7 +113,7 @@ To filter, for example, a given transaction type, write a query with the followi
 
 For other advanced queries, check the `Robo3T <https://studio3t.com/knowledge-base/articles/query-mongodb/>`_ docs.
 
-3. Click on "Play" button to execute the query.
+3. Click on the **"Play"** button to execute the query.
 
 .. figure:: ../../resources/images/screenshots/robo3t-query.png
     :align: center
