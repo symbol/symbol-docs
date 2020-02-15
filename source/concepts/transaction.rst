@@ -11,7 +11,7 @@ Transaction types
 
 .. _transaction-types:
 
-|codename| supports different transaction types.
+|codename| supports many different transaction types.
 For example, there are transactions to transfer :doc:`mosaics <mosaic>` between accounts, transfer or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 The following transaction types are included in |codename| based networks by default:
