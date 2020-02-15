@@ -33,7 +33,7 @@ Method #01: Using the SDK
 
 .. note:: Before starting this guide, make sure you have an :doc:`account loaded with <../../getting-started/setup-workstation>` |networkcurrency|.
 
-1. Open a new file, and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic configured as:
+1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic with the following configuration:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
