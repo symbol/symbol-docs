@@ -2,8 +2,8 @@
 Data Validation
 ###############
 
-|codename| uses tree structures to store data associated in a block.
-This allows light clients to verify if a :doc:`transaction <transaction>` or :doc:`receipt <receipt>` exists and is valid without demanding the entire ledger history.
+|codename| uses tree structures to store large data associated with a block that cannot be retrieved directly from the :doc:`block header <block>`.
+This allows light clients to verify if an element (e.g. :doc:`transaction <transaction>`, :doc:`receipt statement <receipt>`) exists without demanding the entire ledger history.
 
 ***********
 Merkle tree
@@ -15,7 +15,10 @@ Merkle tree
 
 A Merkle tree is a structure of nodes labeled by hashes.
 Pictured above is the simplest form of a Merkle tree, the binary Merkle tree.
-In particular, |codename| generates **two separated Merkle Trees per block**. The first one stores all the transactions included in the block. The second, all the receipts linked with the block.
+In particular, |codename| generates two Merkle Trees per block:
+
+* **Transactions Merkle Tree**: Stores all the transactions included in the block.
+* **Receipts Merkle Tree**: Stores all the receipt statements linked to a block.
 
 Leaf nodes
 ==========
@@ -66,7 +69,7 @@ a) If item.position == left -> proofHash = sha_256(item.hash + proofHash).
 
 b) If item.position == right -> proofHash = sha_256(proofHash+ item.hash).
 
-Repeat 2. for every item in the MerkleProof list.
+Repeat 4. for every item in the MerkleProof list.
 
 5. Compare if the HRoot' equals to HRoot.
 
