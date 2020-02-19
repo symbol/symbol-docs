@@ -302,4 +302,4 @@ Enumeration: uint16
 
     0x0000; Reserved.
 
-Continue: :doc:`Node <node>`.
+Continue: :doc:`Data validation <data-validation>`.
