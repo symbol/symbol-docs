@@ -29,7 +29,9 @@ const repositoryFactory = new RepositoryFactoryHttp_1.RepositoryFactoryHttp(node
 const accountHttp = repositoryFactory.createAccountRepository();
 // Page size between 10 and 100
 const pageSize = 10;
+const queryParams = new nem2_sdk_1.QueryParams();
+queryParams.setPageSize(pageSize);
 accountHttp
-    .getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize))
+    .getAccountTransactions(address, queryParams)
     .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
 /* end block 01 */

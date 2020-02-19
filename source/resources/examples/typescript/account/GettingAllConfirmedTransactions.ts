@@ -28,16 +28,21 @@ const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 
-const pageSize = 100;
 const allTransactions = true;
+const pageSize = 100;
+const queryParams = new QueryParams();
+queryParams.setPageSize(pageSize);
 
 accountHttp
-    .getAccountTransactions(address, new QueryParams(pageSize, undefined))
+    .getAccountTransactions(address, queryParams)
     .pipe(
-        expand( (transactions) => transactions.length === pageSize && allTransactions
-            ? accountHttp.getAccountTransactions(address,
-                new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
-            : EMPTY),
+        expand( (transactions) => {
+            if (transactions.length === pageSize && allTransactions) {
+                queryParams.setId(transactions[transactions.length - 1].transactionInfo!.id);
+                return accountHttp.getAccountTransactions(address, queryParams);
+            }
+            return EMPTY;
+        }),
         concatMap((transactions) => transactions),
         toArray(),
     )
