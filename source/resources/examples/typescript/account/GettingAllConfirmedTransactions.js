@@ -27,13 +27,19 @@ const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
-const pageSize = 100;
 const allTransactions = true;
+const pageSize = 100;
+const queryParams = new nem2_sdk_1.QueryParams();
+queryParams.setPageSize(pageSize);
 accountHttp
-    .getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize, undefined))
-    .pipe(operators_1.expand((transactions) => transactions.length === pageSize && allTransactions
-    ? accountHttp.getAccountTransactions(address, new nem2_sdk_1.QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
-    : rxjs_1.EMPTY), operators_1.concatMap((transactions) => transactions), operators_1.toArray())
+    .getAccountTransactions(address, queryParams)
+    .pipe(operators_1.expand((transactions) => {
+    if (transactions.length === pageSize && allTransactions) {
+        queryParams.setId(transactions[transactions.length - 1].transactionInfo.id);
+        return accountHttp.getAccountTransactions(address, queryParams);
+    }
+    return rxjs_1.EMPTY;
+}), operators_1.concatMap((transactions) => transactions), operators_1.toArray())
     .subscribe((transactions) => {
     console.log(transactions);
 }, (err) => console.log(err));

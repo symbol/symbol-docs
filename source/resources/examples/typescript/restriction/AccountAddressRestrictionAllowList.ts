@@ -24,7 +24,7 @@ import {
     Deadline,
     NetworkType,
     RepositoryFactoryHttp,
-    UInt64
+    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */

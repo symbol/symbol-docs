@@ -29,8 +29,10 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 // Page size between 10 and 100
 const pageSize = 10;
+const queryParams = new QueryParams();
+queryParams.setPageSize(pageSize);
 
 accountHttp
-    .getAccountTransactions(address, new QueryParams(pageSize))
+    .getAccountTransactions(address, queryParams)
     .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
 /* end block 01 */
