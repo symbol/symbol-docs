@@ -42,7 +42,7 @@ Specifies the number of confirmed blocks the mosaic is rented for.
 It is allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this maximum parameter :ref:`editable per network <config-network-properties>`.
 **Non-expiring mosaics** can be created by setting this property to ``0``.
 
-.. note:: Differently to namespaces, a mosaic duration cannot be extended after its creation. Before creating one, consider if your use case requires the mosaic to expire or not.
+.. note:: Different from namespaces, a mosaic duration cannot be extended after its creation. Before creating one, consider if your use case requires the mosaic to expire or not.
 
 The following formula is used to convert days to blocks approximately:
 
