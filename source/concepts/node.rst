@@ -22,7 +22,7 @@ Peer node
 **Repository:** |catapult-server|
 
 .. figure:: ../resources/images/diagrams/peer-detail.png
-    :width: 200px
+    :width: 400px
     :align: center
 
     Peer node communication

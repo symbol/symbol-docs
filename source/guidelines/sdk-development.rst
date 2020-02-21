@@ -35,7 +35,7 @@ Package Organization
 ====================
 
 .. figure:: ../resources/images/diagrams/nem2-sdk-architecture.png
-    :width: 400px
+    :width: 450px
     :align: center
 
     Package organization diagram
