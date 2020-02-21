@@ -30,7 +30,7 @@ Furthermore, reading entities from memory buffers—or just a part of them—is 
 
 **Flexibility**
 
-REST `transaction endpoints <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_ handle the calls to update the blockchain state.
+REST `transaction endpoints <https://nemtech.github.io/symbol-openapi/#operation/announceTransaction>`_ handle the calls to update the blockchain state.
 The serialized payload of a transaction is appended to the body of the POST call.
 These endpoints allow the addition of new functionality to the server-side without modifying the API contract.
 

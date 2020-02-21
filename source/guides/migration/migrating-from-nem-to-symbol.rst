@@ -34,7 +34,7 @@ Now, API requests mostly happen with REST API nodes usually on port **3000**.
 
 * Reference: :doc:`Catapult REST <../../api>`
 
-* Reference: `REST API contract <https://nemtech.github.io/nem2-openapi/>`_
+* Reference: `REST API contract <https://nemtech.github.io/symbol-openapi/>`_
 
 There are several **Software Development Kits** that have been—and some that are—under development for |codename| distributed ledgers consumer applications.
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.

@@ -148,11 +148,11 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 
 .. code-block:: bash
 
-    git clone https://github.com/nemtech/nem2-openapi.git
-    cd nem2-openapi && mkdir sdks && cd sdks
+    git clone https://github.com/nemtech/symbol-openapi.git
+    cd symbol-openapi && mkdir sdks && cd sdks
     cp ../spec/openapi3.yaml .
 
-- `Open API definition <https://github.com/nemtech/nem2-openapi/releases>`_
+- `Open API definition <https://github.com/nemtech/symbol-openapi/releases>`_
 
 2. Copy the ``templates folder`` from ``{nem2-sdk-typescript-javascript}/infrastructure/`` into a new folder.
 

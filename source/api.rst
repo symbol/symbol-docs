@@ -23,7 +23,7 @@ Get the complete list of available endpoints by clicking on the button below:
 
 .. raw:: html
 
-    <a class="btn btn-default" href="https://nemtech.github.io/nem2-openapi" rel="nofollow">REST API Endpoints</a>
+    <a class="btn btn-default" href="https://nemtech.github.io/symbol-openapi" rel="nofollow">REST API Endpoints</a>
 
 .. _websockets:
 
@@ -61,7 +61,7 @@ The messages returned contain information about the blocks.
 
 *Response format*
 
-* `BlockInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/block/schemas/BlockInfoDTO.yml>`_
+* `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
 **confirmedAdded/{address}**
 
@@ -79,7 +79,7 @@ The messages returned contain information about the confirmed transactions.
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedAdded/{address}**
 
@@ -99,7 +99,7 @@ Possible scenarios when this channel notifies are: the transaction is announced 
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedRemoved/{address}**
 
@@ -137,7 +137,7 @@ The messages returned contain information about the transactions.
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **partialRemoved/{address}**
 
@@ -175,7 +175,7 @@ The messages returned contain the cosignature signed transaction.
 
 *Response format*
 
-* `CosignatureDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
+* `CosignatureDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
 
 **status/{address}**
 
@@ -193,7 +193,7 @@ The messages returned contain the error messages and the transaction hashes.
 
 *Response format*
 
-* `TransactionStatusDTO <https://github.com/nemtech/nem2-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
+* `TransactionStatusDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
 .. _status-errors:
 
@@ -393,7 +393,7 @@ HTTP client, available for Mac, Windows and Linux.
 
 .. |postman-spec| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-openapi/releases" target="_blank">Postman spec</a>
+    <a href="https://github.com/nemtech/symbol-openapi/releases" target="_blank">Postman spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
