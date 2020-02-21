@@ -110,6 +110,10 @@ input.form-control:focus {
 table {
     word-break: break-word;
 }
+
+table a:not(.btn), .table a:not(.btn){
+    text-decoration: none;
+}
 /* Layout*/
 body > .container {
     padding-top: 20px;
