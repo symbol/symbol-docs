@@ -48,7 +48,7 @@ Creating the namespace
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace --sync
+    symbol-cli transaction namespace --sync
 
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y

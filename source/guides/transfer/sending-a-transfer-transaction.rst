@@ -45,7 +45,7 @@ Method #01: Using the SDK
 
 .. code-block:: bash
 
-   nem2-cli monitor all --address <alice-address>
+   symbol-cli monitor all --address <alice-address>
 
 2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
 

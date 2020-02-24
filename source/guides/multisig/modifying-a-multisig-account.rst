@@ -174,14 +174,14 @@ She has to opt-in first in order to become a  cosignatory of the multisig accoun
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
+    symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile carol
 
 6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with Alice's or Bob's account.
 The amount of |networkcurrency| locked becomes available again on Alice's account, and Carol is added to the multisig.
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
+    symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile bob
 
 .. _guide-modify-a-multisig-account-removing-a-cosignatory:
 

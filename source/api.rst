@@ -366,10 +366,10 @@ Tools
 
 We recommend using one of the following tools to interact with the available endpoints.
 
-NEM2-SDK
-========
+SDKs
+====
 
-The **NEM2 Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
+The **Symbol Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
 
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`

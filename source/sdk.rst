@@ -44,15 +44,15 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
 .. |tsjs-repo| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">Repository</a>
+    <a href="https://github.com/nemtech/symbol-sdk-typescript-javascript" target="_blank">Repository</a>
 
 .. |tsjs-reference| raw:: html
 
-    <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/" target="_blank">Documentation</a>
+    <a href="https://nemtech.github.io/symbol-sdk-typescript-javascript/" target="_blank">Documentation</a>
 
 .. |java-repo| raw:: html
 
-    <a href="https://github.com/nemtech/nem2-sdk-java" target="_blank">Repository</a>
+    <a href="https://github.com/nemtech/symbol-sdk-java" target="_blank">Repository</a>
 
 .. |csharp-repo| raw:: html
 
@@ -60,7 +60,7 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
 .. |java-reference| raw:: html
 
-    <a href="https://nemtech.github.io/nem2-sdk-java/javadoc/0.16.3/" target="_blank">Documentation</a>
+    <a href="https://nemtech.github.io/symbol-sdk-java/javadoc/0.16.3/" target="_blank">Documentation</a>
 
 .. |swift-repo| raw:: html
 

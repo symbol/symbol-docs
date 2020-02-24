@@ -53,7 +53,7 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaic --sync
+    symbol-cli transaction mosaic --sync
 
     Do you want an non-expiring mosaic? [y/n]: y
     Introduce mosaic divisibility: 2
@@ -69,7 +69,7 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace --sync
+    symbol-cli transaction namespace --sync
 
     Introduce namespace name: cc
     Do you want to create a root namespace? [y/n]: y
@@ -79,7 +79,7 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
 .. code-block:: bash
 
-    nem2-cli transaction namespace --sync
+    symbol-cli transaction namespace --sync
 
     Introduce namespace name: shares
     Do you want to create a root namespace? [y/n]: n
@@ -91,7 +91,7 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaicalias --sync
+    symbol-cli transaction mosaicalias --sync
 
     Introduce namespace name: cc.shares
     Introduce alias action (1: Link, 0: Unlink): 1

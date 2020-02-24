@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli metadata namespace --namespace-name foo
+symbol-cli metadata namespace --namespace-name foo

@@ -127,7 +127,7 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
 
 .. code-block:: bash
 
-    nem2-cli monitor aggregatebonded --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU
+    symbol-cli monitor aggregatebonded --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU
 
 2. Modify the previous code, defining the transaction as  **bonded**.
 
@@ -164,4 +164,4 @@ Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. U
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
+    symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice

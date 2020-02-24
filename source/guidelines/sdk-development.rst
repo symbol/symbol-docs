@@ -34,7 +34,7 @@ Characteristics
 Package Organization
 ====================
 
-.. figure:: ../resources/images/diagrams/nem2-sdk-architecture.png
+.. figure:: ../resources/images/diagrams/sdk-architecture.png
     :width: 450px
     :align: center
 
@@ -154,7 +154,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 
 - `Open API definition <https://github.com/nemtech/symbol-openapi/releases>`_
 
-2. Copy the ``templates folder`` from ``{nem2-sdk-typescript-javascript}/infrastructure/`` into a new folder.
+2. Copy the ``templates folder`` from ``{symbol-sdk-typescript-javascript}/infrastructure/`` into a new folder.
 
 3. Download the OpenAPI generator and generate the DTOs.
 

@@ -37,7 +37,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
 .. code-block:: bash
 
-    nem2-cli account generate --save
+    symbol-cli account generate --save
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
@@ -46,7 +46,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
 .. code-block:: bash
 
-    nem2-cli account generate --save
+    symbol-cli account generate --save
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y

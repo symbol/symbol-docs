@@ -23,13 +23,13 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global nem2-cli
+    npm install --global symbol-cli
 
 2. Generate a new account and save it as a **profile**.
 
 .. code-block:: bash
 
-    nem2-cli account generate
+    symbol-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
@@ -77,7 +77,7 @@ After the transaction gets confirmed, check if the account has received |network
 
 .. code-block:: bash
 
-    nem2-cli account info  --profile testnet
+    symbol-cli account info  --profile testnet
 
     Balance Information
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
@@ -114,7 +114,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install symbol-sdk rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
 
@@ -143,7 +143,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install nem2-sdk rxjs
+            npm install symbol-sdk rxjs
 
     .. tab:: Java
 
@@ -161,7 +161,7 @@ If none of the languages fits your project, you can always query the blockchain 
                 mavenCentral()
             }
 
-        3. Add nem2-sdk as a dependency.
+        3. Add symbol-sdk as a dependency.
 
         .. code-block:: java
 

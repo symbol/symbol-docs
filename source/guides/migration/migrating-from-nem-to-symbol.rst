@@ -161,11 +161,11 @@ You can also ask integration related questions on |stack-overflow|, or reach our
 
 .. |ts-js-sdk| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-sdk-typescript-javascript" target="_blank">TS/JS SDK</a>
+   <a href="https://github.com/nemtech/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a>
 
 .. |ts-js-sdk-docs| raw:: html
 
-   <a href="https://nemtech.github.io/nem2-sdk-typescript-javascript/" target="_blank">documentation</a>
+   <a href="https://nemtech.github.io/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>
 
 .. |nem-library| raw:: html
 

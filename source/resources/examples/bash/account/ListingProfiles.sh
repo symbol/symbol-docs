@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli profile list
+symbol-cli profile list

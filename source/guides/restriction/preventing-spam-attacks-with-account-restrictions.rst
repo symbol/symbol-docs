@@ -48,7 +48,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
 .. code-block:: bash
 
-    nem2-cli account generate
+    symbol-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
@@ -70,7 +70,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
 .. code-block:: bash
 
-    nem2-cli account generate
+    symbol-cli account generate
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save account? [y/n]: y

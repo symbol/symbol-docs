@@ -50,7 +50,7 @@ Creating the account
 
 .. code-block:: bash
 
-    nem2-cli account generate --save
+    symbol-cli account generate --save
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
@@ -145,7 +145,7 @@ Monitor the network until the transaction gets confirmed, and then announce the 
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash <transaction-hash> --profile alice
+    symbol-cli transaction cosign --hash <transaction-hash> --profile alice
 
 7. If everything goes well, now Alice :doc:`has assigned the metadata value <getting-metadata-entries-attached-to-an-account>` ``{bobPublicKey, CERT, 123456}``, which can be read as "Alice account has the certificate number 123456 and it was verified by Bob".
 

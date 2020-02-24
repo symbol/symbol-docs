@@ -121,7 +121,7 @@ To keep one of these accounts quickly retrievable, we are going to store one of 
 
 .. code-block:: bash
 
-    npm install --global nem2-cli
+    npm install --global symbol-cli
 
 2. Open a new terminal window.
 Then, go to the directory where the bootstrap tool has generated the addresses.
@@ -139,11 +139,11 @@ Then, go to the directory where the bootstrap tool has generated the addresses.
 4. Under the section ``nemesis_addresses``, you will find the key pairs which contain |privatenetworkcurrency|.
 Copy the private key of the first account.
 
-5. Type the command ``nem2-cli profile import`` using the key obtained in the previous step.
+5. Type the command ``symbol-cli profile import`` using the key obtained in the previous step.
 
 .. code-block:: bash
 
-    nem2-cli profile import
+    symbol-cli profile import
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Introduce your private key: 123***456

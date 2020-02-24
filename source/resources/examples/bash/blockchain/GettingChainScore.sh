@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli chain score
+symbol-cli chain score
