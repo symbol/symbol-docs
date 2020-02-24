@@ -2,7 +2,7 @@
 SDK
 ####
 
-The **Symbol Software Development Kit** is the primary software development tool to create |codename| components, such as additional tools, libraries, or applications.
+The **Symbol SDK** is the primary software development tool to create |codename| components, such as additional tools, libraries, or applications.
 
 It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
@@ -31,10 +31,10 @@ Read the |protocol-compatibility-report| to know more about the status of each p
     :header: "Language", "Repository", "Reference"
     :delim: ;
 
-    Dart SDK ; |dart-repo| ;
-    C# SDK ; |csharp-repo| ;
-    Go SDK ; |go-repo| ;
-    Swift SDK ; |swift-repo| ;
+    Dart SDK ;  ;
+    C# SDK ;  ;
+    Go SDK ; ;
+    Swift SDK ; ;
     C++ ;  ;
     PHP SDK ;  ;
     Ruby SDK ; ;
@@ -54,25 +54,9 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
     <a href="https://github.com/nemtech/symbol-sdk-java" target="_blank">Repository</a>
 
-.. |csharp-repo| raw:: html
-
-    <a href="https://github.com/nemtech/nem2-sdk-csharp/" target="_blank">Repository</a>
-
 .. |java-reference| raw:: html
 
     <a href="https://nemtech.github.io/symbol-sdk-java/javadoc/0.16.3/" target="_blank">Documentation</a>
-
-.. |swift-repo| raw:: html
-
-    <a href="https://github.com/proximax-storage/nem2-sdk-swift/" target="_blank">Repository</a>
-
-.. |go-repo| raw:: html
-
-    <a href="https://github.com/proximax-storage/nem2-sdk-go/" target="_blank">Repository</a>
-
-.. |dart-repo| raw:: html
-
-    <a href="https://github.com/fajarvm/nem2-sdk-dart/" target="_blank">Repository</a>
 
 .. |protocol-compatibility-report| raw:: html
 

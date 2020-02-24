@@ -1,526 +1,526 @@
 [main]
 host = https://www.transifex.com
 
-[symboldocsindex]
+[symboldocs.index]
 file_filter = source/locale/<lang>/LC_MESSAGES/index.po
 source_file = build/gettext/index.pot
 source_lang = en
 type = PO
 
-[symboldocsapi]
+[symboldocs.api]
 file_filter = source/locale/<lang>/LC_MESSAGES/api.po
 source_file = build/gettext/api.pot
 source_lang = en
 type = PO
 
-[symboldocscli]
+[symboldocs.cli]
 file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
 source_file = build/gettext/cli.pot
 source_lang = en
 type = PO
 
-[symboldocslibraries]
+[symboldocs.libraries]
 file_filter = source/locale/<lang>/LC_MESSAGES/libraries.po
 source_file = build/gettext/libraries.pot
 source_lang = en
 type = PO
 
-[symboldocssdk]
+[symboldocs.sdk]
 file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
 source_file = build/gettext/sdk.pot
 source_lang = en
 type = PO
 
-[symboldocsserver]
+[symboldocs.server]
 file_filter = source/locale/<lang>/LC_MESSAGES/server.po
 source_file = build/gettext/server.pot
 source_lang = en
 type = PO
 
-[symboldocssphinx]
+[symboldocs.sphinx]
 file_filter = source/locale/<lang>/LC_MESSAGES/sphinx.po
 source_file = build/gettext/sphinx.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--account]
+[symboldocs.concepts--account]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account.po
 source_file = build/gettext/concepts/account.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--aggregate-transaction]
+[symboldocs.concepts--aggregate-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/aggregate-transaction.po
 source_file = build/gettext/concepts/aggregate-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--block]
+[symboldocs.concepts--block]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/block.po
 source_file = build/gettext/concepts/block.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--consensus-algorithm]
+[symboldocs.concepts--consensus-algorithm]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/consensus-algorithm.po
 source_file = build/gettext/concepts/consensus-algorithm.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--cross-chain-swaps]
+[symboldocs.concepts--cross-chain-swaps]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cross-chain-swaps.po
 source_file = build/gettext/concepts/cross-chain-swaps.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--cryptography]
+[symboldocs.concepts--cryptography]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cryptography.po
 source_file = build/gettext/concepts/cryptography.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--fees]
+[symboldocs.concepts--fees]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
 source_file = build/gettext/concepts/fees.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--harvesting]
+[symboldocs.concepts--harvesting]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
 source_file = build/gettext/concepts/harvesting.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--inflation]
+[symboldocs.concepts--inflation]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/inflation.po
 source_file = build/gettext/concepts/inflation.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--metadata]
+[symboldocs.concepts--metadata]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/metadata.po
 source_file = build/gettext/concepts/metadata.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--mosaic]
+[symboldocs.concepts--mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
 source_file = build/gettext/concepts/mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--multisig-account]
+[symboldocs.concepts--multisig-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/multisig-account.po
 source_file = build/gettext/concepts/multisig-account.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--namespace]
+[symboldocs.concepts--namespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/namespace.po
 source_file = build/gettext/concepts/namespace.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--node]
+[symboldocs.concepts--node]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/node.po
 source_file = build/gettext/concepts/node.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--receipt]
+[symboldocs.concepts--receipt]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
 source_file = build/gettext/concepts/receipt.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--transaction]
+[symboldocs.concepts--transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transaction.po
 source_file = build/gettext/concepts/transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--account-restriction]
+[symboldocs.concepts--account-restriction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restriction.po
 source_file = build/gettext/concepts/account-restriction.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--mosaic-restriction]
+[symboldocs.concepts--mosaic-restriction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restriction.po
 source_file = build/gettext/concepts/mosaic-restriction.pot
 source_lang = en
 type = PO
 
-[symboldocsconcepts--transfer-transaction]
+[symboldocs.concepts--transfer-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transfer-transaction.po
 source_file = build/gettext/concepts/transfer-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocscontribute--community]
+[symboldocs.contribute--community]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/community.po
 source_file = build/gettext/contribute/community.pot
 source_lang = en
 type = PO
 
-[symboldocscontribute--contributing]
+[symboldocs.contribute--contributing]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
 source_file = build/gettext/contribute/contributing.pot
 source_lang = en
 type = PO
 
-[symboldocscontribute--contributors]
+[symboldocs.contribute--contributors]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
 source_file = build/gettext/contribute/contributors.pot
 source_lang = en
 type = PO
 
-[symboldocsgetting-started--first-application]
+[symboldocs.getting-started--first-application]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
 source_file = build/gettext/getting-started/first-application.pot
 source_lang = en
 type = PO
 
-[symboldocsgetting-started--setup-workstation]
+[symboldocs.getting-started--setup-workstation]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
 source_file = build/gettext/getting-started/setup-workstation.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--generating-transaction-builders]
+[symboldocs.guidelines--generating-transaction-builders]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
 source_file = build/gettext/guidelines/generating-transaction-builders.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--sdk-development]
+[symboldocs.guidelines--sdk-development]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-development.po
 source_file = build/gettext/guidelines/sdk-development.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--sdk-documentation]
+[symboldocs.guidelines--sdk-documentation]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-documentation.po
 source_file = build/gettext/guidelines/sdk-documentation.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--style-guide]
+[symboldocs.guidelines--style-guide]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/style-guide.po
 source_file = build/gettext/guidelines/style-guide.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--suggesting-changes]
+[symboldocs.guidelines--suggesting-changes]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
 source_file = build/gettext/guidelines/suggesting-changes.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--translating-the-documentation]
+[symboldocs.guidelines--translating-the-documentation]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/translating-the-documentation.po
 source_file = build/gettext/guidelines/translating-the-documentation.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--writing-a-guide]
+[symboldocs.guidelines--writing-a-guide]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-guide.po
 source_file = build/gettext/guidelines/writing-a-guide.pot
 source_lang = en
 type = PO
 
-[symboldocsguidelines--writing-a-schema]
+[symboldocs.guidelines--writing-a-schema]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-schema.po
 source_file = build/gettext/guidelines/writing-a-schema.pot
 source_lang = en
 type = PO
 
 
-[symboldocsguides--account--getting-account-information]
+[symboldocs.guides--account--getting-account-information]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-account-information.po
 source_file = build/gettext/guides/account/getting-account-information.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--account--getting-the-amount-of-assets-sent-to-an-account]
+[symboldocs.guides--account--getting-the-amount-of-assets-sent-to-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-the-amount-of-assets-sent-to-an-account.po
 source_file = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-an-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--account--creating-an-account]
+[symboldocs.guides--account--creating-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
 source_file = build/gettext/guides/account/creating-an-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--account--creating-a-wallet]
+[symboldocs.guides--account--creating-a-wallet]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-a-wallet.po
 source_file = build/gettext/guides/account/creating-a-wallet.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--account--reading-transactions-from-an-account]
+[symboldocs.guides--account--reading-transactions-from-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
 source_file = build/gettext/guides/account/reading-transactions-from-an-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--aggregate--creating-an-escrow-contract-with-aggregate-bonded-transaction]
+[symboldocs.guides--aggregate--creating-an-escrow-contract-with-aggregate-bonded-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.po
 source_file = build/gettext/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--aggregate--sending-a-multisig-transaction]
+[symboldocs.guides--aggregate--sending-a-multisig-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-a-multisig-transaction.po
 source_file = build/gettext/guides/aggregate/sending-a-multisig-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--aggregate--sending-multiple-transactions-together-with-aggregate-complete-transaction]
+[symboldocs.guides--aggregate--sending-multiple-transactions-together-with-aggregate-complete-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.po
 source_file = build/gettext/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--aggregate--signing-announced-aggregate-bonded-transactions-automatically]
+[symboldocs.guides--aggregate--signing-announced-aggregate-bonded-transactions-automatically]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.po
 source_file = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--aggregate--signing-announced-aggregate-bonded-transactions]
+[symboldocs.guides--aggregate--signing-announced-aggregate-bonded-transactions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions.po
 source_file = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
+[symboldocs.guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
 source_file = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--blockchain--getting-block-by-height]
+[symboldocs.guides--blockchain--getting-block-by-height]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-block-by-height.po
 source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--blockchain--listening-new-blocks]
+[symboldocs.guides--blockchain--listening-new-blocks]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
 source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--accountlink--activating-delegated-harvesting]
+[symboldocs.guides--accountlink--activating-delegated-harvesting]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/activating-delegated-harvesting.po
 source_file = build/gettext/guides/accountlink/activating-delegated-harvesting.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--assigning-metadata-entries-to-a-mosaic]
+[symboldocs.guides--metadata--assigning-metadata-entries-to-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
 source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--assigning-metadata-entries-to-a-namespace]
+[symboldocs.guides--metadata--assigning-metadata-entries-to-a-namespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-namespace.po
 source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-namespace.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--assigning-metadata-entries-to-an-account]
+[symboldocs.guides--metadata--assigning-metadata-entries-to-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
 source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--getting-metadata-entries-attached-to-a-mosaic]
+[symboldocs.guides--metadata--getting-metadata-entries-attached-to-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.po
 source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--getting-metadata-entries-attached-to-a-namespace]
+[symboldocs.guides--metadata--getting-metadata-entries-attached-to-a-namespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-namespace.po
 source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-namespace.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--getting-metadata-entries-attached-to-an-account]
+[symboldocs.guides--metadata--getting-metadata-entries-attached-to-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-an-account.po
 source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-an-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--metadata--updating-metadata-entries]
+[symboldocs.guides--metadata--updating-metadata-entries]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
 source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--migration--migrating-from-nem-to-symbol]
+[symboldocs.guides--migration--migrating-from-nem-to-symbol]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nem-to-symbol.po
 source_file = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--monitor--turning-the-asynchronous-transaction-announcement-into-synchronous]
+[symboldocs.guides--monitor--turning-the-asynchronous-transaction-announcement-into-synchronous]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.po
 source_file = build/gettext/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--mosaic--creating-a-mosaic]
+[symboldocs.guides--mosaic--creating-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/creating-a-mosaic.po
 source_file = build/gettext/guides/mosaic/creating-a-mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--mosaic--getting-mosaic-information]
+[symboldocs.guides--mosaic--getting-mosaic-information]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/getting-mosaic-information.po
 source_file = build/gettext/guides/mosaic/getting-mosaic-information.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--mosaic--modifying-mosaic-supply]
+[symboldocs.guides--mosaic--modifying-mosaic-supply]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
 source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--multisig--converting-an-account-to-multisig]
+[symboldocs.guides--multisig--converting-an-account-to-multisig]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/converting-an-account-to-multisig.po
 source_file = build/gettext/guides/multisig/converting-an-account-to-multisig.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--multisig--creating-a-multi-level-multisig-account]
+[symboldocs.guides--multisig--creating-a-multi-level-multisig-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multi-level-multisig-account.po
 source_file = build/gettext/guides/multisig/creating-a-multi-level-multisig-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--multisig--modifying-a-multisig-account]
+[symboldocs.guides--multisig--modifying-a-multisig-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/modifying-a-multisig-account.po
 source_file = build/gettext/guides/multisig/modifying-a-multisig-account.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--registering-a-namespace]
+[symboldocs.guides--namespace--registering-a-namespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-namespace.po
 source_file = build/gettext/guides/namespace/registering-a-namespace.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--registering-a-subnamespace]
+[symboldocs.guides--namespace--registering-a-subnamespace]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-subnamespace.po
 source_file = build/gettext/guides/namespace/registering-a-subnamespace.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--extending-a-namespace-registration-period]
+[symboldocs.guides--namespace--extending-a-namespace-registration-period]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/extending-a-namespace-registration-period.po
 source_file = build/gettext/guides/namespace/extending-a-namespace-registration-period.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--getting-namespace-information]
+[symboldocs.guides--namespace--getting-namespace-information]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/getting-namespace-information.po
 source_file = build/gettext/guides/namespace/getting-namespace-information.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--link-a-namespace-to-a-mosaic]
+[symboldocs.guides--namespace--link-a-namespace-to-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-a-mosaic.po
 source_file = build/gettext/guides/namespace/link-a-namespace-to-a-mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--namespace--link-a-namespace-to-an-address]
+[symboldocs.guides--namespace--link-a-namespace-to-an-address]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-an-address.po
 source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--network--configuring-network-properties]
+[symboldocs.guides--network--configuring-network-properties]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
 source_file = build/gettext/guides/network/configuring-network-properties.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--network--configuring-node-properties]
+[symboldocs.guides--network--configuring-node-properties]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
 source_file = build/gettext/guides/network/configuring-node-properties.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--network--creating-a-private-test-net]
+[symboldocs.guides--network--creating-a-private-test-net]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/creating-a-private-test-net.po
 source_file = build/gettext/guides/network/creating-a-private-test-net.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--network--running-a-test-net-node]
+[symboldocs.guides--network--running-a-test-net-node]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-test-net-node.po
 source_file = build/gettext/guides/network/running-a-test-net-node.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--restriction--preventing-spam-attacks-with-account-restrictions]
+[symboldocs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
 source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--restriction--getting-account-restrictions-attached-to-an-address]
+[symboldocs.guides--restriction--getting-account-restrictions-attached-to-an-address]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-account-restrictions-attached-to-an-address.po
 source_file = build/gettext/guides/restriction/getting-account-restrictions-attached-to-an-address.pot
 source_lang = en
 type = PO
 
 
-[symboldocsguides--restriction--delegating-mosaic-restrictions-to-a-third-party]
+[symboldocs.guides--restriction--delegating-mosaic-restrictions-to-a-third-party]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.po
 source_file = build/gettext/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.pot
 source_lang = en
 type = PO
 
 
-[symboldocsguides--restriction--restricting-mosaics-transfers]
+[symboldocs.guides--restriction--restricting-mosaics-transfers]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/restricting-mosaics-transfers.po
 source_file = build/gettext/guides/restriction/restricting-mosaics-transfers.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--secretlock--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
+[symboldocs.guides--secretlock--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
 source_file = build/gettext/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--transfer--sending-a-transfer-transaction]
+[symboldocs.guides--transfer--sending-a-transfer-transaction]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-a-transfer-transaction.po
 source_file = build/gettext/guides/transfer/sending-a-transfer-transaction.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--transfer--sending-an-encrypted-message]
+[symboldocs.guides--transfer--sending-an-encrypted-message]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-an-encrypted-message.po
 source_file = build/gettext/guides/transfer/sending-an-encrypted-message.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
+[symboldocs.guides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.po
 source_file = build/gettext/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.pot
 source_lang = en
 type = PO
 
-[symboldocsguides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
+[symboldocs.guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
 source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
 source_lang = en
