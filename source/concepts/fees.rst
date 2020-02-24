@@ -52,4 +52,4 @@ The effective rental fee is adjusted dynamically based on the :doc:`median netwo
 
 For more information, see how the network calculates the effective rental fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-rental-fee>`.
 
-Continue: :doc:`Consensus <consensus-algorithm>`.
+Continue: :doc:`Receipt <receipt>`.
