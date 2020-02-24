@@ -19,7 +19,7 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-1. Install |cli|.
+1. Install |cli|. The required Node.js version is 12.X LTS.
 
 .. code-block:: bash
 
@@ -104,7 +104,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: TypeScript
 
-        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+        1. Create a ``package.json`` file. The required Node.js version is 12.X LTS.
 
         .. code-block:: bash
 
@@ -118,7 +118,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
 
-        Make sure you have at least version 2.5.X installed.
+        Make sure you have at least version 3.X installed.
 
         .. code-block:: bash
 
@@ -133,7 +133,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: JavaScript
 
-        1. Create a ``package.json`` file. The minimum required Node.js version is 8.9.X.
+        1. Create a ``package.json`` file. The required Node.js version is 12.X LTS.
 
         .. code-block:: bash
 
@@ -147,7 +147,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: Java
 
-        1. Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
+        1. Open a new Java `gradle`_ project. The required `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
 
         .. code-block:: bash
 
