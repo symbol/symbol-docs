@@ -166,7 +166,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.16.1"
+                compile "io.nem:sdk-vertx-client:0.17.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
