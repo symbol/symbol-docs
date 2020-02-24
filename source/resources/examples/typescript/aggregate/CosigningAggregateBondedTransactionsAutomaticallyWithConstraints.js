@@ -24,7 +24,7 @@ const validTransaction = (transaction, publicAccount) => {
     return transaction instanceof nem2_sdk_1.TransferTransaction &&
         transaction.signer.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new nem2_sdk_1.MosaicId('75AF035421401EF0') ||
+        (transaction.mosaics[0].id.equals(new nem2_sdk_1.MosaicId('51A99028058245A8') ||
             transaction.mosaics[0].id.equals(new nem2_sdk_1.NamespaceId('symbol.xym')))) &&
         transaction.mosaics[0].amount.compare(nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
@@ -38,7 +38,7 @@ const networkType = nem2_sdk_1.NetworkType.TEST_NET;
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();

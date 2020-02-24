@@ -33,7 +33,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-20.us-west-1.nemtech.network:3000
+    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -83,10 +83,10 @@ After the transaction gets confirmed, check if the account has received |network
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 75AF035421401EF0 │ 750.0           │ 750000000       | Never             │
+    │ 51A99028058245A8 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW``.
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TC3QLP-S4L4MM-LA7X6H-JCORXD-R4BPRM-KQNQZE-ITY2``.
 
 .. _setup-development-environment:
 
@@ -166,7 +166,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "compile 'io.nem:sdk-vertx-client:0.16.0"
+                compile "compile 'io.nem:sdk-vertx-client:0.16.1"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.

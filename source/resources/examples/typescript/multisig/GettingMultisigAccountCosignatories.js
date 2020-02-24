@@ -23,7 +23,7 @@ const nem2_sdk_1 = require("nem2-sdk");
 const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
 const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const multisigHttp = repositoryFactory.createMultisigRepository();
 multisigHttp

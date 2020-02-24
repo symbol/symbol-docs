@@ -18,28 +18,36 @@
 
 package nem2.guides.examples.blockchain;
 
-import io.nem.sdk.infrastructure.BlockchainHttp;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.nem.sdk.api.BlockRepository;
+import io.nem.sdk.api.RepositoryFactory;
+import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.sdk.model.blockchain.BlockInfo;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
 
 
 class GettingBlockByHeight {
 
     @Test
-    void gettingBlockByHeight() throws ExecutionException, InterruptedException, MalformedURLException {
+    void gettingBlockByHeight()
+        throws ExecutionException, InterruptedException {
         /* start block 01 */
-        final BlockchainHttp blockchainHttp = new BlockchainHttp("http://localhost:3000");
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            final BlockRepository blockRepository = repositoryFactory.createBlockRepository();
 
-        // Replace with block height
-        final BigInteger blockHeight = BigInteger.valueOf(1);
-
-        final BlockInfo blockInfo = blockchainHttp.getBlockByHeight(blockHeight).toFuture().get();
-
-        System.out.print(blockInfo);
+            // Replace with block height
+            final BigInteger blockHeight = BigInteger.valueOf(1);
+            final BlockInfo blockInfo = blockRepository.getBlockByHeight(blockHeight).toFuture()
+                .get();
+            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+            System.out.println(gson.toJson(blockInfo));
+        }
         /* end block 01 */
     }
 }

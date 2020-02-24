@@ -39,7 +39,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account.
+1. Start by creating a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account.
 We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash

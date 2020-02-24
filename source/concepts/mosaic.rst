@@ -20,7 +20,8 @@ Find below the complete list of configurable properties.
 Divisibility
 ============
 
-Determines the decimal place to which the mosaic can be divided. Divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001.
+Determines the decimal place to which the mosaic can be divided.
+A divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001.
 The divisibility must be in the range of 0 and 6.
 
 Initial supply
@@ -29,7 +30,8 @@ Initial supply
 Indicates the amount of mosaic in circulation.
 The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-|codename| works with **absolute amounts**. To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
+|codename| works with **absolute amounts**.
+To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1,000 (absolute) instead.
 
@@ -37,14 +39,17 @@ Duration
 ========
 
 Specifies the number of confirmed blocks the mosaic is rented for.
-It is allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`.
+It is allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this maximum parameter :ref:`editable per network <config-network-properties>`.
 **Non-expiring mosaics** can be created by setting this property to ``0``.
 
-You can use the following formula to convert approximately days to blocks:
+.. note:: Different from namespaces, a mosaic duration cannot be extended after its creation. Before creating one, consider if your use case requires the mosaic to expire or not.
+
+The following formula is used to convert days to blocks approximately:
 
 .. math::
 
     duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds
+
 
 Supply mutable
 ==============
@@ -77,14 +82,14 @@ If set to true, the mosaic creator can configure custom :doc:`restrictions <mosa
 
 .. _mosaic-rental-fee:
 
-**********
-Rental fee
-**********
+************
+Creation fee
+************
 
-To create a mosaic, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+To create a mosaic, accounts have to pay a fee in addition to the :doc:`transaction fee <fees>`.
 The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
-By default, registering a mosaic in |codename|'s public network has an :ref:`initial cost <config-network-properties>` of ``0.0005`` |networkcurrency|.
+By default, creating a mosaic in |codename|'s public network has an :ref:`initial cost <config-network-properties>` of ``0.0005`` |networkcurrency|.
 However, **the network dynamically adjusts the mosaic rental fee** over time.
 
 To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.

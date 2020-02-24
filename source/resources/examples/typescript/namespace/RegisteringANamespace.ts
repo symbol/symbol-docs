@@ -22,7 +22,7 @@ import {
     NamespaceRegistrationTransaction,
     NetworkType,
     RepositoryFactoryHttp,
-    UInt64
+    UInt64,
 } from 'nem2-sdk';
 
 /* start block 01 */
@@ -44,10 +44,10 @@ const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.create
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 

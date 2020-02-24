@@ -47,7 +47,7 @@ const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
+const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 
@@ -67,7 +67,7 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
 
 /* start block 02 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = 'CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B';
+const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
         mergeMap((transaction) => {
@@ -89,7 +89,7 @@ interface SignedAggregateHashLock {
 }
 
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('75AF035421401EF0');
+const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
@@ -129,10 +129,9 @@ listener.open().then(() => {
                 signedAggregateHashLock.aggregate,
                 listener),
         ),
-    ).subscribe((ignored) => {
-            console.log('Transaction confirmed');
-            listener.close();
-        },
-        (err) => console.log(err));
+    ).subscribe(
+        (ignored) => console.log('Transaction confirmed'),
+        (err) => console.log(err),
+        () => listener.close());
 });
 /* end block 04 */

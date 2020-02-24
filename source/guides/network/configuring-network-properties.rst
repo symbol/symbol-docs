@@ -33,14 +33,14 @@ config-network.properties
     **network**; ; ; ;
     identifier; NetworkIdentifier; Network identifier.; mijin-test; public-test
     nodeEqualityStrategy; NodeIdentityEqualityStrategy; Node equality strategy.; host; host
-    publicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF; A3CE86263CD000F45867A6B5A396A521AF4557D9A6BD3C796478A9BF40BF4F4C
-    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6; CC42AAD7BD45E8C276741AB2524BC30F5529AF162AD12247EF9A98D6B54A385B
+    publicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF; 9BE93593C699867F1B4F624FD37BC7FB93499CDEC9929088F2FF1031293960FF
+    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6; 45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A
     epochAdjustment; utils::TimeSpan; Nemesis epoch time adjustment.; 1573430400s; 1573430400s
     **chain**; ; ; ;
     enableVerifiableState; bool; Set to true if block chain should calculate state hashes so that state is fully verifiable at each block.; true; true
     enableVerifiableReceipts; bool; Set to true if block chain should calculate receipts so that state changes are fully verifiable at each block.; true; true
-    currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x0DC6'7FBE'1CAD'29E3; 0x75AF'0354'2140'1EF0
-    harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x2651'4E2A'1EF3'3824; 0x75AF'0354'2140'1EF0
+    currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x0DC6'7FBE'1CAD'29E3; 0x51A9'9028'0582'45A8
+    harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x2651'4E2A'1EF3'3824; 0x51A9'9028'0582'45A8
     blockGenerationTargetTime; utils::TimeSpan; Targeted time between blocks.; 15s; 15s
     blockTimeSmoothingFactor; uint32_t; *Note*: A higher value makes the network more biased. *Note*: This can lower security because it will increase the influence of time relative to importance.; 3000; 3000
     importanceGrouping; uint64_t; Number of blocks that should be treated as a group for importance purposes. *Note*: Importances will only be calculated at blocks that are multiples of this grouping number.; 39; 1433
@@ -92,7 +92,7 @@ config-network.properties
     minNamespaceDuration; utils::BlockSpan; Minimum namespace duration.; 1m; 30d
     maxNamespaceDuration; utils::BlockSpan; Maximum namespace duration.; 365d; 365d
     namespaceGracePeriodDuration; utils::BlockSpan; Grace period during which time only the previous owner can renew an expired namespace.; 2m; 30d
-    reservedRootNamespaceNames; unordered_set<string>; Reserved root namespaces that cannot be claimed.; xem, nem, user, account, org, com, biz, net, edu, mil, gov, info; xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
+    reservedRootNamespaceNames; unordered_set<string>; Reserved root namespaces that cannot be claimed.; xem, nem, user, account, org, com, biz, net, edu, mil, gov, info; symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
     namespaceRentalFeeSinkPublicKey; Key; Public key of the namespace rental fee sink account.; 3E82E1C1E4A75ADAA3CBA8C101C3CD31D9817A2EB966EB3B511FB2ED45B8E262; 4428A4DA56362C2293A277159F7C1E270FE7BD6CED461877494006C7D69F1172
     rootNamespaceRentalFeePerBlock; Amount; Root namespace rental fee per block.; 1; 1
     childNamespaceRentalFee; Amount; Child namespace rental fee.; 100; 100

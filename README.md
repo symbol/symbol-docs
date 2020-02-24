@@ -30,7 +30,7 @@ To know more about Symbol, continue reading the following documents:
 
 Learn how to use the software development kits and tools with the following step-by-step implementation examples.
 
-* [How to create a wallet](https://nemtech.github.io/guides/account/creating-a-wallet.html)
+* [How to create an account](https://nemtech.github.io/guides/account/creating-an-account.html)
 * [How to send a transaction](https://nemtech.github.io/guides/transfer/sending-a-transfer-transaction.html)
 * [How to create a mosaic](https://nemtech.github.io/guides/mosaic/creating-a-mosaic.html)
 * [How to register a namespace](https://nemtech.github.io/guides/namespace/registering-a-namespace.html)

@@ -16,17 +16,17 @@
  *
  */
 
-import {NamespaceId, RepositoryFactoryHttp} from 'nem2-sdk';
+package nem2.guides.examples.multisig;
 
-/* start block 01 */
-// replace with namespace name
-const namespace = new NamespaceId('foo');
-// replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-20.us-west-1.nemtech.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const namespaceHttp = repositoryFactory.createNamespaceRepository();
+import org.junit.jupiter.api.Test;
 
-namespaceHttp
-    .getNamespace(namespace)
-    .subscribe((namespace) => console.log(namespace), (err) => console.error(err));
-/* end block 01 */
+import java.util.concurrent.ExecutionException;
+
+class ConvertingAnAccountToMultisig {
+
+    @Test
+    void convertingAnAccountToMultisig()
+        throws ExecutionException, InterruptedException {
+        //Todo: Implement
+        }
+}

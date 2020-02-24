@@ -42,6 +42,11 @@ To ensure the transactions are being sent to the correct place with the correct 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 However, the same method **cannot be used to verify transactions of the past**.
 This is due to the facts that:
 
