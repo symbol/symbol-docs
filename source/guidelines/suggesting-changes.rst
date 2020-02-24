@@ -71,7 +71,7 @@ When you contribute code, you affirm that the contribution is your original work
 Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
 Building symbol-docs
-==================
+====================
 
 If the documentation change is small, you can use the *"Edit on Github"* button at the top of the page.
 

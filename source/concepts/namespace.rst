@@ -63,7 +63,7 @@ Subnamespaces
 
 On the internet, a domain can have a sub-domain. |codename| namespaces can have subnamespaces to **identify and organize assets**.
 
-.. figure:: ../resources/images/examples/namespace-setup.png
+.. figure:: ../resources/images/diagrams/namespace-setup.png
     :align: center
     :width: 450px
 
