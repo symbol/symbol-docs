@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.restriction;
+package symbol.guides.examples.restriction;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

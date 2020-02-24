@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.account;
+package symbol.guides.examples.account;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;

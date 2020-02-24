@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# nem2-docs documentation build configuration file, created by
+# symbol-docs documentation build configuration file, created by
 # sphinx-quickstart on Mon Dec 18 16:39:26 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -296,7 +296,7 @@ html_favicon = 'favicon-32x32.png'
 
 # -- Options for edit on github -------------------------------------------
 
-edit_on_github_project = 'nemtech/nem2-docs'
+edit_on_github_project = 'nemtech/symbol-docs'
 edit_on_github_branch = 'master'
 
 # -- Options for edit scaled images ---------------------------------------
@@ -319,9 +319,9 @@ viewsource_title = 'View Code'
 def viewsource_resolve_link(file_path, language=None):
     if language == 'javascript':
         language = 'typescript'
-    base_url = 'https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/%s/' % language
+    base_url = 'https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/%s/' % language
     if language == 'java':
-        base_url += 'src/test/java/nem2/guides/examples/'
+        base_url += 'src/test/java/symbol/guides/examples/'
     path_split = file_path.split('/')
     path = "/".join(path_split[len(path_split)-2:])
     return base_url + path

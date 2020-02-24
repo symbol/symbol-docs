@@ -2,7 +2,7 @@
 SDK
 ####
 
-The **NEM2 Software Development Kit** is the primary software development tool to create |codename| components, such as additional tools, libraries, or applications.
+The **Symbol Software Development Kit** is the primary software development tool to create |codename| components, such as additional tools, libraries, or applications.
 
 It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 

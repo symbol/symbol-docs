@@ -70,7 +70,7 @@ When you contribute code, you affirm that the contribution is your original work
 
 Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
-Building nem2-docs
+Building symbol-docs
 ==================
 
 If the documentation change is small, you can use the *"Edit on Github"* button at the top of the page.
@@ -104,13 +104,13 @@ Run ``make livehtml`` and preview your changes.
 
 Push your local changes to your forked copy of the repository and |pull-request|. In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
 
-Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into nem2-docs.
+Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into symbol-docs.
 
 *CONTRIBUTING.md* is based on `CONTRIBUTING-template.md <https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md>`_ , `elasticsearch/CONTRIBUTING <https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and `spark/CONTRIBUTING <https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_.
 
 .. |issue| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-docs/issues" target="_blank">issue</a>
+   <a href="https://github.com/nemtech/symbol-docs/issues" target="_blank">issue</a>
 
 .. |github-help| raw:: html
 
@@ -122,4 +122,4 @@ Then sit back and wait. There will probably be a discussion about the pull reque
 
 .. |repository| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-docs/" target="_blank">nem2-docs repository</a>
+   <a href="https://github.com/nemtech/symbol-docs/" target="_blank">symbol-docs repository</a>

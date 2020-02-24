@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.namespace;
+package symbol.guides.examples.namespace;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

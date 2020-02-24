@@ -61,7 +61,7 @@ Creates a new profile.
 
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.
     -g, --generation-hash <generationHash> - (Optional) Generation hash of the network. Necessary to create the profile offline.
@@ -81,7 +81,7 @@ Creates a new profile from an existent private key.
 .. code-block:: bash
 
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.
@@ -142,7 +142,7 @@ Generated accounts can be stored as named profiles by adding a node url.
 .. code-block:: bash
 
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.

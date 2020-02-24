@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.multisig;
+package symbol.guides.examples.multisig;
 
 import org.junit.jupiter.api.Test;
 

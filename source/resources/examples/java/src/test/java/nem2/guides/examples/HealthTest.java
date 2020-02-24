@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples;
+package symbol.guides.examples;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

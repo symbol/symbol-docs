@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.blockchain;
+package symbol.guides.examples.blockchain;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

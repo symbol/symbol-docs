@@ -50,4 +50,4 @@ Symbol is an [open-source](https://github.com/nemtech) project. Discover how our
 ## License
 
 Copyright (c) 2018-present NEM 
-Licensed under the [Apache License 2.0](https://github.com/nemtech/nem2-docs/blob/master/LICENSE)
+Licensed under the [Apache License 2.0](https://github.com/nemtech/symbol-docs/blob/master/LICENSE)

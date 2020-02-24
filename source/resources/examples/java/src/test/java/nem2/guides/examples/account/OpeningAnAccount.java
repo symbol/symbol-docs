@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.account;
+package symbol.guides.examples.account;
 
 import io.nem.sdk.model.account.Account;
 import io.nem.sdk.model.blockchain.NetworkType;

@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.blockchain;
+package symbol.guides.examples.blockchain;
 
 import io.nem.sdk.api.ChainRepository;
 import io.nem.sdk.api.RepositoryFactory;

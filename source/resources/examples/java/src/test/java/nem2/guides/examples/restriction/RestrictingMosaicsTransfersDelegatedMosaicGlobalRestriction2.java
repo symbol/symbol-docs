@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.restriction;
+package symbol.guides.examples.restriction;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

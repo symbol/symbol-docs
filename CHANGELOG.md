@@ -119,7 +119,7 @@ Code-name: Elephant 1 & 2
 - Filters are now named account restrictions
 - Node concept with broker documentation
 - Cryptography section comes with code examples
-- Open API spec is now in a separate repository nem2-openapi
+- Open API spec is now in a separate repository symbol-openapi
 - symbol-sdk Java reference is now in a separate repository
 
 ### Removed
@@ -302,7 +302,7 @@ Code-name: bison
 - What is NEM section
 - Running Catapult in local guide
 - Node concept
-- NEM2-camel guide
+- symbol-camel guide
 - Prototyping Tool Reference
 - ``transaction cosign`` command reference
 -  rxjs6 support to typescript code examples

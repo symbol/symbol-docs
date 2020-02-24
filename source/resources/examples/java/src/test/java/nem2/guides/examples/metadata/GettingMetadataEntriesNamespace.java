@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.metadata;
+package symbol.guides.examples.metadata;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

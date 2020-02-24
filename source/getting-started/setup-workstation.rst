@@ -31,9 +31,9 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     symbol-cli account generate
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Introduce NEM 2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 

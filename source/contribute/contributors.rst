@@ -44,8 +44,8 @@ We want to recognize as well the work of the |contributors| who provide content,
 
 .. |contributors| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-docs/graphs/contributors" target="_blank">contributors</a>
+   <a href="https://github.com/nemtech/symbol-docs/graphs/contributors" target="_blank">contributors</a>
 
 .. |issues| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-docs/issues" target="_blank">issues</a>
+   <a href="https://github.com/nemtech/symbol-docs/issues" target="_blank">issues</a>

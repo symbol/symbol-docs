@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.transfer;
+package symbol.guides.examples.transfer;
 
 import io.nem.sdk.api.RepositoryFactory;
 import io.nem.sdk.api.TransactionRepository;

@@ -1,4 +1,4 @@
-package nem2.guides.examples.multisig;
+package symbol.guides.examples.multisig;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

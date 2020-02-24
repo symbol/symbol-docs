@@ -38,11 +38,11 @@ Before starting to work with Mosaic Restrictions, we need to have created a rest
     symbol-cli transaction mosaic --profile ccfactory --sync
 
     Do you want a non-expiring mosaic? [y/n]: y
-    Introduce mosaic divisibility: 0
+    Enter mosaic divisibility: 0
     Do you want mosaic to have supply mutable? [y/n]: y
     Do you want mosaic to be transferable? [y/n]: y
     Do you want mosaic to be restrictable? [y/n]: y
-    Introduce amount of tokens: 1000
+    Enter amount of tokens: 1000
     Transaction confirmed
 
     The new mosaic id is: 634a8ac3fc2b65b3

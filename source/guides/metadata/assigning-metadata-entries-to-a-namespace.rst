@@ -50,10 +50,10 @@ Creating the namespace
 
     symbol-cli transaction namespace --sync
 
-    Introduce namespace name: cc
+    Enter namespace name: cc
     Do you want to create a root namespace? [y/n]: y
-    Introduce the namespace rental duration: 1000
-    Introduce max_fee (absolute amount): 0
+    Enter the namespace rental duration: 1000
+    Enter max_fee (absolute amount): 0
     Transaction confirmed.
 
 *************************

@@ -101,4 +101,4 @@ Then sit back and wait. There will probably be a discussion about the pull reque
 *CONTRIBUTING.md is based on [CONTRIBUTING-template.md](https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md)* , [elasticsearch/CONTRIBUTING](https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md) and [spark/CONTRIBUTING](https://github.com/apache/spark/blob/master/CONTRIBUTING.md)
 
 [pull-request]: https://help.github.com/articles/about-pull-requests/
-[github-issues]: https://github.com/nemtech/nem2-docs/issues
+[github-issues]: https://github.com/nemtech/symbol-docs/issues

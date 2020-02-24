@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.mosaic;
+package symbol.guides.examples.mosaic;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

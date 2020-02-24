@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.blockchain;
+package symbol.guides.examples.blockchain;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

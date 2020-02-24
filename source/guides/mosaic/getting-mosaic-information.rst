@@ -33,7 +33,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/mosaic/GettingMosaicInformation.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/GettingMosaicInformation.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

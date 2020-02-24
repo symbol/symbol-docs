@@ -369,7 +369,7 @@ We recommend using one of the following tools to interact with the available end
 SDKs
 ====
 
-The **Symbol Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
+The **Symbol SDK** is the primary software development tool to create Symbol components, such as additional tools, libraries or applications.
 
 * :doc:`Reference <../sdk>`
 * :doc:`Guides <../concepts/account>`

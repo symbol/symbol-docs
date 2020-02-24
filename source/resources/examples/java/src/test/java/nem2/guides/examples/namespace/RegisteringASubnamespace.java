@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.namespace;
+package symbol.guides.examples.namespace;
 
 import org.junit.jupiter.api.Test;
 

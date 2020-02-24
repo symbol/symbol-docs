@@ -56,12 +56,12 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
     symbol-cli transaction mosaic --sync
 
     Do you want an non-expiring mosaic? [y/n]: y
-    Introduce mosaic divisibility: 2
+    Enter mosaic divisibility: 2
     Do you want mosaic to have supply mutable? [y/n]: y
     Do you want mosaic to be transferable? [y/n]: y
     Do you want mosaic to be restrictable? [y/n]: y
-    Introduce max_fee (absolute amount): 0
-    Introduce amount of tokens: 100
+    Enter max_fee (absolute amount): 0
+    Enter amount of tokens: 100
     The new mosaic id is:  2C08D5EDB652AA79
     Transaction confirmed.
 
@@ -71,20 +71,20 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
     symbol-cli transaction namespace --sync
 
-    Introduce namespace name: cc
+    Enter namespace name: cc
     Do you want to create a root namespace? [y/n]: y
-    Introduce the namespace rental duration: 1000
-    Introduce max_fee (absolute amount): 0
+    Enter the namespace rental duration: 1000
+    Enter max_fee (absolute amount): 0
     Transaction confirmed.
 
 .. code-block:: bash
 
     symbol-cli transaction namespace --sync
 
-    Introduce namespace name: shares
+    Enter namespace name: shares
     Do you want to create a root namespace? [y/n]: n
-    Introduce the parent namespace name: cc
-    Introduce max_fee (absolute amount): 0
+    Enter the parent namespace name: cc
+    Enter max_fee (absolute amount): 0
     Transaction confirmed.
 
 3. Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created in the first step.
@@ -93,10 +93,10 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
     symbol-cli transaction mosaicalias --sync
 
-    Introduce namespace name: cc.shares
-    Introduce alias action (1: Link, 0: Unlink): 1
-    Introduce mosaic in hexadecimal format: 2C08D5EDB652AA79
-    Introduce max_fee (absolute amount): 0
+    Enter namespace name: cc.shares
+    Enter alias action (1: Link, 0: Unlink): 1
+    Enter mosaic in hexadecimal format: 2C08D5EDB652AA79
+    Enter max_fee (absolute amount): 0
     Transaction confirmed.
 
 *************************

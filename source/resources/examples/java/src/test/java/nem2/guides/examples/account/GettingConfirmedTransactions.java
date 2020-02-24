@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.account;
+package symbol.guides.examples.account;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.account;
+package symbol.guides.examples.account;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

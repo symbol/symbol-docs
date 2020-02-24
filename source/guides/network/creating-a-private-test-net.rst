@@ -145,9 +145,9 @@ Copy the private key of the first account.
 
     symbol-cli profile import
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
-    Introduce your private key: 123***456
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter your private key: 123***456
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://localhost:3000
     Insert profile name: base-profile
 
 You should see the account credentials in your terminal.

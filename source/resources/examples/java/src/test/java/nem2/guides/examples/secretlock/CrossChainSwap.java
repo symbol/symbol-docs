@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.secretlock;
+package symbol.guides.examples.secretlock;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.transfer;
+package symbol.guides.examples.transfer;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.aggregate;
+package symbol.guides.examples.aggregate;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;

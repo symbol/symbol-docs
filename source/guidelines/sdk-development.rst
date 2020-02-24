@@ -111,7 +111,7 @@ Before starting
 3. :doc:`Check the API reference <../api>` and play with the API endpoints.
 4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` & :doc:`CLI <../cli>` .
 5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask |codename| related questions.
-6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
+6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and  comment your intentions in  NEM2 slack ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with him/her.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
 ***********
@@ -161,14 +161,14 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 .. code-block:: bash
 
     brew install openapi-generator
-    openapi-generator generate -i ./openapi3.yml -g typescript-node -t templates/ -o ./nem2-ts-sdk/ && rm -R nem2-ts-sdk/test
+    openapi-generator generate -i ./openapi3.yml -g typescript-node -t templates/ -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
 
 - `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
 
 4. As the TypeScript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list.
 You can jump this step if the code generator for your language supports them.
 
-* Open the generated file ``./nem2-ts-sdk/model/models.ts`` in your favorite editor.
+* Open the generated file ``./symbol-ts-sdk/model/models.ts`` in your favorite editor.
 * Search for line contains ``let enumsMap: {[index: string]: any}``.
 * Move all ``xxxTypeEnum`` entries from below ``typeMap`` into ``enumsMap``.
 

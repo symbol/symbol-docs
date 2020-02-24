@@ -39,18 +39,18 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
     symbol-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
     Insert profile name: alice
 
 .. code-block:: bash
 
     symbol-cli account generate --save
 
-    Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Introduce NEM2 Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
     Insert profile name: certificate
 
 *************************

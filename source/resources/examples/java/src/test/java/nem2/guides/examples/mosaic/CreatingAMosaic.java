@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.mosaic;
+package symbol.guides.examples.mosaic;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;

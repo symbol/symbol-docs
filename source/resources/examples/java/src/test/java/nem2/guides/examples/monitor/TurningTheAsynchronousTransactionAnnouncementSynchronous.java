@@ -16,7 +16,7 @@
  *
  */
 
-package nem2.guides.examples.monitor;
+package symbol.guides.examples.monitor;
 
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
