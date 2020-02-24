@@ -150,7 +150,7 @@ These are the steps we are following to generate the Typescript DTOs (data trans
 
     git clone https://github.com/nemtech/nem2-openapi.git
     cd nem2-openapi && mkdir sdks && cd sdks
-    cp ../spec/openapi3.yaml .
+    cp ../spec/openapi.yml .
 
 - `Open API definition <https://github.com/nemtech/nem2-openapi/releases>`_
 
