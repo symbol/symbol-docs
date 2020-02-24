@@ -17,30 +17,30 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with sender private key
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with address
 const aliceAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
-const aliceAccount = nem2_sdk_1.Address.createFromRawAddress(aliceAddress);
+const aliceAccount = symbol_sdk_1.Address.createFromRawAddress(aliceAddress);
 // replace with address
 const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
-const bobAccount = nem2_sdk_1.Address.createFromRawAddress(bobAddress);
+const bobAccount = symbol_sdk_1.Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const mosaic = new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
-const aliceTransferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), aliceAccount, [mosaic], nem2_sdk_1.PlainMessage.create('payout'), networkType);
-const bobTransferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), bobAccount, [mosaic], nem2_sdk_1.PlainMessage.create('payout'), networkType);
+const mosaic = new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
+const aliceTransferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), aliceAccount, [mosaic], symbol_sdk_1.PlainMessage.create('payout'), networkType);
+const bobTransferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), bobAccount, [mosaic], symbol_sdk_1.PlainMessage.create('payout'), networkType);
 /* end block 01 */
 /* start block 02 */
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [aliceTransferTransaction.toAggregate(account.publicAccount),
-    bobTransferTransaction.toAggregate(account.publicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [aliceTransferTransaction.toAggregate(account.publicAccount),
+    bobTransferTransaction.toAggregate(account.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
@@ -48,7 +48,7 @@ const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

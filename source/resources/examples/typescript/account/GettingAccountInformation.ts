@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, RepositoryFactoryHttp} from 'nem2-sdk';
+import {Address, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with recipient address

@@ -29,7 +29,7 @@ import {
     Transaction,
     TransferTransaction,
     UInt64,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */

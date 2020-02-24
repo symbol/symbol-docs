@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'nem2-sdk';
+import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'symbol-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
 
 /* start block 01 */

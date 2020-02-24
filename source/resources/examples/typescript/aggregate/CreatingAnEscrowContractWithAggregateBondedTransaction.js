@@ -17,45 +17,45 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with alice private key
 const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const aliceAccount = nem2_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
+const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
 // replace with ticket distributor public key
 const ticketDistributorPublicKey = '20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A';
-const ticketDistributorPublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(ticketDistributorPublicKey, networkType);
+const ticketDistributorPublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(ticketDistributorPublicKey, networkType);
 // replace with ticket mosaic id
-const ticketMosaicId = new nem2_sdk_1.MosaicId('7cdf3b117a3c40cc');
+const ticketMosaicId = new symbol_sdk_1.MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new nem2_sdk_1.MosaicId('51A99028058245A8');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('51A99028058245A8');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const aliceToTicketDistributorTx = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), ticketDistributorPublicAccount.address, [new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))], nem2_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'), networkType);
-const ticketDistributorToAliceTx = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), aliceAccount.address, [new nem2_sdk_1.Mosaic(ticketMosaicId, nem2_sdk_1.UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))], nem2_sdk_1.PlainMessage.create('send 1 museum ticket to customer'), networkType);
+const aliceToTicketDistributorTx = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), ticketDistributorPublicAccount.address, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'), networkType);
+const ticketDistributorToAliceTx = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), aliceAccount.address, [new symbol_sdk_1.Mosaic(ticketMosaicId, symbol_sdk_1.UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))], symbol_sdk_1.PlainMessage.create('send 1 museum ticket to customer'), networkType);
 /* end block 01 */
 /* start block 02 */
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createBonded(nem2_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
-    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
-const hashLockTransaction = nem2_sdk_1.HashLockTransaction.create(nem2_sdk_1.Deadline.create(), new nem2_sdk_1.Mosaic(networkCurrencyMosaicId, nem2_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), nem2_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
+const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const transactionService = new nem2_sdk_1.TransactionService(transactionHttp, receiptHttp);
+const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
     transactionService
         .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)

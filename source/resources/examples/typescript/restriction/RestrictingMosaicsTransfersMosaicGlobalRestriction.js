@@ -17,35 +17,35 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';
-const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
-const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
+const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 /* end block 01 */
 /* start block 02 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
-    .create(nem2_sdk_1.Deadline.create(), mosaicId, // mosaicId
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
+const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction
+    .create(symbol_sdk_1.Deadline.create(), mosaicId, // mosaicId
 key, // restrictionKey
-nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
-nem2_sdk_1.UInt64.fromUint(1), // newRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-networkType, undefined, nem2_sdk_1.UInt64.fromUint(2000000));
+symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
+symbol_sdk_1.UInt64.fromUint(1), // newRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
+networkType, undefined, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with company private key
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(transaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

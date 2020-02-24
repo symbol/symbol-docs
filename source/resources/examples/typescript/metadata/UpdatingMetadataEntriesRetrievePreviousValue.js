@@ -17,29 +17,29 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with bob private key
 const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const bobAccount = nem2_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
+const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
 // replace with alice public key
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
-const alicePublicAccount = nem2_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 // replace with key and new value
-const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('CERT');
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
-const newValueBytes = nem2_sdk_1.Convert.utf8ToUint8(newValue);
+const newValueBytes = symbol_sdk_1.Convert.utf8ToUint8(newValue);
 const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
     .pipe(operators_1.mergeMap((metadata) => {
-    const currentValueBytes = nem2_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
-    return rxjs_1.of(nem2_sdk_1.AccountMetadataTransaction.create(nem2_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, newValueBytes.length - currentValueBytes.length, nem2_sdk_1.Convert.decodeHex(nem2_sdk_1.Convert.xor(currentValueBytes, newValueBytes)), networkType));
+    const currentValueBytes = symbol_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
+    return rxjs_1.of(symbol_sdk_1.AccountMetadataTransaction.create(symbol_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, newValueBytes.length - currentValueBytes.length, symbol_sdk_1.Convert.decodeHex(symbol_sdk_1.Convert.xor(currentValueBytes, newValueBytes)), networkType));
 }));
 /* end block 01 */

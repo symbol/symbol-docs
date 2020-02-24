@@ -17,10 +17,10 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, nem2_sdk_1.NetworkType.TEST_NET);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, symbol_sdk_1.NetworkType.TEST_NET);
 console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

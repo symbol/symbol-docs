@@ -16,9 +16,9 @@
  *
  */
 
-import {Address, QueryParams, RepositoryFactoryHttp} from 'nem2-sdk';
 import {EMPTY} from 'rxjs';
 import {concatMap, expand, toArray} from 'rxjs/operators';
+import {Address, QueryParams, RepositoryFactoryHttp} from 'symbol-sdk';
 
 // replace with account address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
@@ -30,15 +30,13 @@ const accountHttp = repositoryFactory.createAccountRepository();
 
 const allTransactions = true;
 const pageSize = 100;
-const queryParams = new QueryParams();
-queryParams.setPageSize(pageSize);
 
 accountHttp
-    .getAccountTransactions(address, queryParams)
+    .getAccountTransactions(address, new QueryParams({pageSize}))
     .pipe(
         expand( (transactions) => {
             if (transactions.length === pageSize && allTransactions) {
-                queryParams.setId(transactions[transactions.length - 1].transactionInfo!.id);
+                const queryParams = new QueryParams({pageSize, id: transactions[transactions.length - 1].transactionInfo!.id});
                 return accountHttp.getAccountTransactions(address, queryParams);
             }
             return EMPTY;

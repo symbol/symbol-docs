@@ -16,8 +16,7 @@
  *
  */
 
-import {Address, QueryParams} from 'nem2-sdk';
-import {RepositoryFactoryHttp} from 'nem2-sdk/dist/src/infrastructure/RepositoryFactoryHttp';
+import {Address, QueryParams, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with account address
@@ -29,8 +28,7 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 // Page size between 10 and 100
 const pageSize = 10;
-const queryParams = new QueryParams();
-queryParams.setPageSize(pageSize);
+const queryParams = new QueryParams({pageSize});
 
 accountHttp
     .getAccountTransactions(address, queryParams)

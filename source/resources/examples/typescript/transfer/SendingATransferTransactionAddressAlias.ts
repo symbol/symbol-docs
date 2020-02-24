@@ -16,7 +16,7 @@
  *
  */
 
-import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64} from 'nem2-sdk';
+import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64} from 'symbol-sdk';
 
 /* start block 01 */
 // Replace with network type

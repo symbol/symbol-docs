@@ -25,7 +25,7 @@ import {
     NetworkType,
     RepositoryFactoryHttp,
     UInt64
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 
 /* start block 01 */
 const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';

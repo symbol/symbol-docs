@@ -16,7 +16,7 @@
  *
  */
 
-import {NamespaceId, RepositoryFactoryHttp} from 'nem2-sdk';
+import {NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name

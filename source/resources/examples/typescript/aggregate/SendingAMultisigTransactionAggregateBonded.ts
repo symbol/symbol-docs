@@ -31,7 +31,7 @@ import {
     TransactionService,
     TransferTransaction,
     UInt64,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 
 // replace network type
 const networkType = NetworkType.TEST_NET;

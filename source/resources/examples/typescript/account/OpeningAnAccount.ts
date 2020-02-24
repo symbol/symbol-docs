@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, NetworkType} from 'nem2-sdk';
+import {Account, NetworkType} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with private key
