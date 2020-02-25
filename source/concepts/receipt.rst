@@ -16,7 +16,7 @@ The block header stores the root hash, which is different from zero when the blo
 Transaction statement
 *********************
 
-A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked with a transaction in a particular block.
+A :ref:`transaction statement <transaction-statement>` is a collection of receipts linked to a transaction in a particular block.
 Statements can include receipts with the following basic types:
 
 * **Balance Transfer**: The invisible state change triggered a mosaic transfer.
@@ -302,4 +302,4 @@ Enumeration: uint16
 
     0x0000; Reserved.
 
-Continue: :doc:`Node <node>`.
+Continue: :doc:`Data validation <data-validation>`.

@@ -134,10 +134,11 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/block
     concepts/transaction
     concepts/fees
+    concepts/receipt
+    concepts/data-validation
     concepts/consensus-algorithm
     concepts/harvesting
     concepts/inflation
-    concepts/receipt
     concepts/node
     Whitepaper <https://nemtech.github.io/catapult-whitepaper/main.pdf>
 
