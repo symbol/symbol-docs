@@ -115,7 +115,7 @@ Common practices to include code snippets in a document.
     :header: "Case", "Example"
     :delim: ;
 
-    Documenting bash commands.; Do not add ``$>`` before bash commands: ``nem2-cli account info``.
+    Documenting bash commands.; Do not add ``$>`` before bash commands: ``symbol-cli account info``.
     Using code snippets.;  Import them from a file using the ``.. viewsource::`` directive. :doc:`Example <writing-a-guide>`
     Displaying a subset of the code; Use the comments ``/* start block 01*/`` and ``/* end block 01 */`` to divide code blocks. :doc:`Example <writing-a-guide>`
 
@@ -137,7 +137,6 @@ List of terms that are prone to be written in different ways.
     JavaScript; Javascript, javascript
     MongoDB; mongodb, Mongodb
     NEM; Nem, nem
-    NEM Developer Center; NEM developer center
     Node.js; nodejs, node.js
     RxJS; rxjs
     SDK; Sdk, Sdk

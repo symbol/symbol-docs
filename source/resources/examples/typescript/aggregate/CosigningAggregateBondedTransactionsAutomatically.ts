@@ -23,7 +23,7 @@ import {
     CosignatureTransaction,
     NetworkType,
     RepositoryFactoryHttp,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 
 import {filter, map, mergeMap} from 'rxjs/operators';
 

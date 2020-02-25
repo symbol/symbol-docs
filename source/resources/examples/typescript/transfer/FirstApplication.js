@@ -17,22 +17,22 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
-const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with customer address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
-const recipientAddress = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const transferTransaction = nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), recipientAddress, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(1))], nem2_sdk_1.PlainMessage.create('enjoy your ticket'), networkType, nem2_sdk_1.UInt64.fromUint(2000000));
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(mosaicId, symbol_sdk_1.UInt64.fromUint(1))], symbol_sdk_1.PlainMessage.create('enjoy your ticket'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 01 */
 /* start block 02 */
 // replace with ticket vendor private key
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
@@ -40,7 +40,7 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 /* start block 03 */
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

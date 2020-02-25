@@ -12,7 +12,7 @@ Installation
 
 .. code-block:: bash
 
-    npm install --global nem2-cli
+    npm install --global symbol-cli
 
 *************
 Configuration
@@ -23,26 +23,26 @@ Profiles are used to set a base URL and have an account to sign transactions.
 
 .. code-block:: bash
 
-    nem2-cli profile import --private-key your_private_key --network TEST_NET --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --password your_password --profile test_net_profile
+    symbol-cli profile import --private-key your_private_key --network TEST_NET --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --password your_password --profile test_net_profile
 
 By default, |cli| will always use the default profile.
 To use a named profile, add the ``--profile`` option to the command.
 
 .. code-block:: bash
 
-    nem2-cli account info --profile test_net_profile
+    symbol-cli account info --profile test_net_profile
 
 If you are going to use named profile for multiple commands, you can change the default profile with the following command.
 
 .. code-block:: bash
 
-    nem2-cli profile setdefault --profile new_profile
+    symbol-cli profile setdefault --profile new_profile
 
 If you do not have a private key to create a profile, you can generate a new account, add a node URL and save it as default or named profile.
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET -s --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --pasword your_password --profile test_net_profile
+    symbol-cli account generate --network TEST_NET -s --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --pasword your_password --profile test_net_profile
 
 ********
 Commands
@@ -61,7 +61,7 @@ Creates a new profile.
 
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.
     -g, --generation-hash <generationHash> - (Optional) Generation hash of the network. Necessary to create the profile offline.
@@ -81,7 +81,7 @@ Creates a new profile from an existent private key.
 .. code-block:: bash
 
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.
@@ -142,7 +142,7 @@ Generated accounts can be stored as named profiles by adding a node url.
 .. code-block:: bash
 
     --profile <profile>                    - (Optional) Select between your profiles, by providing a profile name.
-    -u, --url <url>                        - (Optional) When saving profile, provide a NEM2 Node URL. Example: http://localhost:3000
+    -u, --url <url>                        - (Optional) When saving profile, provide a Symbol Node URL. Example: http://localhost:3000
     -n, --network <network>                - Network Type. (MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST)
     -p, --password <password>              - (Optional) When saving profile, provide the password.
     -d, --default                          - (Optional) Set the profile as default.
@@ -768,9 +768,9 @@ Gets the mosaic id or address behind an namespace.
 Transaction
 ===========
 
-Transactions are signed with the profiles created with ``nem2-cli profile create``, ``nem2-cli profile import``, or ``nem2-cli account generate -s``.
+Transactions are signed with the profiles created with ``symbol-cli profile create``, ``symbol-cli profile import``, or ``symbol-cli account generate -s``.
 
-By default, the developer has to query if a transaction announced to the network has been included in a block or not with the command ``nem2-cli transaction status``.
+By default, the developer has to query if a transaction announced to the network has been included in a block or not with the command ``symbol-cli transaction status``.
 To wait until the transaction gets confirmed or rejected, pass the ``--sync`` option to the transaction command.
 
 **Transaction Info**
@@ -1402,4 +1402,4 @@ Returns the :ref:`mosaic address restrictions <mosaic-address-restriction-transa
 
 .. |open-source| raw:: html
 
-   <a href="https://github.com/nemtech/nem2-cli" target="_blank">open-source</a>
+   <a href="https://github.com/nemtech/symbol-cli" target="_blank">open-source</a>

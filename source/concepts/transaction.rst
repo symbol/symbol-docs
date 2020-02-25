@@ -76,7 +76,7 @@ We recommend `using the SDK to define <https://github.com/nemtech/nem2-docs/blob
         NetworkType,
         PlainMessage,
         TransferTransaction
-    } from "nem2-sdk";
+    } from 'symbol-sdk';
 
     const recipientAddress = Address
         .createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
@@ -123,7 +123,7 @@ An account has to follow the next steps to `sign a transaction <https://github.c
 
 .. code-block:: typescript
 
-    import {Account} from "nem2-sdk";
+    import {Account} from 'symbol-sdk';
 
     const privateKey = process.env.PRIVATE_KEY as string;
     const generationHash = process.env.GENERATION_HASH as string;
@@ -157,13 +157,13 @@ Announcing a transaction
 ************************
 
 Signed transactions are ready to be announced to the network.
-You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/nem2-openapi/#operation/announceTransaction>`_.
+You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/symbol-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 
     .. code-block:: typescript
 
-        import {TransactionHttp} from "nem2-sdk";
+        import {TransactionHttp} from 'symbol-sdk';
 
         const transactionHttp = new TransactionHttp('http://localhost:3000');
 

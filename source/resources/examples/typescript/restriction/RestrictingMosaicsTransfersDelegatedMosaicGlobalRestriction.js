@@ -17,37 +17,37 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with kyc provider private key
 const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
-const kycProviderAccount = nem2_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
+const kycProviderAccount = symbol_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 // Define KYC Mosaic Id
-const mosaicNonce = nem2_sdk_1.MosaicNonce.createRandom();
-const mosaicDefinitionTransaction = nem2_sdk_1.MosaicDefinitionTransaction.create(nem2_sdk_1.Deadline.create(), mosaicNonce, nem2_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount), nem2_sdk_1.MosaicFlags.create(true, true, true), 0, nem2_sdk_1.UInt64.fromUint(0), networkType);
+const mosaicNonce = symbol_sdk_1.MosaicNonce.createRandom();
+const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), mosaicNonce, symbol_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount), symbol_sdk_1.MosaicFlags.create(true, true, true), 0, symbol_sdk_1.UInt64.fromUint(0), networkType);
 console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 // Define Mosaic global restriction Is_Verified = 1
-const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
-const mosaicGlobalRestrictionTransaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
-    .create(nem2_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, // mosaicId
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
+const mosaicGlobalRestrictionTransaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction
+    .create(symbol_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, // mosaicId
 key, // restictionKey
-nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
-nem2_sdk_1.UInt64.fromUint(1), // newRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
+symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
+symbol_sdk_1.UInt64.fromUint(1), // newRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
 networkType);
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [
     mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
     mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)
-], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
+], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

@@ -35,7 +35,7 @@ Open a new file and run the following code snippet to create an account.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/CreatingAnAccount.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/account/CreatingAnAccount.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -54,7 +54,7 @@ If you already have a private key, you can use it to define a new ``Account`` ob
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/account/OpeningAnAccount.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/account/OpeningAnAccount.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

@@ -16,7 +16,7 @@
  *
  */
 
-import {AccountRestrictionFlags, Address, RepositoryFactoryHttp} from 'nem2-sdk';
+import {AccountRestrictionFlags, Address, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with address

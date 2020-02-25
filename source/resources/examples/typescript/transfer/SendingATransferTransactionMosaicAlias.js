@@ -17,11 +17,11 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with aliased mosaicId
-const mosaicId = new nem2_sdk_1.NamespaceId('foo');
-nem2_sdk_1.TransferTransaction.create(nem2_sdk_1.Deadline.create(), nem2_sdk_1.Account.generateNewAccount(networkType).address, [new nem2_sdk_1.Mosaic(mosaicId, nem2_sdk_1.UInt64.fromUint(10000000))], nem2_sdk_1.EmptyMessage, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
+const mosaicId = new symbol_sdk_1.NamespaceId('foo');
+symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), symbol_sdk_1.Account.generateNewAccount(networkType).address, [new symbol_sdk_1.Mosaic(mosaicId, symbol_sdk_1.UInt64.fromUint(10000000))], symbol_sdk_1.EmptyMessage, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 01 */

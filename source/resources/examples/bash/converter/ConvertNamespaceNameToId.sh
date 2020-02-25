@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli converter namespaceNameToId --namespace-name test
+symbol-cli converter namespaceNameToId --namespace-name test

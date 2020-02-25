@@ -17,35 +17,35 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with cc.shares mosaic id
 const sharesIdHex = '7cdf3b117a3c40cc';
-const sharesId = new nem2_sdk_1.MosaicId(sharesIdHex);
+const sharesId = new symbol_sdk_1.MosaicId(sharesIdHex);
 // replace with kyc mosaic id
 const kycIdHex = '183D0802BCDB97AF';
-const kycId = new nem2_sdk_1.MosaicId(kycIdHex);
+const kycId = new symbol_sdk_1.MosaicId(kycIdHex);
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const key = nem2_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
-const transaction = nem2_sdk_1.MosaicGlobalRestrictionTransaction
-    .create(nem2_sdk_1.Deadline.create(), sharesId, // mosaicId
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
+const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction
+    .create(symbol_sdk_1.Deadline.create(), sharesId, // mosaicId
 key, // restictionKey
-nem2_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
-nem2_sdk_1.UInt64.fromUint(2), // newRestrictionValue
-nem2_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
+symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
+symbol_sdk_1.UInt64.fromUint(2), // newRestrictionValue
+symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
 networkType, kycId, // referenceMosaicId
-nem2_sdk_1.UInt64.fromUint(2000000));
+symbol_sdk_1.UInt64.fromUint(2000000));
 const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const comfyClothingCompanyAccount = nem2_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
+const comfyClothingCompanyAccount = symbol_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = comfyClothingCompanyAccount.sign(transaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

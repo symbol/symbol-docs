@@ -17,7 +17,7 @@ Follow this guide to start contributing to the translation of the |sitename|.
 Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=nem2docs>`_ .
 Also, we recommend reading Transifex's `Getting Started as a Translator guide <https://docs.transifex.com/getting-started-1/translators>`_.
 
-2. Join nem2-docs team and choose a language
+2. Join symbol-docs team and choose a language
 
 Explore the `nem2-docs project in Transifex <https://www.transifex.com/nemtech/nem2docs/>`_.
 Check which languages are being translated and up to which point they are complete.
@@ -99,4 +99,4 @@ For each documentation file, a .po file will be created under ``build/gettext``.
 
     tx push --source
 
-:doc:`Submit your changes <suggesting-changes>` into the nem2-docs repository.
+:doc:`Submit your changes <suggesting-changes>` into the symbol-docs repository.

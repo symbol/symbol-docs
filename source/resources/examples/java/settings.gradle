@@ -1,4 +1,4 @@
-rootProject.name = 'nem2-sdk-examples'
+rootProject.name = 'symbol-sdk-examples'
 include 'crypto'
 include 'buffers'
 

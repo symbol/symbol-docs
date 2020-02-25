@@ -16,7 +16,7 @@
  *
  */
 
-import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RepositoryFactoryHttp} from 'nem2-sdk';
+import {MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with mosaic id

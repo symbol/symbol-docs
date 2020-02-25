@@ -45,7 +45,7 @@ Method #01: Using the SDK
 
 .. code-block:: bash
 
-   nem2-cli monitor all --address <alice-address>
+   symbol-cli monitor all --address <alice-address>
 
 2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
 
@@ -61,7 +61,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -83,7 +83,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransactionWithMultipleMosaics.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransactionWithMultipleMosaics.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -106,7 +106,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java
         :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -125,7 +125,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransaction.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java
         :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

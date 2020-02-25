@@ -16,7 +16,7 @@
  *
  */
 
-import {NetworkType, Password, SimpleWallet} from 'nem2-sdk';
+import {NetworkType, Password, SimpleWallet} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with password

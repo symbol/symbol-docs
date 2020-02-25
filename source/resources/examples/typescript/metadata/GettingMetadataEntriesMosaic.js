@@ -17,14 +17,14 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '0DC67FBE1CAD29E3';
-const mosaicId = new nem2_sdk_1.MosaicId(mosaicIdHex);
+const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 metadataHttp.getMosaicMetadata(mosaicId)
     .subscribe((metadata) => {

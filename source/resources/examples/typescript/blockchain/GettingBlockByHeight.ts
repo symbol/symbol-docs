@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp, UInt64} from 'nem2-sdk';
+import {RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with node endpoint

@@ -17,25 +17,23 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
+const symbol_sdk_1 = require("symbol-sdk");
 // replace with account address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
-const address = nem2_sdk_1.Address.createFromRawAddress(rawAddress);
+const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 const allTransactions = true;
 const pageSize = 100;
-const queryParams = new nem2_sdk_1.QueryParams();
-queryParams.setPageSize(pageSize);
 accountHttp
-    .getAccountTransactions(address, queryParams)
+    .getAccountTransactions(address, new symbol_sdk_1.QueryParams({ pageSize }))
     .pipe(operators_1.expand((transactions) => {
     if (transactions.length === pageSize && allTransactions) {
-        queryParams.setId(transactions[transactions.length - 1].transactionInfo.id);
+        const queryParams = new symbol_sdk_1.QueryParams({ pageSize, id: transactions[transactions.length - 1].transactionInfo.id });
         return accountHttp.getAccountTransactions(address, queryParams);
     }
     return rxjs_1.EMPTY;

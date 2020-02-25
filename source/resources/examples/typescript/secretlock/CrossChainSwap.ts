@@ -29,7 +29,7 @@ import {
     SecretProofTransaction,
     TransactionHttp,
     UInt64,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 
 /* start block 01 */
 const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);

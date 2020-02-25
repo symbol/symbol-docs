@@ -1,3 +1,4 @@
+/* Translation */
 const translations = ['ja', 'zh_CN'];
 
 function translatePathRedirect(languageCode) {
@@ -34,6 +35,7 @@ function initLanguageSelector() {
     });
 }
 
+/* Code tabs */
 function setPreferredCodeTab() {
     try {
         let urlParams = new URLSearchParams(window.location.search);
@@ -67,6 +69,7 @@ function addBlockCaptionInsideCodeExample() {
     $(".example-code").addClass("visible");
 }
 
+/* Links */
 function addTargetBlankAttributeToExternalLinks() {
     $('a.external').attr("target", "_blank");
 }

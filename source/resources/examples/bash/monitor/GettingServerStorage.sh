@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli diagnostic storage
+symbol-cli diagnostic storage

@@ -17,23 +17,23 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account) => {
-    const cosignatureTransaction = nem2_sdk_1.CosignatureTransaction.create(transaction);
+    const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
 /* start block 02 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp
