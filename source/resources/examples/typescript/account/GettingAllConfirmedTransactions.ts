@@ -16,9 +16,9 @@
  *
  */
 
-import {Address, QueryParams, RepositoryFactoryHttp} from 'nem2-sdk';
 import {EMPTY} from 'rxjs';
 import {concatMap, expand, toArray} from 'rxjs/operators';
+import {Address, QueryParams, RepositoryFactoryHttp} from 'symbol-sdk';
 
 // replace with account address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
@@ -28,16 +28,19 @@ const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 
-const pageSize = 100;
 const allTransactions = true;
+const pageSize = 100;
 
 accountHttp
-    .getAccountTransactions(address, new QueryParams(pageSize, undefined))
+    .getAccountTransactions(address, new QueryParams({pageSize}))
     .pipe(
-        expand( (transactions) => transactions.length === pageSize && allTransactions
-            ? accountHttp.getAccountTransactions(address,
-                new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo!.id))
-            : EMPTY),
+        expand( (transactions) => {
+            if (transactions.length === pageSize && allTransactions) {
+                const queryParams = new QueryParams({pageSize, id: transactions[transactions.length - 1].transactionInfo!.id});
+                return accountHttp.getAccountTransactions(address, queryParams);
+            }
+            return EMPTY;
+        }),
         concatMap((transactions) => transactions),
         toArray(),
     )

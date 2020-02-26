@@ -16,7 +16,7 @@
  *
  */
 
-import {Metadata, MosaicId, RepositoryFactoryHttp} from 'nem2-sdk';
+import {Metadata, MosaicId, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with mosaic id

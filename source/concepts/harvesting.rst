@@ -44,7 +44,7 @@ When the node does not define a beneficiary, all the rewards go to the block sig
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center
-    :width: 250px
+    :width: 400px
 
     Rewards division when the network's sharing ratio equals 10%
 

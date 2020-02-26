@@ -17,29 +17,29 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
 /* start block 01 */
 const validTransaction = (transaction, publicAccount) => {
-    return transaction instanceof nem2_sdk_1.TransferTransaction &&
+    return transaction instanceof symbol_sdk_1.TransferTransaction &&
         transaction.signer.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new nem2_sdk_1.MosaicId('51A99028058245A8') ||
-            transaction.mosaics[0].id.equals(new nem2_sdk_1.NamespaceId('symbol.xym')))) &&
-        transaction.mosaics[0].amount.compare(nem2_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
+        (transaction.mosaics[0].id.equals(new symbol_sdk_1.MosaicId('51A99028058245A8') ||
+            transaction.mosaics[0].id.equals(new symbol_sdk_1.NamespaceId('symbol.xym')))) &&
+        transaction.mosaics[0].amount.compare(symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
 const cosignAggregateBondedTransaction = (transaction, account) => {
-    const cosignatureTransaction = nem2_sdk_1.CosignatureTransaction.create(transaction);
+    const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
     return account.signCosignatureTransaction(cosignatureTransaction);
 };
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 listener.open().then(() => {

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli diagnostic serverInfo
+symbol-cli diagnostic serverInfo

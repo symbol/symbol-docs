@@ -36,7 +36,7 @@ Method #01: Using the SDK
 
 .. code-block:: bash
 
-    nem2-cli namespace info --name foo
+    symbol-cli namespace info --name foo
 
     Namespace: foo
     --------------
@@ -55,7 +55,7 @@ The next step is to figure out the current height of the chain, and calculate th
 
 .. code-block:: bash
 
-    nem2-cli blockchain height
+    symbol-cli blockchain height
 
     52500
 
@@ -84,7 +84,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
 
 .. code-block:: bash
 
-    nem2-cli namespace info --namespace-name foo
+    symbol-cli namespace info --namespace-name foo
 
     Namespace: foo
     --------------

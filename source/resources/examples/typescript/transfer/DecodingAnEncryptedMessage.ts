@@ -16,7 +16,7 @@
  *
  */
 
-import {Account, NetworkType, PublicAccount, RepositoryFactoryHttp, TransferTransaction} from 'nem2-sdk';
+import {Account, NetworkType, PublicAccount, RepositoryFactoryHttp, TransferTransaction} from 'symbol-sdk';
 import {map} from 'rxjs/operators';
 
 /* start block 01 */

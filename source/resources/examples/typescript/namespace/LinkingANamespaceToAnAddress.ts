@@ -25,8 +25,8 @@ import {
     NamespaceId,
     NetworkType,
     RepositoryFactoryHttp,
-    UInt64
-} from 'nem2-sdk';
+    UInt64,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name

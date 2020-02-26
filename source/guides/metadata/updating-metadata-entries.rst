@@ -116,7 +116,7 @@ Monitor the network until the transaction gets confirmed, and then announce the 
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash <transaction-hash> --profile alice
+    symbol-cli transaction cosign --hash <transaction-hash> --profile alice
 
 6. Retrieve the metadata entries assigned to Alice's account following :doc:`the next guide <getting-metadata-entries-attached-to-an-account>`.
 

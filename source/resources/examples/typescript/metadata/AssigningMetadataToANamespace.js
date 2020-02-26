@@ -17,31 +17,31 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with company private key
 const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const companyAccount = nem2_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
+const companyAccount = symbol_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
 // replace with namespace name
-const namespaceId = new nem2_sdk_1.NamespaceId('cc');
+const namespaceId = new symbol_sdk_1.NamespaceId('cc');
 const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
 const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
-const nameMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
-const emailMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
-const addressMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
-const phoneMetadataTransaction = nem2_sdk_1.NamespaceMetadataTransaction.create(nem2_sdk_1.Deadline.create(), companyAccount.publicKey, nem2_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
+const nameMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
+const emailMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
+const addressMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
+const phoneMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
 /* end block 01 */
 /* start block 02 */
-const aggregateTransaction = nem2_sdk_1.AggregateTransaction.createComplete(nem2_sdk_1.Deadline.create(), [
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [
     nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
     emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
     addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
     phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
-], networkType, [], nem2_sdk_1.UInt64.fromUint(2000000));
+], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
@@ -49,7 +49,7 @@ const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

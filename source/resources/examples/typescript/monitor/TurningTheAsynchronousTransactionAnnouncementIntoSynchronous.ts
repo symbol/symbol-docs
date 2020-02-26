@@ -28,7 +28,7 @@ import {
     TransactionService,
     TransferTransaction,
     UInt64,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 import {merge} from 'rxjs';
 import {filter, tap} from 'rxjs/operators';
 

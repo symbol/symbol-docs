@@ -82,7 +82,7 @@ Now you can send transactions to the namespace linked to the account instead of 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/nem2/guides/examples/transfer/SendingATransferTransactionAddressAlias.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransactionAddressAlias.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */

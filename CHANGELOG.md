@@ -32,7 +32,7 @@ Code-name: Fushicho 2 & 3
 - WebSockets docs
 - Testnet guides
 - Dynamic substitutions for code and currency names
-- NEM2-CLI latest commands
+- symbol-cli latest commands
 - Whitepaper link
 
 ### Changed
@@ -56,7 +56,7 @@ Code-name: Fushicho 1
 - Metadata guides
 - Rental fees concept 
 - Delegated harvesting guide 
-- NEM2-CLI@0.13.4 new commands
+- symbol-cli@0.13.4 new commands
 - Configuring a network / node guides
 - Deploy a private testnet guide 
 
@@ -81,7 +81,7 @@ Code-name: Elephant 3
 - Dynamic rental fees concept
 - Persistent delegated harvesting concept 
 - Mosaic Restriction guides  
-- NEM2-CLI@0.13.1 new commands 
+- symbol-cli@0.13.1 new commands 
 
 ### Changed
 
@@ -111,7 +111,7 @@ Code-name: Elephant 1 & 2
 - Getting the mosaic identifier behind a namespace guide 
 - Sending an encrypted message guide
 - Migrating from NIS1 to Catapult guide
-- nem2-cli 0.13 new commands
+- symbol-cli 0.13 new commands
 - Network generation hash concept
 
 ### Changed
@@ -119,8 +119,8 @@ Code-name: Elephant 1 & 2
 - Filters are now named account restrictions
 - Node concept with broker documentation
 - Cryptography section comes with code examples
-- Open API spec is now in a separate repository nem2-openapi
-- NEM2-SDK Java reference will be in a separate repository
+- Open API spec is now in a separate repository symbol-openapi
+- symbol-sdk Java reference is now in a separate repository
 
 ### Removed
 
@@ -161,7 +161,7 @@ Code-name: Dragon
 -  HashLockTransactions can lock NetworkCurrencyMosaic
 - Catbuffer guides merged into SDK guidelines
 - Secret lock specific for a public key
-- Guides compatible with nem2-sdk 0.12
+- Guides compatible with symbol-sdk 0.12
 
 ### Fixed
 
@@ -302,7 +302,7 @@ Code-name: bison
 - What is NEM section
 - Running Catapult in local guide
 - Node concept
-- NEM2-camel guide
+- symbol-camel guide
 - Prototyping Tool Reference
 - ``transaction cosign`` command reference
 -  rxjs6 support to typescript code examples

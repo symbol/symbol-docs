@@ -97,7 +97,7 @@ The **account #1** must has to lock ``10`` |networkcurrency| to announce the tra
 
 .. code-block:: bash
 
-    nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile <account>
+    symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile <account>
 
 ************
 What's next?

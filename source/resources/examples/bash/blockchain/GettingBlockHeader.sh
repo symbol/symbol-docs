@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli block header --height 1
+symbol-cli block header --height 1

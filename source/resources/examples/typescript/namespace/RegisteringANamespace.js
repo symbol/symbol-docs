@@ -17,24 +17,24 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const nem2_sdk_1 = require("nem2-sdk");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with namespace name
 const namespaceName = 'foo';
 // replace with duration (in blocks)
-const duration = nem2_sdk_1.UInt64.fromUint(1000);
+const duration = symbol_sdk_1.UInt64.fromUint(1000);
 // replace with network type
-const networkType = nem2_sdk_1.NetworkType.TEST_NET;
-const namespaceRegistrationTransaction = nem2_sdk_1.NamespaceRegistrationTransaction.createRootNamespace(nem2_sdk_1.Deadline.create(), namespaceName, duration, networkType, nem2_sdk_1.UInt64.fromUint(2000000));
+const networkType = symbol_sdk_1.NetworkType.TEST_NET;
+const namespaceRegistrationTransaction = symbol_sdk_1.NamespaceRegistrationTransaction.createRootNamespace(symbol_sdk_1.Deadline.create(), namespaceName, duration, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = nem2_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
-const repositoryFactory = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)

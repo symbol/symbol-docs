@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nem2-cli converter stringToKey --value test
+symbol-cli converter stringToKey --value test

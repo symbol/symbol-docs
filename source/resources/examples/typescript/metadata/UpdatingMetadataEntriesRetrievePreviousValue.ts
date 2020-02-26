@@ -25,7 +25,7 @@ import {
     NetworkType,
     PublicAccount,
     RepositoryFactoryHttp,
-} from 'nem2-sdk';
+} from 'symbol-sdk';
 import {of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 

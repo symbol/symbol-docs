@@ -39,12 +39,12 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Start by registering a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account.
+1. Start by creating a new ``restrictable`` mosaic with the :doc:`ComfyClothingCompany account <../account/creating-an-account>` account.
 We will refer to this mosaic from now on as ``cc.shares``.
 
 .. code-block:: bash
 
-    nem2-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany --sync
+    symbol-cli transaction mosaic --amount 1000000 --transferable --supply-mutable --restrictable --divisibility 0 --non-expiring --profile cccompany --sync
 
     The new mosaic id is: 7cdf3b117a3c40cc
 

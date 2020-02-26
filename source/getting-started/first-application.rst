@@ -67,7 +67,7 @@ After running the following command, you should see on your screen a line simila
 
 .. code-block:: bash
 
-    nem2-cli account info --profile testnet
+    symbol-cli account info --profile testnet
 
     Account Information
     ┌───────────────────┬────────────────────────────────────────────────┐
@@ -100,7 +100,7 @@ If your row after mosaics is empty, follow the :doc:`previous guide <setup-works
 
 .. code-block:: bash
 
-    nem2-cli account generate --network TEST_NET --save --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --profile customer
+    symbol-cli account generate --network TEST_NET --save --url http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000 --profile customer
 
     New Account
 
@@ -128,7 +128,7 @@ In a new terminal, monitor which transactions involving the ticket vendor's addr
 
 .. code-block:: bash
 
-   nem2-cli monitor all --address TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB
+   symbol-cli monitor all --address TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB
 
 *******************
 Creating the ticket
@@ -155,7 +155,7 @@ This means that the customer can only send back the ticket to the creator of the
 
 .. code-block:: bash
 
-   nem2-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync
+   symbol-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync
 
 2. After announcing the transaction, copy the MosaicId displayed in the terminal.
 
@@ -197,7 +197,7 @@ Now that we have defined the mosaic, we are going to send one ticket unit to a c
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -220,7 +220,7 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java
         :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
@@ -239,20 +239,20 @@ Although the transaction is defined, it has not been announced to the network ye
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-    .. viewsource:: ../resources/examples/java/src/test/java/nem2/guides/examples/transfer/FirstApplication.java
+    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java
         :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
     .. code-block:: bash
 
-        nem2-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
+        symbol-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
 4. When the transaction appears as confirmed, check if the customer has received the ticket.
 
 .. code-block:: bash
 
-    nem2-cli account info --profile customer
+    symbol-cli account info --profile customer
 
 **************************
 Did we solve the use case?

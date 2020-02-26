@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
-set SPHINXPROJ=nem2-docs
+set SPHINXPROJ=symbol-docs
 
 if "%1" == "" goto help
 
