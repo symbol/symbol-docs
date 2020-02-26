@@ -38,7 +38,7 @@ Address
 *******
 
 Public keys can be shared in a shorter form as **addresses**.
-A |codename| address is a **base-32 encoded triplet** consisting of:
+A |codename| address is a **Base32 encoded triplet** consisting of:
 
 * The network byte.
 * The 160-bit hash of the account's public key.
