@@ -46,8 +46,12 @@ The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 Accounts management
 *******************
 
-Management of :doc:`account <../../concepts/account>` with |codename| has not changed much compared to the previous NIS1 public network accounts.
-A few notable changes have happened as to public verifiability of accounts and field names returned in the REST endpoints.
+Both platforms use the digital signature algorithm named Ed25519, but with different hashing algorithms.
+While NIS1 uses **Keccak-SHA3-512**, |codename| changed to **SHA-512** to support TLS.
+
+The change in the hashing algorithm used leads to have, for the same private key in NIS1 and |codename|, different public keys and addresses.
+
+Also, a few notable changes have happened as to public verifiability of accounts and field names returned in the REST endpoints.
 
 * Guide: :doc:`Creating and opening an account  <../account/creating-an-account>`
 * Guide: :doc:`Getting the account information <../account/getting-account-information>`
