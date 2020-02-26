@@ -18,11 +18,11 @@
 
 package symbol.guides.examples.blockchain;
 
-import io.nem.sdk.api.NamespaceRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.mosaic.MosaicId;
-import io.nem.sdk.model.namespace.NamespaceId;
+import io.nem.symbol.sdk.api.NamespaceRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.mosaic.MosaicId;
+import io.nem.symbol.sdk.model.namespace.NamespaceId;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ExecutionException;

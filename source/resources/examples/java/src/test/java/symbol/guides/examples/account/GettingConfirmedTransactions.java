@@ -18,15 +18,15 @@
 
 package symbol.guides.examples.account;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.AccountRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionSearchCriteria;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.Transaction;
+import io.nem.symbol.sdk.api.AccountRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.TransactionSearchCriteria;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.PublicAccount;
+import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
+import io.nem.symbol.sdk.model.transaction.Transaction;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -58,8 +58,8 @@ class GettingConfirmedTransactions {
 
             final List<Transaction> transactions = accountRepository
                     .transactions(publicAccount, transactionSearchCriteria).toFuture().get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(transactions));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(transactions));
         }
         /* end block 01 */
     }

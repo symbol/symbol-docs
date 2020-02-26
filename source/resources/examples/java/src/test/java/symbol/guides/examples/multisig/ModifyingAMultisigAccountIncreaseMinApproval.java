@@ -18,17 +18,17 @@
 
 package symbol.guides.examples.multisig;
 
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.AggregateTransactionFactory;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.TransactionRepository;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Account;
+import io.nem.symbol.sdk.model.account.PublicAccount;
+import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.transaction.AggregateTransaction;
+import io.nem.symbol.sdk.model.transaction.AggregateTransactionFactory;
+import io.nem.symbol.sdk.model.transaction.MultisigAccountModificationTransaction;
+import io.nem.symbol.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
+import io.nem.symbol.sdk.model.transaction.SignedTransaction;
 import java.math.BigInteger;
 import java.util.Collections;
 import java.util.concurrent.ExecutionException;

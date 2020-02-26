@@ -18,26 +18,9 @@
 
 package symbol.guides.examples.multisig;
 
-import io.nem.sdk.api.Listener;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.TransactionRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Account;
-import io.nem.sdk.model.account.PublicAccount;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.mosaic.NetworkCurrencyMosaic;
-import io.nem.sdk.model.transaction.AggregateTransaction;
-import io.nem.sdk.model.transaction.AggregateTransactionFactory;
-import io.nem.sdk.model.transaction.HashLockTransaction;
-import io.nem.sdk.model.transaction.HashLockTransactionFactory;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.sdk.model.transaction.SignedTransaction;
-import io.nem.sdk.model.transaction.Transaction;
-import java.math.BigInteger;
-import java.util.Collections;
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class ModifyingAMultisigAccountAddCosignatory {
 
