@@ -25,7 +25,7 @@ Ongoing work
 
 .. note:: ⚠️ The following SDKs are not compatible with the latest version of catapult-server.
 
-Read the |protocol-compatibility-report| to know more about the status of each project.
+.. Read the |protocol-compatibility-report| to know more about the status of each project.
 
 .. csv-table::
     :header: "Language", "Repository", "Reference"
