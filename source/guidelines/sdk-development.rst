@@ -91,7 +91,7 @@ Creating the project
 3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
 4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
 
-You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
+You can base your work on the `TypeScript SDK <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
 The TypeScript version is the first SDK getting the latest updates.
 Check regularly the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
