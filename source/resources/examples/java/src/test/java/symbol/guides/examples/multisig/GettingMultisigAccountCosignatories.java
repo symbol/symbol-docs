@@ -1,14 +1,15 @@
 package symbol.guides.examples.multisig;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.MultisigRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Address;
-import io.nem.sdk.model.account.MultisigAccountInfo;
-import java.util.concurrent.ExecutionException;
+import io.nem.symbol.sdk.api.MultisigRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Address;
+import io.nem.symbol.sdk.model.account.MultisigAccountInfo;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 public class GettingMultisigAccountCosignatories {
 
@@ -32,8 +33,8 @@ public class GettingMultisigAccountCosignatories {
             final MultisigAccountInfo multisigAccountInfo = multisigRepository
                 .getMultisigAccountInfo(address).toFuture().get();
 
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(multisigAccountInfo));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(multisigAccountInfo));
             /* end block 01 */
         }
 

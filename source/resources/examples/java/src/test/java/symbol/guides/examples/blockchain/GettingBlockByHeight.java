@@ -18,12 +18,12 @@
 
 package symbol.guides.examples.blockchain;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.BlockRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.blockchain.BlockInfo;
+import io.nem.symbol.sdk.api.BlockRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.blockchain.BlockInfo;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
@@ -45,8 +45,8 @@ class GettingBlockByHeight {
             final BigInteger blockHeight = BigInteger.valueOf(1);
             final BlockInfo blockInfo = blockRepository.getBlockByHeight(blockHeight).toFuture()
                 .get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(blockInfo));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(blockInfo));
         }
         /* end block 01 */
     }

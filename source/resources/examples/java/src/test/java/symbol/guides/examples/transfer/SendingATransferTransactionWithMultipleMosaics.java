@@ -18,15 +18,15 @@
 
 package symbol.guides.examples.transfer;
 
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Address;
-import io.nem.sdk.model.account.UnresolvedAddress;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.message.PlainMessage;
-import io.nem.sdk.model.mosaic.Mosaic;
-import io.nem.sdk.model.mosaic.MosaicId;
-import io.nem.sdk.model.transaction.TransferTransactionFactory;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Address;
+import io.nem.symbol.sdk.model.account.UnresolvedAddress;
+import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.message.PlainMessage;
+import io.nem.symbol.sdk.model.mosaic.Mosaic;
+import io.nem.symbol.sdk.model.mosaic.MosaicId;
+import io.nem.symbol.sdk.model.transaction.TransferTransactionFactory;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;

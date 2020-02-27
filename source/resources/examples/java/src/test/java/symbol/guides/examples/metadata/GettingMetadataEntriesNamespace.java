@@ -18,13 +18,13 @@
 
 package symbol.guides.examples.metadata;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.MetadataRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.metadata.Metadata;
-import io.nem.sdk.model.namespace.NamespaceId;
+import io.nem.symbol.sdk.api.MetadataRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.metadata.Metadata;
+import io.nem.symbol.sdk.model.namespace.NamespaceId;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -43,13 +43,13 @@ class GettingMetadataEntriesNamespace {
             final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
 
             // replace with namespace name
-            final  String namespaceName = "symbol";
+            final String namespaceName = "symbol";
             final NamespaceId namespaceId = NamespaceId.createFromName(namespaceName);
 
             final List<Metadata> metadata = metadataRepository.getNamespaceMetadata(namespaceId, Optional.empty())
                     .toFuture().get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(metadata));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(metadata));
         }
         /* end block 01 */
     }

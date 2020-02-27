@@ -18,16 +18,17 @@
 
 package symbol.guides.examples.namespace;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.NamespaceRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.namespace.NamespaceId;
-import io.nem.sdk.model.namespace.NamespaceInfo;
+import io.nem.symbol.sdk.api.NamespaceRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.namespace.NamespaceId;
+import io.nem.symbol.sdk.model.namespace.NamespaceInfo;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
+import org.junit.jupiter.api.Test;
+
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
-import org.junit.jupiter.api.Test;
 
 class GettingNamespaceInformation {
 
@@ -47,8 +48,8 @@ class GettingNamespaceInformation {
             final NamespaceInfo namespaceInfo = namespaceRepository.getNamespace(namespaceId)
                 .toFuture()
                 .get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(namespaceInfo));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(namespaceInfo));
         }
     }
     /* end block 01 */

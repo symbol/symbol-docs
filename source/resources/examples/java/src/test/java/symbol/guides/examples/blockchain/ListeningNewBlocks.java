@@ -18,11 +18,6 @@
 
 package symbol.guides.examples.blockchain;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.Listener;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import org.junit.jupiter.api.Test;
 
 import java.net.MalformedURLException;

@@ -18,14 +18,14 @@
 
 package symbol.guides.examples.restriction;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.api.RestrictionMosaicRepository;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.Address;
-import io.nem.sdk.model.mosaic.MosaicId;
-import io.nem.sdk.model.restriction.MosaicAddressRestriction;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.RestrictionMosaicRepository;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Address;
+import io.nem.symbol.sdk.model.mosaic.MosaicId;
+import io.nem.symbol.sdk.model.restriction.MosaicAddressRestriction;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
@@ -56,8 +56,8 @@ class GettingMosaicAddressRestrictions {
             restrictions = restrictionRepository
                     .getMosaicAddressRestrictions(mosaicId, Collections.singletonList(address))
                     .toFuture().get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(restrictions));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(restrictions));
         }
         /* end block 01 */
     }

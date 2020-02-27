@@ -18,18 +18,16 @@
 
 package symbol.guides.examples.account;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.nem.sdk.api.AccountRepository;
-import io.nem.sdk.api.RepositoryFactory;
-import io.nem.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.sdk.model.account.AccountInfo;
-import io.nem.sdk.model.account.Address;
-
-import java.io.StringWriter;
-import java.util.concurrent.ExecutionException;
+import io.nem.symbol.sdk.api.AccountRepository;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.AccountInfo;
+import io.nem.symbol.sdk.model.account.Address;
+import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ExecutionException;
 
 class GettingAccountInformation {
 
@@ -49,8 +47,8 @@ class GettingAccountInformation {
             final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
                 .getAccountInfo(address).toFuture().get();
-            final Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-            System.out.println(gson.toJson(accountInfo));
+            final JsonHelper helper = new JsonHelperJackson2();
+            System.out.println(helper.prettyPrint(accountInfo));
         }
         /* end block 01 */
     }
