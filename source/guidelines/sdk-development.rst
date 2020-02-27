@@ -42,20 +42,24 @@ Package Organization
 
 **Infrastructure**
 
+This package includes the generated API client and DTOs.
 The HTTP requests are made following the Repository Pattern, and they return |codename| domain immutable models via the Observable Pattern.
 
 **Models**
 
-The |codename| domain models are immutable by definition, meaning that the developer cannot change their attributes. Instead, the developers have to create new Transactions and dispatch them to the blockchain via TransactionHTTP.
+The |codename| domain models are immutable by definition, meaning that the developer cannot change their attributes.
+Instead, the developers have to create new Transactions and dispatch them to the blockchain via TransactionHTTP.
 
 **Services**
 
-Common operations that require multiple :doc:`REST API <../api>` requests are handled by services provided.
+Common operations that require combining multiple :doc:`REST API <../api>` requests.
 
 Reactive
 ========
 
-|sdk| uses ReactiveX Library intensely.
+The |sdk| uses the `ReactiveX Library <http://reactivex.io/>`_ intensely.
+
+The benefits of using a reactive approach are:
 
 * **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 * **Less is more**: ReactiveX's operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -64,206 +68,93 @@ Reactive
 * **Frontend**: Manipulation of UI events and API responses on the Web using RxJS.
 * **Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and implementation independence.
 
-.. note:: In case you are not familiar with ReactiveX and you still have to deliver something fast, you can convert an observable to Promise/Future by reviewing this |rp-promise-example|. However, **we encourage you to learn ReactiveX**.
-
-* |rxjsinaction|
-* |frp|
-* |learnrxjs|
-* |rp-wiki|
-* |op-wiki|
-* |reactivex|
-
-.. |reactivex| raw:: html
-
-    <a href="http://reactivex.io/" target="_black">ReactiveX</a>
-
-.. |rxjsinaction| raw:: html
-
-    <a href="https://www.manning.com/books/rxjs-in-action" target="_black">RxJS in Action</a>
-
-.. |frp| raw:: html
-
-    <a href="https://www.manning.com/books/functional-reactive-programming" target="_black">Functional Reactive Programming</a>
-
-.. |rp-wiki| raw:: html
-
-    <a href="https://en.wikipedia.org/wiki/Reactive_programming" target="_black">Reactive Programming</a>
-
-.. |op-wiki| raw:: html
-
-    <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_black">Observer Pattern</a>
-
-.. |learnrxjs| raw:: html
-
-    <a href="https://www.learnrxjs.io/" target="_black">Learn RxJS</a>
-
-.. |rp-promise-example| raw:: html
-
-    <a href="https://www.learnrxjs.io/operators/utility/topromise.html" target="_black">example</a>
-
+If you are new to Reactive Programming, we encourage you to start with the online guide `Learn RxJS <https://www.learnrxjs.io/>`_.
 
 ***************
 Before starting
 ***************
 
 1. Review the technical documentation to become familiar with the |codename| :doc:`built-in features<../concepts/account>`.
-2. Setup the |codename| `local environment via docker <https://github.com/tech-bureau/catapult-service-bootstrap>`_.
-3. :doc:`Check the API reference <../api>` and play with the API endpoints.
+2. Setup the |codename| :doc:`local environment via docker <../guides/network/creating-a-private-test-net>`.
+3. Check the :doc:`API reference <../api>` and play with offered set of endpoints.
 4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` & :doc:`CLI <../cli>` .
-5. `Join <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ our Slack to ask |codename| related questions.
-6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and comment your intentions in ``#sig-api`` channel. If someone is already working on it, we suggest you collaborate with them.
+5. Join our `Slack <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ to ask |codename| related questions.
+6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and comment on your intentions in ``#sig-api`` channel. If someone is already working on it, we suggest you collaboratingwith them.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
-***********
-Development
-***********
-
-You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
-The TypeScript version is the first SDK getting the latest updates.
-
-Regularly check the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
-
+********************
 Creating the project
-====================
+********************
 
 1. Add a README with the instructions to install the SDK.
 2. Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
 3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
 4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
 
-A project with good test coverage it's more likely to be used and trusted by the developers!
+You can base your work in `TypeScript <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
+The TypeScript version is the first SDK getting the latest updates.
+Check regularly the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
-We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
+We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last). A project with good test coverage it's more likely to be used and trusted by the developers!
 If you need inspiration, you can adapt the same `tests we did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
 
-API Wrapper
-===========
+*************
+Infrastucture
+*************
 
-The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API generation.
-It supports multiple languages, and hopefully, yours is on the list.
+The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API and DTOs generation.
+It supports multiple languages, and hopefully, yours is `on the list <https://openapi-generator.tech/docs/generators/>`_.
 
-These are the steps we are following to generate the Typescript DTOs (data transfer objects):
+These are the steps we followed to generate the Typescript DTOs (data transfer objects):
 
-1. Download the latest Open API definition.
+1. Download the `latest Symbol OpenAPI spec <https://github.com/nemtech/symbol-openapi/releases>`_ from GitHub releases.
 
-.. code-block:: bash
+2. Install the OpenApi generator CLI.
 
-    git clone https://github.com/nemtech/symbol-openapi.git
-    cd symbol-openapi && mkdir sdks && cd sdks
-    cp ../spec/openapi3.yaml .
+.. code-block::bash
 
-- `Open API definition <https://github.com/nemtech/symbol-openapi/releases>`_
+   npm install @openapitools/openapi-generator-cli@cli-4.1.0 -g
 
-2. Copy the ``templates folder`` from ``{symbol-sdk-typescript-javascript}/infrastructure/`` into a new folder.
-
-3. Download the OpenAPI generator and generate the DTOs.
+3. Generate the DTOs for the programming language selected.
 
 .. code-block:: bash
 
-    brew install openapi-generator
-    openapi-generator generate -i ./openapi3.yml -g typescript-node -t templates/ -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
+    openapi-generator generate -i ./openapi3.yml -g typescript-node -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
 
-- `Swagger Codegen instructions <https://github.com/swagger-api/swagger-codegen#development-in-docker>`_
+4. The generated lib are normally published into a central repository (e.g. maven, npm). The SDKs depend on those libraries like any other third party dependency. To automate the deployment of the packages, including the generator for the selected programming language in the `symbol-openapi-generator <https://github.com/nemtech/symbol-openapi-generator>`_ project.
 
-4. As the TypeScript generator does not recognize ``enum`` type alias, we need to manually move enum classes into the ``enumsMap`` list.
-You can jump this step if the code generator for your language supports them.
+5. Drop the generated client classes and implement them using the `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of `ReactiveX <http://reactivex.io/>`_.
 
-* Open the generated file ``./symbol-ts-sdk/model/models.ts`` in your favorite editor.
-* Search for line contains ``let enumsMap: {[index: string]: any}``.
-* Move all ``xxxTypeEnum`` entries from below ``typeMap`` into ``enumsMap``.
+Example of repositories and implementations:
 
-Example:
-
-.. code-block:: typescript
-
-    let enumsMap: {[index: string]: any} = {
-        "AccountPropertyTypeEnum": AccountPropertyTypeEnum,
-        "AliasTypeEnum": AliasTypeEnum,
-        "MosaicPropertyIdEnum": MosaicPropertyIdEnum,
-        "MultisigModificationTypeEnum": MultisigModificationTypeEnum,
-        "NamespaceTypeEnum": NamespaceTypeEnum,
-        "ReceiptTypeEnum": ReceiptTypeEnum,
-        "RolesTypeEnum": RolesTypeEnum,
-    }
-
-    let typeMap: {[index: string]: any} = {
-        "AccountDTO": AccountDTO,
-        "AccountIds": AccountIds,
-        "AccountInfoDTO": AccountInfoDTO,
-        "AccountMetaDTO": AccountMetaDTO,
-        "AccountNamesDTO": AccountNamesDTO,
-        "AccountPropertiesDTO": AccountPropertiesDTO,
-        "AccountPropertiesInfoDTO": AccountPropertiesInfoDTO,
-        "AccountPropertyDTO": AccountPropertyDTO,
-        "AliasDTO": AliasDTO,
-        "AnnounceTransactionInfoDTO": AnnounceTransactionInfoDTO,
-        "BlockDTO": BlockDTO,
-        "BlockInfoDTO": BlockInfoDTO,
-        "BlockMetaDTO": BlockMetaDTO,
-        "BlockchainScoreDTO": BlockchainScoreDTO,
-        "CommunicationTimestamps": CommunicationTimestamps,
-        "Cosignature": Cosignature,
-        "HeightInfoDTO": HeightInfoDTO,
-        "MerklePathItem": MerklePathItem,
-        "MerkleProofInfo": MerkleProofInfo,
-        "MerkleProofInfoDTO": MerkleProofInfoDTO,
-        "MosaicDTO": MosaicDTO,
-        "MosaicDefinitionDTO": MosaicDefinitionDTO,
-        "MosaicIds": MosaicIds,
-        "MosaicInfoDTO": MosaicInfoDTO,
-        "MosaicMetaDTO": MosaicMetaDTO,
-        "MosaicNamesDTO": MosaicNamesDTO,
-        "MosaicPropertyDTO": MosaicPropertyDTO,
-        "MultisigAccountGraphInfoDTO": MultisigAccountGraphInfoDTO,
-        "MultisigAccountInfoDTO": MultisigAccountInfoDTO,
-        "MultisigDTO": MultisigDTO,
-        "NamespaceDTO": NamespaceDTO,
-        "NamespaceIds": NamespaceIds,
-        "NamespaceInfoDTO": NamespaceInfoDTO,
-        "NamespaceMetaDTO": NamespaceMetaDTO,
-        "NamespaceNameDTO": NamespaceNameDTO,
-        "NetworkTypeDTO": NetworkTypeDTO,
-        "NodeInfoDTO": NodeInfoDTO,
-        "NodeTimeDTO": NodeTimeDTO,
-        "ResolutionEntryDTO": ResolutionEntryDTO,
-        "ResolutionStatementDTO": ResolutionStatementDTO,
-        "ServerDTO": ServerDTO,
-        "ServerInfoDTO": ServerInfoDTO,
-        "SourceDTO": SourceDTO,
-        "StatementsDTO": StatementsDTO,
-        "StorageInfoDTO": StorageInfoDTO,
-        "TransactionHashes": TransactionHashes,
-        "TransactionIds": TransactionIds,
-        "TransactionInfoDTO": TransactionInfoDTO,
-        "TransactionMetaDTO": TransactionMetaDTO,
-        "TransactionPayload": TransactionPayload,
-        "TransactionStatementDTO": TransactionStatementDTO,
-        "TransactionStatusDTO": TransactionStatusDTO,
-    }
-
-5. Copy the generated files into the `nem2-sdk infrastructure folder <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/src/infrastructure>`_.
-
-6. Drop the generated client classes and implement them using the `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of `ReactiveX <http://reactivex.io/>`_.
-
-Example of a Repository and HTTP implementation:
-
+* `CreateTransactionsFromDTO <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
 * `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
 * `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
 
-7. The **repositories return models instead of DTOs**.
-You will need to code the models before finishing the API wrapper.
+See the complete list of `repositories and implementations <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_.
 
+6. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
+
+******
 Models
-======
+******
 
-The `models <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-core/src/main/java/io/nem/sdk/model>`_ are by default immutable and aim to hide the complexity, like type conversion or relationship between objects.
+By default, models are immutable and aim to hide the complexity, like type conversion or relationship between objects.
 
-You will find in the different implementations different invariants to ensure the object is well constructed and a nicer API is published.
+Example of models implementation:
 
-Particular decisions to consider:
+* `Account <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/account/Account.ts>`_
+* `NamespaceId <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_
+* `NodeInfo <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/node/NodeInfo.ts>`_
+
+See the complete list of `models <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/model>`_.
+
+You will find in the implementations different invariants to ensure the object is well constructed and a nicer API is published.
+
+Particular decisions we considered:
 
 * UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
-*  API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
+* API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
 * `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
@@ -271,8 +162,48 @@ Transaction Serialization
 
 The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize |codename| entities.
 
-In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.
-For example, the |sdk| uses the generated code to operate with the entities in binary form before announcing them to the network.
+In combination with the `catbuffer-generators project <https://github.com/nemtech/catbuffer-generators/tree/master/generators>`_, developers can generate builder classes for a given set of programming languages.
+For example, the |sdk| uses the generated code to operate with the entities in binary form.
+
+.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/nemtech/catbuffer-generators/tree/master/generators/typescript>`_ for TypeScript.
+
+If there is a generator, follow the next steps to generate the builders for all the existent entities:
+
+1. Clone the catbuffer-generators repository.
+
+.. code-block:: bash
+
+   git clone https://github.com/nemtech/catbuffer-generators
+
+2. Install the package requirements.
+
+.. code-block:: bash
+
+   pip install -r requirements.txt
+
+3. Clone the catbuffer repository inside the ``catbuffer-generators`` folder.
+
+.. code-block:: bash
+
+   git clone https://github.com/nemtech/catbuffer
+
+4. Generate code for all the schemas running the following command under the ``catbuffer-generators`` directory, replacing ``cpp_builder`` for the targeted programming language.
+
+.. code-block:: bash
+
+   python ../scripts/generate_all.sh cpp_builder
+
+The previous command creates a new file for every schema under the ``catbuffer/_generated/cpp_builder`` folder.
+
+5. Publish the generated code into a central repository and make the SDK dependant on this library. For every transaction type, use the generated builders to serialize and deserialize transactions.
+
+Here you can find some examples of how we used transactions builders:
+
+* `AccountAddressRestrictionTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/AccountAddressRestrictionTransaction.ts>`_
+* `TransferTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/TransferTransaction.ts>`_
+* `AggregateTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/AggregateTransaction.ts>`_
+
+See the complete list of `transactions <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/model/transaction>`_.
 
 KeyPair and Cryptographic functions
 ===================================
@@ -281,14 +212,30 @@ KeyPair and Cryptographic functions
 
 Implementing cryptographic functions is required to sign transactions.
 
-Example: `core/crypto <https://github.com/nemtech/nem2-sdk-java/tree/master/sdk-core/src/main/java/io/nem/core/crypto>`_
+Example: `core/crypto <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/core/crypto>`_
 
-********************
-Documenting your SDK
-********************
+********
+Services
+********
+
+Services combine multiple :doc:`REST API <../api>` requests and provide developers with handy methods that cannot be retrieved directly from the API.
+
+Services are considered "nice to have" features, and these usually are not required to consider the SDK complete. We recommend starting coding services only if you have a fully operational and well-tested SDK first.
+
+Examples of services:
+
+* `AggregateTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/AggregateTransactionService.ts>`_: Helps application developers to announce aggregate transactions without having to develop the logic to wait for the hash lock confirmation.
+* `MetadataTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/MetadataTransactionService.ts>`_: Creates metadata transactions without having to pass the previous value.
+* `BlockService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/BlockService.ts>`_: Provides with methods to verify that the data returned by a given node is valid.
+
+See the complete list of `services <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/service>`_.
+
+*******************
+Documenting the SDK
+*******************
 
 The SDKs need to be adopted by other developers.
-As a contributor, no one knows better than you how a determined SDK works.
+As the main developer, no one knows better than you how the SDK works.
 Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
 
 ******************************
@@ -298,9 +245,8 @@ Publishing the SDK as official
 To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_.
 The reason behind the |codename| Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among |codename| developers.
 
-********************
 Recommended Licenses
-********************
+====================
 
 *  MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_
 *  Apache-2.0: `Apache License, version
