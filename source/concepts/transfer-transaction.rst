@@ -34,7 +34,7 @@ Message
 
 In the :ref:`public network <config-network-properties>`, transfer transactions can hold a message up to ``1023`` characters in length, making them suitable for timestamping data permanently on the blockchain.
 
-By default, the messages attached are visible by default to all network participants, although the client does not encrypt the message.
+By default, the messages attached are visible to all network participants.
 
 Encrypted message
 =================
