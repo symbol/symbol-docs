@@ -180,10 +180,11 @@ Gets an array of transactions for which an account is the sender or receiver.
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address>                  - Account address.
-    -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
-    -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>    - Account address.
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -199,10 +200,11 @@ Gets an array of incoming transactions. A transaction is said to be incoming wit
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address>                  - Account address.
-    -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
-    -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>    - Account address.
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -218,10 +220,11 @@ Gets an array of outgoing transactions. A transaction is said to be outgoing wit
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address>                  - Account address.
-    -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
-    -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>    - Account address.
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -237,10 +240,11 @@ Gets the array of transactions for which an account is the sender or receiver an
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address>                  - Account address.
-    -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
-    -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>    - Account address.
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -256,10 +260,11 @@ Gets an array of aggregate bonded transactions where the account is the sender o
 
 .. code-block:: bash
 
-    --profile <profile>                      - (Optional) Select between your profiles, by providing a profile name.
-    -a, --address <address>                  - Account address.
-    -n, --num-transactions <numTransactions> - (Optional) Number of transactions. [10]
-    -i, --id <id>                            - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
+    -a, --address <address>    - Account address.
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -297,9 +302,9 @@ Returns the transactions for a given block height.
 
     --profile <profile>        - (Optional) Select between your profiles, by providing a profile name.
     -h, --height <height>      - Block height.
-    -s, --page-size <pageSize> - (Optional) Page size between 10 and 100. Default: 10
-    -i, --id <id>              - (Optional) Id after which we want objects to be returned.
-    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. Default: DESC
+    -n, --page-size <pageSize> - (Optional) Number of transactions per page. [10]
+    -i, --id <id>              - (Optional) Identifier of the transaction after which we want the transactions to be returned.
+    -o, --order <order>        - (Optional): Order of transactions. DESC. Newer to older. ASC. Older to newer. [DESC]
 
 *Command*
 
@@ -491,41 +496,6 @@ Gets the current score of the block chain. The higher the score, the better the 
 *Command*
 
 .. viewsource:: resources/examples/bash/blockchain/GettingChainScore.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-Diagnostic
-==========
-
-**Server info**
-
-Gets the REST server components versions.
-
-*Options*
-
-.. code-block:: bash
-
-    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
-
-*Command*
-
-.. viewsource:: resources/examples/bash/monitor/GettingServerInfo.sh
-    :language: bash
-    :start-after: #!/bin/sh
-
-**Storage**
-
-Gets diagnostic information about the node storage.
-
-*Options*
-
-.. code-block:: bash
-
-    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
-
-*Command*
-
-.. viewsource:: resources/examples/bash/monitor/GettingServerStorage.sh
     :language: bash
     :start-after: #!/bin/sh
 
@@ -762,6 +732,75 @@ Gets the mosaic id or address behind an namespace.
 *Command*
 
 .. viewsource:: resources/examples/bash/namespace/GettingAliasResolution.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+Node
+====
+
+Get node related information.
+
+**Health**
+
+Gets information about the connection and services status.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/node/GettingHealth.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Info**
+
+Gets information about the node.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/node/GettingInfo.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Server info**
+
+Gets the REST server components versions.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/node/GettingServerInfo.sh
+    :language: bash
+    :start-after: #!/bin/sh
+
+**Storage**
+
+Gets diagnostic information about the node storage.
+
+*Options*
+
+.. code-block:: bash
+
+    --profile <profile>  - (Optional) Select between your profiles, by providing a profile name.
+
+*Command*
+
+.. viewsource:: resources/examples/bash/node/GettingStorageInfo.sh
     :language: bash
     :start-after: #!/bin/sh
 
