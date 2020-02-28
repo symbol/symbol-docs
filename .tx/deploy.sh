@@ -1,5 +1,21 @@
 #!/bin/bash
 
-pip install transifex-client
-sudo echo $'[https://www.transifex.com]\nhostname = https://api.transifex.com\nusername = '"$TRANSIFEX_USER"$'\npassword = '"$TRANSIFEX_PASSWORD"$'\n' > ~/.transifexrc
-tx push -s
+tx_install() {
+    pip install transifex-client
+}
+
+tx_init() {
+    echo "[https://www.transifex.com]
+hostname = https://www.transifex.com
+username = $TRANSIFEX_USER
+password = $TRANSIFEX_PASSWORD
+token =" > ~/.transifexrc
+}
+
+tx_push() {
+    tx push -s
+}
+
+tx_install
+tx_init
+tx_push
