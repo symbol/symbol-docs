@@ -16,8 +16,8 @@
  *
  */
 
-import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'symbol-sdk';
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
+import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with sender address

@@ -16,6 +16,8 @@
  *
  */
 
+import {of} from 'rxjs';
+import {mergeMap} from 'rxjs/operators';
 import {
     Account,
     AggregateTransaction,
@@ -34,8 +36,6 @@ import {
     TransactionService,
     UInt64,
 } from 'symbol-sdk';
-import {of} from 'rxjs';
-import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with network type

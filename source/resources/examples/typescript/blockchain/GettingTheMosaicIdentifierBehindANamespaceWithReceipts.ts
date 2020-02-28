@@ -16,6 +16,7 @@
  *
  */
 
+import {map, mergeMap} from 'rxjs/operators';
 import {
     Account,
     Address,
@@ -29,7 +30,6 @@ import {
     TransferTransaction,
     UInt64,
 } from 'symbol-sdk';
-import {map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const aliasedMosaic = new Mosaic(

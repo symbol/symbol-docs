@@ -16,6 +16,8 @@
  *
  */
 
+import {of} from 'rxjs';
+import {mergeMap} from 'rxjs/operators';
 import {
     Account,
     AccountMetadataTransaction,
@@ -26,8 +28,6 @@ import {
     PublicAccount,
     RepositoryFactoryHttp,
 } from 'symbol-sdk';
-import {of} from 'rxjs';
-import {mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with network type

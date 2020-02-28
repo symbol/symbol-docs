@@ -1,5 +1,7 @@
 # Symbol Developer Documentation
 
+[![Build Status](https://travis-ci.org/nemtech/symbol-docs.svg?branch=master)](https://travis-ci.org/nemtech/symbol-docs)
+
 Browse the developer documentation to start integrating blockchain technology into your project.
 
 ## Symbol is Your Blockchain Platform

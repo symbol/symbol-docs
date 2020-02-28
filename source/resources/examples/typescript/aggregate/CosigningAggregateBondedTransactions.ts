@@ -16,6 +16,7 @@
  *
  */
 
+import {filter, map, mergeMap} from 'rxjs/operators';
 import {
     Account,
     AggregateTransaction,
@@ -24,7 +25,6 @@ import {
     NetworkType,
     RepositoryFactoryHttp,
 } from 'symbol-sdk';
-import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {

@@ -16,6 +16,7 @@
  *
  */
 
+import {filter, map, mergeMap} from 'rxjs/operators';
 import {
     Account,
     AggregateTransaction,
@@ -30,7 +31,6 @@ import {
     TransferTransaction,
     UInt64,
 } from 'symbol-sdk';
-import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {

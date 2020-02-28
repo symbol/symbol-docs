@@ -16,6 +16,8 @@
  *
  */
 
+import {merge} from 'rxjs';
+import {filter, tap} from 'rxjs/operators';
 import {
     Account,
     Address,
@@ -29,8 +31,6 @@ import {
     TransferTransaction,
     UInt64,
 } from 'symbol-sdk';
-import {merge} from 'rxjs';
-import {filter, tap} from 'rxjs/operators';
 
 /* start block 01 */
 // replace with recipient address

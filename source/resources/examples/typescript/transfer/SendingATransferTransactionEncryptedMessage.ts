@@ -23,7 +23,7 @@ import {
     PublicAccount,
     RepositoryFactoryHttp,
     TransferTransaction,
-    UInt64
+    UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */
