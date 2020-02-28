@@ -54,8 +54,15 @@ The following formula is used to convert days to blocks approximately:
 Supply mutable
 ==============
 
-If set to true, the mosaic supply can change at a later point.
-Otherwise, the mosaic supply remains immutable.
+If set to true, the mosaic supply can change at a later point. 
+In this case, the mosaic creator is allowed to redefine the total mosaic supply with a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`.
+The transaction increases or decreases the mosaic supply in ``delta`` units.
+
+To decrease the mosaic supply, the mosaic creator account must own at least ``delta`` units.
+This means that the mosaic creator cannot remove mosaics from other account balances, even if the supply mutable property is enabled.
+
+If set to false, the mosaic supply remains immutable.
+However, if the mosaic creator owns all the mosaic supply, this is modifiable even if the mosaic is defined as not mutable.
 
 Transferable
 ============
