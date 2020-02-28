@@ -14,6 +14,7 @@ script:
   - make gettext
 deploy:
   provider: script
+  skip_cleanup: true
   script: bash .tx/deploy.sh
   on:
     branch: master
