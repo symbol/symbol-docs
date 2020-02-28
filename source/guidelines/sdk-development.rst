@@ -79,24 +79,33 @@ Before starting
 3. Check the :doc:`API reference <../api>` and play with offered set of endpoints.
 4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` & :doc:`CLI <../cli>` .
 5. Join our `Slack <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ to ask |codename| related questions.
-6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and comment on your intentions in ``#sig-api`` channel. If someone is already working on it, we suggest you collaboratingwith them.
+6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and comment on your intentions in ``#sig-api`` channel.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
 ********************
 Creating the project
 ********************
 
-1. Add a README with the instructions to install the SDK.
-2. Add a `Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
-3. Add a `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
-4. Setup the Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
-
 You can base your work on the `TypeScript SDK <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
 The TypeScript version is the first SDK getting the latest updates.
 Check regularly the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
-We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last). A project with good test coverage it's more likely to be used and trusted by the developers!
-If you need inspiration, you can adapt the same `tests we did <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
+Create a new repository, preferably on GitHub, with:
+
+1. The README with the instructions to install the SDK.
+2. The `Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
+3. The `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
+
+Then, setup a Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
+
+We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
+
+A project with good test coverage it's more likely to be used and trusted by the developers!
+If you need inspiration, feel free to adapt directly the same tests we did.
+
+* Example of ``travis.yml`` `configuration file <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_
+* Example of `unit tests  <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
+* Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/e2e>`_.
 
 *************
 Infrastucture
@@ -121,9 +130,11 @@ These are the steps we followed to generate the Typescript DTOs (data transfer o
 
     openapi-generator generate -i ./openapi3.yml -g typescript-node -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
 
-4. The generated lib are normally published into a central repository (e.g. maven, npm). The SDKs depend on those libraries like any other third party dependency. To automate the deployment of the packages, including the generator for the selected programming language in the `symbol-openapi-generator <https://github.com/nemtech/symbol-openapi-generator>`_ project.
+4. The generated lib is normally published into a central repository (e.g. maven, npm). The SDKs depend on those libraries like any other third party dependency. To automate the deployment of the packages, including the generator for the selected programming language in the `symbol-openapi-generator <https://github.com/nemtech/symbol-openapi-generator>`_ project.
 
 5. Drop the generated client classes and implement them using the `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of `ReactiveX <http://reactivex.io/>`_.
+
+.. note:: The SDK for TypeScript currently chooses the ``typescript-node`` template from the OpenAPI Generator, but there are also other templates available to fit for other purposes. The SDK has interfaced out all the Http Repositories so that different implementations can be applied.
 
 Example of repositories and implementations:
 
@@ -169,11 +180,11 @@ For example, the |sdk| uses the generated code to operate with the entities in b
 
 If there is a generator, follow the next steps to generate the builders for all the existent entities:
 
-1. Clone the catbuffer-generators repository.
+1. Clone the catbuffer-generators repository recursively.
 
 .. code-block:: bash
 
-   git clone https://github.com/nemtech/catbuffer-generators
+   git clone --recursive git@github.com:nemtech/catbuffer-generators.git
 
 2. Install the package requirements.
 
@@ -183,19 +194,15 @@ If there is a generator, follow the next steps to generate the builders for all 
 
 3. Clone the catbuffer repository inside the ``catbuffer-generators`` folder.
 
-.. code-block:: bash
-
-   git clone https://github.com/nemtech/catbuffer
-
 4. Generate code for all the schemas running the following command under the ``catbuffer-generators`` directory, replacing ``cpp_builder`` for the targeted programming language.
 
 .. code-block:: bash
 
-   python ../scripts/generate_all.sh cpp_builder
+   python scripts/generate_all.sh cpp_builder
 
 The previous command creates a new file for every schema under the ``catbuffer/_generated/cpp_builder`` folder.
 
-5. Publish the generated code into a central repository and make the SDK dependant on this library. For every transaction type, use the generated builders to serialize and deserialize transactions.
+5. Publish the generated code into a central repository (e.g. Maven, NPM) and make the SDK dependant on this library. For every transaction type, use the generated builders to serialize and deserialize transactions.
 
 Here you can find some examples of how we used transactions builders:
 
@@ -210,9 +217,22 @@ KeyPair and Cryptographic functions
 
 .. note:: This section is incomplete.
 
-Implementing cryptographic functions is required to sign transactions.
+Cryptographic functions are required to sign transactions.
+All the crypto-related functions can be found under the `core/crypto <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/core/crypto>`_ module.
 
-Example: `core/crypto <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/core/crypto>`_
+SDKs use standard ``tweetnacl`` (ed2559) for key pair generation, address derivation (from public key) and signings:
+
+* Keypairs are based on tweetnacl 64 bytes secretKey (public + private) using SHA-512.
+* Signatures use tweetnacl detached mode and also get generated using SHA-512.
+
+Finally, pay special attention to the `test vectors <https://github.com/nemtech/test-vectors>`_.
+The best way to make sure your implementation is correct is to use the test vectors files as inputs and expected outputs.
+
+Examples of vector tests:
+
+* `KeyPairVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/master/sdk-core/src/test/java/io/nem/symbol/core/crypto/KeyPairVectorTester.java>`_
+* `DsaSignerVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/master/sdk-core/src/test/java/io/nem/symbol/core/crypto/DsaSignerVectorTester.java>`_
+* `KeyPair <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/test/core/crypto/keyPair.spec.ts#L88>`_
 
 ********
 Services
