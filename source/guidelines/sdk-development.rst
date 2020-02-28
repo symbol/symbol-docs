@@ -96,16 +96,24 @@ Create a new repository, preferably on GitHub, with:
 2. The `Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/>`_.
 3. The `Contributors guidelines <https://help.github.com/articles/setting-guidelines-for-repository-contributors/>`_ to help others know how they can help you.
 
-Then, setup a Continuous Integration system. We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
-
-We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
+*******
+Testing
+*******
 
 A project with good test coverage it's more likely to be used and trusted by the developers!
+
+We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
 If you need inspiration, feel free to adapt directly the same tests we did.
 
 * Example of ``travis.yml`` `configuration file <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_
 * Example of `unit tests  <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
 * Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/e2e>`_.
+
+Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite automatically.
+We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
+
+Also, we strive to keep our codebases with a unit test coverage of 80% or higher.
+We use `coveralls <https://coveralls.io/`_ to monitor test coverage.
 
 *************
 Infrastucture
