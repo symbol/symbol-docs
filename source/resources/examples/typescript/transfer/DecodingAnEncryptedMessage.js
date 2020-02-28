@@ -17,8 +17,8 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;

@@ -36,7 +36,9 @@ const nonce = symbol_sdk_1.MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), nonce, symbol_sdk_1.MosaicId.createFromNonce(nonce, account.publicAccount), symbol_sdk_1.MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable), divisibility, duration, networkType);
 /* end block 01 */
 /* start block 02 */
-const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction.create(symbol_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, symbol_sdk_1.MosaicSupplyChangeAction.Increase, symbol_sdk_1.UInt64.fromUint(1000000), networkType);
+// replace with mosaic units to increase
+const delta = 1000000;
+const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction.create(symbol_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, symbol_sdk_1.MosaicSupplyChangeAction.Increase, symbol_sdk_1.UInt64.fromUint(delta * Math.pow(10, divisibility)), networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [
