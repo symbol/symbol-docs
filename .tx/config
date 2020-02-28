@@ -79,6 +79,12 @@ source_file = build/gettext/concepts/cryptography.pot
 source_lang = en
 type = PO
 
+[symboldocs.concepts--data-validation]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/data-validation.po
+source_file = build/gettext/concepts/data-validation.pot
+source_lang = en
+type = PO
+
 [symboldocs.concepts--fees]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
 source_file = build/gettext/concepts/fees.pot
@@ -455,6 +461,12 @@ type = PO
 [symboldocs.guides--network--configuring-node-properties]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
 source_file = build/gettext/guides/network/configuring-node-properties.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--network--connecting-to-mongodb]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/connecting-to-mongodb.po
+source_file = build/gettext/guides/network/connecting-to-mongodb.pot
 source_lang = en
 type = PO
 

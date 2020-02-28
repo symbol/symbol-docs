@@ -14,9 +14,6 @@ script:
   - make gettext
 deploy:
   provider: script
-  script:
-    - pip install transifex-client
-    - echo $'[https://www.transifex.com]\nhostname = https://api.transifex.com\nusername = '"$TRANSIFEX_USER"$'\npassword = '"$TRANSIFEX_PASSWORD"$'\n' > ~/.transifexrc
-    - tx push -s
+  script: bash .tx/deploy.sh
   on:
     branch: master
