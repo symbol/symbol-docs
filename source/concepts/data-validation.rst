@@ -30,7 +30,7 @@ A Merkle tree is built by hashing together two hashes, from left to right, repea
 .. note:: If there is a layer with an odd number of hashes (and the number is different to 1), the last hash is doubled.
 
 Merkle root
-==========
+===========
 
 The hash at the bottom of the tree is called the Merkle root.
 The Merkle root hashes for receipts and transactions are included in block headers to summarize the data linked.
