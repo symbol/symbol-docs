@@ -109,7 +109,7 @@ If you need inspiration, feel free to adapt directly the same tests we did.
 * Example of `unit tests  <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
 * Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/e2e>`_.
 
-Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite automatically.
+Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite and code linter automatically.
 We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
 
 Also, we strive to keep our codebases with a unit test coverage of 80% or higher.
