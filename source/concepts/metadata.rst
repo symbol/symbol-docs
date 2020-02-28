@@ -12,7 +12,7 @@ The most common uses of metadata are:
 Metadata is uniquely **identified** by the tuple ``{ signer, target-id, metadata-key }``.
 Including a signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
 
-The **value** linked to an identifier is a string up to ``1024`` characters,  being this parameter :ref:`editable per network <config-network-properties>`.
+The **value** linked to an identifier is a string up to ``1023`` characters,  being this parameter :ref:`editable per network <config-network-properties>`.
 The client application is responsible for encrypting the message or keeping it visible for every blockchain participant.
 
 ***********
