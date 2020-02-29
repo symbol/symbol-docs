@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -57,8 +57,8 @@ msgstr ""
 " することでこれらと疎通できます。 "
 
 #: ../../source/getting-started/setup-workstation.rst:30
-msgid "Install |cli|."
-msgstr "|cli| のインストール"
+msgid "Install |cli|. The required Node.js version is 12.X LTS."
+msgstr "|cli| のインストール。バージョン 12.X LTS の Node.js が必要です。"
 
 #: ../../source/getting-started/setup-workstation.rst:36
 msgid "Generate a new account and save it as a **profile**."
@@ -126,11 +126,11 @@ msgstr ""
 msgid ""
 "The faucet has a limited amount of |networkcurrency| and must be replenished"
 " before it dries. If you don’t need your test |networkcurrency| units "
-"anymore, please send them back to the account ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2"
-"-QM6QZT-BGWDJZ-GNQW``."
+"anymore, please send them back to the account ``TC3QLP-S4L4MM-LA7X6H-JCORXD-"
+"R4BPRM-KQNQZE-ITY2``."
 msgstr ""
 "フォーセットは |networkcurrency| の量が限られているため、不足する前に補充する必要があります。 |networkcurrency| "
-"が必要なくなった場合は ``TAPEQM-ZKSSHR-S36JCZ-KBCIB2-QM6QZT-BGWDJZ-GNQW`` へ送り返してください。"
+"が必要なくなった場合は ``TC3QLP-S4L4MM-LA7X6H-JCORXD-R4BPRM-KQNQZE-ITY2`` へ送り返してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:103
 msgid "Creating a project"
@@ -158,9 +158,8 @@ msgstr ""
 #: ../../source/getting-started/setup-workstation.rst:115
 #: ../../source/getting-started/setup-workstation.rst:144
 msgid ""
-"Create a ``package.json`` file. The minimum required Node.js version is "
-"8.9.X."
-msgstr "``package.json`` を作成します。バージョン 8.9.X 以上の Node.js が必要です。"
+"Create a ``package.json`` file. The required Node.js version is 12.X LTS."
+msgstr "``package.json`` を作成します。バージョン 12.X LTS の Node.js が必要です。"
 
 #: ../../source/getting-started/setup-workstation.rst:121
 #: ../../source/getting-started/setup-workstation.rst:150
@@ -176,8 +175,8 @@ msgstr ""
 "を使うことを推奨します。"
 
 #: ../../source/getting-started/setup-workstation.rst:129
-msgid "Make sure you have at least version 2.5.X installed."
-msgstr "バージョン 2.5.X 以上がインストールされていることを確認してください。"
+msgid "Make sure you have at least version 3.X installed."
+msgstr "バージョン 3.X 以上がインストールされていることを確認してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:136
 msgid "Use `ts-node`_ to execute TypeScript files with node."
@@ -185,19 +184,19 @@ msgstr "`ts-node`_ を使うと TypeScript ファイルを node で実行でき�
 
 #: ../../source/getting-started/setup-workstation.rst:158
 msgid ""
-"Open a new Java `gradle`_ project. The minimum `JDK`_ version is JDK 8. Use "
-"your favourite IDE or create a project from the command line."
+"Open a new Java `gradle`_ project. The required `JDK`_ version is JDK 8. Use"
+" your favourite IDE or create a project from the command line."
 msgstr ""
-"新しく Java `gradle`_ プロジェクトを開いてください。`JDK`_ は最低でも JDK 8 "
-"が必要です。お気に入りのIDEを使用するか、コマンドラインからプロジェクトを作成してください。"
+"新しく Java `gradle`_ プロジェクトを開いてください。要求される `JDK`_ は JDK 8 です。お気に入りの IDE "
+"を使用するか、コマンドラインからプロジェクトを作成してください。"
 
 #: ../../source/getting-started/setup-workstation.rst:164
 msgid "Edit ``build.gradle`` to use Maven central repository."
 msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
 
 #: ../../source/getting-started/setup-workstation.rst:172
-msgid "Add nem2-sdk as a dependency."
-msgstr "nem2-sdk を依存として追加します。"
+msgid "Add symbol-sdk as a dependency."
+msgstr "symbol-sdk を依存として追加します。"
 
 #: ../../source/getting-started/setup-workstation.rst:180
 msgid "Execute ``gradle build`` and ``gradle run`` to run your program."

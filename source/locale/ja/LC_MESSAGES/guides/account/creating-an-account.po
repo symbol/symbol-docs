@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-11-25 18:21+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -48,12 +48,12 @@ msgid ""
 "Open a new file and run the following code snippet to create an account."
 msgstr "アカウントを作成するために、新しいファイルを開いて、次のコードスニペットを実行してください。"
 
-#: ../../source/guides/account/creating-an-account.rst:50
+#: ../../source/guides/account/creating-an-account.rst:51
 msgid ""
 "If you already have a private key, you can use it to define a new "
 "``Account`` object."
 msgstr "既に秘密鍵を持っている場合は、それを使用して ``Account`` オブジェクトを定義することができます。"
 
-#: ../../source/guides/account/creating-an-account.rst:66
+#: ../../source/guides/account/creating-an-account.rst:72
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

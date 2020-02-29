@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -182,14 +182,16 @@ msgstr ""
 
 #: ../../source/concepts/harvesting.rst:80
 msgid ""
-"Then, the account needs to send a **special encrypted message** to the node "
+"Then, the account needs to send a `special encrypted message "
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node "
 "via a :doc:`TransferTransaction <transfer-transaction>`. The message must "
 "contain the remote's account **proxy private key**  encrypted using AES, so "
 "that only the recipient will be able to decipher it."
 msgstr ""
 "次に、アカウントは :doc:`TransferTransaction <transfer-transaction>` を用いて "
-"**特別な暗号化メッセージ** をノードへ送信する必要があります。このメッセージは、受信者だけが解読できるように AES を用いて暗号化されたリモートの"
-" **プロキシ秘密鍵** が含まれていなければなりません。"
+"`特別な暗号化メッセージ <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_"
+" をノードへ送信する必要があります。このメッセージは、受信者だけが解読できるように AES を用いて暗号化されたリモートの **プロキシ秘密鍵** "
+"が含まれていなければなりません。"
 
 #: ../../source/concepts/harvesting.rst:83
 msgid ""
@@ -403,4 +405,4 @@ msgstr "アカウントを関連付ける"
 
 #: ../../source/concepts/harvesting.rst:175
 msgid "Continue: :doc:`Inflation <inflation>`."
-msgstr "次へ: :doc:`インフレーション <inflation>`"
+msgstr "次項: :doc:`インフレーション <inflation>`"

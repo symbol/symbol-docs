@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -177,10 +177,6 @@ msgid ""
 msgstr ""
 "これを明示的に述べているかどうかにかかわらず、著作権で保護された素材をプルリクエスト、電子メール、またはその他の方法で提出することは、プロジェクトのオープンソースライセンスの下での素材のライセンスを取得することに同意し、法的権限を有することを保証します。"
 
-#: ../../source/guidelines/suggesting-changes.rst:82
-msgid "Building nem2-docs"
-msgstr "nem2-docs のビルド"
-
 #: ../../source/guidelines/suggesting-changes.rst:84
 msgid ""
 "If the documentation change is small, you can use the *\"Edit on Github\"* "
@@ -239,15 +235,6 @@ msgstr ""
 "ローカルでの変更をフォークしたリポジトリのコピーにプッシュし |pull-request| "
 "を送信します。プルリクエストであなたの変更を要約するタイトルを記入し、変更が何をしているかの詳細を本文に記入します。また、議論が行われた場合の "
 "issue 番号、例えば \"Closes＃123\" も記入します。"
-
-#: ../../source/guidelines/suggesting-changes.rst:115
-msgid ""
-"Then sit back and wait. There will probably be a discussion about the pull "
-"request and, if any changes are needed, we would love to work with you to "
-"get your pull request merged into nem2-docs."
-msgstr ""
-"それが済んだら休憩して待ちましょう。プルリクエストについての議論をして、その変更が必要な場合はプルリクエストを nem2-docs "
-"にマージするための協力をしたいと思います。"
 
 #: ../../source/guidelines/suggesting-changes.rst:117
 msgid ""

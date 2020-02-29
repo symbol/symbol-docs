@@ -2,17 +2,17 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -88,27 +88,32 @@ msgid ""
 ":doc:`CLI tool <../../cli>`."
 msgstr "Alice と証明書用のアカウントを :doc:`CLI tool <../../cli>` を使用して作成します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:67
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:66
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/transfer/sending-an-encrypted-message.rst:69
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:154
+msgid "Encrypt the message"
+msgstr "メッセージの暗号化"
+
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:71
 msgid ""
 "Create an **encrypted message** for the certificate, signing it with Alice's"
 " account."
 msgstr "証明書用の **暗号化メッセージ** を作成して Alice のアカウントで署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:83
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:85
 msgid ""
 "Attach the encrypted message to a **TransferTransaction**, setting the "
 "certificate address as the recipient."
 msgstr "**TransferTransaction** に暗号化メッセージを添付して、受信者には証明書アドレスを設定します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:97
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:99
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:99
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:101
 msgid ""
 "To make the transaction only valid for your network, include the first block"
 " generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
@@ -117,26 +122,34 @@ msgstr ""
 "自分のネットワークでのみ有効なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
 "'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:113
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:115
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:127
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:130
+msgid "Decrypt the message"
+msgstr "メッセージの復号"
+
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:132
 msgid ""
-"5. After the transaction gets confirmed, fetch it using the transaction hash"
-" output from (3). You can now **decrypt the message** using either the "
+"After the transaction gets confirmed, fetch it using the transaction hash "
+"output from (3). You can now **decrypt the message** using either the "
 "certificate account or address account."
 msgstr ""
-"5. トランザクションが承認された後に (3) "
+"トランザクションが承認された後に (3) "
 "で出力されたトランザクションハッシュを使用してトランザクションを取得します。証明書アカウントまたはアドレスアカウントを使用して **メッセージを復号**"
 " できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:142
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:147
 msgid ""
 "If you managed to read the message, try to decrypt it using another "
 "unrelated account to ensure that only the defined participants can read the "
 "encrypted content."
 msgstr ""
 "メッセージを読むことができたら、定義された参加者だけが暗号化された内容を読むことができることを確認するために、別の無関係なアカウントを使ってメッセージが解読できないことを試してください。"
+
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:151
+msgid "Method #02: Using the CLI"
+msgstr "方法 #02: CLI を使用する"

@@ -2,17 +2,17 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Bob のアドレスが受信者で ``10`` |networkcurrency| を添付した **TransferTransaction** "
 "を定義してください。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:72
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:77
 msgid ""
 "As you may have noticed, transfer transactions require an array of mosaics "
 "as a parameter. This permits sending transfer transactions with multiple "
@@ -91,13 +91,13 @@ msgid ""
 msgstr ""
 "すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とします。これは一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:75
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:80
 msgid ""
 "If you own more than one mosaic, you can send them together in the same "
 "transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信できます:"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:89
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:99
 msgid ""
 "|codename| works with absolute amounts. To get an absolute amount, multiply "
 "the number of assets you want to send by 10\\ :sup:`divisibility`.  For "
@@ -109,11 +109,11 @@ msgstr ""
 "を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-mosaic-information>` 2 "
 "である場合、10 単位 (相対) 送信するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:91
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:101
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:93
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:103
 msgid ""
 "Include the first block generation hash to make the transaction only valid "
 "for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
@@ -122,13 +122,13 @@ msgstr ""
 "あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
 "'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:107
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:122
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:121
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:141
 msgid ""
 "5. Open the terminal where you are monitoring the transaction's status. The "
 "transaction should appear as confirmed after ±15 seconds and the amount "
@@ -140,6 +140,6 @@ msgstr ""
 "トランザクションのステータスを監視しているターミナルを開いてください。トランザクションは15秒前後で承認済みとして現れ、定義した総量は送信者アカウントから受信者アカウントへ送られます。ターミナルでエラーが起きた場合はエラーコードの意味を"
 " :ref:`こちら <status-errors>` で参照してください。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:127
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:147
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

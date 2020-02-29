@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -62,11 +62,11 @@ msgstr "トランザクションステートメント"
 #: ../../source/concepts/receipt.rst:27
 msgid ""
 "A :ref:`transaction statement <transaction-statement>` is a collection of "
-"receipts linked with a transaction in a particular block. Statements can "
+"receipts linked to a transaction in a particular block. Statements can "
 "include receipts with the following basic types:"
 msgstr ""
 ":ref:`トランザクションステートメント <transaction-statement>` "
-"は特定のブロック内のトランザクションにリンクしたレシートの集合です。ステートメントは以下の基礎タイプをもつレシートを含みます:"
+"は特定のブロック内のトランザクションにリンクしたレシート集合です。ステートメントは以下の基礎タイプをもつレシートを含みます:"
 
 #: ../../source/concepts/receipt.rst:30
 msgid ""
@@ -445,5 +445,5 @@ msgid "Reserved."
 msgstr "予約済み"
 
 #: ../../source/concepts/receipt.rst:313
-msgid "Continue: :doc:`Node <node>`."
-msgstr "次へ: :doc:`ノード <node>`"
+msgid "Continue: :doc:`Data validation <data-validation>`."
+msgstr "次項: :doc:`データバリデーション <inflation>`"

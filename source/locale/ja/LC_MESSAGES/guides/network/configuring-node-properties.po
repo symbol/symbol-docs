@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -160,6 +160,10 @@ msgid "Server api port."
 msgstr "サーバ API ポート"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of incoming connections per identity over primary port."
+msgstr "プライマリポート経由の着信接続の ID ごとの最大数。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if the server should reuse ports already in use."
 msgstr "true の場合、サーバは使用中のポートを再利用します。"
 
@@ -178,9 +182,54 @@ msgid "Set to true if transaction spam throttling should be enabled."
 msgstr "true の場合、スパムスロットルが有効になります。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of nodes to track in memory."
+msgstr "メモリに追跡保持するノードの最大数"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Networks that should be treated as local."
+msgstr "ローカルとして扱われるべきネットワーク。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Node host (leave empty to auto-detect IP)."
+msgstr "ノードホスト (空の場合は自動的に IP アドレスを取得)"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Node friendly name (leave empty to use address)."
+msgstr "ノードのフレンドリー名 (空の場合はアドレスを使用)"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Node version."
+msgstr "ノードバージョン"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of active connections."
+msgstr "有効な接続の最大数"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Default duration for banning."
+msgstr "BAN 期間のデフォルト値"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum duration for banning."
+msgstr "BAN の最大期間"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of banned nodes."
+msgstr "BAN 済ノードの最大数"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Harvester private key."
 msgstr "ハーベスタの秘密鍵"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if auto harvesting is enabled."
 msgstr "true の場合、自動ハーベスティングが有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of unlocked accounts."
+msgstr "アンロックアカウントの最大数"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Public key of the account receiving part of the harvested fee."
+msgstr "ハーベスト手数料の一部を受け取るアカウントの公開鍵"

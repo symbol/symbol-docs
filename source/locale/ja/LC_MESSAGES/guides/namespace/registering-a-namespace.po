@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,7 +61,7 @@ msgid ""
 "if your namespace name is **available**."
 msgstr "この例では、 ``foo`` と呼ばれるネームスペースを取得します。あなたのネームスペースが **有効** かどうかを確認してください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:53
+#: ../../source/guides/namespace/registering-a-namespace.rst:58
 msgid ""
 "Is the namespace available? Try to register it before someone else does it! "
 "Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-"
@@ -71,7 +71,7 @@ msgstr ""
 ":ref:`NamespaceRegistrationTransaction1 <namespace-registration-"
 "transaction>` をアナウンスしてください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:67
+#: ../../source/guides/namespace/registering-a-namespace.rst:72
 msgid ""
 "To keep the ownership of your namespace, you will have to :doc:`extend its "
 "duration before it expires <extending-a-namespace-registration-period>`."
@@ -79,15 +79,15 @@ msgstr ""
 "あなたのネームスペース所有権を維持するためには :doc:`期限が切れる前にネームスペース期間の延長 <extending-a-namespace-"
 "registration-period>` を行ってください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:71
+#: ../../source/guides/namespace/registering-a-namespace.rst:76
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:79
+#: ../../source/guides/namespace/registering-a-namespace.rst:84
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:81
+#: ../../source/guides/namespace/registering-a-namespace.rst:86
 msgid ""
 "When the transaction is confirmed, :doc:`register a subnamespace "
 "<registering-a-subnamespace>` following the next guide."

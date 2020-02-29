@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -505,15 +505,6 @@ msgid ""
 "We recommend using one of the following tools to interact with the available"
 " endpoints."
 msgstr "有効なエンドポイントと疎通するために以下のツールを推奨します:"
-
-#: ../../source/api.rst:380
-msgid ""
-"The **NEM2 Software Development Kit** is the primary software development "
-"tool to create NEM2 components, such as additional tools, libraries or "
-"applications."
-msgstr ""
-"**NEM2 ソフトウェア開発キット** とは NEM2 "
-"コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
 #: ../../source/api.rst:382
 msgid ":doc:`Reference <../sdk>`"

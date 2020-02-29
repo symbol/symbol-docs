@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/index.rst:11
-msgid "NEM Developer Center"
-msgstr "NEM デベロッパーセンター"
+msgid "Symbol Developers"
+msgstr "Symbol 開発者"
 
 #: ../../source/index.rst:13
 msgid ""
@@ -32,8 +32,8 @@ msgid ""
 msgstr "開発者向けドキュメントを参照し、ブロックチェーンテクノロジーをプロジェクトに統合しましょう。"
 
 #: ../../source/index.rst:17
-msgid "Catapult is Your Blockchain Platform"
-msgstr "Catapult はあなたのブロックチェーンプラットフォームです。"
+msgid "Symbol is Your Blockchain Platform"
+msgstr "Symbol はあなたのブロックチェーンプラットフォームです。"
 
 #: ../../source/index.rst:19
 msgid ""
@@ -47,13 +47,13 @@ msgstr ""
 #: ../../source/index.rst:22
 msgid ""
 "|codename| offers flexible and secure customizable solutions through simple,"
-" yet powerful, built-in features. Developers are able to easily integrate "
-"blockchain technology into their projects or create powerful dApps using "
-"|codename|'s :doc:`REST API <api>`. This allows creating a variety of "
-"architectural solutions with lightweight code efficiently, in any "
+" yet powerful, **built-in features**. Developers are able to easily "
+"integrate blockchain technology into their projects or create powerful dApps"
+" using |codename|'s :doc:`REST API <api>`. This allows creating a variety of"
+" architectural solutions with lightweight code efficiently, in any "
 "programming language."
 msgstr ""
-"|codename| は柔軟で、安全な、カスタム可能のソリューションとして、シンプルで、しかしパワフルな組み込み機能を提供します。開発者は "
+"|codename| は柔軟で、安全な、カスタム可能のソリューションとして、シンプルで、しかしパワフルな **組み込み機能** を提供します。開発者は "
 "|codename| の :doc:`REST API <api>` "
 "を使って、ブロックチェーンのテクノロジーを彼らのプロジェクトへの統合を容易にしたり、強力な dApps "
 "を作成することができます。これにより、任意のプログラミング言語の軽量なコードで効率的に、さまざまなアーキテクチャソリューションを作成することができます。"
@@ -113,8 +113,8 @@ msgid ""
 msgstr "次のステップバイステップの実装例でソフトウェア開発キットとツールの使用方法を学びます。"
 
 #: ../../source/index.rst:49
-msgid ":doc:`How to create a wallet <guides/account/creating-an-account>`"
-msgstr ":doc:`ウォレットの作り方 <guides/account/creating-an-account>`"
+msgid ":doc:`How to create an account <guides/account/creating-an-account>`"
+msgstr ":doc:`アカウントの作り方 <guides/account/creating-an-account>`"
 
 #: ../../source/index.rst:50
 msgid ""
@@ -144,8 +144,8 @@ msgid ":ref:`More guides <blog-categories>`"
 msgstr ":ref:`他のガイド <blog-categories>`"
 
 #: ../../source/index.rst:58
-msgid "Contributing to Catapult"
-msgstr "Catapult へ貢献する"
+msgid "Contributing to Symbol"
+msgstr "Symbol へ貢献する"
 
 #: ../../source/index.rst:60
 msgid ""
