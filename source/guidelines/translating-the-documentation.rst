@@ -14,15 +14,15 @@ Follow this guide to start contributing to the translation of the |sitename|.
 
 1. Sign up for an account
 
-Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=nem2docs>`_ .
+Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=symboldocs>`_ .
 Also, we recommend reading Transifex's `Getting Started as a Translator guide <https://docs.transifex.com/getting-started-1/translators>`_.
 
 2. Join symbol-docs team and choose a language
 
-Explore the `nem2-docs project in Transifex <https://www.transifex.com/nemtech/nem2docs/>`_.
+Explore the `nem2-docs project in Transifex <https://www.transifex.com/nemtech/symboldocs/>`_.
 Check which languages are being translated and up to which point they are complete.
 
-Click on `Help Translate "nem2-docs" <https://www.transifex.com/signup/?join_project=nem2docs>`_ button on the right side of the header, selecting the language you want to contribute.
+Click on `Help Translate "nem2-docs" <https://www.transifex.com/signup/?join_project=symboldocs>`_ button on the right side of the header, selecting the language you want to contribute.
 
 The translation coordinator will approve your request.
 Once accepted, you will receive an email. At this moment, you will be able to start translating the docs.

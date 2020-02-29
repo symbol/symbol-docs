@@ -30,7 +30,7 @@ function initLanguageSelector() {
             translatePathRedirect($(this).val());
         }
         else {
-            window.location.href = 'https://www.transifex.com/nemtech/nem2docs/';
+            window.location.href = 'https://www.transifex.com/nemtech/symboldocs/';
         }
     });
 }
