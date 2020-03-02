@@ -135,7 +135,8 @@ body > .container {
     color: #333;
     border-bottom: 2px solid #00C8FF;
 }
-.content a:hover{
+.content a:hover,
+.content a:focus{
     text-decoration: none;
 }
 .content ul {
@@ -497,12 +498,13 @@ div.figure .caption {
 .mermaid .note,
 .mermaid  rect,
 .mermaid .actor{
-    stroke: #ff00ff;
-    fill: #fff;
+    stroke: #ff00ff !important;
+    fill: #fff !important;
 }
 .mermaid line,
+.mermaid .path,
 .mermaid .messageLine0{
-    stroke: #ff00ff;
+    stroke: #ff00ff !important;
 }
 .mermaid text.actor tspan {
     fill: #333;

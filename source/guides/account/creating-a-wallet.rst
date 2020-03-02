@@ -43,10 +43,6 @@ Open a new file and run the following code snippet to create a new wallet.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccountWallet.sh
-        :language: bash
-        :start-after: #!/bin/sh
-
 If you already have a private key, you can use it to define a new ``SimpleWallet`` object.
 
 .. example-code::
