@@ -68,7 +68,6 @@ class ModifyingMosaicSupply {
             /* end block 01 */
 
             /* start block 02 */
-            // replace with network generation hash
             final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
 
             final SignedTransaction signedTransaction = account

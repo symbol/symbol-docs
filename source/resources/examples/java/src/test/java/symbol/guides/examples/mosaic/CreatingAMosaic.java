@@ -94,9 +94,7 @@ class CreatingAMosaic {
                             ))
                     .maxFee(BigInteger.valueOf(2000000)).build();
 
-            // replace with network generation hash
             final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
-
             final SignedTransaction signedTransaction = account
                     .sign(aggregateTransaction, generationHash);
 
