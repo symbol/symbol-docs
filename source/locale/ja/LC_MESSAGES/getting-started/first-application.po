@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -324,19 +324,19 @@ msgstr "添付されたメッセージ"
 msgid "The network type."
 msgstr "ネットワークタイプ"
 
-#: ../../source/getting-started/first-application.rst:208
+#: ../../source/getting-started/first-application.rst:213
 msgid ""
 "Although the transaction is defined, it has not been announced to the "
 "network yet."
 msgstr "トランザクションは定義されましたが、まだネットワークへはアナウンスされていません。"
 
-#: ../../source/getting-started/first-application.rst:210
+#: ../../source/getting-started/first-application.rst:215
 msgid ""
 "Sign the transaction with the **ticket vendor account**, so that the network"
 " can verify the authenticity of the transaction."
 msgstr "ネットワークがトランザクションの信頼性を検証できるように **チケット販売者のアカウント** でトランザクションに署名をします。"
 
-#: ../../source/getting-started/first-application.rst:212
+#: ../../source/getting-started/first-application.rst:217
 msgid ""
 "Include the first block generation hash to make the transaction only valid "
 "for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
@@ -345,35 +345,35 @@ msgstr ""
 "あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
 "'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:226
+#: ../../source/getting-started/first-application.rst:236
 msgid "Once signed, announce the transaction to the network."
 msgstr "署名が終わったら、トランザクションをネットワークへアナウンスします。"
 
-#: ../../source/getting-started/first-application.rst:244
+#: ../../source/getting-started/first-application.rst:259
 msgid ""
 "When the transaction appears as confirmed, check if the customer has "
 "received the ticket."
 msgstr "トランザクションが承認されたら、購入者がチケットを受信したことを確認します。"
 
-#: ../../source/getting-started/first-application.rst:252
+#: ../../source/getting-started/first-application.rst:267
 msgid "Did we solve the use case?"
 msgstr "このユースケースを解決できたのでしょうか？"
 
-#: ../../source/getting-started/first-application.rst:254
+#: ../../source/getting-started/first-application.rst:269
 msgid ""
 "✅ Identify each customer: Creating |codename| accounts for each customer."
 msgstr "✅ 各購入者の識別: 各購入者の |codename| アカウントの作成"
 
-#: ../../source/getting-started/first-application.rst:256
+#: ../../source/getting-started/first-application.rst:271
 msgid "✅ Avoid ticket reselling: Creating a non-transferable mosaic."
 msgstr "✅ チケットの転売防止: 転送不可能なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:258
+#: ../../source/getting-started/first-application.rst:273
 msgid ""
 "✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic."
 msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:260
+#: ../../source/getting-started/first-application.rst:275
 msgid ""
 "Continue learning about more about |codename| :doc:`built-in features "
 "<../concepts/account>`."

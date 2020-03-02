@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -54,14 +54,14 @@ msgstr ""
 "javascript/classes/_infrastructure_accounthttp_.accounthttp.html>`_ "
 "リポジトリを使用してください。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:46
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:51
 msgid ""
 "By default, the SDK provides up to 10 transactions. The page size can be "
 "increased up to 100 transactions."
 msgstr ""
 "デフォルトでは、SDK は 10 トランザクションまでを提供しています。このパラメータは 100 トランザクションまで増加することができます。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:48
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:53
 msgid ""
 "2. To `get more than 100 transactions "
 "<https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
@@ -74,6 +74,6 @@ msgstr ""
 " をするためには、あなたはさらなる要求をしなければなりません。各追加の呼び出しにおいて、``QueryParams`` にオプションのパラメタである "
 "``transactionId`` に前の要求によって返された最新のトランザクション識別子を追加してください。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:57
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:62
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -246,16 +246,22 @@ msgid ""
 ":doc:`Check the API reference <../api>` and play with the API endpoints."
 msgstr ":doc:`API リファレンスを確認 <../api>` して、API エンドポイントを利用してみてください。"
 
+#: ../../source/guidelines/sdk-development.rst:120
+msgid ""
+"Become familiar with the current :doc:`SDK via code examples "
+"<../concepts/account>` & :doc:`CLI <../cli>` ."
+msgstr ""
+"現在の :doc:`SDK のコード例 <../concepts/account>` と :doc:`CLI <../cli>` に詳しくなる。"
+
 #: ../../source/guidelines/sdk-development.rst:122
 msgid ""
 "Be sure no one is already working on the SDK you want to create. Check the "
-":doc:`repository list <../sdk>` and  comment your intentions in  nem2 slack "
-"``#sig-api`` channel. If someone is already working on it, we suggest you "
-"collaborate with him/her."
+":doc:`repository list <../sdk>` and comment your intentions in ``#sig-api`` "
+"channel. If someone is already working on it, we suggest you collaborate "
+"with them."
 msgstr ""
-"作成しようとしている SDK にまだ誰も取り組んでいないことを確認してください。:doc:`リポジトリリスト <../sdk>` をチェックし nem2"
-" slack の ``#sig-api`` "
-"チャンネルであなたの意向をコメントしてください。すでに誰かがそれに取り組んでいた場合は彼/彼女と協力することを推奨します。"
+"作成しようとしている SDK にまだ誰も取り組んでいないことを確認してください。:doc:`リポジトリリスト <../sdk>` をチェックし "
+"``#sig-api`` チャンネルであなたの意向をコメントしてください。すでに誰かがそれに取り組んでいた場合はその方と協力することを推奨します。"
 
 #: ../../source/guidelines/sdk-development.rst:123
 msgid ""
@@ -294,6 +300,11 @@ msgstr "API ラッパー"
 msgid "Download the latest Open API definition."
 msgstr "最新の Open API 定義をダウンロード。"
 
+#: ../../source/guidelines/sdk-development.rst:163
+msgid ""
+"`Open API definition <https://github.com/nemtech/symbol-openapi/releases>`_"
+msgstr "`Open API 定義 <https://github.com/nemtech/symbol-openapi/releases>`_"
+
 #: ../../source/guidelines/sdk-development.rst:167
 msgid "Download the OpenAPI generator and generate the DTOs."
 msgstr "OpenAPI ジェネレータをダウンロードして、DTO を生成してください。"
@@ -316,9 +327,30 @@ msgid ""
 "might need to convert those types for the user."
 msgstr "API 変換: API によって返されるデータは圧縮される場合があります。ユーザーのこれらのタイプを変換する必要がある場合があります。"
 
+#: ../../source/guidelines/sdk-development.rst:275
+msgid ""
+"`Namespace <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation"
+" time you add the string name, but when you receive the Namespace from the "
+"network, it comes in formatted as ``uint64`` id. A specific endpoint returns"
+" the Namespace ``string`` name."
+msgstr ""
+"`ネームスペース <https://github.com/nemtech/nem2-sdk-typescript-"
+"javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ ID:  "
+"作成時には文字列名を追加しますが、ネットワークからネームスペースを取得すると ``uint64`` "
+"IDとしてフォーマットされます。特定のエンドポイントは ``文字列`` のネームスペース名を返します。"
+
 #: ../../source/guidelines/sdk-development.rst:278
 msgid "Transaction Serialization"
 msgstr "トランザクションのシリアル化"
+
+#: ../../source/guidelines/sdk-development.rst:280
+msgid ""
+"The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
+"protocol to serialize and deserialize |codename| entities."
+msgstr ""
+"`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
+"のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
 
 #: ../../source/guidelines/sdk-development.rst:286
 msgid "KeyPair and Cryptographic functions"

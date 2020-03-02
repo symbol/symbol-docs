@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -56,10 +56,6 @@ msgstr ""
 "<https://www.transifex.com/signup/?join_project=nem2docs>`_ で作成します。Transifex"
 " 提供の `翻訳者として取り組みを始めるガイド <https://docs.transifex.com/getting-"
 "started-1/translators>`_ を読むことをおすすめします。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:28
-msgid "Join nem2-docs team and choose a language"
-msgstr "nem2-docs チームに参加して、言語を選択します"
 
 #: ../../source/guidelines/translating-the-documentation.rst:30
 msgid ""
@@ -164,9 +160,3 @@ msgstr "1. 文言を生成します。各ドキュメントファイルの .po �
 #: ../../source/guidelines/translating-the-documentation.rst:104
 msgid "Push the source literals to Transifex."
 msgstr "Transifex へ文言ソースをプッシュ。"
-
-#: ../../source/guidelines/translating-the-documentation.rst:110
-msgid ""
-":doc:`Submit your changes <suggesting-changes>` into the nem2-docs "
-"repository."
-msgstr "nem2-docs リポジトリへ :doc:`変更を提出<suggesting-changes>` してください。"

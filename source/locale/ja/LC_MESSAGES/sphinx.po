@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,156 +21,102 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../env/lib/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
+#: ../../source/_templates/include/language.html:7
+msgid "Translate"
+msgstr "翻訳する"
 
-#: ../../../env/lib/site-packages/ablog/templates/collection.html:48
-#: ../../source/_templates/collection.html:19
-msgid "Read more ..."
-msgstr "もっと読む"
-
-#: ../../source/_templates/globaltoc.html:10
-msgid "Navigation"
-msgstr "ナビゲーション"
-
-#: ../../../env/lib/site-packages/ablog/templates/categories.html:2
-msgid "Categories"
-msgstr "カテゴリ"
-
-#: ../../source/_templates/layout.html:42
-msgid "On this page"
-msgstr "このページ"
-
-#: ../../source/_templates/layout.html:75
-msgid "Did you find what you were looking for?"
-msgstr "お探しのものは見つかりましたか？"
-
-#: ../../source/_templates/layout.html:76
-msgid "Give us your feedback."
-msgstr "フィードバックをください。"
-
-#: ../../source/_templates/include/footer.html:5
-msgid "Learn"
-msgstr "学習する"
-
-#: ../../source/_templates/include/footer.html:8
-msgid "Getting Started"
-msgstr "入門"
-
-#: ../../source/_templates/include/footer.html:11
-#: ../../source/_templates/include/footer.html:29
-msgid "References"
-msgstr "リファレンス"
-
-#: ../../source/_templates/include/footer.html:14
-msgid "Built-in Features"
-msgstr "ビルドイン機能"
-
-#: ../../source/_templates/include/footer.html:17
-msgid "Protocol"
-msgstr "プロトコル"
-
-#: ../../source/_templates/include/footer.html:20
 #: ../../source/_templates/catalog.html:3
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/_templates/include/footer.html:23
-msgid "Contribute"
-msgstr "貢献する"
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
 
-#: ../../source/_templates/include/footer.html:31
-msgid "Whitepaper"
-msgstr "ホワイトペーパー"
+#: ../../source/_templates/layout.html:43
+msgid "On this page"
+msgstr "このページ"
 
-#: ../../source/_templates/include/footer.html:32
-msgid "REST Gateway"
-msgstr "REST ゲートウェイ"
+#: ../../source/_templates/layout.html:76
+msgid "Did you find what you were looking for?"
+msgstr "お探しのものは見つかりましたか？"
 
-#: ../../source/_templates/include/footer.html:33
-msgid "Server"
-msgstr "サーバ"
+#: ../../source/_templates/layout.html:77
+msgid "Give us your feedback."
+msgstr "フィードバックをください。"
 
-#: ../../source/_templates/include/footer.html:36
-msgid "Libraries"
-msgstr "ライブラリ"
+#: ../../source/_templates/include/edit-github.html:2
+msgid "Improve this page"
+msgstr "このページにを加筆修正する"
 
-#: ../../source/_templates/include/footer.html:41
-msgid "Community"
-msgstr "コミュニティ"
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
 
-#: ../../source/_templates/include/footer.html:51
-msgid "Ask development questions"
-msgstr "開発に関する質問"
-
-#: ../../source/_templates/include/footer.html:80
-msgid "Last updated on %(last_updated)s."
-msgstr "最終更新 %(last_updated)s"
-
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:2
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:2
 msgid "Update"
 msgstr "更新"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:7
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:7
 #: ../../source/_templates/post-meta.html:5
 msgid "Author"
 msgstr "投稿者"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:16
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:16
 msgid "Location"
 msgstr "場所"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:25
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:25
 msgid "Language"
 msgstr "言語"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:34
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:34
 msgid "Category"
 msgstr "カテゴリ"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:43
-#: ../../../env/lib/site-packages/ablog/templates/tagcloud.html:2
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/tagcloud.html:2
 msgid "Tags"
 msgstr "タグ"
 
-#: ../../../env/lib/site-packages/ablog/templates/postcard2.html:44
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:44
 msgid "Tag"
 msgstr "タグ"
 
-#: ../../source/_templates/include/navbar-right.html:5
-msgid "Edit"
-msgstr "編集"
-
-#: ../../source/_templates/include/navbar-right.html:14
-msgid "Translate"
-msgstr "翻訳する"
-
-#: ../../../env/lib/site-packages/ablog/templates/authors.html:2
 #: ../../source/_templates/post-meta.html:5
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/authors.html:2
 msgid "Authors"
 msgstr "投稿者"
 
-#: ../../../env/lib/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:19
+msgid "Read more ..."
+msgstr "もっと読む"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
+
+#: ../../source/_templates/navbar.html:39
+msgid "Navigation"
+msgstr "ナビゲーション"
 
 #: ../../source/_templates/collection.html:4
 msgid "guides"
 msgstr "ガイド"
 
-#: ../../../env/lib/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
-
-#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
-
-#: ../../../env/lib/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
-
-#: ../../../env/lib/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/categories.html:2
+msgid "Categories"
+msgstr "カテゴリ"

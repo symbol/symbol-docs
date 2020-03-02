@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -92,9 +92,8 @@ msgstr ""
 
 #: ../../source/concepts/transfer-transaction.rst:45
 msgid ""
-"By default, the messages attached are visible by default to all network "
-"participants, although the client does not encrypt the message."
-msgstr "デフォルトでは、添付メッセージはすべてのネットワーク参加者に表示されますが、クライアントはメッセージを暗号化しません。"
+"By default, the messages attached are visible to all network participants."
+msgstr "デフォルトでは、添付されたメッセージはネットワーク参加者の全員が見ることができます。"
 
 #: ../../source/concepts/transfer-transaction.rst:48
 msgid "Encrypted message"
@@ -118,20 +117,20 @@ msgstr ""
 #: ../../source/concepts/transfer-transaction.rst:54
 msgid ""
 "You can find under the ``crypto`` module how to `encode "
-"<https://github.com/nemtech/nem2-sdk-typescript-"
+"<https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/src/core/crypto/Crypto.ts#L248>`_ and `decode "
-"<https://github.com/nemtech/nem2-sdk-typescript-"
+"<https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/src/core/crypto/Crypto.ts#L316>`_ encrypted messages,"
 " but we recommend you to use the available `SDK public methods "
-"<https://nemtech.github.io/nem2-sdk-typescript-"
+"<https://nemtech.github.io/symbol-sdk-typescript-"
 "javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
 "instead."
 msgstr ""
-"``crypto`` モジュールの下に暗号化メッセージの `エンコード <https://github.com/nemtech/nem2-sdk-"
+"``crypto`` モジュールの下に暗号化メッセージの `エンコード <https://github.com/nemtech/symbol-sdk-"
 "typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L248>`_ と `デコード "
-"<https://github.com/nemtech/nem2-sdk-typescript-"
+"<https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/src/core/crypto/Crypto.ts#L316>`_ "
-"の方法を発見することができますが、替わりに `SDK のパブリックメソッド <https://nemtech.github.io/nem2-sdk-"
+"の方法を発見することができますが、替わりに `SDK のパブリックメソッド <https://nemtech.github.io/symbol-sdk-"
 "typescript-"
 "javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
 "を使用することを推奨します。"
@@ -215,4 +214,4 @@ msgstr "永続的なハーベスティングのデリゲート"
 
 #: ../../source/concepts/transfer-transaction.rst:113
 msgid "Continue: :doc:`Aggregate Transaction <aggregate-transaction>`."
-msgstr "次へ: :doc:`アグリゲートトランザクション <aggregate-transaction>`"
+msgstr "次項: :doc:`アグリゲートトランザクション <aggregate-transaction>`"

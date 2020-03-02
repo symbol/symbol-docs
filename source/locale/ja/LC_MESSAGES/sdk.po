@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -23,11 +23,10 @@ msgstr ""
 
 #: ../../source/sdk.rst:13
 msgid ""
-"The **NEM2 Software Development Kit** is the primary software development "
-"tool to create |codename| components, such as additional tools, libraries, "
-"or applications."
+"The **Symbol SDK** is the primary software development tool to create "
+"|codename| components, such as additional tools, libraries, or applications."
 msgstr ""
-"**NEM2 ソフトウェア開発キット** とは |codename| "
+"**Symbol SDK** とは |codename| "
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
 
 #: ../../source/sdk.rst:15
@@ -59,6 +58,10 @@ msgstr "リポジトリ"
 msgid "Reference"
 msgstr "リファレンス"
 
+#: ../../source/sdk.rst:1
+msgid "TypeScript & JS SDK"
+msgstr "TypeScript と JS SDK"
+
 #: ../../source/sdk.rst:32
 msgid "Ongoing work"
 msgstr "開発中"
@@ -68,12 +71,6 @@ msgid ""
 "⚠️ The following SDKs are not compatible with the latest version of "
 "catapult-server."
 msgstr "⚠️ 以下の SDK は最新バージョンの catapult-server と互換性がありません。"
-
-#: ../../source/sdk.rst:36
-msgid ""
-"Read the |protocol-compatibility-report| to know more about the status of "
-"each project."
-msgstr "各プロジェクトの進捗を確認するために |protocol-compatibility-report| を読んでください。"
 
 #: ../../source/sdk.rst:51
 msgid ""

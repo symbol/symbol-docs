@@ -2,16 +2,16 @@
 # Copyright (C) 2018-2019, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: nem2-docs 0.20.3\n"
+"Project-Id-Version: symbol-docs 0.20.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 23:33+0000\n"
+"POT-Creation-Date: 2020-02-28 13:02+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -85,12 +85,12 @@ msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:50
 msgid ""
-"1. Start by registering a new ``restrictable`` mosaic with the "
+"1. Start by creating a new ``restrictable`` mosaic with the "
 ":doc:`ComfyClothingCompany account <../account/creating-an-account>` "
 "account. We will refer to this mosaic from now on as ``cc.shares``."
 msgstr ""
 "1. :doc:`ComfyClothingCompany アカウント <../account/creating-an-account>` に新しい "
-"``制限可能`` なモザイクを登録することから始めます。今後、このモザイクを ``cc.shares`` と呼び、このモザイクを参照します。"
+"``制限可能`` なモザイクの作成から始めます。今後、このモザイクは ``cc.shares`` と呼びます。"
 
 #: ../../source/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.rst:59
 msgid ""
