@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.20.4\n"
+"Project-Id-Version: symbol-docs 0.21.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 13:02+0000\n"
+"POT-Creation-Date: 2020-03-02 10:03+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -48,33 +48,37 @@ msgstr "アカウントの作成"
 #: ../../source/guidelines/translating-the-documentation.rst:25
 msgid ""
 "Create a new Transifex account `here "
-"<https://www.transifex.com/signup/?join_project=nem2docs>`_ . Also, we "
+"<https://www.transifex.com/signup/?join_project=symboldocs>`_ . Also, we "
 "recommend reading Transifex's `Getting Started as a Translator guide "
 "<https://docs.transifex.com/getting-started-1/translators>`_."
 msgstr ""
 "新しい Transifex アカウントを `ここ "
-"<https://www.transifex.com/signup/?join_project=nem2docs>`_ で作成します。Transifex"
-" 提供の `翻訳者として取り組みを始めるガイド <https://docs.transifex.com/getting-"
+"<https://www.transifex.com/signup/?join_project=symboldocs>`_ "
+"で作成します。Transifex 提供の `翻訳者として取り組みを始めるガイド <https://docs.transifex.com/getting-"
 "started-1/translators>`_ を読むことをおすすめします。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:28
+msgid "Join symbol-docs team and choose a language"
+msgstr "symbol-docs チームに参加して、言語を選択します"
 
 #: ../../source/guidelines/translating-the-documentation.rst:30
 msgid ""
 "Explore the `nem2-docs project in Transifex "
-"<https://www.transifex.com/nemtech/nem2docs/>`_. Check which languages are "
-"being translated and up to which point they are complete."
+"<https://www.transifex.com/nemtech/symboldocs/>`_. Check which languages are"
+" being translated and up to which point they are complete."
 msgstr ""
 "`Transifex 内の nem2-docs プロジェクト "
-"<https://www.transifex.com/nemtech/nem2docs/>`_ "
+"<https://www.transifex.com/nemtech/symboldocs/>`_ "
 "を探ります。どの言語が翻訳されているか、どの時点まで完了しているかを確認してください。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:33
 msgid ""
 "Click on `Help Translate \"nem2-docs\" "
-"<https://www.transifex.com/signup/?join_project=nem2docs>`_ button on the "
+"<https://www.transifex.com/signup/?join_project=symboldocs>`_ button on the "
 "right side of the header, selecting the language you want to contribute."
 msgstr ""
-"貢献したい言語を選択中のヘッダーの右サイドにある `\"nem2-docs\" の翻訳ヘルプ "
-"<https://www.transifex.com/signup/?join_project=nem2docs>`_ ボタンをクリックします。"
+"貢献したい言語を選択中のヘッダーの右サイドにある `\"symbol-docs\" の翻訳ヘルプ "
+"<https://www.transifex.com/signup/?join_project=symboldocs>`_ ボタンをクリックします。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:35
 msgid ""
@@ -160,3 +164,9 @@ msgstr "1. 文言を生成します。各ドキュメントファイルの .po �
 #: ../../source/guidelines/translating-the-documentation.rst:104
 msgid "Push the source literals to Transifex."
 msgstr "Transifex へ文言ソースをプッシュ。"
+
+#: ../../source/guidelines/translating-the-documentation.rst:110
+msgid ""
+":doc:`Submit your changes <suggesting-changes>` into the symbol-docs "
+"repository."
+msgstr "symbol-docs リポジトリへ :doc:`変更を提出<suggesting-changes>` してください。"
