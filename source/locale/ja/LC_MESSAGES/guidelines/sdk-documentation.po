@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.20.4\n"
+"Project-Id-Version: symbol-docs 0.21.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 13:02+0000\n"
+"POT-Creation-Date: 2020-03-02 10:03+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,36 +35,27 @@ msgstr ""
 "SDK は他の開発者に採用される必要があります。貢献者として、決定された SDK "
 "がどのように機能するかをあなたより知っている人は誰もいません。次のドキュメントを提供して、他の人を助け、SDK の使用を広めることを検討してください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:20
-msgid ""
-"In your `README <https://github.com/nemtech/nem2-sdk-typescript-"
-"javascript/blob/master/README.md>`_, make sure that you at least have the "
-"following sections."
-msgstr ""
-"あなたの `README <https://github.com/nemtech/nem2-sdk-typescript-"
-"javascript/blob/master/README.md>`_ には最低でも次のセクションを記述してください。"
-
-#: ../../source/guidelines/sdk-documentation.rst:22
+#: ../../source/guidelines/sdk-documentation.rst:24
 msgid "Requirements"
 msgstr "必須項目"
 
-#: ../../source/guidelines/sdk-documentation.rst:23
+#: ../../source/guidelines/sdk-documentation.rst:25
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guidelines/sdk-documentation.rst:24
+#: ../../source/guidelines/sdk-documentation.rst:26
 msgid "Contributing"
 msgstr "貢献"
 
-#: ../../source/guidelines/sdk-documentation.rst:25
+#: ../../source/guidelines/sdk-documentation.rst:27
 msgid "License"
 msgstr "ライセンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:29
+#: ../../source/guidelines/sdk-documentation.rst:33
 msgid "Comments and reference docs"
 msgstr "コメントとリファレンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:31
+#: ../../source/guidelines/sdk-documentation.rst:35
 msgid ""
 "Document functions and classes with comments while you write your code. A "
 "reference generator should be able to read these comments and generate HTML "
@@ -73,11 +64,11 @@ msgstr ""
 "コードを記述している間に、関数とクラスをコメント付きでドキュメント化します。リファレンスジェネレーターはこれらのコメントを読み取り、HTML "
 "として出力を生成できる必要があります。"
 
-#: ../../source/guidelines/sdk-documentation.rst:39
+#: ../../source/guidelines/sdk-documentation.rst:45
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/guidelines/sdk-documentation.rst:45
+#: ../../source/guidelines/sdk-documentation.rst:54
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
 "repository>`_ and clone `nem2-docs repository "
@@ -87,7 +78,7 @@ msgstr ""
 "repository>`_ をフォークして`nem2-docs リポジトリ "
 "<https://github.com/nemtech/nem2-docs>`__ をクローンしてください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:51
+#: ../../source/guidelines/sdk-documentation.rst:60
 msgid ""
 "Create a new folder under ``source/resources/examples/`` named as the "
 "programming language of your SDK."
