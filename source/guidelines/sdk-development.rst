@@ -150,7 +150,7 @@ Example of repositories and implementations:
 * `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
 * `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
 
-See the complete list of `repositories and implementations <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_.
+See the complete list of `repositories and implementations <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure>`_.
 
 6. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
