@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 0.21.2 - 06-Mar-2020
+
+Code-name: Fushicho 5
+
+## Added
+
+- How to connect to MongoDB guide
+- Data validation (merkle trees) concept
+- CI for translations
+- Mosaic snippets for JavaSDK
+
+### Changed
+
+- NEM Developer Center rebranded to Symbol Developers
+- Server installation docs
+- Enhanced mosaic creation guides
+- SDK development guidelines up to date
+- Key pair generation and address Format (NIP10)
+- CLI and SDK code examples to be Fushicho 5 compatible
+
 ## 0.20.4 - 09-Feb-2020
 
 Code-name: Fushicho 4
