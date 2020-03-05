@@ -860,7 +860,7 @@ Delegates the account importance to a :ref:`proxy account <account-link-transact
     --sync                       - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                   - (Optional) Announce the transaction without double confirmation.
     -u, --public-key <publicKey> - Remote account public key.
-    -a, --action <action>        - Alias action (1: Link, 0: Unlink).
+    -a, --action <action>        - Alias action (Link, Unlink).
 
 *Command*
 
@@ -979,7 +979,7 @@ Links a namespace to an :doc:`address <concepts/account>`.
     -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
     --sync                               - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                           - (Optional) Announce the transaction without double confirmation.
-    -a, --action <action>                - Alias action (1: Link, 0: Unlink).
+    -a, --action <action>                - Alias action (Link, Unlink).
     -a, --address <address>              - Account address.
     -n, --namespace-name <namespaceName> - Namespace name.
 
@@ -1002,7 +1002,7 @@ Links a namespace to a :doc:`mosaic <concepts/mosaic>`.
     -f, --max-fee <maxFee>               - Maximum fee (absolute amount).
     --sync                               - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                           - (Optional) Announce the transaction without double confirmation.
-    -a, --action <action>                - Alias action (1: Link, 0: Unlink).
+    -a, --action <action>                - Alias action (Link, Unlink).
     -m, --mosaic-id <mosaicId>           - Mosaic id in hexadecimal format.
     -n, --namespace-name <namespaceName> - Namespace name.
 
@@ -1080,7 +1080,7 @@ Changes a mosaic :doc:`mosaic <concepts/mosaic>`.
     -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
     --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                 - (Optional) Announce the transaction without double confirmation.
-    -a, --action <action>      - Mosaic supply change action (1: Increase, 0: Decrease).
+    -a, --action <action>      - Mosaic supply change action (Increase, Decrease).
     -m, --mosaic-id <mosaicId> - Mosaic id in hexadecimal format.
     -d, --amount <amount>      - Atomic amount of supply change.
 
@@ -1109,7 +1109,7 @@ Create or modify a :doc:`multisig account <concepts/multisig-account>`.
     -L, --amount <amount>                                        - Relative amount of network mosaic to lock. [10]
     -R, --min-removal-delta <minRemovalDelta>                    - (Optional) Number of signatures needed to remove a cosignatory.  [0]
     -A, --min-approval-delta <minApprovalDelta>                  - (Optional) Number of signatures needed to approve a transaction. [0]
-    -a, --action <action>                                        - Modification Action (1: Add, 0: Remove).
+    -a, --action <action>                                        - Modification Action (Add, Remove).
     -p, --cosignatory-public-key <cosignatoryPublicKey>          - Cosignatory accounts public keys (separated by a comma).
     -u, --multisig-account-public-key <multisigAccountPublicKey> - Multisig account public key.
 
@@ -1196,7 +1196,7 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
     -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
     -s, --secret <secret>                      - Proof hashed in hexadecimal format.
-    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (Op_Sha3_256, Op_Keccak_256, Op_Hash_160, Op_Hash_256).
     -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
 
 *Command*
@@ -1247,7 +1247,7 @@ Announces a :doc:`SecretLockTransaction <concepts/cross-chain-swaps>`.
     -a, --amount <amount>                      - Amount of mosaic units to lock.
     -d, --duration <duration>                  - Number of blocks for which a lock should be valid. Duration is allowed to lie up to 30 days. If reached, the mosaics will be returned to the initiator.
     -s, --secret <secret>                      - Proof hashed in hexadecimal format.
-    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (Op_Sha3_256, Op_Keccak_256, Op_Hash_160, Op_Hash_256).
     -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
 
 *Command*
@@ -1271,7 +1271,7 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     --announce                                 - (Optional) Announce the transaction without double confirmation.
     -s, --secret <secret>                      - Proof hashed in hexadecimal.
     -p, --proof <proof>                        - Original random set of bytes in hexadecimal.
-    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (0: Op_Sha3_256, 1: Op_Keccak_256, 2: Op_Hash_160, 3: Op_Hash_256).
+    -H, --hash-algorithm <hashAlgorithm>       - Algorithm used to hash the proof (Op_Sha3_256, Op_Keccak_256, Op_Hash_160, Op_Hash_256).
     -r, --recipient-address <recipientAddress> - Address or @alias that receives the funds once unlocked.
 
 *Command*
@@ -1293,8 +1293,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -f, --max-fee <maxFee>                     - Maximum fee (absolute amount).
     --sync                                     - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                                 - (Optional) Announce the transaction without double confirmation.
-    -f, --flags <flags>                        - Restriction flags.(0: AllowOutgoingAddress, 1: BlockOutgoingAddress, 2: AllowIncomingAddress, 3: BlockIncomingAddress)
-    -a, --action <action>                      - Modification action. (1: Add, 0: Remove).
+    -f, --flags <flags>                        - Restriction flags.(AllowOutgoingAddress, BlockOutgoingAddress, AllowIncomingAddress, BlockIncomingAddress)
+    -a, --action <action>                      - Modification action. (Add, Remove).
     -v, --recipient-address <recipientAddress> - Address or @alias to allow/block.
 
 *Command*
@@ -1316,8 +1316,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -f, --max-fee <maxFee>     - Maximum fee (absolute amount).
     --sync                     - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                 - (Optional) Announce the transaction without double confirmation.
-    -f, --flags <flags>        - Restriction flags.(0: AllowMosaic, 1: BlockMosaic)
-    -a, --action <action>      - Modification action. (1: Add, 0: Remove).
+    -f, --flags <flags>        - Restriction flags.(AllowMosaic, BlockMosaic)
+    -a, --action <action>      - Modification action. (Add, Remove).
     -v, --mosaic-id <mosaicId> - Mosaic or @alias to allow / block.
 
 *Command*
@@ -1339,8 +1339,8 @@ Announces a :doc:`SecretProofTransaction <concepts/cross-chain-swaps>`.
     -f, --max-fee <maxFee>                   - Maximum fee (absolute amount).
     --sync                                   - (Optional) Wait until the server confirms or rejects the transaction.
     --announce                               - (Optional) Announce the transaction without double confirmation.
-    -f, --flags <flags>                      - Restriction flag. (0: AllowOutgoingTransactionType, 1: BlockOutgoingTransactionType)
-    -a, --action <action>                    - Modification action. (1: Add, 0: Remove).
+    -f, --flags <flags>                      - Restriction flag. (AllowOutgoingTransactionType, BlockOutgoingTransactionType)
+    -a, --action <action>                    - Modification action. (Add, Remove).
     -v, --transaction-type <transactionType> - Transaction type formatted as hex.
 
 *Command*
@@ -1366,7 +1366,7 @@ You can send ``multiple mosaics`` splitting them with a comma, e.g: @cat.currenc
     --announce                                      - (Optional) Announce the transaction without double confirmation.
     -r, --recipient-address <recipientAddress>      - Recipient address or @alias.
     -m, --message <message>                         - Transaction message.
-    -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics with commas.
+    -c, --mosaics <mosaics>                         - Mosaic to transfer in the format (mosaicId(hex)|@aliasName)::absoluteAmount. Add multiple mosaics separated by commas.
     -e, --encrypted                                 - (Optional) Send an encrypted message. If you set this value, you should set the value of 'recipientPublicKey' as well).
     -u, --recipient-public-key <recipientPublicKey> - (Optional) The recipient public key in an encrypted message.
 
