@@ -57,6 +57,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` to set the **initial supply**. For instance, we can set it to **1,000,000** mosaic units.
 
 .. example-code::
@@ -68,6 +73,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.js
         :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java
+        :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -86,6 +96,11 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/mosaic/CreatingAMosaic.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

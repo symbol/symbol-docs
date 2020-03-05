@@ -22,9 +22,10 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-If you have followed the previous guide, right now you should own a ``supply mutable`` :doc:`mosaic <../../concepts/mosaic>` with 1,000,000 units.
+In this example, we are going to increase a **supply mutable** mosaic in 1,000,000 units.
 
-To increase the initial supply to 2,000,000, define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` replacing your target mosaic identifier in the next code snippet.
+1. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` as in the next code snippet.
+Then, replace the ``mosaicId`` and ``divisibility`` with the targetted mosaic properties.
 
 .. example-code::
 
@@ -38,7 +39,34 @@ To increase the initial supply to 2,000,000, define a :ref:`MosaicSupplyChangeTr
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: You can decrease a mosaic supply by changing ``MosaicSupplyType.Increase`` to ``MosaicSupplyType.Decrease``.
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/ModifyingMosaicSupply.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+.. note:: |codename| works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to increase/decrease by 10\ :sup:`divisibility`. For example, if the mosaic has **divisibility** 2, to increase 10 units (relative) you should define 1000 (absolute) instead.
+
+2. Sign the transaction with the mosaic creator account and announce it to the network.
+
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/mosaic/ModifyingMosaicSupply.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/mosaic/ModifyingMosaicSupply.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+Otherwise, you can decrease a mosaic supply by changing ``MosaicSupplyChangeAction.Increase`` to ``MosaicSupplyChangeAction.Decrease``.
+In this second case, the mosaic creator account must own at least ``delta`` units to decrease the mosaic supply.
 
 *************************
 Method #02: Using the CLI

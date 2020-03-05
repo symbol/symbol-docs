@@ -58,11 +58,14 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
 /* end block 01 */
 
 /* start block 02 */
+// replace with mosaic units to increase
+const delta = 1000000;
+
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
     Deadline.create(),
     mosaicDefinitionTransaction.mosaicId,
     MosaicSupplyChangeAction.Increase,
-    UInt64.fromUint(1000000),
+    UInt64.fromUint(delta * Math.pow(10, divisibility)),
     networkType);
 /* end block 02 */
 

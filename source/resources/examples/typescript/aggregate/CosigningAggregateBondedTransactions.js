@@ -17,8 +17,8 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account) => {
     const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);

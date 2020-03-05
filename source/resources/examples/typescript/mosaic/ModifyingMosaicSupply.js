@@ -27,7 +27,13 @@ const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkTyp
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
-const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction.create(symbol_sdk_1.Deadline.create(), mosaicId, symbol_sdk_1.MosaicSupplyChangeAction.Increase, symbol_sdk_1.UInt64.fromUint(2000000), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+// replace with mosaic divisibility
+const divisibility = 0;
+// replace with mosaic units to increase
+const delta = 1000000;
+const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction.create(symbol_sdk_1.Deadline.create(), mosaicId, symbol_sdk_1.MosaicSupplyChangeAction.Increase, symbol_sdk_1.UInt64.fromUint(delta * Math.pow(10, divisibility)), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+/* end block 01 */
+/* start block 02 */
 // replace with meta.generationHash (nodeUrl + '/block/1')
 const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
 const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);
@@ -38,4 +44,4 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
     .announce(signedTransaction)
     .subscribe((x) => console.log(x), (err) => console.error(err));
-/* end block 01 */
+/* end block 02 */

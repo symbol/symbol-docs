@@ -17,8 +17,8 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 const aliasedMosaic = new symbol_sdk_1.Mosaic(new symbol_sdk_1.NamespaceId('symbol.xym'), symbol_sdk_1.UInt64.fromUint(1000000));
 /* end block 01 */

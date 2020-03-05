@@ -18,7 +18,22 @@
 
 package symbol.guides.examples.mosaic;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
+
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.TransactionRepository;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Account;
+import io.nem.symbol.sdk.model.blockchain.BlockDuration;
+import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.mosaic.MosaicFlags;
+import io.nem.symbol.sdk.model.mosaic.MosaicId;
+import io.nem.symbol.sdk.model.mosaic.MosaicNonce;
+import io.nem.symbol.sdk.model.mosaic.MosaicSupplyChangeActionType;
+import io.nem.symbol.sdk.model.transaction.*;
 import org.junit.jupiter.api.Test;
 
 class ModifyingMosaicSupply {
@@ -26,6 +41,44 @@ class ModifyingMosaicSupply {
     @Test
     void modifyingMosaicSupply()
         throws ExecutionException, InterruptedException {
-        //Todo: Implement
+        /* start block 01 */
+        // replace with node endpoint
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
+            // replace with private key
+            final String privateKey = "1111111111111111111111111111111111111111111111111111111111111111";
+            final Account account = Account
+                    .createFromPrivateKey(privateKey, networkType);
+            // replace with mosaic id
+            final String mosaicIdHex = "7cdf3b117a3c40cc";
+            final MosaicId mosaicId = new MosaicId(mosaicIdHex);
+            // replace with mosaic divisibility
+            final int divisibility = 0;
+            // replace with mosaic units to increase
+            final int delta = 1000000;
+
+            final MosaicSupplyChangeTransaction mosaicSupplyChangeTransaction = MosaicSupplyChangeTransactionFactory
+                    .create(
+                            networkType,
+                            mosaicId,
+                            MosaicSupplyChangeActionType.INCREASE,
+                            BigDecimal.valueOf(delta * Math.pow(10, divisibility)).toBigInteger())
+                    .maxFee(BigInteger.valueOf(2000000)).build();
+            /* end block 01 */
+
+            /* start block 02 */
+            final String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
+
+            final SignedTransaction signedTransaction = account
+                    .sign(mosaicSupplyChangeTransaction, generationHash);
+
+
+            final TransactionRepository transactionRepository = repositoryFactory
+                    .createTransactionRepository();
+            transactionRepository.announce(signedTransaction).toFuture().get();
+        }
+        /* end block 02 */
+
     }
 }

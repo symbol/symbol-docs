@@ -17,8 +17,8 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
 const operators_1 = require("rxjs/operators");
+const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with sender address
 const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
