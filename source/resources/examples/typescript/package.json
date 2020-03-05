@@ -8,9 +8,9 @@
     "js-sha3": "^0.7.0",
     "merkletreejs": "^0.1.11",
     "rxjs": "^6.5.4",
-    "symbol-sdk": "^0.17.1",
+    "symbol-sdk": "^0.17.3",
     "tslint": "^5.20.1",
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/node": "^10.12.27"

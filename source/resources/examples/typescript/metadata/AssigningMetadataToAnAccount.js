@@ -38,7 +38,7 @@ const bobPrivateKey = '000000000000000000000000000000000000000000000000000000000
 const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A';
+const networkGenerationHash = '44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C';
 const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 /* end block 03 */
@@ -52,7 +52,7 @@ const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGe
 /* end block 04 */
 /* start block 05 */
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
+const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

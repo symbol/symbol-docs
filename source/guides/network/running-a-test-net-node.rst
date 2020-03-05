@@ -137,15 +137,15 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer-xym.nemtech.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer.symboldev.network/" target="_blank">Blockchain Explorer</a>
 
 .. |faucet-1| raw:: html
 
-   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-01.symboldev.network/" target="_blank">Faucet</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-02.symboldev.network/" target="_blank">alternative faucet</a>
 
 .. |latest-release| raw:: html
 

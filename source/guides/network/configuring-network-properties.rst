@@ -34,7 +34,7 @@ config-network.properties
     identifier; NetworkIdentifier; Network identifier.; mijin-test; public-test
     nodeEqualityStrategy; NodeIdentityEqualityStrategy; Node equality strategy.; host; host
     publicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF; 9BE93593C699867F1B4F624FD37BC7FB93499CDEC9929088F2FF1031293960FF
-    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6; 45870419226A7E51D61D94AD728231EDC6C9B3086EF9255A8421A4F26870456A
+    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6; 44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C
     epochAdjustment; utils::TimeSpan; Nemesis epoch time adjustment.; 1573430400s; 1573430400s
     **chain**; ; ; ;
     enableVerifiableState; bool; Set to true if block chain should calculate state hashes so that state is fully verifiable at each block.; true; true

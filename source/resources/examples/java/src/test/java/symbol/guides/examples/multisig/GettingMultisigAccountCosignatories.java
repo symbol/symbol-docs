@@ -21,7 +21,7 @@ public class GettingMultisigAccountCosignatories {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+            "http://api-2-01.us-west-1.symboldev.network:3000")) {
 
             final MultisigRepository multisigRepository = repositoryFactory
                 .createMultisigRepository();

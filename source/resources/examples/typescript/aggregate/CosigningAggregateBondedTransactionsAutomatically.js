@@ -32,7 +32,7 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
+const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();

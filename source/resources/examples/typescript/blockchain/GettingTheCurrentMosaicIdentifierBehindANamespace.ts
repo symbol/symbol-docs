@@ -23,7 +23,7 @@ import {NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
 const namespaceId = new NamespaceId('symbol.xym');
 
 // replace with node endpoint
-const nodeUrl = 'http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000';
+const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 

@@ -19,11 +19,11 @@
 /* start block 01 */
 import {sha3_256} from 'js-sha3';
 import {MerkleTree} from 'merkletreejs/index';
-import {QueryParams, RepositoryFactoryHttp, UInt64} from 'nem2-sdk';
+import {QueryParams, RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
 
 const example = async () => {
     // replace with node url
-    const nodeUrl = 'http://api-xym-3-01.ap-northeast-1.nemtech.network:3000';
+    const nodeUrl = 'http://api-2-01.eu-west-1.symboldev.network:3000';
     const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
     const blockHttp = repositoryHttp.createBlockRepository();
     // replace with block height
@@ -32,7 +32,8 @@ const example = async () => {
     // 1. Obtain HRoot; in Symbol, this is stored in the block header.
     const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
     // 2. Calculate HRoot' creating a Merkle tree with all the transactions within the block in natural order.
-    const queryParams = new QueryParams().setPageSize(100);
+    // Note: This code snippet assumes that the block has less than 100 transactions.
+    const queryParams = new QueryParams({pageSize: 100})
     const transactions = await blockHttp.getBlockTransactions(height, queryParams).toPromise();
     const leaves = transactions
         .sort((n1, n2) => n1.transactionInfo!.index - n2.transactionInfo!.index)
