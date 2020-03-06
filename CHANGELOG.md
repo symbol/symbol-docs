@@ -14,6 +14,7 @@ Code-name: Fushicho 5
 - Data validation (merkle trees) concept
 - CI for translations
 - Mosaic snippets for JavaSDK
+- Import Java Reference versions automatically
 
 ### Changed
 
