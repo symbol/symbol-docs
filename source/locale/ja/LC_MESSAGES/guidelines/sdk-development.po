@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -242,8 +242,8 @@ msgid ""
 "Setup the |codename| :doc:`local environment via docker "
 "<../guides/network/creating-a-private-test-net>`."
 msgstr ""
-"`Docker でローカル環境に <../guides/network/creating-a-private-test-net>`_ "
-"|codename| を セットアップします。"
+"|codename| の :doc:`ローカル環境を Docker で <../guides/network/creating-a-private-"
+"test-net>` セットアップします。"
 
 #: ../../source/guidelines/sdk-development.rst:87
 msgid ""
@@ -290,16 +290,6 @@ msgstr ""
 msgid "Creating the project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/guidelines/sdk-development.rst:97
-msgid ""
-"You can base your work on the `TypeScript SDK <https://github.com/nemtech"
-"/symbol-sdk-typescript-javascript>`_. The TypeScript version is the first "
-"SDK getting the latest updates. Check regularly the `Changelog "
-"<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code "
-"change update."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:101
 msgid "Create a new repository, preferably on GitHub, with:"
 msgstr "可能であれば GitHub で新しいリポジトリを作成します:"
@@ -316,13 +306,6 @@ msgstr ""
 "`Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-"
 "to-your-project/>`_"
 
-#: ../../source/guidelines/sdk-development.rst:105
-msgid ""
-"The `Contributors guidelines <https://help.github.com/articles/setting-"
-"guidelines-for-repository-contributors/>`_ to help others know how they can "
-"help you."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:109
 msgid "Testing"
 msgstr "テスト"
@@ -331,27 +314,23 @@ msgstr "テスト"
 msgid ""
 "A project with good test coverage it's more likely to be used and trusted by"
 " the developers!"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:113
-msgid ""
-"We **strongly** suggest to do `Test-Driven Development "
-"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing "
-"(test last). If you need inspiration, feel free to adapt directly the same "
-"tests we did."
-msgstr ""
+msgstr "良好なテストカバレッジのプロジェクトは開発者にとって、より信頼のおけるものとなるでしょう。"
 
 #: ../../source/guidelines/sdk-development.rst:116
 msgid ""
 "Example of ``travis.yml`` `configuration file <https://github.com/nemtech"
 "/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_"
 msgstr ""
+"``travis.yml`` `設定ファイル <https://github.com/nemtech/symbol-sdk-typescript-"
+"javascript/blob/master/.travis.yml>`_ の例"
 
 #: ../../source/guidelines/sdk-development.rst:117
 msgid ""
 "Example of `unit tests  <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/tree/master/test>`_."
 msgstr ""
+"`ユニットテスト <https://github.com/nemtech/symbol-sdk-typescript-"
+"javascript/tree/master/test>`_ の例"
 
 #: ../../source/guidelines/sdk-development.rst:118
 msgid ""
@@ -361,185 +340,31 @@ msgstr ""
 "`エンドツーエンドテスト <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/tree/master/e2e>`_ の例"
 
-#: ../../source/guidelines/sdk-development.rst:120
-msgid ""
-"Once you have written some tests, setup a Continuous Integration (CI) system"
-" to run the test suite and code linter automatically. We use `travis-ci "
-"<https://travis-ci.org/>`_, but feel free to use the one that suits you "
-"best."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:123
-msgid ""
-"Also, we strive to keep our codebases with a unit test coverage of 80% or "
-"higher. We use `coveralls <https://coveralls.io/>`_ to monitor test "
-"coverage."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:128
 msgid "Infrastucture"
 msgstr "インフラストラクチャ"
-
-#: ../../source/guidelines/sdk-development.rst:130
-msgid ""
-"The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API "
-"and DTOs generation. It supports multiple languages, and hopefully, yours is"
-" `on the list <https://openapi-generator.tech/docs/generators/>`_."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:133
-msgid ""
-"These are the steps we followed to generate the Typescript DTOs (data "
-"transfer objects):"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:135
-msgid ""
-"Download the `latest Symbol OpenAPI spec <https://github.com/nemtech/symbol-"
-"openapi/releases>`_ from GitHub releases."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:137
 msgid "Install the OpenApi generator CLI."
 msgstr "OpenAPI ジェネレータ CLI のインストール"
 
-#: ../../source/guidelines/sdk-development.rst:143
-msgid "Generate the DTOs for the programming language selected."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:149
-msgid ""
-"The generated lib is normally published into a central repository (e.g. "
-"maven, npm). The SDKs depend on those libraries like any other third party "
-"dependency. To automate the deployment of the packages, including the "
-"generator for the selected programming language in the `symbol-openapi-"
-"generator <https://github.com/nemtech/symbol-openapi-generator>`_ project."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:151
-msgid ""
-"Drop the generated client classes and implement them using the `Repository "
-"pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning "
-"`Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of "
-"`ReactiveX <http://reactivex.io/>`_."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:153
-msgid ""
-"The SDK for TypeScript currently chooses the ``typescript-node`` template "
-"from the OpenAPI Generator, but there are also other templates available to "
-"fit for other purposes. The SDK has interfaced out all the Http Repositories"
-" so that different implementations can be applied."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:155
 msgid "Example of repositories and implementations:"
 msgstr "リポジトリ実装の例:"
-
-#: ../../source/guidelines/sdk-development.rst:157
-msgid ""
-"`CreateTransactionsFromDTO <https://github.com/nemtech/symbol-sdk-"
-"typescript-"
-"javascript/blob/master/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:158
-msgid ""
-"`BlockchainRepository <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/infrastructure/BlockRepository.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:159
-msgid ""
-"`BlockchainHttp <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/infrastructure/BlockHttp.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:161
-msgid ""
-"See the complete list of `repositories and implementations "
-"<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/infrastructure>`_."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:163
-msgid ""
-"The **repositories return models instead of DTOs**. You will need to code "
-"the models before finishing the API wrapper."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:167
 msgid "Models"
 msgstr "モデル"
 
-#: ../../source/guidelines/sdk-development.rst:169
-msgid ""
-"By default, models are immutable and aim to hide the complexity, like type "
-"conversion or relationship between objects."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:171
 msgid "Example of models implementation:"
 msgstr "モデル実装の例:"
-
-#: ../../source/guidelines/sdk-development.rst:173
-msgid ""
-"`Account <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/account/Account.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:174
-msgid ""
-"`NamespaceId <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/namespace/NamespaceId.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:175
-msgid ""
-"`NodeInfo <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/node/NodeInfo.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:177
-msgid ""
-"See the complete list of `models <https://github.com/nemtech/symbol-sdk-"
-"typescript-javascript/tree/master/src/model>`_."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:179
-msgid ""
-"You will find in the implementations different invariants to ensure the "
-"object is well constructed and a nicer API is published."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:181
-msgid "Particular decisions we considered:"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:183
-msgid ""
-"UInt64 support: While `Java supports big numbers "
-"<https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for"
-" example, JavaScript doesn't. The JavaScript SDK has a custom class to "
-"handle the `uint64 types <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/UInt64.ts>`_. If your language supports "
-"``uint64``, use that implementation instead."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:184
 msgid ""
 "API conversions: Sometimes, the data returned by API is compressed. You "
 "might need to convert those types for the user."
 msgstr "API 変換: API によって返されるデータは圧縮される場合があります。ユーザーのこれらのタイプを変換する必要がある場合があります。"
-
-#: ../../source/guidelines/sdk-development.rst:185
-msgid ""
-"`Namespace <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation"
-" time you add the string name, but when you receive the Namespace from the "
-"network, it comes in formatted as ``uint64`` id. A specific endpoint returns"
-" the Namespace ``string`` name."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:188
 msgid "Transaction Serialization"
@@ -553,90 +378,9 @@ msgstr ""
 "`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
 "のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
 
-#: ../../source/guidelines/sdk-development.rst:192
-msgid ""
-"In combination with the `catbuffer-generators project "
-"<https://github.com/nemtech/catbuffer-generators/tree/master/generators>`_, "
-"developers can generate builder classes for a given set of programming "
-"languages. For example, the |sdk| uses the generated code to operate with "
-"the entities in binary form."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:195
-msgid ""
-"If there is no generator for the programming language selected, you will "
-"need to develop it first. You can base your work on the `generator "
-"<https://github.com/nemtech/catbuffer-"
-"generators/tree/master/generators/typescript>`_ for TypeScript."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:197
-msgid ""
-"If there is a generator, follow the next steps to generate the builders for "
-"all the existent entities:"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:199
-msgid "Clone the catbuffer-generators repository recursively."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:205
 msgid "Install the package requirements."
 msgstr "必須パッケージをインストール"
-
-#: ../../source/guidelines/sdk-development.rst:211
-msgid ""
-"Clone the catbuffer repository inside the ``catbuffer-generators`` folder."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:213
-msgid ""
-"Generate code for all the schemas running the following command under the "
-"``catbuffer-generators`` directory, replacing ``cpp_builder`` for the "
-"targeted programming language."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:219
-msgid ""
-"The previous command creates a new file for every schema under the "
-"``catbuffer/_generated/cpp_builder`` folder."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:221
-msgid ""
-"Publish the generated code into a central repository (e.g. Maven, NPM) and "
-"make the SDK dependant on this library. For every transaction type, use the "
-"generated builders to serialize and deserialize transactions."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:223
-msgid "Here you can find some examples of how we used transactions builders:"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:225
-msgid ""
-"`AccountAddressRestrictionTransaction <https://github.com/nemtech/symbol-"
-"sdk-typescript-"
-"javascript/blob/master/src/model/transaction/AccountAddressRestrictionTransaction.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:226
-msgid ""
-"`TransferTransaction <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/TransferTransaction.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:227
-msgid ""
-"`AggregateTransaction <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/AggregateTransaction.ts>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:229
-msgid ""
-"See the complete list of `transactions <https://github.com/nemtech/symbol-"
-"sdk-typescript-javascript/tree/master/src/model/transaction>`_."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:232
 msgid "KeyPair and Cryptographic functions"
@@ -646,180 +390,26 @@ msgstr "キーペアと暗号化関数"
 msgid "This section is incomplete."
 msgstr "このセクションは未完了です。"
 
-#: ../../source/guidelines/sdk-development.rst:236
-msgid ""
-"Cryptographic functions are required to sign transactions. All the crypto-"
-"related functions can be found under the `core/crypto "
-"<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/tree/master/src/core/crypto>`_ module."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:239
-msgid ""
-"SDKs use standard ``tweetnacl`` (ed2559) for key pair generation, address "
-"derivation (from public key) and signings:"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:241
-msgid ""
-"Keypairs are based on tweetnacl 64 bytes secretKey (public + private) using "
-"SHA-512."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:242
-msgid ""
-"Signatures use tweetnacl detached mode and also get generated using SHA-512."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:244
-msgid ""
-"Finally, pay special attention to the `test vectors "
-"<https://github.com/nemtech/test-vectors>`_. The best way to make sure your "
-"implementation is correct is to use the test vectors files as inputs and "
-"expected outputs."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:247
 msgid "Examples of vector tests:"
 msgstr "ベクタテストの例:"
-
-#: ../../source/guidelines/sdk-development.rst:249
-msgid ""
-"`KeyPairVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/master"
-"/sdk-"
-"core/src/test/java/io/nem/symbol/core/crypto/KeyPairVectorTester.java>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:250
-msgid ""
-"`DsaSignerVectorTester <https://github.com/nemtech/symbol-sdk-"
-"java/blob/master/sdk-"
-"core/src/test/java/io/nem/symbol/core/crypto/DsaSignerVectorTester.java>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:251
-msgid ""
-"`KeyPair <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/test/core/crypto/keyPair.spec.ts#L88>`_"
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:255
 msgid "Services"
 msgstr "サービス"
 
-#: ../../source/guidelines/sdk-development.rst:257
-msgid ""
-"Services combine multiple :doc:`REST API <../api>` requests and provide "
-"developers with handy methods that cannot be retrieved directly from the "
-"API."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:259
-msgid ""
-"Services are considered \"nice to have\" features, and these usually are not"
-" required to consider the SDK complete. We recommend starting coding "
-"services only if you have a fully operational and well-tested SDK first."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:261
 msgid "Examples of services:"
 msgstr "サービスの例:"
-
-#: ../../source/guidelines/sdk-development.rst:263
-msgid ""
-"`AggregateTransactionService <https://github.com/nemtech/symbol-sdk-"
-"typescript-"
-"javascript/blob/master/src/service/AggregateTransactionService.ts>`_: Helps "
-"application developers to announce aggregate transactions without having to "
-"develop the logic to wait for the hash lock confirmation."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:264
-msgid ""
-"`MetadataTransactionService <https://github.com/nemtech/symbol-sdk-"
-"typescript-"
-"javascript/blob/master/src/service/MetadataTransactionService.ts>`_: Creates"
-" metadata transactions without having to pass the previous value."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:265
-msgid ""
-"`BlockService <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/service/BlockService.ts>`_: Provides with methods"
-" to verify that the data returned by a given node is valid."
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:267
-msgid ""
-"See the complete list of `services <https://github.com/nemtech/symbol-sdk-"
-"typescript-javascript/tree/master/src/service>`_."
-msgstr ""
 
 #: ../../source/guidelines/sdk-development.rst:271
 msgid "Documenting the SDK"
 msgstr "SDK のドキュメント"
 
-#: ../../source/guidelines/sdk-development.rst:273
-msgid ""
-"The SDKs need to be adopted by other developers. As the main developer, no "
-"one knows better than you how the SDK works. Consider helping others and "
-"spread the usage of the SDK by providing :doc:`the following documentation "
-"<sdk-documentation>`."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:279
 msgid "Publishing the SDK as official"
 msgstr "公式として公開されているSDK"
 
-#: ../../source/guidelines/sdk-development.rst:281
-msgid ""
-"To make an SDK officially supported, submit it as a `NIP "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_. The reason "
-"behind the |codename| Improvement Proposal is to ensure that the new "
-"libraries are reviewed, tested, and shared among |codename| developers."
-msgstr ""
-
 #: ../../source/guidelines/sdk-development.rst:285
 msgid "Recommended Licenses"
 msgstr "推奨するライセンス"
-
-#: ../../source/guidelines/sdk-development.rst:287
-msgid "MIT: `Expat/MIT/X11 license <https://opensource.org/licenses/MIT>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:288
-msgid ""
-"Apache-2.0: `Apache License, version 2.0 "
-"<http://www.apache.org/licenses/LICENSE-2.0>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:290
-msgid ""
-"BSD-2-Clause: `OSI-approved BSD 2-clause license "
-"<https://opensource.org/licenses/BSD-2-Clause>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:292
-msgid ""
-"BSD-3-Clause: `OSI-approved BSD 3-clause license "
-"<https://opensource.org/licenses/BSD-3-Clause>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:294
-msgid ""
-"CC0-1.0: `Creative Commons CC0 1.0 Universal "
-"<https://creativecommons.org/publicdomain/zero/1.0/>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:296
-msgid ""
-"GNU-All-Permissive: `GNU All-Permissive License "
-"<http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-"
-"Files.html>`_"
-msgstr ""
-
-#: ../../source/guidelines/sdk-development.rst:298
-msgid ""
-"LGPL-2.1+: `GNU Lesser General Public License (LGPL), version 2.1 or newer "
-"<http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html>`_"
-msgstr ""

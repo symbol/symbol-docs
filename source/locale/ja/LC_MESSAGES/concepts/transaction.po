@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -59,12 +59,6 @@ msgstr "次のトランザクションタイプが |codename| ベースのネッ
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
@@ -87,52 +81,16 @@ msgid "**Remote harvesting**"
 msgstr "**リモートハーベスティング**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414C"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`AccountLinkTransaction <account-link-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Delegate the account importance to a proxy account."
 msgstr "アカウントのインポータンスをプロキシアカウントへ移譲する。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "**Aggregate**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4141"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`AggregateCompleteTransaction <aggregate-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send transactions in batches to different accounts."
 msgstr "異なるアカウントにトランザクションをバッチ送信します。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4241"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`AggregateBondedTransaction <aggregate-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Propose an arrangement of transactions between different accounts."
 msgstr "異なるアカウント間のトランザクションの手配を提案します。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "--"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`CosignatureTransaction <cosignature-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Cosign an AggregateBondedTransaction."
@@ -143,25 +101,8 @@ msgid "**Mosaic**"
 msgstr "**モザイク**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414D"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Register a new mosaic."
 msgstr "新しいモザイクの取得"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x424D"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Change an existent mosaic supply."
@@ -172,157 +113,44 @@ msgid "**Namespace**"
 msgstr "**ネームスペース**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x414E"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Register namespaces to organize your assets."
 msgstr "ネームスペースを登録してアセットを整理します。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x424E"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`AddressAliasTransaction <address-alias-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Attach a namespace name to an account."
 msgstr "アカウントにネームスペースをアタッチする。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x434E"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`MosaicAliasTransaction <mosaic-alias-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Attach a namespace name to a mosaic."
 msgstr "ネームスペースをモザイクにアタッチする。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "**Metadata**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4144"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`AccountMetadataTransaction <account-metadata-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Associate a key-value state to an account."
 msgstr "アカウントに Key-Value 状態を関連付けます。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4244"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Associate a key-value state to a mosaic."
 msgstr "モザイクに Key-Value 状態を関連付けます。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4344"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Associate a key-value state to a namespace."
 msgstr "ネームスペースに Key-Value 状態を関連付けます。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Multisignature**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4155"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`MultisigAccountModificationTransaction <multisig-account-modification-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Create or modify a multisig contract."
 msgstr "マルチシグコントラクトの作成と変更"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "**Hash Lock**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4148"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`HashLockTransaction <hash-lock-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Lock a deposit needed to announce aggregate bonded transactions."
 msgstr "アグリゲートボンドトランザクションのアナウンスに必要なデポジットをロック"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Secret Lock**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4152"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`SecretLockTransaction <secret-lock-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Start a token swap between different chains."
 msgstr "異なるチェーン間でのトークンスワップの開始。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4252"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`SecretProofTransaction <secret-proof-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Conclude a token swap between different chains."
 msgstr "異なるチェーン間でのトークンスワップの完結。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "**Account restriction**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4150"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`AccountAddressRestrictionTransaction <account-address-restriction-"
-"transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
@@ -331,29 +159,9 @@ msgid ""
 msgstr "与えられたアドレスを含む送受信トランザクションの許可/ブロックします。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4250"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid ""
 "Allow or block incoming transactions containing a given set of mosaics."
 msgstr "与えられたモザイクを含む受信トランザクションの許可/ブロックします。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4350"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`AccountOperationRestrictionTransaction <account-operation-restriction-"
-"transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Allow or block outgoing transactions by transaction type."
@@ -364,44 +172,12 @@ msgid "**Mosaic restriction**"
 msgstr "**モザイク制限**"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4151"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Set a global restriction to a mosaic."
 msgstr "モザイクにグローバル制限の設定"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x4251"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-":ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Set a mosaic restriction to a specific address."
 msgstr "特定のアドレスにモザイク制限を設定"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "**Transfer**"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x4154"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`TransferTransaction <transfer-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
@@ -431,6 +207,9 @@ msgid ""
 "docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
 " transactions."
 msgstr ""
+"トランザクションを `SDK を使用して定義する <https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_"
+" ことを推奨しています。"
 
 #: ../../source/concepts/transaction.rst:116
 msgid "Signing a transaction"
@@ -443,6 +222,10 @@ msgid ""
 "docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
 " expresses the account's agreement to change the network state as defined."
 msgstr ""
+"アカウントはトランザクションをネットワークにアナウンスする前に、トランザクションに署名する必要があります。 `トランザクションに署名  "
+"<https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
+" することは、定義されたとおりにネットワークの状態を変更することにアカウントが同意したと示されます。"
 
 #: ../../source/concepts/transaction.rst:121
 msgid ""
@@ -459,6 +242,9 @@ msgid ""
 "<https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:"
 msgstr ""
+"アカウントは `トランザクションへ署名 <https://github.com/nemtech/symbol-sdk-typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_ "
+"をするために次のステップに従う必要があります:"
 
 #: ../../source/concepts/transaction.rst:125
 msgid ""
@@ -499,6 +285,11 @@ msgid ""
 "signer public key, nemesis block generation hash, and the remaining "
 "transaction payload."
 msgstr ""
+"署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードに SHA3-512 "
+"ハッシュアルゴリズムを適用して `トランザクションハッシュ <https://github.com/nemtech/symbol-sdk-"
+"typescript-"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L126-L179>`_ "
+"を計算します。"
 
 #: ../../source/concepts/transaction.rst:165
 msgid "Announcing a transaction"
@@ -614,20 +405,6 @@ msgstr "トランザクションのシリアル化"
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/transaction.rst:251
-#: ../../source/concepts/transaction.rst:271
-msgid ":ref:`SizePrefixedEntity <size-prefixed-entity>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:252
-msgid ":ref:`VerifiableEntity <verifiable-entity>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:253
-#: ../../source/concepts/transaction.rst:289
-msgid ":ref:`EntityBody <entity-body>`"
-msgstr ""
-
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
@@ -637,24 +414,8 @@ msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "max_fee"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":schema:`Amount <types.cats#L1>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Maximum fee allowed to spend for the transaction."
 msgstr "トランザクションに最大の手数料を支払うことが許可されています。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "deadline"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":schema:`Timestamp <types.cats#L8>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
@@ -666,23 +427,9 @@ msgstr ""
 "ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/concepts/transaction.rst:265
-msgid "EmbeddedTransactionHeader"
-msgstr ""
-
 #: ../../source/concepts/transaction.rst:267
 msgid "Binary layout for an embedded transaction header."
 msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "embeddedTransactionHeader_Reserved1"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-msgid "uint32"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
@@ -690,75 +437,31 @@ msgid ""
 "boundary."
 msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
-#: ../../source/concepts/transaction.rst:282
-msgid "EmbeddedTransaction"
-msgstr ""
-
 #: ../../source/concepts/transaction.rst:284
 msgid ""
 "Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
 "transaction."
 msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
 
-#: ../../source/concepts/transaction.rst:288
-msgid ":ref:`EmbeddedTransactionHeader <embedded-transaction-header>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:293
-msgid "Entity schemas"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:298
-msgid "SizePrefixedEntity"
-msgstr ""
-
 #: ../../source/concepts/transaction.rst:300
 msgid "Serialization of an entity that has a prefixed size."
 msgstr "サイズをプレフィックスしたエンティティのシリアル化"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "size"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "unit32"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Size of the transaction."
 msgstr "トランザクションのサイズ"
-
-#: ../../source/concepts/transaction.rst:311
-msgid "VerifiableEntity"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:313
 msgid "Serialization of an entity that should be signed by an account."
 msgstr "アカウントによって署名されるべきエンティティのシリアル化。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "verifiableEntityHeader_Reserved1"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "reserved padding to align Signature on 8-byte boundary."
 msgstr "Signature を 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "signature"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":schema:`Signature <types.cats#L15>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Entity signature generated by the signer."
 msgstr "署名者により生成されたエンティティの署名。"
-
-#: ../../source/concepts/transaction.rst:325
-msgid "EntityBody"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:327
 msgid ""
@@ -767,112 +470,40 @@ msgid ""
 msgstr "エンティティのシリアル化。エンティティはブロックまたは :doc:`トランザクション <transaction>` です。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "signerPublicKey"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":schema:`Key <types.cats#L14>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Public key of the signer of the entity."
 msgstr "エンティティの署名者の公開鍵"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "entityBody_Reserved1"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Reserved padding to align end of EntityBody on 8-byte boundary."
 msgstr "EntityBody の終わりを 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "version"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Version of the structure."
 msgstr "構造体のバージョン"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "network"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`Network <network-type>`"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Entity network."
 msgstr "エンティティネットワーク"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "type"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid ":ref:`EntityType <entity-type>`"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "Entity type."
 msgstr "エンティティタイプ"
-
-#: ../../source/concepts/transaction.rst:343
-msgid "NetworkType"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:345
-msgid "Enumeration: uint8"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x68"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "(MAIN_NET) Public network."
 msgstr "(MAIN_NET) パブリックネットワーク"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x98"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "(TEST_NET) Public test network."
 msgstr "(TEST_NET) パブリックテストネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x60"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "(MIJIN) Private network."
 msgstr "(MIJIN) プライベートネットワーク"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "0x90"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
 msgid "(MIJIN_TEST) Private test network."
 msgstr "(MIJIN_TEST) プライベートテストネットワーク"
-
-#: ../../source/concepts/transaction.rst:359
-msgid "EntityType"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:361
-msgid "Enumeration: uint16"
-msgstr ""
-
-#: ../../source/concepts/transaction.rst:1
-msgid "0x0000"
-msgstr ""
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Reserved."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2020-01-27 23:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -68,19 +68,9 @@ msgstr "説明"
 
 #: ../../source/libraries.rst:1
 msgid ""
-"`Apostille library <https://github.com/luxtagofficial/Apostille-library>`_"
-msgstr ""
-
-#: ../../source/libraries.rst:1
-msgid ""
 "Transferable, updatable, branded, and conjointly owned blockchain "
 "notarizations."
 msgstr "譲渡可能、更新可能、ブランド付き、共同所有のブロックチェーン公証"
-
-#: ../../source/libraries.rst:1
-msgid ""
-"`symbol-hd-wallets <https://github.com/nemfoundation/symbol-hd-wallets/>`_"
-msgstr ""
 
 #: ../../source/libraries.rst:1
 msgid ""
@@ -88,37 +78,16 @@ msgid ""
 msgstr "|codename| 用 HD ウォレットを扱うための実験的ライブラリ。"
 
 #: ../../source/libraries.rst:1
-msgid ""
-"`nem2-nonfungible-asset <https://github.com/nemfoundation/nem2-nonfungible-"
-"asset/>`_"
-msgstr ""
-
-#: ../../source/libraries.rst:1
 msgid "Experimental library to handle non-fungible assets for |codename|."
 msgstr "|codename| 用代替不可能アセットを扱うための実験的ライブラリ。"
-
-#: ../../source/libraries.rst:1
-msgid ""
-"`nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-"
-"sharing/>`_"
-msgstr ""
 
 #: ../../source/libraries.rst:1
 msgid "Implementing Shamir's secret sharing on |codename|."
 msgstr "|codename| でシャミア秘密共有を実装する。"
 
 #: ../../source/libraries.rst:1
-msgid ""
-"`symbol-qr-library <https://github.com/nemfoundation/symbol-qr-library/>`_"
-msgstr ""
-
-#: ../../source/libraries.rst:1
 msgid "Experimental library to generate QR specification for |codename|."
 msgstr "|codename| 用の QR 仕様を生成するための実験的ライブラリ。"
-
-#: ../../source/libraries.rst:1
-msgid "`nem2-uri-scheme <https://github.com/nemfoundation/nem2-uri-scheme/>`_"
-msgstr ""
 
 #: ../../source/libraries.rst:1
 msgid "Experimental library to handle uri scheme for |codename|."

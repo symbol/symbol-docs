@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.1\n"
+"Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-02 10:03+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -136,7 +136,7 @@ msgid ""
 "which accounts can transact with the mosaic."
 msgstr "STO には規制があるため、モザイク作成者はモザイクを取引できるアカウントを制限できる必要があります。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:68
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:73
 msgid ""
 "Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
 "transaction>` to set the **initial supply**. For instance, we can set it to "
@@ -145,7 +145,7 @@ msgstr ""
 "**初期供給量** を設定するために :ref:`MosaicSupplyChangeTransaction <mosaic-supply-"
 "change-transaction>` を用います。例えば **1,000,000** モザイク単位を作成します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:82
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:92
 msgid ""
 "|codename| works with **absolute amounts**. To get an absolute amount, "
 "multiply the number of assets you want to create by 10\\ "
@@ -155,7 +155,7 @@ msgstr ""
 "|codename| は **絶対量** を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
 "を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:84
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:94
 msgid ""
 "Announce both transactions together using an :ref:`AggregateTransaction "
 "<aggregate-transaction>`."
@@ -163,7 +163,7 @@ msgstr ""
 "両方のトランザクションは :ref:`AggregateTransaction <aggregate-transaction>` "
 "を使って一緒にアナウンスします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:86
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:96
 msgid ""
 "Include the first block generation hash to make the transaction only valid "
 "for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
@@ -172,7 +172,7 @@ msgstr ""
 "あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
 "'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:100
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:115
 msgid ""
 "Once the transaction gets confirmed, you can try to :doc:`transfer "
 "<../transfer/sending-a-transfer-transaction>` one unit of the created mosaic"
@@ -183,6 +183,6 @@ msgstr ""
 "-transfer-transaction>` してみたり、 :doc:`モザイクプロパティの変更 <modifying-mosaic-supply>`"
 " または :doc:`ネームスペースをモザイクへリンク <creating-a-mosaic>` してみましょう。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:104
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:119
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

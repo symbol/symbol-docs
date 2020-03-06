@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,27 +61,6 @@ msgstr ""
 "transaction>` を定義します。そして、 ``mosaicId`` と ``divisibility`` "
 "を目標とするモザイクプロパティに置き換えます。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:40
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:61
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts`"
-msgstr ""
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:45
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:66
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.js`"
-msgstr ""
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:50
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:71
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/java/src/test/java/symbol/guides/examples/mosaic/ModifyingMosaicSupply.java`"
-msgstr ""
-
 #: ../../source/guides/mosaic/modifying-mosaic-supply.rst:55
 msgid ""
 "|codename| works with **absolute amounts**. To get an absolute amount, "
@@ -114,9 +93,3 @@ msgstr ""
 #: ../../source/guides/mosaic/modifying-mosaic-supply.rst:81
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
-
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:83
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/bash/mosaic/ModifyingMosaicSupply.sh`"
-msgstr ""
