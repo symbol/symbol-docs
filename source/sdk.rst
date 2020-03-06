@@ -56,7 +56,7 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
 .. |java-reference| raw:: html
 
-    <a href="https://nemtech.github.io/symbol-sdk-java/javadoc/0.17.0/" target="_blank">Documentation</a>
+    <a href="https://nemtech.github.io/symbol-sdk-java/javadoc/0.17.0-SNAPSHOT/" target="_blank">Documentation</a>
 
 .. |protocol-compatibility-report| raw:: html
 
