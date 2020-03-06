@@ -113,7 +113,7 @@ Once you have written some tests, setup a Continuous Integration (CI) system to 
 We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
 
 Also, we strive to keep our codebases with a unit test coverage of 80% or higher.
-We use `coveralls <https://coveralls.io/`_ to monitor test coverage.
+We use `coveralls <https://coveralls.io/>`_ to monitor test coverage.
 
 *************
 Infrastucture

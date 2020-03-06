@@ -17,7 +17,7 @@ Supported languages
     :delim: ;
 
     TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|
-    Java SDK; |java-repo|; |java-reference|
+    Java SDK; |java-repo|; :doc:`Documentation <references/java-sdk>`
 
 ************
 Ongoing work
@@ -53,10 +53,6 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 .. |java-repo| raw:: html
 
     <a href="https://github.com/nemtech/symbol-sdk-java" target="_blank">Repository</a>
-
-.. |java-reference| raw:: html
-
-    <a href="https://nemtech.github.io/symbol-sdk-java/javadoc/0.17.0-SNAPSHOT/" target="_blank">Documentation</a>
 
 .. |protocol-compatibility-report| raw:: html
 

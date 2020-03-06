@@ -49,6 +49,7 @@ extensions = [
     'sphinx_tabs.tabs',
     'edit-on-github',
     'fulltoc',
+    'ghreference',
     'ablog'
 ]
 
