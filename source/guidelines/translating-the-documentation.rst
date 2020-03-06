@@ -19,10 +19,10 @@ Also, we recommend reading Transifex's `Getting Started as a Translator guide <h
 
 2. Join symbol-docs team and choose a language
 
-Explore the `nem2-docs project in Transifex <https://www.transifex.com/nemtech/symboldocs/>`_.
+Explore the `symbol-docs project in Transifex <https://www.transifex.com/nemtech/symboldocs/>`_.
 Check which languages are being translated and up to which point they are complete.
 
-Click on `Help Translate "nem2-docs" <https://www.transifex.com/signup/?join_project=symboldocs>`_ button on the right side of the header, selecting the language you want to contribute.
+Click on `Help Translate "symbol-docs" <https://www.transifex.com/signup/?join_project=symboldocs>`_ button on the right side of the header, selecting the language you want to contribute.
 
 The translation coordinator will approve your request.
 Once accepted, you will receive an email. At this moment, you will be able to start translating the docs.

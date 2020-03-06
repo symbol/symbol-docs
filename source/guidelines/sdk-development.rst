@@ -86,9 +86,9 @@ Before starting
 Creating the project
 ********************
 
-You can base your work on the `TypeScript SDK <https://github.com/nemtech/nem2-sdk-typescript-javascript>`_.
+You can base your work on the `TypeScript SDK <https://github.com/nemtech/symbol-sdk-typescript-javascript>`_.
 The TypeScript version is the first SDK getting the latest updates.
-Check regularly the `Changelog <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
+Check regularly the `Changelog <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
 Create a new repository, preferably on GitHub, with:
 
@@ -106,7 +106,7 @@ We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org
 If you need inspiration, feel free to adapt directly the same tests we did.
 
 * Example of ``travis.yml`` `configuration file <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_
-* Example of `unit tests  <https://github.com/nemtech/nem2-sdk-typescript-javascript/tree/master/test>`_.
+* Example of `unit tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/test>`_.
 * Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/e2e>`_.
 
 Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite and code linter automatically.
@@ -147,10 +147,10 @@ These are the steps we followed to generate the Typescript DTOs (data transfer o
 Example of repositories and implementations:
 
 * `CreateTransactionsFromDTO <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
-* `BlockchainRepository <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
-* `BlockchainHttp <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
+* `BlockchainRepository <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
+* `BlockchainHttp <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
 
-See the complete list of `repositories and implementations <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/infrastructure>`_.
+See the complete list of `repositories and implementations <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure>`_.
 
 6. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
@@ -172,9 +172,9 @@ You will find in the implementations different invariants to ensure the object i
 
 Particular decisions we considered:
 
-* UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
+* UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
 * API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
-* `Namespace <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
+* `Namespace <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================

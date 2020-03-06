@@ -20,10 +20,10 @@ Ongoing work
    :delim: ;
 
     `Apostille library <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
-    `nem2-hd-wallets <https://github.com/nemfoundation/nem2-hd-wallets/>`_; Experimental library to handle hyper deterministic wallets for |codename|.
+    `symbol-hd-wallets <https://github.com/nemfoundation/symbol-hd-wallets/>`_; Experimental library to handle hyper deterministic wallets for |codename|.
     `nem2-nonfungible-asset <https://github.com/nemfoundation/nem2-nonfungible-asset/>`_; Experimental library to handle non-fungible assets for |codename|.
     `nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-sharing/>`_; Implementing Shamir's secret sharing on |codename|.
-    `nem2-qr-library <https://github.com/nemfoundation/nem2-qr-library/>`_; Experimental library to generate QR specification for |codename|.
+    `symbol-qr-library <https://github.com/nemfoundation/symbol-qr-library/>`_; Experimental library to generate QR specification for |codename|.
     `nem2-uri-scheme <https://github.com/nemfoundation/nem2-uri-scheme/>`_; Experimental library to handle uri scheme for |codename|.
 
 Do you need to create a NIP to create a library? No, you don’t. In fact, we suggest not submitting a NIP until you build a library that improves |codename| and the different projects that use it. Since the library can be changed multiple times, developers should spend more time experimenting and learning, creating a specification later on.

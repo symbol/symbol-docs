@@ -28,7 +28,7 @@ To do so, open a new :ref:`WebSocket connection <websockets>` connection.
 
     import * as WebSocket from 'ws';
 
-    const host = 'api-2-01.us-west-1.symboldev.network:3000';
+    const host = 'api-01.us-west-1.symboldev.network:3000/';
     const ws = new WebSocket('ws://' + host + '/ws');
 
     ws.on('open', () => {
