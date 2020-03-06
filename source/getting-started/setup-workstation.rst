@@ -33,7 +33,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-west-1.symboldev.network:3000/
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 

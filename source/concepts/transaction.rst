@@ -65,7 +65,7 @@ Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>
 Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties.
 You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
 
-We recommend `using the SDK to define <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+We recommend `using the SDK to define <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
 
 .. code-block:: typescript
 
@@ -108,11 +108,11 @@ Signing a transaction
 *********************
 
 Accounts must sign transactions before announcing them to the network.
-`Signing a transaction <https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
+`Signing a transaction <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
 For example, a TransferTransaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
-An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/nem2-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:
+An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
 2. Get the nemesis block generation hash. You can query ``nodeUrl + '/block/1'`` and copy ``meta.generationHash`` value.

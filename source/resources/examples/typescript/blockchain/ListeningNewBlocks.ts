@@ -19,7 +19,7 @@
 import {RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 

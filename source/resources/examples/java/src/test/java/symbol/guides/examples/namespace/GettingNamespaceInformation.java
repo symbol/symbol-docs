@@ -38,7 +38,7 @@ class GettingNamespaceInformation {
 
         /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://api-2-01.us-west-1.symboldev.network:3000")) {
+            "http://api-01.us-west-1.symboldev.network:3000/")) {
             // replace with namespace name
             final NamespaceId namespaceId = NamespaceId.createFromName("foo");
 

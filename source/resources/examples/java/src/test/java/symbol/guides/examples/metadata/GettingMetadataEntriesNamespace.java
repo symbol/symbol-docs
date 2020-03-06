@@ -39,7 +39,7 @@ class GettingMetadataEntriesNamespace {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-2-01.us-west-1.symboldev.network:3000")) {
+                "http://api-01.us-west-1.symboldev.network:3000/")) {
             final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
 
             // replace with namespace name

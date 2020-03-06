@@ -6,7 +6,7 @@ Writing a guide
 
 Thank you for considering writing a new guide!
 
-Before starting, we recommend you to open the `nem2-docs repository issues <https://github.com/nemtech/nem2-docs/issues>`_ to find some ideas pending to be written.
+Before starting, we recommend you to open the `symbol-docs repository issues <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas pending to be written.
 
 To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
 If there is no issue yet, create a new one introducing the content you want to publish.
@@ -15,11 +15,11 @@ If there is no issue yet, create a new one introducing the content you want to p
 Writing the guide
 *****************
 
-1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `nem2-docs <https://github.com/nemtech/nem2-docs>`_ repository.
+1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `symbol-docs <https://github.com/nemtech/symbol-docs>`_ repository.
 
 .. code-block:: bash
 
-    git clone https://github.com/nemtech/nem2-docs.git
+    git clone https://github.com/nemtech/symbol-docs.git
 
 2. Make sure you have Python 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed.
 
@@ -86,7 +86,7 @@ Writing the guide
 5. Write and code your guide.
 Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
 
-6. Add the `code examples <https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
+6. Add the `code examples <https://github.com/nemtech/symbol-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
 You can render fragments of code from a file inside your ``.rst`` file.
 
 ::
