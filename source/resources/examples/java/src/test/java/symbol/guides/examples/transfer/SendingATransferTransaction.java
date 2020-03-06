@@ -45,7 +45,7 @@ class SendingATransferTransaction {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+                "http://api-2-01.us-west-1.symboldev.network:3000")) {
             // replace with recipient address
             final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);

@@ -52,7 +52,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
     Insert profile name: product
 
     New Account
@@ -74,7 +74,7 @@ Before starting solving the use case, you will need to set up two accounts with 
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save account? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
     Insert profile name: company
 
     New Account

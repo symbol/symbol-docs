@@ -18,8 +18,8 @@
 
 /* start block 01 */
 import {sha3_256} from 'js-sha3';
-import {BlockRepository, RepositoryFactoryHttp, UInt64} from 'nem2-sdk';
-import {PositionEnum} from 'nem2-sdk-openapi-typescript-node-client';
+import {PositionEnum} from 'symbol-openapi-typescript-node-client/dist/model/positionEnum';
+import {BlockRepository, RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
 
 const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository) => {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
@@ -44,7 +44,7 @@ const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHtt
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
 };
 
-const nodeUrl = 'http://api-xym-3-01.ap-northeast-1.nemtech.network:3000';
+const nodeUrl = 'http://api-2-01.eu-west-1.symboldev.network:3000';
 const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height

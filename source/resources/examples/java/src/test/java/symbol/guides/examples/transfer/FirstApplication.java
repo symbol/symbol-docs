@@ -45,7 +45,7 @@ class FirstApplication {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000")) {
+                "http://api-2-01.us-west-1.symboldev.network:3000")) {
             // replace with mosaic id
             final String mosaicIdHex = "7cdf3b117a3c40cc";
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);

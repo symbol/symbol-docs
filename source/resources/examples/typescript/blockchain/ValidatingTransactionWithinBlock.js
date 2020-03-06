@@ -27,8 +27,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 /* start block 01 */
 const js_sha3_1 = require("js-sha3");
-const nem2_sdk_1 = require("nem2-sdk");
-const nem2_sdk_openapi_typescript_node_client_1 = require("nem2-sdk-openapi-typescript-node-client");
+const positionEnum_1 = require("symbol-openapi-typescript-node-client/dist/model/positionEnum");
+const symbol_sdk_1 = require("symbol-sdk");
 const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(this, void 0, void 0, function* () {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
     const HRoot = (yield blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
@@ -42,7 +42,7 @@ const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(this, 
     const HRoot0 = merkleProof
         .reduce((proofHash, pathItem) => {
         const hasher = js_sha3_1.sha3_256.create();
-        if (pathItem.position === nem2_sdk_openapi_typescript_node_client_1.PositionEnum.Left) {
+        if (pathItem.position === positionEnum_1.PositionEnum.Left) {
             return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
         }
         else {
@@ -52,11 +52,11 @@ const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(this, 
     // 5. Compare if the HRoot' equals to HRoot.
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
 });
-const nodeUrl = 'http://api-xym-3-01.ap-northeast-1.nemtech.network:3000';
-const repositoryHttp = new nem2_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const nodeUrl = 'http://api-2-01.eu-west-1.symboldev.network:3000';
+const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height
-const height = nem2_sdk_1.UInt64.fromUint(1);
+const height = symbol_sdk_1.UInt64.fromUint(1);
 // 1. Calculate H(B); the hash of the element you want to validate if exists within a block.
 const leaf = '1F4B55D42C9C91805E73317319DDDA633667D5E44EB0F03678FF7F130555DF4B'.toLowerCase();
 validateTransactionInBlock(leaf, height, blockHttp).then((result) => console.log(result));

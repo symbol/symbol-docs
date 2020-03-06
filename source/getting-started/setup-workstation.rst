@@ -23,7 +23,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global symbol-cli
+    npm install --global symbol-cli@0.18.2
 
 2. Generate a new account and save it as a **profile**.
 
@@ -33,7 +33,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -114,7 +114,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk rxjs
+            npm install symbol-sdk@0.17.3 rxjs
 
         3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
 
@@ -143,7 +143,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk rxjs
+            npm install symbol-sdk@0.17.3 rxjs
 
     .. tab:: Java
 
@@ -185,12 +185,12 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer-xym.nemtech.network/nodes" target="_blank">this list</a>
+   <a href="http://explorer.symboldev.network/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet-xym-01.nemtech.network/" target="_blank">Navigate here</a>
+   <a href="http://faucet-01.symboldev.network/" target="_blank">Navigate here</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-xym-02.nemtech.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-02.symboldev.network/" target="_blank">alternative faucet</a>

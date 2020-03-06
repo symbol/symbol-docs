@@ -41,7 +41,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
     Insert profile name: alice
 
 .. code-block:: bash
@@ -50,7 +50,7 @@ Create an account for Alice, and another for the certificate with the :doc:`CLI 
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-2-01.us-west-1.symboldev.network:3000
     Insert profile name: certificate
 
 *************************
