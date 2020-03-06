@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.1\n"
+"Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-02 10:03+0000\n"
+"POT-Creation-Date: 2020-03-06 18:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,6 +35,14 @@ msgstr ""
 "SDK は他の開発者に採用される必要があります。貢献者として、決定された SDK "
 "がどのように機能するかをあなたより知っている人は誰もいません。次のドキュメントを提供して、他の人を助け、SDK の使用を広めることを検討してください。"
 
+#: ../../source/guidelines/sdk-documentation.rst:20
+msgid "Readme"
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:22
+msgid "Make sure that the README has the following sections."
+msgstr ""
+
 #: ../../source/guidelines/sdk-documentation.rst:24
 msgid "Requirements"
 msgstr "必須項目"
@@ -51,6 +59,12 @@ msgstr "貢献"
 msgid "License"
 msgstr "ライセンス"
 
+#: ../../source/guidelines/sdk-documentation.rst:29
+msgid ""
+"**Template**: `README <https://github.com/nemtech/symbol-sdk-typescript-"
+"javascript/blob/master/README.md>`_"
+msgstr ""
+
 #: ../../source/guidelines/sdk-documentation.rst:33
 msgid "Comments and reference docs"
 msgstr "コメントとリファレンス"
@@ -64,22 +78,60 @@ msgstr ""
 "コードを記述している間に、関数とクラスをコメント付きでドキュメント化します。リファレンスジェネレーターはこれらのコメントを読み取り、HTML "
 "として出力を生成できる必要があります。"
 
+#: ../../source/guidelines/sdk-documentation.rst:38
+msgid ""
+"Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ "
+"for Javascript, whereas in Java, we are using `Javadoc "
+"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:41
+msgid ""
+"We recommend you to research and determine which is the reference generator "
+"most convenient for the selected programming language."
+msgstr ""
+
 #: ../../source/guidelines/sdk-documentation.rst:45
 msgid "Guides"
 msgstr "ガイド"
 
+#: ../../source/guidelines/sdk-documentation.rst:47
+msgid ""
+"The |sitename| gathers a collection of :ref:`guides <blog-categories>`. "
+"These guides show developers how to use |codename| built-in features while "
+"following step-by-step use cases. Each guide comes with at least one "
+"snippet, which is an executable piece of code that solves the proposed use "
+"case."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:51
+msgid ""
+"Writing snippets helps you to compare how the SDK code looks like in "
+"contrast with others. Furthermore, you will be testing manually if the SDK "
+"behaves correctly."
+msgstr ""
+
 #: ../../source/guidelines/sdk-documentation.rst:54
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`_ and clone `nem2-docs repository "
-"<https://github.com/nemtech/nem2-docs>`__."
+"repository>`_ and clone `symbl-docs repository <https://github.com/nemtech"
+"/symbol-docs>`__."
 msgstr ""
-"`<https://help.github.com/articles/fork-a-repo/#fork-an-example-"
-"repository>`_ をフォークして`nem2-docs リポジトリ "
-"<https://github.com/nemtech/nem2-docs>`__ をクローンしてください。"
 
 #: ../../source/guidelines/sdk-documentation.rst:60
 msgid ""
 "Create a new folder under ``source/resources/examples/`` named as the "
 "programming language of your SDK."
 msgstr "あなたの言語の SDK 用として ``source/resources/examples/`` の下に新しいフォルダを作ってください。"
+
+#: ../../source/guidelines/sdk-documentation.rst:62
+msgid ""
+"Adapt every `TypeScript snippet <https://github.com/nemtech/symbol-"
+"docs/tree/master/source/resources/examples/typescript>`__ using the new SDK."
+msgstr ""
+
+#: ../../source/guidelines/sdk-documentation.rst:64
+msgid ""
+"Push the changes and `create a pull request <https://services.github.com/on-"
+"demand/intro-to-github/es/crear-pull-request>`__."
+msgstr ""

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.1\n"
+"Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-02 10:03+0000\n"
+"POT-Creation-Date: 2020-03-06 18:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,30 +47,76 @@ msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/mosaic/modifying-mosaic-supply.rst:33
 msgid ""
-"If you have followed the previous guide, right now you should own a ``supply"
-" mutable`` :doc:`mosaic <../../concepts/mosaic>` with 1,000,000 units."
-msgstr ""
-"前のガイドに従っていれば、1,000,000 単位の ``supply mutable`` な :doc:`モザイク "
-"<../../concepts/mosaic>` を保有していることでしょう。"
+"In this example, we are going to increase a **supply mutable** mosaic in "
+"1,000,000 units."
+msgstr "この例では、 **供給可変** モザイクを 1,000,000 単位で増やします。"
 
 #: ../../source/guides/mosaic/modifying-mosaic-supply.rst:35
 msgid ""
-"To increase the initial supply to 2,000,000, define a "
-":ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` "
-"replacing your target mosaic identifier in the next code snippet."
+"1. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
+"transaction>` as in the next code snippet. Then, replace the ``mosaicId`` "
+"and ``divisibility`` with the targetted mosaic properties."
 msgstr ""
-"初期供給量を 2,000,000 まで増加させるには、次のコードスニペット中のモザイク識別子を置き換えた "
-":ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` "
-"を定義してください。"
+"1. 次のコードスニペットのように :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
+"transaction>` を定義します。そして、 ``mosaicId`` と ``divisibility`` "
+"を目標とするモザイクプロパティに置き換えます。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:49
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:40
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:61
 msgid ""
-"You can decrease a mosaic supply by changing ``MosaicSupplyType.Increase`` "
-"to ``MosaicSupplyType.Decrease``."
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.ts`"
 msgstr ""
-"``MosaicSupplyType.Increase`` を ``MosaicSupplyType.Decrease`` "
-"に変更してモザイク供給量を減少させることができます。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:53
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:45
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:66
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/typescript/mosaic/ModifyingMosaicSupply.js`"
+msgstr ""
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:50
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:71
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/java/src/test/java/symbol/guides/examples/mosaic/ModifyingMosaicSupply.java`"
+msgstr ""
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:55
+msgid ""
+"|codename| works with **absolute amounts**. To get an absolute amount, "
+"multiply the number of assets you want to increase/decrease by 10\\ "
+":sup:`divisibility`. For example, if the mosaic has **divisibility** 2, to "
+"increase 10 units (relative) you should define 1000 (absolute) instead."
+msgstr ""
+"|codename| は **絶対量** を扱います。絶対量を取得するには、増減するアセットの量に 10\\ :sup:`divisibility` "
+"を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 増減するには 1000 (絶対) と定義します。"
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:57
+msgid ""
+"Sign the transaction with the mosaic creator account and announce it to the "
+"network."
+msgstr "モザイク作成者のアカウントでトランザクションに署名して、ネットワークにアナウンスします。"
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:76
+msgid ""
+"Otherwise, you can decrease a mosaic supply by changing "
+"``MosaicSupplyChangeAction.Increase`` to "
+"``MosaicSupplyChangeAction.Decrease``. In this second case, the mosaic "
+"creator account must own at least ``delta`` units to decrease the mosaic "
+"supply."
+msgstr ""
+"それ以外の場合は ``MosaicSupplyChangeAction.Increase`` を "
+"``MosaicSupplyChangeAction.Decrease`` "
+"に変更することでモザイクの供給を減らすことができます。この2番目の場合、モザイク作成者アカウントはモザイクの供給を減らすために、少なくとも "
+"``delta`` 単位を保有していなければなりません。"
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:81
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
+
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:83
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/master/source/resources/examples/bash/mosaic/ModifyingMosaicSupply.sh`"
+msgstr ""

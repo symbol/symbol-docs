@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.1\n"
+"Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-02 10:03+0000\n"
+"POT-Creation-Date: 2020-03-06 18:02+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -20,6 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/sdk.rst:11
+msgid "SDK"
+msgstr ""
 
 #: ../../source/sdk.rst:13
 msgid ""
@@ -62,6 +66,26 @@ msgstr "リファレンス"
 msgid "TypeScript & JS SDK"
 msgstr "TypeScript と JS SDK"
 
+#: ../../source/sdk.rst:1
+msgid "|tsjs-repo|"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "|tsjs-reference|"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Java SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "|java-repo|"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid ":doc:`Documentation <references/java-sdk>`"
+msgstr ""
+
 #: ../../source/sdk.rst:32
 msgid "Ongoing work"
 msgstr "開発中"
@@ -71,6 +95,38 @@ msgid ""
 "⚠️ The following SDKs are not compatible with the latest version of "
 "catapult-server."
 msgstr "⚠️ 以下の SDK は最新バージョンの catapult-server と互換性がありません。"
+
+#: ../../source/sdk.rst:1
+msgid "Dart SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "C# SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Go SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Swift SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "C++"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "PHP SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Ruby SDK"
+msgstr ""
+
+#: ../../source/sdk.rst:1
+msgid "Python SDK"
+msgstr ""
 
 #: ../../source/sdk.rst:51
 msgid ""
