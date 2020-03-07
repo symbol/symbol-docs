@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -52,10 +52,6 @@ msgstr "プロパティ"
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:35
-msgid "config-network.properties"
-msgstr ""
-
 #: ../../source/guides/network/configuring-network-properties.rst:1
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Property"
@@ -72,862 +68,100 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Default MIJIN_TEST"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Default TEST_NET"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**network**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "identifier"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "NetworkIdentifier"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Network identifier."
 msgstr "ネットワーク識別子"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "mijin-test"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "public-test"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "nodeEqualityStrategy"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "NodeIdentityEqualityStrategy"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Node equality strategy."
 msgstr "ノード等価ストラテジ"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "host"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "publicKey"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Key"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Nemesis public key."
 msgstr "ネメシス公開鍵"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "9BE93593C699867F1B4F624FD37BC7FB93499CDEC9929088F2FF1031293960FF"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "generationHash"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "catapult::GenerationHash"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Nemesis generation hash."
 msgstr "ネメシスジェネレーションハッシュ"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "epochAdjustment"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "utils::TimeSpan"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Nemesis epoch time adjustment."
 msgstr "ネメシスエポックタイムの調整"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1573430400s"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**chain**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "enableVerifiableState"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "bool"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Set to true if block chain should calculate state hashes so that state is "
-"fully verifiable at each block."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "true"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "enableVerifiableReceipts"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Set to true if block chain should calculate receipts so that state changes "
-"are fully verifiable at each block."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "currencyMosaicId"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "MosaicId"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Mosaic id used as primary chain currency."
 msgstr "モザイクID をプライマリなチェーン通貨として使用されています。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "0x0DC6'7FBE'1CAD'29E3"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "0x51A9'9028'0582'45A8"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "harvestingMosaicId"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Mosaic id used to provide harvesting ability."
 msgstr "ハーベスティング可能なモザイクID"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "0x2651'4E2A'1EF3'3824"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "blockGenerationTargetTime"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Targeted time between blocks."
 msgstr "ブロック間の生成時間"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "15s"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "blockTimeSmoothingFactor"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "uint32_t"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"*Note*: A higher value makes the network more biased. *Note*: This can lower"
-" security because it will increase the influence of time relative to "
-"importance."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "3000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "importanceGrouping"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "uint64_t"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Number of blocks that should be treated as a group for importance purposes. "
-"*Note*: Importances will only be calculated at blocks that are multiples of "
-"this grouping number."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "39"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1433"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "importanceActivityPercentage"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "uint8_t"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Percentage of importance resulting from fee generation and beneficiary "
-"usage."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "5"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxRollbackBlocks"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of blocks that can be rolled back."
 msgstr "ロールバック可能な最大ブロック数"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "40"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "398"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxDifficultyBlocks"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of blocks to use in a difficulty calculation."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "60"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "defaultDynamicFeeMultiplier"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "BlockFeeMultiplier"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Default multiplier to use for dynamic fees."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "10'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxTransactionLifetime"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum lifetime a transaction can have before it expires."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "24h"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxBlockFutureTime"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum future time of a block that can be accepted."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "500ms"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "initialCurrencyAtomicUnits"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Amount"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Initial currency atomic units available in the network."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "8'998'999'998'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "7'831'975'436'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMosaicAtomicUnits"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Maximum atomic units (total-supply * 10 ^ divisibility) of a mosaic allowed "
-"in the network."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "9'000'000'000'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "totalChainImportance"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Importance"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Total whole importance units available in the network."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "15'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "minHarvesterBalance"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Minimum number of harvesting mosaic atomic units needed for an account to be"
-" eligible for harvesting."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "500"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "10'000'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxHarvesterBalance"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Maximum number of harvesting mosaic atomic units needed for an account to be"
-" eligible for harvesting."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "4'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "50'000'000'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "harvestBeneficiaryPercentage"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Percentage of the harvested fee that is collected by the beneficiary "
-"account."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "10"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "25"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "blockPruneInterval"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Number of blocks between cache pruning."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "360"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxTransactionsPerBlock"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of transactions per block."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "200'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1'500"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.accountlink**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "dummy"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "to trigger plugin load"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.aggregate**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxTransactionsPerAggregate"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of transactions per aggregate."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxCosignaturesPerAggregate"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of cosignatures per aggregate."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "15"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "enableStrictCosignatureCheck"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Set to true if cosignatures must exactly match component signers. Set to "
-"false if cosignatures should be validated externally."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "false"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "enableBondedAggregateSupport"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"Set to true if bonded aggregates should be allowed. Set to false if bonded "
-"aggregates should be rejected."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxBondedTransactionLifetime"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum lifetime a bonded transaction can have before it expires."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "48h"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.lockhash**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "lockedFundsPerAggregate"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Amount that has to be locked per aggregate in partial cache."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "10'000'000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxHashLockDuration"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "utils::BlockSpan"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of blocks for which a hash lock can exist."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "2d"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.locksecret**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxSecretLockDuration"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum number of blocks for which a secret lock can exist."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "30d"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "minProofSize"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "uint16_t"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Minimum size of a proof in bytes."
 msgstr "バイト換算の最小 proof サイズ"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxProofSize"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "Maximum size of a proof in bytes."
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.metadata**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxValueSize"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum metadata value size."
 msgstr "メタデータ値の最大サイズ"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1024"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.mosaic**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMosaicsPerAccount"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of mosaics that an account can own."
 msgstr "アカウントが保有できるモザイクの最大数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMosaicDuration"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum mosaic duration."
 msgstr "モザイク有効期限の最大値"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "3650d"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMosaicDivisibility"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum mosaic divisibility."
 msgstr "モザイク可分性の最大値"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "6"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "mosaicRentalFeeSinkPublicKey"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Public key of the mosaic rental fee sink account."
 msgstr "モザイクレンタル手数料のシンクアカウント公開鍵"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "53E140B5947F104CABC2D6FE8BAEDBC30EF9A0609C717D9613DE593EC2A266D3"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "4428A4DA56362C2293A277159F7C1E270FE7BD6CED461877494006C7D69F1172"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "mosaicRentalFee"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Mosaic rental fee."
 msgstr "モザイクレンタル手数料"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.multisig**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMultisigDepth"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of multisig levels."
 msgstr "マルチシグ深度の最大数"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "3"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxCosignatoriesPerAccount"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of cosignatories per account."
 msgstr "アカウント毎の連署者の最大数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxCosignedAccountsPerAccount"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of accounts a single account can cosign."
 msgstr "シングルアカウントが署名できるアカウントの最大数"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.namespace**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxNameSize"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum namespace name size."
 msgstr "最大ネームスペース名長"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "64"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxChildNamespaces"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of children for a root namespace."
 msgstr "最大子ネームスペース数"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "256"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxNamespaceDepth"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum namespace depth."
 msgstr "最大ネームスペース深度"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "minNamespaceDuration"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Minimum namespace duration."
 msgstr "最小ネームスペース期間"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "1m"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxNamespaceDuration"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum namespace duration."
 msgstr "最大ネームスペース期間"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "365d"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "namespaceGracePeriodDuration"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid ""
@@ -936,127 +170,29 @@ msgid ""
 msgstr "期限切れネームスペースの更新猶予期間"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "2m"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "reservedRootNamespaceNames"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "unordered_set<string>"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Reserved root namespaces that cannot be claimed."
 msgstr "予約済みルートネームスペース"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "xem, nem, user, account, org, com, biz, net, edu, mil, gov, info"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid ""
-"symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, "
-"gov, info"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "namespaceRentalFeeSinkPublicKey"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Public key of the namespace rental fee sink account."
 msgstr "ネームスペースレンタル手数料のシンクアカウント公開鍵"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "3E82E1C1E4A75ADAA3CBA8C101C3CD31D9817A2EB966EB3B511FB2ED45B8E262"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "rootNamespaceRentalFeePerBlock"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Root namespace rental fee per block."
 msgstr "ルートネームスペースレンタル手数料"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "childNamespaceRentalFee"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Child namespace rental fee."
 msgstr "子ネームスペースレンタル手数料"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "100"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.restrictionaccount**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxAccountRestrictionValues"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of account restriction values."
 msgstr "最大制限アカウント数"
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "512"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.restrictionmosaic**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMosaicRestrictionValues"
-msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of mosaic restriction values."
 msgstr "最大モザイク制限数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "20"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**plugin:catapult.plugins.transfer**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "maxMessageSize"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum transaction message size."
 msgstr "最大メッセージサイズ"
-
-#: ../../source/guides/network/configuring-network-properties.rst:115
-msgid "config-inflation.properties"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "**inflation**"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "starting-at-height-1"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "starting-at-height-10000"
-msgstr ""
-
-#: ../../source/guides/network/configuring-network-properties.rst:1
-msgid "0"
-msgstr ""

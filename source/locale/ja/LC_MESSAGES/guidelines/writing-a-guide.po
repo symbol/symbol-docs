@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:02+0000\n"
+"POT-Creation-Date: 2020-03-06 18:31+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,6 +35,8 @@ msgid ""
 " <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas "
 "pending to be written."
 msgstr ""
+"始める前に `symbol-docs リポジトリ issues <https://github.com/nemtech/symbol-"
+"docs/issues>`_ を開き、記述しようとしているアイディアを探すことを推奨します。"
 
 #: ../../source/guidelines/writing-a-guide.rst:19
 msgid ""
@@ -54,6 +56,8 @@ msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the "
 "`symbol-docs <https://github.com/nemtech/symbol-docs>`_ repository."
 msgstr ""
+"`<https://help.github.com/articles/fork-a-repo/>`_ をフォークして`symbol-docs "
+"<https://github.com/nemtech/symbol-docs>`_ リポジトリをクローンしてください。"
 
 #: ../../source/guidelines/writing-a-guide.rst:32
 msgid ""
@@ -92,14 +96,14 @@ msgid ""
 "``source/resources/examples/<language_or_tool>``. You can render fragments "
 "of code from a file inside your ``.rst`` file."
 msgstr ""
+"6. `コード例 <https://github.com/nemtech/symbol-"
+"docs/tree/master/source/resources/examples>`_ を "
+"``source/resources/examples/<language_or_tool>`` の下に追加してください。rst "
+"ファイルの中からコード断片をレンダリングすることもできます。"
 
 #: ../../source/guidelines/writing-a-guide.rst:109
 msgid "Test and preview your changes."
 msgstr "あなたの変更点をテストしプレビューしてください。"
-
-#: ../../source/guidelines/writing-a-guide.rst:113
-msgid "make livehtml"
-msgstr ""
 
 #: ../../source/guidelines/writing-a-guide.rst:115
 msgid ""
