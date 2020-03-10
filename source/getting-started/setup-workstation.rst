@@ -77,7 +77,7 @@ After the transaction gets confirmed, check if the account has received |network
 
 .. code-block:: bash
 
-    symbol-cli account info  --profile testnet
+    symbol-cli account info --profile testnet
 
     Balance Information
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
@@ -86,7 +86,7 @@ After the transaction gets confirmed, check if the account has received |network
     │ 51A99028058245A8 │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TC3QLP-S4L4MM-LA7X6H-JCORXD-R4BPRM-KQNQZE-ITY2``.
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-AJHH``.
 
 .. _setup-development-environment:
 

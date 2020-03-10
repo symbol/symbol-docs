@@ -83,7 +83,16 @@ To stop all the running services, run ``sudo docker-compose down`` in the same d
 Peer assembly
 =============
 
-The Peer assembly will set up a :ref:`Peer <peer-node>` only node.
+You can verify that the node is running by running with the command ``docker-compose ps peer-node`` in the same ``peer-assembly`` folder.
+The command's output looks like:
+
+.. code-block:: bash
+
+     Name                       Command                    State   Ports
+     ------------------------------------------------------------------------------------
+     peerassembly_peer-node_1   bash -c /bin-mount/wait    Up      0.0.0.0:7900->7900/tcp
+
+The node is running if the state for ``peerassembly_peer-node_1`` is set to "Up".
 
 API harvest assembly
 ====================
@@ -133,7 +142,7 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |desktop-wallet| raw:: html
 
-   <a href="https://github.com/nemfoundation/symbol-desktop-wallet-beta" target="_blank">Desktop Wallet</a>
+   <a href="https://github.com/nemfoundation/symbol-desktop-wallet" target="_blank">Desktop Wallet</a>
 
 .. |blockchain-explorer| raw:: html
 
