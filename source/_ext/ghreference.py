@@ -16,21 +16,23 @@ class GitHubReference(Directive):
     option_spec = {
         'folder': directives.unchanged,
     }
+    excluded_file_names = ['SNAPSHOT', '.nojekyll']
 
     def run(self):
         g = Github()
         base_url = 'https://nemtech.github.io/'
         base_url += self.arguments[0].split('/')[1]
         repo = g.get_repo(self.arguments[0])
-        contents = repo.get_contents(self.options['folder'], ref="gh-pages")
+        folder = '' if not self.options['folder'] else self.options['folder']
+        contents = repo.get_contents(folder, ref="gh-pages")
         node_list = nodes.bullet_list()
         for line in list(reversed(contents)):
             uri = base_url + '/' + line.path
-            version = line.path.split('/')[1]
-            if 'SNAPSHOT' not in version:
+            version = line.path.split('/')[-1]
+            if not any(excluded_file_name in version for excluded_file_name in self.excluded_file_names):
                 item = nodes.list_item()
                 item_p = nodes.paragraph()
-                item_p += nodes.reference(text=line.path.split('/')[1], refuri=uri)
+                item_p += nodes.reference(text=version, refuri=uri)
                 item += item_p
                 node_list += item
         return [node_list]
