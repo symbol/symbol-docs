@@ -16,7 +16,7 @@ Supported languages
     :header: "Language", "Repository", "Reference"
     :delim: ;
 
-    TypeScript & JS SDK; |tsjs-repo|; |tsjs-reference|
+    TypeScript& JavaScript SDK; |tsjs-repo|; :doc:`Documentation <references/typescript-sdk>`
     Java SDK; |java-repo|; :doc:`Documentation <references/java-sdk>`
 
 ************
@@ -45,10 +45,6 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 .. |tsjs-repo| raw:: html
 
     <a href="https://github.com/nemtech/symbol-sdk-typescript-javascript" target="_blank">Repository</a>
-
-.. |tsjs-reference| raw:: html
-
-    <a href="https://nemtech.github.io/symbol-sdk-typescript-javascript/" target="_blank">Documentation</a>
 
 .. |java-repo| raw:: html
 
