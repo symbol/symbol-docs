@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-03-11 15:09+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -59,8 +59,8 @@ msgid "Reference"
 msgstr "リファレンス"
 
 #: ../../source/sdk.rst:1
-msgid "TypeScript & JS SDK"
-msgstr "TypeScript と JS SDK"
+msgid ":doc:`Documentation <references/typescript-sdk>`"
+msgstr ":doc:`ドキュメント <references/typescript-sdk>`"
 
 #: ../../source/sdk.rst:1
 msgid ":doc:`Documentation <references/java-sdk>`"
