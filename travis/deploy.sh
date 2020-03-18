@@ -19,6 +19,6 @@ else
    echo "Publishing docs"
    git add .
    git commit -m "Release docs"
-   git push --force
+   git push --set-upstream origin master --force
 echo ""
 fi
