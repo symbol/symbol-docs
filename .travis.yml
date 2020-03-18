@@ -15,13 +15,12 @@ script:
   - make gettext
 deploy:
   - provider: script
-  skip_cleanup: true
-  script: bash travis/transifex.sh
-  on:
-    branch: master
+    skip_cleanup: true
+    script: bash travis/transifex.sh
+    on:
+      branch: master
   - provider: script
-  skip_cleanup: true
-  script: bash travis/deploy.sh
-  on:
-    branch: master
-
+    skip_cleanup: true
+    script: bash travis/deploy.sh
+    on:
+      branch: master
