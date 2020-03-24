@@ -3,11 +3,11 @@ Exports some documentation from catapult code into reStructuredText tables.
 """
 from setuptools import find_packages, setup
 
-dependencies = ['click']
+dependencies = ['click', 'wheel']
 
 setup(
     name='catapultdocscli',
-    version='0.2.1',
+    version='0.2.2',
     url='https://github.com/nemtech/catapult-docs-cli',
     license='MIT',
     author='David Garcia (@dgarcia360)',
