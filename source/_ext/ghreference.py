@@ -27,8 +27,12 @@ class GitHubReference(Directive):
         contents = repo.get_contents(folder, ref="gh-pages")
         node_list = nodes.bullet_list()
         for line in list(reversed(contents)):
-            uri = base_url + '/' + line.path
-            version = line.path.split('/')[-1]
+            if '.md' in line.path:
+                uri = 'https://github.com/' + self.arguments[0] + '/blob/gh-pages/' + line.path
+                version = line.path.split('.md')[0]
+            else:
+                uri = base_url + '/' + line.path
+                version = line.path.split('/')[-1]
             if not any(excluded_file_name in version for excluded_file_name in self.excluded_file_names):
                 item = nodes.list_item()
                 item_p = nodes.paragraph()
