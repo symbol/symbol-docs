@@ -7,7 +7,7 @@ dependencies = ['click']
 
 setup(
     name='catapultdocscli',
-    version='0.2.0',
+    version='0.2.1',
     url='https://github.com/nemtech/catapult-docs-cli',
     license='MIT',
     author='David Garcia (@dgarcia360)',

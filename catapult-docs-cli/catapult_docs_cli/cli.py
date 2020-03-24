@@ -2,7 +2,7 @@ import json
 
 import click
 
-from catapult_docs_cli.commands import PropertiesCommand, StatusErrorsCommand
+from catapult_docs_cli.commands import PropertiesCommand, StatusErrorsCommand, CLIUsageCommand
 
 
 def load_config(config):
@@ -30,5 +30,7 @@ def main(command, config):
         PropertiesCommand(config).execute()
     elif command == 'status-errors':
         StatusErrorsCommand(config).execute()
+    elif command == 'cli-usage':
+        CLIUsageCommand(config).execute()
     else:
         raise click.ClickException('The specified option is not implemented.')
