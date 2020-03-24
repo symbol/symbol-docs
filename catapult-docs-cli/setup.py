@@ -7,7 +7,7 @@ dependencies = ['click', 'wheel']
 
 setup(
     name='catapultdocscli',
-    version='0.2.3',
+    version='0.2.5',
     url='https://github.com/nemtech/catapult-docs-cli',
     license='MIT',
     author='David Garcia (@dgarcia360)',

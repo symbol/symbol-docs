@@ -17,8 +17,9 @@ class CLIUsageCommand(Command):
             print('## ' + folder['title'].title() + '\n')
             for command in folder['commands']:
                 print('### ' + command + '\n')
-                cli_command = "symbol-cli " + folder['title'] + " " + command + " -h"
-                process = subprocess.Popen(cli_command, shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                cli_command = "symbol-cli " + folder['title'] + " " + command + " --help"
+                process = subprocess.Popen(cli_command, shell=True, text=True, stdout=subprocess.PIPE,
+                                           stderr=subprocess.STDOUT, universal_newlines=True)
                 out = process.communicate()[0]
                 print(out)
 
