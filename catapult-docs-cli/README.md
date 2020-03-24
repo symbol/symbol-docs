@@ -1,10 +1,11 @@
 # catapult-docs-cli
 
+[![PyPI](https://img.shields.io/pypi/v/catapultdocscli)](https://pypi.org/project/catapultdocscli/)
 [![Build Status](https://travis-ci.org/nemtech/catapult-docs-cli.svg?branch=master)](https://travis-ci.org/nemtech/catapult-docs-cli)
 
 Exports documentation available in ``catapult-server`` and ``catapult-rest`` code into reStructuredText tables. 
 
-The generated outputs are used in the [NEM Developer Center](http://nemtech.github.io).
+The generated outputs are used in the [Symbol Developer Documentation](http://nemtech.github.io).
 
 ## Requirements
 
@@ -43,6 +44,7 @@ catapult-docs-cli COMMAND [OPTIONS]
 |-----------------------|-----------------------------------------------------|
 | properties            | Generates catapult-server properties docs.          |
 | status-errors         | Generates catapult-rest status errors docs.         |
+| cli-usage             | Generates symbol-cli commands docs.                 |
 | --help                | Show this message and exit.                         |
 
 
@@ -64,6 +66,12 @@ catapult-docs-cli properties --config .catdocs
 
 ```
 catapult-docs-cli status-errors --config .catdocs
+```
+
+### Generate symbol-cli command docs
+
+```
+catapult-docs-cli cli-usage --config .clidocs
 ```
     
 ### Export generated docs to a file
