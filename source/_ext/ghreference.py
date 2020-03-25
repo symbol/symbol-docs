@@ -21,7 +21,7 @@ class GitHubReference(Directive):
     docs_url = 'https://nemtech.github.io/'
 
     def run(self):
-        token = os.getenv["GITHUB_TOKEN", False]
+        token = os.getenv('GITHUB_TOKEN')
         if token:
             g = Github(token)
             repo = g.get_repo(self.arguments[0])
