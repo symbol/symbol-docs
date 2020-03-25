@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-03-25 13:19+0000\n"
 "PO-Revision-Date: 2019-12-17 09:31+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -177,11 +177,30 @@ msgstr ""
 "サービスを停止するには ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
 "を実行してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:94
-msgid "The Peer assembly will set up a :ref:`Peer <peer-node>` only node."
-msgstr "Peer assembly は :ref:`Peer <peer-node>` ノードだけを提供します。"
+#: ../../source/guides/network/running-a-test-net-node.rst:92
+msgid "Peer assembly"
+msgstr "Peer アセンブリ"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:99
+#: ../../source/guides/network/running-a-test-net-node.rst:94
+msgid ""
+"You can verify that the node is running by running with the command "
+"``docker-compose ps peer-node`` in the same ``peer-assembly`` folder. The "
+"command's output looks like:"
+msgstr ""
+"``peer-assembly`` と同じフォルダ内で、コマンド ``docker-compose ps peer-node`` "
+"を実行すると、ノードが実行されていることを確認できます。コマンド出力は次のようになります:"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:103
+msgid ""
+"The node is running if the state for ``peerassembly_peer-node_1`` is set to "
+"\"Up\"."
+msgstr "``peerassembly_peer-node_1`` の状態が \"Up\" の場合、ノードは実行中です。"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:106
+msgid "API harvest assembly"
+msgstr "API ハーベストアセンブリ"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:108
 msgid ""
 "The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` "
 "and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-"
@@ -191,14 +210,14 @@ msgstr ""
 "の併用で、トランザクションのサブミットを受けたり、データの読み込みを提供する :ref:`Rest gateway <rest-gateway>` "
 "もセットアップします。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:101
+#: ../../source/guides/network/running-a-test-net-node.rst:110
 msgid ""
 "You can verify that the node is running by opening a new browser tab with "
 "the following URL: ``localhost:3000/chain/height``."
 msgstr ""
 "次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:103
+#: ../../source/guides/network/running-a-test-net-node.rst:112
 msgid ""
 "The software should expose the port ``3000`` by default. If you cannot "
 "access the REST Gateway from outside, it might mean that the port is closed "
@@ -208,7 +227,7 @@ msgstr ""
 "ソフトウェアはデフォルトでポート ``3000`` を公開します。もし REST Gateway "
 "に外部からアクセスできない場合は、あなたのマシンかホスティングプロバイダがデフォルトでポートを閉じている可能性があるので、マシンの外部からアクセスできるようにポートを開いてください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:105
+#: ../../source/guides/network/running-a-test-net-node.rst:114
 msgid ""
 "API nodes take up more memory and storage than Peer nodes. If you have "
 "memory or storage constraints and you are running into issues, it is "
@@ -217,11 +236,11 @@ msgstr ""
 "API ノードは Peer ノードよりも多くのメモリとストレージを必要とします。もしメモリやストレージに制約がある場合は、Peer "
 "ノードを変わりに起動することを推奨します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:109
+#: ../../source/guides/network/running-a-test-net-node.rst:118
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:111
+#: ../../source/guides/network/running-a-test-net-node.rst:120
 msgid ""
 "After running the node for the first time, you can :ref:`change a set of "
 "properties <node-properties>` such as the node's public key or the "
@@ -230,7 +249,7 @@ msgstr ""
 "初回にノードを実行した後は、ノードの公開鍵や :doc:`ハーベスティング <../../concepts/harvesting>` 設定の "
 ":ref:`プロパティを変更 <node-properties>` できます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:113
+#: ../../source/guides/network/running-a-test-net-node.rst:122
 msgid ""
 "A file ``config-input.yaml`` will be generated with the default values. "
 "Depending on the assembly chosen, this file will be located under the "
@@ -239,7 +258,7 @@ msgstr ""
 "``config-input.yaml`` ファイルはデフォルト値で生成されます。選択したアセンブリによって、このファイルは ``peer-"
 "assembly/peer-node/`` または ``api-harvest-assembly/api-node`` の下に配置されます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:116
+#: ../../source/guides/network/running-a-test-net-node.rst:125
 msgid ""
 "If the node service is running, run ``sudo docker-compose down`` under the "
 "same directory you executed the ``up`` command."
@@ -247,21 +266,21 @@ msgstr ""
 "ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
 "を実行してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:118
+#: ../../source/guides/network/running-a-test-net-node.rst:127
 msgid "Edit the properties file ``config-input.yaml`` with a text editor."
 msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:120
+#: ../../source/guides/network/running-a-test-net-node.rst:129
 msgid ""
 "Save the changes and apply them with the command ``sudo docker-compose up "
 "--build --detach``."
 msgstr "変更を保存して ``sudo docker-compose up --build --detach`` コマンドで適用してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:124
+#: ../../source/guides/network/running-a-test-net-node.rst:133
 msgid "Interacting with the test network"
 msgstr "テストネットワークと疎通する"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:126
+#: ../../source/guides/network/running-a-test-net-node.rst:135
 msgid ""
 "To interact with your node, :ref:`create first an account <setup-creating-a"
 "-test-account>` and :ref:`acquire test <setup-getting-test-currency>` "
@@ -270,30 +289,30 @@ msgstr ""
 "ノードと疎通するために、 :ref:`最初のアカウントを作成 <setup-creating-a-test-account>` して "
 ":ref:`テスト用 <setup-getting-test-currency>`  |networkcurrency| を取得してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:128
+#: ../../source/guides/network/running-a-test-net-node.rst:137
 msgid "Then, read and write data from the network with the following tools:"
 msgstr "ネットワークからのデータの読み書きは次のツールで行います:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:130
+#: ../../source/guides/network/running-a-test-net-node.rst:139
 msgid ""
 "|blockchain-explorer|: Search for transactions, accounts, assets, and blocks"
 " in the test network."
 msgstr "|blockchain-explorer|: テストネットワーク内のトランザクション、アカウント、アセット、ブロックの検索"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:131
+#: ../../source/guides/network/running-a-test-net-node.rst:140
 msgid ""
 "|desktop-wallet|: Cross-platform client for |codename|. Available for Mac, "
 "Linux, and Windows."
 msgstr ""
 "|desktop-wallet|: |codename| 用の Mac, Linux, Windows 用クロスプラットフォームクライアント"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:132
+#: ../../source/guides/network/running-a-test-net-node.rst:141
 msgid ""
 ":doc:`Command-Line Interface <../../cli>`: Execute the most commonly used "
 "actions from your terminal."
 msgstr ":doc:`コマンドラインインターフェイス <../../cli>`: よく使用されるアクションをターミナルで実行します"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:133
+#: ../../source/guides/network/running-a-test-net-node.rst:142
 msgid ""
 "|faucet-1|: Receive |networkcurrency| units to test |codename|'s services. "
 "If the default faucet is empty, try this other |faucet-2|."
@@ -301,13 +320,13 @@ msgstr ""
 "|faucet-1|: テスト |codename| サービスへ |networkcurrency| を受信します。デフォルトフォーセットが空の場合は "
 "|faucet-2| を試してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:134
+#: ../../source/guides/network/running-a-test-net-node.rst:143
 msgid ""
 ":doc:`Software Development Kits <../../sdk>`: Add |codename| to your "
 "project."
 msgstr ":doc:`ソフトウェア開発キット <../../sdk>`: |codename| をあなたのプロジェクトへ追加"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:136
+#: ../../source/guides/network/running-a-test-net-node.rst:145
 msgid ""
 "On this portal you can find information about |codename|'s features and :ref"
 ":`self-paced guides <blog-categories>` on how to use the **software "
