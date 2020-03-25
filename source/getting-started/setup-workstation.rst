@@ -19,11 +19,13 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-1. Install |cli|. The required Node.js version is 12.X LTS.
+.. note:: Symbol CLI require Node.js 12 LTS to execute.
+
+1. Install |cli| executing the following command in a new terminal:
 
 .. code-block:: bash
 
-    npm install --global symbol-cli@0.18.2
+    npm install --global symbol-cli@0.18.3
 
 2. Generate a new account and save it as a **profile**.
 
@@ -104,7 +106,9 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: TypeScript
 
-        1. Create a ``package.json`` file. The required Node.js version is 12.X LTS.
+        .. note:: Symbol SDK require Node.js 12 LTS to execute.
+
+        1. Create a ``package.json`` file.
 
         .. code-block:: bash
 
@@ -116,16 +120,14 @@ If none of the languages fits your project, you can always query the blockchain 
 
             npm install symbol-sdk@0.17.3 rxjs
 
-        3. We recommend to use **TypeScript instead of JavaScript** when building applications for |codename|.
-
-        Make sure you have at least version 3.X installed.
+        3. Install globally TypeScript dependency:
 
         .. code-block:: bash
 
-            sudo npm install --global typescript
+            npm install --global typescript
             typescript --version
 
-        4. Use `ts-node`_ to execute TypeScript files with node.
+        4. Install `ts-node`_ to execute TypeScript files with node.
 
         .. code-block:: bash
 
@@ -133,7 +135,10 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: JavaScript
 
-        1. Create a ``package.json`` file. The required Node.js version is 12.X LTS.
+        .. note:: Symbol SDK require Node.js 12 LTS to execute.
+
+
+        1. Create a ``package.json`` file.
 
         .. code-block:: bash
 
@@ -147,7 +152,9 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: Java
 
-        1. Open a new Java `gradle`_ project. The required `JDK`_ version is JDK 8. Use your favourite IDE or create a project from the command line.
+        .. note:: Symbol SDK require JDK 8 to execute.
+
+        1. Open a new Java `gradle`_ project.  Use your favourite IDE or create a project from the command line.
 
         .. code-block:: bash
 
@@ -161,7 +168,7 @@ If none of the languages fits your project, you can always query the blockchain 
                 mavenCentral()
             }
 
-        3. Add symbol-sdk as a dependency.
+        3. Add ``symbol-sdk`` as a dependency.
 
         .. code-block:: java
 
