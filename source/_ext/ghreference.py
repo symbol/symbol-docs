@@ -35,7 +35,7 @@ class GitHubReference(Directive):
                     uri = 'https://github.com/' + self.arguments[0] + '/blob/gh-pages/' + line.path
                     version = line.path.split('.md')[0]
                 else:
-                    uri = docs_url + self.arguments[0].split('/')[1] + '/' + line.path
+                    uri = self.docs_url + self.arguments[0].split('/')[1] + '/' + line.path
                     version = line.path.split('/')[-1]
 
                 if not any(excluded_file_name in version for excluded_file_name in self.excluded_file_names):
