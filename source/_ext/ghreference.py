@@ -21,6 +21,8 @@ class GitHubReference(Directive):
     docs_url = 'https://nemtech.github.io/'
 
     def run(self):
+        node_list = nodes.bullet_list()
+
         token = os.getenv('GITHUB_TOKEN')
         if token:
             g = Github(token)
@@ -28,7 +30,6 @@ class GitHubReference(Directive):
             folder = '' if not self.options['folder'] else self.options['folder']
             contents = repo.get_contents(folder, ref="gh-pages")
 
-            node_list = nodes.bullet_list()
             for line in list(reversed(contents)):
 
                 if '.md' in line.path:
@@ -45,7 +46,7 @@ class GitHubReference(Directive):
                     item += item_p
                     node_list += item
 
-            return [node_list]
+        return [node_list]
 
 
 def setup(app):
