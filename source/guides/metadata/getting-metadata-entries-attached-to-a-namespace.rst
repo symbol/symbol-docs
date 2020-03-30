@@ -11,6 +11,12 @@ Getting metadata entries attached to a namespace
 
 Get the list of metadata entries attached to an namespace.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`assigning metadata entries to a namespace <assigning-metadata-entries-to-a-namespace>` guide.
+
 *************************
 Method #01: Using the SDK
 *************************

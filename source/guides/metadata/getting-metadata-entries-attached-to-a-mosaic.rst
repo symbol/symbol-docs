@@ -11,6 +11,12 @@ Getting metadata entries attached to a mosaic
 
 Get the list of metadata entries attached to an mosaic.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`assigning metadata entries to a mosaic <assigning-metadata-entries-to-a-mosaic>` guide.
+
 *************************
 Method #01: Using the SDK
 *************************

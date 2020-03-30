@@ -29,8 +29,9 @@ However, to make sure Alice and Bob receive the funds at the same time, he decid
 Prerequisites
 *************
 
-- Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete :doc:`sending mosaics and messages between two accounts <../transfer/sending-a-transfer-transaction>` guide.
+- Create :ref:`accounts <setup-creating-a-test-account>` for Alice, Bob, and Dan.
+- Load Dans's account with at least 200 |networkcurrency| units.
 
 *************************
 Method #01: Using the SDK

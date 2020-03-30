@@ -21,8 +21,8 @@ By the end of this guide, you will be connected to your API node database instan
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have an :doc:`API or Dual node running <running-a-test-net-node>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Have an :doc:`API or Dual node running <running-a-test-net-node>`.
 
 .. _install-robo3t:
 

@@ -11,13 +11,6 @@ Sending mosaics and messages between two accounts
 
 Transfer mosaics and messages between two accounts.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-
 **********
 Background
 **********
@@ -34,8 +27,9 @@ Alice wants to send 10 |networkcurrency| to Bob, whose address is ``TBONKW-COWBZ
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees.
 
 *************************
 Method #01: Using the SDK

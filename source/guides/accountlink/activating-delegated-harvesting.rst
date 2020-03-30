@@ -29,15 +29,15 @@ In this process, you will **delegate your main account (M) importance** to a **p
 Prerequisites
 *************
 
-- Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
+- Complete :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 
 Before you can activate delegated harvesting, you will need to have three accounts:
 
-* A **main account (M)** with at least ``10,000`` |networkcurrency| units.
-* An **announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
-* A brand new **remote account (R)** that did not send or receive any transactions.
+* Create a **main account (M)** with at least ``10,000`` |networkcurrency| units.
+* Create an **announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
+* Create a brand new **remote account (R)** that did not send or receive any transactions.
 
-- Follow this guide to :ref:`create new accounts <setup-creating-a-test-account>`.
+.. note:: Follow this guide to :ref:`create new accounts <setup-creating-a-test-account>`.
 
 *************************
 Method #01: Using the SDK

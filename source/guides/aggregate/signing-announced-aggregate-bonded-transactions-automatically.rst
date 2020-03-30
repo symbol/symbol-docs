@@ -15,8 +15,7 @@ Create a bot to cosign automatically transactions that require your account's si
 Prerequisites
 *************
 
-- Finish :doc:`creating an escrow contract guide <creating-an-escrow-contract-with-aggregate-bonded-transaction>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete :doc:`creating an escrow contract<creating-an-escrow-contract-with-aggregate-bonded-transaction>` guide.
 
 ******************
 Developing the bot

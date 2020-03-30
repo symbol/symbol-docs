@@ -25,10 +25,11 @@ The guide will use the namespace ``foo``, but you should follow along with anoth
 Prerequisites
 *************
 
-- Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>` and at least one namespace
+- Complete :doc:`registering a namespace <registering-a-namespace>` guide.
+- Have an account with a namespace.
+- Have an account with enough |networkcurrency| to pay for the transaction and renewal fees.
 
-*************************
+************************
 Method #01: Using the SDK
 *************************
 

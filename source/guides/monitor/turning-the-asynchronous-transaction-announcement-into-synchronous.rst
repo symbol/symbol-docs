@@ -27,8 +27,9 @@ The |sdk| ``TransactionService`` aims to solve this problem by providing a funct
 Prerequisites
 *************
 
-- Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete :doc:`sending mosaics and messages between two accounts <../transfer/sending-a-transfer-transaction>` guide.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees.
 
 *********************************
 Sending a synchronous transaction

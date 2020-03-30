@@ -15,14 +15,14 @@ Get the public key and balance of an account.
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create :ref:`an account <setup-creating-a-test-account>`.
 
 *************************
 Method #01: Using the SDK
 *************************
 
-1. Open a new file and call ``getAccountInfo`` function, passing your account's address as a parameter.
+Open a new file and call the ``getAccountInfo`` function from the ``AccountHttp`` repository, passing your account's address as a parameter.
 
 .. example-code::
 

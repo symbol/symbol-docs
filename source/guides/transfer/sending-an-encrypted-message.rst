@@ -11,14 +11,6 @@ Sending an encrypted message
 
 Send an encrypted message that only can be read by the recipient account.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Finish :doc:`sending mosaics and messages between two accounts guide <sending-a-transfer-transaction>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-
 **********
 Background
 **********
@@ -28,6 +20,15 @@ Imagine that Alice wants to timestamp a sensitive message to send to an account 
 Alice knows that sending a TransferTransaction with a **plain message** to the public network will make the content of the message publicly available.
 
 Thus, Alice sends an **encrypted message** that is only readable by herself and those with access to the academic certificate.
+
+*************
+Prerequisites
+*************
+
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Complete :doc:`sending mosaics and messages between two accounts <sending-a-transfer-transaction>` guide.
+- Create :ref:`accounts <setup-creating-a-test-account>` for Alice to represent the certificate.
+- Load the Alice's account with enough |networkcurrency| to pay for transaction fees.
 
 ***********************
 Setting up the use case

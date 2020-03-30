@@ -15,9 +15,9 @@ Check the number of asset units you have sent to an account.
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Have :doc:`sent mosaics <../transfer/sending-a-transfer-transaction>` to another account
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create :ref:`a new account <setup-creating-a-test-account>`.
+- Send :doc:`mosaics <../transfer/sending-a-transfer-transaction>` from the account created to another account.
 
 *************************
 Method #01: Using the SDK

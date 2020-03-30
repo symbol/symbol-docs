@@ -11,6 +11,13 @@ Getting mosaic global restrictions attached to a mosaic
 
 Get the list of mosaic global restrictions.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`restricting mosaics transfers <restricting-mosaics-transfers>` guide.
+
+
 *************************
 Method #01: Using the SDK
 *************************

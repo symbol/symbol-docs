@@ -9,19 +9,15 @@
 Creating a wallet
 #################
 
-How to set up a new wallet.
+This guide will show you how to create a new wallet.
 
-**********
-Background
-**********
-
-A **wallet** enables you to store your account to sign transactions, **encrypting your private key** with a password.
+Wallets are used to encrypt private keys with a password so that you can store accounts safely on devices.
 
 *************
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 
 *************************
 Method #01: Using the SDK
@@ -29,7 +25,7 @@ Method #01: Using the SDK
 
 If the programming language of the SDK you are using allows **client-side** development, you will be able to create a wallet.
 
-Open a new file and run the following code snippet to create a new wallet.
+To create a new wallet, open a new file, and run the following code snippet.
 
 .. example-code::
 

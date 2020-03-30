@@ -11,6 +11,12 @@ Getting mosaic address restrictions attached to an account
 
 Get the list of mosaic address restrictions.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`restricting mosaics transfers <restricting-mosaics-transfers>` guide.
+
 *************************
 Method #01: Using the SDK
 *************************

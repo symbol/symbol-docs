@@ -9,19 +9,19 @@
 Creating an account
 ###################
 
-How to create a new |codename| account.
+Learn how to create a new |codename| account.
 
 *************
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 
 *************************
 Method #01: Using the SDK
 *************************
 
-Open a new file and run the following code snippet to create an account.
+To create an account, open a new file, and run the following code snippet.
 
 .. example-code::
 

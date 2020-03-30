@@ -24,14 +24,13 @@ In this guide, we are going to help this company to **create the tokens for thei
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees.
 
 *************************
 Method #01: Using the SDK
 *************************
-
-.. note:: Before starting this guide, make sure you have an :doc:`account loaded with <../../getting-started/setup-workstation>` |networkcurrency|.
 
 1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic with the following configuration:
 

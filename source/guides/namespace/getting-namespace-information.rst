@@ -15,7 +15,7 @@ Get the ownership and duration for a given namespace identifier.
 Prerequisites
 *************
 
-- Finish :doc:`registering a namespace guide <registering-a-namespace>`
+- Complete :doc:`registering a namespace <registering-a-namespace>` guide.
 
 *************************
 Method #01: Using the SDK

@@ -11,14 +11,6 @@ Assigning metadata to a mosaic
 
 Add custom data to a mosaic.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
-
 **********
 Background
 **********
@@ -39,10 +31,9 @@ Before distributing the shares between the investors, ComfyClothingCompany wants
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
-
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees, create mosaics and register namespaces.
 
 *******************
 Creating the shares

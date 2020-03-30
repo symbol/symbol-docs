@@ -16,7 +16,8 @@ Background
 **********
 
 :doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
-Following this guide you will create the following **3-level multisig account**.
+
+This guide will show you how to create the following **3-level multisig account**.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
@@ -28,8 +29,9 @@ Following this guide you will create the following **3-level multisig account**.
 Prerequisites
 *************
 
-- Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-an-account>`
+- Complete :doc:`converting an account to multisig <converting-an-account-to-multisig>` guide.
+- Create :doc:`accounts <../account/creating-an-account>` for every multisig level.
+- Load the root multisig account with enough |networkcurrency| to pay for the transaction fee.
 
 ******************************************
 Example #1: Multisig account with 3 levels
@@ -78,7 +80,7 @@ Example #1: Multisig account with 3 levels
         :end-before: /* end block 03 */
 
 4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
-The **account #1** must has to lock ``10`` |networkcurrency| to announce the transaction.
+The **account #1** must lock ``10`` |networkcurrency| to announce the transaction.
 
 .. example-code::
 

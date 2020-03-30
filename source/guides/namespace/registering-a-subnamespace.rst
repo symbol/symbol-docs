@@ -15,8 +15,7 @@ Create subnamespaces to organize your assets.
 Prerequisites
 *************
 
-- Finish :doc:`registering a namespace guide <registering-a-namespace>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>` and at least one namespace
+- Complete :doc:`registering a namespace <registering-a-namespace>` guide.
 
 *************************
 Method #01: Using the SDK

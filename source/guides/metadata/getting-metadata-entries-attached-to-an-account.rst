@@ -11,6 +11,12 @@ Getting metadata entries attached to an account
 
 Get the list of metadata entries attached to an account.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`assigning metadata entries to an account <assigning-metadata-entries-to-an-account>` guide.
+
 *************************
 Method #01: Using the SDK
 *************************

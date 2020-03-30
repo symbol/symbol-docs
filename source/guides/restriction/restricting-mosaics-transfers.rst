@@ -23,7 +23,9 @@ This guide shows you how to use |codename|'s :doc:`Mosaic Restriction <../../con
 Prerequisites
 *************
 
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
+- Complete :doc:`creating a mosaic <../mosaic/creating-a-mosaic>` guide.
+- Create :ref:`accounts <setup-creating-a-test-account>` for ComfyClothingCompany, Alice, And Bob.
+- Load ComfyClothingCompany's account with enough |networkcurrency| to pay for the transactions fees and creation of mosaics.
 
 ******************************
 Creating a restrictable mosaic
@@ -64,7 +66,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
 
     Use case diagram
 
-1. Open a new TypeScript file. Then, place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64.
+1. Open a new file and place the mosaic identifier value you got while creating the mosaic in a variable named ``mosaicId``. Also, you should represent the key ``KYC`` with a numeric value encoded as a UInt64.
 
 .. example-code::
 
@@ -114,7 +116,6 @@ Assigning Mosaic Address Restrictions
 When investors complete the KYC/AML process, the CharlieChocolateFactory alters their accounts with a **MosaicAddressRestrictionTransaction** with parameters ``ccf.shares, KYC, 1``, allowing certified investors to participate in the STO. Others who have not provided the necessary information will not be able to receive or trade the asset.
 
 Alice, a potential investor, passes the KYC process. Once Alice has been verified, the company tags Alice's account with the mosaic address restriction ``{ccf.shares, Alice, KYC, 1}``. On the other hand, Bob, another interested investor, did not pass the KYC process. Bob’s account is not eligible to receive ``ccf.shares`` as it does not meet the mosaic global restriction requirements. Nevertheless, CharlieCholocalteFatory decides to tag the account with the **mosaic address restriction** ``{ccf.shares, Bob, KYC, 0}``. Doing so, they know that Bob has attempted and failed the KYC process.
-
 
 1. Define both **MosaicAddressRestrictionTransaction** for Alice and Bob accounts as follows:
 

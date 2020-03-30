@@ -15,7 +15,7 @@ Get the ownership, divisibility, duration, and flags for a given mosaic identifi
 Prerequisites
 *************
 
-- Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
+- Complete :doc:`creating a mosaic <creating-a-mosaic>` guide.
 
 *************************
 Method #01: Using the SDK

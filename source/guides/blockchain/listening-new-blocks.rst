@@ -15,7 +15,7 @@ Get notified when a new block is included.
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 
 ****************************
 Method #01: Using WebSockets

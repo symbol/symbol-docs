@@ -15,7 +15,7 @@ Get the block information given a height.
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 
 *************************
 Method #01: Using the SDK

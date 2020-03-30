@@ -11,14 +11,6 @@ Assigning metadata to a namespace
 
 Add custom data to a namespace.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
-
 **********
 Background
 **********
@@ -36,9 +28,9 @@ In this guide, you are going to implement a program to add contact details to a 
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Finish :doc:`registering a namespace guide <../namespace/registering-a-namespace>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees, create mosaics and register namespaces.
 
 **********************
 Creating the namespace

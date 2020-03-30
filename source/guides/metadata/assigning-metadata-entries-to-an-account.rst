@@ -11,13 +11,6 @@ Assigning metadata to an account
 
 Add custom data to an account.
 
-*************
-Prerequisites
-*************
-
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-
 **********
 Background
 **********
@@ -39,8 +32,9 @@ In this tutorial, you are going to implement a program to allow Bob tag accounts
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create :ref:`accounts <setup-creating-a-test-account>` for Alice and Bob.
+- Load Bob's account with enough |networkcurrency| to pay for transaction fees.
 
 ********************
 Creating the account

@@ -34,8 +34,8 @@ For this example, imagine that the two parties agree on a virtual service, imply
 
     Multi-Asset Escrowed Transactions
 
-How to create an escrow contract with Catapult
-==============================================
+How to create an escrow contract with Symbol
+============================================
 
 Normalizing the previous description into |codename| related concepts:
 
@@ -55,9 +55,10 @@ Normalizing the previous description into |codename| related concepts:
 Prerequisites
 *************
 
-- Know how to :doc:`create accounts <../account/creating-an-account>`
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
-- Finish :doc:`sending multiple transactions together guide <sending-multiple-transactions-together-with-aggregate-complete-transaction>`
+- Complete :doc:`sending mosaics and messages between two accounts <../transfer/sending-a-transfer-transaction>` guide.
+- Create :ref:`accounts <setup-creating-a-test-account>` for Alice and the ticket distributor.
+- Load Alice's account with at least 200 |networkcurrency| units.
+- Create a :doc:`new mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor account to represent the museum ticket.
 
 ********************************************
 Setting up the required accounts and mosaics

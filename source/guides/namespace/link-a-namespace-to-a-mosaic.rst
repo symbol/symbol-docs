@@ -15,9 +15,11 @@ Link a namespace to a mosaic.
 Prerequisites
 *************
 
-- Have registered one :doc:`namespace <../../concepts/namespace>`
-- Have registered one :doc:`mosaic <../../concepts/mosaic>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>`.
+- Load the account with enough |networkcurrency| to pay for transaction fees.
+- Create a :doc:`mosaic <../../concepts/mosaic>` with the account.
+- Register a :doc:`namespace <../../concepts/mosaic>` with the account.
 
 *************************
 Method #01: Using the SDK

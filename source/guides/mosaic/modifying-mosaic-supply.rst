@@ -15,8 +15,8 @@ Alter the supply of a mosaic.
 Prerequisites
 *************
 
-- Finish :doc:`creating a mosaic guide <creating-a-mosaic>`
-- Have registered a supply mutable mosaic
+- Complete :doc:`creating a mosaic guide <creating-a-mosaic>`.
+- Have registered a supply mutable mosaic.
 
 *************************
 Method #01: Using the SDK

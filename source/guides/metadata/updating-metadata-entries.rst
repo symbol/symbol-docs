@@ -11,12 +11,6 @@ Updating metadata entries
 
 Update any existent metadata entry.
 
-*************
-Prerequisites
-*************
-
-- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
-
 **********
 Background
 **********
@@ -34,9 +28,8 @@ However, you could follow a similar approach to update namespace and mosaic meta
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Finish :doc:`assigning metadata entries to an account guide <assigning-metadata-entries-to-an-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Complete :doc:`assigning metadata entries to an account <assigning-metadata-entries-to-an-account>` guide.
 
 *************************
 Method #01: Using the SDK

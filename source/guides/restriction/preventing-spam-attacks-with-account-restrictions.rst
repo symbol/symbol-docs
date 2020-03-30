@@ -35,60 +35,15 @@ Thus, you opt to configure the product :doc:`account restrictions <../../concept
 Prerequisites
 *************
 
-- Finish :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
+- Complete :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`.
+- Complete :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`.
+- Complete :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`.
+- Create :ref:`accounts <setup-creating-a-test-account>` to represent the product and another one to repesent the company.
+- Load the product's account with enough |networkcurrency| to pay for the transactions fees.
 
 *************************
 Method #01: Using the SDK
 *************************
-
-Before starting solving the use case, you will need to set up two accounts with the :doc:`CLI tool<../../cli>`.
-
-1. Create an account to represent the product.
-
-.. code-block:: bash
-
-    symbol-cli account generate
-
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
-    Do you want to save the account? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-west-1.symboldev.network:3000/
-    Insert profile name: product
-
-    New Account
-    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
-    │ Property    │ Value                                                            │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU                   │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 6C0350A10724FC325A1F06CEFC4CA14464BC472F566842D22418AEE0F8746B4C │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ FFF..FFF                                                         │
-    └─────────────┴──────────────────────────────────────────────────────────────────┘
-
-2. Create another account for the company.
-
-.. code-block:: bash
-
-    symbol-cli account generate
-
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
-    Do you want to save account? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-west-1.symboldev.network:3000/
-    Insert profile name: company
-
-    New Account
-    ┌─────────────┬──────────────────────────────────────────────────────────────────┐
-    │ Property    │ Value                                                            │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Public Key  │ 20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A │
-    ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Private Key │ AAA...AAA                                                        │
-    └─────────────┴──────────────────────────────────────────────────────────────────┘
-
-Next, you will configure the product's account only to accept receiving transfer transactions that contain a specific mosaic.
 
 Blocking transactions by address
 ================================

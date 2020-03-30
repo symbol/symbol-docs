@@ -11,6 +11,12 @@ Getting the account restrictions attached to an address
 
 Get the list of account's restrictions.
 
+*************
+Prerequisites
+*************
+
+- Complete :doc:`preventing spam attacks with account restrictions <preventing-spam-attacks-with-account-restrictions>` guide.
+
 *************************
 Method #01: Using the SDK
 *************************

@@ -35,9 +35,12 @@ In future guides, you will learn how to increase the minimum number of cosignatu
 Prerequisites
 *************
 
-- Finish the :doc:`getting started section <../../getting-started/setup-workstation>`
-- Have one :ref:`account with network currency <setup-creating-a-test-account>`
-- Create :doc:`two accounts <../account/creating-an-account>`
+- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
+- Create a new :ref:`account <setup-creating-a-test-account>` to turn into multisig.
+- Load the account with enough |networkcurrency| to pay for transaction fees.
+- Create accounts for Alice and Bob.
+
+.. note:: To create create new accounts, follow :ref:`this guide <setup-creating-a-test-account>`.
 
 ****************************
 Example #01: 1-of-2 multisig

@@ -32,8 +32,9 @@ In this guide, we will be restricting accounts to trade with ``cc.shares``—mos
 Prerequisites
 *************
 
-- Finish :doc:`creating a mosaic guide <../mosaic/creating-a-mosaic>`
-- Finish :doc:`restricting mosaics transfers <restricting-mosaics-transfers>`
+- Complete :doc:`restricting mosaics transfers <restricting-mosaics-transfers>` guide.
+- Create :ref:`accounts <setup-creating-a-test-account>` for ComfyClothingCompany and KYC provider.
+- Load both accounts with enough |networkcurrency| to pay for the transactions fees and creation of mosaics.
 
 *************************
 Method #01: Using the SDK

@@ -19,8 +19,7 @@ Finally, **after removing a cosignatory**, you will know how to perform all sort
 Prerequisites
 *************
 
-- Finish :doc:`converting an account to multisig guide <converting-an-account-to-multisig>`
-- Know how to :doc:`create accounts <../account/creating-an-account>`
+- Complete :doc:`converting an account to multisig <converting-an-account-to-multisig>` guide.
 
 .. _guide-modify-a-multisig-account-min-approval:
 

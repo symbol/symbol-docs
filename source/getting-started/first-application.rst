@@ -4,7 +4,7 @@ Writing your first application
 
 This guide will take you through the |codename| development cycle.
 First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`Mosaics <../concepts/mosaic>` and :doc:`Accounts <../concepts/account>`.
-Then, you will record your first transaction on the blockchain.
+Then, we will record a first transaction on the blockchain.
 
 **********
 Background
@@ -16,9 +16,10 @@ The initial vendor could be the event website, an online ticket vending platform
 Buying a ticket from someone that is not the initial vendor does not necessarily only mean to pay more for the ticket.
 There is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can't do anything to solve the issue.
 
-*************************
 What do we want to solve?
-*************************
+=========================
+
+A ticket vendor wants to set up a system to:
 
 .. figure:: ../resources/images/examples/getting-started.png
     :width: 450px
@@ -26,15 +27,13 @@ What do we want to solve?
 
     Authorization model
 
-The ticket vendor wants to set up a system to:
 
 a) Identify each ticket and customer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-******************************
-Why Catapult is a good choice?
-******************************
+Why Symbol is a good choice?
+============================
 
 Blockchain technology makes sense in cases where:
 
