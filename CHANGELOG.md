@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 0.21.3 - 30-Mar-2020
+
+Code-name: Fushicho 5
+
+## Added
+
+- Import TypeScript SDK reference versions automatically
+- Import CLI commands reference versions automatically
+- Publish docs when pushing to master
+- Updated cross chain swap concept with maxRollBackBlocks
+
+## Updated
+
+- Added more details on guides prerequisites
+
 ## 0.21.2 - 06-Mar-2020
 
 Code-name: Fushicho 5
