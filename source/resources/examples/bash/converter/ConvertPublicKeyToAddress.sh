@@ -1,3 +1,0 @@
-#!/bin/sh
-
-symbol-cli converter publicKeyToAddress --publicKey FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET
