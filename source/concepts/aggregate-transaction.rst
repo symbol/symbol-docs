@@ -92,7 +92,7 @@ But Alice doesn't own |networkcurrency| to pay the transaction fee.
 By creating an AggregateBondedTransaction, Alice can convert ``currency.euro`` to |networkcurrency| to pay the fee.
 Now, Alice and Bob can use |codename|'s public blockchain without ever having to buy or hold |networkcurrency| units.
 
-Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain technology.
+Since the app creator can put its own branding on the open source payment app, Alice and Bob may not even know they are using blockchain technology.
 
 .. figure:: ../resources/images/examples/aggregate-paying-for-others-fees.png
     :align: center
