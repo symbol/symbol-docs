@@ -268,6 +268,7 @@ rst_prolog = """
 .. |privatenetworkcurrency| replace:: ``cat.currency``
 .. |sdk| replace:: Symbol SDK
 .. |cli| replace:: Symbol CLI
+.. |desktop-wallet| replace:: Symbol Desktop Wallet
 """
 
 # -- Options for Epub output ----------------------------------------------

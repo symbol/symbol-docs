@@ -13,20 +13,19 @@ Desktop Wallet
     :width: 600px
 
 Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
+|desktop-wallet| is available for Mac, Windows, and as a web application.
 
 .. note:: The desktop wallet is only available for the public test network.
 
 Installation
 ============
 
-Symbol Desktop Wallet is available for Mac, Windows, and as a web application.
-
-1. Download Symbol Desktop Wallet from the `releases section <https://github.com/nemfoundation/symbol-desktop-wallet/releases>`_.
+1. Download the |desktop-wallet| from the `releases section <https://github.com/nemfoundation/symbol-desktop-wallet/releases>`_.
+The executable file for your operative system is under the "Assets" tab.
 
 2. Launch the executable file and follow the installation instructions.
 
 3. Create an account. Remember to save the mnemonic somewhere safe (offline).
-
 
 .. _wallet-cli:
 
@@ -39,7 +38,6 @@ Command-Line Interface
     :width: 600px
 
 |cli| is an |open-source| command-line interface to interact with the blockchain.
-
 
 Installation
 ============
