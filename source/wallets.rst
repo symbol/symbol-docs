@@ -14,6 +14,8 @@ Desktop Wallet
 
 Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
 
+.. note:: The desktop wallet is only available for the public test network.
+
 Installation
 ============
 
