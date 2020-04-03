@@ -34,7 +34,7 @@ Prerequisites
 Setting up the use case
 ***********************
 
-Create an account for Alice, and another for the certificate with the :doc:`CLI tool <../../cli>`.
+Create an account for Alice, and another for the certificate with the :ref:`CLI tool <wallet-cli>`.
 
 .. code-block:: bash
 

@@ -1,12 +1,46 @@
-####
-CLI
-####
+#######
+Wallets
+#######
+
+.. _wallet-desktop:
+
+**************
+Desktop Wallet
+**************
+
+.. figure:: resources/images/screenshots/wallet.png
+    :align: center
+    :width: 600px
+
+Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
+
+Installation
+============
+
+Symbol Desktop Wallet is available for Mac, Windows, and as a web application.
+
+1. Download Symbol Desktop Wallet from the `releases section <https://github.com/nemfoundation/symbol-desktop-wallet/releases>`_.
+
+2. Launch the executable file and follow the installation instructions.
+
+3. Create an account. Remember to save the mnemonic somewhere safe (offline).
+
+
+.. _wallet-cli:
+
+**********************
+Command-Line Interface
+**********************
+
+.. figure:: resources/images/screenshots/cli.png
+    :align: center
+    :width: 600px
 
 |cli| is an |open-source| command-line interface to interact with the blockchain.
 
-************
+
 Installation
-************
+============
 
 |cli| is distributed using the node package manager ``npm``.
 
@@ -18,9 +52,8 @@ Execute the following command in a new terminal:
 
     npm install --global symbol-cli
 
-*************
 Configuration
-*************
+=============
 
 To start using |cli|, configure a profile.
 Profiles are used to set a base URL and account to sign transactions.
@@ -52,9 +85,8 @@ If you do not have a private key to create a profile, you can generate a new acc
 
    <a href="https://github.com/nemtech/symbol-cli" target="_blank">open-source</a>
 
-********
 Commands
-********
+========
 
 These are the available commands for Symbol CLI separated by version.
 
