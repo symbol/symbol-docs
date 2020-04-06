@@ -37,7 +37,7 @@ Follow the latest updates about the public launch on the |forum|.
 Private test network
 ====================
 
-With |codename|, businesses can launch and extend private networks by developing custom plugins and extensions at the protocol level.
+With |codename|, businesses can launch and extend private networks by developing :doc:`custom plugins <concepts/plugin>` and extensions at the protocol level.
 The package |catapult-service-bootstrap| contains the necessary setup scripts to deploy a network for testing and development purposes with just one command.
 
 To run a private test net, follow :doc:`this guide <guides/network/creating-a-private-test-net>`.

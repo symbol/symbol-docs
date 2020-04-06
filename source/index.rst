@@ -124,6 +124,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/mosaic-restriction
     concepts/multisig-account
     concepts/cross-chain-swaps
+    concepts/plugin
 
 .. toctree::
     :maxdepth: 2
