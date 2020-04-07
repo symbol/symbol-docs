@@ -4,12 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 0.21.3 - 30-Mar-2020
+## 0.21.3 - 07-Mar-2020
 
 Code-name: Fushicho 5
 
 ## Added
-
+- Extending Symbol concept
+- Wallet installation notes
 - Import TypeScript SDK reference versions automatically
 - Import CLI commands reference versions automatically
 - Publish docs when pushing to master
