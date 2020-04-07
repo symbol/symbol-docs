@@ -5,10 +5,10 @@ Extending Symbol
 Symbol comes with improved extensibility through its plugin-based architecture.
 
 A **plugin** is a self-contained group of functions that can be added to the Symbol's protocol to extend its capabilities.
-The plugin approach allows developers to introduce new and different ways to alter the chain's state via transactions, without having to modify Symbol's core engine or disrupt any other feature.
+The plugin approach allows developers to introduce different ways to alter the chain's state via transactions without modifying Symbol's core engine or disrupting other features.
 
 Every base :doc:`transaction type  <transaction>` available in Symbol is defined as a separate plugin.
-This separation makes possible to only load a minimum subset of features to fit the network requirements.
+This separation makes it possible to only load a minimum subset of features to fit the network requirements.
 
 ************
 Architecture
@@ -32,7 +32,7 @@ The file has to match the following format so that the Symbol engine can dynamic
     }}
 
 All the plugin related files are stored in the same folder to keep the code organized.
-The folder also includes the file ``CMakeLists.txt`` to indicate the compiler how to build the plugin.
+The folder also includes the file ``CMakeLists.txt``, which instructs the compiler on how to build the plugin.
 
 .. code-block:: cmake
 
@@ -63,7 +63,7 @@ Security
 The code defined in a plugin runs forever unless the network is stopped or all network nodes decide to use a new configuration that disables the plugin.
 If a subset of nodes does not adopt the configuration changes, the chain will split in two.
 
-Before writing custom logic, try to solve the use case first by combining the set of transactions provided in Symbol by default.
-Note that Symbol base plugins have been audited, the platform is running an extensive test-net period before the public launch, and its code has been open-source since April 2018.
+Before writing custom logic, developers should try to solve the use case by using the set of transactions provided in Symbol by default.
+Note that Symbol base plugins have been audited. The platform is running an extensive test-net period before the public launch, and its code has been open-source since April 2018.
 
 If you decide to create a new plugin, it is recommended to test the code extensively, bring external auditors, and run a testnet period before launching the network in production to minimize vulnerabilities in the custom code.
