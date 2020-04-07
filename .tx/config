@@ -13,12 +13,6 @@ source_file = build/gettext/api.pot
 source_lang = en
 type = PO
 
-[symboldocs.cli]
-file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
-source_file = build/gettext/cli.pot
-source_lang = en
-type = PO
-
 [symboldocs.libraries]
 file_filter = source/locale/<lang>/LC_MESSAGES/libraries.po
 source_file = build/gettext/libraries.pot
@@ -34,6 +28,12 @@ type = PO
 [symboldocs.server]
 file_filter = source/locale/<lang>/LC_MESSAGES/server.po
 source_file = build/gettext/server.pot
+source_lang = en
+type = PO
+
+[symboldocs.wallets]
+file_filter = source/locale/<lang>/LC_MESSAGES/wallets.po
+source_file = build/gettext/wallets.pot
 source_lang = en
 type = PO
 
@@ -136,6 +136,12 @@ type = PO
 [symboldocs.concepts--receipt]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
 source_file = build/gettext/concepts/receipt.pot
+source_lang = en
+type = PO
+
+[symboldocs.concepts--plugin]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/plugin.po
+source_file = build/gettext/concepts/plugin.pot
 source_lang = en
 type = PO
 

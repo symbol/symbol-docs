@@ -29,7 +29,7 @@ Prerequisites
 - Have an account with a namespace.
 - Have an account with enough |networkcurrency| to pay for the transaction and renewal fees.
 
-************************
+*************************
 Method #01: Using the SDK
 *************************
 
