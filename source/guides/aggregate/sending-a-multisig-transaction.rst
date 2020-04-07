@@ -165,7 +165,7 @@ After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :do
         :end-before: /* end block 02 */
 
 4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added.
-Then, :doc:`cosign the AggregateTransaction <../../cli>` with Alice's account. Use the transaction hash output from (2).
+Then, cosign the AggregateTransaction with Alice's account. Use the transaction hash output from (2).
 
 .. code-block:: bash
 

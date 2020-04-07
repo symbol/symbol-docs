@@ -40,7 +40,7 @@ Prerequisites
 Creating the account
 ********************
 
-1. Create an account for Alice, using the :doc:`CLI tool <../../cli>`.
+1. Create an account for Alice, using the :ref:`CLI tool <wallet-cli>`.
 
 .. code-block:: bash
 

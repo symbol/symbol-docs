@@ -129,8 +129,8 @@ To interact with your node, :ref:`create first an account <setup-creating-a-test
 Then, read and write data from the network with the following tools:
 
 * |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
-* |desktop-wallet|: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
-* :doc:`Command-Line Interface <../../cli>`: Execute the most commonly used actions from your terminal.
+* :ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
+* :ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used actions from your terminal.
 * |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
 * :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
@@ -139,10 +139,6 @@ On this portal you can find information about |codename|'s features and :ref:`se
 .. _docker: https://docs.docker.com/install/
 
 .. _docker-compose: https://docs.docker.com/compose/install/
-
-.. |desktop-wallet| raw:: html
-
-   <a href="https://github.com/nemfoundation/symbol-desktop-wallet" target="_blank">Desktop Wallet</a>
 
 .. |blockchain-explorer| raw:: html
 
