@@ -1,7 +1,7 @@
 # catapult-docs-cli
 
 [![PyPI](https://img.shields.io/pypi/v/catapultdocscli)](https://pypi.org/project/catapultdocscli/)
-[![Build Status](https://travis-ci.org/nemtech/catapult-docs-cli.svg?branch=master)](https://travis-ci.org/nemtech/catapult-docs-cli)
+[![Build Status](https://travis-ci.com/nemtech/catapult-docs-cli.svg?branch=master)](https://travis-ci.com/nemtech/catapult-docs-cli)
 
 Exports documentation available in ``catapult-server`` and ``catapult-rest`` code into reStructuredText tables. 
 
