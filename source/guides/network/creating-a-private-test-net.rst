@@ -80,31 +80,7 @@ Installation
 
 To stop the process, press ``Ctrl+C``.
 
-********
-Commands
-********
-
-.. csv-table::
-    :header: "Command", "Description"
-    :delim: ;
-
-    ./cmds/clean-data; Delete all of the blockchain and cache data, keeping the configuration and generated keys.
-    ./cmds/clean-all; Clean the data and additionally will remove the generated keys and the configuration generated from these keys.
-    ./cmds/run-api-recovery; Run the API recovery service.
-    ./cmds/setup-network; Create the nemesis block and generate all the config files if they do not already exist on disk.
-    ./cmds/start-all; Create config and nemesis if it doesn't exist and starts up all services.
-    ./cmds/start-api-db; Start the MongoDB instance and configure schema/indexes if needed.
-    ./cmds/start-api-node; Start the API node.
-    ./cmds/start-catapult-api; Start the API node and REST gateway services.
-    ./cmds/start-catapult-api-broker;  Start just the API broker service.
-    ./cmds/start-catapult-peers; Start peer0 and peer1 services only.
-    ./cmds/stop-all; Stop all the services.
-    ./cmds/stop-api-db; Stop the MongoDB service.
-    ./cmds/stop-api-node; Stop the API node.
-    ./cmds/stop-catapult-api; Stop the API node and REST gateway services.
-    ./cmds/stop-catapult-api-broker;   Stop just the API broker service.
-    ./cmds/stop-catapult-peers; Stop peer0 and peer1 services.
-    ./cmds/stop-catapult-api-broker ;  Stop just the API broker service.
+.. note:: Find more commands to manage the network in the `installation notes <https://github.com/tech-bureau/catapult-service-bootstrap#bootstrap-scriptscommands>`_.
 
 *********************
 Getting test currency
@@ -169,7 +145,7 @@ As the name suggests, the **private key has to be kept secret at all times**.
 Anyone with access to the private key ultimately has control over the account.
 On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|. In this portal, you can find everything you need to know about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running and an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|. In this portal, you can find detailed information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
 .. _docker: https://docs.docker.com/install/
 

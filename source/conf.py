@@ -47,10 +47,11 @@ extensions = [
     'sphinxcontrib.mermaid',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
+    'ablog',
     'edit-on-github',
     'fulltoc',
     'ghreference',
-    'ablog'
+    'redirects',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,7 +70,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'symbol-docs'
-copyright = u'2018-2019, NEM'
+copyright = u'2018-present, NEM'
 author = u'NEM'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -267,6 +268,7 @@ rst_prolog = """
 .. |privatenetworkcurrency| replace:: ``cat.currency``
 .. |sdk| replace:: Symbol SDK
 .. |cli| replace:: Symbol CLI
+.. |desktop-wallet| replace:: Symbol Desktop Wallet
 """
 
 # -- Options for Epub output ----------------------------------------------

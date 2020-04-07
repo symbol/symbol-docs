@@ -6,7 +6,7 @@ Server
 
 These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
-Learn more about the protocol by reading the |whitepaper| and this :doc:`documentation <concepts/account>`.
+Learn more about the protocol by reading the |whitepaper| and this :doc:`documentation <concepts/node>`.
 
 ******************
 Building the image
