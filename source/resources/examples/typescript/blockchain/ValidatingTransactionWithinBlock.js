@@ -17,10 +17,11 @@
  *
  */
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -29,7 +30,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const js_sha3_1 = require("js-sha3");
 const positionEnum_1 = require("symbol-openapi-typescript-node-client/dist/model/positionEnum");
 const symbol_sdk_1 = require("symbol-sdk");
-const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(this, void 0, void 0, function* () {
+const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(void 0, void 0, void 0, function* () {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
     const HRoot = (yield blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
     // 3. Request the merkleProof: H1, H7, H10

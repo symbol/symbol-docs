@@ -36,7 +36,7 @@ console.log(signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

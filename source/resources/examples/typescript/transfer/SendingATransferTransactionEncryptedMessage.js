@@ -40,7 +40,7 @@ const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerati
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

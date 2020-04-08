@@ -50,7 +50,7 @@ console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

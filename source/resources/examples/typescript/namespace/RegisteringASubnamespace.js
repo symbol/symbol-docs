@@ -33,7 +33,7 @@ const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkTyp
 const networkGenerationHash = '44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C';
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

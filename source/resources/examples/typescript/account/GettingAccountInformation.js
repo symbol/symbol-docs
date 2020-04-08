@@ -23,7 +23,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp

@@ -22,7 +22,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('symbol');
 // replace with node endpoint
-const nodeUrl = 'http://api-2-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 metadataHttp.getNamespaceMetadata(namespaceId)
