@@ -18,7 +18,7 @@ Prerequisites
 - Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 - Create a new :ref:`account <setup-creating-a-test-account>`.
 - Load the account with enough |networkcurrency| to pay for transaction fees.
-- Register a :doc:`namespace <../../concepts/mosaic>` with the account.
+- Register a :doc:`namespace <../../concepts/namespace>` with the account.
 
 *************************
 Method #01: Using the SDK
