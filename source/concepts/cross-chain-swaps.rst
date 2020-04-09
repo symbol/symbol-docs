@@ -200,8 +200,7 @@ Enumeration: uint8
     :delim: ;
 
     0 (Op_Sha3_256); Proof is hashed using SHA3-256.
-    1 (Op_Keccak_256); Proof is hashed using Keccak (ETH compatibility).
-    2 (Op_Hash_160); Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
-    3 (Op_Hash_256); Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).
+    1 (Op_Hash_160); Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 (bitcoin's OP_HASH160).
+    2 (Op_Hash_256); Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256).
 
 Continue: :doc:`Cryptography <cryptography>`.
