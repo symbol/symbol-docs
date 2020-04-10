@@ -20,7 +20,7 @@ When announcing a transaction in NIS1, you had to wait to get the response from 
 As a result, the developer does not have to wait until the server returns a response, being able to make more responsive apps.
 However, now is the developer's responsibility to check the status of the transaction and ensure it is confirmed.
 
-The negative aspect of announcing transactions asynchronously announcement is that it adds unnecessary complexity to small projects.
+The negative aspect of announcing transactions asynchronously is that it adds unnecessary complexity to small projects.
 The |sdk| ``TransactionService`` aims to solve this problem by providing a function that waits for the confirmation or rejection of the transaction.
 
 *************
