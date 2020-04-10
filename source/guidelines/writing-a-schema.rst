@@ -44,7 +44,7 @@ Each attribute can have one of the types defined in `types.cats <https://github.
         # attached mosaics
         mosaics = array(UnresolvedMosaic, mosaicsCount, sort_key=mosaicId)
 
-2. Define a second transaction struct in the same file.
+4. Define a second transaction struct in the same file.
 This will contain information about the version of the entity and its identifier.
 The underlying transaction properties and the particular transaction body are appended as inlines.
 
@@ -59,7 +59,7 @@ The underlying transaction properties and the particular transaction body are ap
         inline TransferTransactionBody
 
 
-3. Define an EmbeddedTransaction struct to serialize the inner transactions within an aggregate.
+5. Define an EmbeddedTransaction struct to serialize the inner transactions within an aggregate.
 The embedded transaction and the body transaction are added as inlines.
 
 .. code-block:: python
@@ -70,7 +70,7 @@ The embedded transaction and the body transaction are added as inlines.
         inline EntityBody
 
 
-4. The catbuffer library allows you to generate the transaction builders from the schema we have defined.
+6. The catbuffer library allows you to generate the transaction builders from the schema we have defined.
 For example, run the following command to generate C++ code:
 
 .. code-block:: bash
