@@ -130,10 +130,7 @@ In order for the remote account to be accepted for delegated harvesting, it need
 * It cannot already be a remote account for another account.
 * It cannot be its own remote account.
 
-Furthermore, for the duration that the account is used as a delegated account, it is restricted from:
-
-* initiating any transactions.
-* involvement with any type of transactions.
+Furthermore, for the duration that the account is used as a delegated account, it is restricted from initiating any transactions or be involved in any transaction.
 
 **Version**: 0x01
 
