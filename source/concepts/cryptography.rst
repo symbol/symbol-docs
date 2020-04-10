@@ -10,7 +10,7 @@ Cryptography
 Key pair
 ********
 
-Elliptic curve cryptography is an approach to **public key cryptography**.
+Elliptic curve cryptography is an approach to public key cryptography.
 The cryptographic system uses **pairs of keys**:
 
 * **Private key**: A random 256-bit integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
@@ -37,7 +37,7 @@ You can find the implementation to |implementation-signature| and |implementatio
 Address
 *******
 
-Public keys can be shared in a shorter form as **addresses**.
+Public keys can be shared in a shorter form as addresses.
 A |codename| address is a **Base32 encoded triplet** consisting of:
 
 * The network byte.
@@ -67,12 +67,6 @@ The following steps are performed to |implementation-public-key-address|:
 
 		return decoded;
 	}
-
-1. SHA3-256 of the public key.
-2. RIPEMD-160 hash of (1).
-3. Add the network identifier byte in front of (2).
-4. Concatenate (3) and the checksum of (3).
-5. (Optional) Base32 of (4).
 
 As you can see, it is possible to create an address without interacting with the blockchain.
 In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.

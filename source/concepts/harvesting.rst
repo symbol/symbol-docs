@@ -79,7 +79,7 @@ As the remote private key is **saved on disk**, even if the node disconnects tem
 Additionally, the use of encrypted message creates a **backup** of the information for the nodes.
 If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can retrieve the data by querying the blockchain.
 
-Security-wise, **sharing a proxy private key** does not compromise the original account since:
+Security-wise, sharing a proxy private key does not compromise the original account since:
 
 * The remote account has zero balance.
 * The remote account by itself can't transfer the importance to another account.

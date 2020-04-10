@@ -9,7 +9,7 @@
 Creating a private test net
 ###########################
 
-This guide will walk you through the process of **setting up your own private network** using |codename|'s technology.
+This guide will walk you through the process of setting up your own private network using |codename|'s technology.
 
 To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
 
@@ -145,7 +145,8 @@ As the name suggests, the **private key has to be kept secret at all times**.
 Anyone with access to the private key ultimately has control over the account.
 On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running and an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|. In this portal, you can find detailed information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running and an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|.
+In this portal, you can find detailed information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the software development kits.
 
 .. _docker: https://docs.docker.com/install/
 

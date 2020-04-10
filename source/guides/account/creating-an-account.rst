@@ -21,7 +21,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-To create an account, open a new file, and run the following code snippet.
+To create an account, open a new file and run the following code snippet.
 
 .. example-code::
 

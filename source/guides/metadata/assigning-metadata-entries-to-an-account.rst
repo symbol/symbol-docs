@@ -15,8 +15,8 @@ Add custom data to an account.
 Background
 **********
 
-Bob works as a digital notary that **stamp accounts** on |codename|'s public blockchain.
-When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then **tags the customer's account** with the digitized document as metadata.
+Bob works as a digital notary that stamp accounts on |codename|'s public blockchain.
+When a customer comes to Bob to notarize a document, he checks the authentication of the customer's documents then tags the customer's account with the digitized document as metadata.
 
 Alice is a recent graduate who wants her educational certificate accredited to her |codename| account to avoid the hassle of repeatedly providing verification of her degree.
 So she goes to Bob and provides him with proof of her degree.
@@ -72,7 +72,7 @@ Define this key as a new variable.
         :end-before: /* end block 01 */
 
 2. Alice's degree brings the identifier ``123456`` for her certificate.
-Help Bob to **assign this value to the key** defined in the previous step.
+Help Bob to assign this value to the key defined in the previous step.
 To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
 
 .. example-code::

@@ -37,14 +37,23 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp
     .getAccountOutgoingTransactions(senderAddress)
-    .pipe(operators_1.mergeMap((_) => _), // Transform transaction array to single transactions to process them
-operators_1.filter((_) => _.type === symbol_sdk_1.TransactionType.TRANSFER), // Filter transfer transactions
-operators_1.map((_) => _), // Map transaction as transfer transaction
+    .pipe(
+// Process each transaction individually.
+operators_1.mergeMap((_) => _), 
+// Filter transfer transactions.
+operators_1.filter((_) => _.type === symbol_sdk_1.TransactionType.TRANSFER), 
+// Map transaction as transfer transaction.
+operators_1.map((_) => _), 
+// Filter transactions where the account is the recipient address.
 operators_1.filter((_) => _.recipientAddress instanceof symbol_sdk_1.Address
-    && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
-operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
-operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
-operators_1.toArray(), // Add all mosaics amounts into one array
+    && _.recipientAddress.equals(recipientAddress)), 
+// Filter transactions containing a given mosaic
+operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), 
+// Transform absolute amount to relative amount.
+operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), 
+// Add all amounts into an array.
+operators_1.toArray(), 
+// Sum all the amounts.
 operators_1.map((_) => _.reduce((a, b) => a + b, 0)))
     .subscribe((total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total), (err) => console.error(err));
 /* end block 01 */

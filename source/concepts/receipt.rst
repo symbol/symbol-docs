@@ -96,7 +96,7 @@ Receipt schemas
 Receipt
 =======
 
-Conditional state changes in the background enable complex transactions.
+Receipts provide proof for every state change not retrievable from the block.
 
 **Inlines**:
 

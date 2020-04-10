@@ -18,7 +18,7 @@ Background
 A private company, ComfyClothingCompany, decides that it wants to go public.
 Instead of a traditional IPO, the company decides to do an STO to issue tokens through the |codename| platform.
 
-In this guide, we are going to help this company to **create the tokens for their STO**.
+In this guide, we are going to help this company to create the tokens for their STO.
 
 *************
 Prerequisites

@@ -68,7 +68,7 @@ To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>`
 This cost is paid in |networkcurrency| mosaics, the default network currency of the public network.
 
 Now that you have created your first account, try to request |networkcurrency| units from the **testnet faucet**.
-|faucet|, indicate the amount of |networkcurrency| you want to receive and the address, and click "CLAIM!".
+|faucet|, indicate the amount of |networkcurrency| you want to receive and the address, and click "**CLAIM!**".
 
 .. figure:: ../resources/images/screenshots/faucet.png
     :align: center
@@ -96,7 +96,7 @@ After the transaction gets confirmed, check if the account has received |network
 Creating a project
 ******************
 
-Now that you have your account filled with |networkcurrency| units, it is the time to choose a **programming language**.
+Now that you have your account filled with |networkcurrency| units, it is the time to **choose a programming language**.
 Pick the one you feel most comfortable with, or follow your project requirements.
 
 Then, **create a folder for your new project** and run the instructions for the selected language.

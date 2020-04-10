@@ -9,7 +9,7 @@
 Running a test net node
 #######################
 
-This guide will walk you through the process of **setting up your node** to join |codename|’s **public test network**.
+This guide will walk you through the process of setting up your node to join |codename|’s **public test network**.
 
 The test network mirrors the same technology and features of the future main public network.
 You can use the test net to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
