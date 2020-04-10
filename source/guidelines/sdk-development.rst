@@ -7,29 +7,9 @@ SDK Development
 One of the key objectives we had when building the first group of  SDKs was to enable developers to change quickly between programming languages without having to adapt to a completely different design.
 This document intends to guide developers to ship |codename|-based SDKs that share the same design to achieve interoperability.
 
-*********
-Rationale
-*********
-
-The |sdk| shares the same design/architecture between programming languages to accomplish the next properties:
-
-* **Fast language adaptation**: For example, there is a |sdk| for Java, but you need to work on C++. As both SDKs share the same design, you could re-write the library faster, adapting the syntax to your language. The same principle also applies to code examples, projects, applications...
-* **Cohesion/shared knowledge across developers**: Every developer should be able to change between projects that use |codename|. By sharing the same design, we also share the same best practices among projects.
-* **Fast SDK updates**: Migrating any improvement from a |sdk| implementation to the rest is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
-
 ************
 Architecture
 ************
-
-Characteristics
-===============
-
-- **Standardized Contracts**: Guaranteeing interoperability and harmonization of data models.
-- **Loose Coupling**: Reducing the degree of component coupling fosters.
-- **Abstraction**: Increasing the long-term consistency of interoperability and allowing underlying components to evolve independently.
-- **Reusability**: Enabling high-level interoperability between modules and potential component consumers.
-- **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
-- **Composability**: For components to be effectively composable, they must be interoperable.
 
 Package Organization
 ====================
@@ -53,6 +33,16 @@ Instead, the developers have to create new Transactions and dispatch them to the
 **Services**
 
 Common operations that require combining multiple :doc:`REST API <../api>` requests.
+
+Characteristics
+===============
+
+- **Standardized Contracts**: Guaranteeing interoperability and harmonization of data models.
+- **Loose Coupling**: Reducing the degree of component coupling fosters.
+- **Abstraction**: Increasing the long-term consistency of interoperability and allowing underlying components to evolve independently.
+- **Reusability**: Enabling high-level interoperability between modules and potential component consumers.
+- **Stateless**: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.
+- **Composability**: For components to be effectively composable, they must be interoperable.
 
 Reactive
 ========

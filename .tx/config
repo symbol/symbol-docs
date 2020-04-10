@@ -13,12 +13,6 @@ source_file = build/gettext/api.pot
 source_lang = en
 type = PO
 
-[symboldocs.libraries]
-file_filter = source/locale/<lang>/LC_MESSAGES/libraries.po
-source_file = build/gettext/libraries.pot
-source_lang = en
-type = PO
-
 [symboldocs.sdk]
 file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
 source_file = build/gettext/sdk.pot

@@ -26,7 +26,7 @@ To know more about Symbol, continue reading the following documents:
 * [Protocol](https://nemtech.github.io/concepts/cryptography.html)
 * [API Reference](https://nemtech.github.io/api.html)
 * [Software Development Kits](https://nemtech.github.io/sdk.html)
-* [Command Line Tool](https://nemtech.github.io/cli.html)
+* [Wallets](https://nemtech.github.io/wallets.html)
 
 ## Featured Guides
 

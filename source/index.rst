@@ -31,7 +31,6 @@ To know more about |codename|, continue reading the following documents:
 * :doc:`API Reference <api>`
 * :doc:`Software Development Kits <api>`
 * :doc:`Wallets <wallets>`
-* :doc:`Libraries <libraries>`
 
 ***************
 Featured Guides
@@ -153,7 +152,6 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     server
     sdk
     wallets
-    libraries
 
 .. toctree::
     :maxdepth: 2
