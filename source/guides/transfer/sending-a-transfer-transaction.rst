@@ -46,7 +46,7 @@ Read and verify the information, then enter your wallet password and click "**Co
 At first, it might show up under "**Unconfirmed**" transactions as the transaction becomes included in a block, but you should soon be able to see it under the "**Confirmed**" transactions.
 
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. In a new terminal, monitor which transactions involving the your account are confirmed and which of them are rejected by the network.
