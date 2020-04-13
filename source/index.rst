@@ -30,6 +30,7 @@ To know more about |codename|, continue reading the following documents:
 * :doc:`Protocol <concepts/cryptography>`
 * :doc:`API Reference <api>`
 * :doc:`Software Development Kits <api>`
+* :doc:`Command-line Interface <cli>`
 * :doc:`Wallets <wallets>`
 
 ***************
@@ -151,6 +152,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     api
     server
     sdk
+    cli
     wallets
 
 .. toctree::
