@@ -2,6 +2,7 @@
 
 .. post:: 04 March, 2019
     :category: Namespace
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

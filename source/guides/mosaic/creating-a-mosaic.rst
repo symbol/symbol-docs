@@ -2,6 +2,7 @@
 
 .. post:: 16 Aug, 2018
     :category: Mosaic
+    :tags: wallet, SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -11,11 +12,7 @@ Creating a mosaic
 
 Tokenize an asset using mosaics.
 
-**********
-Background
-**********
-
-A private company, ComfyClothingCompany, decides that it wants to go public.
+Imagine that a private company, ComfyClothingCompany, decides that it wants to go public.
 Instead of a traditional IPO, the company decides to do an STO to issue tokens through the |codename| platform.
 
 In this guide, we are going to help this company to create the tokens for their STO.
@@ -28,11 +25,11 @@ Prerequisites
 - Create a new :ref:`account <setup-creating-a-test-account>`.
 - Load the account with enough |networkcurrency| to pay for transaction fees.
 
-*************************
-Method #01: Using the SDK
-*************************
+******************************
+Defining the mosaic properties
+******************************
 
-1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` to set the **mosaic properties**. In this example, we are going to create a mosaic with the following configuration:
+ComfyClothingCompany decides to create their STO mosaic with the following configuration:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -43,6 +40,38 @@ Method #01: Using the SDK
     Supply mutable; True; ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of 10,000,000 authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
     Transferable; True; Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to true.
     Restrictable; True; Since STOs are regulated, the mosaic creator should be able to restrict which accounts can transact with the mosaic.
+
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Click on the "**Mosaics**" tab from the left side menu.
+
+2. Click on the "**Create new mosaics**" tab on the top of the page.
+
+.. figure:: ../../resources/images/screenshots/desktop-create-mosaic-1.gif
+    :align: center
+    :width: 800px
+
+3. Determine the properties of the mosaic you desire to create. Click "**Send**".
+
+.. figure:: ../../resources/images/screenshots/desktop-create-mosaic-2.gif
+    :align: center
+    :width: 800px
+
+4. Verify the information on the popup and enter your wallet password. Click "**Confirm**". This should send the transaction to the network.
+
+.. figure:: ../../resources/images/screenshots/desktop-create-mosaic-3.gif
+    :align: center
+    :width: 800px
+
+5. When the transaction becomes confirmed, you can check to see that the mosaic has been created by going back to the "**Owned mosaics**" tab.
+
+*************************
+Method #02: Using the SDK
+*************************
+
+1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` and determined the desired **mosaic properties** .
 
 .. example-code::
 
@@ -83,8 +112,8 @@ Method #01: Using the SDK
 .. note:: |codename| works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
-
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+Include the first block generation hash to make the transaction only valid for your network.
+Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -106,8 +135,10 @@ Method #01: Using the SDK
 Once the transaction gets confirmed, you can try to :doc:`transfer <../transfer/sending-a-transfer-transaction>` one unit of the created mosaic to another account, :doc:`modify the mosaic properties <modifying-mosaic-supply>` or :doc:`link a namespace to the mosaic <creating-a-mosaic>`.
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
+
+Open a terminal window and run the following command to create a new mosaic.
 
 .. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
     :language: bash

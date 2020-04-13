@@ -2,6 +2,7 @@
 
 .. post:: 07 Oct, 2019
     :category: Mosaic Restriction
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

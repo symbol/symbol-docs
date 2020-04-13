@@ -1,7 +1,8 @@
 :orphan:
 
-.. post:: 18 Aug, 2018
+.. post:: 03 Aug, 2018
     :category: Account
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -44,6 +45,8 @@ Open a new file and call the ``getAccountInfo`` function from the ``AccountHttp`
 *************************
 Method #02: Using the CLI
 *************************
+
+Open a terminal window and run the following command to get the account details.
 
 .. viewsource:: ../../resources/examples/bash/account/GettingAccountInformation.sh
     :language: bash

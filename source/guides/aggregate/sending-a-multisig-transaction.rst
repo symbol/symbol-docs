@@ -2,6 +2,7 @@
 
 .. post:: 20 Aug, 2018
     :category: Multisig Account
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

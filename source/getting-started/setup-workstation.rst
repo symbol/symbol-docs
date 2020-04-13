@@ -1,4 +1,5 @@
-.. post:: 16 Aug, 2018
+.. post:: 01 Aug, 2018
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 
