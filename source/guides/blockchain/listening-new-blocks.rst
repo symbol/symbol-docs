@@ -1,7 +1,8 @@
 :orphan:
 
-.. post:: 8 Aug, 2018
+.. post:: 18 Aug, 2018
     :category: Block
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

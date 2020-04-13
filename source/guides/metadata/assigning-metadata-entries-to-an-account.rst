@@ -2,6 +2,7 @@
 
 .. post:: 29 Sep, 2019
     :category: Metadata
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

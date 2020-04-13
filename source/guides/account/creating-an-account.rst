@@ -1,7 +1,8 @@
 :orphan:
 
-.. post:: 18 Aug, 2018
+.. post:: 02 Aug, 2018
     :category: Account
+    :tags: wallet, SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -9,7 +10,7 @@
 Creating an account
 ###################
 
-Learn how to create a new |codename| account to start sending and receiving transactions.
+Create a new |codename| account to start sending and receiving transactions.
 
 *************
 Prerequisites
@@ -21,7 +22,7 @@ Prerequisites
 Method #01: Using the Desktop Wallet
 ************************************
 
-1. Open up the :ref:`Desktop Wallet <desktop-wallet>` application and click on the "**Create Mnemonic**" button.
+1. Open up the :ref:`Desktop Wallet <wallet-desktop>` application and click on the "**Create Mnemonic**" button.
 
 .. figure:: ../../resources/images/screenshots/desktop-create-account-1.gif
     :align: center
