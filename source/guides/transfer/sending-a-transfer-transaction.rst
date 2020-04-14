@@ -2,6 +2,7 @@
 
 .. post:: 10 Aug, 2018
     :category: Transfer Transaction
+    :tags: wallet, SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -9,19 +10,9 @@
 Sending mosaics and messages between two accounts
 #################################################
 
-Transfer mosaics and messages between two accounts.
+Define, sign, and announce a transfer transaction.
 
-**********
-Background
-**********
-
-.. figure:: ../../resources/images/examples/transfer-transaction.png
-    :align: center
-    :width: 450px
-
-    Sending a TransferTransaction
-
-Alice wants to send 10 |networkcurrency| to Bob, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
+This guide will show you how to send 10 |networkcurrency| from your account to Bob's, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
 
 *************
 Prerequisites
@@ -31,15 +22,38 @@ Prerequisites
 - Create a new :ref:`account <setup-creating-a-test-account>`.
 - Load the account with enough |networkcurrency| to pay for transaction fees.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. From the home page of your Desktop Wallet, click on the "**Transfer**" tab.
+
+.. figure:: ../../resources/images/screenshots/desktop-transfer-1.gif
+    :align: center
+    :width: 800px
+
+2. Fill out the necessary information for the transfer transaction.
+For this example, you need to specify that you are sending 10 XYM to Bob (``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-AJHH``).  You can add a message, but it is not necessary in this case.
+
+.. figure:: ../../resources/images/screenshots/desktop-transfer-2.gif
+    :align: center
+    :width: 800px
+
+3. Once you have filled out all the information, click "**Send**". A popup will show.
+Read and verify the information, then enter your wallet password and click "**Confirm**".
+
+4. You can verify that the transaction was successful by going back to the "**Dashboard**" tab.
+At first, it might show up under "**Unconfirmed**" transactions as the transaction becomes included in a block, but you should soon be able to see it under the "**Confirmed**" transactions.
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
-1. In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which of them are rejected by the network.
+1. In a new terminal, monitor which transactions involving the your account are confirmed and which of them are rejected by the network.
 
 .. code-block:: bash
 
-   symbol-cli monitor all --address <alice-address>
+   symbol-cli monitor all --address <YOUR-ADDRESS>
 
 2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
 
@@ -84,9 +98,8 @@ If you own more than one mosaic, you can send them together in the same transact
 
 .. note:: |codename| works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
-3. Sign the transaction with Alice's account.
-
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+3. Sign the transaction with your account.
+Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
 .. example-code::
 
@@ -129,8 +142,10 @@ The transaction should appear as confirmed after ±15 seconds and the amount def
 If the terminal raises an error, check the error code meaning :ref:`here <status-errors>`.
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
+
+Open a terminal window and run the following command to transfer 10 XYM from your default account to Bob's address.
 
 .. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
     :language: bash

@@ -2,6 +2,7 @@
 
 .. post:: 20 Sep, 2019
     :category: Mosaic Restriction
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

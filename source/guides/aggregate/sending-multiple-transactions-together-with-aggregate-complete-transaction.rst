@@ -2,6 +2,7 @@
 
 .. post:: 11 Aug, 2018
     :category: Aggregate Transaction
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

@@ -1,7 +1,8 @@
 :orphan:
 
-.. post:: 14 Aug, 2018
+.. post:: 18 Aug, 2018
     :category: Aggregate Transaction
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

@@ -1,7 +1,7 @@
 :orphan:
 
 .. post:: 30 Oct, 2019
-    :category: Network, Node, Harvesting
+    :category: Network, Harvesting
     :excerpt: 1
     :nocomments:
 
