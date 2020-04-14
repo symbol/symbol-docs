@@ -6,7 +6,7 @@ Node
 These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.
 
 .. figure:: ../resources/images/diagrams/four-layer-architecture.png
-    :width: 500px
+    :width: 550px
     :align: center
 
     |codename|’s Performance Advantage: A Four-Layered Architecture
@@ -22,7 +22,7 @@ Peer node
 **Repository:** |catapult-server|
 
 .. figure:: ../resources/images/diagrams/peer-detail.png
-    :width: 400px
+    :width: 300px
     :align: center
 
     Peer node communication
@@ -78,7 +78,7 @@ API node
 **Repository:** |catapult-server|
 
 .. figure:: ../resources/images/diagrams/api-detail.png
-    :width: 400px
+    :width: 500px
     :align: center
 
     Peer + API (Dual) node communication
@@ -120,7 +120,7 @@ REST gateway
 **Repository:** |catapult-rest|
 
 .. figure:: ../resources/images/diagrams/rest-detail.png
-    :width: 450px
+    :width: 500px
     :align: center
 
     REST gateway communication
