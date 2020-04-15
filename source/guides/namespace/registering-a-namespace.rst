@@ -20,8 +20,37 @@ Prerequisites
 - Create a new :ref:`account <setup-creating-a-test-account>`.
 - Load the account with enough |networkcurrency| to pay for transaction fees.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+1. Click on “**Namespace**” on the left-side menu.
+
+.. figure:: ../../resources/images/screenshots/desktop-register-namespace-1.gif
+    :align: center
+    :width: 800px
+
+2. Click on the “**Create new namespaces**” tab.
+
+.. figure:: ../../resources/images/screenshots/desktop-register-namespace-2.gif
+    :align: center
+    :width: 800px
+
+3. Enter information for your new namespace. Click “**Send**”. Verify the information on the popup and enter your wallet password. Click “**Confirm**”.
+
+Note: The name must be unique in the network, and may have a maximum length of 64 characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ , -.
+
+.. figure:: ../../resources/images/screenshots/desktop-register-namespace-3.gif
+    :align: center
+    :width: 800px
+
+4. You can check that the namespace has been created by going back to the “Owned namespaces” tab. If you don’t see your namespace, try clicking on the update icon.
+
+.. figure:: ../../resources/images/screenshots/desktop-register-namespace-4.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Choose a **unique name** for your namespace. One common option is to use your company's or own name.
@@ -66,7 +95,7 @@ Method #01: Using the SDK
 .. note:: To keep the ownership of your namespace, you will have to :doc:`extend its duration before it expires <extending-a-namespace-registration-period>`.
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
 
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh

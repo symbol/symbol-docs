@@ -21,8 +21,32 @@ Prerequisites
 - Load the account with enough |networkcurrency| to pay for transaction fees.
 - Register a :doc:`namespace <../../concepts/namespace>` with the account.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Click on “**Namespaces**” on the left-side menu.
+
+.. figure:: ../../resources/images/screenshots/desktop-link-address-1.gif
+    :align: center
+    :width: 800px
+
+2. Click on the edit icon of the namespace you desire to link to an account. Select “**Link an address**” as the alias type.  Enter the address of the account you want to link to the namespace. Click “**Send**”.
+
+Verify the information on the next page. Enter your wallet password. Click on “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/desktop-link-address-2.gif
+    :align: center
+    :width: 800px
+
+3. If you linked the namespace to your desktop wallet account, you can check by going to the “**Account**” page and checking the “**Alias**”.
+
+.. figure:: ../../resources/images/screenshots/desktop-link-address-3.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Define the namespace identifier and the address you want to alias.
@@ -58,7 +82,7 @@ Then, announce the **AliasTransaction** that links the namespace and the address
 .. note:: If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
 
 .. viewsource:: ../../resources/examples/bash/namespace/LinkNamespaceAddress.sh
