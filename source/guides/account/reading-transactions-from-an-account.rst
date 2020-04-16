@@ -2,6 +2,7 @@
 
 .. post:: 18 Aug, 2018
     :category: Account
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -52,6 +53,8 @@ For each additional call, add to the ``QueryParams`` the optional parameter ``tr
 *************************
 Method #02: Using the CLI
 *************************
+
+Open a terminal window and run the following command to get the confirmed transactions involving an account.
 
 .. viewsource:: ../../resources/examples/bash/account/GettingConfirmedTransactions.sh
     :language: bash

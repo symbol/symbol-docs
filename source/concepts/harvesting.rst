@@ -44,7 +44,7 @@ When the node does not define a beneficiary, all the rewards go to the block sig
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center
-    :width: 400px
+    :width: 300px
 
     Rewards division when the network's sharing ratio equals 10%
 
@@ -63,7 +63,7 @@ In other words, you can use the importance score of your account to create new b
 
 .. figure:: ../resources/images/diagrams/delegated-harvesting.png
     :align: center
-    :width: 600px
+    :width: 400px
 
     Activating delegated harvesting
 

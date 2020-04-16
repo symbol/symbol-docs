@@ -2,6 +2,7 @@
 
 .. post:: 11 Oct, 2019
     :category: Harvesting
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 
