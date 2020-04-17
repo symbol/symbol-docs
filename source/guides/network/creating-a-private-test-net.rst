@@ -36,7 +36,6 @@ Hardware requirements
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
 * **HD**: 20GB or more
-* **OS**: Linux or Mac
 
 .. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
@@ -44,11 +43,20 @@ Hardware requirements
 Environment requirements
 ************************
 
-The setup scripts are automated using docker.
+The setup scripts are available for Linux and Mac OS and automated using docker.
 To run a test net node, you will need to have installed the following docker tools:
 
 * `docker`_
 * `docker-compose`_
+
+*****************
+Port requirements
+*****************
+
+Make sure that the server's host is accessible from the internet and that the following ports are open and available:
+
+* The port ``7900`` is used by catapult-server to communicate between nodes.
+* The port ``3000`` is used by the REST Gateway to expose the endpoints to interact with the node.
 
 ************
 Installation
