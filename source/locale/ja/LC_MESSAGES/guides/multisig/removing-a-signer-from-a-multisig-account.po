@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"PO-Revision-Date: 2020-04-24 12:29+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:20
+msgid "Removing a signer from a multisig account"
+msgstr "マルチシグアカウントからの署名者の削除"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:22
+msgid ""
+"This guide will show you how to remove a cosignatory from a multisig "
+"account."
+msgstr "このガイドでは、マルチシグアカウントから署名者を削除する方法を説明します。"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:28
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:30
+msgid ""
+"Complete :doc:`converting an account to multisig <creating-a-multisig-"
+"account>` guide."
+msgstr ":doc:`マルチシグアカウントへの変換 <creating-a-multisig-account>` ガイドを完了している"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:34
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:36
+msgid ""
+"The following code shows how to remove a cosignatory from a **2-of-3** "
+"multisig account with ``minRemoval`` set to 1."
+msgstr ""
+"次のコードは ``minRemoval`` を 1 に設定して **2-of-3** マルチシグアカウントから署名者を削除する方法を示しています。"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:50
+msgid ""
+"The **minRemoval parameter** indicates the number of required signatures to "
+"delete an account from the multisig. This value can be increased or "
+"decreased in the same way as the :doc:`minApproval parameter <modifying-a"
+"-multisig-account-min-approval>` is modified."
+msgstr ""
+"**minRemovalパラメータ** はマルチシグからアカウントを削除するために必要な署名の数を示します。この値は :doc:`minApproval"
+" パラメータ <modifying-a-multisig-account-min-approval>` を変更するのと同じ方法で増減できます。"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:52
+msgid ""
+"This time, the MultisigModificationTransaction is wrapped in an "
+"**AggregateCompleteTransaction** because just one account is required to "
+"delete others from the multisig."
+msgstr ""
+"今回 MultisigModificationTransaction はマルチシグから他のアカウントを削除するために必要なアカウントは 1 "
+"つだけなので、 **AggregateCompleteTransaction** によってラップされています。"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:54
+msgid ""
+"If more than one cosignature is required to announce the transaction (e.g., "
+"``minRemoval`` is set to 2), the transaction must be defined as aggregate "
+"**bonded**, and all other required multisig participants should cosign it in"
+" order to be confirmed. Follow the :doc:`next guide <../aggregate/sending-a"
+"-multisig-transaction>` to announce aggregate bonded transactions involving "
+"a multisig account."
+msgstr ""
+"トランザクションのアナウンスに複数の署名が必要な (たとえば ``minRemoval`` が 2 に設定されている場合) "
+"、トランザクションはアグリゲート **ボンデッド** "
+"として定義する必要があり、また、他のすべての必要なマルチシグ参加者は、承認のために署名する必要があります。 :doc:`次のガイド "
+"<../aggregate/sending-a-multisig-transaction>` "
+"に従って、マルチシグアカウントに関連する、アグリゲートボンデッドトランザクションをアナウンスします。"
+
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:56
+msgid ""
+"Follow :doc:`the next guide <creating-a-multilevel-multisig-account>` to "
+"create a multi-level multisig account."
+msgstr ""
+":doc:`次のガイド <creating-a-multilevel-multisig-account>` "
+"に従って、マルチレベルマルチシグアカウントを作成します。"

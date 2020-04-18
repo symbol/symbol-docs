@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-10-28 13:02+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,49 +21,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:18
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:20
 msgid "Assigning metadata to an account"
 msgstr "アカウントにメタデータを割り当てる"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:20
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:22
 msgid "Add custom data to an account."
 msgstr "アカウントにカスタムデータを追加"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:24
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:48
-msgid "Prerequisites"
-msgstr "前提条件"
-
 #: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:26
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:50
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:27
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:51
-msgid ""
-"Have one :ref:`account with network currency <setup-creating-a-test-"
-"account>`"
-msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
-
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:31
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:33
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:28
 msgid ""
-"Bob works as a digital notary that **stamp accounts** on |codename|'s public"
-" blockchain. When a customer comes to Bob to notarize a document, he checks "
-"the authentication of the customer's documents then **tags the customer's "
-"account** with the digitized document as metadata."
+"Bob works as a digital notary that stamp accounts on |codename|'s public "
+"blockchain. When a customer comes to Bob to notarize a document, he checks "
+"the authentication of the customer's documents then tags the customer's "
+"account with the digitized document as metadata."
 msgstr ""
-"Bob は |codename| パブリックブロックチェーン上の **公証アカウント** "
-"を扱うデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
-"の元へ訪れると、彼は顧客のドキュメントの認証をチェックし、デジタル化ドキュメントをメタデータとして **顧客アカウントにタグ付け** します。"
+"Bob は |codename| パブリックブロックチェーン上の公証アカウントを扱うデジタル公証人として働いています。顧客がドキュメントを公証するために"
+" Bob の元へ訪れると、彼は顧客のドキュメントの認証をチェックし、デジタル化ドキュメントをメタデータとして顧客アカウントにタグ付けします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:36
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:31
 msgid ""
 "Alice is a recent graduate who wants her educational certificate accredited "
 "to her |codename| account to avoid the hassle of repeatedly providing "
@@ -75,7 +55,7 @@ msgstr ""
 "アカウントに認定することで、学位証明を繰り返して提供しなければならない面倒事を避けたいと思っています。そのため彼女は Bob "
 "を訪れ、学位を彼に提供します。Alice が手数料を支払うと Bob は真正性を検証し Alice のアカウントに学位を表すメタデータをスタンプします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:40
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:35
 msgid ""
 "In this tutorial, you are going to implement a program to allow Bob tag "
 "accounts issuing :doc:`metadata transactions <../../concepts/metadata>`."
@@ -83,19 +63,40 @@ msgstr ""
 "このチュートリアルでは、 Bob のタグアカウントに  :doc:`メタデータトランザクション <../../concepts/metadata>` "
 "の発行を許可する実装を行います。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:55
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:43
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:45
+msgid ""
+"Complete the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`."
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:46
+msgid ""
+"Create :ref:`accounts <setup-creating-a-test-account>` for Alice and Bob."
+msgstr "Alice と Bob の :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:47
+msgid ""
+"Load Bob's account with enough |networkcurrency| to pay for transaction "
+"fees."
+msgstr "Bob のアカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:51
 msgid "Creating the account"
 msgstr "アカウントの作成"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:57
-msgid "Create an account for Alice, using the :doc:`CLI tool <../../cli>`."
-msgstr " :doc:`CLI ツール <../../cli>` を使って Alice のアカウントを作成します。"
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:53
+msgid "Create an account for Alice, using the :ref:`CLI tool <wallet-cli>`."
+msgstr ":ref:`CLI ツール <wallet-cli>` を使って Alice のアカウントを作成します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:70
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:66
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:72
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:68
 msgid ""
 "1. Bob has to pick a **key** to store Alice's certificate. Imagine that "
 "``CERT`` is a common key to store university degrees. Define this key as a "
@@ -104,19 +105,19 @@ msgstr ""
 "1. Bob は Alice の証明を保存するために **キー** を入手する必要があります。``CERT`` "
 "が大学の学位を保存するための共通キーであるとイメージしてください。このキーを新しい変数として定義します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:88
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:84
 msgid ""
 "2. Alice's degree brings the identifier ``123456`` for her certificate. Help"
-" Bob to **assign this value to the key** defined in the previous step. To "
+" Bob to assign this value to the key defined in the previous step. To "
 "achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-"
 "transaction>` linking Alice account, the key (CERT), and the associated "
 "value (123456)."
 msgstr ""
-"2. Alice の学位は証明書の識別子 ``123456`` を持っています。前の手順で定義した **この値を割り当てるキー** は Bob "
+"2. Alice の学位は証明書の識別子 ``123456`` を持っています。前の手順で定義した、この値を割り当てるキーは Bob "
 "を助けます。これを実現するには Alice のアカウント、キー (CERT) および関連する値 (123456) をリンクする "
 ":ref:`AccountMetadataTransaction <account-metadata-transaction>` を定義します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:104
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:100
 msgid ""
 "3. To avoid spamming the account with invalid metadata keys, all metadata is"
 " attached only with the consent of the account owner through Aggregate "
@@ -131,7 +132,7 @@ msgstr ""
 "する必要があります。**AccountMetadataTransaction** を :ref:`AggregateBondedTransaction "
 "<aggregate-bonded>` でラップし、 Bob のアカウントを使用してトランザクションに署名します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:120
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:116
 msgid ""
 "4. Before sending an aggregate transaction to the network, Bob has to lock "
 "``10`` |networkcurrency|. Define a new :ref:`HashLockTransaction <hash-lock-"
@@ -141,13 +142,13 @@ msgstr ""
 "をロックする必要があります。新しい :ref:`HashLockTransaction <hash-lock-transaction>` "
 "を定義して、Bob のアカウントで署名します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:135
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:131
 msgid ""
 "Bob will receive the locked funds back if Alice cosigns the aggregate during"
 " the next ``480`` blocks."
 msgstr "Alice が次の ``480`` ブロック中にアグリゲートに署名すると、 Bob はロックされた資産を取り戻します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:137
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:133
 msgid ""
 "5. Announce the **HashLockTransaction**. Monitor the network until the "
 "transaction gets confirmed, and then announce the **AggregateTransaction** "
@@ -156,13 +157,13 @@ msgstr ""
 "5. **HashLockTransaction** をアナウンスします。トランザクションが承認されるまでネットワークを監視し、次に "
 "**AccountMetadataTransaction** を含む **AggregateTransaction** をアナウンスします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:152
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:148
 msgid ""
 "Once the transaction gets confirmed, cosign the hash obtained in the fourth "
 "step using Alice's profile."
 msgstr "トランザクションが承認されたら、Alice のプロファイルを使用して、4番目のステップで取得したハッシュに署名します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:158
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:154
 msgid ""
 "If everything goes well, now Alice :doc:`has assigned the metadata value "
 "<getting-metadata-entries-attached-to-an-account>` ``{bobPublicKey, CERT, "
@@ -173,6 +174,6 @@ msgstr ""
 "account>` ``{bobPublicKey, CERT, 123456}`` が割り当てられます。これは \"Alice アカウントは証明書番号"
 " 123456 を持っており、Bob によって検証されています\" と読むことができます。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:162
+#: ../../source/guides/metadata/assigning-metadata-entries-to-an-account.rst:158
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

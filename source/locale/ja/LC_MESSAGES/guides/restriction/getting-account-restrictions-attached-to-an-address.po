@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,18 +21,30 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:18
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:20
 msgid "Getting the account restrictions attached to an address"
 msgstr "アドレスにアカウント制限をアタッチする"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:20
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:22
 msgid "Get the list of account's restrictions."
 msgstr "アカウントの制限リストの取得"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:24
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:26
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:28
+msgid ""
+"Complete :doc:`preventing spam attacks with account restrictions "
+"<preventing-spam-attacks-with-account-restrictions>` guide."
+msgstr ""
+":doc:`アカウント制限でスパム攻撃を防止する <preventing-spam-attacks-with-account-"
+"restrictions>` ガイドを完了している"
+
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:32
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:45
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:53
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/contributors.rst:11
+#: ../../source/contribute/contributors.rst:12
 msgid "Contributors"
 msgstr "貢献者"
 
-#: ../../source/contribute/contributors.rst:13
+#: ../../source/contribute/contributors.rst:14
 msgid ""
 "The |sitename| is not written from scratch. It is the sum of previous effort"
 " and documents written by the community and core developers, adapted for "
@@ -34,7 +34,7 @@ msgstr ""
 "|sitename| "
 "はスクラッチから書かれていません。新しいリリースに合わせて、コミュニティやコア開発者の努力とこれまでに記述したドキュメントの賜物です。感謝します！"
 
-#: ../../source/contribute/contributors.rst:23
+#: ../../source/contribute/contributors.rst:24
 msgid ""
 "We want to recognize as well the work of the |contributors| who provide "
 "content, open new |issues|, and improve the quality and completeness of this"

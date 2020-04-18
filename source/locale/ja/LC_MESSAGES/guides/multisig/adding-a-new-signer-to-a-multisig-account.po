@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"PO-Revision-Date: 2020-04-24 12:28+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:20
+msgid "Adding a new signer to a multisig account"
+msgstr "マルチシグアカウントに新しい署名者の追加"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:22
+msgid ""
+"This guide will show you how to add a new cosignatory to a multisig account."
+msgstr "このガイドでは、マルチシグアカウントに新しい署名者を追加する方法を説明します。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:28
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:30
+msgid ""
+"Imagine that Alice and Bob want to **add Carol**, a third participant, as a "
+"cosignatory of a multisig **2-of-2** multisig account. However, they don't "
+"want to increase the number of signatures needed to accept transactions, so "
+"the new account will require only **2-of-3** cosignatures to transact."
+msgstr ""
+"Alice と Bob は **2-of-2** マルチシグアカウントの連署者として **Carol を追加** "
+"したいと仮定します。しかし、彼らはトランザクションを受け入れるために必要な署名数を増やしたくないので、新しいアカウントはトランザクションに ** "
+"2-of-3** の署名を必要とするようにします。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:37
+msgid "2-of-3 multisig account example"
+msgstr "2-of-3 マルチシグアカウントの例"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:41
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:43
+msgid ""
+"Complete :doc:`converting an account to multisig <creating-a-multisig-"
+"account>` guide."
+msgstr ":doc:`マルチシグアカウントへの変換 <creating-a-multisig-account>` ガイドを終了している"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:47
+msgid "Method #01: Using the SDK"
+msgstr "方法 #01: SDK を使用する"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:49
+msgid ""
+"Open a new file. Define the public keys of the multisig account and the new "
+"account to be added into new variables."
+msgstr "新しいファイルを開きます。マルチシグアカウントの公開鍵と追加する新しいアカウントを変数へ格納して定義します。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:63
+msgid ""
+"Create a **MultisigAccountModificationTransaction**, adding the new "
+"participant as a cosignatory."
+msgstr "**MultisigAccountModificationTransaction** を作り、連署者として新しい参加者を追加します。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:65
+msgid ""
+"Following the previous example, the multisig account will become a "
+"**2-of-3**, since we are adding a new cosignatory but not increasing the "
+"``minApprovalDelta``."
+msgstr ""
+"前の例に続いて、新しい署名者を追加しているが ``minApprovalDelta`` を増加させていないため、マルチシグアカウントは "
+"**2-of-3** になります。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:79
+msgid ""
+"Wrap the **MultisigAccountModificationTransaction** in an "
+":ref:`AggregateBondedTransaction <aggregate-transaction>`.  Sign it with a "
+"cosingatory of the original multisig account."
+msgstr ""
+"**MultisigAccountModificationTransaction** を "
+":ref:`AggregateBondedTransaction <aggregate-transaction>` "
+"へラップします。それに、元のマルチシグアカウントの連署者で署名します。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:93
+msgid ""
+"4. Before sending an **AggregateBondedTransaction**, an account must lock at"
+" least ``10`` |networkcurrency|. This transaction is required to prevent "
+"spamming the network. After the HashLockTransaction has been confirmed, "
+"announce the AggregateTransaction."
+msgstr ""
+"4. **AggregateBondedTransaction** を送信する前に、アカウントがロックをするために最低でも ``10`` "
+"|networkcurrency| を必要とします。このトランザクションはスパムを防止する目的で要求されます。 "
+"**HashLockTransaction** が承認されると AggregateTransaction をアナウンスできます。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:109
+msgid ""
+"5. The new account must opt-in first in order to become a cosignatory of the"
+" multisig account. :doc:`Cosign the AggregateTransaction hash <../aggregate"
+"/signing-announced-aggregate-bonded-transactions>`  with the account to be "
+"added to the multisig."
+msgstr ""
+"5. 新しいアカウントがマルチシグアカウントの連署者になるためには、まずオプトインしなければなりません。マルチシグに追加したいアカウントで "
+":doc:`AggregateTransaction ハッシュに署名 <../aggregate/signing-announced-"
+"aggregate-bonded-transactions>` します。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:116
+msgid ""
+"6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-"
+"aggregate-bonded-transactions>` with all other multisig account participants"
+" required to reach quorum. The amount of |networkcurrency| locked becomes "
+"available again on the account that sent the HashLockTransaction, and the "
+"new participant is added to the multisig."
+msgstr ""
+"6. 定足数に達するために必要な、他のすべてのマルチシグアカウント参加者で :doc:`AggregateTransaction に連署名 "
+"<../aggregate/signing-announced-aggregate-bonded-transactions>` します。ロックされた "
+"|networkcurrency| は HashLockTransaction "
+"を送信したアカウントで再び使用可能になり、新しい参加者がマルチシグに追加されます。"
+
+#: ../../source/guides/multisig/adding-a-new-signer-to-a-multisig-account.rst:123
+msgid ""
+"Follow :doc:`the next guide <removing-a-signer-from-a-multisig-account>` to "
+"remove a cosignatory from a multisig account."
+msgstr ""
+":doc:`次のガイド <removing-a-signer-from-a-multisig-account>` "
+"に従って、マルチシグアカウントから署名者を削除します。"

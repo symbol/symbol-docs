@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/account.rst:11
+#: ../../source/concepts/account.rst:12
 msgid "Account"
 msgstr "アカウント"
 
-#: ../../source/concepts/account.rst:13
+#: ../../source/concepts/account.rst:14
 msgid ""
 "An account is a :ref:`key pair <keypair>` (private and public key) "
 "associated with a mutable state stored on the blockchain. In other words, "
@@ -35,7 +35,7 @@ msgstr ""
 "アカウントとは NEM ブロックチェーン上に保存される、変更可能な状態に関連付く :ref:`キーペア <keypair>`  "
 "(秘密鍵と公開鍵)です。言い換えるとブロックチェーン上にある、あなたの秘密鍵でのみ変更をすることができる **金庫** です。"
 
-#: ../../source/concepts/account.rst:16
+#: ../../source/concepts/account.rst:17
 msgid ""
 "Think of an account as **container for assets**. It can be used to hold XEM "
 "or other mosaics, whether they are tokens or specialized assets."
@@ -43,7 +43,7 @@ msgstr ""
 "NEM アカウントをブロックチェーン内の **資産のコンテナ** "
 "として考えてみてください。よくあるブロックチェーンのように、アカウントは預け入れられたトークンを表現します。"
 
-#: ../../source/concepts/account.rst:19
+#: ../../source/concepts/account.rst:20
 msgid ""
 "Moreover, |codename| accounts can also represent **non-fungible assets** "
 "that must be unique and updatable: a package to be shipped, a house deed or "
@@ -52,35 +52,27 @@ msgstr ""
 "さらに、|codename| アカウントは一意でかつ更新可能な **代替できない資産** : "
 "出荷パッケージ、家屋譲渡証書、公証文書を表現することができます。"
 
-#: ../../source/concepts/account.rst:23
+#: ../../source/concepts/account.rst:24
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/concepts/account.rst:25
+#: ../../source/concepts/account.rst:26
 msgid "Accounts have the following properties:"
 msgstr "アカウントは以下のプロパティを持ちます:"
 
-#: ../../source/concepts/account.rst:27
-msgid "**Private key**"
-msgstr "**秘密鍵**"
-
-#: ../../source/concepts/account.rst:29
+#: ../../source/concepts/account.rst:31
 msgid ""
 "A private key is a key to an account. Anyone with access to the private key "
 "ultimately has control over the account."
 msgstr "秘密鍵はアカウントの鍵です。秘密鍵にアクセスできる人なら誰でもアカウントを完全にコントロールできてしまいます。"
 
-#: ../../source/concepts/account.rst:32
+#: ../../source/concepts/account.rst:34
 msgid ""
 "The private key must be kept secret. Make sure your private key is backed up"
 " safely somewhere offline."
 msgstr "プライベートキーは必ず秘密であることを守ってください。オフラインのどこか安全な場所に秘密鍵がバックアップされていることを確認してください。"
 
-#: ../../source/concepts/account.rst:34
-msgid "**Public key**"
-msgstr "**公開鍵**"
-
-#: ../../source/concepts/account.rst:36
+#: ../../source/concepts/account.rst:39
 msgid ""
 "The public key can be used to verify signatures of the account. The public "
 "key is stored on the blockchain with the first issued transaction. An "
@@ -88,11 +80,7 @@ msgid ""
 msgstr ""
 "公開鍵はアカウントの署名を検証するために使われます。公開鍵は、最初のトランザクションが発行とともにブロックチェーンに格納されます。トランザクションを発行していないアカウントは公開鍵フィールドが空になります。"
 
-#: ../../source/concepts/account.rst:40
-msgid "**Address**"
-msgstr "**アドレス**"
-
-#: ../../source/concepts/account.rst:42
+#: ../../source/concepts/account.rst:46
 msgid ""
 "Each account has a unique :ref:`address <address>` derived from the public "
 "key. Normally, the address is shared instead of the public key because it is"
@@ -101,20 +89,12 @@ msgstr ""
 "各アカウントは公開鍵より導出される一意な :ref:`アドレス <address>`  "
 "を持ちます。アドレスは公開鍵より短く、ネットワークの情報を有するので、通常では公開鍵の代わりに共有されます。"
 
-#: ../../source/concepts/account.rst:45
-msgid "**Balance**"
-msgstr "**残高**"
-
-#: ../../source/concepts/account.rst:47
+#: ../../source/concepts/account.rst:52
 msgid ""
 "The amount of different :doc:`mosaics <mosaic>` units the account owns."
 msgstr "アカウントの保有する異なる :doc:`モザイク <mosaic>` の量。"
 
-#: ../../source/concepts/account.rst:49
-msgid "**Importance**"
-msgstr "**インポータンス**"
-
-#: ../../source/concepts/account.rst:51
+#: ../../source/concepts/account.rst:57
 msgid ""
 "The :ref:`importance score <importance-calculation>` determines the "
 "probability of an account to harvest the next block in case the account has "
@@ -125,11 +105,11 @@ msgstr ""
 "<harvesting>` "
 "がオンになっていて、他のすべてのアカウントもハーベストしている場合に、アカウントが次のブロックをハーベストする確率を決定します。"
 
-#: ../../source/concepts/account.rst:55
+#: ../../source/concepts/account.rst:61
 msgid "Multisig Account"
 msgstr "マルチシグアカウント"
 
-#: ../../source/concepts/account.rst:57
+#: ../../source/concepts/account.rst:63
 msgid ""
 "Accounts become truly smart when configured with special rules—directly on "
 "the blockchain—that define how they relate and control each other, as well "
@@ -137,7 +117,7 @@ msgid ""
 msgstr ""
 "どのように相互に関連して制御するか、どのようにその内容を更新や転送をするかの定義を直接ブロックチェーン上に特別なルールとして設定しておけば、アカウントはとてもスマートなものになります。"
 
-#: ../../source/concepts/account.rst:59
+#: ../../source/concepts/account.rst:65
 msgid ""
 "One crucial type of rule is :doc:`multisig <multisig-account>` control that "
 "allows ownership of account-based assets to be shared in a variety of ways "
@@ -146,11 +126,11 @@ msgstr ""
 "1つの重要なルールタイプは、アカウントベースの資産の所有権を複数の当事者間でさまざまな方法で共有できる :doc:`マルチシグ <multisig-"
 "account>` コントロールです。"
 
-#: ../../source/concepts/account.rst:63
+#: ../../source/concepts/account.rst:69
 msgid "Restrictions"
 msgstr "制約事項:"
 
-#: ../../source/concepts/account.rst:65
+#: ../../source/concepts/account.rst:71
 msgid ""
 "Accounts may configure a set of smart rules to block announcing or receiving"
 " transactions given a series of :doc:`restrictions <account-restriction>`."
@@ -158,10 +138,10 @@ msgstr ""
 "アカウントはスマートなルールの集合を構成し、一連の :doc:`制約 <account-restriction>` "
 "の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
 
-#: ../../source/concepts/account.rst:69
+#: ../../source/concepts/account.rst:75
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/account.rst:79
+#: ../../source/concepts/account.rst:85
 msgid "Continue: :doc:`Mosaics <mosaic>`."
 msgstr "次項: :doc:`モザイク <mosaic>`"

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,46 +21,40 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:18
+#: ../../source/guides/blockchain/getting-block-by-height.rst:20
 msgid "Getting a block by height"
 msgstr "ブロック高によるブロックの取得"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:20
+#: ../../source/guides/blockchain/getting-block-by-height.rst:22
 msgid "Get the block information given a height."
 msgstr "与えられたブロック高のブロック情報を取得する。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:24
+#: ../../source/guides/blockchain/getting-block-by-height.rst:26
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:26
-msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/blockchain/getting-block-by-height.rst:30
+#: ../../source/guides/blockchain/getting-block-by-height.rst:32
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:32
+#: ../../source/guides/blockchain/getting-block-by-height.rst:34
 msgid ""
 "What happened in the genesis block? Run the following code to get the first "
 "block header recorded on the blockchain."
 msgstr "ジェネシスブロックでは何が発生したのでしょう？次のコードを実行してブロックチェーンに最初に記録されたブロックのヘッダを取得します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:51
+#: ../../source/guides/blockchain/getting-block-by-height.rst:53
 msgid "The following snippet returns the height of the latest block."
 msgstr "以下のスニペットは最終ブロックの高さを返却します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:67
+#: ../../source/guides/blockchain/getting-block-by-height.rst:69
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:69
+#: ../../source/guides/blockchain/getting-block-by-height.rst:71
 msgid "Get the block header:"
 msgstr "ブロックヘッダの取得:"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:75
+#: ../../source/guides/blockchain/getting-block-by-height.rst:77
 msgid "Get the height of the blockchain:"
 msgstr "ブロックチェーン高の取得:"
