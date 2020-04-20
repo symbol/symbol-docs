@@ -15,7 +15,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Noto Sans", sans-serif !important;
     color: #333;
-    font-weight: bold;
+    font-weight: 700;
 }
 h1 {
     margin-top: 0;
@@ -97,10 +97,11 @@ input.form-control:focus {
 /* Alert */
 .alert {
     margin: 20px 0;
-    padding: 12px;
-    border-radius: 4px;
+    padding: 5px 1.5rem !important;
     background: #F5F5F5;
     color: #333;
+    border-left: 6px solid #00c8ff;
+    border-radius: 0px 4px 4px 0px;
 }
 /* Label */
 .label {
@@ -128,16 +129,11 @@ body > .container {
 }
 /* Content */
 .content {
-    line-height: 1.6;
+    line-height: 1.85;
     padding-bottom: 50px;
 }
 .content a {
-    color: #333;
-    border-bottom: 2px solid #00C8FF;
-}
-.content a:hover,
-.content a:focus{
-    text-decoration: none;
+    color: #5200c6;
 }
 .content ul {
     list-style: none;
@@ -238,7 +234,7 @@ body > .container {
 #language .select::after {
     content: "";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: bold;
     color: #FFF;
     position: absolute;
     right: 14px;
@@ -427,9 +423,10 @@ div.figure .caption {
     border-color: #00c8ff !important;
 }
 .highlight > pre {
-    background-color: #F5F5F5;
+    color: #fff;
+    background-color: #333;
     border-radius: 4px;
-    padding: 8px 12px;
+    padding: 12px;
     border: 0;
 }
 .example-code {
@@ -460,7 +457,7 @@ div.figure .caption {
 }
 .example-selector > li.selected {
     background-color: transparent !important;
-    color: #22292F !important;
+    color: #5200c6 !important;
 }
 .example-code .code-block-caption {
     top: -28px;
@@ -469,6 +466,10 @@ div.figure .caption {
     text-align: right;
     height: 0;
     padding: 0 5px;
+}
+.code-block-caption a {
+    color: #00c8ff;
+    font-weight: bold;
 }
 .literal-block-wrapper {
     padding: 0 !important;

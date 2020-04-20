@@ -2,6 +2,7 @@
 
 .. post:: 08 Apr, 2019
     :category: Mosaic
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 

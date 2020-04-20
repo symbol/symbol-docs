@@ -29,5 +29,6 @@ const accountHttp = repositoryFactory.createAccountRepository();
 
 accountHttp
     .getAccountInfo(address)
-    .subscribe((accountInfo) => console.log(accountInfo), (err) => console.error(err));
+    .subscribe((accountInfo) => console.log(accountInfo),
+        (err) => console.error(err));
 /* end block 01 */

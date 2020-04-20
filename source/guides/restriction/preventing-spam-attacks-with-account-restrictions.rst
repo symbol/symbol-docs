@@ -2,6 +2,7 @@
 
 .. post:: 07 May, 2019
     :category: Account Restriction
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

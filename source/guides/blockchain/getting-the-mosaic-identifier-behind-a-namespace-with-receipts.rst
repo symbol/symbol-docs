@@ -6,6 +6,7 @@ Getting the asset identifier behind a namespace with receipts
 
 .. post:: 11 Jul, 2019
     :category: Receipt
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

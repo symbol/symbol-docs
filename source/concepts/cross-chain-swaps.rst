@@ -8,7 +8,7 @@ A cross-chain swap enables trading tokens across different blockchains without u
     :align: center
     :width: 400px
 
-    Atomic cross-chain swap between public and private network
+    Cross-chain swap between public and private network
 
 |codename| follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets. The protocol guarantees that if all participants agree, the swap will take place. On the other hand, if some of them decide not to conclude the process, each participant should receive their locked funds back.
 
@@ -35,7 +35,7 @@ Instead of transferring tokens between different chains literally, the trade wil
 The cross chan swap protocol will ensure that the token swap occurs atomically.
 
 .. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
-    :caption: Atomic cross-chain swap sequence diagram
+    :caption: Cross-chain swap sequence diagram
     :align: center
 
 Before starting with the swap, all participants involved int the swap must own at least one account in each blockchain.

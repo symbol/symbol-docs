@@ -39,17 +39,27 @@ const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp
     .getAccountOutgoingTransactions(senderAddress)
     .pipe(
-        mergeMap((_) => _), // Transform transaction array to single transactions to process them
-        filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
-        map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
+        // Process each transaction individually.
+        mergeMap((_) => _),
+        // Filter transfer transactions.
+        filter((_) => _.type === TransactionType.TRANSFER),
+        // Map transaction as transfer transaction.
+        map((_) => _ as TransferTransaction),
+        // Filter transactions where the account is the recipient address.
         filter((_) => _.recipientAddress instanceof Address
-            && _.recipientAddress.equals(recipientAddress)), // Filter transactions from to account
-        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), // Filter mosaicId transactions
-        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), // Map relative amount
-        toArray(), // Add all mosaics amounts into one array
+            && _.recipientAddress.equals(recipientAddress)),
+        // Filter transactions containing a given mosaic
+        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)),
+        // Transform absolute amount to relative amount.
+        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)),
+        // Add all amounts into an array.
+        toArray(),
+        // Sum all the amounts.
         map((_) => _.reduce((a, b) => a + b, 0)),
     )
     .subscribe(
-        (total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total),
+        (total) => console.log('Total', mosaicId.toHex(),
+            'sent to account', recipientAddress.pretty(),
+            'is:', total),
         (err) => console.error(err));
 /* end block 01 */

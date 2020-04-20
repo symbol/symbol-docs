@@ -1,7 +1,8 @@
 :orphan:
 
-.. post:: 8 Aug, 2018
+.. post:: 18 Aug, 2018
     :category: Block
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -95,7 +96,7 @@ If you want to execute Listeners from the client-side (e.g., Angular, React, Vue
 
 .. code-block:: typescript
 
-  const listener = new Listener('ws://api-2-01.eu-west-1.symboldev.network:3000', WebSocket);
+  const listener = new Listener('ws://api-01.us-west-1.symboldev.network:3000', WebSocket);
   listener.open().then(() => ...
 
 *************************

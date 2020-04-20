@@ -44,7 +44,7 @@ When the node does not define a beneficiary, all the rewards go to the block sig
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center
-    :width: 400px
+    :width: 300px
 
     Rewards division when the network's sharing ratio equals 10%
 
@@ -63,7 +63,7 @@ In other words, you can use the importance score of your account to create new b
 
 .. figure:: ../resources/images/diagrams/delegated-harvesting.png
     :align: center
-    :width: 600px
+    :width: 400px
 
     Activating delegated harvesting
 
@@ -79,7 +79,7 @@ As the remote private key is **saved on disk**, even if the node disconnects tem
 Additionally, the use of encrypted message creates a **backup** of the information for the nodes.
 If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can retrieve the data by querying the blockchain.
 
-Security-wise, **sharing a proxy private key** does not compromise the original account since:
+Security-wise, sharing a proxy private key does not compromise the original account since:
 
 * The remote account has zero balance.
 * The remote account by itself can't transfer the importance to another account.
@@ -130,10 +130,7 @@ In order for the remote account to be accepted for delegated harvesting, it need
 * It cannot already be a remote account for another account.
 * It cannot be its own remote account.
 
-Furthermore, for the duration that the account is used as a delegated account, it is restricted from:
-
-* initiating any transactions.
-* involvement with any type of transactions.
+Furthermore, for the duration that the account is used as a delegated account, it is restricted from initiating any transactions or be involved in any transaction.
 
 **Version**: 0x01
 

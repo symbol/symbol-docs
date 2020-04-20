@@ -61,7 +61,7 @@ At this point, the namespace becomes **available** for its registration again.
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. |codename| namespaces can have subnamespaces to **identify and organize assets**.
+On the internet, a domain can have a sub-domain. |codename| namespaces can have subnamespaces to identify and organize assets.
 
 .. figure:: ../resources/images/diagrams/namespace-setup.png
     :align: center
@@ -81,7 +81,7 @@ For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but 
 Alias
 *****
 
-:ref:`AliasTransactions <address-alias-transaction>` link namespaces to accounts and mosaics.
+:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics.
 An alias or its linked asset can be used interchangeably when sending a transaction.
 Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
@@ -90,7 +90,7 @@ This link will be editable, so the creator may unlink a previously set alias and
 
 The block :doc:`receipts <receipt>` store the resolution of the alias for a given transaction.
 
-**Restrictions:**
+Alias transactions have the following restrictions:
 
 - An account or mosaic can be linked to many namespaces but one namespace can only be linked to one account or mosaic.
 - An account can assign a namespace to any account that :doc:`permits receiving <account-restriction>` AddressAliasTransaction.

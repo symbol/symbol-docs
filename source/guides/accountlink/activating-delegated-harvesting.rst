@@ -2,6 +2,7 @@
 
 .. post:: 11 Oct, 2019
     :category: Harvesting
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 
@@ -16,7 +17,7 @@ Background
 **********
 
 :ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
-The following guide will show you how to **delegate your account importance** without compromising the account's funds.
+The following guide will show you how to delegate your account importance without compromising the account's funds.
 
 In this process, you will **delegate your main account (M) importance** to a **proxy public key (R)**. Then,you will request a node to **add your remote account (R)** as a delegated harvester with the **announcer account (A)**.
 

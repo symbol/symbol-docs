@@ -2,6 +2,7 @@
 
 .. post:: 18 Aug, 2018
     :category: Monitoring
+    :tags: SDK
     :excerpt: 1
     :nocomments:
 

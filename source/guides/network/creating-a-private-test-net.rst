@@ -9,7 +9,7 @@
 Creating a private test net
 ###########################
 
-This guide will walk you through the process of **setting up your own private network** using |codename|'s technology.
+This guide will walk you through the process of setting up your own private network using |codename|'s technology.
 
 To run the network, we are going to use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to help developers to quickly build their own network.
 
@@ -36,7 +36,6 @@ Hardware requirements
 * **CPU**: 2 cores or more
 * **Memory**: 4GB or more
 * **HD**: 20GB or more
-* **OS**: Linux or Mac
 
 .. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
 
@@ -44,11 +43,20 @@ Hardware requirements
 Environment requirements
 ************************
 
-The setup scripts are automated using docker.
+The setup scripts are available for Linux and Mac OS and automated using docker.
 To run a test net node, you will need to have installed the following docker tools:
 
 * `docker`_
 * `docker-compose`_
+
+*****************
+Port requirements
+*****************
+
+Make sure that the server's host is accessible from the internet and that the following ports are open and available:
+
+* The port ``7900`` is used by catapult-server to communicate between nodes.
+* The port ``3000`` is used by the REST Gateway to expose the endpoints to interact with the node.
 
 ************
 Installation
@@ -145,7 +153,8 @@ As the name suggests, the **private key has to be kept secret at all times**.
 Anyone with access to the private key ultimately has control over the account.
 On the other hand, you can share securely the public and address of your account with other participants of the network to receive transactions from them.
 
-Now that you have your node running and an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|. In this portal, you can find detailed information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+Now that you have your node running and an account with some |privatenetworkcurrency|, we recommend you to surf the |sitename|.
+In this portal, you can find detailed information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the software development kits.
 
 .. _docker: https://docs.docker.com/install/
 

@@ -9,7 +9,7 @@ The creation of an **inflationary mosaic** empowers consortium and private netwo
 Distribution
 ************
 
-Networks with inflation configured can **increase the currency mosaic per block**.
+Networks with inflation configured can increase the currency mosaic per block.
 In this case, the block reward includes the mosaics created due to inflation. The :doc:`harvester <harvesting>` collects the newly created mosaics, sharing them with the beneficiary when set.
 
 The block creating currency mosaics record an :doc:`inflation receipt <receipt>`, listing the amount of mosaics created.

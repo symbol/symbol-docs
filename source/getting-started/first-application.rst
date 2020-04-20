@@ -3,8 +3,9 @@ Writing your first application
 ##############################
 
 This guide will take you through the |codename| development cycle.
-First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`Mosaics <../concepts/mosaic>` and :doc:`Accounts <../concepts/account>`.
-Then, we will record a first transaction on the blockchain.
+
+First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`mosaics <../concepts/mosaic>` and :doc:`accounts <../concepts/account>`.
+By the end of this guide, you will know how to issue and monitor transaction on the blockchain.
 
 **********
 Background
@@ -19,14 +20,14 @@ There is the chance to be a victim of buying a fake or duplicate ticket, where t
 What do we want to solve?
 =========================
 
-A ticket vendor wants to set up a system to:
-
 .. figure:: ../resources/images/examples/getting-started.png
     :width: 450px
     :align: center
 
     Authorization model
 
+
+A ticket vendor wants to set up a system to:
 
 a) Identify each ticket and customer.
 b) Avoid ticket reselling.
@@ -57,16 +58,22 @@ First, identify the actors involved in the problem to solve:
 * The customer.
 
 We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`.
+Think of accounts as deposit boxes on the blockchain which can be modified with an appropriate private key.
 Each account is unique and identified by an address.
-An account has access to a deposit box on the blockchain, which can be modified with an appropriate private key.
 
-1. Have you :ref:`loaded an account with test <setup-creating-a-test-account>` |networkcurrency|?
-The account you have loaded in |cli| represents the **ticket vendor**.
-After running the following command, you should see on your screen a line similar to:
+Have you loaded an account with test |networkcurrency|?
+In the :ref:`previous guide <setup-creating-a-test-account>`, you have loaded an account with |cli|.
+This account will represent the **ticket vendor**.
+
+1. Run the following command to verify that the ticket vendor account has |networkcurrency| units.
 
 .. code-block:: bash
 
     symbol-cli account info --profile testnet
+
+You should see on your screen a line similar to:
+
+.. code-block:: bash
 
     Account Information
     ┌───────────────────┬────────────────────────────────────────────────┐
@@ -92,10 +99,10 @@ After running the following command, you should see on your screen a line simila
     │ 51A99028058245A8 │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-This account owns 750 |networkcurrency| units.
+As you can see, this account owns 750 |networkcurrency| relative units.
 If your row after mosaics is empty, follow the :doc:`previous guide <setup-workstation>` to get test currency.
 
-2. Create a second account to identify the **customer**.
+2. Create a second account with the CLI to identify the **customer**.
 
 .. code-block:: bash
 
@@ -133,13 +140,14 @@ In a new terminal, monitor which transactions involving the ticket vendor's addr
 Creating the ticket
 *******************
 
-We are representing the ticket with |codename| :doc:`Mosaics <../concepts/mosaic>`.
+We are representing the ticket with |codename| :doc:`mosaics <../concepts/mosaic>`.
 This feature can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
-They have configurable properties, which are defined at the moment of their creation
+
+Mosaics have configurable properties, which are defined at the moment of their creation
 For example, we opt to set **transferable property to false**.
 This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
-1. Create a new mosaic to represent the ticket configured as follows with the ticket vendor account.
+1. Use the CLI with the ticket vendor account to create a new mosaic that will represent the ticket. This new mosaic can be configured as follows:
 
 .. csv-table::
     :header: "Property", "Value", "Description"
@@ -152,11 +160,12 @@ This means that the customer can only send back the ticket to the creator of the
     Supply mutable; True; The mosaic supply can change at a later point.
     Transferable; False; The mosaic can be only transferred back to the mosaic creator.
 
+
 .. code-block:: bash
 
-   symbol-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync
+   symbol-cli transaction mosaic --amount 99 --supply-mutable --divisibility 0 --duration 1000 --max-fee 2000000 --sync --profile testnet
 
-2. After announcing the transaction, copy the MosaicId displayed in the terminal.
+2. After announcing the transaction, copy the mosaic id displayed in the terminal.
 
 .. code-block:: bash
 

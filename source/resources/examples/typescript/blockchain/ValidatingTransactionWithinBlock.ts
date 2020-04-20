@@ -44,7 +44,7 @@ const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHtt
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
 };
 
-const nodeUrl = 'http://api-2-01.eu-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
 const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height

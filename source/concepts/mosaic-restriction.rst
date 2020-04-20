@@ -2,7 +2,7 @@
 Mosaic Restriction
 ##################
 
-Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact—send or receive—with the asset.
+Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which accounts can transact with the asset.
 
 This feature has been specifically tailored for **Security Token Offerings (STO)**.
 In contrast to the unregulated tokens that were introduced through ICOs, security tokens are blockchain based representation of value that is subject to regulation under security laws, and thus need a way to bypass blockchain autonomy.
@@ -19,7 +19,7 @@ Mosaic restrictions are **editable** over time, empowering the mosaic creator to
 Global restriction
 ******************
 
-The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to transact a given mosaic.
+The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to send or receive a given mosaic.
 
 One mosaic can handle up to ``20`` global restrictions, being this parameter :ref:`configurable per network <config-network-properties>`.
 A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:

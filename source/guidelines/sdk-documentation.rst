@@ -5,7 +5,7 @@ SDK Documentation
 #################
 
 The SDKs need to be adopted by other developers, and as a contributor, no one knows better than you how a determined SDK works.
-Consider helping others and spread the usage of the SDK by providing the following documentation.
+Help others and spread the usage of the SDK writing documentation.
 
 ******
 Readme

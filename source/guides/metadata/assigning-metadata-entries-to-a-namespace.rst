@@ -2,6 +2,7 @@
 
 .. post:: 01 Oct, 2019
     :category: Metadata
+    :tags: SDK, CLI
     :excerpt: 1
     :nocomments:
 
@@ -15,7 +16,7 @@ Add custom data to a namespace.
 Background
 **********
 
-:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users **verify domain ownership**.
+:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users verify domain ownership.
 The contained data could include information such as registrant, administrative, or technical contact information.
 
 In this guide, you are going to implement a program to add contact details to a namespace.

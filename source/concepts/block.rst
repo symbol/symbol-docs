@@ -4,7 +4,7 @@ Block
 
 The central element of every cryptocurrency is a public ledger called the **blockchain**, which links blocks together.
 
-Since the blocks in the chain are ordered, the complete :doc:`transaction <transaction>` **history** is held on the blockchain.
+Since the blocks in the chain are ordered, the complete :doc:`transaction <transaction>` history is held on the blockchain.
 Subsequent blocks have increasing heights that differ by one.
 Each block can contain up to ``1,000`` transactions (public network), being this value :ref:`configurable per network <config-network-properties>`.
 

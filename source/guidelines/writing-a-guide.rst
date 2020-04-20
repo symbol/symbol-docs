@@ -4,9 +4,14 @@
 Writing a guide
 ###############
 
-Thank you for considering writing a new guide!
+|sitename| guides help other developers to get started on Symbol's technology, giving step-by-step instructions on how to use the tools, integrate with other technologies, and combine the built-in features to architect solutions.
 
-Before starting, we recommend you to open the `symbol-docs repository issues <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas pending to be written.
+***************
+Before starting
+***************
+
+If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas pending to be written.
+We also encourage you to join our `Slack <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ #sig-docs channel and present yourself!
 
 To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
 If there is no issue yet, create a new one introducing the content you want to publish.
@@ -33,13 +38,15 @@ Writing the guide
 
     pip install -r requirements.txt
 
-3. Create a new ``rst`` file inside one of the guides folder.
+4. Create a new ``rst`` file inside one of the guides folder.
 
 .. code-block:: bash
 
     mkdir source/guides/<folder_name>/<title>.rst
 
-4. Use the following template to organize your content.
+5. Write and code your guide in **restructuredText**. If you need help to format your text, you can check this `cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_.
+
+You can use the following template to organize your content:
 
 ::
 
@@ -83,11 +90,8 @@ Writing the guide
 
     Is there any extra exercise that readers could try on their own?
 
-5. Write and code your guide.
-Check the `restructured text cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ to style your text.
-
 6. Add the `code examples <https://github.com/nemtech/symbol-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
-You can render fragments of code from a file inside your ``.rst`` file.
+You can render fragments of code from a file inside your ``.rst`` file with the directive ``example-code``.
 
 ::
 

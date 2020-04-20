@@ -46,7 +46,7 @@ Adding a certificate to an account
     Metadata used to attach relevant information to an asset
 
 Bob works as a digital notary that stamp accounts on |codename|'s public blockchain.
-When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then **tags the account with a MetadataTransaction**.
+When a customer comes to Bob to notarize a document, he checks the authentication of the customer’s documents then tags the account with a MetadataTransaction.
 
 Alice a recent graduate and wants her educational certificate accredited to her |codename| account to avoid the hassle of repeatedly providing verification of her degree.
 So she goes to Bob and provides him with proof of her degree.
@@ -61,7 +61,7 @@ Access management
 
     Validating metadata to restrict performing an off-chain action
 
-The HR department of the SneakersCompany uses the |codename| for **access management** of sensitive work resources.
+The HR department of the SneakersCompany uses the |codename| for access management of sensitive work resources.
 Each account is tagged with the metadata that regulates its access to the company apps suite.
 
 When a new employee, Carol, is hired, the HR department creates a new work account for her.

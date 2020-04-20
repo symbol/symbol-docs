@@ -32,5 +32,6 @@ const queryParams = new QueryParams({pageSize});
 
 accountHttp
     .getAccountTransactions(address, queryParams)
-    .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
+    .subscribe((transactions) => console.log(transactions),
+        (err) => console.error(err));
 /* end block 01 */
