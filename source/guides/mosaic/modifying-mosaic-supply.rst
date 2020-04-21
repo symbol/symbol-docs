@@ -10,7 +10,7 @@
 Modifying mosaic supply
 #######################
 
-Alter the supply of a mosaic.
+If a mosaic was created with the  "**Supply Mutable**" property, you can make more tokens or reduce the total supply.
 
 *************
 Prerequisites
@@ -23,30 +23,30 @@ Prerequisites
 Method #01: Using the Desktop Wallet
 ************************************
 
-1. Click on the “**Mosaic**” tab on the left-side menu.
+1. Click on the "**Mosaic**" tab on the left-side menu.
 
 .. figure:: ../../resources/images/screenshots/modify-mosaic-supply-1.gif
     :align: center
     :width: 800px
 
-2. Click on the edit icon (represented by a pen) on the right side of the mosaic that you desire to edit. Click “**modify supply**”.
-Note: This option will only show for mosaics that were created with the “**Supply Mutable**” property.
+2. Click on the edit icon (represented by a pen) on the right side of the mosaic that you desire to edit. Click "**modify supply**".
+Note: 
 
 .. figure:: ../../resources/images/screenshots/modify-mosaic-supply-2.gif
     :align: center
     :width: 800px
 
-3. Select the “**Supply Change Direction**” to indicate whether you desire to increase or decrease the supply. Then enter the amount by you wish to edit the relative supply. Click “Send”. Verify the information on the next page and enter your wallet password. Click “Confirm”.
+3. Select the "**Supply Change Direction**" to indicate whether you desire to increase or decrease the supply. Then enter the amount by you wish to edit the relative supply. Click "**Send**". Verify the information on the next page and enter your wallet password. Click "**Confirm**".
 
 In our example, the relative supply is increased by 1,000,000. Since the divisibility property of the mosaic is 0, the change in absolute supply is identical.
 
-Note: if you enter a negative number, it will do the inverse of the indicated “**Supply Change Direction**”. Example: if you choose to increase by -100, the relative supply will decrease by 100.
+.. note:: If you enter a negative number, it will do the inverse of the indicated "**Supply Change Direction**". For example, if you choose to increase by -100, the relative supply will decrease by 100. To decrease the supply, the mosaic owner must have at least the number of units to be removed.
 
 .. figure:: ../../resources/images/screenshots/modify-mosaic-supply-3.gif
     :align: center
     :width: 800px
 
-4. You can verify the change in supply on the “**Mosaics**” page. If you still see the old supply, try clicking on the update icon on the top right.
+4. You can verify the change in supply on the "**Mosaics**" page. If you still see the old supply, try clicking on the update icon on the top right.
 
 .. figure:: ../../resources/images/screenshots/modify-mosaic-supply-4.gif
     :align: center
@@ -56,10 +56,9 @@ Note: if you enter a negative number, it will do the inverse of the indicated �
 Method #02: Using the SDK
 *************************
 
-In this example, we are going to increase a **supply mutable** mosaic in 1,000,000 units.
-
 1. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` as in the next code snippet.
-Then, replace the ``mosaicId`` and ``divisibility`` with the targetted mosaic properties.
+Then, replace the ``mosaicId`` and ``divisibility`` with the current mosaic properties.
+Edit ``delta`` with the relative amount of mosaics you want to increase.
 
 .. example-code::
 
@@ -105,6 +104,9 @@ In this second case, the mosaic creator account must own at least ``delta`` unit
 *************************
 Method #03: Using the CLI
 *************************
+
+To alter the mosaic supply, open a terminal window and run the following command.
+Replace ``7cdf3b117a3c40cc`` with the mosaic identifier and ``1000000`` with the absolute units to be increased.
 
 .. viewsource:: ../../resources/examples/bash/mosaic/ModifyingMosaicSupply.sh
     :language: bash
