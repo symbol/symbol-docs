@@ -12,6 +12,10 @@ Creating a mosaic
 
 Tokenize an asset using mosaics.
 
+**********
+Background
+**********
+
 Imagine that a private company, ComfyClothingCompany, decides that it wants to go public.
 Instead of a traditional IPO, the company decides to do an STO to issue tokens through the |codename| platform.
 
