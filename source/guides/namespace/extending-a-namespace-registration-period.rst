@@ -10,7 +10,7 @@
 Extending a namespace registration period
 #########################################
 
-Extend a namespace registration period.
+This guide shows you how to extend the rental period of a namespace.
 
 **********
 Background
@@ -19,7 +19,6 @@ Background
 Namespaces are registered for a certain amount of blocks.
 The creator can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
 
-This guide shows you how to extend the rental period of a namespace.
 The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
 
 *************
@@ -101,6 +100,9 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
 *************************
 Method #02: Using the CLI
 *************************
+
+To extend the namespace duration, open a terminal window and run the following command.
+Replace ``foo`` with the namespace name and ``1000`` with the number of blocks to extend.
 
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
     :language: bash

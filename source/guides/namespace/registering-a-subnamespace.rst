@@ -10,45 +10,44 @@
 Creating a subnamespace
 #######################
 
-Create subnamespaces to organize your assets.
+Once you have a registered root :doc:`namespace <../../concepts/namespace>`, you can create up to ``3`` levels of subnamespaces to organize your assets.
 
 *************
 Prerequisites
 *************
 
 - Complete :doc:`registering a namespace <registering-a-namespace>` guide.
+- Register a :doc:`namespace <../../concepts/namespace>` with an account.
 
 ************************************
 Method #01: Using the Desktop Wallet
 ************************************
 
-1. Click on “**Namespace**” on the left-side menu. Go to the “**Create sub namespaces**” tab.
+1. Click on "**Namespace**" on the left-side menu. Go to the "**Create subnamespaces**" tab.
 
 .. figure:: ../../resources/images/screenshots/desktop-register-subnamespace-1.gif
     :align: center
     :width: 800px
 
-2. Enter information for your sub namespace. Click “**Send**”. Verify the information on the popup and enter your wallet password. Click “**Confirm**”.
-
-Note: you need a root namespace to create a sub namespace.
+2. Enter information for your subnamespace. Click "**Send**". Verify the information on the popup and enter your wallet password. Click "**Confirm**".
 
 .. figure:: ../../resources/images/screenshots/desktop-register-subnamespace-2.gif
     :align: center
     :width: 800px
 
-3. You can check that the sub namespace has been created by going back to the “**Owned namespaces**” tab. If the sub namespace does not show, try clicking on the update icon.
+3. You can check that the sub namespace has been created by going back to the "**Owned namespaces**" tab. If the subnamespace does not show, try clicking on the update icon.
 
 .. figure:: ../../resources/images/screenshots/desktop-register-subnamespace-3.gif
     :align: center
     :width: 800px
 
+When the subnamespace is created, link the subnamespace with a :doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address <../namespace/link-a-namespace-to-an-address>`.
+
 *************************
 Method #02: Using the SDK
 *************************
 
-Once you have a registered root :doc:`namespace <../../concepts/namespace>`, you can create up to ``3`` levels of subnamespaces to **organize your assets**.
-
-This code example creates a subnamespace called ``bar`` under the namespace ``foo``.
+The next code snippet creates a subnamespace called ``bar`` under the namespace ``foo``.
 
 .. example-code::
 
@@ -66,12 +65,9 @@ This code example creates a subnamespace called ``bar`` under the namespace ``fo
 Method #03: Using the CLI
 *************************
 
+To create a subnamespace, open a terminal window and run the following command.
+Replace ``foo`` with the root namespace name and ``bar`` with the new subnamespace to be created.
+
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringASubnamespace.sh
     :language: bash
     :start-after: #!/bin/sh
-
-************
-What's next?
-************
-
-When the transaction is confirmed, link the subnamespace with a :doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address <../namespace/link-a-namespace-to-an-address>`.
