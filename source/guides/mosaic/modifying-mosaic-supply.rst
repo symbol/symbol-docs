@@ -2,15 +2,15 @@
 
 .. post:: 18 Aug, 2018
     :category: Mosaic
-    :tags: SDK, CLI
+    :tags: wallet, SDK, CLI
     :excerpt: 1
     :nocomments:
 
-#######################
-Modifying mosaic supply
-#######################
+###########################
+Modifying the mosaic supply
+###########################
 
-If a mosaic was created with the  "**Supply Mutable**" property, you can make more tokens or reduce the total supply.
+If a mosaic was created with the "**Supply Mutable**" property, you can make more tokens or reduce the total supply.
 
 *************
 Prerequisites

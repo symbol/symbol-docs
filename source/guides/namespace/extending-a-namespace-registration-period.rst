@@ -2,7 +2,7 @@
 
 .. post:: 19 Jun, 2019
     :category: Namespace
-    :tags: SDK, CLI
+    :tags: wallet, SDK, CLI
     :excerpt: 1
     :nocomments:
 
