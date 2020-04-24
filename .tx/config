@@ -404,6 +404,12 @@ source_file = build/gettext/guides/multisig/creating-a-multisig-account.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--multisig--creating-a-multi-level-multisig-account]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multi-level-multisig-account.po
+source_file = build/gettext/guides/multisig/creating-a-multi-level-multisig-account.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--multisig--modifying-a-multisig-account-min-approval]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/modifying-a-multisig-account-min-approval.po
 source_file = build/gettext/guides/multisig/modifying-a-multisig-account-min-approval.pot
