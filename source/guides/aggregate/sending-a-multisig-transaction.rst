@@ -10,7 +10,7 @@
 Sending a multisig transaction
 ##############################
 
-Send a transaction involving a multisig account.
+This guide will show you how to issue transactions from a multisig account.
 
 **********
 Background
@@ -22,33 +22,25 @@ Background
 
     Sending an AggregateCompleteTransaction
 
-Alice and Bob have separate :doc:`accounts <../../concepts/account>`.
-They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+In this example, Alice and Bob are cosignatories of a **1-of-2 multisig** account.
+This multisig configuration permits Alice and Bob to share funds in a separate account, requiring only the signature from one of them to transact.
 
-This shared account appears in |codename| as **1-of-2 multisig**.
-Multisig accounts permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
-
-In this guide, you will send a transaction from a multisig account.
+Let's send 10  |networkcurrency| from the shared account to a third address.
 
 *************
 Prerequisites
 *************
 
 - Complete :doc:`sending mosaics and messages between two accounts <../transfer/sending-a-transfer-transaction>` guide.
-- Complete :doc:`converting an account to multisig <../multisig/converting-an-account-to-multisig>` guide.
+- Complete :doc:`converting an account to multisig <../multisig/creating-a-multisig-account>` guide.
 - Load the 1-of-2 multisig account with 10 |networkcurrency| units.
 - Load Bob's account with enough |networkcurrency| units to pay for the transactions fees.
 
-**************************************
-Example #1: 1-of-2 signatures required
-**************************************
+*************************
+Method #01: Using the SDK
+*************************
 
-Bob has finished filling the basket, and he is ready to pay.
-The cashier's screen indicates that the cost of the purchase adds up to 10 |networkcurrency|.
-
-Let's develop the piece of code present in Bob's mobile wallet that enables him to send multisig transactions.
-
-1. Define the private key of Bob's account and the public key of the multisig account shared with Alice.
+1. Define the private key of one of the multisig cosignatories in a new variable. Then, define the public key of the shared account.
 
 .. example-code::
 
@@ -62,7 +54,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define the following :ref:`TransferTransaction <transfer-transaction>`:
+2. Define the a :ref:`TransferTransaction <transfer-transaction>` as follows:
 
 .. csv-table::
     :header: "Property", "Value"
@@ -70,7 +62,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
     :delim: ;
 
     Type; TransferTransaction
-    Recipient; Grocery's address
+    Recipient; Address of the account that will receive the transaction
     Mosaics; [10 |networkcurrency|]
     Message; sending 10 |networkcurrency|
 
@@ -86,10 +78,7 @@ Let's develop the piece of code present in Bob's mobile wallet that enables him 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer.
-
-An AggregateTransaction is **complete** if before announcing it to the network, all the required cosigners have signed it.
-In this case the multisig requires only one signature (1-of-2), so you can define the aggregate as complete.
+3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer of the transaction.
 
 .. example-code::
 
@@ -103,7 +92,7 @@ In this case the multisig requires only one signature (1-of-2), so you can defin
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Sign and announce the transaction using Bob's account.
+4. Then, sign and announce the transaction with a cosignatory account.
 
 .. example-code::
 
@@ -117,25 +106,12 @@ In this case the multisig requires only one signature (1-of-2), so you can defin
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-**************************************
-Example #2: 2-of-2 signatures required
-**************************************
+5. The recipient of the transction should receive the funds once the funds are confirmed.
 
-What would have happened if the account was a **2-of-2 multisig** instead of a 1-of-2? As all required cosigners did not sign the transaction, it should be announced as :ref:`aggregate bonded <aggregate-transaction>` and cosigned later with Alice's account.
+This time, the TransferTransaction was wrapped in an AggregateCompleteTransaction because just one account was required to announce the transaction.
+If more than one cosignature is required to announce the transaction (e.g., the multisig is a 2-of-2 account), the transaction must be defined as aggregate **bonded**, and all other required multisig participants should cosign it in order to be confirmed.
 
-.. figure:: ../../resources/images/examples/multisig-transaction-2-of-2.png
-    :align: center
-    :width: 500px
-
-    Sending an AggregateBondedTransaction
-
-1. Open a new terminal to monitor the **AggregateBondedTransaction** status by passing the multisig's address.
-
-.. code-block:: bash
-
-    symbol-cli monitor aggregatebonded --address TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU
-
-2. Modify the previous code, defining the transaction as  **bonded**.
+1. To issue a transaction from a **2-of-2 multisig**, modify the previous code and define the transaction as bonded.
 
 .. example-code::
 
@@ -149,9 +125,10 @@ What would have happened if the account was a **2-of-2 multisig** instead of a 1
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. When an AggregateTransaction is bonded, Bob needs to lock at least ``10`` |networkcurrency| to prevent spamming the network.
-Once all cosigners sign the transaction, the amount of |networkcurrency| locked becomes available again in Bob's account.
-After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>`.
+2. When an AggregateTransaction is bonded, an account needs to lock at least ``10`` |networkcurrency| to prevent spamming the network.
+Once all cosigners sign the transaction, the amount of |networkcurrency| locked becomes available again in the account that has locked the funds.
+After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>` with a cosignatory.
+In our case, we will sign the transaction with Bob's account.
 
 .. example-code::
 
@@ -165,9 +142,12 @@ After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :do
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-4. Once the transaction reaches the network, you will see it on the terminal where you are monitoring the aggregate bonded transactions added.
-Then, cosign the AggregateTransaction with Alice's account. Use the transaction hash output from (2).
+3. Once the transaction reaches the network, every other multisig cosignatory required to reach quorum must cosign the transaction. 
+
+To cosign the transaction, you can use the :ref:`CLI <wallet-cli>` command ``transaction cosign``, replacing the transaction hash from (2).
 
 .. code-block:: bash
 
     symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile alice
+
+4. The recipient should receive the funds once the transaction is cosigned by at least ``minApproval`` cosignatories. Besides, the account that has locked the 10 |networkcurrency| should have received the locked funds back.

@@ -8,7 +8,7 @@ Multisig :doc:`accounts <account>` require additional signatures to initiate act
 Cosignatories
 *************
 
-|codename| :doc:`accounts <account>` can be :doc:`converted to multisig <../guides/multisig/converting-an-account-to-multisig>`.
+|codename| :doc:`accounts <account>` can be :doc:`converted to multisig <../guides/multisig/creating-a-multisig-account>`.
 The cosignatories—other accounts—of the multisig will become the account managers.
 
 From that moment on, the multisig account cannot announce transactions by itself.
