@@ -43,6 +43,7 @@ Learn how to use the software development kits and tools with the following step
 * :doc:`How to send a transaction <guides/transfer/sending-a-transfer-transaction>`
 * :doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`
 * :doc:`How to register a namespace <guides/namespace/registering-a-namespace>`
+* :doc:`How to create a multisig account <guides/multisig/creating-a-multisig-account>`
 * :doc:`How to run a private test network <guides/network/creating-a-private-test-net>`
 * :ref:`More guides <blog-categories>`
 
@@ -106,6 +107,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     guides/account/creating-an-account
     guides/transfer/sending-a-transfer-transaction
     guides/mosaic/creating-a-mosaic
+    guides/multisig/creating-a-multisig-account
     guides/network/running-a-test-net-node
     guides/network/creating-a-private-test-net
     More guides <https://nemtech.github.io/guides/category.html>

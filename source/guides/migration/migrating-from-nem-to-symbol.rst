@@ -136,7 +136,7 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process).
 In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.
 
-* Guide: :doc:`Converting an account to multisignature <../multisig/converting-an-account-to-multisig>`
+* Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-account>`
 
 2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 

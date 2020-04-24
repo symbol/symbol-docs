@@ -10,7 +10,7 @@
 Creating a multi-level multisig account
 #######################################
 
-Create a multi-level multisig account.
+This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.
 
 **********
 Background
@@ -18,7 +18,7 @@ Background
 
 :doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
 
-This guide will show you how to create the following **3-level multisig account**.
+In this guide, we are going to create a complex **3-level multisig account**.
 
 .. figure:: ../../resources/images/examples/mlma-complex-1.png
     :align: center
@@ -26,17 +26,26 @@ This guide will show you how to create the following **3-level multisig account*
 
     3-level multisig account example
 
+For example, if the **account #5** initiates an **AggregateBondedTransaction** involving the **account #1**, the accounts **#7 or #8** and **#4** should cosign the transaction in order to be included in a block.
+
+.. figure:: ../../resources/images/examples/mlma-complex-2.png
+    :align: center
+    :width: 750px
+
+    Sending an AggregateBondedTransaction from a MLMA
+
+
 *************
 Prerequisites
 *************
 
-- Complete :doc:`converting an account to multisig <converting-an-account-to-multisig>` guide.
+- Complete :doc:`converting an account to multisig <creating-a-multisig-account>` guide.
 - Create :doc:`accounts <../account/creating-an-account>` for every multisig level.
 - Load the root multisig account with enough |networkcurrency| to pay for the transaction fee.
 
-******************************************
-Example #1: Multisig account with 3 levels
-******************************************
+************************
+Method #1: Using the SDK
+************************
 
 1. Define the **multisig account #2**.
 
@@ -101,15 +110,3 @@ The **account #1** must lock ``10`` |networkcurrency| to announce the transactio
 .. code-block:: bash
 
     symbol-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C --profile <account>
-
-************
-What's next?
-************
-
-If the **account #5** initiates an **AggregateBondedTransaction** involving the **account #1**, which accounts should cosign the transaction?
-
-.. figure:: ../../resources/images/examples/mlma-complex-2.png
-    :align: center
-    :width: 750px
-
-    Sending an AggregateBondedTransaction from a MLMA

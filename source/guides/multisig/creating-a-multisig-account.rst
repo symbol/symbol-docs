@@ -7,30 +7,28 @@
     :nocomments:
 
 
-#################################
-Converting an account to multisig
-#################################
+###########################
+Creating a multisig account 
+###########################
 
-Create a 1-of-2 multisig account.
+This guide will show you how to setup a joint account.
 
 **********
 Background
 **********
 
-Alice and Bob have separate accounts.
-They also want to have a shared account to buy groceries, so that if Bob is out shopping, he can buy groceries for both himself and Alice.
+Imagine that Alice and Bob have separate accounts, but they also want to have a shared account to buy groceries.
+If one of them goes out shopping, they should be able to transact with using their joint account without requiring explicit authorization from the other person.
 
 This shared account appears in |codename| as **1-of-2 multisig**.
-:doc:`Multisig accounts <../../concepts/multisig-account>` permit Alice and Bob sharing funds in a separate account, requiring only the signature from one of them to transact.
+Creating a :doc:`Multisig account <../../concepts/multisig-account>` permits Alice and Bob to share funds in a separate account.
+Since the account is configured as a 1-of-2, it's only required the signature from one of them to issue transactions from the new account.
 
 .. figure:: ../../resources//images/examples/multisig-1-of-2.png
     :align: center
     :width: 350px
 
     1-of-2 multisig account example
-
-In this guide, you are going to create a 1-of-2 multisig account.
-In future guides, you will learn how to increase the minimum number of cosignatures required, as well as invite and remove cosignatories from the multisig account.
 
 *************
 Prerequisites
@@ -43,12 +41,12 @@ Prerequisites
 
 .. note:: To create create new accounts, follow :ref:`this guide <setup-creating-a-test-account>`.
 
-****************************
-Example #01: 1-of-2 multisig
-****************************
+*************************
+Method #01: Using the SDK
+*************************
 
-1. First, define the accounts that will be cosignatories of the multisig account.
-In our case, these are Alice and Bob addresses.
+1. First, define the accounts that will become cosignatories of the multisig account.
+Following our example, these are Alice and Bob addresses.
 Then, open the account that will be converted into multisig using its private key.
 
 .. example-code::
@@ -64,7 +62,7 @@ Then, open the account that will be converted into multisig using its private ke
         :end-before: /* end block 01 */
 
 2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to convert the shared account into a multisig account.
-As you want to create a 1-of-2 multisig account, set the minimum signatures required to ``1``.
+Since we want to create a 1-of-2 multisig account, let's set the minimum required signatures to ``1``.
 
 .. example-code::
 
@@ -78,7 +76,7 @@ As you want to create a 1-of-2 multisig account, set the minimum signatures requ
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction**.
+3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction** defined in the previous step.
 This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::
@@ -93,7 +91,7 @@ This action is necessary because Alice and Bob must opt-in to become cosignatori
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Sign the **AggregateTransaction** using the private key of the multisig account.
+4. Sign the **AggregateTransaction** using the private key of the future multisig account.
 
 .. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
 
@@ -125,7 +123,8 @@ After the **HashLockTransaction** has been confirmed, announce the AggregateTran
         :start-after:  /* start block 05 */
         :end-before: /* end block 05 */
 
-6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with Alice's account.
+6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-aggregate-bonded-transactions>` with the :ref:`CLI <wallet-cli>` using Alice's account.
+Replace the hash ``A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C`` with the AggregateTransaction hash signed in (4).
 
 .. code-block:: bash
 
@@ -139,8 +138,8 @@ After the **HashLockTransaction** has been confirmed, announce the AggregateTran
 
 .. _guide-get-multisig-account-info:
 
-8. If everything goes well, the account is now multisig, being Alice and Bob cosignatories.
-You can get the list of the multisig accounts where Alice or Bob are cosignatories using the ``getMultisigAccountInfo`` function.
+8. If everything goes well, the account is now set as multisig, being Alice and Bob accounts their cosignatories.
+You can get the list of the multisig accounts where Alice or Bob are cosignatories with the function ``MultisigHttp.getMultisigAccountInfo()``.
 
 .. example-code::
 
@@ -159,8 +158,4 @@ You can get the list of the multisig accounts where Alice or Bob are cosignatori
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-************
-What's next?
-************
-
-Modify the multisig account you just created, converting it into a **2-of-2 multisig** following :doc:`the next guide <modifying-a-multisig-account>`.
+Follow :doc:`the next guide <modifying-a-multisig-account-min-approval>` to modify the number of required signatures.
