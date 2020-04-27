@@ -39,6 +39,6 @@ transactionHttp
     .pipe(operators_1.map((x) => x))
     .subscribe((transaction) => {
     console.log('Raw message: ', transaction.message.payload);
-    console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount, networkType).payload);
+    console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
 }, ((err) => console.log(err)));
 /* end block 01 */
