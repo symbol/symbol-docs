@@ -36,20 +36,24 @@ class GitHubReference(Directive):
                 if '.md' in line.path:
                     uri = 'https://github.com/' + self.arguments[0] + '/blob/gh-pages/' + line.path
                     version = line.path.split('.md')[0]
-                    if count == 1:
-                        version = version + ' (next)'
-                    elif count == 2:
-                        version = version + ' (latest)'
                 else:
                     uri = self.docs_url + self.arguments[0].split('/')[1] + '/' + line.path
                     version = line.path.split('/')[-1]
+
+                if count == 1:
+                    version = version + ' (next)'
+                elif count == 2:
+                    version = version + ' (latest)'
+
                 if not any(excluded_file_name in version for excluded_file_name in self.excluded_file_names):
                     item = nodes.list_item()
                     item_p = nodes.paragraph()
                     item_p += nodes.reference(text=version, refuri=uri)
                     item += item_p
                     node_list += item
+
                 count += 1
+
         return [node_list]
 
 
