@@ -8,7 +8,7 @@
 
 
 ###########################
-Creating a multisig account 
+Creating a multisig account
 ###########################
 
 This guide will show you how to setup a joint account.
@@ -41,8 +41,47 @@ Prerequisites
 
 .. note:: To create create new accounts, follow :ref:`this guide <setup-creating-a-test-account>`.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to the account that you want to convert into a multisig account.
+
+2. Click on the “**Multisig**” tab on the left-side menu.
+
+3. Click on “**Add a cosignatory**” and provide the address or public key of the account you want to add as a cosignatory of the multisig. Click on the “**+**” button.
+Note: make sure potential cosignatory accounts have previously sent transactions on the network.
+
+.. figure:: ../../resources/images/screenshots/create-multisig-2.gif
+    :align: center
+    :width: 800px
+
+4. Repeat step 3 for each account you want to add as a cosignatory of the multisig. In our example case, we have 2 accounts we want to add as cosignatories: Alice and Bob.
+
+5. Select the number of “**Min. Approval**” and “**Min. Removal**” for the multisig.
+
+6. Click “**Send**”. Review the information on the popup. Provide your wallet password and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/create-multisig-3.gif
+    :align: center
+    :width: 800px
+
+7. Log in to an account you selected as a potential cosignatory of the multisig. On the “**Home**” page, click on “**Partial**” transactions. Click on the pending Aggregate Bonded transaction. Provide your wallet password and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/create-multisig-4.gif
+    :align: center
+    :width: 800px
+
+8. Repeat step 7 for each account you added as a potential cosignatory for the multisig.
+
+9. Log in to the account being converted to a multisig. When the Aggregate Bonded transaction is complete (confirmed), you can check that it has been converted by going back to the “**Multisig**” page.
+
+.. figure:: ../../resources/images/screenshots/create-multisig-5.png
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. First, define the accounts that will become cosignatories of the multisig account.

@@ -37,8 +37,36 @@ Prerequisites
 
 - Complete :doc:`converting an account to multisig <creating-a-multisig-account>` guide.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to an account that is a cosignatory of the account you want to modify. Either Alice or Bob's account.
+
+2. Click on the “**Multisig**” tab on the left-side of the wallet.
+
+3. Select the multisig wallet you want to modify from the dropdown menu from the top field. This will convert the “**Operation Type**” to “**Modifying account multisig properties**”.
+
+.. figure:: ../../resources/images/screenshots/modify-multisig-1.gif
+    :align: center
+    :width: 800px
+
+4. Select the new “**Min. Approval**” number. In this case, we want to change it to "**2**". Click “**Send**”. Review the information on the popup. Enter your wallet password and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/modify-multisig-2.gif
+    :align: center
+    :width: 800px
+
+5. Navigate to the “**Home**” page. Click on the “**partial**” transactions. Click on the pending transaction. Enter your password and click “**Confirm**”.
+
+7. Once the Aggregate Transaction is confirmed, you can check its new properties in the “**Multisig**” menu.
+
+.. figure:: ../../resources/images/screenshots/modify-multisig-3.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 One of the cosignatory accounts, for example Alice's, will announce a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to increase ``minApprovalDelta``.
