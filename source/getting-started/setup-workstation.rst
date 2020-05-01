@@ -26,7 +26,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global symbol-cli@0.19.1
+    npm install --global symbol-cli@0.19.2
 
 2. Generate a new account and save it as a **profile**.
 
