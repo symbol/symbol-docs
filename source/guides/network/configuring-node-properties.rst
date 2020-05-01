@@ -58,6 +58,7 @@ config-user.properties
     **account**; ; ;
     enableDelegatedHarvestersAutoDetection; bool; Set to true if potential delegated harvesters should be automatically detected.; true
     **storage**; ; ;
+    certificateDirectory; string; Certificate directory.; ../certificate
     dataDirectory; string; Data directory.; ../data
     pluginsDirectory; string; Plugins directory.; .
 
@@ -99,10 +100,9 @@ config-node.properties
     transactionElementTraceInterval; uint32_t; Multiple of elements at which a transaction element should be traced through queue and completion.; 10
     enableDispatcherAbortWhenFull; bool; Set to true if the process should terminate when any dispatcher is full.; true
     enableDispatcherInputAuditing; bool; Set to true if all dispatcher inputs should be audited.; true
-    outgoingSecurityMode; ionet::ConnectionSecurityMode; Security mode of outgoing connections initiated by this node.; None
-    incomingSecurityModes; ionet::ConnectionSecurityMode; Accepted security modes of incoming connections initiated by other nodes.; None
     maxCacheDatabaseWriteBatchSize; utils::FileSize; Maximum cache database write batch size.; 5MB
     maxTrackedNodes; uint32_t; Maximum number of nodes to track in memory.; 5'000
+    batchVerificationRandomSource; string; Source of random numbers used in batch verification.; /dev/urandom
     trustedHosts; unordered_set<string>; Trusted hosts that are allowed to execute protected API calls on this node.;
     localNetworks; unordered_set<string>; Networks that should be treated as local.; 127.0.0.1
     **localnode**; ; ;
