@@ -72,4 +72,4 @@ This time, the MultisigModificationTransaction is wrapped in an **AggregateCompl
 
 .. note:: If more than one cosignature is required to announce the transaction (e.g., ``minRemoval`` is set to 2), the transaction must be defined as aggregate **bonded**, and all other required multisig participants should cosign it in order to be confirmed. Follow the :doc:`next guide <../aggregate/sending-a-multisig-transaction>` to announce aggregate bonded transactions involving a multisig account.
 
-Follow :doc:`the next guide <creating-a-multisig-account>` to create a multi-level multisig account.
+Follow :doc:`the next guide <creating-a-multilevel-multisig-account>` to create a multi-level multisig account.

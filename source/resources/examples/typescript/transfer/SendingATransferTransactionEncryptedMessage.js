@@ -28,7 +28,7 @@ const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(alicePrivateKey, 
 const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
 const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
 const encryptedMessage = aliceAccount
-    .encryptMessage('This message is secret', certificatePublicAccount, networkType);
+    .encryptMessage('This message is secret', certificatePublicAccount);
 /* end block 01 */
 /* start block 02 */
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
