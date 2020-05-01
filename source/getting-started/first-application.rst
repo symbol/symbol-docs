@@ -106,7 +106,7 @@ If your row after mosaics is empty, follow the :doc:`previous guide <setup-works
 
 .. code-block:: bash
 
-    symbol-cli account generate --network TEST_NET --save --url http://api-01.us-west-1.symboldev.network:3000/ --profile customer
+    symbol-cli account generate --network TEST_NET --save --url http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000 --profile customer
 
     New Account
 

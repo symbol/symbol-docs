@@ -26,7 +26,7 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
