@@ -38,8 +38,7 @@ const certificatePublicAccount = PublicAccount.createFromPublicKey(certificatePu
 
 const encryptedMessage = aliceAccount
     .encryptMessage('This message is secret',
-        certificatePublicAccount,
-        networkType);
+        certificatePublicAccount);
 /* end block 01 */
 
 /* start block 02 */

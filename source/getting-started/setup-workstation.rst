@@ -26,7 +26,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
 .. code-block:: bash
 
-    npm install --global symbol-cli@0.18.3
+    npm install --global symbol-cli@0.19.2
 
 2. Generate a new account and save it as a **profile**.
 
@@ -119,7 +119,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.17.4 rxjs
+            npm install symbol-sdk@0.18.0 rxjs
 
         3. Install globally TypeScript dependency:
 
@@ -149,7 +149,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.17.4 rxjs
+            npm install symbol-sdk@0.18.0 rxjs
 
     .. tab:: Java
 

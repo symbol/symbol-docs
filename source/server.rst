@@ -217,7 +217,7 @@ Options
 
 .. |instructions| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/BUILDING.md" target="_blank">instructions</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/master/docs/README.md" target="_blank">instructions</a>
 
 .. |whitepaper| raw:: html
 
