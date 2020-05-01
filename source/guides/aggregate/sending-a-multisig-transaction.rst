@@ -36,8 +36,24 @@ Prerequisites
 - Load the 1-of-2 multisig account with 10 |networkcurrency| units.
 - Load Bob's account with enough |networkcurrency| units to pay for the transactions fees.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to one of the cosignatory accounts of the multisig.
+
+2. Click on the “**transfer**” tab.
+
+3. Enter the appropriate information for your transfer transaction. Selet the multisig account from the dropdown menu of the “FROM” field. Enter the address of the recipient. Select the mosaic you desire to send and the amount. Click “**Send**”. Review the information on the popup and enter your wallet password. Click “**Confirm**”
+
+.. figure:: ../../resources/images/screenshots/multisig-transaction-1.gif
+    :align: center
+    :width: 800px
+
+4. Once the transaction is confirmed, you should see changes in the respective account balances.
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Define the private key of one of the multisig cosignatories in a new variable. Then, define the public key of the shared account.
@@ -142,7 +158,7 @@ In our case, we will sign the transaction with Bob's account.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Once the transaction reaches the network, every other multisig cosignatory required to reach quorum must cosign the transaction. 
+3. Once the transaction reaches the network, every other multisig cosignatory required to reach quorum must cosign the transaction.
 
 To cosign the transaction, you can use the :ref:`CLI <wallet-cli>` command ``transaction cosign``, replacing the transaction hash from (2).
 

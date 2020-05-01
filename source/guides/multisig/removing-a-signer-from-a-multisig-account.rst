@@ -20,8 +20,36 @@ Prerequisites
 
 - Complete :doc:`converting an account to multisig <creating-a-multisig-account>` guide.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to one of the cosignatory accounts of the multisig account.
+
+2. Click on “**Multisig**” on the left-side menu.
+
+3. Select the multisig account in the dropdown menu.
+
+4. Find the cosignatory address that you want to remove in the cosignatories listed. Click the trash icon - this should highlight the account you want to remove. Then click “**Send**”. Review the information in the popup and enter your wallet password. Finally, click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/remove-signer-1.gif
+    :align: center
+    :width: 800px
+
+5. Navigate to the “**Home**” page. Click on the “**partial**” transactions. Click on the pending transaction. Enter your password and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/add-signer-2.gif
+    :align: center
+    :width: 800px
+
+6. You can check that the singer has been removed by going back to the “**multisig**” page.
+
+.. figure:: ../../resources/images/screenshots/remove-signer-screenshot.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 The following code shows how to remove a cosignatory from a **2-of-3** multisig account with ``minRemoval`` set to 1.
