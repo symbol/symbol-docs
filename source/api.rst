@@ -2,7 +2,7 @@
 REST Gateway
 ############
 
-The **REST gateway** combines HTTP and WebSockets to perform read and write actions on the blockchain.
+|catapult-rest| combines HTTP and WebSockets to perform read and write actions on the blockchain.
 
 .. _http-requests:
 
@@ -10,7 +10,7 @@ The **REST gateway** combines HTTP and WebSockets to perform read and write acti
 Http requests
 *************
 
-|catapult-rest| uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
+The REST Gateway uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
 
 Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
 
@@ -19,12 +19,10 @@ Assuming that Catapult REST is running locally, HTTP GET requests can be execute
 Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
 This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
 
-Get the complete list of available endpoints by clicking on the button below:
+You can refer to the next documentation to get the list of available endpoints.
 
-.. raw:: html
-
-    <a class="btn btn-default" href="https://nemtech.github.io/symbol-openapi" rel="nofollow">REST API Endpoints</a>
-
+.. ghreference:: nemtech/symbol-openapi
+    :folder:
 .. _websockets:
 
 **********
@@ -358,42 +356,9 @@ This section describes the error messages that can be returned via status channe
     0x80450002; Failure_Extension_Partial_Transaction_Dependency_Removed; Validation failed because the partial transaction was pruned from the temporal cache due to its dependency being removed.
     0x80450003; Failure_Extension_Read_Rate_Limit_Exceeded; Validation failed because socket read rate limit was exceeded.
 
-.. _tools:
-
-*****
-Tools
-*****
-
-We recommend using one of the following tools to interact with the available endpoints.
-
-SDKs
-====
-
-The **Symbol SDK** is the primary software development tool to create Symbol components, such as additional tools, libraries or applications.
-
-* :doc:`Reference <../sdk>`
-* :doc:`Guides <../concepts/account>`
-
-Postman
-========
-
-HTTP client, available for Mac, Windows and Linux.
-
-1. Download |postman-app| for your current operative system.
-
-2. Import the |postman-spec| for |codename|.
-
 .. |yarn| raw:: html
 
     <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
-
-.. |postman-app| raw:: html
-
-    <a href="https://www.getpostman.com/downloads/" target="_blank">Postman app</a>
-
-.. |postman-spec| raw:: html
-
-    <a href="https://github.com/nemtech/symbol-openapi/releases" target="_blank">Postman spec</a>
 
 .. |catapult-service-bootstrap| raw:: html
 
