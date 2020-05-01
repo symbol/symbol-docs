@@ -56,7 +56,6 @@ config-user.properties
     :delim: ;
 
     **account**; ; ;
-    bootPrivateKey; string; Boot private key.; 0000000000000000000000000000000000000000000000000000000000000000
     enableDelegatedHarvestersAutoDetection; bool; Set to true if potential delegated harvesters should be automatically detected.; true
     **storage**; ; ;
     dataDirectory; string; Data directory.; ../data
