@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,41 +21,40 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/sdk-documentation.rst:13
+#: ../../source/guidelines/sdk-documentation.rst:14
 msgid "SDK Documentation"
 msgstr "SDK ドキュメント"
 
-#: ../../source/guidelines/sdk-documentation.rst:15
+#: ../../source/guidelines/sdk-documentation.rst:16
 msgid ""
 "The SDKs need to be adopted by other developers, and as a contributor, no "
-"one knows better than you how a determined SDK works. Consider helping "
-"others and spread the usage of the SDK by providing the following "
-"documentation."
+"one knows better than you how a determined SDK works. Help others and spread"
+" the usage of the SDK writing documentation."
 msgstr ""
 "SDK は他の開発者に採用される必要があります。貢献者として、決定された SDK "
-"がどのように機能するかをあなたより知っている人は誰もいません。次のドキュメントを提供して、他の人を助け、SDK の使用を広めることを検討してください。"
+"がどのように機能するかをあなたより知っている人は誰もいません。ドキュメントを書いて、他の人を助け、SDK の利用を広めてください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:22
+#: ../../source/guidelines/sdk-documentation.rst:23
 msgid "Make sure that the README has the following sections."
 msgstr "READMEに次のセクションがあることを確認してください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:24
+#: ../../source/guidelines/sdk-documentation.rst:25
 msgid "Requirements"
 msgstr "必須項目"
 
-#: ../../source/guidelines/sdk-documentation.rst:25
+#: ../../source/guidelines/sdk-documentation.rst:26
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guidelines/sdk-documentation.rst:26
+#: ../../source/guidelines/sdk-documentation.rst:27
 msgid "Contributing"
 msgstr "貢献"
 
-#: ../../source/guidelines/sdk-documentation.rst:27
+#: ../../source/guidelines/sdk-documentation.rst:28
 msgid "License"
 msgstr "ライセンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:29
+#: ../../source/guidelines/sdk-documentation.rst:30
 msgid ""
 "**Template**: `README <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/README.md>`_"
@@ -63,11 +62,11 @@ msgstr ""
 "**テンプレート**: `README <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/README.md>`_"
 
-#: ../../source/guidelines/sdk-documentation.rst:33
+#: ../../source/guidelines/sdk-documentation.rst:34
 msgid "Comments and reference docs"
 msgstr "コメントとリファレンス"
 
-#: ../../source/guidelines/sdk-documentation.rst:35
+#: ../../source/guidelines/sdk-documentation.rst:36
 msgid ""
 "Document functions and classes with comments while you write your code. A "
 "reference generator should be able to read these comments and generate HTML "
@@ -76,17 +75,17 @@ msgstr ""
 "コードを記述している間に、関数とクラスをコメント付きでドキュメント化します。リファレンスジェネレーターはこれらのコメントを読み取り、HTML "
 "として出力を生成できる必要があります。"
 
-#: ../../source/guidelines/sdk-documentation.rst:41
+#: ../../source/guidelines/sdk-documentation.rst:42
 msgid ""
 "We recommend you to research and determine which is the reference generator "
 "most convenient for the selected programming language."
 msgstr "選択したプログラミング言語にとって最も便利なリファレンスジェネレーターを調査して決定することをお勧めします。"
 
-#: ../../source/guidelines/sdk-documentation.rst:45
+#: ../../source/guidelines/sdk-documentation.rst:46
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/guidelines/sdk-documentation.rst:54
+#: ../../source/guidelines/sdk-documentation.rst:55
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-"
 "repository>`_ and clone `symbl-docs repository <https://github.com/nemtech"
@@ -96,8 +95,16 @@ msgstr ""
 "repository>`_ をフォークして`symbol-docs リポジトリ <https://github.com/nemtech/symbol-"
 "docs>`__ をクローンしてください。"
 
-#: ../../source/guidelines/sdk-documentation.rst:60
+#: ../../source/guidelines/sdk-documentation.rst:61
 msgid ""
 "Create a new folder under ``source/resources/examples/`` named as the "
 "programming language of your SDK."
 msgstr "あなたの言語の SDK 用として ``source/resources/examples/`` の下に新しいフォルダを作ってください。"
+
+#: ../../source/guidelines/sdk-documentation.rst:65
+msgid ""
+"Push the changes and `create a pull request <https://services.github.com/on-"
+"demand/intro-to-github/es/crear-pull-request>`__."
+msgstr ""
+"変更をプッシュして `プルリクエストを作成 <https://services.github.com/on-demand/intro-to-"
+"github/es/crear-pull-request>`__ してください。"

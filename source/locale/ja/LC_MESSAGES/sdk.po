@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-11 15:09+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,40 +21,64 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/sdk.rst:13
+#: ../../source/sdk.rst:14
 msgid ""
 "The **Symbol SDK** is the primary software development tool to create "
 "|codename| components, such as additional tools, libraries, or applications."
+" It enables developers to focus on their product rather than on the specific"
+" API details due to its higher abstraction."
 msgstr ""
 "**Symbol SDK** とは |codename| "
-"コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。"
-
-#: ../../source/sdk.rst:15
-msgid ""
-"It enables developers to focus on their product rather than on the specific "
-"API details due to its higher abstraction."
-msgstr "これを利用することで、開発者は特有な API の抽象化ではなく、彼らの製品に焦点を当てることができます。"
+"コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するための主要なソフトウェア開発ツールです。高度な抽象化により、開発者は特定の"
+" API 詳細ではなく製品に集中できます。"
 
 #: ../../source/sdk.rst:17
 msgid ""
-"Learn how to use |codename|'s SDK following the :ref:`guided implementation "
-"examples <blog-categories>`."
+"The |sdk| shares the same design between programming languages to accomplish"
+" the next properties:"
+msgstr "|sdk| では以下のプロパティを実現するために、各プログラミング言語間で同じデザインを共有しています:"
+
+#: ../../source/sdk.rst:19
+msgid ""
+"**Fast language adaptation**: For example, there is a |sdk| for Java, but "
+"you need to work on C++. As both SDKs share the same design, you could re-"
+"write the library faster, adapting the syntax to your language. The same "
+"principle also applies to code examples, projects, applications..."
 msgstr ""
-"|codename| SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
+"**素早く言語に適応する**: 例えば Java 用の |sdk| ライブラリがありますが、 C++ 用を必要な場合もあるでしょう。どちらの SDK "
+"も同じデザインを共有しているため、ライブラリを素早く書き直すことができ、構文を言語に合わせるだけです。この原則はコード例、プロジェクト、アプリケーションなどにも適用されます。"
+
+#: ../../source/sdk.rst:20
+msgid ""
+"**Cohesion/shared knowledge across developers**: Every developer should be "
+"able to change between projects that use |codename|. By sharing the same "
+"design, we also share the same best practices among projects."
+msgstr ""
+"**開発者間での知識の凝縮/共有**: 全開発者は |codename| "
+"を使用するプロジェクト間を切り替えられる必要があります。同じデザインを共有することで、プロジェクト間で同じベストプラクティスを共有します。"
 
 #: ../../source/sdk.rst:21
+msgid ""
+"**Fast SDK updates**: Migrating any improvement from a |sdk| to the other is"
+" faster. Also, if any bug appears in one language, it is quicker to check "
+"and fix it."
+msgstr ""
+"**素早い SDK のアップデート**: |sdk| "
+"から、それ以外へ特定の改善を素早く移行できます。ある言語において発生したバグは、速やかにチェックされ、修正されます。"
+
+#: ../../source/sdk.rst:25
 msgid "Supported languages"
 msgstr "サポート言語"
 
-#: ../../source/sdk.rst:1 ../../source/sdk.rst:1
+#: ../../source/sdk.rst:1
 msgid "Language"
 msgstr "言語"
 
-#: ../../source/sdk.rst:1 ../../source/sdk.rst:1
+#: ../../source/sdk.rst:1
 msgid "Repository"
 msgstr "リポジトリ"
 
-#: ../../source/sdk.rst:1 ../../source/sdk.rst:1
+#: ../../source/sdk.rst:1
 msgid "Reference"
 msgstr "リファレンス"
 
@@ -66,19 +90,89 @@ msgstr ":doc:`ドキュメント <references/typescript-sdk>`"
 msgid ":doc:`Documentation <references/java-sdk>`"
 msgstr ":doc:`ドキュメント <references/java-sdk>`"
 
-#: ../../source/sdk.rst:32
-msgid "Ongoing work"
-msgstr "開発中"
-
 #: ../../source/sdk.rst:34
 msgid ""
-"⚠️ The following SDKs are not compatible with the latest version of "
-"catapult-server."
-msgstr "⚠️ 以下の SDK は最新バージョンの catapult-server と互換性がありません。"
+"Learn how to use |codename|'s SDK following the :ref:`guided implementation "
+"examples <blog-categories>`."
+msgstr ""
+"|codename| SDK の使い方を学ぶには :ref:`ガイド付き実装サンプル <blog-categories>` を参照してください。"
 
-#: ../../source/sdk.rst:51
+#: ../../source/sdk.rst:36
 msgid ""
 "If you want to create a new SDK, check the :doc:`development guidelines "
 "<guidelines/sdk-development>`."
 msgstr ""
 "新しい SDK を作りたい場合は :doc:`開発ガイドライン <guidelines/sdk-development>` を確認してください。"
+
+#: ../../source/sdk.rst:52
+msgid "Other libraries"
+msgstr "その他のライブラリ"
+
+#: ../../source/sdk.rst:54
+msgid ""
+"Symbol developers have created other libraries that improve and add new "
+"features on top of Symbol."
+msgstr "Symbol 開発者は Symbol に改善および新機能を追加する他のライブラリを作成しました。"
+
+#: ../../source/sdk.rst:1
+msgid "Name"
+msgstr "名称"
+
+#: ../../source/sdk.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/sdk.rst:1
+msgid ""
+"Transferable, updatable, branded, and conjointly owned blockchain "
+"notarizations."
+msgstr "譲渡可能、更新可能、ブランド付け、共同所有のブロックチェーン公証"
+
+#: ../../source/sdk.rst:1
+msgid "Library to debug rand access |codename| node data."
+msgstr "|codename| ノードデータにランダムアクセスするデバッグライブラリ"
+
+#: ../../source/sdk.rst:1
+msgid "Hyper-deterministic wallets library for |codename|."
+msgstr "|codename| 用 HD ウォレットを扱うためのライブラリ。"
+
+#: ../../source/sdk.rst:1
+msgid "QR library for |codename|."
+msgstr "|codename| 用 QR ライブラリ"
+
+#: ../../source/sdk.rst:1
+msgid "URI Scheme library for |codename|."
+msgstr "|codename| 用URI スキーマライブラリ"
+
+#: ../../source/sdk.rst:1
+msgid "Implementing Shamir's secret sharing on |codename|."
+msgstr "|codename| でシャミア秘密共有を実装する。"
+
+#: ../../source/sdk.rst:67
+msgid ""
+"To make a library official, the library should be proposed through the |NIP|"
+" process."
+msgstr "公式のライブラリとなるためには、 |NIP|  を通して提案する必要があります。"
+
+#: ../../source/sdk.rst:69
+msgid "The reason behind the |NIP| is to ensure that:"
+msgstr "|NIP| の背景"
+
+#: ../../source/sdk.rst:71
+msgid "The specification has been discussed and accepted."
+msgstr "議論され受理された仕様"
+
+#: ../../source/sdk.rst:72
+msgid ""
+"The new library is reviewed, tested and shared among |codename| developers."
+msgstr "新しいライブラリは |codename| 開発者の間でレビュー、テスト、共有されます。"
+
+#: ../../source/sdk.rst:73
+msgid ""
+"The library is compatible with third-party projects that uses the same "
+"specification."
+msgstr "ライブラリは同じ仕様のサードパーティプロジェクトと互換性があります。"
+
+#: ../../source/sdk.rst:81
+msgid "Guides"
+msgstr "ガイド"

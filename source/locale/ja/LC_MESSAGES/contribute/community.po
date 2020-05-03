@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/community.rst:11
+#: ../../source/contribute/community.rst:12
 msgid "Community"
 msgstr "コミュニティ"
 
-#: ../../source/contribute/community.rst:13
+#: ../../source/contribute/community.rst:14
 msgid ""
 "After reading the docs, you probably have some unanswered questions. Most of"
 " the documentation and guides that the |sitename| has today have been added "
@@ -34,27 +34,27 @@ msgstr ""
 "ドキュメントを読み終えても、あなたには未解決の質問があるかもしれません。私たちのコミュニティが必要性を感じていたため、今日の |sitename| "
 "のドキュメントとガイドのほとんどが追加されています。"
 
-#: ../../source/contribute/community.rst:16
+#: ../../source/contribute/community.rst:17
 msgid ""
 "Discover how the open source |community| works, and get started "
 "participating:"
 msgstr "|community| がどのように機能しているか見て、参加してみましょう:"
 
-#: ../../source/contribute/community.rst:18
+#: ../../source/contribute/community.rst:19
 msgid "Ask in |stack-overflow| development related questions."
 msgstr "開発に関連する疑問は |stack-overflow| で質問してください。"
 
-#: ../../source/contribute/community.rst:20
+#: ../../source/contribute/community.rst:21
 msgid "Reach our community joining the official |slack|."
 msgstr "私達の公式 |slack| に参加してください。"
 
-#: ../../source/contribute/community.rst:22
+#: ../../source/contribute/community.rst:23
 msgid ""
 "Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` "
 "to propose changes."
 msgstr ""
 "変更を提案するためには :doc:`貢献ガイドライン <../guidelines/suggesting-changes>` を確認してください。"
 
-#: ../../source/contribute/community.rst:24
+#: ../../source/contribute/community.rst:25
 msgid "Follow the development updates on |twitter|."
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"

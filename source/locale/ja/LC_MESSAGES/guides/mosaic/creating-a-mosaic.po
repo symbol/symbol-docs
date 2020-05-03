@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,69 +21,61 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:18
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:20
 msgid "Creating a mosaic"
 msgstr "モザイクの作成"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:20
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:22
 msgid "Tokenize an asset using mosaics."
 msgstr "モザイクを使用した資産のトークン化"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:24
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:26
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:26
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:28
 msgid ""
-"A private company, ComfyClothingCompany, decides that it wants to go public."
-" Instead of a traditional IPO, the company decides to do an STO to issue "
-"tokens through the |codename| platform."
+"Imagine that a private company, ComfyClothingCompany, decides that it wants "
+"to go public. Instead of a traditional IPO, the company decides to do an STO"
+" to issue tokens through the |codename| platform."
 msgstr ""
-"非上場会社である ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は |codename| "
+"とある民間企業の ComfyClothingCompany は上場を目指しています。従来の IPO の代わりに、同社は |codename| "
 "プラットフォームを通じてトークンを発行するために STO を行うことにしました。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:29
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:31
 msgid ""
-"In this guide, we are going to help this company to **create the tokens for "
-"their STO**."
-msgstr "このガイドでは、この会社が **STOのトークンを作成する** のを支援します。"
+"In this guide, we are going to help this company to create the tokens for "
+"their STO."
+msgstr "このガイドでは、この会社がSTOのトークンを作成することを支援します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:33
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:35
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:35
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:37
 msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+"Complete the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`."
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:36
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:38
+msgid "Create a new :ref:`account <setup-creating-a-test-account>`."
+msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:39
 msgid ""
-"Have one :ref:`account with network currency <setup-creating-a-test-"
-"account>`"
-msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
+"Load the account with enough |networkcurrency| to pay for transaction fees."
+msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:40
-msgid "Method #01: Using the SDK"
-msgstr "方法 #01: SDK を使用する"
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:43
+msgid "Defining the mosaic properties"
+msgstr "モザイクプロパティの定義"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:42
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:45
 msgid ""
-"Before starting this guide, make sure you have an :doc:`account loaded with "
-"<../../getting-started/setup-workstation>` |networkcurrency|."
-msgstr ""
-"ガイドを始める前に |networkcurrency| を :doc:`保有したアカウント <../../getting-started/setup-"
-"workstation>` が準備できていることを確認してください。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:44
-msgid ""
-"Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-"
-"definition-transaction>` to set the **mosaic properties**. In this example, "
-"we are going to create a mosaic with the following configuration:"
-msgstr ""
-"新しいファイルを開き、 **mosaic properties** を設定するために :ref:`MosaicDefinitionTransaction"
-" <mosaic-definition-transaction>` を定義します。この例では、次の設定でモザイクを作成します。"
+"ComfyClothingCompany decides to create their STO mosaic with the following "
+"configuration:"
+msgstr "ComfyClothingCompany は次の構成で STO モザイクを作成することにしました:"
 
 #: ../../source/guides/mosaic/creating-a-mosaic.rst:1
 msgid "Property"
@@ -136,7 +128,51 @@ msgid ""
 "which accounts can transact with the mosaic."
 msgstr "STO には規制があるため、モザイク作成者はモザイクを取引できるアカウントを制限できる必要があります。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:73
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:59
+msgid "Method #01: Using the Desktop Wallet"
+msgstr "方法 #01: デスクトップウォレットを使用する"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:61
+msgid "Click on the \"**Mosaics**\" tab from the left side menu."
+msgstr "左側のメニューから \"**モザイク**\" タブをクリックします。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:63
+msgid "Click on the \"**Create new mosaics**\" tab on the top of the page."
+msgstr "ページの上部から \"**新しいモザイクの作成**\" タブをクリックします。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:69
+msgid ""
+"Determine the properties of the mosaic you desire to create. Click "
+"\"**Send**\"."
+msgstr "作成するモザイクのプロパティを決定します。 \"**送信**\" をクリックします。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:75
+msgid ""
+"Verify the information on the popup and enter your wallet password. Click "
+"\"**Confirm**\". This should send the transaction to the network."
+msgstr ""
+"ポップアップの情報を確認し、ウォレットのパスワードを入力します。 \"**確認**\" "
+"をクリックします。これでトランザクションがネットワークに送信されます。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:81
+msgid ""
+"When the transaction becomes confirmed, you can check to see that the mosaic"
+" has been created by going back to the \"**Owned mosaics**\" tab."
+msgstr "トランザクションが確認されたら \"**所有モザイク**\" タブに戻り、モザイクが作成されたことを確認できます。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:85
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:87
+msgid ""
+"Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-"
+"definition-transaction>` and determined the desired **mosaic properties** ."
+msgstr ""
+"新しいファイルを開き、 :ref:`MosaicDefinitionTransaction <mosaic-definition-"
+"transaction>` を定義して、要求する **mosaic properties** を決定します。"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:106
 msgid ""
 "Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
 "transaction>` to set the **initial supply**. For instance, we can set it to "
@@ -145,7 +181,7 @@ msgstr ""
 "**初期供給量** を設定するために :ref:`MosaicSupplyChangeTransaction <mosaic-supply-"
 "change-transaction>` を用います。例えば **1,000,000** モザイク単位を作成します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:92
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:125
 msgid ""
 "|codename| works with **absolute amounts**. To get an absolute amount, "
 "multiply the number of assets you want to create by 10\\ "
@@ -155,24 +191,18 @@ msgstr ""
 "|codename| は **絶対量** を扱います。絶対量を取得するには、作成したいアセットの量に 10\\ :sup:`divisibility` "
 "を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:94
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:127
 msgid ""
-"Announce both transactions together using an :ref:`AggregateTransaction "
-"<aggregate-transaction>`."
+"3. Announce both transactions together using an :ref:`AggregateTransaction "
+"<aggregate-transaction>`. Include the first block generation hash to make "
+"the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` "
+"in a new browser tab and copy the ``meta.generationHash`` value."
 msgstr ""
-"両方のトランザクションは :ref:`AggregateTransaction <aggregate-transaction>` "
-"を使って一緒にアナウンスします。"
+"3. 両方のトランザクションを :ref:`AggregateTransaction <aggregate-transaction>` "
+"を使用してアナウンスします。最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + '/block/1'`` を開いて"
+" ``meta.generationHash`` の値をコピーします。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:96
-msgid ""
-"Include the first block generation hash to make the transaction only valid "
-"for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
-"copy the ``meta.generationHash`` value."
-msgstr ""
-"あなたのネットワークでだけ妥当なトランザクションを作るには、最初のブロック生成ハッシュを含めてください。新しいブラウザタブで ``nodeUrl + "
-"'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
-
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:115
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:148
 msgid ""
 "Once the transaction gets confirmed, you can try to :doc:`transfer "
 "<../transfer/sending-a-transfer-transaction>` one unit of the created mosaic"
@@ -183,6 +213,11 @@ msgstr ""
 "-transfer-transaction>` してみたり、 :doc:`モザイクプロパティの変更 <modifying-mosaic-supply>`"
 " または :doc:`ネームスペースをモザイクへリンク <creating-a-mosaic>` してみましょう。"
 
-#: ../../source/guides/mosaic/creating-a-mosaic.rst:119
-msgid "Method #02: Using the CLI"
-msgstr "方法 #02: CLI を使用する"
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:152
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"
+
+#: ../../source/guides/mosaic/creating-a-mosaic.rst:154
+msgid ""
+"Open a terminal window and run the following command to create a new mosaic."
+msgstr "ターミナルを開き、新しいモザイクを作成するために、次のコマンドを実行します。"

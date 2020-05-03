@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-network-properties.rst:18
+#: ../../source/guides/network/configuring-network-properties.rst:19
 msgid "Configuring network properties"
 msgstr "ネットワークプロパティの設定"
 
-#: ../../source/guides/network/configuring-network-properties.rst:20
+#: ../../source/guides/network/configuring-network-properties.rst:21
 msgid "Customize the network configurable parameters."
 msgstr "ネットワーク設定パラメータの変更"
 
-#: ../../source/guides/network/configuring-network-properties.rst:22
+#: ../../source/guides/network/configuring-network-properties.rst:23
 msgid ""
 "The directory ``ruby/catapult-templates/peer_node/resources`` of the "
 "|catapult-service-bootstrap| repository comes with a set of files to "
@@ -38,17 +38,17 @@ msgstr ""
 "|catapult-service-bootstrap| リポジトリの ``ruby​/catapult-"
 "templates/peer_node/resources`` ディレクトリにはネットワークを構成するための一連ファイルが付属しています。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:24
+#: ../../source/guides/network/configuring-network-properties.rst:25
 msgid ""
 "The ``.properties`` files provided can be edited with any text editor before"
 " launching a network for the first time."
 msgstr "生成される ``.properties`` ファイルはネットワーク初回起動の前に任意のテキストエディタで編集できます。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:28
+#: ../../source/guides/network/configuring-network-properties.rst:29
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/guides/network/configuring-network-properties.rst:30
+#: ../../source/guides/network/configuring-network-properties.rst:31
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
