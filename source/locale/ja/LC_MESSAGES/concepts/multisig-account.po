@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,32 +22,21 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/multisig-account.rst:11
+#: ../../source/concepts/multisig-account.rst:12
 msgid "Multisig Account"
 msgstr "マルチシグアカウント"
 
-#: ../../source/concepts/multisig-account.rst:13
+#: ../../source/concepts/multisig-account.rst:14
 msgid ""
 "Multisig :doc:`accounts <account>` require additional signatures to initiate"
 " actions/transfers."
 msgstr "マルチシグ :doc:`アカウント <account>` はアクション/転送を実行するために追加の署名を必要とします。"
 
-#: ../../source/concepts/multisig-account.rst:17
+#: ../../source/concepts/multisig-account.rst:18
 msgid "Cosignatories"
 msgstr "連署者"
 
-#: ../../source/concepts/multisig-account.rst:19
-msgid ""
-"|codename| :doc:`accounts <account>` can be :doc:`converted to multisig "
-"<../guides/multisig/converting-an-account-to-multisig>`. The "
-"cosignatories—other accounts—of the multisig will become the account "
-"managers."
-msgstr ""
-"|codename| :doc:`アカウント <account>` は :doc:`マルチシグに変換する <../guides/multisig"
-"/converting-an-account-to-multisig>` ことができます。マルチシグの連署者 - 他のアカウント - "
-"はこのアカウントのマネージャとなります。"
-
-#: ../../source/concepts/multisig-account.rst:22
+#: ../../source/concepts/multisig-account.rst:23
 msgid ""
 "From that moment on, the multisig account cannot announce transactions by "
 "itself. A multisig cosignatory has to propose a transaction involving the "
@@ -57,17 +46,17 @@ msgstr ""
 "この瞬間からマルチシグアカウントはそれ自信からトランザクションをアナウンスできなくなります。連署者のうち 1 人がマルチシグに関係した "
 ":doc:`アグリゲートトランザクション <aggregate-transaction>` でラップしたトランザクションを提案する必要があります。"
 
-#: ../../source/concepts/multisig-account.rst:25
+#: ../../source/concepts/multisig-account.rst:26
 msgid ""
 "To record the transaction in the block, the other cosignatories will have to"
 " agree."
 msgstr "このトランザクションをブロックに記録するには、他の連署者の同意が必要です。"
 
-#: ../../source/concepts/multisig-account.rst:29
+#: ../../source/concepts/multisig-account.rst:30
 msgid "Minimum approval and removal"
 msgstr "最小承認数と削除数"
 
-#: ../../source/concepts/multisig-account.rst:31
+#: ../../source/concepts/multisig-account.rst:32
 msgid ""
 "It is not always necessary to require all cosignatories to cosign "
 "transactions associated with the multisig account. |codename| allows to set "
@@ -79,11 +68,11 @@ msgstr ""
 "は連署者の同意の最小数の設定が可能です。大抵のニーズに合わせてこれらのプロパティを :ref:`編集 <guide-modify-a-multisig-"
 "account-min-approval>` することができます。"
 
-#: ../../source/concepts/multisig-account.rst:39
+#: ../../source/concepts/multisig-account.rst:40
 msgid "2-of-3 multisignature account"
 msgstr "2-of-3 マルチシグアカウント"
 
-#: ../../source/concepts/multisig-account.rst:41
+#: ../../source/concepts/multisig-account.rst:42
 msgid ""
 "|codename|'s current implementation of multisig is *\"M-of-N\"*, where M is "
 "the number of cosignatories required to announce a transaction and N is the "
@@ -95,7 +84,7 @@ msgstr ""
 "は合計連署者数です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4, 2-of-2, 4-of-9, 9-of-10 "
 "などです。"
 
-#: ../../source/concepts/multisig-account.rst:44
+#: ../../source/concepts/multisig-account.rst:45
 msgid ""
 "Similarly, cosignatories can :ref:`invite other accounts to take part in the"
 " multisig <guide-modify-a-multisig-account-add-new-cosignatory>`, or  "
@@ -106,7 +95,7 @@ msgstr ""
 "account-add-new-cosignatory>`  または  :ref:`参加者に除名の提案 <guide-modify-a"
 "-multisig-account-removing-a-cosignatory>` をすることができます。"
 
-#: ../../source/concepts/multisig-account.rst:46
+#: ../../source/concepts/multisig-account.rst:47
 msgid ""
 "Multisig accounts are a powerful tool, but please use this tool with "
 "caution.  If the cosignatories keys get lost and minimum approval is not "
@@ -117,11 +106,11 @@ msgstr ""
 "マルチシグアカウントは強力なツールですが、このツールの使用は慎重に行ってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントが保有する資産へのアクセスが永久に不可能になります。この状況を回避するには"
 " ``最小限の削除数`` パラメータを適切に設定してください。"
 
-#: ../../source/concepts/multisig-account.rst:50
+#: ../../source/concepts/multisig-account.rst:51
 msgid "Constraints"
 msgstr "制約"
 
-#: ../../source/concepts/multisig-account.rst:52
+#: ../../source/concepts/multisig-account.rst:53
 msgid ""
 "The public network defines the following constraints for multisig accounts, "
 "being the values presented :ref:`configurable per network <config-network-"
@@ -130,15 +119,15 @@ msgstr ""
 "パブリックネットワークはマルチシグアカウントに次の制約を定義します。値は :ref:`ネットワークごとに設定可能 <config-network-"
 "properties>` です。"
 
-#: ../../source/concepts/multisig-account.rst:54
+#: ../../source/concepts/multisig-account.rst:55
 msgid "Multisig accounts can have up to ``25`` cosignatories."
 msgstr "マルチシグアカウントは ``25`` 連署者までを設定可能です。"
 
-#: ../../source/concepts/multisig-account.rst:56
+#: ../../source/concepts/multisig-account.rst:57
 msgid "An account can be cosigner of up to ``25`` multisig accounts."
 msgstr "アカウントは ``25`` マルチシグアカウントまでの連署者として設定可能です。"
 
-#: ../../source/concepts/multisig-account.rst:58
+#: ../../source/concepts/multisig-account.rst:59
 msgid ""
 "Multisig account can be a cosigner for another multisig account, up to ``3``"
 " levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature"
@@ -148,7 +137,7 @@ msgstr ""
 "階層まで、他のマルチシグアカウントの連署者になることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに “AND/OR“ "
 "ロジックを追加します。"
 
-#: ../../source/concepts/multisig-account.rst:60
+#: ../../source/concepts/multisig-account.rst:61
 msgid ""
 ":ref:`Multisig modification transactions <multisig-account-modification-"
 "transaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-"
@@ -159,27 +148,27 @@ msgstr ""
 "transaction>` は :doc:`アグリゲートトランザクション <aggregate-transaction>` "
 "でラップされる必要があります。マルチシグに追加される新しい連署者はアグリゲートに署名することでオプトインしなければなりません。"
 
-#: ../../source/concepts/multisig-account.rst:64
+#: ../../source/concepts/multisig-account.rst:65
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/concepts/multisig-account.rst:66
+#: ../../source/concepts/multisig-account.rst:67
 msgid ""
 "There is a broad range of useful applications for multisig accounts. Let's "
 "take a look at some of the most common use cases."
 msgstr "マルチシグアカウントには幅広い便利なアプリケーションがあります。一般的な使用例のいくつかを見てみましょう。"
 
-#: ../../source/concepts/multisig-account.rst:70
+#: ../../source/concepts/multisig-account.rst:71
 msgid "Shared accounts"
 msgstr "共有アカウント"
 
-#: ../../source/concepts/multisig-account.rst:72
+#: ../../source/concepts/multisig-account.rst:73
 msgid ""
 "Several families are members of the local philatelist society and use a "
 "shared account to buy stamps."
 msgstr "いくつかの家族は地元の切手収集家共同体のメンバーであり、切手を購入するために共有アカウントを使用しています。"
 
-#: ../../source/concepts/multisig-account.rst:74
+#: ../../source/concepts/multisig-account.rst:75
 msgid ""
 "To ensure that all agree on which old stamps they should buy and on the "
 "right price, they use a multisig account. This way, all members of the "
@@ -188,11 +177,11 @@ msgid ""
 msgstr ""
 "購入するべき古い切手と適切な価格のすべてに合意するために、彼らはマルチシグアカウントを使用します。この方法では、正当なトランザクションとしてブロックチェーンに取り込まれる前に、共同体の全員がトランザクションに同意することが必要です。"
 
-#: ../../source/concepts/multisig-account.rst:78
+#: ../../source/concepts/multisig-account.rst:79
 msgid "Multi-factor authorization"
 msgstr "複数要素認証"
 
-#: ../../source/concepts/multisig-account.rst:80
+#: ../../source/concepts/multisig-account.rst:81
 msgid ""
 "Alice wants to make sure her funds are not compromised in any way. Therefore"
 " she sets up a multisig account with her funds and attaches two accounts "
@@ -202,7 +191,7 @@ msgstr ""
 "Alice "
 "は彼女の資産が決して損なわれないようにしたいと考えています。したがって、彼女は彼女の資産でマルチシグアカウントを設定し、マルチシグアカウントを制御するために2要素認証の形態として、2つのアカウント(署名者アカウント)を設定しました。"
 
-#: ../../source/concepts/multisig-account.rst:83
+#: ../../source/concepts/multisig-account.rst:84
 msgid ""
 "Both of her signer accounts need to approve the transaction, and her signer "
 "accounts are located on different computer platforms with different "
@@ -211,19 +200,19 @@ msgid ""
 msgstr ""
 "彼女の署名者アカウントは両方ともトランザクションを承認する必要があり、この署名者アカウントは異なるパスワードを持つ、異なるコンピュータに配置されます。これは悪意のあるハッカーやウィルスが自分のアカウントのうち1つを侵害したとしても、彼女の資金はまだ安全に保たれます。"
 
-#: ../../source/concepts/multisig-account.rst:89
+#: ../../source/concepts/multisig-account.rst:90
 msgid "Multi-factor authorization using multisig accounts"
 msgstr "マルチシグアカウントを使用した複数要素認証"
 
-#: ../../source/concepts/multisig-account.rst:92
+#: ../../source/concepts/multisig-account.rst:93
 msgid "Assets ownership"
 msgstr "アセットの所有権"
 
-#: ../../source/concepts/multisig-account.rst:94
+#: ../../source/concepts/multisig-account.rst:95
 msgid "Multisig accounts can be used to represent the ownership of assets."
 msgstr "マルチシグアカウントを使用して資産の所有権を表すことができます。"
 
-#: ../../source/concepts/multisig-account.rst:96
+#: ../../source/concepts/multisig-account.rst:97
 msgid ""
 "A company could create a 1-of-1 multisig account for each of their products,"
 " adding themselves as the cosignatory. When the company sells the product to"
@@ -233,19 +222,19 @@ msgstr ""
 "企業は製品ごとに 1-of-1 マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が Alice "
 "へ製品を販売するとき、彼女が署名者として追加されることで所有者となり、同じ取引の中で会社の所有権が取り除かれます。"
 
-#: ../../source/concepts/multisig-account.rst:103
+#: ../../source/concepts/multisig-account.rst:104
 msgid "Transferring an account"
 msgstr "アカウントの譲渡"
 
-#: ../../source/concepts/multisig-account.rst:106
+#: ../../source/concepts/multisig-account.rst:107
 msgid "Manufacturing and supply chains"
 msgstr "製造業とサプライチェーン"
 
-#: ../../source/concepts/multisig-account.rst:108
+#: ../../source/concepts/multisig-account.rst:109
 msgid "In this example, a manufacturer is shipping a pharmaceutical product."
 msgstr "これは製造者が医薬製品を発送する事例です。"
 
-#: ../../source/concepts/multisig-account.rst:110
+#: ../../source/concepts/multisig-account.rst:111
 msgid ""
 "The product receives its quality approval :doc:`mosaic <mosaic>` only when "
 "its blockchain record shows it has a production date, safety inspection, and"
@@ -254,27 +243,27 @@ msgstr ""
 "この製品は、ブロックチェーン記録が示す製造日時、安全検査、正しい温度で出荷されたかを示したときだけに、品質認可 :doc:`モザイク <mosaic>`"
 " を受取ります。"
 
-#: ../../source/concepts/multisig-account.rst:112
+#: ../../source/concepts/multisig-account.rst:113
 msgid ""
 "Sensors in the shipping container report temperature data every 5 minutes "
 "and consolidate it into a daily report."
 msgstr "出荷コンテナ内のセンサーが温度を5分ごとにレポートし、日次レポートとしてまとめます。"
 
-#: ../../source/concepts/multisig-account.rst:118
+#: ../../source/concepts/multisig-account.rst:119
 msgid "Manufacturing and Supply Chains"
 msgstr "製造業とサプライチェーン"
 
-#: ../../source/concepts/multisig-account.rst:121
-#: ../../source/concepts/multisig-account.rst:132
+#: ../../source/concepts/multisig-account.rst:122
+#: ../../source/concepts/multisig-account.rst:133
 msgid "Fraud Detection"
 msgstr "不正検知"
 
-#: ../../source/concepts/multisig-account.rst:123
+#: ../../source/concepts/multisig-account.rst:124
 msgid ""
 "This example shows how a high-security account can be made easier to use."
 msgstr "この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。"
 
-#: ../../source/concepts/multisig-account.rst:125
+#: ../../source/concepts/multisig-account.rst:126
 msgid ""
 "Transactions are only approved from a hardware wallet OR your phone AND a "
 "fraud detection AI. MLMA allows a variety of security configurations at the "
@@ -283,35 +272,35 @@ msgstr ""
 "トランザクションはハードウェアウォレットまたは電話と不正検知 AI によってのみ承認されます。MLMA "
 "はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
 
-#: ../../source/concepts/multisig-account.rst:136
+#: ../../source/concepts/multisig-account.rst:137
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/multisig-account.rst:148
+#: ../../source/concepts/multisig-account.rst:149
 msgid "Transaction schemas"
 msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/multisig-account.rst:155
+#: ../../source/concepts/multisig-account.rst:156
 msgid "Announce a MultisigAccountModificationTransaction to:"
 msgstr "MultisigAccountModificationTransaction のアナウンス:"
 
-#: ../../source/concepts/multisig-account.rst:157
+#: ../../source/concepts/multisig-account.rst:158
 msgid "Transform an account to multisig account."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/concepts/multisig-account.rst:158
+#: ../../source/concepts/multisig-account.rst:159
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更"
 
-#: ../../source/concepts/multisig-account.rst:159
+#: ../../source/concepts/multisig-account.rst:160
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
-#: ../../source/concepts/multisig-account.rst:165
+#: ../../source/concepts/multisig-account.rst:166
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/multisig-account.rst:167
+#: ../../source/concepts/multisig-account.rst:168
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -365,6 +354,6 @@ msgstr "連署者公開鍵追加"
 msgid "Cosignatory public key deletions."
 msgstr "連署者公開鍵削除"
 
-#: ../../source/concepts/multisig-account.rst:181
+#: ../../source/concepts/multisig-account.rst:182
 msgid "Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`."
 msgstr "次項: :doc:`クロスチェーンスワップ <cross-chain-swaps>`"

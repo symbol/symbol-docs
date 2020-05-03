@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/sdk-development.rst:13
+#: ../../source/guidelines/sdk-development.rst:14
 msgid "SDK Development"
 msgstr "SDK 開発"
 
-#: ../../source/guidelines/sdk-development.rst:15
+#: ../../source/guidelines/sdk-development.rst:16
 msgid ""
 "One of the key objectives we had when building the first group of  SDKs was "
 "to enable developers to change quickly between programming languages without"
@@ -37,99 +37,23 @@ msgstr ""
 "つは、開発者がまったく異なる設計に適応することなく、プログラミング言語間で迅速に変更できるようにすることでした。このドキュメントは相互運用性を実現するために、同じ設計を共有する"
 " |codename| ベースの SDK を出荷するように開発者をガイドすることを目的としています。"
 
-#: ../../source/guidelines/sdk-development.rst:20
-msgid "Rationale"
-msgstr "根拠"
-
-#: ../../source/guidelines/sdk-development.rst:22
-msgid ""
-"The |sdk| shares the same design/architecture between programming languages "
-"to accomplish the next properties:"
-msgstr "|sdk| では以下のプロパティを実現するために、各プログラミング言語間で同じデザイン/アーキテクチャを共有しています:"
-
-#: ../../source/guidelines/sdk-development.rst:24
-msgid ""
-"**Fast language adaptation**: For example, there is a |sdk| for Java, but "
-"you need to work on C++. As both SDKs share the same design, you could re-"
-"write the library faster, adapting the syntax to your language. The same "
-"principle also applies to code examples, projects, applications..."
-msgstr ""
-"**素早く言語に適応する**: 例えば Java 用の |sdk| ライブラリがありますが、 C++ 用を必要な場合もあるでしょう。どちらの SDK "
-"も同じデザインを共有しているため、ライブラリを素早く書き直すことができ、構文を言語に合わせるだけです。この原則はコード例、プロジェクト、アプリケーションなどにも適用されます。"
-
-#: ../../source/guidelines/sdk-development.rst:25
-msgid ""
-"**Cohesion/shared knowledge across developers**: Every developer should be "
-"able to change between projects that use |codename|. By sharing the same "
-"design, we also share the same best practices among projects."
-msgstr ""
-"**開発者間での知識の凝縮/共有**: 全開発者は |codename| "
-"を使用するプロジェクト間を切り替えられる必要があります。同じデザインを共有することで、プロジェクト間で同じベストプラクティスを共有します。"
-
-#: ../../source/guidelines/sdk-development.rst:26
-msgid ""
-"**Fast SDK updates**: Migrating any improvement from a |sdk| implementation "
-"to the rest is faster. Also, if any bug appears in one language, it is "
-"quicker to check and fix it."
-msgstr ""
-"**素早い SDK のアップデート**: |sdk| "
-"の実装から、それ以外の残りについて1つの改善を移行することが素早く行えます。ある言語において発生したバグは、速やかにチェックされ、修正されます。"
-
-#: ../../source/guidelines/sdk-development.rst:30
+#: ../../source/guidelines/sdk-development.rst:21
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
-#: ../../source/guidelines/sdk-development.rst:33
-msgid "Characteristics"
-msgstr "特徴"
-
-#: ../../source/guidelines/sdk-development.rst:35
-msgid ""
-"**Standardized Contracts**: Guaranteeing interoperability and harmonization "
-"of data models."
-msgstr "**標準化された契約**: データモデルの相互運用性と調和を保証する。"
-
-#: ../../source/guidelines/sdk-development.rst:36
-msgid "**Loose Coupling**: Reducing the degree of component coupling fosters."
-msgstr "**疎結合**: コンポーネントの結合度合いを取り除く。"
-
-#: ../../source/guidelines/sdk-development.rst:37
-msgid ""
-"**Abstraction**: Increasing the long-term consistency of interoperability "
-"and allowing underlying components to evolve independently."
-msgstr "**抽象化**: 相互運用性の長期的な一貫性を高め、基礎となるコンポーネントを独立して進化させる。"
-
-#: ../../source/guidelines/sdk-development.rst:38
-msgid ""
-"**Reusability**: Enabling high-level interoperability between modules and "
-"potential component consumers."
-msgstr "**再利用性**: モジュールとコンポーネント利用者間での高いレベルの相互運用性。"
-
-#: ../../source/guidelines/sdk-development.rst:39
-msgid ""
-"**Stateless**: Increasing availability and scalability of components "
-"allowing them to interoperate more frequently and reliably."
-msgstr "**ステートレス**: コンポーネントの可用性と拡張性を高め、より頻繁で信頼できる相互運用を可能にします。"
-
-#: ../../source/guidelines/sdk-development.rst:40
-msgid ""
-"**Composability**: For components to be effectively composable, they must be"
-" interoperable."
-msgstr "**合成性**: 効果的なコンポーネントの構成のために、相互運用可能でなければなりません。"
-
-#: ../../source/guidelines/sdk-development.rst:43
+#: ../../source/guidelines/sdk-development.rst:24
 msgid "Package Organization"
 msgstr "パッケージ構成"
 
-#: ../../source/guidelines/sdk-development.rst:49
+#: ../../source/guidelines/sdk-development.rst:30
 msgid "Package organization diagram"
 msgstr "パッケージ構成ダイアグラム"
 
-#: ../../source/guidelines/sdk-development.rst:51
+#: ../../source/guidelines/sdk-development.rst:32
 msgid "**Infrastructure**"
 msgstr "インフラストラクチャ"
 
-#: ../../source/guidelines/sdk-development.rst:53
+#: ../../source/guidelines/sdk-development.rst:34
 msgid ""
 "This package includes the generated API client and DTOs. The HTTP requests "
 "are made following the Repository Pattern, and they return |codename| domain"
@@ -138,11 +62,11 @@ msgstr ""
 "このパッケージには生成された API クライアントと DTO が含まれています。HTTP "
 "リクエストはリポジトリパターンに則しており、これらはオブザーバルパターンを介して |codename| の変更不可なモデルを返します。"
 
-#: ../../source/guidelines/sdk-development.rst:56
+#: ../../source/guidelines/sdk-development.rst:37
 msgid "**Models**"
 msgstr "**モデル**"
 
-#: ../../source/guidelines/sdk-development.rst:58
+#: ../../source/guidelines/sdk-development.rst:39
 msgid ""
 "The |codename| domain models are immutable by definition, meaning that the "
 "developer cannot change their attributes. Instead, the developers have to "
@@ -152,43 +76,81 @@ msgstr ""
 "|codename| ドメインモデルは定義によっては不変ですが、開発者はその属性を変更できません。代わりに、開発者は新しいトランザクションを作成して "
 "TransactionHTTP 経由でブロックチェーンへ送信する必要があります。"
 
-#: ../../source/guidelines/sdk-development.rst:61
+#: ../../source/guidelines/sdk-development.rst:42
 msgid "**Services**"
 msgstr "**サービス**"
 
-#: ../../source/guidelines/sdk-development.rst:63
+#: ../../source/guidelines/sdk-development.rst:44
 msgid ""
 "Common operations that require combining multiple :doc:`REST API <../api>` "
 "requests."
 msgstr "複数の :doc:`REST API <../api>` リクエストを結合する必要がある一般的な操作"
 
-#: ../../source/guidelines/sdk-development.rst:66
+#: ../../source/guidelines/sdk-development.rst:47
+msgid "Characteristics"
+msgstr "特徴"
+
+#: ../../source/guidelines/sdk-development.rst:49
+msgid ""
+"**Standardized Contracts**: Guaranteeing interoperability and harmonization "
+"of data models."
+msgstr "**標準化された契約**: データモデルの相互運用性と調和を保証する。"
+
+#: ../../source/guidelines/sdk-development.rst:50
+msgid "**Loose Coupling**: Reducing the degree of component coupling fosters."
+msgstr "**疎結合**: コンポーネントの結合度合いを取り除く。"
+
+#: ../../source/guidelines/sdk-development.rst:51
+msgid ""
+"**Abstraction**: Increasing the long-term consistency of interoperability "
+"and allowing underlying components to evolve independently."
+msgstr "**抽象化**: 相互運用性の長期的な一貫性を高め、基礎となるコンポーネントを独立して進化させる。"
+
+#: ../../source/guidelines/sdk-development.rst:52
+msgid ""
+"**Reusability**: Enabling high-level interoperability between modules and "
+"potential component consumers."
+msgstr "**再利用性**: モジュールとコンポーネント利用者間での高いレベルの相互運用性。"
+
+#: ../../source/guidelines/sdk-development.rst:53
+msgid ""
+"**Stateless**: Increasing availability and scalability of components "
+"allowing them to interoperate more frequently and reliably."
+msgstr "**ステートレス**: コンポーネントの可用性と拡張性を高め、より頻繁で信頼できる相互運用を可能にします。"
+
+#: ../../source/guidelines/sdk-development.rst:54
+msgid ""
+"**Composability**: For components to be effectively composable, they must be"
+" interoperable."
+msgstr "**合成性**: 効果的なコンポーネントの構成のために、相互運用可能でなければなりません。"
+
+#: ../../source/guidelines/sdk-development.rst:57
 msgid "Reactive"
 msgstr "リアクティブ"
 
-#: ../../source/guidelines/sdk-development.rst:68
+#: ../../source/guidelines/sdk-development.rst:59
 msgid ""
 "The |sdk| uses the `ReactiveX Library <http://reactivex.io/>`_ intensely."
 msgstr "|sdk| は `ReactiveX Library <http://reactivex.io/>`_ ライブラリを多用しています。"
 
-#: ../../source/guidelines/sdk-development.rst:70
+#: ../../source/guidelines/sdk-development.rst:61
 msgid "The benefits of using a reactive approach are:"
 msgstr "リアクティブアプローチを使用する利点は次のとおりです:"
 
-#: ../../source/guidelines/sdk-development.rst:72
+#: ../../source/guidelines/sdk-development.rst:63
 msgid ""
 "**Functional**: Developers can avoid complex stateful programs using clean "
 "input/output functions over observable streams."
 msgstr ""
 "**機能性**: 開発者はオブザーバブルなストリームにクリーンな入出力関数を使用して、複雑でステートフルなプログラムを避けることができます。"
 
-#: ../../source/guidelines/sdk-development.rst:73
+#: ../../source/guidelines/sdk-development.rst:64
 msgid ""
 "**Less is more**: ReactiveX's operators often reduce what was once an "
 "elaborate challenge into a few lines of code."
 msgstr "**少ない事で多くの事を**: 大抵の場合、ReactiveX オペレータは複雑なコードを数行のコードへ還元します。"
 
-#: ../../source/guidelines/sdk-development.rst:74
+#: ../../source/guidelines/sdk-development.rst:65
 msgid ""
 "**Async error handling**: Traditional try/catch is weak for error handling "
 "in asynchronous computations, but ReactiveX will offer developers the proper"
@@ -197,7 +159,7 @@ msgstr ""
 "**非同期的エラーハンドリング**: 伝統的な try/catch は非同期処理でのエラー処理には非力ですが、ReactiveX "
 "はエラーを処理するための適切なツールを開発者に提供します。"
 
-#: ../../source/guidelines/sdk-development.rst:75
+#: ../../source/guidelines/sdk-development.rst:66
 msgid ""
 "**Concurrency**: Observables and Schedulers in ReactiveX allow the "
 "programmer to abstract away low-level threading, synchronization, and "
@@ -206,19 +168,19 @@ msgstr ""
 "**並列処理**: ReactiveX "
 "のオブザーバブルとスケジューラは、プログラマへの低水準のスレッディング、同期、並行処理の実装を抽象化することができます。"
 
-#: ../../source/guidelines/sdk-development.rst:76
+#: ../../source/guidelines/sdk-development.rst:67
 msgid ""
 "**Frontend**: Manipulation of UI events and API responses on the Web using "
 "RxJS."
 msgstr "**フロントエンド**: Web上で RxJS を使用したUIイベントとAPI応答の操作。"
 
-#: ../../source/guidelines/sdk-development.rst:77
+#: ../../source/guidelines/sdk-development.rst:68
 msgid ""
 "**Backend**: Embrace ReactiveX's asynchronicity, enabling concurrency and "
 "implementation independence."
 msgstr "**バックエンド**: ReactiveX の非同期性を利用し、同時性と実装の独立性を可能にします。"
 
-#: ../../source/guidelines/sdk-development.rst:79
+#: ../../source/guidelines/sdk-development.rst:70
 msgid ""
 "If you are new to Reactive Programming, we encourage you to start with the "
 "online guide `Learn RxJS <https://www.learnrxjs.io/>`_."
@@ -226,18 +188,18 @@ msgstr ""
 "リアクティブプログラミングを初めて使用する場合は、オンラインガイド `Learn RxJS <https://www.learnrxjs.io/>`_ "
 "から始めることをお勧めします。"
 
-#: ../../source/guidelines/sdk-development.rst:83
+#: ../../source/guidelines/sdk-development.rst:74
 msgid "Before starting"
 msgstr "始める前に"
 
-#: ../../source/guidelines/sdk-development.rst:85
+#: ../../source/guidelines/sdk-development.rst:76
 msgid ""
 "Review the technical documentation to become familiar with the |codename| "
 ":doc:`built-in features<../concepts/account>`."
 msgstr ""
 "|codename| :doc:`ビルドイン機能<../concepts/account>` に詳しくなるためにはテクニカルドキュメントを見てください。"
 
-#: ../../source/guidelines/sdk-development.rst:86
+#: ../../source/guidelines/sdk-development.rst:77
 msgid ""
 "Setup the |codename| :doc:`local environment via docker "
 "<../guides/network/creating-a-private-test-net>`."
@@ -245,20 +207,20 @@ msgstr ""
 "|codename| の :doc:`ローカル環境を Docker で <../guides/network/creating-a-private-"
 "test-net>` セットアップします。"
 
-#: ../../source/guidelines/sdk-development.rst:87
+#: ../../source/guidelines/sdk-development.rst:78
 msgid ""
 "Check the :doc:`API reference <../api>` and play with offered set of "
 "endpoints."
 msgstr ":doc:`API リファレンス <../api>` を確認して、エンドポイントを実行してみてください。"
 
-#: ../../source/guidelines/sdk-development.rst:88
+#: ../../source/guidelines/sdk-development.rst:79
 msgid ""
 "Become familiar with the current :doc:`SDK via code examples "
-"<../concepts/account>` & :doc:`CLI <../cli>` ."
+"<../concepts/account>` and :ref:`CLI <wallet-cli>` ."
 msgstr ""
-"現在の :doc:`SDK のコード例 <../concepts/account>` と :doc:`CLI <../cli>` に詳しくなる。"
+"現在の :doc:`SDK のコード例 <../concepts/account>` と :ref:`CLI <wallet-cli>` に詳しくなる。"
 
-#: ../../source/guidelines/sdk-development.rst:89
+#: ../../source/guidelines/sdk-development.rst:80
 msgid ""
 "Join our `Slack "
 "<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
@@ -268,7 +230,7 @@ msgstr ""
 "`<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_"
 " 参加して尋ねてください。"
 
-#: ../../source/guidelines/sdk-development.rst:90
+#: ../../source/guidelines/sdk-development.rst:81
 msgid ""
 "Be sure no one is already working on the SDK you want to create. Check the "
 ":doc:`repository list <../sdk>` and comment on your intentions in ``#sig-"
@@ -277,7 +239,7 @@ msgstr ""
 "作成しようとしている SDK にまだ誰も取り組んでいないことを確認してください。:doc:`リポジトリリスト <../sdk>` をチェックし "
 "``#sig-api`` チャンネルであなたの意向をコメントしてください。"
 
-#: ../../source/guidelines/sdk-development.rst:91
+#: ../../source/guidelines/sdk-development.rst:82
 msgid ""
 "Claim the SDK `forking this repository "
 "<https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a "
@@ -286,19 +248,19 @@ msgstr ""
 "`このリポジトリをフォークしている <https://help.github.com/en/articles/creating-a-pull-"
 "request/>`_ そのSDK を要求して :doc:`リポジトリリスト <../sdk>` に新しいエントリを追加してください。"
 
-#: ../../source/guidelines/sdk-development.rst:95
+#: ../../source/guidelines/sdk-development.rst:86
 msgid "Creating the project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/guidelines/sdk-development.rst:101
+#: ../../source/guidelines/sdk-development.rst:92
 msgid "Create a new repository, preferably on GitHub, with:"
 msgstr "可能であれば GitHub で新しいリポジトリを作成します:"
 
-#: ../../source/guidelines/sdk-development.rst:103
+#: ../../source/guidelines/sdk-development.rst:94
 msgid "The README with the instructions to install the SDK."
 msgstr "SDK のインストール手順の README"
 
-#: ../../source/guidelines/sdk-development.rst:104
+#: ../../source/guidelines/sdk-development.rst:95
 msgid ""
 "The `Code of Conduct <https://help.github.com/articles/adding-a-code-of-"
 "conduct-to-your-project/>`_."
@@ -306,17 +268,17 @@ msgstr ""
 "`Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-"
 "to-your-project/>`_"
 
-#: ../../source/guidelines/sdk-development.rst:109
+#: ../../source/guidelines/sdk-development.rst:100
 msgid "Testing"
 msgstr "テスト"
 
-#: ../../source/guidelines/sdk-development.rst:111
+#: ../../source/guidelines/sdk-development.rst:102
 msgid ""
 "A project with good test coverage it's more likely to be used and trusted by"
 " the developers!"
 msgstr "良好なテストカバレッジのプロジェクトは開発者にとって、より信頼のおけるものとなるでしょう。"
 
-#: ../../source/guidelines/sdk-development.rst:116
+#: ../../source/guidelines/sdk-development.rst:107
 msgid ""
 "Example of ``travis.yml`` `configuration file <https://github.com/nemtech"
 "/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_"
@@ -324,7 +286,7 @@ msgstr ""
 "``travis.yml`` `設定ファイル <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/blob/master/.travis.yml>`_ の例"
 
-#: ../../source/guidelines/sdk-development.rst:117
+#: ../../source/guidelines/sdk-development.rst:108
 msgid ""
 "Example of `unit tests  <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/tree/master/test>`_."
@@ -332,7 +294,7 @@ msgstr ""
 "`ユニットテスト <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/tree/master/test>`_ の例"
 
-#: ../../source/guidelines/sdk-development.rst:118
+#: ../../source/guidelines/sdk-development.rst:109
 msgid ""
 "Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-"
 "typescript-javascript/tree/master/e2e>`_."
@@ -340,37 +302,41 @@ msgstr ""
 "`エンドツーエンドテスト <https://github.com/nemtech/symbol-sdk-typescript-"
 "javascript/tree/master/e2e>`_ の例"
 
-#: ../../source/guidelines/sdk-development.rst:128
+#: ../../source/guidelines/sdk-development.rst:119
 msgid "Infrastucture"
 msgstr "インフラストラクチャ"
 
-#: ../../source/guidelines/sdk-development.rst:137
+#: ../../source/guidelines/sdk-development.rst:128
 msgid "Install the OpenApi generator CLI."
 msgstr "OpenAPI ジェネレータ CLI のインストール"
 
-#: ../../source/guidelines/sdk-development.rst:155
+#: ../../source/guidelines/sdk-development.rst:134
+msgid "Generate the DTOs for the programming language selected."
+msgstr "選択したプログラミング言語向けの DTO を生成する。"
+
+#: ../../source/guidelines/sdk-development.rst:146
 msgid "Example of repositories and implementations:"
 msgstr "リポジトリ実装の例:"
 
-#: ../../source/guidelines/sdk-development.rst:167
+#: ../../source/guidelines/sdk-development.rst:158
 msgid "Models"
 msgstr "モデル"
 
-#: ../../source/guidelines/sdk-development.rst:171
+#: ../../source/guidelines/sdk-development.rst:162
 msgid "Example of models implementation:"
 msgstr "モデル実装の例:"
 
-#: ../../source/guidelines/sdk-development.rst:184
+#: ../../source/guidelines/sdk-development.rst:175
 msgid ""
 "API conversions: Sometimes, the data returned by API is compressed. You "
 "might need to convert those types for the user."
 msgstr "API 変換: API によって返されるデータは圧縮される場合があります。ユーザーのこれらのタイプを変換する必要がある場合があります。"
 
-#: ../../source/guidelines/sdk-development.rst:188
+#: ../../source/guidelines/sdk-development.rst:179
 msgid "Transaction Serialization"
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/guidelines/sdk-development.rst:190
+#: ../../source/guidelines/sdk-development.rst:181
 msgid ""
 "The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
 "protocol to serialize and deserialize |codename| entities."
@@ -378,38 +344,38 @@ msgstr ""
 "`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
 "のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
 
-#: ../../source/guidelines/sdk-development.rst:205
+#: ../../source/guidelines/sdk-development.rst:196
 msgid "Install the package requirements."
 msgstr "必須パッケージをインストール"
 
-#: ../../source/guidelines/sdk-development.rst:232
+#: ../../source/guidelines/sdk-development.rst:223
 msgid "KeyPair and Cryptographic functions"
 msgstr "キーペアと暗号化関数"
 
-#: ../../source/guidelines/sdk-development.rst:234
+#: ../../source/guidelines/sdk-development.rst:225
 msgid "This section is incomplete."
 msgstr "このセクションは未完了です。"
 
-#: ../../source/guidelines/sdk-development.rst:247
+#: ../../source/guidelines/sdk-development.rst:238
 msgid "Examples of vector tests:"
 msgstr "ベクタテストの例:"
 
-#: ../../source/guidelines/sdk-development.rst:255
+#: ../../source/guidelines/sdk-development.rst:246
 msgid "Services"
 msgstr "サービス"
 
-#: ../../source/guidelines/sdk-development.rst:261
+#: ../../source/guidelines/sdk-development.rst:252
 msgid "Examples of services:"
 msgstr "サービスの例:"
 
-#: ../../source/guidelines/sdk-development.rst:271
+#: ../../source/guidelines/sdk-development.rst:262
 msgid "Documenting the SDK"
 msgstr "SDK のドキュメント"
 
-#: ../../source/guidelines/sdk-development.rst:279
+#: ../../source/guidelines/sdk-development.rst:270
 msgid "Publishing the SDK as official"
 msgstr "公式として公開されているSDK"
 
-#: ../../source/guidelines/sdk-development.rst:285
+#: ../../source/guidelines/sdk-development.rst:276
 msgid "Recommended Licenses"
 msgstr "推奨するライセンス"

@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"PO-Revision-Date: 2020-04-07 17:42+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/plugin.rst:12
+msgid "Extending Symbol"
+msgstr "Symbol の拡張"
+
+#: ../../source/concepts/plugin.rst:14
+msgid ""
+"|codename| comes with improved extensibility through its plugin-based "
+"architecture."
+msgstr "|codename| はプラグインベースのアーキテクチャにより拡張性が向上しています。"
+
+#: ../../source/concepts/plugin.rst:16
+msgid ""
+"A **plugin** is a self-contained group of functions that can be added to the"
+" |codename|'s protocol to extend its capabilities. The plugin approach "
+"allows developers to introduce different ways to alter the chain's state via"
+" transactions without modifying the core engine or disrupting other "
+"features."
+msgstr ""
+"**プラグイン** は |codename| "
+"の機能を拡張するためにプロトコルに追加できる自己完結型の機能グループです。プラグインアプローチにより開発者はコアエンジンを変更したり、他の機能を中断したりせずに、トランザクションを介してチェーンの状態を変更するさまざまな方法を導入できます。"
+
+#: ../../source/concepts/plugin.rst:24
+msgid "Architecture"
+msgstr "アーキテクチャ"
+
+#: ../../source/concepts/plugin.rst:54
+msgid ""
+"The plugin may define the following submodules internally to keep the code "
+"organized:"
+msgstr "プラグインはコードを整理しておくために、次のサブモジュールを内部で定義する場合があります:"
+
+#: ../../source/concepts/plugin.rst:1
+msgid "Submodule"
+msgstr "サブモジュール"
+
+#: ../../source/concepts/plugin.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Cache types and rules for serializing and deserializing model types to and "
+"from binary."
+msgstr "バイナリとの間でモデルタイプをシリアル化および逆シリアル化するためのキャッシュタイプとルール。"
+
+#: ../../source/concepts/plugin.rst:70
+msgid "Security"
+msgstr "セキュリティ"
