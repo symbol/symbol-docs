@@ -49,15 +49,13 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-5. Navigate to the “**Home**” page. Click on the “partial” transactions. Click on the pending transaction. Enter your password and click “**Confirm**”.
+5. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
 
 .. figure:: ../../resources/images/screenshots/add-signer-2.gif
     :align: center
     :width: 800px
 
-6. Repeat “**Step 5**” in another cosignatory account as many times as you need to satisfy the minimum approval (prior to modification) of the multisig. If it was at 1, you do not need to do this step.
-
-7. You can check that the new signer has been added by navigating to the “Multisig” page. The new signer should be listed under “**Cosignatories**”.
+6. You can check that the new signer has been added by navigating to the “Multisig” page. The new signer should be listed under “**Cosignatories**”.
 
 .. figure:: ../../resources/images/screenshots/add-signer-3.png
     :align: center

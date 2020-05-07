@@ -41,7 +41,7 @@ Prerequisites
 Method #01: Using the Desktop Wallet
 ************************************
 
-1. Log in to an account that is a cosignatory of the account you want to modify. Either Alice or Bob's account.
+1. Log in to an account that is a cosignatory (Alice or Bob) of the account you want to modify.
 
 2. Click on the “**Multisig**” tab on the left-side of the wallet.
 
@@ -57,7 +57,11 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-5. Navigate to the “**Home**” page. Click on the “**partial**” transactions. Click on the pending transaction. Enter your password and click “**Confirm**”.
+5. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
+
+.. figure:: ../../resources/images/screenshots/add-signer-2.gif
+    :align: center
+    :width: 800px
 
 7. Once the Aggregate Transaction is confirmed, you can check its new properties in the “**Multisig**” menu.
 

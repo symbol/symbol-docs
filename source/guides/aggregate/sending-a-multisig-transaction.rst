@@ -44,13 +44,19 @@ Method #01: Using the Desktop Wallet
 
 2. Click on the “**transfer**” tab.
 
-3. Enter the appropriate information for your transfer transaction. Selet the multisig account from the dropdown menu of the “FROM” field. Enter the address of the recipient. Select the mosaic you desire to send and the amount. Click “**Send**”. Review the information on the popup and enter your wallet password. Click “**Confirm**”
+3. Enter the appropriate information for your transfer transaction. Select the multisig account from the dropdown menu of the “FROM” field. Enter the address of the recipient. Select the mosaic you desire to send and the amount. Click “**Send**”. Review the information on the popup and enter your wallet password. Click “**Confirm**”
 
 .. figure:: ../../resources/images/screenshots/multisig-transaction-1.gif
     :align: center
     :width: 800px
 
-4. Once the transaction is confirmed, you should see changes in the respective account balances.
+4. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
+
+.. figure:: ../../resources/images/screenshots/add-signer-2.gif
+    :align: center
+    :width: 800px
+
+5. Once the transaction is confirmed, you should see changes in the respective account balances.
 
 *************************
 Method #02: Using the SDK
