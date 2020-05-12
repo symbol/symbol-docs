@@ -40,7 +40,7 @@ Bob—the notary from the :doc:`assigning metadata entries to an account guide <
 
 .. figure:: ../../resources/images/examples/metadata-update.png
     :align: center
-    :width: 400px
+    :width: 450px
 
 1. Define a new **AccountMetadataTransaction** setting Alice's account as the metadata target.
 To indicate that the certificate has expired, Bob decides to add the new value ``000000`` to the metadata entry with key ``CERT``.

@@ -22,7 +22,7 @@ However, to make sure Alice and Bob receive the funds at the same time, he decid
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
-    :width: 400px
+    :width: 500px
 
     Sending transactions to different recipients atomically
 

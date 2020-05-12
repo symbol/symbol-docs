@@ -26,7 +26,7 @@ Before distributing the shares between the investors, ComfyClothingCompany wants
 
 .. figure:: ../../resources/images/examples/metadata-mosaic.png
     :align: center
-    :width: 400px
+    :width: 550px
 
 *************
 Prerequisites
