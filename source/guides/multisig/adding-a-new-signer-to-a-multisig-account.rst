@@ -23,7 +23,7 @@ However, they don't want to increase the number of signatures needed to accept t
 
 .. figure:: ../../resources/images/examples/multisig-2-of-3.png
     :align: center
-    :width: 350px
+    :width: 400px
 
     2-of-3 multisig account example
 
