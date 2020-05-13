@@ -58,7 +58,7 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symb
     convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
     convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C';
+const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 // replace with symbol.xym id
@@ -68,7 +68,7 @@ const networkCurrencyDivisibility = 6;
 const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
