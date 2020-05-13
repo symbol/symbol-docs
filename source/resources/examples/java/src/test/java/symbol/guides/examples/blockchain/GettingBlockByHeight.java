@@ -38,7 +38,7 @@ class GettingBlockByHeight {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://api-01.us-west-1.symboldev.network:3000/")) {
+            "http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000")) {
             final BlockRepository blockRepository = repositoryFactory.createBlockRepository();
 
             // Replace with block height
