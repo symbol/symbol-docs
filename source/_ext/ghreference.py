@@ -17,7 +17,7 @@ class GitHubReference(Directive):
     option_spec = {
         'folder': directives.unchanged,
     }
-    excluded_file_names = ['SNAPSHOT', '.nojekyll', 'template']
+    excluded_file_names = ['SNAPSHOT', '.nojekyll', 'template', 'openapi3.yml','postman.json']
     docs_url = 'https://nemtech.github.io/'
 
     def run(self):
@@ -39,11 +39,6 @@ class GitHubReference(Directive):
                 else:
                     uri = self.docs_url + self.arguments[0].split('/')[1] + '/' + line.path
                     version = line.path.split('/')[-1]
-
-                if count == 1:
-                    version = version + ' (next)'
-                elif count == 2:
-                    version = version + ' (latest)'
 
                 if not any(excluded_file_name in version for excluded_file_name in self.excluded_file_names):
                     item = nodes.list_item()

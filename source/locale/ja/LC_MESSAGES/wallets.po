@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"PO-Revision-Date: 2020-04-07 17:42+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/wallets.rst:12
+msgid "Wallets"
+msgstr "ウォレット"
+
+#: ../../source/wallets.rst:18
+msgid "Desktop Wallet"
+msgstr "デスクトップウォレット"
+
+#: ../../source/wallets.rst:24
+msgid ""
+"Cross-platform client for Symbol to manage accounts, mosaics, namespaces, "
+"and issue transactions. |desktop-wallet| is available for Mac, Windows, and "
+"as a web application."
+msgstr ""
+"アカウント、モザイク、名前空間を管理し、トランザクションを発行するための Symbol 用クロスプラットフォームクライアント。 |desktop-"
+"wallet| は Mac, Windows と Web アプリケーションが提供されています。"
+
+#: ../../source/wallets.rst:27
+msgid "The desktop wallet is only available for the public test network."
+msgstr "デスクトップウォレットはパブリックテストネットワークでのみ使用できます。"
+
+#: ../../source/wallets.rst:30
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/wallets.rst:32
+msgid ""
+"1. Download the |desktop-wallet| from the `releases section "
+"<https://github.com/nemfoundation/symbol-desktop-wallet/releases>`_. The "
+"executable file for your operative system is under the \"Assets\" tab."
+msgstr ""
+"1. `リリースセクション <https://github.com/nemfoundation/symbol-desktop-"
+"wallet/releases>`_ から |desktop-wallet| をダウンロードします。あなたの OS 向け実行可能ファイルは "
+"\"Assets\" タブの下にあります。"
+
+#: ../../source/wallets.rst:35
+msgid "Launch the executable file and follow the installation instructions."
+msgstr "実行可能ファイルを起動し、インストール手順に従います。"
+
+#: ../../source/wallets.rst:37
+msgid ""
+"Follow this :doc:`step-by-step guide <guides/account/creating-an-account>` "
+"to create a new account."
+msgstr ""
+":doc:`ステップ・バイ・ステップガイド <guides/account/creating-an-account>` "
+"に従って新しいアカウントを作成します。"
+
+#: ../../source/wallets.rst:40
+msgid "Guides"
+msgstr "ガイド"

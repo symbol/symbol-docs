@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2019\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,57 +21,74 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:18
+#: ../../source/guides/namespace/registering-a-namespace.rst:20
 msgid "Registering a namespace"
 msgstr "ネームスペースの取得"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:20
-msgid "Create a unique place for your assets."
-msgstr "あなたのアセット用に一意な場所を作成する。"
+#: ../../source/guides/namespace/registering-a-namespace.rst:22
+msgid "Create a unique name to identify your assets."
+msgstr "アセットを識別する、一意の名前を作成します。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:24
+#: ../../source/guides/namespace/registering-a-namespace.rst:26
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:26
+#: ../../source/guides/namespace/registering-a-namespace.rst:28
 msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
+"Complete the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`."
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:27
+#: ../../source/guides/namespace/registering-a-namespace.rst:29
+msgid "Create a new :ref:`account <setup-creating-a-test-account>`."
+msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:30
 msgid ""
-"Have one :ref:`account with network currency <setup-creating-a-test-"
-"account>`"
-msgstr ":ref:`ネットワーク通貨を持つアカウント <setup-creating-a-test-account>`"
+"Load the account with enough |networkcurrency| to pay for transaction fees."
+msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:31
-msgid "Method #01: Using the SDK"
-msgstr "方法 #01: SDK を使用する"
+#: ../../source/guides/namespace/registering-a-namespace.rst:34
+msgid "Method #01: Using the Desktop Wallet"
+msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:33
+#: ../../source/guides/namespace/registering-a-namespace.rst:36
+msgid "Click on \"**Namespace**\" on the left-side menu."
+msgstr "左側のメニューの \"**ネームスペース**\" をクリックします。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:42
+msgid "Click on the \"**Create new namespaces**\" tab."
+msgstr "\"**Create new namespaces**\" タブをクリックします。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:48
 msgid ""
-"Choose a **unique name** for your namespace. One common option is to use "
-"your company's or own name."
-msgstr "ネームスペースのために **一意な名前** を選択してください。一般的にはあなたの会社または自分の名前を使用します。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:35
-msgid ""
-"In this example, we are going to register a namespace named ``foo``. Check "
-"if your namespace name is **available**."
-msgstr "この例では、 ``foo`` と呼ばれるネームスペースを取得します。あなたのネームスペースが **有効** かどうかを確認してください。"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:58
-msgid ""
-"Is the namespace available? Try to register it before someone else does it! "
-"Announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-"
-"transaction>` with the chosen name and renting duration expressed in blocks."
+"3. Enter the information for your new namespace. Click \"**Send**\". Verify "
+"the information on the popup and enter your wallet password. Click "
+"\"**Confirm**\"."
 msgstr ""
-"新しいネームスペースを取得するために、選んだ名前とブロック数で示されるレンタル期間を設定した "
-":ref:`NamespaceRegistrationTransaction1 <namespace-registration-"
-"transaction>` をアナウンスしてください。"
+"3. 新しいネームスペースの情報を入力します。 \"**送信**\" をクリックします。ポップアップの情報を確認し、ウォレットのパスワードを入力します。"
+" \"**確認**\" をクリックします。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:72
+#: ../../source/guides/namespace/registering-a-namespace.rst:51
+msgid ""
+"The name must be unique in the network, and may have a maximum length of 64 "
+"characters, and the allowed characters are a, b, c, …, z, 0, 1, 2, …, 9, _ ,"
+" -."
+msgstr ""
+"名前はネットワーク上で一意でなければならず、最大64文字、利用可能な文字は a, b, c, …, z, 0, 1, 2, …, 9, _ , - "
+"です。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:57
+msgid ""
+"4. You can check that the namespace has been created by going back to the "
+"\"**Owned namespaces**\" tab. If you don’t see your namespace, try clicking "
+"on the update icon."
+msgstr ""
+"4. \"**Owned namespaces**\" "
+"タブに戻って、ネームスペースが作成されたことを確認できます。ネームスペースが表示されない場合は、更新アイコンをクリックしてみてください。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:64
+#: ../../source/guides/namespace/registering-a-namespace.rst:94
 msgid ""
 "To keep the ownership of your namespace, you will have to :doc:`extend its "
 "duration before it expires <extending-a-namespace-registration-period>`."
@@ -79,18 +96,53 @@ msgstr ""
 "あなたのネームスペース所有権を維持するためには :doc:`期限が切れる前にネームスペース期間の延長 <extending-a-namespace-"
 "registration-period>` を行ってください。"
 
-#: ../../source/guides/namespace/registering-a-namespace.rst:76
-msgid "Method #02: Using the CLI"
-msgstr "方法 #02: CLI を使用する"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:84
-msgid "What's next?"
-msgstr "次は？"
-
-#: ../../source/guides/namespace/registering-a-namespace.rst:86
+#: ../../source/guides/namespace/registering-a-namespace.rst:66
 msgid ""
-"When the transaction is confirmed, :doc:`register a subnamespace "
+"When the transaction is confirmed, you can :doc:`register a subnamespace "
 "<registering-a-subnamespace>` following the next guide."
 msgstr ""
 "トランザクションが承認されたら、次のガイドの :doc:`サブネームスペースの取得 <registering-a-subnamespace>` "
-"へ進みます。"
+"へ進めます。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:70
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:72
+msgid ""
+"Choose a **unique name** for your namespace. One common option is to use "
+"your company's or own name."
+msgstr "ネームスペースのために **一意な名前** を選択してください。一般的にはあなたの会社または自分の名前を使用します。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:74
+msgid ""
+"Check if the namespace name is **available**. For example, you can use the "
+":ref:`Command-line Interface <wallet-cli>` to check if the namespace has "
+"been registered."
+msgstr ""
+"ネームスペース名が **利用可能** かどうかを確認します。例えば、 :ref:`コマンドラインインターフェイス <wallet-cli>` "
+"を使用して、ネームスペースが登録されているかどうかを確認できます。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:80
+msgid ""
+"Is the namespace available? Try to register it before someone else does it! "
+"Open a new file and announce a :ref:`NamespaceRegistrationTransaction"
+"<namespace-registration-transaction>` with the chosen name and renting "
+"duration expressed in blocks."
+msgstr ""
+"このネームスペースは有効でしょうか？誰かに取得される前に登録しましょう！新しいネームスペースを取得するために、新しいファイルを開いて、選んだ名前とブロック数で示されるレンタル期間を設定した"
+" :ref:`NamespaceRegistrationTransaction1 <namespace-registration-"
+"transaction>` をアナウンスしてください。"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:98
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"
+
+#: ../../source/guides/namespace/registering-a-namespace.rst:100
+msgid ""
+"To create a new namespace, open a terminal window and run the following "
+"command. Replace ``foo`` with the chosen namespace name and ``1000`` with "
+"the namespace duration expressed in blocks."
+msgstr ""
+"新しいネームスペースを作成するには、ターミナルウィンドウを開き、次のコマンドを実行します。 ``foo`` を選択したネームスペース名に置き換え、 "
+"``1000`` をブロック数で表したネームスペース期間で置き換えます。"

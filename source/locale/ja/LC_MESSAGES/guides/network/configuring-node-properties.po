@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,29 +21,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-node-properties.rst:18
+#: ../../source/guides/network/configuring-node-properties.rst:19
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:20
+#: ../../source/guides/network/configuring-node-properties.rst:21
 msgid "Customize the node configurable parameters."
 msgstr "ノード設定パラメータの変更"
 
-#: ../../source/guides/network/configuring-node-properties.rst:24
+#: ../../source/guides/network/configuring-node-properties.rst:25
 msgid "Packages"
 msgstr "パッケージ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:26
+#: ../../source/guides/network/configuring-node-properties.rst:27
 msgid ""
 "The instructions to configure the node vary depending on the package used to"
 " deploy the network."
 msgstr "ノードを構成する手順はネットワークの展開に使用するパッケージによって異なります。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:29
+#: ../../source/guides/network/configuring-node-properties.rst:30
 msgid "Testnet Bootstrap"
 msgstr "テストネットブートストラップ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:31
+#: ../../source/guides/network/configuring-node-properties.rst:32
 msgid ""
 "After running a node for the first time, the file ``config-input.yaml`` will"
 " be generated with the default values. Depending on the assembly chosen, "
@@ -54,7 +54,7 @@ msgstr ""
 " ``peer-assembly/peer-node/`` または ``api-harvest-assembly/api-node`` "
 "の下に配置されます。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:34
+#: ../../source/guides/network/configuring-node-properties.rst:35
 msgid ""
 "If the node service is running, run ``sudo docker-compose down`` under the "
 "same directory you executed the ``up`` command."
@@ -62,21 +62,21 @@ msgstr ""
 "ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
 "を実行してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:36
+#: ../../source/guides/network/configuring-node-properties.rst:37
 msgid "Edit the properties file ``config-input.yaml`` with a text editor."
 msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:38
+#: ../../source/guides/network/configuring-node-properties.rst:39
 msgid ""
 "Save the changes and apply them with the command ``sudo docker-compose up "
 "--build --detach``."
 msgstr "変更を保存して ``sudo docker-compose up --build --detach`` コマンドで適用してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:41
+#: ../../source/guides/network/configuring-node-properties.rst:42
 msgid "Service Bootstrap"
 msgstr "サービスブートストラップ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:43
+#: ../../source/guides/network/configuring-node-properties.rst:44
 msgid ""
 "Find under the directory ``build/catapult-config`` the generated properties "
 "files for the ``peer`` and ``api`` nodes that compose the network."
@@ -84,11 +84,11 @@ msgstr ""
 "``build/catapult-config`` ディレクトリにネットワークを構成する ``peer`` および ``api`` "
 "ノード用に生成されたプロパティファイルが格納されています。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:45
+#: ../../source/guides/network/configuring-node-properties.rst:46
 msgid "Stop all the services with the command ``./cmds/stop-all``."
 msgstr "すべてのサービスを停止するには ``./cmds/stop-all`` を使用します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:47
+#: ../../source/guides/network/configuring-node-properties.rst:48
 msgid ""
 "To edit the node properties assigned to the ``peer-node-0``, open the target"
 " file under ``peer-node-0/userconfig/resources`` with a text editor."
@@ -96,16 +96,16 @@ msgstr ""
 "``peer-node-0`` に割り当てられたノードプロパティを変更するには、 ``peer-"
 "node-0/userconfig/resources`` の対象ファイルをテキストエディタで開きます。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:49
+#: ../../source/guides/network/configuring-node-properties.rst:50
 msgid ""
 "Save the changes and apply them with the command ``./cmds/start-all -d``."
 msgstr "変更を保存して、 ``./cmds/start-all -d`` コマンドで適用します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:55
+#: ../../source/guides/network/configuring-node-properties.rst:56
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:57
+#: ../../source/guides/network/configuring-node-properties.rst:58
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
@@ -132,10 +132,6 @@ msgstr "説明"
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Default"
 msgstr "デフォルト"
-
-#: ../../source/guides/network/configuring-node-properties.rst:1
-msgid "Boot private key."
-msgstr "ブート秘密鍵"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid ""

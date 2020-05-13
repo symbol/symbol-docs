@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-11-25 18:21+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,39 +21,104 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/account/creating-an-account.rst:18
+#: ../../source/guides/account/creating-an-account.rst:20
 msgid "Creating an account"
 msgstr "アカウントの作成"
 
-#: ../../source/guides/account/creating-an-account.rst:20
-msgid "How to create a new |codename| account."
-msgstr "|codename| アカウントを作成する"
+#: ../../source/guides/account/creating-an-account.rst:22
+msgid ""
+"Create a new |codename| account to start sending and receiving transactions."
+msgstr "トランザクションの送信と受信をするために、新しい |codename| アカウントを作成します。"
 
-#: ../../source/guides/account/creating-an-account.rst:24
+#: ../../source/guides/account/creating-an-account.rst:26
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/account/creating-an-account.rst:26
+#: ../../source/guides/account/creating-an-account.rst:28
 msgid ""
-"Finish the :doc:`getting started section <../../getting-started/setup-"
-"workstation>`"
-msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を終了している"
-
-#: ../../source/guides/account/creating-an-account.rst:30
-msgid "Method #01: Using the SDK"
-msgstr "方法 #01: SDK を使用する"
+"Complete the :doc:`getting started section <../../getting-started/setup-"
+"workstation>`."
+msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
 #: ../../source/guides/account/creating-an-account.rst:32
-msgid ""
-"Open a new file and run the following code snippet to create an account."
-msgstr "アカウントを作成するために、新しいファイルを開いて、次のコードスニペットを実行してください。"
+msgid "Method #01: Using the Desktop Wallet"
+msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/account/creating-an-account.rst:51
+#: ../../source/guides/account/creating-an-account.rst:34
+msgid ""
+"Open up the :ref:`Desktop Wallet <wallet-desktop>` application and click on "
+"the \"**Create Mnemonic**\" button."
+msgstr ""
+":ref:`デスクトップウォレット <wallet-desktop>` アプリケーションを開き、 \"**ニーモニックの作成**\" "
+"ボタンを押下します。"
+
+#: ../../source/guides/account/creating-an-account.rst:40
+msgid ""
+"2. Enter your profile information, including your profile name, network type"
+" and password. Be sure to select the correct network type for your desired "
+"purpose. Once you have filled out the page with the appropriate information,"
+" click \"**Next**\"."
+msgstr ""
+"2. "
+"プロファイル名、ネットワークタイプ、パスワードなどのプロファイル情報を入力します。目的に合った正しいネットワークタイプを選択してください。ページで適切な情報を入力したら"
+" \"**次へ**\" をクリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:48
+msgid ""
+"3. On the next page, the Desktop Wallet uses the movement of your mouse "
+"cursor to generate a random mnemonic passphrase for your wallet. Shift your "
+"mouse around the screen until the progress bar reaches 100% and the "
+"application automatically moves you to the next page."
+msgstr ""
+"3. "
+"次のページでは、デスクトップウォレットがマウスカーソルの動きを使用して、ウォレットのランダムなニーモニックパスフレーズを生成します。進行状況バーが100％に達し、アプリケーションが自動的に次のページに移動するまで、画面上でマウスを動かします。"
+
+#: ../../source/guides/account/creating-an-account.rst:55
+msgid ""
+"Click \"**Display mnemonic words**\" to view your private passphrase. Be "
+"sure to store this information as it stores all the information that is "
+"needed to recover your assets in the wallet in case of emergencies. Storing "
+"this passphrase somewhere offline is preferred. Click \"**Next**\"."
+msgstr ""
+"\"**ニーモニックワードを表示**\" "
+"をクリックしてプライベートパスフレーズを表示します。この情報は緊急時にウォレットの資産を復旧するために必要なすべての情報が格納されているため、必ず保存してください。このパスフレーズをオフラインで保存することを推奨します。"
+" \"**次へ**\" をクリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:58
+msgid ""
+"Verify that you have backed up your mnemonic passphrase. Click the "
+"passphrase in the correct order. Click \"**Next**\"."
+msgstr "ニーモニックパスフレーズをバックアップしたことを確認します。正しい順序でパスフレーズをクリックします。 \"**次へ**\" クリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:64
+msgid ""
+"Read the safety tips on the next page and click \"**Next**\". "
+"Congratulations, your account should be ready for use!"
+msgstr ""
+"次のページの安全に関するヒントを読んだら \"**次へ**\" をクリックします。おめでとうございます。アカウントが使用できるようになっているはずです。"
+
+#: ../../source/guides/account/creating-an-account.rst:68
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
+
+#: ../../source/guides/account/creating-an-account.rst:70
+msgid ""
+"To create an account, open a new file and run the following code snippet. Be"
+" sure to select the correct network type for your desired purpose."
+msgstr "アカウントを作成するには、新しいファイルを開き、次のコードスニペットを実行します。目的に合った正しいネットワークタイプを選択してください。"
+
+#: ../../source/guides/account/creating-an-account.rst:90
 msgid ""
 "If you already have a private key, you can use it to define a new "
 "``Account`` object."
 msgstr "既に秘密鍵を持っている場合は、それを使用して ``Account`` オブジェクトを定義することができます。"
 
-#: ../../source/guides/account/creating-an-account.rst:72
-msgid "Method #02: Using the CLI"
-msgstr "方法 #02: CLI を使用する"
+#: ../../source/guides/account/creating-an-account.rst:111
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"
+
+#: ../../source/guides/account/creating-an-account.rst:113
+msgid ""
+"Open a terminal window and run the following command to create a new "
+"account."
+msgstr "ターミナルを開き、新しいアカウントを作成するために、次のコマンドを実行します。"

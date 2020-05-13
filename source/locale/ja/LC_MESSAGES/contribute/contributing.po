@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/contributing.rst:11
+#: ../../source/contribute/contributing.rst:12
 msgid "Guidelines"
 msgstr "ガイドライン"
 
-#: ../../source/contribute/contributing.rst:13
+#: ../../source/contribute/contributing.rst:14
 msgid ""
 "First off, thank you for considering contributing to |codename|! Follow "
 "these guidelines for contributing to |codename| projects, achieving the best"
@@ -34,7 +34,7 @@ msgstr ""
 "まずはじめに、|codename| への貢献に感謝します。これらのガイドラインに従って、|codename| "
 "プロジェクトに貢献し、より少ない労力で最高の品質を達成してください。"
 
-#: ../../source/contribute/contributing.rst:16
+#: ../../source/contribute/contributing.rst:17
 msgid ""
 "If you want to contribute to an existent project, read as well the "
 "CONTRIBUTING.md file that you will find at the root-level folder of the "
@@ -42,49 +42,49 @@ msgid ""
 msgstr ""
 "既存のプロジェクトに貢献したい場合は、そのリポジトリのプロジェクトフォルダのルートにある CONTRIBUTING.md ファイルを読んでください"
 
-#: ../../source/contribute/contributing.rst:20
+#: ../../source/contribute/contributing.rst:21
 msgid "SDK"
 msgstr "SDK"
 
-#: ../../source/contribute/contributing.rst:22
+#: ../../source/contribute/contributing.rst:23
 msgid ":doc:`Summary <../sdk>`"
 msgstr ":doc:`概要 <../sdk>`"
 
-#: ../../source/contribute/contributing.rst:23
+#: ../../source/contribute/contributing.rst:24
 msgid ":doc:`Developing an SDK <../guidelines/sdk-development>`"
 msgstr ":doc:`SDK の開発 <../guidelines/sdk-development>`"
 
-#: ../../source/contribute/contributing.rst:24
+#: ../../source/contribute/contributing.rst:25
 msgid ":doc:`Documenting an SDK <../guidelines/sdk-documentation>`"
 msgstr ":doc:`SDK のドキュメント <../guidelines/sdk-documentation>`"
 
-#: ../../source/contribute/contributing.rst:25
+#: ../../source/contribute/contributing.rst:26
 msgid ""
 ":doc:`Generating transaction builders <../guidelines/generating-transaction-"
 "builders>`"
 msgstr ":doc:`トランザクションビルダの生成 <../guidelines/generating-transaction-builders>`"
 
-#: ../../source/contribute/contributing.rst:26
+#: ../../source/contribute/contributing.rst:27
 msgid ":doc:`Writing a transaction schema <../guidelines/writing-a-schema>`"
 msgstr ":doc:`トランザクションスキーマの記述 <../guidelines/writing-a-schema>`"
 
-#: ../../source/contribute/contributing.rst:30
+#: ../../source/contribute/contributing.rst:31
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#: ../../source/contribute/contributing.rst:32
+#: ../../source/contribute/contributing.rst:33
 msgid ":doc:`Style guide <../guidelines/style-guide>`"
 msgstr ":doc:`スタイルガイド <../guidelines/style-guide>`"
 
-#: ../../source/contribute/contributing.rst:33
+#: ../../source/contribute/contributing.rst:34
 msgid ":doc:`Suggesting changes <../guidelines/suggesting-changes>`"
 msgstr ":doc:`変更の提案 <../guidelines/suggesting-changes>`"
 
-#: ../../source/contribute/contributing.rst:34
+#: ../../source/contribute/contributing.rst:35
 msgid ":doc:`Writing a guide <../guidelines/writing-a-guide>`"
 msgstr ":doc:`ガイドの記述 <../guidelines/writing-a-guide>`"
 
-#: ../../source/contribute/contributing.rst:35
+#: ../../source/contribute/contributing.rst:36
 msgid ""
 ":doc:`Translating the documentation <../guidelines/translating-the-"
 "documentation>`"

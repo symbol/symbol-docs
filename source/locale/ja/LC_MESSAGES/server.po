@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2019, NEM
+# Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.2\n"
+"Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 18:31+0000\n"
+"POT-Creation-Date: 2020-05-01 04:41+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,18 +21,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/server.rst:11
+#: ../../source/server.rst:12
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/server.rst:13
+#: ../../source/server.rst:14
 msgid ""
 "|codename|-based networks rely on nodes to provide a trustless, high-"
 "performance, and secure blockchain platform."
 msgstr ""
 "|codename| ベースのネットワークは、トラストレスな、高性能で安全なブロックチェーンプラットフォームを提供するためにノードに依存しています。"
 
-#: ../../source/server.rst:15
+#: ../../source/server.rst:16
 msgid ""
 "These nodes are deployed using |catapult-server| software, a C++ rewrite of "
 "the previous Java-written NEM distributed ledger that has been running since"
@@ -41,27 +41,27 @@ msgstr ""
 "これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-"
 "server| ソフトウェアを使用してデプロイされます。"
 
-#: ../../source/server.rst:17
+#: ../../source/server.rst:18
 msgid ""
 "Learn more about the protocol by reading the |whitepaper| and this "
-":doc:`documentation <concepts/account>`."
+":doc:`documentation <concepts/node>`."
 msgstr ""
-"プロトコルについてより詳しい情報は |whitepaper| と :doc:`ドキュメント <concepts/account>` を参照してください。"
+"プロトコルについてより詳しい情報は |whitepaper| と :doc:`ドキュメント <concepts/node>` を参照してください。"
 
-#: ../../source/server.rst:21
+#: ../../source/server.rst:22
 msgid "Building the image"
 msgstr "イメージのビルド"
 
-#: ../../source/server.rst:23
+#: ../../source/server.rst:24
 msgid ""
 "To compile catapult-server source code, follow the building |instructions|."
 msgstr "catapult-server をソースコードからコンパイルするには |instructions| に従ってください。"
 
-#: ../../source/server.rst:27
+#: ../../source/server.rst:28
 msgid "Running catapult-server"
 msgstr "catapult-server の起動"
 
-#: ../../source/server.rst:29
+#: ../../source/server.rst:30
 msgid ""
 "catapult-server executable can be used either to run different types of "
 "nodes or to launch new networks. This section contains the instructions on "
@@ -71,17 +71,17 @@ msgstr ""
 "実行可能ファイルは、様々なタイプのノードを立ち上げたり、新しいネットワークを起動したりするために使用できます。このセクションでは色々な目的で "
 "catapult-server を実行する方法について説明します。"
 
-#: ../../source/server.rst:33
+#: ../../source/server.rst:34
 msgid "Test network node"
 msgstr "テストネットワークノード"
 
-#: ../../source/server.rst:35
+#: ../../source/server.rst:36
 msgid ""
 "Developers can deploy test net nodes to experiment with the offered "
 "transaction set in a live network without the loss of valuable assets."
 msgstr "開発者はテストネットノードを実験的に使用することで、貴重な資産を失うことなく、様々なトランザクションを試すことができます。"
 
-#: ../../source/server.rst:37
+#: ../../source/server.rst:38
 msgid ""
 "To run a test net node, follow :doc:`this guide <guides/network/running-a"
 "-test-net-node>`."
@@ -89,33 +89,34 @@ msgstr ""
 "テストネットのノードを起動するには、:doc:`このガイド <guides/network/running-a-test-net-node>` "
 "に従ってください。"
 
-#: ../../source/server.rst:40
+#: ../../source/server.rst:41
 msgid "Main network node"
 msgstr "メインネットワークノード"
 
-#: ../../source/server.rst:42
+#: ../../source/server.rst:43
 msgid ""
 "At the time of writing, the main public network has not been launched. "
 "Follow the latest updates about the public launch on the |forum|."
 msgstr ""
 "執筆時点でメインのパブリックネットワークは開始されていません。 |forum| にてパブリックのローンチに関する最新情報を捕捉してください。"
 
-#: ../../source/server.rst:46
+#: ../../source/server.rst:47
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/server.rst:48
+#: ../../source/server.rst:49
 msgid ""
 "With |codename|, businesses can launch and extend private networks by "
-"developing custom plugins and extensions at the protocol level. The package "
-"|catapult-service-bootstrap| contains the necessary setup scripts to deploy "
-"a network for testing and development purposes with just one command."
+"developing :doc:`custom plugins <concepts/plugin>` and extensions at the "
+"protocol level. The package |catapult-service-bootstrap| contains the "
+"necessary setup scripts to deploy a network for testing and development "
+"purposes with just one command."
 msgstr ""
-"|codename| "
-"を使用すると、企業はプロトコルレベルでカスタムプラグインと拡張機能を開発することにより、プライベートネットワークを起動および拡張できます"
-"。|catapult-service-bootstrap| パッケージは開発と学習目的の構築を、一つのコマンドで行うスクリプトが含まれています。"
+"|codename| を使用すると、企業はプロトコルレベルで  :doc:`custom plugins <concepts/plugin>` "
+"と拡張機能を開発することにより、プライベートネットワークを起動および拡張できます。|catapult-service-bootstrap| "
+"パッケージは開発と学習目的の構築を、一つのコマンドで行うスクリプトが含まれています。"
 
-#: ../../source/server.rst:51
+#: ../../source/server.rst:52
 msgid ""
 "To run a private test net, follow :doc:`this guide "
 "<guides/network/creating-a-private-test-net>`."
@@ -123,21 +124,21 @@ msgstr ""
 "プライベートのテストネットを起動するには、:doc:`このガイド <guides/network/creating-a-private-test-"
 "net>` に従ってください。"
 
-#: ../../source/server.rst:54
+#: ../../source/server.rst:55
 msgid "Private network"
 msgstr "プライベートネットワーク"
 
-#: ../../source/server.rst:56
+#: ../../source/server.rst:57
 msgid ""
 "Instructions on how to launch a secure and production-ready private chain "
 "will be released here."
 msgstr "安全で本番環境に対応したプライベートチェーンを開始する方法についてはこちらをご覧ください。"
 
-#: ../../source/server.rst:62
+#: ../../source/server.rst:63
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/server.rst:64
+#: ../../source/server.rst:65
 msgid ""
 "Catapult server comes with tools to check the health of the network, "
 "generate nemesis blocks, create keypairs, recover the server in the event of"
@@ -146,31 +147,31 @@ msgstr ""
 "Catapult サーバーにはネットワークの健全性チェック、nemesis "
 "ブロックの生成、キーペアの作成、突然の終了時のサーバ復旧などを行うツールが付属しています。"
 
-#: ../../source/server.rst:66
+#: ../../source/server.rst:67
 msgid "You can find them inside of ``catapult-server/build/bin``."
 msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
 
-#: ../../source/server.rst:71
+#: ../../source/server.rst:72
 msgid "Generates keypairs and addresses."
 msgstr "キーペアとアドレスの生成。"
 
-#: ../../source/server.rst:73 ../../source/server.rst:108
-#: ../../source/server.rst:137 ../../source/server.rst:164
-#: ../../source/server.rst:185 ../../source/server.rst:204
+#: ../../source/server.rst:74 ../../source/server.rst:109
+#: ../../source/server.rst:138 ../../source/server.rst:165
+#: ../../source/server.rst:186 ../../source/server.rst:205
 msgid "Options"
 msgstr "オプション"
 
-#: ../../source/server.rst:91 ../../source/server.rst:126
-#: ../../source/server.rst:153 ../../source/server.rst:174
-#: ../../source/server.rst:193
+#: ../../source/server.rst:92 ../../source/server.rst:127
+#: ../../source/server.rst:154 ../../source/server.rst:175
+#: ../../source/server.rst:194
 msgid "Command"
 msgstr "コマンド"
 
-#: ../../source/server.rst:97
+#: ../../source/server.rst:98
 msgid "If you want the save the output, add an output stream at the end:"
 msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
 
-#: ../../source/server.rst:106
+#: ../../source/server.rst:107
 msgid ""
 "Creates a nemesis block out of a `mijin-test.properties  "
 "<https://github.com/nemtech/catapult-"
@@ -181,13 +182,13 @@ msgstr ""
 "server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
 "nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
 
-#: ../../source/server.rst:135
+#: ../../source/server.rst:136
 msgid ""
 "Executes CPU-based performance tests of catapult functions, such as hashing "
 "or encryption."
 msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
 
-#: ../../source/server.rst:162
+#: ../../source/server.rst:163
 msgid ""
 "Outputs node info, partner node connectivity info, and a partner node table "
 "for known peers within :properties:`peers-p2p.json <peers-p2p.json>` and "
@@ -197,13 +198,13 @@ msgstr ""
 "api.json <peers-api.json>` "
 "内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
 
-#: ../../source/server.rst:183
+#: ../../source/server.rst:184
 msgid ""
 "Generates the list of status errors that the server might return after "
 "receiving a transaction."
 msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
 
-#: ../../source/server.rst:202
+#: ../../source/server.rst:203
 msgid ""
 "Checks the health and displays statistics (like the unconfirmed transaction "
 "cache) for the nodes found inside of :properties:`peers-p2p.json <peers-"
