@@ -44,7 +44,7 @@ Method #01: Using the Desktop Wallet
 
 6. You can check that the signer has been removed by going back to the “**multisig**” page.
 
-.. figure:: ../../resources/images/screenshots/remove-signer-screenshot.gif
+.. figure:: ../../resources/images/screenshots/remove-signer-screenshot.png
     :align: center
     :width: 800px
 
