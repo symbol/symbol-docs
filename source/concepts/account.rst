@@ -6,7 +6,7 @@ An account is a :ref:`key pair <keypair>` (private and public key) associated wi
 In other words, you have a **deposit box**, which only you can modify with your private key.
 
 Think of an account as **container for assets**.
-It can be used to hold XEM or other mosaics, whether they are tokens or specialized assets.
+It can be used to hold XYM or other mosaics, whether they are tokens or specialized assets.
 
 Moreover, |codename| accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
 
@@ -74,4 +74,3 @@ Guides
     :sort:
 
 Continue: :doc:`Mosaics <mosaic>`.
-

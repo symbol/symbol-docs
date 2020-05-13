@@ -29,8 +29,28 @@ Prerequisites
 - Have an account with a namespace.
 - Have an account with enough |networkcurrency| to pay for the transaction and renewal fees.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Click on the “**Namespaces**” on the left-side menu.
+
+2. Click on the  “**Edit**” button (pen symbol) for the namespace you desire to extend the duration of. Then click on “**Extend duration**”.
+
+.. figure:: ../../resources/images/screenshots/extend-namespace-1.gif
+    :align: center
+    :width: 800px
+
+3. Enter the amount of blocks to extend the duration of the namespace. Select the amount of fees you are willing to spend. Click “**Send**”.
+
+4. Review the information, enter your wallet password, and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/extend-namespace-2.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Get your namespace information, and inspect the value of the property ``endHeight``.
@@ -98,7 +118,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     endHeight:      54000
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
 
 To extend the namespace duration, open a terminal window and run the following command.
