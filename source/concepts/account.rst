@@ -37,6 +37,19 @@ Address
 Each account has a unique :ref:`address <address>` derived from the public key.
 Normally, the address is shared instead of the public key because it is shorter and gathers information about the network.
 
+Hierarchical Deterministic Wallets
+===========
+
+Symbol supports a multi-account hierarchy enabling the generation of multiple public keys without revealing the private key.
+
+The deterministic keys from which the accounts will be derived from are serialized into human-readable words in Mnemonic codes.
+
+Symbol only uses the **hardened child key derivation** scheme of derivation. Hardened child keys are derived in the following manner:
+
+.. math::
+
+    Hardened child key = hash(parent private key + index)
+
 Balance
 =======
 
