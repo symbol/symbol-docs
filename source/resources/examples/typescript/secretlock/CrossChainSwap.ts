@@ -21,7 +21,7 @@ import {sha3_256} from 'js-sha3';
 import {
     Account,
     Deadline,
-    HashType,
+    LockHashAlgorithm,
     Mosaic,
     MosaicId,
     NetworkType,
@@ -60,7 +60,7 @@ const tx1 = SecretLockTransaction.create(
     Deadline.create(),
     new Mosaic(new MosaicId('00D3378709746FC4'), UInt64.fromUint(10)),
     UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
-    HashType.Op_Sha3_256,
+    LockHashAlgorithm.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,
     NetworkType.MIJIN);
@@ -78,7 +78,7 @@ const tx2 = SecretLockTransaction.create(
     Deadline.create(),
     new Mosaic(new MosaicId('10293DE77C684F71'), UInt64.fromUint(10)),
     UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
-    HashType.Op_Sha3_256,
+    LockHashAlgorithm.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
     NetworkType.MAIN_NET,
@@ -95,7 +95,7 @@ publicChainTransactionHttp
 /* start block 07 */
 const tx3 = SecretProofTransaction.create(
     Deadline.create(),
-    HashType.Op_Sha3_256,
+    LockHashAlgorithm.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
     proof,
@@ -111,7 +111,7 @@ publicChainTransactionHttp
 /* start block 08 */
 const tx4 = SecretProofTransaction.create(
     Deadline.create(),
-    HashType.Op_Sha3_256,
+    LockHashAlgorithm.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,
     proof,
