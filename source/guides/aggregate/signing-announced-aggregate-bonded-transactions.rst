@@ -18,8 +18,20 @@ Prerequisites
 
 - Complete :doc:`creating an escrow contract<creating-an-escrow-contract-with-aggregate-bonded-transaction>` guide.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to a cosignatory account that has an impending aggregate bonded transaction waiting to be signed.
+
+2. At the home page, click on the “partial” tab. Click on the listed transaction and enter your wallet password to sign the transaction.
+
+.. figure:: ../../resources/images/screenshots/add-signer-2.gif
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Create a function to cosign any **AggregateBondedTransaction**.
@@ -57,7 +69,7 @@ Method #01: Using the SDK
         :end-before: /* end block 02 */
 
 *************************
-Method #02: Using the CLI
+Method #03: Using the CLI
 *************************
 
 .. viewsource:: ../../resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh

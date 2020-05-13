@@ -33,8 +33,36 @@ Prerequisites
 
 - Complete :doc:`converting an account to multisig <creating-a-multisig-account>` guide.
 
+************************************
+Method #01: Using the Desktop Wallet
+************************************
+
+1. Log in to an account that is a cosignatory of the multisig account. This could be Alice or Bob's account.
+
+2. Click on “**Multisig**” on the left-side menu.
+
+3. Select the multisig wallet you want to modify from the dropdown menu from the top field. This will convert the “**Operation Type**” to “**Modifying account multisig properties**”.
+
+4. Click on “**Add a cosignatory**” and provide the address or public key of the account you want to add as a new signer to the multisig. Click “**Send**”. Review the information on the popup. Enter your wallet password and click “**Confirm**”.
+
+.. figure:: ../../resources/images/screenshots/add-signer-1.gif
+    :align: center
+    :width: 800px
+
+5. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
+
+.. figure:: ../../resources/images/screenshots/add-signer-2.gif
+    :align: center
+    :width: 800px
+
+6. You can check that the new signer has been added by navigating to the “Multisig” page. The new signer should be listed under “**Cosignatories**”.
+
+.. figure:: ../../resources/images/screenshots/add-signer-3.png
+    :align: center
+    :width: 800px
+
 *************************
-Method #01: Using the SDK
+Method #02: Using the SDK
 *************************
 
 1. Open a new file. Define the public keys of the multisig account and the new account to be added into new variables.
