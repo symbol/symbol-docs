@@ -58,10 +58,10 @@ const transaction = MosaicGlobalRestrictionTransaction
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.generationHash (nodeUrl + '/block/1')
-const networkGenerationHash = '44D2225B8932C9A96DCB13508CBCDFFA9A9663BFBA2354FEEC8FCFCB7E19846C';
+const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = account.sign(transaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 

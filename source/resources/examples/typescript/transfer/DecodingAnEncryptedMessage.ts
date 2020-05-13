@@ -30,7 +30,7 @@ const certificateAccount = Account.createFromPrivateKey(certificatePrivateKey, n
 const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-west-1.symboldev.network:3000';
+const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 // replace with transaction hash
