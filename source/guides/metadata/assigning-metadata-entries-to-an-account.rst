@@ -27,7 +27,7 @@ In this tutorial, you are going to implement a program to allow Bob tag accounts
 
 .. figure:: ../../resources/images/examples/metadata-certificate.png
     :align: center
-    :width: 400px
+    :width: 450px
 
 *************
 Prerequisites

@@ -63,13 +63,13 @@ Create a new connection
 
 .. figure:: ../../resources/images/screenshots/robo3t-open.png
     :align: center
-    :width: 600px
+    :width: 700px
 
 4. Enter the following details under the **"Connection"** tab:
 
 .. figure:: ../../resources/images/screenshots/robo3t-connection.png
     :align: center
-    :width: 600px
+    :width: 700px
 
 * **Type**: Direct Connection
 * **Name**: my-node
@@ -84,7 +84,7 @@ Go to the **SSH tab** and add the server's details:
 
 .. figure:: ../../resources/images/screenshots/robo3t-tunnel.png
     :align: center
-    :width: 600px
+    :width: 700px
 
 Replace the **SSH Address**, **username**, and **authentication** method.
 
@@ -102,7 +102,7 @@ Querying MongoDB
 
 .. figure:: ../../resources/images/screenshots/robo3t-collection.png
     :align: center
-    :width: 600px
+    :width: 700px
 
 2. In most cases, you may want to filter a set of entries by one of its attributes.
 To filter, for example, a given transaction type, write a query with the following format on Robo 3T shell:
@@ -117,7 +117,7 @@ For other advanced queries, check the `Robo3T <https://studio3t.com/knowledge-ba
 
 .. figure:: ../../resources/images/screenshots/robo3t-query.png
     :align: center
-    :width: 600px
+    :width: 700px
 
 .. |Robo3T| raw:: html
 

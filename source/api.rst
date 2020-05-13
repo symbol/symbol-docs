@@ -17,7 +17,7 @@ Assuming that Catapult REST is running locally, HTTP GET requests can be execute
     http://localhost:3000/<path-to-API-request>
 
 Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
-This kind of request cannot usually be executed from within the browser unless you use a :ref:`plugin <tools>` which enables you to do it.
+This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
 
 You can refer to the next documentation to get the list of available endpoints.
 

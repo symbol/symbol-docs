@@ -31,7 +31,7 @@ For this example, imagine that the two parties agree on a virtual service, imply
 
 .. figure:: ../../resources/images/examples/aggregate-escrow-1.png
     :align: center
-    :width: 450px
+    :width: 600px
 
     Multi-Asset Escrowed Transactions
 

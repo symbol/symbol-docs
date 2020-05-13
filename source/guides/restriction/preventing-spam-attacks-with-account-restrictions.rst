@@ -26,7 +26,7 @@ For that reason, the company only wants to show related transactions, avoiding t
 
 .. figure:: ../../resources/images/examples/account-restrictions-spam.png
     :align: center
-    :width: 450px
+    :width: 550px
 
     Blocking spam attacks
 

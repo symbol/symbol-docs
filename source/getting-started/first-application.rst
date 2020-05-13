@@ -21,7 +21,7 @@ What do we want to solve?
 =========================
 
 .. figure:: ../resources/images/examples/getting-started.png
-    :width: 450px
+    :width: 600px
     :align: center
 
     Authorization model

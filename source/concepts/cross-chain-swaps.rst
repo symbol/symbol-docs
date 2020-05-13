@@ -6,7 +6,7 @@ A cross-chain swap enables trading tokens across different blockchains without u
 
 .. figure:: ../resources/images/examples/cross-chain-swap.png
     :align: center
-    :width: 400px
+    :width: 500px
 
     Cross-chain swap between public and private network
 

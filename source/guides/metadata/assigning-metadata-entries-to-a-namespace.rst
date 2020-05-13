@@ -16,14 +16,15 @@ Add custom data to a namespace.
 Background
 **********
 
-:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users verify domain ownership.
-The contained data could include information such as registrant, administrative, or technical contact information.
+:doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users verify the ownership of the registered name.
+The data attached could include information such as registrant, administrative, or technical contact information.
 
-In this guide, you are going to implement a program to add contact details to a namespace.
+Imagine that the company ComfyClothingCompany wants to add their information to their namespace ``cc`` so that any user of the network can quickly identify the company's details.
+In this guide, you are going to implement a program to add metadata entries to a namespace.
 
 .. figure:: ../../resources/images/examples/metadata-namespace.png
     :align: center
-    :width: 400px
+    :width: 500px
 
 *************
 Prerequisites

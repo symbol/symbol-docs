@@ -27,7 +27,7 @@ To achieve this, we will be increasing the **minApproval parameter** in one unit
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
     :align: center
-    :width: 300px
+    :width: 350px
 
     2-of-2 multisig account example
 

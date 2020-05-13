@@ -69,7 +69,7 @@ The final customers can review the product mosaics scanning a QR code. For that 
 
 .. figure:: ../resources/images/examples/account-restrictions-spam.png
     :align: center
-    :width: 450px
+    :width: 550px
 
     Blocking spam transactions
 
