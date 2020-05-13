@@ -65,7 +65,7 @@ Method #01: Using the Desktop Wallet
 
 6. Once the Aggregate Transaction is confirmed, you can check its new properties in the “**Multisig**” menu.
 
-.. figure:: ../../resources/images/screenshots/modify-multisig-3.gif
+.. figure:: ../../resources/images/screenshots/modify-multisig-3.png
     :align: center
     :width: 800px
 
