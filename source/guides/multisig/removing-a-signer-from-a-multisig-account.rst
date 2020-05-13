@@ -42,7 +42,7 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-6. You can check that the singer has been removed by going back to the “**multisig**” page.
+6. You can check that the signer has been removed by going back to the “**multisig**” page.
 
 .. figure:: ../../resources/images/screenshots/remove-signer-screenshot.gif
     :align: center
