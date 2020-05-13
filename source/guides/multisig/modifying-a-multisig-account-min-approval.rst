@@ -63,7 +63,7 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-7. Once the Aggregate Transaction is confirmed, you can check its new properties in the “**Multisig**” menu.
+6. Once the Aggregate Transaction is confirmed, you can check its new properties in the “**Multisig**” menu.
 
 .. figure:: ../../resources/images/screenshots/modify-multisig-3.gif
     :align: center
