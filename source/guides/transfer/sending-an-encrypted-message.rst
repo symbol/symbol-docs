@@ -91,7 +91,7 @@ Encrypt the message
 
 3. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, include the network generation hash. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

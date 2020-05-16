@@ -34,9 +34,11 @@ const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+console.log("Payload:", signedTransaction.payload);
+console.log("Transaction Hash:", signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint

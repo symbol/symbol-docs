@@ -8,27 +8,27 @@ In other words, you have a **deposit box**, which only you can modify with your 
 Think of an account as **container for assets**.
 It can be used to hold XYM or other mosaics, whether they are tokens or specialized assets.
 
-Moreover, |codename| accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed or a document to be notarized.
+Moreover, |codename| accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed, or a document to be notarized.
 
 **********
 Properties
 **********
 
-Accounts have the following properties:
+Accounts have the following properties.
 
 Private key
 ===========
 
-A private key is a key to an account.
-Anyone with access to the private key ultimately has control over the account.
+A private key is a secret number that allows an account to announce transactions.
+Anyone with access to the private key ultimately has control over the account and its assets.
 
 .. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
 
 Public key
 ==========
 
-The public key can be used to verify signatures of the account.
-The public key is stored on the blockchain with the first issued transaction.
+The public key is used to verify the account's signatures.
+It is stored on the blockchain with the first-issued transaction.
 An account which has not issued any transaction has its public key field empty.
 
 Address
@@ -40,7 +40,7 @@ Normally, the address is shared instead of the public key because it is shorter 
 Balance
 =======
 
-The amount of different :doc:`mosaics <mosaic>` units the account owns.
+The balance is the amount of different :doc:`mosaics <mosaic>` units owned by the account.
 
 Importance
 ==========

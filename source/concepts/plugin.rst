@@ -7,7 +7,7 @@ Extending Symbol
 A **plugin** is a self-contained group of functions that can be added to the |codename|'s protocol to extend its capabilities.
 The plugin approach allows developers to introduce different ways to alter the chain's state via transactions without modifying the core engine or disrupting other features.
 
-Every base :doc:`transaction type  <transaction>` available in |codename| is defined as a separate plugin.
+Every base :doc:`transaction type <transaction>` available in |codename| is defined as a separate plugin.
 This separation makes it possible to only load a minimum subset of features to fit the network requirements.
 
 ************

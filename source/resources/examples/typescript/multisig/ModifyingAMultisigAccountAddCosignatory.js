@@ -36,7 +36,7 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symb
 // replace with cosignatory private key
 const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const cosignatoryAccount = symbol_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);

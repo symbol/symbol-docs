@@ -5,7 +5,7 @@ Writing your first application
 This guide will take you through the |codename| development cycle.
 
 First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`mosaics <../concepts/mosaic>` and :doc:`accounts <../concepts/account>`.
-By the end of this guide, you will know how to issue and monitor transaction on the blockchain.
+By the end of this guide, you will know how to issue and monitor transactions on the blockchain.
 
 **********
 Background
@@ -14,7 +14,7 @@ Background
 The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor.
 The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.
 
-Buying a ticket from someone that is not the initial vendor does not necessarily only mean to pay more for the ticket.
+Buying a ticket from someone that is not the initial vendor does not necessarily mean paying more for the ticket.
 There is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can't do anything to solve the issue.
 
 What do we want to solve?
@@ -33,8 +33,8 @@ a) Identify each ticket and customer.
 b) Avoid ticket reselling.
 c) Avoid non-authentic tickets and duplicate ones.
 
-Why Symbol is a good choice?
-============================
+Why Symbol is the right choice?
+===============================
 
 Blockchain technology makes sense in cases where:
 
@@ -43,7 +43,7 @@ Blockchain technology makes sense in cases where:
 * There is a need to keep track of an immutable set of events.
 
 |codename| is a **flexible blockchain** technology.
-Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** to transfer and store value, authorization, traceability, and identification.
 
 The rest of the code will remain **off-chain**.
 This reduces the inherent immutability risk, as you could change the process when necessary.
@@ -52,20 +52,20 @@ This reduces the inherent immutability risk, as you could change the process whe
 Creating an account for each participant
 ****************************************
 
-First, identify the actors involved in the problem to solve:
+First, let's identify the actors involved in the use case we want to solve:
 
 * The ticket vendor.
 * The customer.
 
 We have decided to represent the ticket vendor and customer as separate :doc:`accounts <../concepts/account>`.
-Think of accounts as deposit boxes on the blockchain which can be modified with an appropriate private key.
+Think of accounts as deposit boxes on the blockchain, which can be modified with an appropriate private key.
 Each account is unique and identified by an address.
 
 Have you loaded an account with test |networkcurrency|?
-In the :ref:`previous guide <setup-creating-a-test-account>`, you have loaded an account with |cli|.
-This account will represent the **ticket vendor**.
+In the :ref:`previous guide <setup-creating-a-test-account>`, you have learned how to create an account with |cli|.
+This account will represent the **ticket vendor** account.
 
-1. Run the following command to verify that the ticket vendor account has |networkcurrency| units.
+1. Run the following command to verify if the ticket vendor account has |networkcurrency| units.
 
 .. code-block:: bash
 
@@ -99,8 +99,8 @@ You should see on your screen a line similar to:
     │ 51A99028058245A8 │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-As you can see, this account owns 750 |networkcurrency| relative units.
-If your row after mosaics is empty, follow the :doc:`previous guide <setup-workstation>` to get test currency.
+This account owns 750 |networkcurrency| relative units.
+If your row after "Balance Information" is empty, follow the :doc:`previous guide <setup-workstation>` to get test currency.
 
 2. Create a second account with the CLI to identify the **customer**.
 
@@ -125,12 +125,14 @@ Monitoring the blockchain
 *************************
 
 Accounts change the blockchain state through transactions.
-Once an account announces a transaction, if properly formed, the server will return an OK response.
+Once an account announces a transaction, the server will return an OK response if it is properly formed.
 
-Receiving an OK response does not mean the transaction is valid, or included in a block.
-A good practice is to **monitor transactions** before being announced.
+However, receiving an OK response does not mean the transaction is valid or included in a block.
+For example, the transaction could be rejected because the issuer does not have enough |networkcurrency|, the message set is too large, or the fee set is too low.
 
-In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which of them are rejected by the network.
+A good practice is to **monitor transactions** before being announced to know when they get confirmed or rejected by the network.
+
+In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which are rejected by the network.
 
 .. code-block:: bash
 
@@ -143,9 +145,9 @@ Creating the ticket
 We are representing the ticket with |codename| :doc:`mosaics <../concepts/mosaic>`.
 This feature can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.
 
-Mosaics have configurable properties, which are defined at the moment of their creation
+Mosaics have configurable properties, which are defined at the moment of their creation.
 For example, we opt to set **transferable property to false**.
-This means that the customer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+This means that the customer can only send the ticket back to the mosaic's creator, avoiding the ticket reselling.
 
 1. Use the CLI with the ticket vendor account to create a new mosaic that will represent the ticket. This new mosaic can be configured as follows:
 
@@ -172,13 +174,13 @@ This means that the customer can only send back the ticket to the creator of the
    The new mosaic id is: 7cdf3b117a3c40cc
 
 The transaction should appear as confirmed after ±15 seconds.
-If the terminal raises an error, check the error code meaning :ref:`here <status-errors>`.
+If the terminal raises an error, you can check the error code's meaning  :ref:`here <status-errors>`.
 
 ******************
 Sending the ticket
 ******************
 
-Now that we have defined the mosaic, we are going to send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`.
+Now that we have defined the mosaic, we will send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`.
 
 1. Open a new file, and define a **TransferTransaction** with the following values.
 
@@ -214,7 +216,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
 2. Sign the transaction with the **ticket vendor account**, so that the network can verify the authenticity of the transaction.
 
-.. note:: Include the first block generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+.. note:: Include the network generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 
@@ -256,7 +258,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
         symbol-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
-4. When the transaction appears as confirmed, check if the customer has received the ticket.
+4. Look at the terminal where you are monitoring transactions. When the transaction appears as confirmed, you can check if the customer has received the ticket with the following command.
 
 .. code-block:: bash
 
