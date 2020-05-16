@@ -16,7 +16,7 @@ const accountLinkTransaction = symbol_sdk_1.AccountLinkTransaction.create(symbol
 /* start block 03 */
 // replace with node endpoint
 const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();

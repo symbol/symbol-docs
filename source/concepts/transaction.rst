@@ -55,51 +55,34 @@ The following transaction types are included in |codename| based networks by def
     **Transfer**;;
     0x4154; :ref:`TransferTransaction <transfer-transaction>`; Send mosaics and messages between two accounts.
 
+Every base :doc:`transaction type <transaction>` available in |codename| is defined as a separate :doc:`plugin <plugin>`.
+The plugin approach allows developers to introduce new transaction types without modifying the core engine or disrupting other features.
+
 .. _transaction-definition:
 
 **********************
 Defining a transaction
 **********************
 
-Transactions are defined in a `serialized <https://github.com/nemtech/catbuffer>`_ form.
-Each transaction extends from the :ref:`transaction schema definition <transaction>`, combining the type's particular properties.
-You can find the description of the additional properties under the :ref:`"Schema" section <transfer-transaction>`, at the end of each built-in feature description.
+Transactions are defined in a serialized form.
+Every transaction extends from the base :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
 
-We recommend `using the SDK to define <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30>`_ transactions.
+All transactions should define a deadline and a max_fee:  
 
-.. code-block:: typescript
+* ``deadline``: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
 
-    import {
-        Address,
-        Deadline,
-        NetworkCurrencyMosaic,
-        NetworkType,
-        PlainMessage,
-        TransferTransaction
-    } from 'symbol-sdk';
+* ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
-    const recipientAddress = Address
-        .createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54');
+.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages. 
 
-    const transferTransaction = TransferTransaction.create(
-        Deadline.create(),
-        recipientAddress,
-        [NetworkCurrencyMosaic.createRelative(10)],
-        PlainMessage.create('This is a test message'),
-        NetworkType.MIJIN_TEST);
+We recommend using the :doc:`SDK <../sdk>` to define new transactions.
 
-    console.log(transferTransaction.serialize());
+.. example-code::
 
-    /* Outputs:
-    B3000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000
-    000000000000039054410000000000000000B986E63F170
-    0000090FA39EC47E05600AFA74308A7EA607D145E371B5F
-    4F1447BC0F00010057656C636F6D6520546F204E454D44B
-    262C46CEABB858096980000000000
-    */
+    .. viewsource:: ../resources/examples/typescript/transfer/SendingATransferTransaction.ts
+        :language: typescript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
 
 .. _transaction-signature:
 
@@ -110,45 +93,24 @@ Signing a transaction
 Accounts must sign transactions before announcing them to the network.
 `Signing a transaction <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
 
-For example, a TransferTransaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
+For example, a TransferTransaction describes who the recipient is and the number of mosaics to transfer.
+In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
 An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:
 
-1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature and signer.
-2. Get the nemesis block generation hash. You can query ``nodeUrl + '/block/1'`` and copy ``meta.generationHash`` value.
+1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature, and signer.
+2. Get the nemesis block ``generation hash``. You can query ``nodeUrl + '/node/info'`` and copy ``meta.networkGenerationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
 6. Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L126-L179>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
-.. code-block:: typescript
+.. example-code::
 
-    import {Account} from 'symbol-sdk';
-
-    const privateKey = process.env.PRIVATE_KEY as string;
-    const generationHash = process.env.GENERATION_HASH as string;
-    const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-
-    const signedTransaction = account.sign(transferTransaction, generationHash);
-
-    console.log(signedTransaction.payload);
-
-    /* Outputs:
-    B3000000F77A8DCFCB57B81F9BE5B46738F7132998F5512
-    3BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785
-    DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA624
-    9E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D
-    22A599A3D0E3039054410000000000000000265DEE3F170
-    0000090FA39EC47E05600AFA74308A7EA607D145E371B5F
-    4F1447BC0F00010057656C636F6D6520546F204E454D44B
-    262C46CEABB858096980000000000
-     */
-
-    console.log(signedTransaction.hash);
-
-    /* Outputs:
-    21C4D9583CE1887BE7187D4B65B67567B45D5E6114AEE155C0CD266B6AA6A302
-     */
+    .. viewsource:: ../resources/examples/typescript/transfer/SendingATransferTransaction.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 .. _transaction-validation:
 
@@ -161,15 +123,10 @@ You can either use the SDK ``TransactionHttp`` service or append the payload to 
 
 .. example-code::
 
-    .. code-block:: typescript
-
-        import {TransactionHttp} from 'symbol-sdk';
-
-        const transactionHttp = new TransactionHttp('http://localhost:3000');
-
-        transactionHttp
-            .announce(signedTransaction)
-            .subscribe(x => console.log(x), err => console.error(err));
+    .. viewsource:: ../resources/examples/typescript/transfer/SendingATransferTransaction.ts
+        :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
 
     .. code-block:: bash
 
@@ -187,14 +144,14 @@ At this point, it is still unknown whether the transaction is valid.
 The first stage of validation happens in the API nodes.
 If the transaction presents some error, the WebSocket throws a notification through the status channel.
 In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.
-Never rely on a transaction which has an unconfirmed state.
+Never rely on a transaction that has an unconfirmed state.
 It is not clear if it will get included in a block, as it should pass a second validation.
 
 The second validation is done before the transaction is added in a :doc:`harvested block <block>`.
-If valid, the harvester stores the transaction in a block, and it reaches the **confirmed** status.
+If valid, the harvester stores the transaction in a block and reaches the **confirmed** status.
 
 Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
-Additionally, the transaction fee is deducted from the signer's account.
+Additionally, the :doc:`transaction fee <fees>` is deducted from the signer's account.
 
 The transaction has **zero confirmations** at this point.
 When another block is added to the blockchain, the transaction has one confirmation.
@@ -206,8 +163,8 @@ The next block added to the chain will give it two confirmations and so on.
 Rollbacks
 *********
 
-Blockchains are designed in a way that under certain circumstances recent blocks need to be rolled back.
-These are essential to resolve forks of the blockchain.
+Blockchains are designed in a way that, under certain circumstances, recent blocks need to be rolled back.
+These are essential to resolve the forks of the blockchain.
 
 The rewrite limit is the maximum number of blocks that can be rolled back.
 Hence, forks can only be resolved up to a certain depth too.

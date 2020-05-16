@@ -41,7 +41,7 @@ const ticketDistributorToAliceTx = symbol_sdk_1.TransferTransaction.create(symbo
 /* start block 02 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
     ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);

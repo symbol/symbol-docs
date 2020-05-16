@@ -116,8 +116,8 @@ Method #02: Using the SDK
 .. note:: |codename| works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
 3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
-Include the first block generation hash to make the transaction only valid for your network.
-Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+Include the network generation hash to make the transaction only valid for your network.
+Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

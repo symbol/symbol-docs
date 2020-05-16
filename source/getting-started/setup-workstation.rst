@@ -20,7 +20,7 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-.. note:: Symbol CLI require Node.js 12 LTS to execute.
+.. note:: Symbol CLI requires Node.js 12 LTS to execute.
 
 1. Install |cli| executing the following command in a new terminal:
 

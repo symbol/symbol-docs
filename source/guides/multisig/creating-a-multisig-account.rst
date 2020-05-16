@@ -132,7 +132,7 @@ This action is necessary because Alice and Bob must opt-in to become cosignatori
 
 4. Sign the **AggregateTransaction** using the private key of the future multisig account.
 
-.. note:: To make the transaction only valid for your network, you will need to pass the first block generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and copy the ``meta.generationHash`` value.
+.. note:: To make the transaction only valid for your network, you will need to pass the first network generation hash. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

@@ -49,7 +49,7 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-5. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
+5. If the multisig account has the "**minimum approval**" set to a number greater than 1, log in to another cosignatory account and :doc:`cosign the transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`. Repeat this step until the minimum approval number is satisfied.
 
 .. figure:: ../../resources/images/screenshots/add-signer-2.gif
     :align: center
