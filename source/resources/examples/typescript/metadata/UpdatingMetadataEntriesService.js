@@ -43,7 +43,7 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(sym
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(operators_1.mergeMap((transaction) => {
-    const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [transaction.toAggregate(bobAccount.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+    const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [transaction.toAggregate(bobAccount.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
     const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
     return rxjs_1.of(signedTransaction);
 }));

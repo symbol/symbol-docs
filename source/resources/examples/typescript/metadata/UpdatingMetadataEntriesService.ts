@@ -71,7 +71,7 @@ const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E589
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
         mergeMap((transaction) => {
-            const aggregateTransaction = AggregateTransaction.createComplete(
+            const aggregateTransaction = AggregateTransaction.createBonded(
                 Deadline.create(),
                 [transaction.toAggregate(bobAccount.publicAccount)],
                 networkType,
