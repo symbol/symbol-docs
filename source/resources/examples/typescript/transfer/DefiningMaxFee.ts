@@ -58,7 +58,7 @@ const example = async () => {
         [transferTransaction.toAggregate(publicAccount1),
             transferTransaction.toAggregate(publicAccount2)],
         NetworkType.TEST_NET,
-        [],)
+        [])
     .setMaxFeeForAggregate(medianFeeMultiplier, 1);
     /* end block 02 */
 };

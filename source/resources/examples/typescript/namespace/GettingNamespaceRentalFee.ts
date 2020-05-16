@@ -24,14 +24,14 @@ const example = async () => {
     /* start block 01 */
     const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
     const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
-    
+
     const networkHttp = repositoryHttp.createNetworkRepository();
-    networkHttp.getRentalFees().subscribe(rentalFees => {
-        console.log("RootNamespaceRentalFeePerBlock", 
+    networkHttp.getRentalFees().subscribe((rentalFees) => {
+        console.log('RootNamespaceRentalFeePerBlock',
         rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
-        console.log("ChildNamespaceRentalFee", 
+        console.log('ChildNamespaceRentalFee',
         rentalFees.effectiveChildNamespaceRentalFee.compact());
-    })
+    });
     /* end block 01 */
 };
 

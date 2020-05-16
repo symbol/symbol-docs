@@ -57,8 +57,8 @@ const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
-console.log("Payload:", signedTransaction.payload);
-console.log("Transaction Hash:", signedTransaction.hash);
+console.log('Payload:', signedTransaction.payload);
+console.log('Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
 
 /* start block 03 */

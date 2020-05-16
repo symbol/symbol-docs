@@ -32,9 +32,9 @@ const example = () => __awaiter(void 0, void 0, void 0, function* () {
     const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
     const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
     const networkHttp = repositoryHttp.createNetworkRepository();
-    networkHttp.getRentalFees().subscribe(rentalFees => {
-        console.log("RootNamespaceRentalFeePerBlock", rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
-        console.log("ChildNamespaceRentalFee", rentalFees.effectiveChildNamespaceRentalFee.compact());
+    networkHttp.getRentalFees().subscribe((rentalFees) => {
+        console.log('RootNamespaceRentalFeePerBlock', rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
+        console.log('ChildNamespaceRentalFee', rentalFees.effectiveChildNamespaceRentalFee.compact());
     });
     /* end block 01 */
 });
