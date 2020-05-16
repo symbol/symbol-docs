@@ -258,7 +258,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
         symbol-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
-4. Look at the terminal where you are monitoring transactions. When the transaction appears as confirmed, you can check if the customer has received the ticket with the following command.
+4. Look at the terminal window where you are monitoring transactions. When the transaction appears as confirmed, you can check if the customer has received the ticket with the following command.
 
 .. code-block:: bash
 
