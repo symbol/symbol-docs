@@ -45,7 +45,7 @@ Mosaic restriction
 Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed.
 On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
-Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated to their activity.
+Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated with their activity.
 
 *********************
 Operation restriction

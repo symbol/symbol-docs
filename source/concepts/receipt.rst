@@ -3,12 +3,11 @@ Receipt
 #######
 
 Conditional state changes in the background enable complex transactions.
-
 For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as the :doc:`AggregateBondedTransaction <aggregate-transaction>` is confirmed.
 When the locked funds are automatically returned to the account, there is no additional :doc:`transaction <transaction>` recorded.
 This might appear as a *hidden change* that increases the :doc:`account <account>` balance.
-Receipts provide proof for every hidden change.
 
+Receipts provide proof for every hidden change.
 The collection of receipts are hashed into a |merkle| and linked to a :doc:`block <block>`.
 The block header stores the root hash, which is different from zero when the block has receipts.
 

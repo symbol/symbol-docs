@@ -93,8 +93,22 @@ If set to true, the mosaic creator can configure custom :doc:`restrictions <mosa
 Creation fee
 ************
 
-To create a mosaic, accounts have to pay a fee in addition to the :doc:`transaction fee <fees>`.
-The fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+An account willing to create a mosaic has to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+Both fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+
+The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of how much network currency will cost you to create a mosaic:
+
+.. example-code::
+
+    .. viewsource:: ../resources/examples/typescript/mosaic/GettingMosaicRentalFee.ts
+        :language: typescript
+        :start-after: /* start block 01 */
+        :end-before: /* end block 01 */
+    
+    .. viewsource:: ../resources/examples/typescript/mosaic/GettingMosaicRentalFee.js
+        :language: javascript
+        :start-after: /* start block 01 */
+        :end-before: /* end block 01 */
 
 By default, creating a mosaic in |codename|'s public network has an :ref:`initial cost <config-network-properties>` of ``0.0005`` |networkcurrency|.
 However, **the network dynamically adjusts the mosaic rental fee** over time.

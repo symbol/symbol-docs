@@ -33,7 +33,7 @@ const transaction = symbol_sdk_1.AccountRestrictionTransaction
 // replace with product private key
 const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const productAccount = symbol_sdk_1.Account.createFromPrivateKey(productPrivateKey, networkType);
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
 // replace with node endpoint

@@ -61,7 +61,8 @@ At this point, the namespace becomes **available** for its registration again.
 Subnamespaces
 *************
 
-On the internet, a domain can have a sub-domain. |codename| namespaces can have subnamespaces to identify and organize assets.
+On the internet, a domain can have a sub-domain.
+|codename| namespaces can have subnamespaces to identify and organize assets.
 
 .. figure:: ../resources/images/diagrams/namespace-setup.png
     :align: center
@@ -102,8 +103,22 @@ Alias transactions have the following restrictions:
 Rental fee
 **********
 
-To create a namespace or to extend its duration, accounts have to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+An account willing to register a namespace or extend its duration has to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
 Both fees will be deducted from the account's balance after the announcement of a valid **NamespaceRegistrationTransaction**.
+
+The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of how much network currency will cost you to register a namespace:
+
+.. example-code::
+
+    .. viewsource:: ../resources/examples/typescript/namespace/GettingNamespaceRentalFee.ts
+        :language: typescript
+        :start-after: /* start block 01 */
+        :end-before: /* end block 01 */
+    
+    .. viewsource:: ../resources/examples/typescript/namespace/GettingNamespaceRentalFee.js
+        :language: javascript
+        :start-after: /* start block 01 */
+        :end-before: /* end block 01 */
 
 The default namespace rental fees are :ref:`configurable per network <config-network-properties>`, but the **network dynamically adjusts the namespace rental fees** over time.
 

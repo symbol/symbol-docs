@@ -36,7 +36,7 @@ const networkCurrencyDivisibility = 6;
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('sending 10 symbol.xym'), networkType);
 /* start block 01 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [transferTransaction.toAggregate(multisigAccount)], networkType);
-// replace with meta.generationHash (nodeUrl + '/block/1')
+// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = 'ACECD90E7B248E012803228ADB4424F0D966D24149B72E58987D2BF2F2AF03C4';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
