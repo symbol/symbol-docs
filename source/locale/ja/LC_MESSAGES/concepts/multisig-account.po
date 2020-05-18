@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,6 +35,16 @@ msgstr "マルチシグ :doc:`アカウント <account>` はアクション/転�
 #: ../../source/concepts/multisig-account.rst:18
 msgid "Cosignatories"
 msgstr "連署者"
+
+#: ../../source/concepts/multisig-account.rst:20
+msgid ""
+"|codename| :doc:`accounts <account>` can be :doc:`converted to multisig "
+"<../guides/multisig/creating-a-multisig-account>`. The cosignatories—other "
+"accounts—of the multisig will become the account managers."
+msgstr ""
+"|codename| :doc:`アカウント <account>` は :doc:`マルチシグに変換する "
+"<../guides/multisig/creating-a-multisig-account>` ことができます。マルチシグの連署者 - "
+"他のアカウント - はこのアカウントのマネージャとなります。"
 
 #: ../../source/concepts/multisig-account.rst:23
 msgid ""

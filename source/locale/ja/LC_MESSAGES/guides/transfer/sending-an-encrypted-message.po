@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -123,12 +123,12 @@ msgstr "Alice のアカウントでトランザクションに署名します。
 
 #: ../../source/guides/transfer/sending-an-encrypted-message.rst:103
 msgid ""
-"To make the transaction only valid for your network, include the first block"
-" generation hash. Open ``nodeUrl + '/block/1'`` in a new browser tab and "
-"copy the ``meta.generationHash`` value."
+"To make the transaction only valid for your network, include the network "
+"generation hash. Open ``nodeUrl + '/node/info'`` in a new browser tab and "
+"copy the ``meta.networkGenerationHash`` value."
 msgstr ""
-"自分のネットワークでのみ有効なトランザクションを作るには、最初のブロック生成ハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
-"'/block/1'`` を開いて ``meta.generationHash`` の値をコピーします。"
+"自分のネットワークでのみ有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
+"'/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
 
 #: ../../source/guides/transfer/sending-an-encrypted-message.rst:117
 msgid ""

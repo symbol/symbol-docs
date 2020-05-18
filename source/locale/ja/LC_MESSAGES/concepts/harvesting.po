@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,17 +29,6 @@ msgstr "ハーベスティング"
 msgid ""
 "The process of creating new :doc:`blocks <block>` is called harvesting."
 msgstr "新しい :doc:`ブロック <block>` を生成するプロセスをハーベスティングと呼びます。"
-
-#: ../../source/concepts/harvesting.rst:16
-msgid ""
-"In this process, the :doc:`account <account>` that harvests a block—called "
-"the **harvester**—is rewarded with the :doc:`transaction fees <fees>` added "
-"in the block and the :doc:`inflation <inflation>` tokens generated, if "
-"applicable."
-msgstr ""
-"このプロセス中に、ブロックをハーベストする :doc:`アカウント <account>` - **ハーベスタ** と呼びます - はブロックに追加された"
-" :doc:`トランザクション手数料 <fees>` 報酬と該当する場合は生成された :doc:`インフレーション <inflation>` "
-"トークンが提供されます。"
 
 #: ../../source/concepts/harvesting.rst:18
 msgid ""
@@ -99,28 +88,10 @@ msgstr ""
 "例えばコンソーシアムネットワークではインフラを運営する企業間でハーベスティングモザイクを配布することができますが、他の参加者はサービスを利用するために "
 ":doc:`通貨モザイク <fees>` を支払う必要があります。"
 
-#: ../../source/concepts/harvesting.rst:39
-msgid ""
-"By contrast, public networks might decide to use the same mosaic for paying "
-"transaction fees and running the network. For example, |codename|'s public "
-"network uses |networkcurrency| as the harvesting mosaic."
-msgstr ""
-"これとは対照的に、パブリックネットワークではトランザクション手数料の支払いとネットワーク運用に同じモザイクを使用する可能性があります。たとえば "
-"|codename| のパブリックネットワークでは |networkcurrency| をハーベストモザイクとして使用しています。"
-
 #: ../../source/concepts/harvesting.rst:46
 #: ../../source/concepts/harvesting.rst:1
 msgid "Local harvesting"
 msgstr "ローカルハーベスティング"
-
-#: ../../source/concepts/harvesting.rst:48
-msgid ""
-"An eligible account can harvest new blocks by running a node. To harvest "
-"locally, provide a private key in :properties:`config-harvesting.properties "
-"<config-harvesting.properties>` file."
-msgstr ""
-"適格なアカウントはノードを実行して新しいブロックを収集できます。ローカルでハーベスティングするには :properties:`config-"
-"harvesting.properties <config-harvesting.properties>` ファイルに秘密鍵を記入します。"
 
 #: ../../source/concepts/harvesting.rst:51
 msgid ""
@@ -347,14 +318,6 @@ msgstr "別のアカウントのリモートアカウントにはできません
 #: ../../source/concepts/harvesting.rst:140
 msgid "It cannot be its own remote account."
 msgstr "自身のリモートアカウントになることはできません。"
-
-#: ../../source/concepts/harvesting.rst:142
-msgid ""
-"Furthermore, for the duration that the account is used as a delegated "
-"account, it is restricted from initiating any transactions or be involved in"
-" any transaction."
-msgstr ""
-"さらにアカウントがデリゲートアカウントとして使用されている間は、トランザクションを開始する、またはトランザクションに関与することが制限されます:"
 
 #: ../../source/concepts/harvesting.rst:148
 msgid "**Inlines**:"
