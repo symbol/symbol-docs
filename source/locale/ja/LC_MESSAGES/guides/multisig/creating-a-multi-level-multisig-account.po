@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-09-30 13:37+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -25,6 +25,12 @@ msgstr ""
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:20
 msgid "Creating a multi-level multisig account"
 msgstr "マルチレベルマルチシグアカウントの作成"
+
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:22
+msgid ""
+"This guide will show you how to connect multiple multisig accounts to "
+"achieve advanced on-chain authorization logic."
+msgstr "このガイドでは、複数のマルチシグアカウントを接続して、高度なチェーン上の承認ロジックを実現する方法について説明します。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:26
 msgid "Background"
@@ -39,9 +45,25 @@ msgstr ""
 ":doc:`マルチシグアカウント <../../concepts/multisig-account>` "
 "は他のマルチシグアカウントを連署者とすることができ、マルチシグトランザクションに “AND/OR” ロジックを追加できます。"
 
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:30
+msgid ""
+"In this guide, we are going to create a complex **3-level multisig "
+"account**."
+msgstr "このガイドでは、複雑な **3 階層マルチシグアカウント** を作成します。"
+
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:36
 msgid "3-level multisig account example"
 msgstr "3 階層マルチシグアカウントの例"
+
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:38
+msgid ""
+"For example, if the **account #5** initiates an "
+"**AggregateBondedTransaction** involving the **account #1**, the accounts "
+"**#7 or #8** and **#4** should cosign the transaction in order to be "
+"included in a block."
+msgstr ""
+"例えば、 **アカウント #5** が **アカウント #1** を含む **AggregateBondedTransaction** を開始する\n"
+"場合、ブロックに取り込まれるためには、アカウント **#7 または #8** および **#4** がトランザクションに署名する必要があります。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:44
 msgid "Sending an AggregateBondedTransaction from a MLMA"
@@ -50,6 +72,12 @@ msgstr "MLMA からの AggregateBondedTransaction の送信"
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:49
 msgid "Prerequisites"
 msgstr "前提条件"
+
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:51
+msgid ""
+"Complete :doc:`converting an account to multisig <creating-a-multisig-"
+"account>` guide."
+msgstr ":doc:`マルチシグアカウントへの変換 <creating-a-multisig-account>` ガイドを完了している"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:52
 msgid ""
@@ -62,6 +90,10 @@ msgid ""
 "Load the root multisig account with enough |networkcurrency| to pay for the "
 "transaction fee."
 msgstr "ルートマルチシグアカウントへ手数料を支払うために十分な |networkcurrency| を入金してください。"
+
+#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:57
+msgid "Method #1: Using the SDK"
+msgstr "方法 #1: SDK を使用する"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:59
 msgid "Define the **multisig account #2**."

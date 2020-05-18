@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/mosaic.rst:12 ../../source/concepts/mosaic.rst:181
+#: ../../source/concepts/mosaic.rst:12 ../../source/concepts/mosaic.rst:195
 msgid "Mosaic"
 msgstr "モザイク"
 
@@ -194,16 +194,7 @@ msgstr "true の場合、モザイク作成者は :doc:`制限 <mosaic-restricti
 msgid "Creation fee"
 msgstr "作成手数料"
 
-#: ../../source/concepts/mosaic.rst:105
-msgid ""
-"To create a mosaic, accounts have to pay a fee in addition to the "
-":doc:`transaction fee <fees>`. The fees will be deducted from the account's "
-"balance after the announcement of a valid **MosaicDefinitionTransaction**."
-msgstr ""
-"モザイクを作成するために、アカウントは手数料に加えて :doc:`トランザクション手数料 <fees>` を支払います。有効な "
-"**MosaicDefinitionTransaction** のアナウンスをすると、手数料はアカウントの残高から差し引かれます。"
-
-#: ../../source/concepts/mosaic.rst:108
+#: ../../source/concepts/mosaic.rst:122
 msgid ""
 "By default, creating a mosaic in |codename|'s public network has an "
 ":ref:`initial cost <config-network-properties>` of ``0.0005`` "
@@ -214,7 +205,7 @@ msgstr ""
 ":ref:`初期コスト <config-network-properties>` があります。しかし "
 "**ネットワークはモザイクレンタル手数料を動的に調整** していきます。"
 
-#: ../../source/concepts/mosaic.rst:111
+#: ../../source/concepts/mosaic.rst:125
 msgid ""
 "To calculate the effective rental fee, the network multiplies the default "
 "value set in the configuration by the :doc:`median network multiplier "
@@ -228,23 +219,23 @@ msgstr ""
 " を乗算します。乗数がゼロの場合は、これらは中央値計算の前に :ref:`defaultDynamicFeeMultiplier <config-"
 "network-properties>` で置き換えられます。"
 
-#: ../../source/concepts/mosaic.rst:116
+#: ../../source/concepts/mosaic.rst:130
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic.rst:128
+#: ../../source/concepts/mosaic.rst:142
 msgid "Transaction schemas"
 msgstr "トランザクションスキーマ"
 
-#: ../../source/concepts/mosaic.rst:135
+#: ../../source/concepts/mosaic.rst:149
 msgid "Announce a MosaicDefinitionTransaction to create a new mosaic."
 msgstr "新しいモザイクを作るために MosaicDefinitionTransaction をアナウンスします。"
 
-#: ../../source/concepts/mosaic.rst:141 ../../source/concepts/mosaic.rst:166
+#: ../../source/concepts/mosaic.rst:155 ../../source/concepts/mosaic.rst:180
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/concepts/mosaic.rst:143 ../../source/concepts/mosaic.rst:168
+#: ../../source/concepts/mosaic.rst:157 ../../source/concepts/mosaic.rst:182
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -290,7 +281,7 @@ msgstr "モザイクフラグ"
 msgid "Mosaic divisibility."
 msgstr "モザイク可分性"
 
-#: ../../source/concepts/mosaic.rst:160
+#: ../../source/concepts/mosaic.rst:174
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
@@ -353,6 +344,6 @@ msgstr "減少"
 msgid "Increase."
 msgstr "増加"
 
-#: ../../source/concepts/mosaic.rst:232
+#: ../../source/concepts/mosaic.rst:246
 msgid "Continue: :doc:`Namespaces <namespace>`."
 msgstr "次項: :doc:`ネームスペース <namespace>`"
