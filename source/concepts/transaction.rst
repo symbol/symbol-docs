@@ -22,7 +22,7 @@ The following transaction types are included in |codename| based networks by def
     :delim: ;
 
     **Remote harvesting**;;
-    0x414C; :ref:`AccountLinkTransaction <account-link-transaction>`; Delegate the account importance to a proxy account.
+    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account.
     **Aggregate**;;
     0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
