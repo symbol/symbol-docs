@@ -20,25 +20,28 @@ The instructions to configure the node vary depending on the package used to dep
 Testnet Bootstrap
 =================
 
-After running a node for the first time, the file ``config-input.yaml`` will be generated with the default values.
-Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
+After running a node for the first time, the file ``config-input.yaml`` will be generated in the folder``symbol-testnet-bootstrap/identity``.
+
+To edit the node properties, follow the next steps:
 
 1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
 2. Edit the properties file ``config-input.yaml`` with a text editor.
 
-3. Save the changes and apply them with the command ``sudo docker-compose up --build --detach``.
+3. Save and apply the changes with the command ``sudo docker-compose up --build --detach``.
 
 Service Bootstrap
 =================
 
-1. Find under the directory ``build/catapult-config`` the generated properties files for the ``peer`` and ``api`` nodes that compose the network.
+After running a network for the first time, the folder ``build/catapult-config`` contains all the properties files for the Peer and API nodes that compose the network.
 
-2. Stop all the services with the command ``./cmds/stop-all``.
+For example, if you want to edit the ``peer-node-0`` properties, follow the next steps:
 
-3. To edit the node properties assigned to the ``peer-node-0``, open the target file under ``peer-node-0/userconfig/resources`` with a text editor.
+1. Stop all the services with the command ``./cmds/stop-all``.
 
-4. Save the changes and apply them with the command ``./cmds/start-all -d``.
+2. Open the properties file to edit under ``peer-node-0/userconfig/resources`` with a text editor.
+
+3. Save and apply the changes with the command ``./cmds/start-all -d``.
 
 .. _node-properties:
 
