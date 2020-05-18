@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,44 +22,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/receipt.rst:12 ../../source/concepts/receipt.rst:1
-#: ../../source/concepts/receipt.rst:106
+#: ../../source/concepts/receipt.rst:105
 msgid "Receipt"
 msgstr "レシート"
 
-#: ../../source/concepts/receipt.rst:14
-msgid ""
-"Conditional state changes in the background enable complex transactions."
-msgstr "バックグラウンドでの条件付き状態変更は、複雑なトランザクションを可能にします。"
-
-#: ../../source/concepts/receipt.rst:16
-msgid ""
-"For example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as"
-" the :doc:`AggregateBondedTransaction <aggregate-transaction>` is confirmed."
-" When the locked funds are automatically returned to the account, there is "
-"no additional :doc:`transaction <transaction>` recorded. This might appear "
-"as a *hidden change* that increases the :doc:`account <account>` balance. "
-"Receipts provide proof for every hidden change."
-msgstr ""
-"例えば :ref:`ハッシュロック <hash-lock-transaction>` は "
-":doc:`AggregateBondedTransaction <aggregate-transaction>` "
-"が承認され次第、終了します。ロックされた資金が自動的に口座に返却されるとき、追加で :doc:`トランザクション <transaction>` "
-"は記録されません。これは :doc:`アカウント <account>` の残高が増える *隠された変更* "
-"として現れるかもしれません。レシートはすべての隠された変更の証拠を提供します。"
-
-#: ../../source/concepts/receipt.rst:21
-msgid ""
-"The collection of receipts are hashed into a |merkle| and linked to a "
-":doc:`block <block>`. The block header stores the root hash, which is "
-"different from zero when the block has receipts."
-msgstr ""
-"レシートのハッシュは |merkle| に入り :doc:`ブロック <block>` "
-"にリンクされます。ブロックヘッダはルートハッシュを格納し、ブロックがレシートを持ったときに 0 ではなくなります。"
-
-#: ../../source/concepts/receipt.rst:26
+#: ../../source/concepts/receipt.rst:25
 msgid "Transaction statement"
 msgstr "トランザクションステートメント"
 
-#: ../../source/concepts/receipt.rst:28
+#: ../../source/concepts/receipt.rst:27
 msgid ""
 "A :ref:`transaction statement <transaction-statement>` is a collection of "
 "receipts linked to a transaction in a particular block. Statements can "
@@ -68,36 +39,36 @@ msgstr ""
 ":ref:`トランザクションステートメント <transaction-statement>` "
 "は特定のブロック内のトランザクションにリンクしたレシート集合です。ステートメントは以下の基礎タイプをもつレシートを含みます:"
 
-#: ../../source/concepts/receipt.rst:31
+#: ../../source/concepts/receipt.rst:30
 msgid ""
 "**Balance Transfer**: The invisible state change triggered a mosaic "
 "transfer."
 msgstr "**Balance Transfer**: モザイク転送によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:32
+#: ../../source/concepts/receipt.rst:31
 msgid ""
 "**Balance Change**: The invisible state change altered an account balance."
 msgstr "**Balance Change**: アカウントの残高変化によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:33
+#: ../../source/concepts/receipt.rst:32
 msgid "**Mosaic Expiry**: A mosaic expired."
 msgstr "**Mosaic Expiry**: モザイクの期限切れ"
 
-#: ../../source/concepts/receipt.rst:34
+#: ../../source/concepts/receipt.rst:33
 msgid "**Namespace Expiry**: A namespace expired."
 msgstr "**Namespace Expiry**: ネームスペースの期限切れ"
 
-#: ../../source/concepts/receipt.rst:35
+#: ../../source/concepts/receipt.rst:34
 msgid ""
 "**Inflation**: Network currency mosaics were created due to :doc:`inflation "
 "<inflation>`."
 msgstr "**インフレーション**: :doc:`インフレーション <inflation>` のために作り出されたネットワーク通貨モザイク。"
 
-#: ../../source/concepts/receipt.rst:39
+#: ../../source/concepts/receipt.rst:38
 msgid "Resolution statement"
 msgstr "解決ステートメント"
 
-#: ../../source/concepts/receipt.rst:41
+#: ../../source/concepts/receipt.rst:40
 msgid ""
 "When a transaction includes an :doc:`alias <namespace>`, a so called "
 ":ref:`resolution statement <resolution-statement>` reflects the resolved "
@@ -106,21 +77,21 @@ msgstr ""
 "トランザクションが :doc:`エイリアス <namespace>` を含むとき、 :ref:`解決ステートメント <resolution-"
 "statement>` と呼ばれ、そのブロックの解決済みの値を反映します:"
 
-#: ../../source/concepts/receipt.rst:43
+#: ../../source/concepts/receipt.rst:42
 msgid "**Address Resolution**: An account alias was used in the block."
 msgstr "**Address Resolution**: このブロックで使用されたアカウントエイリアス。"
 
-#: ../../source/concepts/receipt.rst:44
+#: ../../source/concepts/receipt.rst:43
 msgid "**Mosaic Resolution**: A mosaic alias was used in the block."
 msgstr "**Mosaic Resolution**: このブロックで使用されたモザイクエイリアス。"
 
-#: ../../source/concepts/receipt.rst:46
+#: ../../source/concepts/receipt.rst:45
 msgid ""
 "The alias receipts record the first occurrence of an (unresolved, resolved) "
 "alias pair used in a block."
 msgstr "エイリアスレシートはブロック内で使用された(未解決、解決済み)エイリアスペアの最初の出現を記録します。"
 
-#: ../../source/concepts/receipt.rst:48
+#: ../../source/concepts/receipt.rst:47
 msgid ""
 "It is technically possible to get more than one resolution for the same "
 "namespace id and block. This situation is common when a namespace creator "
@@ -130,7 +101,7 @@ msgstr ""
 "同じ namespace id "
 "とブロックに対して1つ以上の解決を取得することは技術的に可能です。この状況はネームスペース作成者が別のアセットへリンクを変更し、同じブロック内で2つの異なる解決になる場合によく見られます。"
 
-#: ../../source/concepts/receipt.rst:51
+#: ../../source/concepts/receipt.rst:50
 msgid ""
 "The receipt source ``primaryId`` references the transaction where the alias "
 "first appears within the block. The ``secondaryId`` is not 0 when the "
@@ -142,11 +113,11 @@ msgstr ""
 ":doc:`AggregateTransaction <../../concepts/aggregate-transaction>` の一部である場合は"
 " ``secondaryId`` が 0 以外になり、アグリゲート内のインデックス位置を示します。"
 
-#: ../../source/concepts/receipt.rst:56
+#: ../../source/concepts/receipt.rst:55
 msgid "Recorded receipts"
 msgstr "記録済みレシート"
 
-#: ../../source/concepts/receipt.rst:58
+#: ../../source/concepts/receipt.rst:57
 msgid "|codename| records invisible state changes for the following entities."
 msgstr "|codename| は以下のエントリに不可視な状態変化を記録します。"
 
@@ -276,18 +247,18 @@ msgid ""
 " recorded when a secretlock expires."
 msgstr "アカウントが受信するロックされたモザイク、mosaic id とその量。シークレットロックの期限が切れたときに記録されます。"
 
-#: ../../source/concepts/receipt.rst:89
+#: ../../source/concepts/receipt.rst:88
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/receipt.rst:101
+#: ../../source/concepts/receipt.rst:100
 msgid "Receipt schemas"
 msgstr "レシートスキーマ"
 
-#: ../../source/concepts/receipt.rst:110 ../../source/concepts/receipt.rst:131
-#: ../../source/concepts/receipt.rst:153 ../../source/concepts/receipt.rst:174
-#: ../../source/concepts/receipt.rst:195 ../../source/concepts/receipt.rst:216
-#: ../../source/concepts/receipt.rst:237 ../../source/concepts/receipt.rst:258
+#: ../../source/concepts/receipt.rst:109 ../../source/concepts/receipt.rst:130
+#: ../../source/concepts/receipt.rst:152 ../../source/concepts/receipt.rst:173
+#: ../../source/concepts/receipt.rst:194 ../../source/concepts/receipt.rst:215
+#: ../../source/concepts/receipt.rst:236 ../../source/concepts/receipt.rst:257
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -319,7 +290,7 @@ msgstr "レシートバージョン"
 msgid "Receipt type."
 msgstr "レシートタイプ"
 
-#: ../../source/concepts/receipt.rst:126
+#: ../../source/concepts/receipt.rst:125
 msgid "The invisible state change triggered a mosaic transfer."
 msgstr "モザイク転送によりトリガされた不可視の状態変化。"
 
@@ -335,7 +306,7 @@ msgstr "送信者の公開鍵"
 msgid "Address of the recipient."
 msgstr "受信者のアドレス"
 
-#: ../../source/concepts/receipt.rst:148
+#: ../../source/concepts/receipt.rst:147
 msgid "The invisible state change changed an account balance."
 msgstr "アカウントの残高変化によりトリガされた不可視の状態変化。"
 
@@ -347,7 +318,7 @@ msgstr "増加または減少したモザイク"
 msgid "Public key of the target account."
 msgstr "ターゲットアカウントの公開鍵"
 
-#: ../../source/concepts/receipt.rst:169
+#: ../../source/concepts/receipt.rst:168
 msgid "An :doc:`mosaic <mosaic>` expired."
 msgstr "期限切れの :doc:`モザイク <mosaic>`"
 
@@ -355,7 +326,7 @@ msgstr "期限切れの :doc:`モザイク <mosaic>`"
 msgid "Mosaic identifier."
 msgstr "モザイク識別子"
 
-#: ../../source/concepts/receipt.rst:190
+#: ../../source/concepts/receipt.rst:189
 msgid "A :doc:`namespace <namespace>` expired."
 msgstr "期限切れの :doc:`ネームスペース <namespace>`"
 
@@ -363,7 +334,7 @@ msgstr "期限切れの :doc:`ネームスペース <namespace>`"
 msgid "Namespace identifier."
 msgstr "ネームスペース識別子"
 
-#: ../../source/concepts/receipt.rst:211
+#: ../../source/concepts/receipt.rst:210
 msgid ""
 "Network currency mosaics were created due to :doc:`inflation <inflation>`."
 msgstr ":doc:`インフレーション <inflation>` のために作り出されたネットワーク通貨モザイク。"
@@ -376,7 +347,7 @@ msgstr "作成されたモザイクの識別子"
 msgid "Number of mosaics created."
 msgstr "作成されたモザイクの数"
 
-#: ../../source/concepts/receipt.rst:232
+#: ../../source/concepts/receipt.rst:231
 msgid "The collection of receipts related to a transaction."
 msgstr "トランザクションに関するレシートのコレクション。"
 
@@ -388,13 +359,13 @@ msgstr "レシートをトリガしたトランザクション。"
 msgid "Array of receipts."
 msgstr "レシートの配列"
 
-#: ../../source/concepts/receipt.rst:253
+#: ../../source/concepts/receipt.rst:252
 msgid ""
 "A resolution statement keeps the relation between a namespace alias used in "
 "a transaction and the real address or mosaic id."
 msgstr "解決ステートメントはトランザクションで使用されるネームスペースエイリアスと実際のアドレスまたは mosaic id 間の関係を保持します。"
 
-#: ../../source/concepts/receipt.rst:256
+#: ../../source/concepts/receipt.rst:255
 msgid "**type**: Address_Alias_Resolution or Mosaic_Alias_Resolution"
 msgstr "**type**: Address_Alias_Resolution または Mosaic_Alias_Resolution"
 
@@ -412,7 +383,7 @@ msgstr ""
 "未解決のネームスペース識別子にリンクされている解決エントリの配列。1 "
 "ブロック内でエイリアス関連のトランザクションが原因で解決が異なるソースで変わる可能性があるため、これは単一の UInt64 フィールドではなく配列です。"
 
-#: ../../source/concepts/receipt.rst:274
+#: ../../source/concepts/receipt.rst:273
 msgid "A single resolution statement can have multiple resolution entries."
 msgstr "1つの解決ステートメントには複数の解決エントリを含まれることがあります。"
 
@@ -424,7 +395,7 @@ msgstr "解決済みアドレスまたは解決済みモザイクの識別子"
 msgid "Information about the transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクションの情報。"
 
-#: ../../source/concepts/receipt.rst:288
+#: ../../source/concepts/receipt.rst:287
 msgid "The transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクション。"
 
@@ -444,6 +415,6 @@ msgstr ""
 msgid "Reserved."
 msgstr "予約済み"
 
-#: ../../source/concepts/receipt.rst:314
+#: ../../source/concepts/receipt.rst:313
 msgid "Continue: :doc:`Data validation <data-validation>`."
 msgstr "次項: :doc:`データバリデーション <inflation>`"

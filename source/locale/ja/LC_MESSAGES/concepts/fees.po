@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-11-13 15:09+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -57,76 +57,34 @@ msgstr "ネットワークタイプ"
 msgid "Mosaic name"
 msgstr "モザイク名"
 
-#: ../../source/concepts/fees.rst:30
-msgid ""
-"Private chains can edit the configuration of the network to eliminate fees, "
-"or use another :doc:`mosaic <mosaic>` that better suits their needs."
-msgstr ""
-"プライベートチェーンでは、手数料を無くすためにネットワークの設定を編集したり、ニーズに合った別の :doc:`モザイク定義 <mosaic>` "
-"を使用したりできます。"
-
 #: ../../source/concepts/fees.rst:34
 msgid "Transaction fee"
 msgstr "トランザクション手数料"
 
-#: ../../source/concepts/fees.rst:36
-msgid ""
-"The fee associated with a transaction primarily depends on the transaction's"
-" size. The effective fee is the product of the size of the transaction, and "
-"a fee multiplier set by the harvester. The node owner can configure the "
-"latter value to all positive values, including zero."
-msgstr ""
-"トランザクションに関連する手数料は、主としてトランザクションのサイズにより異なります。実効手数料は、トランザクションのサイズと、ハーベスタによって設定された手数料の乗数の積です。ノードの所有者はこの後者の値を、ゼロを含む正の値に設定できます。"
-
-#: ../../source/concepts/fees.rst:44
-msgid ""
-"The sender of a transaction must specify during the transaction definition a"
-" ``max_fee``, meaning the maximum fee the account allows to spend for this "
-"transaction."
-msgstr ""
-"トランザクションの送信者は、トランザクションの定義中に ``max_fee`` "
-"を指定しなければならず、これはアカウントがこのトランザクションに費やすことのできる最大手数料を意味します。"
-
-#: ../../source/concepts/fees.rst:46
-msgid ""
-"If the ``effective_fee`` is smaller or equal to the ``max_fee``, the "
-"harvester can opt to include the transaction in the block. The "
-"``fee_multiplier`` is stored in the :ref:`block header <block-header>`, "
-"permitting to determine which was the effective fee paid for every "
-"transaction included in the block."
-msgstr ""
-"``effective_fee`` が ``max_fee`` 以下の場合、ハーベスタはトランザクションをブロックに含めることを選択できます。 "
-"``fee_multiplier`` は :ref:`ブロックヘッダ <block-header>` "
-"に格納され、ブロックに含まれるすべてのトランザクションに対して支払われた実効手数料がどれであるかを決定することができます。"
-
 #: ../../source/concepts/fees.rst:49
-msgid "The harvesting nodes can decide their transaction inclusion strategy:"
-msgstr "ハーベスティングノードはトランザクション包含ストラテジーを決定することができます。"
-
-#: ../../source/concepts/fees.rst:51
 msgid ""
 "**Prefer-oldest**: Preferred for networks with high transaction throughput "
 "requirements. Include first the oldest transactions."
 msgstr ""
 "**Prefer-oldest**：高いトランザクションスループットが要求されるネットワークに適しています。最も古いトランザクションを最初に含めます。"
 
-#: ../../source/concepts/fees.rst:52
+#: ../../source/concepts/fees.rst:50
 msgid ""
 "**Minimize-fees**: Philanthropic nodes. Include first the transactions that "
 "other nodes do not want to include."
 msgstr "**Minimize-fees**: 慈善事業なノード。他のノードが含めたくない最初のトランザクションを含めます。"
 
-#: ../../source/concepts/fees.rst:53
+#: ../../source/concepts/fees.rst:51
 msgid ""
 "**Maximize-fees**: Most common in public networks. Include first "
 "transactions with higher fees."
 msgstr "**Maximize-fees**: パブリックネットワークで最も一般的です。より高い手数料の最初のトランザクションを含みます。"
 
-#: ../../source/concepts/fees.rst:57
+#: ../../source/concepts/fees.rst:89
 msgid "Rental fee"
 msgstr "レンタル手数料"
 
-#: ../../source/concepts/fees.rst:59
+#: ../../source/concepts/fees.rst:91
 msgid ""
 "Accounts willing to register a :doc:`namespace <namespace>` or a "
 ":doc:`mosaic <mosaic>` have to pay a rental fee in addition to the "
@@ -139,7 +97,7 @@ msgstr ""
 ":ref:`maxDifficultyBlocks <config-network-properties>` に対する :doc:`median "
 "network multiplier <harvesting>` に基づいて調整されます。"
 
-#: ../../source/concepts/fees.rst:62
+#: ../../source/concepts/fees.rst:94
 msgid ""
 "For more information, see how the network calculates the effective rental "
 "fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-"
@@ -148,6 +106,6 @@ msgstr ""
 "より詳しくは :ref:`モザイク <mosaic-rental-fee>` と :ref:`ネームスペース <namespace-rental-"
 "fee>` のレンタル実効手数料の計算方法を参照してください。"
 
-#: ../../source/concepts/fees.rst:64
+#: ../../source/concepts/fees.rst:96
 msgid "Continue: :doc:`Receipt <receipt>`."
 msgstr "次項: :doc:`レシート <receipt>`"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 04:41+0000\n"
+"POT-Creation-Date: 2020-05-16 21:50+0000\n"
 "PO-Revision-Date: 2019-06-20 22:03+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -71,17 +71,13 @@ msgid ""
 " renewal fees."
 msgstr "アカウントに手数料と更新料を支払うために十分な |networkcurrency| を持たせてください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:43
-msgid "Method #01: Using the SDK"
-msgstr "方法 #01: SDK を使用する"
-
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:45
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:65
 msgid ""
 "Get your namespace information, and inspect the value of the property "
 "``endHeight``."
 msgstr "あなたのネームスペース情報を取得して、``endHeight`` プロパティの値を確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:61
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:81
 msgid ""
 "The information shows that the namespace ``foo`` will become inactive at "
 "height ``5300``. The next step is to figure out the current height of the "
@@ -91,11 +87,11 @@ msgstr ""
 "この情報はネームスペース ``foo`` がブロック高 ``5300`` "
 "で非アクティブになることを示しています。次のステップは現在のチェーン高を把握し、ネームスペースが非アクティブになるまでに残っているブロック数を計算することです。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:64
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:84
 msgid "Check the current blockchain height."
 msgstr "現在のブロック高を確認する。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:72
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:92
 msgid ""
 "As you can see, the namespace is going to expire in ``500`` blocks "
 "(53000-52500). To avoid losing all the subnamespaces and aliases linked to "
@@ -104,11 +100,11 @@ msgstr ""
 "ご覧のとおり、ネームスペースは ``500`` ブロック(53000-52500)で期限切れになります。foo "
 "にリンクしているすべてのサブネームスペースとエイリアスが失われないようにするためにネームスペースの期間を延長します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:75
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:95
 msgid "Extend the namespace duration for ``1000`` more blocks."
 msgstr "ネームスペース期間を ``1000`` ブロック延長します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:89
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:109
 msgid ""
 "Use the following formula to convert approximately days to blocks ``duration"
 " ≈ numberOfDays * 86400 / blockGenerationTargetTime``."
@@ -116,21 +112,17 @@ msgstr ""
 "この公式 ``duration ≈ numberOfDays * 86400 / blockGenerationTargetTime`` "
 "を使っておよその日数をブロックに変換します。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:91
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:111
 msgid ""
 "Once the **RegisterNamespaceTransaction** gets confirmed, double-check that "
 "the namespace duration has been extended."
 msgstr "**RegisterNamespaceTransaction** が承認されたら、ネームスペースの期限が延長されたことも確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:93
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:113
 msgid "Validate that ``endHeight`` has increased by ``1000`` block units."
 msgstr "``endHeight`` が ブロック単位で ``1000`` 増加していることを確認してください。"
 
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:111
-msgid "Method #02: Using the CLI"
-msgstr "方法 #02: CLI を使用する"
-
-#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:113
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:133
 msgid ""
 "To extend the namespace duration, open a terminal window and run the "
 "following command. Replace ``foo`` with the namespace name and ``1000`` with"
