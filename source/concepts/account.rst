@@ -37,19 +37,6 @@ Address
 Each account has a unique :ref:`address <address>` derived from the public key.
 Normally, the address is shared instead of the public key because it is shorter and gathers information about the network.
 
-Hierarchical Deterministic Wallets
-===========
-
-Symbol supports a multi-account hierarchy enabling the generation of multiple public keys without revealing the private key.
-
-The deterministic keys from which the accounts will be derived from are serialized into human-readable words in Mnemonic codes.
-
-Symbol only uses the **hardened child key derivation** scheme of derivation. Hardened child keys are derived in the following manner:
-
-.. math::
-
-    Hardened child key = hash(parent private key + index)
-
 Balance
 =======
 
@@ -73,6 +60,22 @@ Restrictions
 ************
 
 Accounts may configure a set of smart rules to block announcing or receiving transactions given a series of :doc:`restrictions <account-restriction>`.
+
+**********************************
+Hierarchical Deterministic Wallets
+**********************************
+
+Symbol supports a multi-account hierarchy, enabling the generation of multiple public keys (deterministic wallets) without revealing the private key. The deterministic wallets are derived from a single binary seed converted from a mnemonic code - a group of 12 human-readable words - using elliptic curve mathematics.
+
+As HD wallets share a common seed, an owner of the wallets can backup the wallets by securely storing a single mnemonic code. Additionally, the multi-account hierarchy supports several chains of keypairs (multiple trees), giving the owner selective sharing of wallet public keys.
+
+Symbol only uses the **hardened child key derivation** scheme of derivation, which means only private keys are used to derive child keys. Hardened child keys are derived in the following manner:
+
+.. math::
+
+    Hardened child key = hash(parent private key + index)
+
+More information on how HD wallets are generated on Symbol can be found on the Hyper-deterministic wallets generator library.
 
 ******
 Guides
