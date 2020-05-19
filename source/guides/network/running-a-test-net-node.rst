@@ -109,7 +109,7 @@ API nodes take up more memory and storage than Peer nodes. If you have memory or
 
 You can verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider so you will have to open it in order to access from outside the machine.
+.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider. If so, you will have to open it in order to access it from outside the machine.
 
 ***************************
 Configuring node properties
