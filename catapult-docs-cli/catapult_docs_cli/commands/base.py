@@ -42,8 +42,36 @@ class Paragraph:
         return self.text + '\n'
 
 
+class Yaml(ABC):
+    """Base class to format tables within a yaml document.
+
+    Attributes:
+        rows (:obj:`list` of str): The rows of the table.
+
+    Args:
+        rows (:obj:`list` of str): The rows of the table.
+    """
+
+    def __init__(self, rows, note):
+        self.rows = rows
+        self.note = note
+
+    @abstractmethod
+    def _format_rows(self):
+        """Formats the table rows as a string."""
+
+    def to_string(self):
+        """Formats the table as a string.
+
+        Returns:
+            str: The table formatted as a string.
+        """
+        result = self._format_rows()
+        return result
+
+
 class Table(ABC):
-    """Base class for tables within a RST document.
+    """Base class to format tables within a RST document.
 
     Attributes:
         header (:obj:`list` of str): The header of the table.

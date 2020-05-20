@@ -1,5 +1,5 @@
 from catapult_docs_cli.utils import clean_dicts, clean_entity, merge_dicts, clean_line, indent
-from .base import Command, Table, Title, Paragraph, Parser
+from .base import Command, Parser, Yaml
 
 
 class StatusErrorsCommand(Command):
@@ -10,39 +10,37 @@ class StatusErrorsCommand(Command):
 
     def execute(self):
         """Contains all the logic to execute a command."""
+        rows = []
         for c in self.config['status-errors']:
-            print(Title(c['title']).to_string())
-            if c['text']:
-                print(Paragraph(c['text']).to_string())
-            print(StatusErrorsTable(
-                StatusErrorsParser(c['source'], c['descriptions'],
-                                   self.config['serverPath'], self.config['restPath']).parse()).to_string() + '\n')
+            errors = StatusErrorsParser(c['source'], c['descriptions'], self.config['serverPath'], self.config['restPath'])
+            rows.extend(errors.parse())
+        note = 'List of status errors that can be returned via the status channel after announcing a transaction:'
+        print(StatusErrorsYaml(rows, note).to_string())
 
 
-class StatusErrorsTable(Table):
-    """Class to format a set of status errors into RST.
+class StatusErrorsYaml(Yaml):
+    """Class to format a set of status errors into yaml."""
 
-    Each row contains:
-        - The status error ID in hexadecimal.
-        - The status error friendly name.
-        - The status error description.
-    """
-
-    def __init__(self, rows):
-        super().__init__(['Id', 'Status', 'Description'], rows)
+    def __init__(self, rows, note):
+        super().__init__(rows, note)
 
     def _format_rows(self):
-        """Formats the table rows as a str.
+        """Formats the table rows as a yaml.
 
         Returns:
-            str: The rows formatted as a str.
+            str: The rows formatted as a yaml.
         """
-        result = ''
+        result = 'type: string\n'
+        result += 'enum:\n'
         for row in self.rows:
             key = row['key']
-            code = row['code']
-            description = '' if 'description' not in row else row['description']
-            result += '\n' + indent(code + "; " + key + "; " + description, 4)
+            result += indent('- ' + key + '\n', 2)
+        result += 'description: |\n'
+        result += indent(self.note + '\n', 2)
+        for row in self.rows:
+            key = row['key']
+            description = '' if 'description' not in row else " - " + row['description']
+            result += indent('* ' + key + description + '\n', 2)
         return result
 
 

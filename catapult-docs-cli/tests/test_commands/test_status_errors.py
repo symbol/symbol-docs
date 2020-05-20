@@ -1,4 +1,4 @@
-from catapult_docs_cli.commands.status_errors import StatusErrorsParser, StatusErrorsTable
+from catapult_docs_cli.commands.status_errors import StatusErrorsParser, StatusErrorsYaml
 
 
 def test_status_errors_parser():
@@ -21,12 +21,9 @@ def test_status_errors_parser():
     ]
 
 
-def test_status_errors_table():
-    table = StatusErrorsTable([{'key': 'key', 'code': 'code', 'description': 'description'}])
+def test_status_errors_yaml():
+    table = StatusErrorsYaml([{'key': 'key', 'code': 'code', 'description': 'description'}], 'note')
     assert table.rows == [{'key': 'key', 'code': 'code', 'description': 'description'}]
-    assert table.header == ['Id', 'Status', 'Description']
-    expected_header_formatted = '.. csv-table::\n    :header: "Id", "Status", "Description"\n    :delim: ;'
-    expected_rows_formatted = '\n    code; key; description'
-    assert table._format_header() == expected_header_formatted
+    expected_rows_formatted = 'type: string\nenum:\n  - key\ndescription: |\n  note\n  * key - description\n'
     assert table._format_rows() == expected_rows_formatted
-    assert table.to_string() == expected_header_formatted + '\n' + expected_rows_formatted
+    assert table.to_string() == expected_rows_formatted
