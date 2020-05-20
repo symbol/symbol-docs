@@ -18,7 +18,7 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
 Regardless of the method chosen, any account willing to activate harvesting must first announce a valid :ref:`VrfKeyTransaction <vrf-key-link-transaction>`.
-The Vrf transaction links the harvester account with a second key pair to randomize block production and leader selection.
+The VRF transaction links the harvester account with a second key pair to randomize block production and leader selection.
 
 .. _harvesting-mosaic:
 
@@ -47,7 +47,7 @@ To harvest locally, the account should provide the next properties in :propertie
     :delim: ;
 
     harvesterPrivateKey; string; The harvester account private key. This account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero in the public network.;
-    harvesterSigningPrivateKey; string; The Vrf private key linked with the account.
+    harvesterSigningPrivateKey; string; The VRF private key linked with the account.
     enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
@@ -160,7 +160,7 @@ Required for all accounts willing to activate delegated harvesting.
 VrfKeyLinkTransaction
 =====================
 
-Announce a VrfKeyLinkTransaction to link an account with a Vrf public key.
+Announce a VrfKeyLinkTransaction to link an account with a VRF public key.
 The key is used to randomize block production and leader/participant selection.
 Required for all harvesting eligible accounts.
 
