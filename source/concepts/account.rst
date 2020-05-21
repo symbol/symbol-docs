@@ -65,17 +65,13 @@ Accounts may configure a set of smart rules to block announcing or receiving tra
 Hierarchical Deterministic Wallets
 **********************************
 
-Symbol supports a multi-account hierarchy, enabling the generation of multiple public keys (deterministic wallets) without revealing the private key. The deterministic wallets are derived from a single binary seed converted from a mnemonic code - a group of 12 human-readable words - using elliptic curve mathematics.
+Symbol supports a multi-account hierarchy, enabling the generation of multiple public keys (deterministic wallets) without revealing the private key. The deterministic wallets are derived from a single binary seed converted from a mnemonic code - a group of 24 human-readable words - using elliptic curve mathematics.
 
 As HD wallets share a common seed, an owner of the wallets can backup the wallets by securely storing a single mnemonic code. Additionally, the multi-account hierarchy supports several chains of keypairs (multiple trees), giving the owner selective sharing of wallet public keys.
 
-Symbol only uses the **hardened child key derivation** scheme of derivation, which means only private keys are used to derive child keys. Hardened child keys are derived in the following manner:
+Symbol only uses the **hardened child key derivation** scheme of derivation, which means only private keys are used to derive child keys. The 'NIP-6<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>' defines the complete specification on how HD wallets are defined on Symbol.
 
-.. math::
-
-    Hardened child key = hash(parent private key + index)
-
-More information on how HD wallets are generated on Symbol can be found on the Hyper-deterministic wallets generator library.
+To generate new HD Wallets, you can use the library 'symbol-hd-wallets<https://github.com/nemfoundation/symbol-hd-wallets>', available for TypeScript and JavaScript.
 
 ******
 Guides
