@@ -89,7 +89,7 @@ Method #03: Using the CLI
 *************************
 
 To create a new namespace, open a terminal window and run the following command.
-Replace ``foo`` with the chosen namespace name and ``1000`` with the namespace duration expressed in blocks.
+Replace ``foo`` with the chosen namespace name and ``172800`` with the namespace duration expressed in blocks.
 
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
     :language: bash

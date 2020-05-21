@@ -83,7 +83,7 @@ The next step is to figure out the current height of the chain, and calculate th
 As you can see, the namespace is going to expire in ``500`` blocks (53000-52500).
 To avoid losing all the subnamespaces and aliases linked to foo, we are going to extend the namespace duration.
 
-3. Extend the namespace duration for ``1000`` more blocks.
+3. Extend the namespace duration for ``172800`` more blocks.
 
 .. example-code::
 
@@ -101,7 +101,7 @@ To avoid losing all the subnamespaces and aliases linked to foo, we are going to
 
 Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the namespace duration has been extended.
 
-4. Validate that ``endHeight`` has increased by ``1000`` block units.
+4. Validate that ``endHeight`` has increased by ``172800`` block units.
 
 .. code-block:: bash
 
@@ -115,14 +115,14 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     type:           Root namespace
     owner:          TBULEA...IPS4
     startHeight:    52000
-    endHeight:      54000
+    endHeight:      178100
 
 *************************
 Method #03: Using the CLI
 *************************
 
 To extend the namespace duration, open a terminal window and run the following command.
-Replace ``foo`` with the namespace name and ``1000`` with the number of blocks to extend.
+Replace ``foo`` with the namespace name and ``172800`` with the number of blocks to extend.
 
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh
     :language: bash
