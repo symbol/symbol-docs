@@ -158,7 +158,7 @@ When another block is added to the blockchain, the transaction has one confirmat
 The next block added to the chain will give it two confirmations and so on.
 
 Under certain circumstances, like network failure or partition, the most recent confirmed blocks need to be reversed.
-:ref:`Rollbacks <rollbacks>` are characteristic in blockchain systems and  essential to resolve the forks of the blockchain.
+:ref:`Rollbacks <rollbacks>` are characteristic in blockchain systems and essential to resolve the forks of the blockchain.
 
 In the public network, a transaction is considered to be irrevocable when it receives ``398`` confirmations, being this value :ref:`configurable per network <config-network-properties>`.
 In other words, it is necessary to wait at least ``398`` blocks after a transaction receives its first confirmation to have the guarantee that it cannot be reversed.
