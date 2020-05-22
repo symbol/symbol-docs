@@ -168,8 +168,8 @@ Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    duration; :schema:`BlockDuration <types.cats#L2>`; Number of confirmed blocks you would like to rent the namespace for. Required for root namespaces.
-    parentId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Parent namespace identifier. Required for subnamespaces.
+    duration; :schema:`BlockDuration <types.cats>`; Number of confirmed blocks you would like to rent the namespace for. Required for root namespaces.
+    parentId; :schema:`NamespaceId <namespace/namespace_types.cats>`; Parent namespace identifier. Required for subnamespaces.
     id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
     registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
     nameSize; uint8; Namespace name size in bytes.
@@ -195,7 +195,7 @@ Announce an AliasTransaction to attach a namespace to an account. A namespace ca
     :delim: ;
 
     namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    address; :schema:`Address <types.cats#L11>`; Aliased address.
+    address; :schema:`Address <types.cats>`; Aliased address.
     aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _mosaic-alias-transaction:
@@ -217,8 +217,8 @@ Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    mosaicId; :schema:`MosaicId <types.cats#L7>`; Aliased mosaic identifier.
+    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats>`; Identifier of the namespace that will become an alias.
+    mosaicId; :schema:`MosaicId <types.cats>`; Aliased mosaic identifier.
     aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
 
 .. _namespace-registration-type:

@@ -152,7 +152,7 @@ Required for all accounts willing to activate delegated harvesting.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    linkedPublicKey; :schema:`Key <types.cats#L14>`; Linked account public key.
+    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _vrf-key-link-transaction:
@@ -176,7 +176,7 @@ Required for all harvesting eligible accounts.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    linkedPublicKey; :schema:`Key <types.cats#L14>`; Remote account public key.
+    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _link-action:

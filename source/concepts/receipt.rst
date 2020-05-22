@@ -127,8 +127,8 @@ The invisible state change triggered a mosaic transfer.
     :delim: ;
 
     mosaic; :ref:`Mosaic <mosaic>`; Mosaic transferred.
-    senderPublicKey; :schema:`Key <types.cats#L14>`; Public key of the sender.
-    recipientAddress; :schema:`Address <types.cats#L11>`; Address of the recipient.
+    senderPublicKey; :schema:`Key <types.cats>`; Public key of the sender.
+    recipientAddress; :schema:`Address <types.cats>`; Address of the recipient.
 
 .. _balance-change-receipt:
 
@@ -149,7 +149,7 @@ The invisible state change changed an account balance.
     :delim: ;
 
     mosaic; :ref:`Mosaic <mosaic>`; Mosaic increased or decreased.
-    targetPublicKey; :schema:`Key <types.cats#L14>`; Public key of the target account.
+    targetPublicKey; :schema:`Key <types.cats>`; Public key of the target account.
 
 .. _mosaic-expiry-receipt:
 
@@ -169,7 +169,7 @@ An :doc:`mosaic <mosaic>` expired.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    artifactId; :schema:`MosaicId <types.cats#L7>`; Mosaic identifier.
+    artifactId; :schema:`MosaicId <types.cats>`; Mosaic identifier.
 
 
 .. _namespace-expiry-receipt:
@@ -211,8 +211,8 @@ Network currency mosaics were created due to :doc:`inflation <inflation>`.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    mosaicId; :schema:`MosaicId <types.cats#L7>`; Identifier of the mosaic that has been created.
-    amount; :schema:`Amount <types.cats#L1>`; Number of mosaics created.
+    mosaicId; :schema:`MosaicId <types.cats>`; Identifier of the mosaic that has been created.
+    amount; :schema:`Amount <types.cats>`; Number of mosaics created.
 
 .. _transaction-statement:
 
@@ -253,7 +253,7 @@ A resolution statement keeps the relation between a namespace alias used in a tr
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    unresolved; :schema:`UnresolvedAddress <types.cats#L10>` or :schema:`UnresolvedMosaicId <types.cats#L6>`; Unresolved address or unresolved mosaic identifier.
+    unresolved; :schema:`UnresolvedAddress <types.cats>` or :schema:`UnresolvedMosaicId <types.cats>`; Unresolved address or unresolved mosaic identifier.
     resolutionEntries; array(:ref:`ResolutionEntry <resolution-entry>`, size=resolvedEntriesSize); Array of resolution entries linked to the unresolved namespace identifier. It is an array instead of a single UInt64 field since within one block the resolution might change for different sources due to alias related transactions.
 
 .. _resolution-entry:
@@ -267,8 +267,8 @@ A single resolution statement can have multiple resolution entries.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    resolvedValue; :schema:`Address <types.cats#L11>` or :schema:`MosaicId <types.cats#L7>`; Resolved address or resolved mosaic identifier.
-    source; :ref:`ReceiptSource <receipt-source>`;  Information about the transaction that triggered the receipt.
+    resolvedValue; :schema:`Address <types.cats>` or :schema:`MosaicId <types.cats>`; Resolved address or resolved mosaic identifier.
+    source; :ref:`ReceiptSource <receipt-source>`; Information about the transaction that triggered the receipt.
 
 .. _receipt-source:
 
