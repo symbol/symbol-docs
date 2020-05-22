@@ -53,8 +53,6 @@ Make sure that the server's host is accessible from the internet and that the fo
 Installation
 ************
 
-.. note:: These instructions are for the newer |codename| test network deployments (ie: will use |networkcurrency| as the network currency mosaic). If you have previously been running a node on the older test networks using ``nem.xem`` (pre 0.9.2.1), you will be redeploying your node and syncing with a different network. Any account(s) you might have been using on the old network will have no balance if moving to a new network.
-
 The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
 
 1. Download the |latest-release| of the package, or clone the repository directly using Git.
@@ -107,26 +105,25 @@ API harvest assembly
 
 The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
 
+API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a Peer only node instead.
+
 You can verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
 
-.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider so you will have to open it in order to access from outside the machine.
-
-.. note:: API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a Peer only node instead.
+.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider. If so, you will have to open it in order to access it from outside the machine.
 
 ***************************
 Configuring node properties
 ***************************
 
-After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the node's public key or the :doc:`harvesting <../../concepts/harvesting>` configuration.
+After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the public name or the :doc:`harvesting <../../concepts/harvesting>` configuration of the node.
 
-A file ``config-input.yaml`` will be generated with the default values.
-Depending on the assembly chosen, this file will be located under the ``peer-assembly/peer-node/`` or ``api-harvest-assembly/api-node``.
+To edit the node properties, follow the next steps:
 
 1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
 
 2. Edit the properties file ``config-input.yaml`` with a text editor.
 
-3. Save the changes and apply them with the command ``sudo docker-compose up --build --detach``.
+3. Save and apply the changes with the command ``sudo docker-compose up --build --detach``.
 
 *********************************
 Interacting with the test network

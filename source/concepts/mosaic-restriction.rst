@@ -200,7 +200,7 @@ Enumeration: uint8
     1 (EQ); Allow if equal.
     2 (NE); Allow if not equal.
     3 (LT); Allow if less than.
-    4 (LTE); Allow if allow if less than or equal.
+    4 (LTE); Allow if less than or equal.
     5 (GT); Allow if greater than.
     6 (GTE); Allow if greater than or equal.
 
