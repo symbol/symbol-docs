@@ -153,24 +153,15 @@ If valid, the harvester stores the transaction in a block and reaches the **conf
 Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
 Additionally, the :doc:`transaction fee <fees>` is deducted from the signer's account.
 
-The transaction has **zero confirmations** at this point.
+The transaction has zero confirmations at this point.
 When another block is added to the blockchain, the transaction has one confirmation.
 The next block added to the chain will give it two confirmations and so on.
 
-.. _rollbacks:
+Under certain circumstances, like network failure or partition, the most recent confirmed blocks need to be reversed.
+:ref:`Rollbacks <rollbacks>` are characteristic in blockchain systems and  essential to resolve the forks of the blockchain.
 
-*********
-Rollbacks
-*********
-
-Blockchains are designed in a way that, under certain circumstances, recent blocks need to be rolled back.
-These are essential to resolve the forks of the blockchain.
-
-The rewrite limit is the maximum number of blocks that can be rolled back.
-Hence, forks can only be resolved up to a certain depth too.
-
-|codename|'s public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`.
-Once a transaction has more than ``maxRollBackConfirmations`` value, it cannot be reversed.
+In the public network, a transaction is considered to be irrevocable when it receives ``398`` confirmations, being this value :ref:`configurable per network <config-network-properties>`.
+In other words, it is necessary to wait at least ``398`` blocks after a transaction receives its first confirmation to have the guarantee that it cannot be reversed.
 
 ******
 Guides
