@@ -36,7 +36,7 @@ const recipientAddress = Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
+const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 

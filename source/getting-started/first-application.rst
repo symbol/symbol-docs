@@ -96,7 +96,7 @@ You should see on your screen a line similar to:
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 51A99028058245A8 │ 750.0           │ 750000000       │ Never             │
+    │ 05D6A80DE3C9ADCA │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 This account owns 750 |networkcurrency| relative units.

@@ -24,7 +24,7 @@ const validTransaction = (transaction, publicAccount) => {
     return transaction instanceof symbol_sdk_1.TransferTransaction &&
         transaction.signer.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new symbol_sdk_1.MosaicId('51A99028058245A8') ||
+        (transaction.mosaics[0].id.equals(new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA') ||
             transaction.mosaics[0].id.equals(new symbol_sdk_1.NamespaceId('symbol.xym')))) &&
         transaction.mosaics[0].amount.compare(symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
