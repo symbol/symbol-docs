@@ -41,8 +41,9 @@ config-network.properties
     enableVerifiableReceipts; bool; Set to true if block chain should calculate receipts so that state changes are fully verifiable at each block.; true; true
     currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x0DC6'7FBE'1CAD'29E3; 0x51A9'9028'0582'45A8
     harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x2651'4E2A'1EF3'3824; 0x51A9'9028'0582'45A8
-    blockGenerationTargetTime; utils::TimeSpan; Targeted time between blocks.; 15s; 15s
+    blockGenerationTargetTime; utils::TimeSpan; Targeted time between blocks.; 30s; 15s
     blockTimeSmoothingFactor; uint32_t; *Note*: A higher value makes the network more biased. *Note*: This can lower security because it will increase the influence of time relative to importance.; 3000; 3000
+    blockFinalizationInterval; uint32_t; Number of blocks between successive finalization attempts.; 30;
     importanceGrouping; uint64_t; Number of blocks that should be treated as a group for importance purposes. *Note*: Importances will only be calculated at blocks that are multiples of this grouping number.; 39; 1433
     importanceActivityPercentage; uint8_t; Percentage of importance resulting from fee generation and beneficiary usage.; 5; 5
     maxRollbackBlocks; uint32_t; Maximum number of blocks that can be rolled back.; 40; 398
@@ -55,7 +56,10 @@ config-network.properties
     totalChainImportance; Importance; Total whole importance units available in the network.; 15'000'000; 7'831'975'436'000'000
     minHarvesterBalance; Amount; Minimum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.; 500; 10'000'000'000
     maxHarvesterBalance; Amount; Maximum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.; 4'000'000; 50'000'000'000'000
+    minVoterBalance; Amount; Minimum number of harvesting mosaic atomic units needed for an account to be eligible for voting.; 50'000;
     harvestBeneficiaryPercentage; uint8_t; Percentage of the harvested fee that is collected by the beneficiary account.; 10; 25
+    harvestNetworkPercentage; uint8_t; Percentage of the harvested fee that is collected by the network.; 5;
+    harvestNetworkFeeSinkPublicKey; Key; Public key of the harvest network fee sink account.; FF5563F1C5824EE0CD868799FBE8744B46D5549973FDA499939C952D951494E4;
     blockPruneInterval; uint32_t; Number of blocks between cache pruning.; 360; 360
     maxTransactionsPerBlock; uint32_t; Maximum number of transactions per block.; 200'000; 1'500
     **plugin:catapult.plugins.accountlink**; ; ; ;
