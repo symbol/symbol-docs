@@ -128,9 +128,9 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+*******************
+Transaction schemas
+*******************
 
 .. _account-key-link-transaction:
 

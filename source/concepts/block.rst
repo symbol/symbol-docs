@@ -72,4 +72,37 @@ Guides
     :excerpts:
     :sort:
 
+*******************
+Transaction schemas
+*******************
+
+.. _voting-key-link-transaction:
+
+VotingKeyLinkTransaction
+========================
+
+Announce a VotingKeyLinkTransaction to associate a |BLS| public key with an account.
+Required for node operators willing to vote finalized blocks.
+
+**Version**: 0x01
+
+**EntityType**: 0x4143
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    linkedPublicKey; :schema:`Key <types.cats#L14>`; Remote account public key.
+    linkAction; :ref:`LinkAction <link-action>`; Account link action.
+
 Continue: :doc:`Transaction <transaction>`.
+
+
+.. |BLS| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham" target="_blank">BLS</a>
+

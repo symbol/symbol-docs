@@ -132,6 +132,7 @@ Guides
 *******************
 Transaction schemas
 *******************
+
 .. _mosaic-global-restriction-transaction:
 
 MosaicGlobalRestrictionTransaction
