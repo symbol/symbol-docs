@@ -136,7 +136,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: JavaScript
 
-        .. note:: Symbol SDK require Node.js 12 LTS to execute.
+        .. note:: Symbol SDK requires Node.js 12 LTS to execute.
 
 
         1. Create a ``package.json`` file.
@@ -153,7 +153,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: Java
 
-        .. note:: Symbol SDK require JDK 8 to execute.
+        .. note:: Symbol SDK requires JDK 8 to execute.
 
         1. Open a new Java `gradle`_ project.  Use your favourite IDE or create a project from the command line.
 
@@ -174,7 +174,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:sdk-vertx-client:0.17.0"
+                compile "io.nem:symbol-sdk-vertx-client:0.19.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
