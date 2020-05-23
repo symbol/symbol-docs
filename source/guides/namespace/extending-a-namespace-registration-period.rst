@@ -115,7 +115,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     type:           Root namespace
     owner:          TBULEA...IPS4
     startHeight:    52000
-    endHeight:      178100
+    endHeight:      225800
 
 *************************
 Method #03: Using the CLI
