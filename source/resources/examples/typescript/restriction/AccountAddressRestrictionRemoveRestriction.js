@@ -26,7 +26,7 @@ const companyAddress = symbol_sdk_1.Address.createFromRawAddress(companyRawAddre
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const transaction = symbol_sdk_1.AccountRestrictionTransaction
-    .createAddressRestrictionModificationTransaction(symbol_sdk_1.Deadline.create(), symbol_sdk_1.AccountRestrictionFlags.AllowIncomingAddress, [], [companyAddress], networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+    .createAddressRestrictionModificationTransaction(symbol_sdk_1.Deadline.create(), symbol_sdk_1.AddressRestrictionFlag.AllowIncomingAddress, [], [companyAddress], networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with product private key

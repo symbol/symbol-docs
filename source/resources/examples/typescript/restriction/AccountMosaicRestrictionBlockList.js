@@ -27,7 +27,7 @@ const companyShareMosaicId = new symbol_sdk_1.MosaicId(companyShareMosaicIdHex);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const transaction = symbol_sdk_1.AccountRestrictionTransaction
-    .createMosaicRestrictionModificationTransaction(symbol_sdk_1.Deadline.create(), symbol_sdk_1.AccountRestrictionFlags.BlockMosaic, [companyShareMosaicId], [], networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+    .createMosaicRestrictionModificationTransaction(symbol_sdk_1.Deadline.create(), symbol_sdk_1.MosaicRestrictionFlag.BlockMosaic, [companyShareMosaicId], [], networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with product private key

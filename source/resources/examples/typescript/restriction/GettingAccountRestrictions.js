@@ -32,7 +32,7 @@ restrictionHttp.getAccountRestrictions(address)
         accountRestrictions
             .filter((accountRestriction) => accountRestriction.values.length > 0)
             .map((accountRestriction) => {
-            console.log('\n', symbol_sdk_1.AccountRestrictionFlags[accountRestriction.restrictionFlags], accountRestriction.values.toString());
+            console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
         });
     }
     else {
