@@ -57,8 +57,7 @@ The first block is defined before launching a new network and sets the distribut
 
 The process of creating the subsequent new blocks is called :doc:`harvesting <harvesting>`.
 
-Blocks are created by :doc:`accounts <account>` based on their importance score.
-The :doc:`consensus algorithm <consensus-algorithm>` chooses each round the account that harvest the block. 
+Blocks are created by :doc:`accounts <account>`, which are chosen by the :doc:`consensus algorithm <consensus-algorithm>` based on their importance score.
 
 The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the mosaics created by :doc:`inflation <inflation>`.
 This gives the harvester an incentive to add as many transactions to the block as possible.
@@ -74,8 +73,8 @@ Blockchains are designed in a way that, in the presence of a network failure or 
 The rewrite limit is the maximum number of blocks that can be rolled back.
 Hence, forks can only be resolved up to a certain depth too.
 
-|codename|'s public network has a rewrite limit of ``398`` blocks, being this limit :ref:`configurable per network <config-network-properties>`.
-At this point, the transactions linked to the block are permanently recorded on the blockchain.
+|codename|'s public network has a rewrite limit of ``398`` blocks, but this limit is :ref:`configurable per network <config-network-properties>`.
+The transactions linked to a block are permanently recorded on the blockchain once the number of confirmation blocks (subsequent blocks) surpasses the maximum number of rollback blocks.
 
 ******
 Guides
