@@ -8,24 +8,13 @@ Since the blocks in the chain are ordered, the complete :doc:`transaction <trans
 Subsequent blocks have increasing heights that differ by one.
 Each block can contain up to ``1,000`` transactions (public network), being this value :ref:`configurable per network <config-network-properties>`.
 
-Blocks are stored in a database as permanent medium.
-|codename| calls the first block in the chain the **nemesis block**.
-
 |codename| blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
 
-**************
-Block creation
-**************
+******
+Header
+******
 
-Blocks are created by :doc:`accounts <account>`.
-The process of creating new blocks is called :doc:`harvesting <harvesting>`.
-The **harvesting account**—called the harvester— gets the :doc:`fees <fees>` for the transactions in the block and :doc:`inflation <inflation>`. This gives the harvester an incentive to add as many transactions to the block as possible.
-
-************
-Block header
-************
-
-Serialization of the block header.
+Nodes stores blocks in a serialized form as follows:
 
 **Inlines:**
 
@@ -58,6 +47,35 @@ Serialization of the block header.
 .. |patricia| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">patricia tree</a>
+
+********
+Creation
+********
+
+|codename| calls the first block in the chain the **nemesis block**.
+The first block is defined before launching a new network and sets the distribution of the network currency mosaics.
+
+The process of creating the subsequent new blocks is called :doc:`harvesting <harvesting>`.
+
+Blocks are created by :doc:`accounts <account>`, which are chosen by the :doc:`consensus algorithm <consensus-algorithm>` based on their importance score.
+The consensus algorithm determines a new account to harvest the subsequent block after each block creation.
+
+The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the mosaics created by :doc:`inflation <inflation>`.
+This gives the harvester an incentive to add as many transactions to the block as possible.
+
+.. _rollbacks:
+
+*********
+Rollbacks
+*********
+
+Blockchains are designed in a way that, in the presence of a network failure or partition, the recent blocks might need to be rolled back.
+
+The rewrite limit is the maximum number of blocks that can be rolled back.
+Hence, forks can only be resolved up to a certain depth too.
+
+|codename|'s public network has a rewrite limit of ``398`` blocks, but this limit is :ref:`configurable per network <config-network-properties>`.
+The transactions linked to a block are permanently recorded on the blockchain once the number of confirmation blocks (subsequent blocks) surpasses the maximum number of rollback blocks.
 
 ******
 Guides
