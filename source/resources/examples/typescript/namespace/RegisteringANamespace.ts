@@ -29,7 +29,7 @@ import {
 // replace with namespace name
 const namespaceName = 'foo';
 // replace with duration (in blocks)
-const duration = UInt64.fromUint(1000);
+const duration = UInt64.fromUint(172800);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 
