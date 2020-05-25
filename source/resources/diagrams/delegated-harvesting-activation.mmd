@@ -3,7 +3,7 @@ sequenceDiagram
     participant Announcer Account
     participant Network
     participant Node
-    Main Account ->>  Network: AccountLinkTransaction(remotePublicKey)
+    Main Account ->>  Network: AccountKeyLinkTransaction(remotePublicKey)
     activate Network
     Network -->> Main Account: Confirms transaction
     deactivate Network

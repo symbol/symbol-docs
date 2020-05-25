@@ -133,7 +133,7 @@ Announce an AggregateTransaction to combine multiple transactions together.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    transactionsHash; :schema:`Hash256 <types.cats#L12>`; Aggregate hash of the aggregate transaction.
+    transactionsHash; :schema:`Hash256 <types.cats>`; Aggregate hash of the aggregate transaction.
     payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
     aggregateTransactionHeader_Reserved1; uint32; Reserved padding to align end of AggregateTransactionHeader on 8-byte boundary.
     transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions. Other aggregate transactions are not allowed as inner transactions.
@@ -154,7 +154,7 @@ Cosignature transactions are used to sign :ref:`announced AggregateBondedTransac
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    parentHash; :schema:`Hash256 <types.cats#L12>`;  AggregateBondedTransaction hash to cosign.
+    parentHash; :schema:`Hash256 <types.cats>`;  AggregateBondedTransaction hash to cosign.
 
 .. _cosignature:
 
@@ -167,8 +167,8 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signerPublicKey; :schema:`Key <types.cats#L14>`; Cosigner public key.
-    signature; :schema:`Signature <types.cats#L15>`; Transaction signature.
+    signerPublicKey; :schema:`Key <types.cats>`; Cosigner public key.
+    signature; :schema:`Signature <types.cats>`; Transaction signature.
 
 
 .. _hash-lock-transaction:
@@ -202,7 +202,7 @@ If the AggregateBondedTransaction duration is reached without being signed by al
     :delim: ;
 
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
-    duration; :schema:`BlockDuration <types.cats#L2>`; Number of blocks for which a lock should be valid.
-    hash; :schema:`Hash256 <types.cats#L12>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.
+    duration; :schema:`BlockDuration <types.cats>`; Number of blocks for which a lock should be valid.
+    hash; :schema:`Hash256 <types.cats>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.
 
 Continue: :doc:`Account Restrictions <account-restriction>`.

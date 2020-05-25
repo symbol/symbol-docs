@@ -17,6 +17,9 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 |codename|'s public network defines that an account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero.
 Eligible accounts can use their importance scores to create new blocks either by :ref:`running a node <local-harvesting>` or delegating it to a :ref:`remote node <delegated-harvesting>`.
 
+Regardless of the method chosen, any account willing to activate harvesting must first announce a valid :ref:`VrfKeyTransaction <vrf-key-link-transaction>`.
+The VRF transaction links the harvester account with a second key pair to randomize block production and leader selection.
+
 .. _harvesting-mosaic:
 
 *****************
@@ -37,9 +40,20 @@ Local harvesting
 ****************
 
 An eligible account can harvest new blocks by running a node.
-To harvest locally, the account should provide a private key in the :properties:`config-harvesting.properties <config-harvesting.properties>` file.
+To harvest locally, the account should provide the next properties in :properties:`config-harvesting.properties <config-node-properties>` file:
 
-Besides, each node can set a **beneficiary public key** to share a 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio :ref:`configurable per network <config-network-properties>`.
+.. csv-table::
+    :header: "Property", "Type", "Description", "Default"
+    :delim: ;
+
+    harvesterPrivateKey; string; The harvester account private key. This account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero in the public network.;
+    harvesterSigningPrivateKey; string; The VRF private key linked with the account.
+    enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
+    maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
+    delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
+    beneficiaryPublicKey; string; Public key of the account receiving part of the harvested fee.; 0000000000000000000000000000000000000000000000000000000000000000
+
+Note that each node can set a **beneficiary public key** to share a 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio :ref:`configurable per network <config-network-properties>`.
 When the node does not define a beneficiary, all the rewards go to the block signer.
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
@@ -56,10 +70,10 @@ Local harvesting is secure as long as no one accesses your node instance, which 
 Delegated harvesting
 ********************
 
-An eligible account may also delegate its importance score to a :ref:`remote node <delegated-harvesting>` for harvesting.
+Delegated harvesting allows using the importance score of an account to create new blocks and receive rewards without having to run a node locally.
 
-Delegated harvesting enables an account to use a **proxy private key** that can be shared with a node securely.
-In other words, you can use the importance score of your account to create new blocks without running a node.
+An eligible account can delegate its importance score to a brand new **proxy account**
+The private key of the proxy account can be shared securely with any node that is running local harvesting that delegated harvesting connections.
 
 .. figure:: ../resources/images/diagrams/delegated-harvesting.png
     :align: center
@@ -67,13 +81,16 @@ In other words, you can use the importance score of your account to create new b
 
     Activating delegated harvesting
 
-To enable delegated harvesting, the account owner has to link its **importance score** to a remote account announcing an :ref:`AccountLinkTransaction <account-link-transaction>`.
+To enable delegated harvesting, the account owner has to link its importance score to the proxy account by announcing an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
+In order for the remote account to be accepted for delegated harvesting, the remote account should not have sent nor received any transaction or be linked to another account previously.
+
+.. note:: The remote account cannot be involved in any transaction while it is a delegated account.
 
 Then, the account needs to send a `special encrypted message <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node via a :doc:`TransferTransaction <transfer-transaction>`.
-The message must contain the remote's account **proxy private key**  encrypted using AES, so that only the recipient will be able to decipher it.
+The message must contain the remote's account **proxy private key**  encrypted using AES, making the transaction readable only by the recipient.
 
 The node receives an encrypted message using :ref:`WebSockets <websockets>`.
-Once the node decrypts the private key of the potential delegated harvester, the node owner can **add the remote account as a delegated harvester** if the candidate meets the requirements.
+Once the node decrypts the private key of the potential delegated harvester, the node owner can add the remote account as a delegated harvester if the candidate meets the requirements.
 
 As the remote private key is **saved on disk**, even if the node disconnects temporarily, the persistent delegated harvesters will be reestablished once the node reconnects to the network.
 Additionally, the use of encrypted message creates a **backup** of the information for the nodes.
@@ -95,7 +112,7 @@ Remote harvesters may not receive the entire reward if the following conditions 
     :delim: ;
 
     **Configuration** ; Setup a catapult-server node.; Activate remote harvesting.
-    **Cost** ; The node maintenance (electricity, cost VPN).; AccountLinkTransaction + TransferTransaction announcement fees.
+    **Cost** ; The node maintenance (electricity, cost VPN) + VrfKeyTransaction announcement fees.; VrfKeyTransaction + AccountKeyLinkTransaction + TransferTransaction announcement fees.
     **Security**; The node stores the private key.;  A proxy private key is shared with a node.
     **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - node's beneficiary share.
 
@@ -111,26 +128,17 @@ Guides
     :excerpts:
     :sort:
 
-*******
-Schemas
-*******
+*******************
+Transaction schemas
+*******************
 
-.. _account-link-transaction:
+.. _account-key-link-transaction:
 
-AccountLinkTransaction
-======================
+AccountKeyLinkTransaction
+=========================
 
-Announce an AccountLinkTransaction to delegate the account importance to a remote account.
-
-In order for the remote account to be accepted for delegated harvesting, it needs to meet the following conditions:
-
-* It cannot own any mosaics.
-* It cannot be a cosignatory of any other account.
-* It cannot be a multisig account.
-* It cannot already be a remote account for another account.
-* It cannot be its own remote account.
-
-The account cannot be involved in any transaction while it is a delegated account.
+Announce an AccountKeyLinkTransaction to delegate the account importance score to a proxy account.
+Required for all accounts willing to activate delegated harvesting.
 
 **Version**: 0x01
 
@@ -144,7 +152,31 @@ The account cannot be involved in any transaction while it is a delegated accoun
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    remotePublicKey; :schema:`Key <types.cats#L14>`; Remote account public key.
+    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
+    linkAction; :ref:`LinkAction <link-action>`; Account link action.
+
+.. _vrf-key-link-transaction:
+
+VrfKeyLinkTransaction
+=====================
+
+Announce a VrfKeyLinkTransaction to link an account with a VRF public key.
+The key is used to randomize block production and leader/participant selection.
+Required for all harvesting eligible accounts.
+
+**Version**: 0x01
+
+**EntityType**: 0x4243
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 .. _link-action:

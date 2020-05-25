@@ -45,13 +45,13 @@ class SendingATransferTransaction {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000")) {
+                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
             // replace with recipient address
             final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with symbol.xym id
-            final MosaicId networkCurrencyMosaicId = new MosaicId("51A99028058245A8");
+            final MosaicId networkCurrencyMosaicId = new MosaicId("05D6A80DE3C9ADCA");
             // replace with network currency divisibility
             final Integer networkCurrencyDivisibility = 6;
             // replace with relative amount of symbol.xym to send

@@ -58,7 +58,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an :ref:`AccountLinkTransaction <account-link-transaction>` to **delegate M's importance to R** using its public key.
+2. Create an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>` to **delegate M's importance to R** using its public key.
 
 .. example-code::
 
@@ -72,7 +72,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Sign the AccountLinkTransaction with **M** and announce it to the network.
+3. Sign the AccountKeyLinkTransaction with **M** and announce it to the network.
 
 .. example-code::
 
@@ -143,7 +143,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000 --profile main
+    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --profile main
 
 2. Create a brand new account. This account will be your **remote account (R)**.
 
@@ -161,7 +161,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000 --profile announcer
+    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --profile announcer
 
 4. Send a request to the node you want to be added as a delegated harvester with **A**. Replace ``<recipient-public-key>`` with the node's public key and ``<remote-private-key>`` with **R's private key**.
 

@@ -38,7 +38,7 @@ class SendingATransferTransactionAddressAlias {
             throws ExecutionException, InterruptedException {
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000")) {
+                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
             /* start block 01 */
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with aliased address

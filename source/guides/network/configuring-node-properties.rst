@@ -58,11 +58,11 @@ config-user.properties
     :header: "Property", "Type", "Description", "Default"
     :delim: ;
 
-    **account**; ; ;
+    **account**; ; ; 
     enableDelegatedHarvestersAutoDetection; bool; Set to true if potential delegated harvesters should be automatically detected.; true
-    **storage**; ; ;
-    certificateDirectory; string; Certificate directory.; ../certificate
+    **storage**; ; ; 
     dataDirectory; string; Data directory.; ../data
+    certificateDirectory; string; Certificate directory.; ../certificate
     pluginsDirectory; string; Plugins directory.; .
 
 config-node.properties
@@ -74,7 +74,6 @@ config-node.properties
 
     **node**; ; ;
     port; unsigned short; Server port.; 7900
-    apiPort; unsigned short; Server api port.; 7901
     maxIncomingConnectionsPerIdentity; uint32_t; Maximum number of incoming connections per identity over primary port.; 3
     enableAddressReuse; bool; Set to true if the server should reuse ports already in use.; false
     enableSingleThreadPool; bool; Set to true if a single thread pool should be used, Set to false if multiple thread pools should be used.; false
@@ -140,8 +139,9 @@ config-harvesting.properties
     :header: "Property", "Type", "Description", "Default"
     :delim: ;
 
-    **harvesting**; ; ;
-    harvesterPrivateKey; string; Harvester private key.;
+    **harvesting**; ; ; 
+    harvesterSigningPrivateKey; string; Harvester signing private key.; 
+    harvesterVrfPrivateKey; string; Harvester vrf private key.; 
     enableAutoHarvesting; bool; Set to true if auto harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of unlocked accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy.; Importance

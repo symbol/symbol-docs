@@ -32,7 +32,7 @@ const mosaicIdHex = '46BE9BC0626F9B1A';
 const divisibility = 6;
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 accountHttp
