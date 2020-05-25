@@ -18,10 +18,10 @@
 
 import {
     Account,
-    AccountRestrictionFlags,
     AccountRestrictionTransaction,
     Deadline,
     MosaicId,
+    MosaicRestrictionFlag,
     NetworkType,
     RepositoryFactoryHttp,
     UInt64,
@@ -40,7 +40,7 @@ const networkType = NetworkType.TEST_NET;
 const transaction = AccountRestrictionTransaction
     .createMosaicRestrictionModificationTransaction(
         Deadline.create(),
-        AccountRestrictionFlags.BlockMosaic,
+        MosaicRestrictionFlag.BlockMosaic,
         [companyShareMosaicId],
         [],
         networkType,

@@ -1,6 +1,6 @@
 import {
     Account,
-    AccountLinkTransaction,
+    AccountKeyLinkTransaction,
     Deadline,
     LinkAction,
     NetworkType,
@@ -19,7 +19,7 @@ const remoteAccount = Account.generateNewAccount(networkType);
 /* end block 01 */
 
 /* start block 02 */
-const accountLinkTransaction = AccountLinkTransaction.create(
+const accountLinkTransaction = AccountKeyLinkTransaction.create(
     Deadline.create(),
     remoteAccount.publicKey,
     LinkAction.Link,

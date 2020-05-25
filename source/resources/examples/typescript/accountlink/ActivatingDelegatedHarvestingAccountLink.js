@@ -11,7 +11,7 @@ const mainAccount = symbol_sdk_1.Account.createFromPrivateKey(mainAccountPrivate
 const remoteAccount = symbol_sdk_1.Account.generateNewAccount(networkType);
 /* end block 01 */
 /* start block 02 */
-const accountLinkTransaction = symbol_sdk_1.AccountLinkTransaction.create(symbol_sdk_1.Deadline.create(), remoteAccount.publicKey, symbol_sdk_1.LinkAction.Link, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const accountLinkTransaction = symbol_sdk_1.AccountKeyLinkTransaction.create(symbol_sdk_1.Deadline.create(), remoteAccount.publicKey, symbol_sdk_1.LinkAction.Link, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint

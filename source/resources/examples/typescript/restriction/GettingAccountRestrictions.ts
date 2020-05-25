@@ -16,7 +16,7 @@
  *
  */
 
-import {AccountRestrictionFlags, Address, RepositoryFactoryHttp} from 'symbol-sdk';
+import { Address, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with address
@@ -33,7 +33,7 @@ restrictionHttp.getAccountRestrictions(address)
             accountRestrictions
                 .filter((accountRestriction) => accountRestriction.values.length > 0)
                 .map((accountRestriction) => {
-                    console.log('\n', AccountRestrictionFlags[accountRestriction.restrictionFlags], accountRestriction.values.toString());
+                    console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
                 });
         } else {
             console.log('The address does not have account restriction assigned.');

@@ -18,9 +18,9 @@
 
 import {
     Account,
-    AccountRestrictionFlags,
     AccountRestrictionTransaction,
     Address,
+    AddressRestrictionFlag,
     Deadline,
     NetworkType,
     RepositoryFactoryHttp,
@@ -39,7 +39,7 @@ const networkType = NetworkType.TEST_NET;
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
         Deadline.create(),
-        AccountRestrictionFlags.AllowIncomingAddress,
+        AddressRestrictionFlag.AllowIncomingAddress,
         [],
         [companyAddress],
         networkType,
