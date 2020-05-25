@@ -60,14 +60,13 @@ Every node with P2P capabilities keeps a success and a failure counter for every
 
 Nodes update the counters accordingly after processing the data requested.
 If a node successfully connects to a remote peer, it first increments the success counter towards the remote peer.
-If the communication attempt fails,  the node increments the remote peer’s failure counter.
+If the communication attempt fails, the node increments the remote peer’s failure counter.
 Likewise, the node updates the peer counters accordingly after processing data shared.
 
 Extrapolating from these scores, the node assigns a weight between 500 and 10000 to every peer reached.
 
 The probability of selecting a remote node to read data from depends linearly on its weight.
 Every four rounds of node selections, the criteria changes to prevent |sybil|.
-Then the node selects a peer with high importance.
 
 .. _api-node:
 
@@ -166,3 +165,33 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
+
+*******************
+Transaction schemas
+*******************
+
+.. _node-key-link-transaction:
+
+NodeKeyLinkTransaction
+======================
+
+Announce a NodeKeyLinkTransaction to link a public key to an account.
+TLS uses the linked public key to create sessions.
+Required for node operators.
+
+**Version**: 0x01
+
+**EntityType**: 0x424C
+
+**Inlines**:
+
+* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
+    linkAction; :ref:`LinkAction <link-action>`; Account link action.
+
+Continue: :doc:`Transaction <transaction>`.

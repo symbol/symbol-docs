@@ -44,7 +44,7 @@ const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicK
 const recipientRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('51A99028058245A8');
+const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 /* end block 01 */

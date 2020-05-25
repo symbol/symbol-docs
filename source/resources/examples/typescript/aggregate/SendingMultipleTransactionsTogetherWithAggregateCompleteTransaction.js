@@ -31,7 +31,7 @@ const aliceAccount = symbol_sdk_1.Address.createFromRawAddress(aliceAddress);
 const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const bobAccount = symbol_sdk_1.Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('51A99028058245A8');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const mosaic = new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));

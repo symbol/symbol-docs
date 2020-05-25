@@ -21,17 +21,21 @@ The following transaction types are included in |codename| based networks by def
     :widths: 20 30 50
     :delim: ;
 
-    **Remote harvesting**;;
-    0x414C; :ref:`AccountLinkTransaction <account-link-transaction>`; Delegate the account importance to a proxy account.
+    **Account Link**;;
+    0x414C; :ref:`AccountKyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
+    0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for node operators.
     **Aggregate**;;
     0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
     --; :ref:`CosignatureTransaction <cosignature-transaction>`; Cosign an AggregateBondedTransaction.
+    **Core**;;
+    0x4143; :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
+    0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
     **Mosaic**;;
-    0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Register a new mosaic.
-    0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change an existent mosaic supply.
+    0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Create a new mosaic.
+    0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change the mosaic total supply.
     **Namespace**;;
-    0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register namespaces to organize your assets.
+    0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register a namespace to organize your assets.
     0x424E; :ref:`AddressAliasTransaction <address-alias-transaction>`; Attach a namespace name to an account.
     0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
     **Metadata**;;
@@ -50,8 +54,8 @@ The following transaction types are included in |codename| based networks by def
     0x4250; :ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`AccountOperationRestrictionTransaction <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
     **Mosaic restriction**;;
-    0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set a global restriction to a mosaic.
-    0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set a mosaic restriction to a specific address.
+    0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set global rules to transfer a restrictable mosaic.
+    0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set address specific rules to transfer a restrictable mosaic.
     **Transfer**;;
     0x4154; :ref:`TransferTransaction <transfer-transaction>`; Send mosaics and messages between two accounts.
 
@@ -91,19 +95,19 @@ Signing a transaction
 *********************
 
 Accounts must sign transactions before announcing them to the network.
-`Signing a transaction <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_ expresses the account's agreement to change the network state as defined.
+Signing a transaction expresses the account's agreement to change the network state as defined.
 
 For example, a TransferTransaction describes who the recipient is and the number of mosaics to transfer.
 In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
-An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:
+An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L216>`_:
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature, and signer.
 2. Get the nemesis block ``generation hash``. You can query ``nodeUrl + '/node/info'`` and copy ``meta.networkGenerationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6. Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L126-L179>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+6. Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/Transaction.ts#L127>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. example-code::
 
@@ -196,8 +200,8 @@ Serialization of a transaction.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    max_fee; :schema:`Amount <types.cats#L1>`; Maximum fee allowed to spend for the transaction.
-    deadline; :schema:`Timestamp <types.cats#L8>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
+    max_fee; :schema:`Amount <types.cats>`; Maximum fee allowed to spend for the transaction.
+    deadline; :schema:`Timestamp <types.cats>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
 .. _embedded-transaction-header:
 
@@ -257,7 +261,7 @@ Serialization of an entity that should be signed by an account.
     :delim: ;
 
     verifiableEntityHeader_Reserved1; uint32; reserved padding to align Signature on 8-byte boundary.
-    signature; :schema:`Signature <types.cats#L15>`; Entity signature generated by the signer.
+    signature; :schema:`Signature <types.cats>`; Entity signature generated by the signer.
 
 .. _entity-body:
 
@@ -271,7 +275,7 @@ An entity could be a block or a :doc:`transaction <transaction>`.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    signerPublicKey; :schema:`Key <types.cats#L14>`; Public key of the signer of the entity.
+    signerPublicKey; :schema:`Key <types.cats>`; Public key of the signer of the entity.
     entityBody_Reserved1; uint32; Reserved padding to align end of EntityBody on 8-byte boundary.
     version; uint8; Version of the structure.
     network; :ref:`Network <network-type>`; Entity network.

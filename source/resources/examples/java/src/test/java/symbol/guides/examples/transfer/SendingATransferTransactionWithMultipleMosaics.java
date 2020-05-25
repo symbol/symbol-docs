@@ -53,7 +53,7 @@ class SendingATransferTransactionWithMultipleMosaics {
                             /* start block 01 */
                             Arrays.asList(new Mosaic(new MosaicId("7CDF3B117A3C40CC"),
                                             BigInteger.valueOf(1000)),
-                                    new Mosaic(new MosaicId("51A99028058245A8"),
+                                    new Mosaic(new MosaicId("05D6A80DE3C9ADCA"),
                                             BigInteger.valueOf(10000000))),
                             /* end block 01 */
                             PlainMessage.create("This is a test message"))
