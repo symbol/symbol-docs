@@ -65,7 +65,7 @@ The mosaic we are creating will have the properties ``supplyMutable``, ``transfe
 
     Enter namespace name: cc
     Do you want to create a root namespace? [y/n]: y
-    Enter the namespace rental duration: 1000
+    Enter the namespace rental duration: 172800
     Enter max_fee (absolute amount): 0
     Transaction confirmed.
 
