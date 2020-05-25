@@ -33,7 +33,7 @@ Profiles are used to set a base URL and account to sign transactions.
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key <PRIVATE_KEY> --network TEST_NET --url http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000 --password <PASSWORD> --profile <PROFILE_NAME>
+    symbol-cli profile import --private-key <PRIVATE_KEY> --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --password <PASSWORD> --profile <PROFILE_NAME>
 
 By default, |cli| will always use the default profile.
 To use a named profile with any other command, add the ``--profile`` option to the command.
@@ -52,7 +52,7 @@ If you do not have a private key to create a profile, you can generate a new acc
 
 .. code-block:: bash
 
-    symbol-cli account generate --network TEST_NET --url http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000 --password <PASSWORD> --profile <PROFILE_NAME> --save
+    symbol-cli account generate --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --password <PASSWORD> --profile <PROFILE_NAME> --save
 
 .. |open-source| raw:: html
 

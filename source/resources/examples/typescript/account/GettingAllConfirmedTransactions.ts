@@ -24,7 +24,7 @@ import {Address, QueryParams, RepositoryFactoryHttp} from 'symbol-sdk';
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
-const nodeUrl = 'http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const accountHttp = repositoryFactory.createAccountRepository();
 

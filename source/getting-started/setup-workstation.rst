@@ -36,7 +36,7 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-02.ap-northeast-1.0941-v1.symboldev.network:3000/
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000/
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -119,7 +119,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.18.0 rxjs
+            npm install symbol-sdk@0.19.1 rxjs
 
         3. Install globally TypeScript dependency:
 
@@ -136,7 +136,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: JavaScript
 
-        .. note:: Symbol SDK require Node.js 12 LTS to execute.
+        .. note:: Symbol SDK requires Node.js 12 LTS to execute.
 
 
         1. Create a ``package.json`` file.
@@ -149,11 +149,11 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.18.0 rxjs
+            npm install symbol-sdk@0.19.1 rxjs
 
     .. tab:: Java
 
-        .. note:: Symbol SDK require JDK 8 to execute.
+        .. note:: Symbol SDK requires JDK 8 to execute.
 
         1. Open a new Java `gradle`_ project.  Use your favourite IDE or create a project from the command line.
 
@@ -174,7 +174,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:sdk-vertx-client:0.17.0"
+                compile "io.nem:symbol-sdk-vertx-client:0.19.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
@@ -193,12 +193,12 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer-941.symboldev.network/nodes" target="_blank">this list</a>
+   <a href="http://explorer-951.symboldev.network/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet-941-01.symboldev.network/" target="_blank">Navigate here</a>
+   <a href="http://faucet-951-01.symboldev.network/" target="_blank">Navigate here</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-941-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-951-02.symboldev.network/" target="_blank">alternative faucet</a>
