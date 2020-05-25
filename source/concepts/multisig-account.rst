@@ -167,7 +167,7 @@ c) Add or delete cosignatories from a multisig account.
     publicKeyAdditionsCount; uint8; Number of cosignatory public key additions.
     publicKeyDeletionsCount ; uint8; Number of cosignatory public key deletions.
     multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align publicKeyAdditions on 8-byte boundary.
-    publicKeyAdditions; array(:schema:`Key <types.cats#L14>`, publicKeyAdditionsCount); Cosignatory public key additions.
-    publicKeyDeletions; array(:schema:`Key <types.cats#L14>`, publicKeyDeletionsCount); Cosignatory public key deletions.
+    publicKeyAdditions; array(:schema:`Key <types.cats>`, publicKeyAdditionsCount); Cosignatory public key additions.
+    publicKeyDeletions; array(:schema:`Key <types.cats>`, publicKeyDeletionsCount); Cosignatory public key deletions.
 
 Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`.

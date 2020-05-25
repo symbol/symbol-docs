@@ -51,7 +51,7 @@ class SendingATransferTransaction {
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with symbol.xym id
-            final MosaicId networkCurrencyMosaicId = new MosaicId("51A99028058245A8");
+            final MosaicId networkCurrencyMosaicId = new MosaicId("05D6A80DE3C9ADCA");
             // replace with network currency divisibility
             final Integer networkCurrencyDivisibility = 6;
             // replace with relative amount of symbol.xym to send

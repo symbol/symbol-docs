@@ -58,7 +58,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create an :ref:`AccountLinkTransaction <account-link-transaction>` to **delegate M's importance to R** using its public key.
+2. Create an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>` to **delegate M's importance to R** using its public key.
 
 .. example-code::
 
@@ -72,7 +72,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Sign the AccountLinkTransaction with **M** and announce it to the network.
+3. Sign the AccountKeyLinkTransaction with **M** and announce it to the network.
 
 .. example-code::
 

@@ -96,7 +96,7 @@ You should see on your screen a line similar to:
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 51A99028058245A8 │ 750.0           │ 750000000       │ Never             │
+    │ 05D6A80DE3C9ADCA │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 This account owns 750 |networkcurrency| relative units.
@@ -174,7 +174,7 @@ This means that the customer can only send the ticket back to the mosaic's creat
    The new mosaic id is: 7cdf3b117a3c40cc
 
 The transaction should appear as confirmed after ±15 seconds.
-If the terminal raises an error, you can check the error code's meaning  :ref:`here <status-errors>`.
+If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
 
 ******************
 Sending the ticket
