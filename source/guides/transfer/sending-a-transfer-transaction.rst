@@ -139,7 +139,7 @@ Include the network generation hash to make the transaction only valid for your 
 
 5. Open the terminal where you are monitoring the transaction's status.
 The transaction should appear as confirmed after ±15 seconds and the amount defined gets transferred from the sender's account to the recipient's account.
-If the terminal raises an error, you can check the error code description :ref:`here <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
+If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
 
 *************************
 Method #03: Using the CLI
