@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-19 18:20+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -41,6 +41,27 @@ msgid ""
 msgstr ""
 ":doc:`エスクローの作成 <creating-an-escrow-contract-with-aggregate-bonded-"
 "transaction>` ガイドを完了している"
+
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:32
+msgid "Method #01: Using the Desktop Wallet"
+msgstr "方法 #01: デスクトップウォレットを使用する"
+
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:34
+msgid ""
+"Log in to a cosignatory account that has an impending aggregate bonded "
+"transaction waiting to be signed."
+msgstr "署名されるのを待機しているアグリゲートボンデッドトランザクションがある連署者アカウントにログインします。"
+
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:36
+msgid ""
+"At the home page, click on the “partial” tab. Click on the listed "
+"transaction and enter your wallet password to sign the transaction."
+msgstr ""
+"ホームで “partial” タブをクリックします。トランザクションリストをクリックし、ウォレットのパスワードを入力してトランザクションに署名します。"
+
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:44
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:46
 msgid "Create a function to cosign any **AggregateBondedTransaction**."
@@ -76,3 +97,7 @@ msgid ""
 msgstr ""
 "``TransactionHttp`` リポジトリを使って ``CosignatureSignedTransaction`` "
 "をネットワークへアナウンスします。"
+
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:82
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"
