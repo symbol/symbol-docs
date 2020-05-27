@@ -60,11 +60,11 @@ The sharing ratios for the beneficiary and network sink are :ref:`configurable p
 Node operators can set a **beneficiary public key** to share up to 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`).
 When the node operator does not define a beneficiary or a Harvest Fee Sink, all the rewards go to the block signer.
 
-.. figure:: ../resources/images/diagrams/beneficiary.png
+.. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
     :align: center
     :width: 300px
 
-    Rewards division when the network's sharing ratio equals 10%
+    Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
 
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
