@@ -48,7 +48,7 @@ const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768F
 const signedTransaction = account.sign(namespaceRegistrationTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl, networkType, networkGenerationHash);
+const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
 transactionHttp
