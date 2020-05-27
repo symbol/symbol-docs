@@ -51,10 +51,14 @@ To harvest locally, the account should provide the next properties in :propertie
     enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
-    beneficiaryPublicKey; string; Public key of the account receiving part of the harvested fee.; 0000000000000000000000000000000000000000000000000000000000000000
+    beneficiaryPublicKey; string; The public key of the account that will receive a percentage of the block fees defined by the harvestBeneficiaryPercentage.; 0000000000000000000000000000000000000000000000000000000000000000
+    harvestBeneficiaryPercentage; Percentage; Percentage of the block fees that will be given to the beneficiaryPublicKey account.
+    harvestNetworkFeeSinkPublicKey; string; The public key of the account that will receive a percentage of the block fees defined by the harvestNetworkPercentage.;0000000000000000000000000000000000000000000000000000000000000000
+    harvestNetworkPercentage; Percentage; Percentage of the block fees that will be given to the harvestNetworkFeeSinkPublicKey account.; 5
 
-Note that each node can set a **beneficiary public key** to share a 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio :ref:`configurable per network <config-network-properties>`.
-When the node does not define a beneficiary, all the rewards go to the block signer.
+The sharing ratios for the beneficiary and network sink are :ref:`configurable per network <config-network-properties>`. The calculation of the beneficiary percentage will occur after the network sink calculation.
+Node operators can set a **beneficiary public key** to share up to 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`).
+When the node operator does not define a beneficiary or a Harvest Fee Sink, all the rewards go to the block signer.
 
 .. figure:: ../resources/images/diagrams/beneficiary.png
     :align: center
