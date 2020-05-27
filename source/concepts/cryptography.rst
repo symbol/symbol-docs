@@ -73,7 +73,7 @@ In fact, the blockchain only tracks addresses and public keys when they first ap
 
 .. |edwards| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/Twisted_Edwards_curve/" target="_blank">Twisted Edwards curve</a>
+   <a href="https://en.wikipedia.org/wiki/Twisted_Edwards_curve" target="_blank">Twisted Edwards curve</a>
 
 .. |Ed25519| raw:: html
 
