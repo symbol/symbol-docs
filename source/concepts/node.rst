@@ -193,5 +193,3 @@ Required for node operators.
 
     linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
-
-Continue: :doc:`Transaction <transaction>`.

@@ -22,7 +22,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with namespace name
 const namespaceName = 'foo';
 // replace with duration (in blocks)
-const duration = symbol_sdk_1.UInt64.fromUint(1000);
+const duration = symbol_sdk_1.UInt64.fromUint(172800);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const namespaceRegistrationTransaction = symbol_sdk_1.NamespaceRegistrationTransaction.createRootNamespace(symbol_sdk_1.Deadline.create(), namespaceName, duration, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
