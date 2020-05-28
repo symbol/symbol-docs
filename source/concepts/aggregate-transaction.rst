@@ -100,6 +100,20 @@ Since the app creator can put its own branding on the open source payment app, A
 
     Paying for others fees
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
+    0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    --; :ref:`CosignatureTransaction <cosignature-transaction>`; Cosign an AggregateBondedTransaction.
+    0x4148; :ref:`HashLockTransaction <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
+
 ******
 Guides
 ******
@@ -111,98 +125,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-AggregateTransaction
-====================
-
-Announce an AggregateTransaction to combine multiple transactions together.
-
-**Version**: 0x01
-
-**EntityType**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 (:ref:`bonded<aggregate-bonded>`)
-
-**Inlines**:
-
-:ref:`Transaction <transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    transactionsHash; :schema:`Hash256 <types.cats>`; Aggregate hash of the aggregate transaction.
-    payloadSize; uint32; Transaction payload size in bytes. In other words, the total number of bytes occupied by all inner transactions.
-    aggregateTransactionHeader_Reserved1; uint32; Reserved padding to align end of AggregateTransactionHeader on 8-byte boundary.
-    transactions; array(:ref:`Transaction <transaction>`, size=payloadSize); Array of inner transactions. Other aggregate transactions are not allowed as inner transactions.
-    cosignatures; array(:ref:`Cosignature <cosignature>`, __FILL__); Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining body space after transactions.
-
-.. _cosignature-transaction:
-
-DetachedCosignature
-===================
-
-Cosignature transactions are used to sign :ref:`announced AggregateBondedTransactions <aggregate-transaction>` with missing cosignatures.
-
-**Inlines**:
-
-* :ref:`Cosignature <cosignature-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    parentHash; :schema:`Hash256 <types.cats>`;  AggregateBondedTransaction hash to cosign.
-
-.. _cosignature:
-
-Cosignature
-===========
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    signerPublicKey; :schema:`Key <types.cats>`; Cosigner public key.
-    signature; :schema:`Signature <types.cats>`; Transaction signature.
-
-
-.. _hash-lock-transaction:
-
-HashLockTransaction
-===================
-
-**Alias**: LockFundsTransaction
-
-Lock funds for a certain amount of blocks with a HashLockTransaction before sending an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
-This transaction prevents spamming the partial cache with transactions that never will complete.
-The lock duration is allowed to lie up to ``2 days``, being this value :ref:`configurable per network <config-network-properties>`.
-
-After enough funds are locked (``10`` |networkcurrency| by default), the AggregateTransaction can be announced and added into the partial transactions cache.
-
-.. note:: It's not necessary to sign the aggregate and its HashLockTransaction with the same account. For example, if Bob wants to announce an aggregate and does not have enough funds to announce a HashLockTransaction, he can ask Alice to send the hash lock funds transaction for him by sharing the signed AggregateTransaction hash.
-
-Upon completion of the aggregate, the locked funds become available in the account that signed the initial HashLockTransaction.
-If the AggregateBondedTransaction duration is reached without being signed by all cosignatories, the locked amount becomes a reward collected by the block harvester at the height where the lock expires.
-
-**Version**: 0x01
-
-**EntityType**: 0x4148
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
-    duration; :schema:`BlockDuration <types.cats>`; Number of blocks for which a lock should be valid.
-    hash; :schema:`Hash256 <types.cats>`; AggregateBondedTransaction hash that has to be confirmed before unlocking the mosaics.
 
 Continue: :doc:`Account Restrictions <account-restriction>`.

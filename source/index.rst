@@ -1,6 +1,6 @@
-#################
-Symbol Developers
-#################
+####################
+Symbol Documentation
+####################
 
 Browse the developer documentation to start integrating blockchain technology into your project.
 
