@@ -1,4 +1,4 @@
-# Symbol Developer Documentation
+# Symbol Documentation
 
 [![Build Status](https://travis-ci.com/nemtech/symbol-docs.svg?branch=master)](https://travis-ci.com/nemtech/symbol-docs)
 
