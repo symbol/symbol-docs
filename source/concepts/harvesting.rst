@@ -35,6 +35,22 @@ By contrast, public networks might use the same mosaic for paying transaction fe
 
 .. _local-harvesting:
 
+*******
+Rewards
+*******
+
+Network operators can define a public key as the **Network Fee Sink** that will receive a percentage of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public network, this fee could be used to create supernode programs, reward accounts who participate in the finalization process, or advance the network development. By default, the public test network sets this percentage to 5%.
+
+Additionally, each node has the ability to set a **beneficiary public key** to share a percentage (up to 25%) of the harvesting rewards. The sharing ratios for the beneficiary is :ref:`configurable per network <config-network-properties>`. The node operators can use this feature to create incentive structures for their node supporters.
+
+.. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
+
+.. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
+    :align: center
+    :width: 300px
+
+    Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
+
 ****************
 Local harvesting
 ****************
@@ -52,16 +68,6 @@ To harvest locally, the account should provide the next properties in :propertie
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
     beneficiaryPublicKey; string; The public key of the account that will receive a percentage of the block fees defined by the harvestBeneficiaryPercentage.; 0000000000000000000000000000000000000000000000000000000000000000
-
-The sharing ratios for the beneficiary is :ref:`configurable per network <config-network-properties>`. The calculation of the beneficiary percentage will occur after the network sink calculation.
-Node operators can set a **beneficiary public key** to share up to 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`).
-When the node operator does not define a beneficiary or a Harvest Fee Sink, all the rewards go to the block signer.
-
-.. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
-    :align: center
-    :width: 300px
-
-    Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
 
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
