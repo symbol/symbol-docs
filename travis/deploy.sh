@@ -20,7 +20,9 @@ if [ "$SKIP_RELEASE_PUBLISH" = "true" ]; then
 else
    echo "Publishing docs"
    git add .
+   echo "Commit"
    git commit -m "Release docs"
+   echo "Push"
    git push --set-upstream origin master --force
 echo ""
 fi
