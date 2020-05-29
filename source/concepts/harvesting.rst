@@ -45,7 +45,7 @@ The sharing ratios for the beneficiary and network sink accounts are :ref:`confi
 
 .. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
     :align: center
-    :width: 300px
+    :width: 600px
 
     Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
 
