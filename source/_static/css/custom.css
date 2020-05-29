@@ -338,6 +338,7 @@ body > .container {
 }
 .sidebar-xs .dropdown a:hover {
     background-color: transparent;
+    color: #5200c6;
 }
 .caret {
     color: #fff;
