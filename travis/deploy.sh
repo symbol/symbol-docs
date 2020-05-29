@@ -9,6 +9,8 @@ cd build/html
 
 echo "Setting remote url https://github.com/${RELEASE_REPO_SLUG}.git"
 git init
+git config --global user.name "symbolbot"
+git config --global user.email "${GITHUB_EMAIL}"
 git remote add origin "https://${GITHUB_TOKEN}@github.com/${RELEASE_REPO_SLUG}.git" > /dev/null 2>&1
 
 #  The $SKIP_RELEASE_PUBLISH env variable can avoid republishing if the release process fails.
