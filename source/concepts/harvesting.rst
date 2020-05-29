@@ -33,6 +33,25 @@ For example, consortium networks can distribute harvesting mosaics between the c
 By contrast, public networks might use the same mosaic for paying transaction fees and running the network.
 |codename|'s public network uses |networkcurrency| as the harvesting mosaic, enabling any eligible participant to harvest new blocks.
 
+*******
+Rewards
+*******
+
+Network operators can define a **network fee sink account** that will receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public network, this fee could be used to create supernode programs, reward accounts that participate in the finalization process or advance the network development. By default, the public test network sets this percentage to 5%.
+
+Additionally, each node can set a **beneficiary account** to share a percentage (up to 25%) of the harvesting rewards. The node operators can use this feature to create incentive structures for their node supporters.
+
+The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`. 
+
+.. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
+    :align: center
+    :width: 300px
+
+    Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
+
+.. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
+
+
 .. _local-harvesting:
 
 ****************
@@ -51,16 +70,7 @@ To harvest locally, the account should provide the next properties in :propertie
     enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
-    beneficiaryPublicKey; string; Public key of the account receiving part of the harvested fee.; 0000000000000000000000000000000000000000000000000000000000000000
-
-Note that each node can set a **beneficiary public key** to share a 25% of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`), being the sharing ratio :ref:`configurable per network <config-network-properties>`.
-When the node does not define a beneficiary, all the rewards go to the block signer.
-
-.. figure:: ../resources/images/diagrams/beneficiary.png
-    :align: center
-    :width: 300px
-
-    Rewards division when the network's sharing ratio equals 10%
+    beneficiaryPublicKey; string; The public key of the account that will receive a percentage of the block fees defined by the harvestBeneficiaryPercentage.; 0000000000000000000000000000000000000000000000000000000000000000
 
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
