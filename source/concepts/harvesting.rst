@@ -33,8 +33,6 @@ For example, consortium networks can distribute harvesting mosaics between the c
 By contrast, public networks might use the same mosaic for paying transaction fees and running the network.
 |codename|'s public network uses |networkcurrency| as the harvesting mosaic, enabling any eligible participant to harvest new blocks.
 
-.. _local-harvesting:
-
 *******
 Rewards
 *******
@@ -50,6 +48,8 @@ Additionally, each node has the ability to set a **beneficiary public key** to s
     :width: 300px
 
     Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
+
+.. _local-harvesting:
 
 ****************
 Local harvesting
