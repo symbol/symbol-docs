@@ -14,8 +14,9 @@ Developers are able to easily integrate blockchain technology into their project
 This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
 
 Symbol provides access to both public and private blockchains, individually or as a hybrid, providing options to best suit your company’s needs.
-The public blockchain is a decentralized, open, and self-sustaining ledger that can be used by anyone.
-The private blockchain, on the other hand, offers higher speed and privacy.
+
+**NOTE**: At the time of writing, |codename|'s **MAIN_NET** has not been released. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: [Symbol Launch Plan](https://blog.nem.io/nem-ecosystem-symbol-launch-plan/).
+
 
 ## Getting Started
 

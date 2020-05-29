@@ -18,4 +18,13 @@ tx_push() {
 
 tx_install
 tx_init
-tx_push
+
+#  The $SKIP_TX_PUBLISH env variable can avoid republishing if the release process fails.
+if [ "$SKIP_TX_PUBLISH" = "true" ]; then
+   echo "Skipping publishing of tx"
+   echo ""
+else
+   echo "Publishing TX"
+   tx_push
+echo ""
+fi
