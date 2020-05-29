@@ -37,17 +37,20 @@ By contrast, public networks might use the same mosaic for paying transaction fe
 Rewards
 *******
 
-Network operators can define a public key as the **Network Fee Sink** that will receive a percentage of the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public network, this fee could be used to create supernode programs, reward accounts who participate in the finalization process, or advance the network development. By default, the public test network sets this percentage to 5%.
+Network operators can define a **network fee sink account** that will receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public network, this fee could be used to create supernode programs, reward accounts that participate in the finalization process or advance the network development. By default, the public test network sets this percentage to 5%.
 
-Additionally, each node has the ability to set a **beneficiary public key** to share a percentage (up to 25%) of the harvesting rewards. The sharing ratios for the beneficiary is :ref:`configurable per network <config-network-properties>`. The node operators can use this feature to create incentive structures for their node supporters.
+Additionally, each node can set a **beneficiary account** to share a percentage (up to 25%) of the harvesting rewards. The node operators can use this feature to create incentive structures for their node supporters.
 
-.. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
+The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`. 
 
 .. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
     :align: center
     :width: 300px
 
     Rewards division when the network's sharing ratio for network sink is 20% and for beneficiary is 10%.
+
+.. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
+
 
 .. _local-harvesting:
 
