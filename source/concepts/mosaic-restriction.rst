@@ -117,6 +117,18 @@ The KYC provider encounters 3 potential investors:
 Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other.
 But Alice—who has not provided a valid proof of address—will not be able to receive shares.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set global rules to transfer a restrictable mosaic.
+    0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set address specific rules to transfer a restrictable mosaic.
+
 ******
 Guides
 ******
@@ -128,80 +140,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-.. _mosaic-global-restriction-transaction:
-
-MosaicGlobalRestrictionTransaction
-==================================
-
-Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a mosaic.
-
-**Version**: 0x01
-
-**EntityType**: 0x4151
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Identifier of the mosaic being restricted. The mosaic creator must be the signer of the transaction.
-    referenceMosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Identifier of the mosaic providing the restriction key. The mosaic global restriction for the mosaic identifier depends on global restrictions set on the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if the mosaic giving the restriction equals the mosaic identifier.
-    restrictionKey; uint64; Restriction key relative to the reference mosaic identifier.
-    previousRestrictionValue; uint64; Previous restriction value.
-    newRestrictionValue; uint64; New restriction value.
-    previousRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; Previous restriction type.
-    newRestrictionType; :ref:`MosaicRestrictionType <mosaic-restriction-type>`; New restriction type.
-
-.. _mosaic-address-restriction-transaction:
-
-MosaicAddressRestrictionTransaction
-===================================
-
-Announce a MosaicAddressRestrictionTransaction transaction to set a restriction rule to an address.
-
-**Version**: 0x01
-
-**EntityType**: 0x4251
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Identifier of the mosaic to which the restriction applies. The mosaic creator must be the signer of the transaction.
-    restrictionKey; uint64; Restriction key.
-    previousRestrictionValue; uint64; Previous restriction value. Set ``previousRestrictionValue`` to ``FFFFFFFFFFFFFFFF`` if the target address does not have a previous restriction value for this mosaic identifier and restriction key.
-    newRestrictionValue; uint64; New restriction value.
-    targetAddress; :schema:`UnresolvedAddress <types.cats>`; Address being restricted.
-
-.. _mosaic-restriction-type:
-
-MosaicRestrictionType
-=====================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0; Uninitialized value indicating no restriction.
-    1 (EQ); Allow if equal.
-    2 (NE); Allow if not equal.
-    3 (LT); Allow if less than.
-    4 (LTE); Allow if less than or equal.
-    5 (GT); Allow if greater than.
-    6 (GTE); Allow if greater than or equal.
 
 Continue: :doc:`Multisig Accounts <multisig-account>`.

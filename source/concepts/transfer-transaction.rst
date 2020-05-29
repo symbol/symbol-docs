@@ -45,6 +45,17 @@ Encrypted messages are only accessible by the sender and the recipient.
 
 .. note:: You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L253-L264>`_ and `decode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/core/crypto/Crypto.ts#L304-L315>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://nemtech.github.io/symbol-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x4154; :ref:`TransferTransaction <transfer-transaction>`; Send mosaics and messages between two accounts.
+
 ******
 Guides
 ******
@@ -56,50 +67,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-.. _transfer-transaction:
-
-TransferTransaction
-===================
-
-Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages between two :doc:`accounts <account>`.
-
-**Version**: 0x01
-
-**EntityType**: 0x4154
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    recipientAddress; :schema:`UnresolvedAddress <types.cats>`; Transaction recipient.
-    mosaicsCount; uint8; Number of attached mosaics.
-    messageSize; uint16; Size of the attached message.
-    transferTransactionBody_Reserved1; uint32; Reserved padding to align mosaics on 8-byte boundary.
-    mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Attached mosaics to send.
-    message; array(byte, messageSize); :ref:`Message type <message-type>` and hexadecimal payload.
-
-.. _message-type:
-
-MessageType
-===========
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Plain message.
-    0x01; Encrypted message.
-    0xFE; Persistent harvesting delegation.
 
 Continue: :doc:`Aggregate Transaction <aggregate-transaction>`.

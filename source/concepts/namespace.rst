@@ -133,6 +133,19 @@ The default namespace rental fees are :ref:`configurable per network <config-net
 To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
 In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register a namespace to organize your assets.
+    0x424E; :ref:`AddressAliasTransaction <address-alias-transaction>`; Attach a namespace name to an account.
+    0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
+    
 ******
 Guides
 ******
@@ -144,109 +157,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-.. _namespace-registration-transaction:
-
-NamespaceRegistrationTransaction
-================================
-
-Announce a NamespaceRegistrationTransaction to register and re-rent a namespace.
-
-**Version**: 0x01
-
-**EntityType**: 0x414E
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    duration; :schema:`BlockDuration <types.cats>`; Number of confirmed blocks you would like to rent the namespace for. Required for root namespaces.
-    parentId; :schema:`NamespaceId <namespace/namespace_types.cats>`; Parent namespace identifier. Required for subnamespaces.
-    id; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Namespace identifier.
-    registrationType; :ref:`NamespaceRegistrationType <namespace-registration-type>`; Namespace registration type.
-    nameSize; uint8; Namespace name size in bytes.
-    name; array(bytes, namespaceNameSize); Namespace name.
-
-.. _address-alias-transaction:
-
-AddressAliasTransaction
-=======================
-
-Announce an AliasTransaction to attach a namespace to an account. A namespace can be assigned to any account present in the network.
-
-**Version**: 0x01
-
-**EntityType**: 0x424E
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Identifier of the namespace that will become an alias.
-    address; :schema:`Address <types.cats>`; Aliased address.
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
-
-.. _mosaic-alias-transaction:
-
-MosaicAliasTransaction
-======================
-
-Announce an AliasTransaction to attach a namespace to a mosaic. Setting an alias to a mosaic is only possible if the account announcing the transaction has created the namespace and mosaic involved.
-
-**Version**: 0x01
-
-**EntityType**: 0x434E
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    namespaceId; :schema:`NamespaceId <namespace/namespace_types.cats>`; Identifier of the namespace that will become an alias.
-    mosaicId; :schema:`MosaicId <types.cats>`; Aliased mosaic identifier.
-    aliasAction; :ref:`AliasAction <alias-action>`; Alias action.
-
-.. _namespace-registration-type:
-
-NamespaceRegistrationType
-=========================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0; Root namespace.
-    1; Child namespace.
-
-.. _alias-action:
-
-AliasAction
-===========
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Link alias.
-    0x01; Unlink alias.
 
 Continue: :doc:`Metadata <metadata>`.

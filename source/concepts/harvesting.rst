@@ -126,6 +126,18 @@ Remote harvesters may not receive the entire reward if the following conditions 
     **Security**; The node stores the private key.;  A proxy private key is shared with a node.
     **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - node's beneficiary share.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
+    0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
+
 ******
 Guides
 ******
@@ -137,70 +149,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-.. _account-key-link-transaction:
-
-AccountKeyLinkTransaction
-=========================
-
-Announce an AccountKeyLinkTransaction to delegate the account importance score to a proxy account.
-Required for all accounts willing to activate delegated harvesting.
-
-**Version**: 0x01
-
-**EntityType**: 0x414C
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
-    linkAction; :ref:`LinkAction <link-action>`; Account link action.
-
-.. _vrf-key-link-transaction:
-
-VrfKeyLinkTransaction
-=====================
-
-Announce a VrfKeyLinkTransaction to link an account with a VRF public key.
-The key is used to randomize block production and leader/participant selection.
-Required for all harvesting eligible accounts.
-
-**Version**: 0x01
-
-**EntityType**: 0x4243
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
-    linkAction; :ref:`LinkAction <link-action>`; Account link action.
-
-.. _link-action:
-
-LinkAction
-==========
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Unlink account.
-    0x01; Link account.
 
 Continue: :doc:`Inflation <inflation>`.

@@ -116,6 +116,18 @@ However, **the network dynamically adjusts the mosaic rental fee** over time.
 To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
 In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Create a new mosaic.
+    0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change the mosaic total supply.
+
 ******
 Guides
 ******
@@ -127,111 +139,5 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-*******************
-Transaction schemas
-*******************
-
-.. _mosaic-definition-transaction:
-
-MosaicDefinitionTransaction
-===========================
-
-Announce a MosaicDefinitionTransaction to create a new mosaic.
-
-**Version**: 0x01
-
-**EntityType**: 0x414D
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    id; :schema:`MosaicId <types.cats>`; Identifier of the mosaic.
-    duration; :schema:`BlockDuration <types.cats>`; Mosaic duration expressed in blocks. If set to 0, the mosaic is non-expiring.
-    nonce; uint32; Random nonce used to generate the mosaic id.
-    flags; :ref:`MosaicFlag <mosaic-flags>`; Mosaic flags.
-    divisibility; uint8; Mosaic divisibility.
-
-.. _mosaic-supply-change-transaction:
-
-MosaicSupplyChangeTransaction
-=============================
-
-Announce a supply change transaction to increase or decrease a mosaic's supply.
-
-**Version**: 0x01
-
-**EntityType**: 0x424D
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Affected mosaic identifier.
-    delta; :schema:`Amount <types.cats>`; Amount of supply to increase or decrease.
-    action; :ref:`MosaicSupplyChangeAction<mosaic-supply-change-action>`; Supply change action.
-
-.. _mosaic:
-
-Mosaic
-======
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; :schema:`MosaicId <types.cats>`; Mosaic identifier.
-    amount; :schema:`Amount <types.cats>`; Mosaic amount.
-
-.. _unresolved-mosaic:
-
-UnresolvedMosaic
-================
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    mosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Mosaic identifier. If the most significant bit of byte 0 is set, a namespaceId (alias) is used instead of the real mosaic identifier.
-    amount; :schema:`Amount <types.cats>`; Mosaic amount.
-
-.. _mosaic-flags:
-
-MosaicFlags
-===========
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; No flags present.
-    0x01; Mosaic supports supply changes even when the mosaic creator owns partial supply.
-    0x02; Mosaic supports transfers between arbitrary accounts. When not set, the mosaic can only be transferred to/from the mosaic creator.
-    0x04; Mosaic creator can add rules to restrict which accounts are enabled to send and receive the mosaic.
-
-.. _mosaic-supply-change-action:
-
-MosaicSupplyChangeAction
-========================
-
-Enumeration: uint8
-
-.. csv-table::
-    :header: "Id", "Description"
-    :delim: ;
-
-    0x00; Decrease.
-    0x01; Increase.
 
 Continue: :doc:`Namespaces <namespace>`.

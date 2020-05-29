@@ -166,30 +166,3 @@ Guides
     :excerpts:
     :sort:
 
-*******************
-Transaction schemas
-*******************
-
-.. _node-key-link-transaction:
-
-NodeKeyLinkTransaction
-======================
-
-Announce a NodeKeyLinkTransaction to link a public key to an account.
-TLS uses the linked public key to create sessions.
-Required for node operators.
-
-**Version**: 0x01
-
-**EntityType**: 0x424C
-
-**Inlines**:
-
-* :ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-transaction>`
-
-.. csv-table::
-    :header: "Property", "Type", "Description"
-    :delim: ;
-
-    linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
-    linkAction; :ref:`LinkAction <link-action>`; Account link action.
