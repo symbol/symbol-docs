@@ -7,10 +7,12 @@
 Setting up your workstation
 ###########################
 
-This first guide will walk you through a step-by-step installation of the required tools to start developing with |codename|.
+.. note:: Not a developer? Download our :doc:`client <../wallets>` to manage XYM and issue transactions.
+
+This first guide will walk you through a step-by-step installation of the required tools to **start developing applications** on |codename|.
 
 We will be using the **test network**, which uses the same technology and features of the future main public network.
-You can use the testnet to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
+The testnet allows developers to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
 .. _setup-creating-a-test-account:
 
@@ -20,15 +22,23 @@ Creating an account
 
 An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by :doc:`announcing transactions <../concepts/transaction>`.
 
-.. note:: Symbol CLI requires Node.js 12 LTS to execute.
-
-1. Install |cli| executing the following command in a new terminal:
+We are creating a new account with the :doc:`Symbol CLI <../cli>`, a command-line tool designed to architect solutions and interact with Symbol networks in an efficient manner. 
+ 
+1. Symbol CLI requires **Node.js 12 LTS** to execute. Open a new terminal and check the version installed with:
 
 .. code-block:: bash
 
-    npm install --global symbol-cli@0.19.2
+    node --version
 
-2. Generate a new account and save it as a **profile**.
+If you get an error or the version returned does not match v12.X, visit |node-js| to install the requirement.
+
+2. To install |cli|, run the next command.
+
+.. code-block:: bash
+
+    npm install --global symbol-cli@0.20.2
+
+3. Then, generate a new account and save it as a **profile**.
 
 .. code-block:: bash
 
@@ -36,13 +46,12 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
+    Select an import type: » PrivateKey
     Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000/
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
-.. note:: If the test network node is not working, you can use another node url from |network-list|. You can also **run your testnet node** by following :doc:`this guide <../guides/network/running-a-test-net-node>`.
-
-3. You should see the account credentials in your terminal.
+4. If everything goes well, you should see the account credentials displayed in the terminal.
 
 .. code-block:: bash
 
@@ -57,7 +66,13 @@ An :doc:`account <../concepts/account>` is a deposit box where you can hold :doc
     │ Private Key │ AAA...AAA                                                        │
     └─────────────┴──────────────────────────────────────────────────────────────────┘
 
-.. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
+.. note:: Make sure to keep the private key secret and backed up safely somewhere offline.
+
+If you get the error ``The CLI cannot reach the node``, the most common causes are:
+
+* **Incorrect node URL**: The URL used does not belong to an active node. Open the URL provided in a new browser tab and check if you get a response. If the test network node is not working, you can **use another node url** from |network-list| or **run your testnet node** by following :doc:`the next guide <../guides/network/running-a-test-net-node>`.
+
+* **Internet connection**: The CLI resolves some values from the node. If you decide to use the tool without being connected to the internet, you will have to pass the options ``--network``, ``--generation-hash``, ``--namespace-id``, and ``divisibility``. Type ``symbol-cli account generate --help`` to know more about each parameter.
 
 .. _setup-getting-test-currency:
 
@@ -68,7 +83,7 @@ Getting test currency
 To announce a transaction, the sender should pay a :doc:`fee <../concepts/fees>` to provide an incentive to those who validate and secure the network and run the infrastructure.
 This cost is paid in |networkcurrency| mosaics, the default network currency of the public network.
 
-Now that you have created your first account, try to request |networkcurrency| units from the **testnet faucet**.
+Now that you have created your first account, let's request |networkcurrency| units from the **testnet faucet**.
 |faucet|, indicate the amount of |networkcurrency| you want to receive and the address, and click "**CLAIM!**".
 
 .. figure:: ../resources/images/screenshots/faucet.png
@@ -76,7 +91,7 @@ Now that you have created your first account, try to request |networkcurrency| u
 
 .. note:: If the default faucet is empty, try this other |faucet-2|.
 
-After the transaction gets confirmed, check if the account has received |networkcurrency| using the command-line tool.
+After the transaction gets confirmed, check if your account has received |networkcurrency| using the command-line tool.
 
 .. code-block:: bash
 
@@ -138,7 +153,6 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. note:: Symbol SDK requires Node.js 12 LTS to execute.
 
-
         1. Create a ``package.json`` file.
 
         .. code-block:: bash
@@ -186,6 +200,10 @@ Continue: :doc:`Writing your first application <first-application>`.
 .. _gradle: https://gradle.org/install/
 
 .. _JDK: https://www.oracle.com/technetwork/es/java/javase/downloads/index.html
+
+.. |node-js| raw:: html
+
+   <a href="https://nodejs.org/en/download/" target="_blank">nodejs.org</a>
 
 .. |different-ways-to-install-a-nuget-package| raw:: html
 
