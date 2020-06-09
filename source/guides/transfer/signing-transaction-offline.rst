@@ -1,3 +1,11 @@
+:orphan:
+
+.. post:: 8 Jun, 2020
+    :category: Transfer Transaction
+    :tags: SDK, CLI
+    :excerpt: 1
+    :nocomments:
+
 #############################
 Signing a transaction offline
 #############################
