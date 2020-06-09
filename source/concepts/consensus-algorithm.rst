@@ -52,7 +52,7 @@ Each network can define custom consensus algorithm :ref:`constants <config-netwo
 Calculation
 ***********
 
-The importance can be calculated for each account in the following manner:
+The :term:`importance score <Importance Score>` can be calculated for each account in the following manner:
 
 .. math::
 

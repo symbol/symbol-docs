@@ -94,7 +94,7 @@ Delegating the KYC process to a specialized company
 
 Following the previous example, ComfyClothingCompany delegates the KYC process to a company specialized in KYC & AML.
 
-The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the global restriction ``{kyc, Is_Verified, EQ = 1}`` to the mosaic.
+The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the :term:`global restriction <Global Restriction>` ``{kyc, Is_Verified, EQ = 1}`` to the mosaic.
 
 The KYC provider also defines the following permission tiers:
 
@@ -125,7 +125,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set global rules to transfer a restrictable mosaic.
     0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set address specific rules to transfer a restrictable mosaic.
 

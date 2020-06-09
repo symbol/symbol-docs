@@ -82,7 +82,7 @@ For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but 
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics.
+:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and :term:`mosaics <Mosaics>`.
 An alias or its linked asset can be used interchangeably when sending a transaction.
 Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
@@ -114,7 +114,7 @@ The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of ho
         :language: typescript
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
-    
+
     .. viewsource:: ../resources/examples/typescript/namespace/GettingNamespaceRentalFee.js
         :language: javascript
         :start-after: /* start block 01 */
@@ -141,11 +141,11 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register a namespace to organize your assets.
     0x424E; :ref:`AddressAliasTransaction <address-alias-transaction>`; Attach a namespace name to an account.
     0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
-    
+
 ******
 Guides
 ******

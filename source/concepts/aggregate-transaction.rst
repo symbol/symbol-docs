@@ -15,7 +15,7 @@ Aggregate transactions merge multiple transactions into one, allowing **trustles
 
 When all involved :doc:`accounts <../concepts/account>` have cosigned the AggregateTransaction, all the inner transactions are executed at the same time.
 
-|codename|'s :ref:`public network <config-network-properties>` supports aggregate transaction containing up to ``1,000`` inner transactions involving up to ``25`` different cosignatories.
+|codename|'s :ref:`public network <config-network-properties>` supports aggregate transaction containing up to ``1,000`` inner transactions involving up to ``25`` different :term:`cosignatories <Cosignatories>`.
 Other aggregate transactions are not allowed as inner transactions.
 
 .. _aggregate-complete:
@@ -63,7 +63,7 @@ Sending multiple transactions together
 Dan announces an AggregateTransaction that merges two transfer transactions.
 
 As Dan is the only required signatory, the transaction is considered complete after he signed.
-After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
+After announcing it to the network, Alice and Bob will receive the :term:`mosaics <Mosaics>` at the same time.
 
 .. figure:: ../resources/images/examples/aggregate-sending-payouts.png
     :align: center
@@ -108,7 +108,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
     0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
     --; :ref:`CosignatureTransaction <cosignature-transaction>`; Cosign an AggregateBondedTransaction.

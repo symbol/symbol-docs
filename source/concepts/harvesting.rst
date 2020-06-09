@@ -28,7 +28,7 @@ Harvesting mosaic
 
 |codename| software supports :ref:`defining any mosaic <config-network-properties>` for harvesting purposes to fit the business needs.
 
-For example, consortium networks can distribute harvesting mosaics between the companies that are running the infrastructure, while other participants need to pay fees in the form of :doc:`currency mosaic <fees>` to consume services.
+For example, consortium networks can distribute harvesting :term:`mosaics <Mosaics>` between the companies that are running the infrastructure, while other participants need to pay fees in the form of :doc:`currency mosaic <fees>` to consume services.
 
 By contrast, public networks might use the same mosaic for paying transaction fees and running the network.
 |codename|'s public network uses |networkcurrency| as the harvesting mosaic, enabling any eligible participant to harvest new blocks.
@@ -41,7 +41,7 @@ Network operators can define a **network fee sink account** that will receive a 
 
 Additionally, each node can set a **beneficiary account** to share a percentage (up to 25%) of the harvesting rewards. The node operators can use this feature to create incentive structures for their node supporters.
 
-The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`. 
+The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`.
 
 .. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
     :align: center
@@ -80,7 +80,7 @@ Local harvesting is secure as long as no one accesses your node instance, which 
 Delegated harvesting
 ********************
 
-Delegated harvesting allows using the importance score of an account to create new blocks and receive rewards without having to run a node locally.
+Delegated harvesting allows using the :term:`importance score <Importance Score>` of an account to create new blocks and receive rewards without having to run a node locally.
 
 An eligible account can delegate its importance score to a brand new **proxy account**
 The private key of the proxy account can be shared securely with any node that is running local harvesting that delegated harvesting connections.
@@ -91,7 +91,7 @@ The private key of the proxy account can be shared securely with any node that i
 
     Activating delegated harvesting
 
-To enable delegated harvesting, the account owner has to link its importance score to the proxy account by announcing an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
+To enable delegated harvesting, the account owner has to link its :term:`importance score <Importance Score>` to the proxy account by announcing an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
 In order for the remote account to be accepted for delegated harvesting, the remote account should not have sent nor received any transaction or be linked to another account previously.
 
 .. note:: The remote account cannot be involved in any transaction while it is a delegated account.
@@ -134,7 +134,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
     0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
 

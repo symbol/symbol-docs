@@ -4,6 +4,9 @@ Glossary
 
 .. glossary::
 
+    Absolute Amount
+      A method of measuring amounts of mosaics while taking into account their divisibility. It is figured out by multiplying the relative amount by 10\ :sup:`divisibility`. For example, if the mosaic has divisibility 2, to send 10 units (relative) you should define 1000 (absolute) instead.
+
     Account Link Transaction
       A type of transaction used to transfer an account importance score to a proxy account. This is required for all accounts that wish to activate :ref:`delegated harvesting <delegated-harvesting>`. Read :ref:`more <account-key-link-transaction>`.
 
@@ -31,14 +34,23 @@ Glossary
     Catapult
       The original project alias for NEM 2.0 - later labeled as Symbol.
 
+    Cosign
+      The act providing a signature to approve a transaction.
+
     Cosignatories
       Accounts that act as account managers to :doc:`multisig accounts <multisig-account>`. Cosignatories need to sign multisig account transactions before they can be announced to the network.
 
     Cross Chain Swap
       A built-in feature of Symbol which enables the trading of tokens across different blockchains without using an intermediary party (e.g. an exchange service). Read :doc:`more <cross-chain-swap>`.
 
+    Deadline
+      A time window for a transaction to be accepted before it reaches its expiration. The transaction is eliminated when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
+
     Delegated Harvesting
       A method of harvesting that allows users to receive rewards without having to run a node locally by delegating their importance scores to a brand new proxy account. Read :ref:`more <delegated-harvesting>`.
+
+    Divisibility
+      The property of mosaics that enable fractional amounts. The number of divisibility refers to the decimal place to which the mosaic can be divided.
 
     Duration
       Length of time measured in :doc:`blocks <block>`. Each block on the Symbol blockchain takes about ~15 seconds to harvest.
@@ -48,6 +60,9 @@ Glossary
 
     Fee Multiplier
       A multiplier used to calculate the effective :doc:`fee <fees>` of each transaction contained within a block.
+
+    Global Restriction
+      Network-wide rules that determine whether accounts will be able to send or receive a specific mosaic (with Mosaic Restrictions enabled).
 
     Harvester
       The account that :doc:`harvests <harvesting>` a block. The account is rewarded with the transaction fees added in the block and the :doc:`inflation <inflation>` tokens generated.
@@ -94,7 +109,7 @@ Glossary
     Mosaics
       Digital tokens on the Symbol blockchain used to represent fixed assets - set of multiple identical things that do not change. Read :doc:`more <mosaic>`.
 
-    Mosaic Restrictions
+    Mosaic Restriction
       A feature that allows mosaic creators to control which accounts can transact with the asset. It only affects mosaics with the restrictable property enabled explicitly at the moment of creation. Read :doc:`more <mosaic-restriction>`.
 
     Multi-level Multisignature Account
@@ -121,6 +136,9 @@ Glossary
     Node Reputation
       A measure of trust that the Symbol network determines for each specific node. The network’s trust for a node increases with each successful interaction, and decreases for each failed attempt of communication.
 
+    Off-chain
+      Realm outside of the blockchain. Off-chain activity does not directly reflect on the blockchain.
+
     Peer Nodes
       Nodes that facilitate the blockchain process by verifying transactions and blocks, running the :doc:`consensus algorithm <consensus-algorithm>`, creating new blocks, and propagating the changes through the network.
 
@@ -132,6 +150,9 @@ Glossary
 
     Receipt
       Record of proof for every hidden change on the blockchain. The collection of receipts are hashed into a merkle tree and linked to a block. Read :doc:`more <recipt>`.
+
+    Reference Mosaic
+      A mosaic selected by the mosaic creator to define mosaic restrictions that depend directly on the selected mosaic's global restrictions.
 
     Rental Fee
       :doc:`Fees <fees>` required to register a :doc:`namespace <namespace>` or extend its duration. The default namespace rental fees are configurable per network, but the network dynamically adjusts the namespace rental fees over time.

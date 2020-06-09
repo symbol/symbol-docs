@@ -59,13 +59,13 @@ Before starting with the swap, all participants involved int the swap must own a
     Secret; h(proof)
     Network; Private Chain
 
-Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If no one unlocks it before the duration set is reached, the locked funds will be returned back to Alice.
+Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If no one unlocks it before the :term:`duration <Duration>` set is reached, the locked funds will be returned back to Alice.
 
 4. Alice **announces TX1 to the private network** and **shares with Bob the secret**.
 
 .. note:: Bob should retrieve the secret from the chain. It is Bob's responsibility to verify the secret correctness.
 
-5. Bob defines announces the following **SecretLockTransaction TX2** to the **public network**:
+5. Bob defines announces the following :term:`**SecretLockTransaction TX2** <Secret Lock Transaction>` to the **public network**:
 
 .. csv-table::
     :header: "TX2 Property", "Value"
@@ -96,7 +96,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 7. Once TX3 is confirmed, the **proof** is revealed. **TX2 transaction is unlocked**, and Alice receives the locked funds.
 
-8. Bob picks the proof and announces the **SecretProofTransaction TX4** to the **private network**, receiving the locked funds from **TX1**.
+8. Bob picks the proof and announces the :term:`**SecretProofTransaction TX4** <Secret Proof Transaction>` to the **private network**, receiving the locked funds from **TX1**.
 
 .. csv-table::
     :header: "TX4 Property", "Value"
@@ -112,7 +112,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 The process is atomic, but should be completed with lots of time before the deadlines:
 
-* TX1's duration should be significantly bigger than TX2's to guarantee that the second participant will have time to unlock TX1 after the first one reveals the proof.
+* TX1's :term:`duration <Duration>` should be significantly bigger than TX2's to guarantee that the second participant will have time to unlock TX1 after the first one reveals the proof.
 * Each participant must wait for at least ``maxRollBackBlocks`` between announcements to prevent experiencing :ref:`transaction rollbacks <rollbacks>`.
 
 ********************
@@ -123,7 +123,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4152; :ref:`SecretLockTransaction <secret-lock-transaction>`; Transaction to start a token swap between different chains.
     0x4252; :ref:`SecretProofTransaction <secret-proof-transaction>`; transaction to conclude a token swap between different chains.
 

@@ -4,7 +4,7 @@ Account Restriction
 
 :doc:`Accounts <account>` may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.
 
-The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
+The account owners — plural in case of :term:`multisig accounts <Multisignature (Multisig) Account>` — can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
 
 |codename|'s public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
 
@@ -34,7 +34,7 @@ Mosaic restriction
 ******************
 
 Similar to address restrictions, an account can configure a restriction to permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` attached are allowed.
-On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+On the other hand, the account can refuse to accept transactions containing a :term:`mosaic <Mosaics>` listed as blocked.
 
 Account mosaic restrictions are generally used to **prevent accounts being tagged with mosaics** not associated with their activity.
 
@@ -65,7 +65,7 @@ A pharmaceutical company is using the public chain to certify the quality of the
 
 When the quality verification process concludes, an operator sends a :doc:`quality seal<mosaic>` to the product account.
 
-The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
+The final customers can review the product :term:`mosaics <Mosaics>` scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.
 
 .. figure:: ../resources/images/examples/account-restrictions-spam.png
     :align: center
@@ -78,7 +78,7 @@ The company opts to configure their product accounts restrictions, enabling only
 Enhancing the account security
 ==============================
 
-Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the :doc:`multisig <multisig-account>` account.
+Lately, Alice is only using her main account to cosign :term:`aggregate transactions <Aggregate Transaction>` where she is a :term:`cosignatory <Cosignatories>` for the :doc:`multisig <multisig-account>` account.
 
 As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account.
 Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.
@@ -91,7 +91,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4150; :ref:`AccountAddressRestrictionTransaction <account-address-restriction-transaction>`; Allow or block incoming and outgoing transactions for a given a set of addresses.
     0x4250; :ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
     0x4350; :ref:`AccountOperationRestrictionTransaction <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.

@@ -20,8 +20,8 @@ Statements can include receipts with the following basic types:
 
 * **Balance Transfer**: The invisible state change triggered a mosaic transfer.
 * **Balance Change**: The invisible state change altered an account balance.
-* **Mosaic Expiry**: A mosaic expired.
-* **Namespace Expiry**: A namespace expired.
+* **Mosaic Expiry**: A :term:`mosaic <Mosaics>` expired.
+* **Namespace Expiry**: A :term:`namespace <Namespaces>` expired.
 * **Inflation**: Network currency mosaics were created due to :doc:`inflation <inflation>`.
 
 ********************

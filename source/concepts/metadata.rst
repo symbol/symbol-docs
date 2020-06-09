@@ -7,7 +7,7 @@ Metadata
 The most common uses of metadata are:
 
 * Attach relevant information to your assets.
-* Validate the value attached to an asset to enable users in your application to perform an off-chain action.
+* Validate the value attached to an asset to enable users in your application to perform an :term:`off-chain <Off-chain>` action.
 
 Metadata is uniquely **identified** by the tuple ``{ signer, target-id, metadata-key }``.
 Including a signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
@@ -21,16 +21,16 @@ Persistence
 
 Metadata entries are stored on the blockchain—like the message of a regular :doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value state**.
 
-This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history off-chain to obtain the latest transaction message value.
+This feature reduces the reading time of client applications; metadata allows information to be accessed by keys instead of processing the entire account transaction history :term:`off-chain <Off-chain>` to obtain the latest transaction message value.
 
 ***********
 Permissions
 ***********
 
-The account, namespace or mosaic creator must **opt-in** to all metadata requests received by giving explicit permission.
+The account, :term:`namespace <Namespaces>` or :term:`mosaic <Mosaics>` creator must **opt-in** to all metadata requests received by giving explicit permission.
 In practice, this means that all MetadataTransactions must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`.
 
-The target account should cosign the aggregate to record the metadata on the blockchain and update the asset state.
+The target account should :term:`cosign <Cosign>` the aggregate to record the metadata on the blockchain and update the asset state.
 
 ********
 Examples
@@ -79,7 +79,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4144; :ref:`AccountMetadataTransaction <account-metadata-transaction>`; Associate a key-value state to an account.
     0x4244; :ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
     0x4344; :ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.

@@ -58,11 +58,11 @@ The first block is defined before launching a new network and sets the distribut
 
 The process of creating the subsequent new blocks is called :doc:`harvesting <harvesting>`.
 
-Blocks are created by :doc:`accounts <account>`, which are chosen by the :doc:`consensus algorithm <consensus-algorithm>` based on their importance score.
+Blocks are created by :doc:`accounts <account>`, which are chosen by the :doc:`consensus algorithm <consensus-algorithm>` based on their :term:`importance score <Importance Score>`.
 The consensus algorithm determines a new account to harvest the subsequent block after each block creation.
 
-The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the mosaics created by :doc:`inflation <inflation>`.
-This gives the harvester an incentive to add as many transactions to the block as possible.
+The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the :term:`mosaics <Mosaics>` created by :doc:`inflation <inflation>`.
+This gives the :term:`harvester <Harvester>` an incentive to add as many transactions to the block as possible.
 
 .. _rollbacks:
 
@@ -91,4 +91,3 @@ Guides
     :sort:
 
 Continue: :doc:`Transaction <transaction>`.
-

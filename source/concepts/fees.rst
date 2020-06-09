@@ -25,17 +25,17 @@ Transaction fee
 ***************
 
 The fee associated with a transaction primarily depends on the size of the transaction.
-The effective fee deducted from the account sending the transaction is calculated as the product of the size of the transaction and a fee multiplier set by the node that harvests the block.
+The effective fee deducted from the account sending the transaction is calculated as the product of the size of the transaction and a :term:`fee multiplier <Fee Multiplier>` set by the node that :term:`harvests <Harvesting>` the block.
 
 .. math::
 
-    effectiveFee = transaction::size * block::feeMultiplier
+    :term:`effectiveFee <Effective Fee>` = transaction::size * block::feeMultiplier
 
 A node owner :ref:`can configure the fee multiplier <node-properties>` to all positive values, including zero.  The ``fee_multiplier`` is stored in the :ref:`block header <block-header>` when the node harvests a new block, determining which was the effective fee paid for every transaction included.
 
 Before announcing the transaction, the sender must specify during the transaction definition a ``max_fee``, indicating the maximum fee the account allows to spend for this transaction.
 
-If the ``effective_fee`` is smaller or equal to the ``max_fee``, a harvester could opt to include the transaction in the block. The harvesting nodes :ref:`can set their transaction inclusion strategy <node-properties>`:
+If the ``effective_fee`` is smaller or equal to the ``max_fee``, a :term:`harvester <Harvester>` could opt to include the transaction in the block. The harvesting nodes :ref:`can set their transaction inclusion strategy <node-properties>`:
 
 * **Prefer-oldest**: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.
 * **Minimize-fees**: Philanthropic nodes. Include first the transactions that other nodes do not want to include.
@@ -53,7 +53,7 @@ To ensure that the transaction will get included without setting a ``max_fee`` u
         :language: typescript
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
-    
+
     .. viewsource:: ../resources/examples/typescript/transfer/DefiningMaxFee.js
         :language: javascript
         :start-after: /* start block 01 */
@@ -61,7 +61,7 @@ To ensure that the transaction will get included without setting a ``max_fee`` u
 
 .. note:: It is not guaranteed that the transaction will get confirmed if the multiplier used is to low. To have better chances, the sender of the transaction could opt to use any value between medianNetworkFeeMultiplier and highestFeeMultiplier instead.
 
-To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size, it is required to know beforehand the number of participant accounts that will need to cosign the transaction.
+To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size, it is required to know beforehand the number of participant accounts that will need to :term:`cosign <Cosign>` the transaction.
 
 .. example-code::
 
@@ -69,7 +69,7 @@ To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size
         :language: typescript
         :start-after: /* start block 02 */
         :end-before: /* end block 02 */
-    
+
     .. viewsource:: ../resources/examples/typescript/transfer/DefiningMaxFee.js
         :language: javascript
         :start-after: /* start block 02 */

@@ -20,7 +20,7 @@ To record the transaction in the block, the other cosignatories will have to agr
 Minimum approval and removal
 ****************************
 
-It is not always necessary to require all cosignatories to cosign transactions associated with the multisig account.
+It is not always necessary to require all :term:`cosignatories <Cosignatories>` to cosign transactions associated with the multisig account.
 |codename| allows to set up the minimum number of cosignatory agreements.
 These properties can be :ref:`edited <guide-modify-a-multisig-account-min-approval>` afterward to suit almost all needs.
 
@@ -131,7 +131,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4155; :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>`; Create or modify a multisig contract.
 
 ******

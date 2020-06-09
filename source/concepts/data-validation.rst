@@ -33,7 +33,7 @@ Merkle root
 ===========
 
 The hash at the bottom of the tree is called the Merkle root.
-The Merkle root hashes for receipts and transactions are included in block headers to summarize the data linked.
+The Merkle root hashes for :term:`receipts <Receipt>` and transactions are included in block headers to summarize the data linked.
 
 The following example shows how to verify that a block is composed of all its transactions:
 

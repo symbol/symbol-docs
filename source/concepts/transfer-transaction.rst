@@ -53,7 +53,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4154; :ref:`TransferTransaction <transfer-transaction>`; Send mosaics and messages between two accounts.
 
 ******

@@ -93,7 +93,7 @@ If set to true, the mosaic creator can configure custom :doc:`restrictions <mosa
 Creation fee
 ************
 
-An account willing to create a mosaic has to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
+An account willing to create a mosaic has to pay a :term:`rental fee <Rental Fee>` in addition to the :doc:`transaction fee <fees>`.
 Both fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
 
 The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of how much network currency will cost you to create a mosaic:
@@ -104,7 +104,7 @@ The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of ho
         :language: typescript
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
-    
+
     .. viewsource:: ../resources/examples/typescript/mosaic/GettingMosaicRentalFee.js
         :language: javascript
         :start-after: /* start block 01 */
@@ -124,7 +124,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Create a new mosaic.
     0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change the mosaic total supply.
 
