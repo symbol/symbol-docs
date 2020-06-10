@@ -121,9 +121,8 @@ Common practices to include code snippets in a document.
 
 If you are writing a guide, you might find helpful this :doc:`guideline <writing-a-guide>`.
 
-********
-Glossary
-********
+Terms
+=====
 
 List of terms that are prone to be written in different ways.
 
@@ -132,7 +131,10 @@ List of terms that are prone to be written in different ways.
     :delim: ;
 
     API; Api, Api
+    blockchain; block chain
     Catapult; catapult, NEM Catapult
+    CLI; cli, Cli
+    GitHub, github, Github
     id; ID
     JavaScript; Javascript, javascript
     MongoDB; mongodb, Mongodb
