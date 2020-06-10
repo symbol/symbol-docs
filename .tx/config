@@ -127,15 +127,22 @@ source_file = build/gettext/concepts/node.pot
 source_lang = en
 type = PO
 
-[symboldocs.concepts--receipt]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
-source_file = build/gettext/concepts/receipt.pot
+[symboldocs.concepts--overview]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/overview.po
+source_file = build/gettext/concepts/overview.pot
 source_lang = en
 type = PO
 
 [symboldocs.concepts--plugin]
 file_filter = source/locale/<lang>/LC_MESSAGES/concepts/plugin.po
 source_file = build/gettext/concepts/plugin.pot
+source_lang = en
+type = PO
+
+
+[symboldocs.concepts--receipt]
+file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
+source_file = build/gettext/concepts/receipt.pot
 source_lang = en
 type = PO
 
@@ -190,6 +197,12 @@ type = PO
 [symboldocs.getting-started--setup-workstation]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
 source_file = build/gettext/getting-started/setup-workstation.pot
+source_lang = en
+type = PO
+
+[symboldocs.getting-started--what-is-symbol]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-symbol.po
+source_file = build/gettext/getting-started/what-is-symbol.pot
 source_lang = en
 type = PO
 
