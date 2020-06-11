@@ -7,8 +7,7 @@ Browse the developer documentation to start integrating blockchain technology in
 ## Symbol is built for developers
 
 Symbol is a feature-rich development platform that lets you build blockchain projects faster and more efficiently, so you can exceed expectations.
-
-Symbol uses familiar **APIs** to interface with your existing platform so the learning curve is lower and you can develop your way.
+Symbol uses familiar **APIs** so you can easily interface with your existing platform.
 This means you can create a variety of architectural solutions with lightweight code efficiently, in **any programming language**.
 
 Symbol provides access to both public and private blockchains, individually or as a hybrid, providing options to best suit your project's needs.
