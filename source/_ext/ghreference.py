@@ -7,6 +7,7 @@ import os
 import requests
 from github import Github
 from docutils.parsers.rst import directives, Directive, nodes
+from pkg_resources import parse_version
 
 
 class GitHubReference(Directive):
@@ -31,7 +32,7 @@ class GitHubReference(Directive):
             contents = repo.get_contents(folder, ref="gh-pages")
 
             count = 1
-            for line in list(reversed(contents)):
+            for line in sorted(contents, key=parse_version, reverse=True):
 
                 if '.md' in line.path:
                     uri = 'https://github.com/' + self.arguments[0] + '/blob/gh-pages/' + line.path

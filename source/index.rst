@@ -161,7 +161,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :maxdepth: 2
     :hidden:
     :caption: Contribute
-
+    
     contribute/community
     contribute/contributing
     contribute/contributors
