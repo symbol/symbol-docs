@@ -200,7 +200,7 @@ Glossary
       The most basic transaction used to send mosaics and messages between two accounts. Read :doc:`more <concepts/transfer-transaction>`.
 
     VRF
-      VRF allows multiple instances of a routing table to exist in a router and work simultaneously. All potential harvesting accounts must link to a VRF public key by announcing a VrfKeyLinkTransaction. The key is then used to randomize block production and leader/participant selection.
+      VRF stands for verifiable random function. All potential harvesting accounts must link to a second public key by announcing a VrfKeyLinkTransaction. The key linked is then used to randomize block production and leader/participant selection.
 
     XYM
       The native currency of the Symbol blockchain.
