@@ -4,34 +4,18 @@ Symbol Documentation
 
 Browse the developer documentation to start integrating blockchain technology into your project.
 
-**********************************
-Symbol is Your Blockchain Platform
-**********************************
-
-|codename| is a **developer-friendly blockchain platform** for businesses.
-It reduces cost, complexity, and time-to-market so businesses can be more competitive.
-
-|codename| offers flexible and secure customizable solutions through simple, yet powerful, **built-in features**.
-Developers are able to easily integrate blockchain technology into their projects or create powerful dApps using |codename|'s :doc:`REST API <api>`.
-This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
-
-|codename| provides access to both **public and private blockchains**, individually or as a hybrid, providing options to best suit your company's needs.
-
-.. note:: At the time of writing, |codename|'s **MAIN_NET** has not been released. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://blog.nem.io/nem-ecosystem-symbol-launch-plan/>`_.
+.. note:: |codename|'s **MAIN_NET** has not been released yet. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://blog.nem.io/nem-ecosystem-symbol-launch-plan/>`_.
 
 ***************
 Getting Started
 ***************
 
-To start developing with |codename|, we recommend you to :doc:`setup your workstation <getting-started/setup-workstation>`.
-To know more about |codename|, continue reading the following documents:
+Connect and combine |codename|'s built-in features to architect your blockchain solution.
 
-* :doc:`Built-in Features <concepts/account>`
+* :doc:`What is Symbol? <getting-started/what-is-symbol>`
+* :doc:`Setting up your workstation <getting-started/setup-workstation>`
+* :doc:`Built-in Features <concepts/overview>`
 * :doc:`Protocol <concepts/cryptography>`
-* :doc:`API Reference <api>`
-* :doc:`Software Development Kits <api>`
-* :doc:`Command-line Interface <cli>`
-* :doc:`Wallets <wallets>`
 
 ***************
 Featured Guides
@@ -47,6 +31,17 @@ Learn how to use the software development kits and tools with the following step
 * :doc:`How to run a private test network <guides/network/creating-a-private-test-net>`
 * :ref:`More guides <blog-categories>`
 
+***********************
+Reference Documentation
+***********************
+
+Surf the reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
+
+* :doc:`API Reference <api>`
+* :doc:`Software Development Kits <api>`
+* :doc:`Command-line Interface <cli>`
+* :doc:`Wallets <wallets>`
+
 **********************
 Contributing to Symbol
 **********************
@@ -54,7 +49,6 @@ Contributing to Symbol
 |codename| is an |open-source| project.
 Discover how our |community| is organized, and get started participating:
 
-*   Ask in |stack-overflow| development-related questions
 *   Reach our community joining the official |slack|
 *   Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to propose changes
 *   Follow the development updates on |twitter|
@@ -69,10 +63,6 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 .. |community| raw:: html
 
    <a href="https://github.com/nemtech/community/" target="_blank">community</a>
-
-.. |stack-overflow| raw:: html
-
-   <a href="https://stackoverflow.com/tags/nem/" target="_blank">StackOverflow</a>
 
 .. |slack| raw:: html
 
@@ -95,6 +85,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :hidden:
     :caption: Getting Started
 
+    getting-started/what-is-symbol
     getting-started/setup-workstation
     getting-started/first-application
     guides/migration/migrating-from-nem-to-symbol
@@ -117,6 +108,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :hidden:
     :caption: Built-in Features
 
+    concepts/overview
     concepts/account
     concepts/mosaic
     concepts/namespace

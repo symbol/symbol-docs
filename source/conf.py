@@ -295,7 +295,7 @@ epub_exclude_files = ['search.html, references.html, guides.html']
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
-html_favicon = 'favicon-32x32.png'
+html_favicon = 'favicon.ico'
 
 # -- Options for edit on github -------------------------------------------
 

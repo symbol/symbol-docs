@@ -4,31 +4,22 @@
 
 Browse the developer documentation to start integrating blockchain technology into your project.
 
-## Symbol is Your Blockchain Platform
+## Symbol is built for developers
 
-Symbol is a developer-friendly blockchain platform for businesses.
-It reduces cost, complexity, and time-to-market so businesses can be more competitive.
+Symbol is a feature-rich development platform that lets you build blockchain projects faster and more efficiently, so you can exceed expectations.
+Symbol uses familiar **APIs** so you can easily interface with your existing platform.
+This means you can create a variety of architectural solutions with lightweight code efficiently, in **any programming language**.
 
-Symbol offers flexible and secure customizable solutions through simple, yet powerful, built-in features.
-Developers are able to easily integrate blockchain technology into their projects or create powerful dApps using Symbol’s REST API.
-This allows creating a variety of architectural solutions with lightweight code efficiently, in any programming language.
-
-Symbol provides access to both public and private blockchains, individually or as a hybrid, providing options to best suit your company’s needs.
-
-**NOTE**: At the time of writing, |codename|'s **MAIN_NET** has not been released. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: [Symbol Launch Plan](https://blog.nem.io/nem-ecosystem-symbol-launch-plan/).
-
+Symbol provides access to both public and private blockchains, individually or as a hybrid, providing options to best suit your project's needs.
 
 ## Getting Started
 
-To start developing with Symbol, we recommend you to  [setup your workstation](https://nemtech.github.io/getting-started/setup-workstation.html).
-To know more about Symbol, continue reading the following documents:
+Connect and combine Symbol's built-in features to architect your blockchain solution.
 
-* [Built-in features](https://nemtech.github.io/concepts/account.html)
+* [What is Symbol?](https://nemtech.github.io/getting-started/what-is-symbol.html)
+* [Setting up your workstation](https://nemtech.github.io/getting-started/setup-workstation.html)
+* [Built-in features](https://nemtech.github.io/concepts/overview.html)
 * [Protocol](https://nemtech.github.io/concepts/cryptography.html)
-* [API Reference](https://nemtech.github.io/api.html)
-* [Software Development Kits](https://nemtech.github.io/sdk.html)
-* [Command-line Interface](https://nemtech.github.io/wallets.html)
-* [Wallets](https://nemtech.github.io/wallets.html)
 
 ## Featured Guides
 
@@ -42,11 +33,19 @@ Learn how to use the software development kits and tools with the following step
 * [How to run a private test network](https://nemtech.github.io/guides/network/creating-a-private-test-net.html)
 * [More guides](https://nemtech.github.io/guides/category.html)
 
+## Reference Documentation
+
+Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
+
+* [API Reference](https://nemtech.github.io/api.html)
+* [Software Development Kits](https://nemtech.github.io/sdk.html)
+* [Command-line Interface](https://nemtech.github.io/wallets.html)
+* [Wallets](https://nemtech.github.io/wallets.html)
+
 ## Contributing to Symbol
 
 Symbol is an [open-source](https://github.com/nemtech) project. Discover how our [community](https://github.com/nemtech/community/) is organized, and get started participating:
 
-*  Ask in [StackOverflow](https://stackoverflow.com/tags/nem/) development related questions.
 *  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU).
 *  Check the [contributing guidelines](https://nemtech.github.io/guidelines/suggesting-changes.html) to propose changes.
 *  Follow the development updates on [Twitter](https://twitter.com/NEMofficial).

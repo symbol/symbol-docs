@@ -7,13 +7,17 @@ Most of the documentation and guides that the |sitename| has today have been add
 
 Discover how the open source |community| works, and get started participating:
 
-* Ask in |stack-overflow| development related questions.
-
 * Reach our community joining the official |slack|.
 
 * Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` to propose changes.
 
 * Follow the development updates on |twitter|.
+
+*   Explore our |github| repositories
+
+.. |github| raw:: html
+
+   <a href="https://github.com/nemtech" target="_blank">GitHub</a>
 
 .. |community| raw:: html
 
