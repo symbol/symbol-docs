@@ -12,6 +12,8 @@ Signing a transaction offline
 
 This guide will show you how to sign a transaction offline then use an online computer to announce the transaction.
 
+This can be useful for when you are keeping your private keys in an offline device (cold wallet) for security reasons. By signing a transaction offline, you will be able to execute transactions from your cold wallet while keeping your private keys completely safe.
+
 The example in the guide will send 155 |networkcurrency| from your offline wallet to Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``)
 
 *************
@@ -22,6 +24,26 @@ Prerequisites
 - Load the account with enough |networkcurrency| to pay for transaction fees.
 - Both your offline and online :doc:`workstations <../../getting-started/setup-workstation.rst>` are set up for Symbol-CLI and Symbol-SDK.
 - You installed the `Symbol URI scheme <https://github.com/nemfoundation/symbol-uri-scheme>`_.
+
+********************************************
+Step 0: Create an offline account (Optional)
+********************************************
+
+.. note:: This step is only necessary if you don't already have an offline account.
+
+On your offline workstation, open up your terminal and type:
+
+.. code-block:: bash
+
+    `symbol-cli account generate`
+
+Select the network type. Then, select "no" when it asks you if you want to save your account. You can select either "Private key" or "Mnemoinc" as the type of import
+
+.. figure:: ../../resources/images/screenshots/offline-transaction-account-create.png
+    :align: center
+    :width: 800px
+
+.. note:: Remember to transfer some XYM tokens into this account before you continue with the guide.
 
 ***************************************************
 Step 1: Set up a transaction through the symbol-cli
