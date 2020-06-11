@@ -8,7 +8,7 @@ Glossary
       A method of measuring amounts of mosaics while taking into account their divisibility. It is figured out by multiplying the relative amount by 10\ :sup:`divisibility`. For example, if the mosaic has divisibility 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
     Account
-      A container for assets, which can only be modified with its private key. An account always has two keys (private and public) and an address. Read :doc:`more <source/account>`.
+      A container for assets, which can only be modified with its private key. An account always has two keys (private and public) and an address. Read :doc:`more <concepts/account>`.
 
     Account Link Transaction
       A type of transaction used to transfer an account importance score to a proxy account. This is required for all accounts that wish to activate :ref:`delegated harvesting <delegated-harvesting>`. Read :ref:`more <account-key-link-transaction>`.
@@ -26,7 +26,7 @@ Glossary
       An Aggregate Transaction is complete when all the required participants have signed it. Read :ref:`more <aggregate-complete>`.
 
     Alias
-      The :doc:`namespace <namespace>` linked to an account or mosaic using Alias transactions. An alias and its linked object can be used interchangeably when sending a transaction. Read :ref:`more <Alias>`.
+      The :doc:`namespace <namespace>` linked to an account or mosaic using Alias transactions. An alias and its linked object can be used interchangeably when sending a transaction. Read :ref:`more <alias>`.
 
     API Nodes
       Nodes responsible for storing data in a readable form in MongoDB. They are also responsible for collecting the cosignatures of :ref:`aggregated bonded transactions <aggregate-bonded>`.
