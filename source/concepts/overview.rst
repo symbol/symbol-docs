@@ -17,7 +17,7 @@ Transfer of value
 Accounts management
 *******************
 
-* **Account**: An account is a container for assets, which can only be modified with its private key. Read :doc:more <account>.
+* **Account**: An account is a container for assets, which can only be modified with its private key. Read :doc:`more <account>`.
 * **Multisig Account**: Accounts that require additional signatures (from cosignatories) to initiate actions/transfers. Read :doc:`more <multisig-account>`.
 * **Restrictions**:  A configurable set of smart rules to block announcing or receiving transactions for a specific account. Read :doc:`more <account-restriction>`.
 
