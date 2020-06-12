@@ -25,9 +25,9 @@ Prerequisites
 - Both your offline and online :doc:`workstations <../../getting-started/setup-workstation.rst>` are set up for Symbol-CLI and Symbol-SDK.
 - You installed the `Symbol URI scheme <https://github.com/nemfoundation/symbol-uri-scheme>`_.
 
-********************************************
-Step 0: Create an offline account (Optional)
-********************************************
+*********************************
+Step 1: Create an offline account
+*********************************
 
 .. note:: This step is only necessary if you don't already have an offline account.
 
@@ -35,9 +35,14 @@ On your offline workstation, open up your terminal and type:
 
 .. code-block:: bash
 
-    `symbol-cli account generate`
+    `symbol-cli account generate --network TEST_NET --generation-hash 4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2 --namespace-id symbol.xym --divisibility 6 --url http://api-01-ap-northeast-1`
 
-Select the network type. Then, select "no" when it asks you if you want to save your account. You can select either "Private key" or "Mnemoinc" as the type of import
+But replace the "generation hash" and node url to match the information on your CLI.
+
+.. note:: To figure out the node information, pass `symbol-cli node info`
+
+Select to save the account, by either the Private Key or Mnemonic Phrase. Enter the desired wallet profile name and password.
+If successful, the CLI should return the information of the created account.
 
 .. figure:: ../../resources/images/screenshots/offline-transaction-account-create.png
     :align: center
@@ -46,7 +51,7 @@ Select the network type. Then, select "no" when it asks you if you want to save 
 .. note:: Remember to transfer some XYM tokens into this account before you continue with the guide.
 
 ***************************************************
-Step 1: Set up a transaction through the symbol-cli
+Step 2: Set up a transaction through the symbol-cli
 ***************************************************
 
 On your offline workstation, open up your terminal and type:
@@ -66,7 +71,7 @@ Here, you have already successfully signed the transaction offline. Save the sig
     :width: 800px
 
 *****************************************************
-Step 2: Set up to convert the transaction into an URI
+Step 3: Set up to convert the transaction into an URI
 *****************************************************
 
 Open a text editor and set up the following typescript file to generate a URI:
@@ -83,7 +88,7 @@ Make sure you replace the transaction payload provided in the example with your 
 Save the typescript file.
 
 ***********************************
-Step 3: Obtain your transaction URI
+Step 4: Obtain your transaction URI
 ***********************************
 
 Run the file from step 2 in your terminal.
@@ -102,7 +107,7 @@ When executed successfully, your terminal should return the URI of your transact
 Save the URI of your transaction.
 
 **********************************************
-Step 4: Announce the transaction using the URI
+Step 5: Announce the transaction using the URI
 **********************************************
 
 Move to your online workstation.
