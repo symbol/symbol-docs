@@ -37,7 +37,7 @@ On your offline workstation, open up your terminal and type:
 
     `symbol-cli account generate --network TEST_NET --generation-hash 4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2 --namespace-id symbol.xym --divisibility 6 --url http://api-01-ap-northeast-1`
 
-But replace the "generation hash" and node url to match the information on your CLI.
+But replace the "generation hash" and node "url" to match the information on your CLI.
 
 .. note:: To figure out the node information, pass `symbol-cli node info`
 
