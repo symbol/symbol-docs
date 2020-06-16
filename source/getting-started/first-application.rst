@@ -274,4 +274,4 @@ Did we solve the use case?
 
 * ✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.
 
-Continue learning about more about |codename| :doc:`built-in features <../concepts/account>`.
+Continue learning about more about |codename| :doc:`built-in features <../concepts/overview>`.
