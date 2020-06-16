@@ -70,7 +70,7 @@ To harvest locally, the account should provide the next properties in :propertie
     enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
-    beneficiaryPublicKey; string; The public key of the account that will receive a percentage of the block fees defined by the harvestBeneficiaryPercentage.; 0000000000000000000000000000000000000000000000000000000000000000
+    beneficiaryAddress; Address; Address of the account that will receive a percentage of the block fees defined by the harvestBeneficiaryPercentage.; 0000000000000000000000000000000000000000000000000000000000000000
 
 Local harvesting is secure as long as no one accesses your node instance, which is storing the private key.
 
