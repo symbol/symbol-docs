@@ -65,8 +65,8 @@ To harvest locally, the account should provide the next properties in :propertie
     :header: "Property", "Type", "Description", "Default"
     :delim: ;
 
-    harvesterPrivateKey; string; The harvester account private key. This account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero in the public network.;
-    harvesterSigningPrivateKey; string; The VRF private key linked with the account.
+    harvesterSigningPrivateKey; string; The harvester account private key. This account needs to hold at least ``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have importance score greater than zero in the public network.;
+    harvesterVrfPrivateKey; string; The VRF private key linked with the account.
     enableAutoHarvesting; bool; Set to true if delegated harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of delegated harvesting accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy used to keep accounts once the node stores ``maxUnlockedAccounts``. Possible values are "Importance" or "Age".; Importance
