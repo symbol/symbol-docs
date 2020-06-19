@@ -7,12 +7,6 @@ source_file = build/gettext/index.pot
 source_lang = en
 type = PO
 
-[symboldocs.glossary]
-file_filter = source/locale/<lang>/LC_MESSAGES/glossary.po
-source_file = build/gettext/glossary.pot
-source_lang = en
-type = PO
-
 [symboldocs.api]
 file_filter = source/locale/<lang>/LC_MESSAGES/api.po
 source_file = build/gettext/api.pot
