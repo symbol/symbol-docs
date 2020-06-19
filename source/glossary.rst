@@ -26,7 +26,7 @@ Glossary
       An Aggregate Transaction is complete when all the required participants have signed it. Read :ref:`more <aggregate-complete>`.
 
     Alias
-      The :doc:`namespace <namespace>` linked to an account or mosaic using Alias transactions. An alias and its linked object can be used interchangeably when sending a transaction. Read :ref:`more <alias>`.
+      The :doc:`namespace <concepts/namespace>` linked to an account or mosaic using Alias transactions. An alias and its linked object can be used interchangeably when sending a transaction. Read :ref:`more <alias>`.
 
     API Nodes
       Nodes responsible for storing data in a readable form in MongoDB. They are also responsible for collecting the cosignatures of :ref:`aggregated bonded transactions <aggregate-bonded>`.
@@ -65,7 +65,7 @@ Glossary
       A multiplier used to calculate the effective :doc:`fee <concepts/fees>` of each transaction contained within a block.
 
     Global Restriction
-      Network-wide rules that determine whether accounts will be able to send or receive a specific mosaic (with :doc:`Mosaic Restrictions <concepts/mosaic-restirction>` enabled).
+      Network-wide rules that determine whether accounts will be able to send or receive a specific mosaic (with :doc:`Mosaic Restrictions <concepts/mosaic-restriction>` enabled).
 
     Harvester
       The account that :doc:`harvests <concepts/harvesting>` a block. The account is rewarded with the transaction fees added in the block and the :doc:`inflation <concepts/inflation>` tokens generated.
@@ -86,7 +86,7 @@ Glossary
       A value calculated by the :doc:`PoS+ protocol <concepts/consensus-algorithm>` based on three factors that determines the probability that an account has to harvest a :doc:`block <concepts/block>`.
 
     Inflation
-      Network configured increase in currency supply per block. The mosaics created due to inflation are included in the block reward. Read :doc:`more <source/inflation>`.
+      Network configured increase in currency supply per block. The mosaics created due to inflation are included in the block reward. Read :doc:`more <concepts/inflation>`.
 
     Local Harvesting
       A method of :doc:`harvesting <concepts/harvesting>` executed by running a local node.
