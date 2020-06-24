@@ -32,7 +32,7 @@ import {
 // replace with namespace name
 const namespaceId = new NamespaceId('foo');
 // replace with address
-const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 

@@ -23,7 +23,7 @@ import {Address, MosaicId, RepositoryFactoryHttp, TransactionGroup, TransactionT
 // replace with signer public key
 const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 // replace with recipient address
-const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientRawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 // replace with mosaic id
 const mosaicIdHex = '46BE9BC0626F9B1A';

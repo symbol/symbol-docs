@@ -79,7 +79,7 @@ You should see on your screen a line similar to:
     ┌───────────────────┬────────────────────────────────────────────────┐
     │ Property          │ Value                                          │
     ├───────────────────┼────────────────────────────────────────────────┤
-    │ Address           │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB │
+    │ Address           │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI │
     ├───────────────────┼────────────────────────────────────────────────┤
     │ Address Height    │ 1                                              │
     ├───────────────────┼────────────────────────────────────────────────┤
@@ -113,7 +113,7 @@ If your row after "Balance Information" is empty, follow the :doc:`previous guid
     ┌─────────────┬────────────────────────────────────────────────┐
     │ Property    │ Value                                          │
     ├─────────────┼────────────────────────────────────────────────┤
-    │ Address     │ TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 │
+    │ Address     │ TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I  │
     ├─────────────┼────────────────────────────────────────────────┤
     │ Public Key  │ E59...82F                                      │
     ├─────────────┼────────────────────────────────────────────────┤
@@ -136,7 +136,7 @@ In a new terminal, monitor which transactions involving the ticket vendor's addr
 
 .. code-block:: bash
 
-   symbol-cli monitor all --address TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB
+   symbol-cli monitor all --address TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI
 
 *******************
 Creating the ticket
@@ -190,7 +190,7 @@ Now that we have defined the mosaic, we will send one ticket unit to a customer 
     :widths: 20 30 50
 
     Deadline; Default (2 hours) ; The maximum amount of time to include the transaction on the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
-    Recipient; TBULEA...IPS4; The recipient account address. In this case, the customer's address.
+    Recipient; TCHBDE...32I; The recipient account address. In this case, the customer's address.
     Mosaics; [1 ``7cdf3b117a3c40cc``]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
     Network; TEST_NET; The network type.
@@ -256,7 +256,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
     .. code-block:: bash
 
-        symbol-cli transaction transfer --recipient-address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
+        symbol-cli transaction transfer --recipient-address TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I --mosaics 7cdf3b117a3c40cc::1 --message enjoy_your_ticket --max-fee 2000000 --sync
 
 4. Look at the terminal window where you are monitoring transactions. When the transaction appears as confirmed, you can check if the customer has received the ticket with the following command.
 

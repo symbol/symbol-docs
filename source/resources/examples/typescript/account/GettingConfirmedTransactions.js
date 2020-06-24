@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with account address
-const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 /* start block 02 */

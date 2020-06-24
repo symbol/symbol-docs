@@ -23,7 +23,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with customer address
-const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;

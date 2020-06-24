@@ -12,7 +12,7 @@ Sending mosaics and messages between two accounts
 
 Define, sign, and announce a transfer transaction.
 
-This guide will show you how to send 10 |networkcurrency| from your account to Bob's, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
+This guide will show you how to send 10 |networkcurrency| from your account to Bob's, whose address is ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``.
 
 *************
 Prerequisites
@@ -33,7 +33,7 @@ Method #01: Using the Desktop Wallet
     :width: 800px
 
 2. Fill out the necessary information for the transfer transaction.
-For this example, you need to specify that you are sending 10 XYM to Bob (``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-AJHH``).  You can add a message, but it is not necessary in this case.
+For this example, you need to specify that you are sending 10 XYM to Bob (``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``).  You can add a message, but it is not necessary in this case.
 
 .. figure:: ../../resources/images/screenshots/desktop-transfer-2.gif
     :align: center

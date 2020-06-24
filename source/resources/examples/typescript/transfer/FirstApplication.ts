@@ -34,7 +34,7 @@ import {
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with customer address
-const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const recipientAddress = Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;

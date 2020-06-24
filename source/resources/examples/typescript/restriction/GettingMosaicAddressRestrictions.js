@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with address
-const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';

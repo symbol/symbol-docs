@@ -25,7 +25,7 @@ const aliasedMosaic = new symbol_sdk_1.Mosaic(new symbol_sdk_1.NamespaceId('symb
 /* start block 02 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), symbol_sdk_1.Address.createFromRawAddress('TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ'), [aliasedMosaic], symbol_sdk_1.PlainMessage.create('Test aliased mosaic'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), symbol_sdk_1.Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'), [aliasedMosaic], symbol_sdk_1.PlainMessage.create('Test aliased mosaic'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);

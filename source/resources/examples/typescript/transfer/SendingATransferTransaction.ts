@@ -31,7 +31,7 @@ import {
 
 /* start block 01 */
 // replace with recipient address
-const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;

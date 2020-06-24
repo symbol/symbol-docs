@@ -22,7 +22,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('foo');
 // replace with address
-const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 /* start block 02 */

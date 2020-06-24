@@ -20,7 +20,7 @@ import {Address, RepositoryFactoryHttp, TransactionGroup} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with account address
-const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 

@@ -28,7 +28,7 @@ const multisigAccount2 = symbol_sdk_1.Account.createFromPrivateKey(multisig2Priv
 const cosignatoryAccount5PublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
 const cosignatory5 = symbol_sdk_1.PublicAccount.createFromPublicKey(cosignatoryAccount5PublicKey, networkType);
 // replace with public key
-const cosignatoryAccount6PublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const cosignatoryAccount6PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const cosignatory6 = symbol_sdk_1.PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, networkType);
 const convertMultisigAccount2Transaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 1, 1, [cosignatory5.address, cosignatory6.address], [], networkType);
 /* end block 01 */

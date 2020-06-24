@@ -47,7 +47,7 @@ class SendingATransferTransaction {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
                 "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
             // replace with recipient address
-            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with symbol.xym id

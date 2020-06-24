@@ -22,7 +22,7 @@ const operators_1 = require("rxjs/operators");
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with recipient address
-const rawRecipientAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const rawRecipientAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;

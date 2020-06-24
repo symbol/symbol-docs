@@ -27,7 +27,7 @@ const cosignatoryAccount = symbol_sdk_1.Account.createFromPrivateKey(cosignatory
 const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
 const multisigAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
 // replace with recipient address
-const recipientRawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const recipientRawAddress = 'TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(recipientRawAddress);
 // replace with symbol.xym id
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');
