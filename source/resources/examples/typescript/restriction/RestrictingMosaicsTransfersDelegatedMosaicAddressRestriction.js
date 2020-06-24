@@ -23,13 +23,13 @@ const symbol_sdk_1 = require("symbol-sdk");
 const mosaicIdHex = '183D0802BCDB97AF';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with alice address
-const aliceRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceRawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const aliceAddress = symbol_sdk_1.Address.createFromRawAddress(aliceRawAddress);
 // replace with bob address
-const bobRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobRawAddress = 'TD6TLA-MJMDD3-DC3S6S-NFLGH2-T5YSUN-KNWM7N-4VY';
 const bobAddress = symbol_sdk_1.Address.createFromRawAddress(bobRawAddress);
 // replace with carol address
-const carolRawAddress = 'TCF7MK-FL6QYF-UHWVRZ-6UUCLN-YBDWLQ-ZZC37A-2O6R';
+const carolRawAddress = 'TCF7MK-FL6QYF-UHWVRZ-6UUCLN-YBDWLQ-ZZC37A-2O6';
 const carolAddress = symbol_sdk_1.Address.createFromRawAddress(carolRawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;

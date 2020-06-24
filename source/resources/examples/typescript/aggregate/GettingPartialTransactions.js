@@ -19,24 +19,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
-// replace with address
+// replace with account address
 const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
-// replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-const restrictionHttp = repositoryFactory.createRestrictionAccountRepository();
-restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictions) => {
-    if (accountRestrictions.length > 0) {
-        accountRestrictions
-            .filter((accountRestriction) => accountRestriction.values.length > 0)
-            .map((accountRestriction) => {
-            console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
-        });
-    }
-    else {
-        console.log('The address does not have account restriction assigned.');
-    }
-}, (err) => console.log(err));
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100 };
+transactionHttp
+    .search(searchCriteria)
+    .subscribe((page) => console.log(page.data), (err) => console.error(err));
 /* end block 01 */

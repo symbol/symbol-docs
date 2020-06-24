@@ -25,10 +25,10 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with address
-const aliceAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const aliceAccount = symbol_sdk_1.Address.createFromRawAddress(aliceAddress);
 // replace with address
-const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobAddress = 'TD6TLA-MJMDD3-DC3S6S-NFLGH2-T5YSUN-KNWM7N-4VY';
 const bobAccount = symbol_sdk_1.Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');

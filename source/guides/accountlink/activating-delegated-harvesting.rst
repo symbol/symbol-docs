@@ -32,13 +32,11 @@ Prerequisites
 
 - Complete :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 
-Before you can activate delegated harvesting, you will need to have three accounts:
+Before you can activate delegated harvesting, you need to have three accounts:
 
-* Create a **main account (M)** with at least ``10,000`` |networkcurrency| units.
-* Create an **announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
-* Create a brand new **remote account (R)** that did not send or receive any transactions.
-
-.. note:: Follow this guide to :ref:`create new accounts <setup-creating-a-test-account>`.
+* **Main account (M)** with at least ``10,000`` harvesting mosaic units.
+* **Announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
+* **Remote account (R)** that did not send or receive any transactions.
 
 *************************
 Method #01: Using the SDK

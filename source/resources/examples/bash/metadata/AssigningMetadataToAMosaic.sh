@@ -1,3 +1,3 @@
 #!/bin/sh
 
-symbol-cli transaction mosaicmetadata --target-public-key 20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A --mosaic-id 2C08D5EDB652AA79 --key BC2FC3ACFF58FF89 --value US00000000
+symbol-cli transaction mosaicmetadata --target-address TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ --mosaic-id 2C08D5EDB652AA79 --key BC2FC3ACFF58FF89 --value US00000000

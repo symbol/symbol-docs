@@ -23,7 +23,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with signer public key
 const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 // replace with recipient address
-const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientRawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(recipientRawAddress);
 // replace with mosaic id
 const mosaicIdHex = '46BE9BC0626F9B1A';

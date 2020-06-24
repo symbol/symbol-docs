@@ -10,7 +10,19 @@
 Reading transactions from an account
 ####################################
 
-Get the list of transactions where an account is involved.
+:orphan:
+
+.. post:: 18 Aug, 2018
+    :category: Account
+    :tags: SDK, CLI
+    :excerpt: 1
+    :nocomments:
+
+####################################
+Reading transactions from an account
+####################################
+
+Get the complete list of transactions involving an account.
 
 *************
 Prerequisites
@@ -22,7 +34,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. To get the latest confirmed transactions for a given account, open a new file, and copy the following code snippet.
+1. Open a new file and define the account address.
 
 .. example-code::
 
@@ -41,14 +53,44 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: By default, the SDK provides up to 10 transactions. The page size can be increased up to 100 transactions.
+2. Define a new ``TransactionHttp`` repository and the search criteria.
+In this example, we will retrieve all account-related transactions with at least one confirmation, but you could also query the unconfirmed and partial collections.
 
-2. To `get more than 100 transactions <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests iteratively.
-For each additional call, add to the ``QueryParams`` the optional parameter ``transactionId`` with the latest transaction identifier known returned by the previous request.
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingConfirmedTransactions.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+.. note: Find in the SDK reference all the possible `SearchCriteria options <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values. If ``address`` is not set, all transactions present in the network are returned.
+
+3. The API returns pages with up to 100 transactions.
+The `page object <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
+
+To get additional transactions, you will have to make further requests iteratively.
+For each additional call, increase the ``pageNumber`` in one unit.
 
 .. code-block:: typescript
 
-    new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))
+    const searchCriteria = {group: TransactionGroup.Confirmed, address, pageNumber: 2, pageSize: 100};
+
+4. Since the transaction collection might grow while paginating, it's advised to set the first transaction you want to start pagination. 
+Set an ``offset`` value with the first transaction internal identifier.
+
+.. code-block:: typescript
+
+    const searchCriteria = {group: TransactionGroup.Confirmed, address, pageNumber: 2, pageSize: 100, id:85BBEA6CC462B244};
 
 *************************
 Method #02: Using the CLI

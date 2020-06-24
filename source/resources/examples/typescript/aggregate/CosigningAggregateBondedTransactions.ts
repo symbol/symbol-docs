@@ -42,15 +42,18 @@ const networkType = NetworkType.TEST_NET;
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
+// replace with transaction hash to cosign
+const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
+/* end block 02 */
+
+/* end block 03 */
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
-// replace with transaction hash to cosign
-const hash = '';
 
 transactionHttp
-    .getTransaction(hash, TransactionGroup.Partial)
+    .getTransaction(transactionHash, TransactionGroup.Partial)
     .pipe(
         map((transaction) => cosignAggregateBondedTransaction(transaction as AggregateTransaction, account)),
         mergeMap((cosignatureSignedTransaction) =>
@@ -58,4 +61,4 @@ transactionHttp
     )
     .subscribe((announcedTransaction) => console.log(announcedTransaction),
         (err) => console.error(err));
-/* end block 02 */
+/* end block 03 */

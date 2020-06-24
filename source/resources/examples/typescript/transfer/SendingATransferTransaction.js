@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with recipient address
-const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;

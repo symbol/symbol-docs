@@ -22,6 +22,9 @@ import {Address, RepositoryFactoryHttp, TransactionGroup} from 'symbol-sdk';
 // replace with account address
 const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
 const address = Address.createFromRawAddress(rawAddress);
+/* end block 01 */
+
+/* start block 02 */
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
@@ -32,4 +35,4 @@ transactionHttp
     .search(searchCriteria)
     .subscribe((page) => console.log(page.data),
         (err) => console.error(err));
-/* end block 01 */
+/* start block 02 */

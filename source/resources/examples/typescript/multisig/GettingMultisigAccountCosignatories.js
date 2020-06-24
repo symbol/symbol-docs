@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with multisig address
-const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
+const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
