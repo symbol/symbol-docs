@@ -30,7 +30,7 @@ const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41
 const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with value
 const value = '123456';
-const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.create(symbol_sdk_1.Deadline.create(), alicePublicAccount.publicKey, key, value.length, value, networkType);
+const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.create(symbol_sdk_1.Deadline.create(), alicePublicAccount.address, key, value.length, value, networkType);
 /* end block 02 */
 /* start block 03 */
 // replace with bob private key

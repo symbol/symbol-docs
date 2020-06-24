@@ -50,7 +50,7 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     Deadline.create(),
     1,
     1,
-    [cosignatory1, cosignatory2],
+    [cosignatory1.address, cosignatory2.address],
     [],
     networkType);
 /* end block 02 */

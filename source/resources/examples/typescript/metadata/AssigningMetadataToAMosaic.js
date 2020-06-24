@@ -27,11 +27,11 @@ const companyAccount = symbol_sdk_1.Account.createFromPrivateKey(companyPrivateK
 // replace with mosaic id
 const mosaicId = new symbol_sdk_1.NamespaceId('cc.shares');
 const isin = 'US00000000';
-const isinMetadataTransaction = symbol_sdk_1.MosaicMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('ISIN'), mosaicId, isin.length, isin, networkType);
+const isinMetadataTransaction = symbol_sdk_1.MosaicMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('ISIN'), mosaicId, isin.length, isin, networkType);
 /* end block 01 */
 /* start block 02 */
 const name = 'ComfyClothingCompany';
-const nameMetadataTransaction = symbol_sdk_1.MosaicMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), mosaicId, name.length, name, networkType);
+const nameMetadataTransaction = symbol_sdk_1.MosaicMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), mosaicId, name.length, name, networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),

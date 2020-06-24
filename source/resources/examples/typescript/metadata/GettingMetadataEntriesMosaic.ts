@@ -38,8 +38,9 @@ metadataHttp.getMosaicMetadata(mosaicId)
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
                     console.log('\n ---');
                     console.log('\n Value:\t', metadataEntry.value);
-                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
+                    console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
+                    console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
                     console.log('\n TargetId:\t', metadataEntry.targetId);
                 });
         }

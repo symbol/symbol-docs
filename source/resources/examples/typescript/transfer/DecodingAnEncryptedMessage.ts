@@ -17,7 +17,7 @@
  */
 
 import {map} from 'rxjs/operators';
-import {Account, NetworkType, PublicAccount, RepositoryFactoryHttp, TransferTransaction} from 'symbol-sdk';
+import {Account, NetworkType, PublicAccount, RepositoryFactoryHttp, TransactionGroup, TransferTransaction} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with network type
@@ -37,7 +37,7 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 
 transactionHttp
-    .getTransaction(transactionHash)
+    .getTransaction(transactionHash, TransactionGroup.Confirmed)
     .pipe(
         map( (x) => x as TransferTransaction ),
     )

@@ -36,8 +36,10 @@ const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
-accountHttp
-    .getAccountPartialTransactions(account.address)
-    .pipe(operators_1.mergeMap((_) => _), operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)))
+// replace with transaction hash to cosign
+const hash = '';
+transactionHttp
+    .getTransaction(hash, symbol_sdk_1.TransactionGroup.Partial)
+    .pipe(operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)))
     .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
 /* end block 02 */

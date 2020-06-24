@@ -35,7 +35,7 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 // replace with transaction hash
 const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 transactionHttp
-    .getTransaction(transactionHash)
+    .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Confirmed)
     .pipe(operators_1.map((x) => x))
     .subscribe((transaction) => {
     console.log('Raw message: ', transaction.message.payload);

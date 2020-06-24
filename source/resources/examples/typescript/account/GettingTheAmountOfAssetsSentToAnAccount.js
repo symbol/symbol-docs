@@ -20,9 +20,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const operators_1 = require("rxjs/operators");
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
-// replace with sender address
-const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
-const senderAddress = symbol_sdk_1.Address.createFromRawAddress(senderRawAddress);
+// replace with signer public key
+const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 // replace with recipient address
 const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(recipientRawAddress);
@@ -34,19 +33,22 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-const accountHttp = repositoryFactory.createAccountRepository();
-accountHttp
-    .getAccountOutgoingTransactions(senderAddress)
-    .pipe(
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const searchCriteria = {
+    group: symbol_sdk_1.TransactionGroup.Confirmed,
+    signerPublicKey,
+    recipientAddress,
+    pageSize: 100,
+    pageNumber: 1,
+    type: [symbol_sdk_1.TransactionType.TRANSFER]
+};
+transactionHttp
+    .search(searchCriteria)
+    .pipe(operators_1.map((_) => _.data), 
 // Process each transaction individually.
 operators_1.mergeMap((_) => _), 
-// Filter transfer transactions.
-operators_1.filter((_) => _.type === symbol_sdk_1.TransactionType.TRANSFER), 
 // Map transaction as transfer transaction.
 operators_1.map((_) => _), 
-// Filter transactions where the account is the recipient address.
-operators_1.filter((_) => _.recipientAddress instanceof symbol_sdk_1.Address
-    && _.recipientAddress.equals(recipientAddress)), 
 // Filter transactions containing a given mosaic
 operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), 
 // Transform absolute amount to relative amount.

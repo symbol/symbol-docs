@@ -59,10 +59,10 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
     Deadline.create(),
     networkType,
     MetadataType.Account,
-    alicePublicAccount,
+    alicePublicAccount.address,
     key,
     newValue,
-    bobAccount.publicAccount);
+    bobAccount.publicAccount.address);
 /* end block 01 */
 
 /* start block 02 */

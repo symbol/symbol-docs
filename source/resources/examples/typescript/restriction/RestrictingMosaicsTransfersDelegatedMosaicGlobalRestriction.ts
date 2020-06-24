@@ -42,7 +42,7 @@ const mosaicNonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     mosaicNonce,
-    MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount),
+    MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address),
     MosaicFlags.create(true, true, true),
     0,
     UInt64.fromUint(0),

@@ -45,7 +45,7 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     0,
     0,
     [],
-    [cosignatoryToRemove],
+    [cosignatoryToRemove.address],
     networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(

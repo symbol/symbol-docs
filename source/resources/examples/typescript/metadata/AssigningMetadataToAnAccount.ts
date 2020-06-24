@@ -49,7 +49,7 @@ const value = '123456';
 
 const accountMetadataTransaction = AccountMetadataTransaction.create(
     Deadline.create(),
-    alicePublicAccount.publicKey,
+    alicePublicAccount.address,
     key,
     value.length,
     value,

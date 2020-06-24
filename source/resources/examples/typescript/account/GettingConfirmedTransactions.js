@@ -25,11 +25,9 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-const accountHttp = repositoryFactory.createAccountRepository();
-// Page size between 10 and 100
-const pageSize = 10;
-const queryParams = new symbol_sdk_1.QueryParams({ pageSize });
-accountHttp
-    .getAccountTransactions(address, queryParams)
-    .subscribe((transactions) => console.log(transactions), (err) => console.error(err));
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Confirmed, address, pageNumber: 1, pageSize: 100 };
+transactionHttp
+    .search(searchCriteria)
+    .subscribe((page) => console.log(page.data), (err) => console.error(err));
 /* end block 01 */

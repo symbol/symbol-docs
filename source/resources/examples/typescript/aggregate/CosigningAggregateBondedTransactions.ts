@@ -24,6 +24,8 @@ import {
     CosignatureTransaction,
     NetworkType,
     RepositoryFactoryHttp,
+    Transaction,
+    TransactionGroup,
 } from 'symbol-sdk';
 
 /* start block 01 */
@@ -44,13 +46,13 @@ const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
+// replace with transaction hash to cosign
+const hash = '';
 
-accountHttp
-    .getAccountPartialTransactions(account.address)
+transactionHttp
+    .getTransaction(hash, TransactionGroup.Partial)
     .pipe(
-        mergeMap((_) => _),
-        filter((_) => !_.signedByAccount(account.publicAccount)),
-        map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+        map((transaction) => cosignAggregateBondedTransaction(transaction as AggregateTransaction, account)),
         mergeMap((cosignatureSignedTransaction) =>
             transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)),
     )

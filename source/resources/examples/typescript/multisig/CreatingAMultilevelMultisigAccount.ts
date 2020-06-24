@@ -48,7 +48,7 @@ const convertMultisigAccount2Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     1,
     1,
-    [cosignatory5, cosignatory6],
+    [cosignatory5.address, cosignatory6.address],
     [],
     networkType);
 /* end block 01 */
@@ -71,7 +71,7 @@ const convertMultisigAccount3Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     2,
     1,
-    [cosignatory7, cosignatory8, cosignatory4],
+    [cosignatory7.address, cosignatory8.address, cosignatory4.address],
     [],
     networkType);
 /* end block 02 */
@@ -85,7 +85,7 @@ const convertMultisigAccount1Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     3,
     1,
-    [multisigAccount2.publicAccount, multisigAccount3.publicAccount, cosignatory4],
+    [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
     [],
     networkType);
 /* end block 03 */
