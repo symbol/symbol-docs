@@ -4,7 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 0.21.3 - 07-Mar-2020
+## 0.21.4 - 16-May-2020
+
+Code-name: Pentesting part 3 (RC7)
+
+## Added
+
+- How-to guides for desktop wallet
+- Port requirements to "Running a test net node" guide
+- API reference versioning support
+- Optimal max_fee calculation docs
+- 0.9.5 transaction types (Vrf, Node, Voting)
+- What is Symbol section
+- Troubleshooting notes in getting started section
+- Glossary.
+
+## Updated
+
+- SDK code examples
+- Refactor multisig guides, making possible to solve them with the desktop wallet
+- Moved libraries under SDK.
+- Diagrams adapted with new style
+- Transaction schemas split from concepts
+- 0.9.5 configuration and latest testnet links
+
+## 0.21.3 - 7-Abr-2020
 
 Code-name: Fushicho 5
 
