@@ -35,8 +35,8 @@ c) Add or delete cosignatories from a multisig account.
 
     minRemovalDelta; int8; Number of signatures needed to remove a cosignatory. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
     minApprovalDelta; int8; Number of signatures needed to approve a transaction. If we are modifying an existing multisig account, this indicates the relative change of the minimum cosignatories.
-    publicKeyAdditionsCount; uint8; Number of cosignatory public key additions.
-    publicKeyDeletionsCount ; uint8; Number of cosignatory public key deletions.
-    multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align publicKeyAdditions on 8-byte boundary.
-    publicKeyAdditions; array(:schema:`Key <types.cats>`, publicKeyAdditionsCount); Cosignatory public key additions.
-    publicKeyDeletions; array(:schema:`Key <types.cats>`, publicKeyDeletionsCount); Cosignatory public key deletions.
+    addressAdditionsCount; uint8; Number of cosignatory address additions.
+    addressDeletionsCount; uint8; Number of cosignatory address deletions.
+    multisigAccountModificationTransactionBody_Reserved1; uint32; Reserved padding to align addressAdditions on 8-byte boundary.
+    addressAdditions; array(:schema:`UnresolvedAddress <types.cats>`, addressAdditionsCount); Cosignatory address additions.
+    addressDeletions; array(:schema:`UnresolvedAddress <types.cats>`, addressDeletionsCount); Cosignatory address deletions.
