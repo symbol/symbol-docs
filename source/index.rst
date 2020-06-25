@@ -37,6 +37,7 @@ Reference Documentation
 
 Surf the reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
 
+* :doc:`Tools <references/overview>`
 * :doc:`Server <server>`
 * :doc:`REST API <api>`
 * :doc:`Software Development Kits <api>`
@@ -144,7 +145,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :hidden:
     :caption: References
 
-    compatibility
+    references/overview
     server
     api
     sdk
@@ -159,4 +160,4 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     contribute/community
     contribute/contributing
     contribute/contributors
-    glossary
+    contribute/glossary

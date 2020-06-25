@@ -10,7 +10,7 @@
 Reading transactions from an account
 ####################################
 
-Get the list of transactions where an account is involved.
+Get the complete list of transactions involving an account.
 
 *************
 Prerequisites
@@ -22,7 +22,10 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. To get the latest confirmed transactions for a given account, open a new file, and copy the following code snippet.
+1. Open a new file and define the account address.
+Define a new ``TransactionHttp`` repository and the search criteria.
+
+In this example, we will retrieve all account-related transactions with at least one confirmation, but you could also query the unconfirmed and partial collections.
 
 .. example-code::
 
@@ -41,9 +44,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: By default, the SDK provides up to 10 transactions. The page size can be increased up to 100 transactions.
-
-2. To `get more than 100 transactions <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests iteratively.
+2. The API returns pages with up to 100 transactions. To `get more than 100 transactions <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests iteratively.
 For each additional call, add to the ``QueryParams`` the optional parameter ``transactionId`` with the latest transaction identifier known returned by the previous request.
 
 .. code-block:: typescript
