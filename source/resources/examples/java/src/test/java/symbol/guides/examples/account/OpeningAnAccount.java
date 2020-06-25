@@ -19,7 +19,7 @@
 package symbol.guides.examples.account;
 
 import io.nem.symbol.sdk.model.account.Account;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import org.junit.jupiter.api.Test;
 
 class OpeningAnAccount {

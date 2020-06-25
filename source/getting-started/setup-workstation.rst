@@ -163,7 +163,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.19.2 rxjs
+            npm install symbol-sdk@0.20.2 rxjs
 
     .. tab:: Java
 
@@ -188,7 +188,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:symbol-sdk-vertx-client:0.19.0"
+                compile "io.nem:symbol-sdk-vertx-client:0.20.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
