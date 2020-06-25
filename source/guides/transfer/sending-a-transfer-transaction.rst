@@ -58,7 +58,7 @@ Method #02: Using the SDK
 2. Open a new file and define the **TransferTransaction**.
 Include Bob's address as the recipient, and attach  10 |networkcurrency|.
 
-|codename| mosaic units are defined as an absolute amount.
+Mosaic units in |codename| are defined as **absolute amounts**.
 To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.
 For example, if the mosaic had :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 

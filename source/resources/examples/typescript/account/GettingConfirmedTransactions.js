@@ -32,4 +32,4 @@ const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Confirmed, address
 transactionHttp
     .search(searchCriteria)
     .subscribe((page) => console.log(page.data), (err) => console.error(err));
-/* start block 02 */
+/* end block 02 */
