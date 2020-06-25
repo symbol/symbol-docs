@@ -71,13 +71,13 @@ Defining a transaction
 Transactions are defined in a serialized form.
 Every transaction extends from the base :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
 
-All transactions should define a deadline and a max_fee:  
+All transactions should define a deadline and a max_fee:
 
 * ``deadline``: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
 
 * ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
-.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages. 
+.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
 
 We recommend using the :doc:`SDK <../sdk>` to define new transactions.
 
@@ -150,26 +150,19 @@ Validation
 **********
 
 The first stage of validation happens in the API nodes.
-If the transaction presents some error, the WebSocket throws a notification through the status channel.
-In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.
-Never rely on a transaction that has an unconfirmed state.
-It is not clear if it will get included in a block, as it should pass a second validation.
+If the transaction encounters an error, the WebSocket throws a notification through the status channel.
+If not, the transaction reaches the P2P network with an **unconfirmed** status.
+In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be replied upon.
 
-The second validation is done before the transaction is added in a :doc:`harvested block <block>`.
-If valid, the harvester stores the transaction in a block and reaches the **confirmed** status.
+The second validation happens before the transaction is added in a :doc:`harvested block <block>`.
+If successful, the harvester stores the transaction in a block and the transaction reaches the **confirmed** status.
+At this state, the transaction is officially recorded in the blockchain ledger, but has not yet reached finality.
 
-Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
-Additionally, the :doc:`transaction fee <fees>` is deducted from the signer's account.
+Under certain circumstances, such as a network failure or partition, the most recent confirmed blocks can be **rollback**.
+Hence, confirmed transactions that have not been finalized are recognized by the network but are not immutable because they can still be reversed.
 
-The transaction has zero confirmations at this point.
-When another block is added to the blockchain, the transaction has one confirmation.
-The next block added to the chain will give it two confirmations and so on.
-
-Under certain circumstances, like network failure or partition, the most recent confirmed blocks might need to be reversed.
-:ref:`Rollbacks <rollbacks>` are characteristic of blockchain systems and essential to resolve forks.
-
-In the public network, a transaction is considered to be irrevocable when it receives ``398`` confirmations. But the maximum number of blocks that can be rolled back is :ref:`configurable per network <config-network-properties>`.
-In other words, it is necessary to wait at least ``398`` blocks after a transaction receives its first confirmation to guarantee that it cannot be reversed on the public network.
+For a block to be immutable, it needs to complete the :ref:`finalization <finalization>` process.
+Once a block is finalized, the block and the included transactions are permanently recorded on the blockchain ledger.
 
 ******
 Guides

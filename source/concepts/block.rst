@@ -64,19 +64,26 @@ The consensus algorithm determines a new account to harvest the subsequent block
 The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the mosaics created by :doc:`inflation <inflation>`.
 This gives the harvester an incentive to add as many transactions to the block as possible.
 
-.. _rollbacks:
+.. _finalization:
 
-*********
-Rollbacks
-*********
+************
+Finalization
+************
 
-Blockchains are designed in a way that, in the presence of a network failure or partition, the recent blocks might need to be rolled back.
+Finalization is the process of making changes on a blockchain ledger permanent.
+Before blocks reach finality, they can be rolled back in the presence of a network failure or partition.
+Once blocks completes finalization, they are immutable.
 
-The rewrite limit is the maximum number of blocks that can be rolled back.
-Hence, forks can only be resolved up to a certain depth too.
+For every block, a sorting algorithm selects zero, one, or multiple accounts to propose the block to be finalized; these selected accounts unveil themselves at the beginning of the iteration to other nodes.
+Then, the committee selection algorithm verifies the eligible accounts to vote on the finality of the proposed block.
+If the proposed block matches the node records, verified accounts will cast a positive vote to tag the block as finalized.
 
-|codename|'s public network has a rewrite limit of ``398`` blocks, but this limit is :ref:`configurable per network <config-network-properties>`.
-The transactions linked to a block are permanently recorded on the blockchain once the number of confirmation blocks (subsequent blocks) surpasses the maximum number of rollback blocks.
+A block can be reversed until 2/3 of the stakes registered to vote have marked it as finalized.
+After that point, the transactions linked to the block are permanently recorded on the blockchain.
+
+When there is low connectivity or many bad actors, finalization will take longer to occur and create the potential for larger rollbacks and unwinding.
+Rollback will always be allowed to the last finalized block, but a finalized block will never be allowed to be rolled back.
+Thus, clients that rely on the immutability of the blockchain history should only trust transactions from finalized blocks.
 
 ******
 Guides
@@ -91,4 +98,3 @@ Guides
     :sort:
 
 Continue: :doc:`Transaction <transaction>`.
-
