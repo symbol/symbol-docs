@@ -39,9 +39,27 @@
 {% if render_sidebar %}
 <div class="col-md-2">
     <div class="bs-sidenav secondary" role="complementary">
-        {% include "include/edit-github.html" %}
-        <span class="title">{% trans %}On this page{% endtrans %}</span>
-        {{localtoc}}
+    {% if pagename == 'guides/category' %}
+    <span class="title">{% trans %}On this page{% endtrans %}</span>
+        {% if ablog %}
+        <ul>
+            <li>
+                <a class="reference internal nav-header" href="#">Guides</a>
+            </li>
+            <ul>
+            {% for coll in ablog.category %}
+                <li>
+                    <a class="reference internal" href="#{{coll.xref}}">{{coll}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </ul>
+        {% endif %}
+    {% else %}
+    {% include "include/edit-github.html" %}
+    <span class="title">{% trans %}On this page{% endtrans %}</span>
+    {{localtoc}}
+    {% endif %}
     </div>
 </div>
 {% endif %}
