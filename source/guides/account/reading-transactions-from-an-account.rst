@@ -44,7 +44,7 @@ In this example, we will retrieve all account-related transactions with at least
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. The API returns pages with up to 100 transactions. To `get more than 100 transactions <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests iteratively.
+2. The API returns pages with up to 100 transactions. To `get more than 100 transactions <https://github.com/nemtech/symbol-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,  you will have to make further requests iteratively.
 For each additional call, add to the ``QueryParams`` the optional parameter ``transactionId`` with the latest transaction identifier known returned by the previous request.
 
 .. code-block:: typescript
