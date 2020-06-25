@@ -63,12 +63,7 @@ In this example, we will retrieve all account-related transactions with at least
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingConfirmedTransactions.java
-        :language: java
-        :start-after:  /* start block 02 */
-        :end-before: /* end block 02 */
-
-.. note: Find in the SDK reference all the possible `SearchCriteria options <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values. If ``address`` is not set, all transactions present in the network are returned.
+.. note: Find all the possible `SearchCriteria options <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values in the SDK reference. If ``address`` filter is not set, all transactions present in the network are returned.
 
 3. The API returns pages with up to 100 transactions.
 The `page object <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
