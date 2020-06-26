@@ -175,9 +175,12 @@ In other words, it is necessary to wait at least ``398`` blocks after a transact
 Spam Throttle
 *************
 
-Unconfirmed transactions are held in a node’s cache until it can be included in a block. Since cache is a valuable resource, Symbol implements a spam throttle that prevents an attacker from filling the cache with unconfirmed transactions while still letting honest actors successfully submit new unconfirmed transactions.
+The node's cache holds unconfirmed transactions until they can be included in a block.
+Since cache is a valuable resource, |codename| implements a spam throttle that prevents an attacker from filling the cache with unconfirmed transactions while still letting honest actors successfully submit new unconfirmed transactions.
 
-The Symbol spam throttle controls the amount of unconfirmed transactions accounts can submit by calculating the fair share of cache for each account relative to its importance score. If an account has surpassed its fair share of the cache and the node cache contains more unconfirmed transactions than the amount that can be included in a single block, the transaction will be rejected. This effectively blocks malicious actors from spamming a node with transactions while allowing other users to continue using the node normally.
+The spam throttle controls the amount of unconfirmed transactions accounts can submit by calculating the fair share of cache for each account relative to its importance score.
+If an account has surpassed its fair share of the cache and the node cache contains more unconfirmed transactions than the amount that can be included in a single block, the transaction will be rejected.
+This effectively blocks malicious actors from spamming a node with transactions while allowing other users to continue using the node normally.
 
 ******
 Guides
