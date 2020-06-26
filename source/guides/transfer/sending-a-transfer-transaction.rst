@@ -49,7 +49,7 @@ At first, it might show up under "**Unconfirmed**" transactions as the transacti
 Method #02: Using the SDK
 *************************
 
-1. In a new terminal, monitor which transactions involving the sender account are confirmed and which of them are rejected by the network.
+1. In a new terminal, monitor the transactions involving the sender account to know if they are confirmed or rejected by the network.
 
 .. code-block:: bash
 

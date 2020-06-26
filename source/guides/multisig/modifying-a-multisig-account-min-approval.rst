@@ -20,10 +20,10 @@ Background
 
 Imagine that Alice and Bob are cosignatories of a 1-of-2 multisig account.
 This means that at least one of their account's signatures is required to authorize multisig transactions.
-In other words, we can say that the ``minApproval`` parameter of the multisig is currently set to 1.
+In other words, we can say that the ``minApproval`` property of the multisig is currently set to 1.
 
 In this case, we want to make both cosignatories required, shifting to a **2-of-2 multisig** instead.
-To achieve this, we will be increasing the **minApproval parameter** in one unit.
+To achieve this, we will be increasing **minApproval** by one unit.
 
 .. figure:: ../../resources/images/examples/multisig-2-of-2.png
     :align: center
@@ -89,7 +89,7 @@ One of the cosignatory accounts, for example Alice's, will announce a :ref:`Mult
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define a **MultisigAccountModificationTransaction** to increase the ``minAprovalDelta`` in one unit.
+2. Define a **MultisigAccountModificationTransaction** to increase the ``minAprovalDelta`` by one unit.
 
 .. example-code::
 
@@ -103,7 +103,7 @@ One of the cosignatory accounts, for example Alice's, will announce a :ref:`Mult
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: If you want to decrease the ``minApproval`` parameter, set ``minApprovalDelta`` with a negative value. For example, to reduce the number of required signers in one unit, you should set ``minApprovalDelta`` to ``-1``.
+.. note:: If you want to decrease the ``minApproval`` property, set ``minApprovalDelta`` with a negative value. For example, to reduce the number of required signers by one unit, you should set ``minApprovalDelta`` to ``-1``.
 
 3. Wrap the **MultisigAccountModificationTransaction** in an **AggregateTransaction**, attaching the multisig public key as the signer.
 
