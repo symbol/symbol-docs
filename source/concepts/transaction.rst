@@ -71,13 +71,13 @@ Defining a transaction
 Transactions are defined in a serialized form.
 Every transaction extends from the base :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
 
-All transactions should define a deadline and a max_fee:  
+All transactions should define a deadline and a max_fee:
 
 * ``deadline``: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
 
 * ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
-.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages. 
+.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
 
 We recommend using the :doc:`SDK <../sdk>` to define new transactions.
 
@@ -170,6 +170,17 @@ Under certain circumstances, like network failure or partition, the most recent 
 
 In the public network, a transaction is considered to be irrevocable when it receives ``398`` confirmations. But the maximum number of blocks that can be rolled back is :ref:`configurable per network <config-network-properties>`.
 In other words, it is necessary to wait at least ``398`` blocks after a transaction receives its first confirmation to guarantee that it cannot be reversed on the public network.
+
+*************
+Spam Throttle
+*************
+
+The node's cache holds unconfirmed transactions until they can be included in a block.
+Since cache is a valuable resource, |codename| implements a spam throttle that prevents an attacker from filling the cache with unconfirmed transactions while still letting honest actors successfully submit new unconfirmed transactions.
+
+The spam throttle controls the amount of unconfirmed transactions accounts can submit by calculating the fair share of cache for each account relative to its importance score.
+If an account has surpassed its fair share of the cache and the node cache contains more unconfirmed transactions than the amount that can be included in a single block, the transaction will be rejected.
+This effectively blocks malicious actors from spamming a node with transactions while allowing other users to continue using the node normally.
 
 ******
 Guides
