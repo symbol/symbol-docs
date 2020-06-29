@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2019-02-22 08:57+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/cli.rst:20
+msgid ""
+"|cli| is an |open-source| command-line interface to interact with the "
+"blockchain."
+msgstr "|cli| はブロックチェーンと疎通する、オープンソースのコマンドラインインターフェイスです。"
+
+#: ../../source/cli.rst:24
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/cli.rst:26
+msgid "|cli| is distributed using the node package manager ``npm``."
+msgstr "|cli| は node パッケージマネージャの ``npm`` によって公開されています。"
+
+#: ../../source/cli.rst:28
+msgid "Symbol CLI require Node.js 12 LTS to execute."
+msgstr "Symbol CLI は Node.js 12 LTS を実行に必要とします。"
+
+#: ../../source/cli.rst:30
+msgid "Execute the following command in a new terminal:"
+msgstr "次のコマンドを新しいターミナルで実行します:"
+
+#: ../../source/cli.rst:38
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../source/cli.rst:40
+msgid ""
+"To start using |cli|, configure a profile. Profiles are used to set a base "
+"URL and account to sign transactions."
+msgstr ""
+"|cli| の使用を開始するには、まずプロファイルを構成します。プロファイルはベース URL "
+"をセットし、トランザクションに署名するためのアカウントを保存するために使われます。"
+
+#: ../../source/cli.rst:47
+msgid ""
+"By default, |cli| will always use the default profile. To use a named "
+"profile with any other command, add the ``--profile`` option to the command."
+msgstr ""
+"|cli| は常にデフォルトプロファイルを使用します。他のコマンドでも名前付きプロファイルを使用する場合は、コマンドに ``--profile`` "
+"オプションを追加します。"
+
+#: ../../source/cli.rst:54
+msgid ""
+"If you are going to use named profile for multiple commands, you can change "
+"the default profile with the following command."
+msgstr "名前付きプロファイルを複数のコマンドで使いたい場合は、デフォルトプロファイルを次のコマンドで変更できます。"
+
+#: ../../source/cli.rst:60
+msgid ""
+"If you do not have a private key to create a profile, you can generate a new"
+" account, add a node URL and save it as default or named profile."
+msgstr ""
+"プロファイルを作成する秘密鍵がない場合は、新しいアカウントを生成し、ノード URL を追加して、デフォルトまたは名前付きプロファイルとして保存します。"
+
+#: ../../source/cli.rst:72
+msgid "Commands"
+msgstr "コマンド"
+
+#: ../../source/cli.rst:74
+msgid "These are the available commands for Symbol CLI separated by version."
+msgstr "これらはバージョンごとに分けられた Symbol CLI で使用可能なコマンドです。"
+
+#: ../../source/cli.rst:76
+msgid ""
+"Find out which CLI version do you have installed by running ``symbol-cli`` "
+"from the command line."
+msgstr "コマンドラインから `` symbol-cli`` を実行して、インストールされている CLI バージョンを確認します。"
+
+#: ../../source/cli.rst:83
+msgid "Guides"
+msgstr "ガイド"

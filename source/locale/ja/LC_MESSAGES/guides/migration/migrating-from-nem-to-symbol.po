@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2020-02-28 13:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -129,8 +129,9 @@ msgid ""
 "different hashing algorithms. While NIS1 uses **Keccak-SHA3-512**, "
 "|codename| changed to **SHA-512** to support TLS."
 msgstr ""
-"どちらのプラットフォームも Ed25519 というデジタル署名アルゴリズムを使用しますが、ハッシュアルゴリズムが異なります。NIS1 は ** "
-"Keccak-SHA3-512** を使用しますが、 |codename| は TLS をサポートするために ** HA-512** に変更されました。"
+"どちらのプラットフォームも Ed25519 というデジタル署名アルゴリズムを使用しますが、ハッシュアルゴリズムが異なります。NIS1 は "
+"**Keccak-SHA3-512** を使用しますが、 |codename| は TLS をサポートするために **SHA-512** "
+"に変更されました。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:61
 msgid ""
@@ -402,6 +403,12 @@ msgstr ""
 " <multisig-account-modification-transaction>` のトランザクションタイプは "
 ":ref:`MultisigAccountModificationTransaction <aggregate-transaction>` "
 "でラップされる必要があります。"
+
+#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:148
+msgid ""
+"Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-"
+"account>`"
+msgstr "ガイド: :doc:`マルチシグアカウントの作成 <../multisig/creating-a-multisig-account>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:150
 msgid ""

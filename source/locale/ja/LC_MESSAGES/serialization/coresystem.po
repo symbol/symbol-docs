@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/coresystem.rst:14
+msgid "Core System Schemas"
+msgstr "コアシステムスキーマ"
+
+#: ../../source/serialization/coresystem.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/coresystem.rst:20
+msgid "Voting Key Link"
+msgstr "投票リンクキー"
+
+#: ../../source/serialization/coresystem.rst:27
+msgid ""
+"Announce a VotingKeyLinkTransaction to associate a |BLS| public key with an "
+"account. Required for node operators willing to vote finalized blocks."
+msgstr ""
+"|BLS| をアカウントの公開鍵に関連付けるために VotingKeyLinkTransaction "
+"をアナウンスします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要なことです。"
+
+#: ../../source/serialization/coresystem.rst:36
+#: ../../source/serialization/coresystem.rst:64
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+
+#: ../../source/serialization/coresystem.rst:1
+#: ../../source/serialization/coresystem.rst:1
+msgid "Linked public key."
+msgstr "リンクした公開鍵"
+
+#: ../../source/serialization/coresystem.rst:1
+#: ../../source/serialization/coresystem.rst:1
+msgid "Account link action."
+msgstr "アカウントリンクアクション"
+
+#: ../../source/serialization/coresystem.rst:47
+msgid "Vrf Key Link"
+msgstr "Vrf キーリンク"
+
+#: ../../source/serialization/coresystem.rst:54
+msgid ""
+"Announce a VrfKeyLinkTransaction to link an account with a VRF public key. "
+"The key is used to randomize block production and leader/participant "
+"selection. Required for all harvesting eligible accounts."
+msgstr ""
+"VRF 公開鍵をアカウントにリンクするために VrfKeyLinkTransaction "
+"をアナウンスします。キーはブロック生成とリーダー/参加者の選択をランダム化するために使用されます。適格なハーベストアカウントのすべてに必要なことです。"

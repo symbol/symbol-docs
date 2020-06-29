@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/index.rst:12
-msgid "Symbol Developers"
-msgstr "Symbol 開発者"
+msgid "Symbol Documentation"
+msgstr "Symbol ドキュメンテーション"
 
 #: ../../source/index.rst:14
 msgid ""
@@ -31,157 +31,153 @@ msgid ""
 "technology into your project."
 msgstr "開発者向けドキュメントを参照し、ブロックチェーンテクノロジーをプロジェクトに統合しましょう。"
 
-#: ../../source/index.rst:18
-msgid "Symbol is Your Blockchain Platform"
-msgstr "Symbol はあなたのブロックチェーンプラットフォームです。"
+#: ../../source/index.rst:16
+msgid ""
+"|codename|'s **MAIN_NET** has not been released yet. The network "
+"specification, documentation, and tooling presented may suffer variations "
+"before the network launch. See here the complete roadmap for the public "
+"launch: `Symbol Launch Plan <https://forum.nem.io/t/symbol-launch-reporting-"
+"single-source-of-information/24863/9>`_."
+msgstr ""
+"まだ |codename| の **MAIN_NET** "
+"はリリースされていません。提示されたネットワーク仕様、ドキュメント、およびツールはネットワークの公開前に変化する可能性があります。一般公開への完全なロードマップは次のとおりです:"
+" `Symbol ローンチプラン <https://forum.nem.io/t/symbol-launch-reporting-single-"
+"source-of-information/24863/9>`_"
 
 #: ../../source/index.rst:20
-msgid ""
-"|codename| is a **developer-friendly blockchain platform** for businesses. "
-"It reduces cost, complexity, and time-to-market so businesses can be more "
-"competitive."
-msgstr ""
-"|codename| はビジネス向けの **開発者フレンドリーなブロックチェーンプラットフォーム** "
-"です。コスト、複雑さ、および市場投入までの時間を短縮し、企業の競争力を高めます。"
-
-#: ../../source/index.rst:23
-msgid ""
-"|codename| offers flexible and secure customizable solutions through simple,"
-" yet powerful, **built-in features**. Developers are able to easily "
-"integrate blockchain technology into their projects or create powerful dApps"
-" using |codename|'s :doc:`REST API <api>`. This allows creating a variety of"
-" architectural solutions with lightweight code efficiently, in any "
-"programming language."
-msgstr ""
-"|codename| は柔軟で、安全な、カスタム可能のソリューションとして、シンプルで、しかしパワフルな **組み込み機能** を提供します。開発者は "
-"|codename| の :doc:`REST API <api>` "
-"を使って、ブロックチェーンのテクノロジーを彼らのプロジェクトへの統合を容易にしたり、強力な dApps "
-"を作成することができます。これにより、任意のプログラミング言語の軽量なコードで効率的に、さまざまなアーキテクチャソリューションを作成することができます。"
-
-#: ../../source/index.rst:27
-msgid ""
-"|codename| provides access to both **public and private blockchains**, "
-"individually or as a hybrid, providing options to best suit your company's "
-"needs. The public blockchain is a decentralized, open, and self-sustaining "
-"ledger that can be used by anyone. The private blockchain, on the other "
-"hand, offers higher speed and privacy."
-msgstr ""
-"|codename| は **パブリックとプライベートブロックチェーン** "
-"の両方を提供し、それぞれまたはハイブリッドで、あなたの会社のニーズに最適な選択肢を提供します。パブリックブロックチェーンは分散型で、公開されており、自立可能な、誰にでも利用される元帳です。一方で、プライベートブロックチェーンは、高い速度とプライバシーを提供します。"
-
-#: ../../source/index.rst:33
 msgid "Getting Started"
 msgstr "入門"
 
-#: ../../source/index.rst:35
+#: ../../source/index.rst:22
 msgid ""
-"To start developing with |codename|, we recommend you to :doc:`setup your "
-"workstation <getting-started/setup-workstation>`. To know more about "
-"|codename|, continue reading the following documents:"
-msgstr ""
-"|codename| での開発を始めるには :doc:`ワークステーションのセットアップ <getting-started/setup-"
-"workstation>` を推奨します。より |codename| を知るためには、次のドキュメントを参照してください:"
+"Connect and combine |codename|'s built-in features to architect your "
+"blockchain solution."
+msgstr "|codename| の組み込み機能を接続および組み合わせて、ブロックチェーンソリューションを構築します。"
 
-#: ../../source/index.rst:38
-msgid ":doc:`Built-in Features <concepts/account>`"
-msgstr ":doc:`ビルドイン機能 <concepts/account>`"
+#: ../../source/index.rst:24
+msgid ":doc:`What is Symbol? <getting-started/what-is-symbol>`"
+msgstr ":doc:`Symbol とは？ <getting-started/what-is-symbol>`"
 
-#: ../../source/index.rst:39
+#: ../../source/index.rst:25
+msgid ":doc:`Setting up your workstation <getting-started/setup-workstation>`"
+msgstr ":doc:`ワークステーションのセットアップ <getting-started/setup-workstation>`"
+
+#: ../../source/index.rst:26
+msgid ":doc:`Built-in Features <concepts/overview>`"
+msgstr ":doc:`ビルドイン機能 <concepts/overview>`"
+
+#: ../../source/index.rst:27
 msgid ":doc:`Protocol <concepts/cryptography>`"
 msgstr ":doc:`プロトコル <concepts/cryptography>`"
 
-#: ../../source/index.rst:40
-msgid ":doc:`API Reference <api>`"
-msgstr ":doc:`API リファレンス <api>`"
-
-#: ../../source/index.rst:41
-msgid ":doc:`Software Development Kits <api>`"
-msgstr ":doc:`ソフトウェア開発キット <api>`"
-
-#: ../../source/index.rst:42
-msgid ":doc:`Command-line Interface <cli>`"
-msgstr ":doc:`コマンドラインインターフェイス <cli>`"
-
-#: ../../source/index.rst:43
-msgid ":doc:`Wallets <wallets>`"
-msgstr ":doc:`ウォレット <wallets>`"
-
-#: ../../source/index.rst:47
+#: ../../source/index.rst:31
 msgid "Featured Guides"
 msgstr "注目のガイド"
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:33
 msgid ""
 "Learn how to use the software development kits and tools with the following "
 "step-by-step implementation examples."
 msgstr "次のステップバイステップの実装例でソフトウェア開発キットとツールの使用方法を学びます。"
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:35
 msgid ":doc:`How to create an account <guides/account/creating-an-account>`"
 msgstr ":doc:`アカウントの作り方 <guides/account/creating-an-account>`"
 
-#: ../../source/index.rst:52
+#: ../../source/index.rst:36
 msgid ""
 ":doc:`How to send a transaction <guides/transfer/sending-a-transfer-"
 "transaction>`"
 msgstr ":doc:`トランザクションを送信する <guides/transfer/sending-a-transfer-transaction>`"
 
-#: ../../source/index.rst:53
+#: ../../source/index.rst:37
 msgid ":doc:`How to create a mosaic <guides/mosaic/creating-a-mosaic>`"
 msgstr ":doc:`モザイクを作成する <guides/mosaic/creating-a-mosaic>`"
 
-#: ../../source/index.rst:54
+#: ../../source/index.rst:38
 msgid ""
 ":doc:`How to register a namespace "
 "<guides/namespace/registering-a-namespace>`"
 msgstr ":doc:`ネームスペースを作成する <guides/namespace/registering-a-namespace>`"
 
-#: ../../source/index.rst:56
+#: ../../source/index.rst:39
+msgid ""
+":doc:`How to create a multisig account <guides/multisig/creating-a-multisig-"
+"account>`"
+msgstr ":doc:`マルチシグアカウントの作り方 <guides/multisig/creating-a-multisig-account>`"
+
+#: ../../source/index.rst:40
 msgid ""
 ":doc:`How to run a private test network <guides/network/creating-a-private-"
 "test-net>`"
 msgstr ""
 ":doc:`プライベートテストネットワークを立ち上げる <guides/network/creating-a-private-test-net>`"
 
-#: ../../source/index.rst:57
+#: ../../source/index.rst:41
 msgid ":ref:`More guides <blog-categories>`"
 msgstr ":ref:`他のガイド <blog-categories>`"
 
-#: ../../source/index.rst:61
+#: ../../source/index.rst:45
+msgid "Reference Documentation"
+msgstr "リファレンスドキュメント"
+
+#: ../../source/index.rst:47
+msgid ""
+"Surf the reference documentation to learn more about our APIs, SDKs, CLIs, "
+"and Wallets."
+msgstr "API、SDK、CLI、ウォレットの詳細についてはリファレンスドキュメントをご覧ください。"
+
+#: ../../source/index.rst:49
+msgid ":doc:`Tools <references/overview>`"
+msgstr ":doc:`ツール <references/overview>`"
+
+#: ../../source/index.rst:50
+msgid ":doc:`Server <server>`"
+msgstr ":doc:`サーバ <server>`"
+
+#: ../../source/index.rst:52
+msgid ":doc:`Software Development Kits <api>`"
+msgstr ":doc:`ソフトウェア開発キット <api>`"
+
+#: ../../source/index.rst:53
+msgid ":doc:`Command-line Interface <cli>`"
+msgstr ":doc:`コマンドラインインターフェイス <cli>`"
+
+#: ../../source/index.rst:54
+msgid ":doc:`Wallets <wallets>`"
+msgstr ":doc:`ウォレット <wallets>`"
+
+#: ../../source/index.rst:58
 msgid "Contributing to Symbol"
 msgstr "Symbol へ貢献する"
 
-#: ../../source/index.rst:63
+#: ../../source/index.rst:60
 msgid ""
 "|codename| is an |open-source| project. Discover how our |community| is "
 "organized, and get started participating:"
 msgstr ""
 "|codename| は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
 
-#: ../../source/index.rst:66
-msgid "Ask in |stack-overflow| development-related questions"
-msgstr "開発に関する質問は |stack-overflow| で尋ねてください。"
-
-#: ../../source/index.rst:67
+#: ../../source/index.rst:63
 msgid "Reach our community joining the official |slack|"
 msgstr "私達の公式 |slack| に参加してください。"
 
-#: ../../source/index.rst:68
+#: ../../source/index.rst:64
 msgid ""
 "Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to "
 "propose changes"
 msgstr ""
 "変更を提案するためには :doc:`貢献ガイドライン <guidelines/suggesting-changes>` を確認してください。"
 
-#: ../../source/index.rst:69
+#: ../../source/index.rst:65
 msgid "Follow the development updates on |twitter|"
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/index.rst:70
+#: ../../source/index.rst:66
 msgid "Explore our |github| repositories"
 msgstr "|github| リポジトリを探索しましょう。"
 
-#: ../../source/index.rst:72
+#: ../../source/index.rst:68
 msgid ""
 "Continue: :doc:`Setting up your workstation <getting-started/setup-"
 "workstation>`."

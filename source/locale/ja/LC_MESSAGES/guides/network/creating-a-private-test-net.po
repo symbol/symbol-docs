@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:63
 msgid "Port requirements"
-msgstr "次の必須項目"
+msgstr "ポート要件"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:65
 msgid ""
@@ -275,14 +275,18 @@ msgstr ""
 "その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
 "。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:165
+#: ../../source/guides/network/creating-a-private-test-net.rst:167
+msgid "Next steps"
+msgstr "次の手順"
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:169
 msgid ""
-"Now that you have your node running and an account with some "
+"Now that you have your test network running and an account with some "
 "|privatenetworkcurrency|, we recommend you to surf the |sitename|. In this "
 "portal, you can find detailed information about |codename|'s features and "
 ":ref:`self-paced guides <blog-categories>` on how to use the software "
 "development kits."
 msgstr ""
-"ノードの起動と |privatenetworkcurrency| を持つアカウントの準備ができたので、 |sitename| "
+"テストネットワークの起動と |privatenetworkcurrency| を持つアカウントの準備ができたので、 |sitename| "
 "の閲覧を推奨します。このポータルでは詳細な |codename| の機能、及びソフトウェア開発キットの使い方において :ref:`自己ペースガイド "
 "<blog-categories>` が掲載されています。"

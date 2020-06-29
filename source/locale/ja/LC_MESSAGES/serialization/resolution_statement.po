@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/resolution_statement.rst:14
+msgid "Resolution Statement Schemas"
+msgstr "解決ステートメントスキーマ"
+
+#: ../../source/serialization/resolution_statement.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/resolution_statement.rst:20
+msgid "Resolution Statement Types"
+msgstr "解決ステートメントタイプ"
+
+#: ../../source/serialization/resolution_statement.rst:27
+msgid "The transaction that triggered the receipt."
+msgstr "レシートをトリガしたトランザクション。"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid "Transaction index within the block."
+msgstr "ブロック内のトランザクションインデックス。"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid ""
+"Transaction index inside within the AggregateTransaction. If the transaction"
+" is not an inner transaction, then the secondary identifier is set to 0."
+msgstr ""
+"AggregateTransaction 内のトランザクションのインデックス。トランザクションがインナートランザクションではない場合、セカンダリ識別子は"
+" 0 に設定されます。"
+
+#: ../../source/serialization/resolution_statement.rst:45
+msgid "A single resolution statement can have multiple resolution entries."
+msgstr "1つの解決ステートメントには複数の解決エントリを含まれることがあります。"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid ":schema:`Address <types.cats>` or :schema:`MosaicId <types.cats>`"
+msgstr ":schema:`Address <types.cats>` または :schema:`MosaicId <types.cats>`"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid "Resolved address or resolved mosaic identifier."
+msgstr "解決済みアドレスまたは解決済みモザイクの識別子"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid "Information about the transaction that triggered the receipt."
+msgstr "レシートをトリガしたトランザクションの情報。"
+
+#: ../../source/serialization/resolution_statement.rst:56
+msgid "Resolution Statements"
+msgstr "解決ステートメント"
+
+#: ../../source/serialization/resolution_statement.rst:63
+msgid ""
+"A resolution statement keeps the relation between a namespace alias used in "
+"a transaction and the real address or mosaic id."
+msgstr "解決ステートメントはトランザクションで使用されるネームスペースエイリアスと実際のアドレスまたは mosaic id 間の関係を保持します。"
+
+#: ../../source/serialization/resolution_statement.rst:66
+msgid "**type**: Address_Alias_Resolution or Mosaic_Alias_Resolution"
+msgstr "**type**: Address_Alias_Resolution または Mosaic_Alias_Resolution"
+
+#: ../../source/serialization/resolution_statement.rst:68
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid ""
+":schema:`UnresolvedAddress <types.cats>` or :schema:`UnresolvedMosaicId "
+"<types.cats>`"
+msgstr ""
+":schema:`UnresolvedAddress <types.cats>` または :schema:`UnresolvedMosaicId "
+"<types.cats>`"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid "Unresolved address or unresolved mosaic identifier."
+msgstr "未解決アドレスまたは未解決モザイクの識別子"
+
+#: ../../source/serialization/resolution_statement.rst:1
+msgid ""
+"Array of resolution entries linked to the unresolved namespace identifier. "
+"It is an array instead of a single UInt64 field since within one block the "
+"resolution might change for different sources due to alias related "
+"transactions."
+msgstr ""
+"未解決のネームスペース識別子にリンクされている解決エントリの配列。1 "
+"ブロック内でエイリアス関連のトランザクションが原因で解決が異なるソースで変わる可能性があるため、これは単一の UInt64 フィールドではなく配列です。"

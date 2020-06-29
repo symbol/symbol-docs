@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -29,6 +29,16 @@ msgstr "ハーベスティング"
 msgid ""
 "The process of creating new :doc:`blocks <block>` is called harvesting."
 msgstr "新しい :doc:`ブロック <block>` を生成するプロセスをハーベスティングと呼びます。"
+
+#: ../../source/concepts/harvesting.rst:16
+msgid ""
+"In this process, the :doc:`account <account>` that harvests a block—called "
+"the **harvester**—is rewarded with the :doc:`transaction fees <fees>` added "
+"in the block and the :doc:`inflation <inflation>` tokens generated."
+msgstr ""
+"このプロセス中には、ブロックをハーベストする :doc:`アカウント <account>` - **ハーベスタ** と呼びます - "
+"はブロックに追加された :doc:`トランザクション手数料 <fees>` 報酬と生成された :doc:`インフレーション <inflation>` "
+"トークンが提供されます。"
 
 #: ../../source/concepts/harvesting.rst:18
 msgid ""
@@ -66,11 +76,22 @@ msgstr ""
 "harvesting>` または  :ref:`リモートノード <delegated-harvesting>` "
 "にデリゲートすることでインポータンススコアを新しいブロック生成のために使用することができます。"
 
-#: ../../source/concepts/harvesting.rst:33
+#: ../../source/concepts/harvesting.rst:29
+msgid ""
+"Regardless of the method chosen, any account willing to activate harvesting "
+"must first announce a valid :ref:`VrfKeyTransaction <vrf-key-link-"
+"transaction>`. The VRF transaction links the harvester account with a second"
+" key pair to randomize block production and leader selection."
+msgstr ""
+"選択した方法に関係なく、ハーベスティングをアクティブ化したいアカウントは、最初に有効な :ref:`VrfKeyTransaction <vrf-"
+"key-link-transaction>` を通知します。VRF トランザクションはハーベスタアカウントと 2 "
+"番目のキーペアをリンクして、ブロックの生成とリーダーの選択をランダム化します。"
+
+#: ../../source/concepts/harvesting.rst:36
 msgid "Harvesting mosaic"
 msgstr "ハーベスティングモザイク"
 
-#: ../../source/concepts/harvesting.rst:35
+#: ../../source/concepts/harvesting.rst:38
 msgid ""
 "|codename| software supports :ref:`defining any mosaic <config-network-"
 "properties>` for harvesting purposes to fit the business needs."
@@ -78,7 +99,7 @@ msgstr ""
 "|codename| ソフトウェアはビジネスニーズに合わせたハーベスティングを目的とした :ref:`モザイク定義 <config-network-"
 "properties>` をサポートします。"
 
-#: ../../source/concepts/harvesting.rst:37
+#: ../../source/concepts/harvesting.rst:40
 msgid ""
 "For example, consortium networks can distribute harvesting mosaics between "
 "the companies that are running the infrastructure, while other participants "
@@ -88,94 +109,203 @@ msgstr ""
 "例えばコンソーシアムネットワークではインフラを運営する企業間でハーベスティングモザイクを配布することができますが、他の参加者はサービスを利用するために "
 ":doc:`通貨モザイク <fees>` を支払う必要があります。"
 
-#: ../../source/concepts/harvesting.rst:46
+#: ../../source/concepts/harvesting.rst:42
+msgid ""
+"By contrast, public networks might use the same mosaic for paying "
+"transaction fees and running the network. |codename|'s public network uses "
+"|networkcurrency| as the harvesting mosaic, enabling any eligible "
+"participant to harvest new blocks."
+msgstr ""
+"これとは対照的に、パブリックネットワークではトランザクション手数料の支払いとネットワーク運用には同じモザイクを使用することがあります。たとえば "
+"|codename| のパブリックネットワークでは |networkcurrency| "
+"をハーベストモザイクとして使用して、適格な参加者が新しいブロックをハーベストできるようにしています。"
+
+#: ../../source/concepts/harvesting.rst:47
+msgid "Rewards"
+msgstr "報酬"
+
+#: ../../source/concepts/harvesting.rst:49
+msgid ""
+"Network operators can define a **network fee sink account** that will "
+"receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and"
+" :doc:`inflation <inflation>`). In the case of the public network, this fee "
+"could be used to create supernode programs, reward accounts that participate"
+" in the finalization process or advance the network development. By default,"
+" the public test network sets this percentage to 5%."
+msgstr ""
+"ネットワークオペレーターはハーベスト報酬 (ブロック :doc:`手数料 <fees>` および :doc:`インフレーション "
+"<inflation>`）の割合を受け取る **ネットワーク手数料シンクアカウント** "
+"を定義できます。パブリックネットワークにおいて、この手数料はスーパーノードプログラムの作成、ファイナライズプロセスに参加するアカウントへの報酬、またはネットワーク開発の前進に使用できます。デフォルトでは、パブリックテストネットワークはこの割合を5％に設定します。"
+
+#: ../../source/concepts/harvesting.rst:51
+msgid ""
+"Additionally, each node can set a **beneficiary account** to share a "
+"percentage (up to 25%) of the harvesting rewards. The node operators can use"
+" this feature to create incentive structures for their node supporters."
+msgstr ""
+"さらに、各ノードは **受益者アカウント** を設定して、ハーベスト報酬の割合 (最大25％) "
+"を共有できます。ノードオペレータはこの機能を使用して、ノードサポータのインセンティブ構造を作成できます。"
+
+#: ../../source/concepts/harvesting.rst:53
+msgid ""
+"The sharing ratios for the beneficiary and network sink accounts are "
+":ref:`configurable per network <config-network-properties>`."
+msgstr ""
+"受取人の共有比率とネットワークシンクアカウントは :ref:`ネットワークごとに設定可能 <config-network-properties>` "
+"です。"
+
+#: ../../source/concepts/harvesting.rst:59
+msgid ""
+"Rewards division when the network's sharing ratio for network sink is 20% "
+"and for beneficiary is 10%."
+msgstr "ネットワークシンクに対するネットワークの共有率が20％であり、受益者に対するネットワークの共有率が10％である場合の報酬区分"
+
+#: ../../source/concepts/harvesting.rst:61
+msgid ""
+"The calculation of the beneficiary percentage will occur after the network "
+"sink calculation. When the node operator does not define a beneficiary or a "
+"Network Fee Sink, all the rewards go to the block signer."
+msgstr ""
+"受益者の割合の計算は、ネットワークシンク計算後に行われます。ノードオペレーターが受取人またはネットワーク手数料シンクを定義しない場合、すべての報酬はブロック署名者に送られます。"
+
+#: ../../source/concepts/harvesting.rst:68
 #: ../../source/concepts/harvesting.rst:1
 msgid "Local harvesting"
 msgstr "ローカルハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:51
+#: ../../source/concepts/harvesting.rst:70
 msgid ""
-"Besides, each node can set a **beneficiary public key** to share a 25% of "
-"the harvesting rewards (:doc:`fees <fees>` and :doc:`inflation "
-"<inflation>`), being the sharing ratio :ref:`configurable per network "
-"<config-network-properties>`. When the node does not define a beneficiary, "
-"all the rewards go to the block signer."
+"An eligible account can harvest new blocks by running a node. To harvest "
+"locally, the account should provide the next properties in :properties"
+":`config-harvesting.properties <config-node-properties>` file:"
 msgstr ""
-"さらに、各ノードは 25% のハーベスティング報酬( :doc:`手数料 <fees>` と :doc:`インフレーション <inflation>` "
-")を共有するために **受益者公開鍵** を設定することができ、共有比率は :ref:`各ネットワークごとに設定可能 <config-network-"
-"properties>` です。ノードが受取人を定義しない場合、すべての報酬はブロック署名者が受け取ります。"
+"適格なアカウントはノードを実行して新しいブロックを収集できます。ローカルでハーベスティングするために、アカウントは :properties"
+":`config-harvesting.properties <config-node-properties>` ファイルに次のプロパティを記入します:"
 
-#: ../../source/concepts/harvesting.rst:58
-msgid "Rewards division when the network's sharing ratio equals 10%"
-msgstr "ネットワークの共有率が10％に等しい場合の報酬区分"
+#: ../../source/concepts/harvesting.rst:1
+msgid "Property"
+msgstr "プロパティ"
 
-#: ../../source/concepts/harvesting.rst:60
+#: ../../source/concepts/harvesting.rst:1
+#: ../../source/concepts/harvesting.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/concepts/harvesting.rst:1
+#: ../../source/concepts/harvesting.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"The harvester account private key. This account needs to hold at least "
+"``10,000`` :ref:`harvesting mosaics <harvesting-mosaic>` units to have "
+"importance score greater than zero in the public network."
+msgstr ""
+"ハーベスタアカウントの秘密鍵。パブリックネットワークでは、このアカウントが 0 より大きいインポータンススコアを得るには、少なくとも "
+"``10,000`` :ref:`ハーベスティングモザイク <harvesting-mosaic>` ユニットを保有している必要があります。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid "The VRF private key linked with the account."
+msgstr "アカウントにリンクされた VRF 秘密鍵。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid "Set to true if delegated harvesting is enabled."
+msgstr "true の場合、デリゲートハーベスティングが有効になります。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid "Maximum number of delegated harvesting accounts."
+msgstr "デリゲートハーベスティングアカウントの最大数"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"Delegate harvester prioritization policy used to keep accounts once the node"
+" stores ``maxUnlockedAccounts``. Possible values are \"Importance\" or "
+"\"Age\"."
+msgstr ""
+"ノード一度が保持した ``maxUnlockedAccounts`` アカウントを維持するための、デリゲートハーベスター優先順位付けポリシー。可能な値は"
+" \"Importance\" または \"Age\" です。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"The public key of the account that will receive a percentage of the block "
+"fees defined by the harvestBeneficiaryPercentage."
+msgstr "HarvestBeneficiaryPercentage によって定義された、ブロック手数料の割合を受け取るアカウントの公開鍵。"
+
+#: ../../source/concepts/harvesting.rst:84
 msgid ""
 "Local harvesting is secure as long as no one accesses your node instance, "
 "which is storing the private key."
 msgstr "ローカルハーベスティングでは、プライベートキーを格納しているノードのインスタンスに誰もアクセスしない限りは安全です。"
 
-#: ../../source/concepts/harvesting.rst:66
+#: ../../source/concepts/harvesting.rst:90
 #: ../../source/concepts/harvesting.rst:1
 msgid "Delegated harvesting"
 msgstr "デリゲートハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:68
+#: ../../source/concepts/harvesting.rst:92
 msgid ""
-"An eligible account may also delegate its importance score to a :ref:`remote"
-" node <delegated-harvesting>` for harvesting."
+"Delegated harvesting allows using the importance score of an account to "
+"create new blocks and receive rewards without having to run a node locally."
 msgstr ""
-"適格なアカウントはそのインポータンススコアを :ref:`リモートノード <delegated-harvesting>` "
-"にデリゲートしてハーベスティングすることもできます。"
+"デリゲートハーベストにより、アカウントのインポータンススコアを使用して、ローカルでノードを実行しなくても、新しいブロックを作成して報酬を受け取ることができます。"
 
-#: ../../source/concepts/harvesting.rst:70
+#: ../../source/concepts/harvesting.rst:94
 msgid ""
-"Delegated harvesting enables an account to use a **proxy private key** that "
-"can be shared with a node securely. In other words, you can use the "
-"importance score of your account to create new blocks without running a "
-"node."
+"An eligible account can delegate its importance score to a brand new **proxy"
+" account** The private key of the proxy account can be shared securely with "
+"any node that is running local harvesting that delegated harvesting "
+"connections."
 msgstr ""
-"デリゲートハーベスティングでは、アカウントはノードと安全に共有できる **プロキシ秘密鍵** "
-"を使用できます。つまり、自分のアカウントの重要性スコアを利用して、ノードの運用をせずに新しいブロックを作成することができます。"
+"適格なアカウントはそのインポータンススコアを新しい **プロキシアカウント** "
+"に委任できます。プロキシアカウントの秘密鍵は、デリゲートハーベストの接続を実行するローカルハーベストを実行している任意のノードと安全に共有できます。"
 
-#: ../../source/concepts/harvesting.rst:77
+#: ../../source/concepts/harvesting.rst:101
 msgid "Activating delegated harvesting"
 msgstr "デリゲートハーベスティングの有効化"
 
-#: ../../source/concepts/harvesting.rst:79
+#: ../../source/concepts/harvesting.rst:103
 msgid ""
-"To enable delegated harvesting, the account owner has to link its "
-"**importance score** to a remote account announcing an "
-":ref:`AccountLinkTransaction <account-link-transaction>`."
+"To enable delegated harvesting, the account owner has to link its importance"
+" score to the proxy account by announcing an :ref:`AccountKeyLinkTransaction"
+" <account-key-link-transaction>`. In order for the remote account to be "
+"accepted for delegated harvesting, the remote account should not have sent "
+"nor received any transaction or be linked to another account previously."
 msgstr ""
-"デリゲートハーベスティングを有効にするには、アカウントの所有者が :ref:`AccountLinkTransaction <account-link-"
-"transaction>` をアナウンスすることで **重要度スコア** をリモートアカウントにリンクする必要があります。"
+"デリゲートハーベスティングを有効にするには、アカウントの所有者が :ref:`AccountKeyLinkTransaction <account-"
+"key-link-transaction>` "
+"をアナウンスすることでインポータンススコアをプロキシアカウントにリンクする必要があります。リモートアカウントがデリゲートハーベストを受け入れられるためには、リモートアカウントがトランザクションを送受信したことがなく、以前に別のアカウントにリンクされたことがあってはなりません。"
 
-#: ../../source/concepts/harvesting.rst:81
+#: ../../source/concepts/harvesting.rst:106
+msgid ""
+"The remote account cannot be involved in any transaction while it is a "
+"delegated account."
+msgstr "リモートアカウントはデリゲートアカウントである間、トランザクションに関与できません。"
+
+#: ../../source/concepts/harvesting.rst:108
 msgid ""
 "Then, the account needs to send a `special encrypted message "
 "<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node "
 "via a :doc:`TransferTransaction <transfer-transaction>`. The message must "
-"contain the remote's account **proxy private key**  encrypted using AES, so "
-"that only the recipient will be able to decipher it."
+"contain the remote's account **proxy private key**  encrypted using AES, "
+"making the transaction readable only by the recipient."
 msgstr ""
 "次に、アカウントは :doc:`TransferTransaction <transfer-transaction>` を用いて "
 "`特別な暗号化メッセージ <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_"
-" をノードへ送信する必要があります。このメッセージは、受信者だけが解読できるように AES を用いて暗号化されたリモートの **プロキシ秘密鍵** "
+" をノードへ送信する必要があります。このメッセージは受信者だけが解読できるように AES を用いて暗号化されたリモートの **プロキシ秘密鍵** "
 "が含まれていなければなりません。"
 
-#: ../../source/concepts/harvesting.rst:84
+#: ../../source/concepts/harvesting.rst:111
 msgid ""
 "The node receives an encrypted message using :ref:`WebSockets <websockets>`."
 " Once the node decrypts the private key of the potential delegated "
-"harvester, the node owner can **add the remote account as a delegated "
-"harvester** if the candidate meets the requirements."
+"harvester, the node owner can add the remote account as a delegated "
+"harvester if the candidate meets the requirements."
 msgstr ""
 "ノードは :ref:`WebSockets <websockets>` "
-"を通じて暗号化メッセージを受信します。ノードがデリゲートハーベスティングをする秘密鍵を復号すると、候補アカウントが条件を満たす場合、ノードの所有者は "
-"**リモートアカウントをデリゲートハーベスターとして追加** できます。"
+"を通じて暗号化メッセージを受信します。ノードがデリゲートハーベスティングをする秘密鍵を復号すると、候補アカウントが条件を満たす場合、ノードの所有者はリモートアカウントをデリゲートハーベスターとして追加できます。"
 
-#: ../../source/concepts/harvesting.rst:87
+#: ../../source/concepts/harvesting.rst:114
 msgid ""
 "As the remote private key is **saved on disk**, even if the node disconnects"
 " temporarily, the persistent delegated harvesters will be reestablished once"
@@ -189,43 +319,43 @@ msgstr ""
 " **バックアップ** "
 "が作成されます。デリゲートキーを含むディスクが破損や破壊された場合でも、ノード所有者はブロックチェーンを照会してデータを取得できます。"
 
-#: ../../source/concepts/harvesting.rst:91
+#: ../../source/concepts/harvesting.rst:118
 msgid ""
 "Security-wise, sharing a proxy private key does not compromise the original "
 "account since:"
 msgstr "セキュリティに関して、プロキシの秘密鍵を共有しても、次の理由から元のアカウントが侵害されることはありません:"
 
-#: ../../source/concepts/harvesting.rst:93
+#: ../../source/concepts/harvesting.rst:120
 msgid "The remote account has zero balance."
 msgstr "リモートアカウントは残高0です。"
 
-#: ../../source/concepts/harvesting.rst:94
+#: ../../source/concepts/harvesting.rst:121
 msgid ""
 "The remote account by itself can't transfer the importance to another "
 "account."
 msgstr "リモートアカウントそれ自身だけでは、インポータンスを他のアカウントに移すことはできません。"
 
-#: ../../source/concepts/harvesting.rst:95
+#: ../../source/concepts/harvesting.rst:122
 msgid "The original account receives the resulting fees."
 msgstr "元のアカウントは結果の手数料を受け取ります。"
 
-#: ../../source/concepts/harvesting.rst:97
+#: ../../source/concepts/harvesting.rst:124
 msgid ""
 "Remote harvesters may not receive the entire reward if the following "
 "conditions are met:"
 msgstr "以下の条件を満たす場合、リモートハーベスターは全報酬を受け取ることができません:"
 
-#: ../../source/concepts/harvesting.rst:99
+#: ../../source/concepts/harvesting.rst:126
 msgid "The network harvesting sharing rate is greater than 0."
 msgstr "ネットワークハーベスティング共有率が 0 より大きい。"
 
-#: ../../source/concepts/harvesting.rst:100
+#: ../../source/concepts/harvesting.rst:127
 msgid ""
 "The node selected has defined a :ref:`beneficiary account <local-"
 "harvesting>`."
 msgstr ":ref:`受益者アカウント <local-harvesting>` を定義している選択されたノード。"
 
-#: ../../source/concepts/harvesting.rst:102
+#: ../../source/concepts/harvesting.rst:129
 msgid "Comparison between local and delegated harvesting"
 msgstr "ローカルとデリゲートハーベスティングの比較"
 
@@ -246,12 +376,18 @@ msgid "**Cost**"
 msgstr "**コスト**"
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "The node maintenance (electricity, cost VPN)."
-msgstr "ノードのメンテナンス(電気、VPNのコスト)"
+msgid ""
+"The node maintenance (electricity, cost VPN) + VrfKeyLinkTransaction "
+"announcement fees."
+msgstr "ノードのメンテナンス(電気、VPNのコスト) + VrfKeyLinkTransaction アナウンス手数料"
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "AccountLinkTransaction + TransferTransaction announcement fees."
-msgstr "AccountLinkTransaction + TransferTransaction アナウンス手数料"
+msgid ""
+"VrfKeyLinkTransaction + AccountKeyLinkTransaction + TransferTransaction "
+"announcement fees."
+msgstr ""
+"VrfKeyLinkTransaction + AccountKeyLinkTransaction + TransferTransaction "
+"アナウンス手数料"
 
 #: ../../source/concepts/harvesting.rst:1
 msgid "**Security**"
@@ -279,87 +415,27 @@ msgstr "トータル報酬。ノード所有者は報酬の一部を受取アカ
 msgid "Total reward - node's beneficiary share."
 msgstr "合計報酬 - ノードの受益者分配"
 
-#: ../../source/concepts/harvesting.rst:113
+#: ../../source/concepts/harvesting.rst:140
+msgid "Related transactions"
+msgstr "関連トランザクション"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"Delegate the account importance to a proxy account. Required for all "
+"accounts willing to activate delegated harvesting."
+msgstr ""
+"アカウントのインポータンスをプロキシアカウントに委任します。デリゲートハーベスティングをアクティブ化したい、すべてのアカウントに必要なことです。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"Link an account with a VRF public key. Required for all harvesting eligible "
+"accounts."
+msgstr "アカウントを VRF 公開鍵にリンクします。ハーベスト対象のすべてのアカウントに必要です。"
+
+#: ../../source/concepts/harvesting.rst:152
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/harvesting.rst:125
-msgid "Schemas"
-msgstr "スキーマ"
-
-#: ../../source/concepts/harvesting.rst:132
-msgid ""
-"Announce an AccountLinkTransaction to delegate the account importance to a "
-"remote account."
-msgstr "アカウントのインポータンスをリモートアカウントにデリゲートするために、AccountLinkTransaction をアナウンスします。"
-
-#: ../../source/concepts/harvesting.rst:134
-msgid ""
-"In order for the remote account to be accepted for delegated harvesting, it "
-"needs to meet the following conditions:"
-msgstr "デリゲートハーベスティングのためにリモートアカウントが受け入れられるためには以下の条件を満たす必要があります:"
-
-#: ../../source/concepts/harvesting.rst:136
-msgid "It cannot own any mosaics."
-msgstr "モザイクを保有することはできません。"
-
-#: ../../source/concepts/harvesting.rst:137
-msgid "It cannot be a cosignatory of any other account."
-msgstr "他のいかなるアカウントの連署者になることはできません。"
-
-#: ../../source/concepts/harvesting.rst:138
-msgid "It cannot be a multisig account."
-msgstr "マルチシグアカウントになることはできません。"
-
-#: ../../source/concepts/harvesting.rst:139
-msgid "It cannot already be a remote account for another account."
-msgstr "別のアカウントのリモートアカウントにはできません。"
-
-#: ../../source/concepts/harvesting.rst:140
-msgid "It cannot be its own remote account."
-msgstr "自身のリモートアカウントになることはできません。"
-
-#: ../../source/concepts/harvesting.rst:148
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/harvesting.rst:150
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Property"
-msgstr "プロパティ"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Type"
-msgstr "タイプ"
-
-#: ../../source/concepts/harvesting.rst:1
-#: ../../source/concepts/harvesting.rst:1
-msgid "Description"
-msgstr "説明"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Remote account public key."
-msgstr "リモートアカウントの公開鍵"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Account link action."
-msgstr "アカウントリンクアクション"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Unlink account."
-msgstr "アカウントの関連付けをやめる"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Link account."
-msgstr "アカウントを関連付ける"
-
-#: ../../source/concepts/harvesting.rst:173
+#: ../../source/concepts/harvesting.rst:162
 msgid "Continue: :doc:`Inflation <inflation>`."
 msgstr "次項: :doc:`インフレーション <inflation>`"

@@ -23,6 +23,7 @@ You can refer to the next documentation to get the list of available endpoints.
 
 .. ghreference:: nemtech/symbol-openapi
     :folder:
+
 .. _websockets:
 
 **********

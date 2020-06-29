@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-10-28 13:02+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -32,6 +32,28 @@ msgstr "ネームスペースにカスタムデータを追加"
 #: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:26
 msgid "Background"
 msgstr "背景"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:28
+msgid ""
+":doc:`Metadata <../../concepts/metadata>` can be attached to "
+":doc:`namespaces <../../concepts/namespace>` to help users verify the "
+"ownership of the registered name. The data attached could include "
+"information such as registrant, administrative, or technical contact "
+"information."
+msgstr ""
+":doc:`メタデータ <../../concepts/metadata>` はユーザーが登録した名前の所有権を確認できるように "
+":doc:`ネームスペース <../../concepts/namespace>` "
+"にアタッチできます。添付されたデータには登録者、管理者、または技術的な連絡先情報などの情報が含まれます。"
+
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:31
+msgid ""
+"Imagine that the company ComfyClothingCompany wants to add their information"
+" to their namespace ``cc`` so that any user of the network can quickly "
+"identify the company's details. In this guide, you are going to implement a "
+"program to add metadata entries to a namespace."
+msgstr ""
+"ComfyClothingCompany という会社がネームスペース ``cc`` "
+"に情報を追加して、ネットワークのユーザーが会社の詳細をすばやく識別できるようにしたいとします。このガイドでは、メタデータエントリをネームスペースへ追加するプログラムを実装します。"
 
 #: ../../source/guides/metadata/assigning-metadata-entries-to-a-namespace.rst:40
 msgid "Prerequisites"

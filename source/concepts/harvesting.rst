@@ -122,7 +122,7 @@ Remote harvesters may not receive the entire reward if the following conditions 
     :delim: ;
 
     **Configuration** ; Setup a catapult-server node.; Activate remote harvesting.
-    **Cost** ; The node maintenance (electricity, cost VPN) + VrfKeyTransaction announcement fees.; VrfKeyTransaction + AccountKeyLinkTransaction + TransferTransaction announcement fees.
+    **Cost** ; The node maintenance (electricity, cost VPN) + VrfKeyLinkTransaction announcement fees.; VrfKeyLinkTransaction + AccountKeyLinkTransaction + TransferTransaction announcement fees.
     **Security**; The node stores the private key.;  A proxy private key is shared with a node.
     **Reward**; Total reward. The node owner can share part of the reward with a beneficiary account.; Total reward - node's beneficiary share.
 

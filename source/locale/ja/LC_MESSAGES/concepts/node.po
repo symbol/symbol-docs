@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -49,7 +49,7 @@ msgstr "**4層アーキテクチャ** により、開発者に他の層への影
 msgid "Peer node"
 msgstr "Peer ノード"
 
-#: ../../source/concepts/node.rst:31 ../../source/concepts/node.rst:87
+#: ../../source/concepts/node.rst:31 ../../source/concepts/node.rst:86
 msgid "**Repository:** |catapult-server|"
 msgstr "**リポジトリ:** |catapult-server|"
 
@@ -137,7 +137,7 @@ msgid ""
 "Nodes update the counters accordingly after processing the data requested. "
 "If a node successfully connects to a remote peer, it first increments the "
 "success counter towards the remote peer. If the communication attempt fails,"
-"  the node increments the remote peer’s failure counter. Likewise, the node "
+" the node increments the remote peer’s failure counter. Likewise, the node "
 "updates the peer counters accordingly after processing data shared."
 msgstr ""
 "ノードは要求されたデータの処理をした後に、それに応じてカウンタを更新します。ノードがリモートピアへの接続に成功すると、最初にリモートピアに対しての成功カウンタをインクリメントします。通信の試行が失敗した場合、ノードはリモートピアの失敗カウンタを増やします。同様にノードは共有データの処理後にピアカウンタを適宜更新します。"
@@ -152,21 +152,18 @@ msgstr "これらのスコアから推定して、ノードは到達したすべ
 msgid ""
 "The probability of selecting a remote node to read data from depends "
 "linearly on its weight. Every four rounds of node selections, the criteria "
-"changes to prevent |sybil|. Then the node selects a peer with high "
-"importance."
-msgstr ""
-"データを読み取るリモートノードを選択する確率はその重みに比例します。4回のノード選択ごとに条件が変更され |sybil| "
-"が防止されます。ノードは重要度の高いピアを選択します。"
+"changes to prevent |sybil|."
+msgstr "データを読み取るリモートノードを選択する確率はその重みに比例します。4回のノード選択ごとに条件が変更され |sybil| が防止されます。"
 
-#: ../../source/concepts/node.rst:85
+#: ../../source/concepts/node.rst:84
 msgid "API node"
 msgstr "API ノード"
 
-#: ../../source/concepts/node.rst:93
+#: ../../source/concepts/node.rst:92
 msgid "Peer + API (Dual) node communication"
 msgstr "Peer + API (Dual) ノードコミュニケーション"
 
-#: ../../source/concepts/node.rst:95
+#: ../../source/concepts/node.rst:94
 msgid ""
 "The primary responsibility of an API node is to store the data in a readable"
 " form in MongoDB. The catapult-server software allows configuring standalone"
@@ -175,7 +172,7 @@ msgstr ""
 "API ノードの主な役割は、データを MongoDB に読み取り可能な形式で保存することです。 catapult-server "
 "ソフトウェアを使用すると、スタンドアロン API ノードまたは Peer 機能 (Dual) を構成できます。"
 
-#: ../../source/concepts/node.rst:98
+#: ../../source/concepts/node.rst:97
 msgid ""
 "Instead of writing the data directly into MongoDB, the nodes write it into a"
 " file-based queue called ``spool``. A broker service consumes the data from "
@@ -186,7 +183,7 @@ msgstr ""
 "と呼ばれるファイルベースのキューに書き込みます。ブローカーサービスはスプールからのデータを消費し、それに応じて MongoDB "
 "を更新します。ブロックが処理されると、ブローカーサービスは ZMQ を使用して Catapult REST インスタンスへの変更を通知します。"
 
-#: ../../source/concepts/node.rst:102
+#: ../../source/concepts/node.rst:101
 msgid ""
 "API nodes are also responsible for collecting the cosignatures of "
 ":doc:`aggregated bonded transactions <aggregate-transaction>`, which are "
@@ -195,29 +192,29 @@ msgstr ""
 "API ノードは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
 "の連署名を集める役割も果たし、それが完成したときにだけ処理されます。"
 
-#: ../../source/concepts/node.rst:107
+#: ../../source/concepts/node.rst:106
 msgid ""
 "|mongodb| stores blocks, transactions, and chain states for high query "
 "performance."
 msgstr "|mongodb| はブロック、トランザクションとチェーン状態をハイパフォーマンスの実現のために保存します。"
 
-#: ../../source/concepts/node.rst:109
+#: ../../source/concepts/node.rst:108
 msgid "The broker service updates the linked MongoDB instance when:"
 msgstr "次の場合にブローカーサービスはリンクした MongoDB を更新します:"
 
-#: ../../source/concepts/node.rst:111
+#: ../../source/concepts/node.rst:110
 msgid "A new block / a bunch of blocks finish processing."
 msgstr "新しいブロック/ブロックの束の処理が終了します。"
 
-#: ../../source/concepts/node.rst:112
+#: ../../source/concepts/node.rst:111
 msgid "New unconfirmed transactions complete processing."
 msgstr "新しい未承認トランザクションの処理を完了します。"
 
-#: ../../source/concepts/node.rst:114
+#: ../../source/concepts/node.rst:113
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB は外部からアクセスされるべきではありません。"
 
-#: ../../source/concepts/node.rst:119
+#: ../../source/concepts/node.rst:118
 msgid ""
 "|zmq| is an asynchronous messaging library, which enables real-time "
 "subscriptions. It transports notifications from the API node to the ZMQ "
@@ -228,19 +225,19 @@ msgstr ""
 "Catapult REST が購読します。これは REST WebSocket "
 "に代わるもので、パフォーマンスが重要な場合に使用することを目的としています。"
 
-#: ../../source/concepts/node.rst:127
+#: ../../source/concepts/node.rst:126
 msgid "REST gateway"
 msgstr "REST ゲートウェイ"
 
-#: ../../source/concepts/node.rst:129
+#: ../../source/concepts/node.rst:128
 msgid "**Repository:** |catapult-rest|"
 msgstr "**リポジトリ:** |catapult-rest|"
 
-#: ../../source/concepts/node.rst:135
+#: ../../source/concepts/node.rst:134
 msgid "REST gateway communication"
 msgstr "REST ゲートウェイコミュニケーション"
 
-#: ../../source/concepts/node.rst:137
+#: ../../source/concepts/node.rst:136
 msgid ""
 "The REST gateways handle :doc:`JSON API <../api>` client requests. The "
 "gateway reads from MongoDB, formats the response, and returns it to the "
@@ -251,7 +248,7 @@ msgstr ""
 "MongoDB から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
 "<websockets>` でクライアントにイベントを返却する役割も果たします。"
 
-#: ../../source/concepts/node.rst:141
+#: ../../source/concepts/node.rst:140
 msgid ""
 "Each REST gateway connects to one API instance to send new transactions "
 "requests triggered from the client-side and receive updates in real-time "
@@ -260,6 +257,6 @@ msgstr ""
 "各 REST ゲートウェイは1つの API "
 "インスタンスに接続して、クライアントサイドからトリガーされた新しいトランザクション要求を送信し、ソケットを使用してリアルタイムで更新を受信します。"
 
-#: ../../source/concepts/node.rst:169
+#: ../../source/concepts/node.rst:168
 msgid "Guides"
 msgstr "ガイド"

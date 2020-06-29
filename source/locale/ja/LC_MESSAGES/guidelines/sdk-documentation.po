@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -84,6 +84,15 @@ msgstr "選択したプログラミング言語にとって最も便利なリフ
 #: ../../source/guidelines/sdk-documentation.rst:46
 msgid "Guides"
 msgstr "ガイド"
+
+#: ../../source/guidelines/sdk-documentation.rst:52
+msgid ""
+"Writing snippets helps you to compare how the SDK code looks like in "
+"contrast with others. Furthermore, you will be testing manually if the SDK "
+"behaves correctly."
+msgstr ""
+"スニペットの作成は SDK コードが他のコードと対照的にどのように見えるかを比較できます。さらに SDK "
+"が正しく動作するかどうかを手動でテストできるでしょう。"
 
 #: ../../source/guidelines/sdk-documentation.rst:55
 msgid ""

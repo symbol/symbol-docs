@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-07-12 10:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -53,9 +53,89 @@ msgstr ""
 "|codename| パブリックネットワークはアカウントに ``512`` までのアカウント制限と制限タイプを定義できます。このパラメータは "
 ":ref:`ネットワークごとに設定可能 <config-network-properties>` です。"
 
-#: ../../source/concepts/account-restriction.rst:20
-msgid "Restriction types"
-msgstr "制限タイプ"
+#: ../../source/concepts/account-restriction.rst:22
+msgid "Address restriction"
+msgstr "アドレス制限"
+
+#: ../../source/concepts/account-restriction.rst:24
+msgid ""
+"An account can decide to **only receive** transactions from a list of "
+"allowed **addresses**. Alternatively, the account can define a list of "
+"blocked addresses."
+msgstr ""
+"アカウントは許可した **アドレス** リストからのトランザクションを **受信だけ** "
+"するように決定できます。あるいはアカウントはブロックするアドレスのリストを定義できます。"
+
+#: ../../source/concepts/account-restriction.rst:27
+msgid ""
+"Restricting **incoming transactions** is useful when the account will be "
+"only receiving transactions from known addresses, or when the account wants "
+"to block transactions coming from unknown senders."
+msgstr ""
+"**受信トランザクション** "
+"を制限することはアカウントが既知のアドレスからのトランザクションのみを受信する場合、またはアカウントが未知の送信者からのトランザクションをブロックしたい場合に役立ちます。"
+
+#: ../../source/concepts/account-restriction.rst:33
+msgid "Address restriction diagram"
+msgstr "アドレス制限ダイアグラム"
+
+#: ../../source/concepts/account-restriction.rst:35
+msgid ""
+"Allow and block restrictions are mutually exclusive. In other words, an "
+"account can only configure a block or an allow list per type of restriction."
+msgstr "許可とブロックの制限は相互に排他的です。つまり、アカウントは制限タイプごとにブロックまたは許可リストを構成することしかできません。"
+
+#: ../../source/concepts/account-restriction.rst:37
+msgid ""
+"By default, when there are no restrictions set, all the accounts in the "
+"network can announce transactions to the unrestricted account."
+msgstr "デフォルトでは、制限セットがない場合、ネットワーク内のすべてのアカウントが指定されたアカウントにトランザクションをアナウンスできます。"
+
+#: ../../source/concepts/account-restriction.rst:39
+msgid ""
+"Additionally, an account can decide to apply address restrictions to the "
+"**outgoing transactions**, limiting the accounts allowed that are valid "
+"recipients."
+msgstr "さらにアカウントは **送信トランザクション** にアドレス制限を適用することができ、有効な受信者として許可されるアカウントの制限します。"
+
+#: ../../source/concepts/account-restriction.rst:43
+msgid "Mosaic restriction"
+msgstr "モザイク制限"
+
+#: ../../source/concepts/account-restriction.rst:45
+msgid ""
+"Similar to address restrictions, an account can configure a restriction to "
+"permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` "
+"attached are allowed. On the other hand, the account can refuse to accept "
+"transactions containing a mosaic listed as blocked."
+msgstr ""
+"アドレス制限のように、アカウントは許可した :doc:`モザイク <mosaic>` "
+"が添付されている場合にだけ、受信トランザクションを許可する制限を構成できます。一方で、アカウントはブロックリストにあるモザイクを含んでいるトランザクションを拒否できます。"
+
+#: ../../source/concepts/account-restriction.rst:48
+msgid ""
+"Account mosaic restrictions are generally used to **prevent accounts being "
+"tagged with mosaics** not associated with their activity."
+msgstr ""
+"一般的にアカウントのモザイク制限は、アカウントがそのアクティビティに関連付けられていない **モザイクでタグ付けされるのを防ぐ** ために使用されます。"
+
+#: ../../source/concepts/account-restriction.rst:52
+msgid "Operation restriction"
+msgstr "操作制限"
+
+#: ../../source/concepts/account-restriction.rst:54
+msgid ""
+"An account can allow/block announcing **outgoing** transactions with a "
+"determined :ref:`operation type <transaction-types>`. By doing so, the "
+"account increases its security, preventing the announcement by mistake of "
+"undesired transactions."
+msgstr ""
+"アカウントは送信トランザクションのアナウンスを :ref:`操作タイプ <transaction-types>` "
+"によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
+
+#: ../../source/concepts/account-restriction.rst:57
+msgid "Restriction types allowed"
+msgstr "許可された制限タイプ"
 
 #: ../../source/concepts/account-restriction.rst:1
 msgid "Restriction"
@@ -69,85 +149,17 @@ msgstr "受信トランザクション"
 msgid "Outgoing Transactions"
 msgstr "送信トランザクション"
 
-#: ../../source/concepts/account-restriction.rst:31
-msgid "Address restriction"
+#: ../../source/concepts/account-restriction.rst:1
+msgid "Address Restriction"
 msgstr "アドレス制限"
 
-#: ../../source/concepts/account-restriction.rst:33
-msgid ""
-"An account can decide to **only receive** transactions from a list of "
-"allowed **addresses**. Alternatively, the account can define a list of "
-"blocked addresses."
-msgstr ""
-"アカウントは許可した **アドレス** リストからのトランザクションを **受信だけ** "
-"するように決定できます。あるいはアカウントはブロックするアドレスのリストを定義できます。"
-
-#: ../../source/concepts/account-restriction.rst:36
-msgid ""
-"Restricting **incoming transactions** is useful when the account will be "
-"only receiving transactions from known addresses, or when the account wants "
-"to block transactions coming from unknown senders."
-msgstr ""
-"**受信トランザクション** "
-"を制限することはアカウントが既知のアドレスからのトランザクションのみを受信する場合、またはアカウントが未知の送信者からのトランザクションをブロックしたい場合に役立ちます。"
-
-#: ../../source/concepts/account-restriction.rst:42
-msgid "Address restriction diagram"
-msgstr "アドレス制限ダイアグラム"
-
-#: ../../source/concepts/account-restriction.rst:44
-msgid ""
-"Allow and block restrictions are mutually exclusive. In other words, an "
-"account can only configure a block or an allow list per type of restriction."
-msgstr "許可とブロックの制限は相互に排他的です。つまり、アカウントは制限タイプごとにブロックまたは許可リストを構成することしかできません。"
-
-#: ../../source/concepts/account-restriction.rst:46
-msgid ""
-"By default, when there are no restrictions set, all the accounts in the "
-"network can announce transactions to the unrestricted account."
-msgstr "デフォルトでは、制限セットがない場合、ネットワーク内のすべてのアカウントが指定されたアカウントにトランザクションをアナウンスできます。"
-
-#: ../../source/concepts/account-restriction.rst:48
-msgid ""
-"Additionally, an account can decide to apply address restrictions to the "
-"**outgoing transactions**, limiting the accounts allowed that are valid "
-"recipients."
-msgstr "さらにアカウントは **送信トランザクション** にアドレス制限を適用することができ、有効な受信者として許可されるアカウントの制限します。"
-
-#: ../../source/concepts/account-restriction.rst:52
-msgid "Mosaic restriction"
+#: ../../source/concepts/account-restriction.rst:1
+msgid "Mosaic Restriction"
 msgstr "モザイク制限"
 
-#: ../../source/concepts/account-restriction.rst:54
-msgid ""
-"Similar to address restrictions, an account can configure a restriction to "
-"permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` "
-"attached are allowed. On the other hand, the account can refuse to accept "
-"transactions containing a mosaic listed as blocked."
-msgstr ""
-"アドレス制限のように、アカウントは許可した :doc:`モザイク <mosaic>` "
-"が添付されている場合にだけ、受信トランザクションを許可する制限を構成できます。一方で、アカウントはブロックリストにあるモザイクを含んでいるトランザクションを拒否できます。"
-
-#: ../../source/concepts/account-restriction.rst:57
-msgid ""
-"Account mosaic restrictions are generally used to **prevent accounts being "
-"tagged with mosaics** not associated with their activity."
-msgstr ""
-"一般的にアカウントのモザイク制限は、アカウントがそのアクティビティに関連付けられていない **モザイクでタグ付けされるのを防ぐ** ために使用されます。"
-
-#: ../../source/concepts/account-restriction.rst:61
-msgid "Operation restriction"
+#: ../../source/concepts/account-restriction.rst:1
+msgid "Operation Restriction"
 msgstr "操作制限"
-
-#: ../../source/concepts/account-restriction.rst:63
-msgid ""
-"An account can allow/block announcing **outgoing** transactions with a "
-"determined :ref:`operation type <transaction-types>`. By doing so, the "
-"account increases its security, preventing the announcement by mistake of "
-"undesired transactions."
-msgstr ""
-"アカウントは送信トランザクションのアナウンスを :ref:`操作タイプ <transaction-types>` "
-"によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
 
 #: ../../source/concepts/account-restriction.rst:68
 msgid "Examples"
@@ -207,112 +219,36 @@ msgstr ""
 "一時的な処置として、アリスはメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
 
 #: ../../source/concepts/account-restriction.rst:97
-msgid "Guides"
-msgstr "ガイド"
+msgid "Related transactions"
+msgstr "関連トランザクション"
 
-#: ../../source/concepts/account-restriction.rst:116
-msgid ""
-"Configure restrictions to prevent receiving or sending transactions from/to "
-"undesired addresses."
-msgstr "望まないアドレスから/へのトランザクションの送信/受信を防ぐ制限の設定。"
-
-#: ../../source/concepts/account-restriction.rst:124
-#: ../../source/concepts/account-restriction.rst:150
-#: ../../source/concepts/account-restriction.rst:176
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Property"
-msgstr "プロパティ"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
 #: ../../source/concepts/account-restriction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
 #: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Type of the account restriction."
-msgstr "アカウント制限のタイプ"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "number of account restriction additions."
-msgstr "アカウント制限の追加数"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Number of account restriction deletions."
-msgstr "アカウント制限の削除数"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Reserved padding to align restrictionAdditions on 8-byte boundary."
-msgstr "制限追加の終わりを 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Account restriction additions."
-msgstr "アカウント制限の追加"
-
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Account restriction deletions."
-msgstr "アカウント制限の削除"
-
-#: ../../source/concepts/account-restriction.rst:142
 msgid ""
-"Configure restrictions to prevent receiving transactions containing a "
-"specific mosaic."
-msgstr "特定のモザイクを含むトランザクションの受け取りを防ぐ制限の設定。"
+"Allow or block incoming and outgoing transactions for a given a set of "
+"addresses."
+msgstr "与えられたアドレスを含む送受信トランザクションの許可/ブロックします。"
 
-#: ../../source/concepts/account-restriction.rst:168
+#: ../../source/concepts/account-restriction.rst:1
 msgid ""
-"Configure restrictions to prevent announcing transactions by :ref:`type "
-"<transaction-types>`."
-msgstr ":ref:`タイプ <transaction-types>` によるトランザクションのアナウンスを防止する制限の設定。"
+"Allow or block incoming transactions containing a given set of mosaics."
+msgstr "与えられたモザイクを含む受信トランザクションの許可/ブロックします。"
 
 #: ../../source/concepts/account-restriction.rst:1
-msgid "Restriction type is an address."
-msgstr "アドレスの制限タイプ"
+msgid "Allow or block outgoing transactions by transaction type."
+msgstr "トランザクションタイプによる送信トランザクションの許可/ブロックします。"
 
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Restriction type is a mosaic identifier."
-msgstr "モザイク識別子の制限タイプ"
+#: ../../source/concepts/account-restriction.rst:110
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Restriction type is a transaction type."
-msgstr "トランザクションタイプの制限タイプ"
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Restriction is interpreted as outgoing."
-msgstr "送信を制限中"
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Restriction is interpreted as blocking operation."
-msgstr "制限はブロックの操作として解釈されます。"
-
-#: ../../source/concepts/account-restriction.rst:206
+#: ../../source/concepts/account-restriction.rst:120
 msgid "Continue: :doc:`Mosaic Restrictions <mosaic-restriction>`."
 msgstr "次項: :doc:`モザイク制限 <mosaic-restriction>`"

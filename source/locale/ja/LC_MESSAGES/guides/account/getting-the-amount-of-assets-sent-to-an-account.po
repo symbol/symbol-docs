@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-03-18 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:49
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:48
 msgid ""
 "If you want to check another :doc:`mosaic <../../concepts/mosaic>` different"
 " than the native currency, change ``mosaicId`` and ``divisibility`` for the "

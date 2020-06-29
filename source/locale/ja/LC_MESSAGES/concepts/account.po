@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -161,9 +161,55 @@ msgstr ""
 "の下、アナウンスまたはトランザクションの受信をブロックすることができます。"
 
 #: ../../source/concepts/account.rst:75
+msgid "Hierarchical Deterministic Wallets"
+msgstr "階層的決定性ウォレット"
+
+#: ../../source/concepts/account.rst:77
+msgid ""
+"Symbol supports a multi-account hierarchy, enabling the generation of "
+"multiple accounts from a single binary seed. The seed is encoded as a "
+"mnemonic passphrase - a group of 24 human-readable words - using elliptic "
+"curve mathematics."
+msgstr ""
+"Symbolはマルチアカウント階層をサポートしており、単一のバイナリシードから複数のアカウントを生成できます。シードは楕円曲線数学を使用したニーモニックパスフレーズ"
+" - 可読な 24 単語のグループ - としてエンコードされます。"
+
+#: ../../source/concepts/account.rst:79
+msgid ""
+"As the child accounts share a common seed, the owner of the HD wallet can "
+"backup the accounts derived by securely storing a single mnemonic "
+"passphrase. Additionally, the multi-account hierarchy supports several "
+"chains of keypairs (multiple trees), giving the owner selective use and "
+"sharing of accounts."
+msgstr ""
+"子アカウントは共通シードを共有するので、HD "
+"ウォレットの所有者は、単一のニーモニックパスフレーズを安全に保存することによって派生したアカウントをバックアップできます。さらに、マルチアカウント階層は、キーペアのチェーン"
+" (複数のツリー) をサポートし、所有者にアカウントの選択的な使用と共有を提供します。"
+
+#: ../../source/concepts/account.rst:81
+msgid ""
+"Symbol uses the **hardened child key derivation scheme**, which means that "
+"child private keys are derived from parent private keys. The `NIP-6 "
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>`_ defines the "
+"complete specification on how HD wallets are defined on Symbol."
+msgstr ""
+"Symbol は **強化された子キーの派生スキーム** を使用します。つまり、子の秘密キーは親の秘密キーから派生します。 `NIP-6 "
+"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>`_ で Symbol での "
+"HD ウォレットの定義方法に関する完全な仕様を定義しています。"
+
+#: ../../source/concepts/account.rst:83
+msgid ""
+"To generate new HD Wallets, you can use the library `symbol-hd-wallets "
+"<https://github.com/nemfoundation/symbol-hd-wallets>`_, available for "
+"TypeScript and JavaScript."
+msgstr ""
+"HD ウォレットを生成するには、TypeScript または JavaScript の `symbol-hd-wallets "
+"<https://github.com/nemfoundation/symbol-hd-wallets>`_ ライブラリを使用してください。"
+
+#: ../../source/concepts/account.rst:87
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/account.rst:85
+#: ../../source/concepts/account.rst:97
 msgid "Continue: :doc:`Mosaics <mosaic>`."
 msgstr "次項: :doc:`モザイク <mosaic>`"

@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/account_link.rst:14
+msgid "Account Link Schemas"
+msgstr "アカウントリンクアクションスキーマ"
+
+#: ../../source/serialization/account_link.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/account_link.rst:20
+msgid "Account Key Link"
+msgstr "アカウントキーリンク"
+
+#: ../../source/serialization/account_link.rst:27
+msgid ""
+"Announce an AccountKeyLinkTransaction to delegate the account importance "
+"score to a proxy account. Required for all accounts willing to activate "
+"delegated harvesting."
+msgstr ""
+"AccountKeyLinkTransaction "
+"をアナウンスして、アカウントのインポータンススコアをプロキシアカウントに委任します。デリゲートハーベスティングをアクティブ化したい、すべてのアカウントに必要なことです。"
+
+#: ../../source/serialization/account_link.rst:34
+#: ../../source/serialization/account_link.rst:76
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/serialization/account_link.rst:36
+#: ../../source/serialization/account_link.rst:78
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+msgid "Linked public key."
+msgstr "リンクした公開鍵"
+
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+msgid "Account link action."
+msgstr "アカウントリンクアクション"
+
+#: ../../source/serialization/account_link.rst:1
+msgid "Unlink account."
+msgstr "アカウントの関連付けをやめる"
+
+#: ../../source/serialization/account_link.rst:1
+msgid "Link account."
+msgstr "アカウントを関連付ける"
+
+#: ../../source/serialization/account_link.rst:61
+msgid "Node Key Link"
+msgstr "ノードキーリンク"
+
+#: ../../source/serialization/account_link.rst:68
+msgid ""
+"Announce a NodeKeyLinkTransaction to link a public key to an account. TLS "
+"uses the linked public key to create sessions. Required for node operators."
+msgstr ""
+"公開鍵をアカウントにリンクするために NodeKeyLinkTransaction をアナウンスします。TLS "
+"はリンクされた公開鍵を使用してセッションを作成します。ノード操作に必要なものです。"

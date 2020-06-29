@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -190,79 +190,25 @@ msgid ""
 msgstr "一方で権限を持たない Derek が会社のアプリスイートにアクセスしようとすると会社のアプリは彼のリクエストを拒否します。"
 
 #: ../../source/concepts/metadata.rst:85
+msgid "Related transactions"
+msgstr "関連トランザクション"
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Associate a key-value state to an account."
+msgstr "アカウントに Key-Value 状態を関連付けます。"
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Associate a key-value state to a mosaic."
+msgstr "モザイクに Key-Value 状態を関連付けます。"
+
+#: ../../source/concepts/metadata.rst:1
+msgid "Associate a key-value state to a namespace."
+msgstr "ネームスペースに Key-Value 状態を関連付けます。"
+
+#: ../../source/concepts/metadata.rst:98
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/metadata.rst:96
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/metadata.rst:103
-msgid ""
-"Announce an AccountMetadataTransaction to associate a key-value state to an "
-"account."
-msgstr "AccountMetadataTransaction をアナウンスして Key-Value 状態をアカウントに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Metadata target public key."
-msgstr "メタデータターゲットの公開鍵"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "Metadata key scoped to source, target and type."
-msgstr "メタデータキーの source, target, type に対するスコープ。"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid "Change in value size in bytes."
-msgstr "値のサイズをバイト単位で変更する"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Value size in bytes."
-msgstr "バイト換算の値のサイズ"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-#: ../../source/concepts/metadata.rst:1
-msgid ""
-"Difference between the previous value and new value. You can calculate value"
-" as ``xor(previous-value, new-value)``. If there is no previous value, use "
-"directly the new value."
-msgstr ""
-"前の値と新しい値の差分。値は ``xor(previous-value, new-value)`` "
-"として計算できます。前の値がない場合は新しい値を直接使用します。"
-
-#: ../../source/concepts/metadata.rst:128
-msgid ""
-"Announce a MosaicMetadataTransaction to associate a key-value state to a "
-"mosaic."
-msgstr "MosaicMetadataTransaction をアナウンスして Key-Value 状態をモザイクに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Target mosaic creator public key."
-msgstr "ターゲットモザイク作成者の公開鍵"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Target mosaic identifier."
-msgstr "対象のモザイク識別子"
-
-#: ../../source/concepts/metadata.rst:1 ../../source/concepts/metadata.rst:1
-msgid "New value size in bytes."
-msgstr "バイト換算の新しい値のサイズ"
-
-#: ../../source/concepts/metadata.rst:154
-msgid ""
-"Announce a NamespaceMetadataTransaction to associate a key-value state to a "
-"namespace."
-msgstr "NamespaceMetadataTransaction をアナウンスして Key-Value 状態をネームスペースに関連付けます。"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Target namespace creator public key."
-msgstr "ターゲットネームスペース作成者の公開鍵"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Target namespace identifier."
-msgstr "対象のネームスペース識別子"
-
-#: ../../source/concepts/metadata.rst:175
+#: ../../source/concepts/metadata.rst:107
 msgid "Continue: :doc:`Transfer Transaction <transfer-transaction>`."
 msgstr "次へ: :doc:`転送トランザクション <transfer-transaction>`"

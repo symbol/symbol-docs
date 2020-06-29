@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -50,13 +50,23 @@ msgid ""
 "executed from a browser and have the form:"
 msgstr "Catapult REST がローカルで動いているのであれば、HTTP GET リクエストはブラウザからこのように実行できます:"
 
+#: ../../source/api.rst:28
+msgid ""
+"Conversely, HTTP PUT and POST requests have the same structure but use JSON "
+"structures in the request body. This kind of request cannot usually be "
+"executed from within the browser unless you use a plugin which enables you "
+"to do it."
+msgstr ""
+"HTTP PUT と POST リクエストは同じ構造ですが、リクエストボディに JSON "
+"形式を使用します。この種のリクエストは、それが可能なプラグインを利用しないことにはブラウザから実行することができません。"
+
 #: ../../source/api.rst:31
 msgid ""
 "You can refer to the next documentation to get the list of available "
 "endpoints."
 msgstr "次のドキュメントを参照して、使用可能なエンドポイントのリストを取得できます。"
 
-#: ../../source/api.rst:41
+#: ../../source/api.rst:42
 msgid ""
 "To get **live updates** when an event occurs on the blockchain, Catapult "
 "REST publishes WebSockets. Client applications can open a WebSocket "
@@ -71,29 +81,29 @@ msgstr ""
 "を絶えずポーリングするのではなく、使用可能なチャンネルを購読する資格を得ます。チャンネルでイベントが発生すると REST "
 "ゲートウェイは購読しているすべてのクライアントにリアルタイムで通知を送信します。"
 
-#: ../../source/api.rst:46
+#: ../../source/api.rst:47
 msgid ""
 "WebSocket URIs share the same host and port as the HTTP requests URIs, but "
 "use the ``ws://`` protocol:"
 msgstr ""
 "WebSocket URI は HTTP リクエスト URI と同じホストとポートを共有しますが ``ws://`` プロトコルを使用します:"
 
-#: ../../source/api.rst:50
+#: ../../source/api.rst:51
 msgid ""
 "Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain"
 "/listening-new-blocks>`"
 msgstr ""
 "ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
-#: ../../source/api.rst:53
+#: ../../source/api.rst:54
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:55
+#: ../../source/api.rst:56
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:57
+#: ../../source/api.rst:58
 msgid ""
 "The block channel notifies for every subscribed client every time there is a"
 " new harvested block. The messages returned contain information about the "
@@ -101,19 +111,19 @@ msgid ""
 msgstr ""
 "ブロックチャンネルは、新しくハーベストされたブロックがあるたびに、購読しているすべてのクライアントに通知します。返されるメッセージにはブロックに関する情報が含まれています"
 
-#: ../../source/api.rst:60 ../../source/api.rst:78 ../../source/api.rst:98
-#: ../../source/api.rst:118 ../../source/api.rst:136 ../../source/api.rst:156
-#: ../../source/api.rst:174 ../../source/api.rst:192
+#: ../../source/api.rst:61 ../../source/api.rst:79 ../../source/api.rst:99
+#: ../../source/api.rst:119 ../../source/api.rst:137 ../../source/api.rst:157
+#: ../../source/api.rst:175 ../../source/api.rst:193
 msgid "*Request body*"
 msgstr "*リクエストボディ*"
 
-#: ../../source/api.rst:69 ../../source/api.rst:87 ../../source/api.rst:107
-#: ../../source/api.rst:127 ../../source/api.rst:145 ../../source/api.rst:165
-#: ../../source/api.rst:183 ../../source/api.rst:201
+#: ../../source/api.rst:70 ../../source/api.rst:88 ../../source/api.rst:108
+#: ../../source/api.rst:128 ../../source/api.rst:146 ../../source/api.rst:166
+#: ../../source/api.rst:184 ../../source/api.rst:202
 msgid "*Response format*"
 msgstr "*レスポンスフォーマット*"
 
-#: ../../source/api.rst:75
+#: ../../source/api.rst:76
 msgid ""
 "The confirmedAdded channel notifies when a transaction related to an address"
 " is included in a block. The messages returned contain information about the"
@@ -121,7 +131,7 @@ msgid ""
 msgstr ""
 "承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。返されるメッセージには、承認済みのトランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:93
+#: ../../source/api.rst:94
 msgid ""
 "The unconfirmedAdded channel notifies when a transaction related to an "
 "address gets the unconfirmed state, waiting to be included in a block. The "
@@ -129,7 +139,7 @@ msgid ""
 msgstr ""
 "未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。返されるメッセージには、未承認のトランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:96
+#: ../../source/api.rst:97
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction is "
 "announced to the network via ``PUT /transaction`` HTTP endpoint or an "
@@ -140,7 +150,7 @@ msgstr ""
 "エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、partial "
 "から未承認へ変わるとき、このチャンネルからの通知が届く可能性があります。"
 
-#: ../../source/api.rst:113
+#: ../../source/api.rst:114
 msgid ""
 "The unconfirmedRemoved channel notifies when a transaction related to an "
 "address had the unconfirmed state, but not anymore. The messages returned "
@@ -148,14 +158,14 @@ msgid ""
 msgstr ""
 "未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:116
+#: ../../source/api.rst:117
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is "
 "confirmed, or the deadline has been reached, and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
 
-#: ../../source/api.rst:133
+#: ../../source/api.rst:134
 msgid ""
 "The partialAdded channel notifies when an AggregateBondedTransaction related"
 " to an address reaches the partial state, waiting to have all required "
@@ -164,7 +174,7 @@ msgstr ""
 "パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが partial "
 "な状態にあり、すべての必要な連署者を待機しているときに通知を行います。返されるメッセージには、トランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:151
+#: ../../source/api.rst:152
 msgid ""
 "The partialRemoved channel notifies when a transaction related to an address"
 " had the partial state, but is not anymore. The messages returned contain "
@@ -172,14 +182,14 @@ msgid ""
 msgstr ""
 "パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:154
+#: ../../source/api.rst:155
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is "
 "unconfirmed, or the deadline has been reached, and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに含まれなくなったときです。"
 
-#: ../../source/api.rst:171
+#: ../../source/api.rst:172
 msgid ""
 "The cosignature channel notifies when a cosignature signed transaction "
 "related to an address is added to an AggregateBondedTransaction with the "
@@ -189,299 +199,10 @@ msgstr ""
 "連署チャネルはアドレスに関連する *連署署名トランザクション* "
 "が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。返されるメッセージには、署名済み署名付きトランザクションが含まれています。"
 
-#: ../../source/api.rst:189
+#: ../../source/api.rst:190
 msgid ""
 "The status channel notifies when a transaction related to an address rises "
 "an error. The messages returned contain the error messages and the "
 "transaction hashes."
 msgstr ""
 "ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。返されるメッセージには、エラーメッセージとトランザクションハッシュが含まれます。"
-
-#: ../../source/api.rst:208
-msgid "Status errors"
-msgstr "ステータスエラー"
-
-#: ../../source/api.rst:210
-msgid ""
-"This section describes the error messages that can be returned via status "
-"channel after announcing a transaction."
-msgstr "このセクションでは、トランザクションをアナウンスした後に、ステータスチャンネルが返却するエラーメッセージの説明をします。"
-
-#: ../../source/api.rst:1
-msgid "Status"
-msgstr "ステータス"
-
-#: ../../source/api.rst:1
-msgid "Description"
-msgstr "説明"
-
-#: ../../source/api.rst:1
-msgid "Validation result is success."
-msgstr "バリデーション結果は成功です。"
-
-#: ../../source/api.rst:1
-msgid "Validation result is neither success nor failure."
-msgstr "バリデーション結果は成功でも失敗でもありません。"
-
-#: ../../source/api.rst:1
-msgid "Validation result is failure."
-msgstr "バリデーション結果は失敗です。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the deadline passed."
-msgstr "デッドラインを過ぎているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the deadline is too far in the future."
-msgstr "期限が遠すぎる未来に指定されているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the account has an insufficient balance."
-msgstr "アカウントの残高が不十分なため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because there are too many transactions in a block."
-msgstr "ブロックにトランザクションが多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because an entity originated from the nemesis account "
-"after the nemesis block."
-msgstr "ネメシスブロックの後にエンティティがネメシスアカウントから生成されたため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the entity has the wrong network specified."
-msgstr "エンティティに間違ったネットワークが指定されているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because an address is invalid."
-msgstr "アドレスが有効ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because entity version is invalid."
-msgstr "エンティティのバージョンが有効ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a transaction fee is invalid."
-msgstr "トランザクション手数料が有効ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because a block was harvested by an ineligible harvester."
-msgstr "不適格なハーベスタによってブロックがハーベストされたため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because an address is zero."
-msgstr "アドレスがゼロのため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a public key is zero."
-msgstr "公開鍵がゼロのため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because internal padding is nonzero."
-msgstr "内部パディングがゼロのため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the entity hash is already known."
-msgstr "エンティティのハッシュがすでに存在するため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the verification of the signature failed."
-msgstr "署名の検証に失敗したため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because account link action is invalid."
-msgstr "アカウントリンクアクションが有効ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because main account is already linked to another account."
-msgstr "メインアカウントはすでに他のアカウントにリンクしているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because main account is not linked to another account."
-msgstr "メインアカウントが他のアカウントにリンクしていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because remote is not allowed to sign a transaction."
-msgstr "リモートにはトランザクションへの署名を許可されていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because aggregate has too many transactions."
-msgstr "アグリゲートしているトランザクションが多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because aggregate does not have any transactions."
-msgstr "アグリゲートにトランザクションが無いため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because aggregate has too many cosignatures."
-msgstr "アグリゲートの連署者が多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because redundant cosignatures are present."
-msgstr "重複する連署者が存在するため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because lock does not allow the specified mosaic."
-msgstr "ロックに許可されていないモザイクが指定されたため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because lock does not allow the specified amount."
-msgstr "ロックに許可されていない総量が指定されたため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because hash is already present in cache."
-msgstr "ハッシュがすでにキャッシュに存在するため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because hash is not present in cache."
-msgstr "ハッシュがキャッシュに存在しない、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because hash is inactive."
-msgstr "ハッシュが非アクティブであるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because duration is too long."
-msgstr "期間が長すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because the name and id don't match."
-msgstr "名前とIDがマッチしないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because the parent is expired."
-msgstr "親の期限が切れているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a mosaic property is invalid."
-msgstr "モザイクプロパティが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic flags are invalid."
-msgstr "モザイクフラグが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic supply change amount is invalid."
-msgstr "モザイク供給量が妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic id is invalid."
-msgstr "モザイクIDが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because mosaic modification is not allowed."
-msgstr "モザイク変更が許可されていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic supply is immutable."
-msgstr "モザイク供給量が不変のため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the resulting mosaic supply is negative."
-msgstr "モザイク供給量が負数になるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the mosaic is not transferable."
-msgstr "モザイクは転送可能ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1 ../../source/api.rst:1
-msgid "Validation failed because a modification is redundant."
-msgstr "変更が冗長になっているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because account is not in multisig cache."
-msgstr "キャッシュ内にアカウントがマルチシグが無いため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the root namespace has a reserved name."
-msgstr "ルートネームスペースは既に予約済みのため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the namespace parent is unknown."
-msgstr "親ネームスペースが不明のため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the namespace already exists."
-msgstr "ネームスペースがすでに存在するため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the namespace is already active."
-msgstr "ネームスペースがすでにアクティブなため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because an eternal namespace was received after the "
-"nemesis block."
-msgstr "ネメシスブロックの後に無期限のネームスペースを受け取ったため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the maximum number of children for a root "
-"namespace was exceeded."
-msgstr "ルートネームスペースに対する子の最大数を超えているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because alias action is invalid."
-msgstr "エイリアスアクションが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because namespace does not exist."
-msgstr "ネームスペースは存在しないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because namespace is already linked to an alias."
-msgstr "ネームスペースはすでにエイリアスにリンクされているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because namespace is not linked to an alias."
-msgstr "ネームスペースはエイリアスにリンクされていないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because a modification address is invalid."
-msgstr "変更アドレが妥当ではないため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the transaction has too many modifications."
-msgstr "トランザクションが多すぎる変更を持っているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the mosaic transfer is prohibited by the "
-"recipient."
-msgstr "受信者によってモザイクの転送が禁止されているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the unconfirmed cache is too full."
-msgstr "未承認キャッシュが多すぎるため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the consumer input is empty."
-msgstr "消費者の入力が空のため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the chain part has too many blocks."
-msgstr "チェーンの一部が多すぎるブロックを持っているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because the remote chain is too far behind."
-msgstr "リモートチェーンのタイムスタンプが遅れすぎているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the remote chain timestamp is too far in the "
-"future."
-msgstr "リモートチェーンのタイムスタンプが先に進みすぎているため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid ""
-"Validation failed because the verification of the signature failed during a "
-"batch operation."
-msgstr "バッチ操作中に署名の検証に失敗したため、バリデーションに失敗しました。"
-
-#: ../../source/api.rst:1
-msgid "Validation failed because socket read rate limit was exceeded."
-msgstr "ソケットの読み込みレート制限を超えたため、バリデーションに失敗しました。"
