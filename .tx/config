@@ -569,6 +569,12 @@ source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictio
 source_lang = en
 type = PO
 
+[symboldocs.references--overview]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/overview.po
+source_file = build/gettext/references/overview.pot
+source_lang = en
+type = PO
+
 [symboldocs.serialization--account_link]
 file_filter = source/locale/<lang>/LC_MESSAGES/serialization/account_link.po
 source_file = build/gettext/serialization/account_link.pot

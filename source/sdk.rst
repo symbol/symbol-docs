@@ -72,7 +72,7 @@ Guides
 ******
 
 .. postlist::
-    :tags: CLI
+    :tags: SDK
     :date: %A, %B %d, %Y
     :format: {title}
     :list-style: circle

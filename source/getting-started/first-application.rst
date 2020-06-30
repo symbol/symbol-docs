@@ -132,7 +132,7 @@ For example, the transaction could be rejected because the issuer does not have 
 
 A good practice is to **monitor transactions** before being announced to know when they get confirmed or rejected by the network.
 
-In a new terminal, monitor which transactions involving the ticket vendor's address are confirmed and which are rejected by the network.
+1In a new terminal, monitor the transactions involving the ticket vendor's account to know if they are confirmed or rejected by the network.
 
 .. code-block:: bash
 

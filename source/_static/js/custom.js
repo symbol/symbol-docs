@@ -36,31 +36,6 @@ function initLanguageSelector() {
 }
 
 /* Code tabs */
-function setPreferredCodeTab() {
-    try {
-        let urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('code')) {
-            localStorage.setItem('preferredCodeTab', urlParams.get('code'));
-        }
-    } catch (e) {
-        console.log("Error:" + e);
-    }
-}
-
-function clickPreferredCodeTab() {
-    const code = localStorage.getItem('preferredCodeTab');
-    if (code !== null) {
-        if (code === 'typescript') {
-            $("[data-tab=tab-0-0]").click();
-        } else if (code === 'javascript') {
-            $("[data-tab=tab-0-1]").click();
-        } else if (code === 'java') {
-            $("[data-tab=tab-0-2]").click();
-        }
-        $(".highlight-" + code).click();
-    }
-}
-
 function addBlockCaptionInsideCodeExample() {
     $(".code-block-caption").each(function () {
         $(this).next().prepend(this);
@@ -74,7 +49,7 @@ function addTargetBlankAttributeToExternalLinks() {
     $('a.external').attr("target", "_blank");
 }
 
-function highlightOnScrollSidebar(){
+function highlightSidebarLinksOnScroll(){
     const sections = $('.content .section');
     $(window).scroll(function(){
         const currentScroll = $(this).scrollTop();
@@ -96,8 +71,6 @@ function highlightOnScrollSidebar(){
 $(document).ready(function () {
     addBlockCaptionInsideCodeExample();
     initLanguageSelector();
-    setPreferredCodeTab();
-    clickPreferredCodeTab();
     addTargetBlankAttributeToExternalLinks();
-    highlightOnScrollSidebar();
+    highlightSidebarLinksOnScroll();
 });

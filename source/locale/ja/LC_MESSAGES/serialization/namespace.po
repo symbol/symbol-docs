@@ -11,7 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2020-06-19 18:20+0000\n"
+=======
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+>>>>>>> origin/master
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -126,6 +130,17 @@ msgstr "親ネームスペース識別子。サブネームスペースに必須
 msgid "Namespace registration type."
 msgstr "ネームスペース登録タイプ"
 
+<<<<<<< HEAD
+=======
+#: ../../source/serialization/namespace.rst:1
+msgid "Namespace name size in bytes."
+msgstr "バイト換算のネームスペース名"
+
+#: ../../source/serialization/namespace.rst:1
+msgid "Namespace name."
+msgstr "ネームスペース名"
+
+>>>>>>> origin/master
 #: ../../source/serialization/namespace.rst:128
 msgid "Namespace Types"
 msgstr "ネームスペースタイプ"

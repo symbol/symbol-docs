@@ -66,7 +66,7 @@ The following code shows how to remove a cosignatory from a **2-of-3** multisig 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: The **minRemoval parameter** indicates the number of required signatures to delete an account from the multisig. This value can be increased or decreased in the same way as the :doc:`minApproval parameter <modifying-a-multisig-account-min-approval>` is modified.
+.. note:: The **minRemoval property** indicates the number of required signatures to delete an account from the multisig. This value can be increased or decreased in the same way as the :doc:`minApproval property <modifying-a-multisig-account-min-approval>` is modified.
 
 This time, the MultisigModificationTransaction is wrapped in an **AggregateCompleteTransaction** because just one account is required to delete others from the multisig.
 

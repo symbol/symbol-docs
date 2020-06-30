@@ -1,20 +1,22 @@
 {%- extends "page.html" %}
+{%- block htmltitle %}
+<title>{{ gettext('Guides') }} {{ titlesuffix }}</title>
+{%- endblock %}
+
 {% block body %}
 <h1> {{ gettext('Guides') }}</h1>
+<p>{% trans %}Step-by-step tutorials on how to use the tools, integrate Symbol with other technologies, and combine the built-in features to architect solutions.{% endtrans %}</p>
+
 {% for collection in catalog %}
 {% if collection %}
 <div class="section">
-    <h2>{{ collection }}</h2>
-    <ul class="postlist-style-circle postlist">
-        {% for post in collection|sort(attribute='date') %}
-        <li>
-            <p class="first">
-                <a class="reference internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a>
-            </p>
-            <p>{{post.excerpt[0]}}</p>
-        </li>
-        {% endfor %}
-    </ul>
+    <h2 id="{{collection.xref}}">{{ collection }}</h2>
+    {% for post in collection|sort(attribute='date') %}
+        <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+        {{ post.to_html(collection.docname) }}
+        <p><a href="{{ pathto(post.docname) }}">{{ _("Read more ...") }}</a></p>
+        <hr>
+    {% endfor %}
 </div>
 {% endif %}
 {% endfor %}
