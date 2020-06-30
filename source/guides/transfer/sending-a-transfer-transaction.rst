@@ -12,7 +12,7 @@ Sending mosaics and messages between two accounts
 
 Define, sign, and announce a transfer transaction.
 
-This guide will show you how to send 10 |networkcurrency| from your account to Bob's, whose address is ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP``.
+This guide will show you how to send 10 |networkcurrency| from your account to Bob's, whose address is ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``.
 
 *************
 Prerequisites
@@ -33,7 +33,7 @@ Method #01: Using the Desktop Wallet
     :width: 800px
 
 2. Fill out the necessary information for the transfer transaction.
-For this example, you need to specify that you are sending 10 XYM to Bob (``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-AJHH``).  You can add a message, but it is not necessary in this case.
+For this example, you need to specify that you are sending 10 XYM to Bob (``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``).  You can add a message, but it is not necessary in this case.
 
 .. figure:: ../../resources/images/screenshots/desktop-transfer-2.gif
     :align: center
@@ -49,13 +49,18 @@ At first, it might show up under "**Unconfirmed**" transactions as the transacti
 Method #02: Using the SDK
 *************************
 
-1. In a new terminal, monitor which transactions involving the your account are confirmed and which of them are rejected by the network.
+1. In a new terminal, monitor the transactions involving the sender account to know if they are confirmed or rejected by the network.
 
 .. code-block:: bash
 
    symbol-cli monitor all --address <YOUR-ADDRESS>
 
-2. Define the **TransferTransaction**, including Bob address as the recipient and attaching 10 |networkcurrency|.
+2. Open a new file and define the **TransferTransaction**.
+Include Bob's address as the recipient, and attach  10 |networkcurrency|.
+
+Mosaic units in |codename| are defined as **absolute amounts**.
+To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.
+For example, if the mosaic had :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
 
 .. example-code::
 
@@ -96,10 +101,9 @@ If you own more than one mosaic, you can send them together in the same transact
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: |codename| works with absolute amounts. To get an absolute amount, multiply the number of assets you want to send by 10\ :sup:`divisibility`.  For example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you should define 1000 (absolute) instead.
-
 3. Sign the transaction with your account.
-Include the network generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
+Then, include the network generation hash seed to make the transaction only valid for your network. 
+To retrieve the network generration hash seed, open ``nodeUrl + '/node/info'`` in a new browser tab and copy ``meta.networkGenerationHashSeed`` value.
 
 .. example-code::
 

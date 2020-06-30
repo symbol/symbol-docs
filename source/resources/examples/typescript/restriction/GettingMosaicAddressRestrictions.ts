@@ -20,7 +20,7 @@ import {Address, MosaicId, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with address
-const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const address = Address.createFromRawAddress(rawAddress);
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';

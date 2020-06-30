@@ -59,7 +59,7 @@ If you get an error or the version returned does not match v12.X, visit |node-js
     ┌─────────────┬──────────────────────────────────────────────────────────────────┐
     │ Property    │ Value                                                            │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
-    │ Address     │ TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB                   │
+    │ Address     │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI                   │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
     │ Public Key  │ 203...C0A                                                        │
     ├─────────────┼──────────────────────────────────────────────────────────────────┤
@@ -134,7 +134,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.19.2 rxjs
+            npm install symbol-sdk@0.20.5 rxjs
 
         3. Install globally TypeScript dependency:
 
@@ -163,7 +163,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.19.2 rxjs
+            npm install symbol-sdk@0.20.5 rxjs
 
     .. tab:: Java
 
@@ -188,7 +188,7 @@ If none of the languages fits your project, you can always query the blockchain 
         .. code-block:: java
 
             dependencies {
-                compile "io.nem:symbol-sdk-vertx-client:0.19.0"
+                compile "io.nem:symbol-sdk-vertx-client:0.20.0"
             }
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.

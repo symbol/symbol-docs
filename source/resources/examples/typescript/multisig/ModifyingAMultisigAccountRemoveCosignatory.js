@@ -30,7 +30,7 @@ const cosignatoryToRemove = symbol_sdk_1.PublicAccount.createFromPublicKey(cosig
 // replace with cosignatory private key
 const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const cosignatoryAccount = symbol_sdk_1.Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
-const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 0, 0, [], [cosignatoryToRemove], networkType);
+const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 0, 0, [], [cosignatoryToRemove.address], networkType);
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';

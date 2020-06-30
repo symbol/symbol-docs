@@ -34,10 +34,10 @@ import {
 const mosaicIdHex = '183D0802BCDB97AF';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with alice address
-const aliceRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceRawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const aliceAddress = Address.createFromRawAddress(aliceRawAddress);
 // replace with bob address
-const bobRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobRawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const bobAddress = Address.createFromRawAddress(bobRawAddress);
 // replace with carol address
 const carolRawAddress = 'TCF7MK-FL6QYF-UHWVRZ-6UUCLN-YBDWLQ-ZZC37A-2O6R';

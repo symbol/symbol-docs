@@ -20,19 +20,15 @@ import {Address, RepositoryFactoryHttp, TransactionGroup} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with account address
-const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
+const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = Address.createFromRawAddress(rawAddress);
-/* end block 01 */
-
-/* start block 02 */
-// replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const searchCriteria = {group: TransactionGroup.Confirmed, address, pageNumber: 1, pageSize: 100};
+const searchCriteria = {group: TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100};
 transactionHttp
     .search(searchCriteria)
     .subscribe((page) => console.log(page.data),
         (err) => console.error(err));
-/* end block 02 */
+/* end block 01 */

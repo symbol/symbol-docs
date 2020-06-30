@@ -40,7 +40,7 @@ const mosaicId = new NamespaceId('cc.shares');
 const isin = 'US00000000';
 const isinMetadataTransaction = MosaicMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('ISIN'),
     mosaicId,
     isin.length,
@@ -53,7 +53,7 @@ const isinMetadataTransaction = MosaicMetadataTransaction.create(
 const name = 'ComfyClothingCompany';
 const nameMetadataTransaction = MosaicMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('NAME'),
     mosaicId,
     name.length,

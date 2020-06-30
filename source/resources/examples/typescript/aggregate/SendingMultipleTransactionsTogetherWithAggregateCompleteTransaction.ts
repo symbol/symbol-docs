@@ -37,10 +37,10 @@ const networkType = NetworkType.TEST_NET;
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with address
-const aliceAddress =  'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceAddress =  'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const aliceAccount = Address.createFromRawAddress(aliceAddress);
 // replace with address
-const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const bobAccount = Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
 const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');

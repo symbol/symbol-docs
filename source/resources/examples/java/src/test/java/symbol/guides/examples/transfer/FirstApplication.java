@@ -24,7 +24,7 @@ import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Account;
 import io.nem.symbol.sdk.model.account.Address;
 import io.nem.symbol.sdk.model.account.UnresolvedAddress;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import io.nem.symbol.sdk.model.message.PlainMessage;
 import io.nem.symbol.sdk.model.mosaic.Mosaic;
 import io.nem.symbol.sdk.model.mosaic.MosaicId;
@@ -51,7 +51,7 @@ class FirstApplication {
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);
 
             // replace with customer address
-            final String rawAddress = "TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4";
+            final String rawAddress = "TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
 

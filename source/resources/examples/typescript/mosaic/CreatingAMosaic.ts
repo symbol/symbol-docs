@@ -50,7 +50,7 @@ const nonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
     Deadline.create(),
     nonce,
-    MosaicId.createFromNonce(nonce, account.publicAccount),
+    MosaicId.createFromNonce(nonce, account.address),
     MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
     divisibility,
     duration,

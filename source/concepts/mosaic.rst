@@ -30,7 +30,7 @@ Initial supply
 Indicates the amount of mosaic in circulation.
 The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-|codename| works with **absolute amounts**.
+Mosaic units in |codename| are defined as **absolute amounts**.
 To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
 
 For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1,000 (absolute) instead.

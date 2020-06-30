@@ -17,27 +17,16 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
-const operators_1 = require("rxjs/operators");
 const symbol_sdk_1 = require("symbol-sdk");
+/* start block 01 */
 // replace with account address
-const rawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
-// replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-const accountHttp = repositoryFactory.createAccountRepository();
-const allTransactions = true;
-const pageSize = 100;
-accountHttp
-    .getAccountTransactions(address, new symbol_sdk_1.QueryParams({ pageSize }))
-    .pipe(operators_1.expand((transactions) => {
-    if (transactions.length === pageSize && allTransactions) {
-        const queryParams = new symbol_sdk_1.QueryParams({ pageSize, id: transactions[transactions.length - 1].transactionInfo.id });
-        return accountHttp.getAccountTransactions(address, queryParams);
-    }
-    return rxjs_1.EMPTY;
-}), operators_1.concatMap((transactions) => transactions), operators_1.toArray())
-    .subscribe((transactions) => {
-    console.log(transactions);
-}, (err) => console.log(err));
+const transactionHttp = repositoryFactory.createTransactionRepository();
+const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100 };
+transactionHttp
+    .search(searchCriteria)
+    .subscribe((page) => console.log(page.data), (err) => console.error(err));
+/* end block 01 */

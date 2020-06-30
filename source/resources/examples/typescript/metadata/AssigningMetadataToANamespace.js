@@ -30,10 +30,10 @@ const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
 const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
-const nameMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
-const emailMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
-const addressMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
-const phoneMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
+const nameMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
+const emailMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
+const addressMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
+const phoneMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
 /* end block 01 */
 /* start block 02 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [

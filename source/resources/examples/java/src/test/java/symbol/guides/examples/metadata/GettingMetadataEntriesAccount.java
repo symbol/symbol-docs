@@ -43,7 +43,7 @@ class GettingMetadataEntriesAccount {
             final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
 
             // replace with address
-            final String rawAddress = "TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4";
+            final String rawAddress = "TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I";
             final Address address = Address.createFromRawAddress(rawAddress);
 
             final List<Metadata> metadata = metadataRepository.getAccountMetadata(address, Optional.empty())

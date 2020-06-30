@@ -23,7 +23,7 @@ import io.nem.symbol.sdk.api.TransactionRepository;
 import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Account;
 import io.nem.symbol.sdk.model.blockchain.BlockDuration;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import io.nem.symbol.sdk.model.mosaic.MosaicFlags;
 import io.nem.symbol.sdk.model.mosaic.MosaicId;
 import io.nem.symbol.sdk.model.mosaic.MosaicNonce;

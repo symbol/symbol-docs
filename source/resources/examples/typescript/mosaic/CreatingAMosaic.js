@@ -33,7 +33,7 @@ const isRestrictable = true;
 // replace with custom divisibility
 const divisibility = 0;
 const nonce = symbol_sdk_1.MosaicNonce.createRandom();
-const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), nonce, symbol_sdk_1.MosaicId.createFromNonce(nonce, account.publicAccount), symbol_sdk_1.MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable), divisibility, duration, networkType);
+const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), nonce, symbol_sdk_1.MosaicId.createFromNonce(nonce, account.address), symbol_sdk_1.MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable), divisibility, duration, networkType);
 /* end block 01 */
 /* start block 02 */
 // replace with mosaic units to increase

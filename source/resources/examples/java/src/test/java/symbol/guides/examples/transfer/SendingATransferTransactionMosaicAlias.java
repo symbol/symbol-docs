@@ -21,7 +21,7 @@ package symbol.guides.examples.transfer;
 import io.nem.symbol.sdk.api.RepositoryFactory;
 import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Account;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import io.nem.symbol.sdk.model.message.PlainMessage;
 import io.nem.symbol.sdk.model.mosaic.Mosaic;
 import io.nem.symbol.sdk.model.namespace.NamespaceId;

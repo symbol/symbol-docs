@@ -28,7 +28,7 @@ import {
 } from 'symbol-sdk';
 
 /* start block 01 */
-const companyRawAddress = 'TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB';
+const companyRawAddress = 'TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI';
 const companyAddress = Address.createFromRawAddress(companyRawAddress);
 /* end block 01 */
 

@@ -29,7 +29,7 @@ const newCosignatoryPublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C
 const newCosignatoryAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(newCosignatoryPublicKey, networkType);
 /* end block 01 */
 /* start block 02 */
-const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 0, 0, [newCosignatoryAccount], [], networkType);
+const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 0, 0, [newCosignatoryAccount.address], [], networkType);
 /* end block 02 */
 /* start block 03 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(multisigAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));

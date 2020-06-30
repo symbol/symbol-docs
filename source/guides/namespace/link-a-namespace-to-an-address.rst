@@ -107,7 +107,7 @@ Method #03: Using the CLI
 *************************
 
 To link a namespace and an address, open a terminal window and run the following command.
-Replace ``TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4`` with the account's address and ``foo`` with the namespace name to be linked.
+Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the account's address and ``foo`` with the namespace name to be linked.
 
 .. note:: The account signing the transaction must own the namespace.
 

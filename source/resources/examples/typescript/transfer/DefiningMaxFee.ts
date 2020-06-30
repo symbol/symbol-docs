@@ -38,7 +38,7 @@ const example = async () => {
     const medianFeeMultiplier = (await networkHttp.getTransactionFees().toPromise()).medianFeeMultiplier;
 
     // Define transaction and set max fee
-    const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+    const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
     const recipientAddress = Address.createFromRawAddress(rawAddress);
     const transferTransaction = TransferTransaction.create(
         Deadline.create(),

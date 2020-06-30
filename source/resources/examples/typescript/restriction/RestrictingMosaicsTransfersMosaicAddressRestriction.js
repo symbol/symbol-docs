@@ -25,10 +25,10 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with address
-const aliceRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceRawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const aliceAddress = symbol_sdk_1.Address.createFromRawAddress(aliceRawAddress);
 // replace with address
-const bobRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobRawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const bobAddress = symbol_sdk_1.Address.createFromRawAddress(bobRawAddress);
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 const aliceMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestrictionTransaction

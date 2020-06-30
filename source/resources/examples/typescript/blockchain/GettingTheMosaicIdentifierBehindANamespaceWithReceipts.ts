@@ -43,7 +43,7 @@ const aliasedMosaic = new Mosaic(
 const networkType = NetworkType.TEST_NET;
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
-    Address.createFromRawAddress('TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4'),
+    Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
     [aliasedMosaic],
     PlainMessage.create('Test aliased mosaic'),
     networkType,

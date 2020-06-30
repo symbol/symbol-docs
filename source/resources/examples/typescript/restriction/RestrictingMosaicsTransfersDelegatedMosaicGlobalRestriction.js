@@ -25,7 +25,7 @@ const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 const kycProviderAccount = symbol_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 // Define KYC Mosaic Id
 const mosaicNonce = symbol_sdk_1.MosaicNonce.createRandom();
-const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), mosaicNonce, symbol_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount), symbol_sdk_1.MosaicFlags.create(true, true, true), 0, symbol_sdk_1.UInt64.fromUint(0), networkType);
+const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), mosaicNonce, symbol_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address), symbol_sdk_1.MosaicFlags.create(true, true, true), 0, symbol_sdk_1.UInt64.fromUint(0), networkType);
 console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 // Define Mosaic global restriction Is_Verified = 1
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());

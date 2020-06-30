@@ -113,7 +113,7 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
     hexadecimal:    82a9d1ac587ec054
     uint:           [ 1484701780, 2192167340 ]
     type:           Root namespace
-    owner:          TBULEA...IPS4
+    owner:          TCHBDE...32I
     startHeight:    52000
     endHeight:      225800
 

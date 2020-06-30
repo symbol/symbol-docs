@@ -43,7 +43,7 @@ class GettingAccountInformation {
                 .createAccountRepository();
 
             // Replace with an address
-            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
                 .getAccountInfo(address).toFuture().get();

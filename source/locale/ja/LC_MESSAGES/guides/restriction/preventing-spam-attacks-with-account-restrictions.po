@@ -151,7 +151,7 @@ msgid ""
 "Define the company’s address ``TCVQ2R-XKJQKH-4RJZWG-"
 "DARWJ6-V4J4W7-F4DGH6-ZFAB`` in a new variable."
 msgstr ""
-"会社アドレス ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` を新しい変数に定義します。"
+"会社アドレス ``TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI`` を新しい変数に定義します。"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:85
 msgid ""
@@ -172,11 +172,11 @@ msgstr "製品のアカウントでトランザクションへ署名してアナ
 msgid ""
 "Now, if you send a :doc:`TransferTransaction <../transfer/sending-a"
 "-transfer-transaction>` from another account, you will get an error since "
-"only ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` is allowed to send "
+"only ``TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI`` is allowed to send "
 "transactions to the product's account."
 msgstr ""
 "今や他のアカウントから :doc:`TransferTransaction <../transfer/sending-a-transfer-"
-"transaction>` を送ると ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` "
+"transaction>` を送ると ``TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI`` "
 "だけが製品アカウントへのトランザクション送信が許可されているためエラーが発生します。"
 
 #: ../../source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst:117

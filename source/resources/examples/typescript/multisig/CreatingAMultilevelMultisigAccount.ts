@@ -41,14 +41,14 @@ const multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, netwo
 const cosignatoryAccount5PublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
 const cosignatory5 = PublicAccount.createFromPublicKey(cosignatoryAccount5PublicKey, networkType);
 // replace with public key
-const cosignatoryAccount6PublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const cosignatoryAccount6PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, networkType);
 
 const convertMultisigAccount2Transaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     1,
     1,
-    [cosignatory5, cosignatory6],
+    [cosignatory5.address, cosignatory6.address],
     [],
     networkType);
 /* end block 01 */
@@ -71,7 +71,7 @@ const convertMultisigAccount3Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     2,
     1,
-    [cosignatory7, cosignatory8, cosignatory4],
+    [cosignatory7.address, cosignatory8.address, cosignatory4.address],
     [],
     networkType);
 /* end block 02 */
@@ -85,7 +85,7 @@ const convertMultisigAccount1Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     3,
     1,
-    [multisigAccount2.publicAccount, multisigAccount3.publicAccount, cosignatory4],
+    [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
     [],
     networkType);
 /* end block 03 */

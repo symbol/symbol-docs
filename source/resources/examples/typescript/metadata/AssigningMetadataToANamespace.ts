@@ -43,7 +43,7 @@ const phone = '000-0000';
 
 const nameMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('NAME'),
     namespaceId,
     name.length,
@@ -53,7 +53,7 @@ const nameMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('EMAIL'),
     namespaceId,
     email.length,
@@ -63,7 +63,7 @@ const emailMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('ADDRESS'),
     namespaceId,
     address.length,
@@ -73,7 +73,7 @@ const addressMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('PHONE'),
     namespaceId,
     phone.length,

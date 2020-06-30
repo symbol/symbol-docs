@@ -27,7 +27,7 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
 // replace with alice public key
-const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
@@ -36,7 +36,7 @@ const metadataService = new symbol_sdk_1.MetadataTransactionService(metadataHttp
 // replace with key and new value
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
-const accountMetadataTransaction = metadataService.createMetadataTransaction(symbol_sdk_1.Deadline.create(), networkType, symbol_sdk_1.MetadataType.Account, alicePublicAccount, key, newValue, bobAccount.publicAccount);
+const accountMetadataTransaction = metadataService.createMetadataTransaction(symbol_sdk_1.Deadline.create(), networkType, symbol_sdk_1.MetadataType.Account, alicePublicAccount.address, key, newValue, bobAccount.publicAccount.address);
 /* end block 01 */
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
