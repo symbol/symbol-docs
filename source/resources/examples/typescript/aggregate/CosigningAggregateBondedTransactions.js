@@ -35,7 +35,7 @@ const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkTyp
 // replace with transaction hash to cosign
 const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 /* end block 02 */
-/* end block 03 */
+/* start block 03 */
 const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
