@@ -134,7 +134,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.19.2 rxjs
+            npm install symbol-sdk@0.20.5 rxjs
 
         3. Install globally TypeScript dependency:
 
@@ -163,7 +163,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
         .. code-block:: bash
 
-            npm install symbol-sdk@0.20.2 rxjs
+            npm install symbol-sdk@0.20.5 rxjs
 
     .. tab:: Java
 
