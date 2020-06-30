@@ -27,6 +27,32 @@ You can refer to the next documentation to get the list of available endpoints.
 .. _websockets:
 
 **********
+Pagination
+**********
+
+All **GET** requests through the Symbol API are paginated by default, but a user can customize the query parameters for their convenience.
+
+Each collection has a different set of available parameters.
+The following table displays the general parameters available:
+
+.. csv-table::
+    :header: "Query Parameter", "Type", "Description", "Default"
+    :delim: ;
+
+    pageSize; integer ``[0..100]``; Selects the number of entries to return.; ``10``
+    pageNumber; integer ``>=1``; Filters by page number; ``1``
+    offset; string; Identifies the entry at which to start pagination. If the ordering parameter is set to -id, the elements returned precede the identifier. Otherwise, newer elements with respect to the id are returned.
+    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id.; "desc"
+    orderBy; string; Chooses to sort by height or id. Parameter specific to pagination for block related queries.
+
+Multiple query parameters can be combined in the same call.
+For example, ``localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` will return 60 block entries per page starting with block id ``EE94FD819A1B30D6C5D1C03``.
+
+Responses will also include metainfo about the pagination.
+
+More information about query routes and their parameters can be found `here <https://nemtech.github.io/symbol-openapi/v0.9.2/>`_.
+
+**********
 WebSockets
 **********
 
