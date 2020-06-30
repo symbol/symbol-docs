@@ -10,18 +10,6 @@
 Reading transactions from an account
 ####################################
 
-:orphan:
-
-.. post:: 18 Aug, 2018
-    :category: Account
-    :tags: SDK, CLI
-    :excerpt: 1
-    :nocomments:
-
-####################################
-Reading transactions from an account
-####################################
-
 Get the complete list of transactions involving an account.
 
 *************
@@ -69,7 +57,7 @@ In this example, we will retrieve all account-related transactions with at least
 The `page object <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
 
 To get additional transactions, you will have to make further requests iteratively.
-For each additional call, increase the ``pageNumber`` in one unit.
+For each additional call, increase the ``pageNumber`` by one unit.
 
 .. code-block:: typescript
 

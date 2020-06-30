@@ -10,7 +10,7 @@
 Cosigning aggregate bonded transactions
 #######################################
 
-Cosign `aggregate <aggregate-bonded>` transactions pending to be signed.
+Cosign :ref:`aggregate <aggregate-bonded>` transactions pending to be signed.
 
 *************
 Prerequisites
@@ -35,8 +35,10 @@ Method #01: Using the Desktop Wallet
 Method #02: Using the SDK
 *************************
 
-1. First, check if your account has incoming aggregate transactions not signed.
+1. First, check if your account has incoming aggregate transactions that have not been signed.
 Use the ``TransactionHttp`` repository to search all the incoming aggregate transactions pending to be signed by your account.
+
+.. example-code::
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/GettingPartialTransactions.ts
         :language: typescript
@@ -64,7 +66,7 @@ Copy and save the transaction hash you want to cosign with your account.
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-3. Define the transaction hash to cosign and signer account.
+3. Define the transaction hash to cosign and the signer account.
 If you want to cosign a transaction involving a multisig account, you should be using the cosignatory account instead.
 
 .. example-code::
@@ -96,7 +98,7 @@ Finally, announce the cosignature to network with ``transactionHttp.announceAggr
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Once all the participants cosign the transaction, this will be included in a block.
+Once all the participants cosign the transaction, the transaction will be included in a block.
 
 *************************
 Method #03: Using the CLI
