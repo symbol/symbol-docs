@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -103,19 +103,31 @@ msgstr "方法 #02: SDK を使用する"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:61
 msgid ""
-"In a new terminal, monitor which transactions involving the your account are"
-" confirmed and which of them are rejected by the network."
-msgstr "新しいターミナルでは、あなたのアカウントのアドレスに関係するトランザクションの承認済みとそれらのネットワークによる却下を監視します。"
+"In a new terminal, monitor the transactions involving the sender account to "
+"know if they are confirmed or rejected by the network."
+msgstr "新しいターミナルで、送信者のアカウントに関するトランザクションを監視して、ネットワークによって承認または拒否されたかを確認します。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:67
 msgid ""
-"Define the **TransferTransaction**, including Bob address as the recipient "
-"and attaching 10 |networkcurrency|."
+"2. Open a new file and define the **TransferTransaction**. Include Bob's "
+"address as the recipient, and attach  10 |networkcurrency|."
 msgstr ""
-"Bob のアドレスが受信者で ``10`` |networkcurrency| を添付した **TransferTransaction** "
-"を定義してください。"
+"2. 新しいファイルを開き、 **TransferTransaction** を定義します。Bob のアドレスを受信者とし、 ``10`` "
+"|networkcurrency| を添付します。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:86
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:70
+msgid ""
+"Mosaic units in |codename| are defined as **absolute amounts**. To get an "
+"absolute amount, multiply the number of assets you want to send by 10\\ "
+":sup:`divisibility`. For example, if the mosaic had :doc:`divisibility "
+"<../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you "
+"should define 1000 (absolute) instead."
+msgstr ""
+"|codename| では、モザイクの単位を **絶対量** で定義します。絶対量を取得するには、送りたいアセット量に 10\\ "
+":sup:`divisibility` を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-mosaic-"
+"information>` 2 である場合、10 単位 (相対量) を送信するには 1000 (絶対量) と定義します。"
+
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:91
 msgid ""
 "As you may have noticed, transfer transactions require an array of mosaics "
 "as a parameter. This permits sending transfer transactions with multiple "
@@ -123,58 +135,50 @@ msgid ""
 msgstr ""
 "すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とします。これは一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:89
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:94
 msgid ""
 "If you own more than one mosaic, you can send them together in the same "
 "transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信できます:"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:108
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:113
 msgid ""
-"|codename| works with absolute amounts. To get an absolute amount, multiply "
-"the number of assets you want to send by 10\\ :sup:`divisibility`.  For "
-"example, if the mosaic has :doc:`divisibility <../mosaic/getting-mosaic-"
-"information>` 2, to send 10 units (relative) you should define 1000 "
-"(absolute) instead."
-msgstr ""
-"|codename| は主に絶対量を扱います。絶対量を取得するには、送ってほしいアセットの量に 10\\ :sup:`divisibility` "
-"を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-mosaic-information>` 2 "
-"である場合、10 単位 (相対) 送信するには 1000 (絶対) と定義します。"
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:110
-msgid ""
-"3. Sign the transaction with your account. Include the network generation "
-"hash to make the transaction only valid for your network. Open ``nodeUrl + "
-"'/node/info'`` in a new browser tab and copy the "
-"``meta.networkGenerationHash`` value."
+"3. Sign the transaction with your account. Then, include the network "
+"generation hash seed to make the transaction only valid for your network. To"
+" retrieve the network generration hash seed, open ``nodeUrl + '/node/info'``"
+" in a new browser tab and copy ``meta.networkGenerationHashSeed`` value."
 msgstr ""
 "3. "
-"あなたのアカウントで署名します。あなたのネットワークだけで有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めてください。新しいブラウザタブで"
-" ``nodeUrl + '/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
+"あなたのアカウントで署名します。次に、あなたのネットワークだけで有効なトランザクションを作るために、ネットワークジェネレーションハッシュを含めます。ネットワークジェネレーションハッシュシードを取得するために、新しいブラウザタブで"
+" ``nodeUrl + '/node/info'`` を開いて ``meta.networkGenerationHashSeed`` "
+"の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:130
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:134
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:149
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:153
 msgid ""
 "5. Open the terminal where you are monitoring the transaction's status. The "
 "transaction should appear as confirmed after ±15 seconds and the amount "
 "defined gets transferred from the sender's account to the recipient's "
-"account. If the terminal raises an error, check the error code meaning "
-":ref:`here <status-errors>`."
+"account. If the terminal raises an error, you can check the error code "
+"description `here <https://github.com/nemtech/symbol-"
+"openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_."
 msgstr ""
 "5. "
 "トランザクションのステータスを監視しているターミナルを開いてください。トランザクションは15秒前後で承認済みとして現れ、定義した総量は送信者アカウントから受信者アカウントへ送られます。ターミナルでエラーが起きた場合はエラーコードの意味を"
-" :ref:`こちら <status-errors>` で参照してください。"
+" `こちら <https://github.com/nemtech/symbol-"
+"openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_"
+" で参照してください。"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:155
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:159
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:157
+#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:161
 msgid ""
 "Open a terminal window and run the following command to transfer 10 XYM from"
 " your default account to Bob's address."

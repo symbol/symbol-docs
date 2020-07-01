@@ -25,9 +25,10 @@ h1 {
 h2 {
     font-size: 30px;
     margin: 40px 0 20px 0;
-    color: #333;
+    color: #44004e;
 }
 h3 {
+    font-size: 24px;
     margin: 20px 0;
     color: #333;
 }
@@ -339,9 +340,8 @@ body > .container {
 .sidebar-xs .dropdown a:hover {
     background-color: transparent;
     color: #5200c6;
-
 }
-.sidebar-xs .dropdown-toggle:hover {
+.sidebar-xs a.dropdown-toggle:hover {
     color: #fff;
 }
 .caret {

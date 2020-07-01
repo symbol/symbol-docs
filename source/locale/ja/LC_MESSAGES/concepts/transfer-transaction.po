@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -136,82 +136,29 @@ msgstr ""
 "を使用することを推奨します。"
 
 #: ../../source/concepts/transfer-transaction.rst:59
-msgid "Guides"
-msgstr "ガイド"
-
-#: ../../source/concepts/transfer-transaction.rst:71
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/transfer-transaction.rst:78
-msgid ""
-"Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages "
-"between two :doc:`accounts <account>`."
-msgstr ""
-":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <account>` "
-"間で送信するためには、転送トランザクションをアナウンスします。"
-
-#: ../../source/concepts/transfer-transaction.rst:84
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/transfer-transaction.rst:86
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Property"
-msgstr "プロパティ"
+msgid "Related transactions"
+msgstr "関連トランザクション"
 
 #: ../../source/concepts/transfer-transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "Transaction recipient."
-msgstr "トランザクションレシート"
+msgid ":ref:`TransferTransaction <transfer-transaction>`"
+msgstr ":ref:`転送トランザクション <transfer-transaction>`"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid "Number of attached mosaics."
-msgstr "添付されたモザイクの数"
+msgid "Send mosaics and messages between two accounts."
+msgstr "モザイクとメッセージを２つのアカウント間で送信します。"
 
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Size of the attached message."
-msgstr "添付されたメッセージのサイズ"
+#: ../../source/concepts/transfer-transaction.rst:70
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Reserved padding to align mosaics on 8-byte boundary."
-msgstr "モザイクを 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Attached mosaics to send."
-msgstr "送信する添付済みモザイク"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid ":ref:`Message type <message-type>` and hexadecimal payload."
-msgstr ":ref:`メッセージタイプ <message-type>` と 16 進数のペイロード"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Plain message."
-msgstr "平文メッセージ"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Encrypted message."
-msgstr "暗号化メッセージ"
-
-#: ../../source/concepts/transfer-transaction.rst:1
-msgid "Persistent harvesting delegation."
-msgstr "永続的なハーベスティングのデリゲート"
-
-#: ../../source/concepts/transfer-transaction.rst:114
+#: ../../source/concepts/transfer-transaction.rst:80
 msgid "Continue: :doc:`Aggregate Transaction <aggregate-transaction>`."
 msgstr "次項: :doc:`アグリゲートトランザクション <aggregate-transaction>`"

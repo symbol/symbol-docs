@@ -37,7 +37,8 @@ Learn how to use the software development kits and tools with the following step
 
 Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
 
-* [API Reference](https://nemtech.github.io/api.html)
+* [Server](https://nemtech.github.io/server.html)
+* [REST API](https://nemtech.github.io/api.html)
 * [Software Development Kits](https://nemtech.github.io/sdk.html)
 * [Command-line Interface](https://nemtech.github.io/wallets.html)
 * [Wallets](https://nemtech.github.io/wallets.html)

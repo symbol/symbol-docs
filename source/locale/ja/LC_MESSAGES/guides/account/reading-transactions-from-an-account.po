@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,8 +26,8 @@ msgid "Reading transactions from an account"
 msgstr "トランザクションをアカウントから読み込む"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:22
-msgid "Get the list of transactions where an account is involved."
-msgstr "アカウントが関連するトランザクション一覧の取得"
+msgid "Get the complete list of transactions involving an account."
+msgstr "アカウントに関連するトランザクションの完全なリストの取得"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:26
 msgid "Prerequisites"
@@ -45,36 +45,40 @@ msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:34
 msgid ""
-"To get the latest confirmed transactions for a given account, open a new "
-"file, and copy the following code snippet."
-msgstr "あるアカウントの最新承認済みトランザクションを取得するには、新しくファイルを開き、次のコードスニペットをコピーします。"
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:53
-msgid ""
-"By default, the SDK provides up to 10 transactions. The page size can be "
-"increased up to 100 transactions."
+"1. Open a new file and define the account address. Define a new "
+"``TransactionHttp`` repository and the search criteria."
 msgstr ""
-"デフォルトでは、SDK は 10 トランザクションまでを提供しています。このパラメータは 100 トランザクションまで増加することができます。"
+"1. 新しいファイルを開いて、アカウントアドレスを定義します。新しい ``TransactionHttp`` リポジトリと検索条件を定義します。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:55
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:37
 msgid ""
-"2. To `get more than 100 transactions <https://github.com/nemtech/symbol-"
+"In this example, we will retrieve all account-related transactions with at "
+"least one confirmation, but you could also query the unconfirmed and partial"
+" collections."
+msgstr ""
+"この例では、承認が 1 つ以上あるすべてのアカウント関連トランザクションを取得しますが、未承認とパーシャルのコレクションをクエリすることもできます。"
+
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:56
+msgid ""
+"2. The API returns pages with up to 100 transactions. To `get more than 100 "
+"transactions <https://github.com/nemtech/symbol-"
 "docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
 "  you will have to make further requests iteratively. For each additional "
 "call, add to the ``QueryParams`` the optional parameter ``transactionId`` "
 "with the latest transaction identifier known returned by the previous "
 "request."
 msgstr ""
-"2. `100よりも多いトランザクションの取得 <https://github.com/nemtech/symbol-"
+"2. API は最大 100 トランザクションをページごとに返します。 `100 よりも多いトランザクションの取得 "
+"<https://github.com/nemtech/symbol-"
 "docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_"
 " をするためには、あなたはさらなる要求をしなければなりません。各追加の呼び出しにおいて、``QueryParams`` にオプションのパラメタである "
 "``transactionId`` に前の要求によって返された最新のトランザクション識別子を追加してください。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:64
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:65
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:66
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:67
 msgid ""
 "Open a terminal window and run the following command to get the confirmed "
 "transactions involving an account."

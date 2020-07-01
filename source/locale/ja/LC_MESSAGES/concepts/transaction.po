@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,7 +22,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/transaction.rst:12
-#: ../../source/concepts/transaction.rst:203
 msgid "Transaction"
 msgstr "トランザクション"
 
@@ -32,7 +31,7 @@ msgid ""
 "In the case of blockchain, that is when an action signed by an :doc:`account"
 " <account>` changes its state."
 msgstr ""
-"一般的にトランザクションとはデータベースシステム内での作業単位を表します。ブロックチェーンにおいては、 :doc:`アカウント <account>` "
+"一般的にトランザクションとはデータベースシステム内での作業単位を表します。ブロックチェーンにおいて、 :doc:`アカウント <account>` "
 "によって署名されたアクションが、それ自身の状態を変えるときを指します。"
 
 #: ../../source/concepts/transaction.rst:19
@@ -47,42 +46,35 @@ msgid ""
 " <multisig-account>` rules), and more."
 msgstr ""
 "|codename| にはたくさんの異なるトランザクションタイプがあります。例えば、 :doc:`モザイク <mosaic>` "
-"をアカウント間で転送したり、メッセージング、アカウントの所有権を転送または構築( :doc:`マルチシグ <multisig-account>` "
-"ルールも含めて)するなどがあります。"
+"をアカウント間で転送したり、メッセージング、アカウントの所有権を転送または構築する ( :doc:`マルチシグ <multisig-account>` "
+"ルールも含めて) などがあります。"
 
 #: ../../source/concepts/transaction.rst:26
 msgid ""
 "The following transaction types are included in |codename| based networks by"
 " default:"
-msgstr "次のトランザクションタイプが |codename| ベースのネットワークにデフォルトで含まれます:"
+msgstr "デフォルトでは、次のトランザクションタイプが |codename| ベースのネットワークに含まれます:"
 
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
 #: ../../source/concepts/transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
 #: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Remote harvesting**"
-msgstr "**リモートハーベスティング**"
+msgid ""
+"Delegate the account importance to a proxy account. Required for all "
+"accounts willing to activate delegated harvesting."
+msgstr ""
+"アカウントのインポータンスをプロキシアカウントに委任します。デリゲートハーベスティングをアクティブ化しようとする、すべてのアカウントに必要なことです。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "Delegate the account importance to a proxy account."
-msgstr "アカウントのインポータンスをプロキシアカウントへ移譲する。"
+msgid ""
+"Link an account with a public key used by TLS to create sessions. Required "
+"for node operators."
+msgstr "アカウントを TLS が使用する公開鍵とリンクしてセッションを作成します。ノード演算子に必要です。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send transactions in batches to different accounts."
@@ -97,23 +89,27 @@ msgid "Cosign an AggregateBondedTransaction."
 msgstr "AggregateBondedTransaction へ連署します。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Mosaic**"
-msgstr "**モザイク**"
+msgid ""
+"Link an account with a BLS public key. Required for node operators willing "
+"to vote finalized blocks."
+msgstr "アカウントを BLS 公開鍵にリンクします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要です。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "Register a new mosaic."
-msgstr "新しいモザイクの取得"
+msgid ""
+"Link an account with a VRF public key. Required for all harvesting eligible "
+"accounts."
+msgstr "アカウントを VRF 公開鍵にリンクします。ハーベスト対象のすべてのアカウントに必要です。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "Change an existent mosaic supply."
-msgstr "既存モザイク供給量の変更をします。"
+msgid "Create a new mosaic."
+msgstr "新しいモザイクの作成"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Namespace**"
-msgstr "**ネームスペース**"
+msgid "Change the mosaic total supply."
+msgstr "モザイクの合計供給量を変更します。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "Register namespaces to organize your assets."
+msgid "Register a namespace to organize your assets."
 msgstr "ネームスペースを登録してアセットを整理します。"
 
 #: ../../source/concepts/transaction.rst:1
@@ -168,72 +164,147 @@ msgid "Allow or block outgoing transactions by transaction type."
 msgstr "トランザクションタイプによる送信トランザクションの許可/ブロックします。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "**Mosaic restriction**"
-msgstr "**モザイク制限**"
+msgid "Set global rules to transfer a restrictable mosaic."
+msgstr "制限可能モザイクの転送にグローバルルールを設定します。"
 
 #: ../../source/concepts/transaction.rst:1
-msgid "Set a global restriction to a mosaic."
-msgstr "モザイクにグローバル制限の設定"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Set a mosaic restriction to a specific address."
-msgstr "特定のアドレスにモザイク制限を設定"
+msgid "Set address specific rules to transfer a restrictable mosaic."
+msgstr "制限可能モザイクの転送に特定アドレスを設定します。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
 msgstr "モザイクとメッセージを２つのアカウント間で送信します。"
 
-#: ../../source/concepts/transaction.rst:74
+#: ../../source/concepts/transaction.rst:71
+msgid ""
+"Every base transaction type available in |codename| is defined as a separate"
+" :doc:`plugin <plugin>`. The plugin approach allows developers to introduce "
+"new transaction types without modifying the core engine or disrupting other "
+"features."
+msgstr ""
+"|codename| で利用可能なすべての基本トランザクションタイプは個別の :doc:`プラグイン <plugin>` "
+"として定義されています。このプラグインアプローチにより、開発者はコアエンジンを変更したり、他の機能を分断することなく、新しいトランザクションタイプを導入できます。"
+
+#: ../../source/concepts/transaction.rst:78
 msgid "Defining a transaction"
 msgstr "トランザクションの定義"
 
-#: ../../source/concepts/transaction.rst:100
+#: ../../source/concepts/transaction.rst:80
+msgid ""
+"Transactions are defined in a serialized form. Every transaction extends "
+"from the base :ref:`transaction schema definition <transaction>`, adding the"
+" type's particular properties."
+msgstr ""
+"トランザクションはシリアル化された形式で定義されます。すべてのトランザクションは基本 :ref:`トランザクションスキーマ定義 "
+"<transaction>` から拡張され、特定の型プロパティが追加されています。"
+
+#: ../../source/concepts/transaction.rst:83
+msgid "All transactions should define a deadline and a max_fee:"
+msgstr "すべてのトランザクションは deadline と max_fee を定義する必要があります:"
+
+#: ../../source/concepts/transaction.rst:85
+msgid ""
+"``deadline``: A transaction has a time window to be accepted before it "
+"reaches its deadline. The transaction expires when the deadline is reached "
+"and all the nodes reject the transaction. By default, the SDK sets the "
+"deadline to 2 hours, but it can be extended up to 24 hours."
+msgstr ""
+"``deadline``: "
+"トランザクションは期限に到達する前に受け入れられるタイムウィンドウを持ちます。期限に到達してトランザクションが期限切れになると、すべてのノードはトランザクションを拒否します。デフォルトでは、"
+" SDK は期限を 2 時間に設定しますが、最大 24 時間まで延長できます。"
+
+#: ../../source/concepts/transaction.rst:87
+msgid ""
+"``max_fee``: The maximum amount of network currency that the sender of the "
+"transaction is willing to pay to get the transaction accepted. :doc:`The "
+"next documentation <fees>` shows you how to set the optimal max_fee value."
+msgstr ""
+"``max_fee``: トランザクション送信者がトランザクションを承認されるために支払う意思のあるネットワーク通貨の最大額。 "
+":doc:`次のドキュメント <fees>` は最適な max_fee 値を設定する方法を示しています。"
+
+#: ../../source/concepts/transaction.rst:89
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/concepts/transaction.rst:91
+msgid "We recommend using the :doc:`SDK <../sdk>` to define new transactions."
+msgstr "新しいトランザクションを定義するには :doc:`SDK <../sdk>` を使用することを推奨します。"
+
+#: ../../source/concepts/transaction.rst:104
 msgid "Signing a transaction"
 msgstr "トランザクションへの署名"
 
-#: ../../source/concepts/transaction.rst:102
+#: ../../source/concepts/transaction.rst:106
 msgid ""
 "Accounts must sign transactions before announcing them to the network. "
-"`Signing a transaction <https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
-" expresses the account's agreement to change the network state as defined."
+"Signing a transaction expresses the account's agreement to change the "
+"network state as defined."
 msgstr ""
-"アカウントはトランザクションをネットワークにアナウンスする前に、トランザクションに署名する必要があります。 `トランザクションに署名  "
-"<https://github.com/nemtech/symbol-"
-"docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40>`_"
-" することは、定義されたとおりにネットワークの状態を変更することにアカウントが同意したと示されます。"
+"アカウントはトランザクションをネットワークにアナウンスする前に、トランザクションに署名する必要があります。トランザクションへの署名は、定義通りにネットワークの状態を変更することにアカウントが同意することを表明します。"
 
-#: ../../source/concepts/transaction.rst:108
+#: ../../source/concepts/transaction.rst:109
+msgid ""
+"For example, a TransferTransaction describes who the recipient is and the "
+"number of mosaics to transfer. In this case, signing the transaction means "
+"to accept moving those mosaics from one account's balance to another."
+msgstr ""
+"例えば、TransferTransaction "
+"には受信者が誰であるかと、転送するモザイクの量が記述されます。この場合、トランザクションに署名することは、それらのモザイクをあるアカウントの残高から他方のアカウントに移動することに同意することを意味します。"
+
+#: ../../source/concepts/transaction.rst:112
 msgid ""
 "An account has to follow the next steps to `sign a transaction "
 "<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_:"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L216>`_:"
 msgstr ""
 "アカウントは `トランザクションへ署名 <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L213>`_ "
+"javascript/blob/master/src/model/transaction/Transaction.ts#L216>`_ "
 "をするために次のステップに従う必要があります:"
 
-#: ../../source/concepts/transaction.rst:112
+#: ../../source/concepts/transaction.rst:114
+msgid ""
+"Get the ``signing bytes``, which are all the bytes of the transaction except"
+" the size, signature, and signer."
+msgstr "サイズ、署名、および署名者以外のトランザクションのすべてのバイトである ``署名バイト`` を取得します。"
+
+#: ../../source/concepts/transaction.rst:115
+msgid ""
+"Get the nemesis block ``generation hash``. You can query ``nodeUrl + "
+"'/node/info'`` and copy ``meta.networkGenerationHash`` value."
+msgstr ""
+"ネメシスブロックの ``ジェネレーションハッシュ`` を取得してください。 ``nodeUrl + '/node/info'`` にアクセスして "
+"``meta.networkGenerationHash`` の値をコピーします。"
+
+#: ../../source/concepts/transaction.rst:116
 msgid "Prepend the nemesis block generation hash to the signing bytes."
 msgstr "署名バイトにネメシスブロックのジェネレーションハッシュを接頭します。"
 
-#: ../../source/concepts/transaction.rst:113
+#: ../../source/concepts/transaction.rst:117
 msgid ""
 "Sign the resulting string with the signer's private key. This will give you "
 "the transaction ``signature``."
 msgstr "署名者の秘密鍵で結果文字列に署名します。これはトランザクションに ``署名`` を与えます。"
 
-#: ../../source/concepts/transaction.rst:114
+#: ../../source/concepts/transaction.rst:118
 msgid ""
 "Append the signer's signature and public key to the transaction to obtain "
 "the ``payload``."
 msgstr "署名者の署名と公開鍵をトランザクションに追加して ``ペイロード`` を取得します。"
 
-#: ../../source/concepts/transaction.rst:115
+#: ../../source/concepts/transaction.rst:119
 msgid ""
 "Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-"
 "typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L126-L179>`_ by "
+"javascript/blob/master/src/model/transaction/Transaction.ts#L127>`_ by "
 "applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the "
 "signer public key, nemesis block generation hash, and the remaining "
 "transaction payload."
@@ -241,14 +312,13 @@ msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードに SHA3-512 "
 "ハッシュアルゴリズムを適用して `トランザクションハッシュ <https://github.com/nemtech/symbol-sdk-"
 "typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L126-L179>`_ "
-"を計算します。"
+"javascript/blob/master/src/model/transaction/Transaction.ts#L127>`_ を計算します。"
 
-#: ../../source/concepts/transaction.rst:128
+#: ../../source/concepts/transaction.rst:132
 msgid "Announcing a transaction"
 msgstr "トランザクションのアナウンス"
 
-#: ../../source/concepts/transaction.rst:130
+#: ../../source/concepts/transaction.rst:134
 msgid ""
 "Signed transactions are ready to be announced to the network. You can either"
 " use the SDK ``TransactionHttp`` service or append the payload to the "
@@ -259,169 +329,86 @@ msgstr ""
 "サービスを使用するか、ペイロードを `トランザクションエンドポイント <https://nemtech.github.io/symbol-"
 "openapi/#operation/announceTransaction>`_ のリクエストに追加することができます。"
 
-#: ../../source/concepts/transaction.rst:144
+#: ../../source/concepts/transaction.rst:148
 msgid ""
 "After announcing the transaction, the REST API will always return an OK "
 "response immediately. At this point, it is still unknown whether the "
 "transaction is valid."
 msgstr "トランザクションのアナウンスをすると、REST API は常にOKをすぐに返します。この時点ではトランザクションが正当かどうかは不明です。"
 
-#: ../../source/concepts/transaction.rst:151
+#: ../../source/concepts/transaction.rst:155
 msgid "Transaction cycle"
 msgstr "トランザクションサイクル"
 
-#: ../../source/concepts/transaction.rst:165
+#: ../../source/concepts/transaction.rst:161
 msgid ""
-"The transaction has **zero confirmations** at this point. When another block"
-" is added to the blockchain, the transaction has one confirmation. The next "
-"block added to the chain will give it two confirmations and so on."
+"The first stage of validation happens in the API nodes. If the transaction "
+"presents some error, the WebSocket throws a notification through the status "
+"channel. In the positive case, the transaction reaches the P2P network with "
+"an **unconfirmed** status. Never rely on a transaction that has an "
+"unconfirmed state. It is not clear if it will get included in a block, as it"
+" should pass a second validation."
 msgstr ""
-"この時点でトランザクションの **承認数はゼロ** "
-"です。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
+"バリデーションの初回ステージは API ノードで行われます。トランザクションが何らかのエラーを含んでいる場合、WebSocket "
+"はステータスチャンネルへ通知を投げます。良いケースの場合、トランザクションは P2P ネットワークへ **未承認** "
+"ステータスとして到達します。未承認状態のトランザクションを信頼してはいけません。2つ目のバリデーションを通過しないといけないので、これがブロックに取り込まれるかどうかは不明です。"
+
+#: ../../source/concepts/transaction.rst:167
+msgid ""
+"The second validation is done before the transaction is added in a "
+":doc:`harvested block <block>`. If valid, the harvester stores the "
+"transaction in a block and reaches the **confirmed** status."
+msgstr ""
+"トランザクションが :doc:`ハーベストされたブロック <block>` "
+"に追加される前に、2つ目のバリデーションは完了します。妥当な場合、ハーベスターはブロックにトランザクションを保存し、それは **承認済み** "
+"のステータスとなります。"
+
+#: ../../source/concepts/transaction.rst:170
+msgid ""
+"Continuing the previous example, the transaction gets processed and the "
+"amount stated gets transferred from the signer's account to the recipient's "
+"account. Additionally, the :doc:`transaction fee <fees>` is deducted from "
+"the signer's account."
+msgstr ""
+"前述した事例の続きとして、そのトランザクションが処理され、設定された総量が署名者のアカウントから受信者のアカウントへ振り込まれた状態になります。さらに "
+":doc:`トランザクション手数料 <fees>` は署名者のアカウントから差し引かれます。"
 
 #: ../../source/concepts/transaction.rst:173
-msgid "Rollbacks"
-msgstr "ロールバック"
-
-#: ../../source/concepts/transaction.rst:178
 msgid ""
-"The rewrite limit is the maximum number of blocks that can be rolled back. "
-"Hence, forks can only be resolved up to a certain depth too."
-msgstr "書き換え制限とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
-
-#: ../../source/concepts/transaction.rst:181
-msgid ""
-"|codename|'s public network has a rewrite limit of ``398`` blocks, being "
-"this limit :ref:`configurable per network <config-network-properties>`. Once"
-" a transaction has more than ``maxRollBackConfirmations`` value, it cannot "
-"be reversed."
+"The transaction has zero confirmations at this point. When another block is "
+"added to the blockchain, the transaction has one confirmation. The next "
+"block added to the chain will give it two confirmations and so on."
 msgstr ""
-"|codename| パブリックネットワークでは書き換え限界を ``398`` ブロックとしています。この限界は :ref:`ネットワークごとに設定可能"
-" <config-network-properties>` です。トランザクションが ``maxRollBackConfirmations`` "
-"値以上の承認を得ると、元に戻すことはできません。"
+"この時点でトランザクションの承認数はゼロです。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:186
+#: ../../source/concepts/transaction.rst:177
+msgid ""
+"Under certain circumstances, like network failure or partition, the most "
+"recent confirmed blocks might need to be reversed. :ref:`Rollbacks "
+"<rollbacks>` are characteristic of blockchain systems and essential to "
+"resolve forks."
+msgstr ""
+"ネットワーク障害やパーティションなどの特定の状況では、直近に承認されたブロックを元に戻す必要がある場合があります。 :ref:`ロールバック "
+"<rollbacks>` はブロックチェーンシステムの特性であり、フォークの解決に不可欠なものです。"
+
+#: ../../source/concepts/transaction.rst:180
+msgid ""
+"In the public network, a transaction is considered to be irrevocable when it"
+" receives ``398`` confirmations. But the maximum number of blocks that can "
+"be rolled back is :ref:`configurable per network <config-network-"
+"properties>`. In other words, it is necessary to wait at least ``398`` "
+"blocks after a transaction receives its first confirmation to guarantee that"
+" it cannot be reversed on the public network."
+msgstr ""
+"パブリックネットワークにおいて ``398`` "
+"承認を受け取ったトランザクションは取り消せないと見なされます。ただし、ロールバックできるブロックの最大数は :ref:`ネットワークごとに設定可能 "
+"<config-network-properties>` です。つまり、トランザクションが最初の承認を受け取った後、少なくとも ``398`` "
+"ブロック待機して、パブリックネットワーク上で元に戻せないことを保証する必要があります。"
+
+#: ../../source/concepts/transaction.rst:185
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transaction.rst:198
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/transaction.rst:205
-msgid "Serialization of a transaction."
-msgstr "トランザクションのシリアル化"
-
-#: ../../source/concepts/transaction.rst:207
-#: ../../source/concepts/transaction.rst:227
-#: ../../source/concepts/transaction.rst:244
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-#: ../../source/concepts/transaction.rst:1
-msgid "Property"
-msgstr "プロパティ"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Maximum fee allowed to spend for the transaction."
-msgstr "トランザクションに最大の手数料を支払うことが許可されています。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-"Number of milliseconds elapsed since the creation of the nemesis block. If a"
-" transaction does not get included in a block before the deadline is "
-"reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours"
-" ahead."
-msgstr ""
-"ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
-"時間先までが許容されています。"
-
-#: ../../source/concepts/transaction.rst:225
-msgid "Binary layout for an embedded transaction header."
-msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid ""
-"Reserved padding to align end of EmbeddedTransactionHeader on 8-byte "
-"boundary."
-msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/transaction.rst:242
-msgid ""
-"Serialization of an :doc:`aggregate <aggregate-transaction>` inner "
-"transaction."
-msgstr ":doc:`アグリゲート <aggregate-transaction>` インナートランザクションのシリアル化"
-
-#: ../../source/concepts/transaction.rst:258
-msgid "Serialization of an entity that has a prefixed size."
-msgstr "サイズをプレフィックスしたエンティティのシリアル化"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Size of the transaction."
-msgstr "トランザクションのサイズ"
-
-#: ../../source/concepts/transaction.rst:271
-msgid "Serialization of an entity that should be signed by an account."
-msgstr "アカウントによって署名されるべきエンティティのシリアル化。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "reserved padding to align Signature on 8-byte boundary."
-msgstr "Signature を 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Entity signature generated by the signer."
-msgstr "署名者により生成されたエンティティの署名。"
-
-#: ../../source/concepts/transaction.rst:285
-msgid ""
-"Serialization of an entity. An entity could be a block or a "
-":doc:`transaction <transaction>`."
-msgstr "エンティティのシリアル化。エンティティはブロックまたは :doc:`トランザクション <transaction>` です。"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Public key of the signer of the entity."
-msgstr "エンティティの署名者の公開鍵"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Reserved padding to align end of EntityBody on 8-byte boundary."
-msgstr "EntityBody の終わりを 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Version of the structure."
-msgstr "構造体のバージョン"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Entity network."
-msgstr "エンティティネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Entity type."
-msgstr "エンティティタイプ"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "(MAIN_NET) Public network."
-msgstr "(MAIN_NET) パブリックネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "(TEST_NET) Public test network."
-msgstr "(TEST_NET) パブリックテストネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "(MIJIN) Private network."
-msgstr "(MIJIN) プライベートネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "(MIJIN_TEST) Private test network."
-msgstr "(MIJIN_TEST) プライベートテストネットワーク"
-
-#: ../../source/concepts/transaction.rst:1
-msgid "Reserved."
-msgstr "予約済み"
-
-#: ../../source/concepts/transaction.rst:327
+#: ../../source/concepts/transaction.rst:195
 msgid "Continue: :doc:`Fees <fees>`."
 msgstr "次項: :doc:`手数料 <fees>`"

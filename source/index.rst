@@ -4,7 +4,7 @@ Symbol Documentation
 
 Browse the developer documentation to start integrating blockchain technology into your project.
 
-.. note:: |codename|'s **MAIN_NET** has not been released yet. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://blog.nem.io/nem-ecosystem-symbol-launch-plan/>`_.
+.. note:: |codename|'s **MAIN_NET** has not been released yet. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://forum.nem.io/t/symbol-launch-reporting-single-source-of-information/24863/9>`_.
 
 ***************
 Getting Started
@@ -37,7 +37,9 @@ Reference Documentation
 
 Surf the reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
 
-* :doc:`API Reference <api>`
+* :doc:`Tools <references/overview>`
+* :doc:`Server <server>`
+* :doc:`REST API <api>`
 * :doc:`Software Development Kits <api>`
 * :doc:`Command-line Interface <cli>`
 * :doc:`Wallets <wallets>`
@@ -143,8 +145,9 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     :hidden:
     :caption: References
 
-    api
+    references/overview
     server
+    api
     sdk
     cli
     wallets
@@ -157,3 +160,4 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     contribute/community
     contribute/contributing
     contribute/contributors
+    contribute/glossary

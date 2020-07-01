@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/receipts.rst:14
+msgid "Receipts Schemas"
+msgstr "レシートスキーマ"
+
+#: ../../source/serialization/receipts.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Reserved."
+msgstr "予約済み"
+
+#: ../../source/serialization/receipts.rst:40
+msgid ""
+"Receipts provide proof for every state change not retrievable from the "
+"block."
+msgstr "レシートはブロックから取得できないすべての状態変化の証明を提供します。"
+
+#: ../../source/serialization/receipts.rst:42
+#: ../../source/serialization/receipts.rst:63
+#: ../../source/serialization/receipts.rst:85
+#: ../../source/serialization/receipts.rst:106
+#: ../../source/serialization/receipts.rst:126
+#: ../../source/serialization/receipts.rst:147
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Receipt version."
+msgstr "レシートバージョン"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Receipt type."
+msgstr "レシートタイプ"
+
+#: ../../source/serialization/receipts.rst:58
+msgid "The invisible state change triggered a mosaic transfer."
+msgstr "モザイク転送によりトリガされた不可視の状態変化。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Mosaic transferred."
+msgstr "転送されたモザイク"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Public key of the sender."
+msgstr "送信者の公開鍵"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Address of the recipient."
+msgstr "受信者のアドレス"
+
+#: ../../source/serialization/receipts.rst:80
+msgid "The invisible state change changed an account balance."
+msgstr "アカウントの残高変化によりトリガされた不可視の状態変化。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Mosaic increased or decreased."
+msgstr "増加または減少したモザイク"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Public key of the target account."
+msgstr "対象アカウントの公開鍵"
+
+#: ../../source/serialization/receipts.rst:101
+msgid "An :doc:`mosaic <mosaic>` expired."
+msgstr "期限切れの :doc:`モザイク <mosaic>`"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Mosaic identifier."
+msgstr "モザイク識別子"
+
+#: ../../source/serialization/receipts.rst:121
+msgid ""
+"Network currency mosaics were created due to :doc:`inflation "
+"<../concepts/inflation>`."
+msgstr ":doc:`インフレーション <../concepts/inflation>` のために作り出されたネットワーク通貨モザイク。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Identifier of the mosaic that has been created."
+msgstr "作成されたモザイクの識別子"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Number of mosaics created."
+msgstr "作成されたモザイクの数"
+
+#: ../../source/serialization/receipts.rst:142
+msgid "The collection of receipts related to a transaction."
+msgstr "トランザクションに関するレシートのコレクション。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Transaction that triggered the receipt."
+msgstr "レシートをトリガしたトランザクション。"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Array of receipts."
+msgstr "レシートの配列"

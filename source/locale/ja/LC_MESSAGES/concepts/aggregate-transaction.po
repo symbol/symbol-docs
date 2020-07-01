@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -204,180 +204,37 @@ msgstr ""
 "は彼らがブロックチェーン技術を使っていることに気が付かないでしょう。"
 
 #: ../../source/concepts/aggregate-transaction.rst:114
-msgid "Guides"
-msgstr "ガイド"
+msgid "Related transactions"
+msgstr "関連トランザクション"
 
-#: ../../source/concepts/aggregate-transaction.rst:126
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/aggregate-transaction.rst:131
-msgid ""
-"Announce an AggregateTransaction to combine multiple transactions together."
-msgstr "複数の転送トランザクションを集約するために AggregateTransaction をアナウンスします。"
-
-#: ../../source/concepts/aggregate-transaction.rst:133
-#: ../../source/concepts/aggregate-transaction.rst:201
-msgid "**Version**: 0x01"
-msgstr "**バージョン**: 0x01"
-
-#: ../../source/concepts/aggregate-transaction.rst:135
-msgid ""
-"**EntityType**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 "
-"(:ref:`bonded<aggregate-bonded>`)"
-msgstr ""
-"**エンティティタイプ**: 0x4141 (:ref:`コンプリート<aggregate-complete>`), 0x4241 (:ref:`ボンド"
-"<aggregate-bonded>`)"
-
-#: ../../source/concepts/aggregate-transaction.rst:137
-#: ../../source/concepts/aggregate-transaction.rst:158
-#: ../../source/concepts/aggregate-transaction.rst:205
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Property"
-msgstr "プロパティ"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
 #: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
-#: ../../source/concepts/aggregate-transaction.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Aggregate hash of the aggregate transaction."
-msgstr "アグリゲートトランザクションのハッシュの集約"
+msgid "Send transactions in batches to different accounts."
+msgstr "異なるアカウントにトランザクションをバッチ送信します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid ""
-"Transaction payload size in bytes. In other words, the total number of bytes"
-" occupied by all inner transactions."
-msgstr "バイト単位のトランザクションのペイロードサイズ。つまりインナートランザクションすべてによって占有されている合計バイト数。"
+msgid "Propose an arrangement of transactions between different accounts."
+msgstr "異なるアカウント間のトランザクションの手配を提案します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid ""
-"Reserved padding to align end of AggregateTransactionHeader on 8-byte "
-"boundary."
-msgstr "AggregateTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
+msgid "Cosign an AggregateBondedTransaction."
+msgstr "AggregateBondedTransaction へ連署します。"
 
 #: ../../source/concepts/aggregate-transaction.rst:1
-msgid ""
-"Array of inner transactions. Other aggregate transactions are not allowed as"
-" inner transactions."
-msgstr "インナートランザクションの配列。他のアグリゲートトランザクションはインナートランザクションとして許可されていません。"
+msgid "Lock a deposit needed to announce aggregate bonded transactions."
+msgstr "アグリゲートボンドトランザクションのアナウンスに必要なデポジットをロック"
 
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid ""
-"Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining "
-"body space after transactions."
-msgstr ":ref:`連署者 <cosignature>` トランザクションの配列。トランザクションの後ろの残りの本体スペースを埋めます。"
+#: ../../source/concepts/aggregate-transaction.rst:128
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/aggregate-transaction.rst:156
-msgid ""
-"Cosignature transactions are used to sign :ref:`announced "
-"AggregateBondedTransactions <aggregate-transaction>` with missing "
-"cosignatures."
-msgstr ""
-"署名トランザクションは、まだ署名の揃っていない :ref:`アナウンス済みの AggregateBondedTransactions "
-"<aggregate-transaction>` への署名に使用します。"
-
-#: ../../source/concepts/aggregate-transaction.rst:160
-msgid ":ref:`Cosignature <cosignature-transaction>`"
-msgstr ":ref:`連署者 <cosignature-transaction>`"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "AggregateBondedTransaction hash to cosign."
-msgstr "署名すべき AggregateBondedTransaction ハッシュ"
-
-#: ../../source/concepts/aggregate-transaction.rst:173
-#: ../../source/concepts/aggregate-transaction.rst:207
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Cosigner public key."
-msgstr "連署者の公開鍵"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Transaction signature."
-msgstr "トランザクションの署名"
-
-#: ../../source/concepts/aggregate-transaction.rst:190
-msgid ""
-"Lock funds for a certain amount of blocks with a HashLockTransaction before "
-"sending an :ref:`AggregateBondedTransaction <aggregate-transaction>`. This "
-"transaction prevents spamming the partial cache with transactions that never"
-" will complete. The lock duration is allowed to lie up to ``2 days``, being "
-"this value :ref:`configurable per network <config-network-properties>`."
-msgstr ""
-":ref:`AggregateBondedTransaction <aggregate-transaction>` を送信する前に "
-"HashLockTransaction "
-"で一定のブロック量で資産をロックします。このトランザクションは決して完了しないトランザクションで部分キャッシュをスパムすることを防止します。ロック期間は"
-" ``2日`` までで、この値は :ref:`ネットワーク <config-network-properties>` ごとに設定可能です。"
-
-#: ../../source/concepts/aggregate-transaction.rst:194
-msgid ""
-"After enough funds are locked (``10`` |networkcurrency| by default), the "
-"AggregateTransaction can be announced and added into the partial "
-"transactions cache."
-msgstr ""
-"十分な資金 (デフォルトでは ``10`` |networkcurrency|) がロックされた後、AggregateTransaction "
-"をアナウンスして部分トランザクションキャッシュに追加することができます。"
-
-#: ../../source/concepts/aggregate-transaction.rst:196
-msgid ""
-"It's not necessary to sign the aggregate and its HashLockTransaction with "
-"the same account. For example, if Bob wants to announce an aggregate and "
-"does not have enough funds to announce a HashLockTransaction, he can ask "
-"Alice to send the hash lock funds transaction for him by sharing the signed "
-"AggregateTransaction hash."
-msgstr ""
-"アグリゲートとその HashLockTransaction に同じアカウントで署名する必要はありません。たとえば、ボブがアグリゲートをアナウンスしたいが"
-" HashLockTransaction をアナウンスするのに十分な資産がない場合、彼はアリスに署名された AggregateTransaction "
-"ハッシュを共有するハッシュロックファンドトランザクションを送信するように依頼できます。"
-
-#: ../../source/concepts/aggregate-transaction.rst:198
-msgid ""
-"Upon completion of the aggregate, the locked funds become available in the "
-"account that signed the initial HashLockTransaction. If the "
-"AggregateBondedTransaction duration is reached without being signed by all "
-"cosignatories, the locked amount becomes a reward collected by the block "
-"harvester at the height where the lock expires."
-msgstr ""
-"アグリゲートが完了するとロックされた資金は最初の HashLockTransaction "
-"に署名したアカウントへ返還されます。すべての連署者によって署名されずに AggregateBondedTransaction "
-"が期限に到達した場合、ロックされた資産はブロックのハーベスタによってロックの有効期限が切れるブロック高でハーベストされて報酬となります。"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Locked mosaic."
-msgstr "ロックされたモザイク"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid "Number of blocks for which a lock should be valid."
-msgstr "ロックが有効なブロックの数。"
-
-#: ../../source/concepts/aggregate-transaction.rst:1
-msgid ""
-"AggregateBondedTransaction hash that has to be confirmed before unlocking "
-"the mosaics."
-msgstr "モザイクをアンロックする前に、AggregateBondedTransaction ハッシュが承認されていなければなりません。"
-
-#: ../../source/concepts/aggregate-transaction.rst:217
+#: ../../source/concepts/aggregate-transaction.rst:138
 msgid "Continue: :doc:`Account Restrictions <account-restriction>`."
 msgstr "次項: :doc:`アカウント制限 <account-restriction>`"

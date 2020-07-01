@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-06-20 22:03+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -71,6 +71,35 @@ msgid ""
 " renewal fees."
 msgstr "アカウントに手数料と更新料を支払うために十分な |networkcurrency| を持たせてください。"
 
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:43
+msgid "Method #01: Using the Desktop Wallet"
+msgstr "方法 #01: デスクトップウォレットを使用する"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:45
+msgid "Click on the “**Namespaces**” on the left-side menu."
+msgstr "左側のメニューの “**ネームスペース**” をクリックします。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:47
+msgid ""
+"Click on the  “**Edit**” button (pen symbol) for the namespace you desire to"
+" extend the duration of. Then click on “**Extend duration**”."
+msgstr "期間を延長したいネームスペースの \"**編集**\" ボタン (ペンのアイコン) をクリックします。そして \"**延長期間**\" をクリックします。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:53
+msgid ""
+"Enter the amount of blocks to extend the duration of the namespace. Select "
+"the amount of fees you are willing to spend. Click “**Send**”."
+msgstr "ネームスペースの延長する期間のブロック数を入力します。費やす手数料を選択してください。 \"**送信**\" をクリックします。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:55
+msgid ""
+"Review the information, enter your wallet password, and click “**Confirm**”."
+msgstr "情報を確認します。ウォレットパスワードを入力して \"**確認**\" をクリックします。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:63
+msgid "Method #02: Using the SDK"
+msgstr "方法 #02: SDK を使用する"
+
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:65
 msgid ""
 "Get your namespace information, and inspect the value of the property "
@@ -101,8 +130,8 @@ msgstr ""
 "にリンクしているすべてのサブネームスペースとエイリアスが失われないようにするためにネームスペースの期間を延長します。"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:95
-msgid "Extend the namespace duration for ``1000`` more blocks."
-msgstr "ネームスペース期間を ``1000`` ブロック延長します。"
+msgid "Extend the namespace duration for ``172800`` more blocks."
+msgstr "ネームスペース期間を ``172800`` ブロック延長します。"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:109
 msgid ""
@@ -119,14 +148,18 @@ msgid ""
 msgstr "**RegisterNamespaceTransaction** が承認されたら、ネームスペースの期限が延長されたことも確認してください。"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:113
-msgid "Validate that ``endHeight`` has increased by ``1000`` block units."
-msgstr "``endHeight`` が ブロック単位で ``1000`` 増加していることを確認してください。"
+msgid "Validate that ``endHeight`` has increased by ``172800`` block units."
+msgstr "``endHeight`` が ブロック単位で ``172800`` 増加していることを確認してください。"
+
+#: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:131
+msgid "Method #03: Using the CLI"
+msgstr "方法 #03: CLI を使用する"
 
 #: ../../source/guides/namespace/extending-a-namespace-registration-period.rst:133
 msgid ""
 "To extend the namespace duration, open a terminal window and run the "
-"following command. Replace ``foo`` with the namespace name and ``1000`` with"
-" the number of blocks to extend."
+"following command. Replace ``foo`` with the namespace name and ``172800`` "
+"with the number of blocks to extend."
 msgstr ""
-"ネームスペースの期間を延長するには、ターミナルウィンドウを開いて、次のコマンドを実行します。 ``foo`` をネームスペース名に、 ``1000`` "
-"を延長するブロック数に置き換えます。"
+"ネームスペースの期間を延長するには、ターミナルウィンドウを開いて、次のコマンドを実行します。 ``foo`` をネームスペース名に、 "
+"``172800`` を延長するブロック数に置き換えます。"

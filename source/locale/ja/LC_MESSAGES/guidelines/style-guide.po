@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-06-05 14:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -152,10 +152,6 @@ msgstr "Bash コマンドのドキュメント化"
 msgid "Using code snippets."
 msgstr "コードスニペットの使用"
 
-#: ../../source/guidelines/style-guide.rst:135
-msgid "Glossary"
-msgstr "用語集"
-
-#: ../../source/guidelines/style-guide.rst:137
+#: ../../source/guidelines/style-guide.rst:136
 msgid "List of terms that are prone to be written in different ways."
 msgstr "頻繁に表記ゆれの傾向がある用語のリスト。"

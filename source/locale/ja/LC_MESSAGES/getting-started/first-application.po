@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -216,10 +216,9 @@ msgstr ""
 
 #: ../../source/getting-started/first-application.rst:144
 msgid ""
-"In a new terminal, monitor which transactions involving the ticket vendor's "
-"address are confirmed and which are rejected by the network."
-msgstr ""
-"新しいターミナルで、チケット販売者のアドレスに関連するトランザクションが承認され、ネットワークによって拒否されるトランザクションを監視します。"
+"1In a new terminal, monitor the transactions involving the ticket vendor's "
+"account to know if they are confirmed or rejected by the network."
+msgstr "新しいターミナルで、チケット販売者のアカウントに関するトランザクションを監視して、ネットワークによって承認または拒否されたかを確認します。"
 
 #: ../../source/getting-started/first-application.rst:152
 msgid "Creating the ticket"
@@ -297,11 +296,14 @@ msgstr "トランザクションをアナウンスしたら、ターミナルに
 #: ../../source/getting-started/first-application.rst:185
 msgid ""
 "The transaction should appear as confirmed after ±15 seconds. If the "
-"terminal raises an error, you can check the error code's meaning  :ref:`here"
-" <status-errors>`."
+"terminal raises an error, you can check the error code description `here "
+"<https://github.com/nemtech/symbol-"
+"openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_."
 msgstr ""
-"トランザクションは15秒前後で承認済みとして現れます。ターミナルにはエラーが表示された場合は、エラーコードの意味を :ref:`ここで <status-"
-"errors>` 確認できます。"
+"トランザクションは15秒前後で承認済みとして現れます。ターミナルでエラーが起きた場合はエラーコードの意味を `こちら "
+"<https://github.com/nemtech/symbol-"
+"openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_"
+" で参照してください。"
 
 #: ../../source/getting-started/first-application.rst:190
 msgid "Sending the ticket"
@@ -404,5 +406,5 @@ msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作
 #: ../../source/getting-started/first-application.rst:286
 msgid ""
 "Continue learning about more about |codename| :doc:`built-in features "
-"<../concepts/account>`."
-msgstr "|codename| :doc:`ビルドイン機能 <../concepts/account>` の学習を続ける。"
+"<../concepts/overview>`."
+msgstr "|codename| :doc:`ビルドイン機能 <../concepts/overview>` の学習を続ける。"

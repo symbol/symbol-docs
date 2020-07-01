@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:51+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/compatibility.rst:14
+msgid "Compatibility Matrix"
+msgstr "互換性表"
+
+#: ../../source/compatibility.rst:16
+msgid ""
+"This document lists the versions compatibility matrix between catapult-"
+"server milestones and related packages and applications."
+msgstr ""
+"このドキュメントでは catapult-server マイルストーンとその関連するパッケージおよびアプリケーション間でのバージョン互換性表を示します。"
+
+#: ../../source/compatibility.rst:1 ../../source/compatibility.rst:1
+msgid "Milestone"
+msgstr "マイルストーン"
+
+#: ../../source/compatibility.rst:37
+msgid "Wallets"
+msgstr "ウォレット"
+
+#: ../../source/compatibility.rst:1
+msgid "Desktop"
+msgstr "デスクトップ"

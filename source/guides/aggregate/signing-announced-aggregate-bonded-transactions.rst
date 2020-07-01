@@ -10,13 +10,14 @@
 Cosigning aggregate bonded transactions
 #######################################
 
-How to cosign aggregate bonded transactions.
+Cosign :ref:`aggregate <aggregate-bonded>` transactions pending to be signed.
 
 *************
 Prerequisites
 *************
 
-- Complete :doc:`creating an escrow contract<creating-an-escrow-contract-with-aggregate-bonded-transaction>` guide.
+This guide assumes that you have received an aggregate transaction. 
+You can follow the guide :doc:`creating an escrow contract<creating-an-escrow-contract-with-aggregate-bonded-transaction>` to announce an aggregate transaction.
 
 ************************************
 Method #01: Using the Desktop Wallet
@@ -48,13 +49,10 @@ Method #02: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Fetch all aggregate bonded transactions pending to be signed by your account.
+2. Retrieve all the complete transactions object pending to be signed by your account using the ``TransactionHttp`` repository.
+At this point, you might want to do some extra checks, like verifying the contents of the transaction.
 
 .. note:: To fetch aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig public key instead. See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
-
-3. For each transaction, check if you have not already signed it. Cosign each pending transaction using the previously created function.
-
-4. Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 
 .. example-code::
 
@@ -67,6 +65,11 @@ Method #02: Using the SDK
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
+
+3. If everything looks ok, cosign the transaction with the signer account.  
+Finally, announce the cosignature to network with ``transactionHttp.announceAggregateBondedCosignature``.
+
+Once all the participants cosign the transaction, the transaction will be included in a block.
 
 *************************
 Method #03: Using the CLI

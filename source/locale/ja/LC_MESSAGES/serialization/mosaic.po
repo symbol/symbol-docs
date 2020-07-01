@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/mosaic.rst:14
+msgid "Mosaic Schemas"
+msgstr "モザイクスキーマ"
+
+#: ../../source/serialization/mosaic.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/mosaic.rst:20
+msgid "Mosaic Definition"
+msgstr "モザイク定義"
+
+#: ../../source/serialization/mosaic.rst:27
+msgid "Announce a MosaicDefinitionTransaction to create a new mosaic."
+msgstr "新しいモザイクを作るために MosaicDefinitionTransaction をアナウンスします。"
+
+#: ../../source/serialization/mosaic.rst:35
+#: ../../source/serialization/mosaic.rst:64
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Identifier of the mosaic."
+msgstr "モザイクの識別子"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid ""
+"Mosaic duration expressed in blocks. If set to 0, the mosaic is non-"
+"expiring."
+msgstr "ブロック数で表現されたモザイク期間。0 に設定した場合は無期限のモザイクになります。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Random nonce used to generate the mosaic id."
+msgstr "モザイクIDを生成するために使用されるランダムなノンス値"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Mosaic flags."
+msgstr "モザイクフラグ"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Mosaic divisibility."
+msgstr "モザイク可分性"
+
+#: ../../source/serialization/mosaic.rst:49
+msgid "Mosaic Supply Change"
+msgstr "モザイク供給量変更"
+
+#: ../../source/serialization/mosaic.rst:56
+msgid ""
+"Announce a supply change transaction to increase or decrease a mosaic's "
+"supply."
+msgstr "モザイクの供給量を増加または減少させるために供給量変更トランザクションをアナウンスする。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Affected mosaic identifier."
+msgstr "影響を受けるモザイク識別子"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Amount of supply to increase or decrease."
+msgstr "モザイク供給量の増加または減少の総量。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Supply change action."
+msgstr "供給量変更アクション"
+
+#: ../../source/serialization/mosaic.rst:76
+msgid "Mosaic Types"
+msgstr "モザイクタイプ"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Mosaic identifier."
+msgstr "モザイク識別子"
+
+#: ../../source/serialization/mosaic.rst:1
+#: ../../source/serialization/mosaic.rst:1
+msgid "Mosaic amount."
+msgstr "モザイク量"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid ""
+"Mosaic identifier. If the most significant bit of byte 0 is set, a "
+"namespaceId (alias) is used instead of the real mosaic identifier."
+msgstr ""
+"モザイク識別子。バイトの最上位ビットが0の設定されている場合、モザイク識別子の代わりに namespaceId (エイリアス) が使用されます。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "No flags present."
+msgstr "フラグ無し"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid ""
+"Mosaic supports supply changes even when the mosaic creator owns partial "
+"supply."
+msgstr "モザイク作成者が供給量を部分的に保有している場合でも、モザイクは供給の変更をサポートします。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid ""
+"Mosaic supports transfers between arbitrary accounts. When not set, the "
+"mosaic can only be transferred to/from the mosaic creator."
+msgstr "モザイクは任意のアカウント間の振替をサポートします。not を設定した場合はモザイクはモザイク作成者との間でしか転送できません。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid ""
+"Mosaic creator can add rules to restrict which accounts are enabled to send "
+"and receive the mosaic."
+msgstr "モザイク作成者はどのアカウントがモザイクを送受信できるのかを制限するルールを追加することができます。"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Decrease."
+msgstr "減少"
+
+#: ../../source/serialization/mosaic.rst:1
+msgid "Increase."
+msgstr "増加"

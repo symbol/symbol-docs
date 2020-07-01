@@ -13,6 +13,18 @@ source_file = build/gettext/api.pot
 source_lang = en
 type = PO
 
+[symboldocs.cli]
+file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
+source_file = build/gettext/cli.pot
+source_lang = en
+type = PO
+
+[symboldocs.compatibility]
+file_filter = source/locale/<lang>/LC_MESSAGES/compatibility.po
+source_file = build/gettext/compatibility.pot
+source_lang = en
+type = PO
+
 [symboldocs.sdk]
 file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
 source_file = build/gettext/sdk.pot
@@ -554,5 +566,108 @@ type = PO
 [symboldocs.guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
 source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--overview]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/overview.po
+source_file = build/gettext/references/overview.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--account_link]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/account_link.po
+source_file = build/gettext/serialization/account_link.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--aggregate]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/aggregate.po
+source_file = build/gettext/serialization/aggregate.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--coresystem]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/coresystem.po
+source_file = build/gettext/serialization/coresystem.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--entity]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/entity.po
+source_file = build/gettext/serialization/entity.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--lock_hash]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/lock_hash.po
+source_file = build/gettext/serialization/lock_hash.pot
+source_lang = en
+type = PO
+
+
+[symboldocs.serialization--lock_secret]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/lock_secret.po
+source_file = build/gettext/serialization/lock_secret.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--metadata]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/metadata.po
+source_file = build/gettext/serialization/metadata.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/mosaic.po
+source_file = build/gettext/serialization/mosaic.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--multisig]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/multisig.po
+source_file = build/gettext/serialization/multisig.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--namespace]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/namespace.po
+source_file = build/gettext/serialization/namespace.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--receipts]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/receipts.po
+source_file = build/gettext/serialization/receipts.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--resolution_statement]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/resolution_statement.po
+source_file = build/gettext/serialization/resolution_statement.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--restriction_account]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/restriction_account.po
+source_file = build/gettext/serialization/restriction_account.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--restriction_mosaic]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/restriction_mosaic.po
+source_file = build/gettext/serialization/restriction_mosaic.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--transaction]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/transaction.po
+source_file = build/gettext/serialization/transaction.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--transfer]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/transfer.po
+source_file = build/gettext/serialization/transfer.pot
 source_lang = en
 type = PO

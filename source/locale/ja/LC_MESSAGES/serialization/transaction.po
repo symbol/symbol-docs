@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:54+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/transaction.rst:14
+msgid "Transaction Schemas"
+msgstr "トランザクションスキーマ"
+
+#: ../../source/serialization/transaction.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/transaction.rst:27
+msgid "Serialization of a transaction."
+msgstr "トランザクションのシリアル化"
+
+#: ../../source/serialization/transaction.rst:29
+#: ../../source/serialization/transaction.rst:49
+#: ../../source/serialization/transaction.rst:66
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/serialization/transaction.rst:1
+msgid "Maximum fee allowed to spend for the transaction."
+msgstr "トランザクションに最大の手数料を支払うことが許可されています。"
+
+#: ../../source/serialization/transaction.rst:1
+msgid ""
+"Number of milliseconds elapsed since the creation of the nemesis block. If a"
+" transaction does not get included in a block before the deadline is "
+"reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours"
+" ahead."
+msgstr ""
+"ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
+"時間先までが許容されています。"
+
+#: ../../source/serialization/transaction.rst:47
+msgid "Binary layout for an embedded transaction header."
+msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
+
+#: ../../source/serialization/transaction.rst:1
+msgid ""
+"Reserved padding to align end of EmbeddedTransactionHeader on 8-byte "
+"boundary."
+msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃える予約パディング"
+
+#: ../../source/serialization/transaction.rst:64
+msgid ""
+"Serialization of an :doc:`aggregate <../concepts/aggregate-transaction>` "
+"inner transaction."
+msgstr ":doc:`アグリゲート <../concepts/aggregate-transaction>` インナートランザクションのシリアル化"

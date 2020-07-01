@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2020-04-24 12:29+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -34,26 +34,6 @@ msgstr "このガイドでは、マルチシグトランザクションを実行
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:28
 msgid "Background"
 msgstr "背景"
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:30
-msgid ""
-"Imagine that Alice and Bob are cosignatories of a 1-of-2 multisig account. "
-"This means that at least one of their account's signatures is required to "
-"authorize multisig transactions. In other words, we can say that the "
-"``minApproval`` parameter of the multisig is currently set to 1."
-msgstr ""
-"Alice と Bob は 1-of-2 "
-"マルチシグアカウントの連署者です。マルチシグトランザクションを承認するには、彼らのうち少なくとも一つのアカウントの署名が必要なことを意味します。つまり "
-"``最小承認数`` パラメタが現在は 1 に設定されているということになります。"
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:34
-msgid ""
-"In this case, we want to make both cosignatories required, shifting to a "
-"**2-of-2 multisig** instead. To achieve this, we will be increasing the "
-"**minApproval parameter** in one unit."
-msgstr ""
-"このケースでは、両方の連署者を必要とするように **2-of-2** マルチシグへ変更します。これを達成するために **minApproval "
-"パラメタ** を 1 単位だけ増加します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:41
 msgid "2-of-2 multisig account example"
@@ -137,24 +117,6 @@ msgid ""
 "Open a new file. Then, define Alice's account public key and the multisig "
 "account private key into new variables."
 msgstr "新しいファイルを開きます。そして、 Alice のアカウントの公開鍵とマルチシグアカウントの秘密鍵を新しい変数へ格納します。"
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:101
-msgid ""
-"Define a **MultisigAccountModificationTransaction** to increase the "
-"``minAprovalDelta`` in one unit."
-msgstr ""
-"``minApprovalDelta`` を 1 単位増加させる **MultisigAccountModificationTransaction** "
-"を定義します。"
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:115
-msgid ""
-"If you want to decrease the ``minApproval`` parameter, set "
-"``minApprovalDelta`` with a negative value. For example, to reduce the "
-"number of required signers in one unit, you should set ``minApprovalDelta`` "
-"to ``-1``."
-msgstr ""
-"``minApproval`` パラメタを減少させる場合は ``minApprovalDelta`` を負の値に設定してください。たとえば、 1 "
-"つのユニットで必要な署名者の数を減らすには ``minApprovalDelta`` を ``-1`` に設定します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:117
 msgid ""

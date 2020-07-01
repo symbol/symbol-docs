@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,44 +46,15 @@ msgstr ""
 
 #: ../../source/concepts/block.rst:20
 msgid ""
-"Blocks are stored in a database as permanent medium. |codename| calls the "
-"first block in the chain the **nemesis block**."
-msgstr ""
-"ブロックはデータベースに永続的なメディアとして保存されます。 |codename| はチェーン内の最初のブロックである **ネメシスブロック** "
-"を呼び出します。"
-
-#: ../../source/concepts/block.rst:23
-msgid ""
 "|codename| blocks complete every ``15`` seconds, making transactions confirm"
 " quickly enough for everyday use."
 msgstr "|codename| ブロックは ``15`` 秒毎に完了し、日々の使用に対して十分にトランザクションを承認します。"
 
-#: ../../source/concepts/block.rst:27
-msgid "Block creation"
-msgstr "ブロック生成"
+#: ../../source/concepts/block.rst:26
+msgid "Nodes stores blocks in a serialized form as follows:"
+msgstr "ノードは次のようにブロックをシリアル化した形式で保存します:"
 
-#: ../../source/concepts/block.rst:29
-msgid ""
-"Blocks are created by :doc:`accounts <account>`. The process of creating new"
-" blocks is called :doc:`harvesting <harvesting>`. The **harvesting "
-"account**—called the harvester— gets the :doc:`fees <fees>` for the "
-"transactions in the block and :doc:`inflation <inflation>`. This gives the "
-"harvester an incentive to add as many transactions to the block as possible."
-msgstr ""
-"ブロックは :doc:`アカウント <account>` によって作成されます。新しいブロックの生成プロセスは :doc:`ハーベスティング "
-"<harvesting>` と呼ばれます。ハーベスティングアカウント - ハーベスターと呼ばれます - はブロック内のトランザクションに応じた "
-":doc:`手数料 <fees>` と :doc:`インフレーション <inflation>` "
-"を受け取ります。これによりハーベスターにはできるだけ多くのトランザクションをブロックに追加するインセンティブが与えられます。"
-
-#: ../../source/concepts/block.rst:35
-msgid "Block header"
-msgstr "ブロックヘッダ"
-
-#: ../../source/concepts/block.rst:37
-msgid "Serialization of the block header."
-msgstr "ブロックヘッダのシリアル化"
-
-#: ../../source/concepts/block.rst:39
+#: ../../source/concepts/block.rst:28
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
@@ -116,6 +87,10 @@ msgid ""
 msgstr "以前のブロックに基づき、新しいブロックを見つけるのがどのくらい難しいかを決定します。"
 
 #: ../../source/concepts/block.rst:1
+msgid "Generation hash proof."
+msgstr "ジェネレーションハッシュプルーフ"
+
+#: ../../source/concepts/block.rst:1
 msgid "Hash of the previous block."
 msgstr "前ブロックのハッシュ"
 
@@ -143,10 +118,75 @@ msgstr "手数料乗数はブロックのトランザクションに適用され
 msgid "Reserved padding to align end of BlockHeader on 8-byte boundary."
 msgstr "BlockHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
+#: ../../source/concepts/block.rst:65
+msgid ""
+"|codename| calls the first block in the chain the **nemesis block**. The "
+"first block is defined before launching a new network and sets the "
+"distribution of the network currency mosaics."
+msgstr ""
+"|codename| チェーンの原初ブロックを **nemesis ブロック** "
+"と呼びます。原初ブロックは新しいネットワークを起動する前に定義され、ネットワーク通貨モザイクの頒布を設定します。"
+
+#: ../../source/concepts/block.rst:68
+msgid ""
+"The process of creating the subsequent new blocks is called :doc:`harvesting"
+" <harvesting>`."
+msgstr "後続する新しいブロックを生成するプロセスを :doc:`ハーベスティング <harvesting>` と呼びます。"
+
+#: ../../source/concepts/block.rst:70
+msgid ""
+"Blocks are created by :doc:`accounts <account>`, which are chosen by the "
+":doc:`consensus algorithm <consensus-algorithm>` based on their importance "
+"score. The consensus algorithm determines a new account to harvest the "
+"subsequent block after each block creation."
+msgstr ""
+"ブロックは :doc:`コンセンサスアルゴリズム <consensus-algorithm>` により、インポータンススコアに基づいて選ばれた "
+":doc:`アカウント <account>` "
+"によって作成されます。コンセンサスアルゴリズムは各ブロックの作成後に後続ブロックをハーベストするための新しいアカウントを決定します。"
+
 #: ../../source/concepts/block.rst:73
+msgid ""
+"The harvesting account receives the :doc:`fees <fees>` for the transactions "
+"added in the block and the mosaics created by :doc:`inflation <inflation>`. "
+"This gives the harvester an incentive to add as many transactions to the "
+"block as possible."
+msgstr ""
+"ハーベスティングアカウントはブロックに追加されたトランザクションの :doc:`手数料 <fees>` と :doc:`インフレーション "
+"<inflation>` "
+"によって作成されたモザイクを受け取ります。これはハーベスタはできるだけ多くのトランザクションをブロックに追加するためのインセンティブを与えます。"
+
+#: ../../source/concepts/block.rst:80
+msgid "Rollbacks"
+msgstr "ロールバック"
+
+#: ../../source/concepts/block.rst:82
+msgid ""
+"Blockchains are designed in a way that, in the presence of a network failure"
+" or partition, the recent blocks might need to be rolled back."
+msgstr "ブロックチェーンはネットワーク障害やパーティションが存在する場合に、必要があれば直近のブロックをロールバックするように設計されています。"
+
+#: ../../source/concepts/block.rst:84
+msgid ""
+"The rewrite limit is the maximum number of blocks that can be rolled back. "
+"Hence, forks can only be resolved up to a certain depth too."
+msgstr "書き換え制限とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
+
+#: ../../source/concepts/block.rst:87
+msgid ""
+"|codename|'s public network has a rewrite limit of ``398`` blocks, but this "
+"limit is :ref:`configurable per network <config-network-properties>`. The "
+"transactions linked to a block are permanently recorded on the blockchain "
+"once the number of confirmation blocks (subsequent blocks) surpasses the "
+"maximum number of rollback blocks."
+msgstr ""
+"|codename| のパブリックネットワーク書き換え制限は ``398`` ブロックですが、この制限は :ref:`ネットワークごとに設定可能 "
+"<config-network-properties>` です。ブロックにリンクされているトランザクションは、承認ブロック (後続ブロック) "
+"の数がロールバックブロックの最大数を超えると、ブロックチェーンへ永続的に記録されます。"
+
+#: ../../source/concepts/block.rst:92
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:83
+#: ../../source/concepts/block.rst:102
 msgid "Continue: :doc:`Transaction <transaction>`."
 msgstr "次項: :doc:`トランザクション <transaction>`"

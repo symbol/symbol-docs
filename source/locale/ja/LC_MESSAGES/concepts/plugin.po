@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2020-04-07 17:42+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -42,9 +42,40 @@ msgstr ""
 "**プラグイン** は |codename| "
 "の機能を拡張するためにプロトコルに追加できる自己完結型の機能グループです。プラグインアプローチにより開発者はコアエンジンを変更したり、他の機能を中断したりせずに、トランザクションを介してチェーンの状態を変更するさまざまな方法を導入できます。"
 
+#: ../../source/concepts/plugin.rst:19
+msgid ""
+"Every base :doc:`transaction type <transaction>` available in |codename| is "
+"defined as a separate plugin. This separation makes it possible to only load"
+" a minimum subset of features to fit the network requirements."
+msgstr ""
+"|codename| では、各基本 :doc:`トランザクションタイプ <transaction>` "
+"がプラグインとして分離して定義されています。この分離によって、ネットワーク要件を満たすために機能の最小サブセットのみをロードすることが可能になります。"
+
 #: ../../source/concepts/plugin.rst:24
 msgid "Architecture"
 msgstr "アーキテクチャ"
+
+#: ../../source/concepts/plugin.rst:26
+msgid ""
+"The simplest form of a |codename| plugin is a file written in C++ that "
+"registers a ``PluginManager`` and exposes a single entry point. The file has"
+" to match the following format so that :doc:`catapult-server <../server>` "
+"can dynamically link the plugin."
+msgstr ""
+"|codename| の最も単純な形式のプラグインは C++ で記述されたファイルで ``PluginManager`` "
+"を登録し、単一のエントリポイントを公開します。 :doc:`catapult-server <../server>` "
+"がプラグインを動的にリンクできるように、ファイルは次の形式に一致する必要があります。"
+
+#: ../../source/concepts/plugin.rst:43
+msgid ""
+"All the plugin related files are stored in the same folder under the "
+"``plugins`` directory to keep the code organized. The folder also includes "
+"the file ``CMakeLists.txt``, which instructs the compiler on how to build "
+"the plugin."
+msgstr ""
+"プラグイン関連のすべてのファイルは ``plugins`` "
+"ディレクトリ以下の同じフォルダに保存して、コードを整頓しています。このフォルダにはプラグインのビルド方法をコンパイラに指示するファイル "
+"``CMakeLists.txt`` も含まれます。"
 
 #: ../../source/concepts/plugin.rst:54
 msgid ""
@@ -66,6 +97,80 @@ msgid ""
 "from binary."
 msgstr "バイナリとの間でモデルタイプをシリアル化および逆シリアル化するためのキャッシュタイプとルール。"
 
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Configurable parameters defined as a set of key-value pairs. The value of "
+"each parameter is defined in the network configuration file ``config-"
+"network.properties``."
+msgstr ""
+"キーと値のペアをセットとして定義している構成可能なパラメータ。各パラメータの値はネットワーク設定ファイル ``config-"
+"network.properties`` で定義されます。"
+
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Transaction types and the mapping of those types to parsing rules. "
+"Specifically, the plugin defines rules for translating a transaction into "
+"component notifications that are used in further processing."
+msgstr ""
+"トランザクションタイプとそれらタイプ解析ルールへのマッピング。具体的には、プラグインはトランザクションを後続の処理で使用されるコンポーネント通知に変換するためのルールを定義します。"
+
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Observers process the notifications produced by block and transaction "
+"processing. The registered observers can subscribe to general or plugin-"
+"defined notifications and update blockchain state based on their values. "
+"Observers don't require any validation logic because they are only called "
+"after all applicable validators succeed."
+msgstr ""
+"オブザーバは、ブロックおよびトランザクション処理によって生成された通知を処理します。登録されたオブザーバは、一般通知またはプラグイン定義の通知を購読し、その値に基づいてブロックチェーンの状態を更新できます。オブザーバは適用可能なすべてのバリデータが成功した後にのみ呼び出されるため、検証ロジックを必要としません。"
+
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Instructions for the core engine to load the plugin. This submodule contains"
+" the ``PluginManager`` file."
+msgstr "コアエンジンがプラグインをロードするための手順。このサブモジュールには ``PluginManager`` ファイルが含まれています。"
+
+#: ../../source/concepts/plugin.rst:1
+msgid ""
+"Stateless and stateful validators process the notifications produced by "
+"block and transaction processing. The registered validators can subscribe to"
+" general or plugin-defined notifications and reject disallowed values or "
+"state changes."
+msgstr ""
+"ステートレスおよびステートフルのバリデータは、ブロックおよびトランザクション処理によって生成された通知を処理します。登録されたバリデータは、一般的な通知またはプラグイン定義の通知を購読し、許可されていない値または状態の変更を拒否できます。"
+
 #: ../../source/concepts/plugin.rst:70
 msgid "Security"
 msgstr "セキュリティ"
+
+#: ../../source/concepts/plugin.rst:72
+msgid ""
+"The code defined in a plugin runs forever unless the network is stopped or "
+"all network nodes decide to use a new configuration that disables the "
+"plugin. If a subset of nodes does not adopt the configuration changes, the "
+"chain will split in two."
+msgstr ""
+"プラグインで定義したコードは、ネットワークが停止するか、すべてのネットワークノードがプラグインを無効にする新しい構成を使用することを決定しない限り、永久に実行されます。ノードのサブセットが構成変更を採用しない場合、チェーンは"
+" 2 つに分割されます。"
+
+#: ../../source/concepts/plugin.rst:75
+msgid ""
+"Before writing custom logic, developers should try to solve the use case by "
+"using the set of :doc:`transactions provided  <transaction>` in |codename| "
+"by default. Note that |codename| base plugins have been audited. The "
+"platform is running an extensive test-net period before the public launch, "
+"and its code has been open-source since April 2018."
+msgstr ""
+"カスタムロジックを作成する前に、開発者は |codename| がデフォルトで :doc:`提供されるトランザクション <transaction>` "
+"を使用して、ユースケースを解決するようにしてください。 |codename| "
+"の基本プラグインは監査済みです。プラットフォームは一般公開前に大規模なテストネット期間を実行しており、そのコードは2018 "
+"年4月からオープンソースになっています。"
+
+#: ../../source/concepts/plugin.rst:78
+msgid ""
+"If you decide to create a new plugin, it is recommended to test the code "
+"extensively, bring external auditors, and run a testnet period before "
+"launching the network in production to minimize vulnerabilities in the "
+"custom code."
+msgstr ""
+"新しいプラグインを作成する場合、カスタムコードの脆弱性を最小限に抑えるために、本番環境でネットワークを起動する前に、コードを広範囲にテストし、外部監査人を参加させて、テストネット期間を実施することを推奨します。"

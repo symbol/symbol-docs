@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -148,7 +148,6 @@ msgstr ""
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Type"
 msgstr "タイプ"
 
@@ -239,130 +238,25 @@ msgstr ""
 "``maxRollBackBlocks`` を待機する必要があります。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:129
-msgid "Guides"
-msgstr "ガイド"
+msgid "Related transactions"
+msgstr "関連トランザクション"
 
-#: ../../source/concepts/cross-chain-swaps.rst:141
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/cross-chain-swaps.rst:148
-msgid ""
-"Use a SecretLockTransaction to transfer mosaics between two accounts. The "
-"specified mosaics remain locked until a valid :ref:`SecretProofTransaction "
-"<secret-proof-transaction>` unlocks them."
-msgstr ""
-"2 つのアカウント間でモザイクを転送するにはSecretLockTransactionを使用します。特定のモザイクは妥当な "
-":ref:`SecretProofTransaction <secret-proof-transaction>` "
-"がそれらをアンロックするまで、ロックされたままになります。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:150
-msgid ""
-"The maximum number of blocks the lock can lie up to is ``30 days``, being "
-"this parameter :ref:`configurable per network <config-network-properties>`. "
-"If the transaction duration is reached without being proved, the locked "
-"amount goes back to the initiator of the SecretLockTransaction."
-msgstr ""
-"ロックできるブロックの最大数は ``30日間`` です。このパラメータは :ref:`ネットワークごとに設定可能 <config-network-"
-"properties>` "
-"です。トランザクションが証明されずに期間に到達した場合、ロックされた総量はSecretLockTransactionを開始したアカウントへ戻ります。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:153
-#: ../../source/concepts/cross-chain-swaps.rst:180
-msgid "**Version**: 0x01"
-msgstr "**バージョン**: 0x01"
-
-#: ../../source/concepts/cross-chain-swaps.rst:157
-#: ../../source/concepts/cross-chain-swaps.rst:184
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/cross-chain-swaps.rst:159
-#: ../../source/concepts/cross-chain-swaps.rst:186
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Property"
-msgstr "プロパティ"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
 #: ../../source/concepts/cross-chain-swaps.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Proof hashed."
-msgstr "ハッシュ化された証明"
+msgid "Transaction to start a token swap between different chains."
+msgstr "異なるチェーン間でのトークンスワップを開始するトランザクション。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Locked mosaic."
-msgstr "ロックされたモザイク"
+msgid "transaction to conclude a token swap between different chains."
+msgstr "異なるチェーン間でのトークンスワップを完結するトランザクション。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ""
-"Number of blocks for which a lock should be valid. If reached, the mosaics "
-"will be returned to the initiator."
-msgstr "ロックを有効にするブロックの数。期間は ``30`` 日までが許可されています。"
+#: ../../source/concepts/cross-chain-swaps.rst:141
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Algorithm used to hash the proof."
-msgstr "proof に使用されているハッシュアルゴリズム"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Address that receives the funds once unlocked."
-msgstr "ロック解除後、ファンドを受け取るアドレス"
-
-#: ../../source/concepts/cross-chain-swaps.rst:176
-msgid ""
-"Use a SecretProofTransaction to unlock :ref:`SecretLockTransactions <secret-"
-"lock-transaction>`."
-msgstr ""
-"SecretProofTransactionは :ref:`SecretLockTransactions <secret-lock-"
-"transaction>` のアンロックに使用します。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:178
-msgid ""
-"The transaction must prove that it knows the *proof* that unlocks the "
-"mosaics."
-msgstr "トランザクションはモザイクをアンロックするための *proof* を証明しなければなりません。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Proof size in bytes."
-msgstr "バイト換算のプルーフサイズ"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Original random set of bytes."
-msgstr "元のランダムなバイト列"
-
-#: ../../source/concepts/cross-chain-swaps.rst:203
-msgid "The list of supported hashing algorithms."
-msgstr "サポートされているハッシュアルゴリズムのリスト"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Proof is hashed using SHA3-256."
-msgstr "SHA3-256 によってハッシュ化された proof"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid ""
-"Proof is hashed twice: first with SHA-256 and then with RIPEMD-160 "
-"(bitcoin's OP_HASH160)."
-msgstr ""
-"最初に SHA-256 を、その後 RIPEMD-160 によって2回のハッシュ化された proof (bitcoin's OP_HASH160)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:1
-msgid "Proof is hashed twice with SHA-256 (bitcoin's OP_HASH256)."
-msgstr "SHA-256 によって2回のハッシュ化されたproof (bitcoin's OP_HASH256)"
-
-#: ../../source/concepts/cross-chain-swaps.rst:215
+#: ../../source/concepts/cross-chain-swaps.rst:151
 msgid "Continue: :doc:`Cryptography <cryptography>`."
 msgstr "次へ: :doc:`暗号手法 <cryptography>`"

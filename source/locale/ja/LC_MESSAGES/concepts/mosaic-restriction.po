@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -89,20 +89,15 @@ msgstr ""
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
-#: ../../source/concepts/mosaic-restriction.rst:1
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../source/concepts/mosaic-restriction.rst:1
-#: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
@@ -117,7 +112,6 @@ msgid ""
 "this transaction."
 msgstr "影響を受けるモザイク識別子。モザイク作成者はトランザクションの署名者である必要があります。"
 
-#: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Restriction key."
@@ -330,105 +324,21 @@ msgstr ""
 "ユニットを購入して送ることができるでしょう。しかし有効な住所証明を提示していない Alice は株式を受け取ることができません。"
 
 #: ../../source/concepts/mosaic-restriction.rst:131
+msgid "Related transactions"
+msgstr "関連トランザクション"
+
+#: ../../source/concepts/mosaic-restriction.rst:1
+msgid "Set global rules to transfer a restrictable mosaic."
+msgstr "制限可能モザイクの転送にグローバルルールを設定します。"
+
+#: ../../source/concepts/mosaic-restriction.rst:1
+msgid "Set address specific rules to transfer a restrictable mosaic."
+msgstr "制限可能モザイクの転送に特定アドレスを設定します。"
+
+#: ../../source/concepts/mosaic-restriction.rst:143
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/mosaic-restriction.rst:149
-msgid ""
-"Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a"
-" mosaic."
-msgstr "MosaicGlobalRestrictionTransaction をアナウンスして制限ルールをモザイクに設定します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-"Identifier of the mosaic being restricted. The mosaic creator must be the "
-"signer of the transaction."
-msgstr "制限されるモザイク識別子。モザイク作成者はトランザクションの署名者である必要があります。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-"Identifier of the mosaic providing the restriction key. The mosaic global "
-"restriction for the mosaic identifier depends on global restrictions set on "
-"the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if "
-"the mosaic giving the restriction equals the mosaic identifier."
-msgstr ""
-"制限キーを提供するモザイクの識別子。モザイクIDのモザイクグローバル制限は参照モザイクに設定されたグローバル制限によって異なります。制限を与えるモザイクがモザイク識別子と等しい場合"
-" ``referenceMosaicId`` に ``0000000000000000`` に設定します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Restriction key relative to the reference mosaic identifier."
-msgstr "制限キーは参照モザイク識別子に関連します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Previous restriction value."
-msgstr "以前の制限値"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "New restriction value."
-msgstr "新しい制限値"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Previous restriction type."
-msgstr "以前の制限タイプ"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "New restriction type."
-msgstr "新しい制限タイプ"
-
-#: ../../source/concepts/mosaic-restriction.rst:176
-msgid ""
-"Announce a MosaicAddressRestrictionTransaction transaction to set a "
-"restriction rule to an address."
-msgstr "MosaicAddressRestrictionTransaction をアナウンスして制限ルールをアドレスに設定します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-"Identifier of the mosaic to which the restriction applies. The mosaic "
-"creator must be the signer of the transaction."
-msgstr "制限が適用されるモザイクの識別子。モザイク作成者はトランザクションの署名者である必要があります。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-"Previous restriction value. Set ``previousRestrictionValue`` to "
-"``FFFFFFFFFFFFFFFF`` if the target address does not have a previous "
-"restriction value for this mosaic identifier and restriction key."
-msgstr ""
-"以前の制限値。ターゲットアドレスにこのモザイク識別子と制限キーの以前の制限値がない場合は ``previousRestrictionValue`` に "
-"``FFFFFFFFFFFFFFFF`` を設定します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Address being restricted."
-msgstr "制限されているアドレス"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Uninitialized value indicating no restriction."
-msgstr "制限が無いことを示す未初期化値。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if equal."
-msgstr "同じ場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if not equal."
-msgstr "同じでない場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if less than."
-msgstr "未満の場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if allow if less than or equal."
-msgstr "以下の場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if greater than."
-msgstr "超える場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Allow if greater than or equal."
-msgstr "以上の場合に許可"
-
-#: ../../source/concepts/mosaic-restriction.rst:215
+#: ../../source/concepts/mosaic-restriction.rst:153
 msgid "Continue: :doc:`Multisig Accounts <multisig-account>`."
 msgstr "次項: :doc:`マルチシグアカウント <multisig-account>`"

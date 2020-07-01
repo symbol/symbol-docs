@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,15 +46,16 @@ msgstr "テストネットブートストラップ"
 #: ../../source/guides/network/configuring-node-properties.rst:32
 msgid ""
 "After running a node for the first time, the file ``config-input.yaml`` will"
-" be generated with the default values. Depending on the assembly chosen, "
-"this file will be located under the ``peer-assembly/peer-node/`` or ``api-"
-"harvest-assembly/api-node``."
+" be generated in the folder``symbol-testnet-bootstrap/identity``."
 msgstr ""
-"最初にノードを開始した後に ``config-input.yaml`` ファイルはデフォルト値で生成されます。選択したアセンブリによって、このファイルは"
-" ``peer-assembly/peer-node/`` または ``api-harvest-assembly/api-node`` "
-"の下に配置されます。"
+"初めてノードを実行した後、ファイル ``config-input.yaml`` がフォルダ ``symbol-testnet-"
+"bootstrap/identity`` に生成されます。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:35
+#: ../../source/guides/network/configuring-node-properties.rst:34
+msgid "To edit the node properties, follow the next steps:"
+msgstr "ノードプロパティを編集するには次の手順に従います:"
+
+#: ../../source/guides/network/configuring-node-properties.rst:36
 msgid ""
 "If the node service is running, run ``sudo docker-compose down`` under the "
 "same directory you executed the ``up`` command."
@@ -62,50 +63,54 @@ msgstr ""
 "ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
 "を実行してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:37
+#: ../../source/guides/network/configuring-node-properties.rst:38
 msgid "Edit the properties file ``config-input.yaml`` with a text editor."
 msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:39
+#: ../../source/guides/network/configuring-node-properties.rst:40
 msgid ""
-"Save the changes and apply them with the command ``sudo docker-compose up "
-"--build --detach``."
-msgstr "変更を保存して ``sudo docker-compose up --build --detach`` コマンドで適用してください。"
+"Save and apply the changes with the command ``sudo docker-compose up --build"
+" --detach``."
+msgstr "保存したら ``sudo docker-compose up --build --detach`` コマンドで反映してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:42
+#: ../../source/guides/network/configuring-node-properties.rst:43
 msgid "Service Bootstrap"
 msgstr "サービスブートストラップ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:44
+#: ../../source/guides/network/configuring-node-properties.rst:45
 msgid ""
-"Find under the directory ``build/catapult-config`` the generated properties "
-"files for the ``peer`` and ``api`` nodes that compose the network."
+"After running a network for the first time, the folder ``build/catapult-"
+"config`` contains all the properties files for the Peer and API nodes that "
+"compose the network."
 msgstr ""
-"``build/catapult-config`` ディレクトリにネットワークを構成する ``peer`` および ``api`` "
-"ノード用に生成されたプロパティファイルが格納されています。"
+"初めてネットワークを実行した後、フォルダ ``build/catapult-config`` にはネットワークを構成するピアおよび API "
+"ノードのすべてのプロパティファイルが含まれます。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:46
+#: ../../source/guides/network/configuring-node-properties.rst:47
+msgid ""
+"For example, if you want to edit the ``peer-node-0`` properties, follow the "
+"next steps:"
+msgstr "例えば、 ``peer-node-0`` プロパティを編集するには次の手順に従います:"
+
+#: ../../source/guides/network/configuring-node-properties.rst:49
 msgid "Stop all the services with the command ``./cmds/stop-all``."
 msgstr "すべてのサービスを停止するには ``./cmds/stop-all`` を使用します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:48
+#: ../../source/guides/network/configuring-node-properties.rst:51
 msgid ""
-"To edit the node properties assigned to the ``peer-node-0``, open the target"
-" file under ``peer-node-0/userconfig/resources`` with a text editor."
-msgstr ""
-"``peer-node-0`` に割り当てられたノードプロパティを変更するには、 ``peer-"
-"node-0/userconfig/resources`` の対象ファイルをテキストエディタで開きます。"
+"Open the properties file to edit under ``peer-node-0/userconfig/resources`` "
+"with a text editor."
+msgstr "``peer-node-0/userconfig/resources`` にあるプロパティファイルをテキストエディタで開いて編集します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:50
-msgid ""
-"Save the changes and apply them with the command ``./cmds/start-all -d``."
-msgstr "変更を保存して、 ``./cmds/start-all -d`` コマンドで適用します。"
+#: ../../source/guides/network/configuring-node-properties.rst:53
+msgid "Save and apply the changes with the command ``./cmds/start-all -d``."
+msgstr "保存して変更を ``./cmds/start-all -d`` コマンドで適用します。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:56
+#: ../../source/guides/network/configuring-node-properties.rst:59
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../../source/guides/network/configuring-node-properties.rst:58
+#: ../../source/guides/network/configuring-node-properties.rst:61
 msgid "Find below the list of configurable properties."
 msgstr "設定可能なプロパティのリストは次の通りです。"
 
@@ -152,10 +157,6 @@ msgid "Server port."
 msgstr "サーバポート"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
-msgid "Server api port."
-msgstr "サーバ API ポート"
-
-#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Maximum number of incoming connections per identity over primary port."
 msgstr "プライマリポート経由の着信接続の ID ごとの最大数。"
 
@@ -174,8 +175,30 @@ msgid "Set to true if cache data should be saved in a database."
 msgstr "true の場合、キャッシュデータのデータベース保存が有効になります。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Set to true if temporary sync files should be automatically cleaned up. "
+"*Note*: This should be Set to false if broker process is running."
+msgstr ""
+"一時同期ファイルを自動的にクリーンアップする必要がある場合は true に設定します。*注意*: ブローカープロセスが実行されている場合、これは "
+"false に設定する必要があります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if transaction spam throttling should be enabled."
 msgstr "true の場合、スパムスロットルが有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Maximum fee that will boost a transaction through the spam throttle when "
+"spam throttling is enabled."
+msgstr "スパムスロットルが有効な場合、スパムスロットルを介してのトランザクションをブーストさせる最大手数料。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of blocks per sync attempt."
+msgstr "同期試行ごとの最大ブロック数。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum chain bytes per sync attempt."
+msgstr "同期試行あたりの最大チェーンバイト。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Maximum number of nodes to track in memory."
@@ -219,8 +242,12 @@ msgid "Maximum number of banned nodes."
 msgstr "BAN 済ノードの最大数"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
-msgid "Harvester private key."
-msgstr "ハーベスタの秘密鍵"
+msgid "Harvester signing private key."
+msgstr "ハーベスタの署名秘密鍵"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Harvester vrf private key."
+msgstr "ハーベスタの検証秘密鍵"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if auto harvesting is enabled."

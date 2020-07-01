@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-11 06:12+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/concepts/overview.rst:12
+msgid "Features"
+msgstr "機能"
+
+#: ../../source/concepts/overview.rst:14
+msgid ""
+"Connect and combine Symbol's built-in features to architect your blockchain "
+"solution. Use our ready-made plugin configurations for your most common "
+"business needs, or configure the plugin primitives plugin to customize the "
+"capabilities of your network without sacrificing performance."
+msgstr ""
+"Symbol "
+"の組み込み機能に接続および組み合わせて、ブロックチェーンソリューションを構築します。最も一般的なビジネスニーズに合わせて既製のプラグイン構成を使用するか、プラグインプリミティブを構成して、パフォーマンスを犠牲にすることなくネットワークの機能をカスタマイズします。"
+
+#: ../../source/concepts/overview.rst:19
+msgid "Transfer of value"
+msgstr "価値の転送"
+
+#: ../../source/concepts/overview.rst:22
+msgid "Transfer Transaction"
+msgstr "転送トランザクション"
+
+#: ../../source/concepts/overview.rst:24
+msgid ""
+"The most basic transaction used to send mosaics and messages between two "
+"accounts."
+msgstr "モザイクやメッセージを2つのアカウント間で送信するために使う、最も基本のトランザクションです。 "
+
+#: ../../source/concepts/overview.rst:26
+msgid ":doc:`Read more ...<transfer-transaction>`."
+msgstr ":doc:`詳細を見る <transfer-transaction>`"
+
+#: ../../source/concepts/overview.rst:33
+msgid "Aggregate Transaction"
+msgstr "アグリゲートトランザクション"
+
+#: ../../source/concepts/overview.rst:35
+msgid ""
+"A type of transaction that merges multiple transactions into one by "
+"generating a one-time disposable smart contract."
+msgstr ""
+"ワンタイムの破棄可能なスマートコントラクトを作成することで、複数のトランザクションを一つのトランザクションへマージしたトランザクションタイプです。"
+
+#: ../../source/concepts/overview.rst:37
+msgid ":doc:`Read more ...<aggregate-transaction>`."
+msgstr ":doc:`詳細を見る <aggregate-transaction>`"
+
+#: ../../source/concepts/overview.rst:44
+msgid "Cross-Chain Swap"
+msgstr "クロスチェーンスワップ"
+
+#: ../../source/concepts/overview.rst:46
+msgid ""
+"A built-in feature of Symbol which enables the trading of tokens across "
+"different blockchains without using an intermediary party (e.g. an exchange "
+"service)."
+msgstr "第三者 (交換サービスなど) を使用せずに、異なるブロックチェーン間でトークンを取引できる Symbol の組み込み機能。"
+
+#: ../../source/concepts/overview.rst:49
+msgid ":doc:`Read more ...<cross-chain-swaps>`."
+msgstr ":doc:`詳細を見る <cross-chain-swaps>`"
+
+#: ../../source/concepts/overview.rst:57
+msgid "Accounts management"
+msgstr "アカウントの管理"
+
+#: ../../source/concepts/overview.rst:60
+msgid "Account"
+msgstr "アカウント"
+
+#: ../../source/concepts/overview.rst:62
+msgid ""
+"An account is a container for assets, which can only be modified with its "
+"private key."
+msgstr "アカウントは秘密鍵によって変更ができるアセットのコンテナです。"
+
+#: ../../source/concepts/overview.rst:64
+msgid ":doc:`Read more ...<account>`."
+msgstr ":doc:`詳細を見る <account>`"
+
+#: ../../source/concepts/overview.rst:71
+msgid "Multisig Account"
+msgstr "マルチシグアカウント"
+
+#: ../../source/concepts/overview.rst:73
+msgid ""
+"Accounts that require additional signatures (from cosignatories) to initiate"
+" actions/transfers."
+msgstr "アクション / 転送の開始に (連署者からの) 追加署名が必要なアカウントです。"
+
+#: ../../source/concepts/overview.rst:75
+msgid ":doc:`Read more ...<multisig-account>`."
+msgstr ":doc:`詳細を見る <multisig-account>`"
+
+#: ../../source/concepts/overview.rst:82
+#: ../../source/concepts/overview.rst:108
+msgid "Restrictions"
+msgstr "制約"
+
+#: ../../source/concepts/overview.rst:84
+msgid ""
+"A configurable set of smart rules to block announcing or receiving "
+"transactions for a specific account."
+msgstr "ブロックのアナウンスや特定のアカウントへのトランザクションの受信へ対する設定可能なスマートなルールです。"
+
+#: ../../source/concepts/overview.rst:86
+msgid ":doc:`Read more ...<account-restriction>`."
+msgstr ":doc:`詳細を見る <account-restriction>`"
+
+#: ../../source/concepts/overview.rst:94
+msgid "Assets issuance"
+msgstr "アセットの発行"
+
+#: ../../source/concepts/overview.rst:97
+msgid "Mosaics"
+msgstr "モザイク"
+
+#: ../../source/concepts/overview.rst:99
+msgid ""
+"Digital tokens on the Symbol blockchain used to represent fixed assets - set"
+" of multiple identical things that do not change."
+msgstr "固定されたアセット - 変更されない複数ので同一の集合 - を表現するための Symbol ブロックチェーン上のデジタルトークンです。"
+
+#: ../../source/concepts/overview.rst:101
+msgid ":doc:`Read more ...<mosaic>`."
+msgstr ":doc:`詳細を見る <mosaic>`"
+
+#: ../../source/concepts/overview.rst:110
+msgid ""
+"A feature that allows mosaic creators to control which accounts can transact"
+" with the asset. It only affects mosaics with the restrictable property "
+"enabled explicitly at the moment of creation."
+msgstr ""
+"モザイク作成者にアカウントがアセットを使った取引を制御できるようにする機能。これは作成時に明示的に有効化された制限可能プロパティを持つモザイクにのみ影響します。"
+
+#: ../../source/concepts/overview.rst:112
+msgid ":doc:`Read more ...<mosaic-restriction>`."
+msgstr ":doc:`詳細を見る <mosaic-restriction>`"
+
+#: ../../source/concepts/overview.rst:119
+msgid "Namespaces"
+msgstr "ネームスペース"
+
+#: ../../source/concepts/overview.rst:121
+msgid ""
+"Unique domain spaces on the Symbol blockchain, which can be linked to Symbol"
+" accounts or mosaics. Functions similarly to internet domains."
+msgstr ""
+"Symbol ブロックチェーン上の一意なドメインスペース。Symbol "
+"アカウントまたはモザイクにリンクできます。インターネットドメインと同様に機能します。"
+
+#: ../../source/concepts/overview.rst:123
+msgid ":doc:`Read more ...<namespace>`."
+msgstr ":doc:`詳細を見る <namespace>`"
+
+#: ../../source/concepts/overview.rst:130
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: ../../source/concepts/overview.rst:132
+msgid "Additional information that can be attached to accounts or mosaics."
+msgstr "アカウントやモザイクに添付される追加情報です。"
+
+#: ../../source/concepts/overview.rst:134
+msgid ":doc:`Read more ...<metadata>`."
+msgstr ":doc:`詳細を見る <metadata>`"
+
+#: ../../source/concepts/overview.rst:142
+msgid "Network management"
+msgstr "ネットワークの管理"
+
+#: ../../source/concepts/overview.rst:145
+msgid "Harvesting"
+msgstr "ハーベスティング"
+
+#: ../../source/concepts/overview.rst:147
+msgid "The process of creating new blocks on the Symbol blockchain."
+msgstr "Symbol ブロックチェーンにおいての新しいブロックを作成するプロセスです。"
+
+#: ../../source/concepts/overview.rst:149
+msgid ":doc:`Read more ...<harvesting>`."
+msgstr ":doc:`詳細を見る <harvesting>`"
+
+#: ../../source/concepts/overview.rst:156
+msgid "Inflation"
+msgstr "インフレーション"
+
+#: ../../source/concepts/overview.rst:158
+msgid ""
+"Assets created on the Symbol blockchain can set an inflation configuration "
+"to increase the supply per block."
+msgstr "Symbol ブロックチェーンで作成されたアセットはインフレーション設定してブロックあたりの供給を増やすことができます。"
+
+#: ../../source/concepts/overview.rst:160
+msgid ":doc:`Read more ...<inflation>`."
+msgstr ":doc:`詳細を見る <inflation>`"
+
+#: ../../source/concepts/overview.rst:167
+msgid "Extending Symbol"
+msgstr "Symbol の拡張"
+
+#: ../../source/concepts/overview.rst:169
+msgid ""
+"The plugin approach allows developers to introduce different ways to alter "
+"the chain's state via transactions without modifying the core engine or "
+"disrupting other features."
+msgstr ""
+"プラグインアプローチにより、開発者はコアエンジンを変更したり他の機能を中断したりせずに、トランザクションを介してチェーンの状態を変更するさまざまな方法を導入できます。"
+
+#: ../../source/concepts/overview.rst:171
+msgid ":doc:`Read more ...<plugin>`."
+msgstr ":doc:`詳細を見る <plugin>`"

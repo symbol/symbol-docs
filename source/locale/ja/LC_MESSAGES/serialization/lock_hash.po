@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.21.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"PO-Revision-Date: 2020-06-19 17:53+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/serialization/lock_hash.rst:14
+msgid "Lock Hash Schemas"
+msgstr "ロックハッシュスキーマ"
+
+#: ../../source/serialization/lock_hash.rst:16
+msgid ""
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
+msgstr ""
+"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
+"<https://github.com/nemtech/catbuffer-generators>`_ "
+"プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
+
+#: ../../source/serialization/lock_hash.rst:20
+msgid "Hash Lock"
+msgstr "ハッシュロック"
+
+#: ../../source/serialization/lock_hash.rst:29
+msgid ""
+"Lock funds for a certain amount of blocks with a HashLockTransaction before "
+"sending an :ref:`AggregateBondedTransaction <aggregate-transaction>`. This "
+"transaction prevents spamming the partial cache with transactions that never"
+" will complete. The lock duration is allowed to lie up to ``2 days``, being "
+"this value :ref:`configurable per network <config-network-properties>`."
+msgstr ""
+":ref:`AggregateBondedTransaction <aggregate-transaction>` を送信する前に "
+"HashLockTransaction "
+"で一定のブロック量で資産をロックします。このトランザクションは決して完了しないトランザクションで部分キャッシュをスパムすることを防止します。ロック期間は"
+" ``2日`` までで、この値は :ref:`ネットワーク <config-network-properties>` ごとに設定可能です。"
+
+#: ../../source/serialization/lock_hash.rst:33
+msgid ""
+"After enough funds are locked (``10`` |networkcurrency| by default), the "
+"AggregateTransaction can be announced and added into the partial "
+"transactions cache."
+msgstr ""
+"十分な資金 (デフォルトでは ``10`` |networkcurrency|) がロックされた後、AggregateTransaction "
+"をアナウンスして部分トランザクションキャッシュに追加することができます。"
+
+#: ../../source/serialization/lock_hash.rst:35
+msgid ""
+"It's not necessary to sign the aggregate and its HashLockTransaction with "
+"the same account. For example, if Bob wants to announce an aggregate and "
+"does not have enough funds to announce a HashLockTransaction, he can ask "
+"Alice to send the hash lock funds transaction for him by sharing the signed "
+"AggregateTransaction hash."
+msgstr ""
+"アグリゲートとその HashLockTransaction に同じアカウントで署名する必要はありません。たとえば、ボブがアグリゲートをアナウンスしたいが"
+" HashLockTransaction をアナウンスするのに十分な資産がない場合、彼はアリスに署名された AggregateTransaction "
+"ハッシュを共有するハッシュロックファンドトランザクションを送信するように依頼できます。"
+
+#: ../../source/serialization/lock_hash.rst:37
+msgid ""
+"Upon completion of the aggregate, the locked funds become available in the "
+"account that signed the initial HashLockTransaction. If the "
+"AggregateBondedTransaction duration is reached without being signed by all "
+"cosignatories, the locked amount becomes a reward collected by the block "
+"harvester at the height where the lock expires."
+msgstr ""
+"アグリゲートが完了するとロックされた資金は最初の HashLockTransaction "
+"に署名したアカウントへ返還されます。すべての連署者によって署名されずに AggregateBondedTransaction "
+"が期限に到達した場合、ロックされた資産はブロックのハーベスタによってロックの有効期限が切れるブロック高でハーベストされて報酬となります。"
+
+#: ../../source/serialization/lock_hash.rst:44
+msgid "**Inlines**:"
+msgstr "**インライン**"
+
+#: ../../source/serialization/lock_hash.rst:46
+msgid ""
+":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+msgstr ""
+":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
+"transaction>`"
+
+#: ../../source/serialization/lock_hash.rst:1
+msgid "Locked mosaic."
+msgstr "ロックされたモザイク"
+
+#: ../../source/serialization/lock_hash.rst:1
+msgid "Number of blocks for which a lock should be valid."
+msgstr "ロックが有効なブロックの数。"
+
+#: ../../source/serialization/lock_hash.rst:1
+msgid ""
+"AggregateBondedTransaction hash that has to be confirmed before unlocking "
+"the mosaics."
+msgstr "モザイクをアンロックする前に、AggregateBondedTransaction ハッシュが承認されていなければなりません。"

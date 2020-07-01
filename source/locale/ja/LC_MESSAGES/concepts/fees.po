@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-11-13 15:09+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -43,7 +43,7 @@ msgstr "ネットワーク通貨"
 msgid ""
 "By default, fees are paid in the underlying currency of the |codename| "
 "network."
-msgstr "デフォルトでは、手数料は |codename| ネットワークの基礎通貨で支払われます。"
+msgstr "デフォルトでは、手数料は |codename| ネットワーク基軸通貨で支払われます。"
 
 #: ../../source/concepts/fees.rst:23
 msgid "Default network currency per network type"
@@ -57,9 +57,57 @@ msgstr "ネットワークタイプ"
 msgid "Mosaic name"
 msgstr "モザイク名"
 
+#: ../../source/concepts/fees.rst:30
+msgid ""
+"Private chains :ref:`can edit the network configuration <config-network-"
+"properties>` to eliminate fees or use another :doc:`mosaic <mosaic>` that "
+"better suits their needs."
+msgstr ""
+"プライベートチェーンでは、ニーズに合わせるために手数料を無くしたり、他の :doc:`モザイク <mosaic>` を使用するために  "
+":ref:`ネットワークの設定を編集 <config-network-properties>` できます。"
+
 #: ../../source/concepts/fees.rst:34
 msgid "Transaction fee"
 msgstr "トランザクション手数料"
+
+#: ../../source/concepts/fees.rst:36
+msgid ""
+"The fee associated with a transaction primarily depends on the size of the "
+"transaction. The effective fee deducted from the account sending the "
+"transaction is calculated as the product of the size of the transaction and "
+"a fee multiplier set by the node that harvests the block."
+msgstr ""
+"トランザクションに関連する手数料は、主としてトランザクションのサイズによって異なります。トランザクションを送信するアカウントから差し引かれる実効手数料はトランザクションのサイズとブロックをハーベストするノードによって設定される手数料乗数の積として計算されます。"
+
+#: ../../source/concepts/fees.rst:43
+msgid ""
+"A node owner :ref:`can configure the fee multiplier <node-properties>` to "
+"all positive values, including zero.  The ``fee_multiplier`` is stored in "
+"the :ref:`block header <block-header>` when the node harvests a new block, "
+"determining which was the effective fee paid for every transaction included."
+msgstr ""
+"ノード所有者は :ref:`手数料乗数 <node-properties>` を 0 "
+"を含むすべての正の値に設定できます。ノードが新しいブロックをハーベストするとき ``fee_multiplier`` は :ref:`ブロックヘッダー "
+"<block-header>` に格納され、含まれるトランザクションすべてに対して支払われた有効な手数料を決定します。"
+
+#: ../../source/concepts/fees.rst:45
+msgid ""
+"Before announcing the transaction, the sender must specify during the "
+"transaction definition a ``max_fee``, indicating the maximum fee the account"
+" allows to spend for this transaction."
+msgstr ""
+"トランザクションを送信する前に、トランザクション定義の中で ``max_fee`` "
+"を指定する必要があり、これはアカウントがこのトランザクションに費やせる最大手数料を示しています。"
+
+#: ../../source/concepts/fees.rst:47
+msgid ""
+"If the ``effective_fee`` is smaller or equal to the ``max_fee``, a harvester"
+" could opt to include the transaction in the block. The harvesting nodes "
+":ref:`can set their transaction inclusion strategy <node-properties>`:"
+msgstr ""
+"``effective_fee`` が ``max_fee`` "
+"以下の場合、ハーベスタはトランザクションをブロックに含める選択ができます。ハーベスティングノードはそれらの :ref:`トランザクションインクルード戦略"
+" <node-properties>` を設定できます:"
 
 #: ../../source/concepts/fees.rst:49
 msgid ""
@@ -79,6 +127,38 @@ msgid ""
 "**Maximize-fees**: Most common in public networks. Include first "
 "transactions with higher fees."
 msgstr "**Maximize-fees**: パブリックネットワークで最も一般的です。より高い手数料の最初のトランザクションを含みます。"
+
+#: ../../source/concepts/fees.rst:53
+msgid ""
+"To ensure that the transaction will get included without setting a "
+"``max_fee`` unnecessarily high, the sender of the transaction can ask the "
+":doc:`REST Gateway <../api>` for the median, average, highest, or lowest "
+"multiplier of the network over the last N blocks. For example, the sender "
+"could set the transaction max_fee as follows:"
+msgstr ""
+"``max_fee`` を不必要に高く設定せずにトランザクションが確実に含まれるようにするためには、トランザクション送信者は :doc:`REST "
+"ゲートウェイ <../api>` に直近 N "
+"ブロックのネットワークの乗数の中央値、平均値、最高値、または最低値を問い合わせることができます。たとえば、送信者はトランザクションの max_fee "
+"を次のように設定できます:"
+
+#: ../../source/concepts/fees.rst:71
+msgid ""
+"It is not guaranteed that the transaction will get confirmed if the "
+"multiplier used is to low. To have better chances, the sender of the "
+"transaction could opt to use any value between medianNetworkFeeMultiplier "
+"and highestFeeMultiplier instead."
+msgstr ""
+"使用する乗数が低すぎる場合、トランザクションが承認されることを保証しません。より可能性を高めるためには、トランザクション送信者が "
+"medianNetworkFeeMultiplier と highestFeeMultiplier の間で任意の値を使用します。"
+
+#: ../../source/concepts/fees.rst:73
+msgid ""
+"To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` "
+"size, it is required to know beforehand the number of participant accounts "
+"that will need to cosign the transaction."
+msgstr ""
+":doc:`アグリゲートボンデッドトランザクション <aggregate-transaction>` "
+"のサイズを決定するには、トランザクションに署名する必要がある参加者アカウントの数を事前に知っておく必要があります。"
 
 #: ../../source/concepts/fees.rst:89
 msgid "Rental fee"

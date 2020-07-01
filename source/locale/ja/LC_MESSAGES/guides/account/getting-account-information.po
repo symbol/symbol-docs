@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -49,17 +49,17 @@ msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/account/getting-account-information.rst:35
 msgid ""
-"Open a new file and call the ``getAccountInfo`` function from the "
-"``AccountHttp`` repository, passing your account's address as a parameter."
+"Open a new file and call the ``getAccountInfo`` function available in the "
+"``AccountHttp`` repository. Pass your account's address as a parameter."
 msgstr ""
-"新しいファイルを開いて、アカウントのアドレスを引数として ``AccountHttp`` リポジトリから ``getAccountInfo`` "
+"新しいファイルを開き、アカウントのアドレスを引数として ``AccountHttp`` リポジトリの持つ ``getAccountInfo`` "
 "関数を呼びます。"
 
-#: ../../source/guides/account/getting-account-information.rst:56
+#: ../../source/guides/account/getting-account-information.rst:57
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/account/getting-account-information.rst:58
+#: ../../source/guides/account/getting-account-information.rst:59
 msgid ""
 "Open a terminal window and run the following command to get the account "
 "details."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,48 +21,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/tagcloud.html:2
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:43
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:7
-msgid "Author"
-msgstr "投稿者"
-
-#: ../../source/_templates/post-meta.html:5
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/authors.html:2
-msgid "Authors"
-msgstr "投稿者"
-
-#: ../../source/_templates/navbar.html:39
-msgid "Navigation"
-msgstr "ナビゲーション"
-
-#: ../../source/_templates/catalog.html:3
-msgid "Guides"
-msgstr "ガイド"
-
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/recentposts.html:2
-msgid "Recent Posts"
-msgstr "最近の投稿"
-
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/categories.html:2
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:7
-msgid "Previous"
-msgstr "前へ"
-
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:17
-msgid "Next"
-msgstr "次へ"
-
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:2
 msgid "Update"
 msgstr "更新"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:7
+#: ../../source/_templates/post-meta.html:5
+msgid "Author"
+msgstr "投稿者"
 
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:16
 msgid "Location"
@@ -76,47 +46,105 @@ msgstr "言語"
 msgid "Category"
 msgstr "カテゴリ"
 
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:43
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/tagcloud.html:2
+msgid "Tags"
+msgstr "タグ"
+
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:44
 msgid "Tag"
 msgstr "タグ"
-
-#: ../../source/_templates/layout.html:43
-msgid "On this page"
-msgstr "このページ"
-
-#: ../../source/_templates/layout.html:76
-msgid "Did you find what you were looking for?"
-msgstr "お探しのものは見つかりましたか？"
-
-#: ../../source/_templates/layout.html:77
-msgid "Give us your feedback."
-msgstr "フィードバックをください。"
-
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
 
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/languages.html:2
 msgid "Languages"
 msgstr "言語"
 
+#: ../../source/_templates/include/navbar-right.html:3
+msgid "Getting Started"
+msgstr "入門"
+
+#: ../../source/_templates/include/navbar-right.html:6
+msgid "Features"
+msgstr "機能"
+
+#: ../../source/_templates/include/navbar-right.html:9
+#: ../../source/_templates/catalog.html:3
+#: ../../source/_templates/catalog.html:7
+msgid "Guides"
+msgstr "ガイド"
+
+#: ../../source/_templates/include/navbar-right.html:12
+msgid "Tools"
+msgstr "ツール"
+
+#: ../../source/_templates/include/navbar-right.html:15
+msgid "Contribute"
+msgstr "貢献"
+
+#: ../../source/_templates/catalog.html:8
+msgid ""
+"Step-by-step tutorials on how to use the tools, integrate Symbol with other "
+"technologies, and combine the built-in features to architect solutions."
+msgstr ""
+"チュートリアルでは、ツールの使用方法、Symbol "
+"と他のテクノロジーの統合方法、およびビルドイン機能をアーキテクトソリューションに組み合わせる方法について段階的に説明しています。"
+
+#: ../../source/_templates/catalog.html:17
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/collection.html:48
+#: ../../source/_templates/collection.html:19
+msgid "Read more ..."
+msgstr "詳細を見る"
+
+#: ../../source/_templates/layout.html:43
+#: ../../source/_templates/layout.html:60
+msgid "On this page"
+msgstr "このページ"
+
+#: ../../source/_templates/layout.html:94
+msgid "Did you find what you were looking for?"
+msgstr "お探しのものは見つかりましたか？"
+
+#: ../../source/_templates/layout.html:95
+msgid "Give us your feedback."
+msgstr "フィードバックをください。"
+
+#: ../../source/_templates/include/edit-github.html:2
+msgid "Improve this page"
+msgstr "このページを加筆修正する"
+
+#: ../../source/_templates/post-meta.html:5
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/authors.html:2
+msgid "Authors"
+msgstr "投稿者"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
+
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/locations.html:2
 msgid "Locations"
 msgstr "場所"
 
-#: ../../source/_templates/include/edit-github.html:2
-msgid "Improve this page"
-msgstr "このページにを加筆修正する"
+#: ../../source/_templates/include/language.html:7
+msgid "Translate"
+msgstr "翻訳する"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:7
+msgid "Previous"
+msgstr "前へ"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:17
+msgid "Next"
+msgstr "次へ"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/recentposts.html:2
+msgid "Recent Posts"
+msgstr "最近の投稿"
 
 #: ../../source/_templates/collection.html:4
 msgid "guides"
 msgstr "ガイド"
 
-#: ../../source/_templates/collection.html:19
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/collection.html:48
-msgid "Read more ..."
-msgstr "もっと読む"
-
-#: ../../source/_templates/include/language.html:7
-msgid "Translate"
-msgstr "翻訳する"
+#: ../../source/_templates/navbar.html:39
+msgid "Navigation"
+msgstr "ナビゲーション"

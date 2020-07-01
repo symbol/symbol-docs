@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:50+0000\n"
+"POT-Creation-Date: 2020-06-26 09:12+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -283,44 +283,8 @@ msgstr ""
 "はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。"
 
 #: ../../source/concepts/multisig-account.rst:137
-msgid "Guides"
-msgstr "ガイド"
-
-#: ../../source/concepts/multisig-account.rst:149
-msgid "Transaction schemas"
-msgstr "トランザクションスキーマ"
-
-#: ../../source/concepts/multisig-account.rst:156
-msgid "Announce a MultisigAccountModificationTransaction to:"
-msgstr "MultisigAccountModificationTransaction のアナウンス:"
-
-#: ../../source/concepts/multisig-account.rst:158
-msgid "Transform an account to multisig account."
-msgstr "マルチシグアカウントへの変換"
-
-#: ../../source/concepts/multisig-account.rst:159
-msgid "Change the configurable properties of a multisig account."
-msgstr "マルチシグアカウントの設定可能なプロパティを変更"
-
-#: ../../source/concepts/multisig-account.rst:160
-msgid "Add or delete cosignatories from a multisig account."
-msgstr "マルチシグアカウントから連署者の追加または削除"
-
-#: ../../source/concepts/multisig-account.rst:166
-msgid "**Inlines**:"
-msgstr "**インライン**"
-
-#: ../../source/concepts/multisig-account.rst:168
-msgid ""
-":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-msgstr ""
-":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
-"transaction>`"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Property"
-msgstr "プロパティ"
+msgid "Related transactions"
+msgstr "関連トランザクション"
 
 #: ../../source/concepts/multisig-account.rst:1
 msgid "Type"
@@ -331,39 +295,13 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/multisig-account.rst:1
-msgid ""
-"Number of signatures needed to remove a cosignatory. If we are modifying an "
-"existing multisig account, this indicates the relative change of the minimum"
-" cosignatories."
-msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
+msgid "Create or modify a multisig contract."
+msgstr "マルチシグコントラクトの作成と変更"
 
-#: ../../source/concepts/multisig-account.rst:1
-msgid ""
-"Number of signatures needed to approve a transaction. If we are modifying an"
-" existing multisig account, this indicates the relative change of the "
-"minimum cosignatories."
-msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
+#: ../../source/concepts/multisig-account.rst:148
+msgid "Guides"
+msgstr "ガイド"
 
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Number of cosignatory public key additions."
-msgstr "連署者公開鍵追加数"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Number of cosignatory public key deletions."
-msgstr "連署者公開鍵削除数"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Reserved padding to align publicKeyAdditions on 8-byte boundary."
-msgstr "publicKeyAdditions を 8 バイト境界に揃えた予約パディング"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Cosignatory public key additions."
-msgstr "連署者公開鍵追加"
-
-#: ../../source/concepts/multisig-account.rst:1
-msgid "Cosignatory public key deletions."
-msgstr "連署者公開鍵削除"
-
-#: ../../source/concepts/multisig-account.rst:182
+#: ../../source/concepts/multisig-account.rst:158
 msgid "Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`."
 msgstr "次項: :doc:`クロスチェーンスワップ <cross-chain-swaps>`"
