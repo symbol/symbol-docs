@@ -15,8 +15,9 @@ Account Key Link
 AccountKeyLinkTransaction
 =========================
 
+This transaction is required for all accounts willing to activate delegated harvesting.
+
 Announce an AccountKeyLinkTransaction to delegate the account importance score to a proxy account.
-Required for all accounts willing to activate delegated harvesting.
 
 **Version**: 0x01
 
@@ -56,9 +57,9 @@ Node Key Link
 NodeKeyLinkTransaction
 ======================
 
+This transaction is required for all node operators.
+
 Announce a NodeKeyLinkTransaction to link a public key to an account.
-TLS uses the linked public key to create sessions.
-Required for node operators.
 
 **Version**: 0x01
 
