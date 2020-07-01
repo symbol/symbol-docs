@@ -33,7 +33,7 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
 
 * Codes in the ``2xx`` range indicate success.
 * Codes in the ``4xx`` range indicate an error occurred with the information provided by the user.
-* Codes in the ``5xx`` range indicate an error with Symbol's server.
+* Codes in the ``5xx`` range indicate an error with the node.
 
 .. csv-table:: HTTP Status Code Summary
     :header: "Error Code", "Response", "Description"
@@ -44,8 +44,8 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
     400; InvalidContent;  The provided argument was not of an acceptable type of input.
     404; ResourceNotFound; The requested resource does not exist.
     409; InvalidArgument; The required arguments were missing or unacceptable for the request.
-    500; InternalServiceError; An error occurred within the Symbol server.
-    503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST server.
+    500; InternalServiceError; An error occurred within the REST Gateway.
+    503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
 
 **********
 WebSockets
