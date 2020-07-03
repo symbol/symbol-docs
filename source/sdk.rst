@@ -66,15 +66,3 @@ The reason behind the |NIP| is to ensure that:
 .. |NIP| raw:: html
 
    <a href="https://github.com/nemtech/NIP" target="_blank">NEM Improvement Proposal</a>
-
-******
-Guides
-******
-
-.. postlist::
-    :tags: SDK
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:
