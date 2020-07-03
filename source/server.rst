@@ -95,7 +95,7 @@ If you want the save the output, add an output stream at the end:
 catapult.tools.nemgen
 =====================
 
-Creates a nemesis block out of a `mijin-test.properties  <https://github.com/nemtech/catapult-server/blob/master/tools/nemgen/resources/mijin-test.properties>`_ file. The output generated is used to start a new chain.
+Creates a nemesis block out of a `mijin-test.properties  <https://github.com/nemtech/catapult-server/blob/main/tools/nemgen/resources/mijin-test.properties>`_ file. The output generated is used to start a new chain.
 
 Options
 
@@ -217,7 +217,7 @@ Options
 
 .. |instructions| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/docs/README.md" target="_blank">instructions</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/docs/README.md" target="_blank">instructions</a>
 
 .. |whitepaper| raw:: html
 
