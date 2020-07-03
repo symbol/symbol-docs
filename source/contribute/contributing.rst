@@ -7,6 +7,12 @@ Follow these guidelines for contributing to |codename| projects, achieving the b
 
 .. note:: If you want to contribute to an existent project, read as well the CONTRIBUTING.md file that you will find at the root-level folder of the project.
 
+******
+Server
+******
+
+* `Notes for developers <https://github.com/nemtech/catapult-server/blob/main/docs/README.md>`_
+
 ***
 SDK
 ***
