@@ -24,10 +24,8 @@ You can refer to the next documentation to get the list of available endpoints.
 .. ghreference:: nemtech/symbol-openapi
     :folder:
 
-.. _websockets:
-
-Errors
-======
+Response codes
+==============
 
 Symbol uses conventional HTTP response codes to indicate the success or failure of an API request.
 
@@ -46,6 +44,8 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
     409; InvalidArgument; The required arguments were missing or unacceptable for the request.
     500; InternalServiceError; An error occurred within the REST Gateway.
     503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
+
+.. _websockets:
 
 **********
 WebSockets
