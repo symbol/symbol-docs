@@ -69,6 +69,8 @@ At this point, you might want to do some extra checks, like verifying the conten
 3. If everything looks ok, cosign the transaction with the signer account.  
 Finally, announce the cosignature to network with ``transactionHttp.announceAggregateBondedCosignature``.
 
+Once all the participants cosign the transaction, the transaction will be included in a block.
+
 *************************
 Method #03: Using the CLI
 *************************

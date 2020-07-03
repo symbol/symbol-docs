@@ -24,6 +24,27 @@ You can refer to the next documentation to get the list of available endpoints.
 .. ghreference:: nemtech/symbol-openapi
     :folder:
 
+Response codes
+==============
+
+Symbol uses conventional HTTP response codes to indicate the success or failure of an API request.
+
+* Codes in the ``2xx`` range indicate success.
+* Codes in the ``4xx`` range indicate an error occurred with the information provided by the user.
+* Codes in the ``5xx`` range indicate an error with the node.
+
+.. csv-table:: HTTP Status Code Summary
+    :header: "Error Code", "Response", "Description"
+    :delim: ;
+
+    200; OK; Everything worked as expected.
+    202; Accepted; The request has been accepted, but the processing has not been completed.
+    400; InvalidContent;  The provided argument was not of an acceptable type of input.
+    404; ResourceNotFound; The requested resource does not exist.
+    409; InvalidArgument; The required arguments were missing or unacceptable for the request.
+    500; InternalServiceError; An error occurred within the REST Gateway.
+    503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
+
 .. _websockets:
 
 **********

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-19 18:20+0000\n"
+"POT-Creation-Date: 2020-07-02 08:42+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -66,7 +66,78 @@ msgid ""
 "endpoints."
 msgstr "次のドキュメントを参照して、使用可能なエンドポイントのリストを取得できます。"
 
-#: ../../source/api.rst:42
+#: ../../source/api.rst:39
+msgid "Errors"
+msgstr "エラー"
+
+#: ../../source/api.rst:41
+msgid ""
+"Symbol uses conventional HTTP response codes to indicate the success or "
+"failure of an API request."
+msgstr "Symbol は従来の HTTP レスポンスコードを使用して、API リクエストの成功または失敗を示します。"
+
+#: ../../source/api.rst:43
+msgid "Codes in the ``2xx`` range indicate success."
+msgstr "``2xx`` 番台コードは成功を示します。"
+
+#: ../../source/api.rst:44
+msgid ""
+"Codes in the ``4xx`` range indicate an error occurred with the information "
+"provided by the user."
+msgstr "``4xx`` 番台コードはユーザーが提供した情報でエラーが発生したことを示します。"
+
+#: ../../source/api.rst:45
+msgid "Codes in the ``5xx`` range indicate an error with the node."
+msgstr "``5xx`` 番台のコードはノードのエラーを示します。"
+
+#: ../../source/api.rst:47
+msgid "HTTP Status Code Summary"
+msgstr "HTTP ステータスコード概要"
+
+#: ../../source/api.rst:1
+msgid "Error Code"
+msgstr "エラーコード"
+
+#: ../../source/api.rst:1
+msgid "Response"
+msgstr "レスポンス"
+
+#: ../../source/api.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/api.rst:1
+msgid "Everything worked as expected."
+msgstr "すべて想定通りに稼働している"
+
+#: ../../source/api.rst:1
+msgid ""
+"The request has been accepted, but the processing has not been completed."
+msgstr "リクエストは受理されましたが、処理は完了していません。"
+
+#: ../../source/api.rst:1
+msgid "The provided argument was not of an acceptable type of input."
+msgstr "提供された引数は、許容できるタイプの入力ではありませんでした"
+
+#: ../../source/api.rst:1
+msgid "The requested resource does not exist."
+msgstr "リクエストしたリソースは存在しません。"
+
+#: ../../source/api.rst:1
+msgid "The required arguments were missing or unacceptable for the request."
+msgstr "リクエストに必要な引数が欠落しているか、受け入れられませんでした"
+
+#: ../../source/api.rst:1
+msgid "An error occurred within the REST Gateway."
+msgstr "REST ゲートウェイでエラーが発生しました"
+
+#: ../../source/api.rst:1
+msgid ""
+"Either API node or database service is unavailable or unreachable from the "
+"REST Gateway."
+msgstr "API ノードまたはデータベースサービスのいずれかが REST ゲートウェイから使用できないか、到達できません"
+
+#: ../../source/api.rst:63
 msgid ""
 "To get **live updates** when an event occurs on the blockchain, Catapult "
 "REST publishes WebSockets. Client applications can open a WebSocket "
@@ -81,29 +152,29 @@ msgstr ""
 "を絶えずポーリングするのではなく、使用可能なチャンネルを購読する資格を得ます。チャンネルでイベントが発生すると REST "
 "ゲートウェイは購読しているすべてのクライアントにリアルタイムで通知を送信します。"
 
-#: ../../source/api.rst:47
+#: ../../source/api.rst:68
 msgid ""
 "WebSocket URIs share the same host and port as the HTTP requests URIs, but "
 "use the ``ws://`` protocol:"
 msgstr ""
 "WebSocket URI は HTTP リクエスト URI と同じホストとポートを共有しますが ``ws://`` プロトコルを使用します:"
 
-#: ../../source/api.rst:51
+#: ../../source/api.rst:72
 msgid ""
 "Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain"
 "/listening-new-blocks>`"
 msgstr ""
 "ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
-#: ../../source/api.rst:54
+#: ../../source/api.rst:75
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:56
+#: ../../source/api.rst:77
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:58
+#: ../../source/api.rst:79
 msgid ""
 "The block channel notifies for every subscribed client every time there is a"
 " new harvested block. The messages returned contain information about the "
@@ -111,19 +182,19 @@ msgid ""
 msgstr ""
 "ブロックチャンネルは、新しくハーベストされたブロックがあるたびに、購読しているすべてのクライアントに通知します。返されるメッセージにはブロックに関する情報が含まれています"
 
-#: ../../source/api.rst:61 ../../source/api.rst:79 ../../source/api.rst:99
-#: ../../source/api.rst:119 ../../source/api.rst:137 ../../source/api.rst:157
-#: ../../source/api.rst:175 ../../source/api.rst:193
+#: ../../source/api.rst:82 ../../source/api.rst:100 ../../source/api.rst:120
+#: ../../source/api.rst:140 ../../source/api.rst:158 ../../source/api.rst:178
+#: ../../source/api.rst:196 ../../source/api.rst:214
 msgid "*Request body*"
 msgstr "*リクエストボディ*"
 
-#: ../../source/api.rst:70 ../../source/api.rst:88 ../../source/api.rst:108
-#: ../../source/api.rst:128 ../../source/api.rst:146 ../../source/api.rst:166
-#: ../../source/api.rst:184 ../../source/api.rst:202
+#: ../../source/api.rst:91 ../../source/api.rst:109 ../../source/api.rst:129
+#: ../../source/api.rst:149 ../../source/api.rst:167 ../../source/api.rst:187
+#: ../../source/api.rst:205 ../../source/api.rst:223
 msgid "*Response format*"
 msgstr "*レスポンスフォーマット*"
 
-#: ../../source/api.rst:76
+#: ../../source/api.rst:97
 msgid ""
 "The confirmedAdded channel notifies when a transaction related to an address"
 " is included in a block. The messages returned contain information about the"
@@ -131,7 +202,7 @@ msgid ""
 msgstr ""
 "承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。返されるメッセージには、承認済みのトランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:94
+#: ../../source/api.rst:115
 msgid ""
 "The unconfirmedAdded channel notifies when a transaction related to an "
 "address gets the unconfirmed state, waiting to be included in a block. The "
@@ -139,7 +210,7 @@ msgid ""
 msgstr ""
 "未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。返されるメッセージには、未承認のトランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:97
+#: ../../source/api.rst:118
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction is "
 "announced to the network via ``PUT /transaction`` HTTP endpoint or an "
@@ -150,7 +221,7 @@ msgstr ""
 "エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、partial "
 "から未承認へ変わるとき、このチャンネルからの通知が届く可能性があります。"
 
-#: ../../source/api.rst:114
+#: ../../source/api.rst:135
 msgid ""
 "The unconfirmedRemoved channel notifies when a transaction related to an "
 "address had the unconfirmed state, but not anymore. The messages returned "
@@ -158,14 +229,14 @@ msgid ""
 msgstr ""
 "未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:117
+#: ../../source/api.rst:138
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is "
 "confirmed, or the deadline has been reached, and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
 
-#: ../../source/api.rst:134
+#: ../../source/api.rst:155
 msgid ""
 "The partialAdded channel notifies when an AggregateBondedTransaction related"
 " to an address reaches the partial state, waiting to have all required "
@@ -174,7 +245,7 @@ msgstr ""
 "パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが partial "
 "な状態にあり、すべての必要な連署者を待機しているときに通知を行います。返されるメッセージには、トランザクションに関する情報が含まれています。"
 
-#: ../../source/api.rst:152
+#: ../../source/api.rst:173
 msgid ""
 "The partialRemoved channel notifies when a transaction related to an address"
 " had the partial state, but is not anymore. The messages returned contain "
@@ -182,14 +253,14 @@ msgid ""
 msgstr ""
 "パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:155
+#: ../../source/api.rst:176
 msgid ""
 "Possible scenarios when this channel notifies are: the transaction now is "
 "unconfirmed, or the deadline has been reached, and it was not included in a "
 "block."
 msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに含まれなくなったときです。"
 
-#: ../../source/api.rst:172
+#: ../../source/api.rst:193
 msgid ""
 "The cosignature channel notifies when a cosignature signed transaction "
 "related to an address is added to an AggregateBondedTransaction with the "
@@ -199,7 +270,7 @@ msgstr ""
 "連署チャネルはアドレスに関連する *連署署名トランザクション* "
 "が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。返されるメッセージには、署名済み署名付きトランザクションが含まれています。"
 
-#: ../../source/api.rst:190
+#: ../../source/api.rst:211
 msgid ""
 "The status channel notifies when a transaction related to an address rises "
 "an error. The messages returned contain the error messages and the "

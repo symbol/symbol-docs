@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-19 18:20+0000\n"
+"POT-Creation-Date: 2020-07-02 08:42+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -127,49 +127,61 @@ msgid ""
 "and Wallets."
 msgstr "API、SDK、CLI、ウォレットの詳細についてはリファレンスドキュメントをご覧ください。"
 
+#: ../../source/index.rst:49
+msgid ":doc:`Tools <references/overview>`"
+msgstr ":doc:`ツール <references/overview>`"
+
+#: ../../source/index.rst:50
+msgid ":doc:`Server <server>`"
+msgstr ":doc:`サーバ <server>`"
+
 #: ../../source/index.rst:51
+msgid ":doc:`REST API <api>`"
+msgstr ":doc:`REST API <api>`"
+
+#: ../../source/index.rst:52
 msgid ":doc:`Software Development Kits <api>`"
 msgstr ":doc:`ソフトウェア開発キット <api>`"
 
-#: ../../source/index.rst:52
+#: ../../source/index.rst:53
 msgid ":doc:`Command-line Interface <cli>`"
 msgstr ":doc:`コマンドラインインターフェイス <cli>`"
 
-#: ../../source/index.rst:53
+#: ../../source/index.rst:54
 msgid ":doc:`Wallets <wallets>`"
 msgstr ":doc:`ウォレット <wallets>`"
 
-#: ../../source/index.rst:57
+#: ../../source/index.rst:58
 msgid "Contributing to Symbol"
 msgstr "Symbol へ貢献する"
 
-#: ../../source/index.rst:59
+#: ../../source/index.rst:60
 msgid ""
 "|codename| is an |open-source| project. Discover how our |community| is "
 "organized, and get started participating:"
 msgstr ""
 "|codename| は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
 
-#: ../../source/index.rst:62
+#: ../../source/index.rst:63
 msgid "Reach our community joining the official |slack|"
 msgstr "私達の公式 |slack| に参加してください。"
 
-#: ../../source/index.rst:63
+#: ../../source/index.rst:64
 msgid ""
 "Check the :doc:`contributing guidelines <guidelines/suggesting-changes>` to "
 "propose changes"
 msgstr ""
 "変更を提案するためには :doc:`貢献ガイドライン <guidelines/suggesting-changes>` を確認してください。"
 
-#: ../../source/index.rst:64
+#: ../../source/index.rst:65
 msgid "Follow the development updates on |twitter|"
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/index.rst:65
+#: ../../source/index.rst:66
 msgid "Explore our |github| repositories"
 msgstr "|github| リポジトリを探索しましょう。"
 
-#: ../../source/index.rst:67
+#: ../../source/index.rst:68
 msgid ""
 "Continue: :doc:`Setting up your workstation <getting-started/setup-"
 "workstation>`."

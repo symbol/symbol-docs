@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-19 18:20+0000\n"
+"POT-Creation-Date: 2020-07-02 08:42+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -185,6 +185,20 @@ msgstr ""
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Set to true if transaction spam throttling should be enabled."
 msgstr "true の場合、スパムスロットルが有効になります。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Maximum fee that will boost a transaction through the spam throttle when "
+"spam throttling is enabled."
+msgstr "スパムスロットルが有効な場合、スパムスロットルを介してのトランザクションをブーストさせる最大手数料。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum number of blocks per sync attempt."
+msgstr "同期試行ごとの最大ブロック数。"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum chain bytes per sync attempt."
+msgstr "同期試行あたりの最大チェーンバイト。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Maximum number of nodes to track in memory."
