@@ -12,6 +12,7 @@ Server
 ******
 
 * `Notes for developers <https://github.com/nemtech/catapult-server/blob/main/docs/README.md>`_
+* :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
 
 ***
 SDK
@@ -21,7 +22,6 @@ SDK
 * :doc:`Developing an SDK <../guidelines/sdk-development>`
 * :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
 * :doc:`Generating transaction builders <../guidelines/generating-transaction-builders>`
-* :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
 
 *************
 Documentation
