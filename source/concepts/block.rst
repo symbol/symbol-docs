@@ -78,6 +78,10 @@ For every block, a sorting algorithm selects zero, one, or multiple accounts to 
 Then, the committee selection algorithm verifies the eligible accounts to vote on the finality of the proposed block.
 If the proposed block matches the node records, verified accounts will cast a positive vote to tag the block as finalized.
 
+The eligibility for voting has 2 requirements:
+#. Has at least minVoterBalance network currency units.
+#. Registered as a voter by announcing a VotingKeyLinkTransaction
+
 A block can be reversed until 2/3 of the stakes registered to vote have marked it as finalized.
 After that point, the transactions linked to the block are permanently recorded on the blockchain.
 
