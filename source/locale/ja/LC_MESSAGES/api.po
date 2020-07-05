@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-02 08:42+0000\n"
+"POT-Creation-Date: 2020-07-03 17:38+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -66,31 +66,31 @@ msgid ""
 "endpoints."
 msgstr "次のドキュメントを参照して、使用可能なエンドポイントのリストを取得できます。"
 
-#: ../../source/api.rst:39
-msgid "Errors"
-msgstr "エラー"
+#: ../../source/api.rst:37
+msgid "Response codes"
+msgstr "レスポンスコード"
 
-#: ../../source/api.rst:41
+#: ../../source/api.rst:39
 msgid ""
 "Symbol uses conventional HTTP response codes to indicate the success or "
 "failure of an API request."
 msgstr "Symbol は従来の HTTP レスポンスコードを使用して、API リクエストの成功または失敗を示します。"
 
-#: ../../source/api.rst:43
+#: ../../source/api.rst:41
 msgid "Codes in the ``2xx`` range indicate success."
 msgstr "``2xx`` 番台コードは成功を示します。"
 
-#: ../../source/api.rst:44
+#: ../../source/api.rst:42
 msgid ""
 "Codes in the ``4xx`` range indicate an error occurred with the information "
 "provided by the user."
 msgstr "``4xx`` 番台コードはユーザーが提供した情報でエラーが発生したことを示します。"
 
-#: ../../source/api.rst:45
+#: ../../source/api.rst:43
 msgid "Codes in the ``5xx`` range indicate an error with the node."
 msgstr "``5xx`` 番台のコードはノードのエラーを示します。"
 
-#: ../../source/api.rst:47
+#: ../../source/api.rst:45
 msgid "HTTP Status Code Summary"
 msgstr "HTTP ステータスコード概要"
 
