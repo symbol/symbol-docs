@@ -51,27 +51,41 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
 Pagination
 **********
 
-All **GET** requests through the Symbol API are paginated by default, but a user can customize the query parameters for their convenience.
+When a query returns more than one result, the REST Gateway paginates the responses by default.
+The query parameters can be customized to advance through the pages and filter the contents returned.
 
-Each collection has a different set of available parameters.
-The following table displays the general parameters available:
+Each pageable endpoint defines its own set of filters.
+However, the following table shows the query params present in every searchable endpoint:
 
 .. csv-table::
-    :header: "Query Parameter", "Type", "Description", "Default"
+    :header: "Query Parameter", "Type", "Description", "Default", "Example"
     :delim: ;
 
-    pageSize; integer ``[0..100]``; Selects the number of entries to return.; ``10``
-    pageNumber; integer ``>=1``; Filters by page number; ``1``
-    offset; string; Identifies the entry at which to start pagination. If the ordering parameter is set to -id, the elements returned precede the identifier. Otherwise, newer elements with respect to the id are returned.
-    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id.; "desc"
-    orderBy; string; Chooses to sort by height or id. Parameter specific to pagination for block related queries.
+    pageSize; integer ``[10..100]``; Selects the number of entries to return.; ``10``; ``http://localhost:3000/blocks?pageSize=100`` returns 100 block entries per page.
+    pageNumber; integer ``>=1``; Filters by page number; ``1``;  ``http://localhost:3000/blocks?page=2`` returns page 2 (with 10 entries per page as default).
+    offset; string; Identifies the entry at which to start pagination.; NA; ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03`` returns block entires starting with block id ``EE94FD819A1B30D6C5D1C03``.
+    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id.; "desc"; ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.
+    orderBy; string; Chooses the parameter to sort by. By default, all the collections are sortable by id, but the collection could define additional properties.
 
 Multiple query parameters can be combined in the same call.
-For example, ``localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` will return 60 block entries per page starting with block id ``EE94FD819A1B30D6C5D1C03``.
+For example, ``http://localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` will return 100 block entries per page starting with block id ``EE94FD819A1B30D6C5D1C03``.
 
-Responses will also include metainfo about the pagination.
+The responses also include meta-information about the pagination total number of entries, current page number, and the total number of pages.
+Here is an example response meta-information of the pagination:
 
-More information about query routes and their parameters can be found `here <https://nemtech.github.io/symbol-openapi/v0.9.2/>`_.
+``{
+    "data": [
+      {}
+    ],
+    "pagination": {
+      "pageNumber": 0,
+      "pageSize": 0,
+      "totalEntries": 0,
+      "totalPages": 0
+    }
+  }``
+
+Find more information about query routes and their parameters 'here <https://nemtech.github.io/symbol-openapi/v0.9.2/>_.'
 
 **********
 WebSockets
