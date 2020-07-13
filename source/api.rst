@@ -58,13 +58,13 @@ Each pageable endpoint defines its own set of filters.
 However, the following table shows the query params present in every searchable endpoint:
 
 .. csv-table::
-    :header: "Query Parameter", "Type", "Description", "Default", "Example"
+    :header: "Query Parameter", "Type", "Description", "Default"
     :delim: ;
 
-    pageSize; integer ``[10..100]``; Selects the number of entries to return.; ``10``; ``http://localhost:3000/blocks?pageSize=100`` returns 100 block entries per page.
-    pageNumber; integer ``>=1``; Filters by page number; ``1``;  ``http://localhost:3000/blocks?page=2`` returns page 2 (with 10 entries per page as default).
-    offset; string; Identifies the entry at which to start pagination.; NA; ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03`` returns block entires starting with block id ``EE94FD819A1B30D6C5D1C03``.
-    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id.; "desc"; ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.
+    pageSize; integer ``[10..100]``; Selects the number of entries to return. Example: ``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per page; ``10``
+    pageNumber; integer ``>=1``; Filters by page number. Example: ``http://localhost:3000/blocks?page=2`` returns page 2; ``1``
+    offset; string; Identifies the entry at which to start pagination. Example: ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``.;
+    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; "desc"
     orderBy; string; Chooses the parameter to sort by. By default, all the collections are sortable by id, but the collection could define additional properties.
 
 Multiple query parameters can be combined in the same call.
@@ -73,7 +73,9 @@ For example, ``http://localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1
 The responses also include meta-information about the pagination total number of entries, current page number, and the total number of pages.
 Here is an example response meta-information of the pagination:
 
-``{
+.. code-block:: json
+
+  {
     "data": [
       {}
     ],
@@ -83,7 +85,7 @@ Here is an example response meta-information of the pagination:
       "totalEntries": 0,
       "totalPages": 0
     }
-  }``
+  }
 
 Find more information about query routes and their parameters 'here <https://nemtech.github.io/symbol-openapi/v0.9.2/>_.'
 
