@@ -47,7 +47,7 @@ If you get an error or the version returned does not match v12.X, visit |node-js
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
     Select an import type: » PrivateKey
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000/
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.096x.symboldev.network:3000/
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -101,7 +101,7 @@ After the transaction gets confirmed, check if your account has received |networ
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 05D6A80DE3C9ADCA │ 750.0           │ 750000000       | Never             │
+    │ 5E62990DCAC5BE8A │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 .. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries. If you don’t need your test |networkcurrency| units anymore, please send them back to the account ``TA6W43-2Q3NHN-Q5HQSK-Q52XL7-MFJZQI-TJRYBI-LQGG``.
@@ -211,12 +211,12 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer-951.symboldev.network/nodes" target="_blank">this list</a>
+   <a href="http://explorer-96x.symboldev.network/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet-951-01.symboldev.network/" target="_blank">Navigate here</a>
+   <a href="http://faucet-96x-01.symboldev.network/" target="_blank">Navigate here</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-951-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-96x-02.symboldev.network/" target="_blank">alternative faucet</a>

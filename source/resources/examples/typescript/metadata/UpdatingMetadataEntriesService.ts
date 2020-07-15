@@ -47,7 +47,7 @@ const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 
@@ -67,7 +67,7 @@ const accountMetadataTransaction = metadataService.createMetadataTransaction(
 
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedAggregateTransaction = accountMetadataTransaction
     .pipe(
         mergeMap((transaction) => {
@@ -89,7 +89,7 @@ interface SignedAggregateHashLock {
 }
 
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 

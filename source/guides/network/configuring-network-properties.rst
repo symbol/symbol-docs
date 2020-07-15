@@ -33,14 +33,14 @@ config-network.properties
     **network**; ; ; ;
     identifier; NetworkIdentifier; Network identifier.; mijin-test; public-test
     nodeEqualityStrategy; NodeIdentityEqualityStrategy; Node equality strategy.; host; host
-    nemesisSignerPublicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF; 392FF0ABA6C4BE82C0D1C4C7E399D396A0F51AD8E3EF1FC28070249C1D8D812E
-    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6; 4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2
+    nemesisSignerPublicKey; Key; Nemesis public key.; B4F12E7C9F6946091E2CB8B6D3A12B50D17CCBBF646386EA27CE2946A7423DCF;
+    generationHash; catapult::GenerationHash; Nemesis generation hash.; 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6;
     epochAdjustment; utils::TimeSpan; Nemesis epoch time adjustment.; 1573430400s; 1573430400s
     **chain**; ; ; ;
     enableVerifiableState; bool; Set to true if block chain should calculate state hashes so that state is fully verifiable at each block.; true; true
     enableVerifiableReceipts; bool; Set to true if block chain should calculate receipts so that state changes are fully verifiable at each block.; true; true
-    currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x24F4'26B8'D549'3D4B; 0x05D6'A80D'E3C9'ADCA
-    harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x1D9C'DC7E'218C'A88D; 0x05D6'A80D'E3C9'ADCA
+    currencyMosaicId; MosaicId; Mosaic id used as primary chain currency.; 0x24F4'26B8'D549'3D4B;
+    harvestingMosaicId; MosaicId; Mosaic id used to provide harvesting ability.; 0x1D9C'DC7E'218C'A88D;
     blockGenerationTargetTime; utils::TimeSpan; Targeted time between blocks.; 30s; 15s
     blockTimeSmoothingFactor; uint32_t; *Note*: A higher value makes the network more biased. *Note*: This can lower security because it will increase the influence of time relative to importance.; 3000; 3000
     blockFinalizationInterval; uint32_t; Number of blocks between successive finalization attempts.; 30;

@@ -96,7 +96,7 @@ You should see on your screen a line similar to:
     ┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
     │ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
     ├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
-    │ 05D6A80DE3C9ADCA │ 750.0           │ 750000000       │ Never             │
+    │ 5E62990DCAC5BE8A │ 750.0           │ 750000000       │ Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
 This account owns 750 |networkcurrency| relative units.
@@ -106,7 +106,7 @@ If your row after "Balance Information" is empty, follow the :doc:`previous guid
 
 .. code-block:: bash
 
-    symbol-cli account generate --network TEST_NET --save --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --profile customer
+    symbol-cli account generate --network TEST_NET --save --url http://api-01.us-east-1.096x.symboldev.network:3000 --profile customer
 
     New Account
 

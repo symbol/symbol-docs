@@ -29,7 +29,7 @@ const ignored = TransferTransaction.create(
     recipientAddress,
     /* start block 01 */
     [new Mosaic( new MosaicId('7CDF3B117A3C40CC'), UInt64.fromUint(1000)),
-        new Mosaic ( new MosaicId('05D6A80DE3C9ADCA'), UInt64.fromUint(10 * Math.pow(10, 6)))],
+        new Mosaic ( new MosaicId('5E62990DCAC5BE8A'), UInt64.fromUint(10 * Math.pow(10, 6)))],
     /* end block 01 */
     PlainMessage.create('This is a test message'),
     networkType,

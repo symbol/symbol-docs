@@ -32,7 +32,7 @@ const ticketMosaicId = new symbol_sdk_1.MosaicId('7cdf3b117a3c40cc');
 // replace with ticket mosaic id divisibility
 const ticketDivisibility = 0;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const aliceToTicketDistributorTx = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), ticketDistributorPublicAccount.address, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'), networkType);
@@ -42,7 +42,7 @@ const ticketDistributorToAliceTx = symbol_sdk_1.TransferTransaction.create(symbo
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
     ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
@@ -50,7 +50,7 @@ console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

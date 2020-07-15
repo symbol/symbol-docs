@@ -24,7 +24,7 @@ const validTransaction = (transaction, publicAccount) => {
     return transaction instanceof symbol_sdk_1.TransferTransaction &&
         transaction.signer.equals(publicAccount) &&
         transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA') ||
+        (transaction.mosaics[0].id.equals(new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A') ||
             transaction.mosaics[0].id.equals(new symbol_sdk_1.NamespaceId('symbol.xym')))) &&
         transaction.mosaics[0].amount.compare(symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
 };
@@ -38,7 +38,7 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();

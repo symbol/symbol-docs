@@ -22,7 +22,7 @@ import {NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
 // replace with namespace name
 const namespaceId = new NamespaceId('foo');
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 

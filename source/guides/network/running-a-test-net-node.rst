@@ -147,15 +147,15 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer-951.symboldev.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer-96x.symboldev.network/" target="_blank">Blockchain Explorer</a>
 
 .. |faucet-1| raw:: html
 
-   <a href="http://faucet-951-01.symboldev.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-96x-01.symboldev.network/" target="_blank">Faucet</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-951-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-96x-02.symboldev.network/" target="_blank">alternative faucet</a>
 
 .. |latest-release| raw:: html
 
