@@ -36,7 +36,8 @@ Secret Lock
 SecretLockTransaction
 =====================
 
-Use a SecretLockTransaction to transfer mosaics between two accounts. The specified mosaics remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
+Use a SecretLockTransaction to transfer mosaics between two accounts.
+The mosaics sent remain locked until a valid :ref:`SecretProofTransaction <secret-proof-transaction>` unlocks them.
 
 The maximum number of blocks the lock can lie up to is ``30 days``, being this parameter :ref:`configurable per network <config-network-properties>`.
 If the transaction duration is reached without being proved, the locked amount goes back to the initiator of the SecretLockTransaction.
@@ -53,11 +54,11 @@ If the transaction duration is reached without being proved, the locked amount g
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    recipientAddress; :schema:`UnresolvedAddress <types.cats>`; Address that receives the funds once unlocked.
     secret; :schema:`Hash256 <types.cats>`; Proof hashed.
     mosaic; :ref:`UnresolvedMosaic <unresolved-mosaic>`; Locked mosaic.
     duration; :schema:`BlockDuration <types.cats>`; Number of blocks for which a lock should be valid. If reached, the mosaics will be returned to the initiator.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
-    recipientAddress; :schema:`UnresolvedAddress <types.cats>`; Address that receives the funds once unlocked.
 
 ************
 Secret Proof
@@ -70,7 +71,7 @@ SecretProofTransaction
 
 Use a SecretProofTransaction to unlock :ref:`SecretLockTransactions <secret-lock-transaction>`.
 
-The transaction must prove that it knows the *proof* that unlocks the mosaics.
+The transaction must prove knowing the *proof* that unlocks the mosaics.
 
 **Version**: 0x01
 
@@ -84,9 +85,9 @@ The transaction must prove that it knows the *proof* that unlocks the mosaics.
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    recipientAddress; :schema:`UnresolvedAddress <types.cats>`; Address that receives the funds once unlocked.
     secret; :schema:`Hash256 <types.cats>`; Proof hashed.
     proofSize; uint16; Proof size in bytes.
     hashAlgorithm ; :ref:`LockHashAlgorithm<lock-hash-algorithm>`; Algorithm used to hash the proof.
-    recipientAddress; :schema:`UnresolvedAddress <types.cats>`; Address that receives the funds once unlocked.
     proof; array(byte, proofSize); Original random set of bytes.
 

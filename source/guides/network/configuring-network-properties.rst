@@ -57,9 +57,12 @@ config-network.properties
     minHarvesterBalance; Amount; Minimum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.; 500; 10'000'000'000
     maxHarvesterBalance; Amount; Maximum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.; 4'000'000; 50'000'000'000'000
     minVoterBalance; Amount; Minimum number of harvesting mosaic atomic units needed for an account to be eligible for voting.; 50'000; 50'000
+    maxVotingKeysPerAccount; uint8_t; Maximum number of voting keys that can be registered at once per account.; 3; 
+    minVotingKeyLifetime; uint32_t; Minimum number of finalization rounds for which voting key can be registered.; 72;
+    maxVotingKeyLifetime; uint32_t; Maximum number of finalization rounds for which voting key can be registered.; 26280;
     harvestBeneficiaryPercentage; uint8_t; Percentage of the harvested fee that is collected by the beneficiary account.; 10; 25
     harvestNetworkPercentage; uint8_t; Percentage of the harvested fee that is collected by the network.; 5; 5
-    harvestNetworkFeeSinkAddress; Address; Address of the harvest network fee sink account.; SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY; FF5563F1C5824EE0CD868799FBE8744B46D5549973FDA499939C952D951494E4
+    harvestNetworkFeeSinkAddress; Address; Address of the harvest network fee sink account.; SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY;
     blockPruneInterval; uint32_t; Number of blocks between cache pruning.; 360; 360
     maxTransactionsPerBlock; uint32_t; Maximum number of transactions per block.; 200'000; 1'500
     **plugin:catapult.plugins.accountlink**; ; ; ;
@@ -83,7 +86,7 @@ config-network.properties
     maxMosaicsPerAccount; uint16_t; Maximum number of mosaics that an account can own.; 10'000; 1'000
     maxMosaicDuration; utils::BlockSpan; Maximum mosaic duration.; 3650d; 3650d
     maxMosaicDivisibility; uint8_t; Maximum mosaic divisibility.; 6; 6
-    mosaicRentalFeeSinkAddress; Address; Address of the mosaic rental fee sink account.; SDKDPA36TE53BO24FD4KA6OPGOUSEVOU3O5SIFI; 53E140B5947F104CABC2D6FE8BAEDBC30EF9A0609C717D9613DE593EC2A266D3
+    mosaicRentalFeeSinkAddress; Address; Address of the mosaic rental fee sink account.; SDKDPA36TE53BO24FD4KA6OPGOUSEVOU3O5SIFI;
     mosaicRentalFee; Amount; Mosaic rental fee.; 500; 500
     **plugin:catapult.plugins.multisig**; ; ; ;
     maxMultisigDepth; uint8_t; Maximum number of multisig levels.; 3; 3
@@ -97,7 +100,7 @@ config-network.properties
     maxNamespaceDuration; utils::BlockSpan; Maximum namespace duration.; 365d; 365d
     namespaceGracePeriodDuration; utils::BlockSpan; Grace period during which time only the previous owner can renew an expired namespace.; 2m; 30d
     reservedRootNamespaceNames; unordered_set<string>; Reserved root namespaces that cannot be claimed.; xem, nem, user, account, org, com, biz, net, edu, mil, gov, info; symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
-    namespaceRentalFeeSinkAddress; Address; Address of the namespace rental fee sink account.; SDTZ23JBJZP3GTKKM2P6FYCMXS6RQYPB6R477TQ; 3E82E1C1E4A75ADAA3CBA8C101C3CD31D9817A2EB966EB3B511FB2ED45B8E262
+    namespaceRentalFeeSinkAddress; Address; Address of the namespace rental fee sink account.; SDTZ23JBJZP3GTKKM2P6FYCMXS6RQYPB6R477TQ; 
     rootNamespaceRentalFeePerBlock; Amount; Root namespace rental fee per block.; 1; 1
     childNamespaceRentalFee; Amount; Child namespace rental fee.; 100; 100
     **plugin:catapult.plugins.restrictionaccount**; ; ; ;
