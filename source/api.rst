@@ -19,10 +19,15 @@ Assuming that Catapult REST is running locally, HTTP GET requests can be execute
 Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
 This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
 
-You can refer to the next documentation to get the list of available endpoints.
+Endpoints
+=========
+
+Refer to the next documentation to get the list of available endpoints.
 
 .. ghreference:: nemtech/symbol-openapi
     :folder:
+
+See the :doc:`Product Compatiblity Matrix <../compatibility>` to consult the compatibility between the specification and other packages.
 
 Response codes
 ==============
