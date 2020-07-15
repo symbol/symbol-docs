@@ -7,6 +7,13 @@ Follow these guidelines for contributing to |codename| projects, achieving the b
 
 .. note:: If you want to contribute to an existent project, read as well the CONTRIBUTING.md file that you will find at the root-level folder of the project.
 
+******
+Server
+******
+
+* `Notes for developers <https://github.com/nemtech/catapult-server/blob/main/docs/README.md>`_
+* :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
+
 ***
 SDK
 ***
@@ -15,7 +22,6 @@ SDK
 * :doc:`Developing an SDK <../guidelines/sdk-development>`
 * :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
 * :doc:`Generating transaction builders <../guidelines/generating-transaction-builders>`
-* :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
 
 *************
 Documentation
