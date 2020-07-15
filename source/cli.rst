@@ -68,15 +68,3 @@ Find out which CLI version do you have installed by running ``symbol-cli`` from 
 
 .. ghreference:: nemtech/symbol-cli
     :folder:
-
-******
-Guides
-******
-
-.. postlist::
-    :tags: CLI
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

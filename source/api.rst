@@ -24,10 +24,8 @@ You can refer to the next documentation to get the list of available endpoints.
 .. ghreference:: nemtech/symbol-openapi
     :folder:
 
-.. _websockets:
-
-Errors
-======
+Response codes
+==============
 
 Symbol uses conventional HTTP response codes to indicate the success or failure of an API request.
 
@@ -46,6 +44,47 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
     409; InvalidArgument; The required arguments were missing or unacceptable for the request.
     500; InternalServiceError; An error occurred within the REST Gateway.
     503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
+
+Pagination
+==========
+
+When a query returns more than one result, the REST Gateway paginates the responses by default.
+The query parameters can be customized to advance through the pages and filter the contents returned.
+
+Each pageable endpoint defines its own set of filters.
+However, the following table shows the query params present in every searchable endpoint:
+
+.. csv-table::
+    :header: "Query Parameter", "Type", "Description", "Default"
+    :delim: ;
+
+    pageSize; integer ``[10..100]``; Selects the number of entries to return. Example: ``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per page; ``10``
+    pageNumber; integer ``>=1``; Filters by page number. Example: ``http://localhost:3000/blocks?page=2`` returns page 2; ``1``
+    offset; string; Identifies the entry at which to start pagination. Example: ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``.;
+    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; "desc"
+    orderBy; string; Chooses the parameter to sort by. By default, all the collections are sortable by id, but the collection could define additional properties.
+
+Multiple query parameters can be combined in the same call.
+For example, ``http://localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` will return 100 block entries per page starting with block id ``EE94FD819A1B30D6C5D1C03``.
+
+The responses also include meta-information about the pagination total number of entries, current page number, and the total number of pages.
+Here is an example response meta-information of the pagination:
+
+.. code-block:: json
+
+  {
+    "data": [
+      {}
+    ],
+    "pagination": {
+      "pageNumber": 0,
+      "pageSize": 0,
+      "totalEntries": 0,
+      "totalPages": 0
+    }
+  }
+
+.. _websockets:
 
 **********
 WebSockets
