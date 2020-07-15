@@ -82,6 +82,17 @@ Hence, forks can only be resolved up to a certain depth too.
 |codename|'s public network has a rewrite limit of ``398`` blocks, but this limit is :ref:`configurable per network <config-network-properties>`.
 The transactions linked to a block are permanently recorded on the blockchain once the number of confirmation blocks (subsequent blocks) surpasses the maximum number of rollback blocks.
 
+********************
+Related transactions
+********************
+
+.. csv-table::
+    :header:  "Id",  "Type", "Description"
+    :widths: 20 30 50
+    :delim: ;
+    
+    0x4143; :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
+
 ******
 Guides
 ******
