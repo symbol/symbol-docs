@@ -15,7 +15,7 @@ Voting Key Link
 VotingKeyLinkTransaction
 ========================
 
-This transaction is required for node operators willing to vote finalized blocks.
+This transaction is required for node operators wanting to vote for finalized blocks.
 
 Announce a VotingKeyLinkTransaction to associate a |BLS| public key with an account during a fixed period. An account can have active up to ``3`` different voting keys at the same time.
 
