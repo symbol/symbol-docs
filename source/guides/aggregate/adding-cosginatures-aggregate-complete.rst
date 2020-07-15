@@ -33,7 +33,7 @@ Open up a text editor. Using Alice's account, construct the Aggregate Complete T
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transfer/AddingCosignaturesAggregateComplete.ts
+    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -50,7 +50,7 @@ Sign the transaction with Alice's key:
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/transfer/AddingCosignaturesAggregateComplete2.ts
+    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete2.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -67,7 +67,7 @@ Open a text editor on Bob's offline device. Using the payload obtained from step
 
 .. example-code::
 
-  .. viewsource:: ../../resources/examples/typescript/transfer/AddingCosignaturesAggregateComplete3.ts
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete3.ts
       :language: typescript
       :start-after:  /* start block 01 */
       :end-before: /* end block 01 */
@@ -84,7 +84,7 @@ Using the information from Step #3, recreate the transaction and announce it to 
 
 .. example-code::
 
-  .. viewsource:: ../../resources/examples/typescript/transfer/AddingCosignaturesAggregateComplete4.ts
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete4.ts
       :language: typescript
       :start-after:  /* start block 01 */
       :end-before: /* end block 01 */
