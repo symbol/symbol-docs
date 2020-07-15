@@ -15,7 +15,7 @@ Account Key Link
 AccountKeyLinkTransaction
 =========================
 
-This transaction is required for all accounts willing to activate delegated harvesting.
+This transaction is required for all accounts wanting to activate delegated harvesting.
 
 Announce an AccountKeyLinkTransaction to delegate the account importance score to a proxy account.
 
