@@ -14,11 +14,11 @@ const cosignatureSignedTransactions = [
         cosignedTransactionBob.signature,
          cosignedTransactionBob.signerPublicKey),
 ];
-const rectreatedAggregateTransactionFromPayload= TransactionMapping
+const recreatedAggregateTransactionFromPayload= TransactionMapping
 .createFromPayload(signedTransactionAlice.payload) as AggregateTransaction;
 
 const signedTransaction = aliceAccount
-    .signTransactionGivenSignatures(rectreatedAggregateTransactionFromPayload, cosignatureSignedTransactions, generationHash);
+    .signTransactionGivenSignatures(recreatedAggregateTransactionFromPayload, cosignatureSignedTransactions, generationHash);
 
 // replace with node endpoint
 const nodeUrl = '';

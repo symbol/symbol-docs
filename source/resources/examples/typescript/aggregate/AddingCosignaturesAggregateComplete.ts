@@ -1,10 +1,5 @@
 import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencyPublic, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
 
-/* Alice wants to announce the following aggregate transaction to the network as complete:
-    - Alice -> 1000 -> xem -> Bob
-    - Bob -> 1 collectible -> Alice
-*/
-
 const networkType = NetworkType.TEST_NET;
 
 // replace with alice private key
@@ -18,7 +13,7 @@ const bobPublicAccount = PublicAccount.createFromPublicKey(bobPublicKey, network
 const aliceTransferTransaction = TransferTransaction.create(
     Deadline.create(),
     bobPublicAccount.address,
-    [NetworkCurrencyPublic.createRelative(1000)],
+    [NetworkCurrencyPublic.createRelative(100)],
     PlainMessage.create('payout'),
     networkType,
 );
