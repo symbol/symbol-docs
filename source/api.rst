@@ -45,11 +45,8 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
     500; InternalServiceError; An error occurred within the REST Gateway.
     503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
 
-.. _websockets:
-
-**********
 Pagination
-**********
+==========
 
 When a query returns more than one result, the REST Gateway paginates the responses by default.
 The query parameters can be customized to advance through the pages and filter the contents returned.
@@ -87,7 +84,7 @@ Here is an example response meta-information of the pagination:
     }
   }
 
-Find more information about query routes and their parameters 'here <https://nemtech.github.io/symbol-openapi/v0.9.2/>_.'
+.. _websockets:
 
 **********
 WebSockets
