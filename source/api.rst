@@ -47,6 +47,22 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
 
 .. _websockets:
 
+Versioning
+==========
+
+Since the Symbol network is constantly being improved on, the related packages and applications go through many iterations, or *versions*.
+When interacting with a Symbol node, the packages and applications utilized must be compatible with it.
+
+Starting from v1.1.0, version numbers are described as follows:
+
+vX.Y.Z
+
+*X: Represents updates that introduce breaking change to the server. An update to this number means REST will lose server compatibility with previous iterations of the catapult-server.
+*Y: Represents significant updates that do not introduce breaking changes.
+*Z: Represents minor changes progress, such as debugs and updated extensions.
+
+The specific compatibility between versions can be discovered by consulting the :doc:`compatibility matrix <compatibility>`.
+
 **********
 WebSockets
 **********
