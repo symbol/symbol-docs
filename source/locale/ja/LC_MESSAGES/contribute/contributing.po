@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-03 17:38+0000\n"
+"POT-Creation-Date: 2020-07-16 07:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -41,6 +41,10 @@ msgid ""
 "project."
 msgstr ""
 "既存のプロジェクトに貢献したい場合は、そのリポジトリのプロジェクトフォルダのルートにある CONTRIBUTING.md ファイルを読んでください"
+
+#: ../../source/contribute/contributing.rst:21
+msgid "Server"
+msgstr "サーバ"
 
 #: ../../source/contribute/contributing.rst:23
 msgid ""
