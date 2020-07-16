@@ -27,7 +27,7 @@ Refer to the next documentation to get the list of available endpoints.
 .. ghreference:: nemtech/symbol-openapi
     :folder:
 
-See the :doc:`Product Compatiblity Matrix <../compatibility>` to consult the compatibility between the specification and other packages.
+To check the compatibility between the API specification and the REST Gateway implementation, see :doc:`Product Compatibility Matrix <../compatibility>`.
 
 Response codes
 ==============
