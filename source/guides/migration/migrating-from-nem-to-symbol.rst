@@ -124,7 +124,7 @@ Notable changes have happened at protocol level with regards to :doc:`mosaics <.
 In fact, NIS1 namespaces expire altogether with assets linked to them.
 |codename| mosaics are configured to have their own ``duration``, as well as being assigned a unique ``nonce`` value.
 
-Lastly, levies are not available on |codename.
+Lastly, levies are not available on |codename|.
 
 **See also**:
 
@@ -135,7 +135,7 @@ Namespaces
 **********
 
 Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-alias-transaction>`.
-A namespace owner can attach either of an account or a mosaic id to one of its' namespaces.
+A namespace owner can attach either of an account or a mosaic id to one of its namespaces.
 The namespace information endpoint will return the linked object in the alias field.
 
 Also, |codename| root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
