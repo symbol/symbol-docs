@@ -155,9 +155,8 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Contribute
+    :caption: Help
 
     contribute/community
     contribute/contributing
-    contribute/contributors
     contribute/glossary

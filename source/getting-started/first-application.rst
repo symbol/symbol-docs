@@ -79,7 +79,7 @@ You should see on your screen a line similar to:
     ┌───────────────────┬────────────────────────────────────────────────┐
     │ Property          │ Value                                          │
     ├───────────────────┼────────────────────────────────────────────────┤
-    │ Address           │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI │
+    │ Address           │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI  │
     ├───────────────────┼────────────────────────────────────────────────┤
     │ Address Height    │ 1                                              │
     ├───────────────────┼────────────────────────────────────────────────┤
