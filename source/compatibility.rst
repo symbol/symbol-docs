@@ -31,7 +31,7 @@ Wallets
     :header: "Milestone", "Desktop", "CLI"
     :delim: ;
 
-    `v0.9.6.2 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0963---10-jul-2020>`_; ; v0.21.1
+    `v0.9.6.2 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0963---10-jul-2020>`_; v0.12.1; v0.21.1
     `v0.9.5.1 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0951---22-may-2020>`_; v0.10.0; v0.20.2
     `v0.9.4.1 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0941---23-april-2020>`_; v0.9.11; v0.19.4
 
