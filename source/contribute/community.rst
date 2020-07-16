@@ -7,7 +7,7 @@ Most of the documentation and guides that the |sitename| has today have been add
 
 Discover how the open source |community| works, and get started participating:
 
-* Reach our community joining the official |slack|.
+* Reach our community by joining the |slack|.
 
 * Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` to propose changes.
 
@@ -22,10 +22,6 @@ Discover how the open source |community| works, and get started participating:
 .. |community| raw:: html
 
    <a href="https://github.com/nemtech/community/" target="_blank">community</a>
-
-.. |stack-overflow| raw:: html
-
-   <a href="https://stackoverflow.com/tags/nem/" target="_blank">StackOverflow</a>
 
 .. |slack| raw:: html
 

@@ -12,6 +12,30 @@ This document will help you **upgrade your application** previous NIS1 features,
 
 .. note:: This guide is a living document. The information could change as |codename| development advances.
 
+.. csv-table:: Comparison between NIS1 and Symbol
+   :header: "NEM NIS1", "Symbol"
+   :delim: ;
+    
+   **Built-in features**;
+   Mosaics; Mosaics
+   Namespaces; Namespaces
+   Delegated Harvesting; Delegated Harvesting
+   Multisig Accounts; Multi-level Multisig Accounts
+   Mosaic Restrictions; Advanced Mosaic Restrictions
+   — ; Account Restrictions
+   — ; Metadata Controls
+   — ; Aggregated Transactions
+   — ; Inflation
+   — ; Cross-Chain Swaps
+   — ; Plug-Ins
+   **Protocol**;
+   Coded in Java; Coded in C++
+   POI (Proof of Importance); POS+ (Proof of Stake Plus)
+   Keccak-SHA3-512; SHA-512
+   Fixed Fees; Dynamic Fees
+   — ; Receipts
+   — ; Merkle Proofs
+
 ************
 Test network
 ************
@@ -30,17 +54,19 @@ Legacy API incompatibility
 Legacy API calls that used to work for NIS1 network nodes are **not compatible** with |codename|.
 Now, API requests mostly happen with REST API nodes usually on port **3000**.
 
-* Protocol: :doc:`Architecture <../../concepts/node>`
-
-* Reference: :doc:`Catapult REST <../../api>`
-
-* Reference: `REST API contract <https://nemtech.github.io/symbol-openapi/>`_
-
 There are several **Software Development Kits** that have been—and some that are—under development for |codename| distributed ledgers consumer applications.
 As of now, the :doc:`planned SDKs <../../sdk>` to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.
 
 As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most used SDK and leads in |ts-js-sdk-docs|.
 The architecture of the TS SDK is inspired by |nem-library| from NIS1.
+
+**See also**:
+
+* Protocol: :doc:`Nodes Architecture <../../concepts/node>`
+
+* Reference: :doc:`REST Gateway <../../api>`
+
+* Reference: `REST API contract <https://nemtech.github.io/symbol-openapi/>`_
 
 *******************
 Accounts management
@@ -49,9 +75,9 @@ Accounts management
 Both platforms use the digital signature algorithm named Ed25519, but with different hashing algorithms.
 While NIS1 uses **Keccak-SHA3-512**, |codename| changed to **SHA-512** to support TLS.
 
-The change in the hashing algorithm used leads to have, for the same private key in NIS1 and |codename|, different public keys and addresses.
+The change in the hashing algorithm used leads to have, for the same private key in NIS1 and |codename|, different public keys, and addresses.
 
-Also, a few notable changes have happened as to public verifiability of accounts and field names returned in the REST endpoints.
+**See also**:
 
 * Guide: :doc:`Creating and opening an account  <../account/creating-an-account>`
 * Guide: :doc:`Getting the account information <../account/getting-account-information>`
@@ -67,56 +93,67 @@ The first notable change about transactions is that the status response is recei
 In NIS1, the client received the response of the API call right after announcing a transaction.
 |codename| receives the response of the call **asynchronously**, eliminating blocking calls.
 
-* Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`
-* Protocol: |catapult-schemas|
-
 Additionally, |codename| only has one version of :doc:`TransferTransaction <../../concepts/transfer-transaction>`.
 The native currency is now pushed as a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the transaction.
+
+**See also**:
+
+* Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`
+* Protocol: |catapult-schemas|
 
 ****************
 Transaction fees
 ****************
 
-The fee that needs to be paid for a transaction now depends on the transaction size and fee multiplier, where node owners can specify a positive (or zero) value.
-The **effective fee** to be paid for a transaction can be calculated by reading the **fee multiplier** from the block in which the transaction got confirmed and multiplying it by the **size of the transaction**.
+|codename| transaction fees are dynamic and decided by the network participants.
+Each transaction **effective fee** is calculated by multiplying a **fee multiplier** by the **transaction size**. 
+The fee multiplier is attached in the block where the transaction gets confirmed, and it is defined by the node owner harvesting the block.
 
-The ``maxFee`` field represents the maximum fee allowed by the sender to be paid for this transaction to be confirmed in a block.
+During the transaction definition, the sender limits the maximum fee authorized to include the transaction in a block.
+
+**See also**:
 
 * Protocol: :doc:`Transaction fees <../../concepts/fees>`
 
-********************
-Mosaics & namespaces
-********************
+*******
+Mosaics
+*******
 
 Notable changes have happened at protocol level with regards to :doc:`mosaics <../../concepts/mosaic>` management as they are now **independent** of :doc:`namespaces <../../concepts/namespace>`.
 
 In fact, NIS1 namespaces expire altogether with assets linked to them.
 |codename| mosaics are configured to have their own ``duration``, as well as being assigned a unique ``nonce`` value.
 
-Lastly, levies are not available on |codename|, those must be reproduced with aggregate transactions.
+Lastly, levies are not available on |codename.
+
+**See also**:
 
 * Guide: :doc:`Creating a mosaic  <../mosaic/creating-a-mosaic>`
-* Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
-* Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
+
+**********
+Namespaces
+**********
 
 Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-alias-transaction>`.
 A namespace owner can attach either of an account or a mosaic id to one of its' namespaces.
 The namespace information endpoint will return the linked object in the alias field.
 
-Also, root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
-
-* Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-to-a-mosaic>`
-* Guide: :doc:`Linking a namespace to an address <../namespace/link-a-namespace-to-an-address>`
+Also, |codename| root namespaces have a ``duration`` field that is **expressed in a count of blocks** which means yearly renewal is not mandatory anymore.
 
 In order to facilitate the transfer of mosaics, a mosaic creator should register a namespace and alias the mosaic with that namespace.
 End-users can **send transactions using the alias** to refer to the mosaic.
 
-* Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
-* Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
-
 When a transaction includes an alias, a **resolution** reflects the resolved value of that alias in the block.
 To get the real identifier behind an aliased address or mosaic, the client application needs to fetch the related :doc:`resolution receipt <../../concepts/receipt>` linked to the block where the transaction gets included.
 
+**See also**:
+
+* Guide: :doc:`Registering a namespace  <../namespace/registering-a-namespace>`
+* Guide: :doc:`Creating a subnamespace  <../namespace/registering-a-subnamespace>`
+* Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-to-a-mosaic>`
+* Guide: :doc:`Linking a namespace to an address <../namespace/link-a-namespace-to-an-address>`
+* Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a-transfer-transaction-with-an-aliased-mosaic>`
+* Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a-transfer-transaction-to-an-aliased-address>`
 * Guide: :doc:`Getting the asset identifier behind a namespace with receipts <../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts>`
 
 *************************
@@ -136,8 +173,6 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process).
 In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.
 
-* Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-account>`
-
 2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 
 The new AggregateTransaction permits to wrap multiple transactions together involving different participants.
@@ -147,17 +182,20 @@ Otherwise, none of the transactions will get confirmed.
 To send a multisig transaction as in NIS1, the initiator of the transaction has to add it **as an inner transaction of the aggregate**.
 Then, the minimum number of cosignatories defined in the multisignature will have to cosign the aggregate to allow announcing transactions from the shared account.
 
+**See also**:
+
+* Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-account>`
 * Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a-multisig-transaction>`
 
 **********
 Need help?
 **********
 
-While migrating from NIS1 to |codename|, you might still have some unanswered questions.
-In this portal, you can find everything you need to know about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+After reading this documentation, you might still have some unanswered questions.
 
-You can also ask integration related questions on |stack-overflow|, or reach our community of developers joining the official |slack|.
+In this site, you will find descriptions for every new :doc:`feature <../../concepts/overview>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
+We invite you to connect connect with our developer community by joining the |slack|.
 
 .. |catapult-service-bootstrap| raw:: html
 

@@ -30,10 +30,10 @@ const name = 'ComfyClothingCompany';
 const email = 'info@comfyclothingcompany';
 const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
-const nameMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
-const emailMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
-const addressMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
-const phoneMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.publicKey, symbol_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
+const nameMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('NAME'), namespaceId, name.length, name, networkType);
+const emailMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('EMAIL'), namespaceId, email.length, email, networkType);
+const addressMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('ADDRESS'), namespaceId, address.length, address, networkType);
+const phoneMetadataTransaction = symbol_sdk_1.NamespaceMetadataTransaction.create(symbol_sdk_1.Deadline.create(), companyAccount.address, symbol_sdk_1.KeyGenerator.generateUInt64Key('PHONE'), namespaceId, phone.length, phone, networkType);
 /* end block 01 */
 /* start block 02 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [
@@ -45,10 +45,10 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(sy
 /* end block 02 */
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

@@ -29,7 +29,7 @@ Announce an AccountMetadataTransaction to associate a key-value state to an acco
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats>` ; Metadata target public key.
+    targetAddress; :schema:`UnresolvedAddress <types.cats>`; Metadata target address.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; Value size in bytes.
@@ -58,7 +58,7 @@ Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats>` ; Target mosaic creator public key.
+    targetAddress; :schema:`UnresolvedAddress <types.cats>`; Metadata target address.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetMosaicId; :schema:`UnresolvedMosaicId <L6>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
@@ -88,7 +88,7 @@ Announce a NamespaceMetadataTransaction to associate a key-value state to a name
     :header: "Property", "Type", "Description"
     :delim: ;
 
-    targetPublicKey; :schema:`Key <types.cats>` ; Target namespace creator public key.
+    targetAddress; :schema:`UnresolvedAddress <types.cats>`; Metadata target address.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
     targetNamespaceId; :schema:`NamespaceId <namespace/namespace_types.cats#L1>`; Target namespace identifier.
     valueSizeDelta; int16; Change in value size in bytes.

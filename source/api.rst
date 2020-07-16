@@ -19,10 +19,15 @@ Assuming that Catapult REST is running locally, HTTP GET requests can be execute
 Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
 This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
 
-You can refer to the next documentation to get the list of available endpoints.
+Endpoints
+=========
+
+Refer to the next documentation to get the list of available endpoints.
 
 .. ghreference:: nemtech/symbol-openapi
     :folder:
+
+To check the compatibility between the API specification and the REST Gateway implementation, see :doc:`Product Compatibility Matrix <../compatibility>`.
 
 Response codes
 ==============
@@ -61,7 +66,7 @@ However, the following table shows the query params present in every searchable 
     pageSize; integer ``[10..100]``; Selects the number of entries to return. Example: ``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per page; ``10``
     pageNumber; integer ``>=1``; Filters by page number. Example: ``http://localhost:3000/blocks?page=2`` returns page 2; ``1``
     offset; string; Identifies the entry at which to start pagination. Example: ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``.;
-    order; string (Order); Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; "desc"
+    order; string; Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; "desc"
     orderBy; string; Chooses the parameter to sort by. By default, all the collections are sortable by id, but the collection could define additional properties.
 
 Multiple query parameters can be combined in the same call.

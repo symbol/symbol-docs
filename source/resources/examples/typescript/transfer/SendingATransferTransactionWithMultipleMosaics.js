@@ -19,13 +19,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 // replace with recipient address
-const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const ignored = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, 
 /* start block 01 */
 [new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('7CDF3B117A3C40CC'), symbol_sdk_1.UInt64.fromUint(1000)),
-    new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA'), symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6)))], 
+    new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A'), symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6)))], 
 /* end block 01 */
 symbol_sdk_1.PlainMessage.create('This is a test message'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));

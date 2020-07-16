@@ -36,10 +36,10 @@ const networkType = NetworkType.TEST_NET;
 const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 // replace with alice public key
-const alicePublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
@@ -48,12 +48,12 @@ const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
-const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.publicKey)
+const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.address)
     .pipe( mergeMap((metadata) => {
         const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);
         return of(AccountMetadataTransaction.create(
             Deadline.create(),
-            alicePublicAccount.publicKey,
+            alicePublicAccount.address,
             key,
             newValueBytes.length - currentValueBytes.length,
             Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),

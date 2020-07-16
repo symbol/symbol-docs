@@ -34,12 +34,12 @@ import {
 
 /* start block 01 */
 // replace with recipient address
-const rawRecipientAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawRecipientAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(rawRecipientAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
@@ -56,12 +56,12 @@ const transferTransaction = TransferTransaction.create(
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 /* end block 01 */
 
 /* start block 02 */
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

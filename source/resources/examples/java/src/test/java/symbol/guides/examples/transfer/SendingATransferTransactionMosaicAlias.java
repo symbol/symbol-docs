@@ -21,7 +21,7 @@ package symbol.guides.examples.transfer;
 import io.nem.symbol.sdk.api.RepositoryFactory;
 import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Account;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import io.nem.symbol.sdk.model.message.PlainMessage;
 import io.nem.symbol.sdk.model.mosaic.Mosaic;
 import io.nem.symbol.sdk.model.namespace.NamespaceId;
@@ -39,7 +39,7 @@ class SendingATransferTransactionMosaicAlias {
             throws ExecutionException, InterruptedException {
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
+                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             /* start block 01 */
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with aliased mosaic

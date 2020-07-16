@@ -24,7 +24,7 @@ import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Account;
 import io.nem.symbol.sdk.model.account.Address;
 import io.nem.symbol.sdk.model.account.UnresolvedAddress;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
+import io.nem.symbol.sdk.model.network.NetworkType;
 import io.nem.symbol.sdk.model.message.PlainMessage;
 import io.nem.symbol.sdk.model.mosaic.Mosaic;
 import io.nem.symbol.sdk.model.mosaic.MosaicId;
@@ -45,13 +45,13 @@ class SendingATransferTransaction {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
+                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             // replace with recipient address
-            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with symbol.xym id
-            final MosaicId networkCurrencyMosaicId = new MosaicId("05D6A80DE3C9ADCA");
+            final MosaicId networkCurrencyMosaicId = new MosaicId("5E62990DCAC5BE8A");
             // replace with network currency divisibility
             final Integer networkCurrencyDivisibility = 6;
             // replace with relative amount of symbol.xym to send

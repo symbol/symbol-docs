@@ -145,7 +145,7 @@ config-harvesting.properties
     enableAutoHarvesting; bool; Set to true if auto harvesting is enabled.; false
     maxUnlockedAccounts; uint32_t; Maximum number of unlocked accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy.; Importance
-    beneficiaryPublicKey; string; Public key of the account receiving part of the harvested fee.; 0000000000000000000000000000000000000000000000000000000000000000
+    beneficiaryAddress; Address; Address of the account receiving part of the harvested fee.; 
 
 .. |catapult-service-bootstrap| raw:: html
 

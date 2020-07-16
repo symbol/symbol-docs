@@ -44,7 +44,9 @@ Developing the bot
 
 .. note:: To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead.See :ref:`how to get multisig accounts where an account is cosignatory<guide-get-multisig-account-info>`.
 
-5. For each received transaction, check if you have already signed it. Cosign each pending **AggregateBondedTransaction** using the previously created function.
+5. For each received transaction, check if you have signed it.
+At this point, you might want to do some extra checks, like verifying the contents of the transaction.
+Cosign each pending **AggregateBondedTransaction** using the previously created function.
 
 6. Announce ``CosignatureSignedTransaction`` to the network using the ``TransactionHttp`` repository.
 

@@ -23,7 +23,7 @@ import {Metadata, MosaicId, RepositoryFactoryHttp} from 'symbol-sdk';
 const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
@@ -38,8 +38,9 @@ metadataHttp.getMosaicMetadata(mosaicId)
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
                     console.log('\n ---');
                     console.log('\n Value:\t', metadataEntry.value);
-                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
+                    console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
+                    console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
                     console.log('\n TargetId:\t', metadataEntry.targetId);
                 });
         }

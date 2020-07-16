@@ -67,5 +67,6 @@ Cosignature
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    version; uint64; Version of the structure.
     signerPublicKey; :schema:`Key <types.cats>`; Cosigner public key.
     signature; :schema:`Signature <types.cats>`; Transaction signature.

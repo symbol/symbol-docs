@@ -150,13 +150,12 @@ Validation
 **********
 
 The first stage of validation happens in the API nodes.
-If the transaction presents some error, the WebSocket throws a notification through the status channel.
-In the positive case, the transaction reaches the P2P network with an **unconfirmed** status.
-Never rely on a transaction that has an unconfirmed state.
-It is not clear if it will get included in a block, as it should pass a second validation.
+If the transaction encounters an error, the WebSocket throws a notification through the status channel.
+If not, the transaction reaches the P2P network with an **unconfirmed** status.
+In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be replied upon.
 
-The second validation is done before the transaction is added in a :doc:`harvested block <block>`.
-If valid, the harvester stores the transaction in a block and reaches the **confirmed** status.
+The second validation happens before the transaction is added in a :doc:`harvested block <block>`.
+If successful, the harvester stores the transaction in a block and the transaction reaches the **confirmed** status.
 
 Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
 Additionally, the :doc:`transaction fee <fees>` is deducted from the signer's account.
