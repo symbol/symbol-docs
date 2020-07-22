@@ -18,9 +18,9 @@ deploy:
     skip_cleanup: true
     script: bash travis/transifex.sh
     on:
-      branch: master
+      branch: main
   - provider: script
     skip_cleanup: true
     script: bash travis/deploy.sh
     on:
-      branch: master
+      branch: main
