@@ -159,4 +159,4 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>
+   <a href="https://github.com/nemgrouplimited/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>

@@ -96,7 +96,7 @@ In order for the remote account to be accepted for delegated harvesting, the rem
 
 .. note:: The remote account cannot be involved in any transaction while it is a delegated account.
 
-Then, the account needs to send a `special encrypted message <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node via a :doc:`TransferTransaction <transfer-transaction>`.
+Then, the account needs to send a `special encrypted message <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0009.md>`_ to the node via a :doc:`TransferTransaction <transfer-transaction>`.
 The message must contain the remote's account **proxy private key**  encrypted using AES, making the transaction readable only by the recipient.
 
 The node receives an encrypted message using :ref:`WebSockets <websockets>`.

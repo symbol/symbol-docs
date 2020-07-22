@@ -69,7 +69,7 @@ An HD Wallet, or Hierarchical Deterministic Wallet, enables the generation of mu
 The seed is encoded as a mnemonic passphrase - a group of 24 human-readable words - using elliptic curve mathematics.
 
 |codename| supports multi-account hierarchy on the client-side.
-The `NIP-6 <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>`_ defines the protocol to create HD Wallets on |codename|.
+The `NIP-6 <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ defines the protocol to create HD Wallets on |codename|.
 
 To generate new HD Wallets, use the library `symbol-hd-wallets <https://github.com/nemfoundation/symbol-hd-wallets>`_.
 
