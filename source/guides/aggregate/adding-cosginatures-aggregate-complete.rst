@@ -7,7 +7,7 @@
     :nocomments:
 
 #############################################################
-Adding Cosignatures to Aggregate Complete Trasactions Offline
+Adding cosignatures to aggregate complete trasactions offline
 #############################################################
 
 This guide will show you how to add cosignatures to an aggregate complete transaction while offline, then use an online device to announce the transaction.
@@ -23,7 +23,7 @@ Prerequisites
 - Have 2 accounts :ref:`account <setup-creating-a-test-account>`.
 - Load the accounts with enough |networkcurrency| to pay for transaction fees.
 - One of the accounts must own a mosaic other than the |networkcurrency|.
-- Both your offline and online :doc:`workstations <../../getting-started/setup-workstation.rst>` are set up for Symbol-CLI and Symbol-SDK.
+- Both your offline and online :doc:`workstations <../../getting-started/setup-workstation>` are set up for Symbol-CLI and Symbol-SDK.
 
 ****************************************************
 Step 1: Construct the Aggregate Complete Transaction
@@ -50,7 +50,7 @@ Sign the transaction with Alice's key:
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete2.ts
+    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
@@ -67,7 +67,7 @@ Open a text editor on Bob's offline device. Using the payload obtained from step
 
 .. example-code::
 
-  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete3.ts
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts
       :language: typescript
       :start-after:  /* start block 01 */
       :end-before: /* end block 01 */
@@ -84,7 +84,7 @@ Using the information from Step #3, recreate the transaction and announce it to 
 
 .. example-code::
 
-  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete4.ts
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts
       :language: typescript
       :start-after:  /* start block 01 */
       :end-before: /* end block 01 */
