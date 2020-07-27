@@ -22,7 +22,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('symbol.xym');
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 namespaceHttp

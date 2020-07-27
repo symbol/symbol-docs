@@ -59,7 +59,7 @@ By default, when there is no restriction set, all the accounts in the network ca
 Returning to our previous example, let us imagine that you want to configure the product account only to accept receiving transactions that come from the company's account.
 You might take the following steps to do so:
 
-1. Define the company’s address ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` in a new variable.
+1. Define the company’s address ``TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI`` in a new variable.
 
 .. example-code::
 
@@ -102,7 +102,7 @@ Add to the company’s address from the previous step to the allowed list.
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-Now, if you send a :doc:`TransferTransaction <../transfer/sending-a-transfer-transaction>` from another account, you will get an error since only ``TCVQ2R-XKJQKH-4RJZWG-DARWJ6-V4J4W7-F4DGH6-ZFAB`` is allowed to send transactions to the product's account.
+Now, if you send a :doc:`TransferTransaction <../transfer/sending-a-transfer-transaction>` from another account, you will get an error since only ``TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI`` is allowed to send transactions to the product's account.
 
 Blocking transactions by mosaic id
 ==================================

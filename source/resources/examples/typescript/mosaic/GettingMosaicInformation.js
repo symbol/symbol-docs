@@ -23,7 +23,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const mosaicHttp = repositoryFactory.createMosaicRepository();
 mosaicHttp

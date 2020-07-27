@@ -40,7 +40,7 @@ class GettingMosaicAddressRestrictions {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
+                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             final RestrictionMosaicRepository restrictionRepository = repositoryFactory
                     .createRestrictionMosaicRepository();
 
@@ -49,7 +49,7 @@ class GettingMosaicAddressRestrictions {
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);
 
             // replace with address
-            final String rawAddress = "TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4";
+            final String rawAddress = "TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I";
             final Address address = Address.createFromRawAddress(rawAddress);
 
             final List<MosaicAddressRestriction> restrictions;

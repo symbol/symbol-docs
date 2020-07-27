@@ -43,7 +43,7 @@ const phone = '000-0000';
 
 const nameMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('NAME'),
     namespaceId,
     name.length,
@@ -53,7 +53,7 @@ const nameMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('EMAIL'),
     namespaceId,
     email.length,
@@ -63,7 +63,7 @@ const emailMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('ADDRESS'),
     namespaceId,
     address.length,
@@ -73,7 +73,7 @@ const addressMetadataTransaction = NamespaceMetadataTransaction.create(
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
     Deadline.create(),
-    companyAccount.publicKey,
+    companyAccount.address,
     KeyGenerator.generateUInt64Key('PHONE'),
     namespaceId,
     phone.length,
@@ -98,11 +98,11 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 

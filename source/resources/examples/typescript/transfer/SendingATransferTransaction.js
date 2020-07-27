@@ -20,12 +20,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const symbol_sdk_1 = require("symbol-sdk");
 /* start block 01 */
 // replace with recipient address
-const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('This is a test message'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
@@ -35,14 +35,14 @@ const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
 console.log('Payload:', signedTransaction.payload);
 console.log('Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

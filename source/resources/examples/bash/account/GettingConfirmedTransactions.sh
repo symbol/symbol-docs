@@ -1,3 +1,3 @@
 #!/bin/sh
 
-symbol-cli account transactions --address TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4 --numtransactions 10
+symbol-cli transaction search --address TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I

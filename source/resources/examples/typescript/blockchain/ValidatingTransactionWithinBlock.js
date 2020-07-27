@@ -28,7 +28,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 /* start block 01 */
 const js_sha3_1 = require("js-sha3");
-const positionEnum_1 = require("symbol-openapi-typescript-node-client/dist/model/positionEnum");
 const symbol_sdk_1 = require("symbol-sdk");
 const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(void 0, void 0, void 0, function* () {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
@@ -43,7 +42,7 @@ const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(void 0
     const HRoot0 = merkleProof
         .reduce((proofHash, pathItem) => {
         const hasher = js_sha3_1.sha3_256.create();
-        if (pathItem.position === positionEnum_1.PositionEnum.Left) {
+        if (pathItem.position === symbol_sdk_1.MerklePosition.Left) {
             return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
         }
         else {
@@ -53,7 +52,7 @@ const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(void 0
     // 5. Compare if the HRoot' equals to HRoot.
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
 });
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height

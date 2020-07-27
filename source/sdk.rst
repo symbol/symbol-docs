@@ -34,10 +34,6 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
     <a href="https://github.com/nemtech/symbol-sdk-java" target="_blank">Repository</a>
 
-.. |protocol-compatibility-report| raw:: html
-
-    <a href="https://github.com/nemtech/community/blob/master/projects-status.md" target="_blank">protocol compatibility report</a>
-
 ***************
 Other libraries
 ***************

@@ -25,13 +25,13 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
 // replace with address
-const aliceAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
+const aliceAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const aliceAccount = symbol_sdk_1.Address.createFromRawAddress(aliceAddress);
 // replace with address
-const bobAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const bobAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const bobAccount = symbol_sdk_1.Address.createFromRawAddress(bobAddress);
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const mosaic = new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
@@ -44,10 +44,10 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(sy
 /* end block 02 */
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp

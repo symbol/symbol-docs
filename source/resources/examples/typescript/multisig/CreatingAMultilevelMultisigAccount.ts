@@ -41,14 +41,14 @@ const multisigAccount2 = Account.createFromPrivateKey(multisig2PrivateKey, netwo
 const cosignatoryAccount5PublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
 const cosignatory5 = PublicAccount.createFromPublicKey(cosignatoryAccount5PublicKey, networkType);
 // replace with public key
-const cosignatoryAccount6PublicKey = 'E59EF184A612D4C3C4D89B5950EB57262C69862B2F96E59C5043BF41765C482F';
+const cosignatoryAccount6PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, networkType);
 
 const convertMultisigAccount2Transaction = MultisigAccountModificationTransaction.create(
     Deadline.create(),
     1,
     1,
-    [cosignatory5, cosignatory6],
+    [cosignatory5.address, cosignatory6.address],
     [],
     networkType);
 /* end block 01 */
@@ -71,7 +71,7 @@ const convertMultisigAccount3Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     2,
     1,
-    [cosignatory7, cosignatory8, cosignatory4],
+    [cosignatory7.address, cosignatory8.address, cosignatory4.address],
     [],
     networkType);
 /* end block 02 */
@@ -85,7 +85,7 @@ const convertMultisigAccount1Transaction = MultisigAccountModificationTransactio
     Deadline.create(),
     3,
     1,
-    [multisigAccount2.publicAccount, multisigAccount3.publicAccount, cosignatory4],
+    [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
     [],
     networkType);
 /* end block 03 */
@@ -101,12 +101,12 @@ const aggregateTransaction = AggregateTransaction.createBonded(
     UInt64.fromUint(2000000));
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '4009619EB7A9F824C5D0EE0E164E0F99CCD7906A475D7768FD60B452204BD0A2';
+const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = multisigAccount1.sign(aggregateTransaction, networkGenerationHash);
 console.log(signedTransaction.hash);
 
 // replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('05D6A80DE3C9ADCA');
+const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
@@ -122,7 +122,7 @@ const hashLockTransaction = HashLockTransaction.create(
 const signedHashLockTransaction = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

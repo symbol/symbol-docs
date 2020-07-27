@@ -32,13 +32,11 @@ Prerequisites
 
 - Complete :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
 
-Before you can activate delegated harvesting, you will need to have three accounts:
+Before you can activate delegated harvesting, you need to have three accounts:
 
-* Create a **main account (M)** with at least ``10,000`` |networkcurrency| units.
-* Create an **announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
-* Create a brand new **remote account (R)** that did not send or receive any transactions.
-
-.. note:: Follow this guide to :ref:`create new accounts <setup-creating-a-test-account>`.
+* **Main account (M)** with at least ``10,000`` harvesting mosaic units.
+* **Announcer account (A)** with enough |networkcurrency|  units to announce a transaction.
+* **Remote account (R)** that did not send or receive any transactions.
 
 *************************
 Method #01: Using the SDK
@@ -143,7 +141,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --profile main
+    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-01.us-east-1.096x.symboldev.network:3000 --profile main
 
 2. Create a brand new account. This account will be your **remote account (R)**.
 
@@ -161,7 +159,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000 --profile announcer
+    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-01.us-east-1.096x.symboldev.network:3000 --profile announcer
 
 4. Send a request to the node you want to be added as a delegated harvester with **A**. Replace ``<recipient-public-key>`` with the node's public key and ``<remote-private-key>`` with **R's private key**.
 

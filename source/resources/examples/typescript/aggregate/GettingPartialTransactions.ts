@@ -16,16 +16,19 @@
  *
  */
 
-import {RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
+import {Address, RepositoryFactoryHttp, TransactionGroup} from 'symbol-sdk';
 
 /* start block 01 */
-// replace with node endpoint
+// replace with account address
+const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
+const address = Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const blockHttp = repositoryFactory.createBlockRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const height = 1;
-blockHttp
-    .getBlockByHeight(UInt64.fromUint(height))
-    .subscribe((block) => console.log(block), (err) => console.error(err));
+const searchCriteria = {group: TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100};
+transactionHttp
+    .search(searchCriteria)
+    .subscribe((page) => console.log(page.data),
+        (err) => console.error(err));
 /* end block 01 */
