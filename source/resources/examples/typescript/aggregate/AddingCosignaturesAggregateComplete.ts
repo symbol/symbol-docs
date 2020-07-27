@@ -1,11 +1,7 @@
+// tslint:disable-next-line: max-line-length
 import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencyPublic, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
 
 /* start block 01 */
-/* Alice wants to announce the following aggregate transaction to the network as complete:
-    - Alice -> 1000 -> xem -> Bob
-    - Bob -> 1 collectible -> Alice
-*/
-
 const networkType = NetworkType.TEST_NET;
 
 // replace with alice private key
@@ -34,7 +30,7 @@ const bobTransferTransaction = TransferTransaction.create(
 
 const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(),
-    [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicKey)],
+    [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicAccount)],
     networkType,
     [],
     UInt64.fromUint(2000000),
@@ -42,9 +38,6 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 /* end block 01 */
 
 /* start block 02 */
-/*  However, she wants to avoid using the network partial cache to not loose 10 xem if Bob never signs the transaction.
-    Instead,  Alice signs the aggregate transation and shares the resulting payload (offchain) with Bob */
-
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const generationHash = '';
 
@@ -53,7 +46,6 @@ console.log(signedTransactionAlice.payload);
 /* end block 02 */
 
 /* start block 03 */
-/* Bob cosigns the transaction and shares the resulting transaciton signature and parent hash (offchain) with Alice*/
 // replace with bob private key
 const bobPrivateKey = '';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
@@ -63,21 +55,20 @@ console.log(cosignedTransactionBob.parentHash);
 /* end block 03 */
 
 /* start block 04 */
-/* Alice collects the cosignatures, recreate the transaction, and announces it to the network as complete. */
 const cosignatureSignedTransactions = [
     new CosignatureSignedTransaction(
         cosignedTransactionBob.parentHash,
         cosignedTransactionBob.signature,
          cosignedTransactionBob.signerPublicKey),
 ];
-const rectreatedAggregateTransactionFromPayload= TransactionMapping
+const rectreatedAggregateTransactionFromPayload = TransactionMapping
 .createFromPayload(signedTransactionAlice.payload) as AggregateTransaction;
 
 const signedTransaction = aliceAccount
     .signTransactionGivenSignatures(rectreatedAggregateTransactionFromPayload, cosignatureSignedTransactions, generationHash);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
