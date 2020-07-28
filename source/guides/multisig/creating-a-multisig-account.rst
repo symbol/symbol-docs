@@ -50,7 +50,6 @@ Method #01: Using the Desktop Wallet
 2. Click on the “**Multisig**” tab on the left-side menu.
 
 3. Click on “**Add a cosignatory**” and provide the address or public key of the account you want to add as a cosignatory of the multisig. Click on the “**+**” button.
-.. note:: Note: make sure potential cosignatory accounts have previously sent transactions on the network.
 
 .. figure:: ../../resources/images/screenshots/create-multisig-2.gif
     :align: center
