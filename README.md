@@ -1,6 +1,6 @@
 # Symbol Documentation
 
-[![Build Status](https://travis-ci.com/nemtech/symbol-docs.svg?branch=master)](https://travis-ci.com/nemtech/symbol-docs)
+[![Build Status](https://travis-ci.com/nemtech/symbol-docs.svg?branch=main)](https://travis-ci.com/nemtech/symbol-docs)
 
 Browse the developer documentation to start integrating blockchain technology into your project.
 
@@ -56,4 +56,4 @@ Discover how our [community](https://github.com/nemtech/community/) is organized
 ## License
 
 Copyright (c) 2018-present NEM 
-Licensed under the [Apache License 2.0](https://github.com/nemtech/symbol-docs/blob/master/LICENSE)
+Licensed under the [Apache License 2.0](https://github.com/nemtech/symbol-docs/blob/main/LICENSE)

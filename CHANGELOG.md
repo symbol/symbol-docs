@@ -37,7 +37,7 @@ Code-name: Fushicho 5
 - Wallet installation notes
 - Import TypeScript SDK reference versions automatically
 - Import CLI commands reference versions automatically
-- Publish docs when pushing to master
+- Publish docs when pushing to main
 - Updated cross chain swap concept with maxRollBackBlocks
 
 ## Updated
