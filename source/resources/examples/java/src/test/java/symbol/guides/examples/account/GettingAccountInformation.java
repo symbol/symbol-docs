@@ -38,12 +38,12 @@ class GettingAccountInformation {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
+            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             final AccountRepository accountRepository = repositoryFactory
                 .createAccountRepository();
 
             // Replace with an address
-            final String rawAddress = "TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP";
+            final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final Address address = Address.createFromRawAddress(rawAddress);
             final AccountInfo accountInfo = accountRepository
                 .getAccountInfo(address).toFuture().get();

@@ -18,19 +18,6 @@
 
 package symbol.guides.examples.multisig;
 
-import io.nem.symbol.sdk.api.RepositoryFactory;
-import io.nem.symbol.sdk.api.TransactionRepository;
-import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
-import io.nem.symbol.sdk.model.account.Account;
-import io.nem.symbol.sdk.model.account.PublicAccount;
-import io.nem.symbol.sdk.model.blockchain.NetworkType;
-import io.nem.symbol.sdk.model.transaction.AggregateTransaction;
-import io.nem.symbol.sdk.model.transaction.AggregateTransactionFactory;
-import io.nem.symbol.sdk.model.transaction.MultisigAccountModificationTransaction;
-import io.nem.symbol.sdk.model.transaction.MultisigAccountModificationTransactionFactory;
-import io.nem.symbol.sdk.model.transaction.SignedTransaction;
-import java.math.BigInteger;
-import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 

@@ -32,7 +32,7 @@ The previous configuration example inflates 500 currency mosaics per block from 
 Between the blocks 100 and 1250, the currency mosaic supply increases by 400 units per block.
 Starting at height 1250, new blocks will not trigger the creation of mosaics.
 
-The `network configuration <https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties>`_ also describes the initial and **maximum supply** of the native currency mosaic. The maximum supply takes into account the inflation generated per-block.
+The `network configuration <https://github.com/nemtech/catapult-server/blob/main/resources/config-network.properties>`_ also describes the initial and **maximum supply** of the native currency mosaic. The maximum supply takes into account the inflation generated per-block.
 
 .. code-block:: bash
 

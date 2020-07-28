@@ -32,13 +32,13 @@ const example = async () => {
     const publicAccount1 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
     const publicAccount2 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
     // Get median fee multiplier
-    const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+    const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
     const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
     const networkHttp = repositoryHttp.createNetworkRepository();
     const medianFeeMultiplier = (await networkHttp.getTransactionFees().toPromise()).medianFeeMultiplier;
 
     // Define transaction and set max fee
-    const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+    const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
     const recipientAddress = Address.createFromRawAddress(rawAddress);
     const transferTransaction = TransferTransaction.create(
         Deadline.create(),

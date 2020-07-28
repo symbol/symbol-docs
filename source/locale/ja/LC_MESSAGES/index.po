@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -134,6 +134,10 @@ msgstr ":doc:`ツール <references/overview>`"
 #: ../../source/index.rst:50
 msgid ":doc:`Server <server>`"
 msgstr ":doc:`サーバ <server>`"
+
+#: ../../source/index.rst:51
+msgid ":doc:`REST API <api>`"
+msgstr ":doc:`REST API <api>`"
 
 #: ../../source/index.rst:52
 msgid ":doc:`Software Development Kits <api>`"

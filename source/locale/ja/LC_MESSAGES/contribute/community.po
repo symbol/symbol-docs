@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -41,8 +41,8 @@ msgid ""
 msgstr "|community| がどのように機能しているか見て、参加してみましょう:"
 
 #: ../../source/contribute/community.rst:19
-msgid "Reach our community joining the official |slack|."
-msgstr "私達の公式 |slack| に参加してください。"
+msgid "Reach our community by joining the |slack|."
+msgstr "私達のコミュニティは |slack| から参加できます。"
 
 #: ../../source/contribute/community.rst:21
 msgid ""

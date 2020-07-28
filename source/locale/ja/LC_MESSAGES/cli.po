@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../source/cli.rst:12
+msgid "CLI"
+msgstr "CLI"
+
 #: ../../source/cli.rst:20
 msgid ""
 "|cli| is an |open-source| command-line interface to interact with the "
 "blockchain."
-msgstr "|cli| はブロックチェーンと疎通する、オープンソースのコマンドラインインターフェイスです。"
+msgstr "|cli| はブロックチェーンと疎通する、 |open-source| コマンドラインインターフェイスです。"
 
 #: ../../source/cli.rst:24
 msgid "Installation"
@@ -89,7 +93,3 @@ msgid ""
 "Find out which CLI version do you have installed by running ``symbol-cli`` "
 "from the command line."
 msgstr "コマンドラインから `` symbol-cli`` を実行して、インストールされている CLI バージョンを確認します。"
-
-#: ../../source/cli.rst:83
-msgid "Guides"
-msgstr "ガイド"

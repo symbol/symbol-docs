@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -43,48 +43,60 @@ msgstr ""
 "既存のプロジェクトに貢献したい場合は、そのリポジトリのプロジェクトフォルダのルートにある CONTRIBUTING.md ファイルを読んでください"
 
 #: ../../source/contribute/contributing.rst:21
+msgid "Server"
+msgstr "サーバ"
+
+#: ../../source/contribute/contributing.rst:23
+msgid ""
+"`Notes for developers <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/README.md>`_"
+msgstr ""
+"`開発者向けメモ <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/README.md>`_"
+
+#: ../../source/contribute/contributing.rst:24
+msgid ":doc:`Writing a transaction schema <../guidelines/writing-a-schema>`"
+msgstr ":doc:`トランザクションスキーマの記述 <../guidelines/writing-a-schema>`"
+
+#: ../../source/contribute/contributing.rst:28
 msgid "SDK"
 msgstr "SDK"
 
-#: ../../source/contribute/contributing.rst:23
+#: ../../source/contribute/contributing.rst:30
 msgid ":doc:`Summary <../sdk>`"
 msgstr ":doc:`概要 <../sdk>`"
 
-#: ../../source/contribute/contributing.rst:24
+#: ../../source/contribute/contributing.rst:31
 msgid ":doc:`Developing an SDK <../guidelines/sdk-development>`"
 msgstr ":doc:`SDK の開発 <../guidelines/sdk-development>`"
 
-#: ../../source/contribute/contributing.rst:25
+#: ../../source/contribute/contributing.rst:32
 msgid ":doc:`Documenting an SDK <../guidelines/sdk-documentation>`"
 msgstr ":doc:`SDK のドキュメント <../guidelines/sdk-documentation>`"
 
-#: ../../source/contribute/contributing.rst:26
+#: ../../source/contribute/contributing.rst:33
 msgid ""
 ":doc:`Generating transaction builders <../guidelines/generating-transaction-"
 "builders>`"
 msgstr ":doc:`トランザクションビルダの生成 <../guidelines/generating-transaction-builders>`"
 
-#: ../../source/contribute/contributing.rst:27
-msgid ":doc:`Writing a transaction schema <../guidelines/writing-a-schema>`"
-msgstr ":doc:`トランザクションスキーマの記述 <../guidelines/writing-a-schema>`"
-
-#: ../../source/contribute/contributing.rst:31
+#: ../../source/contribute/contributing.rst:37
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#: ../../source/contribute/contributing.rst:33
+#: ../../source/contribute/contributing.rst:39
 msgid ":doc:`Style guide <../guidelines/style-guide>`"
 msgstr ":doc:`スタイルガイド <../guidelines/style-guide>`"
 
-#: ../../source/contribute/contributing.rst:34
+#: ../../source/contribute/contributing.rst:40
 msgid ":doc:`Suggesting changes <../guidelines/suggesting-changes>`"
 msgstr ":doc:`変更の提案 <../guidelines/suggesting-changes>`"
 
-#: ../../source/contribute/contributing.rst:35
+#: ../../source/contribute/contributing.rst:41
 msgid ":doc:`Writing a guide <../guidelines/writing-a-guide>`"
 msgstr ":doc:`ガイドの記述 <../guidelines/writing-a-guide>`"
 
-#: ../../source/contribute/contributing.rst:36
+#: ../../source/contribute/contributing.rst:42
 msgid ""
 ":doc:`Translating the documentation <../guidelines/translating-the-"
 "documentation>`"

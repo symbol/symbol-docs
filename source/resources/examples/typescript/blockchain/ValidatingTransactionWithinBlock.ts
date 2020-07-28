@@ -18,8 +18,7 @@
 
 /* start block 01 */
 import {sha3_256} from 'js-sha3';
-import {PositionEnum} from 'symbol-openapi-typescript-node-client/dist/model/positionEnum';
-import {BlockRepository, RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
+import {BlockRepository, MerklePosition, RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
 
 const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository) => {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
@@ -34,7 +33,7 @@ const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHtt
     const HRoot0 = merkleProof
         .reduce( (proofHash, pathItem) => {
             const hasher = sha3_256.create();
-            if (pathItem.position === PositionEnum.Left) {
+            if (pathItem.position === MerklePosition.Left) {
                 return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
             } else {
                 return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
@@ -44,7 +43,7 @@ const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHtt
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
 };
 
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height

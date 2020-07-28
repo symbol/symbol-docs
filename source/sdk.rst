@@ -34,10 +34,6 @@ If you want to create a new SDK, check the :doc:`development guidelines <guideli
 
     <a href="https://github.com/nemtech/symbol-sdk-java" target="_blank">Repository</a>
 
-.. |protocol-compatibility-report| raw:: html
-
-    <a href="https://github.com/nemtech/community/blob/master/projects-status.md" target="_blank">protocol compatibility report</a>
-
 ***************
 Other libraries
 ***************
@@ -49,10 +45,10 @@ Symbol developers have created other libraries that improve and add new features
    :delim: ;
 
     `apostille <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
-    `symbol-data-lib <https://github.com/nemfoundation/symbol-data-lib/>`_; Library to debug rand access |codename| node data.
-    `symbol-hd-wallets <https://github.com/nemfoundation/symbol-hd-wallets/>`_; Hyper-deterministic wallets library for |codename|.
-    `symbol-qr-library <https://github.com/nemfoundation/symbol-qr-library/>`_; QR library for |codename|.
-    `symbol-uri-scheme <https://github.com/nemfoundation/symbol-uri-scheme/>`_; URI Scheme library for |codename|.
+    `symbol-data-lib <https://github.com/nemgrouplimited/symbol-data-lib/>`_; Library to debug rand access |codename| node data.
+    `symbol-hd-wallets <https://github.com/nemtech/symbol-hd-wallets/>`_; Hyper-deterministic wallets library for |codename|.
+    `symbol-qr-library <https://github.com/nemtech/symbol-qr-library/>`_; QR library for |codename|.
+    `symbol-uri-scheme <https://github.com/nemtech/symbol-uri-scheme/>`_; URI Scheme library for |codename|.
     `nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-sharing/>`_; Implementing Shamir's secret sharing on |codename|.
 
 To make a library official, the library should be proposed through the |NIP| process.
@@ -66,15 +62,3 @@ The reason behind the |NIP| is to ensure that:
 .. |NIP| raw:: html
 
    <a href="https://github.com/nemtech/NIP" target="_blank">NEM Improvement Proposal</a>
-
-******
-Guides
-******
-
-.. postlist::
-    :tags: SDK
-    :date: %A, %B %d, %Y
-    :format: {title}
-    :list-style: circle
-    :excerpts:
-    :sort:

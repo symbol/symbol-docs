@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-16 03:55+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -75,6 +75,17 @@ msgstr ""
 "コードを記述している間に、関数とクラスをコメント付きでドキュメント化します。リファレンスジェネレーターはこれらのコメントを読み取り、HTML "
 "として出力を生成できる必要があります。"
 
+#: ../../source/guidelines/sdk-documentation.rst:39
+msgid ""
+"Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ "
+"for Javascript, whereas in Java, we are using `Javadoc "
+"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_."
+msgstr ""
+"リファレンスジェネレータの例は Javascript 向けに `TypeDoc <https://typedoc.org/>`_ ですが、Java では"
+" `Javadoc "
+"<https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_ "
+"を使用しています。"
+
 #: ../../source/guidelines/sdk-documentation.rst:42
 msgid ""
 "We recommend you to research and determine which is the reference generator "
@@ -84,6 +95,17 @@ msgstr "選択したプログラミング言語にとって最も便利なリフ
 #: ../../source/guidelines/sdk-documentation.rst:46
 msgid "Guides"
 msgstr "ガイド"
+
+#: ../../source/guidelines/sdk-documentation.rst:48
+msgid ""
+"The |sitename| gathers a collection of :ref:`guides <blog-categories>`. "
+"These guides show developers how to use |codename| built-in features while "
+"following step-by-step use cases. Each guide comes with at least one "
+"snippet, which is an executable piece of code that solves the proposed use "
+"case."
+msgstr ""
+"|sitename| は :ref:`ガイド <blog-categories>` を集約したものです。これらのガイドは開発者に |codename| "
+"ビルドイン機能の使い方を段階的なユースケースを用いて説明します。各ガイドには、ユースケースを解決する実行可能なコード断片のスニペットが一つ以上用意されています。"
 
 #: ../../source/guidelines/sdk-documentation.rst:52
 msgid ""
@@ -109,6 +131,14 @@ msgid ""
 "Create a new folder under ``source/resources/examples/`` named as the "
 "programming language of your SDK."
 msgstr "あなたの言語の SDK 用として ``source/resources/examples/`` の下に新しいフォルダを作ってください。"
+
+#: ../../source/guidelines/sdk-documentation.rst:63
+msgid ""
+"Adapt every `TypeScript snippet <https://github.com/nemtech/symbol-"
+"docs/tree/master/source/resources/examples/typescript>`__ using the new SDK."
+msgstr ""
+"新しい SDK を使用して、各 `TypeScript スニペット <https://github.com/nemtech/symbol-"
+"docs/tree/master/source/resources/examples/typescript>`__  に適合する。"
 
 #: ../../source/guidelines/sdk-documentation.rst:65
 msgid ""

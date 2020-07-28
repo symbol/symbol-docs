@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -104,11 +104,11 @@ msgid ""
 msgstr ""
 "新しい SDK を作りたい場合は :doc:`開発ガイドライン <guidelines/sdk-development>` を確認してください。"
 
-#: ../../source/sdk.rst:52
+#: ../../source/sdk.rst:48
 msgid "Other libraries"
 msgstr "その他のライブラリ"
 
-#: ../../source/sdk.rst:54
+#: ../../source/sdk.rst:50
 msgid ""
 "Symbol developers have created other libraries that improve and add new "
 "features on top of Symbol."
@@ -148,31 +148,27 @@ msgstr "|codename| 用URI スキーマライブラリ"
 msgid "Implementing Shamir's secret sharing on |codename|."
 msgstr "|codename| でシャミア秘密共有を実装する。"
 
-#: ../../source/sdk.rst:67
+#: ../../source/sdk.rst:63
 msgid ""
 "To make a library official, the library should be proposed through the |NIP|"
 " process."
 msgstr "公式のライブラリとなるためには、 |NIP|  を通して提案する必要があります。"
 
-#: ../../source/sdk.rst:69
+#: ../../source/sdk.rst:65
 msgid "The reason behind the |NIP| is to ensure that:"
 msgstr "|NIP| の背景"
 
-#: ../../source/sdk.rst:71
+#: ../../source/sdk.rst:67
 msgid "The specification has been discussed and accepted."
 msgstr "議論され受理された仕様"
 
-#: ../../source/sdk.rst:72
+#: ../../source/sdk.rst:68
 msgid ""
 "The new library is reviewed, tested and shared among |codename| developers."
 msgstr "新しいライブラリは |codename| 開発者の間でレビュー、テスト、共有されます。"
 
-#: ../../source/sdk.rst:73
+#: ../../source/sdk.rst:69
 msgid ""
 "The library is compatible with third-party projects that uses the same "
 "specification."
 msgstr "ライブラリは同じ仕様のサードパーティプロジェクトと互換性があります。"
-
-#: ../../source/sdk.rst:81
-msgid "Guides"
-msgstr "ガイド"

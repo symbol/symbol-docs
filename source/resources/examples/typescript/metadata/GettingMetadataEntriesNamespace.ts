@@ -22,7 +22,7 @@ import {Metadata, NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
 // replace with namespace name
 const namespaceId = new NamespaceId('symbol');
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
@@ -35,8 +35,9 @@ metadataHttp.getNamespaceMetadata(namespaceId)
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
                     console.log('\n ---' );
                     console.log('\n Value:\t', metadataEntry.value);
-                    console.log('\n Sender Public Key:\t', metadataEntry.senderPublicKey);
-                    console.log('\n Scoped Metadata Key:\t', metadataEntry.targetPublicKey);
+                    console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
+                    console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
+                    console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
                     console.log('\n TargetId:\t', metadataEntry.targetId);
                 });
         } else {

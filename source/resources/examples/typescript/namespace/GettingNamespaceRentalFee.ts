@@ -22,7 +22,7 @@ import {
 
 const example = async () => {
     /* start block 01 */
-    const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+    const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
     const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 
     const networkHttp = repositoryHttp.createNetworkRepository();

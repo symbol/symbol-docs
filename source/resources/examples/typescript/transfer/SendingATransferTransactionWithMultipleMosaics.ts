@@ -19,7 +19,7 @@
 import {Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64} from 'symbol-sdk';
 
 // replace with recipient address
-const rawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -29,7 +29,7 @@ const ignored = TransferTransaction.create(
     recipientAddress,
     /* start block 01 */
     [new Mosaic( new MosaicId('7CDF3B117A3C40CC'), UInt64.fromUint(1000)),
-        new Mosaic ( new MosaicId('05D6A80DE3C9ADCA'), UInt64.fromUint(10 * Math.pow(10, 6)))],
+        new Mosaic ( new MosaicId('5E62990DCAC5BE8A'), UInt64.fromUint(10 * Math.pow(10, 6)))],
     /* end block 01 */
     PlainMessage.create('This is a test message'),
     networkType,

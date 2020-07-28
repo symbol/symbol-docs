@@ -17,14 +17,13 @@
  */
 
 import {filter, map, mergeMap, toArray} from 'rxjs/operators';
-import {Address, MosaicId, RepositoryFactoryHttp, TransactionType, TransferTransaction} from 'symbol-sdk';
+import {Address, MosaicId, RepositoryFactoryHttp, TransactionGroup, TransactionType, TransferTransaction} from 'symbol-sdk';
 
 /* start block 01 */
-// replace with sender address
-const senderRawAddress = 'TBULEA-UG2CZQ-ISUR44-2HWA6U-AKGWIX-HDABJV-IPS4';
-const senderAddress = Address.createFromRawAddress(senderRawAddress);
+// replace with signer public key
+const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 // replace with recipient address
-const recipientRawAddress = 'TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-757VN3-SKPP';
+const recipientRawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
 // replace with mosaic id
 const mosaicIdHex = '46BE9BC0626F9B1A';
@@ -32,22 +31,26 @@ const mosaicIdHex = '46BE9BC0626F9B1A';
 const divisibility = 6;
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const accountHttp = repositoryFactory.createAccountRepository();
+const transactionHttp = repositoryFactory.createTransactionRepository();
 
-accountHttp
-    .getAccountOutgoingTransactions(senderAddress)
+const searchCriteria = {
+    group: TransactionGroup.Confirmed,
+    signerPublicKey,
+    recipientAddress,
+    pageSize: 100,
+    pageNumber: 1,
+    type: [TransactionType.TRANSFER]};
+
+transactionHttp
+    .search(searchCriteria)
     .pipe(
+        map((_) => _.data),
         // Process each transaction individually.
         mergeMap((_) => _),
-        // Filter transfer transactions.
-        filter((_) => _.type === TransactionType.TRANSFER),
         // Map transaction as transfer transaction.
         map((_) => _ as TransferTransaction),
-        // Filter transactions where the account is the recipient address.
-        filter((_) => _.recipientAddress instanceof Address
-            && _.recipientAddress.equals(recipientAddress)),
         // Filter transactions containing a given mosaic
         filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)),
         // Transform absolute amount to relative amount.

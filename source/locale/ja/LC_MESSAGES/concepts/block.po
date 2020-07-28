@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -54,7 +54,7 @@ msgstr "|codename| ブロックは ``15`` 秒毎に完了し、日々の使用�
 msgid "Nodes stores blocks in a serialized form as follows:"
 msgstr "ノードは次のようにブロックをシリアル化した形式で保存します:"
 
-#: ../../source/concepts/block.rst:28
+#: ../../source/concepts/block.rst:32
 msgid "**Inlines:**"
 msgstr "**インライン**"
 
@@ -62,11 +62,11 @@ msgstr "**インライン**"
 msgid "Property"
 msgstr "プロパティ"
 
-#: ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../source/concepts/block.rst:1
+#: ../../source/concepts/block.rst:1 ../../source/concepts/block.rst:1
 msgid "Description"
 msgstr "説明"
 
@@ -107,8 +107,8 @@ msgid "Hash of the global chain state at this block."
 msgstr "このブロックでのグローバルチェーンステートのハッシュ"
 
 #: ../../source/concepts/block.rst:1
-msgid "Public key of the optional beneficiary designated by harvester."
-msgstr "ハーベスタによって指定されたオプション受益者の公開鍵。"
+msgid "Address of the optional beneficiary designated by harvester."
+msgstr "ハーベスタによって指定されたオプション受益者のアドレス。"
 
 #: ../../source/concepts/block.rst:1
 msgid "Fee multiplier applied to block transactions."
@@ -118,7 +118,7 @@ msgstr "手数料乗数はブロックのトランザクションに適用され
 msgid "Reserved padding to align end of BlockHeader on 8-byte boundary."
 msgstr "BlockHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
-#: ../../source/concepts/block.rst:65
+#: ../../source/concepts/block.rst:69
 msgid ""
 "|codename| calls the first block in the chain the **nemesis block**. The "
 "first block is defined before launching a new network and sets the "
@@ -127,13 +127,13 @@ msgstr ""
 "|codename| チェーンの原初ブロックを **nemesis ブロック** "
 "と呼びます。原初ブロックは新しいネットワークを起動する前に定義され、ネットワーク通貨モザイクの頒布を設定します。"
 
-#: ../../source/concepts/block.rst:68
+#: ../../source/concepts/block.rst:72
 msgid ""
 "The process of creating the subsequent new blocks is called :doc:`harvesting"
 " <harvesting>`."
 msgstr "後続する新しいブロックを生成するプロセスを :doc:`ハーベスティング <harvesting>` と呼びます。"
 
-#: ../../source/concepts/block.rst:70
+#: ../../source/concepts/block.rst:74
 msgid ""
 "Blocks are created by :doc:`accounts <account>`, which are chosen by the "
 ":doc:`consensus algorithm <consensus-algorithm>` based on their importance "
@@ -144,7 +144,7 @@ msgstr ""
 ":doc:`アカウント <account>` "
 "によって作成されます。コンセンサスアルゴリズムは各ブロックの作成後に後続ブロックをハーベストするための新しいアカウントを決定します。"
 
-#: ../../source/concepts/block.rst:73
+#: ../../source/concepts/block.rst:77
 msgid ""
 "The harvesting account receives the :doc:`fees <fees>` for the transactions "
 "added in the block and the mosaics created by :doc:`inflation <inflation>`. "
@@ -155,23 +155,23 @@ msgstr ""
 "<inflation>` "
 "によって作成されたモザイクを受け取ります。これはハーベスタはできるだけ多くのトランザクションをブロックに追加するためのインセンティブを与えます。"
 
-#: ../../source/concepts/block.rst:80
+#: ../../source/concepts/block.rst:84
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/block.rst:82
+#: ../../source/concepts/block.rst:86
 msgid ""
 "Blockchains are designed in a way that, in the presence of a network failure"
 " or partition, the recent blocks might need to be rolled back."
 msgstr "ブロックチェーンはネットワーク障害やパーティションが存在する場合に、必要があれば直近のブロックをロールバックするように設計されています。"
 
-#: ../../source/concepts/block.rst:84
+#: ../../source/concepts/block.rst:88
 msgid ""
 "The rewrite limit is the maximum number of blocks that can be rolled back. "
 "Hence, forks can only be resolved up to a certain depth too."
 msgstr "書き換え制限とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
 
-#: ../../source/concepts/block.rst:87
+#: ../../source/concepts/block.rst:91
 msgid ""
 "|codename|'s public network has a rewrite limit of ``398`` blocks, but this "
 "limit is :ref:`configurable per network <config-network-properties>`. The "
@@ -183,10 +183,20 @@ msgstr ""
 "<config-network-properties>` です。ブロックにリンクされているトランザクションは、承認ブロック (後続ブロック) "
 "の数がロールバックブロックの最大数を超えると、ブロックチェーンへ永続的に記録されます。"
 
-#: ../../source/concepts/block.rst:92
+#: ../../source/concepts/block.rst:96
+msgid "Related transactions"
+msgstr "関連トランザクション"
+
+#: ../../source/concepts/block.rst:1
+msgid ""
+"Link an account with a BLS public key. Required for node operators willing "
+"to vote finalized blocks."
+msgstr "アカウントを BLS 公開鍵にリンクします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要です。"
+
+#: ../../source/concepts/block.rst:107
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:102
+#: ../../source/concepts/block.rst:117
 msgid "Continue: :doc:`Transaction <transaction>`."
 msgstr "次項: :doc:`トランザクション <transaction>`"

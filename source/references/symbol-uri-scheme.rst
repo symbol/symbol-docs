@@ -8,5 +8,5 @@ Symbol URI Scheme Reference
 Versions
 ********
 
-.. ghreference:: nemfoundation/symbol-uri-scheme
+.. ghreference:: nemtech/symbol-uri-scheme
     :folder:

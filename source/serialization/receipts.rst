@@ -60,7 +60,7 @@ The invisible state change triggered a mosaic transfer.
     :delim: ;
 
     mosaic; :ref:`Mosaic <mosaic>`; Mosaic transferred.
-    senderPublicKey; :schema:`Key <types.cats>`; Public key of the sender.
+    senderAddress; :schema:`Address <types.cats>`; Address of the sender.
     recipientAddress; :schema:`Address <types.cats>`; Address of the recipient.
 
 .. _balance-change-receipt:
@@ -82,7 +82,7 @@ The invisible state change changed an account balance.
     :delim: ;
 
     mosaic; :ref:`Mosaic <mosaic>`; Mosaic increased or decreased.
-    targetPublicKey; :schema:`Key <types.cats>`; Public key of the target account.
+    targetAddress; :schema:`Address <types.cats>`; Address of the target account.
 
 .. _mosaic-expiry-receipt:
 

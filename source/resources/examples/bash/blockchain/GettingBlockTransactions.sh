@@ -1,3 +1,3 @@
 #!/bin/sh
 
-symbol-cli block transactions --height 1
+symbol-cli transaction search --height 1 --group Confirmed

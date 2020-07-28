@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-16 03:55+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -47,6 +47,11 @@ msgid ""
 "Announce a MosaicAddressRestrictionTransaction transaction to set a "
 "restriction rule to an address."
 msgstr "MosaicAddressRestrictionTransaction をアナウンスして制限ルールをアドレスに設定します。"
+
+#: ../../source/serialization/restriction_mosaic.rst:33
+#: ../../source/serialization/restriction_mosaic.rst:62
+msgid "**Inlines**:"
+msgstr "**インライン**"
 
 #: ../../source/serialization/restriction_mosaic.rst:35
 #: ../../source/serialization/restriction_mosaic.rst:64

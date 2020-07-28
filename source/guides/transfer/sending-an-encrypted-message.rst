@@ -42,7 +42,7 @@ Create two accounts: one for Alice and another for the certificate with the :ref
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.096x.symboldev.network:3000/
     Insert profile name: alice
 
 .. code-block:: bash
@@ -51,7 +51,7 @@ Create two accounts: one for Alice and another for the certificate with the :ref
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.096x.symboldev.network:3000/
     Insert profile name: certificate
 
 *************************

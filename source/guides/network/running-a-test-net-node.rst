@@ -59,7 +59,7 @@ The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be in
 
 .. code-block:: bash
 
-    git clone https://github.com/nemfoundation/symbol-testnet-bootstrap.git
+    git clone https://github.com/nemgrouplimited/symbol-testnet-bootstrap.git
 
 2. Choose the **assembly distribution** you want to install.
 
@@ -147,16 +147,16 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer-951.symboldev.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer-96x.symboldev.network/" target="_blank">Blockchain Explorer</a>
 
 .. |faucet-1| raw:: html
 
-   <a href="http://faucet-951-01.symboldev.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-96x-01.symboldev.network/" target="_blank">Faucet</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-951-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-96x-02.symboldev.network/" target="_blank">alternative faucet</a>
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>
+   <a href="https://github.com/nemgrouplimited/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>

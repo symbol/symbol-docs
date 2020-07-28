@@ -38,7 +38,7 @@ class GettingMosaicInformation {
 
         /* start block 01 */
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.ap-northeast-1.testnet-0951-v1.symboldev.network:3000")) {
+                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             // replace with mosaic id
             final String mosaicIdHex = "71415AC19C818709";
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);

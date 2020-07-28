@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -228,9 +228,9 @@ msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
-"The public key of the account that will receive a percentage of the block "
-"fees defined by the harvestBeneficiaryPercentage."
-msgstr "HarvestBeneficiaryPercentage によって定義された、ブロック手数料の割合を受け取るアカウントの公開鍵。"
+"Address of the account that will receive a percentage of the block fees "
+"defined by the harvestBeneficiaryPercentage."
+msgstr "HarvestBeneficiaryPercentage によって定義された、ブロック手数料の割合を受け取るアカウントのアドレス。"
 
 #: ../../source/concepts/harvesting.rst:84
 msgid ""
@@ -285,14 +285,14 @@ msgstr "リモートアカウントはデリゲートアカウントである間
 #: ../../source/concepts/harvesting.rst:108
 msgid ""
 "Then, the account needs to send a `special encrypted message "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_ to the node "
+"<https://github.com/nemtech/NIP/blob/main/NIPs/nip-0009.md>`_ to the node "
 "via a :doc:`TransferTransaction <transfer-transaction>`. The message must "
 "contain the remote's account **proxy private key**  encrypted using AES, "
 "making the transaction readable only by the recipient."
 msgstr ""
 "次に、アカウントは :doc:`TransferTransaction <transfer-transaction>` を用いて "
-"`特別な暗号化メッセージ <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0009.md>`_"
-" をノードへ送信する必要があります。このメッセージは受信者だけが解読できるように AES を用いて暗号化されたリモートの **プロキシ秘密鍵** "
+"`特別な暗号化メッセージ <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0009.md>`_ "
+"をノードへ送信する必要があります。このメッセージは受信者だけが解読できるように AES を用いて暗号化されたリモートの **プロキシ秘密鍵** "
 "が含まれていなければなりません。"
 
 #: ../../source/concepts/harvesting.rst:111

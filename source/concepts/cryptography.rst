@@ -42,7 +42,7 @@ A |codename| address is a **Base32 encoded triplet** consisting of:
 
 * The network byte.
 * The 160-bit hash of the account's public key.
-* The 4 byte checksum, to allow the quick recognition of mistyped addresses.
+* The 3 byte checksum, to allow the quick recognition of mistyped addresses.
 
 The following steps are performed to |implementation-public-key-address|:
 
@@ -81,18 +81,18 @@ In fact, the blockchain only tracks addresses and public keys when they first ap
 
 .. |implementation-derivation| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/KeyGenerator.cpp#L40-L42" target="_blank">implementation</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/KeyGenerator.cpp#L40-L42" target="_blank">implementation</a>
 
 .. |implementation-signature| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/Signer.cpp#L116-L170" target="_blank">sign entities</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp#L116-L170" target="_blank">sign entities</a>
 
 .. |implementation-verification| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/crypto/Signer.cpp#L180-L220" target="_blank">verify them</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp#L180-L220" target="_blank">verify them</a>
 
 .. |implementation-public-key-address| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/master/src/catapult/model/Address.cpp#L45-L63" target="_blank">convert a public key to an address</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp#L63-L81" target="_blank">convert a public key to an address</a>
 
 Continue: :doc:`Block <block>`.

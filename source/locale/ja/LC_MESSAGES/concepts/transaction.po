@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-22 15:51+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -64,6 +64,10 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Account Link**"
+msgstr "**アカウントリンク**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid ""
 "Delegate the account importance to a proxy account. Required for all "
 "accounts willing to activate delegated harvesting."
@@ -75,6 +79,10 @@ msgid ""
 "Link an account with a public key used by TLS to create sessions. Required "
 "for node operators."
 msgstr "アカウントを TLS が使用する公開鍵とリンクしてセッションを作成します。ノード演算子に必要です。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "**Aggregate**"
+msgstr "**アグリゲート**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send transactions in batches to different accounts."
@@ -89,6 +97,10 @@ msgid "Cosign an AggregateBondedTransaction."
 msgstr "AggregateBondedTransaction へ連署します。"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Core**"
+msgstr "**コア**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid ""
 "Link an account with a BLS public key. Required for node operators willing "
 "to vote finalized blocks."
@@ -101,12 +113,20 @@ msgid ""
 msgstr "アカウントを VRF 公開鍵にリンクします。ハーベスト対象のすべてのアカウントに必要です。"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Mosaic**"
+msgstr "**モザイク**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Create a new mosaic."
 msgstr "新しいモザイクの作成"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Change the mosaic total supply."
 msgstr "モザイクの合計供給量を変更します。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "**Namespace**"
+msgstr "**ネームスペース**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Register a namespace to organize your assets."
@@ -121,6 +141,10 @@ msgid "Attach a namespace name to a mosaic."
 msgstr "ネームスペースをモザイクにアタッチする。"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Metadata**"
+msgstr "**メタデータ**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Associate a key-value state to an account."
 msgstr "アカウントに Key-Value 状態を関連付けます。"
 
@@ -133,12 +157,24 @@ msgid "Associate a key-value state to a namespace."
 msgstr "ネームスペースに Key-Value 状態を関連付けます。"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Multisignature**"
+msgstr "**マルチシグネチャ**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Create or modify a multisig contract."
 msgstr "マルチシグコントラクトの作成と変更"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Hash Lock**"
+msgstr "**ハッシュロック**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Lock a deposit needed to announce aggregate bonded transactions."
 msgstr "アグリゲートボンドトランザクションのアナウンスに必要なデポジットをロック"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "**Secret Lock**"
+msgstr "**シークレットロック**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Start a token swap between different chains."
@@ -147,6 +183,10 @@ msgstr "異なるチェーン間でのトークンスワップの開始。"
 #: ../../source/concepts/transaction.rst:1
 msgid "Conclude a token swap between different chains."
 msgstr "異なるチェーン間でのトークンスワップの完結。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "**Account restriction**"
+msgstr "**アカウント制限**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid ""
@@ -164,12 +204,20 @@ msgid "Allow or block outgoing transactions by transaction type."
 msgstr "トランザクションタイプによる送信トランザクションの許可/ブロックします。"
 
 #: ../../source/concepts/transaction.rst:1
+msgid "**Mosaic restriction**"
+msgstr "**モザイク制限**"
+
+#: ../../source/concepts/transaction.rst:1
 msgid "Set global rules to transfer a restrictable mosaic."
 msgstr "制限可能モザイクの転送にグローバルルールを設定します。"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Set address specific rules to transfer a restrictable mosaic."
 msgstr "制限可能モザイクの転送に特定アドレスを設定します。"
+
+#: ../../source/concepts/transaction.rst:1
+msgid "**Transfer**"
+msgstr "**転送**"
 
 #: ../../source/concepts/transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
@@ -264,10 +312,10 @@ msgstr ""
 msgid ""
 "An account has to follow the next steps to `sign a transaction "
 "<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L216>`_:"
+"javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_:"
 msgstr ""
 "アカウントは `トランザクションへ署名 <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L216>`_ "
+"javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_ "
 "をするために次のステップに従う必要があります:"
 
 #: ../../source/concepts/transaction.rst:114
@@ -303,16 +351,15 @@ msgstr "署名者の署名と公開鍵をトランザクションに追加して
 #: ../../source/concepts/transaction.rst:119
 msgid ""
 "Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-"
-"typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L127>`_ by "
-"applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the "
-"signer public key, nemesis block generation hash, and the remaining "
+"typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_"
+" by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, "
+"the signer public key, nemesis block generation hash, and the remaining "
 "transaction payload."
 msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードに SHA3-512 "
 "ハッシュアルゴリズムを適用して `トランザクションハッシュ <https://github.com/nemtech/symbol-sdk-"
-"typescript-"
-"javascript/blob/master/src/model/transaction/Transaction.ts#L127>`_ を計算します。"
+"typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_"
+" を計算します。"
 
 #: ../../source/concepts/transaction.rst:132
 msgid "Announcing a transaction"
@@ -340,30 +387,34 @@ msgstr "トランザクションのアナウンスをすると、REST API は常
 msgid "Transaction cycle"
 msgstr "トランザクションサイクル"
 
+#: ../../source/concepts/transaction.rst:159
+msgid "Validation"
+msgstr "バリデーション"
+
 #: ../../source/concepts/transaction.rst:161
 msgid ""
 "The first stage of validation happens in the API nodes. If the transaction "
-"presents some error, the WebSocket throws a notification through the status "
-"channel. In the positive case, the transaction reaches the P2P network with "
-"an **unconfirmed** status. Never rely on a transaction that has an "
-"unconfirmed state. It is not clear if it will get included in a block, as it"
-" should pass a second validation."
+"encounters an error, the WebSocket throws a notification through the status "
+"channel. If not, the transaction reaches the P2P network with an "
+"**unconfirmed** status. In this state, it is not yet clear if the "
+"transaction will get included in a block. Thus, an unconfirmed transaction "
+"should never be replied upon."
 msgstr ""
-"バリデーションの初回ステージは API ノードで行われます。トランザクションが何らかのエラーを含んでいる場合、WebSocket "
-"はステータスチャンネルへ通知を投げます。良いケースの場合、トランザクションは P2P ネットワークへ **未承認** "
-"ステータスとして到達します。未承認状態のトランザクションを信頼してはいけません。2つ目のバリデーションを通過しないといけないので、これがブロックに取り込まれるかどうかは不明です。"
+"バリデーションの初回ステージは API ノードで行われます。トランザクションにエラーがある場合、WebSocket "
+"はステータスチャンネルへ通知を投げます。そうでなければ、トランザクションは P2P ネットワークへ **未承認** "
+"ステータスとして到達します。この状態の場合、トランザクションがブロックに含まれるかどうかはまだ明確ではありません。そのため、未承認状態のトランザクションを信頼してはいけません。"
 
-#: ../../source/concepts/transaction.rst:167
+#: ../../source/concepts/transaction.rst:166
 msgid ""
-"The second validation is done before the transaction is added in a "
-":doc:`harvested block <block>`. If valid, the harvester stores the "
-"transaction in a block and reaches the **confirmed** status."
+"The second validation happens before the transaction is added in a "
+":doc:`harvested block <block>`. If successful, the harvester stores the "
+"transaction in a block and the transaction reaches the **confirmed** status."
 msgstr ""
 "トランザクションが :doc:`ハーベストされたブロック <block>` "
-"に追加される前に、2つ目のバリデーションは完了します。妥当な場合、ハーベスターはブロックにトランザクションを保存し、それは **承認済み** "
-"のステータスとなります。"
+"に追加される前に、2つ目のバリデーションが実施されます。成功した場合、ハーベスターはブロックにトランザクションを保存し、そのトランザクションは "
+"**承認済み** のステータスとなります。"
 
-#: ../../source/concepts/transaction.rst:170
+#: ../../source/concepts/transaction.rst:169
 msgid ""
 "Continuing the previous example, the transaction gets processed and the "
 "amount stated gets transferred from the signer's account to the recipient's "
@@ -373,7 +424,7 @@ msgstr ""
 "前述した事例の続きとして、そのトランザクションが処理され、設定された総量が署名者のアカウントから受信者のアカウントへ振り込まれた状態になります。さらに "
 ":doc:`トランザクション手数料 <fees>` は署名者のアカウントから差し引かれます。"
 
-#: ../../source/concepts/transaction.rst:173
+#: ../../source/concepts/transaction.rst:172
 msgid ""
 "The transaction has zero confirmations at this point. When another block is "
 "added to the blockchain, the transaction has one confirmation. The next "
@@ -381,7 +432,7 @@ msgid ""
 msgstr ""
 "この時点でトランザクションの承認数はゼロです。ブロックチェーンに別のブロックが追加されると、トランザクションは1つ目の承認を得ます。チェーンに追加された次のブロックが2つ目の承認を与え、続いていきます。"
 
-#: ../../source/concepts/transaction.rst:177
+#: ../../source/concepts/transaction.rst:176
 msgid ""
 "Under certain circumstances, like network failure or partition, the most "
 "recent confirmed blocks might need to be reversed. :ref:`Rollbacks "
@@ -391,7 +442,7 @@ msgstr ""
 "ネットワーク障害やパーティションなどの特定の状況では、直近に承認されたブロックを元に戻す必要がある場合があります。 :ref:`ロールバック "
 "<rollbacks>` はブロックチェーンシステムの特性であり、フォークの解決に不可欠なものです。"
 
-#: ../../source/concepts/transaction.rst:180
+#: ../../source/concepts/transaction.rst:179
 msgid ""
 "In the public network, a transaction is considered to be irrevocable when it"
 " receives ``398`` confirmations. But the maximum number of blocks that can "
@@ -405,10 +456,38 @@ msgstr ""
 "<config-network-properties>` です。つまり、トランザクションが最初の承認を受け取った後、少なくとも ``398`` "
 "ブロック待機して、パブリックネットワーク上で元に戻せないことを保証する必要があります。"
 
-#: ../../source/concepts/transaction.rst:185
+#: ../../source/concepts/transaction.rst:184
+msgid "Spam Throttle"
+msgstr "スパムスロットル"
+
+#: ../../source/concepts/transaction.rst:186
+msgid ""
+"The node's cache holds unconfirmed transactions until they can be included "
+"in a block. Since cache is a valuable resource, |codename| implements a spam"
+" throttle that prevents an attacker from filling the cache with unconfirmed "
+"transactions while still letting honest actors successfully submit new "
+"unconfirmed transactions."
+msgstr ""
+"ノードのキャッシュはブロックに取り込まれるまで、未承認トランザクションを保持します。キャッシュは貴重なリソースのため、 |codename| "
+"は攻撃者が未承認トランザクションでキャッシュを満たすことを防ぎながら、正当な利用者が新しい未承認トランザクションを正常に送信できるようにするためのスパムスロットルを実装しています。"
+
+#: ../../source/concepts/transaction.rst:189
+msgid ""
+"The spam throttle controls the amount of unconfirmed transactions accounts "
+"can submit by calculating the fair share of cache for each account relative "
+"to its importance score. If an account has surpassed its fair share of the "
+"cache and the node cache contains more unconfirmed transactions than the "
+"amount that can be included in a single block, the transaction will be "
+"rejected. This effectively blocks malicious actors from spamming a node with"
+" transactions while allowing other users to continue using the node "
+"normally."
+msgstr ""
+"スパムスロットルはアカウントのインポータンススコアを比較して、アカウントごとのキャッシュの配分を公平に計算することにより、アカウントが送信できる未承認トランザクションの量を制御します。アカウントがキャッシュの公平な配分を超過しており、ノードキャッシュに未承認トランザクションが1つのブロックに含めることができる量よりも多い場合、トランザクションは拒否されます。これにより、悪意のある利用者がノードにスパムトランザクションの送信を効果的にブロックし、他のユーザーがノードを通常通り使用できるようにします。"
+
+#: ../../source/concepts/transaction.rst:195
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transaction.rst:195
+#: ../../source/concepts/transaction.rst:205
 msgid "Continue: :doc:`Fees <fees>`."
 msgstr "次項: :doc:`手数料 <fees>`"

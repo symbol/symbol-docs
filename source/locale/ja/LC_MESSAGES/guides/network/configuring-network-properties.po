@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 09:12+0000\n"
+"POT-Creation-Date: 2020-07-16 03:55+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -104,8 +104,32 @@ msgid "Maximum number of blocks that can be rolled back."
 msgstr "ロールバック可能な最大ブロック数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Initial currency atomic units available in the network."
+msgstr "ネットワークの初期通貨単位量"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of transactions per block."
+msgstr "ブロック毎のトランザクションの最大数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of transactions per aggregate."
+msgstr "アグリゲート毎のトランザクションの最大数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of blocks for which a hash lock can exist."
+msgstr "ハッシュロックが存在できる最大ブロック数。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of blocks for which a secret lock can exist."
+msgstr "シークレットロックが存在できる最大ブロック数。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Minimum size of a proof in bytes."
 msgstr "バイト換算の最小 proof サイズ"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum size of a proof in bytes."
+msgstr "バイト換算の最大 proof サイズ"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum metadata value size."
