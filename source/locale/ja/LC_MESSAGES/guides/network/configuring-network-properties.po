@@ -104,12 +104,24 @@ msgid "Maximum number of blocks that can be rolled back."
 msgstr "ロールバック可能な最大ブロック数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Initial currency atomic units available in the network."
+msgstr "ネットワークの初期通貨単位量"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of transactions per block."
 msgstr "ブロック毎のトランザクションの最大数"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Maximum number of transactions per aggregate."
 msgstr "アグリゲート毎のトランザクションの最大数"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of blocks for which a hash lock can exist."
+msgstr "ハッシュロックが存在できる最大ブロック数。"
+
+#: ../../source/guides/network/configuring-network-properties.rst:1
+msgid "Maximum number of blocks for which a secret lock can exist."
+msgstr "シークレットロックが存在できる最大ブロック数。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:1
 msgid "Minimum size of a proof in bytes."
