@@ -6,13 +6,14 @@
     :excerpt: 1
     :nocomments:
 
-#############################################################
-Adding cosignatures to aggregate complete trasactions offline
-#############################################################
+#####################################################
+Adding cosignatures to aggregate complete trasactions
+#####################################################
 
-This guide will show you how to add cosignatures to an aggregate complete transaction while offline, then use an online device to announce the transaction.
+This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial caché.
 
 This can be useful for when you are keeping your private keys in an offline device (cold wallet) for security reasons. By signing adding the cosignatures offline, the cosignatories will be able to execute transactions from your cold wallet while keeping their private keys completely safe.
+Furthermore, it also allows users to avoid unnecessarily locking their funds in aggregate bonded transactions.
 
 In the this guide, we will set up an aggregate complete transaction where Alice (``TDPXWF2H5G7U2NKZRJD47QR4KZPRULPAMQ4O54IK``) will send 100 |networkcurrency| from Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``) in return for 1 `collectible` mosaic.
 
