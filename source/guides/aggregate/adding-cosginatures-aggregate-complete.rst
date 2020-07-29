@@ -10,7 +10,7 @@
 Adding cosignatures to aggregate complete trasactions
 #####################################################
 
-This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial caché.
+This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial cache.
 
 This can be useful for when you are keeping your private keys in an offline device (cold wallet) for security reasons. By signing adding the cosignatures offline, the cosignatories will be able to execute transactions from your cold wallet while keeping their private keys completely safe.
 Furthermore, it also allows users to avoid unnecessarily locking their funds in aggregate bonded transactions.
