@@ -323,7 +323,7 @@ def viewsource_resolve_link(file_path, language=None):
     if language == 'javascript':
         language = 'typescript'
     if language == 'java':
-        language += 'java/src/test/java/symbol/guides/examples'
+        language = 'java/src/test/java/symbol/guides/examples'
     base_url = 'https://github.com/nemtech/symbol-docs/blob/main/source/resources/examples/%s/' % language
     path_split = file_path.split('/')
     path = "/".join(path_split[len(path_split)-2:])
