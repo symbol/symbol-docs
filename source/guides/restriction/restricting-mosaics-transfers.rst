@@ -12,9 +12,9 @@ Restricting mosaic transfers
 
 Limit how accounts can transact with Mosaic Restrictions.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Let's say a company, CharlieChocolateFactory, wants to go public by tokenizing their shares and conducting an STO. They create a mosaic ``ccf.shares`` and configure it to be **restrictable**. To comply with regulations, the company wants only the participants that have passed the **KYC/AML** process to buy and transact their stock.
 
@@ -52,12 +52,9 @@ Before starting to work with Mosaic Restrictions, we need to have created a rest
 
 2. Then, copy and save the mosaic identifier. We will need it later to define restrictions.
 
-*************************
-Method #01: Using the SDK
-*************************
-
+***********************************
 Setting a Mosaic Global Restriction
-===================================
+***********************************
 
 The company wants to add a restriction to only permit accounts with elevated statuses to interact with the asset. To achieve this, the company will add a mosaic global restriction as ``{ccf.shares, KYC, EQ = 1}``, which can be read as "only allow accounts to transact with the ``ccf.shares`` mosaic if their ``KYC`` restriction key for it has a value equal to 1".
 
@@ -111,8 +108,9 @@ The SDK will also request the previous mosaic restriction value and type for thi
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+*************************************
 Assigning Mosaic Address Restrictions
-=====================================
+*************************************
 
 When investors complete the KYC/AML process, the CharlieChocolateFactory alters their accounts with a **MosaicAddressRestrictionTransaction** with parameters ``ccf.shares, KYC, 1``, allowing certified investors to participate in the STO. Others who have not provided the necessary information will not be able to receive or trade the asset.
 
@@ -151,7 +149,7 @@ Alice, a potential investor, passes the KYC process. Once Alice has been verifie
 
 3. Once the transaction gets confirmed, try to send mosaics to Alice's and Bob's accounts.
 
-You should be able to send ``ccf.shares`` to Alice without any problems. Additionally, Alice will be able to transfer mosaics with other accounts with restrictions set to ``{ccf.shares, KYC, 1}``.
+Now, you should be able to send ``ccf.shares`` to Alice without any problems. Additionally, Alice will be able to transfer mosaics with other accounts with restrictions set to ``{ccf.shares, KYC, 1}``.
 
 .. code-block:: bash
 

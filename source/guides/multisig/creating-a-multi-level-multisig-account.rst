@@ -12,9 +12,9 @@ Creating a multi-level multisig account
 
 This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 :doc:`Multisig accounts <../../concepts/multisig-account>` can have as cosignatories other multisig accounts and add “AND/OR” logic to multi-signature transactions.
 

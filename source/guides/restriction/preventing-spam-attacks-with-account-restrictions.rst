@@ -12,9 +12,9 @@ Preventing spam attacks with account restrictions
 
 Learn how to add and remove account restrictions.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Imagine you are a company using the public chain to certify the quality of your products.
 

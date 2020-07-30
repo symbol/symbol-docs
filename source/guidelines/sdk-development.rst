@@ -174,7 +174,7 @@ The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the prot
 In combination with the `catbuffer-generators project <https://github.com/nemtech/catbuffer-generators/tree/main/generators>`_, developers can generate builder classes for a given set of programming languages.
 For example, the |sdk| uses the generated code to operate with the entities in binary form.
 
-.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/nemtech/catbuffer-generators/tree/master/generators/typescript>`_ for TypeScript.
+.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/nemtech/catbuffer-generators/tree/main/generators/typescript>`_ for TypeScript.
 
 If there is a generator, follow the next steps to generate the builders for all the existent entities:
 

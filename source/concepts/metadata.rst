@@ -2,12 +2,12 @@
 Metadata
 ########
 
-|codename| provides you with an option to associate metadata to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a transaction.
+|codename| provides the option to associate custom data to an :doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a transaction.
 
 The most common uses of metadata are:
 
-* Attach relevant information to your assets.
-* Validate the value attached to an asset to enable users in your application to perform an off-chain action.
+* Attach relevant information to assets.
+* Validate the value attached to an asset to enable users in an application to perform an off-chain action.
 
 Metadata is uniquely **identified** by the tuple ``{ signer, target-id, metadata-key }``.
 Including a signer in this composite identifier allows multiple accounts to specify the same metadata without conflict.
@@ -69,7 +69,7 @@ For security reasons, HR sets the metadata of the account to ``{company, ACCESS,
 
 Each time Carol attempts to access the company apps suite, the company app validates that Carol has permission and that the time falls under *9:00-18:00* before granting her admission.
 
-On the other hand, if Derek, who has no permissions, attempts to access the company apps suite, the company app will reject his request.
+Similarly, if Derek, who has no permissions, attempts to access the company apps suite, the app will reject his request.
 
 ********************
 Related transactions

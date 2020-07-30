@@ -11,9 +11,9 @@ Sending an encrypted message
 
 Send an encrypted message that only can be read by the recipient account.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Imagine that Alice wants to timestamp a sensitive message to send to an account representing her academic certificate.
 
@@ -138,14 +138,3 @@ You can now **decrypt the message** using either the certificate account or addr
         :end-before: /* end block 01 */
 
 If you managed to read the message, try to decrypt it using another unrelated account to ensure that only the defined participants can read the encrypted content.
-
-*************************
-Method #02: Using the CLI
-*************************
-
-Encrypt the message
-===================
-
-.. viewsource:: ../../resources/examples/bash/transfer/SendingAnEncryptedTransferTransaction.sh
-    :language: bash
-    :start-after: #!/bin/sh

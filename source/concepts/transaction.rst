@@ -123,7 +123,7 @@ Announcing a transaction
 ************************
 
 Signed transactions are ready to be announced to the network.
-You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://nemtech.github.io/symbol-openapi/#operation/announceTransaction>`_.
+You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://docs.symbolplatform.com/symbol-openapi/#operation/announceTransaction>`_.
 
 .. example-code::
 

@@ -2,11 +2,11 @@
 Consensus
 #########
 
-|codename| uses a modified proof of stake consensus algorithm called Proof of Stake Plus (**PoS+**).
+The consensus protocol is the dynamic method through which blockchain systems reach an agreement and make decisions.
+|codename| utilizes an innovative mechanism called the Proof-of-Stake Plus, a modified version of the popular Proof-of-Stake (|pos|) protocol. 
 
-In a basic Proof of Stake (|pos|) consensus algorithm, the formation of a subsequent block in a blockchain is stochastically assigned to a coin-holding stakeholder of the blockchain weighed by a combination of factors relating to the stakeholders' wealth.
-
-The improved protocol considers accounts' stakes in the network and rewards active supporters based on their activity, diminishing the rich-gets-richer problem.
+In a basic Proof of Stake consensus algorithm, the formation of a subsequent block in a blockchain is stochastically assigned to a coin-holding stakeholder of the blockchain weighed by a combination of factors relating to the stakeholders' wealth.
+The PoS+ protocol also considers accounts' stakes, but it is designed to promote the ecosystem's health by rewarding participants based on their activity.
 
 .. _importance-calculation:
 
@@ -16,9 +16,9 @@ Factors
 
 The algorithm considers the following factors to improve the ecosystem’s health perspective:
 
-* **Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-mosaic>` owned. Owners with larger balances should have the incentive to see the ecosystem flourish.
-* **Transactions**: The total amount of fees paid by an account. Being an active account in the network should be encouraged.
-* **Nodes**: The number of times an account is a beneficiary of a block. The network should incentivize active accounts running nodes for securing the network.
+* **Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-mosaic>` owned. Owners with larger balances have the incentive to see the ecosystem flourish.
+* **Transactions**: The total amount of fees paid by an account. Being an active account in the network is encouraged.
+* **Nodes**: The number of times an account is a beneficiary of a block. The network incentivizes active accounts running nodes for securing the network.
 
 All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
 

@@ -31,11 +31,13 @@ The effective fee deducted from the account sending the transaction is calculate
 
     effectiveFee = transaction::size * block::feeMultiplier
 
-A node owner :ref:`can configure the fee multiplier <node-properties>` to all positive values, including zero.  The ``fee_multiplier`` is stored in the :ref:`block header <block-header>` when the node harvests a new block, determining which was the effective fee paid for every transaction included.
+A node owner :ref:`can configure the fee multiplier <node-properties>` to all positive values, including zero.
+The ``fee_multiplier`` is stored in the :ref:`block header <block-header>` when the node harvests a new block, determining which was the effective fee paid for every transaction included.
 
 Before announcing the transaction, the sender must specify during the transaction definition a ``max_fee``, indicating the maximum fee the account allows to spend for this transaction.
 
-If the ``effective_fee`` is smaller or equal to the ``max_fee``, a harvester could opt to include the transaction in the block. The harvesting nodes :ref:`can set their transaction inclusion strategy <node-properties>`:
+If the ``effective_fee`` is smaller or equal to the ``max_fee``, a harvester could opt to include the transaction in the block.
+The harvesting nodes :ref:`can set their transaction inclusion strategy <node-properties>`:
 
 * **Prefer-oldest**: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.
 * **Minimize-fees**: Philanthropic nodes. Include first the transactions that other nodes do not want to include.
