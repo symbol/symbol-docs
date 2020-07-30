@@ -12,9 +12,9 @@ Getting the asset identifier behind a namespace with receipts
 
 Get the resolution for a given alias and transaction using receipts.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 |codename| accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`.
 This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.

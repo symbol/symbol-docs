@@ -12,14 +12,16 @@ Activating delegated harvesting
 
 Share your account's importance securely with a node.
 
-**********
-Background
-**********
+.. note:: **July 30, 2019**: This guide is outdated and not compatible with latest 0.9.6 milestone. We will publish up-to-date instructions on how to activate delegated harvesting soon.
+
+********
+Use case
+********
 
 :ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node.
 The following guide will show you how to delegate your account importance without compromising the account's funds.
 
-In this process, you will **delegate your main account (M) importance** to a **proxy public key (R)**. Then,you will request a node to **add your remote account (R)** as a delegated harvester with the **announcer account (A)**.
+In this process, you will **delegate your main account (M) importance** to a **proxy public key (R)**. Then, you will request a node to **add your remote account (R)** as a delegated harvester with the **announcer account (A)**.
 
 .. mermaid:: ../../resources/diagrams/delegated-harvesting-activation.mmd
     :caption: Delegated harvesting activation diagram

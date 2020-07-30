@@ -19,7 +19,7 @@ APIs
     `v0.9.4.1 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0941---23-april-2020>`_; v0.8.11; v1.0.20.31; v0.18.0; v0.17.2
 
 - `OpenAPI CHANGELOG <https://github.com/nemtech/symbol-openapi/blob/main/CHANGELOG.md>`_
-- `REST CHANGELOG <https://github.com/nemtech/catapult-rest/blob/master/CHANGELOG.md>`_
+- `REST CHANGELOG <https://github.com/nemtech/catapult-rest/blob/main/CHANGELOG.md>`_
 - `SDK TS CHANGELOG <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md>`_
 - `SDK Java CHANGELOG <https://github.com/nemtech/symbol-sdk-java/blob/main/CHANGELOG.md>`_
 

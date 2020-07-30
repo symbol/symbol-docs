@@ -14,9 +14,9 @@ This guide will show you how to add a new cosignatory to a multisig account.
 
 .. _guide-modify-a-multisig-account-add-new-cosignatory:
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Imagine that Alice and Bob want to **add Carol**, a third participant, as a cosignatory of a multisig **2-of-2** multisig account.
 However, they don't want to increase the number of signatures needed to accept transactions, so the new account will require only **2-of-3** cosignatures to transact.

@@ -7,9 +7,9 @@ This guide will take you through the |codename| development cycle.
 First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`mosaics <../concepts/mosaic>` and :doc:`accounts <../concepts/account>`.
 By the end of this guide, you will know how to issue and monitor transactions on the blockchain.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor.
 The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.

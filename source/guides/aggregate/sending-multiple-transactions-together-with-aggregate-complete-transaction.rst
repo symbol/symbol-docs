@@ -12,9 +12,9 @@ Sending multiple transactions together
 
 Send transactions to different accounts at the same time, using aggregate transactions.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Dan wants to send mosaics to Alice and Bob.
 He could achieve this sending a couple of **TransferTransactions**.
@@ -79,9 +79,3 @@ Method #01: Using the SDK
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
-
-************
-What's next?
-************
-
-Send an AggregateBondedTransaction following :doc:`creating an escrow contract <creating-an-escrow-contract-with-aggregate-bonded-transaction>` guide.

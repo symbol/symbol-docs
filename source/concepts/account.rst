@@ -3,10 +3,8 @@ Account
 #######
 
 An account is a :ref:`key pair <keypair>` (private and public key) associated with a mutable state stored on the blockchain.
-In other words, you have a **deposit box**, which only you can modify with your private key.
 
-Think of an account as **container for assets**.
-It can be used to hold XYM or other mosaics, whether they are tokens or specialized assets.
+In other words, an account is a **deposit box**, which can be used to hold XYM, other mosaics, and specialized assets. However, the assets holded in the box can only be moved with the associated private key.
 
 Moreover, |codename| accounts can also represent **non-fungible assets** that must be unique and updatable: a package to be shipped, a house deed, or a document to be notarized.
 

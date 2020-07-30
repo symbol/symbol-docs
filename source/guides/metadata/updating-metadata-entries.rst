@@ -12,9 +12,9 @@ Updating metadata entries
 
 Update any existent metadata entry.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 :doc:`Metadata <../../concepts/metadata>`  transactions are stored on the blockchain.
 Once a transaction is included in a block—and the block receives enough confirmations—it is not possible to modify the record without invalidating the whole chain.
@@ -113,11 +113,3 @@ Monitor the network until the transaction gets confirmed, and then announce the 
     symbol-cli transaction cosign --hash <transaction-hash> --profile alice
 
 6. Retrieve the metadata entries assigned to Alice's account following :doc:`the next guide <getting-metadata-entries-attached-to-an-account>`.
-
-*************************
-Method #02: Using the CLI
-*************************
-
-.. viewsource:: ../../resources/examples/bash/metadata/UpdatingMetadataEntries.sh
-    :language: bash
-    :start-after: #!/bin/sh

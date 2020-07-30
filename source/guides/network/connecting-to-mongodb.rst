@@ -9,11 +9,8 @@ How to connect to MongoDB
 
 Learn how to access your API node MongoDB instance.
 
-**********
-Background
-**********
-
-The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to MongoDB. Still, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might want to consider connecting to MongoDB directly.
+The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to MongoDB.
+Still, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might want to consider connecting to MongoDB directly.
 
 By the end of this guide, you will be connected to your API node database instance and doing some basic queries.
 

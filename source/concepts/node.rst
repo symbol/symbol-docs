@@ -41,10 +41,10 @@ RocksDB
 
 Peer nodes store the chain state in |rocksdb|.
 The data structures cached are serialized and stored as values to corresponding keys.
-For example, one particular column maps the public keys to addresses.
+For example, a column in this database maps the public keys to addresses.
 Another one, the account state entries as the values to corresponding address keys.
 
-Storing the state in memory is usually faster than using RocksDB.
+Storing the state in memory is faster than using RocksDB.
 However, storing state information in RocksDB demands less memory of the network nodes.
 
 .. note:: Persisting the state in RocksDB is convenient in networks with a large number of accounts.
