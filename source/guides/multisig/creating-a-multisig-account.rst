@@ -13,9 +13,9 @@ Creating a multisig account
 
 This guide will show you how to setup a joint account.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Imagine that Alice and Bob have separate accounts, but they also want to have a shared account to buy groceries.
 If one of them goes out shopping, they should be able to transact with using their joint account without requiring explicit authorization from the other person.
@@ -50,7 +50,6 @@ Method #01: Using the Desktop Wallet
 2. Click on the “**Multisig**” tab on the left-side menu.
 
 3. Click on “**Add a cosignatory**” and provide the address or public key of the account you want to add as a cosignatory of the multisig. Click on the “**+**” button.
-.. note:: Note: make sure potential cosignatory accounts have previously sent transactions on the network.
 
 .. figure:: ../../resources/images/screenshots/create-multisig-2.gif
     :align: center

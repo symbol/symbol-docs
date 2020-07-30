@@ -3,6 +3,7 @@
 .vscode/
 .vs/
 .DS_Store
+venv
 
 # Project specific
 build/

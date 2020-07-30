@@ -93,6 +93,6 @@ In fact, the blockchain only tracks addresses and public keys when they first ap
 
 .. |implementation-public-key-address| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp#L45-L63" target="_blank">convert a public key to an address</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp#L63-L81" target="_blank">convert a public key to an address</a>
 
 Continue: :doc:`Block <block>`.

@@ -7,9 +7,9 @@ This guide will take you through the |codename| development cycle.
 First, we will architect our solution combining some built-in features available in |codename|, such as :doc:`mosaics <../concepts/mosaic>` and :doc:`accounts <../concepts/account>`.
 By the end of this guide, you will know how to issue and monitor transactions on the blockchain.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor.
 The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.
@@ -174,7 +174,7 @@ This means that the customer can only send the ticket back to the mosaic's creat
    The new mosaic id is: 7cdf3b117a3c40cc
 
 The transaction should appear as confirmed after ±15 seconds.
-If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
+If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
 
 ******************
 Sending the ticket

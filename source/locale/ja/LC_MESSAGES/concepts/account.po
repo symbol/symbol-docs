@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.22.1\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-17 12:12+0000\n"
+"POT-Creation-Date: 2020-07-27 15:06+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -178,20 +178,20 @@ msgstr ""
 #: ../../source/concepts/account.rst:80
 msgid ""
 "|codename| supports multi-account hierarchy on the client-side. The `NIP-6 "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>`_ defines the "
+"<https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ defines the "
 "protocol to create HD Wallets on |codename|."
 msgstr ""
 "|codename| はクライアント側でマルチアカウント階層をサポートします。`NIP-6 "
-"<https://github.com/nemtech/NIP/blob/master/NIPs/nip-0006.md>`_ で |codename|"
-" の HD ウォレット生成のプロトコルを定義しています。"
+"<https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ で |codename| の"
+" HD ウォレット生成のプロトコルを定義しています。"
 
 #: ../../source/concepts/account.rst:83
 msgid ""
 "To generate new HD Wallets, use the library `symbol-hd-wallets "
-"<https://github.com/nemfoundation/symbol-hd-wallets>`_."
+"<https://github.com/nemtech/symbol-hd-wallets>`_."
 msgstr ""
-"HD ウォレットを生成するには `symbol-hd-wallets <https://github.com/nemfoundation/symbol-"
-"hd-wallets>`_ ライブラリを使用してください。"
+"HD ウォレットを生成するには `symbol-hd-wallets <https://github.com/nemtech/symbol-hd-"
+"wallets>`_ ライブラリを使用してください。"
 
 #: ../../source/concepts/account.rst:87
 msgid "Guides"

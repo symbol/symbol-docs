@@ -105,7 +105,8 @@ In this second case, the mosaic creator account must own at least ``delta`` unit
 Method #03: Using the CLI
 *************************
 
-To alter the mosaic supply, open a terminal window and run the following command.
+Open a terminal window and run the following command.
+
 Replace ``7cdf3b117a3c40cc`` with the mosaic identifier and ``1000000`` with the absolute units to be increased.
 
 .. viewsource:: ../../resources/examples/bash/mosaic/ModifyingMosaicSupply.sh

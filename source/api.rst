@@ -125,7 +125,7 @@ The messages returned contain information about the blocks.
 
 *Response format*
 
-* `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/block/schemas/BlockInfoDTO.yml>`_
+* `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
 **confirmedAdded/{address}**
 
@@ -143,7 +143,7 @@ The messages returned contain information about the confirmed transactions.
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedAdded/{address}**
 
@@ -163,7 +163,7 @@ Possible scenarios when this channel notifies are: the transaction is announced 
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedRemoved/{address}**
 
@@ -201,7 +201,7 @@ The messages returned contain information about the transactions.
 
 *Response format*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **partialRemoved/{address}**
 
@@ -239,7 +239,7 @@ The messages returned contain the cosignature signed transaction.
 
 *Response format*
 
-* `CosignatureDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
+* `CosignatureDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
 
 **status/{address}**
 
@@ -257,7 +257,7 @@ The messages returned contain the error messages and the transaction hashes.
 
 *Response format*
 
-* `TransactionStatusDTO <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
+* `TransactionStatusDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
 .. |yarn| raw:: html
 

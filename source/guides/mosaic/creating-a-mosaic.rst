@@ -12,15 +12,6 @@ Creating a mosaic
 
 Tokenize an asset using mosaics.
 
-**********
-Background
-**********
-
-Imagine that a private company, ComfyClothingCompany, decides that it wants to go public.
-Instead of a traditional IPO, the company decides to do an STO to issue tokens through the |codename| platform.
-
-In this guide, we are going to help this company to create the tokens for their STO.
-
 *************
 Prerequisites
 *************
@@ -28,22 +19,6 @@ Prerequisites
 - Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
 - Create a new :ref:`account <setup-creating-a-test-account>`.
 - Load the account with enough |networkcurrency| to pay for transaction fees.
-
-******************************
-Defining the mosaic properties
-******************************
-
-ComfyClothingCompany decides to create their STO mosaic with the following configuration:
-
-.. csv-table::
-    :header: "Property", "Value", "Description"
-    :delim: ;
-
-    Divisibility; 0 ; Although brokerages and investment firms can fractionalize shares, the traditional minimum number of shares an investor can purchase from the open market is 1.
-    Duration; 0; Shares of the company should exist as long as the company is in business. The ComfyClothingCompany sets this property to 0, creating a non-expiring mosaic.
-    Supply mutable; True; ComfyClothingCompany sets the initial supply of the mosaic to a typical startup amount of 10,000,000 authorized shares. As the company grows, it could choose to increase the number of shares, so the supply mutable is set to ``true``.
-    Transferable; True; Once the initial shares are distributed, the shares will be on the market to be traded in public. Thus, the transferability property needs to be set to true.
-    Restrictable; True; Since STOs are regulated, the mosaic creator should be able to restrict which accounts can transact with the mosaic.
 
 ************************************
 Method #01: Using the Desktop Wallet
@@ -57,7 +32,9 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-3. Determine the properties of the mosaic you desire to create. Click "**Send**".
+3. Determine the properties of the mosaic you desire to create. 
+You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do you want to configure your mosaic.
+Click "**Send**".
 
 .. figure:: ../../resources/images/screenshots/desktop-create-mosaic-2.gif
     :align: center
@@ -75,7 +52,9 @@ Method #01: Using the Desktop Wallet
 Method #02: Using the SDK
 *************************
 
-1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>` and determined the desired **mosaic properties** .
+1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`.
+This transaction defines the mosaic properties your mosaic will have.
+You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do you want to configure your mosaic.
 
 .. example-code::
 
@@ -94,7 +73,8 @@ Method #02: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` to set the **initial supply**. For instance, we can set it to **1,000,000** mosaic units.
+2. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` to set the **initial supply**.
+For instance, we can set it to **1,000,000** mosaic units.
 
 .. example-code::
 
@@ -142,7 +122,7 @@ Once the transaction gets confirmed, you can try to :doc:`transfer <../transfer/
 Method #03: Using the CLI
 *************************
 
-Open a terminal window and run the following command to create a new mosaic.
+Open a terminal window and run the following command.
 
 .. viewsource:: ../../resources/examples/bash/mosaic/CreatingAMosaic.sh
     :language: bash

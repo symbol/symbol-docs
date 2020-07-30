@@ -61,9 +61,7 @@ Sending multiple transactions together
 ======================================
 
 Dan announces an AggregateTransaction that merges two transfer transactions.
-
-As Dan is the only required signatory, the transaction is considered complete after he signed.
-After announcing it to the network, Alice and Bob will receive the mosaics at the same time.
+Alice and Bob will receive the mosaics at the same time.
 
 .. figure:: ../resources/images/examples/aggregate-sending-payouts.png
     :align: center
@@ -87,7 +85,7 @@ Paying for others fees
 ======================
 
 Alice sends 10 ``currency.euro`` to Bob using an app to make payments.
-But Alice doesn't own |networkcurrency| to pay the transaction fee.
+However, Alice doesn't own |networkcurrency| to pay the transaction fee.
 
 By creating an AggregateBondedTransaction, Alice can convert ``currency.euro`` to |networkcurrency| to pay the fee.
 Now, Alice and Bob can use |codename|'s public blockchain without ever having to buy or hold |networkcurrency| units.

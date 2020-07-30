@@ -66,7 +66,7 @@ The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 
 * Reference: :doc:`REST Gateway <../../api>`
 
-* Reference: `REST API contract <https://nemtech.github.io/symbol-openapi/>`_
+* Reference: `REST API contract <https://docs.symbolplatform.com/symbol-openapi/>`_
 
 *******************
 Accounts management
@@ -207,7 +207,7 @@ We invite you to connect connect with our developer community by joining the |sl
 
 .. |ts-js-sdk-docs| raw:: html
 
-   <a href="https://nemtech.github.io/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>
+   <a href="https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>
 
 .. |nem-library| raw:: html
 
@@ -215,7 +215,7 @@ We invite you to connect connect with our developer community by joining the |sl
 
 .. |catapult-schemas| raw:: html
 
-   <a href="https://github.com/nemtech/catbuffer/tree/master/schemas/" target="_blank">Serialization schemas</a>
+   <a href="https://github.com/nemtech/catbuffer/tree/main/schemas/" target="_blank">Serialization schemas</a>
 
 .. |stack-overflow| raw:: html
 

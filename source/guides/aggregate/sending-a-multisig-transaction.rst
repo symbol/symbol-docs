@@ -12,9 +12,9 @@ Sending a multisig transaction
 
 This guide will show you how to issue transactions from a multisig account.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 .. figure:: ../../resources/images/examples/multisig-transaction-1-of-2.png
     :align: center

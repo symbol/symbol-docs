@@ -2,7 +2,7 @@
 Symbol Documentation
 ####################
 
-Browse the developer documentation to start integrating blockchain technology into your project.
+Browse the documentation to start integrating blockchain technology into your project.
 
 .. note:: |codename|'s **MAIN_NET** has not been released yet. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://forum.nem.io/t/symbol-launch-reporting-single-source-of-information/24863/9>`_.
 
@@ -103,7 +103,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     guides/multisig/creating-a-multisig-account
     guides/network/running-a-test-net-node
     guides/network/creating-a-private-test-net
-    More guides <https://nemtech.github.io/guides/category.html>
+    More guides <https://docs.symbolplatform.com/guides/category.html>
 
 .. toctree::
     :maxdepth: 2
@@ -138,7 +138,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/harvesting
     concepts/inflation
     concepts/node
-    Whitepaper <https://nemtech.github.io/catapult-whitepaper/main.pdf>
+    Whitepaper <https://docs.symbolplatform.com/catapult-whitepaper/main.pdf>
 
 .. toctree::
     :maxdepth: 2

@@ -78,7 +78,7 @@ Creating the project
 
 You can base your work on the `TypeScript SDK <https://github.com/nemtech/symbol-sdk-typescript-javascript>`_.
 The TypeScript version is the first SDK getting the latest updates.
-Check regularly the `Changelog <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
+Check regularly the `Changelog <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md>`_ to be sure you didn't miss any code change update.
 
 Create a new repository, preferably on GitHub, with:
 
@@ -95,9 +95,9 @@ A project with good test coverage it's more likely to be used and trusted by the
 We **strongly** suggest to do `Test-Driven Development <https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing (test last).
 If you need inspiration, feel free to adapt directly the same tests we did.
 
-* Example of ``travis.yml`` `configuration file <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/.travis.yml>`_
-* Example of `unit tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/test>`_.
-* Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/e2e>`_.
+* Example of ``travis.yml`` `configuration file <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/.travis.yml>`_
+* Example of `unit tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/test>`_.
+* Example of `end to end tests  <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/e2e>`_.
 
 Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite and code linter automatically.
 We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that suits you best.
@@ -136,11 +136,11 @@ These are the steps we followed to generate the Typescript DTOs (data transfer o
 
 Example of repositories and implementations:
 
-* `CreateTransactionsFromDTO <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
-* `BlockchainRepository <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/BlockRepository.ts>`_
-* `BlockchainHttp <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure/BlockHttp.ts>`_
+* `CreateTransactionsFromDTO <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
+* `BlockchainRepository <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockRepository.ts>`_
+* `BlockchainHttp <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockHttp.ts>`_
 
-See the complete list of `repositories and implementations <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/infrastructure>`_.
+See the complete list of `repositories and implementations <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/infrastructure>`_.
 
 6. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
@@ -152,29 +152,29 @@ By default, models are immutable and aim to hide the complexity, like type conve
 
 Example of models implementation:
 
-* `Account <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/account/Account.ts>`_
-* `NamespaceId <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_
-* `NodeInfo <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/node/NodeInfo.ts>`_
+* `Account <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/account/Account.ts>`_
+* `NamespaceId <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/namespace/NamespaceId.ts>`_
+* `NodeInfo <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/node/NodeInfo.ts>`_
 
-See the complete list of `models <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/model>`_.
+See the complete list of `models <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/src/model>`_.
 
 You will find in the implementations different invariants to ensure the object is well constructed and a nicer API is published.
 
 Particular decisions we considered:
 
-* UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
+* UInt64 support: While `Java supports big numbers <https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html>`_, for example, JavaScript doesn't. The JavaScript SDK has a custom class to handle the `uint64 types <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/UInt64.ts>`_. If your language supports ``uint64``, use that implementation instead.
 * API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.
-* `Namespace <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
+* `Namespace <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/namespace/NamespaceId.ts>`_ id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as ``uint64`` id. A specific endpoint returns the Namespace ``string`` name.
 
 Transaction Serialization
 =========================
 
 The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the protocol to serialize and deserialize |codename| entities.
 
-In combination with the `catbuffer-generators project <https://github.com/nemtech/catbuffer-generators/tree/master/generators>`_, developers can generate builder classes for a given set of programming languages.
+In combination with the `catbuffer-generators project <https://github.com/nemtech/catbuffer-generators/tree/main/generators>`_, developers can generate builder classes for a given set of programming languages.
 For example, the |sdk| uses the generated code to operate with the entities in binary form.
 
-.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/nemtech/catbuffer-generators/tree/master/generators/typescript>`_ for TypeScript.
+.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/nemtech/catbuffer-generators/tree/main/generators/typescript>`_ for TypeScript.
 
 If there is a generator, follow the next steps to generate the builders for all the existent entities:
 
@@ -204,11 +204,11 @@ The previous command creates a new file for every schema under the ``catbuffer/_
 
 Here you can find some examples of how we used transactions builders:
 
-* `AccountAddressRestrictionTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/AccountAddressRestrictionTransaction.ts>`_
-* `TransferTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/TransferTransaction.ts>`_
-* `AggregateTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/transaction/AggregateTransaction.ts>`_
+* `AccountAddressRestrictionTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/AccountAddressRestrictionTransaction.ts>`_
+* `TransferTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/TransferTransaction.ts>`_
+* `AggregateTransaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/AggregateTransaction.ts>`_
 
-See the complete list of `transactions <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/model/transaction>`_.
+See the complete list of `transactions <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/src/model/transaction>`_.
 
 KeyPair and Cryptographic functions
 ===================================
@@ -216,7 +216,7 @@ KeyPair and Cryptographic functions
 .. note:: This section is incomplete.
 
 Cryptographic functions are required to sign transactions.
-All the crypto-related functions can be found under the `core/crypto <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/core/crypto>`_ module.
+All the crypto-related functions can be found under the `core/crypto <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/src/core/crypto>`_ module.
 
 SDKs use standard ``tweetnacl`` (ed2559) for key pair generation, address derivation (from public key) and signings:
 
@@ -228,9 +228,9 @@ The best way to make sure your implementation is correct is to use the test vect
 
 Examples of vector tests:
 
-* `KeyPairVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/master/sdk-core/src/test/java/io/nem/symbol/core/crypto/KeyPairVectorTester.java>`_
-* `DsaSignerVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/master/sdk-core/src/test/java/io/nem/symbol/core/crypto/DsaSignerVectorTester.java>`_
-* `KeyPair <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/test/core/crypto/keyPair.spec.ts#L88>`_
+* `KeyPairVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/main/sdk-core/src/test/java/io/nem/symbol/core/crypto/KeyPairVectorTester.java>`_
+* `DsaSignerVectorTester <https://github.com/nemtech/symbol-sdk-java/blob/main/sdk-core/src/test/java/io/nem/symbol/core/crypto/DsaSignerVectorTester.java>`_
+* `KeyPair <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/test/core/crypto/keyPair.spec.ts#L88>`_
 
 ********
 Services
@@ -242,11 +242,11 @@ Services are considered "nice to have" features, and these usually are not requi
 
 Examples of services:
 
-* `AggregateTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/AggregateTransactionService.ts>`_: Helps application developers to announce aggregate transactions without having to develop the logic to wait for the hash lock confirmation.
-* `MetadataTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/MetadataTransactionService.ts>`_: Creates metadata transactions without having to pass the previous value.
-* `BlockService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/service/BlockService.ts>`_: Provides with methods to verify that the data returned by a given node is valid.
+* `AggregateTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/service/AggregateTransactionService.ts>`_: Helps application developers to announce aggregate transactions without having to develop the logic to wait for the hash lock confirmation.
+* `MetadataTransactionService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/service/MetadataTransactionService.ts>`_: Creates metadata transactions without having to pass the previous value.
+* `BlockService <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/service/BlockService.ts>`_: Provides with methods to verify that the data returned by a given node is valid.
 
-See the complete list of `services <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/master/src/service>`_.
+See the complete list of `services <https://github.com/nemtech/symbol-sdk-typescript-javascript/tree/main/src/service>`_.
 
 *******************
 Documenting the SDK
@@ -260,7 +260,7 @@ Consider helping others and spread the usage of the SDK by providing :doc:`the f
 Publishing the SDK as official
 ******************************
 
-To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/master/NIPs/nip-0001.md>`_.
+To make an SDK officially supported, submit it as a `NIP <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0001.md>`_.
 The reason behind the |codename| Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among |codename| developers.
 
 Recommended Licenses

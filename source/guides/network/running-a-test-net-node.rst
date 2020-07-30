@@ -59,7 +59,7 @@ The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be in
 
 .. code-block:: bash
 
-    git clone https://github.com/nemfoundation/symbol-testnet-bootstrap.git
+    git clone https://github.com/nemgrouplimited/symbol-testnet-bootstrap.git
 
 2. Choose the **assembly distribution** you want to install.
 
@@ -159,4 +159,4 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |latest-release| raw:: html
 
-   <a href="https://github.com/nemfoundation/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>
+   <a href="https://github.com/nemgrouplimited/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>

@@ -12,9 +12,9 @@ Assigning metadata to a namespace
 
 Add custom data to a namespace.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 :doc:`Metadata <../../concepts/metadata>` can be attached to :doc:`namespaces <../../concepts/namespace>` to help users verify the ownership of the registered name.
 The data attached could include information such as registrant, administrative, or technical contact information.
@@ -114,6 +114,15 @@ Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction 
 Method #02: Using the CLI
 *************************
 
+Open a terminal window and run the following command.
+
+Replace ``TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ`` with the namespace owner address, ``85BBEA6CC462B244`` with the target namespace id.
+Then, set the key-value pairs you want to attatch as metadata.
+
+.. note:: You can use the command ``symbol-cli converter stringtokey`` to transform an string (e.g. ``NAME``) into a valid UInt64 key (``8B5DD479E6AB718A``).
+
 .. viewsource:: ../../resources/examples/bash/metadata/AssigningMetadataToANamespace.sh
     :language: bash
     :start-after: #!/bin/sh
+
+
