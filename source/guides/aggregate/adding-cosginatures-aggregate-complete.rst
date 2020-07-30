@@ -19,7 +19,7 @@ Furthermore, it also allows users to avoid unnecessarily locking their funds in 
 Use case 
 ********
 
-.. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
+.. figure:: ../../resources/images/examples/aggregate-escrow-1.png
     :align: center
     :width: 450px
 
