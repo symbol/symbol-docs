@@ -23,7 +23,9 @@ Use case
     :align: center
     :width: 450px
 
-We will set up an aggregate complete transaction where Alice (``TDPXWF2H5G7U2NKZRJD47QR4KZPRULPAMQ4O54IK``) will send 100 |networkcurrency| from Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``) in return for 1 `collectible` mosaic.
+    Multi-Asset Escrowed Transactions
+
+We will set up an aggregate complete transaction where Alice (``TDPXWF2H5G7U2NKZRJD47QR4KZPRULPAMQ4O54IK``) will send 100 |networkcurrency| to Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``) in return for 1 `collectible` mosaic.
 
 *************
 Prerequisites
