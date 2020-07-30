@@ -14,7 +14,7 @@ Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages betw
 Recipient
 *********
 
-The recipient is the address of the :doc:`account <account>` that receives the TransferTransaction.
+The recipient is the address or :ref:`alias <alias>` of the account that receives the TransferTransaction.
 
 It is possible to send mosaics to any valid address, even if the address has not previously participated in any transaction.
 
@@ -43,7 +43,7 @@ Encrypted messages are only accessible by the sender and the recipient.
 
 |codename| uses Bouncy Castle's AES block cipher implementation in `CBC mode <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to encrypt and decrypt messages.
 
-.. note:: You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L253-L264>`_ and `decode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L304-L315>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://nemtech.github.io/symbol-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
+.. note:: You can find under the ``crypto`` module how to `encode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L253-L264>`_ and `decode <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L304-L315>`_ encrypted messages, but we recommend you to use the available `SDK public methods <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/classes/_model_account_account_.account.html#decryptmessage>`_ instead.
 
 ********************
 Related transactions

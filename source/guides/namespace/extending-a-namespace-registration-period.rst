@@ -12,15 +12,6 @@ Extending a namespace registration period
 
 This guide shows you how to extend the rental period of a namespace.
 
-**********
-Background
-**********
-
-Namespaces are registered for a certain amount of blocks.
-The creator can **extend the registration period** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
-
-The guide will use the namespace ``foo``, but you should follow along with another :doc:`namespace you have registered <registering-a-namespace>`.
-
 *************
 Prerequisites
 *************
@@ -53,7 +44,9 @@ Method #01: Using the Desktop Wallet
 Method #02: Using the SDK
 *************************
 
+
 1. Get your namespace information, and inspect the value of the property ``endHeight``.
+The guide uses the namespace ``foo``, but you should follow along with the :doc:`namespace name you have registered <registering-a-namespace>` and want to extend its duration.
 
 .. code-block:: bash
 
@@ -69,7 +62,7 @@ Method #02: Using the SDK
     startHeight:    52000
     endHeight:      53000
 
-The information shows that the namespace ``foo`` will become inactive at height ``5300``.
+The CLI returns that the namespace will become inactive at height ``5300``.
 The next step is to figure out the current height of the chain, and calculate the number of blocks remaining before your namespace becomes inactive.
 
 2. Check the current blockchain height.
@@ -121,7 +114,8 @@ Once the **RegisterNamespaceTransaction** gets confirmed, double-check that the 
 Method #03: Using the CLI
 *************************
 
-To extend the namespace duration, open a terminal window and run the following command.
+Open a terminal window and run the following command.
+
 Replace ``foo`` with the namespace name and ``172800`` with the number of blocks to extend.
 
 .. viewsource:: ../../resources/examples/bash/namespace/RegisteringANamespace.sh

@@ -14,9 +14,9 @@ This guide will show you how to increase and decrease the minimum number of sign
 
 .. _guide-modify-a-multisig-account-min-approval:
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Imagine that Alice and Bob are cosignatories of a 1-of-2 multisig account.
 This means that at least one of their account's signatures is required to authorize multisig transactions.

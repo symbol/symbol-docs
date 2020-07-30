@@ -143,15 +143,19 @@ To retrieve the network generration hash seed, open ``nodeUrl + '/node/info'`` i
 
 5. Open the terminal where you are monitoring the transaction's status.
 The transaction should appear as confirmed after ±15 seconds and the amount defined gets transferred from the sender's account to the recipient's account.
-If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
+If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
 
 *************************
 Method #03: Using the CLI
 *************************
 
-Open a terminal window and run the following command to transfer 10 XYM from your default account to Bob's address.
+Open a terminal window and run the following command to transfer 10 XYM from your default account.
+
+Remember to replace ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` with the recipient address you want to send mosaics too 
+and ``@symbol.xym::10000000`` with the desired absolute amount.
+
+Optionally, you can set a custom message with the option ``--message``.
 
 .. viewsource:: ../../resources/examples/bash/transfer/SendingATransferTransaction.sh
     :language: bash
     :start-after: #!/bin/sh
-

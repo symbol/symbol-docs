@@ -29,7 +29,7 @@ Method #01: Using the Desktop Wallet
     :width: 800px
 
 2. Enter your profile information, including your profile name, network type and password.
-Be sure to select the correct network type for your desired purpose.
+Select the correct network type for your desired purpose.
 Once you have filled out the page with the appropriate information, click "**Next**".
 
 .. figure:: ../../resources/images/screenshots/desktop-create-account-2.gif
@@ -43,8 +43,7 @@ Shift your mouse around the screen until the progress bar reaches 100% and the a
     :align: center
     :width: 800px
 
-4. Click "**Display mnemonic words**" to view your private passphrase. Be sure to store this information as it stores all the information that is needed to recover your assets in the wallet in case of emergencies. Storing this passphrase somewhere offline is preferred. Click "**Next**".
-
+4. Click "**Display mnemonic words**" to view your private passphrase. Backup this information securely offline and do not share it with anyone, as it stores the key to recover your assets. Click "**Next**".
 
 5. Verify that you have backed up your mnemonic passphrase. Click the passphrase in the correct order. Click "**Next**".
 
@@ -52,14 +51,14 @@ Shift your mouse around the screen until the progress bar reaches 100% and the a
     :align: center
     :width: 800px
 
-6. Read the safety tips on the next page and click "**Next**". Congratulations, your account should be ready for use!
+6. Read the safety tips on the next page and click "**Next**". Congratulations, your account is ready for use!
 
 *************************
 Method #02: Using the SDK
 *************************
 
-To create an account, open a new file and run the following code snippet.
-Be sure to select the correct network type for your desired purpose.
+Open a new file and run the following code snippet.
+Edit ``NetworkType.TEST_NET`` to select the correct network type for your desired purpose.
 
 .. example-code::
 
@@ -101,7 +100,7 @@ If you already have a private key, you can use it to define a new ``Account`` ob
 Method #03: Using the CLI
 *************************
 
-Open a terminal window and run the following command to create a new account.
+Open a terminal window and run the following command.
 
 .. viewsource:: ../../resources/examples/bash/account/CreatingAnAccount.sh
     :language: bash

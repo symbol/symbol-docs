@@ -12,9 +12,9 @@ Creating an escrow contract
 
 Learn about aggregate bonded transactions creating an escrow contract.
 
-**********
-Background
-**********
+********
+Use case
+********
 
     An **escrow** is a *contractual arrangement* in which a *third party receives and disburses money*
     or documents for the *primary transacting parties*. This disbursement is dependent on the
@@ -147,18 +147,6 @@ Is it possible without aggregate transactions?
 - The distributor could choose not to send the ticket after receiving the payment.
 
 Using the AggregateTransaction feature, we ensure that multiple transactions are executed at the same time when all the participants agree.
-
-************
-What's next?
-************
-
-Try to swap mosaics adding a third participant.
-
-.. figure:: ../../resources/images/examples/aggregate-escrow-2.png
-    :align: center
-    :width: 400px
-
-    Multi-Asset Escrowed Transactions
 
 .. |escrow_wikipedia| raw:: html
 

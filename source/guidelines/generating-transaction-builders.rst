@@ -30,7 +30,7 @@ Furthermore, reading entities from memory buffers—or just a part of them—is 
 
 **Flexibility**
 
-REST `transaction endpoints <https://nemtech.github.io/symbol-openapi/#operation/announceTransaction>`_ handle the calls to update the blockchain state.
+REST `transaction endpoints <https://docs.symbolplatform.com/symbol-openapi/#operation/announceTransaction>`_ handle the calls to update the blockchain state.
 The serialized payload of a transaction is appended to the body of the POST call.
 These endpoints allow the addition of new functionality to the server-side without modifying the API contract.
 
@@ -39,7 +39,7 @@ These endpoints allow the addition of new functionality to the server-side witho
 Applications can embed the generated code without managing dependencies, which is particularly desirable in highly-secure environments.
 Besides, sharing a common codebase enables the addition of new features with less effort.
 
-The `schemas <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ define the entities' data structure.
+The `schemas <https://github.com/nemtech/catbuffer/tree/main/schemas>`_ define the entities' data structure.
 The library generates the leanest code necessary to serialize and deserialize defined entities.
 
 ************

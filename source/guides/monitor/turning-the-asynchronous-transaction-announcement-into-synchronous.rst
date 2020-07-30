@@ -12,9 +12,9 @@ Turning the asynchronous transaction announcement into synchronous
 
 Handy snippet to announce a transaction and wait until this is confirmed.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node.
 |codename| works differently: when a transaction is announced, the REST API server will always return an OK.
