@@ -57,11 +57,9 @@ Node Key Link
 NodeKeyLinkTransaction
 ======================
 
-This transaction is required for all node operators.
+This transaction is required for all accounts willing to activate delegated harvesting.
 
-Announce a NodeKeyLinkTransaction to link a public key to an account.
-
-Required for accounts activating delegated harvesting.
+Announce a NodeKeyLinkTransaction to link an account with a public key used by TLS to create sessions.
 
 **Version**: 0x01
 

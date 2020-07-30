@@ -136,6 +136,7 @@ Related transactions
     :delim: ;
     
     0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
+    0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
     0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
 
 ******
