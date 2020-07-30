@@ -36,7 +36,6 @@ metadataHttp.getAccountMetadata(address)
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
                     console.log('\n ---' );
                     console.log('\n Value:\t', metadataEntry.value);
-                    console.log('\n Value:\t', metadataEntry.value);
                     console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
                     console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
                     console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
