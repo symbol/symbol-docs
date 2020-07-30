@@ -12,9 +12,9 @@ Delegating mosaic restrictions to a third party
 
 Allow another account to add restrictions to your mosaics.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Another company, **ComfyClothingCompany** wants to conduct an STO.
 In this case, they want to **delegate the KYC process** to a company specialized in KYC & AML.

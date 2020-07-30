@@ -103,6 +103,8 @@ If you want to execute Listeners from the client-side (e.g., Angular, React, Vue
 Method #03: Using the CLI
 *************************
 
+Open a terminal window and run the following command.
+
 .. viewsource:: ../../resources/examples/bash/blockchain/ListeningNewBlocks.sh
     :language: bash
     :start-after: #!/bin/sh

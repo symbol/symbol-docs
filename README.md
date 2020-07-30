@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/nemtech/symbol-docs.svg?branch=main)](https://travis-ci.com/nemtech/symbol-docs)
 
-Browse the developer documentation to start integrating blockchain technology into your project.
+Browse the documentation to start integrating blockchain technology into your project.
 
 ## Symbol is built for developers
 
@@ -16,32 +16,32 @@ Symbol provides access to both public and private blockchains, individually or a
 
 Connect and combine Symbol's built-in features to architect your blockchain solution.
 
-* [What is Symbol?](https://nemtech.github.io/getting-started/what-is-symbol.html)
-* [Setting up your workstation](https://nemtech.github.io/getting-started/setup-workstation.html)
-* [Built-in features](https://nemtech.github.io/concepts/overview.html)
-* [Protocol](https://nemtech.github.io/concepts/cryptography.html)
+* [What is Symbol?](https://docs.symbolplatform.com/getting-started/what-is-symbol.html)
+* [Setting up your workstation](https://docs.symbolplatform.com/getting-started/setup-workstation.html)
+* [Built-in features](https://docs.symbolplatform.com/concepts/overview.html)
+* [Protocol](https://docs.symbolplatform.com/concepts/cryptography.html)
 
 ## Featured Guides
 
 Learn how to use the software development kits and tools with the following step-by-step implementation examples.
 
-* [How to create an account](https://nemtech.github.io/guides/account/creating-an-account.html)
-* [How to send a transaction](https://nemtech.github.io/guides/transfer/sending-a-transfer-transaction.html)
-* [How to create a mosaic](https://nemtech.github.io/guides/mosaic/creating-a-mosaic.html)
-* [How to register a namespace](https://nemtech.github.io/guides/namespace/registering-a-namespace.html)
-* [How to create a multisig account](https://nemtech.github.io/guides/multisig/creating-a-multisig-account.html)
-* [How to run a private test network](https://nemtech.github.io/guides/network/creating-a-private-test-net.html)
-* [More guides](https://nemtech.github.io/guides/category.html)
+* [How to create an account](https://docs.symbolplatform.com/guides/account/creating-an-account.html)
+* [How to send a transaction](https://docs.symbolplatform.com/guides/transfer/sending-a-transfer-transaction.html)
+* [How to create a mosaic](https://docs.symbolplatform.com/guides/mosaic/creating-a-mosaic.html)
+* [How to register a namespace](https://docs.symbolplatform.com/guides/namespace/registering-a-namespace.html)
+* [How to create a multisig account](https://docs.symbolplatform.com/guides/multisig/creating-a-multisig-account.html)
+* [How to run a private test network](https://docs.symbolplatform.com/guides/network/creating-a-private-test-net.html)
+* [More guides](https://docs.symbolplatform.com/guides/category.html)
 
 ## Reference Documentation
 
 Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
 
-* [Server](https://nemtech.github.io/server.html)
-* [REST API](https://nemtech.github.io/api.html)
-* [Software Development Kits](https://nemtech.github.io/sdk.html)
-* [Command-line Interface](https://nemtech.github.io/wallets.html)
-* [Wallets](https://nemtech.github.io/wallets.html)
+* [Server](https://docs.symbolplatform.com/server.html)
+* [REST API](https://docs.symbolplatform.com/api.html)
+* [Software Development Kits](https://docs.symbolplatform.com/sdk.html)
+* [Command-line Interface](https://docs.symbolplatform.com/wallets.html)
+* [Wallets](https://docs.symbolplatform.com/wallets.html)
 
 ## Contributing to Symbol
 
@@ -49,7 +49,7 @@ Symbol is an [open-source](https://github.com/nemtech) project.
 Discover how our [community](https://github.com/nemtech/community/) is organized, and get started participating:
 
 *  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU).
-*  Check the [contributing guidelines](https://nemtech.github.io/guidelines/suggesting-changes.html) to propose changes.
+*  Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
 *  Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
 *  Explore our [GitHub](https://github.com/nemtech) repositories.
 

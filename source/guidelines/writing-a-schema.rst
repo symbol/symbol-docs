@@ -6,7 +6,7 @@ Writing a Schema
 
 Are you writing a new catapult plugin that includes a new transaction type?
 
-In this guide, we examine how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/transfer/transfer.cats>`_  was constructed.
+In this guide, we examine how the `transfer.cats <https://github.com/nemtech/catbuffer/blob/main/schemas/transfer/transfer.cats>`_  was constructed.
 You can adapt the same steps to define a new schema.
 
 ************
@@ -27,7 +27,7 @@ In our case, we have named the file ``transfer.cats``.
 Think of a struct as a set of properties that we want to store in the same block of memory.
 
 The transaction body contains the extra properties which differ from a basic transaction.
-Each attribute can have one of the types defined in `types.cats <https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats>`_.
+Each attribute can have one of the types defined in `types.cats <https://github.com/nemtech/catbuffer/blob/main/schemas/types.cats>`_.
 
 .. code-block:: python
 

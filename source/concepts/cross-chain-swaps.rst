@@ -10,7 +10,9 @@ A cross-chain swap enables trading tokens across different blockchains without u
 
     Cross-chain swap between public and private network
 
-|codename| follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets. The protocol guarantees that if all participants agree, the swap will take place. On the other hand, if some of them decide not to conclude the process, each participant should receive their locked funds back.
+|codename| follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets.
+The protocol guarantees that if all participants agree, the swap will take place. 
+On the contrary, each participant should receive their locked funds back if some of them decide not to conclude the process.
 
 HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk.
 Every participant in the exchange of tokens needs to present proof (hashlock) to complete it. Failing to do so, the locked assets are released back to each original owner after the timelock expires.
@@ -27,7 +29,7 @@ The problem is that they are not in the same network: alice.token is defined in 
 
 Trading tokens directly from one blockchain to the other is not possible, due to the technological differences between them.
 
-In the case of |codename| public and private chain, the same mosaic name could have a different definition and distribution or even not exist.
+In the case of |codename| public and private chain, the same mosaic name could have a different definition, distribution, or even not exist.
 Between Bitcoin and |codename|, the difference is even more evident, as each blockchain uses an entirely different technology.
 
 Instead of transferring tokens between different chains literally, the trade will be performed inside each chain.
@@ -63,9 +65,7 @@ Once announced, this transaction will remain locked until someone discovers the 
 
 4. Alice **announces TX1 to the private network** and **shares with Bob the secret**.
 
-.. note:: Bob should retrieve the secret from the chain. It is Bob's responsibility to verify the secret correctness.
-
-5. Bob defines announces the following **SecretLockTransaction TX2** to the **public network**:
+5. Bob should retrieve the secret from the chain and announces the following **SecretLockTransaction TX2** to the **public network**:
 
 .. csv-table::
     :header: "TX2 Property", "Value"

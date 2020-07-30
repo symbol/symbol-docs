@@ -12,9 +12,9 @@ Assigning metadata to a mosaic
 
 Add custom data to a mosaic.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Metadata is a |codename| feature that can be used to attach information about :doc:`mosaics <../../concepts/mosaic>`.
 For example, small pieces of data such as legal name, ticker, or ISIN, can be assigned as on-chain :doc:`metadata<../../concepts/metadata>`, while sizable documents, like the prospectus or investor agreement, can be kept off-chain.
@@ -170,6 +170,15 @@ Wrap the **metadata transactions** inside an :ref:`AggregateCompleteTransaction 
 Method #02: Using the CLI
 *************************
 
+Open a terminal window and run the following command.
+
+Replace ``TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ`` with the mosaic owner address, ``2C08D5EDB652AA79`` with the target mosaic id.
+Then, change ``BC2FC3ACFF58FF89`` with a key, and ``US00000000`` with the value you want to attach as metadata.
+
+.. note:: You can use the command ``symbol-cli converter stringtokey`` to transform an string (e.g. ``ISIN``) into a valid UInt64 key (``2C08D5EDB652AA79``).
+
 .. viewsource:: ../../resources/examples/bash/metadata/AssigningMetadataToAMosaic.sh
     :language: bash
     :start-after: #!/bin/sh
+
+

@@ -75,7 +75,7 @@ Verifying accounts that can buy assets
 
 ComfyClothingCompany creates the mosaic ``comfyclothing.shares``.
 For regulatory reasons, the company wants only the participants that have passed the KYC process to buy and transact the asset.
-So the company adds the restriction tier ``{comfyclothing.shares, Can_Buy, EQ = 1}`` to the mosaic ``comfyclothing.shares``.
+Thus, the company adds the restriction tier ``{comfyclothing.shares, Can_Buy, EQ = 1}`` to the mosaic ``comfyclothing.shares``.
 
 Alice, a potential investor, is interested in investing in ComfyClothingCompany so she passes the KYC process.
 Once Alice has been verified, the company tags Alice's account with the MosaicAddressRestrictionTransaction  ``{comfyclothing.shares, Alice, Can_Buy, 1}``.
@@ -115,7 +115,7 @@ The KYC provider encounters 3 potential investors:
 * Carol provides a valid passport and proof of address. The KYC provider awards Carol’s account with the mosaic restriction ``{kyc, Is_Verified, 2}``.
 
 Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares`` units to each other.
-But Alice—who has not provided a valid proof of address—will not be able to receive shares.
+Nevertheless, Alice⁠—who has not provided a valid proof of address—will not be able to receive shares.
 
 ********************
 Related transactions

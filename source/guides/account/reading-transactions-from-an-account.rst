@@ -51,13 +51,13 @@ In this example, we will retrieve all account-related transactions with at least
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note: Find all the possible `SearchCriteria options <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values in the SDK reference. If ``address`` filter is not set, all transactions present in the network are returned.
+.. note: Find all the possible `SearchCriteria options <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values in the SDK reference. If ``address`` filter is not set, all transactions present in the network are returned.
 
 3. The API returns pages with up to 100 transactions.
-The `page object <https://nemtech.github.io/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
+The `page object <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
 
-To get additional transactions, you will have to make further requests iteratively.
-For each additional call, increase the ``pageNumber`` by one unit.
+To get more transactions, you will have to make further requests iteratively.
+For each extra call, increase the ``pageNumber`` by one unit.
 
 .. code-block:: typescript
 
@@ -74,7 +74,9 @@ Set an ``offset`` value with the first transaction internal identifier.
 Method #02: Using the CLI
 *************************
 
-Open a terminal window and run the following command to get the confirmed transactions involving an account.
+Open a terminal window and run the following command.
+
+Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the address you want to query.
 
 .. viewsource:: ../../resources/examples/bash/account/GettingConfirmedTransactions.sh
     :language: bash

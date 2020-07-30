@@ -11,19 +11,19 @@ Atomic cross-chain swap between public and private chain
 
 Trade tokens between different blockchains without using an intermediary party in the process.
 
-**********
-Background
-**********
+********
+Use case
+********
 
 Alice and Bob want to exchange **10 alice.tokens for 10 bob.tokens**.
 The problem is that they are not in the same blockchain: alice.token is defined in |codename|'s public chain, whereas bob.token is only present in a private chain using |codename| technology.
 
 One non-atomic solution could be:
 
-1. Alice sends 10 alice tokens to Bob (private chain)
-2. Bob receives the transaction
-3. Bob sends 10 bob tokens to Alice (public chain)
-4. Alice receives the transaction
+1. Alice sends 10 alice tokens to Bob (private chain).
+2. Bob receives the transaction.
+3. Bob sends 10 bob tokens to Alice (public chain).
+4. Alice receives the transaction.
 
 However, they do not trust each other that much.
 As you may have noticed, Bob could keep Alice's tokens if he opts not to perform 3.

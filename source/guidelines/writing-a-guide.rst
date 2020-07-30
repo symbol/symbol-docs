@@ -64,9 +64,9 @@ You can use the following template to organize your content:
 
     The objective to achieve after finishing the guide.
 
-    **********
-    Background
-    **********
+    ********
+    Use case
+    ********
 
     Explain the necessary concepts before starting to code.
 
@@ -90,7 +90,7 @@ You can use the following template to organize your content:
 
     Is there any extra exercise that readers could try on their own?
 
-6. Add the `code examples <https://github.com/nemtech/symbol-docs/tree/master/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
+6. Add the `code examples <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
 You can render fragments of code from a file inside your ``.rst`` file with the directive ``example-code``.
 
 ::
