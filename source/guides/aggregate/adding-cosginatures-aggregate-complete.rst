@@ -80,7 +80,7 @@ Finally, he shares the information back with Alice.
 Step 3: Announce the Aggregate Complete Transaction
 ***************************************************
 
-Using Bob's private key, Bob's cosignature transaction hash, and signature, recreate the transaction and announce it to the network as complete.
+Using Bob's public key, cosignature transaction hash, and signature, recreate the transaction and announce it to the network as complete.
 
 .. example-code::
 
