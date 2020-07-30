@@ -60,6 +60,7 @@ Make sure to place Alice's private key and Bob's public key in the appropriate p
 
 3. Save the TypeScript file, then run it on your terminal.
 Copy the returned payload and send it over to Bob.
+
 **********************************
 Step 2: Add the second cosignature
 **********************************
@@ -73,7 +74,7 @@ Step 2: Add the second cosignature
       :start-after:  /* start block 03 */
       :end-before: /* end block 03 */
 
-Bob runs the code snippet in the terminal and obtains the transaction signature and the parent hash. 
+2. Bob runs the code snippet in the terminal and obtains the transaction signature and the parent hash. 
 Finally, he shares the information back with Alice.
 
 ***************************************************
