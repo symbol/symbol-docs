@@ -22,7 +22,6 @@ sys.path.insert(0, os.path.abspath('_ext'))
 import sphinx_bootstrap_theme
 
 
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -36,6 +35,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.extlinks',
+    'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
@@ -180,6 +180,9 @@ html_logo = "_static/logo-symbol.svg"
 
 # Docs Title
 html_title = 'Symbol Documentation'
+
+# Docs base url
+html_baseurl = 'docs.symbolplatform.com'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
