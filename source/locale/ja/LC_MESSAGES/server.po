@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-07-30 19:02+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -133,83 +133,3 @@ msgid ""
 "Instructions on how to launch a secure and production-ready private chain "
 "will be released here."
 msgstr "安全で本番環境に対応したプライベートチェーンを開始する方法についてはこちらをご覧ください。"
-
-#: ../../source/server.rst:63
-msgid "Tools"
-msgstr "ツール"
-
-#: ../../source/server.rst:65
-msgid ""
-"Catapult server comes with tools to check the health of the network, "
-"generate nemesis blocks, create keypairs, recover the server in the event of"
-" an abrupt exit, and more."
-msgstr ""
-"Catapult サーバーにはネットワークの健全性チェック、nemesis "
-"ブロックの生成、キーペアの作成、突然の終了時のサーバ復旧などを行うツールが付属しています。"
-
-#: ../../source/server.rst:67
-msgid "You can find them inside of ``catapult-server/build/bin``."
-msgstr "それらは ``catapult-server/build/bin`` の中にあります。"
-
-#: ../../source/server.rst:72
-msgid "Generates keypairs and addresses."
-msgstr "キーペアとアドレスの生成。"
-
-#: ../../source/server.rst:74 ../../source/server.rst:109
-#: ../../source/server.rst:138 ../../source/server.rst:165
-#: ../../source/server.rst:186 ../../source/server.rst:205
-msgid "Options"
-msgstr "オプション"
-
-#: ../../source/server.rst:92 ../../source/server.rst:127
-#: ../../source/server.rst:154 ../../source/server.rst:175
-#: ../../source/server.rst:194
-msgid "Command"
-msgstr "コマンド"
-
-#: ../../source/server.rst:98
-msgid "If you want the save the output, add an output stream at the end:"
-msgstr "出力を保存したい場合は最後に出力ストリームを追加します:"
-
-#: ../../source/server.rst:107
-msgid ""
-"Creates a nemesis block out of a `mijin-test.properties  "
-"<https://github.com/nemtech/catapult-server/blob/main/tools/nemgen/resources"
-"/mijin-test.properties>`_ file. The output generated is used to start a new "
-"chain."
-msgstr ""
-"`mijin-test.properties <https://github.com/nemtech/catapult-"
-"server/blob/main/tools/nemgen/resources/mijin-test.properties>`_ ファイルから "
-"nemesis ブロックを生成します。この生成された出力は新しいチェーンの開始に使用されます。"
-
-#: ../../source/server.rst:136
-msgid ""
-"Executes CPU-based performance tests of catapult functions, such as hashing "
-"or encryption."
-msgstr "ハッシュや暗号化など Catapult 機能のCPUベースのパフォーマンステストを実行します。"
-
-#: ../../source/server.rst:163
-msgid ""
-"Outputs node info, partner node connectivity info, and a partner node table "
-"for known peers within :properties:`peers-p2p.json <peers-p2p.json>` and "
-":properties:`peers-api.json <peers-api.json>`."
-msgstr ""
-":properties:`peers-p2p.json <peers-p2p.json>` および :properties:`peers-"
-"api.json <peers-api.json>` "
-"内の既知のピアについて、ノード情報、パートナーノード接続情報、およびパートナーノードテーブルを出力します。"
-
-#: ../../source/server.rst:184
-msgid ""
-"Generates the list of status errors that the server might return after "
-"receiving a transaction."
-msgstr "トランザクションの受信後にサーバが返却する可能性のあるステータスエラーのリストを生成します。"
-
-#: ../../source/server.rst:203
-msgid ""
-"Checks the health and displays statistics (like the unconfirmed transaction "
-"cache) for the nodes found inside of :properties:`peers-p2p.json <peers-"
-"p2p.json>` and :properties:`peers-api.json <peers-api.json>`."
-msgstr ""
-":properties:`peers-p2p.json <peers-p2p.json>` および :properties:`peers-"
-"api.json <peers-api.json>` "
-"内のノードについて、健全性をチェックし、統計情報(未確認のトランザクションキャッシュなど)を表示します。"

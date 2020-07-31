@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-07-30 19:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -428,14 +428,22 @@ msgstr ""
 
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
+"Link an account with a public key used by TLS to create sessions. Required "
+"for all accounts willing to activate delegated harvesting."
+msgstr ""
+"アカウントを TLS "
+"が使用する公開鍵とリンクしてセッションを作成します。デリゲートハーベスティングをアクティブ化することをいとわない、すべてのアカウントに必要です。"
+
+#: ../../source/concepts/harvesting.rst:1
+msgid ""
 "Link an account with a VRF public key. Required for all harvesting eligible "
 "accounts."
 msgstr "アカウントを VRF 公開鍵にリンクします。ハーベスト対象のすべてのアカウントに必要です。"
 
-#: ../../source/concepts/harvesting.rst:152
+#: ../../source/concepts/harvesting.rst:153
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/harvesting.rst:162
+#: ../../source/concepts/harvesting.rst:163
 msgid "Continue: :doc:`Inflation <inflation>`."
 msgstr "次項: :doc:`インフレーション <inflation>`"
