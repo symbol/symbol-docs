@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-07-30 19:02+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,9 +27,9 @@ msgstr "Symbol ドキュメンテーション"
 
 #: ../../source/index.rst:14
 msgid ""
-"Browse the developer documentation to start integrating blockchain "
-"technology into your project."
-msgstr "開発者向けドキュメントを参照し、ブロックチェーンテクノロジーをプロジェクトに統合しましょう。"
+"Browse the documentation to start integrating blockchain technology into "
+"your project."
+msgstr "当ドキュメントを参照して、ブロックチェーンテクノロジーをあなたのプロジェクトへ統合しましょう。"
 
 #: ../../source/index.rst:16
 msgid ""

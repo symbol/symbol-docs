@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-07-30 19:02+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -139,26 +139,20 @@ msgstr "複数のトランザクションを同時に送信"
 #: ../../source/concepts/aggregate-transaction.rst:72
 msgid ""
 "Dan announces an AggregateTransaction that merges two transfer transactions."
-msgstr "Dan は二つの転送トランザクションを集約した AggregateTransaction をアナウンスします。"
-
-#: ../../source/concepts/aggregate-transaction.rst:74
-msgid ""
-"As Dan is the only required signatory, the transaction is considered "
-"complete after he signed. After announcing it to the network, Alice and Bob "
-"will receive the mosaics at the same time."
+" Alice and Bob will receive the mosaics at the same time."
 msgstr ""
-"Dan が唯一必須の署名者なので、署名した後にトランザクションはコンプリートと見なされます。これがネットワークへアナウンスされると、Alice と "
-"Bob は同時にモザイクを受け取るでしょう。"
+"Dan は二つの転送トランザクションを集約した AggregateTransaction をアナウンスします。Alice と Bob "
+"は同時にモザイクを受け取るでしょう。"
 
-#: ../../source/concepts/aggregate-transaction.rst:81
+#: ../../source/concepts/aggregate-transaction.rst:79
 msgid "Sending payouts with aggregate complete transactions"
 msgstr "アグリゲート完了トランザクションによって支払を送信する"
 
-#: ../../source/concepts/aggregate-transaction.rst:84
+#: ../../source/concepts/aggregate-transaction.rst:82
 msgid "Multi-asset escrowed transactions"
 msgstr "マルチアセットエスクロートランザクション"
 
-#: ../../source/concepts/aggregate-transaction.rst:86
+#: ../../source/concepts/aggregate-transaction.rst:84
 msgid ""
 "In this example, Alice is buying tickets with ``currency.euro`` :doc:`mosaic"
 " <mosaic>`. When the ticket distributor cosigns the AggregateTransaction, "
@@ -167,24 +161,25 @@ msgstr ""
 "この例では Alice がチケットを ``currency:euro``  :doc:`モザイク <mosaic>` で購入しています。チケット販売者は"
 " AggregateTransaction に署名し、交換はアトミックに起こります。"
 
-#: ../../source/concepts/aggregate-transaction.rst:93
+#: ../../source/concepts/aggregate-transaction.rst:91
 msgid "Multi-Asset Escrowed Transactions"
 msgstr "マルチアセットエスクロートランザクション"
 
-#: ../../source/concepts/aggregate-transaction.rst:96
-#: ../../source/concepts/aggregate-transaction.rst:110
+#: ../../source/concepts/aggregate-transaction.rst:94
+#: ../../source/concepts/aggregate-transaction.rst:108
 msgid "Paying for others fees"
 msgstr "他人の手数料を支払う"
 
-#: ../../source/concepts/aggregate-transaction.rst:98
+#: ../../source/concepts/aggregate-transaction.rst:96
 msgid ""
-"Alice sends 10 ``currency.euro`` to Bob using an app to make payments. But "
-"Alice doesn't own |networkcurrency| to pay the transaction fee."
+"Alice sends 10 ``currency.euro`` to Bob using an app to make payments. "
+"However, Alice doesn't own |networkcurrency| to pay the transaction fee."
 msgstr ""
 "Alice は 10 ``currency.euro`` を Bob "
-"へ支払うためにアプリで送ります。しかし彼女はブロックチェーンのトランザクション手数料を支払う分の |networkcurrency| を持っていません。"
+"へ支払うためにアプリで送ります。しかし、彼女はブロックチェーンのトランザクション手数料を支払う分の |networkcurrency| "
+"を持っていません。"
 
-#: ../../source/concepts/aggregate-transaction.rst:101
+#: ../../source/concepts/aggregate-transaction.rst:99
 msgid ""
 "By creating an AggregateBondedTransaction, Alice can convert "
 "``currency.euro`` to |networkcurrency| to pay the fee. Now, Alice and Bob "
@@ -195,7 +190,7 @@ msgstr ""
 "|networkcurrency| に替えることができます。これで Alice と Bob は |networkcurrency| "
 "を購入したり保有することなく、 |codename| のパブリックブロックチェーンを使うことができます。"
 
-#: ../../source/concepts/aggregate-transaction.rst:104
+#: ../../source/concepts/aggregate-transaction.rst:102
 msgid ""
 "Since the app creator can put its own branding on the open source payment "
 "app, Alice and Bob may not even know they are using blockchain technology."
@@ -203,7 +198,7 @@ msgstr ""
 "アプリの製作者はオープンソースの支払いアプリに独自ブランドを付けられるので、Alice と Bob "
 "は彼らがブロックチェーン技術を使っていることに気が付かないでしょう。"
 
-#: ../../source/concepts/aggregate-transaction.rst:114
+#: ../../source/concepts/aggregate-transaction.rst:112
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -231,10 +226,10 @@ msgstr "AggregateBondedTransaction へ連署します。"
 msgid "Lock a deposit needed to announce aggregate bonded transactions."
 msgstr "アグリゲートボンドトランザクションのアナウンスに必要なデポジットをロック"
 
-#: ../../source/concepts/aggregate-transaction.rst:128
+#: ../../source/concepts/aggregate-transaction.rst:126
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/aggregate-transaction.rst:138
+#: ../../source/concepts/aggregate-transaction.rst:136
 msgid "Continue: :doc:`Account Restrictions <account-restriction>`."
 msgstr "次項: :doc:`アカウント制限 <account-restriction>`"
