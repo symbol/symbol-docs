@@ -3,8 +3,9 @@ set -e
 
 echo "Build docs"
 make alldocs
+cp CNAME build/html
 
-echo "Moving to docs folder"
+echo "Moving to build folder"
 cd build/html
 
 echo "Setting remote url https://github.com/${RELEASE_REPO_SLUG}.git"

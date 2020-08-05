@@ -4,6 +4,7 @@
 .vs/
 .DS_Store
 venv
+env
 
 # Project specific
 build/

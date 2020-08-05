@@ -46,7 +46,7 @@ Symbol developers have created other libraries that improve and add new features
 
     `apostille <https://github.com/luxtagofficial/Apostille-library>`_ ; Transferable, updatable, branded, and conjointly owned blockchain notarizations.
     `symbol-data-lib <https://github.com/nemgrouplimited/symbol-data-lib/>`_; Library to debug rand access |codename| node data.
-    `symbol-hd-wallets <https://github.com/nemtech/symbol-hd-wallets/>`_; Hyper-deterministic wallets library for |codename|.
+    `symbol-hd-wallets <https://github.com/nemtech/symbol-hd-wallets/>`_; Hierarchical-deterministic wallets library for |codename|.
     `symbol-qr-library <https://github.com/nemtech/symbol-qr-library/>`_; QR library for |codename|.
     `symbol-uri-scheme <https://github.com/nemtech/symbol-uri-scheme/>`_; URI Scheme library for |codename|.
     `nem2-secret-sharing <https://github.com/CrackTheCode016/nem2-secret-sharing/>`_; Implementing Shamir's secret sharing on |codename|.

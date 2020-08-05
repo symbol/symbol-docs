@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-07-30 19:02+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,25 +27,25 @@ msgstr "メタデータ"
 
 #: ../../source/concepts/metadata.rst:14
 msgid ""
-"|codename| provides you with an option to associate metadata to an "
-":doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace "
-"<namespace>` with a transaction."
+"|codename| provides the option to associate custom data to an :doc:`account "
+"<account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a "
+"transaction."
 msgstr ""
-"|codename| にはトランザクションとともに :doc:`アカウント <account>`, :doc:`モザイク <mosaic>`,  "
-":doc:`ネームスペース <namespace>` にメタデータを関連付ける手段が用意されています。"
+"|codename| はトランザクションとともに :doc:`アカウント <account>`, :doc:`モザイク <mosaic>`,  "
+":doc:`ネームスペース <namespace>` にカスタムデータを関連付ける手段が用意されています。"
 
 #: ../../source/concepts/metadata.rst:16
 msgid "The most common uses of metadata are:"
 msgstr "メタデータの一般的な使い方:"
 
 #: ../../source/concepts/metadata.rst:18
-msgid "Attach relevant information to your assets."
-msgstr "あなたのアセットに関連する情報の添付。"
+msgid "Attach relevant information to assets."
+msgstr "アセットに関連する情報の添付。"
 
 #: ../../source/concepts/metadata.rst:19
 msgid ""
-"Validate the value attached to an asset to enable users in your application "
-"to perform an off-chain action."
+"Validate the value attached to an asset to enable users in an application to"
+" perform an off-chain action."
 msgstr "アセットに付加された価値を検証して、アプリケーション内のユーザがチェーン外のアクションを実行できるようにします。"
 
 #: ../../source/concepts/metadata.rst:21
@@ -185,9 +185,9 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:81
 msgid ""
-"On the other hand, if Derek, who has no permissions, attempts to access the "
-"company apps suite, the company app will reject his request."
-msgstr "一方で権限を持たない Derek が会社のアプリスイートにアクセスしようとすると会社のアプリは彼のリクエストを拒否します。"
+"Similarly, if Derek, who has no permissions, attempts to access the company "
+"apps suite, the app will reject his request."
+msgstr "同様に、権限を持たない Derek が会社のアプリスイートにアクセスしようとすると、そのアプリは彼のリクエストを拒否します。"
 
 #: ../../source/concepts/metadata.rst:85
 msgid "Related transactions"
