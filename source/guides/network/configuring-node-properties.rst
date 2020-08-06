@@ -20,7 +20,7 @@ The instructions to configure the node vary depending on the package used to dep
 Testnet Bootstrap
 =================
 
-After running a node for the first time, the file ``config-input.yaml`` will be generated in the folder``symbol-testnet-bootstrap/identity``.
+After running a node for the first time, the file ``config-input.yaml`` will be generated in the folder ``symbol-testnet-bootstrap/identity``.
 
 To edit the node properties, follow the next steps:
 
