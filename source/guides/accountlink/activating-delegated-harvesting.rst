@@ -12,7 +12,7 @@ Activating delegated harvesting
 
 Share your account's importance securely with a node.
 
-.. note:: **July 30, 2019**: This guide is outdated and not compatible with latest 0.9.6 milestone. We will publish up-to-date instructions on how to activate delegated harvesting soon.
+.. note:: **July 30, 2020**: This guide is outdated and not compatible with latest 0.9.6 milestone. We will publish up-to-date instructions on how to activate delegated harvesting soon.
 
 ********
 Use case
@@ -85,7 +85,6 @@ Method #01: Using the SDK
         :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
-
 
 Once the transaction is confirmed, the next step is to **share R's private key with the node** you wish to connect for delegated harvesting.
 

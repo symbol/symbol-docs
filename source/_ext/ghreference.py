@@ -19,6 +19,7 @@ class GitHubReference(Directive):
     }
     excluded_file_names = [
         'SNAPSHOT',
+        '-SNAPSHOT',
         '.nojekyll',
         'template',
         'openapi3.yml',
