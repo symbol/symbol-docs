@@ -47,6 +47,8 @@ function addBlockCaptionInsideCodeExample() {
 /* Links */
 function addTargetBlankAttributeToExternalLinks() {
     $('a.external').attr("target", "_blank");
+    $('#sidebar a.external').attr("target", "_self");
+
 }
 
 function highlightSidebarLinksOnScroll(){
