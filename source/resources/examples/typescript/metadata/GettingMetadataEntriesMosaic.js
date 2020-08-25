@@ -26,13 +26,12 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
-metadataHttp.getMosaicMetadata(mosaicId)
+const searchCriteria = { targetId: mosaicId, metadataType: symbol_sdk_1.MetadataType.Mosaic };
+metadataHttp.search(searchCriteria)
     .subscribe((metadata) => {
-    if (metadata.length <= 0) {
-        console.log('\n The mosaic does not have metadata entries assigned.');
-    }
-    else {
-        metadata
+    if (metadata.totalEntries > 0) {
+        console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
+        metadata.data
             .map((entry) => {
             const metadataEntry = entry.metadataEntry;
             console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
@@ -43,6 +42,9 @@ metadataHttp.getMosaicMetadata(mosaicId)
             console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
             console.log('\n TargetId:\t', metadataEntry.targetId);
         });
+    }
+    else {
+        console.log('\n The mosaic does not have metadata entries assigned.');
     }
 }, (err) => console.log(err));
 /* end block 01 */

@@ -35,6 +35,7 @@ import {
     SignedTransaction,
     TransactionService,
     UInt64,
+    TransferTransaction,
 } from 'symbol-sdk';
 
 /* start block 01 */
@@ -55,14 +56,14 @@ const metadataService = new MetadataTransactionService(metadataHttp);
 const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 
-const accountMetadataTransaction = metadataService.createMetadataTransaction(
+const accountMetadataTransaction = metadataService.createAccountMetadataTransaction(
     Deadline.create(),
     networkType,
-    MetadataType.Account,
     alicePublicAccount.address,
     key,
     newValue,
-    bobAccount.publicAccount.address);
+    bobAccount.publicAccount.address,
+    UInt64.fromUint(0));
 /* end block 01 */
 
 /* start block 02 */

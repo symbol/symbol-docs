@@ -36,7 +36,7 @@ const metadataService = new symbol_sdk_1.MetadataTransactionService(metadataHttp
 // replace with key and new value
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
-const accountMetadataTransaction = metadataService.createMetadataTransaction(symbol_sdk_1.Deadline.create(), networkType, symbol_sdk_1.MetadataType.Account, alicePublicAccount.address, key, newValue, bobAccount.publicAccount.address);
+const accountMetadataTransaction = metadataService.createAccountMetadataTransaction(symbol_sdk_1.Deadline.create(), networkType, alicePublicAccount.address, key, newValue, bobAccount.publicAccount.address, symbol_sdk_1.UInt64.fromUint(0));
 /* end block 01 */
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
