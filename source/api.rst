@@ -265,7 +265,7 @@ The messages returned contain the error messages and the transaction hashes.
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
 
 .. |catapult-server| raw:: html
 
