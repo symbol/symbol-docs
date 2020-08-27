@@ -20,7 +20,7 @@ The instructions to configure the node vary depending on the package used to dep
 Testnet Bootstrap
 =================
 
-After running a node for the first time, the file ``config-input.yaml`` will be generated in the folder``symbol-testnet-bootstrap/identity``.
+After running a node for the first time, the file ``config-input.yaml`` will be generated in the folder ``symbol-testnet-bootstrap/identity``.
 
 To edit the node properties, follow the next steps:
 
@@ -149,4 +149,4 @@ config-harvesting.properties
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>

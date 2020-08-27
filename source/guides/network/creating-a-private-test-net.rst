@@ -66,7 +66,7 @@ Installation
 
 .. code-block:: bash
 
-    git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
+    git clone https://github.com/nemtech/catapult-service-bootstrap.git
 
 2. Open the ``catapult-service-bootstrap`` folder.
 
@@ -88,7 +88,7 @@ Installation
 
 To stop the process, press ``Ctrl+C``.
 
-Find more commands to manage the network in the `installation notes <https://github.com/tech-bureau/catapult-service-bootstrap#bootstrap-scriptscommands>`_.
+Find more commands to manage the network in the `installation notes <https://github.com/nemtech/catapult-service-bootstrap#bootstrap-scriptscommands>`_.
 
 *********************
 Getting test currency
@@ -166,4 +166,4 @@ In this portal, you can find detailed information about |codename|'s features an
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>

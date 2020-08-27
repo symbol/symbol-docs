@@ -61,7 +61,7 @@ To ensure that the transaction will get included without setting a ``max_fee`` u
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
 
-.. note:: It is not guaranteed that the transaction will get confirmed if the multiplier used is to low. To have better chances, the sender of the transaction could opt to use any value between medianNetworkFeeMultiplier and highestFeeMultiplier instead.
+.. note:: It is not guaranteed that the transaction will get confirmed if the multiplier used is too low. To have better chances, the sender of the transaction could opt to use any value between ``medianNetworkFeeMultiplier`` and ``highestFeeMultiplier`` instead.
 
 To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size, it is required to know beforehand the number of participant accounts that will need to cosign the transaction.
 

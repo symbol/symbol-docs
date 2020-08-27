@@ -53,7 +53,7 @@ Instructions on how to launch a secure and production-ready private chain will b
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">Service Bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Service Bootstrap</a>
 
 .. |instructions| raw:: html
 

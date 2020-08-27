@@ -38,7 +38,7 @@ class GitHubReference(Directive):
             repo = g.get_repo(self.arguments[0])
             folder = '' if not self.options['folder'] else self.options['folder']
             contents = repo.get_contents(folder, ref="gh-pages")
-            clean_contents = [content for content in contents if not any(content.path in excluded_name for excluded_name in self.excluded_file_names)]
+            clean_contents = [content for content in contents if not any(excluded_name in content.path for excluded_name in self.excluded_file_names)]
             sorted_contents = sorted(clean_contents, key=lambda x: LooseVersion(x.path.split('v')[-1]), reverse=True)
             count = 1
             for line in sorted_contents:

@@ -78,4 +78,4 @@ Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and wants 
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>

@@ -199,7 +199,7 @@ We invite you to connect connect with our developer community by joining the |sl
 
 .. |catapult-service-bootstrap| raw:: html
 
-   <a href="https://github.com/tech-bureau/catapult-service-bootstrap" target="_blank">catapult-service-bootstrap</a>
+   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">catapult-service-bootstrap</a>
 
 .. |ts-js-sdk| raw:: html
 
