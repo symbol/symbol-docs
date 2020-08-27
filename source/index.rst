@@ -138,7 +138,6 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
     concepts/harvesting
     concepts/inflation
     concepts/node
-    Whitepaper <https://docs.symbolplatform.com/catapult-whitepaper/main.pdf>
 
 .. toctree::
     :maxdepth: 2
