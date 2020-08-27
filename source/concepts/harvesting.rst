@@ -82,7 +82,7 @@ Delegated harvesting
 
 Delegated harvesting allows using the importance score of an account to create new blocks and receive rewards without having to run a node locally.
 
-An eligible account can delegate its importance score to a brand new **proxy account**
+An eligible account can delegate its importance score to a brand new **proxy account**.
 The private key of the proxy account can be shared securely with any node that is running local harvesting that delegated harvesting connections.
 
 .. figure:: ../resources/images/diagrams/delegated-harvesting.png
