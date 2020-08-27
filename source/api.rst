@@ -127,6 +127,24 @@ The messages returned contain information about the blocks.
 
 * `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
+**finalized block**
+
+The finalized block channel notifies for every subscribed client every time there is a new finalized block.
+The messages returned contain information about the finalized block.
+
+*Request body*
+
+.. code-block:: json
+
+    {
+        "uid": "{uid}",
+        "subscribe": "finalizedBlock"
+    }
+
+*Response format*
+
+* `FinalizedBlockDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/chain/schemas/FinalizedBlockDTO.yml>`_
+
 **confirmedAdded/{address}**
 
 The confirmedAdded channel notifies when a transaction related to an address is included in a block.
