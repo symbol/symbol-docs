@@ -48,7 +48,7 @@ Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, 
 Symbol is an [open-source](https://github.com/nemtech) project.
 Discover how our [community](https://github.com/nemtech/community/) is organized, and get started participating:
 
-*  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU).
+*  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/zt-h0ppnjfm-ood2bVW5P8I2RzcMFgbCVw).
 *  Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
 *  Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
 *  Explore our [GitHub](https://github.com/nemtech) repositories.
