@@ -101,6 +101,11 @@ B) A TransferTransaction from the ticket distributor to Alice sending 1 ``7cdf3b
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account.
 An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it.
 If valid, it will be included in a block.
@@ -118,6 +123,11 @@ In case that signatures are required from other participants—the ticket distri
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. When an **AggregateTransaction is bonded**, Alice will need to lock ``10`` |networkcurrency| to prevent spamming the network.
 Once the ticket distributor signs the AggregateTransaction, the amount of locked |networkcurrency| becomes available again on Alice's account, and the exchange will get through.
 
@@ -130,6 +140,11 @@ Once the ticket distributor signs the AggregateTransaction, the amount of locked
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

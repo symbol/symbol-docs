@@ -52,6 +52,12 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+
 2. Wrap both transactions in an :ref:`AggregateTransaction <aggregate-transaction>`, adding Dan's public account as the required signer. As one private key—Dan's account—can sign all the transactions in the aggregate, we can define the transaction as *complete*.
 
 .. example-code::
@@ -66,6 +72,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.java
+        :language: java
+        :start-after: /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Sign and announce the transaction with Dan's account.
 
 .. example-code::
@@ -77,5 +88,10 @@ Method #01: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */

@@ -36,6 +36,11 @@ Developing the bot
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomatically.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Create a new **Listener** to get notified every time a new **AggregateBondedTransaction** requires the signature of your account.
 
 3. Open the connection. You only need to open the connection once and then connect to all desired channels.
@@ -59,6 +64,11 @@ Cosign each pending **AggregateBondedTransaction** using the previously created 
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js
         :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomatically.java
+        :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -87,3 +97,7 @@ Here you have a possible implementation:
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */

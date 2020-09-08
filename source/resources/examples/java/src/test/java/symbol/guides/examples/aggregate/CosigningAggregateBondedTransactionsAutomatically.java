@@ -18,15 +18,51 @@
 
 package symbol.guides.examples.aggregate;
 
+import io.nem.symbol.sdk.api.Listener;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.TransactionRepository;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Account;
+import io.nem.symbol.sdk.model.network.NetworkType;
+import io.nem.symbol.sdk.model.transaction.AggregateTransaction;
+import io.nem.symbol.sdk.model.transaction.CosignatureSignedTransaction;
+import io.nem.symbol.sdk.model.transaction.CosignatureTransaction;
+import java.util.function.BiFunction;
 import org.junit.jupiter.api.Test;
-
-import java.util.concurrent.ExecutionException;
 
 class CosigningAggregateBondedTransactionsAutomatically {
 
     @Test
-    void cosigningAggregateBondedTransactionsAutomatically()
-        throws ExecutionException, InterruptedException {
-        //Todo: Implement
+    void example() throws Exception {
+
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+            // replace with recipient address
+
+            /* start block 01 */
+            BiFunction<AggregateTransaction, Account, CosignatureSignedTransaction> cosignAggregateBondedTransaction = ((transaction, account) -> CosignatureTransaction
+                .create(transaction).signWith(account));
+            /* end block 01 */
+
+            /* start block 02 */
+            NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
+            // replace with cosigner private key
+            String privateKey = "";
+            Account account = Account.createFromPrivateKey(privateKey, networkType);
+
+            TransactionRepository transactionRepository = repositoryFactory.createTransactionRepository();
+
+            try (Listener listener = repositoryFactory.createListener()) {
+                listener.open().get();
+                listener.aggregateBondedAdded(account.getAddress())
+                    .filter(a -> a.signedByAccount(account.getPublicAccount()))
+                    .map(a -> cosignAggregateBondedTransaction.apply(a, account))
+                    .flatMap(transactionRepository::announceAggregateBondedCosignature).toFuture().get();
+            }
+
+            /* end block 02 */
+
+        }
+
     }
 }

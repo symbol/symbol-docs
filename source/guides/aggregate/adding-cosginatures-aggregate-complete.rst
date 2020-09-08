@@ -49,6 +49,16 @@ Step 1: Construct the aggregate complete transaction
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.js
+        :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/AddingCosignaturesAggregateComplete.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 Make sure to place Alice's private key and Bob's public key in the appropriate places.
 
 2. Sign the transaction with Alice's key.
@@ -57,6 +67,16 @@ Make sure to place Alice's private key and Bob's public key in the appropriate p
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts
         :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/AddingCosignaturesAggregateComplete.java
+        :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
@@ -76,6 +96,17 @@ Step 2: Add the second cosignature
       :start-after:  /* start block 03 */
       :end-before: /* end block 03 */
 
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.js
+      :language: javascript
+      :start-after:  /* start block 03 */
+      :end-before: /* end block 03 */
+
+  .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/AddingCosignaturesAggregateComplete.java
+      :language: java
+      :start-after:  /* start block 03 */
+      :end-before: /* end block 03 */
+
+
 2. Bob runs the code snippet in the terminal and obtains the transaction signature and the parent hash. 
 Finally, he shares the information back with Alice.
 
@@ -91,5 +122,16 @@ Using Bob's public key, cosignature transaction hash, and signature, recreate th
       :language: typescript
       :start-after:  /* start block 04 */
       :end-before: /* end block 04 */
+
+  .. viewsource:: ../../resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.js
+      :language: javascript
+      :start-after:  /* start block 04 */
+      :end-before: /* end block 04 */
+
+  .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/AddingCosignaturesAggregateComplete.java
+      :language: java
+      :start-after:  /* start block 04 */
+      :end-before: /* end block 04 */
+
 
 If successful, Alice will have sent 100 |networkcurrency| to Bob and received 1 ``collectible`` mosaic in return.
