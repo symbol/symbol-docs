@@ -26,7 +26,6 @@ import {
     KeyGenerator,
     MetadataHttp,
     MetadataTransactionService,
-    MetadataType,
     Mosaic,
     MosaicId,
     NetworkType,
@@ -35,7 +34,6 @@ import {
     SignedTransaction,
     TransactionService,
     UInt64,
-    TransferTransaction,
 } from 'symbol-sdk';
 
 /* start block 01 */
