@@ -18,11 +18,14 @@
 
 package symbol.guides.examples.restriction;
 
+import io.nem.symbol.sdk.api.MosaicRestrictionPaginationStreamer;
+import io.nem.symbol.sdk.api.MosaicRestrictionSearchCriteria;
 import io.nem.symbol.sdk.api.RepositoryFactory;
 import io.nem.symbol.sdk.api.RestrictionMosaicRepository;
 import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
 import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.mosaic.MosaicId;
+import io.nem.symbol.sdk.model.restriction.MosaicAddressRestriction;
 import io.nem.symbol.sdk.model.restriction.MosaicGlobalRestriction;
 import io.nem.symbol.sdk.model.transaction.JsonHelper;
 import org.junit.jupiter.api.Test;
@@ -47,9 +50,12 @@ class GettingMosaicGlobalRestrictions {
             final String mosaicIdHex = "634a8ac3fc2b65b3";
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);
 
-            final List<MosaicGlobalRestriction> restrictions = restrictionRepository
-                    .getMosaicGlobalRestrictions(Collections.singletonList(mosaicId))
-                    .toFuture().get();
+            MosaicRestrictionSearchCriteria criteria = new MosaicRestrictionSearchCriteria()
+                .mosaicId(mosaicId);
+
+            List<MosaicGlobalRestriction> restrictions = MosaicRestrictionPaginationStreamer
+                .global(restrictionRepository, criteria).toList().toFuture().get();
+
             final JsonHelper helper = new JsonHelperJackson2();
             System.out.println(helper.prettyPrint(restrictions));
         }

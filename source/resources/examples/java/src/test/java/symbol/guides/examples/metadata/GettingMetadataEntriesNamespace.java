@@ -18,36 +18,41 @@
 
 package symbol.guides.examples.metadata;
 
+import io.nem.symbol.sdk.api.MetadataPaginationStreamer;
 import io.nem.symbol.sdk.api.MetadataRepository;
+import io.nem.symbol.sdk.api.MetadataSearchCriteria;
 import io.nem.symbol.sdk.api.RepositoryFactory;
 import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
 import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.metadata.Metadata;
 import io.nem.symbol.sdk.model.namespace.NamespaceId;
 import io.nem.symbol.sdk.model.transaction.JsonHelper;
-import org.junit.jupiter.api.Test;
-
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.ExecutionException;
+import org.junit.jupiter.api.Test;
 
 class GettingMetadataEntriesNamespace {
 
     @Test
     void gettingMetadataEntriesNamespace()
-            throws ExecutionException, InterruptedException {
+        throws ExecutionException, InterruptedException {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
-            final MetadataRepository metadataRepository = repositoryFactory.createMetadataRepository();
+            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+            final MetadataRepository metadataRepository = repositoryFactory
+                .createMetadataRepository();
 
             // replace with namespace name
             final String namespaceName = "symbol";
             final NamespaceId namespaceId = NamespaceId.createFromName(namespaceName);
 
-            final List<Metadata> metadata = metadataRepository.getNamespaceMetadata(namespaceId, Optional.empty())
-                    .toFuture().get();
+            MetadataPaginationStreamer streamer = new MetadataPaginationStreamer(
+                metadataRepository);
+            MetadataSearchCriteria criteria = new MetadataSearchCriteria().targetId(namespaceId);
+            final List<Metadata> metadata = streamer
+                .search(criteria).toList().toFuture().get();
+
             final JsonHelper helper = new JsonHelperJackson2();
             System.out.println(helper.prettyPrint(metadata));
         }

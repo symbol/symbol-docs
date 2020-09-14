@@ -55,7 +55,8 @@ public class AddingCosignaturesAggregateComplete {
 
             /* start block 01 */
             NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
-            NetworkCurrency networkCurrency = repositoryFactory.getNetworkCurrency().toFuture().get();
+            NetworkCurrency networkCurrency = repositoryFactory.getNetworkCurrency().toFuture()
+                .get();
 
             // replace with alice private key
             String alicePrivatekey = "";
@@ -63,27 +64,33 @@ public class AddingCosignaturesAggregateComplete {
 
             // replace with bob public key
             String bobPublicKey = "";
-            PublicAccount bobPublicAccount = PublicAccount.createFromPublicKey(bobPublicKey, networkType);
+            PublicAccount bobPublicAccount = PublicAccount
+                .createFromPublicKey(bobPublicKey, networkType);
 
             TransferTransaction aliceTransferTransaction = TransferTransactionFactory
                 .create(networkType, bobPublicAccount.getAddress(),
-                    Collections.singletonList(networkCurrency.createRelative(BigInteger.valueOf(1000))),
+                    Collections
+                        .singletonList(networkCurrency.createRelative(BigInteger.valueOf(1000))),
                     PlainMessage.create("payout")).build();
 
             TransferTransaction bobTransferTransaction = TransferTransactionFactory
                 .create(networkType, aliceAccount.getAddress(),
-                    Collections.singletonList(new Mosaic(new NamespaceId("collectible"), BigInteger.valueOf(1))),
+                    Collections.singletonList(
+                        new Mosaic(new NamespaceId("collectible"), BigInteger.valueOf(1))),
                     PlainMessage.create("payout")).build();
 
-            AggregateTransaction aggregateTransaction = AggregateTransactionFactory.createComplete(networkType, Arrays
-                .asList(aliceTransferTransaction.toAggregate(aliceAccount.getPublicAccount()),
-                    bobTransferTransaction.toAggregate(bobPublicAccount))).maxFee(BigInteger.valueOf(2000000)).build();
+            AggregateTransaction aggregateTransaction = AggregateTransactionFactory
+                .createComplete(networkType, Arrays
+                    .asList(aliceTransferTransaction.toAggregate(aliceAccount.getPublicAccount()),
+                        bobTransferTransaction.toAggregate(bobPublicAccount)))
+                .maxFee(BigInteger.valueOf(2000000)).build();
             /* end block 01 */
 
             /* start block 02 */
             String generationHash = repositoryFactory.getGenerationHash().toFuture().get();
 
-            SignedTransaction signedTransactionNotComplete = aliceAccount.sign(aggregateTransaction, generationHash);
+            SignedTransaction signedTransactionNotComplete = aliceAccount
+                .sign(aggregateTransaction, generationHash);
             System.out.println(signedTransactionNotComplete.getPayload());
             /* end block 02 */
 
@@ -91,7 +98,8 @@ public class AddingCosignaturesAggregateComplete {
             // replace with bob private key
             String bobPrivateKey = "";
             Account bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
-            CosignatureSignedTransaction cosignedTransactionBob = CosignatureTransaction.create(aggregateTransaction)
+            CosignatureSignedTransaction cosignedTransactionBob = CosignatureTransaction
+                .create(aggregateTransaction)
                 .signWith(bobAccount);
 
             System.out.println(cosignedTransactionBob.getSignature());
@@ -102,14 +110,14 @@ public class AddingCosignaturesAggregateComplete {
             BinarySerialization serialization = BinarySerializationImpl.INSTANCE;
 
             AggregateTransactionFactory rectreatedAggregateTransactionFromPayload = (AggregateTransactionFactory) serialization
-                .deserializeToFactory(ConvertUtils.getBytes(signedTransactionNotComplete.getPayload()));
+                .deserializeToFactory(
+                    ConvertUtils.getBytes(signedTransactionNotComplete.getPayload()));
 
-//            rectreatedAggregateTransactionFromPayload.getCosignatures()
+            //Added a new cosignature.
+            rectreatedAggregateTransactionFromPayload.addCosignatures(cosignedTransactionBob);
 
-            //TODO USE cosignedTransactionBob instead of bobAccount
             SignedTransaction signedTransactionComplete = aliceAccount
-                .signTransactionWithCosignatories(rectreatedAggregateTransactionFromPayload.build(),
-                    Collections.singletonList(bobAccount), generationHash);
+                .sign(rectreatedAggregateTransactionFromPayload.build(), generationHash);
             System.out.println(signedTransactionComplete.getHash());
 
             TransactionRepository transactionHttp = repositoryFactory.createTransactionRepository();

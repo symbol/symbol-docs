@@ -7,7 +7,7 @@
     :nocomments:
 
 #######################################
-Cosigning aggregate bonded transactions
+Cosigning aggregate bonded transactionsggregate/CosigningAggregateBonde
 #######################################
 
 Cosign :ref:`aggregate <aggregate-bonded>` transactions pending to be signed.
@@ -86,10 +86,15 @@ If you want to cosign a transaction involving a multisig account, you should be 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
     .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactions.java
         :language: java
-        :start-after:  /* start block 03 */
-        :end-before: /* end block 03 */
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
 
 4. Retrieve the complete transaction object from the node using the ``TransactionHttp`` repository.
 At this point, you might want to do some extra checks, like verifying the contents of the transaction.
@@ -100,6 +105,11 @@ Finally, announce the cosignature to network with ``transactionHttp.announceAggr
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.ts
         :language: typescript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.js
+        :language: javascript
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
