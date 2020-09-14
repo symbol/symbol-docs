@@ -50,6 +50,11 @@ Use the ``TransactionHttp`` repository to search all the incoming aggregate tran
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/GettingPartialTransactions.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 Copy and save the transaction hash you want to cosign with your account.
 
 2. Create a function to cosign any **AggregateBondedTransaction**.
@@ -63,6 +68,11 @@ Copy and save the transaction hash you want to cosign with your account.
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.js
         :language: javascript
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactions.java
+        :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
@@ -81,6 +91,11 @@ If you want to cosign a transaction involving a multisig account, you should be 
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactions.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 4. Retrieve the complete transaction object from the node using the ``TransactionHttp`` repository.
 At this point, you might want to do some extra checks, like verifying the contents of the transaction.
 If everything looks ok, cosign the transaction with the signer account.  
@@ -95,6 +110,11 @@ Finally, announce the cosignature to network with ``transactionHttp.announceAggr
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.js
         :language: javascript
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactions.java
+        :language: java
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 

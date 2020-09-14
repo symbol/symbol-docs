@@ -18,6 +18,8 @@
 
 package symbol.guides.examples.restriction;
 
+import io.nem.symbol.sdk.api.MosaicRestrictionPaginationStreamer;
+import io.nem.symbol.sdk.api.MosaicRestrictionSearchCriteria;
 import io.nem.symbol.sdk.api.RepositoryFactory;
 import io.nem.symbol.sdk.api.RestrictionMosaicRepository;
 import io.nem.symbol.sdk.infrastructure.vertx.JsonHelperJackson2;
@@ -25,7 +27,9 @@ import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
 import io.nem.symbol.sdk.model.account.Address;
 import io.nem.symbol.sdk.model.mosaic.MosaicId;
 import io.nem.symbol.sdk.model.restriction.MosaicAddressRestriction;
+import io.nem.symbol.sdk.model.restriction.MosaicRestrictionEntryType;
 import io.nem.symbol.sdk.model.transaction.JsonHelper;
+import io.reactivex.Observable;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
@@ -36,13 +40,13 @@ class GettingMosaicAddressRestrictions {
 
     @Test
     void gettingMosaicAddressRestrictions()
-            throws ExecutionException, InterruptedException {
+        throws ExecutionException, InterruptedException {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
             final RestrictionMosaicRepository restrictionRepository = repositoryFactory
-                    .createRestrictionMosaicRepository();
+                .createRestrictionMosaicRepository();
 
             // replace with mosaicId
             final String mosaicIdHex = "634a8ac3fc2b65b3";
@@ -52,10 +56,12 @@ class GettingMosaicAddressRestrictions {
             final String rawAddress = "TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I";
             final Address address = Address.createFromRawAddress(rawAddress);
 
-            final List<MosaicAddressRestriction> restrictions;
-            restrictions = restrictionRepository
-                    .getMosaicAddressRestrictions(mosaicId, Collections.singletonList(address))
-                    .toFuture().get();
+            MosaicRestrictionSearchCriteria criteria = new MosaicRestrictionSearchCriteria()
+                .mosaicId(mosaicId).targetAddress(address);
+
+            List<MosaicAddressRestriction> restrictions = MosaicRestrictionPaginationStreamer
+                .address(restrictionRepository, criteria).toList().toFuture().get();
+
             final JsonHelper helper = new JsonHelperJackson2();
             System.out.println(helper.prettyPrint(restrictions));
         }

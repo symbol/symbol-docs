@@ -18,15 +18,81 @@
 
 package symbol.guides.examples.aggregate;
 
-import java.net.MalformedURLException;
-import java.util.concurrent.ExecutionException;
+import io.nem.symbol.sdk.api.Listener;
+import io.nem.symbol.sdk.api.RepositoryFactory;
+import io.nem.symbol.sdk.api.TransactionRepository;
+import io.nem.symbol.sdk.infrastructure.vertx.RepositoryFactoryVertxImpl;
+import io.nem.symbol.sdk.model.account.Account;
+import io.nem.symbol.sdk.model.account.PublicAccount;
+import io.nem.symbol.sdk.model.mosaic.NetworkCurrency;
+import io.nem.symbol.sdk.model.network.NetworkType;
+import io.nem.symbol.sdk.model.transaction.AggregateTransaction;
+import io.nem.symbol.sdk.model.transaction.CosignatureSignedTransaction;
+import io.nem.symbol.sdk.model.transaction.CosignatureTransaction;
+import io.nem.symbol.sdk.model.transaction.Transaction;
+import io.nem.symbol.sdk.model.transaction.TransferTransaction;
+import java.math.BigInteger;
+import java.util.function.BiFunction;
 import org.junit.jupiter.api.Test;
 
 class CosigningAggregateBondedTransactionsAutomaticallyWithConstraints {
 
     @Test
-    void cosigningAnnouncedAggregateBondedTransactionsAutomaticallyWithConstraints()
-        throws ExecutionException, InterruptedException, MalformedURLException {
-        //Todo: Implement
+    void example() throws Exception {
+
+        try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
+            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+            // replace with recipient address
+
+            /* start block 01 */
+
+            NetworkCurrency networkCurrency = repositoryFactory.getNetworkCurrency().toFuture().get();
+
+            BiFunction<Transaction, PublicAccount, Boolean> validTransaction = ((transaction, account) -> {
+                if (transaction instanceof TransferTransaction) {
+                    return false;
+                }
+                if (transaction.getSigner().map(s -> !s.equals(account)).orElse(true)) {
+                    return false;
+                }
+
+                TransferTransaction transferTransaction = (TransferTransaction) transaction;
+                return transferTransaction.getMosaics().size() == 1 && transferTransaction.getMosaics().stream()
+                    .allMatch(m -> {
+                        BigInteger maxBalance = networkCurrency.createAbsolute(BigInteger.valueOf(100)).getAmount();
+                        if (m.getAmount().compareTo(maxBalance) > 0) {
+                            return false;
+                        }
+                        return networkCurrency.getMosaicId().map(mosaicId -> mosaicId.equals(m.getId())).orElse(false)
+                            || networkCurrency.getNamespaceId().map(namespaceId -> namespaceId.equals(m.getId()))
+                            .orElse(false);
+                    });
+
+            });
+
+            BiFunction<AggregateTransaction, Account, CosignatureSignedTransaction> cosignAggregateBondedTransaction = ((transaction, account) -> CosignatureTransaction
+                .create(transaction).signWith(account));
+
+            NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
+            // replace with cosigner private key
+            String privateKey = "";
+            Account account = Account.createFromPrivateKey(privateKey, networkType);
+
+            TransactionRepository transactionRepository = repositoryFactory.createTransactionRepository();
+
+            try (Listener listener = repositoryFactory.createListener()) {
+                listener.open().get();
+                listener.aggregateBondedAdded(account.getAddress())
+                    .filter(a -> a.signedByAccount(account.getPublicAccount())).filter(
+                    a -> a.getInnerTransactions().stream()
+                        .anyMatch(t -> validTransaction.apply(t, account.getPublicAccount())))
+                    .map(a -> cosignAggregateBondedTransaction.apply(a, account))
+                    .flatMap(transactionRepository::announceAggregateBondedCosignature).toFuture().get();
+            }
+
+            /* end block 01 */
+
+        }
+
     }
 }

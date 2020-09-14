@@ -76,6 +76,11 @@ Method #02: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateComplete.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Define the a :ref:`TransferTransaction <transfer-transaction>` as follows:
 
 .. csv-table::
@@ -100,6 +105,11 @@ Method #02: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateComplete.java
+        :language: java
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
 3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer of the transaction.
 
 .. example-code::
@@ -114,6 +124,11 @@ Method #02: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateComplete.java
+        :language: java
+        :start-after:  /* start block 03 */
+        :end-before: /* end block 03 */
+
 4. Then, sign and announce the transaction with a cosignatory account.
 
 .. example-code::
@@ -125,6 +140,11 @@ Method #02: Using the SDK
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateComplete.js
         :language: javascript
+        :start-after:  /* start block 04 */
+        :end-before: /* end block 04 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateComplete.java
+        :language: java
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
@@ -147,6 +167,11 @@ If more than one cosignature is required to announce the transaction (e.g., the 
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateBonded.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. When an AggregateTransaction is bonded, an account needs to lock at least ``10`` |networkcurrency| to prevent spamming the network.
 Once all cosigners sign the transaction, the amount of |networkcurrency| locked becomes available again in the account that has locked the funds.
 After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>` with a cosignatory.
@@ -161,6 +186,11 @@ In our case, we will sign the transaction with Bob's account.
 
     .. viewsource:: ../../resources/examples/typescript/aggregate/SendingAMultisigTransactionAggregateBonded.js
         :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingAMultisigTransactionAggregateBonded.java
+        :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
