@@ -7,7 +7,7 @@
     :nocomments:
 
 #######################################
-Cosigning aggregate bonded transactionsggregate/CosigningAggregateBonde
+Cosigning aggregate bonded transactions
 #######################################
 
 Cosign :ref:`aggregate <aggregate-bonded>` transactions pending to be signed.
