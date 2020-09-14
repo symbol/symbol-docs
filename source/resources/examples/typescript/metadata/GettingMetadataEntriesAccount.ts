@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, Metadata, RepositoryFactoryHttp} from 'symbol-sdk';
+import {Address, Metadata, MetadataSearchCriteria, MetadataType, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // Replace with address
@@ -27,10 +27,12 @@ const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
-metadataHttp.getAccountMetadata(address)
+const searchCriteria = {targetAddress: address, metadataType: MetadataType.Account};
+metadataHttp.search(searchCriteria)
     .subscribe((metadata) => {
-        if (metadata.length > 0) {
-            metadata
+        if (metadata.totalEntries > 0) {
+            console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
+            metadata.data
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);

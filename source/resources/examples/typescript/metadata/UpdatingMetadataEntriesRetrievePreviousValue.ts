@@ -48,9 +48,15 @@ const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
-const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.address)
+const searchCriteria = {
+    targetAddress: alicePublicAccount.address,
+    scopedMetadataKey: key.toString(),
+    sourceAddress: bobAccount.address,
+};
+const accountMetadataTransaction = metadataHttp
+.search(searchCriteria)
     .pipe( mergeMap((metadata) => {
-        const currentValueBytes = Convert.utf8ToUint8(metadata.metadataEntry.value);
+        const currentValueBytes = Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
         return of(AccountMetadataTransaction.create(
             Deadline.create(),
             alicePublicAccount.address,
