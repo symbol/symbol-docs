@@ -37,9 +37,15 @@ const metadataHttp = repositoryFactory.createMetadataRepository();
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const newValueBytes = symbol_sdk_1.Convert.utf8ToUint8(newValue);
-const accountMetadataTransaction = metadataHttp.getAccountMetadataByKeyAndSender(alicePublicAccount.address, 'CERT', bobAccount.address)
+const searchCriteria = {
+    targetAddress: alicePublicAccount.address,
+    scopedMetadataKey: key.toString(),
+    sourceAddress: bobAccount.address,
+};
+const accountMetadataTransaction = metadataHttp
+    .search(searchCriteria)
     .pipe(operators_1.mergeMap((metadata) => {
-    const currentValueBytes = symbol_sdk_1.Convert.utf8ToUint8(metadata.metadataEntry.value);
+    const currentValueBytes = symbol_sdk_1.Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
     return rxjs_1.of(symbol_sdk_1.AccountMetadataTransaction.create(symbol_sdk_1.Deadline.create(), alicePublicAccount.address, key, newValueBytes.length - currentValueBytes.length, symbol_sdk_1.Convert.decodeHex(symbol_sdk_1.Convert.xor(currentValueBytes, newValueBytes)), networkType));
 }));
 /* end block 01 */
