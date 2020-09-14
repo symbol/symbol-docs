@@ -16,7 +16,7 @@
  *
  */
 
-import {Metadata, NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
+import {Metadata, MetadataType, NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -26,10 +26,12 @@ const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
-metadataHttp.getNamespaceMetadata(namespaceId)
+const searchCriteria = {targetId: namespaceId, metadataType: MetadataType.Namespace};
+metadataHttp.search(searchCriteria)
     .subscribe((metadata) => {
-        if (metadata.length > 0) {
-            metadata
+        if (metadata.totalEntries > 0) {
+            console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
+            metadata.data
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
