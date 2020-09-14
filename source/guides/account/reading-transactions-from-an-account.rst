@@ -36,6 +36,11 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
+    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingConfirmedTransactions.java
+        :language: java
+        :start-after:  /* start block 01 */
+        :end-before: /* end block 01 */
+
 2. Define a new ``TransactionHttp`` repository and the search criteria.
 In this example, we will retrieve all account-related transactions with at least one confirmation, but you could also query the unconfirmed and partial collections.
 
@@ -48,6 +53,11 @@ In this example, we will retrieve all account-related transactions with at least
 
     .. viewsource:: ../../resources/examples/typescript/account/GettingConfirmedTransactions.js
         :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingConfirmedTransactions.java
+        :language: java
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
