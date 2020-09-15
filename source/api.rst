@@ -186,7 +186,7 @@ Possible scenarios when this message is received are: the transaction is announc
 **unconfirmedRemoved/{address}**
 
 The ``unconfirmedRemoved`` channel notifies subscribed clients when a transaction related to the given address exits the unconfirmed state.
-Each returned message contains a transaction hash.
+Each returned message contains a no-longer-unconfirmed transaction hash.
 
 Possible scenarios when this message is received are: the transaction is now confirmed, or the deadline was reached and the transaction was not included in a block.
 
@@ -205,8 +205,8 @@ Possible scenarios when this message is received are: the transaction is now con
 
 **partialAdded/{address}**
 
-The ``partialAdded`` channel notifies subscribed clients when an :ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given address enters the partial state, waiting to have all required cosignatures.
-Each returned message contains information about a partial transaction.
+The ``partialAdded`` channel notifies subscribed clients when an :ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given address enters the partial state, waiting for all required cosignatures to complete.
+Each returned message contains information about an added partial transaction.
 
 *Request body*
 
@@ -224,7 +224,7 @@ Each returned message contains information about a partial transaction.
 **partialRemoved/{address}**
 
 The ``partialRemoved`` channel notifies subscribed clients when a transaction related to the given address exits the partial state.
-Each returned message contains a transaction hash.
+Each returned message contains a removed partial transaction hash.
 
 Possible scenarios when this message is emitted are: all required cosignatures were received and the transaction is now unconfirmed, or the deadline was reached and the transaction was not included in a block.
 
