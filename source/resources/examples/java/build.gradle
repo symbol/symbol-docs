@@ -10,7 +10,7 @@ plugins {
 
 apply plugin: 'java'
 group 'io.nem'
-version '0.20.0'
+version '0.20.4-SNAPSHOT'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 15:51+0000\n"
+"POT-Creation-Date: 2020-08-27 12:49+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -131,10 +131,6 @@ msgstr "譲渡可能、更新可能、ブランド付け、共同所有のブロ
 #: ../../source/sdk.rst:1
 msgid "Library to debug rand access |codename| node data."
 msgstr "|codename| ノードデータにランダムアクセスするデバッグライブラリ"
-
-#: ../../source/sdk.rst:1
-msgid "Hyper-deterministic wallets library for |codename|."
-msgstr "|codename| 用 HD ウォレットを扱うためのライブラリ。"
 
 #: ../../source/sdk.rst:1
 msgid "QR library for |codename|."

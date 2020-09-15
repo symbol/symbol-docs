@@ -26,10 +26,12 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
-metadataHttp.getAccountMetadata(address)
+const searchCriteria = { targetAddress: address, metadataType: symbol_sdk_1.MetadataType.Account };
+metadataHttp.search(searchCriteria)
     .subscribe((metadata) => {
-    if (metadata.length > 0) {
-        metadata
+    if (metadata.totalEntries > 0) {
+        console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
+        metadata.data
             .map((entry) => {
             const metadataEntry = entry.metadataEntry;
             console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
