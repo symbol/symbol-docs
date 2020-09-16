@@ -126,8 +126,8 @@ Channels
 
 **block**
 
-The block channel notifies for every subscribed client every time there is a new harvested block.
-The messages returned contain information about the blocks.
+The ``block`` channel notifies subscribed clients every time a new block is harvested.
+Each returned message contains information about a harvested block.
 
 *Request body*
 
@@ -142,10 +142,13 @@ The messages returned contain information about the blocks.
 
 * `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
-**finalized block**
+**finalizedBlock**
 
-The finalized block channel notifies for every subscribed client every time there is a new finalized block.
-The messages returned contain information about the finalized block.
+The ``finalizedBlock`` channel notifies subscribed clients every time a set of blocks is irrevocably added to the blockchain (finalized). Blocks are finalized in rounds (batches) and a single message is sent at the end of each round, containing the height of the highest block in the batch.
+
+Therefore, if you are waiting for a particular block to be finalized, you have to listen for a finalization message with greater or equal block height.
+
+Each returned message contains information about a finalization round.
 
 *Request body*
 
@@ -162,8 +165,8 @@ The messages returned contain information about the finalized block.
 
 **confirmedAdded/{address}**
 
-The confirmedAdded channel notifies when a transaction related to an address is included in a block.
-The messages returned contain information about the confirmed transactions.
+The ``confirmedAdded`` channel notifies subscribed clients when a transaction related to the given address is included in a block.
+Each returned message contains information about a confirmed transaction.
 
 *Request body*
 
@@ -180,10 +183,10 @@ The messages returned contain information about the confirmed transactions.
 
 **unconfirmedAdded/{address}**
 
-The unconfirmedAdded channel notifies when a transaction related to an address gets the unconfirmed state, waiting to be included in a block.
-The messages returned contain information about unconfirmed transactions.
+The ``unconfirmedAdded`` channel notifies subscribed clients when a transaction related to the given address enters the unconfirmed state, waiting to be included in a block.
+Each returned message contains information about an unconfirmed transaction.
 
-Possible scenarios when this channel notifies are: the transaction is announced to the network via ``PUT /transaction`` HTTP endpoint or an AggregateBondedTransaction has all required cosigners and change its state from partial to unconfirmed.
+Possible scenarios when this message is received are: the transaction is announced to the network via the ``PUT /transaction`` HTTP endpoint or an :ref:`AggregateBondedTransaction <aggregate-bonded>` has all required cosigners and changes its state from partial to unconfirmed.
 
 *Request body*
 
@@ -200,10 +203,10 @@ Possible scenarios when this channel notifies are: the transaction is announced 
 
 **unconfirmedRemoved/{address}**
 
-The unconfirmedRemoved channel notifies when a transaction related to an address had the unconfirmed state, but not anymore.
-The messages returned contain the transactions hashes.
+The ``unconfirmedRemoved`` channel notifies subscribed clients when a transaction related to the given address exits the unconfirmed state.
+Each returned message contains a no-longer-unconfirmed transaction hash.
 
-Possible scenarios when this channel notifies are: the transaction now is confirmed, or the deadline has been reached, and it was not included in a block.
+Possible scenarios when this message is received are: the transaction is now confirmed, or the deadline was reached and the transaction was not included in a block.
 
 *Request body*
 
@@ -220,8 +223,8 @@ Possible scenarios when this channel notifies are: the transaction now is confir
 
 **partialAdded/{address}**
 
-The partialAdded channel notifies when an AggregateBondedTransaction related to an address reaches the partial state, waiting to have all required cosigners.
-The messages returned contain information about the transactions.
+The ``partialAdded`` channel notifies subscribed clients when an :ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given address enters the partial state, waiting for all required cosignatures to complete.
+Each returned message contains information about an added partial transaction.
 
 *Request body*
 
@@ -238,10 +241,10 @@ The messages returned contain information about the transactions.
 
 **partialRemoved/{address}**
 
-The partialRemoved channel notifies when a transaction related to an address had the partial state, but is not anymore.
-The messages returned contain the transactions hashes.
+The ``partialRemoved`` channel notifies subscribed clients when a transaction related to the given address exits the partial state.
+Each returned message contains a removed partial transaction hash.
 
-Possible scenarios when this channel notifies are: the transaction now is unconfirmed, or the deadline has been reached, and it was not included in a block.
+Possible scenarios when this message is emitted are: all required cosignatures were received and the transaction is now unconfirmed, or the deadline was reached and the transaction was not included in a block.
 
 *Request body*
 
@@ -258,8 +261,8 @@ Possible scenarios when this channel notifies are: the transaction now is unconf
 
 **cosignature/{address}**
 
-The cosignature channel notifies when a cosignature signed transaction related to an address is added to an AggregateBondedTransaction with the partial state.
-The messages returned contain the cosignature signed transaction.
+The ``cosignature`` channel notifies subscribed clients when a cosignature-signed transaction related to the given address is added to an :ref:`AggregateBondedTransaction <aggregate-bonded>` in the partial state.
+Each returned message contains a cosignature-signed transaction.
 
 *Request body*
 
@@ -276,8 +279,8 @@ The messages returned contain the cosignature signed transaction.
 
 **status/{address}**
 
-The status channel notifies when a transaction related to an address rises an error.
-The messages returned contain the error messages and the transaction hashes.
+The ``status`` channel notifies subscribed clients when a transaction related to the given address signals an error.
+Each returned message contains an error message and a transaction hash.
 
 *Request body*
 
