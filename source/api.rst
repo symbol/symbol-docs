@@ -144,11 +144,11 @@ Each returned message contains information about a harvested block.
 
 **finalizedBlock**
 
-The ``finalizedBlock`` channel notifies subscribed clients every time a set of blocks is finalized. Blocks are finalized (irrevocably added to the blockchain) in batches and a single message is sent for each batch, containing the height of the highest block in the batch.
+The ``finalizedBlock`` channel notifies subscribed clients every time a set of blocks is irrevocably added to the blockchain (finalized). Blocks are finalized in rounds (batches) and a single message is sent at the end of each round, containing the height of the highest block in the batch.
 
 Therefore, if you are waiting for a particular block to be finalized, you have to listen for a finalization message with greater or equal block height.
 
-Each returned message contains information about a finalized block batch.
+Each returned message contains information about a finalization round.
 
 *Request body*
 
