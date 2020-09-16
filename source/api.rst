@@ -106,6 +106,21 @@ WebSocket URIs share the same host and port as the HTTP requests URIs, but use t
 
 * Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain/listening-new-blocks>`
 
+Response format
+===============
+
+All channels share the same response format, which is:
+
+.. code-block:: json
+
+    {
+        "topic": "{subscribed-channel}",
+        "data": {}
+    }
+
+* ``topic`` contains the name of the subscribed channel, so the same websocket can be used to monitor multiple channels (``topic`` matches the ``subscribe`` field provided in the request body when subscribing).
+* ``data`` is a channel-specific object. Each channel listed below describes the data object it returns.
+
 Channels
 ========
 
@@ -123,7 +138,7 @@ Each returned message contains information about a harvested block.
         "subscribe": "block"
     }
 
-*Response format*
+*Response data*
 
 * `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
@@ -141,7 +156,7 @@ Each returned message contains information about a finalized block.
         "subscribe": "finalizedBlock"
     }
 
-*Response format*
+*Response data*
 
 * `FinalizedBlockDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/chain/schemas/FinalizedBlockDTO.yml>`_
 
@@ -159,7 +174,7 @@ Each returned message contains information about a confirmed transaction.
         "subscribe": "confirmedAdded/{address}"
     }
 
-*Response format*
+*Response data*
 
 * `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
@@ -179,7 +194,7 @@ Possible scenarios when this message is received are: the transaction is announc
         "subscribe": "unconfirmedAdded/{address}"
     }
 
-*Response format*
+*Response data*
 
 * `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
@@ -199,7 +214,7 @@ Possible scenarios when this message is received are: the transaction is now con
         "subscribe":"unconfirmedRemoved/{address}"
     }
 
-*Response format*
+*Response data*
 
 * Hash
 
@@ -217,7 +232,7 @@ Each returned message contains information about an added partial transaction.
         "subscribe": "partialAdded/{address}"
     }
 
-*Response format*
+*Response data*
 
 * `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
@@ -237,7 +252,7 @@ Possible scenarios when this message is emitted are: all required cosignatures w
         "subscribe": "partialRemoved/{address}"
     }
 
-*Response format*
+*Response data*
 
 * Hash
 
@@ -255,7 +270,7 @@ Each returned message contains a cosignature-signed transaction.
         "subscribe": "cosignature/{address}"
     }
 
-*Response format*
+*Response data*
 
 * `CosignatureDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
 
@@ -273,7 +288,7 @@ Each returned message contains an error message and a transaction hash.
         "subscribe": "status/{address}"
     }
 
-*Response format*
+*Response data*
 
 * `TransactionStatusDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
