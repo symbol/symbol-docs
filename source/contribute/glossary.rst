@@ -98,7 +98,7 @@ Glossary
       A structure of nodes labeled by hashes. It is a :doc:`data validation <../concepts/data-validation>` technique used by Symbol to store large data associated with a block that cannot be retrieved directly from the block header. It allows light clients to verify if an element (e.g. transaction, receipt statement) exists without demanding the entire ledger history.
 
     Messaging
-      The ability to attach strings to :doc:`transactions <../concepts/transfer-transaction>`.
+      The ability to attach text strings to :doc:`transactions <../concepts/transfer-transaction>`.
 
     Metadata
       Additional information that can be attached to accounts, mosaics, or namespaces. Read :doc:`more <../concepts/metadata>`.
