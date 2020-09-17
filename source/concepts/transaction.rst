@@ -152,13 +152,13 @@ Validation
 The first stage of validation happens in the API nodes.
 If the transaction encounters an error, the WebSocket throws a notification through the status channel.
 If not, the transaction reaches the P2P network with an **unconfirmed** status.
-In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be replied upon.
+In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be relied upon.
 
 The second validation happens before the transaction is added in a :doc:`harvested block <block>`.
 If successful, the harvester stores the transaction in a block and the transaction reaches the **confirmed** status.
 At this state, the transaction is officially recorded in the blockchain ledger, but has not yet reached **finality**.
 
-Under certain circumstances, such as a network failure or partition, the most recent confirmed blocks can be **rollback**.
+Under certain circumstances, such as a network failure or partition, the most recently confirmed blocks can be :ref:`rolled back <rollbacks>`.
 Hence, confirmed transactions that have not been finalized are recognized by the network but are not immutable because they can still be reversed.
 
 For a block to be immutable, it needs to complete the :ref:`finalization <finalization>` process.

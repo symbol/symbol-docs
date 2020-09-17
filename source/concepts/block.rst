@@ -68,30 +68,43 @@ The consensus algorithm determines a new account to harvest the subsequent block
 The harvesting account receives the :doc:`fees <fees>` for the transactions added in the block and the mosaics created by :doc:`inflation <inflation>`.
 This gives the harvester an incentive to add as many transactions to the block as possible.
 
+.. _rollbacks:
+
+*********
+Rollbacks
+*********
+
+To ensure fast response times, the |codename| blockchain is designed in a way that, in the presence of a network failure or partition, requests are still answered, and transactions added to the blockchain.
+
+This naturally leads to **forks**, this is, different chains are created in the disconnected parts of the network. Once connectivity is restored **fork resolution** takes place to merge the divergent chains into a single one.
+
+This process might require that some blocks are **rolled back**: they are removed from the blockchain so all their transactions move to the **unconfirmed** state and have to be :ref:`validated <transaction-validation>` again. At this point there's a chance that their deadlines expire without ever being confirmed again.
+
+For this reason, **confirmed** transactions (which have already been added to the blockchain) cannot be relied upon until their block is :ref:`finalized <finalization>`, as shown below.
+
 .. _finalization:
 
 ************
 Finalization
 ************
 
-Finalization is the process of making changes on a blockchain ledger permanent.
-Before blocks reach finality, they can be rolled back in the presence of a network failure or partition.
-Once blocks completes finalization, they are immutable.
+This is the process of making changes on a blockchain ledger permanent.
+Before blocks reach finality, they still might need to be rolled back in the presence of a network failure or partition. However, once blocks are finalized, they become immutable.
 
-For every block, a sorting algorithm selects zero, one, or multiple accounts to propose the block to be finalized; these selected accounts unveil themselves at the beginning of the iteration to other nodes.
-Then, the committee selection algorithm verifies the eligible accounts to vote on the finality of the proposed block.
-If the proposed block matches the node records, verified accounts will cast a positive vote to tag the block as finalized.
+Finalization occurs in rounds. In each round, a **sorting algorithm** selects the accounts responsible for validating all blocks pending finalization. If a proposed block matches an account's node's records, the account emits a positive vote.
 
-The eligibility for voting has 2 requirements:
-#. Has at least minVoterBalance network currency units.
-#. Registered as a voter by announcing a VotingKeyLinkTransaction
+Once **2/3 of the stakes** selected for voting have emitted positive votes, the block becomes finalized. At that point the transactions linked to the block are permanently recorded on the blockchain.
 
-A block can be reversed until 2/3 of the stakes registered to vote have marked it as finalized.
-After that point, the transactions linked to the block are permanently recorded on the blockchain.
+.. note::
+    In order to be eligible as a voter, an account must:
 
-When there is low connectivity or many bad actors, finalization will take longer to occur and create the potential for larger rollbacks and unwinding.
-Rollback will always be allowed to the last finalized block, but a finalized block will never be allowed to be rolled back.
-Thus, clients that rely on the immutability of the blockchain history should only trust transactions from finalized blocks.
+    * Be the owner of a node.
+    * Have at least :ref:`minVoterBalance <config-network-properties>` network currency units.
+    * Be registered as a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` to the network.
+
+When there is low connectivity, or many bad actors, finalization can take longer than usual and create large :ref:`rollbacks`. However, no finalized block will ever be rolled back.
+
+Thus, clients that rely on the immutability of the blockchain history should only trust **transactions from finalized blocks**.
 
 ********************
 Related transactions
