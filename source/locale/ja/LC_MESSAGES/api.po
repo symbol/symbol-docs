@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 12:49+0000\n"
+"POT-Creation-Date: 2020-09-21 09:32+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -267,114 +267,156 @@ msgid ""
 msgstr ""
 "ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
-#: ../../source/api.rst:119
+#: ../../source/api.rst:121
+msgid "All channels share the same response format, which is:"
+msgstr "すべてのチャンネルは同じレスポンスフォーマットを共有しています:"
+
+#: ../../source/api.rst:130
+msgid ""
+"``topic`` contains the name of the subscribed channel, so the same websocket"
+" can be used to monitor multiple channels (``topic`` matches the "
+"``subscribe`` field provided in the request body when subscribing)."
+msgstr ""
+"``topic`` には購読しているチャンネル名が含まれているため、同じ WebSocket を使用して複数のチャンネルを監視できます "
+"(``topic`` は購読時にリクエストボディで提供される ``subscribe`` フィールドに一致します)"
+
+#: ../../source/api.rst:131
+msgid ""
+"``data`` is a channel-specific object. Each channel listed below describes "
+"the data object it returns."
+msgstr ""
+"``data`` はチャンネル固有のオブジェクトです。以下にリストされている各チャンネルは、それが返すデータオブジェクトについて説明しています。"
+
+#: ../../source/api.rst:134
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:121
+#: ../../source/api.rst:136
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:123
+#: ../../source/api.rst:138
 msgid ""
-"The block channel notifies for every subscribed client every time there is a"
-" new harvested block. The messages returned contain information about the "
-"blocks."
+"The ``block`` channel notifies subscribed clients every time a new block is "
+"harvested. Each returned message contains information about a harvested "
+"block."
 msgstr ""
-"ブロックチャンネルは、新しくハーベストされたブロックがあるたびに、購読しているすべてのクライアントに通知します。返されるメッセージにはブロックに関する情報が含まれています"
+"``block`` "
+"チャンネルは、新しいブロックが取得されるたび、購読しているクライアントへ通知します。返却される各メッセージには、収集されたブロックに関する情報が含まれます。"
 
-#: ../../source/api.rst:126 ../../source/api.rst:144 ../../source/api.rst:164
-#: ../../source/api.rst:184 ../../source/api.rst:202 ../../source/api.rst:222
-#: ../../source/api.rst:240 ../../source/api.rst:258
+#: ../../source/api.rst:141 ../../source/api.rst:159 ../../source/api.rst:177
+#: ../../source/api.rst:197 ../../source/api.rst:217 ../../source/api.rst:235
+#: ../../source/api.rst:255 ../../source/api.rst:273 ../../source/api.rst:291
 msgid "*Request body*"
 msgstr "*リクエストボディ*"
 
-#: ../../source/api.rst:135 ../../source/api.rst:153 ../../source/api.rst:173
-#: ../../source/api.rst:193 ../../source/api.rst:211 ../../source/api.rst:231
-#: ../../source/api.rst:249 ../../source/api.rst:267
-msgid "*Response format*"
-msgstr "*レスポンスフォーマット*"
+#: ../../source/api.rst:154
+msgid "**finalizedBlock**"
+msgstr "**ファイナライズ済みブロック**"
 
-#: ../../source/api.rst:141
+#: ../../source/api.rst:156
 msgid ""
-"The confirmedAdded channel notifies when a transaction related to an address"
-" is included in a block. The messages returned contain information about the"
-" confirmed transactions."
+"The ``finalizedBlock`` channel notifies subscribed clients every time a set "
+"of blocks is :ref:`finalized <finalization>`. Each returned message contains"
+" information about the **highest block** in the finalization round. All "
+"blocks with a smaller height are assumed finalized."
 msgstr ""
-"承認済追加チャンネルは、アドレスに関連するトランザクションがブロックに含まれたときに通知します。返されるメッセージには、承認済みのトランザクションに関する情報が含まれています。"
+"``finalizedBlock`` チャンネルは、ブロックの集合が :ref:`finalized <finalization>` "
+"されるたびに購読しているクライアントに通知します。返却される各メッセージには、ファイナライズラウンドの **最も高いブロック** "
+"に関する情報が含まれています。高さが低いブロックはすべてファイナライズ済みと見なされます。"
 
-#: ../../source/api.rst:159
+#: ../../source/api.rst:174
 msgid ""
-"The unconfirmedAdded channel notifies when a transaction related to an "
-"address gets the unconfirmed state, waiting to be included in a block. The "
-"messages returned contain information about unconfirmed transactions."
+"The ``confirmedAdded`` channel notifies subscribed clients when a "
+"transaction related to the given address is included in a block. Each "
+"returned message contains information about a confirmed transaction."
 msgstr ""
-"未承認追加チャンネルは、アドレスに関連するトランザクションが未承認状態にあり、ブロックに含まれるのを待っているときに通知します。返されるメッセージには、未承認のトランザクションに関する情報が含まれています。"
+"``confirmedAdded`` "
+"チャンネルは、指定されたアドレスに関連するトランザクションがブロックに含まれると、購読しているクライアントに通知します。返却される各メッセージには、承認されたトランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:162
+#: ../../source/api.rst:192
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction is "
-"announced to the network via ``PUT /transaction`` HTTP endpoint or an "
-"AggregateBondedTransaction has all required cosigners and change its state "
-"from partial to unconfirmed."
+"The ``unconfirmedAdded`` channel notifies subscribed clients when a "
+"transaction related to the given address enters the unconfirmed state, "
+"waiting to be included in a block. Each returned message contains "
+"information about an unconfirmed transaction."
 msgstr ""
-"トランザクションが ``PUT /transaction`` HTTP "
-"エンドポイントによりアナウンスされるか、アグリゲートボンドトランザクションのすべての署名が揃い、partial "
-"から未承認へ変わるとき、このチャンネルからの通知が届く可能性があります。"
+"``unconfirmedAdded`` "
+"チャンネルは、指定されたアドレスに関連するトランザクションが未承認の状態になり、ブロックに含まれるのを待機しているときに、購読しているクライアントに通知します。返却される各メッセージには、未承認のトランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:179
+#: ../../source/api.rst:195
 msgid ""
-"The unconfirmedRemoved channel notifies when a transaction related to an "
-"address had the unconfirmed state, but not anymore. The messages returned "
-"contain the transactions hashes."
+"Possible scenarios when this message is received are: the transaction is "
+"announced to the network via the ``PUT /transaction`` HTTP endpoint or an "
+":ref:`AggregateBondedTransaction <aggregate-bonded>` has all required "
+"cosigners and changes its state from partial to unconfirmed."
 msgstr ""
-"未承認削除チャンネルはアドレスに関連するトランザクションが未承認状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
+"トランザクションが ``PUT /transaction`` HTTP エンドポイントによりアナウンスされるか、 "
+":ref:`AggregateBondedTransaction <aggregate-bonded>` のすべての署名が揃い、partial "
+"から未承認へ変わるとき、このメッセージが届く可能性があります。"
 
-#: ../../source/api.rst:182
+#: ../../source/api.rst:212
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is "
-"confirmed, or the deadline has been reached, and it was not included in a "
-"block."
-msgstr "このチャンネルが通知するシナリオとしては、トランザクションが承認済になった、または期限を迎えてブロックに含まれなくなったときです。"
-
-#: ../../source/api.rst:199
-msgid ""
-"The partialAdded channel notifies when an AggregateBondedTransaction related"
-" to an address reaches the partial state, waiting to have all required "
-"cosigners. The messages returned contain information about the transactions."
+"The ``unconfirmedRemoved`` channel notifies subscribed clients when a "
+"transaction related to the given address exits the unconfirmed state. Each "
+"returned message contains a no-longer-unconfirmed transaction hash."
 msgstr ""
-"パーシャル追加チャンネルはアドレスに関連するアグリゲートボンドトランザクションが partial "
-"な状態にあり、すべての必要な連署者を待機しているときに通知を行います。返されるメッセージには、トランザクションに関する情報が含まれています。"
+"``unconfirmedRemoved`` "
+"チャンネルは、指定されたアドレスに関連するトランザクションが未確認の状態を抜けると、購読しているクライアントに通知します。返却される各メッセージには、承認されていないトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:217
+#: ../../source/api.rst:215
 msgid ""
-"The partialRemoved channel notifies when a transaction related to an address"
-" had the partial state, but is not anymore. The messages returned contain "
-"the transactions hashes."
+"Possible scenarios when this message is received are: the transaction is now"
+" confirmed, or the deadline was reached and the transaction was not included"
+" in a block."
 msgstr ""
-"パーシャル削除チャンネルはアドレスに関連するトランザクションがパーシャルな状態であったが、そうでなくなったときに通知を行います。返されるメッセージには、トランザクションハッシュが含まれます。"
+"このメッセージが受信された場合に考えられるシナリオは、トランザクションが確認されたか、期限に達していてトランザクションがブロックに含まれていなかった場合です。"
 
-#: ../../source/api.rst:220
+#: ../../source/api.rst:232
 msgid ""
-"Possible scenarios when this channel notifies are: the transaction now is "
-"unconfirmed, or the deadline has been reached, and it was not included in a "
-"block."
-msgstr "このチャンネルが通知するシナリオとしては、トランザクションが未承認になった、または期限を迎えてブロックに含まれなくなったときです。"
-
-#: ../../source/api.rst:237
-msgid ""
-"The cosignature channel notifies when a cosignature signed transaction "
-"related to an address is added to an AggregateBondedTransaction with the "
-"partial state. The messages returned contain the cosignature signed "
+"The ``partialAdded`` channel notifies subscribed clients when an "
+":ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given "
+"address enters the partial state, waiting for all required cosignatures to "
+"complete. Each returned message contains information about an added partial "
 "transaction."
 msgstr ""
-"連署チャネルはアドレスに関連する *連署署名トランザクション* "
-"が、パーシャル状態のアグリゲートボンドトランザクションに追加されたときに通知します。返されるメッセージには、署名済み署名付きトランザクションが含まれています。"
+"``partialAdded`` チャンネルは、指定されたアドレスに関連する :ref:`AggregateBondedTransaction "
+"<aggregate-bonded>` "
+"が部分的な状態になり、必要なすべての署名が完了するのを待っているときに、購読したクライアントに通知します。返却される各メッセージには、追加された部分トランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:255
+#: ../../source/api.rst:250
 msgid ""
-"The status channel notifies when a transaction related to an address rises "
-"an error. The messages returned contain the error messages and the "
-"transaction hashes."
+"The ``partialRemoved`` channel notifies subscribed clients when a "
+"transaction related to the given address exits the partial state. Each "
+"returned message contains a removed partial transaction hash."
 msgstr ""
-"ステータスチャンネルはアドレスに関連するトランザクションでエラーが発生したときに通知を行います。返されるメッセージには、エラーメッセージとトランザクションハッシュが含まれます。"
+"``partialRemoved`` "
+"チャンネルは、指定されたアドレスに関連するトランザクションが部分的な状態を終了すると、購読したクライアントに通知します。返却される各メッセージには、削除された部分的なトランザクションハッシュが含まれます。"
+
+#: ../../source/api.rst:253
+msgid ""
+"Possible scenarios when this message is emitted are: all required "
+"cosignatures were received and the transaction is now unconfirmed, or the "
+"deadline was reached and the transaction was not included in a block."
+msgstr ""
+"このメッセージが出されたときに考えられるシナリオは次のとおりです。必要なすべての署名が受信され、トランザクションが未承認であるか、期限に達し、トランザクションがブロックに含まれていません。"
+
+#: ../../source/api.rst:270
+msgid ""
+"The ``cosignature`` channel notifies subscribed clients when a cosignature-"
+"signed transaction related to the given address is added to an "
+":ref:`AggregateBondedTransaction <aggregate-bonded>` in the partial state. "
+"Each returned message contains a cosignature-signed transaction."
+msgstr ""
+"``cosignature`` チャンネルは、指定されたアドレスに関連する連署者に署名されたトランザクションがパーシャル状態で "
+":ref:`AggregateBondedTransaction <aggregate-bonded>` "
+"に追加されると、購読したクライアントに通知します。返却される各メッセージには、署名者が署名したトランザクションが含まれます。"
+
+#: ../../source/api.rst:288
+msgid ""
+"The ``status`` channel notifies subscribed clients when a transaction "
+"related to the given address signals an error. Each returned message "
+"contains an error message and a transaction hash."
+msgstr ""
+"``status`` "
+"チャンネルは、指定されたアドレスに関連するトランザクションがエラーを通知したときに、購読したクライアントに通知します。返される各メッセージには、エラーメッセージとトランザクションハッシュが含まれます。"

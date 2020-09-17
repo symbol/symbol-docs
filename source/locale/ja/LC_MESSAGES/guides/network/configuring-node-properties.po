@@ -149,6 +149,10 @@ msgid "Data directory."
 msgstr "データディレクトリ"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Certificate directory."
+msgstr "証明書ディレクトリ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Plugins directory."
 msgstr "プラグインディレクトリ"
 
@@ -206,6 +210,24 @@ msgid ""
 msgstr "トランザクションを伝播させてブロックへ含めるための最小手数料乗数。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid ""
+"Transaction selection strategy used for syncing and harvesting unconfirmed "
+"transactions."
+msgstr "未承認トランザクションの同期とハーベスティングに使用するトランザクション選択ストラテジ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum packet data size."
+msgstr "パケットデータの最大サイズ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Size of the block disruptor circular buffer."
+msgstr "ブロックディスラプタ循環バッファーのサイズ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum cache database write batch size."
+msgstr "キャッシュデータベース書き込みバッチの最大サイズ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Maximum number of nodes to track in memory."
 msgstr "メモリに追跡保持するノードの最大数"
 
@@ -235,6 +257,10 @@ msgid "Maximum number of active connections."
 msgstr "有効な接続の最大数"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Maximum size of the pending connections queue."
+msgstr "保留中接続のキューの最大サイズ"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Default duration for banning."
 msgstr "BAN 期間のデフォルト値"
 
@@ -261,6 +287,10 @@ msgstr "true の場合、自動ハーベスティングが有効になります�
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Maximum number of unlocked accounts."
 msgstr "アンロックアカウントの最大数"
+
+#: ../../source/guides/network/configuring-node-properties.rst:1
+msgid "Delegate harvester prioritization policy."
+msgstr "デリゲートハーベスターの優先順位付けポリシー"
 
 #: ../../source/guides/network/configuring-node-properties.rst:1
 msgid "Public key of the account receiving part of the harvested fee."
