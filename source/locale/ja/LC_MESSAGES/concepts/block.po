@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 12:49+0000\n"
+"POT-Creation-Date: 2020-09-17 09:55+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -161,29 +161,116 @@ msgstr "ロールバック"
 
 #: ../../source/concepts/block.rst:86
 msgid ""
-"Blockchains are designed in a way that, in the presence of a network failure"
-" or partition, the recent blocks might need to be rolled back."
-msgstr "ブロックチェーンはネットワーク障害やパーティションが存在する場合に、必要があれば直近のブロックをロールバックするように設計されています。"
+"To ensure fast response times, the |codename| blockchain is designed in a "
+"way that, in the presence of a network failure or partition, requests are "
+"still answered, and transactions added to the blockchain."
+msgstr ""
+"速い応答時間を確保するために、|codename| "
+"ブロックチェーンは、ネットワーク障害またはパーティションが存在する場合でも、要求に応答し、トランザクションがブロックチェーンに追加されるように設計されています。"
 
 #: ../../source/concepts/block.rst:88
 msgid ""
-"The rewrite limit is the maximum number of blocks that can be rolled back. "
-"Hence, forks can only be resolved up to a certain depth too."
-msgstr "書き換え制限とはロールバック可能なブロックの最大数です。したがって、フォークは特定の深さまでしか解決できません。"
-
-#: ../../source/concepts/block.rst:91
-msgid ""
-"|codename|'s public network has a rewrite limit of ``398`` blocks, but this "
-"limit is :ref:`configurable per network <config-network-properties>`. The "
-"transactions linked to a block are permanently recorded on the blockchain "
-"once the number of confirmation blocks (subsequent blocks) surpasses the "
-"maximum number of rollback blocks."
+"This naturally leads to **forks**, this is, different chains are created in "
+"the disconnected parts of the network. Once connectivity is restored **fork "
+"resolution** takes place to merge the divergent chains into a single one."
 msgstr ""
-"|codename| のパブリックネットワーク書き換え制限は ``398`` ブロックですが、この制限は :ref:`ネットワークごとに設定可能 "
-"<config-network-properties>` です。ブロックにリンクされているトランザクションは、承認ブロック (後続ブロック) "
-"の数がロールバックブロックの最大数を超えると、ブロックチェーンへ永続的に記録されます。"
+"このことは当然のことながら **フォーク** を発生させます。つまり、ネットワークで切断された部分に異なるチェーンが作成されます。接続が回復すると "
+"**フォーク解消** が行われ、分岐したチェーンがひとつにマージされます。"
 
-#: ../../source/concepts/block.rst:96
+#: ../../source/concepts/block.rst:90
+msgid ""
+"This process might require that some blocks are **rolled back**: they are "
+"removed from the blockchain so all their transactions move to the "
+"**unconfirmed** state and have to be :ref:`validated <transaction-"
+"validation>` again. At this point there's a chance that their deadlines "
+"expire without ever being confirmed again."
+msgstr ""
+"このプロセスでは一部のブロックを **ロールバック** "
+"する必要がある可能性があります。ブロックチェーンから削除されるブロックが存在するため、すべてのトランザクションは **未承認** 状態に移行し、再び "
+":ref:`validated <transaction-validation>` "
+"になる必要があります。この時に、それらの期限は再確認されることなく、期限切れになる可能性があります。"
+
+#: ../../source/concepts/block.rst:92
+msgid ""
+"For this reason, **confirmed** transactions (which have already been added "
+"to the blockchain) cannot be relied upon until their block is "
+":ref:`finalized <finalization>`, as shown below."
+msgstr ""
+"このため以下に示すように、ブロックが :ref:`finalized <finalization>` になるまで **承認済み** のトランザクション "
+"(ブロックチェーンへ追加されている) でも信頼できません。"
+
+#: ../../source/concepts/block.rst:98
+msgid "Finalization"
+msgstr "ファイナライゼーション"
+
+#: ../../source/concepts/block.rst:100
+msgid ""
+"This is the process of making changes on a blockchain ledger permanent. "
+"Before blocks reach finality, they still might need to be rolled back in the"
+" presence of a network failure or partition. However, once blocks are "
+"finalized, they become immutable."
+msgstr ""
+"これはブロックチェーン台帳の変更を永続的にするプロセスです。ブロックがファイナリティに到達する前に、ネットワーク障害またはパーティションが存在する場合、ブロックをロールバックする必要になる可能性があります。しかし、ブロックがファイナライズされると、それらは不変となります。"
+
+#: ../../source/concepts/block.rst:103
+msgid ""
+"Finalization occurs in rounds. In each round, a **sorting algorithm** "
+"selects the accounts responsible for validating all blocks pending "
+"finalization. If a proposed block matches an account's node's records, the "
+"account emits a positive vote."
+msgstr ""
+"ファイナライズはラウンドで行われます。各ラウンドで **ソートアルゴリズム** "
+"は、ファイナライズを保留しているすべてのブロックの検証を担当するアカウントを選択します。提案されたブロックがアカウントのノードのレコードと一致する場合、そのアカウントは肯定的な票を投じます。"
+
+#: ../../source/concepts/block.rst:105
+msgid ""
+"Once **2/3 of the stakes** selected for voting have emitted positive votes, "
+"the block becomes finalized. At that point the transactions linked to the "
+"block are permanently recorded on the blockchain."
+msgstr ""
+"投票用に選択された **2/3のステーク** "
+"が肯定的な票を投じると、ブロックが確定します。その時点でブロックにリンクされたトランザクションはブロックチェーンに永続的に記録されます。"
+
+#: ../../source/concepts/block.rst:108
+msgid "In order to be eligible as a voter, an account must:"
+msgstr "有権者としての資格を得るには、アカウントが次の条件を満たしている必要があります:"
+
+#: ../../source/concepts/block.rst:110
+msgid "Be the owner of a node."
+msgstr "ノードの所有者になります。"
+
+#: ../../source/concepts/block.rst:111
+msgid ""
+"Have at least :ref:`minVoterBalance <config-network-properties>` network "
+"currency units."
+msgstr ""
+"最低 :ref:`minVoterBalance <config-network-properties>` ネットワーク通貨単位が必要です。"
+
+#: ../../source/concepts/block.rst:112
+msgid ""
+"Be registered as a voter by announcing a :ref:`VotingKeyLinkTransaction "
+"<voting-key-link-transaction>` to the network."
+msgstr ""
+":ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` "
+"をネットワークに通知することで有権者として登録されます。"
+
+#: ../../source/concepts/block.rst:114
+msgid ""
+"When there is low connectivity, or many bad actors, finalization can take "
+"longer than usual and create large :ref:`rollbacks`. However, no finalized "
+"block will ever be rolled back."
+msgstr ""
+"接続性が低い場合、または多くの不正なアクターがいる場合、ファイナライズは通常より時間がかかり、大きな :ref:`rollbacks` "
+"が作成される可能性があります。ただし、ファイナライズされたブロックはロールバックされません。"
+
+#: ../../source/concepts/block.rst:116
+msgid ""
+"Thus, clients that rely on the immutability of the blockchain history should"
+" only trust **transactions from finalized blocks**."
+msgstr ""
+"したがって、ブロックチェーン履歴の不変性に依存するクライアントは **ファイナライズされたブロックのトランザクション** のみを信頼するべきです。"
+
+#: ../../source/concepts/block.rst:120
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -193,10 +280,10 @@ msgid ""
 "to vote finalized blocks."
 msgstr "アカウントを BLS 公開鍵にリンクします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要です。"
 
-#: ../../source/concepts/block.rst:107
+#: ../../source/concepts/block.rst:131
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:117
+#: ../../source/concepts/block.rst:141
 msgid "Continue: :doc:`Transaction <transaction>`."
 msgstr "次項: :doc:`トランザクション <transaction>`"
