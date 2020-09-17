@@ -116,8 +116,6 @@ An account has to follow the next steps to `sign a transaction <https://github.c
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. _transaction-validation:
-
 ************************
 Announcing a transaction
 ************************
@@ -145,6 +143,8 @@ At this point, it is still unknown whether the transaction is valid.
 
     Transaction cycle
 
+.. _transaction-validation:
+
 **********
 Validation
 **********
@@ -152,23 +152,17 @@ Validation
 The first stage of validation happens in the API nodes.
 If the transaction encounters an error, the WebSocket throws a notification through the status channel.
 If not, the transaction reaches the P2P network with an **unconfirmed** status.
-In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be replied upon.
+In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be relied upon.
 
 The second validation happens before the transaction is added in a :doc:`harvested block <block>`.
 If successful, the harvester stores the transaction in a block and the transaction reaches the **confirmed** status.
+At this state, the transaction is officially recorded in the blockchain ledger, but has not yet reached **finality**.
 
-Continuing the previous example, the transaction gets processed and the amount stated gets transferred from the signer's account to the recipient's account.
-Additionally, the :doc:`transaction fee <fees>` is deducted from the signer's account.
+Under certain circumstances, such as a network failure or partition, the most recently confirmed blocks can be :ref:`rolled back <rollbacks>`.
+Hence, confirmed transactions that have not been finalized are recognized by the network but are not immutable because they can still be reversed.
 
-The transaction has zero confirmations at this point.
-When another block is added to the blockchain, the transaction has one confirmation.
-The next block added to the chain will give it two confirmations and so on.
-
-Under certain circumstances, like network failure or partition, the most recent confirmed blocks might need to be reversed.
-:ref:`Rollbacks <rollbacks>` are characteristic of blockchain systems and essential to resolve forks.
-
-In the public network, a transaction is considered to be irrevocable when it receives ``398`` confirmations. But the maximum number of blocks that can be rolled back is :ref:`configurable per network <config-network-properties>`.
-In other words, it is necessary to wait at least ``398`` blocks after a transaction receives its first confirmation to guarantee that it cannot be reversed on the public network.
+For a block to be immutable, it needs to complete the :ref:`finalization <finalization>` process.
+Once a block is finalized, the block and the included transactions are permanently recorded on the blockchain ledger.
 
 *************
 Spam Throttle

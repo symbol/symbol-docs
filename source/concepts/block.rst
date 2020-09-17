@@ -74,13 +74,37 @@ This gives the harvester an incentive to add as many transactions to the block a
 Rollbacks
 *********
 
-Blockchains are designed in a way that, in the presence of a network failure or partition, the recent blocks might need to be rolled back.
+To ensure fast response times, the |codename| blockchain is designed in a way that, in the presence of a network failure or partition, requests are still answered, and transactions added to the blockchain.
 
-The rewrite limit is the maximum number of blocks that can be rolled back.
-Hence, forks can only be resolved up to a certain depth too.
+This naturally leads to **forks**, this is, different chains are created in the disconnected parts of the network. Once connectivity is restored **fork resolution** takes place to merge the divergent chains into a single one.
 
-|codename|'s public network has a rewrite limit of ``398`` blocks, but this limit is :ref:`configurable per network <config-network-properties>`.
-The transactions linked to a block are permanently recorded on the blockchain once the number of confirmation blocks (subsequent blocks) surpasses the maximum number of rollback blocks.
+This process might require that some blocks are **rolled back**: they are removed from the blockchain so all their transactions move to the **unconfirmed** state and have to be :ref:`validated <transaction-validation>` again. At this point there's a chance that their deadlines expire without ever being confirmed again.
+
+For this reason, **confirmed** transactions (which have already been added to the blockchain) cannot be relied upon until their block is :ref:`finalized <finalization>`, as shown below.
+
+.. _finalization:
+
+************
+Finalization
+************
+
+This is the process of making changes on a blockchain ledger permanent.
+Before blocks reach finality, they still might need to be rolled back in the presence of a network failure or partition. However, once blocks are finalized, they become immutable.
+
+Finalization occurs in rounds. In each round, a **sorting algorithm** selects the accounts responsible for validating all blocks pending finalization. If a proposed block matches an account's node's records, the account emits a positive vote.
+
+Once **2/3 of the stakes** selected for voting have emitted positive votes, the block becomes finalized. At that point the transactions linked to the block are permanently recorded on the blockchain.
+
+.. note::
+    In order to be eligible as a voter, an account must:
+
+    * Be the owner of a node.
+    * Have at least :ref:`minVoterBalance <config-network-properties>` network currency units.
+    * Be registered as a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` to the network.
+
+When there is low connectivity, or many bad actors, finalization can take longer than usual and create large :ref:`rollbacks`. However, no finalized block will ever be rolled back.
+
+Thus, clients that rely on the immutability of the blockchain history should only trust **transactions from finalized blocks**.
 
 ********************
 Related transactions
@@ -106,4 +130,3 @@ Guides
     :sort:
 
 Continue: :doc:`Transaction <transaction>`.
-
