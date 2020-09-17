@@ -330,5 +330,5 @@ def viewsource_resolve_link(file_path, language=None):
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/master/schemas/%s', 'file '),
+extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/main/schemas/%s', 'file '),
             'properties': ('https://github.com/nemtech/catapult-server/blob/main/resources/%s', 'file ')}
