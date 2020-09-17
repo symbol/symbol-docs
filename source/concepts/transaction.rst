@@ -116,8 +116,6 @@ An account has to follow the next steps to `sign a transaction <https://github.c
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. _transaction-validation:
-
 ************************
 Announcing a transaction
 ************************
@@ -144,6 +142,8 @@ At this point, it is still unknown whether the transaction is valid.
     :align: center
 
     Transaction cycle
+
+.. _transaction-validation:
 
 **********
 Validation
