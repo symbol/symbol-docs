@@ -45,7 +45,7 @@ Right now, there are two options to start testing Symbol.
 
 * **Public test network** The public test network uses the same technology and features of the future main public network. You can use the testnet to experiment with the offered transaction set in a live network without the loss of valuable assets. To start using the test net, follow :doc:`this guide <../../getting-started/setup-workstation>`.
 
-* **Private test network**: To run a private test network, use the package |catapult-service-bootstrap|. This software suite contains the necessary setup scripts to build a network for development and learning purposes with just one command.
+* **Private test network**: To run a private test network, use the package |symbol-bootstrap|. This tool contains the necessary setup scripts to build a network for development and learning purposes with just one command.
 
 **************************
 Legacy API incompatibility
@@ -197,9 +197,9 @@ In this site, you will find descriptions for every new :doc:`feature <../../conc
 
 We invite you to connect connect with our developer community by joining the |slack|.
 
-.. |catapult-service-bootstrap| raw:: html
+.. |symbol-bootstrap| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">catapult-service-bootstrap</a>
+   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">symbol-bootstrap</a>
 
 .. |ts-js-sdk| raw:: html
 

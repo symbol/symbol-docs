@@ -38,7 +38,7 @@ Private test network
 ====================
 
 With |codename|, businesses can launch and extend private networks by developing :doc:`custom plugins <concepts/plugin>` and extensions at the protocol level.
-The package |catapult-service-bootstrap| contains the necessary setup scripts to deploy a network for testing and development purposes with just one command.
+The package |symbol-bootstrap| contains the necessary setup scripts to deploy a network for testing and development purposes with just one command.
 
 To run a private test net, follow :doc:`this guide <guides/network/creating-a-private-test-net>`.
 
@@ -51,9 +51,9 @@ Instructions on how to launch a secure and production-ready private chain will b
 
    <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
 
-.. |catapult-service-bootstrap| raw:: html
+.. |symbol-bootstrap| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Service Bootstrap</a>
+   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
 
 .. |instructions| raw:: html
 

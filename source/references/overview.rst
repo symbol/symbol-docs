@@ -75,10 +75,10 @@ These nodes are deployed using ``catapult-server`` software, a C++ rewrite of th
 
     <hr>
 
-Catapult Service 
+Symbol Bootstrap
 ================
 
-The package ``catapult-service-bootstrap`` contains the necessary setup scripts to deploy a network for testing and development purposes with just one command.
+The ``symbol-bootstrap`` package contains the necessary setup scripts to deploy a network for testing and development purposes with just one command.
 
 :doc:`Read more ...<../guides/network/creating-a-private-test-net>`.
 
