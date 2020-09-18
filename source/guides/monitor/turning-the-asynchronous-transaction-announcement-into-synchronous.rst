@@ -67,15 +67,3 @@ Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and wants 
         :end-before: /* end block 02 */
 
 .. note:: The function ``TransactionService.announce()`` will respond successfully if the transaction reaches the network and does not have validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
-
-.. |docker| raw:: html
-
-    <a href="https://docs.docker.com/install/" target="_blank">docker</a>
-
-.. |docker-compose| raw:: html
-
-    <a href="https://docs.docker.com/compose/install/" target="_blank">docker compose</a>
-
-.. |catapult-service-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-service-bootstrap/" target="_blank">Catapult Service Bootstrap</a>

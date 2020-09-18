@@ -299,14 +299,6 @@ Each returned message contains an error message and a transaction hash.
 
     <a href="https://yarnpkg.com/lang/en/" target="_blank">yarn</a>
 
-.. |catapult-service-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
-
-.. |catapult-server| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
-
 .. |catapult-rest| raw:: html
 
    <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult REST</a>
