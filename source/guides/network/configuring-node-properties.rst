@@ -146,7 +146,3 @@ config-harvesting.properties
     maxUnlockedAccounts; uint32_t; Maximum number of unlocked accounts.; 5
     delegatePrioritizationPolicy; harvesting::DelegatePrioritizationPolicy; Delegate harvester prioritization policy.; Importance
     beneficiaryAddress; Address; Address of the account receiving part of the harvested fee.; 
-
-.. |catapult-service-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
