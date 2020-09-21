@@ -81,18 +81,18 @@ In fact, the blockchain only tracks addresses and public keys when they first ap
 
 .. |implementation-derivation| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/KeyGenerator.cpp#L40-L42" target="_blank">implementation</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto" target="_blank">implementation</a>
 
 .. |implementation-signature| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp#L116-L170" target="_blank">sign entities</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp" target="_blank">sign entities</a>
 
 .. |implementation-verification| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp#L180-L220" target="_blank">verify them</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp" target="_blank">verify them</a>
 
 .. |implementation-public-key-address| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp#L63-L81" target="_blank">convert a public key to an address</a>
+   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp" target="_blank">convert a public key to an address</a>
 
 Continue: :doc:`Block <block>`.
