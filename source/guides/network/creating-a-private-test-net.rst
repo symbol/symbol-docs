@@ -83,6 +83,31 @@ As an example:
 
 .. note:: Keep you Secret Keys secret at all times!
 
+You can now import any of these accounts using the |symbol-cli| command-line tool for ease of access (Read :doc:`the symbol-cli guide <../../cli>` for more details):
+
+.. code-block:: bash
+
+    symbol-cli profile import --private-key <PRIVATE_KEY> --network TEST_NET --url http://localhost:3000
+
+After giving this new profile a name you will be ready to use it, for example, to retrieve the account's balance:
+
+.. code-block:: bash
+
+    symbol-cli account info --profile <PROFILE_NAME>
+
+You should see that the nodes that |symbol-bootstrap| has created for you already contain some currency (in different :doc:`mosaics <../../concepts/mosaic>`) to start experimenting with them:
+
+.. code-block:: text
+
+    Balance Information
+    ┌──────────────────┬──────────────────┬──────────────────┬───────────────────┐
+    │ Mosaic Id        │ Relative Amount  │ Absolute Amount  │ Expiration Height │
+    ├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+    │ 3ECBB73A05A147BC │ 1,124,874,999.75 │ 1124874999750000 │ Never             │
+    ├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+    │ 2B19203C86F9A668 │ 3,000            │ 3000000          │ Never             │
+    └──────────────────┴──────────────────┴──────────────────┴───────────────────┘
+
 **********
 Next steps
 **********
@@ -94,3 +119,7 @@ We recommend you continue reading the rest of :ref:`the guides <blog-categories>
 .. |symbol-bootstrap| raw:: html
 
    <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+
+.. |symbol-cli| raw:: html
+
+   <a href="https://github.com/nemtech/symbol-cli" target="_blank">symbol-cli</a>
