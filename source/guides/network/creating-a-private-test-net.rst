@@ -53,7 +53,7 @@ Retrieving the node accounts
 
 |symbol-bootstrap| has created multiple nodes with corresponding accounts. To interact with any of these accounts (to transfer mosaics **to** it, for example) you need its address or its public key. To fully control an account (to transfer mosaics **from** it, for example) you need its private key.
 
-All this information can be retrieved from a file in the ``config`` folder:
+All this information can be retrieved from a YAML file in the ``config`` folder:
 
 ``target/config/generated-addresses/addresses.yml``
 
@@ -107,6 +107,32 @@ You should see that the nodes that |symbol-bootstrap| has created for you alread
     ├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
     │ 2B19203C86F9A668 │ 3,000            │ 3000000          │ Never             │
     └──────────────────┴──────────────────┴──────────────────┴───────────────────┘
+
+****************************
+Retrieving the test accounts
+****************************
+
+|symbol-bootstrap| has also created several test accounts preloaded with :doc:`mosaics <../../concepts/mosaic>`. These accounts exist solely for development and learning purposes.
+
+The keys to these accounts can be found in the ``target/config/generated-addresses/addresses.yml`` file as described above, in the ``mosaics`` section:
+
+.. code-block:: yaml
+
+    mosaics:
+        currency:
+            -
+                # This is an account containing the main currency
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 2E10EE45517E04150B5701EDDCBBF95D5E7077CA6627E29CFA8B862BAE09A29F
+                address: TCOKYEBOBNVFEPCEADZXFESZFFIWJH2LF245O3A
+        harvest:
+            -
+                # This is an account containing the network currency used for harvesting
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 1467662C8FBE485FDDB792E36646AC935443B354D38A1DF9E4CE3DAAE5B6F107
+                address: TA4B2EM3OJVYE7ZP426J3UVWPRRP4HDCKJHUXEI
+
+Use the Private Keys to access these accounts, for example, using the |symbol-cli| command-line tool as described above.
 
 **********
 Next steps
