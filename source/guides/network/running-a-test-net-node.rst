@@ -9,137 +9,179 @@
 Running a test net node
 #######################
 
-This guide will walk you through the process of setting up your node to join |codename|’s **public test network**.
+This guide walks you through the process of setting up a node to join |codename|'s **public test network**.
 
 The test network mirrors the same technology and features of the future main public network.
-You can use the test net to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
+You can use the test net to experiment with the offered |codename|'s transaction set in a live network.
 
 .. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
 
-*********************
-Hardware requirements
-*********************
+To run the network, we are going to use the package |symbol-bootstrap|. To better understand how this package works it is highly recommended to read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide.
 
-|codename| nodes have been tested on computers with the following **minimum requirements**.
+**********************
+The ``testnet`` preset
+**********************
 
-* **CPU**: 2 cores or more
-* **Memory**: 4GB or more
-* **HD**: 20GB or more
+|symbol-bootstrap| has a preset called ``testnet`` which instantiates a node that connects to the current public test network (testnet). The capabilities of this node are selected through the ``assembly`` option.
 
-.. note:: Although you might be able to run the software in less powerful instances, you might encounter some issues while installing or running the node.
+To create a peer node:
+======================
 
-************************
-Environment requirements
-************************
-
-The setup scripts are available for Linux and Mac OS and automated using docker.
-To run a test net node, you will need to have installed the following docker tools:
-
-* `docker`_
-* `docker-compose`_
-
-.. note:: The release images target modern x86 architectures. It has been reported that errors are experienced on some older machines provided. If you run into any related issues, please report in the `slack group (#help) <https://join.slack.com/t/nem2/shared_invite/zt-h0ppnjfm-ood2bVW5P8I2RzcMFgbCVw>`_.
-
-*****************
-Port requirements
-*****************
-
-Make sure that the server's host is accessible from the internet and that the following ports are open and available:
-
-* The port ``7900`` is used by catapult-server to communicate between nodes.
-* The port ``3000`` is used by the REST Gateway to expose the endpoints to interact with the node.
-
-************
-Installation
-************
-
-The package ``symbol-testnet-bootstrap`` contains both assemblies ready to be installed.
-
-1. Download the |latest-release| of the package, or clone the repository directly using Git.
+:ref:`Peer nodes <peer-node>`, also called a *harvester* nodes, are the backbone of the network. Among other things, they verify transactions and add new blocks to the blockchain, collecting fees in the process.
 
 .. code-block:: bash
 
-    git clone https://github.com/nemgrouplimited/symbol-testnet-bootstrap.git
+    symbol-bootstrap start -p testnet -a peer
 
-2. Choose the **assembly distribution** you want to install.
+To create an API node:
+======================
 
-In short, if you want to be able to interact with your node, you need to run the :ref:`API assembly <api-node>`.
-On the other hand, if you want a node dedicated exclusively confirm transactions, deploy the :ref:`Peer assembly <peer-node>`.
-
-.. code-block:: bash
-
-    cd symbol-testnet-bootstrap/api-harvest-assembly
-
-or...
+:ref:`API nodes <api-node>` provide external access to the network through a REST API.
 
 .. code-block:: bash
 
-    cd symbol-testnet-bootstrap/peer-assembly
+    symbol-bootstrap start -p testnet -a api
 
-3. Run the node with **docker-compose**.
+To check that the node is up and running open a new browser tab and go to ``localhost:3000/chain/info``. You should get a response from the API node.
 
-.. code-block:: bash
+API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended that you switch to running a Peer only node instead.
 
-    sudo docker-compose up --build --detach
+To create a dual node:
+======================
 
-You should see docker downloading the container images for the first time. Then it should run the setup and finally startup the service.
-
-To stop all the running services, run ``sudo docker-compose down`` in the same directory you executed the ``up`` command.
-
-Peer assembly
-=============
-
-You can verify that the node is running by running with the command ``docker-compose ps peer-node`` in the same ``peer-assembly`` folder.
-The command's output looks like:
+Dual nodes provide the functionality of both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes.
 
 .. code-block:: bash
 
-     Name                       Command                    State   Ports
-     ------------------------------------------------------------------------------------
-     peerassembly_peer-node_1   bash -c /bin-mount/wait    Up      0.0.0.0:7900->7900/tcp
+    symbol-bootstrap start -p testnet -a dual
 
-The node is running if the state for ``peerassembly_peer-node_1`` is set to "Up".
+****************
+Running the node
+****************
 
-API harvest assembly
-====================
+You really don't need to use anything else but ``symbol-bootstrap start``.  Use any of the commands above to instantiate and boot a |codename| node and ``Ctrl+C`` to shut it down.
 
-The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-gateway>` that transactions can be submitted to and data read from.
+Alternatively, you can start in detached mode (``--detached``) to run in the background.
 
-API nodes take up more memory and storage than Peer nodes. If you have memory or storage constraints and you are running into issues, it is recommended you switch to running a Peer only node instead.
+***************************
+Retrieving the node account
+***************************
 
-You can verify that the node is running by opening a new browser tab with the following URL: ``localhost:3000/chain/height``.
+The node you just created has an associated |codename| account which you can use to interact with the node. For instance, you need this account to provide funds to the node so it can emit transactions.
 
-.. note:: The software should expose the port ``3000`` by default. If you cannot access the REST Gateway from outside, it might mean that the port is closed by default by your machine or hosting provider. If so, you will have to open it in order to access it from outside the machine.
+The account's keys and address can be retrieved from a YAML file in the ``config`` folder:
+
+``target/config/generated-addresses/addresses.yml``
+
+As an example:
+
+.. code-block:: yaml
+
+    networkType: 152
+    nemesisGenerationHashSeed: 6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD
+    nodes:
+        -
+            type: peer-node
+            name: peer-node
+            friendlyName: 0f2ccdc
+            roles: 'Peer'
+            ssl:
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 0f2ccdc6d2e6e8012271ccb7f391ee79ef4b92fedc831936158076120edcddcc
+            signing:
+                # These are the keys and address of your node
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 5276BBE852DDBCBDB2343C4349083D055F0E6F19552E5E955B4207E90E45CD6F
+                address: TC7DOAQY65IPHI5NR7R4LYHYD3OEUD6PVDJISVA
+            vrf:
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 1BB864D80F9FC8BF661265276E00E57C1ABDD13B1454A3F5ADC025279FA03268
+                address: TD74YTRSVU4HXEXE4LQYIX2EQ65XLYO4V5XQB4I
+
+.. note:: Keep you Secret Keys secret at all times!
+
+Use the information in the ``signing`` section to access the node's account.
+
+***************************
+Providing funds to the node
+***************************
+
+Before the node can begin harvesting or voting (see below) it needs a **minimum amount of funds**. In the ``testnet`` test environment you can use |codename|'s **Faucet** to provide these funds.
+
+Go to |faucet-1| (or |faucet-2|), insert the ``address`` of your node's account and the amount of |networkcurrency| you need and click on CLAIM.
+
+You will see that your request is first ``unconfirmed`` (pending) and after a few seconds it becomes ``confirmed``. Your node is now funded and ready to operate!
+
+********************
+Submitting link keys
+********************
+
+**Harvesting** and **Voting** nodes require an extra configuration step before they can be used:
+
+Enabling harvesting
+===================
+
+|symbol-bootstrap| creates peer nodes with :doc:`harvesting <../../concepts/harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network.
+
+This can be done by |symbol-bootstrap| too, but it needs to be a step separated from ``symbol-bootstrap start`` because funds are required to announce transactions.
+
+Once the node is running with ``symbol-bootstrap start`` and you have funded it account, from a different terminal (but from the same folder), simply type:
+
+.. code-block:: bash
+
+    symbol-bootstrap link
+
+This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` and submits it to the network. If it succeeds (it might take some seconds, as the transaction needs to be approved and incorporated into the blockchain) your new node is ready to harvest.
+
+.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-launch/25863>`_.
+
+Enabling voting
+===============
+
+The :ref:`block finalization <finalization>` process requires that network nodes vote about the correctness of blocks before they are added to the blockchain. For your new node to participate it has to register as a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` to the network. |symbol-bootstrap| can take care of this too.
+
+.. note:: We are going to create a new voting node. If you already created a non-voting node which you no longer need, you can remove the ``target`` folder or, more conveniently, use the ``-r`` switch next time you invoke ``symbol-bootstrap``.
+
+First, you need to configure the node as a voter, so, besides selecting the ``testnet`` preset and the desired assembly you have to provide a custom preset file with the following content:
+
+.. code-block:: yaml
+
+    nodes:
+    - voting: true
+
+So if you call the above file ``enable-voting-preset.yml`` the whole command would be:
+
+.. code-block:: bash
+
+    symbol-bootstrap start -p testnet -a <assembly> -c enable-voting-preset.yml
+
+Once the node is running, from a different terminal (but from the same folder), simply type:
+
+.. code-block:: bash
+
+    symbol-bootstrap link
+
+Just like in the harvesting case, this creates the required :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` and submits it to the network. Upon successful completion, your new node is ready to vote.
 
 ***************************
 Configuring node properties
 ***************************
 
-After running the node for the first time, you can :ref:`change a set of properties <node-properties>` such as the public name or the :doc:`harvesting <../../concepts/harvesting>` configuration of the node.
-
-To edit the node properties, follow the next steps:
-
-1. If the node service is running, run ``sudo docker-compose down`` under the same directory you executed the ``up`` command.
-
-2. Edit the properties file ``config-input.yaml`` with a text editor.
-
-3. Save and apply the changes with the command ``sudo docker-compose up --build --detach``.
+Follow the :ref:`Configuring node properties <node-properties>` guide to change parameters such as the public name of the node.
 
 *********************************
 Interacting with the test network
 *********************************
 
-To interact with your node, :ref:`create first an account <setup-creating-a-test-account>` and :ref:`acquire test <setup-getting-test-currency>` |networkcurrency|.
-
-Then, read and write data from the network with the following tools:
+You can use the following tools to test the functionality of your new node:
 
 * |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
 * :ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used actions from your terminal.
-* |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try this other |faucet-2|.
+* The |codename| |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try the |faucet-2|.
 * :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
-On this portal you can find information about |codename|'s features and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
+And don't forget to check :ref:`the rest of the guides <blog-categories>` to continue learning about |codename|!
 
 .. _docker: https://docs.docker.com/install/
 
@@ -147,16 +189,16 @@ On this portal you can find information about |codename|'s features and :ref:`se
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer-96x.symboldev.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer-0.10.0.x-01.symboldev.network/" target="_blank">Blockchain Explorer</a>
 
 .. |faucet-1| raw:: html
 
-   <a href="http://faucet-96x-01.symboldev.network/" target="_blank">Faucet</a>
+   <a href="http://faucet-0.10.0.x-01.symboldev.network/" target="_blank">faucet</a>
 
 .. |faucet-2| raw:: html
 
-   <a href="http://faucet-96x-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet-0.10.0.x-02.symboldev.network/" target="_blank">alternative faucet</a>
 
-.. |latest-release| raw:: html
+.. |symbol-bootstrap| raw:: html
 
-   <a href="https://github.com/nemgrouplimited/symbol-testnet-bootstrap/releases/" target="_blank">latest release</a>
+   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
