@@ -35,9 +35,9 @@ Hardware
 Environment
 ===========
 
-The setup scripts are automated using **docker**. To run a test net node, you will need to have installed the following docker tools:
+The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
 
-* `npm`_ version 10 or higher.
+* `nodejs`_ version 10 or higher
 * `docker`_
 * `docker-compose`_
 
@@ -166,7 +166,7 @@ Proceed to the following guides to put what you have learned into practice!
 
 Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#commands>`_ of ``symbol-bootstrap`` commands.
 
-.. _npm: https://www.npmjs.com/get-npm
+.. _nodejs: https://nodejs.org/en/download/
 
 .. _docker: https://docs.docker.com/install/
 
