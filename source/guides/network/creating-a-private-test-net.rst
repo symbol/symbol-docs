@@ -74,6 +74,10 @@ As an example:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
                 publicKey: D67601AC6767F8A3C97FFDB0D9D737A943FFFA6E69C2C6527B0ED32A4E41B443
                 address: TCR6ZWX3UP3TKJK3BSE6ARJ4WAF3KHFFUWJ7EWI
+            voting:
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 921ED0839EA3C8590CA1D6562DDD3BFEDA44CCE05DD82DF8C79DED2A3F816A1B
+                address: TA77BJJJMRXR2OLJKZNUFTRMLHLQ4T2PPHZRX5I                
             ssl:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
                 publicKey: 3d68cdaa4e48a14bd875d4ca18e044522be5f602e8c4f37c1c65eafdfaa19110
@@ -133,6 +137,21 @@ The keys to these accounts can be found in the ``target/config/generated-address
                 address: TA4B2EM3OJVYE7ZP426J3UVWPRRP4HDCKJHUXEI
 
 Use the Private Keys to access these accounts, for example, using the |symbol-cli| command-line tool as described above.
+
+************
+Voting nodes
+************
+
+The :ref:`block finalization <finalization>` process requires that network nodes vote about the correctness of blocks before they are added to the blockchain. Each node can decide whether to register as a voter or not.
+
+All nodes created by the ``bootstrap`` preset are voters by default. If you don't want this, provide a custom preset with these lines to disable voting for each node:
+
+.. code-block:: yaml
+
+    nodes:
+    - voting: false # peer-node-0
+    - voting: false # peer-node-1
+    - voting: false # api-node-0
 
 **********
 Next steps
