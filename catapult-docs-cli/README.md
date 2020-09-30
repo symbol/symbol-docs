@@ -18,7 +18,7 @@ The generated outputs are used in the [Symbol Developer Documentation](http://ne
 
 ```
 git clone https://github.com/nemtech/catapult-docs-cli.git
-cd catapult-docs-clli
+cd catapult-docs-cli
 ```
 
 2. Install the command-line tool.
