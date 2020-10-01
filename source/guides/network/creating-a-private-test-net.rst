@@ -153,6 +153,8 @@ All nodes created by the ``bootstrap`` preset are voters by default. If you don'
     - voting: false # peer-node-1
     - voting: false # api-node-0
 
+.. note:: Without ANY voting node no finalization can occur. By taking a look at ``localhost:3000/chain/info`` you will see you chain height grow but the ``latestFinalizedBlock``'s height will remain at zero.
+
 **********
 Next steps
 **********
