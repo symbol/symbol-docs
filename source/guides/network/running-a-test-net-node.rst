@@ -131,7 +131,7 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded it 
 
     symbol-bootstrap link
 
-This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` and submits it to the network. If it succeeds (it might take some seconds, as the transaction needs to be approved and incorporated into the blockchain) your new node is ready to harvest.
+This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` and submits it to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
 .. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-launch/25863>`_.
 
