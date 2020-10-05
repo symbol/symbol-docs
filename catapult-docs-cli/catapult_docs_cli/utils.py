@@ -1,3 +1,5 @@
+import re
+
 def indent(line, num_spaces):
     """Adds num_spaces spaces before the line.
 
@@ -59,8 +61,8 @@ def clean_line(description):
     Returns:
         str: Formatted line.
     """
-    return description.replace('\\c', 'Set to') \
-        .replace('\\a ', '') \
+    description = re.sub(r'\\c ([^ ]*)', r'``\1``', description)
+    return description.replace('\\a ', '') \
         .replace('\\note', '*Note*:') \
         .replace('std::', '') \
         .replace('\n', '')
