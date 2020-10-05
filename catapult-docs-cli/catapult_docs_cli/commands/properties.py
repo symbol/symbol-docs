@@ -109,12 +109,11 @@ class PropertiesParser(Parser):
                 with open(path, encoding='utf-8') as file:
                     # buffers to store last two lines processed
                     buffer1 = ''
-                    buffer2 = ''
                     lines = file.readlines()
                     for line in lines:
                         line = clean_line(line)
                         # detect line to process
-                        if ("///" in buffer1) and (";" in line) and ("(" not in line):
+                        if (";" in line) and ("(" not in line) and (buffer1):
                             line_split = line.split(' ')
                             # get key
                             key = line_split[len(line_split) - 1].replace(';', '').replace(' ', '')
@@ -123,15 +122,13 @@ class PropertiesParser(Parser):
                                 key += "!"
                             # get type
                             classification = ' '.join(line_split[:len(line_split) - 1]).lstrip()
-                            # get description
-                            description = ''
-                            if "///" in buffer2:
-                                description = buffer2.split('///')[1].lstrip() + " "
-                            description += buffer1.split('///')[1].lstrip()
                             # if key already exists, make it unique
-                            rows.append({'key': key, 'type': classification, 'description': description})
-                        buffer2 = buffer1
-                        buffer1 = line
+                            rows.append({'key': key, 'type': classification, 'description': buffer1})
+                        # Accumulate comments
+                        if ("///" in line):
+                            buffer1 += (' ' if buffer1 else '') + line.split('///')[1].lstrip();
+                        else:
+                            buffer1 = ''
             except IOError:
                 print('Operation failed: %s does not exist' % path)
         return rows
