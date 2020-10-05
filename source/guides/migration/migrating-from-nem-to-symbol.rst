@@ -195,7 +195,7 @@ After reading this documentation, you might still have some unanswered questions
 
 In this site, you will find descriptions for every new :doc:`feature <../../concepts/overview>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
 
-We invite you to connect connect with our developer community by joining the |slack|.
+We invite you to connect with our developer community by joining the |slack|.
 
 .. |symbol-bootstrap| raw:: html
 
@@ -223,7 +223,7 @@ We invite you to connect connect with our developer community by joining the |sl
 
 .. |slack| raw:: html
 
-   <a href="http://slack.nemtech.io/" target="_blank">Slack</a>
+   <a href="https://join.slack.com/t/nem2/shared_invite/zt-hwsoo1s5-G8XO50LaY0m7ZKTRXAczcA" target="_blank">Slack</a>
 
 .. |under-development| raw:: html
 

@@ -68,7 +68,7 @@ Before starting
 2. Setup the |codename| :doc:`local environment via docker <../guides/network/creating-a-private-test-net>`.
 3. Check the :doc:`API reference <../api>` and play with offered set of endpoints.
 4. Become familiar with the current :doc:`SDK via code examples <../concepts/account>` and :ref:`CLI <wallet-cli>` .
-5. Join our `Slack <https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM>`_ to ask |codename| related questions.
+5. Join our `Slack <https://join.slack.com/t/nem2/shared_invite/zt-hwsoo1s5-G8XO50LaY0m7ZKTRXAczcA>`_ to ask |codename| related questions.
 6. Be sure no one is already working on the SDK you want to create. Check the :doc:`repository list <../sdk>` and comment on your intentions in ``#sig-api`` channel.
 7. Claim the SDK `forking this repository <https://help.github.com/en/articles/creating-a-pull-request/>`_ and add a new entry to the :doc:`repository list <../sdk>`.
 
