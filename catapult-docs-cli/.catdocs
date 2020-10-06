@@ -3,7 +3,7 @@
     "restPath": "./catapult-rest/",
     "properties": [{
             "title": "config-database.properties",
-            "text": "",
+            "text": "Database configuration settings.",
             "source": "resources/config-database.properties",
             "descriptions": [
                 "extensions/mongo/src/DatabaseConfiguration.h"
@@ -29,7 +29,7 @@
         },
         {
             "title": "config-harvesting.properties",
-            "text": "",
+            "text": "Harvesting configuration settings.",
             "source": "resources/config-harvesting.properties",
             "descriptions": [
                 "extensions/harvesting/src/HarvestingConfiguration.h"
@@ -37,13 +37,13 @@
         },
         {
             "title": "config-inflation.properties",
-            "text": "",
+            "text": "Inflation configuration settings.",
             "source": "resources/config-inflation.properties",
             "descriptions": []
         },
         {
             "title": "config-logging-broker.properties",
-            "text": "",
+            "text": "Logging configuration settings.",
             "source": "resources/config-logging-recovery.properties",
             "descriptions": [
                 "src/catapult/config/LoggingConfiguration.h"
@@ -51,7 +51,7 @@
         },
         {
             "title": "config-logging-recovery.properties",
-            "text": "",
+            "text": "Logging configuration settings.",
             "source": "resources/config-logging-recovery.properties",
             "descriptions": [
                 "src/catapult/config/LoggingConfiguration.h"
@@ -59,7 +59,7 @@
         },
         {
             "title": "config-logging-server.properties",
-            "text": "",
+            "text": "Logging configuration settings.",
             "source": "resources/config-logging-server.properties",
             "descriptions": [
                 "src/catapult/config/LoggingConfiguration.h"
@@ -67,7 +67,7 @@
         },
         {
             "title": "config-messaging.properties",
-            "text": "",
+            "text": "Messaging configuration settings.",
             "source": "resources/config-messaging.properties",
             "descriptions": [
                 "extensions/zeromq/src/MessagingConfiguration.h"
@@ -75,7 +75,7 @@
         },
         {
             "title": "config-network.properties",
-            "text": "",
+            "text": "Network configuration settings.",
             "source": "resources/config-network.properties",
             "descriptions": [
                 "src/catapult/model/NetworkInfo.h",
@@ -94,7 +94,7 @@
         },
         {
             "title": "config-networkheight.properties",
-            "text": "",
+            "text": "Network height configuration settings.",
             "source": "resources/config-networkheight.properties",
             "descriptions": [
                 "extensions/networkheight/src/NetworkHeightConfiguration.h"
@@ -102,7 +102,7 @@
         },
         {
             "title": "config-node.properties",
-            "text": "",
+            "text": "Node configuration settings.",
             "source": "resources/config-node.properties",
             "descriptions": [
                 "src/catapult/config/NodeConfiguration.h"
@@ -110,7 +110,7 @@
         },
         {
             "title": "config-pt.properties",
-            "text": "",
+            "text": "Partial transactions configuration settings.",
             "source": "resources/config-pt.properties",
             "descriptions": [
                 "extensions/partialtransaction/src/PtConfiguration.h"
@@ -118,7 +118,7 @@
         },
         {
             "title": "config-task.properties",
-            "text": "",
+            "text": "Tasks configuration settings.",
             "source": "resources/config-task.properties",
             "descriptions": [
                 "extensions/sync/src/TasksConfiguration.h"
@@ -126,7 +126,7 @@
         },
         {
             "title": "config-timesync.properties",
-            "text": "",
+            "text": "Time synchronization configuration settings.",
             "source": "resources/config-timesync.properties",
             "descriptions": [
                 "extensions/timesync/src/TimeSynchronizationConfiguration.h"
@@ -134,7 +134,7 @@
         },
         {
             "title": "config-user.properties",
-            "text": "",
+            "text": "User configuration settings.",
             "source": "resources/config-user.properties",
             "descriptions": [
                 "src/catapult/config/UserConfiguration.h"

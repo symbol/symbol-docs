@@ -81,8 +81,9 @@ class Table(ABC):
         header (:obj:`list` of str): The header of the table.
         rows (:obj:`list` of str): The rows of the table.
     """
-    def __init__(self, header, rows):
+    def __init__(self, header, widths, rows):
         self.header = header
+        self.widths = widths
         self.rows = rows
 
     def _format_header(self):
@@ -91,13 +92,19 @@ class Table(ABC):
         Returns:
             str: The header formatted as a string.
         """
-        result = '.. csv-table::\n' + indent(':header: ', 4)
-        for i, head in enumerate(self.header):
-            if i != 0:
-                result += (', "' + head + '"')
-            else:
-                result += '"' + head + '"'
-        result += '\n' + indent(':delim: ;', 4)
+        result = '<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0">'
+        for (head, width) in zip(self.header, self.widths):
+            result += '<th class="head" style="width:' + width + '%">' + head + '</th>'
+        result += '</tr></thead><tbody valign="top">\n'
+        return result
+
+    def _format_footer(self):
+        """Formats the table footer as a string.
+
+        Returns:
+            str: The footer formatted as a string.
+        """
+        result = '</tbody></table>'
         return result
 
     @abstractmethod
@@ -110,7 +117,7 @@ class Table(ABC):
         Returns:
             str: The table formatted as a string.
         """
-        result = self._format_header() + '\n' + self._format_rows()
+        result = self._format_header() + '\n' + self._format_rows() + self._format_footer()
         return result
 
 
@@ -124,22 +131,11 @@ class Title:
         title (string): The content of the title.
     """
 
-    def __init__(self, title):
+    def __init__(self, title, text, source, core_version):
         self.title = title
-
-    def _format_title(self):
-        """Adds RST tags to the title
-
-        Returns:
-            str: The title formatted as a string.
-        """
-        tag = ''
-        i = 0
-        while i < len(self.title):
-            tag += '='
-            i += 1
-        result = self.title + '\n' + tag
-        return result
+        self.text = text
+        self.source = source
+        self.core_version = core_version
 
     def to_string(self):
         """Formats the title as a string.
@@ -147,9 +143,15 @@ class Title:
         Returns:
             str: The title formatted as a string.
         """
-        result = self._format_title()
+        result = ''
+        # If we want the sections to appear in the page TOC they must be produced from rst :(
+        #result += '<h2>' + self.title + '<a class="headerlink" href="#'
+        #result += self.title.lower().replace(' ', '-') + '" title="Permalink to this headline">¶</a></h2>'
+        if (self.text):
+            result += self.text + '<br/>\n'
+        result += '<small>From <code class="docutils literal"><span class="pre">' + self.source
+        result += '</span></code> ' + self.core_version + '</small>'
         return result + '\n'
-
 
 class Parser(ABC):
     """Base class for the code processor.
