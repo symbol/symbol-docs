@@ -10,9 +10,9 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Network identifier.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">nodeEqualityStrategy</span></code></td><td><code class="docutils literal"><span class="pre">NodeIdentityEqualityStrategy</span></code></td><td>host</td><td>host</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node equality strategy.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">nemesisSignerPublicKey</span></code></td><td><code class="docutils literal"><span class="pre">Key</span></code></td><td>C67F465087EF681824805B7E9FF3B2728A4EE847DE044DE5D9FA415F7660B08E</td><td>78F0F6FFDE5C130777506FE2A597ADC5E98BD46041ABF775908299FE94BFD5D0</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">nemesisSignerPublicKey</span></code></td><td><code class="docutils literal"><span class="pre">Key</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis public key.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">generationHashSeed</span></code></td><td><code class="docutils literal"><span class="pre">catapult::GenerationHashSeed</span></code></td><td>57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6</td><td>6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">generationHashSeed</span></code></td><td><code class="docutils literal"><span class="pre">catapult::GenerationHashSeed</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis generation hash seed.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">epochAdjustment</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>1573430400s</td><td>1573430400s</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis epoch time adjustment.</small></td></tr>
@@ -21,9 +21,9 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate state hashes so that state is fully verifiable at each block.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">enableVerifiableReceipts</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate receipts so that state changes are fully verifiable at each block.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">currencyMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td>0x24F4'26B8'D549'3D4B</td><td>0x5B66'E76B'ECAD'0860</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">currencyMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used as primary chain currency.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">harvestingMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td>0x1D9C'DC7E'218C'A88D</td><td>0x5B66'E76B'ECAD'0860</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestingMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used to provide harvesting ability.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">blockGenerationTargetTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>30s</td><td>30s</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Targeted time between blocks.</small></td></tr>
@@ -67,7 +67,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the beneficiary account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">harvestNetworkPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>5</td><td>5</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the network.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">harvestNetworkFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td>SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY</td><td>TDGY4DD2U4YQQGERFMDQYHPYS6M7LHIF6XUCJ4Q</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestNetworkFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the harvest network fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerBlock</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>200'000</td><td>6'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per block.</small></td></tr>
@@ -106,7 +106,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum mosaic duration.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicDivisibility</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>6</td><td>6</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum mosaic divisibility.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">mosaicRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td>SDKDPA36TE53BO24FD4KA6OPGOUSEVOU3O5SIFI</td><td>TDGY4DD2U4YQQGERFMDQYHPYS6M7LHIF6XUCJ4Q</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">mosaicRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the mosaic rental fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">mosaicRentalFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>500</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic rental fee.</small></td></tr>
@@ -132,7 +132,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Grace period during which time only the previous owner can renew an expired namespace.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">reservedRootNamespaceNames</span></code></td><td><code class="docutils literal"><span class="pre">unordered_set<string></span></code></td><td>xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td><td>symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Reserved root namespaces that cannot be claimed.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">namespaceRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td>SDTZ23JBJZP3GTKKM2P6FYCMXS6RQYPB6R477TQ</td><td>TDGY4DD2U4YQQGERFMDQYHPYS6M7LHIF6XUCJ4Q</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">namespaceRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the namespace rental fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">rootNamespaceRentalFeePerBlock</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>1</td><td>1</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Root namespace rental fee per block.</small></td></tr>
