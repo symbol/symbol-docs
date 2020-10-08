@@ -56,6 +56,13 @@ class PropertiesTable(Table):
             description = '' if 'description' not in row else row['description']
             default = '' if 'default' not in row else row['default']
             default_tn = '' if 'default_tn' not in row else str(row['default_tn'])
+            if classification == 'Key' or \
+                    classification == 'Address' or \
+                    'Hash' in classification or \
+                    classification.endswith('Id') or \
+                    key.endswith('Key'):
+                default = ''
+                default_tn = ''
 
             if key[0] == '*':
                 result += '<tr style="background-color:#E0E0E0"><td colspan=4><b>' + key[1:] + '</b></td>'
