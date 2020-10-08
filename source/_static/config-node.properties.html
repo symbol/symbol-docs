@@ -1,0 +1,122 @@
+<!-- File generated using catapult-docs-cli -->
+Node configuration settings.<br/>
+<small>From <code class="docutils literal"><span class="pre">resources/config-node.properties</span></code> v0.10.0.3
+</small>
+
+<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>MIJIN</th><th class="head" style="width:15%">Default value<br/>TESTNET</th></tr></thead><tbody valign="top">
+
+<tr style="background-color:#E0E0E0"><td colspan=4><b>node</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">port</span></code></td><td><code class="docutils literal"><span class="pre">unsigned short</span></code></td><td>7900</td><td>7900</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Server port.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxIncomingConnectionsPerIdentity</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>3</td><td>6</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of incoming connections per identity over primary port.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableAddressReuse</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>false</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if the server should reuse ports already in use.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableSingleThreadPool</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if a single thread pool should be used, <code class="docutils literal"><span class="pre">false</span></code> if multiple thread pools should be used.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableCacheDatabaseStorage</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if cache data should be saved in a database.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableAutoSyncCleanup</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if temporary sync files should be automatically cleaned up. <br/><b>Note</b>: This should be <code class="docutils literal"><span class="pre">false</span></code> if broker process is running.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableTransactionSpamThrottling</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if transaction spam throttling should be enabled.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">transactionSpamThrottlingMaxBoostFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>10'000'000</td><td>10'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum fee that will boost a transaction through the spam throttle when spam throttling is enabled.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxHashesPerSyncAttempt</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>84</td><td>610</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of hashes per sync attempt.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxBlocksPerSyncAttempt</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>42</td><td>602</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks per sync attempt.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxChainBytesPerSyncAttempt</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>100MB</td><td>100MB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum chain bytes per sync attempt.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">shortLivedCacheTransactionDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>10m</td><td>10m</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Duration of a transaction in the short lived cache.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">shortLivedCacheBlockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>100m</td><td>100m</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Duration of a block in the short lived cache.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">shortLivedCachePruneInterval</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>90s</td><td>90s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Time between short lived cache pruning.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">shortLivedCacheMaxSize</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>10'000'000</td><td>200'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of a short lived cache.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minFeeMultiplier</span></code></td><td><code class="docutils literal"><span class="pre">BlockFeeMultiplier</span></code></td><td>0</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum fee multiplier of transactions to propagate and include in blocks.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">transactionSelectionStrategy</span></code></td><td><code class="docutils literal"><span class="pre">model::TransactionSelectionStrategy</span></code></td><td>oldest</td><td>maximize-fee</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Transaction selection strategy used for syncing and harvesting unconfirmed transactions.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">unconfirmedTransactionsCacheMaxResponseSize</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>20MB</td><td>20MB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of an unconfirmed transactions response.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">unconfirmedTransactionsCacheMaxSize</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>1'000'000</td><td>50'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of the unconfirmed transactions cache.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">connectTimeout</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>10s</td><td>15s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Timeout for connecting to a peer.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">syncTimeout</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>60s</td><td>120s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Timeout for syncing with a peer.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">socketWorkingBufferSize</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>512KB</td><td>512KB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Initial socket working buffer size (socket reads will attempt to read buffers of roughly this size).</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">socketWorkingBufferSensitivity</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>100</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Socket working buffer sensitivity (lower values will cause memory to be more aggressively reclaimed). <br/><b>Note</b>: <code class="docutils literal"><span class="pre">0</span></code> will disable memory reclamation.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxPacketDataSize</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>150MB</td><td>150MB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum packet data size.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">blockDisruptorSize</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>4096</td><td>4096</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Size of the block disruptor circular buffer.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">blockElementTraceInterval</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>1</td><td>1</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Multiple of elements at which a block element should be traced through queue and completion.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">transactionDisruptorSize</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>16384</td><td>16384</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Size of the transaction disruptor circular buffer.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">transactionElementTraceInterval</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>10</td><td>10</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Multiple of elements at which a transaction element should be traced through queue and completion.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableDispatcherAbortWhenFull</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>false</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if the process should terminate when any dispatcher is full.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableDispatcherInputAuditing</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>false</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if all dispatcher inputs should be audited.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxCacheDatabaseWriteBatchSize</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>5MB</td><td>5MB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum cache database write batch size.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxTrackedNodes</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5'000</td><td>5'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of nodes to track in memory.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">trustedHosts</span></code></td><td><code class="docutils literal"><span class="pre">unordered_set<string></span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Trusted hosts that are allowed to execute protected API calls on this node.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">localNetworks</span></code></td><td><code class="docutils literal"><span class="pre">unordered_set<string></span></code></td><td>127.0.0.1</td><td>127.0.0.1</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Networks that should be treated as local.</small></td></tr>
+<tr style="background-color:#E0E0E0"><td colspan=4><b>localnode</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">host</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node host (leave empty to auto-detect IP).</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">friendlyName</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td>915772a</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node friendly name (leave empty to use address).</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">version</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>0</td><td>0</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node version.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">roles</span></code></td><td><code class="docutils literal"><span class="pre">ionet::NodeRoles</span></code></td><td>Peer</td><td>Peer</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node roles.</small></td></tr>
+<tr style="background-color:#E0E0E0"><td colspan=4><b>outgoing_connections</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnections</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>10</td><td>10</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of active connections.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnectionAge</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>200</td><td>200</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum connection age.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnectionBanAge</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>20</td><td>20</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum connection ban age.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">numConsecutiveFailuresBeforeBanning</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>3</td><td>3</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of consecutive connection failures before a connection is banned.</small></td></tr>
+<tr style="background-color:#E0E0E0"><td colspan=4><b>incoming_connections</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnections</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>512</td><td>512</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of active connections.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnectionAge</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>200</td><td>200</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum connection age.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxConnectionBanAge</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>20</td><td>20</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum connection ban age.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">numConsecutiveFailuresBeforeBanning</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>3</td><td>3</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of consecutive connection failures before a connection is banned.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">backlogSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>512</td><td>512</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of the pending connections queue.</small></td></tr>
+<tr style="background-color:#E0E0E0"><td colspan=4><b>banning</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">defaultBanDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>12h</td><td>12h</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Default duration for banning.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxBanDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>72h</td><td>12h</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum duration for banning.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">keepAliveDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>48h</td><td>48h</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Duration to keep account in container after the ban expired.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxBannedNodes</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5'000</td><td>5'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of banned nodes.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">numReadRateMonitoringBuckets</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>4</td><td>4</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of read rate monitoring buckets (<code class="docutils literal"><span class="pre">0</span></code> to disable read rate monitoring).</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">readRateMonitoringBucketDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>15s</td><td>15s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Duration of each read rate monitoring bucket.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxReadRateMonitoringTotalSize</span></code></td><td><code class="docutils literal"><span class="pre">utils::FileSize</span></code></td><td>100MB</td><td>100MB</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size allowed during full read rate monitoring period.</small></td></tr>
+</tbody></table>
+
