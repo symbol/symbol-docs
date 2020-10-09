@@ -9,11 +9,13 @@
 Configuring network properties
 ##############################
 
-|symbol-bootstrap| (read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide if you don't know what it is) accepts custom presets to customize the network to your needs.
+There is a large number of network-related settings that can be customized in |codename|.
 
-The tables below list all the network-related properties that can be set. Put them in a YAML file and pass it to ``symbol-bootstrap config`` using the ``-c`` parameter.
+The easiest way to change them is by using |symbol-bootstrap|'s custom presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put the settings in a YAML file and pass it to ``symbol-bootstrap config`` using the ``-c`` parameter.
 
-For node-related properties, read the :doc:`Configuring node properties <configuring-node-properties>` guide.
+These settings can also be directly provided to |catapult-server| through ``.properties`` files. The header of each of the tables below indicates which file contains that table's properties.
+
+.. note:: For **node**-related properties, read the :doc:`Configuring node properties <configuring-node-properties>` guide.
 
 .. _config-network-properties:
 
@@ -34,3 +36,7 @@ Inflation configuration
 .. |symbol-bootstrap| raw:: html
 
    <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+
+.. |catapult-server| raw:: html
+
+   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>

@@ -155,6 +155,12 @@ All nodes created by the ``bootstrap`` preset are voters by default. If you don'
 
 .. note:: Without ANY voting node no finalization can occur. By taking a look at ``localhost:3000/chain/info`` you will see you chain height grow but the ``latestFinalizedBlock``'s height will remain at zero.
 
+******************************
+Configuring network properties
+******************************
+
+Read the :doc:`Configuring network properties <configuring-network-properties>` guide for a list of network-related settings that can be customized.
+
 **********
 Next steps
 **********
