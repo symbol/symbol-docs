@@ -36,7 +36,7 @@ Method #01: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingTheAmountOfAssetsSentToAnAccount.java
+    .. viewsource:: ../../resources/examples/java/src/test/java/symbol/guides/examples/account/GettingTheAmountOfAssetsSentToAnAccount.java
         :language: java
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
