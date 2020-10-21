@@ -71,7 +71,7 @@ The node you just created has an associated |codename| account which you can use
 
 The account's keys and address can be retrieved from a YAML file in the ``config`` folder:
 
-``target/config/generated-addresses/addresses.yml``
+``target/addresses.yml``
 
 As an example:
 
