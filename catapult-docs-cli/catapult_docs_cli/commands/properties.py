@@ -41,7 +41,7 @@ class PropertiesTable(Table):
     """
 
     def __init__(self, rows):
-        super().__init__(['Property', 'Type', 'Default value<br/>MIJIN', 'Default value<br/>TESTNET'], ['35', '35', '15', '15'], rows)
+        super().__init__(['Property', 'Type', 'Default value<br/>PRIVATE', 'Default value<br/>TESTNET'], ['35', '35', '15', '15'], rows)
 
     def _format_rows(self):
         """Formats the table rows as a str.
