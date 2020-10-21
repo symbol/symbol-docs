@@ -3,10 +3,10 @@ Network configuration settings.<br/>
 <small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v0.10.0.3
 </small>
 
-<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>MIJIN</th><th class="head" style="width:15%">Default value<br/>TESTNET</th></tr></thead><tbody valign="top">
+<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>TESTNET</th></tr></thead><tbody valign="top">
 
 <tr style="background-color:#E0E0E0"><td colspan=4><b>network</b></td><td></td><td></td><td></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">identifier</span></code></td><td><code class="docutils literal"><span class="pre">NetworkIdentifier</span></code></td><td>mijin-test</td><td>public-test</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">identifier</span></code></td><td><code class="docutils literal"><span class="pre">NetworkIdentifier</span></code></td><td>private-test</td><td>public-test</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Network identifier.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">nodeEqualityStrategy</span></code></td><td><code class="docutils literal"><span class="pre">NodeIdentityEqualityStrategy</span></code></td><td>host</td><td>host</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node equality strategy.</small></td></tr>
@@ -25,7 +25,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used as primary chain currency.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">harvestingMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used to provide harvesting ability.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">blockGenerationTargetTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>30s</td><td>30s</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">blockGenerationTargetTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>30s</td><td>15s</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Targeted time between blocks.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">blockTimeSmoothingFactor</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>3000</td><td>3000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Smoothing factor in thousandths. If this value is non-zero, the network will be biased in favor of evenly spaced blocks. <br/><b>Note</b>: A higher value makes the network more biased. <br/><b>Note</b>: This can lower security because it will increase the influence of time relative to importance.</small></td></tr>
@@ -43,19 +43,19 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum lifetime a transaction can have before it expires.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxBlockFutureTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>500ms</td><td>500ms</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum future time of a block that can be accepted.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">initialCurrencyAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>8'998'999'998'000'000</td><td>7'831'975'436'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">initialCurrencyAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>8'998'999'998'000'000</td><td>8'998'999'998'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Initial currency atomic units available in the network.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>9'000'000'000'000'000</td><td>9'000'000'000'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum atomic units (total-supply * 10 ^ divisibility) of a mosaic allowed in the network.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">totalChainImportance</span></code></td><td><code class="docutils literal"><span class="pre">Importance</span></code></td><td>15'000'000</td><td>7'831'975'436'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">totalChainImportance</span></code></td><td><code class="docutils literal"><span class="pre">Importance</span></code></td><td>15'000'000</td><td>15'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Total whole importance units available in the network.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">minHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>10'000'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>500</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>4'000'000</td><td>50'000'000'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">minVoterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>50'000</td><td>3'000'000'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minVoterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>50'000</td><td>50'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of harvesting mosaic atomic units needed for an account to be eligible for voting.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">votingSetGrouping</span></code></td><td><code class="docutils literal"><span class="pre">uint64_t</span></code></td><td>100</td><td>720</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">votingSetGrouping</span></code></td><td><code class="docutils literal"><span class="pre">uint64_t</span></code></td><td>100</td><td>100</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of blocks that should be treated as a group for voting set purposes. <br/><b>Note</b>: Voting sets will only be calculated at blocks that are multiples of this grouping number.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxVotingKeysPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of voting keys that can be registered at once per account.</small></td></tr>
@@ -63,7 +63,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of finalization rounds for which voting key can be registered.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxVotingKeyLifetime</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>26280</td><td>26280</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of finalization rounds for which voting key can be registered.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">harvestBeneficiaryPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>10</td><td>25</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestBeneficiaryPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>10</td><td>10</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the beneficiary account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">harvestNetworkPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>5</td><td>5</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the network.</small></td></tr>
@@ -90,7 +90,7 @@ Network configuration settings.<br/>
 <tr><td><code class="docutils literal"><span class="pre">maxHashLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2d</td><td>2d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a hash lock can exist.</small></td></tr>
 <tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.locksecret</b></td><td></td><td></td><td></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">maxSecretLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>30d</td><td>365d</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxSecretLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>30d</td><td>30d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a secret lock can exist.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">minProofSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1</td><td>20</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum size of a proof in bytes.</small></td></tr>
@@ -124,11 +124,11 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of children for a root namespace.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxNamespaceDepth</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace depth.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">minNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>1m</td><td>30d</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>1m</td><td>1m</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum namespace duration.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">maxNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>365d</td><td>1825d</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>365d</td><td>365d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace duration.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">namespaceGracePeriodDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2m</td><td>1d</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">namespaceGracePeriodDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2m</td><td>30d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Grace period during which time only the previous owner can renew an expired namespace.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">reservedRootNamespaceNames</span></code></td><td><code class="docutils literal"><span class="pre">unordered_set<string></span></code></td><td>xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td><td>symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Reserved root namespaces that cannot be claimed.</small></td></tr>
