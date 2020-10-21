@@ -53,9 +53,9 @@ Retrieving the node accounts
 
 |symbol-bootstrap| has created multiple nodes with corresponding accounts. To interact with any of these accounts (to transfer mosaics **to** it, for example) you need its address or its public key. To fully control an account (to transfer mosaics **from** it, for example) you need its private key.
 
-All this information can be retrieved from a YAML file in the ``config`` folder:
+All this information can be retrieved from a YAML file in the ``target`` folder:
 
-``target/config/generated-addresses/addresses.yml``
+``target/addresses.yml``
 
 As an example:
 
@@ -118,7 +118,7 @@ Retrieving the test accounts
 
 |symbol-bootstrap| has also created several test accounts preloaded with :doc:`mosaics <../../concepts/mosaic>`. These accounts exist solely for development and learning purposes.
 
-The keys to these accounts can be found in the ``target/config/generated-addresses/addresses.yml`` file as described above, in the ``mosaics`` section:
+The keys to these accounts can be found in the ``target/addresses.yml`` file as described above, in the ``mosaics`` section:
 
 .. code-block:: yaml
 
