@@ -272,6 +272,26 @@ rst_prolog = """
 
    <a href="https://join.slack.com/t/nem2/shared_invite/zt-j0xtyrr8-dJ9p0~Lua4lJx9ZoLbq7mg" target="_blank">Slack</a>
 
+.. |nem| raw:: html
+
+    <a href="https://nem.io/" target="_blank">NEM</a>
+
+.. |community| raw:: html
+
+   <a href="https://github.com/nemtech/community/" target="_blank">community</a>
+
+.. |twitter| raw:: html
+
+   <a href="https://twitter.com/NEMofficial" target="_blank">Twitter</a>
+
+.. |github| raw:: html
+
+   <a href="https://github.com/nemtech" target="_blank">GitHub</a>
+
+.. |open-source| raw:: html
+
+   <a href="https://github.com/nemtech" target="_blank">open source</a>
+
 """
 
 # -- Options for Epub output ----------------------------------------------
