@@ -555,7 +555,7 @@ div.figure .caption {
 }
 @media screen and (min-width: 768px) {
     #search-box {
-        width: 70%;
+        width: 100%;
     }
 }
 /* Guides */
