@@ -307,9 +307,7 @@ body > .container {
     padding-left: 0;
     padding-bottom: 5px;
     margin: 0;
-}
-#sidebar .toctree-l3, #sidebar .toctree-l2, #sidebar ul.unstyled {
-    display: none;
+    font-weight: bold;
 }
 #sidebar .caption, .sidebar-xs .caption {
     padding: 10px 30px 5px 0;
