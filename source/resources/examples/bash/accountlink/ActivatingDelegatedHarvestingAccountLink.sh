@@ -1,3 +1,3 @@
 #!/bin/sh
 
-symbol-cli transaction accountlink --public-key 98DB319D390F8B52E29A5FB2B4109FD709218CA505BB38D4BC54F51E1102FCDA --action Link --profile main
+symbol-cli transaction accountkeylink --linked-public-key <REMOTE_PUBLIC_KEY> --action Link --profile main

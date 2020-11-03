@@ -1,9 +1,10 @@
 import {
     Account,
-    AccountKeyLinkTransaction,
     Deadline,
     LinkAction,
     NetworkType,
+    NodeKeyLinkTransaction,
+    PublicAccount,
     RepositoryFactoryHttp,
     UInt64,
 } from 'symbol-sdk';
@@ -14,18 +15,18 @@ const networkType = NetworkType.TEST_NET;
 // Main account private key for signing transaction
 const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
-// Generate a new account as remote account
-const remoteAccount = Account.generateNewAccount(networkType);
-console.log('Remote account Private Key:', remoteAccount.privateKey);
+// Node account
+const nodePublicKey = '70E06C112848A652D635755B7530D3096A978321D09B8D8DC17505CAE09565C5';
+const nodeAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
-const accountLinkTransaction = AccountKeyLinkTransaction.create(
+const  nodeLinkTransaction = NodeKeyLinkTransaction.create(
     Deadline.create(),
-    remoteAccount.publicKey,
+    nodeAccount.publicKey,
     LinkAction.Link,
     networkType,
-    UInt64.fromUint(2000000)); // Absolute number
+    UInt64.fromUint(2000000),); // Absolute number
 /* end block 02 */
 
 /* start block 03 */
@@ -35,7 +36,7 @@ const nodeUrl = 'http://api-01.ap-northeast-1.0.10.0.x.symboldev.network:3000';
 const networkGenerationHash = '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const signedTransaction = mainAccount.sign(accountLinkTransaction, networkGenerationHash);
+const signedTransaction = mainAccount.sign(nodeLinkTransaction, networkGenerationHash);
 console.log('Transaction hash:', signedTransaction.hash);
 
 transactionHttp
