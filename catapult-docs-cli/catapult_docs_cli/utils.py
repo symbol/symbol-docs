@@ -61,7 +61,7 @@ def clean_line(description):
     Returns:
         str: Formatted line.
     """
-    description = re.sub(r'\\c ([^ ]*)', r'<code class="docutils literal"><span class="pre">\1</span></code>', description)
+    description = re.sub(r'\\c ([a-zA-Z_]*)', r'<code class="docutils literal"><span class="pre">\1</span></code>', description)
     return description.replace('\\a ', '') \
         .replace('\\note', '<br/><b>Note</b>:') \
         .replace('std::', '') \
