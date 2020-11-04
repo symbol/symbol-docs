@@ -5,7 +5,7 @@ import {
     NetworkType,
     RepositoryFactoryHttp,
     UInt64,
-    VrfKeyLinkTransaction
+    VrfKeyLinkTransaction,
 } from 'symbol-sdk';
 
 /* start block 01 */
