@@ -16,7 +16,7 @@ const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000
 const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
 // Generate a new account as remote account
 const remoteAccount = Account.generateNewAccount(networkType);
-console.log('Remote account Private Key:', remoteAccount.privateKey); 
+console.log('Remote account Private Key:', remoteAccount.privateKey);
 /* end block 01 */
 
 /* start block 02 */
