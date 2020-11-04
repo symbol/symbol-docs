@@ -22,16 +22,17 @@ Use case
 The following guide will show you how to delegate your account importance without compromising the account's funds.
 
 In this process, you will 
-- Delegate your **main account (M)** importance to a **remote acount (R)**.  
-- Link your main account **(M)** to a **VRF account (V)** for randomized block production and leader/participant selection.  
-- Link your main account **(M)** to a node in order to harvest through that node.   
-- Request the node to add your remote account **(R)** as a delegated harvester with the **announcer account (A)**.  
+
+* Delegate your **main account (M)** importance to a **remote acount (R)**.  
+* Link your main account **(M)** to a **VRF account (V)** for randomized block production and leader/participant selection.  
+* Link your main account **(M)** to a node in order to harvest through that node.   
+* Request the node to add your remote account **(R)** as a delegated harvester with the **announcer account (A)**.  
 
 *************
 Prerequisites
 *************
 
-- Complete :doc:`sending mosaics and messages between two accounts guide <../transfer/sending-a-transfer-transaction>`
+- Complete :doc:`sending mosaics and messages between two accounts guide <../account/transfer/sending-a-transfer-transaction>`
 
 Before you can activate delegated harvesting, you need to have four accounts:
 
@@ -40,7 +41,7 @@ Before you can activate delegated harvesting, you need to have four accounts:
 * **VRF account (V)** that did not send or receive any transactions.
 * **Announcer account (A)** with enough XYM to pay for transaction fees.
 
-If you are planning to use Symbol-CLI, you may refer to :ref:`here <creating-an-account>` for profile and account generation. 
+If you are planning to use Symbol-CLI, you may refer to :doc:`here <../getting-started/setup-workstation/creating-an-account>` for profile and account generation. 
 
 *******
 Methods
@@ -61,7 +62,7 @@ Methods
 
 .. note:: If you are using CLI, it is important to follow the profile name you given to the main/remote/vrf accounts. E.g. If you name your main account as "mainAccount", your parameter for --profile shall be "mainAccount" instead of "main"
 
-2. Create a :ref:`VrfKeyLinkTransaction <vrf-key-link>` to **link M to a vrf key**. Sign the VrfKeyLinkTransaction with  **M** and announce it to the network. Keep the private key of **V** for PersistentDelegationRequestTransaction.
+2. Create a :doc:`VrfKeyLinkTransaction <../serialization/coresystem/vrf-key-link>` to **link M to a vrf key**. Sign the VrfKeyLinkTransaction with  **M** and announce it to the network. Keep the private key of **V** for PersistentDelegationRequestTransaction.
 
 .. example-code::
 
@@ -74,7 +75,7 @@ Methods
        :language: bash
        :start-after: #!/bin/sh
 
-3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
+3. Create a :doc:`NodeKeyLinkTransaction <../serialization/accountlink/node-key-link>` to **link M to a node**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
 .. example-code::
 
