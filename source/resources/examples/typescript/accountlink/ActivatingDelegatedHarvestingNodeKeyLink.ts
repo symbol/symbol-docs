@@ -37,6 +37,8 @@ const networkGenerationHash = '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(nodeLinkTransaction, networkGenerationHash);
+console.log('Transaction hash:', signedTransaction.hash);
+
 transactionHttp
     .announce(signedTransaction)
     .subscribe((x) => console.log(x), (err) => console.error(err));
