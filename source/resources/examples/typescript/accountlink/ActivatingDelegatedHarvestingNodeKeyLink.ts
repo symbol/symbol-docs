@@ -6,7 +6,7 @@ import {
     NodeKeyLinkTransaction,
     PublicAccount,
     RepositoryFactoryHttp,
-    UInt64
+    UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */
@@ -26,7 +26,7 @@ const  nodeLinkTransaction = NodeKeyLinkTransaction.create(
     nodeAccount.publicKey,
     LinkAction.Link,
     networkType,
-    UInt64.fromUint(2000000)); // Absolute number
+    UInt64.fromUint(2000000),); // Absolute number
 /* end block 02 */
 
 /* start block 03 */
