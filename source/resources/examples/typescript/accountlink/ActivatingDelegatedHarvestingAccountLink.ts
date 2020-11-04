@@ -16,6 +16,7 @@ const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000
 const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
 // Generate a new account as remote account
 const remoteAccount = Account.generateNewAccount(networkType);
+console.log('Remote account Private Key:', remoteAccount.privateKey); 
 /* end block 01 */
 
 /* start block 02 */
@@ -35,6 +36,8 @@ const networkGenerationHash = '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(accountLinkTransaction, networkGenerationHash);
+console.log('Transaction hash:', signedTransaction.hash);
+
 transactionHttp
     .announce(signedTransaction)
     .subscribe((x) => console.log(x), (err) => console.error(err));
