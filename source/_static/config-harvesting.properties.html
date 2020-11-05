@@ -7,15 +7,15 @@ Harvesting configuration settings.<br/>
 
 <tr style="background-color:#E0E0E0"><td colspan=4><b>harvesting</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">harvesterSigningPrivateKey</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td></td></tr>
-<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester signing private key.</small></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester signing private key. Used only when harvesting is enabled.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">harvesterVrfPrivateKey</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td></td></tr>
-<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester vrf private key.</small></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester VRF private key. Used only when harvesting is enabled.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">enableAutoHarvesting</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
-<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if auto harvesting is enabled.</small></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Set to <code class="docutils literal"><span class="pre">true</span></code> and configure both harvester keys to enable harvesting.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxUnlockedAccounts</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5</td><td>5</td></tr>
-<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of unlocked accounts.</small></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of unlocked accounts, i.e., the maximum number of delegated harvesting accounts.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">delegatePrioritizationPolicy</span></code></td><td><code class="docutils literal"><span class="pre">harvesting::DelegatePrioritizationPolicy</span></code></td><td>Importance</td><td>Importance</td></tr>
-<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Delegate harvester prioritization policy.</small></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Prioritization policy used to keep accounts once the maximum number of delegated harvesting accounts is reached. Possible values are <code class="docutils literal"><span class="pre">Age</span></code> and <code class="docutils literal"><span class="pre">Importance</span></code> .</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">beneficiaryAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the account receiving part of the harvested fee.</small></td></tr>
 </tbody></table>

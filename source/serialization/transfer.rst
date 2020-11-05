@@ -35,6 +35,13 @@ Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages betwe
     mosaics; array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount); Attached mosaics to send.
     message; array(byte, messageSize); :ref:`Message type <message-type>` and hexadecimal payload.
 
+.. _persistent-delegation-request-transaction:
+
+PersistentDelegationRequestTransaction
+======================================
+
+This is actually a :ref:`TransferTransaction <transfer-transaction>` with a :ref:`Message type <message-type>` equal to ``0xFE``.
+
 .. _message-type:
 
 MessageType

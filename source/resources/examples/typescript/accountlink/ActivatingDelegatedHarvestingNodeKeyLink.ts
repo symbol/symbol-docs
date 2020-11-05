@@ -21,12 +21,12 @@ const nodeAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType
 /* end block 01 */
 
 /* start block 02 */
-const  nodeLinkTransaction = NodeKeyLinkTransaction.create(
+const nodeLinkTransaction = NodeKeyLinkTransaction.create(
     Deadline.create(),
     nodeAccount.publicKey,
     LinkAction.Link,
     networkType,
-    UInt64.fromUint(2000000),); // Absolute number
+    UInt64.fromUint(2000000)); // Absolute number
 /* end block 02 */
 
 /* start block 03 */
