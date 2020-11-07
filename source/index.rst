@@ -68,7 +68,7 @@ Continue: :doc:`Setting up your workstation <getting-started/setup-workstation>`
 
 .. |slack| raw:: html
 
-   <a href="https://join.slack.com/t/nem2/shared_invite/zt-hwsoo1s5-G8XO50LaY0m7ZKTRXAczcA" target="_blank">Slack</a>
+   <a href="https://join.slack.com/t/nem2/shared_invite/zt-j0xtyrr8-dJ9p0~Lua4lJx9ZoLbq7mg" target="_blank">Slack</a>
 
 .. |twitter| raw:: html
 
