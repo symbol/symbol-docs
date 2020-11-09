@@ -36,8 +36,8 @@ Enumeration: uint8
 
     0x68; (MAIN_NET) Public network.
     0x98; (TEST_NET) Public test network.
-    0x60; (MIJIN) Private network.
-    0x90; (MIJIN_TEST) Private test network.
+    0x60; (PRIVATE) Private network.
+    0x90; (PRIVATE_TEST) Private test network.
 
 .. _size-prefixed-entity:
 

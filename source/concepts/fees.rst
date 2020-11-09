@@ -15,7 +15,7 @@ By default, fees are paid in the underlying currency of the |codename| network.
     :header: "Network type", "Mosaic name"
     :delim: ;
 
-    MIJIN_TEST; |privatenetworkcurrency|
+    PRIVATE; |privatenetworkcurrency|
     TEST_NET; |networkcurrency|
 
 Private chains :ref:`can edit the network configuration <config-network-properties>` to eliminate fees or use another :doc:`mosaic <mosaic>` that better suits their needs.
