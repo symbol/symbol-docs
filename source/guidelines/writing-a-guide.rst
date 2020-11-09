@@ -11,7 +11,7 @@ Before starting
 ***************
 
 If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas pending to be written.
-We also encourage you to join our `Slack <https://join.slack.com/t/nem2/shared_invite/zt-j0xtyrr8-dJ9p0~Lua4lJx9ZoLbq7mg>`_ #sig-docs channel and present yourself!
+We also encourage you to join our |slack| #sig-docs channel and present yourself!
 
 To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
 If there is no issue yet, create a new one introducing the content you want to publish.
