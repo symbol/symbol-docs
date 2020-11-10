@@ -34,13 +34,15 @@ Prerequisites
 
 - Complete the :doc:`sending mosaics and messages between two accounts <../transfer/sending-a-transfer-transaction>` guide to have a basic understanding of transactions.
 
-Before you can activate delegated harvesting, you need the following accounts:
+Before you can activate delegated harvesting, you need the following items:
 
 - A **Main account (M)** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. This is the account that will receive the harvesting fees. Keep its secret key secret at all times.
 
 - A **Remote account (R)** that will act as a proxy between **M** and the node. This account **must have never sent or received any transaction**, and it cannot be involved in any transaction while it is a delegated account.
 
 - A **VRF account (V)** that has never sent or received any transactions. It is a regular account used to add randomness to the account selection process.
+
+- The **node's public TLS key**. This is the key the node uses to authenticate data for transport over TLS and must be provided by the node owner, it cannot be retrieved remotely through any |codename| API.
 
 Optionally:
 
@@ -82,7 +84,7 @@ Guide
 
 3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
-   Find the node's public key by querying ``http://<node-url>:3000/node/info`` with a browser, for example.
+   .. note:: The node's public TLS key must be provided by the node owner.
 
    .. example-code::
 
