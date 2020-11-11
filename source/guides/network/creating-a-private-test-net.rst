@@ -123,18 +123,34 @@ The keys to these accounts can be found in the ``target/addresses.yml`` file as 
 .. code-block:: yaml
 
     mosaics:
-        currency:
-            -
-                # This is an account containing the main currency
-                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 2E10EE45517E04150B5701EDDCBBF95D5E7077CA6627E29CFA8B862BAE09A29F
-                address: TCOKYEBOBNVFEPCEADZXFESZFFIWJH2LF245O3A
-        harvest:
-            -
-                # This is an account containing the network currency used for harvesting
-                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 1467662C8FBE485FDDB792E36646AC935443B354D38A1DF9E4CE3DAAE5B6F107
-                address: TA4B2EM3OJVYE7ZP426J3UVWPRRP4HDCKJHUXEI
+        -
+            id: 56631872BA6657A1
+            name: currency
+            type: currency
+            # These are accounts containing the main currency
+            accounts:
+                -
+                    privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                    publicKey: 91A9513EBEB50DEFCD928032611B2FBC046FA894089D2ACED115D6EDEB0BFD2A
+                    address: NBO3P2AM3A6242V2NFMUIG5RQ3ZFDRKS5QNRBJA
+                -
+                    privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                    publicKey: 4E9CC90B45265691C2CF0C68785A06602D28DB50ACFB91F8389B976898239132
+                    address: NCDFN3W2AP3E4I2XYITUJHHGVSYKOIR2IUTXKXY
+        -
+            id: 079C43E0DFC44B38
+            name: harvest
+            type: harvest
+            # These are account containing the network currency used for harvesting
+            accounts:
+                -
+                    privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                    publicKey: D617FC0C746681849D93DBEB5FE0E390F26535E4EA76F02AB206AD053B72FAB8
+                    address: NBFFJ3MNPMHP474KD7JLBJWAYSYSAUEW7L7262Q
+                -
+                    privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                    publicKey: BBB04EC2CF67658B755F94FC347DDC4AAFFBFC24B84298AEF41CDA2485FA216E
+                    address: NCQBYJE3U4Q36AA2E6HFTGKCUXIBUB2NMIGAFDA
 
 Use the Private Keys to access these accounts, for example, using the |symbol-cli| command-line tool as described above.
 
