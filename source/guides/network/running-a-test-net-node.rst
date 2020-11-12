@@ -76,29 +76,36 @@ As an example:
 .. code-block:: yaml
 
     networkType: 152
-    nemesisGenerationHashSeed: 6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD
+    nemesisGenerationHashSeed: 1082491EFE93AA7DAC6D0282634953DB8B5FDDAE669237B030695A9F308883D5
     nodes:
         -
-            type: peer-node
-            name: peer-node
-            friendlyName: 0f2ccdc
-            roles: 'Peer'
+            name: peer-node-0
+            friendlyName: peer-node-0
+            roles: 'Peer,Voting'
             ssl:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 0f2ccdc6d2e6e8012271ccb7f391ee79ef4b92fedc831936158076120edcddcc
-            signing:
-                # These are the keys and address of your node
+                publicKey: 8E4B7B32C636E1749B1A4CDC345F1D3BDC6C4C33DEA8DC0BD0FFA5C873CDB232
+            node:
+                # Use these in Delegated Harvesting requests
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 5276BBE852DDBCBDB2343C4349083D055F0E6F19552E5E955B4207E90E45CD6F
-                address: TC7DOAQY65IPHI5NR7R4LYHYD3OEUD6PVDJISVA
+                publicKey: C1C278BCBF2B56918F41620E1AF89D3FCD94ACCA3F1BFE8AC877C1D10A933C82
+            signing:
+                # Use these to access the node's account
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: 6B1936560F85096E398AAF4647EADB6C748100E6D248D98B2916F003B806E725
+                address: TDN3G4REJA7BWDQ2TLB3M522RAYKV5AB55EEPGQ
+            voting:
+                privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+                publicKey: E97B99E7EDE0738CBE2C3BB13F3B0EEB8A361FAAD51271887D12389F1AEEF4EC
+                address: TBBK644JF2XMW35A7BUG6SADTLHAQ2M2KO7O2FQ
             vrf:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 1BB864D80F9FC8BF661265276E00E57C1ABDD13B1454A3F5ADC025279FA03268
-                address: TD74YTRSVU4HXEXE4LQYIX2EQ65XLYO4V5XQB4I
+                publicKey: B304E6F9650CFFA52C6DC51CED29397F6C50F1E2F9AC34993549E0E3E4461027
+                address: TABWAGQNSI4AWPE3IVGS53CQWAN5BYRM5BHMNFA
 
 .. note:: Keep you Secret Keys secret at all times!
 
-Use the information in the ``signing`` section to access the node's account.
+Use the information in the ``signing`` section to access the node's account. When activating :ref:`delegated harvesting <delegated-harvesting>`, use the information in the ``node`` section as the node's **public TLS key**.
 
 ***************************
 Providing funds to the node
@@ -119,7 +126,7 @@ Submitting link keys
 Enabling harvesting
 ===================
 
-|symbol-bootstrap| creates peer nodes with :doc:`harvesting <../../concepts/harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network.
+|symbol-bootstrap| creates peer nodes with :ref:`local harvesting <local-harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network (:ref:`delegated harvesting <delegated-harvesting>` works differently and requires the ``node`` keys).
 
 This can be done by |symbol-bootstrap| too, but it needs to be a step separated from ``symbol-bootstrap start`` because funds are required to announce transactions.
 

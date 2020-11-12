@@ -24,8 +24,8 @@ const vrfAccount = Account.createFromPrivateKey(vrfAccountPrivateKey, networkTyp
 const announcerAccountPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const announcerAccount = Account.createFromPrivateKey(announcerAccountPrivateKey, networkType);
 // Node account - Replace with publicKey by querying http://<node-url>:3000/node/info
-const nodePublicKey = '46DDDBCC4DB446BA1BEEF0294B51327BD2872625A235E658E3D1111F45FAD25D';
-const nodeAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType);
+const nodePublicTLSKey = '46DDDBCC4DB446BA1BEEF0294B51327BD2872625A235E658E3D1111F45FAD25D';
+const nodeAccount = PublicAccount.createFromPublicKey(nodePublicTLSKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
