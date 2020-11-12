@@ -82,7 +82,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
+3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
    .. note:: The node's public TLS key must be provided by the node owner.
 
@@ -122,8 +122,16 @@ If everything is successful, the node will receive the encrypted message through
 - The node has harvesting slots available.
 - The remote account has never sent or received transactions before.
 
-.. note:: As explained in the introduction, announcing a valid :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` does not guarantee being added as a delegated harvester. Currently, the only way to verify that an account has successfully activated delegated harvesting is to become the signer of a new block.
-
 As the remote private key is **saved on disk** by the node, even if the node disconnects temporarily the persistent delegated harvesters will be reestablished once the node reconnects to the network.
 
 Additionally, the use of an encrypted message creates a **backup** of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can still retrieve the data by querying the blockchain.
+
+***********
+Final words
+***********
+
+- **Accounts with higher importance are selected more often to perform harvesting**. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your :ref:`importance score <importance-calculation>` is high enough.
+
+- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 180 blocks (about every 45 minutes). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
+
+- Finally, as explained in the introduction, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status, therefore, |codename| does not provide a mechanism to ask a node this information. You will know delegated harvesting is working when you start seeing blocks appear on the chain signed with your remote account's key and your main account starts receiving harvesting fees.

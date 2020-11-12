@@ -16,8 +16,8 @@ const networkType = NetworkType.TEST_NET;
 const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
 // Node account
-const nodePublicKey = '70E06C112848A652D635755B7530D3096A978321D09B8D8DC17505CAE09565C5';
-const nodeAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType);
+const nodePublicTLSKey = '70E06C112848A652D635755B7530D3096A978321D09B8D8DC17505CAE09565C5';
+const nodeAccount = PublicAccount.createFromPublicKey(nodePublicTLSKey, networkType);
 /* end block 01 */
 
 /* start block 02 */
