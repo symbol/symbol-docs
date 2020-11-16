@@ -16,7 +16,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 #
-# Modified by NEM to keep the overwritten toc in localtoc variable
+# Modified by NEM to keep the overwritten toc in localtoc variable and to
+# show only page titles in global toc.
 
 
 from sphinx import addnodes
@@ -80,6 +81,7 @@ def build_full_toctree(builder, docname, prune, collapse):
         toctree = env.resolve_toctree(docname, builder, toctreenode,
                                       collapse=collapse,
                                       prune=prune,
+                                      titles_only=True,
                                       includehidden=True,
                                       )
         if toctree is not None:
