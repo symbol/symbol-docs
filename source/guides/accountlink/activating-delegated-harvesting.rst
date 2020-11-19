@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 11 Oct, 2019
     :category: Harvesting
     :tags: SDK

@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 18 Aug, 2018
     :category: Mosaic
     :tags: wallet, SDK, CLI

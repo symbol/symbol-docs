@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 07 May, 2019
     :category: Account Restriction
     :tags: SDK

@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 08 Apr, 2019
     :category: Namespace
     :tags: SDK, CLI

@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 10 Aug, 2018
     :category: Transfer Transaction
     :tags: wallet, SDK, CLI

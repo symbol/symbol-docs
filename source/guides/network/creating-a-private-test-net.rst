@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 03 Oct, 2019
     :category: Network
     :excerpt: 1

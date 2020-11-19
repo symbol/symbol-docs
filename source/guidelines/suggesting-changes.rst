@@ -1,5 +1,3 @@
-:orphan:
-
 ################################
 Suggesting documentation changes
 ################################

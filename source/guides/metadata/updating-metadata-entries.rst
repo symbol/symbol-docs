@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 08 Oct, 2019
     :category: Metadata
     :tags: SDK, CLI
