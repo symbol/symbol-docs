@@ -292,7 +292,7 @@ body > .container {
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 30px;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -579,4 +579,12 @@ ul.postlist-style-circle .first {
     .bs-sidenav, footer {
         display: none !important;
     }
+}
+.h1centered {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #5200c6;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
 }

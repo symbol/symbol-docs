@@ -5,7 +5,19 @@ Guidelines
 First off, thank you for considering contributing to |codename|!
 Follow these guidelines for contributing to |codename| projects, achieving the best quality with the less effort.
 
-.. note:: If you want to contribute to an existent project, read as well the CONTRIBUTING.md file that you will find at the root-level folder of the project.
+.. note:: If you want to contribute to an existent project, read as well the ``CONTRIBUTING.md`` file that you will find at the root-level folder of the project.
+
+.. toctree::
+    :hidden:
+
+    ../guidelines/writing-a-schema
+    ../guidelines/sdk-development
+    ../guidelines/sdk-documentation
+    ../guidelines/generating-transaction-builders
+    ../guidelines/style-guide
+    ../guidelines/suggesting-changes
+    ../guidelines/writing-a-guide
+    ../guidelines/translating-the-documentation
 
 ******
 Server

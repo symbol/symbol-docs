@@ -1,9 +1,34 @@
 ########
-Features
+Concepts
 ########
 
 Connect and combine Symbol's built-in features to architect your blockchain solution.
 Use our ready-made plugin configurations for your most common business needs, or configure the plugin primitives plugin to customize the capabilities of your network without sacrificing performance.
+
+.. toctree::
+    :hidden:
+
+    account
+    account-restriction
+    aggregate-transaction
+    block
+    consensus-algorithm
+    cross-chain-swaps
+    cryptography
+    data-validation
+    fees
+    harvesting
+    inflation
+    metadata
+    mosaic
+    mosaic-restriction
+    multisig-account
+    namespace
+    node
+    plugin
+    receipt
+    transaction
+    transfer-transaction
 
 *****************
 Transfer of value
