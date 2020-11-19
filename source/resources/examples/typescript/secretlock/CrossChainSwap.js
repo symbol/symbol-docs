@@ -31,7 +31,7 @@ const publicChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
 const privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH;
 /* end block 01 */
 /* start block 02 */
-const random = crypto.randomBytes(10);
+const random = crypto.randomBytes(20);
 const proof = random.toString('hex');
 console.log('Proof:', proof);
 const hash = js_sha3_1.sha3_256.create();
