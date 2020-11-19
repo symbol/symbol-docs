@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 13 July, 2020
     :category: Aggregate Transaction
     :tags: SDK, CLI

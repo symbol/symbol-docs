@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 29 Oct, 2019
     :category: Account Restriction
     :tags: SDK, CLI

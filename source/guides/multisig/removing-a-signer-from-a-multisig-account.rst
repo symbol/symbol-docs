@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 17 Aug, 2018
     :category: Multisig Account
     :tags: SDK

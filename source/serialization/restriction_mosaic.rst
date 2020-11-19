@@ -1,5 +1,3 @@
-:orphan:
-
 ##########################
 Restriction Mosaic Schemas
 ##########################

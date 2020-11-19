@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 06 Oct, 2019
     :category: Mosaic Restriction
     :tags: SDK, CLI

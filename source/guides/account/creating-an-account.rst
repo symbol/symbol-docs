@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 02 Aug, 2018
     :category: Account
     :tags: wallet, SDK, CLI

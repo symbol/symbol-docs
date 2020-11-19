@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 13 Sep, 2019
     :category: Mosaic Restriction
     :tags: SDK

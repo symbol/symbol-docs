@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 15 Aug, 2018
     :category: Aggregate Transaction
     :tags: SDK

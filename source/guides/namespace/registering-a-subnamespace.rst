@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 18 Aug, 2018
     :category: Namespace
     :tags: wallet, SDK, CLI

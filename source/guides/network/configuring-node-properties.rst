@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 30 Oct, 2019
     :category: Network, Harvesting
     :excerpt: 1

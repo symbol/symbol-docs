@@ -1,5 +1,3 @@
-:orphan:
-
 #############################
 Translating the documentation
 #############################

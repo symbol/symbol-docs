@@ -1,5 +1,3 @@
-:orphan:
-
 ############################
 Resolution Statement Schemas
 ############################
