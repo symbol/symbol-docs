@@ -2,10 +2,10 @@
 References
 ##########
 
+Usage guides for |codename|'s tools and SDKs.
+
 .. toctree::
-    :maxdepth: 2
-    :hidden:
-    :caption: References
+    :maxdepth: 1
 
     overview
     ../server
@@ -13,3 +13,5 @@ References
     ../sdk
     ../cli
     ../wallets
+    ../compatibility
+    ../serialization/index

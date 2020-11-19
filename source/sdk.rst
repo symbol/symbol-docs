@@ -11,6 +11,15 @@ The |sdk| shares the same design between programming languages to accomplish the
 * **Cohesion/shared knowledge across developers**: Every developer should be able to change between projects that use |codename|. By sharing the same design, we also share the same best practices among projects.
 * **Fast SDK updates**: Migrating any improvement from a |sdk| to the other is faster. Also, if any bug appears in one language, it is quicker to check and fix it.
 
+.. toctree::
+    :hidden:
+
+    references/typescript-sdk
+    references/java-sdk
+    references/symbol-hd-wallets
+    references/symbol-qr-library
+    references/symbol-uri-scheme
+
 *******************
 Supported languages
 *******************

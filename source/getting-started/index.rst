@@ -2,9 +2,10 @@
 Getting Started
 ###############
 
+This is probably the first section you'll be interested in reading in jour journey to learn how to use |codename|. Select a page from the Navigation menu.
+
 .. toctree::
-    :maxdepth: 2
-    :hidden:
+    :maxdepth: 1
 
     what-is-symbol
     setup-workstation

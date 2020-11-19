@@ -54,10 +54,6 @@ If you do not have a private key to create a profile, you can generate a new acc
 
     symbol-cli account generate --network TEST_NET --url http://api-01.us-east-1.096x.symboldev.network:3000 --password <PASSWORD> --profile <PROFILE_NAME> --save
 
-.. |open-source| raw:: html
-
-   <a href="https://github.com/nemtech/symbol-cli" target="_blank">open-source</a>
-
 ********
 Commands
 ********
