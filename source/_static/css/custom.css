@@ -329,9 +329,24 @@ body > .container {
     width: 100%;
     min-width: 0;
     border: 0;
+    max-height: 70vh;
+    overflow: auto;
 }
 .sidebar-xs .dropdown-menu > li > a {
     white-space: normal;
+}
+.sidebar-xs .dropdown-menu .toctree-l1 > a {
+    font-weight: bold;
+}
+.sidebar-xs .dropdown-menu .toctree-l2 > a {
+    padding-left: 20px;
+}
+.sidebar-xs .dropdown-menu .toctree-l3 > a {
+    padding-left: 30px;
+    font-size: 80%
+}
+.sidebar-xs .dropdown-menu .current > a {
+    color: #5200c6;
 }
 .sidebar-xs .dropdown a {
     padding-left: 10px;

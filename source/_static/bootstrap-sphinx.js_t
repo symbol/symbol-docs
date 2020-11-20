@@ -79,7 +79,7 @@
 
         // Global TOC.
         if ($("ul.globaltoc li").length) {
-        patchToc($("ul.globaltoc"), 1);
+        patchToc($("ul.globaltoc"), 3);
         } else {
         // Remove Global TOC.
         $(".globaltoc-container").remove();
