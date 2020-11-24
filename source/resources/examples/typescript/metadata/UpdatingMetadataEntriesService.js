@@ -30,7 +30,7 @@ const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, netw
 const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const metadataHttp = new symbol_sdk_1.MetadataHttp(nodeUrl);
 const metadataService = new symbol_sdk_1.MetadataTransactionService(metadataHttp);
 // replace with key and new value

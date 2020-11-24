@@ -40,7 +40,7 @@ class SendingATransferTransactionWithMultipleMosaics {
             throws ExecutionException, InterruptedException {
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+                "http://api-01.us-east-1.0.10.0.x.symboldev.network:3000")) {
             // replace with recipient address
             final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);

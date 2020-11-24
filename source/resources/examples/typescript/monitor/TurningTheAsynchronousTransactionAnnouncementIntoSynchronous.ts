@@ -61,7 +61,7 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 /* end block 01 */
 
 /* start block 02 */
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

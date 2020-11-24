@@ -23,7 +23,7 @@ import {Metadata, MetadataType, MosaicId, RepositoryFactoryHttp} from 'symbol-sd
 const mosaicIdHex = '0DC67FBE1CAD29E3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 

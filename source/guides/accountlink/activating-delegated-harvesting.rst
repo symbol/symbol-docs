@@ -140,7 +140,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-01.us-east-1.096x.symboldev.network:3000 --profile main
+    symbol-cli profile import --private-key 0000000000000000000000000000000000000000000000000000000000000000 --network TEST_NET --url http://api-01.us-east-1.0.10.0.x.symboldev.network:3000 --profile main
 
 2. Create a brand new account. This account will be your **remote account (R)**.
 
@@ -158,7 +158,7 @@ Method #02: Using the CLI
 
 .. code-block:: bash
 
-    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-01.us-east-1.096x.symboldev.network:3000 --profile announcer
+    symbol-cli profile import --private-key FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF --network TEST_NET --url http://api-01.us-east-1.0.10.0.x.symboldev.network:3000 --profile announcer
 
 4. Send a request to the node you want to be added as a delegated harvester with **A**. Replace ``<recipient-public-key>`` with the node's public key and ``<remote-private-key>`` with **R's private key**.
 

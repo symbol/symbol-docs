@@ -39,7 +39,7 @@ const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
 const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 

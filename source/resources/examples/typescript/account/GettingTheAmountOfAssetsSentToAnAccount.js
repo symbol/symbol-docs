@@ -31,7 +31,7 @@ const mosaicIdHex = '46BE9BC0626F9B1A';
 const divisibility = 6;
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const searchCriteria = {

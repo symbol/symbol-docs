@@ -59,7 +59,7 @@ console.log(signedTransaction.hash);
 /* end block 03 */
 
 /* start block 04 */
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 

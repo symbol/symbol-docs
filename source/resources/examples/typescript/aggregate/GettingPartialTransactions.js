@@ -22,7 +22,7 @@ const symbol_sdk_1 = require("symbol-sdk");
 // replace with account address
 const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100 };

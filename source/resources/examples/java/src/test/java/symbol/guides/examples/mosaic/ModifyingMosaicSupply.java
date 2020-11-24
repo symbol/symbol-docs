@@ -41,7 +41,7 @@ class ModifyingMosaicSupply {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+                "http://api-01.us-east-1.0.10.0.x.symboldev.network:3000")) {
             final NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();
             // replace with private key
             final String privateKey = "1111111111111111111111111111111111111111111111111111111111111111";

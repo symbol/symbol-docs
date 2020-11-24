@@ -44,7 +44,7 @@ class GettingMosaicAddressRestrictions {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://api-01.us-east-1.096x.symboldev.network:3000")) {
+            "http://api-01.us-east-1.0.10.0.x.symboldev.network:3000")) {
             final RestrictionMosaicRepository restrictionRepository = repositoryFactory
                 .createRestrictionMosaicRepository();
 

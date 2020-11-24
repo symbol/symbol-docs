@@ -36,7 +36,7 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(sy
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.096x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
