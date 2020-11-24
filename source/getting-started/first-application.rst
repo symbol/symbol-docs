@@ -154,7 +154,7 @@ This means that the customer can only send the ticket back to the mosaic's creat
 .. csv-table::
     :header: "Property", "Value", "Description"
     :delim: ;
-    :widths: 20 30 50
+    :widths: 20 15 65
 
     Divisibility; 0 ; The mosaic units must not be divisible. No one should be able to send "0.5 tickets".
     Duration; 1000; The mosaic will be registered for 1000 blocks.
