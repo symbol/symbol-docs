@@ -13,3 +13,4 @@ Guides related to :doc:`metadata <../../concepts/metadata>` handling.
     getting-metadata-entries-attached-to-a-mosaic
     getting-metadata-entries-attached-to-a-namespace
     getting-metadata-entries-attached-to-an-account
+    updating-metadata-entries
