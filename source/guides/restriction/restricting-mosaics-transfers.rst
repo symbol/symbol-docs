@@ -23,8 +23,8 @@ Prerequisites
 *************
 
 - Complete :doc:`creating a mosaic <../mosaic/creating-a-mosaic>` guide.
-- Create :ref:`accounts <setup-creating-a-test-account>` for ComfyClothingCompany, Alice, And Bob.
-- Load ComfyClothingCompany's account with enough |networkcurrency| to pay for the transactions fees and creation of mosaics.
+- Create :ref:`accounts <setup-creating-a-test-account>` for CharlieChocolateFactory, Alice, And Bob.
+- Load CharlieChocolateFactory's account with enough |networkcurrency| to pay for the transactions fees and creation of mosaics.
 
 ******************************
 Creating a restrictable mosaic
@@ -78,7 +78,7 @@ The company wants to add a restriction to only permit accounts with elevated sta
 
 2. Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaic id and keys you have defined in the previous step as arguments.
 
-The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the ```previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
+The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the ``previousRestrictionValue`` to ``0`` and the ``mosaicRestrictionType`` to ``None``.
 
 .. example-code::
 
