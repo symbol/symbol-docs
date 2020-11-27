@@ -310,6 +310,9 @@ body > .container {
     margin: 0;
     font-weight: bold;
 }
+#sidebar .toctree-l3 > a {
+    font-size: 90%;
+}
 #sidebar .caption, .sidebar-xs .caption {
     padding: 10px 30px 5px 0;
     margin: 0;
@@ -343,7 +346,7 @@ body > .container {
 }
 .sidebar-xs .dropdown-menu .toctree-l3 > a {
     padding-left: 30px;
-    font-size: 80%
+    font-size: 90%
 }
 .sidebar-xs .dropdown-menu .current > a {
     color: #5200c6;
